@@ -1,6 +1,6 @@
 /**
- * Performance Configuration;
- * Comprehensive performance monitoring and optimization settings;
+ * Performance Configuration
+ * Comprehensive performance monitoring and optimization settings
  */
 
 export const performanceConfig = {
@@ -36,7 +36,7 @@ export const performanceConfig = {
       needsImprovement: 500
   }},
 
-  // Resource loading priorities;
+  // Resource loading priorities
   resourceHints: {,
     preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],
     dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},
@@ -76,7 +76,7 @@ export const performanceConfig = {
     treeshaking: true
   },
 
-  // Monitoring;
+  // Monitoring
   monitoring: {,
     sampleRate: 0.1, // 10% of requests;
     reportInterval: 30000, // 30 seconds;

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react'
 const AISalesForecastingPage: React.FC = () => {
     const features = [],
   return (
@@ -16,7 +16,7 @@ const AISalesForecastingPage: React.FC = () => {
       descriptio,
   n: 'AI-powered sales forecasting and prediction',
       benefit,
-  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting'];
+  s: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']
     },
       ico,
   n: Target,
@@ -35,15 +35,14 @@ const AISalesForecastingPage: React.FC = () => {
       benefit,
   s: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Sales Forecasting;
-          </h1>"
+// AI Sales Forecasting</h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Advanced Sales Prediction and Analytics
           </p>"
@@ -51,7 +50,7 @@ const AISalesForecastingPage: React.FC = () => {
 // Predict sales performance with AI-powered forecasting.
             Make data-driven decisions and optimize your sales strategy for maximum results.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
@@ -70,21 +69,20 @@ const AISalesForecastingPage: React.FC = () => {
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
-          <div key={index} className="cyber-card p-6,"
+          < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
+                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>"
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
-                <ul className="space-y-2"></ul>
+                <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
                   ))}
                 </ul>
       </main>

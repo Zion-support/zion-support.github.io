@@ -90,7 +90,6 @@ const TeamPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         </Helmet><title>Our Team - Zion Tech Group</title>
         <meta>
       </Helmet>
@@ -101,22 +100,6 @@ const TeamPage: React.FC = () => {
             <div className="max-w-4xl mx-auto"></div>
               <h1>
                 Our Team</h1>
-=======
-        <title>Our Team - Zion Tech Group | Expert AI & IT Professionals</title>
-        <meta name="description" content="Meet our expert team of AI engineers, developers, and IT professionals. Learn about our leadership and technical expertise." />
-        <meta name="keywords" content="team, AI engineers, developers, IT professionals, leadership, expertise" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Meet Our <span className="text-cyan-400">Team</span>
->>>>>>> main
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Our team consists of world-class AI engineers, developers, and IT professionals 
@@ -271,3 +254,21 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
+        <title>Our Team - Zion Tech Group
+        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Navigation />
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Our Team
+              <div className="prose prose-lg max-w-none">
+                <p className="text-xl text-gray-600 mb-8">
+                  Meet the experts behind our success.
+                <p className="text-gray-700 mb-6">
+                  Coming soon - stay tuned to meet our team!
+        <Footer />
+  )
+}
+export default TeamPage</div></div></div></div></p></p></h1></main>

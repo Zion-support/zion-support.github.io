@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('home-visionary-expander function triggered')}
-    // Home visionary expansion simulation;
+    // Home visionary expansion simulation
     const result = {
       statusCode: 200,
       headers: {,

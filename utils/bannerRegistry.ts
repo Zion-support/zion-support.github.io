@@ -1,5 +1,5 @@
 /**
- * Banner Registry - Centralized banner management system;
+ * Banner Registry - Centralized banner management system
  *
  * This module provides: * - Organized banner categorization,
  * This module,
@@ -28,9 +28,9 @@ export interface BannerConfig {
 }
 
 export class BannerRegistry {
-  private banners: Map<string, BannerInstance> = new Map();</string>private</string> categories: Map<string, string[]> = new Map();</string>private</string> priorityQueue: string[] = []
+  private banners: Map<string, BannerInstance> = new Map()</string>private</string> categories: Map<string, string[]> = new Map()</string>private</string> priorityQueue: string[] = []
   private maxConcurrentBanners: number = 3,
-  private loadingPromises: Map<string, Promise<void>> = new Map();</string>
+  private loadingPromises: Map<string, Promise<void>> = new Map()</string>
 
 export interface BannerConfig {/* TODO: Fix JSX expression */}
   }

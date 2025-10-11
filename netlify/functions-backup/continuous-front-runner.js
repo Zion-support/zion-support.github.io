@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('continuous-front-runner function triggered')}
-    // Continuous front running simulation;
+    // Continuous front running simulation
     const result = {
       statusCode: 200,
       headers: {,

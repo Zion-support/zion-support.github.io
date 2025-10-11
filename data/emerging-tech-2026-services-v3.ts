@@ -65,16 +65,7 @@ export interface EmergingTech2026ServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-=======
-<<<<<<< HEAD
-export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
-  {
-=======
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
->>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -101,18 +92,18 @@ export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [,
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -164,7 +155,6 @@ export const,
     }
   }
 ];
-<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -172,7 +162,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
@@ -181,11 +171,9 @@ export const,
   }
 ];
 id: "2026-emerging-tech-v3"
-=======
-;
->>>>>>> main
     id: "2026-emerging-tech-v3",
->>>>>>> cursor/delete-records-e539
+]
+    id: "2026-emerging-tech-v3"
     name: "2026 Emerging Tech Platform V3",
     tagline: "Third generation emerging tech",
     price: "$399/month",
@@ -259,7 +247,7 @@ id: "2026-emerging-tech-v3"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

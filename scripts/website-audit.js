@@ -1,38 +1,33 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Website audit script to check all links and identify missing pages;
-console.log('🔍 Starting comprehensive website audit...\n');
-
-// Get all page files from the app directory;
-const appDir = path.join(__dirname, '..', 'app');
-const allPages = [];
-
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Website audit script to check all links and identify missing pages
+console.log('🔍 Starting comprehensive website audit...\n')
+// Get all page files from the app directory
+const appDir = path.join(__dirname, '..', 'app')
+const allPages = []
 function scanDirectory(dir, basePath = '') {
     const items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      // Check if directory has a page.tsx file;
-      const pageFile = path.join(fullPath, 'page.tsx');
+      // Check if directory has a page.tsx file
+      const pageFile = path.join(fullPath, 'page.tsx')
       if (fs.existsSync(pageFile)) {
-        const route = basePath + '/' + item;
+        const route = basePath + '/' + item
         allPages.push({)
           path: route),
           file: pageFile),
           exists: true
   });
       }
-      // Recursively scan subdirectories;
-      scanDirectory(fullPath, basePath + '/' + item);
+      // Recursively scan subdirectories
+      scanDirectory(fullPath, basePath + '/' + item)
     }
   }
 }
@@ -73,14 +68,12 @@ footerLinks.forEach(link => {
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
     missingPages.push(link)
   }
-});
-
-console.log(`\n❌ Missing pages (${missingPages.length}):`);
+})
+console.log(`\n❌ Missing pages (${missingPages.length}):`)
 missingPages.forEach(page => {)
-  console.log(`  🚫 ${page}`);
-});
-
-// Check for other common missing pages;
+  console.log(`  🚫 ${page}`)
+})
+// Check for other common missing pages
 const commonPages = [
   '/about',
   '/contact',
@@ -100,17 +93,15 @@ const commonPages = [
   '/gdpr',
   '/security',
   '/compliance'
-];
-
+]
 const additionalMissing = commonPages.filter(page => )
   !existingRoutes.includes(page) && !missingPages.includes(page)
-);
-
+)
 if (additionalMissing.length > 0) {
-  console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`);
+  console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`)
   additionalMissing.forEach(page => {)
-    console.log(`  💡 ${page}`);
-  });
+    console.log(`  💡 ${page}`)
+  })
 }
 
 // Check for broken internal links in existing pages;
@@ -136,20 +127,19 @@ allPages.forEach(page => {
       }
     }
   } catch (error) {
-    console.log(`  ⚠️  Error reading ${page.file}: ${error.message}`);
+    console.log(`  ⚠️  Error reading ${page.file}: ${error.message}`)
   }
-});
-
+})
 if (brokenLinks.length > 0) {
-  console.log(`\n🔗 Broken internal links found (${brokenLinks.length}):`);
+  console.log(`\n🔗 Broken internal links found (${brokenLinks.length}):`)
   brokenLinks.forEach(({ page, brokenLink }) => {
-    console.log(`  ❌ ${page} → ${brokenLink}`);
-  });
+    console.log(`  ❌ ${page} → ${brokenLink}`)
+  })
 } else {
     console.log(`  ✅ No broken internal links found`)
   }
 
-// Generate report;
+// Generate report
 const report = {
   timestamp: new Date().toISOString()
   totalPages: allPages.length;
@@ -178,4 +168,4 @@ console.log(`  2. Fix broken internal links`)
 console.log(`  3. Test all links on the live website`)
 console.log(`  4. Improve navigation structure`),
 ,
-console.log(`\n✅ Website audit completed!`);
+console.log(`\n✅ Website audit completed!`)

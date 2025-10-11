@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import fs from "fs";
-import path from "path";
-import { IntegrationsState } from "./types";
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
-const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
-const STATE_FILE = path.join(DATA_DIR, 'state.json');
-export function readState(): IntegrationsState {;
-  ensureDataDir();
-  try {
-    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
-    return JSON && JSON.parse(raw) as IntegrationsState;
-import fs from "fs";
-import path from "path";
-import { IntegrationsState } from "./types";
-const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-const STATE_FILE = path.join(DATA_DIR, "state.json");
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
-const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
-const STATE_FILE = path.join(DATA_DIR, 'state.json');
-=======
-import fs from 'fs';
-import path from 'path';
-import fs from 'fs';
-import path from 'path';
-import fs from 'fs';
-import path from 'path';
->>>>>>> cursor/delete-records-e539
 import * as fs from 'fs';
 import * as path from 'path';
 import type { IntegrationsState } from './types';
@@ -39,30 +5,18 @@ import type { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
-<<<<<<< HEAD
 function ensureDataDir(): void {/* TODO: Fix JSX expression */}
   e: true });
-=======
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-// const STATE_FILE = path.join(DATA_DIR, "state.json");
-import fs from "fs";
-import path from "path";
-import { IntegrationsState } from "./types";
-
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
-// const STATE_FILE = path.join(DATA_DIR, "state.json");
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
-
-// const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
-// const STATE_FILE = path.join(DATA_DIR, 'state.json');
-
->>>>>>> main
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
->>>>>>> cursor/delete-records-e539
+import * as fs from 'fs'
+import * as path from 'path'
+import type { IntegrationsState } from './types'
+const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations')
+const STATE_FILE = path.join(DATA_DIR, 'state.json')
+function ensureDataDir(): void {/* TODO: Fix JSX expression */}
+  e: true })
   }
 
   if (!fs.existsSync(STATE_FILE)) {}
@@ -71,63 +25,7 @@ export function readState(): IntegrationsState {
   ensureDataDir();
 
   if (!fs.existsSync(STATE_FILE)) {
-<<<<<<< HEAD
     const initial: IntegrationsState = {,
-=======
-    const initial: IntegrationsState = {
-<<<<<<< HEAD
-      connections: []
-      logs: []
-      overrides: []
-      events: []
-    };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-}
-    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
-  }
-}
-export function readState(): IntegrationsState {;
-  ensureDataDir();
-  try {
-    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
-    return JSON && JSON.parse(raw) as IntegrationsState;
-      events: []
-    };
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-    }
-    fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
-  }
-}
-export function writeState(
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-  ensureDataDir();
-  const current = readState();
-  (mutator(current),
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
-  return current;
-    const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState
-    const raw = fs.readFileSync (STATE_FILE, "utf8");
-    return JSON.parse (raw) as IntegrationsState;
-  } catch (error) {
-    return { connections: [], logs: [], overrides: [], events: [] }
-  }
-}
-export function writeState(
-  mutator: (state: IntegrationsState) => void
-): IntegrationsState {
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-  ensureDataDir();
-  const current = readState();
-  (mutator(current),
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
-  return current;
-}
-=======
->>>>>>> main
->>>>>>> cursor/delete-records-e539
       connections: [],
       logs: [],
       overrides: [],
@@ -135,30 +33,7 @@ export function writeState(
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
-}
-}
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
-}
-}
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-  }
-}
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-  }
-}
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-  }
-}
->>>>>>> cursor/delete-records-e539
 
->>>>>>> main
 export function readState(): IntegrationsState {
     ensureDataDir();
 
@@ -210,7 +85,6 @@ export function readState(): IntegrationsState {
     return initial;
   }
 }
-<<<<<<< HEAD
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
   const current = readState();
@@ -220,31 +94,16 @@ export function writeState(mutator: (state: IntegrationsState) => void): Integra
 }
 export function write_state (
   mutator: (state: IntegrationsState) => void,
-=======
 
 export function writeState(
-<<<<<<< HEAD
   mutator: (state: IntegrationsState) => void;
-=======
-  mutator: (state: IntegrationsState) => void
->>>>>>> main
->>>>>>> cursor/delete-records-e539
 ): IntegrationsState {
     ensureDataDir()
   const current = readState()
   mutator(current),
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-<<<<<<< HEAD
   return current
   }
-=======
-  return current;
-}
-<<<<<<< HEAD
-  return current;
-}
-=======
->>>>>>> cursor/delete-records-e539
 
 export interface FileStoreOptions {/* TODO: Fix JSX expression */}
 }
@@ -265,8 +124,8 @@ export class FileStore {
   }
 
   async writeFile(filePath: string, content: string): Promise<void> {,
-//     const fullPath = path.join(this.basePath, filePath);
-    const _dir = path.dirname(fullPath);
+//     const fullPath = path.join(this.basePath, filePath)
+    const _dir = path.dirname(fullPath)
 export class FileStore {/* TODO: Fix JSX expression */}
   }
 
@@ -290,7 +149,7 @@ export class FileStore {/* TODO: Fix JSX expression */}
 //     const fullPath = path.join(this.basePath, filePath);
 
   async exists(filePath: string): Promise<boolean> {
-    const fullPath = path.join(this.basePath, filePath);
+    const fullPath = path.join(this.basePath, filePath)
     try {
       await fs.promises.access(fullPath);
       return true
@@ -306,47 +165,42 @@ export class FileStore {/* TODO: Fix JSX expression */}
   }
 
   async listFiles(dirPath: string = ''): Promise<string[]> {,
-//     const fullPath = path.join(this.basePath, dirPath);
-//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
-    return files;
+//     const fullPath = path.join(this.basePath, dirPath)
+//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true })
+    return files
   async deleteFile(filePath: string): Promise<void> {
     const fullPath = path.join(this.basePath, filePath);
     await fs.promises.unlink(fullPath)
   }
 
   async listFiles(dirPath: string = ''): Promise<string[]> {
-    const fullPath = path.join(this.basePath, dirPath);
-    const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
+    const fullPath = path.join(this.basePath, dirPath)
+    const files = await fs.promises.readdir(fullPath, { withFileTypes: true })
     return files
 
       .filter(file => file.isFile())
-      .map(file => path.join(dirPath, file.name));
+      .map(file => path.join(dirPath, file.name))
   }
 
   async createDirectory(dirPath: string): Promise<void> {,
-//     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.mkdir(fullPath, { recursive: true });
+//     const fullPath = path.join(this.basePath, dirPath)
+    await fs.promises.mkdir(fullPath, { recursive: true })
   }
 
   async deleteDirectory(dirPath: string): Promise<void> {,
-//     const fullPath = path.join(this.basePath, dirPath);
-
+//     const fullPath = path.join(this.basePath, dirPath)
   async createDirectory(dirPath: string): Promise<void> {
-    const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.mkdir(fullPath, { recursive: true });
+    const fullPath = path.join(this.basePath, dirPath)
+    await fs.promises.mkdir(fullPath, { recursive: true })
   }
 
   async deleteDirectory(dirPath: string): Promise<void> {
-    const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.rmdir(fullPath, { recursive: true });
+    const fullPath = path.join(this.basePath, dirPath)
+    await fs.promises.rmdir(fullPath, { recursive: true })
   }
 }
 
 export const createFileStore = (options: FileStoreOptions) =>,
   new FileStore(options);
-<<<<<<< HEAD
 ,
 
-=======
->>>>>>> main
->>>>>>> cursor/delete-records-e539

@@ -1,9 +1,9 @@
 
 
-import React from 'react';
-'use client';
-// ErrorInfo interface removed as it's not used in this hook;
-// Global type definitions for browser events;
+import React from 'react'
+'use client'
+// ErrorInfo interface removed as it's not used in this hook
+// Global type definitions for browser events
 declare global {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -18,20 +18,20 @@ declare global {/* TODO: Fix JSX expression */}
 export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const { trackError } = useAnalytics();
+  const { trackError } = useAnalytics()
   const reportError = useCallback()
     (erro)
   r: Error, context?: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      trackError(error, context);
+      trackError(error, context)
     },
 //     [trackError]
-  );
+  )
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    // Global error handler;
+    // Global error handler
 const handleError = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -62,7 +62,7 @@ const handleUnhandledRejection = (even)
   O: Add content,}
 }
       const componentStack =
-        (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
+        (errorInfo as { componentStack?: string })?.componentStack || 'unknown'
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`);
     }
@@ -74,8 +74,8 @@ const handleUnhandledRejection = (even)
       window as Window & {/* TODO: Fix JSX expression */}
   o: unknown) => void,}
       }
-    ).__REACT_ERROR_HANDLER__ = handleReactError;
-    // Cleanup;
+    ).__REACT_ERROR_HANDLER__ = handleReactError
+    // Cleanup
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 export const useRouter = (;) => {
     return ()
   )
@@ -26,7 +26,7 @@ export const useRouter = () => {};
   }, []);
   const refresh = useCallback(() => {};
     window.location.reload();}
-  }, []);
+  }, [])
   return {}
     push,
 

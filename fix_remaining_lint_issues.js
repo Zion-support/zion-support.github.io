@@ -76,7 +76,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
-        return match.replace(param1, `_${param1}`);
+        return match.replace(param1, `_${param1}`)
       }
       return match;
     });
@@ -257,9 +257,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             !content.includes(varName + '[') &&
             !content.includes('<' + varName)
           ) {
-            fixedLines.push('// ' + line);
-            modified = true;
-            continue;
+            fixedLines.push('// ' + line)
+            modified = true
+            continue
     // Fix,
   2: Comment out unused variable declarations
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
@@ -329,54 +329,54 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       // Fix,
   3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
-              return `_${p}`;
+              return `_${p}`
             }
-            return p;
-          });
+            return p
+          })
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(line.replace()
                 paramMatch[0])
           if (fixedParams.join(', ') !== params.join(', ')) {/* TODO: Fix JSX expression */}`
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})`
               )
-            );
-            modified = true;
-            continue;
+            )
+            modified = true
+            continue
           }
         }
       }
 
-      fixedLines.push(line);
+      fixedLines.push(line)
     }
 
     content = fixedLines.join('\n');
 
     // Fix 4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
-      content = content.replace(/,\s*useContext/g, '');
-      content = content.replace(/useContext,\s*/g, '');
+      content = content.replace(/,\s*useContext/g, '')
+      content = content.replace(/useContext,\s*/g, '')
       if (content.includes('import { useContext }')) {
     // Fix,
   4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
-        content = content.replace(/import { useContext } from 'react';\n?/g, '');
+        content = content.replace(/import { useContext } from 'react';\n?/g, '')
       }
-      modified = true;
+      modified = true
     }
 
     // Fix 5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {,
-      content = content.replace(/,\s*lazy/g, '');
-      content = content.replace(/lazy,\s*/g, '');
+      content = content.replace(/,\s*lazy/g, '')
+      content = content.replace(/lazy,\s*/g, '')
       if (content.includes('import { lazy }')) {
     // Fix,
   5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
-        content = content.replace(/import { lazy } from 'react';\n?/g, '');
+        content = content.replace(/import { lazy } from 'react';\n?/g, '')
       }
-      modified = true;
+      modified = true
     }
 
     // Fix 6: Add proper TypeScript types instead of any,
@@ -389,24 +389,24 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Function to recursively fix remaining lint issues;
+// Function to recursively fix remaining lint issues
 function fixAllRemainingLintIssues(_dir) {
   try {
     for (const file of files) {
 
       try {
         if (stat.isDirectory()) {
-          // Skip certain directories;
+          // Skip certain directories
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
-            continue;
+            continue
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
           }
-          fixedCount += fixAllRemainingLintIssues(filePath);
+          fixedCount += fixAllRemainingLintIssues(filePath)
         } else if ()
           file.endsWith('.tsx') ||
           file.endsWith('.ts') ||
@@ -419,10 +419,10 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
       }
     }
 
-    return fixedCount;
+    return fixedCount
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Main execution;
+// Main execution
 // Main execution;`

@@ -1,5 +1,5 @@
-// Revolutionary AI 2027 Breakthrough Content;
-// Latest cutting-edge AI technologies and enterprise transformations;
+// Revolutionary AI 2027 Breakthrough Content
+// Latest cutting-edge AI technologies and enterprise transformations
 export const breakthroughContent2027 = [
   {
     id: 'ai-2027-ultimate-consciousness-breakthrough',
@@ -75,9 +75,9 @@ export const caseStudies2027 = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]
 export const caseStudies2027 = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

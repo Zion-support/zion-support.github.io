@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('knowledge-pack-runner function triggered')}
-    // Knowledge pack simulation;
+    // Knowledge pack simulation
     const result = {
       statusCode: 200,
       headers: {,

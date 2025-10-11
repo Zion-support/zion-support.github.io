@@ -1,9 +1,9 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems()
       prev.includes(index) ;
@@ -42,7 +42,6 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "What industries do you serve?",
-<<<<<<< HEAD
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
   ]
@@ -52,7 +51,6 @@ const FAQPage: React.FC = () => {
         </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
           </section><div className="
@@ -61,9 +59,6 @@ const FAQPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Find answers to common questions about our AI and IT services, pricing, and implementation.
-            </p>
-          </div>
-        </section>
         <section className="py-16 px-4">
           </section><div className="
             </div><div className="space-y-4">
@@ -78,27 +73,12 @@ const FAQPage: React.FC = () => {
                     ) : (
                       <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     )}
-                  </button>
                   {openItems.includes(index) && (
                     <div className="px-6 pb-4">
                       </div><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
-=======
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.";
-    };
-  ];
-  return() {faqs.map((faq, index) => ()
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? ()
-                    ) : ()
-                    )}
-                  </button>
-                  {openItems.includes(index) && ()
->>>>>>> main
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}
                   )}
-                </div>
               ))}
             </div>
           </div>

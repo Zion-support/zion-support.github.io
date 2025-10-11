@@ -44,16 +44,10 @@ export const generateSitemap = useCallback((...args) => {}
     '/marketing-tools',;
     '/productivity';
   ];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   ${
-<<<<<<< HEAD
-    staticPages.map(page =>),;
-</urlset><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-=======
-    staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" /></urlset>
->>>>>>> main
+    staticPages.map(page =>),</urlset><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   }
   ${staticPages.map(page =>)}
   </urlset><url>}
@@ -76,6 +70,34 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`,}
+    '/developer-tools',
+    '/marketing-tools',
+    '/productivity'
+  ]
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+  ${staticPages.map(page =>),
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}
+  ${staticPages.map(page =>)}
+  <url>}
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '' ? '1.0' : '0.8'}</priority></$1>`).join('')}
+</urlset>`
+  return sitemap
+}
+export const generateRobotsTxt = useCallback((...args) => {}
+  return `User-agent: *
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml
+# Crawl-delay for better server performance
+Crawl-delay: 1,
+# Disallow admin and private areas
+Disallow: /admin/,
+Disallow: /api/,
+Disallow: /_next/,
+Disallow: /private/`;}
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }

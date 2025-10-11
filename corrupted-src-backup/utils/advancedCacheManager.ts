@@ -1,5 +1,5 @@
 /**
- * Advanced cache manager for efficient data caching;
+ * Advanced cache manager for efficient data caching
  */
 
 interface CacheConfig {
@@ -34,11 +34,11 @@ class AdvancedCacheManager<T> {
       return null
   }
 
-    // Check if entry has expired;
+    // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {
-      this.cache.delete(key);
-      this.misses++;
-      return null;
+      this.cache.delete(key)
+      this.misses++
+      return null
 class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
     }
@@ -48,16 +48,15 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   y: string): T | null {/* TODO: Fix JSX expression */}
     }
 
-    // Check if entry has expired;
+    // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
     }
 
-    // Update access statistics;
-    entry.accessCount++;
-    entry.lastAccessed = Date.now();
-    this.hits++;
-
-    return entry.value;
+    // Update access statistics
+    entry.accessCount++
+    entry.lastAccessed = Date.now()
+    this.hits++
+    return entry.value
   }
 
   public set(key: string, value: T): void {
@@ -67,7 +66,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   }
 
     const entry: CacheEntry<T> = {,
-      key;
+      key
       value,
       timestamp: Date.now(),
       accessCount: 1,
@@ -91,23 +90,23 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
       return false
   }
 
-    // Check if entry has expired;
+    // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {
-      this.cache.delete(key);
-      return false;
+      this.cache.delete(key)
+      return false
   public has(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
     }
 
-    // Check if entry has expired;
+    // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
     }
 
-    return true;
+    return true
   }
 
   public delete(key: string): boolean {,
-    return this.cache.delete(key);
+    return this.cache.delete(key)
   public delete(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
   }
@@ -163,13 +162,13 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
 ,
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp>this</timestamp>.config.maxAge) {
-        expiredKeys.push(key);
+        expiredKeys.push(key)
   public cleanup(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
+    expiredKeys.forEach(key => this.cache.delete(key))
   }
 }
 
-export default AdvancedCacheManager;
+export default AdvancedCacheManager

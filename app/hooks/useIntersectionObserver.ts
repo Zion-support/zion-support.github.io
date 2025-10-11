@@ -49,4 +49,4 @@ return () => {
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 return { ref, isIntersecting, entry }
 }
-export default useIntersectionObserver;</HTMLElement>
+export default useIntersectionObserver</HTMLElement>

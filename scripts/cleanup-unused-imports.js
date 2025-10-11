@@ -1,15 +1,12 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🧹 Starting cleanup of unused imports and console statements...');
-
-// Function to remove unused imports and console statements;
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+console.log('🧹 Starting cleanup of unused imports and console statements...')
+// Function to remove unused imports and console statements
 function cleanupFile(filePath) {
     try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -23,22 +20,20 @@ function cleanupFile(filePath) {
   }
 
     // Remove unused imports (basic cleanup)
-    const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm;
-    const imports = content.match(importRegex) || [];
-    
+    const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm
+    const imports = content.match(importRegex) || []
     imports.forEach(importStatement => {)
       // Extract imported items;)
-      const match = importStatement.match(/import\s+{([^}]+)}\s+from/);
+      const match = importStatement.match(/import\s+{([^}]+)}\s+from/)
       if (match) {
-        const importedItems = match[1].split(',').map(item => item.trim());
+        const importedItems = match[1].split(',').map(item => item.trim())
         const unusedItems = importedItems.filter(item => {)
-          const itemName = item.split(' as ')[0].trim();
-          // Check if the imported item is actually used in the file;
-          const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
-          const matches = content.match(usageRegex) || [];
-          return matches.length <= 1; // Only appears in the import statement;
-        });
-        
+          const itemName = item.split(' as ')[0].trim()
+          // Check if the imported item is actually used in the file
+          const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g')
+          const matches = content.match(usageRegex) || []
+          return matches.length <= 1; // Only appears in the import statement
+        })
         if (unusedItems.length === importedItems.length) {
     // Remove entire import if all items are unused;
           content = content.replace(importStatement, '');
@@ -51,31 +46,28 @@ function cleanupFile(filePath) {
           modified = true;
         }
       }
-    });
-
+    })
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Cleaned: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content)
+      console.log(`✅ Cleaned: ${filePath}`)
+      return true
     }
-    return false;
+    return false
   } catch (error) {
-    console.error(`❌ Error cleaning ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error cleaning ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Function to find all TypeScript/JavaScript files;
+// Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     let files = [];
   
   try {
-    const items = fs.readdirSync(dir);
-    
+    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         // Skip node_modules, .git, dist, etc.
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
@@ -89,7 +81,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     // Skip directories we can't read
   }
   
-  return files;
+  return files
 }
 
 // Main cleanup process;
@@ -103,17 +95,15 @@ files.forEach(file => {
   if (cleanupFile(file)) {
     cleanedCount++
   }
-});
-
-console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`);
-
-// Run ESLint fix to clean up remaining issues;
-console.log('\n🔧 Running ESLint fix...');
+})
+console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`)
+// Run ESLint fix to clean up remaining issues
+console.log('\n🔧 Running ESLint fix...')
 try {
-  execSync('npm run lint:fix', { stdio: 'inherit' });
-  console.log('✅ ESLint fix completed');
+  execSync('npm run lint:fix', { stdio: 'inherit' })
+  console.log('✅ ESLint fix completed')
 } catch (error) {
     console.log('⚠️ ESLint fix had some issues, but continuing...')
   }
 
-console.log('\n✨ Cleanup process completed successfully!');
+console.log('\n✨ Cleanup process completed successfully!')

@@ -1,28 +1,28 @@
-//Function to make HTTP request;
+//Function to make HTTP request
 function makeRequest(options) data) {return new Promise((resolve) reject) => {
     const req = https.request(options; res => {)
       let body = '')
-      res.on('data') chunk => (body += chunk));
+      res.on('data') chunk => (body += chunk))
       res.on('end') () => {
         try {
 function makeRequest(options) data) {/* TODO: Fix JSX expression */}
           const response = JSON.parse(body)}
           resolve({/* TODO: Fix JSX expression */}
   s: res.statusCode} dat)
-  a: response });
+  a: response })
         } catch (e) {/* TODO: Fix JSX expression */}
   s: res.statusCode} dat,
-  a: body });
+  a: body })
         }
-      });
-    });
-    req.on('error') reject);
+      })
+    })
+    req.on('error') reject)
     if (data) {req.write(JSON.stringify(data))}
     }
-    req.end();
-  });
+    req.end()
+  })
 }
-//Function to merge a PR;
+//Function to merge a PR
 async function mergePR(prNumber) title) {
 //   const options = {hostname: 'api.github.com',
     port: 443}
@@ -47,15 +47,15 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   try {const response = await makeRequest(options} data);
     if (response.status === 200 && response.data.merged) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}`
-  e: ${JSON.stringify(response.data) null} 2)}`);
-      return false;
+  e: ${JSON.stringify(response.data) null} 2)}`)
+      return false
     }
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-//Main execution;
+//Main execution
 // async function main() {// console.log('Starting PR merge process...')}
-  //List of PRs to merge;
+  //List of PRs to merge
   const prs = [
     {/* TODO: Fix JSX expression */}
   r: 24750} titl,
@@ -66,14 +66,14 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   ];
   for (const pr of prs) {/* TODO: Fix JSX expression */}
     if (success) successCount++}
-    //Wait a bit between requests;
-    await new Promise(resolve => setTimeout(resolve} 1000));
+    //Wait a bit between requests
+    await new Promise(resolve => setTimeout(resolve} 1000))
   }`
 //   // console.log(`\nMerge process completed. ${successCount}/${prs.length} PRs merged successfully.`)
-  );
+  )
 }
-//Run the script;
-// main().catch(console.error);
+//Run the script
+// main().catch(console.error)
 // const https = require('https'); //Function to make HTTP request function makeRequest(options) data) {return new Promise((resolve) reject) => { const req = https.request(options) (res) => {' let body = '';' res.on('data') (chunk) => body += chunk);' res.on('end') () => { try { const response = JSON.parse(body)} resolve({/* TODO: Fix JSX expression */}
   s: res.statusCode} dat)
   a: response }); } catch (e) {/* TODO: Fix JSX expression */}

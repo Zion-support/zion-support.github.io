@@ -81,7 +81,6 @@ const PrivacyPage: React.FC = () => {
       description: 'Request deletion of your personal data',
     },
     {
-<<<<<<< HEAD
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
@@ -90,169 +89,109 @@ const PrivacyPage: React.FC = () => {
     <>
       <Helmet>
         </Helmet><title>Privacy Policy - Zion Tech Group</title>
-=======
-      title: 'Portability',;
-      description: 'Receive your data in a structured format',;
-      icon: Database];
-  return ()
-                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
-                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
-                our website or use our services.
-              </p>
-              <p className="text-gray-300 leading-relaxed" /></p>
-                By using our website or services, you agree to the collection and use of information in accordance with this policy. 
-                If you do not agree with the terms of this Privacy Policy, please do not use our services.
-              </p>
-            </div>
-
-            {/* Policy Sections */}
-            <div className="space-y-8" /></div>
-              {sections.map((section, index) => ()
-                    {section.content.map((item, itemIndex) => ()
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            {/* Cookies Section */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-12" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Cookies and Tracking Technologies</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. 
-                  Cookies are small data files stored on your device that help us remember your preferences and improve our services.
-                </p>
-                <p></p>
-                  You can control cookie settings through your browser preferences. However, disabling cookies may affect 
-                  the functionality of our website and services.
-                </p>
-              </div>
-            </div>
-
-            {/* Third-Party Services */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Third-Party Services</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  We may use third-party services for analytics, marketing, and other business purposes. These services 
-                  may collect information about your use of our website and services.
-                </p>
-                <p></p>
-                  We carefully select our third-party partners and ensure they comply with applicable privacy laws and 
-                  maintain appropriate security measures.
-                </p>
-              </div>
-            </div>
-
-            {/* Data Retention */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Data Retention</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  We retain your personal information only for as long as necessary to fulfill the purposes outlined in this 
-                  Privacy Policy, unless a longer retention period is required or permitted by law.
-                </p>
-                <p></p>
-                  When we no longer need your personal information, we will securely delete or anonymize it in accordance 
-                  with our data retention policies.
-                </p>
-              </div>
-            </div>
-
-            {/* International Transfers */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">International Data Transfers</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  Your information may be transferred to and processed in countries other than your country of residence. 
-                  We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
-                </p>
-              </div>
-            </div>
-
-            {/* Children's Privacy */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Children's Privacy</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  Our services are not intended for children under 13 years of age. We do not knowingly collect personal 
-                  information from children under 13. If we become aware that we have collected personal information from 
-                  a child under 13, we will take steps to delete such information.
-                </p>
-              </div>
-            </div>
-
-            {/* Changes to Policy */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Changes to This Privacy Policy</h2>
-              <div className="space-y-4 text-gray-300" /></div>
-                <p></p>
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the 
-                  new Privacy Policy on this page and updating the "Last updated" date.
-                </p>
-                <p></p>
-                  We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy 
-                  Policy are effective when they are posted on this page.
-                </p>
-              </div>
-            </div>
-
+    }
+  ]
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Privacy Policy
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Your privacy is important to us. Learn how we collect, use, and protect your information.
+          <div className="flex items-center justify-center text-sm text-blue-200">
+            <Calendar className="h-4 w-4 mr-2" />
+            Last updated: {lastUpdated}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Introduction */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction
+              <p className="text-gray-700 leading-relaxed mb-4">
+                At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              <p className="text-gray-700 leading-relaxed">
+                By using our services, you agree to the collection and use of information in accordance with this policy.
+            {/* Information We Collect */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect
+              <div className="grid md:grid-cols-3 gap-6">
+                {dataTypes.map((type, index) => (</div>}
+                  <div key={index} className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-center mb-4">
+                      <type.icon className="h-6 w-6 text-blue-600 mr-3" />
+                      <h3 className="text-lg font-semibold text-gray-900">{type.category}
+                    <p className="text-gray-700 mb-3">{type.description}
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {type.examples.map((example, idx) => (;}
+                        <li key={idx}>• {example}
+                      ))}
+                ))}
+            {/* How We Use Information */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information
+              <div className="grid md:grid-cols-2 gap-6">
+                {purposes.map((purpose, index) => (</div>}
+                  <div key={index} className="flex items-start">
+                    <div className="flex-shrink-0 mr-4">
+                      <purpose.icon className="h-6 w-6 text-blue-600" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{purpose.title}
+                      <p className="text-gray-700">{purpose.description}
+                ))}
+            {/* Data Security */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <div className="flex items-start">
+                  <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures
+                    <p className="text-gray-700 mb-4">
+                      We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+                    <ul className="text-gray-700 space-y-2">
+                      <li>• Encryption of data in transit and at rest
+                      <li>• Regular security audits and assessments
+                      <li>• Access controls and authentication systems
+                      <li>• Employee training on data protection
+            {/* Your Rights */}
+            <section>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights
+              <div className="grid md:grid-cols-2 gap-6">
+                {rights.map((right, index) => (</div>}
+                  <div key={index} className="bg-white border border-gray-200 rounded-lg p-6">
+                    <div className="flex items-center mb-3">
+                      <right.icon className="h-6 w-6 text-green-600 mr-3" />
+                      <h3 className="text-lg font-semibold text-gray-900">{right.title}
+                    <p className="text-gray-700">{right.description}
+                ))}
             {/* Contact Information */}
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8 mt-12" /></div>
-              <h2 className="text-2xl font-bold text-white mb-6">Contact Us</h2>
-              <p className="text-gray-300 mb-6" /></p>
+            <section className="bg-gray-50 rounded-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us
+              <p className="text-gray-700 mb-6">
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-                <div className="flex items-center space-x-3" /></div>
-                  <Mail className="w-5 h-5 text-cyan-400" / /></Mail>
-                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3" /></div>
-                  <Phone className="w-5 h-5 text-cyan-400" / /></Phone>
-                  <span className="text-gray-300">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-start space-x-3" /></div>
-                  <Calendar className="w-5 h-5 text-cyan-400 mt-1" / /></Calendar>
-                  <div className="text-gray-300" /></div>
-                    <div>364 E Main St STE 1008</div>
-                    <div>Middletown, DE 19709</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer / /></Footer>
-    </>
-  );
-};
-
-export default PrivacyPage;
-  ];
-  const purposes = [
-    {;
-    };
-  ];
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
-    {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-    },
-    {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-    },
-    {
-      title: 'Portability',;
-      description: 'Receive your data in a structured format',;
-      icon: Database];
->>>>>>> main
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">privacy@ziontechgroup.com
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">(302) 464-0950
+                <div className="flex items-center">
+                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">ziontechgroup.com
+                <div className="flex items-center">
+                  <User className="h-5 w-5 text-blue-600 mr-3" />
+                  <span className="text-gray-700">Zion Tech Group Privacy Team
+            {/* Updates */}
+            <section>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <div className="flex items-start">
+                  <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates
+                    <p className="text-gray-700">
+                      We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+  )
+}
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></ul></ul></li></li></li></li></li></section></section></section></section></section></section></section>

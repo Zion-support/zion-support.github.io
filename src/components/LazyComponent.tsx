@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense, lazy, ComponentType } from 'react'
 interface LazyComponentProps {
     fallback?: React.ReactNode;
   children: React.ReactNode
@@ -8,15 +8,14 @@ export default function LazyComponent({
   children
 }: LazyComponentProps) {
 const DefaultFallback = () => (
-  <div className="flex items-center justify-center p-8"></div>
-    <div className="cyber-loader"></div>
-    <span className="ml-3 text-cyan-400">Loading...</span>
-  </div>
-);
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
+  <div className="flex items-center justify-center p-8">
+    <div className="cyber-loader">
+    <span className="ml-3 text-cyan-400">Loading...
+)
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children
 }) => {
   return (
-    <Suspense fallback={fallback}></Suspens>
+    <Suspense fallback={fallback}>
       {children}
     </Suspense>
   );
@@ -35,7 +34,7 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
 // Utility function to create lazy components
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
-  const LazyComponent = lazy(importFunc);
+  const LazyComponent = lazy(importFunc)
   return (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
@@ -85,10 +84,10 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef;
-          <HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = React.useState(false)
+  const [isLoaded, setIsLoaded] = React.useState(false)
+  const elementRef = React.useRef
+          <HTMLDivElement>(null)
   React.useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -102,10 +101,10 @@ const,
           setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            setIsVisible(true);
-            setIsLoaded(true);
-          }, delay);
-          observer.disconnect();
+            setIsVisible(true)
+            setIsLoaded(true)
+          }, delay)
+          observer.disconnect()
         }
       },
       {/* TODO: Fix JSX expression */}
@@ -113,21 +112,20 @@ const,
 }
 //         threshold,
 //         rootMargin}
-    );
+    )
     if (elementRef.current) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      observer.observe(elementRef.current);
+      observer.observe(elementRef.current)
     }
-    return () => observer.disconnect();
-  }, [delay, threshold, rootMargin]);
+    return () => observer.disconnect()
+  }, [delay, threshold, rootMargin])
   return (<div>Coming Soon</div>)
   )
-          <div ref={elementRef}></div>
+          <div ref={elementRef}>
       {isVisible ? ()}
-          <Suspense fallback={fallback}></Suspense>
+          <Suspense fallback={fallback}>
           {children}
-        </Suspense>
       ) : ()
 // fallback)}
           </div>
@@ -156,7 +154,7 @@ export const createLazyComponent = {}
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const LazyComponent = lazy(importFunction);
+  const LazyComponent = lazy(importFunction)
   return (prop)
   s: P) => ()
           <Suspense fallback={fallback || <LoadingSpinner />}>
@@ -168,8 +166,8 @@ export const createLazyComponent = {}
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
+  if (typeof window === 'undefined') return
+  // Preload critical fonts
 const fontPreloads = [
   // TOD,
   O: Add items
@@ -183,19 +181,19 @@ const fontPreloads = [
   fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = href;
-    document.head.appendChild(link);
-  });
-  // Preload critical images;
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'style'
+    link.href = href
+    document.head.appendChild(link)
+  })
+  // Preload critical images
 const imagePreloads = [
   // TOD,
   O: Add items
 ],
 //     '/og-image.jpg',
-//     '/favicon.ico'];
+//     '/favicon.ico']
   imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -206,8 +204,7 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 }
-export default LazyComponent;
-  </P>
+export default LazyComponent</P>
   </P>
   </any>
   </HTMLDivElement>

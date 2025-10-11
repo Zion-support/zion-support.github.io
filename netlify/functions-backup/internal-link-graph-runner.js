@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('internal-link-graph-runner function triggered')}
-    // Internal link graph simulation;
+    // Internal link graph simulation
     const result = {
       statusCode: 200,
       headers: {,

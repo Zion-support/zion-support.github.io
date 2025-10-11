@@ -43,43 +43,27 @@ const ContactPage: React.FC = () => {
         message: ''
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }, []);
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         </Helmet><title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, and inquiries." />
-=======
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation or quote for your project. Call (302) 464-0950 or email kleber@ziontechgroup.com" />
-        <meta name="keywords" content="contact us, AI consultation, IT services, free quote, Zion Tech Group" />
->>>>>>> main
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         </main><div className="
           </div><div className="max-w-4xl mx-auto">
             </div><div className="text-center mb-12">
               </div><h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Contact Us
-=======
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Get in <span className="text-cyan-400">Touch</span>
->>>>>>> main
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Ready to transform your business with AI and IT solutions? 
@@ -93,7 +77,6 @@ const ContactPage: React.FC = () => {
         <section className="py-16 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
               {/* Contact Information */}
               </div><div className="space-y-8">
                 </div><div>
@@ -126,25 +109,9 @@ const ContactPage: React.FC = () => {
                           Middletown, DE 19709
                         </p>
                       </div>
-=======
-              {/* Contact Info */}
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                      <p className="text-gray-300 mb-1">(302) 464-0950</p>
-                      <p className="text-gray-400 text-sm">Mon-Fri: 9AM-6PM EST</p>
->>>>>>> main
                     </div>
                   </div>
 
-<<<<<<< HEAD
                 <div className="bg-slate-800/50 rounded-lg p-6">
                   </div><h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -165,51 +132,12 @@ const ContactPage: React.FC = () => {
                       <span>Custom solutions for your business</span>
                     </li>
                   </ul>
-=======
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                      <p className="text-gray-300 mb-1">kleber@ziontechgroup.com</p>
-                      <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                      <p className="text-gray-300 mb-1">364 E Main St STE 1008</p>
-                      <p className="text-gray-300">Middletown, DE 19709</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
-                      <p className="text-gray-300 mb-1">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                      <p className="text-gray-400 text-sm">24/7 Emergency Support Available</p>
-                    </div>
-                  </div>
->>>>>>> main
                 </div>
               </div>
 
               {/* Contact Form */}
-<<<<<<< HEAD
               <div className="bg-slate-800/50 rounded-lg p-8">
                 </div><h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-=======
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
->>>>>>> main
                 
                 {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center">
@@ -291,6 +219,39 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
+        <title>Contact Us - Zion Tech Group
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
+        <meta name="keywords" content="contact, AI solutions, IT consulting, support, consultation" />
+      <Navigation />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Get in
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Ready to transform your business? Let's discuss your project and explore 
+            how our AI and IT solutions can help you achieve your goals.
+      {/* Contact Form and Info */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a message
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span className="text-green-400">Message sent successfully!
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                  <span className="text-red-400">Failed to send message. Please try again.
+              )}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     </div><label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest

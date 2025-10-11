@@ -1,20 +1,15 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiContentDeliveryNetworkPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-=======
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
->>>>>>> main
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
     },
     {
@@ -35,14 +30,12 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     },
-<<<<<<< HEAD
   ]
   return (
     <React.Fragment>
       </React><Helmet>
         </Helmet><meta name="description" content="Intelligent content delivery network powered by AI technology." />
         <meta name="keywords" content="AI CDN, artificial intelligence, content delivery, AI solutions, intelligent networking" />
-      </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
@@ -54,7 +47,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
@@ -71,31 +63,12 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-=======
-  ];
-  return ()
-  );
-}
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}, {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /></h2>
->>>>>>> main
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
                 Discover how our AI platform can revolutionize your business operations.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div><div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -110,28 +83,12 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
                         </li><CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, benefitIndex) => ()
->>>>>>> main
                     ))}
-                  </ul>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section><div className="
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
->>>>>>> main
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8" /></p>
@@ -141,7 +98,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
               Start Your Free Trial,
   </
           </div>
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 </div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -155,19 +111,9 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
                       </li><CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-=======
-            {features.map((feature, index) => ()
-                  {feature.benefits.map((benefit, benefitIndex) => ()
->>>>>>> main
                   ))}
-                </ul>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         </section><div className="
           </div><div className="text-center mb-16">
@@ -184,24 +130,18 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-=======
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-16" /></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-              Experience the benefits of our proven solutions
-  </
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
->>>>>>> main
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                <h3 className="text-lg font-semibold text-white">{benefit}
             ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         </section><div className="
           </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -210,16 +150,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-=======
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8" /></p>
-            Transform your business with our page solutions today
-  </
-          <div className="flex flex-col sm: flex-row gap-4 justify-center" /></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /></button>
->>>>>>> main
               Start Free Trial
   </
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
@@ -228,7 +158,14 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> main
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
+          <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
+      <Footer />
+  )
+}
+export default AiContentDeliveryNetworkPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></section></section></section></section></section>

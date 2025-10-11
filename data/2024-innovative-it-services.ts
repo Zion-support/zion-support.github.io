@@ -190,7 +190,7 @@ export const,
   g: 4.8,
     review,
   s: 520}
-];
+]
 export interface InnovativeITService2024,
   id: string, nam,
   e: string, taglin,

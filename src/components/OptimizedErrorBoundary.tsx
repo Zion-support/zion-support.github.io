@@ -1,4 +1,4 @@
-'use client';
+'use client'
 interface OptimizedErrorBoundaryProps {
     children: ReactNode
   fallback?: ReactNode,
@@ -37,7 +37,7 @@ $4}
     this.setState({
       error,
       errorInfo
-    });
+    })
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided
@@ -50,12 +50,12 @@ $4}
   }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
+    const { resetKeys, resetOnPropsChange } = this.props
+    const { hasError } = this.state
     if (hasError && prevProps.resetKeys !== resetKeys) {
     if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        )
         if (hasResetKeyChanged) {
           this.resetErrorBoundary()
   }
@@ -93,7 +93,7 @@ $4}
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      })
     }
   }
   private resetErrorBoundary = () => {
@@ -124,9 +124,9 @@ $4});
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 interface ErrorFallbackProps {
@@ -147,63 +147,51 @@ const ErrorFallback = memo<ErrorFallbackProps>(
               stroke='currentColor'
               viewBox='0 0 24 24'
             >
-              <path
+              <ath$2 />
                 strokeLinecap='round'
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
               />
-            </svg>
-          </div>
-        </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-          Something went wrong</span>
+          Something went wrong
         <p className='text-gray-600 mb-4'>
           We&apos;re sorry, but something unexpected happened. Please try again.
-        </p>
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
               Error Details (Development)
-            </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
                 <strong>Error:</strong> {error.message}
         {process.env['NODE_ENV'] === 'development' && error && ()}
-          <details className='mb-4 text-left'></details>
+          <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500,
-  hover:text-gray-700'></summary>
+  hover:text-gray-700'>
 // Error Details (Development)
-          </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
-              <div className='mb-2'></div>
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
+              <div className='mb-2'>
                 <strong>Erro,
   r:</strong> {error.message}
-              </div>
-              <div className='mb-2'></div>
+              <div className='mb-2'>
                 <strong>Stac,
-  k:</strong>
-                <pre className='whitespace-pre-wrap'>{error.stack}</pre>
-              </div>
+  k:
+                <pre className='whitespace-pre-wrap'>{error.stack}
               {errorInfo && (
                 <div>
-                  <strong>Component Stack:</strong>
+                  <strong>Component Stack:
                   <pre className='whitespace-pre-wrap'>
               {errorInfo && ()}
-          <div></div>
+          <div>
                   <strong>Component,
-  Stack:</strong>
-                  <pre className='whitespace-pre-wrap'></pre>
+  Stack:
+                  <pre className='whitespace-pre-wrap'>
                     {errorInfo.componentStack}
-                  </pre>
-                </div>
               )}
-            </div>
-          </details>
         )}
-        <div className='flex flex-col,
-  sm:flex-row gap-2 justify-center'></div>
-          <button></button>
+        < className='flex flex-col,$2 />
+  sm:flex-row gap-2 justify-center'>
+          <button>
             onClick={onRetry}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
           >
@@ -215,21 +203,18 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   focus:ring-blue-500,
   focus:ring-offset-2 transition-colors'
 // >
-//             Try Again</button>
-          <button></button>
+//             Try Again
+          <button>
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
-            Reload Page</span>
-        </div>
+            Reload Page
         {errorId && (
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
+          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}
         )}
-      </div>
-    </div>
   )
-);
-ErrorFallback.displayName = 'ErrorFallback';
+)
+ErrorFallback.displayName = 'ErrorFallback'
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
   focus:outline-none,
@@ -237,19 +222,11 @@ ErrorFallback.displayName = 'ErrorFallback';
   focus:ring-gray-500,
   focus:ring-offset-2 transition-colors'
 // >
-//             Reload Page</button>
-        </div>
+//             Reload Page
         {errorId && ()}
           <p className='mt-4 text-xs text-gray-400'>Error,
-  ID: {errorId}</p>
+  ID: {errorId}
         )}
-      </div>
-    </div>
 //   )
-);
-ErrorFallback.displayName = 'ErrorFallback'</h1>
-  </path>
-  </ErrorFallbackProps>
-  </ErrorFallback>
-  </State>
-  </string>
+)
+ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1>

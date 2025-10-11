@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('cloud_orchestrator function triggered')}
-    // Cloud orchestration simulation;
+    // Cloud orchestration simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -1,20 +1,17 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🔧 Final comprehensive syntax fix...');
-
-// Final syntax fixes;
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+console.log('🔧 Final comprehensive syntax fix...')
+// Final syntax fixes
 const fixes = [
-  // Fix missing commas in object arrays;
+  // Fix missing commas in object arrays
   { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /price: '[^']+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
-  // Fix missing commas in arrays;
+  // Fix missing commas in arrays
   { pattern: /}\s*}\s*];/g, replacement: '}]' },
   // Fix stray semicolons;
   { pattern: /,\s*$/gm, replacement: '' },
@@ -27,7 +24,7 @@ function fixFile(filePath) {
     let modified = false;
 
     fixes.forEach(fix => {)
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
         content = newContent;
         modified = true
@@ -35,28 +32,26 @@ function fixFile(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content)
+      console.log(`✅ Fixed: ${filePath}`)
+      return true
     }
-    return false;
+    return false
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Find all TypeScript/JavaScript files;
+// Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     let files = [];
   
   try {
-    const items = fs.readdirSync(dir);
-    
+    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {
           files = files.concat(findFiles(fullPath, extensions))
@@ -69,7 +64,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     // Skip directories we can't read
   }
   
-  return files;
+  return files
 }
 
 // Main fix process;
@@ -83,6 +78,5 @@ files.forEach(file => {
   if (fixFile(file)) {
     fixedCount++
   }
-});
-
-console.log(`\n🎉 Final syntax fix complete! Modified ${fixedCount} files.`);
+})
+console.log(`\n🎉 Final syntax fix complete! Modified ${fixedCount} files.`)

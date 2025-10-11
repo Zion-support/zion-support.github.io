@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import { defineConfig } from 'cypress;
 import { defineConfig } from 'cypress;
 import { define_config } from 'cypress;
-;
 export default define_config ({,
   e2e: {,
 export default defineConfig({,
   e2e: {,
   baseUrl: 'http://localhost:3000',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     viewportWidth: 1280,
@@ -49,7 +43,6 @@ import { defineConfig } from 'cypress;
 ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'
@@ -78,5 +71,3 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 }),
-=======
->>>>>>> main

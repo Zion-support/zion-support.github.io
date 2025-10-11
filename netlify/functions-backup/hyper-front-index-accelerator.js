@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('hyper-front-index-accelerator function triggered')}
-    // Hyper front index acceleration simulation;
+    // Hyper front index acceleration simulation
     const result = {
       statusCode: 200,
       headers: {,

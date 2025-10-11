@@ -32,9 +32,8 @@ self.addEventListener('fetch', (event) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
       })
-  );
-});
-
+  )
+})
 // Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -46,7 +45,7 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName);
           }
         })
-      );
+      )
     })
 
   );

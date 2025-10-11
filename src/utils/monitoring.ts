@@ -1,20 +1,20 @@
 
 'use client'
 /**
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
+ * Comprehensive Monitoring Utility
+ * Real-time application monitoring, performance tracking, and error reporting
+ * Comprehensive Monitoring Utility
+ * Real-time application monitoring, performance tracking, and error reporting
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
+  inp?: number
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -122,7 +122,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
@@ -132,9 +132,9 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (_error) {
     // console.error('Error monitoring resources:', _error)
   }

@@ -75,7 +75,6 @@ const ConsultationPage: React.FC = () => {
     },
     {
       step: '4',
-<<<<<<< HEAD
       title: 'Ongoing Support',
     }
   ]
@@ -111,7 +110,6 @@ const ConsultationPage: React.FC = () => {
                       </ul><li key={featureIndex} className="flex items-center text-gray-300">
                         </li><CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
                     ))}
                   </ul>
 
@@ -196,16 +194,6 @@ const ConsultationPage: React.FC = () => {
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     </div><div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
-=======
-      title: 'Ongoing Support',;
-    };
-  ];
-  return() {consultationTypes.map((type, index) => ()
-                          {type.features.map((feature, featureIndex) => ()
-                          ))}
-                        </ul>
-                      </div>
->>>>>>> main
                     </div>
                   </div>
                 ))}
@@ -219,49 +207,14 @@ const ConsultationPage: React.FC = () => {
                 )}, {submitStatus === 'error' && ()
                 )}
 
-<<<<<<< HEAD
                 <div className="text-center mb-6">
                   </div><h3 className="text-2xl font-bold text-white mb-2">{type.name}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <div className="flex items-center justify-center gap-4 mb-4">
                     </div><span className="text-3xl font-bold text-white">{type.price}</span>
                     <span className="text-gray-400">{type.duration}</span>
-=======
-                <form onSubmit={handleSubmit} className="space-y-6" /></form>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Name *
-                      </label>
-                      <input type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Your full name"
-                      / /></input>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Email *
-                      </label>
-                      <input type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="your@email.com"
-                      / /></input>
-                    </div>
->>>>>>> main
                   </div>
 
-<<<<<<< HEAD
                 <ul className="space-y-3">
                   {type.features.map((feature, index) => (
                     </ul><li key={index} className="flex items-center text-gray-300">
@@ -294,152 +247,10 @@ const ConsultationPage: React.FC = () => {
                       </li><CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
-=======
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Company
-                      </label>
-                      <input type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Your company name"
-                      / /></input>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Phone
-                      </label>
-                      <input type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="+1 (555) 123-4567"
-                      / /></input>
-                    </div>
-                  </div>
-
-                  <div></div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                      Service Interest
-                    </label>
-                    <select id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                      <option value="">Select a service</option>
-                      <option value="ai-strategy">AI Strategy Consultation</option>
-                      <option value="it-infrastructure">IT Infrastructure Review</option>
-                      <option value="digital-transformation">Digital Transformation</option>
-                      <option value="ai-services">AI Services</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SaaS</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Project Timeline
-                      </label>
-                      <select id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                        <option value="">Select timeline</option>
-                        <option value="immediate">Immediate (1-2 weeks)</option>
-                        <option value="short">Short term (1-3 months)</option>
-                        <option value="medium">Medium term (3-6 months)</option>
-                        <option value="long">Long term (6+ months)</option>
-                      </select>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Budget Range
-                      </label>
-                      <select id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                        <option value="">Select budget range</option>
-                        <option value="under-10k">Under $10,000</option>
-                        <option value="10k-50k">$10,000 - $50,000</option>
-                        <option value="50k-100k">$50,000 - $100,000</option>
-                        <option value="100k-500k">$100,000 - $500,000</option>
-                        <option value="over-500k">Over $500,000</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div></div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                      Project Details *
-                    </label>
-                    <textarea id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Tell us about your project, challenges, and goals..."
-                    / /></textarea>
-                  </div>
-
-                  <button type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2" /></button>
-                    {isSubmitting ? ()
-                    ) : ()
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div className="mt-16 text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-6">Prefer to Call?</h2>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /></div>
-                  <a href="tel:+13024640950"
-                    className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Phone className="w-5 h-5" / /></Phone>
-                    <span>Call: (302) 464-0950</span>
-                  </a>
-                  <a href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Mail className="w-5 h-5" / /></Mail>
-                    <span>Email Us</span>
-                  </a>
-                </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-      </section>
-
-      {/* Selected Consultation Details */},
-    {selectedConsultation && ()
-                  {selectedConsultation.features.map((feature, index) => ()
->>>>>>> main
                   ))}
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 </div><h3 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h3>
                 <div className="space-y-4">
@@ -453,21 +264,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     </div><Users className="w-5 h-5 text-blue-400" />
-=======
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8" /></div>
-                <h3 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h3>
-                <div className="space-y-4" /></div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Calendar className="w-5 h-5 text-blue-400" / /></Calendar>
-                    <span>Duration: {selectedConsultation.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Clock className="w-5 h-5 text-blue-400" / /></Clock>
-                    <span>Investment: {selectedConsultation.price}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Users className="w-5 h-5 text-blue-400" / /></Users>
->>>>>>> main
                     <span>Team of 2-3 experts</span>
                   </div>
                 </div>
@@ -513,7 +309,6 @@ const ConsultationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
       )}
 
       {/* Process Section */}
@@ -522,20 +317,10 @@ const ConsultationPage: React.FC = () => {
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-      )},
-    {/* Process Section */}
-      <section className="py-16 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-16" /></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
->>>>>>> main
               A structured approach to delivering exceptional consultation services
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
               </div><div key={index} className="text-center">
@@ -546,17 +331,12 @@ const ConsultationPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-            {process.map((step, index) => ()
->>>>>>> main
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Information */}
-<<<<<<< HEAD
       <section className="py-16 px-4 bg-white/5">
         </section><div className="
           </div><div className="text-center mb-12">
@@ -568,49 +348,24 @@ const ConsultationPage: React.FC = () => {
             </div><div className="text-center">
               </div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 </div><Phone className="w-6 h-6 text-white" />
-=======
-      <section className="py-16 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-12" /></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300">Contact our consultation team today</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <Phone className="w-6 h-6 text-white" / /></Phone>
->>>>>>> main
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-gray-300">+1 (555) 123-4567</p>
               <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
             </div>
 
-<<<<<<< HEAD
             <div className="text-center">
               </div><div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 </div><Mail className="w-6 h-6 text-white" />
-=======
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <Mail className="w-6 h-6 text-white" / /></Mail>
->>>>>>> main
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-gray-300">consultation@ziontechgroup.com</p>
               <p className="text-sm text-gray-400">24/7 Response</p>
             </div>
 
-<<<<<<< HEAD
             <div className="text-center">
               </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 </div><MapPin className="w-6 h-6 text-white" />
-=======
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <MapPin className="w-6 h-6 text-white" / /></MapPin>
->>>>>>> main
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300">San Francisco, CA</p>
@@ -621,33 +376,19 @@ const ConsultationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         </section><div className="
           </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" /></h2>
->>>>>>> main
               Transform Your Business Today
             </h2>
             <p className="text-xl text-gray-300 mb-8" /></p>
               Let our expert consultants help you navigate the complex world of AI and technology.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Schedule Free Consultation
                 </button><ArrowRight className="inline-block ml-2 w-5 h-5" />
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /></button>
-                Schedule Free Consultation
-                <ArrowRight className="inline-block ml-2 w-5 h-5" / /></ArrowRight>
->>>>>>> main
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
                 View Case Studies
@@ -746,3 +487,209 @@ export default ConsultationPage;
 };
 
 export default ConsultationPage;
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">Schedule Consultation
+              ))}
+            {/* Contact Information */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?
+                <p className="text-gray-300 mb-8">
+                  Contact our experts to discuss your specific needs and schedule a consultation.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-xl font-semibold text-white mb-2">Call Us
+                  <p className="text-gray-300 mb-2">(302) 464-0950
+                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Mail className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-xl font-semibold text-white mb-2">Email Us
+                  <p className="text-gray-300 mb-2">kleber@ziontechgroup.com
+                  <p className="text-sm text-gray-400">We'll respond within 24 hours
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Calendar className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-xl font-semibold text-white mb-2">Schedule Online
+                  <p className="text-gray-300 mb-2">Book a consultation
+                  <p className="text-sm text-gray-400">Available 24/7
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="flex items-center justify-center gap-4 text-white">
+                <Calendar className="w-8 h-8 text-purple-400" />
+                <div className="text-left">
+                  <div className="text-2xl font-bold">Flexible Scheduling
+                  <div className="text-gray-400">Book at your convenience
+              <div className="flex items-center justify-center gap-4 text-white">
+                <Users className="w-8 h-8 text-purple-400" />
+                <div className="text-left">
+                  <div className="text-2xl font-bold">Expert Team
+                  <div className="text-gray-400">15+ years experience
+              <div className="flex items-center justify-center gap-4 text-white">
+                <CheckCircle className="w-8 h-8 text-purple-400" />
+                <div className="text-left">
+                  <div className="text-2xl font-bold">Proven Results
+                  <div className="text-gray-400">98% client satisfaction
+              <div className="text-center mt-8">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+                  Schedule Your Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
+{/* Consultation Types */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Choose Your Consultation Type
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Select the consultation that best fits your needs. All sessions include detailed reports and actionable recommendations.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {consultationTypes.map((type) => (
+                <$2 />
+                  key={type.id}
+                  className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                    type.popular
+                      ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
+                      : 'border-white/20'
+                  }`}
+                >
+                  {type.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-3">{type.name}
+                    <p className="text-gray-300 text-sm mb-4">{type.description}
+                    <div className="flex items-center justify-center gap-2 text-purple-400 text-sm mb-4">
+                      <Clock className="w-4 h-4" />
+                      <span>{type.duration}
+                    <div className="text-3xl font-bold text-white">{type.price}
+                  <ul className="space-y-3 mb-8">
+                    {type.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                    ))}
+                  <$2 />
+                    onClick={() =>handleBooking(type.id)}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      type.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                    }`}
+                  >
+                    Book Consultation
+              ))}
+{/* Expert Team */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Meet Our Experts
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our team of experienced professionals brings deep expertise across all areas of technology.
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {experts.map((expert, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <Users className="w-12 h-12 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-2">{expert.name}
+                  <p className="text-purple-400 mb-2">{expert.role}
+                  <p className="text-gray-400 text-sm mb-4">{expert.experience} experience
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {expert.expertise.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">
+                        {skill}
+                    ))}
+              ))}
+        {/* Contact Information */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?
+                <p className="text-xl text-gray-300">
+                  Contact us today to schedule your consultation or learn more about our services.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Phone className="w-8 h-8 text-white" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us
+                  <p className="text-gray-300">+1 (555) 123-4567
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Mail className="w-8 h-8 text-white" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us
+                  <p className="text-gray-300">consultation@ziontech.com
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <MapPin className="w-8 h-8 text-white" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us
+                  <p className="text-gray-300">123 Tech Street, Silicon Valley
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <$2 />
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5" />
+                <$2 />
+                  to="/services"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  View All Services
+      {/* Services Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Consultation Services
+            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {consultationServices.map((service, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{service}
+                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.
+            ))}
+      {/* Process Section */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Process
+            <p className="text-xl text-gray-300">How we deliver exceptional consultation services
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1
+              <h3 className="text-xl font-semibold text-white mb-3">Discovery
+              <p className="text-gray-300">We analyze your current technology landscape and business objectives.
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2
+              <h3 className="text-xl font-semibold text-white mb-3">Strategy
+              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3
+              <h3 className="text-xl font-semibold text-white mb-3">Implementation
+              <p className="text-gray-300">We guide you through execution and provide ongoing support.
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          <p className="text-xl text-gray-300 mb-8">
+            Schedule a consultation with our experts and discover how technology can drive your success.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule Consultation
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Contact Us
+  )
+}
+export default ConsultationPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></button></button></button></button></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></li></li></section></section></section></section></section></section></section></section>

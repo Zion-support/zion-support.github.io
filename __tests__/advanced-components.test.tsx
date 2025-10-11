@@ -5,9 +5,9 @@ import { MemoryRouter } from 'react-router-dom';
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
+    throw new Error('Test error')
   }
-  return <div>Test content</div>;
+  return <div>Test content</div>
 };
 
 describe('Advanced Components', () => {

@@ -37,8 +37,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
     
     // Remove merge conflict markers
-    const conflictRegex = /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g;
-    if (conflictRegex.test(content)) {
+    const conflictRegex = /[\s\S]*?[\s\S]*?    if (conflictRegex.test(content)) {
       content = content.replace(conflictRegex, '');
       modified = true;
     }

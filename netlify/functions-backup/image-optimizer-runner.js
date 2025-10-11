@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('image-optimizer-runner function triggered')}
-    // Image optimization simulation;
+    // Image optimization simulation
     const result = {
       statusCode: 200,
       headers: {,

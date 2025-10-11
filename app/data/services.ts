@@ -1408,4 +1408,3 @@ export const contactInfo = {
   hours: 'Mon-Fri: 9AM-6PM EST'
   }
 };
-;

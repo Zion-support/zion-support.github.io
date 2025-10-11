@@ -126,13 +126,13 @@ export class ErrorHandler {}
   }
 export enum ErrorType {/* TODO: Fix JSX expression */}
 }
-// Error severity levels;
+// Error severity levels
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
-// Error interface;
+// Error interface
 export interface AppError {/* TODO: Fix JSX expression */}
 }
-// Error handler configuration;
+// Error handler configuration
 export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
 }
 // Default configuration;
@@ -159,9 +159,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   static getInstance(config?: Partial</ErrorHandlerConfig><ErrorHandlerConfig>): ErrorHandler {}
     if (!ErrorHandler.instance) {}
-      ErrorHandler.instance = new ErrorHandler(config);
+      ErrorHandler.instance = new ErrorHandler(config)
     }
-    return ErrorHandler.instance;
+    return ErrorHandler.instance
   }
   // Handle error;
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record</ErrorHandlerConfig><string, unknown>): AppError {}
@@ -194,18 +194,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     this.errors.push(appError);
     if (this.config.enableLogging) {}
-      this.logError(appError);
+      this.logError(appError)
     }
     if (this.config.enableReporting) {}
-      this.reportError(appError);
+      this.reportError(appError)
     }
     if (this.config.enableUserNotification) {}
-      this.notifyUser(appError);
+      this.notifyUser(appError)
     }
     if (this.config.enableRetry && this.shouldRetry(appError)) {}
-      this.scheduleRetry(appError);
+      this.scheduleRetry(appError)
     }
-    return appError;
+    return appError
   }
   // Handle network error;
   handleNetworkError(error: Error, url: string, status?: number): AppError {
@@ -236,12 +236,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     this.errors.push(appError);
     if (this.config.enableLogging) {}
-      this.logError(appError);
+      this.logError(appError)
     }
     if (this.config.enableReporting) {}
-      this.reportError(appError);
+      this.reportError(appError)
     }
-    return appError;
+    return appError
   }
   // Handle validation error;
   handleValidationError(field: string, message: string, value?: unknown): AppError {
@@ -268,7 +268,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (this.config.enableLogging) {}
       this.logError(appError);
     }
-    return appError;
+    this.errors.push(appError)
+    if (this.config.enableLogging) {}
+      this.logError(appError)
+    }
+    return appError
   }
   // Generate unique error ID;
   private generateErrorId(): string {}
@@ -284,32 +288,32 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private generateErrorId(): string {};
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-  // Determine error type;
+  // Determine error type
   private determineErrorType(error: Error): ErrorType {}
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
+    const message = error.message.toLowerCase()
+    const stack = error.stack?.toLowerCase() || ''
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {}
-      return ErrorType.NETWORK;
+      return ErrorType.NETWORK
     }
     if (message.includes('validation') || message.includes('invalid')) {}
-      return ErrorType.VALIDATION;
+      return ErrorType.VALIDATION
     }
     if (message.includes('auth') || message.includes('login') || message.includes('token')) {}
-      return ErrorType.AUTHENTICATION;
+      return ErrorType.AUTHENTICATION
     }
     if (message.includes('permission') || message.includes('unauthorized')) {}
-      return ErrorType.AUTHORIZATION;
+      return ErrorType.AUTHORIZATION
     }
     if (message.includes('not found') || message.includes('404')) {}
-      return ErrorType.NOT_FOUND;
+      return ErrorType.NOT_FOUND
     }
     if (message.includes('server') || message.includes('500')) {}
-      return ErrorType.SERVER;
+      return ErrorType.SERVER
     }
     if (stack.includes('react') || stack.includes('component')) {}
-      return ErrorType.CLIENT;
+      return ErrorType.CLIENT
     }
-    return ErrorType.UNKNOWN;
+    return ErrorType.UNKNOWN
   }
   // Determine error severity;
   private determineErrorSeverity(error: Error): ErrorSeverity {
@@ -320,25 +324,25 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private determineErrorSeverity(error: Error): ErrorSeverity {};
     const message = error.message.toLowerCase();
     if (message.includes('critical') || message.includes('fatal')) {}
-      return ErrorSeverity.CRITICAL;
+      return ErrorSeverity.CRITICAL
     }
     if (message.includes('error') || message.includes('exception')) {}
-      return ErrorSeverity.HIGH;
+      return ErrorSeverity.HIGH
     }
     if (message.includes('warning') || message.includes('deprecated')) {}
-      return ErrorSeverity.MEDIUM;
+      return ErrorSeverity.MEDIUM
     }
-    return ErrorSeverity.LOW;
+    return ErrorSeverity.LOW
   }
   // Determine network error severity;
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
     // Determine network error severity
   }
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {}
-    if (!status) return ErrorSeverity.MEDIUM;
-    if (status >= 500) return ErrorSeverity.HIGH;
-    if (status >= 400) return ErrorSeverity.MEDIUM;
-    return ErrorSeverity.LOW;
+    if (!status) return ErrorSeverity.MEDIUM
+    if (status >= 500) return ErrorSeverity.HIGH
+    if (status >= 400) return ErrorSeverity.MEDIUM
+    return ErrorSeverity.LOW
   }
   // Log error;
   private logError(error: AppError) {
@@ -356,7 +360,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   private logError(error: AppError) {}
     if (this.config.enableConsoleLogging) {}
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {}
         case ErrorSeverity.CRITICAL: ;
         case ErrorSeverity.HIGH: break,
@@ -377,7 +381,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */}
     }
-    return appError;
+    return appError
   }
   // Handle network error;
   handleNetworkError()
@@ -394,7 +398,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (this.config.enableReporting) {/* TODO: Fix JSX expression */}
     }
-    return appError;
+    return appError
   }
   // Handle validation error;
   handleValidationError()
@@ -415,14 +419,14 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
     }
-    return appError;
+    return appError
   }
-  // Generate unique error ID;
-  private generateErrorId(): string {/* TODO: Fix JSX expression */}`;
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  // Generate unique error ID
+  private generateErrorId(): string {/* TODO: Fix JSX expression */}`
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
-  // Determine error type;
-  private determineErrorType(erro);
+  // Determine error type
+  private determineErrorType(erro)
   r: Error): ErrorType {/* TODO: Fix JSX expression */}
     }
     if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */}
@@ -437,33 +441,33 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */}
     }
-    return ErrorType.UNKNOWN;
+    return ErrorType.UNKNOWN
   }
-  // Determine error severity;
-  private determineErrorSeverity(erro);
+  // Determine error severity
+  private determineErrorSeverity(erro)
   r: Error): ErrorSeverity {/* TODO: Fix JSX expression */}
     }
     if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */}
     }
     if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */}
     }
-    return ErrorSeverity.LOW;
+    return ErrorSeverity.LOW
   }
-  // Determine network error severity;
+  // Determine network error severity
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */}
   }
-  // Log error;
-  private logError(erro);
-  r: AppError) {/* TODO: Fix JSX expression */}`;
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+  // Log error
+  private logError(erro)
+  r: AppError) {/* TODO: Fix JSX expression */}`
+      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {/* TODO: Fix JSX expression */}
               }
           }
-          break;
+          break
       }
     }
     if (this.config.enableNetworkLogging) {}
-      this.logToNetwork(error);
+      this.logToNetwork(error)
     }
   }
   // Log to network;
@@ -473,7 +477,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     try {
       await fetch()
   private async logToNetwork(error: AppError) {}
-    if (!this.config.reportEndpoint) return;
+    if (!this.config.reportEndpoint) return
     try {}
       await fetch(this.config.reportEndpoint, {)}
         method: 'POST',
@@ -500,9 +504,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       await fetch(this.config.reportEndpoint, {} catch (err) {}
       }
   }
-  // Report error;
+  // Report error
   private async reportError(error: AppError) {}
-    if (!this.config.reportEndpoint) return;
+    if (!this.config.reportEndpoint) return
     try {}
       await fetch(this.config.reportEndpoint, {)}
         method: 'POST',
@@ -554,15 +558,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       font-family: Arial, sans-serif;
     `</string>
     notification.innerHTML = `</string>
-<<<<<<< HEAD
       <div style="display: flex;justify-content:space-between;align-items:center,"></div>
         <div />
           <strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-=======
-      <div style="display: flex;justify-content:space-between;align-items:center," / /></div>
-        <div / /></div>
-          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
->>>>>>> main
     `
     notification.innerHTML = `
       <div style="display: flex;justify-content:space-between;align-items:center,">,</div>
@@ -571,15 +569,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p>
         </div>
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-<<<<<<< HEAD
       <div style="display:flex;justify-content:space-between;align-items:center,"></div>
         <div />
           <strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-=======
-      <div style="display:flex;justify-content:space-between;align-items:center," / /></div>
-        <div / /></div>
-          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
->>>>>>> main
       </div>
     `
     document.body.appendChild(notification)
@@ -589,10 +581,54 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         if (notification.parentElement) {,
     // Auto-remove after 5 seconds for non-critical errors
   }
+    } catch (err) {}
+      }
+  }
+  // Notify user
+  private notifyUser(error: AppError) {
+  // Notify user;}
+  private notifyUser(error: AppError) {}
+    if (typeof window === 'undefined') return
+    const notification = document.createElement('div')
+    notification.className = 'error-notification'
+    notification.style.cssText = `
+      position: fixed;,
+    top: 20 px
+      right: 20 px;,
+    background: ${this.getNotificationColor(error.severity)}
+      color: white;,
+    padding: 15 px
+      border-radius: 5 px
+      box-shadow: 0 2 px 10 px rgba(0,0,0,0.2)
+      z-index: 10000,
+      max-width: 400 px
+      font-family: Arial, sans-serif
+    `
+    notification.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×
+    `
+    notification.innerHTML = `
+      <div style="display: flex;justify-content:space-between;align-items:center;">,
+        <div>,
+          <strong>${error.severity} Error
+          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}
+        <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×
+    `
+    document.body.appendChild(notification)
+    // Auto-remove after 5 seconds for non-critical errors
+    if (error.severity !== ErrorSeverity.CRITICAL) {
+      setTimeout(() => {,
+        if (notification.parentElement) {,
+    // Auto-remove after 5 seconds for non-critical errors;}
     if (error.severity !== ErrorSeverity.CRITICAL) {}
       setTimeout(() => {}
         if (notification.parentElement) {}
-          notification.remove();
+          notification.remove()
     if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */}
     }
   }
@@ -615,8 +651,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     } catch (err) {/* TODO: Fix JSX expression */}
       }
   }
-  // Notify user;
-  private notifyUser(erro);
+  // Notify user
+  private notifyUser(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
   d: ${this.getNotificationColor(error.severity)}
       colo,
@@ -665,7 +701,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     // Auto-remove after 5 seconds for non-critical errors,
     if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
         }
-      }, 5000);
+      }, 5000)
     }
   }
   // Get notification color based on severity;
@@ -707,13 +743,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ()
     );
   }
-  // Schedule retry;
+  // Schedule retry
   private scheduleRetry(error: AppError) {}
-    const retryItem = { error, retryCount: error.retryCount! + 1 };
-    this.retryQueue.push(retryItem);
+    const retryItem = { error, retryCount: error.retryCount! + 1 }
+    this.retryQueue.push(retryItem)
     setTimeout(() => {}
-      this.retryError(retryItem);
-    }, this.config.retryDelay * retryItem.retryCount);
+      this.retryError(retryItem)
+    }, this.config.retryDelay * retryItem.retryCount)
   }
   // Retry error;
   private async retryError(retryItem: {// error: AppError, retryCount: number}) {
@@ -723,17 +759,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   y: ErrorSeverity): string {/* TODO: Fix JSX expression */}
     }
   }
-  // Check if error should be retried;
-  private shouldRetry(erro);
+  // Check if error should be retried
+  private shouldRetry(erro)
   r: AppError): boolean {/* TODO: Fix JSX expression */}
   }
-  // Schedule retry;
-  private scheduleRetry(erro);
+  // Schedule retry
+  private scheduleRetry(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
   t: error.retryCount! + 1 }
     this.retryQueue.push(retryItem);
     setTimeout(() => {/* TODO: Fix JSX expression */}
-    }, this.config.retryDelay * retryItem.retryCount);
+    }, this.config.retryDelay * retryItem.retryCount)
   }
 // Retry error;
   private async retryError(retryItem: { error: AppError, retryCount: number }) {
@@ -748,18 +784,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   private async retryError(retryItem: {// error: AppError, retryCount: number}) {}
     try {}
-      // Implement retry logic based on error type;
+      // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {}
-        // Retry network request;
+        // Retry network request
         if (process.env['NODE_ENV'] === 'development') {}
           if (import.meta.env.DEV) {}
             }
         }
-        // Add your retry logic here;
+        // Add your retry logic here
       }
     } catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
-        this.scheduleRetry(retryItem.error);
+        this.scheduleRetry(retryItem.error)
       } else {}
         }
     }
@@ -797,24 +833,24 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   };
   // Get errors by type;
   getErrorsByType(type: ErrorType): AppError[] {}
-    return this.errors.filter(error => error.type === type);
+    return this.errors.filter(error => error.type === type)
   }
-  // Get errors by severity;
+  // Get errors by severity
   getErrorsBySeverity(severity: ErrorSeverity): AppError[] {}
-    return this.errors.filter(error => error.severity === severity);
+    return this.errors.filter(error => error.severity === severity)
   }
-  // Get unresolved errors;
+  // Get unresolved errors
   getUnresolvedErrors(): AppError[] {}
-    return this.errors.filter(error => !error.resolved);
+    return this.errors.filter(error => !error.resolved)
   }
-  // Mark error as resolved;
+  // Mark error as resolved
   markErrorResolved(errorId: string): boolean {}
-    const error = this.errors.find(e => e.id === errorId);
+    const error = this.errors.find(e => e.id === errorId)
     if (error) {}
-      error.resolved = true;
-      return true;
+      error.resolved = true
+      return true
     }
-    return false;
+    return false
   }
   // Clear resolved errors;
   clearResolvedErrors(): void {
@@ -832,65 +868,68 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     // Clear resolved errors
   }
   clearResolvedErrors(): void {}
-    this.errors = this.errors.filter(error => !error.resolved);
+    this.errors = this.errors.filter(error => !error.resolved)
   }
-  // Clear all errors;
+  // Clear all errors
   clearAllErrors(): void {}
     this.errors = []
     this.retryQueue = []
   }
-  // Get error statistics;
+  // Get error statistics
   getErrorStatistics() {}
-    const total = this.errors.length;
-    const byType = this.errors.reduce();
+    const total = this.errors.length
+    const byType = this.errors.reduce()
       (acc, error) => {}
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
       {} as Record<ErrorType, number>);
-<<<<<<< HEAD
     const bySeverity = this.errors.reduce(
       (acc, error) => {}
       {} as Record</ErrorType><ErrorType>
-=======
-    const bySeverity = this.errors.reduce();
-      (acc, error) => {},;
-    {} as Record<ErrorType>;
->>>>>>> main
             `);
 }
+        acc[error.type] = (acc[error.type] || 0) + 1
+        return acc
+      },
+      {} as Record<ErrorType, number>)
+    const bySeverity = this.errors.reduce(
+      (acc, error) => {;}
+      {} as Record<ErrorType, number>
+            `)
+          }
         }
-        // Add your retry logic here;
+        // Add your retry logic here
       }
     } catch {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         }
     }
   }
-  // Get all errors;
+  // Get all errors
   getErrors(): AppError[] {/* TODO: Fix JSX expression */}
   }
-  // Get errors by type;
-  getErrorsByType(typ);
+  // Get errors by type
+  getErrorsByType(typ)
   e: ErrorType): AppError[] {/* TODO: Fix JSX expression */}
   }
-  // Get errors by severity;
-  getErrorsBySeverity(severit);
+  // Get errors by severity
+  getErrorsBySeverity(severit)
   y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */}
   }
-  // Get unresolved errors;
+  // Get unresolved errors
   getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */}
   }
-  // Mark error as resolved;
-  markErrorResolved(errorI);
+  // Mark error as resolved
+  markErrorResolved(errorI)
   d: string): boolean {/* TODO: Fix JSX expression */}
     }
-    return false;
+    return false
   }
-  // Clear resolved errors;
+  // Clear resolved errors
   clearResolvedErrors(): void {/* TODO: Fix JSX expression */}
   }
-  // Clear all errors;
+  // Clear all errors
   clearAllErrors(): void {/* TODO: Fix JSX expression */}
   }
   // Get error statistics;
@@ -996,14 +1035,10 @@ export class ErrorBoundary extends React.Component<;
 )}
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       return(this.props.fallback || (
   }
           <div style={{ padding: '20px', textAlign: 'center' }}></div>
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button;
-=======
-      return()
->>>>>>> main
   render() {}
     if (this.state.hasError) {}
       return ()
@@ -1011,6 +1046,28 @@ export class ErrorBoundary extends React.Component<;
             </button><h2>Something went wrong</h2>);
             <p>We're sorry, but something unexpected happened.</p>);
             <button;);
+      component: 'ErrorBoundary'
+  })
+    render() {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+    this.errorHandler.handleError(error, errorInfo, {)
+      component: 'ErrorBoundary')
+)}
+  render() {
+    if (this.state.hasError) {
+      return(this.props.fallback || (;}
+          <div style={{ padding: '20px', textAlign: 'center' }}>
+            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<$2 />
+  render() {}
+    if (this.state.hasError) {}
+      return (
+        this.props.fallback || (
+          <div style={{ padding: '20px', textAlign: 'center' }}>
+            <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><$2 />
+              onClick={() =>this.setState({ hasError: false, error: undefined })}
+            <h2>Something went wrong</h2>)
+            <p>We're sorry, but something unexpected happened.</p>)
+            <;)$2 />
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{}
               style={{}
@@ -1020,7 +1077,7 @@ export class ErrorBoundary extends React.Component<;
                 border: 'none',
                 borderRadius: '4px'}
                 cursor: 'pointer'}
-export class ErrorBoundary extends React.Component<;
+export class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}
@@ -1030,7 +1087,7 @@ export class ErrorBoundary extends React.Component<;
   r: false }
     this.errorHandler = ErrorHandler.getInstance();
   }
-  static getDerivedStateFromError(erro);
+  static getDerivedStateFromError(erro)
   r: Error) {/* TODO: Fix JSX expression */}
   r: true, error }
   }
@@ -1056,10 +1113,10 @@ export class ErrorBoundary extends React.Component<;
           </div>
         );
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-// React hook for error handling;
+// React hook for error handling
 export const useErrorHandler = (;) => {
     return ()
   )

@@ -25,7 +25,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   private constructor() {}
   static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
     }
-    return SecurityManager.instance;
+    return SecurityManager.instance
   }
   /**;
    * Sanitize user input to prevent XSS attacks;
@@ -36,17 +36,23 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
   sanitizeInput(input: string): string {}
     return input;
-<<<<<<< HEAD
       .replace(/[<React.Fragment>{
-=======
-      .replace()
->>>>>>> main
     ]/g, '');
       .replace(/javascript:/gi, '');
       .replace(/on\w+=/gi, '')
   }
+  /**
+   * Sanitize user input to prevent XSS attacks
+   */
+  sanitizeInput(input: string): string {,
+    return input;}
+  sanitizeInput(input: string): string {}
+    return input
+      .replace(/[<>{]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '');}
       .trim();}
-  sanitizeInput(inpu);
+  sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
   }
   /**;
@@ -64,13 +70,13 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
       }
-      return parsed.toString();
+      return parsed.toString()
     } catch {}
       return '';}
-  sanitizeUrl(ur);
+  sanitizeUrl(ur)
   l: string): string {/* TODO: Fix JSX expression */}
       }
-      return parsed.toString();
+      return parsed.toString()
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -87,22 +93,22 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     // Fallback for Node.js environment
   }
   generateSecureToken(length: number = 32): string {}
-    const array = new Uint8Array(length);
+    const array = new Uint8Array(length)
     if (typeof window !== 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {}
-      // Fallback for Node.js environment;
-      const crypto = import("crypto");
+      // Fallback for Node.js environment
+      const crypto = import("crypto")
       crypto.randomFillSync(array);}
-  generateSecureToken(lengt);
+  generateSecureToken(lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
   }
-  /**;
-   * Implement rate limiting;
-   */;
+  /**
+   * Implement rate limiting
+   */
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {}
     const now = Date.now();
     const windowStart = now - windowMs;
@@ -131,11 +137,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}
     }
-    return global._rateLimitStorage;
+    return global._rateLimitStorage
   }
 }
-<<<<<<< HEAD
-export default SecurityManager.getInstance();</string>
-=======
-export default SecurityManager.getInstance();
->>>>>>> main
+export default SecurityManager.getInstance()</string>
+export default SecurityManager.getInstance()

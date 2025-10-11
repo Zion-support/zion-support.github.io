@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('trigger-all-and-commit function triggered')}
-    // Trigger all and commit simulation;
+    // Trigger all and commit simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('topic-cluster-builder-runner function triggered')}
-    // Topic cluster building simulation;
+    // Topic cluster building simulation
     const result = {
       statusCode: 200,
       headers: {,

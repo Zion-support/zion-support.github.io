@@ -1,7 +1,7 @@
 
 /**
- * Application Configuration;
- * Centralized configuration management for the Zion Tech Group application;
+ * Application Configuration
+ * Centralized configuration management for the Zion Tech Group application
  */
 
 export interface AppConfig {
@@ -71,7 +71,7 @@ export interface AppConfig {
     componentLazyLoadThreshol,
   d: 0.25,
     cacheMaxAg,
-  e: 3600000, // 1 hour in milliseconds;
+  e: 3600000, // 1 hour in milliseconds
 // enableCS,
   P: true,
 // enableHST,
@@ -95,29 +95,29 @@ export function getConfig,
   O: Add content,}
 }
       value = (value as Record;)
-          <string, unknown>)[key];
+          <string, unknown>)[key]
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      throw new Error(`Configuration key "${keyPath}" not found`);
-  return value as T;
- * Check if a feature is enabled;
+      throw new Error(`Configuration key "${keyPath}" not found`)
+  return value as T
+ * Check if a feature is enabled
 export function isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return config.features[feature];
- * Get current environment;
+  return config.features[feature]
+ * Get current environment
 export function getEnvironment(): string {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return config.app.environment;
- * Check if running in production;
+  return config.app.environment
+ * Check if running in production
 export function isProduction(): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return config.app.environment === 'production';
- * Check if running in development;
+  return config.app.environment === 'production'
+ * Check if running in development
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

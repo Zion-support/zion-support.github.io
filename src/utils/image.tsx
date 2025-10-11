@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useCallback } from 'react';
+'use client'
+import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
     interface ImageProps {
   src: string;
@@ -57,14 +57,13 @@ $4})
   }
   if (hasError) {
     return (
-      <div
+      <$2 />
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
-    );
+        <span className="text-gray-500 text-sm">Failed to load image
+    )
   }
   return (
     <img
@@ -129,20 +128,20 @@ quality = 75,
     // TODO: Add content
   }
 }
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    setIsLoaded(true)
+    if (onLoad) onLoad()
+  }, [onLoad])
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    setHasError(true)
+    if (onError) onError()
+  }, [onError])
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -163,20 +162,19 @@ quality = 75,
   O: Add content,}
 }
     return (
-          <div>Coming Soon</div>
+          <div>Coming Soon
   )
-          <div></div>
+          <div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >
-          <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
+          <span className="text-gray-500 text-sm">Failed to load image
     )
   }
   return (<div>Coming Soon</div>)
   )
-          <img></img>
+          <img>
       src={src}
       alt={alt}
       width={width}
@@ -191,6 +189,4 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 //     />
   )
 }
-export default Image;"`
-  </ImageProps>
-  </ImageProps>
+export default Image;"`</div></div></span></span>

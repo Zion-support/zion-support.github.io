@@ -26,17 +26,10 @@ const DocsPage: React.FC = () => {
       lastUpdated: '2024-01-15',
       sections: [
         'Account Setup',
-<<<<<<< HEAD
         'First API Call',
         'Authentication',
         'Basic Configuration'
       ],
-=======
-        'First API Call',,
-        'Authentication',;
-        'Basic Configuration';
-      ];
->>>>>>> main
     },
     {
       id: 2,
@@ -117,19 +110,11 @@ const DocsPage: React.FC = () => {
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
-<<<<<<< HEAD
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
   ];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
-=======
-    { title: 'Community', url: '/community', icon: Users },;
-    { title: 'Support', url: '/support', icon: Shield };
-  ];
-  const filteredDocs = selectedCategory === 'all' ;
-    ? documentation ;
->>>>>>> main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery 
@@ -139,7 +124,6 @@ const DocsPage: React.FC = () => {
       );
     : filteredDocs;
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -175,9 +159,6 @@ const DocsPage: React.FC = () => {
                 type="text"
                 placeholder="Search documentation..."
                 value={searchQuery}
-=======
-  return ()
->>>>>>> main
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
@@ -185,7 +166,6 @@ const DocsPage: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {quickLinks.map((link, index) => (
               </div><a
@@ -196,27 +176,16 @@ const DocsPage: React.FC = () => {
                 </a><link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
               </a>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" /></div>
-            {quickLinks.map((link, index) => ()
->>>>>>> main
             ))}
           </div>
 
           {/* Category Filter */}
-<<<<<<< HEAD
           <div className="mb-8">
             </div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 </div><button
                   key={category.id}
-=======
-          <div className="mb-8" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
-            <div className="flex flex-wrap gap-4" /></div>
-              {categories.map((category) => ()
->>>>>>> main
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
@@ -224,11 +193,7 @@ const DocsPage: React.FC = () => {
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
-<<<<<<< HEAD
                   </button><category.icon className="w-5 h-5" />
-=======
-                  <category.icon className="w-5 h-5" /></category>
->>>>>>> main
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -236,7 +201,6 @@ const DocsPage: React.FC = () => {
           </div>
 
           {/* Documentation List */}
-<<<<<<< HEAD
           <div className="space-y-6">
             {searchResults.map((doc) => (
               </div><div key={doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
@@ -284,16 +248,10 @@ const DocsPage: React.FC = () => {
                         </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {section}
                       </div>
-=======
-          <div className="space-y-6" /></div>
-            {searchResults.map((doc) => ()
-                    {doc.sections.map((section, sectionIndex) => ()
->>>>>>> main
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                   </div><div className="flex space-x-4">
                     </div><a
@@ -308,18 +266,6 @@ const DocsPage: React.FC = () => {
                       className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
                       </a><Download className="w-4 h-4 mr-2" />
-=======
-                <div className="flex items-center justify-between" /></div>
-                  <div className="flex space-x-4" /></div>
-                    <a href={`/docs/${doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center" /></a>
-                      Read Guide
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
-                    <a href={`/docs/${doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center" /></a>
-                      <Download className="w-4 h-4 mr-2" / /></Download>
->>>>>>> main
                       Download PDF
                     </a>
                   </div>
@@ -328,7 +274,6 @@ const DocsPage: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* No Results */}
           {searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhanced p-8 text-center">
@@ -338,17 +283,12 @@ const DocsPage: React.FC = () => {
                 Try adjusting your search terms or browse our documentation categories.
               </p>
               <button
-=======
-          {/* No Results */},
-    {searchResults.length === 0 && searchQuery && ()
->>>>>>> main
                 onClick={() => setSearchQuery('')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Clear Search
               </button>
             </div>
-<<<<<<< HEAD
           )}
 
           {/* Additional Resources */}
@@ -362,23 +302,10 @@ const DocsPage: React.FC = () => {
                 </a><BookOpen className="w-8 h-8 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Tutorials</div>
-=======
-          )},
-    {/* Additional Resources */}
-          <div className="cyber-card-enhanced p-8 mt-16" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <a href="/tutorials"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <BookOpen className="w-8 h-8 text-cyan-400" / /></BookOpen>
-                <div></div>
-                  <div className="text-white font-semibold">Tutorials</div>
->>>>>>> main
                   <div className="text-gray-300 text-sm">Step-by-step guides</div>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a
                 href="/api"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -386,18 +313,10 @@ const DocsPage: React.FC = () => {
                 </a><Code className="w-8 h-8 text-green-400" />
                 <div>
                   </div><div className="text-white font-semibold">API Reference</div>
-=======
-              <a href="/api"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Code className="w-8 h-8 text-green-400" / /></Code>
-                <div></div>
-                  <div className="text-white font-semibold">API Reference</div>
->>>>>>> main
                   <div className="text-gray-300 text-sm">Complete API documentation</div>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a
                 href="/community"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -405,18 +324,10 @@ const DocsPage: React.FC = () => {
                 </a><Users className="w-8 h-8 text-purple-400" />
                 <div>
                   </div><div className="text-white font-semibold">Community</div>
-=======
-              <a href="/community"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Users className="w-8 h-8 text-purple-400" / /></Users>
-                <div></div>
-                  <div className="text-white font-semibold">Community</div>
->>>>>>> main
                   <div className="text-gray-300 text-sm">Developer community</div>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a
                 href="/support"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -424,13 +335,6 @@ const DocsPage: React.FC = () => {
                 </a><Shield className="w-8 h-8 text-orange-400" />
                 <div>
                   </div><div className="text-white font-semibold">Support</div>
-=======
-              <a href="/support"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Shield className="w-8 h-8 text-orange-400" / /></Shield>
-                <div></div>
-                  <div className="text-white font-semibold">Support</div>
->>>>>>> main
                   <div className="text-gray-300 text-sm">Get help and support</div>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
@@ -444,3 +348,134 @@ const DocsPage: React.FC = () => {
 };
 
 export default DocsPage;
+'use client'
+import React, { useState } from 'react'
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function DocsPage() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const docCategories = [
+    {
+      title: 'Getting Started',
+      icon: 'rocket',
+      description: 'Quick start guides and basic setup instructions',
+      docs: [
+        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
+        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
+      ]
+    },
+    {
+      title: 'API Reference',
+      icon: 'code',
+      description: 'Complete API documentation and endpoints',
+      docs: [;}
+        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
+        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
+        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
+      ]
+    },
+    {
+      title: 'AI Solutions',
+      icon: 'brain',
+      description: 'AI and machine learning documentation',
+      docs: [;}
+        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
+        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
+        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
+      ]
+    },
+    {
+      title: 'Cloud Services',
+      icon: 'cloud',
+      description: 'Cloud infrastructure and services',
+      docs: [;}
+        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
+        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
+        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
+      ]
+    }
+  ]
+  const popularDocs = [
+    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
+    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
+    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
+    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+  ]
+  const filteredDocs = docCategories.map(category => ({
+    ...category,
+    docs: category.docs.filter(doc => 
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.docs.length > 0)
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="Documentation - Zion Tech Group"
+        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
+        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
+      />
+      <Navigation />
+      {/* Popular Docs */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularDocs.map((doc, index) => (;}
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  <span className="text-purple-400 text-sm font-medium">{doc.category}
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                  {doc.title}
+                <p className="text-gray-300 text-sm mb-4">{doc.description}
+                <$2 />
+                  href={doc.link}
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
+                  Read More
+                  <ArrowRight className="w-4 h-4" />
+            ))}
+      {/* Documentation Categories */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredDocs.map((category, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}
+                    <p className="text-gray-300">{category.description}
+                <div className="space-y-4">
+                  {category.docs.map((doc, docIndex) => (
+                    <$2 />
+                      key={docIndex}
+                      href={doc.link}
+                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                            {doc.title}
+                          <p className="text-gray-300 text-sm">{doc.description}
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                  ))}
+            ))}
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Need Help?
+          <p className="text-xl text-purple-100 mb-8">
+            Can't find what you're looking for? Our support team is here to help.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community
+      <Footer />
+  )
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>

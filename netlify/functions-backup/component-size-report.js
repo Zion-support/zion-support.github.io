@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('component-size-report function triggered')}
-    // Component size reporting simulation;
+    // Component size reporting simulation
     const result = {
       statusCode: 200,
       headers: {,

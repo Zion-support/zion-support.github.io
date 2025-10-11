@@ -1,5 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
+import { NextApiRequest, NextApiResponse } from 'next'
 export interface ApiError extends Error {/* TODO: Fix JSX expression */}
 }
 
@@ -31,11 +30,10 @@ export const errorHandler = (er,
   re,
   s: NextApiResponse,)
 ) => {/* TODO: Fix JSX expression */}
-  const { statusCode = 500, message } = err;
-
-  // Log error for monitoring;
+  const { statusCode = 500, message } = err
+  // Log error for monitoring
   if (process.env['NODE_ENV'] === 'development') {
-    // eslint-disable-next-line no-console;
+    // eslint-disable-next-line no-console
 //     // .toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
@@ -57,7 +55,7 @@ export const errorHandler = (er,
       timestamp: new Date().toISOString()
       statusCode,
       timestamp: new Date().toISOString(),
-      statusCode;
+      statusCode
       timestamp: new Date().toISOString()},
       statusCode,
       timestamp: new Date().toISOString()}
@@ -83,7 +81,7 @@ export const errorHandler = (er,
     userAgen,
   t: req.headers['user-agent'],
     i,
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress})
   }
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */}

@@ -8,11 +8,11 @@ export class AppError extends Error {}
   isOperational: boolean,
   timestamp: string,
   constructor(message: string, statusCode = 500, isOperational = true) {}
-    super(message);
-    this.statusCode = statusCode;
-    this.isOperational = isOperational;
-    this.timestamp = new Date().toISOString();
-    Error.captureStackTrace(this, this.constructor);
+    super(message)
+    this.statusCode = statusCode
+    this.isOperational = isOperational
+    this.timestamp = new Date().toISOString()
+    Error.captureStackTrace(this, this.constructor)
   }
 }
 export const errorHandler = (error: AppError | Error) => {};

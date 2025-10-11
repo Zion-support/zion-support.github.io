@@ -541,7 +541,7 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
   }
-];
+]
 export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
@@ -2042,7 +2042,7 @@ export const real2036AIServices = [
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]}
   }
-];
+]
 export const real2036AIServices = [ i,
   d: 'ai-emotion-intelligence-platform'' nam,
   e: 'AI Emotion Intelligence Platform'' taglin,

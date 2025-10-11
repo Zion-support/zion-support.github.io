@@ -43,12 +43,12 @@ class EnhancedAnalytics {}
     this.setupOfflineHandling(),
   }
   constructor() {}
-    this.sessionId = this.generateSessionId();
-    this.setupOfflineHandling();
+    this.sessionId = this.generateSessionId()
+    this.setupOfflineHandling()
     this.setupPeriodicFlush();}
   }
   private generateSessionId(): string {}
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
   private setupOfflineHandling(): void {}
     if (typeof window !== 'undefined') {}
@@ -64,7 +64,7 @@ class EnhancedAnalytics {}
     if (typeof window !== 'undefined') {}
       setInterval(() => {}
         this.flush();}
-      }, this.flushInterval);
+      }, this.flushInterval)
     }
   }
   public initialize(config?: { userId?: string; userType?: string }): void {
@@ -72,8 +72,8 @@ class EnhancedAnalytics {}
     this.isInitialized = true;
     this.userProperties = {}
   public initialize(config?: { userId?: string; userType?: string }): void {}
-    if (this.isInitialized) return;
-    this.isInitialized = true;
+    if (this.isInitialized) return
+    this.isInitialized = true
     this.userProperties = {}
       ...this.userProperties,
       sessionId: this.sessionId,
@@ -153,19 +153,17 @@ class EnhancedAnalytics {}
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {}
-<<<<<<< HEAD
     if (;
       typeof window !== 'undefined' &&;
       (;
         window as {}
           gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
-      ).gtag;
+      ).gtag
     ) {}
-      (;
+      (
         window as unknown as {}
           gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
-=======
     if ()
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
@@ -173,7 +171,6 @@ class EnhancedAnalytics {}
     ) {}
       ()
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
->>>>>>> main
         }
       ).gtag()
     );
@@ -220,7 +217,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   constructor() {/* TODO: Fix JSX expression */}
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
   private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
       })
@@ -229,7 +226,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     }
   }
   private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */}
-      }, this.flushInterval);
+      }, this.flushInterval)
     }
   }
   public initialize(config?: { userId?: string; userType?: string }): void {/* TODO: Fix JSX expression */}
@@ -239,11 +236,11 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       })
     })
   }
-  public setUserProperties(propertie);
+  public setUserProperties(propertie)
   s: UserProperties): void {/* TODO: Fix JSX expression */}
     }
   }
-  public trackEvent(even);
+  public trackEvent(even)
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
       }
     }
@@ -255,17 +252,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */}
     }
   }
-  private sendToGtag(even);
+  private sendToGtag(even)
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
         }
-      ).gtag;
+      ).gtag
     ) {/* TODO: Fix JSX expression */}
         }
       ).gtag('event', event.action, {/* TODO: Fix JSX expression */})
       })
     }
   }
-  public trackPageView(pagePat);
+  public trackPageView(pagePat)
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */}
       }
     })
@@ -303,7 +300,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       metadata: {}
         stack: error.stack,
         ...context}
-  public trackUserInteraction(actio);
+  public trackUserInteraction(actio)
   n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */}
     })
   }
@@ -345,24 +342,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value,
       metadata: {`}
         conversionId: `conv-${Date.now()}
-  public trackConversion(conversionTyp);
-  e: string, value?: number): void {/* TODO: Fix JSX expression */}`;
-  d: `conv-${Date.now()}`;
+  public trackConversion(conversionTyp)
+  e: string, value?: number): void {/* TODO: Fix JSX expression */}`
+  d: `conv-${Date.now()}`
       }
     })
   }
   public trackCustomEvent(category: string;)
-<<<<<<< HEAD
     action: string,),;
     label?: string),;
     value?: number),;
     metadata?: Record</string><string>
-=======
-    action: string,),
-    label?: string),
-    value?: number),
-    metadata?: Record<string></string>
->>>>>>> main
   ): void {
     this.trackEvent({);
       category);
@@ -380,16 +370,33 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackCustomEvent();
     category: string,
     action: string,
-<<<<<<< HEAD
     label?: string,;
     value?: number,;
     metadata?: Record</string><string, unknown>
-=======
+  }
+    action: string;),
+    label?: string),
+    value?: number),
+    metadata?: Record<string, unknown>
+  ): void {
+    this.trackEvent({)
+      category)
+      action)
+      label)
+      value);}
+      metadata}
+    })
+  }
+  private flush(): void {
+    if (this.queue.length === 0) return
+    // Check if online
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+  public trackCustomEvent()
+    category: string,
+    action: string,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown></string>
->>>>>>> main
-  }
+    metadata?: Record<string, unknown>}
   ): void {}
     this.trackEvent({)}
       category,
@@ -400,14 +407,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   private flush(): void {}
-    if (this.queue.length === 0) return;
-    // Check if online;
+    if (this.queue.length === 0) return
+    // Check if online
     if (typeof navigator !== 'undefined' && !navigator.onLine) {}
       this.offlineQueue.push(...this.queue);
       this.queue = []
       return;}
     }
-    // In a real implementation, send to analytics backend;
+    // In a real implementation, send to analytics backend
     if (process.env['NODE_ENV'] === 'development') {}
       }
     // Clear queue;
@@ -463,7 +470,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const analytics = new EnhancedAnalytics();
 export default analytics;
-<<<<<<< HEAD
   public trackCustomEvent(categor,;
   y: string,
     actio,;
@@ -471,16 +477,22 @@ export default analytics;
     label?: string,;
     value?: number,;
     metadata?: Record</string><string, unknown></string>);
-=======
-  public trackCustomEvent()
-    metadata?: Record<string, unknown></string>);
->>>>>>> main
+// Export singleton instance
+export const analytics = new EnhancedAnalytics()
+export default analytics
+  public trackCustomEvent(categor,
+  y: string,
+    actio,
+  n: string,
+    label?: string,
+    value?: number,
+    metadata?: Record<string, unknown></string>)
   ): void {/* TODO: Fix JSX expression */}
     })
   }
   private flush(): void {/* TODO: Fix JSX expression */}
     }
-    // In a real implementation, send to analytics backend;
+    // In a real implementation, send to analytics backend
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
       }
     // Clear queue;

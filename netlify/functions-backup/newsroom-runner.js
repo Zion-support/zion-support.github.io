@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('newsroom-runner function triggered')}
-    // Newsroom simulation;
+    // Newsroom simulation
     const result = {
       statusCode: 200,
       headers: {,

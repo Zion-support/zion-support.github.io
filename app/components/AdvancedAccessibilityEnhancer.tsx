@@ -1,5 +1,5 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {
     children: React.ReactNode
   }
@@ -46,7 +46,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
   }
-<<<<<<< HEAD
   return (
     </AccessibilityEnhancerProps><div className="accessibility-enhanced">
       </div><div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
@@ -56,13 +55,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
           aria-label="Toggle high contrast"
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button>
         <div className="font-size-controls">
           </div><button
-=======
-  return ()
->>>>>>> main
             onClick={() => changeFontSize('small')}
+          <$2 />
+            onClick={() =>changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
@@ -83,9 +80,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
             A
   </
         </div>
-      </div>;
-      {children};
-    </div>;
+      </div>
+      {children}</div>
   );
 };
 

@@ -60,7 +60,7 @@ const TeamPage = React.lazy(() => import('./app/team/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>
 };
 
 // Main App Component

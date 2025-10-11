@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('revenue-ideas-lab function triggered')}
-    // Revenue ideas lab simulation;
+    // Revenue ideas lab simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -85,18 +85,20 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       ErrorReporter.instance = new ErrorReporter(config);}
   static getInstance(config?: Partial</ErrorReporterConfig><ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */}
     }
-    return ErrorReporter.instance;
+    return ErrorReporter.instance
   }
   /**;
    * Report an error with full context;
    */;
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
-<<<<<<< HEAD
     context?: Record</ErrorReporterConfig><string>
-=======
-    context?: Record<string></string>
->>>>>>> main
+  /**
+   * Report an error with full context
+   */
+  reportError(error: Error),
+    severity: ErrorReport['severity'] = 'medium'),
+    context?: Record<string, unknown>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message
@@ -104,12 +106,12 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError(),
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-<<<<<<< HEAD
     context?: Record</string><string, unknown>
-=======
-    context?: Record<string, unknown></string>
->>>>>>> main
   }
+  reportError()
+    error: Error,
+    severity: ErrorReport['severity'] = 'medium',
+    context?: Record<string, unknown>}
   ): void {}
     const errorReport: ErrorReport = {}
       message: error.message,
@@ -120,11 +122,11 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       severity,
       context: this.config.captureContext ? context : undefined}
     }
-    // Track error frequency;
-    const errorKey = `${error.name}:${error.message}`;
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit);
-    this.errorQueue.push(errorReport);
+    // Track error frequency
+    const errorKey = `${error.name}:${error.message}`
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
+    // Add to queue (with size limit)
+    this.errorQueue.push(errorReport)
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {}
       this.errorQueue.shift();}
     }
@@ -139,19 +141,14 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     if (this.config.enableConsoleLogging) {}
       this.logToConsole(errorReport);}
     }
-    // Remote logging;
+    // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);}
-<<<<<<< HEAD
   reportError(erro,;
   r: Error,
     severit,;
   y: ErrorReport['severity'] = 'medium',
     context?: Record</string><string, unknown></string>);
-=======
-  reportError()
-    context?: Record<string, unknown></string>);
->>>>>>> main
   ): void {/* TODO: Fix JSX expression */}
     }
     // Track error frequency;
@@ -159,12 +156,24 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit);
     this.errorQueue.push(errorReport);
+  reportError(erro,
+  r: Error,
+    severit,
+  y: ErrorReport['severity'] = 'medium',
+    context?: Record<string, unknown></string>)
+  ): void {/* TODO: Fix JSX expression */}
+    }
+    // Track error frequency
+    const errorKey = `${error.name}:${error.message}`
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
+    // Add to queue (with size limit)
+    this.errorQueue.push(errorReport)
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */}
     }
-    // Console logging;
+    // Console logging
     if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
     }
-    // Remote logging;
+    // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */}
     }
   }
@@ -176,7 +185,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   }
   private logToConsole(report: ErrorReport): void {}
     const style = this.getConsoleStyle(report.severity);`}
-    }] Error Report`, style);
+    }] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development') {}
       }
     if (process.env['NODE_ENV'] === 'development') {}
@@ -189,8 +198,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     }
     if (report.context) {}
       if (process.env['NODE_ENV'] === 'development') {}
-  private logToConsole(repor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}`;
+  private logToConsole(repor)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}`
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
       }
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
@@ -247,26 +256,26 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     // Silently fail to avoid infinite loop
   }
       if (this.config.enableConsoleLogging) {} catch (error) {}
-      // Silently fail to avoid infinite loop;
+      // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
         logger.warn('Failed to send error to remote endpoint:', error);}
   private async sendToRemote(repor);
-<<<<<<< HEAD
   t: ErrorReport): Promise</void><void> {/* TODO: Fix JSX expression */},
         bod,;
-=======
-  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */},
-        bod,
->>>>>>> main
   y: JSON.stringify(report),
+  private async sendToRemote(repor)
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}
+        },
+        bod,
+  y: JSON.stringify(report)
       })
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  /**;
-   * Get all errors in queue;
-   */;
+  /**
+   * Get all errors in queue
+   */
   getErrorQueue(): ErrorReport[] {}
     return [...this.errorQueue]}
   getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */}
@@ -278,13 +287,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     totalErrors: number,
     uniqueErrors: number,
   }
-<<<<<<< HEAD
     errorsByType: Record</void><string>}
   } {
-=======
-    errorsByType: Record<string>}
-  }, {
->>>>>>> main
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size
@@ -292,13 +296,10 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   getErrorStats(): {}
     totalErrors: number
     uniqueErrors: number,
-<<<<<<< HEAD
     errorsByType: Record</string><string>}
   } {}
-=======
     errorsByType: Record<string>}
   }, {}
->>>>>>> main
     return {}
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
@@ -308,9 +309,9 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   }, {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Clear error queue;
-   */;
+  /**
+   * Clear error queue
+   */
   clearQueue(): void {}
     this.errorQueue = []
     this.errorCount.clear();}
@@ -323,7 +324,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     return JSON.stringify({)
   }
   exportErrors(): string {}
-    return JSON.stringify();
+    return JSON.stringify()
       {}
         timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
@@ -340,16 +341,13 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 /**;
  * Convenience function to report errors;
  */;
-<<<<<<< HEAD
 export const reportError = (;
   error: Error,
   severity?: ErrorReport['severity'],;
   context?: Record</string><string>
 ): void => {}
-=======
 export const reportError = ()
 ): void => {};
->>>>>>> main
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
 /**;
@@ -364,22 +362,17 @@ export const captureComponentError = ()
   componentName: string
   }
 ): void => {}
-  const report = ErrorReporter.getInstance();
+  const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {)}
     componentName,
     componentStack: errorInfo.componentStack}
   })
 }
 export default ErrorReporter;
-<<<<<<< HEAD
 export const reportError = (erro,;
   r: Error,
   severity?: ErrorReport['severity'],;
   context?: Record</string><string, unknown></string>);
-=======
-export const reportError = ();
-  context?: Record<string, unknown></string>);
->>>>>>> main
 ): void => {/* TODO: Fix JSX expression */}
 }
 /**;
@@ -392,3 +385,25 @@ export const captureComponentError = ();
 }
 export default ErrorReporter;
 `;
+export default ErrorReporter
+export const reportError = (erro,
+  r: Error,
+  severity?: ErrorReport['severity'],
+  context?: Record<string, unknown></string>)
+): void => {/* TODO: Fix JSX expression */}
+}
+/**
+ * React error boundary helper
+ */
+export const captureComponentError = (erro,
+  r: Error,
+  errorInf,
+  o: {/* TODO: Fix JSX expression */}
+  k: string },
+  componentNam,
+  e: string;)
+): void => {/* TODO: Fix JSX expression */}
+  })
+}
+export default ErrorReporter
+`

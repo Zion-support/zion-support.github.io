@@ -1040,7 +1040,6 @@ export const serviceCategories = [
   'AI & ML',
 
   'Analytics',;
-;
   'Automation';
 ];
 // Pricing tiers for comparison;];
@@ -1073,4 +1072,3 @@ export const contactInfo = {
   hours: '24/7 Support Available',
   }
   timezone: 'EST (Eastern Standard Time)'};
-;

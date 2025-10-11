@@ -31,7 +31,6 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-<<<<<<< HEAD
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC</ImageProps><ImageProps> = ({}
   src,
@@ -53,9 +52,7 @@ export const Image: React.FC</ImageProps><ImageProps> = ({
   onError,
   }
   ...props}
-=======
 export const Image: React.FC<ImageProps>= ()
->>>>>>> main
 }) => {}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -113,8 +110,7 @@ export default Image</img>
     />);
 };
 
-export default Image;
-    />);
+export default Image/>);
 };
 
 export default Image;

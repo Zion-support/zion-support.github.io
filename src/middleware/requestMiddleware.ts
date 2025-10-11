@@ -1,8 +1,8 @@
 
-'use client';
+'use client'
 /**
- * Request Middleware System;
- * Provides middleware for handling requests and responses;
+ * Request Middleware System
+ * Provides middleware for handling requests and responses
  */
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
@@ -101,12 +101,12 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     // TODO: Add content
   }
 }
-    const result = await next();
-    const duration = Date.now() - startTime;
+    const result = await next()
+    const duration = Date.now() - startTime
     logger.info('Request completed', 'RequestMiddleware', {url: context.request.url}
   try {
-    const result = await next();
-    const duration = Date.now() - startTime;
+    const result = await next()
+    const duration = Date.now() - startTime
     logger.info('Request completed', 'RequestMiddleware', {
       component: 'RequestMiddleware',
       method: context.request.method,
@@ -127,21 +127,21 @@ export const authMiddleware: Middleware = async (context, next) => {
   }
 }
   } catch (error) {
-    const duration = Date.now() - startTime;
+    const duration = Date.now() - startTime
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
       duration
-    });
-    throw error;
+    })
+    throw error
   }
 }
 /**
  * Authentication middleware
  */
 export const authMiddleware: Middleware = async (context, next) => {
-  const token = getAuthToken();
+  const token = getAuthToken()
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token}`;
  * Get authentication token from storage;
@@ -192,11 +192,11 @@ const validTimestamps = timestamps.filter(t => now - t;
 export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
     const requests = new Map<string, number[]>();
   return async (context, next) => {
-    const key = context.request.url;
-    const now = Date.now();
-    const timestamps = requests.get(key) || [];
+    const key = context.request.url
+    const now = Date.now()
+    const timestamps = requests.get(key) || []
     // Remove expired timestamps
-    const validTimestamps = timestamps.filter(t => now - t < windowMs);
+    const validTimestamps = timestamps.filter(t => now - t < windowMs)
     if (validTimestamps.length >= maxRequests) {
       throw new Error('Rate limit exceeded');
     validTimestamps.push(now);
@@ -234,10 +234,10 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const key = context.request.url;
     const cached = cache.get(key);
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
-      return cached.data;
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key })
+      return cached.data
     }
-    const result = await next();
+    const result = await next()
     cache.set(key, {
       data: result,
       timestamp: Date.now()
@@ -273,8 +273,8 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {return await Promise.race([}
   // TODO: Add items]
 //       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))]);
- * Request transformation middleware;
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))])
+ * Request transformation middleware
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise,
           <MiddlewareContext>
@@ -328,7 +328,7 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
 //     .use(errorHandlingMiddleware)
 //     .use(authMiddleware)
 //     .use(timeoutMiddleware(30000))
-    .use(retryMiddleware(2, 1000));
+    .use(retryMiddleware(2, 1000))
 export default {MiddlewareExecutor}
   loggingMiddleware,
   authMiddleware,

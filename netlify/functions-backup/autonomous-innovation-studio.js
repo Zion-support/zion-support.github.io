@@ -1,10 +1,10 @@
-// netlify/functions/autonomous-innovation-studio.js;
+// netlify/functions/autonomous-innovation-studio.js
 exports.handler = async function () {
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {execSync('node automation/autonomous-innovation-studio.cjs', {)
       stdio: inherit),
         shell: true}
-    });
+    })
     execSync('node automation/git-sync.cjs || true', {stdio: inherit),
         shell: true}
     });
@@ -17,13 +17,13 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: false),
         error: String(e,),
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     execSync('node automation/git-sync.cjs || true', {/* TODO: Fix JSX expression */}
   l: true})
-    });
+    })
     return {/* TODO: Fix JSX expression */}
   k: 'autonomous-innovation-studio' });
     }

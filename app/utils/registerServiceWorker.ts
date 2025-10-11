@@ -20,10 +20,10 @@ export async function registerServiceWorker(config: ServiceWorkerConfig = {})
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}
     return;}
   }
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||);
-      window.location.hostname === '[::1]' ||);
-export async function registerServiceWorker();
+  // Only register in production or if explicitly enabled
+  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||)
+      window.location.hostname === '[::1]' ||)
+export async function registerServiceWorker()
   config: ServiceWorkerConfig = {}
 ): Promise</ServiceWorkerRegistration><ServiceWorkerRegistration | undefined> {}
   // Check if service workers are supported;
@@ -75,17 +75,17 @@ export async function registerServiceWorker();
     });
     // Handle updates;
     registration.addEventListener('updatefound', () => {}
-      const installingWorker = registration.installing;
-      if (!installingWorker) return;
+      const installingWorker = registration.installing
+      if (!installingWorker) return
       installingWorker.addEventListener('statechange', () => {}
         if (installingWorker.state === 'installed') {}
           if (navigator.serviceWorker.controller) {}
-            // New update available;
+            // New update available
             if (config.onUpdate) {}
               config.onUpdate(registration);}
             }
           } else {}
-            // Content cached for offline use;
+            // Content cached for offline use
             if (config.onSuccess) {}
               config.onSuccess(registration);}
 export async function registerServiceWorker()
@@ -168,9 +168,9 @@ export async function checkForUpdates(): Promise</void><void> {/* TODO: Fix JSX 
     } catch (error) {/* TODO: Fix JSX expression */}
     }
 }
-/**;
- * Skip waiting and activate new service worker;
- */;
+/**
+ * Skip waiting and activate new service worker
+ */
 export function skipWaiting(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
@@ -181,9 +181,9 @@ export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
   n: 'skipWaiting' })
 }
-/**;
- * Clear all caches;
- */;
+/**
+ * Clear all caches
+ */
 export function clearCaches(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}

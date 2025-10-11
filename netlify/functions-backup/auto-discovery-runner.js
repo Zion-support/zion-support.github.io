@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('auto-discovery-runner function triggered')}
-    // Auto-discovery simulation;
+    // Auto-discovery simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('docs-index-runner function triggered')}
-    // Documentation index simulation;
+    // Documentation index simulation
     const result = {
       statusCode: 200,
       headers: {,

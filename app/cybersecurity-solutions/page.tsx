@@ -82,7 +82,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         </Helmet><title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
         <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />
@@ -177,70 +176,14 @@ const CybersecuritySolutionsPage: React.FC = () => {
                 <li>• Best practices</li>
                 <li>• Incident reporting</li>
               </ul>
-=======
-        <title>Cybersecurity Solutions - Zion Tech Group | Enterprise Security</title>
-        <meta name="description" content="Protect your business with comprehensive cybersecurity solutions. Network security, data protection, compliance, and 24/7 monitoring." />
-        <meta name="keywords" content="cybersecurity, network security, data protection, compliance, security monitoring, enterprise security" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Cybersecurity <span className="text-cyan-400">Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Protect your business with comprehensive cybersecurity solutions. From network security to data protection, 
-                we provide enterprise-grade security to keep your organization safe.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Security Audit
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
-              </div>
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
           <div className="text-center">
             </div><button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Secure Your Organization
             </button>
-=======
-        {/* Security Stats Section */}
-        <section className="py-16 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Security Performance</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our cybersecurity solutions deliver industry-leading protection and performance.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {securityStats.map((stat, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-cyan-500/20 text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
-                  <div className="text-gray-300">{stat.description}</div>
-                </div>
-              ))}
-            </div>
->>>>>>> main
           </div>
         </section>
 

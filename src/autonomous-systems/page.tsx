@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Brain, Cpu, Zap, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Brain, Cpu, Zap, ArrowRight } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 export default function AutonomousSystemsPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -13,13 +13,11 @@ export default function AutonomousSystemsPage() {
   </
           <p className="text-xl text-gray-300 mb-8">
             Self-managing systems that operate independently and adapt to changing conditions.
-          </p>
           <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon
             <p className="text-gray-300 mb-6">
               We're developing cutting-edge autonomous systems solutions. Contact us to learn more.
-            </p>
-            <a
+            <$2 />
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />

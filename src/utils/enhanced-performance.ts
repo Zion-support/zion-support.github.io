@@ -3,7 +3,7 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer'
 /**
  * Performance Observer Wrapper
  */
@@ -85,15 +85,15 @@ export class PerformanceMonitor {
     let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as LayoutShift;
+          const layoutShiftEntry = entry as LayoutShift
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value;
             this.recordMetric('cls', clsValue)
   }
         }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
+      })
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(clsObserver)
     }
   }
   
@@ -181,7 +181,7 @@ export class PerformanceMonitor {
    * Clear all metrics
    */
   clear(): void {
-    this.metrics.clear();
+    this.metrics.clear()
     if (typeof performance !== 'undefined' && performance.clearMarks) {
       performance.clearMarks();
       performance.clearMeasures()
@@ -192,8 +192,7 @@ export class PerformanceMonitor {
    * Get performance report
    */
   getReport(): PerformanceReport {
-    const webVitals = this.getWebVitals();
-    
+    const webVitals = this.getWebVitals()
     return {
       webVitals,
       resources: this.getResourceStats(),
@@ -209,8 +208,7 @@ export class PerformanceMonitor {
       return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 }
     }
     
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    
+    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
     return {
       total: resources.length,
       scripts: resources.filter(r => r.initiatorType === 'script').length,
@@ -227,8 +225,7 @@ export class PerformanceMonitor {
       return null
   }
     
-    const memory = (performance as PerformanceWithMemory).memory;
-    
+    const memory = (performance as PerformanceWithMemory).memory
     return {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
@@ -252,8 +249,7 @@ import type {
   MemoryStats, 
   PerformanceWithMemory, 
   LayoutShift 
-} from '../types/app.types';
-
+} from '../types/app.types'
 // Utility Functions
 
 /**
@@ -321,7 +317,7 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
   }
   
   if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(callback, { timeout });
+    window.requestIdleCallback(callback, { timeout })
   } else {
     setTimeout(callback, 0)
   }
@@ -339,10 +335,10 @@ import type {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 /**
- * Enhanced Performance Monitoring;
- * Comprehensive performance tracking and optimization utilities;
+ * Enhanced Performance Monitoring
+ * Comprehensive performance tracking and optimization utilities
  */
- * Performance Observer Wrapper;
+ * Performance Observer Wrapper
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -357,46 +353,46 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.initializeObservers();
+      this.initializeObservers()
     }
-   * Initialize performance observers;
+   * Initialize performance observers
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    // Monitor navigation timing;
+    // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
   // TOD,
   O: Add content,
 }
-          this.recordMetric('navigation', entry.duration);
-      });
+          this.recordMetric('navigation', entry.duration)
+      })
       navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
-      this.observers.push(navObserver);
-          this.recordMetric('resource', entry.duration);
+  s: ['navigation'] })
+      this.observers.push(navObserver)
+          this.recordMetric('resource', entry.duration)
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      this.observers.push(resourceObserver);
-          this.recordMetric(entry.name, entry.startTime);
+  s: ['resource'] })
+      this.observers.push(resourceObserver)
+          this.recordMetric(entry.name, entry.startTime)
       paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      this.observers.push(paintObserver);
-          const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          this.recordMetric('fid', fid);
+  s: ['paint'] })
+      this.observers.push(paintObserver)
+          const fidEntry = entry as PerformanceEventTiming
+          const fid = fidEntry.processingStart - fidEntry.startTime
+          this.recordMetric('fid', fid)
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      this.observers.push(fidObserver);
-// Types;
+  s: ['first-input'] })
+      this.observers.push(fidObserver)
+// Types
 //   PerformanceReport,
 //   ResourceStats,
 //   MemoryStats,
 //   PerformanceWithMemory,
-//   LayoutShift;
-} from '../types/app.types';
-// Utility Functions;
- * Throttle function;
-export function throttle;
+//   LayoutShift
+} from '../types/app.types'
+// Utility Functions
+ * Throttle function
+export function throttle
           <T extends (...arg)
   s: unknown[]) => any>(* Request idle callback wrapper,
 export function runWhenIdle(callbac)
@@ -409,7 +405,7 @@ export function runWhenIdle(callbac)
   if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.requestIdleCallback(callback, { timeout });
+    window.requestIdleCallback(callback, { timeout })
   } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

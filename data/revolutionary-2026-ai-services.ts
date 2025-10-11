@@ -65,16 +65,7 @@ export interface Revolutionary2026AiService {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-=======
-<<<<<<< HEAD
-export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
-  {
-=======
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
->>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -101,18 +92,18 @@ export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [,
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -164,7 +155,6 @@ export const,
     }
   }
 ];
-<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -172,7 +162,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
@@ -181,11 +171,9 @@ export const,
   }
 ];
 id: "2026-revolutionary-ai"
-=======
-;
->>>>>>> main
     id: "2026-revolutionary-ai",
->>>>>>> cursor/delete-records-e539
+]
+    id: "2026-revolutionary-ai"
     name: "2026 Revolutionary AI Platform",
     tagline: "Revolutionary AI for 2026",
     price: "$249/month",
@@ -259,7 +247,7 @@ id: "2026-revolutionary-ai"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

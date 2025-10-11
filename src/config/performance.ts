@@ -87,8 +87,8 @@ export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 
 /**
- * Performance Configuration;
- * Centralized performance monitoring and optimization settings;
+ * Performance Configuration
+ * Centralized performance monitoring and optimization settings
  */
 
 export const _performanceConfig = {
@@ -141,9 +141,9 @@ export const _performanceConfig = {
   e: {/* TODO: Fix JSX expression */}
   c: {}
 // maxAg,
-  e: 31536000, // 1 year;
+  e: 31536000, // 1 year
 // staleWhileRevalidat,
-  e: 86400, // 1 day;
+  e: 86400, // 1 day
     },
 
     dynamic: {
@@ -151,14 +151,13 @@ export const _performanceConfig = {
   }
 }
   maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute;
-
+  staleWhileRevalidate: 60, // 1 minute
     },
     ap,
   i: {/* TODO: Fix JSX expression */}
   e: 300, // 5 minutes;}
 // staleWhileRevalidat,
-  e: 30, // 30 seconds;
+  e: 30, // 30 seconds
     }
   },
   // Resource hints,
@@ -224,9 +223,9 @@ export const _performanceConfig = {
   g: {/* TODO: Fix JSX expression */}
   d: true}
 // sampleRat,
-  e: 1.0, // 100% in production;
+  e: 1.0, // 100% in production
 // reportInterva,
-  l: 30000, // 30 seconds;
+  l: 30000, // 30 seconds
 // sendToAnalytic,
   s: true,
 // logThreshol,

@@ -114,7 +114,6 @@ const AppLoadingSpinner = () => ();
 );
 
 const App: React.FC = () => {
-<<<<<<< HEAD
     return (
     <ErrorBoundary>
       </ErrorBoundary><HelmetProvider>
@@ -225,10 +224,10 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-=======
-    return ()
->>>>>>> main
   );
 };
 
 export default App;
+  )
+}
+export default App</div>

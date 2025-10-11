@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 interface PerformanceMetrics {
     loadTime: number
   renderTime: number
@@ -20,11 +20,11 @@ const PerformanceDashboard: React.FC = () => {
       }));
     }
     //Update metrics on load
-    updateMetrics();
+    updateMetrics()
     //Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(updateMetrics, 1000)
+    return () => clearInterval(interval)
+  }, [])
   //Only show in development
   if (process.env['NODE_ENV'] !== 'development') {
     return null

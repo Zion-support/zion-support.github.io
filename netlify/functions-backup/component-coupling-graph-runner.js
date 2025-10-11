@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('component-coupling-graph-runner function triggered')}
-    // Component coupling graph simulation;
+    // Component coupling graph simulation
     const result = {
       statusCode: 200,
       headers: {,

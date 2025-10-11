@@ -1,6 +1,4 @@
-'use client';
-
-            </button>
+'use client'</button>
           </div>
 
           {/* Navigation */}

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('robots-auditor function triggered')}
-    // Robots auditing simulation;
+    // Robots auditing simulation
     const result = {
       statusCode: 200,
       headers: {,

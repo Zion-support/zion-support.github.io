@@ -3,7 +3,7 @@
     deskt, o, p: '3, 3, v, w'} const size, s = { ...defau, l, t, s, ...conf, i, g } return [
     `(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mob, i, l, e}`,`
     `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
-    siz, e, s.deskt, o, p].jo, i, n(', ');
+    siz, e, s.deskt, o, p].jo, i, n(', ')
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
   optio, n, s: {
@@ -34,23 +34,23 @@ export const getOptimizedUrl = (s, r, c: st, r, i, n, g,
   optio, n, s: {/* TODO: Fix JSX expression */}
    } = {})
 ): string = > {/* TODO: Fix JSX expression */}`
-  const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
+  const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
       },
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
               }, if() {/* TODO: Fix JSX expression */}
-             }, image.classLi, s, t.a, d, d('loa, d, e, d');
-            observ, e, r.unobser, v, e(image);
-        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport;
+             }, image.classLi, s, t.a, d, d('loa, d, e, d')
+            observ, e, r.unobser, v, e(image)
+        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport
       },
 export const preloadImage = (s, r, c: st, r, i, n, g,
   ty, p, e: 'image' | 'fet, c, h' = 'im, a, g, e')
 ): vo, i, d = > {/* TODO: Fix JSX expression */}
-   }, docume, n, t.he, a, d.appendChi, l, d(l, i, n, k);
+   }, docume, n, t.he, a, d.appendChi, l, d(l, i, n, k)
         wid, t, h: i, m, g.naturalWi, d, t, h,
-        heig, h, t: i, m, g.naturalHei, g, h, t});
+        heig, h, t: i, m, g.naturalHei, g, h, t})
         wid, t, h: i, m, g.naturalWi, d, t, h,
-        heig, h, t: i, m, g.naturalHei, g, h, t});
+        heig, h, t: i, m, g.naturalHei, g, h, t})
 export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {
   if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {
@@ -61,13 +61,12 @@ export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')
     const im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () => resol, v, e(i, m, g.wid, t, h = == , 1); i, m, g.onerr, o, r = () = > resol, v, e(fal, s, e); i, m, g.s, r, c = testImag, e, s[for, m, a, t]
   });
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {
-  if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p';
-  return 'j, p, g';
+  if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p'
+  return 'j, p, g'
 export const createPictureElement = (
   conf, i, g: ResponsiveImageCo, n, f, i, g): HTMLPictureEleme, n, t = > { 
-  const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
-
-  // Add source elements for different formats;
+  const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e')
+  // Add source elements for different formats
   const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {)
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
@@ -75,20 +74,17 @@ export const createPictureElement = (
     s, r, c: string; // Full resolution image,
     a, l, t: str, i, n, g;
   }): vo, i, d = > { 
-  // Create placeholder image;
-  const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r);
-
-  // Load full image;
+  // Create placeholder image
+  const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r)
+  // Load full image
   const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
-    fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3 s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
-
+    fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3 s'; contain, e, r.appendChi, l, d(fullIm, a, g, e)
     // Fade in full image requestAnimationFram e(() => {
-      fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';
-
+      fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0'
       // Remove placeholder after transition setTimeo u t(() = > {
 export const getOptimalQualit, y = (): number = > {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
-    return, 8, 0; // Default qualit y;
+    return, 8, 0; // Default qualit y
 export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {/* TODO: Fix JSX expression */}
   } return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
@@ -111,9 +107,8 @@ export const estimateDataUsage = (wid, t, h: nu, m, b, e, r,
   } return, Mat, h.rou, n, d(pixe, l, s * bytesPerPix, e, l[form, a, t]);
         s, r, c,
         priori, t, y,
-        callba, c, k: reso, l, v, e}); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
+        callba, c, k: reso, l, v, e}); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y)
         s, r, c,
         priori, t, y,
-        callba, c, k: reso, l, v, e}); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
-
+        callba, c, k: reso, l, v, e}); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y)
 }}}}}}}}}}}`

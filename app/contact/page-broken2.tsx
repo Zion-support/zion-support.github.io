@@ -22,7 +22,6 @@ const ContactPage: React.FC = () => {
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-;
     const { name, value } = e.target;
     setFormData()
     }));
@@ -57,19 +56,11 @@ const services = [
 
     'DevOps',
 
-<<<<<<< HEAD
     'Consulting',
 
     'Other'
-  ];
+  ]
   const contactInfo = [
-=======
-    'Consulting',;
-;
-    'Other';
-  ];
-const contactInfo = [
->>>>>>> main
     {
     icon: Phone,
       title: 'Phone',
@@ -93,7 +84,6 @@ const contactInfo = [
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
-<<<<<<< HEAD
   }
     }
   ]
@@ -109,8 +99,7 @@ return (
           {/* Header */}
           <div className="text-center mb-16"></div>
             <h1>
-              Get in;
-              </h1><span>
+              Get in</h1><span>
                 {' '}Touch
               </span>
             </h1>
@@ -148,39 +137,14 @@ return (
                     <div className="relative"></div>
                       <User>
                       </User><input />
-=======
-  };
-    };
-  ];
-return ()
-              )},
-    {
-    submitStatus === 'error' && ()
-              )}
-<form></form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6" / /></div>
-                  <div / /></div>
-                    <label></label>
-                      Full Name *
-                    </label>
-                    <div className="relative" / /></div>
-                      <User></User>
-                      <input / /></input>
->>>>>>> main
                   </div>
                   <div / /></div>
                     <label></label>
                       Email Address *
                     </label>
-<<<<<<< HEAD
                     <div className="relative"></div>
                       <Mail>
                       </Mail><input />
-=======
-                    <div className="relative" / /></div>
-                      <Mail></Mail>
-                      <input / /></input>
->>>>>>> main
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
@@ -188,46 +152,27 @@ return ()
                     <label></label>
                       Company
                     </label>
-<<<<<<< HEAD
                     <div className="relative"></div>
                       <Building>
                       </Building><input />
-=======
-                    <div className="relative" / /></div>
-                      <Building></Building>
-                      <input / /></input>
->>>>>>> main
                   </div>
                   <div / /></div>
                     <label></label>
                       Phone Number
                     </label>
-<<<<<<< HEAD
                     <div className="relative"></div>
                       <Phone>
                       </Phone><input />
-=======
-                    <div className="relative" / /></div>
-                      <Phone></Phone>
-                      <input / /></input>
->>>>>>> main
                   </div>
                 </div>
                 <div / /></div>
                   <label></label>
                     Service Interest,
                   </label>
-<<<<<<< HEAD
                   <div className="relative"></div>
                     <Globe>
                     </Globe><select>
                       </select><option value="">Select a service</option>
-=======
-                  <div className="relative" / /></div>
-                    <Globe></Globe>
-                    <select></select>
-                      <option value="">Select a service</option>
->>>>>>> main
                       {
     services.map((service) => ()
                       ))}
@@ -239,19 +184,12 @@ return ()
                   <label></label>
                     Message *
                   </label>
-<<<<<<< HEAD
                   <div className="relative"></div>
                     <MessageCircle>
                     </MessageCircle><textarea />
-=======
-                  <div className="relative" / /></div>
-                    <MessageCircle></MessageCircle>
-                    <textarea / /></textarea>
->>>>>>> main
                 </div>
                 <button></button>
                   {
-<<<<<<< HEAD
     isSubmitting ? (;
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -263,14 +201,100 @@ return ()
                       </Send><span>Send Message</span>
                     </>
   }
-=======
-    isSubmitting ? ()
-                  ) : ()
->>>>>>> main
+                    <div className="relative">
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Your full name"
+                      />
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="your@email.com"
+                      />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    <div className="relative">
+                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="Your company"
+                      />
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone Number
+                    <div className="relative">
+                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Service Interest
+                  <div className="relative">
+                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
+                      <option value="">Select a service
+                      {services.map((service) => (
+                        <option key={service} value={service}>
+                          {service}
+                      ))}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Message *
+                  <div className="relative">
+                    <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+                      placeholder="Tell us about your project, goals, or any questions you have..."
+                    />
+                <$2 />
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
+                  {isSubmitting ? (
+                    <React.Fragment>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin">
+                      <span>Sending...
+                  ) : (
+                    <React.Fragment>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message
                   )}
-                </button>
-              </form>
-            </div>
             {/* Contact Information */}
             <div className="space-y-8" / /></div>
               <div / /></div>
@@ -278,8 +302,6 @@ return ()
                 <p></p>
                   We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
-                </p>
-              </div>
               {/* Contact Information */}
               <div className="space-y-8" / /></div>
                 <div / /></div>

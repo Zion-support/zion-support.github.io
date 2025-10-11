@@ -32,17 +32,10 @@ const TutorialsPage: React.FC = () => {
         steps: [
           'Set up your development environment',
           'Get your API key from the dashboard',
-<<<<<<< HEAD
           'Make your first API call',
           'Handle responses and errors',
           'Implement advanced features'
         ],
-=======
-          'Make your first API call',,
-          'Handle responses and errors',;
-          'Implement advanced features';
-        ];
->>>>>>> main
       }
     },
     {
@@ -167,7 +160,6 @@ const TutorialsPage: React.FC = () => {
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -284,20 +276,12 @@ const TutorialsPage: React.FC = () => {
                         </div><span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
                         </span>
-=======
-  return() {featuredTutorials.map((tutorial) => ()
-                      {tutorial.tags.slice(0, 3).map((tag, index) => ()
->>>>>>> main
                       ))}
                     </div>
                     <a href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
                       Start Tutorial
-<<<<<<< HEAD
                       </a><ArrowRight className="w-4 h-4 ml-2" />
-=======
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
->>>>>>> main
                     </a>
                   </div>
                 </div>
@@ -306,19 +290,12 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Category Filter */}
-<<<<<<< HEAD
           <section className="mb-12">
             </section></section><h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 </div><button
                   key={category.id}
-=======
-          <section className="mb-12" /></section>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              {categories.map((category) => ()
->>>>>>> main
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
@@ -326,11 +303,7 @@ const TutorialsPage: React.FC = () => {
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
-<<<<<<< HEAD
                   </button><category.icon className="w-5 h-5" />
-=======
-                  <category.icon className="w-5 h-5" /></category>
->>>>>>> main
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -338,7 +311,6 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* All Tutorials */}
-<<<<<<< HEAD
           <section id="all-tutorials" className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -388,23 +360,12 @@ const TutorialsPage: React.FC = () => {
                         </div><span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
                         </span>
-=======
-          <section id="all-tutorials" className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredTutorials.map((tutorial) => ()
-                      {tutorial.tags.map((tag, index) => ()
->>>>>>> main
                       ))}
                     </div>
                     <a href={`/tutorials/${tutorial.id}`}
                       className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
                       Start Tutorial
-<<<<<<< HEAD
                       </a><ArrowRight className="w-4 h-4 ml-2" />
-=======
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
->>>>>>> main
                     </a>
                   </div>
                 </div>
@@ -413,27 +374,17 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Learning Paths */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               </div><div className="cyber-card-enhanced p-8">
                 </div><div className="flex items-center mb-4">
                   </div><Brain className="w-8 h-8 text-cyan-400 mr-3" />
-=======
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Brain className="w-8 h-8 text-cyan-400 mr-3" / /></Brain>
->>>>>>> main
                   <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
                 </div>
                 <p className="text-gray-300 mb-6" /></p>
                   Master AI development from basics to advanced implementations.
                 </p>
-<<<<<<< HEAD
                 <ul className="space-y-2 mb-6">
                   </ul><li className="flex items-center text-sm text-gray-300">
                     </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -456,36 +407,11 @@ const TutorialsPage: React.FC = () => {
               <div className="cyber-card-enhanced p-8">
                 </div><div className="flex items-center mb-4">
                   </div><Cloud className="w-8 h-8 text-green-400 mr-3" />
-=======
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    AI Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    API Integration
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced AI Features
-                  </li>
-                </ul>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Cloud className="w-8 h-8 text-green-400 mr-3" / /></Cloud>
->>>>>>> main
                   <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
                 </div>
                 <p className="text-gray-300 mb-6" /></p>
                   Learn cloud architecture and infrastructure management.
                 </p>
-<<<<<<< HEAD
                 <ul className="space-y-2 mb-6">
                   </ul><li className="flex items-center text-sm text-gray-300">
                     </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -508,36 +434,11 @@ const TutorialsPage: React.FC = () => {
               <div className="cyber-card-enhanced p-8">
                 </div><div className="flex items-center mb-4">
                   </div><Zap className="w-8 h-8 text-purple-400 mr-3" />
-=======
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Cloud Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Security & Compliance
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced Architecture
-                  </li>
-                </ul>
-                <a href="#" className="text-green-400 hover:text-green-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Zap className="w-8 h-8 text-purple-400 mr-3" / /></Zap>
->>>>>>> main
                   <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
                 </div>
                 <p className="text-gray-300 mb-6" /></p>
                   Build and scale your own SaaS business from scratch.
                 </p>
-<<<<<<< HEAD
                 <ul className="space-y-2 mb-6">
                   </ul><li className="flex items-center text-sm text-gray-300">
                     </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -554,48 +455,21 @@ const TutorialsPage: React.FC = () => {
                 </ul>
                 <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold">
                   Start Learning Path </a><ArrowRight className="w-4 h-4 inline ml-1" />
-=======
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    SaaS Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Business Models
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Scaling & Growth
-                  </li>
-                </ul>
-                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
->>>>>>> main
                 </a>
               </div>
             </div>
           </section>
 
           {/* Resources */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               </div><div className="cyber-card-enhanced p-6 text-center">
                 </div><Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-=======
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" / /></Code>
->>>>>>> main
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
                 <p className="text-gray-300 mb-4 text-sm" /></p>
                   Ready-to-use code examples for all our services
                 </p>
-<<<<<<< HEAD
                 <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
                   Browse Examples </a><ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
@@ -603,20 +477,10 @@ const TutorialsPage: React.FC = () => {
 
               <div className="cyber-card-enhanced p-6 text-center">
                 </div><Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
-=======
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" / /></Download>
->>>>>>> main
                 <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
                 <p className="text-gray-300 mb-4 text-sm" /></p>
                   Official SDKs for popular programming languages
                 </p>
-<<<<<<< HEAD
                 <a href="/api" className="text-green-400 hover:text-green-300 text-sm">
                   View SDKs </a><ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
@@ -624,20 +488,10 @@ const TutorialsPage: React.FC = () => {
 
               <div className="cyber-card-enhanced p-6 text-center">
                 </div><Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-=======
-                <a href="/api" className="text-green-400 hover:text-green-300 text-sm" /></a>
-                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" / /></Users>
->>>>>>> main
                 <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
                 <p className="text-gray-300 mb-4 text-sm" /></p>
                   Join our developer community for support and discussions
                 </p>
-<<<<<<< HEAD
                 <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm">
                   Join Community </a><ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
@@ -645,33 +499,18 @@ const TutorialsPage: React.FC = () => {
 
               <div className="cyber-card-enhanced p-6 text-center">
                 </div><BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-=======
-                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm" /></a>
-                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" / /></BookOpen>
->>>>>>> main
                 <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
                 <p className="text-gray-300 mb-4 text-sm" /></p>
                   Comprehensive API and service documentation
                 </p>
-<<<<<<< HEAD
                 <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm">
                   View Docs </a><ExternalLink className="w-4 h-4 inline ml-1" />
-=======
-                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm" /></a>
-                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
->>>>>>> main
                 </a>
               </div>
             </div>
           </section>
 
           {/* CTA */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section><div className="
               </div><h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
@@ -683,17 +522,6 @@ const TutorialsPage: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-=======
-          <section className="mb-16" /></section>
-            <div className="cyber-card-enhanced p-8 text-center" /></div>
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-              <p className="text-gray-300 mb-6" /></p>
-                Join thousands of developers who are already building amazing applications with our services.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4" /></div>
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
->>>>>>> main
                   Get Started Free
                 </a>
                 <a href="/demo"

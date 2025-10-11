@@ -678,7 +678,7 @@ export const cuttingEdgeITServices2025 = [,
   {,
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',,
-  description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.';
+  description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
     features: [
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring'
       'Quantum-enhanced data processingAutomated infrastructure management'
@@ -695,7 +695,7 @@ export const cuttingEdgeITServices2025 = [,
 complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    ];
+    ]
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     complianc,
@@ -745,13 +745,13 @@ export const cuttingEdgeITServices2025 = [
     marketSiz,
   e: '$22.1B',
     targetAudienc,
-  e: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions';
+  e: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
     competitiveAdvantag,
-  e: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
+  e: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization'
     useCase,
   s: [,
       'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platformsEnterprise cloud migration'
-    ];
+    ]
     integration,
   s: ['AWSAzureGoogle CloudKubernetesDockerTerraform'],
     complianc,
@@ -759,7 +759,7 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',,
-  description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.';
+  description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.'
     features: [
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment'
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
@@ -813,13 +813,13 @@ export const cuttingEdgeITServices2025 = [
     marketSiz,
   e: '$18.7B',
     targetAudienc,
-  e: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers';
+  e: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantag,
-  e: 'Advanced edge orchestration, AI model deployment, real-time optimization';
+  e: 'Advanced edge orchestration, AI model deployment, real-time optimization'
     useCase,
   s: [,
       'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systemsReal-time analytics platforms'
-    ];
+    ]
     integration,
   s: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'],
     complianc,
@@ -827,7 +827,7 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',,
-  description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.';
+  description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.'
     features: [
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment'
       'Automated security responsesComprehensive audit logging'
@@ -881,13 +881,13 @@ export const cuttingEdgeITServices2025 = [
     marketSiz,
   e: '$31.2B',
     targetAudienc,
-  e: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions';
+  e: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantag,
-  e: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
+  e: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response'
     useCase,
   s: [,
       'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protectionRemote workforce security'
-    ];
+    ]
     integration,
   s: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'],
     complianc,
@@ -895,7 +895,7 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',,
-  description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.';
+  description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.'
     features: [
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing'
       'Multi-party workflow automationComprehensive reporting and analytics'
@@ -949,13 +949,13 @@ export const cuttingEdgeITServices2025 = [
     marketSiz,
   e: '$19.9B',
     targetAudienc,
-  e: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies';
+  e: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantag,
-  e: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
+  e: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration'
     useCase,
   s: [,
       'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keepingManufacturing process tracking'
-    ];
+    ]
     integration,
   s: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'],
     complianc,
@@ -963,7 +963,7 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',,
-  description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.';
+  description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.'
     features: [
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization'
       'Automated security scanningComprehensive analytics and reporting'
@@ -1017,25 +1017,25 @@ export const cuttingEdgeITServices2025 = [
     marketSiz,
   e: '$25.6B',
     targetAudienc,
-  e: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies';
+  e: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantag,
-  e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
+  e: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'
     useCase,
   s: [,
       'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    ];
+    ]
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
-];
+]
   }
-];
+]
   }
-];
+]
   }
-];
-  }];
+]
+  }]
     integration,
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     complianc,

@@ -3,7 +3,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
     window.gtag('event', 'exception', {
       description: error.message,
       fatal: false,
-      ...context});
+      ...context})
   }
   
   // Also log to console in development
@@ -19,21 +19,20 @@ export const initErrorReporting = () => {
       reportError(event.error, {
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno});
-    });
-
+        colno: event.colno})
+    })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       reportError(new Error(event.reason), {
-        type: 'unhandledrejection'});
-    });
+        type: 'unhandledrejection'})
+    })
   }
 }
 
 'use client'
 /**
- * Advanced Error Tracking and Reporting System;
- * Provides comprehensive error tracking with categorization and analytics;
+ * Advanced Error Tracking and Reporting System
+ * Provides comprehensive error tracking with categorization and analytics
  */
 
 export enum ErrorSeverity {
@@ -108,7 +107,7 @@ class ErrorTrackingService {
   private constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.setupGlobalErrorHandlers();
+    this.setupGlobalErrorHandlers()
   }
   static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -116,12 +115,12 @@ class ErrorTrackingService {
     if (!ErrorTrackingService.instance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      ErrorTrackingService.instance = new ErrorTrackingService();
+      ErrorTrackingService.instance = new ErrorTrackingService()
     }
-    return ErrorTrackingService.instance;
+    return ErrorTrackingService.instance
   }
   /**
-   * Set up global error handlers;
+   * Set up global error handlers
    */
 
   private setupGlobalErrorHandlers(): void {
@@ -129,8 +128,8 @@ class ErrorTrackingService {
   }
 
 }
-    if (typeof window === 'undefined') return;
-    // Handle unhandled errors;
+    if (typeof window === 'undefined') return
+    // Handle unhandled errors
     window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
@@ -151,9 +150,9 @@ class ErrorTrackingService {
           colno: event.colno,
 
         }
-      });
-    });
-    // Handle unhandled promise rejections;
+      })
+    })
+    // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -172,7 +171,7 @@ class ErrorTrackingService {
   )
   }
   /**
-   * Track an error with metadata;
+   * Track an error with metadata
    */
 //   trackError()
 
@@ -193,14 +192,14 @@ class ErrorTrackingService {
     if (existingError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Update existing error;
-      existingError.occurrences++;
-      existingError.lastSeen = timestamp;
-      existingError.metadata = fullMetadata;
+      // Update existing error
+      existingError.occurrences++
+      existingError.lastSeen = timestamp
+      existingError.metadata = fullMetadata
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Create new error entry;
+      // Create new error entry
 const,
   trackedError: TrackedError = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -221,8 +220,8 @@ const,
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const oldestKey = Array.from(this.errors.keys())[0];
-        this.errors.delete(oldestKey);
+        const oldestKey = Array.from(this.errors.keys())[0]
+        this.errors.delete(oldestKey)
       }
     }
     // Log the error;`
@@ -233,18 +232,18 @@ const,
   d: errorId,
       categor,
   y: metadata.category,
-//       ...metadata.context;
-    });
-    // Send to external service if critical;
+//       ...metadata.context
+    })
+    // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.reportToExternalService(errorId);
+      this.reportToExternalService(errorId)
     }
-    return errorId;
+    return errorId
   }
   /**
-   * Generate a unique error ID based on the message;
+   * Generate a unique error ID based on the message
    */
 
   private generateErrorId(message: string): string {
@@ -256,16 +255,15 @@ const,
   }
 
 }
-      const char = message.charCodeAt(i);
-      hash = (hash * 32) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer;
-
+      const char = message.charCodeAt(i)
+      hash = (hash * 32) - hash + char
+      hash = hash & hash; // Convert to 32bit integer
     }
 
     return `err_${Math.abs(hash).toString(36)}`
   }
   /**
-   * Add an error listener;
+   * Add an error listener
    */
 
   addListener(listener: (error: TrackedError) => void): void {
@@ -273,10 +271,10 @@ const,
   }
 
 }
-    this.errorListeners.push(listener);
+    this.errorListeners.push(listener)
   }
   /**
-   * Remove an error listener;
+   * Remove an error listener
    */
 
   removeListener(listener: (error: TrackedError) => void): void {
@@ -284,10 +282,10 @@ const,
   }
 
 }
-    this.errorListeners = this.errorListeners.filter(l => l !== listener);
+    this.errorListeners = this.errorListeners.filter(l => l !== listener)
   }
   /**
-   * Notify all listeners of a new error;
+   * Notify all listeners of a new error
    */
 
   private notifyListeners(error: TrackedError): void {
@@ -301,17 +299,17 @@ const,
       try {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
-        listener(error);
+        listener(error)
       } catch (listenerError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        logger.error('Error in error listener', listenerError as Error);
+        logger.error('Error in error listener', listenerError as Error)
       }
     }
   )
   }
   /**
-   * Report critical errors to external service;
+   * Report critical errors to external service
    */
 
   private async reportToExternalService(errorId: string): Promise,
@@ -320,8 +318,8 @@ const,
   }
 
 }
-    const error = this.errors.get(errorId);
-    if (!error) return;
+    const error = this.errors.get(errorId)
+    if (!error) return
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -343,11 +341,11 @@ const,
   }
 
 }
-      logger.error('Failed to report error to external service', reportError as Error);
+      logger.error('Failed to report error to external service', reportError as Error)
     }
   }
   /**
-   * Get all tracked errors;
+   * Get all tracked errors
    */
 
   getErrors(): TrackedError[] {
@@ -355,10 +353,10 @@ const,
   }
 
 }
-    return Array.from(this.errors.values());
+    return Array.from(this.errors.values())
   }
   /**
-   * Get errors by category;
+   * Get errors by category
    */
 
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
@@ -366,10 +364,10 @@ const,
   }
 
 }
-    return this.getErrors().filter(e => e.metadata.category === category);
+    return this.getErrors().filter(e => e.metadata.category === category)
   }
   /**
-   * Get errors by severity;
+   * Get errors by severity
    */
 
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
@@ -377,10 +375,10 @@ const,
   }
 
 }
-    return this.getErrors().filter(e => e.metadata.severity === severity);
+    return this.getErrors().filter(e => e.metadata.severity === severity)
   }
   /**
-   * Get error statistics;
+   * Get error statistics
    */
 
   getStatistics(): {
@@ -412,9 +410,9 @@ const,
         (byCategory[error.metadata.category] || 0) + error.occurrences
 
       bySeverity[error.metadata.severity] =
-        (bySeverity[error.metadata.severity] || 0) + error.occurrences;
-    });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+        (bySeverity[error.metadata.severity] || 0) + error.occurrences
+    })
+    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10)
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -426,7 +424,7 @@ const,
     }
   }
   /**
-   * Clear all errors;
+   * Clear all errors
    */
 
   clearErrors(): void {
@@ -434,10 +432,10 @@ const,
   }
 
 }
-    this.errors.clear();
+    this.errors.clear()
   }
   /**
-   * Clear errors older than specified time;
+   * Clear errors older than specified time
    */
 
   clearOldErrors(maxAge: number): void {
@@ -445,14 +443,14 @@ const,
   }
 
 }
-    const now = Date.now();
+    const now = Date.now()
     for (const [id, error] of this.errors.entries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (now - error.lastSeen > maxAge) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        this.errors.delete(id);
+        this.errors.delete(id)
       }
     }
   }

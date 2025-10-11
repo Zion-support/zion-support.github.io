@@ -717,7 +717,7 @@ export const real2026Q2Additions = [
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access'];
+      'SDKs for Python / JS and API access']
     use_case,
   s: [,
       'MSPs and IT providers',
@@ -818,7 +818,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access';
+      'SDKs for Python / JS and API access'
     integration,
   s: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
     competitor,
@@ -1345,7 +1345,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     taglin,
   e: 'Policy, risk, and model governance with automated evidence and audit trails.',
     descriptio,
-  n: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  n: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     feature,
   s: [
       'Differential privacy and k-anonymity options'
@@ -1977,9 +1977,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     price: '$4',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
@@ -1993,7 +1993,7 @@ export const real2026Q2Additions = [
     description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
@@ -2052,7 +2052,7 @@ export const real2026Q2Additions = [
   s: //ziontechgroup.com/services/msp-remote-device-ops',
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-    ];
+    ]
     use_case,
   s: ['MSPs and IT providers_internal IT for SMBsBYOD governance'],
     integration,
@@ -2067,7 +2067,7 @@ export const real2026Q2Additions = [
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
     perio,
   d: '/device / month'
     trial_day,
@@ -2085,7 +2085,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month',
     trialDay,
@@ -2103,7 +2103,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
   d: '/month',
     trialDay,
@@ -2409,17 +2409,17 @@ period: '/device/month'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
 export const real2026 Q2 Additions = [
   {
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
@@ -2487,12 +2487,12 @@ perio,
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month',
     trialDay,
@@ -2510,7 +2510,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
   d: '/month',
     trialDay,
@@ -2816,10 +2816,10 @@ export const real2026 Q2 Additions = [
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
@@ -2877,7 +2877,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month',
     trialDay,
@@ -2895,7 +2895,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
   d: '/month',
     trialDay,
@@ -3216,17 +3216,17 @@ export const real2026Q2Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
   }
-];
+]
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
@@ -3237,10 +3237,10 @@ export const real2026Q2Additions = [
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
@@ -3301,7 +3301,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
   d: '/month',
     trialDay,
@@ -3319,7 +3319,7 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
   d: '/month',
     trialDay,
@@ -3640,7 +3640,7 @@ export const real2026Q2Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,
   e: '$2, 500',' perio,

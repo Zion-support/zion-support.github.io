@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('anchor-links-auto-fixer function triggered')}
-    // Anchor links auto-fixing simulation;
+    // Anchor links auto-fixing simulation
     const result = {
       statusCode: 200,
       headers: {,

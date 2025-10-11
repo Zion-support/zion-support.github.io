@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('content-freshness-score-runner function triggered')}
-    // Content freshness score simulation;
+    // Content freshness score simulation
     const result = {
       statusCode: 200,
       headers: {,

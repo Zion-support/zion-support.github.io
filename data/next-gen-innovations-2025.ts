@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface NextGenInnovation2025 {
   id: string;
@@ -27,26 +26,10 @@ export interface NextGenInnovation2025 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-=======
-
-  id: string;
-  name: string;
-<<<<<<< HEAD
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string
-  category: string
-=======
-  tagline: string,
-  price: string,
->>>>>>> main
   description: string;
   features: string[];
   link: string;
   category: string;
-<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -428,13 +411,25 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {
-=======
->>>>>>> cursor/delete-records-e539
     address: string,
   i,
   d: string,
   nam,
   e: string,
+
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+    address: string
+  i,
+  d: string
+  nam,
+  e: string
   taglin,
   e: string,
   pric,
@@ -481,12 +476,8 @@ export const,
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ]
-<<<<<<< HEAD
     id: "next-gen-ai-suite"
-=======
->>>>>>> main
     id: "next-gen-ai-suite",
->>>>>>> cursor/delete-records-e539
     name: "Next-Gen AI Suite",
     tagline: "Future-ready AI solutions",
     price: "$179/month",
@@ -585,7 +576,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-]];
+]]
 ]],
 i,
   d: string, nam,

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('roadmap-curator function triggered')}
-    // Roadmap curation simulation;
+    // Roadmap curation simulation
     const result = {
       statusCode: 200,
       headers: {,

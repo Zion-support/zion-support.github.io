@@ -79,26 +79,17 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
-=======
-    mobile: string;
-    email: string;
-    address: string,
-  };
 }
-<<<<<<< HEAD
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
-=======
-}
->>>>>>> cursor/delete-records-e539
     address: string,
   }
 }
 }
     address: string,
+    address: string
     lin,
   k: '/services / ai - automation - suite',
     categor,
@@ -280,17 +271,9 @@ export const,
     contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "ai-automation-suite"
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950"
->>>>>>> main
     id: "ai-automation-suite",
->>>>>>> cursor/delete-records-e539
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
     price: "$79/month",
@@ -310,25 +293,7 @@ export const,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-<<<<<<< HEAD
     id: "data-warehouse-solution"
-=======
-<<<<<<< HEAD
-  {
-    id: 'ai-sales-outreach-agent',
-    name: 'AI Sales Outreach Agent',
-    tagline: 'Personalized multi-channel sequences with compliance guardrails',
-    price: '$99',
-    period: '/month',
-    description: 'Automates lead research and crafts compliant, personalized outreach across email and LinkedIn with adaptive follow-ups and CRM sync.',
-    features: [
-      'Account and persona research',
-      'Personalized sequence generator',
-      'Deliverability and SPF/DKIM checks',
-      'CRM sync and analytics'
-=======
-    id: "data-warehouse-solution",
->>>>>>> cursor/delete-records-e539
     name: "Data Warehouse Solution",
     tagline: "Enterprise-grade data management and analytics",
     price: "$149/month",
@@ -339,7 +304,6 @@ export const,
       "Advanced analytics",
       "Scalable architecture",
       "Security compliance"
->>>>>>> main
     ],
     link: "/services/data-warehouse-solution"
     category: "Data & Analytics"
@@ -922,8 +886,8 @@ export const,
     marketSize: '$5.5B GRC'
     growthRate: '13% CAGR'
           variant: 'security-futuristic'
-      contactInfo: contact;
-      realImplementation: true;
+      contactInfo: contact
+      realImplementation: true
       implementationDetails: 'Connectors + evidence timelines.'
       launchDate: '2025-06-15'
       customers: 18
@@ -1020,8 +984,8 @@ export const,
     marketSize: '$1.5B dev tools'
     growthRate: '18% CAGR'
     variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Schema watchers + release generator.'
     launchDate: '2025-05-01'
     customers: 30
@@ -1118,8 +1082,8 @@ export const,
     marketSize: '$7.2B DevOps'
     growthRate: '19% CAGR'
           variant: 'monitoring-futuristic'
-      contactInfo: contact;
-      realImplementation: true;
+      contactInfo: contact
+      realImplementation: true
       implementationDetails: 'Incident parsers + templates.'
       launchDate: '2025-02-20'
       customers: 26
@@ -1216,8 +1180,8 @@ export const,
     marketSize: '$7.2B DevOps'
     growthRate: '19% CAGR'
     variant: 'holographic-advanced'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Event collectors + composer.'
     launchDate: '2025-03-15'
     customers: 19
@@ -1314,14 +1278,13 @@ export const,
     marketSize: '$8.9B martech genAI'
     growthRate: '22% CAGR'
     variant: 'quantum-holographic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Brand presets + asset generator.'
     launchDate: '2025-07-15'
     customers: 33
     rating: 4.6
     reviews: 13,
-<<<<<<< HEAD
     popula,
   r: true,
     ico,
@@ -1393,7 +1356,6 @@ export const,
       "Real-time processing","
       "Advanced analytics","
       "Scalable architecture","
-=======
   },
     id: 'cloud-cost-optimizer-pro',
     name: 'Cloud Cost Optimizer Pro',
@@ -1401,26 +1363,21 @@ export const,
     price: '$99',
     period: '/month',
     description: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
-<<<<<<< HEAD
     id: "data-warehouse-solution",
     name: "Data Warehouse Solution",
     tagline: "Enterprise-grade data management and analytics",
     price: "$149/month",
     description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
     features: [
-=======
-    features: [,
->>>>>>> main
       "Data integration",
       "Real-time processing",
       "Advanced analytics",
       "Scalable architecture",
->>>>>>> cursor/delete-records-e539
       "Security compliance"
     ],
     link: "/services/data-warehouse-solution"
     category: "Data & Analytics"
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'SaaS analyzer with exporters for Terraform/Helm and alerting.'
     launchDate: '2025-01-15'
     customers: 90
@@ -1480,8 +1437,8 @@ export const,
     marketSize: '$6B DB monitoring'
     growthRate: '15% CAGR'
     variant: 'holographic-advanced'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Agent collectors with SaaS UI and AI advisory.'
     launchDate: '2024-12-12'
     customers: 60
@@ -1872,8 +1829,8 @@ export const,
     marketSize: '$4B API security'
     growthRate: '23% CAGR'
     variant: 'quantum-cyberpunk'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Hosted scanner with agents and reports.'
     launchDate: '2025-02-10'
     customers: 52
@@ -2078,8 +2035,8 @@ export const,
     marketSize: '$1B status pages'
     growthRate: '10% CAGR'
     variant: 'neural-cyberpunk'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Hosted status pages driven by metrics and incidents.'
     launchDate: '2024-07-22'
     customers: 75
@@ -2176,8 +2133,8 @@ export const,
     marketSize: '$1.2B synthetic'
     growthRate: '14% CAGR'
     variant: 'quantum-matrix'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Distributed workers with central analytics.'
     launchDate: '2024-11-10'
     customers: 130
@@ -2274,8 +2231,8 @@ export const,
     marketSize: '$500M webhook tools'
     growthRate: '16% CAGR'
     variant: 'holographic-quantum'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'SaaS relay with signed storage and replay workers.'
     launchDate: '2024-06-30'
     customers: 58
@@ -2372,8 +2329,8 @@ export const,
     marketSize: '$1.8B flags'
     growthRate: '20% CAGR'
     variant: 'quantum-holographic-advanced'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Edge worker evaluators and admin UI.'
     launchDate: '2024-09-01'
     customers: 42
@@ -2470,8 +2427,8 @@ export const,
     marketSize: '$6B identity'
     growthRate: '24% CAGR'
     variant: 'neural-quantum-cyberpunk'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Hosted IdP brokering and SCIM sync service.'
     launchDate: '2024-10-30'
     customers: 150
@@ -2764,8 +2721,8 @@ export const,
     marketSize: '$1.2B data observability'
     growthRate: '26% CAGR'
     variant: 'quantum-holographic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Collectors and SaaS dashboards with lineage.'
     launchDate: '2024-10-10'
     customers: 44
@@ -2960,8 +2917,8 @@ export const,
     marketSize: '$4B sales tech'
     growthRate: '18% CAGR'
     variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Orchestrator with CRM connectors and copilot UI.'
     launchDate: '2024-08-28'
     customers: 66
@@ -3058,8 +3015,8 @@ export const,
     marketSize: '$1.5B privacy tech'
     growthRate: '25% CAGR'
     variant: 'holographic-advanced'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'DP pipelines with evaluators and dataset catalog.'
     launchDate: '2025-02-01'
     customers: 25
@@ -3450,8 +3407,8 @@ export const,
     marketSize: '$3B AppSec'
     growthRate: '15% CAGR'
     variant: 'quantum-cyberpunk'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Scanner fleet with report UI and CI plugins.'
     launchDate: '2025-02-12'
     customers: 10
@@ -3646,8 +3603,8 @@ export const,
     marketSize: '$3B data ingest'
     growthRate: '20% CAGR'
     variant: 'neural-quantum'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Connector jobs with schema registry and monitor.'
     launchDate: '2025-02-08'
     customers: 9
@@ -7449,14 +7406,11 @@ export const,
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-<<<<<<< HEAD
     realImplementation: true,
     implementationDetails: 'Sequencer with policy engine, identity warm-up, and deliverability checks.',
     launchDate: '2025-07-01',
@@ -8749,12 +8703,6 @@ export const,
     rating: 4.9,
     reviews: 6
     contactInfo: {
-=======
-  };
-];      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
->>>>>>> main
->>>>>>> cursor/delete-records-e539
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -8821,7 +8769,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export interface AdditionalRealService,
   id: string, nam,
   e: string, taglin,

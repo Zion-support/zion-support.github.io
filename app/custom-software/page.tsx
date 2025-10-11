@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CustomSoftwarePage: React.FC = () => {
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -111,9 +110,6 @@ const CustomSoftwarePage: React.FC = () => {
         </div>
       </div>
     </>
-=======
-  return ()
->>>>>>> main
   );
 };
 

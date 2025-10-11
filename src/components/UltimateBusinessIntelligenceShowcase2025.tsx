@@ -1,9 +1,9 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
         return (
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -44,7 +44,7 @@ readingTimereadingTime: '25 min read',
 readingTimereadingTime: '45 min read',
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
@@ -52,18 +52,17 @@ readingTimereadingTime: '45 min read',
     { id: 'resource', name: 'Resources' }
   const filteredContent = selectedCategory === 'all' 
     ? content 
-    : content.filter(item => item.category === selectedCategory);
+    : content.filter(item => item.category === selectedCategory)
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
+        <$2 />
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
-        ></div>
+        >
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
-      </div>
         {/* Header */}
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
@@ -74,7 +73,7 @@ readingTimereadingTime: '45 min read',
             content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
-            <button
+            <$2 />
               key={category.id}
               onClick={() =>setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -84,55 +83,49 @@ readingTimereadingTime: '45 min read',
               }`}
             >
               {category.name}
-            </button>
           ))}
         {/* Content Grid */}
           {filteredContent.map((item) => (
               {/* Badge */}
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse">
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
-                </span>
-                <span className="text-gray-400 text-sm">{item.type}</span>
+                <span className="text-gray-400 text-sm">{item.type}
               {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 {item.title}
-              </h3>
               {/* Description */}
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {item.description}
-              </p>
               {/* Metrics */}
                     {item.metrics.roi}
-                  <div className="text-gray-400 text-xs">ROI</div>
+                  <div className="text-gray-400 text-xs">ROI
                     {item.metrics.timeline}
-                  <div className="text-gray-400 text-xs">Timeline</div>
+                  <div className="text-gray-400 text-xs">Timeline
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
+                  <$2 />
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                     {tag}
               {/* CTA */}
-              <Link
+              <$2 />
                 href={item.url}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
                 Read {item.readingTime}
-                <span className="text-lg">→</span>
-              </Link>
+                <span className="text-lg">→
         {/* Call to Action */}
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
+            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions
                 to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
+                  <ath$2 />
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
-                </svg>
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>)
@@ -143,7 +136,7 @@ import React, { useState } from 'react';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
   // TOD,
   O: Add items
@@ -209,34 +202,31 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'resource',
               {/* Badge */}
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
-                <span className="text-green-400 font-semibold text-sm"></span>
+                <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>"
-                <span className="text-gray-400 text-sm">{item.type}</span>
+                <span className="text-gray-400 text-sm">{item.type}
               {/* Title */}"
-              <h3 className="text-xl font-bold text-white mb-4 group-hove,"
-  r:text-cyan-400 transition-colors"></h3>
+              < className="text-xl font-bold text-white mb-4 group-hove,"$2 />
+  r:text-cyan-400 transition-colors">
                 {item.title}
-              </h3>
               {/* Description */}"
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed"></p>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {item.description}
-              </p>
               {/* Metrics */}
                     {item.metrics.roi}"
-                  <div className="text-gray-400 text-xs">ROI</div>
+                  <div className="text-gray-400 text-xs">ROI
                     {item.metrics.timeline}"
-                  <div className="text-gray-400 text-xs">Timeline</div>
+                  <div className="text-gray-400 text-xs">Timeline
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => ()}
-          <span></span>
+          <span>
                     key={index}"
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                 Read {item.readingTime}"
-                <span className="text-lg"></span>
-              </Link>
+                <span className="text-lg">
         {/* Call to Action */}"
-            <h3 className="text-2xl font-bold text-white mb-4"></h3>
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?"
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>"
                 to="/contact""
@@ -244,7 +234,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   hover:from-blue-700,
   hover:to-indigo-700 transition-all duration-300 transform,"
   hover:scale-105 shadow-2xl""
-              >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+              >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path></path>"
                     strokeLinecap="round""
                     strokeLinejoin="round"

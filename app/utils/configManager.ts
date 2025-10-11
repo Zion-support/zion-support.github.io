@@ -98,7 +98,7 @@ class ConfigManager {
   constructor() {,
   }
     this.config = { ...defaultConfig }
-    this.loadEnvironmentConfig();
+    this.loadEnvironmentConfig()
   }
 private loadEnvironmentConfig(): void {
     const env = process.env.NODE_ENV as Environment || 'development';
@@ -196,60 +196,63 @@ const,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
 const,;
   developmentConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
-=======
-const,
-  developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,
->>>>>>> main
   s: {/* TODO: Fix JSX expression */},
+const,
+  developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
+  },
+  feature,
+  s: {/* TODO: Fix JSX expression */}
+  },
   loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
 const,;
   stagingConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
-=======
-const,
-  stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,
->>>>>>> main
   s: {/* TODO: Fix JSX expression */},
+const,
+  stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
+  },
+  feature,
+  s: {/* TODO: Fix JSX expression */}
+  },
   loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
 const,;
   productionConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
-=======
-const,
-  productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,
->>>>>>> main
   s: {/* TODO: Fix JSX expression */},
   loggin,
   g: {/* TODO: Fix JSX expression */},
+const,
+  productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
+  },
+  feature,
+  s: {/* TODO: Fix JSX expression */}
+  },
+  loggin,
+  g: {/* TODO: Fix JSX expression */}
+  },
   securit,
   y: {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
 const,;
   testConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
-=======
-const,
-  testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
-  feature,
->>>>>>> main
   s: {/* TODO: Fix JSX expression */},
+const,
+  testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
+  },
+  feature,
+  s: {/* TODO: Fix JSX expression */}
+  },
   loggin,
   g: {/* TODO: Fix JSX expression */}
   }
@@ -260,22 +263,22 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
     }
-    return ConfigManager.instance;
+    return ConfigManager.instance
   }
-  /**;
-   * Detect current environment;
-   */;
+  /**
+   * Detect current environment
+   */
   private detectEnvironment(): Environment {/* TODO: Fix JSX expression */}
       }
-      if (nodeEnv === 'test') return 'test';
-      if (nodeEnv === 'production') return 'production';
-      if (nodeEnv === 'development') return 'development';
+      if (nodeEnv === 'test') return 'test'
+      if (nodeEnv === 'production') return 'production'
+      if (nodeEnv === 'development') return 'development'
     }
-    return 'development';
+    return 'development'
   }
-  /**;
-   * Load configuration based on environment;
-   */;
+  /**
+   * Load configuration based on environment
+   */
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
     let config = let config = let config = { ...defaultConfig }
     switch (this.environment) {/* TODO: Fix JSX expression */};
@@ -293,7 +296,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
     (Object.keys(override) as Array</AppConfig><keyof AppConfig>).forEach(</keyof><K extends keyof AppConfig>(ke);
   y: K) => {/* TODO: Fix JSX expression */}
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
+            result[key] = Object.assign({}, baseValue, value) as typeof baseValue
           } else {/* TODO: Fix JSX expression */}
           }
         }
@@ -305,7 +308,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   get</K><K extends keyof AppConfig>(ke);
   y: K): AppConfig[K],
-<<<<<<< HEAD
   get</K><K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,
     nestedKe,;
@@ -313,12 +315,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   ): AppConfig[K][NK],
   get</K><K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,
-=======
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-  y: NK;)
-  ): AppConfig[K], [NK],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
->>>>>>> main
     nestedKey?: NK;);
   ): AppConfig[K] | AppConfig[K], [NK] {/* TODO: Fix JSX expression */}
     }
@@ -327,7 +323,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Set configuration value;
    */;
-<<<<<<< HEAD
   set</K><K extends keyof AppConfig>(ke,;
   y: K, valu);
   e: AppConfig[K]): void,
@@ -343,16 +338,45 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     nestedKeyOrValu,;
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK]);
-=======
-  set<K extends keyof AppConfig>()
-  y: K, valu);
-  e: AppConfig[K]): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-  e: AppConfig[K], [NK])
-  ): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-    value?: AppConfig[K], [NK]);
->>>>>>> main
+      }
+    )
+    return result
+  }
+  /**
+   * Get configuration value
+   */
+  get<K extends keyof AppConfig>(ke)
+  y: K): AppConfig[K]
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
+  y: K,
+    nestedKe,
+  y: NK;)
+  ): AppConfig[K][NK]
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
+  y: K,
+    nestedKey?: NK;)
+  ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value
+   */
+  set<K extends keyof AppConfig>(ke,
+  y: K, valu)
+  e: AppConfig[K]): void
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
+  y: K,
+    nestedKe,
+  y: NK,
+    valu,
+  e: AppConfig[K][NK])
+  ): void
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
+  y: K,
+    nestedKeyOrValu,
+  e: NK | AppConfig[K],
+    value?: AppConfig[K][NK])
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
         }) as AppConfig[K]
@@ -382,38 +406,38 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
     return defaultValues[key]
   }
-  /**;
-   * Get full configuration;
-   */;
+  /**
+   * Get full configuration
+   */
   getConfig(): AppConfig {/* TODO: Fix JSX expression */}
     return { ...this.config }
   }
-  /**;
-   * Get environment;
-   */;
+  /**
+   * Get environment
+   */
   getEnvironment(): Environment {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if feature is enabled;
-   */;
-  isFeatureEnabled(featur);
+  /**
+   * Check if feature is enabled
+   */
+  isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Enable feature;
-   */;
-  enableFeature(featur);
+  /**
+   * Enable feature
+   */
+  enableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Disable feature;
-   */;
-  disableFeature(featur);
+  /**
+   * Disable feature
+   */
+  disableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Get API configuration;
-   */;
+  /**
+   * Get API configuration
+   */
   getAPIConfig() {/* TODO: Fix JSX expression */}
     return { ...this.config.api }
   }
@@ -424,24 +448,24 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   g: Partial</K><AppConfig['api']>): void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config }
   }
-  /**;
-   * Check if in production;
-   */;
+  /**
+   * Check if in production
+   */
   isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if in development;
-   */;
+  /**
+   * Check if in development
+   */
   isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if in test;
-   */;
+  /**
+   * Check if in test
+   */
   isTest(): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if in staging;
-   */;
+  /**
+   * Check if in staging
+   */
   isStaging(): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
@@ -450,21 +474,21 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   override(confi);
   g: Partial</AppConfig><AppConfig>): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Reset configuration;
-   */;
+  /**
+   * Reset configuration
+   */
   reset(): void {/* TODO: Fix JSX expression */}
     this.overrides = {}
     this.config = this.loadConfig();
   }
-  /**;
-   * Export configuration as JSON;
-   */;
+  /**
+   * Export configuration as JSON
+   */
   export(): string {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Validate configuration;
-   */;
+  /**
+   * Validate configuration
+   */
   validate(): {/* TODO: Fix JSX expression */}
   s: string[] }, {/* TODO: Fix JSX expression */}
     }
@@ -472,7 +496,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
     if (this.config.api.retryAttempts < 0) {/* TODO: Fix JSX expression */}
     }
-    // Validate security configuration;
+    // Validate security configuration
     if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}

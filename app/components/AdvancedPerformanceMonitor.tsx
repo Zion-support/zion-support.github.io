@@ -1,5 +1,5 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceMetrics {
     fcp: number | null;
   lcp: number | null;
@@ -14,7 +14,6 @@ interface PerformanceMonitorProps {
   }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
 }) => {
-<<<<<<< HEAD
   const [metrics, setMetrics] = useState</PerformanceMonitorProps><PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -22,13 +21,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     cls: null,
     ttfb: null,
     memory: null,
-=======
-  const [metrics, setMetrics] = useState<PerformanceMetrics>()
->>>>>>> main
   })
   const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
+  })
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return
+    if (typeof PerformanceObserver === 'undefined') return
     const observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
@@ -74,10 +74,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
           const entries = list.getEntries();
           entries.forEach()
             ) {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as LayoutShift
               if (!clsEntry.hadRecentInput) {
-                clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+                clsValue += clsEntry.value
+                setMetrics(prev => ({ ...prev, cls: clsValue }))
               }
             }
           })
@@ -136,22 +136,22 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
+            )
           }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
+            )
           }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
+            )
           }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
+            )
           }
         })
         .catch(() => {
@@ -160,12 +160,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     } catch {
       // web-vitals not available, continue without it
     }
-  }, []);
+  }, [])
   useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-    const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
+    if (!enableRealTimeMonitoring) return
+    const cleanup = measureWebVitals()
+    measureResourceTiming()
+    measureCoreWebVitals()
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {;
       measureResourceTiming();
@@ -179,7 +179,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     measureWebVitals,
     measureResourceTiming,
     measureCoreWebVitals,
-  ]);
+  ])
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
@@ -212,16 +212,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
     return (
       </PerformanceMetrics><div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         </div><h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
           </div><div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-=======
-    return ()
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
->>>>>>> main
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
@@ -233,25 +228,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
               : 'N/A'}
           </div>
         </div>
-<<<<<<< HEAD
         {_recommendations.length > 0 && (
           <div className='mt-2'>
             </div><h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
-            </h4>
             <ul className='text-xs text-red-600'>
               {_recommendations.map((rec, index) => (
                 </ul><li key={index}>• {rec}</li>
-=======
-        {_recommendations.length > 0 && ()
-              {_recommendations.map((rec, index) => ()
->>>>>>> main
+                <li key={index}>• {rec}
               ))}
-            </ul>
-          </div>
         )}
-      </div>
-    );
+    )
   }
   return null;
 };

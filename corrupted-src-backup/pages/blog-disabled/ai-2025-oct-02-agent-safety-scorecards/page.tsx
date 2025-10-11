@@ -1,16 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function BlogPost(): React.JSX.Element {
   return(<React.Fragment>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
         <Helmet>
-          <title>Ai 2025 Oct 02 Agent Safety Scorecards - Zion Tech Group</title>
-          <meta;
+          <title>Ai 2025 Oct 02 Agent Safety Scorecards - Zion Tech Group
+          <meta
             name="description"
             content="Ai 2025 Oct 02 Agent Safety Scorecards - Latest insights from Zion Tech Group"
-          /></meta>
-        </Helmet>
+          />
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
@@ -34,20 +33,15 @@ export default function BlogPost(): React.JSX.Element {
               <p>
                 This is a placeholder blog post. The content for "Ai 2025 Oct 02 Agent Safety,
                 Scorecards" will be added here.
-              </p>
 ,
               <h2>Main Content</h2>,
               <p>,
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.
-              </p>
-              <h2>Conclusion</h2>
+              <h2>Conclusion
               <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
               <div>)
@@ -106,8 +100,6 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
           </div>
         </div>
       </div>,
-    </React.Fragment>);
+    </React.Fragment>)
 }
-"`
-  </h1>
-  </h1>
+"`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></p></p></p></h1></h1></h2></h2></h3>

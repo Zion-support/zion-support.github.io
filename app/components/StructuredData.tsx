@@ -3,16 +3,12 @@ import React from 'react';
 
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
+  data?: Record<string, unknown>
 }
 
-<<<<<<< HEAD
 const StructuredData: React.FC</string><StructuredDataProps> = ({ 
   type = 'Organization', 
   data 
-=======
-const StructuredData: React.FC<StructuredDataProps> = ()
->>>>>>> main
 }) => {
   const getDefaultData = () => {
     switch (type) {
@@ -170,10 +166,8 @@ const StructuredData: React.FC<StructuredDataProps> = ()
         return {}
     }
   };
-;
   const structuredData = data || getDefaultData();
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       </StructuredDataProps><script
@@ -183,12 +177,6 @@ const StructuredData: React.FC<StructuredDataProps> = ()
       }}
     />
     </React.Fragment>
-=======
-  return ()
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    /></script>
->>>>>>> main
   );
 };
 

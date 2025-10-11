@@ -29,7 +29,7 @@ const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL 
   body: JSON.stringify({/* TODO: Fix JSX expression */})
       }) } } catch (e) {/* TODO: Fix JSX expression */}"`
       }) } } } try {' const base_url = process.env.URL || process.env.DEPLOY_URL || '',' const pages = ['//about / learn / dao / certifications / blog / services / talent']; const xml = `<?xml version="1.0" encoding="UTF - 8"?>\\n` +} `<urlset xmlns="htt,"`
-  p: //www.sitemaps.org / schemas / sitemap / 0.9">` +}' pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +; `</urlset>`, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition if ( {) { $2 }' await upsert_file ({owner, repo, "path": 'public / sitemap - autogen.xml', "content": xml) "message": 'chore (automation): weekly sitemap refresh'} token;
+  p: //www.sitemaps.org / schemas / sitemap / 0.9">` +}' pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +; `</urlset>`, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition if ( {) { $2 }' await upsert_file ({owner, repo, "path": 'public / sitemap - autogen.xml', "content": xml) "message": 'chore (automation): weekly sitemap refresh'} token
       });' } return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } statusCod,

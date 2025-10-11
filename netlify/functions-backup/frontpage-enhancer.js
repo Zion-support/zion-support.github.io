@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('frontpage-enhancer function triggered')}
-    // Frontpage enhancement simulation;
+    // Frontpage enhancement simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -7,36 +7,22 @@ import Footer from '../components/Footer';
 
 const SitemapPage: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0];
-  ;
   const pageCategories = [
     {
       title: 'Main Pages',
       icon: Home,
       pages: [
-<<<<<<< HEAD
         { name: 'Home', url: '/', description: 'Main landing page' },
         { name: 'About', url: '/about', description: 'About Zion Tech Group' },
         { name: 'Services', url: '/services', description: 'Our service offerings' },
         { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },
         { name: 'Contact', url: '/contact', description: 'Contact information' }
       ],
-=======
-        { name: 'Home', url: '/', description: 'Landing page with company overview and services' },
-        { name: 'About Us', url: '/about', description: 'Company information, team, and mission' },
-        { name: 'Contact', url: '/contact', description: 'Contact information and inquiry form' },
-        { name: 'Services', url: '/services', description: 'Overview of all our services' },
-        { name: 'Pricing', url: '/pricing', description: 'Service pricing and packages' },
-        { name: 'Blog', url: '/blog', description: 'Latest news, insights, and articles' },
-        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and client projects' },
-        { name: 'Careers', url: '/careers', description: 'Job opportunities and company culture' }
-      ]
->>>>>>> main
     },
     {
       title: 'AI Services',
       icon: Brain,
       pages: [
-<<<<<<< HEAD
         { name: 'AI Services Overview', url: '/ai-services', description: 'Complete AI services catalog' },
         { name: 'AI Analytics', url: '/ai-analytics', description: 'AI-powered data analytics' },
         { name: 'AI Automation', url: '/ai-automation', description: 'Process automation solutions' },
@@ -47,21 +33,6 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' },
         { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }
       ],
-=======
-        { name: 'AI Services Overview', url: '/ai-services', description: 'Comprehensive AI solutions and capabilities' },
-        { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time business intelligence platform' },
-        { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation platform' },
-        { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content creation tools' },
-        { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis and insights' },
-        { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image and video analysis solutions' },
-        { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition and synthesis' },
-        { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI and diagnostic tools' },
-        { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI solutions' },
-        { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI tools' }
-      ]
->>>>>>> main
     },
     {
       title: 'IT Services',
@@ -73,11 +44,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
         { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
         { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }
-<<<<<<< HEAD
       ],
-=======
-  ]
->>>>>>> main
     },
     {
       title: 'Micro SaaS',
@@ -90,11 +57,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
         { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
         { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }
-<<<<<<< HEAD
       ],
-=======
-  ]
->>>>>>> main
     },
     {
       title: 'Emerging Technologies',
@@ -106,11 +69,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating systems' },
         { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Decentralized AI solutions' },
         { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }
-<<<<<<< HEAD
       ],
-=======
-  ]
->>>>>>> main
     },
     {
       title: 'Resources',
@@ -119,7 +78,6 @@ const SitemapPage: React.FC = () => {
         { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
         { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
-<<<<<<< HEAD
         { name: 'Demo', url: '/demo', description: 'Request a demo' },
         { name: 'Consultation', url: '/consultation', description: 'Free consultation' }
       ],
@@ -143,24 +101,6 @@ const SitemapPage: React.FC = () => {
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
       ],
-=======
-        { name: 'Support', url: '/support', description: 'Technical support and help center' },
-        { name: 'Community', url: '/community', description: 'User community and forums' },
-        { name: 'Demo', url: '/demo', description: 'Request a product demonstration' },
-        { name: 'Consultation', url: '/consultation', description: 'Free business consultation' },
-        { name: 'Status', url: '/status', description: 'Service status and uptime' }
-      ]
-    },
-    {
-      title: 'Legal & Compliance',
-      icon: Shield,
-      pages: [
-        { name: 'Privacy Policy', url: '/privacy', description: 'Data protection and privacy practices' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions of use' },
-        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage and management' },
-        { name: 'Compliance', url: '/compliance', description: 'Regulatory compliance information' }
-      ]
->>>>>>> main
     }
   ];
 
@@ -173,7 +113,6 @@ const SitemapPage: React.FC = () => {
     { name: 'Blog', url: '/blog', icon: FileText };
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -190,13 +129,8 @@ const SitemapPage: React.FC = () => {
             </div><div className="flex items-center justify-center mb-6">
               </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 </div><Map className="w-8 h-8 text-white" />
-=======
-  return() {quickLinks.map((link, index) => ()
-                ))}
->>>>>>> main
               </div>
             </div>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Complete overview of all pages and resources available on our website. 
               Find what you're looking for quickly and easily.
@@ -299,44 +233,8 @@ const SitemapPage: React.FC = () => {
               >
                 Go Home
               </a>
-=======
-
-            {/* Sitemap Sections */}
-            <div className="space-y-12" /></div>
-              {sitemapSections.map((section, sectionIndex) => ()
-                    {section.pages.map((page, pageIndex) => ()
-                    ))}
-                  </div>
-                </div>
-              ))}
             </div>
 
-            {/* Search Box */}
-            <div className="mt-16 text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Can't Find What You're Looking For?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Use our search functionality or contact us directly for assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" /></div>
-                  <div className="flex-1 relative" /></div>
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" / /></Search>
-                    <input type="text"
-                      placeholder="Search our website..."
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    / /></input>
-                  </div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300" /></button>
-                    Search
-                  </button>
-                </div>
-              </div>
->>>>>>> main
-            </div>
-
-<<<<<<< HEAD
           {/* XML Sitemap Link */}
           <div className="cyber-card-enhanced p-6 mt-8 text-center">
             </div><h3 className="text-lg font-semibold text-white mb-2">For Developers</h3>
@@ -354,37 +252,75 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-            {/* Contact CTA */}
-            <div className="mt-12 text-center" /></div>
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Need Help Finding Something?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Our team is here to help you find exactly what you need. Contact us for personalized assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <a href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Contact Us
-                  </a>
-                  <a href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Call: (302) 464-0950
-                  </a>
-                </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-      </main>
-      
-      <Footer /></Footer>
->>>>>>> main
     </>
   );
 };
 
 export default SitemapPage;
+import React from 'react'
+const SitemapPage: React.FC = () => {
+  const pages = [
+    { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
+    { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
+    { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
+    { path: '/micro-saas', title: 'Micro SAAS Solutions', description: 'Affordable, powerful AI-driven tools for modern businesses' },
+    { path: '/ai-services', title: 'AI Services', description: 'Advanced artificial intelligence solutions' },
+    { path: '/ai-marketing', title: 'AI Marketing', description: 'Revolutionary AI-powered marketing automation' },
+    { path: '/ai-automation', title: 'AI Automation', description: 'Intelligent automation of business processes' },
+    { path: '/ai-healthcare', title: 'AI Healthcare', description: 'Cutting-edge AI solutions for medical applications' },
+    { path: '/ai-fintech', title: 'AI Fintech', description: 'Revolutionary AI-powered financial services' },
+    { path: '/it-services', title: 'IT Services', description: 'Comprehensive IT solutions and infrastructure' },
+    { path: '/quantum-computing', title: 'Quantum Computing', description: 'Next-generation quantum computing capabilities' },
+    { path: '/autonomous-systems', title: 'Autonomous Systems', description: 'Self-managing and self-optimizing systems' },
+    { path: '/business-intelligence', title: 'Business Intelligence', description: 'Data-driven insights and analytics' },
+    { path: '/blockchain-web3', title: 'Blockchain & Web3', description: 'Decentralized applications and smart contracts' },
+    { path: '/iot-edge-computing', title: 'IoT & Edge Computing', description: 'Connected devices and edge analytics' },
+    { path: '/cybersecurity', title: 'Cybersecurity', description: 'Advanced security services and threat detection' },
+    { path: '/services-advertising', title: 'AI Advertising', description: 'AI-powered advertising and marketing solutions' },
+    { path: '/case-studies', title: 'Case Studies', description: 'Success stories and client implementations' },
+    { path: '/enterprise', title: 'Enterprise Solutions', description: 'Advanced AI and IT solutions for large organizations' },
+    { path: '/team', title: 'Our Team', description: 'Meet the experts behind our innovative solutions' },
+    { path: '/contact', title: 'Contact Us', description: 'Get in touch with our team of experts' },
+    { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
+    { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
+    { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
+  ]
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Sitemap
+          <p className="text-xl text-gray-600">Navigate through all pages on our website
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {pages.map((page, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <$2 />
+                    href={page.path} 
+                    className="text-blue-600 hover:text-blue-700 transition-colors">
+                    {page.title}
+                <p className="text-sm text-gray-600 mb-2">
+                  {page.description}
+                <p className="text-xs text-gray-500">
+                  {page.path}
+            ))}
+        <div className="mt-12 bg-blue-50 rounded-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Need Help Finding Something?
+          <p className="text-gray-600 mb-6">
+            If you can't find what you're looking for, feel free to contact us directly.
+          <div className="flex flex-col sm:flex-row gap-4">
+            <$2 />
+              href="/contact"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+              Contact Us
+            <$2 />
+              href="tel:+13024640950"
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
+              Call Us: (302) 464-0950
+  )
+}
+export default SitemapPage</div></div></div></div></div></div></div></div></p></p></p></p></h1></h2></h3>

@@ -9,7 +9,6 @@ const AiCybersecurityPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
@@ -46,91 +45,20 @@ return (
         </Helmet><title>Ai Cybersecurity - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-=======
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms detect threats in real-time',
-      benefits: ['99.9% accuracy', 'Zero false positives', 'Instant response']
-    },
-    {
-      icon: Shield,
-      title: 'Automated Defense',
-      description: 'AI-powered security systems that respond to threats automatically',
-      benefits: ['Auto-blocking', 'Incident response', 'Threat mitigation']
-    },
-    {
-      icon: Eye,
-      title: 'Behavioral Analysis',
-      description: 'Monitor user behavior patterns to identify anomalies',
-      benefits: ['User profiling', 'Anomaly detection', 'Risk scoring']
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Monitoring',
-      description: '24/7 continuous monitoring of your entire infrastructure',
-      benefits: ['Live dashboards', 'Instant alerts', 'Comprehensive coverage']
-    }
-  ];
-
-  const securityServices = [
-    {
-      title: 'Network Security',
-      description: 'Protect your network infrastructure with AI-powered monitoring',
-      icon: '🌐',
-      features: ['Intrusion detection', 'Traffic analysis', 'DDoS protection']
-    },
-    {
-      title: 'Endpoint Protection',
-      description: 'Secure all devices and endpoints with intelligent threat detection',
-      icon: '💻',
-      features: ['Malware detection', 'Device monitoring', 'Access control']
-    },
-    {
-      title: 'Cloud Security',
-      description: 'Comprehensive security for your cloud infrastructure',
-      icon: '☁️',
-      features: ['Cloud monitoring', 'Data protection', 'Compliance management']
-    },
-    {
-      title: 'Email Security',
-      description: 'Advanced email threat protection and phishing detection',
-      icon: '📧',
-      features: ['Phishing detection', 'Spam filtering', 'Email encryption']
-    },
-    {
-      title: 'Data Protection',
-      description: 'Safeguard sensitive data with AI-powered encryption and monitoring',
-      icon: '🔒',
-      features: ['Data encryption', 'Access monitoring', 'Leak prevention']
-    },
-    {
-      title: 'Compliance',
-      description: 'Ensure compliance with industry regulations and standards',
-      icon: '📋',
-      features: ['GDPR compliance', 'HIPAA support', 'Audit trails']
-    }
-  ];
-
-  const threatTypes = [
-    { name: 'Malware', blocked: '99.8%', description: 'Advanced malware detection and removal' },
-    { name: 'Phishing', blocked: '99.9%', description: 'AI-powered phishing email detection' },
-    { name: 'DDoS', blocked: '100%', description: 'Distributed denial of service protection' },
-    { name: 'Ransomware', blocked: '99.7%', description: 'Real-time ransomware prevention' }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Cybersecurity - Zion Tech Group | Advanced Threat Protection</title>
-        <meta name="description" content="Protect your business with AI-powered cybersecurity solutions. Advanced threat detection, automated defense, and 24/7 monitoring to keep your data secure." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, network security, data protection, cybersecurity solutions, AI security" />
->>>>>>> main
       </Helmet>
       
+    'Gain competitive advantage with advanced technology'
+  ]
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Ai Cybersecurity - Zion Tech Group
+        <meta name="description" content="Advanced AI-powered ai cybersecurity solution for modern businesses." />
+        <meta name="keywords" content="AI ai cybersecurity, artificial intelligence, ai cybersecurity, AI solutions, intelligent automation" />
       <Navigation />
       
       <main className="pt-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
@@ -228,9 +156,6 @@ return (
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
           </section><div className="
@@ -255,31 +180,6 @@ return (
                 <button>
                   Learn More
                 </button>
-=======
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                AI <span className="text-cyan-400">Cybersecurity</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Protect your business with cutting-edge AI-powered cybersecurity solutions. 
-                Advanced threat detection, automated defense, and 24/7 monitoring to keep your data secure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Security Audit
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
->>>>>>> main
               </div>
             </div>
           </div>
@@ -443,3 +343,12 @@ return (
 };
 
 export default AiCybersecurityPage;
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us
+                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
+      <Footer />
+  )
+}
+export default AiCybersecurityPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></ul></li></section></section></section></section>

@@ -31,8 +31,8 @@ class AccessibilityEnhancer {
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
-          // Handle tab navigation;
-          console.log('Tab navigation detected');
+          // Handle tab navigation
+          console.log('Tab navigation detected')
         }
       }
   )
@@ -40,8 +40,8 @@ class AccessibilityEnhancer {
   }
 
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
-      // Add focus indicators;
-      const style = document.createElement('style');
+      // Add focus indicators
+      const style = document.createElement('style')
       style.textContent = `
 
         *:focus {

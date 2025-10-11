@@ -79,26 +79,17 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
-=======
-    mobile: string;
-    email: string;
-    address: string,
-  };
 }
-<<<<<<< HEAD
 export const extraServices: ExtraService[] = [
   {
-=======
-}
->>>>>>> cursor/delete-records-e539
     address: string,
   }
 }
 }
     address: string,
+    address: string
     lin,
   k: '/services / cloud - migration - expert',
     categor,
@@ -280,17 +271,9 @@ export const,
     contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "cloud-migration-expert"
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950"
->>>>>>> main
     id: "cloud-migration-expert",
->>>>>>> cursor/delete-records-e539
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
     price: "$99/hour",
@@ -540,7 +523,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export interface ExtraService,
   id: string, nam,
   e: string, taglin,

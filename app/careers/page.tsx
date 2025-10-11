@@ -13,11 +13,23 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-<<<<<<< HEAD
       requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise'],
-=======
-        requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
->>>>>>> main
+description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      requirements: [
+        '5+ years experience in AI/ML development',
+        'Expertise in Python, TensorFlow, PyTorch',
+        'Experience with cloud platforms (AWS, Azure, GCP)',
+        'Strong understanding of deep learning algorithms',
+        'Previous experience in production AI systems'
+      ],
+      benefits: [
+        'Competitive salary: $120,000 - $180,000',
+        'Equity participation',
+        'Flexible remote work',
+        'Professional development budget'
+      ],
+      posted: '2 days ago',
+      featured: true
     },
     {
       title: 'Cloud Architect',
@@ -35,15 +47,12 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-<<<<<<< HEAD
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills'],
     }
   ];
-=======
-        requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
-      }
-    ];
->>>>>>> main
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
+    }
+  ]
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -72,7 +81,6 @@ const CareersPage: React.FC = () => {
     {
       icon: Award,
       title: 'Excellence',
-<<<<<<< HEAD
       description: 'We strive for the highest quality in everything we do'
     }
   ]
@@ -90,16 +98,6 @@ const CareersPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-=======
-        description: 'We strive for the highest quality in everything we do';
-      };
-    ];
-  return ()
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-        <div className="relative max-w-7xl mx-auto text-center" /></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
->>>>>>> main
             Join Our Team
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
@@ -108,7 +106,6 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="py-20 px-4">
         </section><div className="
           </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
@@ -142,24 +139,12 @@ const CareersPage: React.FC = () => {
                         </li><span className="w-1 h-1 bg-purple-400 rounded-full"></span>
                         <span>{req}</span>
                       </li>
-=======
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16" /></div>
-            {openPositions.map((position, index) => ()
-                    {position.requirements?.map((req, reqIndex) => ()
->>>>>>> main
                     ))}
                   </ul>
                 </div>
                 <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" /></button>
                   Apply Now
-<<<<<<< HEAD
                   </button><ArrowRight className="w-4 h-4 ml-2" />
-=======
-                  <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
->>>>>>> main
                 </button>
               </div>
             ))}
@@ -167,7 +152,6 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="py-20 px-4 bg-white/5">
         </section><div className="
           </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
@@ -180,19 +164,11 @@ const CareersPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
               </div>
-=======
-      <section className="py-20 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" /></div>
-            {values.map((value, index) => ()
->>>>>>> main
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="py-20 px-4">
         </section><div className="
           </div><h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
@@ -203,7 +179,6 @@ const CareersPage: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
-          </div>
           <div className="mt-8">
             </div><Link
               to="/contact"
@@ -211,20 +186,6 @@ const CareersPage: React.FC = () => {
             >
               Get in Touch
               </Link><ArrowRight className="w-5 h-5 ml-2" />
-=======
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" /></div>
-            {benefits.map((benefit, index) => ()
-            ))}
-          </div>
-          <div className="mt-8" /></div>
-            <Link to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></Link>
-              Get in Touch
-              <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
->>>>>>> main
             </Link>
           </div>
         </div>
@@ -234,3 +195,7 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+              <ArrowRight className="w-5 h-5 ml-2" />
+  )
+}
+export default CareersPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></button></button></button></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section></section></section>

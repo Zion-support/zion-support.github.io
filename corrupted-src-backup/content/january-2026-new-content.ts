@@ -1,5 +1,5 @@
-// January 2026 - New Revolutionary Content;
-// Brand new cutting-edge AI breakthroughs and enterprise solutions;
+// January 2026 - New Revolutionary Content
+// Brand new cutting-edge AI breakthroughs and enterprise solutions
 export const january2026NewContent = {
   featuredArticles: [
     {

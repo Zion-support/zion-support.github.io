@@ -83,7 +83,7 @@ export const validationPatterns = {}
  */;
 export function sanitizeInput(input: string): string {
     return input,
-    .replace(/[<>]/g, '') // Remove < and >;
+    .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim()
@@ -117,7 +117,7 @@ export function generateSecureToken(length: number = 32): string {
   }
     }
   }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
 }
 export default {
     securityHeaders,

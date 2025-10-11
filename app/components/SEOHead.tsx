@@ -41,7 +41,6 @@ const defaultStructuredData = {
       "https: //twitter.com/ziontechgroup"
     ],
   }
-<<<<<<< HEAD
 return (
     </SEOHeadProps><Helmet>
       {/* Basic Meta Tags */}
@@ -75,12 +74,52 @@ return (
       {/* Structured Data */}
       <script>
         {JSON.stringify(structuredData || defaultStructuredData)}
-=======
-return() {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> main
       </script>
     </Helmet>
   );
 };
 
 export default SEOHead;
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+  )
+}
+export default SEOHead
+</li>

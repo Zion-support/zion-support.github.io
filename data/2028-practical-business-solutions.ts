@@ -65,16 +65,7 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
-=======
-<<<<<<< HEAD
-export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
-  {
-=======
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
->>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -101,18 +92,18 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -164,7 +155,6 @@ export const,
     }
   }
 ];
-<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -172,7 +162,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
@@ -181,11 +171,9 @@ export const,
   }
 ];
 id: "2028-practical-business-solution"
-=======
-;
->>>>>>> main
     id: "2028-practical-business-solution",
->>>>>>> cursor/delete-records-e539
+]
+    id: "2028-practical-business-solution"
     name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028",
     price: "$249/month",
@@ -259,7 +247,7 @@ id: "2028-practical-business-solution"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

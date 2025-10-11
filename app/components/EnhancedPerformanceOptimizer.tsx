@@ -138,7 +138,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return </string><React.Fragment>{children}</React.Fragment></React.Fragment>;
+  return </string><React.Fragment>{children}</React.Fragment></React.Fragment>
 };
 
 export default PerformanceOptimizer;

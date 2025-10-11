@@ -1,9 +1,9 @@
-'use client';
-import React, { useState } from 'react';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState } from 'react'
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
     const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,15 +26,9 @@ export default function APIDocsPage() {
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-<<<<<<< HEAD
   -d '{
     "text": "Your text to analyze",
     "features": ["sentiment", "entities", "key_phrases"],
-=======
-  -d '{,
-    "text": "Your text to analyze",;
-    "features": ["sentiment", "entities", "key_phrases"];
->>>>>>> main
   }'`
         },
         {
@@ -75,11 +69,7 @@ export default function APIDocsPage() {
     }
   }'`
         }
-<<<<<<< HEAD
       ],
-=======
-  ]
->>>>>>> main
     },
     {
       title: 'Data Analytics',
@@ -109,7 +99,6 @@ export default function APIDocsPage() {
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
     );
   })).filter(category => category.endpoints.length > 0);
-<<<<<<< HEAD
   return (
     </string><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div><SEOOptimizer 
@@ -148,8 +137,6 @@ export default function APIDocsPage() {
               <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Get API Key →
-              </button>
-            </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 </div><Code className="w-6 h-6 text-white" />
@@ -158,8 +145,6 @@ export default function APIDocsPage() {
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 View Examples →
-              </button>
-            </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 </div><Zap className="w-6 h-6 text-white" />
@@ -168,11 +153,6 @@ export default function APIDocsPage() {
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* API Endpoints */}
       <section className="py-16 px-4">
         </section><div className="
@@ -200,75 +180,47 @@ export default function APIDocsPage() {
                               : 'bg-blue-500/20 text-blue-400'
                           }`}>
                             {endpoint.method}
-                          </span>
-                          <code className="text-purple-400 font-mono">{endpoint.path}</code>
-                        </div>
-                        <button
+                          <code className="text-purple-400 font-mono">{endpoint.path}
+                        <$2 />
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             </button><React.Fragment>
                               </React><Check className="w-4 h-4" />
                               Copied!
-                            </React.Fragment>
                           ) : (
                             <React.Fragment>
                               </React><Copy className="w-4 h-4" />
                               Copy
                             </React.Fragment>
-=======
-  return() {filteredEndpoints.map((category, categoryIndex) => ()
-                  {category.endpoints.map((endpoint, endpointIndex) => ()
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? ()
-                          ) : ()
->>>>>>> main
                           )}
                         </button>
                       </div>
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
-<<<<<<< HEAD
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         </div><pre className="text-gray-300 text-sm">
                           </pre><code>{endpoint.code}</code>
-=======
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" /></div>
-                        <pre className="text-gray-300 text-sm" /></pre>
-                          <code>{endpoint.code}</code>
->>>>>>> main
                         </pre>
                       </div>
                     </div>
+                          )}
+                      <p className="text-gray-300 mb-4">{endpoint.description}
+                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                        <pre className="text-gray-300 text-sm">
+                          <code>{endpoint.code}
                   ))}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         </section><div className="
           </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-=======
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6" /></h2>
->>>>>>> main
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8" /></p>
             Start building with our APIs today and create amazing applications.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div><button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" /></button>
->>>>>>> main
               Get API Key
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" /></button>
@@ -288,3 +240,11 @@ export default function APIDocsPage() {
   </h1>
   </SEOOptimizer>
   </string>
+          <p className="text-xl text-purple-100 mb-8">
+            Start building with our APIs today and create amazing applications.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Get API Key
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">View SDKs
+      <Footer />
+  )
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></button></button></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></section></section></section></section>

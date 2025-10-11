@@ -206,7 +206,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready quantum optimization platform with real quantum hardware access and AI-driven algorithm optimization.'
     launchDate: '2024-01-15'
     customers: 45;
@@ -219,7 +219,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 2. Autonomous Drone Fleet Management System;
+  // 2. Autonomous Drone Fleet Management System
     id: 'autonomous-drone-fleet-management',
     name: 'Autonomous Drone Fleet Management System',
     tagline: 'Manage thousands of drones with AI-powered autonomy',
@@ -363,7 +363,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.'
     launchDate: '2024-03-01'
     customers: 89;
@@ -376,7 +376,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 3. Blockchain-Based Decentralized Identity Management;
+  // 3. Blockchain-Based Decentralized Identity Management
     id: 'blockchain-decentralized-identity',
     name: 'Blockchain-Based Decentralized Identity Management',
     tagline: 'Secure, privacy-first digital identity on the blockchain',
@@ -520,7 +520,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.'
     launchDate: '2024-02-01'
     customers: 234;
@@ -533,7 +533,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 4. AI-Powered Climate Change Prediction & Mitigation Platform;
+  // 4. AI-Powered Climate Change Prediction & Mitigation Platform
     id: 'ai-climate-change-prediction',
     name: 'AI-Powered Climate Change Prediction & Mitigation Platform',
     tagline: 'Predict and mitigate climate impacts with AI precision',
@@ -677,7 +677,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.'
     launchDate: '2024-01-01'
     customers: 156;
@@ -690,7 +690,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 5. Neuromorphic Computing AI Platform;
+  // 5. Neuromorphic Computing AI Platform
     id: 'neuromorphic-computing-ai',
     name: 'Neuromorphic Computing AI Platform',
     tagline: 'Brain-inspired AI computing for edge devices',
@@ -834,7 +834,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.'
     launchDate: '2024-03-15'
     customers: 67;
@@ -847,7 +847,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 6. Autonomous Supply Chain Optimization Platform;
+  // 6. Autonomous Supply Chain Optimization Platform
     id: 'autonomous-supply-chain-optimization',
     name: 'Autonomous Supply Chain Optimization Platform',
     tagline: 'AI-driven supply chain that optimizes itself',
@@ -991,7 +991,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.'
     launchDate: '2024-02-15'
     customers: 189;
@@ -1004,7 +1004,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 7. AI-Powered Healthcare Diagnostics & Treatment Platform;
+  // 7. AI-Powered Healthcare Diagnostics & Treatment Platform
     id: 'ai-healthcare-diagnostics-treatment',
     name: 'AI-Powered Healthcare Diagnostics & Treatment Platform',
     tagline: 'Revolutionary AI diagnostics and personalized treatment',
@@ -1148,7 +1148,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.'
     launchDate: '2024-01-01'
     customers: 234;
@@ -1161,7 +1161,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 8. Autonomous Financial Trading & Portfolio Management;
+  // 8. Autonomous Financial Trading & Portfolio Management
     id: 'autonomous-financial-trading',
     name: 'Autonomous Financial Trading & Portfolio Management',
     tagline: 'AI-powered autonomous trading and portfolio optimization',
@@ -1305,7 +1305,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready autonomous trading platform with real exchange integrations and regulatory compliance.'
     launchDate: '2024-02-01'
     customers: 89;
@@ -1318,7 +1318,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 9. AI-Powered Cybersecurity Threat Intelligence Platform;
+  // 9. AI-Powered Cybersecurity Threat Intelligence Platform
     id: 'ai-cybersecurity-threat-intelligence',
     name: 'AI-Powered Cybersecurity Threat Intelligence Platform',
     tagline: 'Predict and prevent cyber threats with AI intelligence',
@@ -1462,7 +1462,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.'
     launchDate: '2024-01-15'
     customers: 345;
@@ -1475,7 +1475,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 10. Autonomous Smart City Infrastructure Management;
+  // 10. Autonomous Smart City Infrastructure Management
     id: 'autonomous-smart-city-infrastructure',
     name: 'Autonomous Smart City Infrastructure Management',
     tagline: 'AI-powered smart city optimization and management',
@@ -1619,7 +1619,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.'
     launchDate: '2024-03-01'
     customers: 78;
@@ -1714,7 +1714,7 @@ export const getServicesByCategory = (category: string) =>
   d: 'month'
     }
   }
-];
+]
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),

@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Advanced Analytics System for Zion Tech Group Website;
- * Provides comprehensive user behavior tracking and insights;
+ * Advanced Analytics System for Zion Tech Group Website
+ * Provides comprehensive user behavior tracking and insights
  */
 
 interface UserEvent {
@@ -105,12 +105,12 @@ class AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      AdvancedAnalytics.instance = new AdvancedAnalytics();
+      AdvancedAnalytics.instance = new AdvancedAnalytics()
     }
-    return AdvancedAnalytics.instance;
+    return AdvancedAnalytics.instance
   }
   /**
-   * Initialize comprehensive analytics tracking;
+   * Initialize comprehensive analytics tracking
    */
 
   private initializeTracking(): void {
@@ -118,34 +118,34 @@ class AdvancedAnalytics {
   }
 
 }
-    if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views;
-    this.trackPageView();
-    // Track clicks;
-    this.trackClicks();
-    // Track scrolls;
-    this.trackScrolls();
-    // Track form submissions;
-    this.trackFormSubmissions();
-    // Track downloads;
-    this.trackDownloads();
-    // Track performance;
+    if (typeof window === 'undefined' || !this.config.enableTracking) return
+    // Track page views
+    this.trackPageView()
+    // Track clicks
+    this.trackClicks()
+    // Track scrolls
+    this.trackScrolls()
+    // Track form submissions
+    this.trackFormSubmissions()
+    // Track downloads
+    this.trackDownloads()
+    // Track performance
     if (this.config.enablePerformanceTracking) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.trackPerformance();
+      this.trackPerformance()
     }
-    // Track user journey;
+    // Track user journey
     if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.trackUserJourney();
+      this.trackUserJourney()
     }
-    // Setup network monitoring;
-    this.setupNetworkMonitoring();
+    // Setup network monitoring
+    this.setupNetworkMonitoring()
   }
   /**
-   * Create new user session;
+   * Create new user session
    */
 
   private createNewSession(): UserSession {
@@ -170,7 +170,7 @@ class AdvancedAnalytics {
     }
   }
   /**
-   * Track page views;
+   * Track page views
    */
 
   trackPageView(url?: string, title?: string): void {id: this.generateEventId()}
@@ -204,7 +204,7 @@ class AdvancedAnalytics {
     this.currentSession.pageViews++
   }
   /**
-   * Track clicks;
+   * Track clicks
    */
 
   private trackClicks(): void {
@@ -252,7 +252,7 @@ class AdvancedAnalytics {
   )
   }
   /**
-   * Track scrolls;
+   * Track scrolls
    */
 
   private trackScrolls(): void {
@@ -265,7 +265,7 @@ class AdvancedAnalytics {
     window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      clearTimeout(scrollTimeout);
+      clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -302,7 +302,7 @@ class AdvancedAnalytics {
   )
   }
   /**
-   * Track form submissions;
+   * Track form submissions
    */
 
   private trackFormSubmissions(): void {
@@ -314,8 +314,8 @@ class AdvancedAnalytics {
   O: Add content,}
 }
       const form = event.target as HTMLFormElement;)
-      const formData = new FormData(form);
-      const formFields = Array.from(formData.keys());
+      const formData = new FormData(form)
+      const formFields = Array.from(formData.keys())
       const,
   submitEvent: UserEvent = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -347,7 +347,7 @@ class AdvancedAnalytics {
   )
   }
   /**
-   * Track downloads;
+   * Track downloads
    */
 
   private trackDownloads(): void {
@@ -359,7 +359,7 @@ class AdvancedAnalytics {
   O: Add content,}
 }
       const target = event.target as HTMLElement;)
-      const link = target.closest('a');
+      const link = target.closest('a')
       if (link && this.isDownloadLink(link)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -392,7 +392,7 @@ class AdvancedAnalytics {
   )
   }
   /**
-   * Track performance metrics;
+   * Track performance metrics
    */
 
   private trackPerformance(): void {
@@ -403,7 +403,7 @@ class AdvancedAnalytics {
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Track Core Web Vitals;
+      // Track Core Web Vitals
       new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
@@ -440,15 +440,14 @@ class AdvancedAnalytics {
           }
         }
 
-      }).observe({ entryTypes: ['paint'] });
-
-      // Track navigation timing;
+      }).observe({ entryTypes: ['paint'] })
+      // Track navigation timing
       window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const navigation = performance.getEntriesByType()
 //           'navigation'
-        )[0] as PerformanceNavigationTiming;
+        )[0] as PerformanceNavigationTiming
         const,
   performanceEvent: UserEvent = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -481,7 +480,7 @@ class AdvancedAnalytics {
     }
   }
   /**
-   * Track user journey;
+   * Track user journey
    */
   private trackUserJourney(): void {
     // Track page transitions
@@ -492,10 +491,10 @@ class AdvancedAnalytics {
       if (window.location.href !== lastUrl) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        this.trackPageView();
-        lastUrl = window.location.href;
+        this.trackPageView()
+        lastUrl = window.location.href
       }
-    });
+    })
     observer.observe(document.body, {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -506,7 +505,7 @@ class AdvancedAnalytics {
     });
   }
   /**
-   * Setup network monitoring;
+   * Setup network monitoring
    */
 
   private setupNetworkMonitoring(): void {
@@ -517,17 +516,17 @@ class AdvancedAnalytics {
     window.addEventListener('online', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.isOnline = true;
-      this.flushEventQueue();
-    });
+      this.isOnline = true
+      this.flushEventQueue()
+    })
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.isOnline = false;
-    });
+      this.isOnline = false
+    })
   }
   /**
-   * Track custom event;
+   * Track custom event
    */
 
   trackEvent(event: UserEvent): void {
@@ -535,23 +534,23 @@ class AdvancedAnalytics {
   }
 
 }
-    this.currentSession.events.push(event);
-    this.eventQueue.push(event);
-    // Keep queue size manageable;
+    this.currentSession.events.push(event)
+    this.eventQueue.push(event)
+    // Keep queue size manageable
     if (this.eventQueue.length > this.maxQueueSize) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.eventQueue.shift();
+      this.eventQueue.shift()
     }
-    // Send to analytics service;
+    // Send to analytics service
     if (this.isOnline) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.sendEvent(event);
+      this.sendEvent(event)
     }
   }
   /**
-   * Send event to analytics service;
+   * Send event to analytics service
    */
 
   private async sendEvent(event: UserEvent): Promise,
@@ -576,30 +575,30 @@ class AdvancedAnalytics {
         },
         bod)
   y: JSON.stringify(event)
-      });
+      })
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * Flush event queue when back online;
+   * Flush event queue when back online
    */
-  private async flushEventQueue(): Promise;
+  private async flushEventQueue(): Promise
           <void> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!this.isOnline) return;
-    const eventsToSend = [...this.eventQueue];
-    this.eventQueue = [];
+    if (!this.isOnline) return
+    const eventsToSend = [...this.eventQueue]
+    this.eventQueue = []
     for (const event of eventsToSend) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      await this.sendEvent(event);
+      await this.sendEvent(event)
     }
   }
   /**
-   * Get element information for tracking;
+   * Get element information for tracking
    */
 
   private getElementInfo(element: HTMLElement): {
@@ -615,27 +614,27 @@ class AdvancedAnalytics {
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const tagName = element.tagName.toLowerCase();
-    const id = element.id || '';
-    const className = element.className || '';
-    const text = element.textContent?.trim();
-    // Determine category based on element type;
-let category = 'interaction';
+    const tagName = element.tagName.toLowerCase()
+    const id = element.id || ''
+    const className = element.className || ''
+    const text = element.textContent?.trim()
+    // Determine category based on element type
+let category = 'interaction'
     if (tagName === 'button' || element.closest('button')) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      category = 'button';
+      category = 'button'
     } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      category = 'link';
+      category = 'link'
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      category = 'form';
+      category = 'form'
     }
-    // Create label;
-let label = id || className || text?.substring(0, 50) || tagName;
+    // Create label
+let label = id || className || text?.substring(0, 50) || tagName
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -648,7 +647,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
   }
   /**
-   * Check if link is a download;
+   * Check if link is a download
    */
 
   private isDownloadLink(link: HTMLAnchorElement): boolean {
@@ -666,7 +665,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     )
   }
   /**
-   * Detect device type;
+   * Detect device type
    */
 
   private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
@@ -674,14 +673,14 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    const width = window.innerWidth;
+    const width = window.innerWidth
     if (width;)
-          < 768) return 'mobile';
-    if (width < 1024) return 'tablet';
-    return 'desktop';
+          < 768) return 'mobile'
+    if (width < 1024) return 'tablet'
+    return 'desktop'
   }
   /**
-   * Detect browser;
+   * Detect browser
    */
 
   private detectBrowser(): string {
@@ -689,15 +688,15 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Chrome')) return 'Chrome';
-    if (userAgent.includes('Firefox')) return 'Firefox';
-    if (userAgent.includes('Safari')) return 'Safari';
-    if (userAgent.includes('Edge')) return 'Edge';
-    return 'Unknown';
+    const userAgent = navigator.userAgent
+    if (userAgent.includes('Chrome')) return 'Chrome'
+    if (userAgent.includes('Firefox')) return 'Firefox'
+    if (userAgent.includes('Safari')) return 'Safari'
+    if (userAgent.includes('Edge')) return 'Edge'
+    return 'Unknown'
   }
   /**
-   * Detect operating system;
+   * Detect operating system
    */
 
   private detectOS(): string {
@@ -705,16 +704,16 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Windows')) return 'Windows';
-    if (userAgent.includes('Mac')) return 'macOS';
-    if (userAgent.includes('Linux')) return 'Linux';
-    if (userAgent.includes('Android')) return 'Android';
-    if (userAgent.includes('iOS')) return 'iOS';
-    return 'Unknown';
+    const userAgent = navigator.userAgent
+    if (userAgent.includes('Windows')) return 'Windows'
+    if (userAgent.includes('Mac')) return 'macOS'
+    if (userAgent.includes('Linux')) return 'Linux'
+    if (userAgent.includes('Android')) return 'Android'
+    if (userAgent.includes('iOS')) return 'iOS'
+    return 'Unknown'
   }
   /**
-   * Generate session ID;
+   * Generate session ID
    */
 
   private generateSessionId(): string {
@@ -722,10 +721,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**
-   * Generate event ID;
+   * Generate event ID
    */
 
   private generateEventId(): string {
@@ -733,10 +732,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 }
 
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**
-   * Get user ID from storage or generate one;
+   * Get user ID from storage or generate one
    */
 
   private getUserId(): string | undefined {
@@ -744,17 +743,17 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    let userId = localStorage.getItem('analytics_user_id');
+    let userId = localStorage.getItem('analytics_user_id')
     if (!userId) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }`
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      localStorage.setItem('analytics_user_id', userId);
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      localStorage.setItem('analytics_user_id', userId)
     }
-    return userId;
+    return userId
   }
   /**
-   * Get analytics summary;
+   * Get analytics summary
    */
 
   getAnalyticsSummary(): {
@@ -773,23 +772,23 @@ let label = id || className || text?.substring(0, 50) || tagName;
   y: Record<string>
     topPage,
   s: Array<{/* TODO: Fix JSX expression */}
-  s: number }>;
+  s: number }>
     conversionRat,
   e: number,
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const events = this.currentSession.events;
-    const totalEvents = events.length;
+    const events = this.currentSession.events
+    const totalEvents = events.length
     const eventsByType = events.reduce()
       (acc, event) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        acc[event.type] = (acc[event.type] || 0) + 1;
-        return acc;
+        acc[event.type] = (acc[event.type] || 0) + 1
+        return acc
       },
-      {} as Record;
-          <string, number></string>
+      {} as Record
+          <string, number>
     )
     const eventsByCategory = events.reduce()
 
@@ -798,41 +797,39 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-        acc[event.category] = (acc[event.category] || 0) + 1;
-        return acc;
+        acc[event.category] = (acc[event.category] || 0) + 1
+        return acc
       },
-      {} as Record;
-
+      {} as Record
           <string, number>
 
-    );
-    const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews;
+    )
+    const pageViews = events.filter(e => e.type === 'page_view')
+    const topPages = pageViews
 // .reduce()
         (acc, event) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          const existing = acc.find(p => p.url === event.url);
+          const existing = acc.find(p => p.url === event.url)
           if (existing) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            existing.views++;
+            existing.views++
           } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-            acc.push({ url: event.url, views: 1 });
-
+            acc.push({ url: event.url, views: 1 })
           }
-          return acc;
+          return acc
         },
-        [] as Array;
+        [] as Array
           <{/* TODO: Fix JSX expression */}
   s: number }>
 // )
-      .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
+      .sort((a, b) => b.views - a.views)
+    const conversions = events.filter(e => e.category === 'conversion').length
+    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -847,7 +844,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
   }
   /**
-   * Send session data to analytics service;
+   * Send session data to analytics service
    */
 
   private async sendSessionData(session: UserSession): Promise,
@@ -872,14 +869,14 @@ let label = id || className || text?.substring(0, 50) || tagName;
         },
         bod)
   y: JSON.stringify(session)
-      });
+      })
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
   }
   /**
-   * End current session;
+   * End current session
    */
 
   endSession(): void {
@@ -887,21 +884,21 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
 
 }
-    this.currentSession.endTime = new Date().toISOString();
+    this.currentSession.endTime = new Date().toISOString()
     this.currentSession.duration =
 //       new Date(this.currentSession.endTime).getTime() -
-      new Date(this.currentSession.startTime).getTime();
-    // Send session data;
+      new Date(this.currentSession.startTime).getTime()
+    // Send session data
     if (this.isOnline) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.sendSessionData(this.currentSession);
+      this.sendSessionData(this.currentSession)
     }
-    // Create new session;
-    this.currentSession = this.createNewSession();
+    // Create new session
+    this.currentSession = this.createNewSession()
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const advancedAnalytics = AdvancedAnalytics.getInstance()
 export default advancedAnalytics;`
 

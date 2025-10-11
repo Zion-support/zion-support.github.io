@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('homepage_advertiser function triggered')}
-    // Homepage advertising simulation;
+    // Homepage advertising simulation
     const result = {
       statusCode: 200,
       headers: {,

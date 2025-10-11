@@ -312,7 +312,7 @@ export const,
     rating: 4.7
     reviews: 41,
   },
-  // Cloud & Infrastructure Services;
+  // Cloud & Infrastructure Services
     id: 'autonomous-cloud-cost-optimization',
     name: 'Autonomous Cloud Cost Optimization',
     tagline: 'AI-driven cloud spending optimization and FinOps automation',
@@ -608,7 +608,7 @@ export const,
     rating: 4.7
     reviews: 67,
   },
-  // Data & Analytics Services;
+  // Data & Analytics Services
     id: 'real-time-data-pipeline-platform'
     name: 'Real-Time Data Pipeline Platform'
     tagline: 'Streaming data processing with real-time analytics',
@@ -803,7 +803,7 @@ export const,
     rating: 4.6
     reviews: 78,
   },
-  // Developer Tools & DevOps;
+  // Developer Tools & DevOps
     id: 'ai-code-review-assistant',
     name: 'AI Code Review Assistant',
     tagline: 'Automated code quality analysis and improvement suggestions',
@@ -998,7 +998,7 @@ export const,
     rating: 4.8
     reviews: 67,
   },
-  // Industry-Specific Solutions;
+  // Industry-Specific Solutions
     id: 'healthcare-ai-compliance-platform',
     name: 'Healthcare AI Compliance Platform',
     tagline: 'Automated HIPAA compliance and medical data security',
@@ -1201,7 +1201,7 @@ export const,
     rating: 4.8
     reviews: 52,
   },
-  // Micro SaaS Services;
+  // Micro SaaS Services
     id: 'ai-email-automation-suite',
     name: 'AI Email Automation Suite',
     tagline: 'Intelligent email marketing with AI-powered personalization',
@@ -1582,7 +1582,7 @@ export const,
     rating: 4.5
     reviews: 112,
   },
-  // IT Services;
+  // IT Services
     id: 'managed-it-support-services',
     name: 'Managed IT Support Services',
     tagline: '24/7 IT support and infrastructure management',
@@ -1870,7 +1870,7 @@ export const,
     rating: 4.9
     reviews: 45,
   },
-  // Advanced AI Services;
+  // Advanced AI Services
     id: 'ai-document-processing-platform',
     name: 'AI Document Processing Platform',
     tagline: 'Intelligent document extraction and data processing',
@@ -2065,7 +2065,7 @@ export const,
     rating: 4.7
     reviews: 56,
   },
-  // Emerging Technology Services;
+  // Emerging Technology Services
     id: 'quantum-computing-simulation-platform',
     name: 'Quantum Computing Simulation Platform',
     tagline: 'Quantum algorithm testing and optimization platform',
@@ -2260,7 +2260,7 @@ export const,
     rating: 4.7
     reviews: 28,
   }
-];
+]
 export const serviceCategories = [{name: 'Micro SaaS',
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
@@ -2350,7 +2350,7 @@ export const serviceCategories = [{name: 'Micro SaaS',
   g: 4.7,
     review,
   s: 28}
-];
+]
 export const serviceCategories = [{/* TODO: Fix JSX expression */}
   n: ''}
     colo,
@@ -2433,7 +2433,7 @@ export const serviceCategories = [{/* TODO: Fix JSX expression */}
     colo,
   r: 'from-violet-600 to-purple-700'
   }
-];
+]
 export interface ComprehensiveService,
   id: string, nam,
   e: string, taglin,

@@ -103,7 +103,7 @@ export const optimizeImages = useCallback((...args) => {};
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
   })
 }
-export const preloadRoute = (rout);
+export const preloadRoute = (rout)
   e: string) => {/* TODO: Fix JSX expression */}
   }
   const resources = routeResources[route as keyof typeof routeResources]
@@ -169,4 +169,3 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */};
 }
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
 };
-;

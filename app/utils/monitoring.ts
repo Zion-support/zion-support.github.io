@@ -169,7 +169,7 @@ class MonitoringService {}
       this.errors = this.errors.slice(-50)
   }
     }
-    // Send to error tracking service (if configured);
+    // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {}
     return { ...this.metrics }

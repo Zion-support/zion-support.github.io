@@ -10,30 +10,30 @@ export const _useRouter = () => {
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.href = url;
+    window.location.href = url
   const replace = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.replace(url);
+    window.location.replace(url)
   const back = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.history.back();
+    window.history.back()
   const forward = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.history.forward();
+    window.history.forward()
   const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.reload();
+    window.location.reload()
   return {push}
     replace,
     back,
     forward,
-    refresh;
+    refresh
   }
 export }
-export const rateLimitingMiddleware = params;
+export const rateLimitingMiddleware = params
 export default { useRouter, usePathname, useSearchParams }

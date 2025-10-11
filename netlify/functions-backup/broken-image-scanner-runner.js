@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('broken-image-scanner-runner function triggered')}
-    // Broken image scanner runner simulation;
+    // Broken image scanner runner simulation
     const result = {
       statusCode: 200,
       headers: {,

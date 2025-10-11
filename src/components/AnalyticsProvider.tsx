@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
     track: (event: string, properties?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
@@ -17,12 +17,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
       // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.async = true
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`
+      document.head.appendChild(script)
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []
       function gtag(...args: any[]) {
     window.dataLayer.push(args)
   }
@@ -30,9 +30,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href});
+        page_location: window.location.href})
     }
-  }, [trackingId]);
+  }, [trackingId])
   const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties)
@@ -47,7 +47,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         page_title: name,
         page_location: window.location.href,
-        ...properties});
+        ...properties})
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
@@ -58,7 +58,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
-        ...traits});
+        ...traits})
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
@@ -89,5 +89,3 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-  </AnalyticsProviderProps>
-  </AnalyticsContextType>

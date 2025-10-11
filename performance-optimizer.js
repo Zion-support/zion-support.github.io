@@ -1,5 +1,5 @@
-//Performance optimizations;
-// //Optimize images;
+//Performance optimizations
+// //Optimize images
 const optimizeImages = () => {
     //   //Add image optimization logic here
   }
@@ -11,7 +11,7 @@ const optimizeCSS = () => {
 
 //Optimize JavaScript;
 const optimizeJS = () => {
-  //   //Add JS optimization logic here;
+  //   //Add JS optimization logic here
 const optimizeImages = () => {/* TODO: Fix JSX expression */}
 }
 

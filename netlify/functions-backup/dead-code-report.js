@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('dead-code-report function triggered')}
-    // Dead code reporting simulation;
+    // Dead code reporting simulation
     const result = {
       statusCode: 200,
       headers: {,

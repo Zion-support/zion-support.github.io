@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('code-smell-audit-runner function triggered')}
-    // Code smell audit simulation;
+    // Code smell audit simulation
     const result = {
       statusCode: 200,
       headers: {,

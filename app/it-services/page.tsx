@@ -1042,7 +1042,6 @@ const ItServicesPage: React.FC = () => {
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-<<<<<<< HEAD
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
@@ -1079,15 +1078,6 @@ const ItServicesPage: React.FC = () => {
                 {categories.map((category) => (
                   </div><button
                     key={category.id}
-=======
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },;
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length };
-  ];
-  const filteredServices = services.filter();
-  );
-
-  return() {categories.map((category) => ()
->>>>>>> main
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
@@ -1102,7 +1092,6 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {filteredServices.map((service) => (
                 </div><div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -1118,30 +1107,19 @@ const ItServicesPage: React.FC = () => {
                         </span><Star className="w-4 h-4 mr-1" />
                         Popular
                       </span>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {filteredServices.map((service) => ()
->>>>>>> main
                     )}
                   </div>
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
-<<<<<<< HEAD
                   <div className="flex items-center justify-between mb-4">
                     </div><div>
                       </div><span className="text-2xl font-bold text-purple-400">{service.price}</span>
-=======
-                  <div className="flex items-center justify-between mb-4" /></div>
-                    <div></div>
-                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
->>>>>>> main
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
-<<<<<<< HEAD
                   <div className="mb-6">
                     </div><h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -1150,17 +1128,10 @@ const ItServicesPage: React.FC = () => {
                           </li><CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
-=======
-                  <div className="mb-6" /></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2" /></ul>
-                      {service.features.slice(0, 3).map((feature, index) => ()
->>>>>>> main
                       ))}
                     </ul>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-center justify-between">
                     </div><Link
                       to="/contact"
@@ -1168,13 +1139,6 @@ const ItServicesPage: React.FC = () => {
                     >
                       Learn More
                       </Link><ArrowRight className="w-4 h-4 ml-1" />
-=======
-                  <div className="flex items-center justify-between" /></div>
-                    <Link to="/contact"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors" /></Link>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
->>>>>>> main
                     </Link>
                     <Link to="/contact"
                       className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
@@ -1186,32 +1150,20 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <div className="text-center">
               </div><div className="bg-slate-800/50 rounded-lg p-8">
                 </div><h2 className="text-2xl font-bold text-white mb-4">
-=======
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
->>>>>>> main
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
                   Let our IT experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-<<<<<<< HEAD
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   </div><Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-=======
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <Link to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
->>>>>>> main
                     Get Free Consultation
                   </Link>
                   <a href="tel:+13024640950"
@@ -1231,3 +1183,67 @@ const ItServicesPage: React.FC = () => {
 };
 
 export default ItServicesPage;
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
+    }
+  ]
+  const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation']
+  const filteredServices = itServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
+  const stats = [
+    { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
+    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
+    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
+    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+  ]
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions
+        <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
+        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
+              From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <$2 />
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              <$2 />
+                to="/consultation"
+                className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              >
+                Free Consultation
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <$2 />
+                  key={index}
+                  to={service.href}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
+                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {service.name}
+                  <p className="text-gray-300 mb-4">{service.description}
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}
+                  <div className="text-gray-300">{stat.label}
+              ))}
+  )
+}
+export default ItServicesPage</div></div></div></div></div></div></div></div></span></span></p></p></h1></h3></section></section>

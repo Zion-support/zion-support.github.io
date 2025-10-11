@@ -245,8 +245,8 @@ for (let i = cleaned.length - 1; i >= 0; i--) {
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
       }
     }
-    sum += digit;
-    isEven = !isEven;
+    sum += digit
+    isEven = !isEven
   }
 const isValid = sum % 10 === 0;
   return {
@@ -324,33 +324,38 @@ export function validateComposite()
 export async function validateAsync()
   validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
-<<<<<<< HEAD
 ): Promise</ValidationResult><ValidationResult> {
     ,;
   try {,;
-=======
-): Promise<ValidationResult> {
-    ,
-  try {,
->>>>>>> main
     return await validator(value)
   }
+
+/**
+ * Async validation
+ */
+export async function validateAsync(
+  validator: (val: unknown) => Promise<ValidationResult>
+  value: unknown,
+): Promise<ValidationResult> {,
+  try {,
+    return await validator(value);}
   } catch (error) {
     return {
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
 export async function validateAsync()
   r: (va),
-<<<<<<< HEAD
   l: unknown) => Promise</ValidationResult><ValidationResult>,
   valu,;
-=======
-  l: unknown) => Promise<ValidationResult>,
-  valu,
->>>>>>> main
   e: unknown,
   }
 ): Promise</ValidationResult><ValidationResult> {/* TODO: Fix JSX expression */}
+export async function validateAsync(validato,
+  r: (va)
+  l: unknown) => Promise<ValidationResult>,
+  valu,
+  e: unknown,;}
+): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
@@ -366,8 +371,8 @@ export {
   }
 } from './validators';
 export {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-} from './validators';"`;</ValidationResult>
-=======
-} from './validators';"`;
->>>>>>> main
+} from './validators';"`</ValidationResult>
+  sanitizeInput;}
+} from './validators'
+export {/* TODO: Fix JSX expression */}
+} from './validators';"`

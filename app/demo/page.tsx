@@ -49,7 +49,6 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-analytics',
       title: 'AI Analytics Dashboard',
-<<<<<<< HEAD
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
       features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'],
@@ -65,53 +64,9 @@ const DemoPage: React.FC = () => {
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions'],
-=======
-      description: 'See how our AI-powered analytics can transform your data into actionable insights',
-      icon: BarChart,
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom visualizations', 'Automated reporting'],
-      duration: '20 minutes',
-      category: 'AI Services'
-    },
-    {
-      id: 'cloud-infrastructure',
-      title: 'Cloud Infrastructure',
-      description: 'Explore our cloud solutions including AWS, Azure, and GCP with migration services',
-      icon: Cloud,
-      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Auto-scaling'],
-      duration: '25 minutes',
-      category: 'IT Services'
-    },
-    {
-      id: 'ai-automation',
-      title: 'AI Workflow Automation',
-      description: 'Discover how AI can automate and optimize your business processes',
-      icon: Zap,
-      features: ['Process mining', 'Workflow optimization', 'Task automation', 'Exception handling'],
-      duration: '18 minutes',
-      category: 'AI Services'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Solutions',
-      description: 'Learn about our comprehensive security services and threat detection',
-      icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Compliance management', '24/7 monitoring'],
-      duration: '22 minutes',
-      category: 'IT Services'
-    },
-    {
-      id: 'micro-saas',
-      title: 'Micro SaaS Tools',
-      description: 'Try our ready-to-use business tools with AI and automation capabilities',
-      icon: Users,
-      features: ['Ready-to-use tools', 'AI integration', 'Custom workflows', 'Scalable solutions'],
-      duration: '30 minutes',
-      category: 'Micro SaaS'
->>>>>>> main
     }
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -182,49 +137,6 @@ const DemoPage: React.FC = () => {
                   >
                     Call: (302) 464-0950
                   </a>
-=======
-  const benefits = [
-    'See our solutions in action',
-    'Get personalized recommendations',
-    'Ask questions to our experts',
-    'Understand implementation process',;
-    'See ROI calculations for your business';
-  ];
-
-  return() {demos.map((demo) => ()
-                      onClick={() => setSelectedDemo(demo.id)}
-                    >
-                      <div className="flex items-start space-x-4" /></div>
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0" /></div>
-                          <demo.icon className="w-6 h-6 text-white" /></demo>
-                        </div>
-                        <div className="flex-1" /></div>
-                          <div className="flex items-center justify-between mb-2" /></div>
-                            <h3 className="text-xl font-bold text-white">{demo.title}</h3>
-                            <span className="text-sm text-cyan-400 font-semibold">{demo.duration}</span>
-                          </div>
-                          <p className="text-gray-300 mb-3">{demo.description}</p>
-                          <div className="flex items-center justify-between" /></div>
-                            <span className="text-sm text-gray-400">{demo.category}</span>
-                            <div className="flex space-x-2" /></div>
-                              {demo.features.slice(0, 2).map((feature, index) => ()
-                              ))}
-                            </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
-                  ))}
-                </div>
-
-                <div className="bg-slate-800/50 rounded-lg p-6" /></div>
-                  <h3 className="text-lg font-semibold text-white mb-4">What You'll Get</h3>
-                  <ul className="space-y-2" /></ul>
-                    {benefits.map((benefit, index) => ()
-                    ))}
-                  </ul>
->>>>>>> main
                 </div>
               </div>
 
@@ -361,8 +273,7 @@ const DemoPage: React.FC = () => {
       </main>
       <Footer />
     </>
-  );
-      </main>
+  )</main>
       
       <Footer /></Footer>
     </>
@@ -370,3 +281,46 @@ const DemoPage: React.FC = () => {
 };
 
 export default DemoPage;
+        <title>Demo - Zion Tech Group | See Our AI Solutions in Action
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
+        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              See Our <span className="text-cyan-400">Solutions</span> in Action
+              Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {demos.map((demo, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
+                    <Play className="w-8 h-8 text-cyan-400" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{demo.title}
+                  <p className="text-gray-300 mb-4">{demo.description}
+                  <div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}
+                  <ul className="space-y-2 mb-6">
+                    {demo.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                    ))}
+                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
+                    <Play className="w-4 h-4 mr-2" />
+                    Watch Demo
+              ))}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
+              <h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?
+              <p className="text-gray-300 mb-6">
+                Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
+              <$2 />
+                href="/contact" 
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
+                Schedule Demo
+                <ArrowRight className="w-4 h-4 ml-2" />
+  )
+}
+export default DemoPage</div></div></div></div></div></div></div></div></div></button></p></p></h1></h2></h3></ul></li></section></section></section>

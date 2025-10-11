@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('ai-trends-radar-runner function triggered')}
-    // AI trends radar simulation;
+    // AI trends radar simulation
     const result = {
       statusCode: 200,
       headers: {,

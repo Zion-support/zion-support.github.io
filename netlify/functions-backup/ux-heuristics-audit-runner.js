@@ -1,5 +1,5 @@
-const _path = require('path');
-const { spawnSync } = require('child_process');
+const _path = require('path')
+const { spawnSync } = require('child_process')
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
@@ -10,7 +10,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stderr: res.stderr || '',
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -22,12 +22,12 @@ exports.config = {/* TODO: Fix JSX expression */}
 }
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
-    const {status, stdout} stderr } = fn();
-    if (stdout) logs.push(stdout);
+    logs.push(`\n=== ${name} ===`)
+    const {status, stdout} stderr } = fn()
+    if (stdout) logs.push(stdout)
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
-    return status;
+    logs.push(`exit=${status}`)
+    return status
   }
   logStep('u)
   x: audit') () => runNode('automation/ux-heuristics-audit.cjs'))

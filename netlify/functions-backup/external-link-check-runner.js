@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('external-link-check-runner function triggered')}
-    // External link checking simulation;
+    // External link checking simulation
     const result = {
       statusCode: 200,
       headers: {,

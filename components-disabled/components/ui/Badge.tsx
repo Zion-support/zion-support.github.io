@@ -51,3 +51,4 @@ classNam,
   e: \\"text - foreground border - border\\"} }}, default_variant,
   s: {} varian,")
   t: \\"default\\"} }) } ); export interface BadgeProps; extends React.HTMLAttributes < HTMLDivElement>, VariantProps < typeof badge_variants> {} /** * Badge - Function description; */ function Badge() { return (} }'")`
+</div></div></div></div></span></span>

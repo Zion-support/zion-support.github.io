@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('front-maximizer function triggered')}
-    // Front maximization simulation;
+    // Front maximization simulation
     const result = {
       statusCode: 200,
       headers: {,

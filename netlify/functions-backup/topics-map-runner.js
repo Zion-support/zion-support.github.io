@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('topics-map-runner function triggered')}
-    // Topics mapping simulation;
+    // Topics mapping simulation
     const result = {
       statusCode: 200,
       headers: {,

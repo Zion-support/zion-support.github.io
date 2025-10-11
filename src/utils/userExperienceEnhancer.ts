@@ -55,23 +55,22 @@ class UserExperienceEnhancer {
     this.setupAccessibilityMonitoring()
   }
   private setupSmoothScrolling(): void {
-    if (!this.config.enableSmoothScrolling) return;
+    if (!this.config.enableSmoothScrolling) return
     // Add smooth scrolling to all anchor links
     
     links.forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-        
+        e.preventDefault()
+        const targetId = link.getAttribute('href')?.substring(1)
+        const targetElement = document.getElementById(targetId || '')
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
             block:           ,
-$4});
+$4})
         }
-      });
-    });
+      })
+    })
     // Add smooth scrolling to window
     window.scrollTo = new Proxy(window.scrollTo, {
     apply: (target, thisArg, args) => {
@@ -80,29 +79,26 @@ $4});
   }
         return target.apply(thisArg, args);
       }
-    });
+    })
   }
   private setupLoadingStates(): void {
-    if (!this.config.enableLoadingStates) return;
+    if (!this.config.enableLoadingStates) return
     // Add loading states to buttons
-    const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]');
-    
+    const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]')
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         this.showLoadingState(button as HTMLButtonElement)
   });
     });
     // Add loading states to forms
-    const forms = document.querySelectorAll('form');
-    
+    const forms = document.querySelectorAll('form')
     forms.forEach(form => {
     form.addEventListener('submit', () => {
         this.showFormLoadingState(form)
   });
     });
     // Add loading states to links
-    const links = document.querySelectorAll('a[data-loading]');
-    
+    const links = document.querySelectorAll('a[data-loading]')
     links.forEach(link => {
     link.addEventListener('click', () => {
         this.showLinkLoadingState(link as HTMLAnchorElement)
@@ -110,13 +106,11 @@ $4});
     });
   }
   private showLoadingState(button: HTMLButtonElement): void {
-    const originalText = button.textContent;
-    const loadingText = button.dataset.loadingText || 'Loading...';
-    
-    button.disabled = true;
-    button.textContent = loadingText;
-    button.classList.add('loading');
-    
+    const originalText = button.textContent
+    const loadingText = button.dataset.loadingText || 'Loading...'
+    button.disabled = true
+    button.textContent = loadingText
+    button.classList.add('loading')
     // Add spinner
     const spinner = document.createElement('span');
     spinner.className = 'spinner'
@@ -124,8 +118,7 @@ $4});
     button.appendChild(spinner),
     
     // Store original state
-    this.loadingStates.set(button.id || 'button', true);
-    
+    this.loadingStates.set(button.id || 'button', true)
     // Reset after 3 seconds (or when action completes)
     setTimeout(() => {
       this.hideLoadingState(button, originalText)
@@ -140,7 +133,7 @@ $4});
       spinner.remove()
   }
     
-    this.loadingStates.set(button.id || 'button', false);
+    this.loadingStates.set(button.id || 'button', false)
   }
   private showFormLoadingState(form: HTMLFormElement): void {
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement,
@@ -149,18 +142,16 @@ $4});
   }
     
     // Disable all form inputs
-    const inputs = form.querySelectorAll('input, textarea, select, button');
+    const inputs = form.querySelectorAll('input, textarea, select, button')
     inputs.forEach(input => {
     (input as HTMLElement).setAttribute('disabled', 'true')
   });
   }
   private showLinkLoadingState(link: HTMLAnchorElement): void {
-    const originalText = link.textContent;
-    const loadingText = link.dataset.loadingText || 'Loading...';
-    
-    link.textContent = loadingText;
-    link.classList.add('loading');
-    
+    const originalText = link.textContent
+    const loadingText = link.dataset.loadingText || 'Loading...'
+    link.textContent = loadingText
+    link.classList.add('loading')
     // Add spinner
     const spinner = document.createElement('span');
     spinner.className = 'spinner'
@@ -170,7 +161,7 @@ $4});
     this.loadingStates.set(link.href, true)
   }
   private setupErrorBoundaries(): void {
-    if (!this.config.enableErrorBoundaries) return;
+    if (!this.config.enableErrorBoundaries) return
     // Global error handler
     window.addEventListener('error', (event) => {
       this.handleError(event.error, 'JavaScript Error')
@@ -180,17 +171,14 @@ $4});
     this.handleError(event.reason, 'Unhandled Promise Rejection')
   });
     // Error boundary for React components (if using React)
-    this.setupReactErrorBoundary();
+    this.setupReactErrorBoundary()
   }
   private handleError(error: Error, type: string): void {
-    console.error(`${type}:`, error);
-    
+    console.error(`${type}:`, error)
     // Store error
-    this.errorBoundaries.set(type, error);
-    
+    this.errorBoundaries.set(type, error)
     // Show user-friendly error message
-    this.showErrorMessage('Something went wrong. Please try again.');
-    
+    this.showErrorMessage('Something went wrong. Please try again.')
     // Report error to analytics
     if (this.config.enableAnalytics) {
     this.reportError(error, type)
@@ -216,16 +204,13 @@ $4});
   }, 5000);
   }
   private setupAnalytics(): void {
-    if (!this.config.enableAnalytics) return;
+    if (!this.config.enableAnalytics) return
     // Track page views
-    this.trackPageView();
-    
+    this.trackPageView()
     // Track user interactions
-    this.trackUserInteractions();
-    
+    this.trackUserInteractions()
     // Track performance metrics
-    this.trackPerformanceMetrics();
-    
+    this.trackPerformanceMetrics()
     // Track user satisfaction
     this.trackUserSatisfaction()
   }
@@ -243,7 +228,7 @@ $4});
   private trackUserInteractions(): void {
     // Track clicks
     document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement
       const interactionData = {
         type: 'click',
         element: target.tagName,
@@ -257,7 +242,7 @@ $4});
     });
     // Track form submissions
     document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
+      const form = event.target as HTMLFormElement
       const formData = {
         type: 'form_submit',
         formId: form.id,
@@ -269,19 +254,17 @@ $4});
     });
     // Track scroll depth
     window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      
+      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
       if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() });
+        maxScrollDepth = scrollDepth
+        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() })
       }
-    });
+    })
   }
   private trackPerformanceMetrics(): void {
     if ('performance' in window) {
       window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const metrics = {
           pageLoadTime: perfData.loadEventEnd - perfData.navigationStart,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
@@ -297,8 +280,7 @@ $4});
   }
   private trackUserSatisfaction(): void {
     // Simple satisfaction tracking based on user behavior
-    let satisfactionScore = 100;
-    
+    let satisfactionScore = 100
     // Decrease score for errors
     window.addEventListener('error', () => {
       satisfactionScore -= 10;
@@ -306,7 +288,7 @@ $4});
   });
     
     // Decrease score for slow interactions
-    let lastInteractionTime = Date.now();
+    let lastInteractionTime = Date.now()
     document.addEventListener('click', () => {
     const interactionTime = Date.now() - lastInteractionTime;
       if (interactionTime > 1000) {
@@ -318,8 +300,7 @@ $4});
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
-    
+    console.log('Analytics:', event, data)
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data)
@@ -338,7 +319,7 @@ $4});
     this.sendAnalytics('error', errorData);
   }
   private setupNotifications(): void {
-    if (!this.config.enableNotifications) return;
+    if (!this.config.enableNotifications) return
     // Request notification permission
     if ('Notification' in window && Notification.permission === 'default') {
       Notification.requestPermission()
@@ -350,17 +331,15 @@ $4});
         body: body,
         icon: icon || '/favicon.ico',
         badge:       ,
-$4});
+$4})
     }
   }
   private setupProgressiveWebApp(): void {
-    if (!this.config.enableProgressiveWebApp) return;
+    if (!this.config.enableProgressiveWebApp) return
     // Add PWA meta tags
-    this.addPWAMetaTags();
-    
+    this.addPWAMetaTags()
     // Setup service worker
-    this.setupServiceWorker();
-    
+    this.setupServiceWorker()
     // Add install prompt
     this.setupInstallPrompt()
   }
@@ -374,7 +353,7 @@ $4});
       { name: 'msapplication-TileColor', content: '#4f46e5' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
       { name: 'theme-color', content: '#4f46e5' }
-    ];
+    ]
     metaTags.forEach(tag => {
     const meta = document.createElement('meta');
       meta.setAttribute('name', tag.name);
@@ -399,9 +378,8 @@ $4});
     let deferredPrompt: any,
     
     window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      
+      e.preventDefault()
+      deferredPrompt = e
       // Show install button
       this.showInstallButton(deferredPrompt)
   });
@@ -412,7 +390,7 @@ $4});
     installButton.className = 'fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50',
     
     installButton.addEventListener('click', () => {
-      deferredPrompt.prompt();
+      deferredPrompt.prompt()
       deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt')
@@ -425,7 +403,7 @@ $4});
     document.body.appendChild(installButton);
   }
   private setupOfflineSupport(): void {
-    if (!this.config.enableOfflineSupport) return;
+    if (!this.config.enableOfflineSupport) return
     // Show offline indicator
     window.addEventListener('online', () => {
       this.showOfflineIndicator(false)
@@ -435,8 +413,7 @@ $4});
   });
   }
   private showOfflineIndicator(isOffline: boolean): void {
-    const indicator = document.getElementById('offline-indicator');
-    
+    const indicator = document.getElementById('offline-indicator')
     if (isOffline) {
       if (!indicator) {
         const offlineDiv = document.createElement('div');
@@ -452,7 +429,7 @@ $4});
     }
   }
   private setupPushNotifications(): void {
-    if (!this.config.enablePushNotifications) return;
+    if (!this.config.enablePushNotifications) return
     // Setup push notification service
     this.setupPushService()
   }
@@ -469,14 +446,14 @@ $4});
       userVisibleOnly: true,
       applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
+      console.log('Push subscription:', subscription)
       // Send subscription to server
     }).catch((error) => {
     console.log('Push subscription failed:', error)
   });
   }
   private setupDarkMode(): void {
-    if (!this.config.enableDarkMode) return;
+    if (!this.config.enableDarkMode) return
     // Detect system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)'),
     
@@ -494,7 +471,7 @@ $4});
     });
     
     // Add dark mode toggle
-    this.addDarkModeToggle();
+    this.addDarkModeToggle()
   }
   private addDarkModeToggle(): void {
     const toggle = document.createElement('button');
@@ -510,16 +487,16 @@ $4});
   });
     
     // Load saved preference
-    const savedDarkMode = localStorage.getItem('darkMode');
+    const savedDarkMode = localStorage.getItem('darkMode')
     if (savedDarkMode === 'true') {
     document.documentElement.classList.add('dark');
       toggle.innerHTML = '☀️'
   }
     
-    document.body.appendChild(toggle);
+    document.body.appendChild(toggle)
   }
   private setupAnimations(): void {
-    if (!this.config.enableAnimations) return;
+    if (!this.config.enableAnimations) return
     // Add intersection observer for animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -529,20 +506,19 @@ $4});
       });
     });
     // Observe elements with animation classes
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach(el => observer.observe(el));
+    const animatedElements = document.querySelectorAll('.animate-on-scroll')
+    animatedElements.forEach(el => observer.observe(el))
   }
   private setupUserPreferences(): void {
     // Load user preferences from localStorage
-    const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}');
-    
+    const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}')
     // Apply preferences
     Object.entries(preferences).forEach(([key, value]) => {
     if (key === 'darkMode') {
         document.documentElement.classList.toggle('dark', value as boolean)
   }
       // Add more preference handling as needed
-    });
+    })
   }
   private setupPerformanceMonitoring(): void {
     // Monitor performance metrics
@@ -553,9 +529,8 @@ $4});
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)
   }
         }
-      });
-      
-      observer.observe({ entryTypes: ['measure'] });
+      })
+      observer.observe({ entryTypes: ['measure'] })
     }
   }
   private setupAccessibilityMonitoring(): void {
@@ -569,7 +544,7 @@ $4});
       subtree: true,
       attributes: true,
       attributeFilter: ['aria-label', 'aria-labelledby', 'role']
-    });
+    })
   }
   private calculatePerformanceScore(entry: PerformanceEntry): number {
     // Simplified performance score calculation
@@ -616,13 +591,12 @@ ${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
 ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}
 ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
-    `;
-    
-    return report.trim();
+    `
+    return report.trim()
   }
 }
 
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancer
 // UserExperienceEnhancer utility
 // This file contains utility functions and configurations
 
@@ -683,13 +657,13 @@ class UserExperienceEnhancer {
   }
 
   private setupSmoothScrolling(): void {if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {}
-      document.documentElement.style.scrollBehavior = 'smooth';
+      document.documentElement.style.scrollBehavior = 'smooth'
     }
   }
 
   private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {}
-      // Add loading state management;
-      console.log('Loading states enabled');
+      // Add loading state management
+      console.log('Loading states enabled')
     }
   }
 

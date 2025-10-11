@@ -12,7 +12,7 @@ export const newInsights: Insight[] = [
     featured: true,
     tags: ['Platform', 'ROI', 'Scorecards'],
     content: `
-# AI Platform Optimization Insights;
+# AI Platform Optimization Insights
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
 
 ## Key Insights
@@ -31,7 +31,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     featured: true,
     tags: ['Security', 'Quantum', 'AI'],
     content: `
-# Quantum AI Security Insights;
+# Quantum AI Security Insights
 Protect your AI systems with next-generation quantum security frameworks.
 
 ## Security Insights;
@@ -45,4 +45,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

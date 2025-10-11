@@ -82,7 +82,7 @@ private updateMetaTag(name: string, content: string): void {
       document.head.appendChild(meta)
   }
     }
-    meta.content = content;
+    meta.content = content
   }
 private updateCanonicalUrl(): void {
     if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
@@ -93,7 +93,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
       document.head.appendChild(canonical)
   }
     }
-    canonical.href = this.config.canonicalUrl;
+    canonical.href = this.config.canonicalUrl
   }
 private updateOpenGraphTags(): void {
     if (typeof document === 'undefined') return;
@@ -136,7 +136,7 @@ private updateMetaTagByProperty(property: string, content: string): void {
       document.head.appendChild(meta)
   }
     }
-    meta.content = content;
+    meta.content = content
   }
 private addMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
@@ -166,4 +166,3 @@ const script = document.createElement('script')
   document.head.appendChild(script)
   }
 };
-;

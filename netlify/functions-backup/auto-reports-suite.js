@@ -17,7 +17,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     run('git config user.email "bot@zion.app"');
     run('git add -A');
     run(
-      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');
+      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true')
     run('git push origin main || true')}
     return {
       statusCode: 200,

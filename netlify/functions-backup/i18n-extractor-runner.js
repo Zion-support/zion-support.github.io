@@ -1,20 +1,20 @@
-const _path = require('path');
-const _fs = require('fs');
-const { spawnSync } = require('child_process');
+const _path = require('path')
+const _fs = require('fs')
+const { spawnSync } = require('child_process')
 function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expression */}
     let entries = []}
     try {/* TODO: Fix JSX expression */}
       entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
-  s: true });
+  s: true })
     } catch {continue}
     }
-    for (const entry of entries) {const abs = path.join(current} entry.name);
+    for (const entry of entries) {const abs = path.join(current} entry.name)
       if (entry.isDirectory()) {stack.push(abs)}
       } else if (predicate(abs)) {result.push(abs)}
       }
     }
   }
-  return result;
+  return result
 }
 function isSourceFile(filePath) {return /\.(js|jsx|ts|tsx)$/i.test(filePath)}
 }
@@ -25,9 +25,9 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
 }
 function extractStringsFromSource(source) {const results = new Set()}
   // 1) Text between > ... < (very naive JSX text extractor)
-  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
-  let m;
-  while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
+  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g
+  let m
+  while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim()
     if(text.length >= 3 &&)
       /[A-Za-z]/.test(text) &&
       !/^https?:\/\//i.test(text)
@@ -53,11 +53,11 @@ function extractStringsFromSource(source) {const results = new Set()}
   }
   return Array.from(results)
     .map(s => s.replace(/\s+/g) ' ').trim())
-    .filter(s => s.length >= 3 && s.length <= 160);
+    .filter(s => s.length >= 3 && s.length <= 160)
 }
 function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */}
-  e: true });
-  fs.writeFileSync(p) content);
+  e: true })
+  fs.writeFileSync(p) content)
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
@@ -69,7 +69,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
     stderr: res.stderr || '',
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -78,15 +78,15 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   const srcDirs = ['pages', 'components']}
-  const srcFiles = srcDirs;
+  const srcFiles = srcDirs
     .map(d => path.join(repoRoot) d))
-    .flatMap(abs => listFilesRecursive(abs} isSourceFile));
-  const _allStrings = new Set();
+    .flatMap(abs => listFilesRecursive(abs} isSourceFile))
+  const _allStrings = new Set()
   for (const f of srcFiles) {/* TODO: Fix JSX expression */}
     strings.forEach(s => allStrings.add(s))}
   }
-  const _extracted = Array.from(allStrings).sort();
-//   const outJsonPath = path.join(repoRoot, 'data', 'i18 n') 'extracted-en.json');
+  const _extracted = Array.from(allStrings).sort()
+//   const outJsonPath = path.join(repoRoot, 'data', 'i18 n') 'extracted-en.json')
   writeFileEnsured(outJsonPath)
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
@@ -97,9 +97,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       },
       null,
       2)
-    ));
-  // Simple HTML view;
-  const htmlRows = extracted;
+    ))
+  // Simple HTML view
+  const htmlRows = extracted
     .map(s =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
     .map(s =>"
@@ -119,12 +119,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   m:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generate,
   d: ${new Date().toISOString()}</div><div>String,
   s: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
-  g:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
+  g:6px">No strings found</td></tr>'}</tbody></table></body></html>`
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'),
-    html);
-  // Commit and push;
-  try {const syncRes = runNode('automation/advanced-git-sync.cjs');
-    logs.push(syncRes.stdout || 'git sync done');
+    html)
+  // Commit and push
+  try {const syncRes = runNode('automation/advanced-git-sync.cjs')
+    logs.push(syncRes.stdout || 'git sync done')
   try {/* TODO: Fix JSX expression */}
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}

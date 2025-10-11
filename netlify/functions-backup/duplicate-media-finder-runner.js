@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('duplicate-media-finder-runner function triggered')}
-    // Duplicate media finding simulation;
+    // Duplicate media finding simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -1,11 +1,11 @@
 
 /**
- * Application Type Definitions;
- * Centralized type definitions for the application;
+ * Application Type Definitions
+ * Centralized type definitions for the application
  */
 /**
- * Performance Metrics Interface;
- * Defines the structure for performance monitoring data;
+ * Performance Metrics Interface
+ * Defines the structure for performance monitoring data
  */
 export interface PerformanceMetrics {
     fcp?: number; // First Contentful Paint
@@ -19,8 +19,8 @@ export interface PerformanceMetrics {
           <string>
 }
 /**
- * Performance Report Interface;
- * Complete performance report structure;
+ * Performance Report Interface
+ * Complete performance report structure
  */
 
 export interface PerformanceReport {
@@ -38,8 +38,8 @@ export interface PerformanceReport {
   p: number,
 }
 /**
- * Resource Statistics Interface;
- * Tracks resource loading statistics;
+ * Resource Statistics Interface
+ * Tracks resource loading statistics
  */
 
 export interface ResourceStats {
@@ -54,8 +54,8 @@ export interface ResourceStats {
 
 }
 /**
- * Memory Statistics Interface;
- * Browser memory usage statistics;
+ * Memory Statistics Interface
+ * Browser memory usage statistics
  */
 
 export interface MemoryStats {
@@ -68,8 +68,8 @@ export interface MemoryStats {
 
 }
 /**
- * Performance Alert Interface;
- * Structure for performance alerts and warnings;
+ * Performance Alert Interface
+ * Structure for performance alerts and warnings
  */
 
 export interface PerformanceAlert {
@@ -85,8 +85,8 @@ export interface PerformanceAlert {
 
 }
 /**
- * Layout Shift Interface;
- * Extends PerformanceEntry for layout shift tracking;
+ * Layout Shift Interface
+ * Extends PerformanceEntry for layout shift tracking
  */
 
 export interface LayoutShift extends PerformanceEntry {
@@ -98,8 +98,8 @@ export interface LayoutShift extends PerformanceEntry {
 
 }
 /**
- * Performance with Memory Interface;
- * Extends Performance API with memory information;
+ * Performance with Memory Interface
+ * Extends Performance API with memory information
  */
 
 export interface PerformanceWithMemory extends Performance {

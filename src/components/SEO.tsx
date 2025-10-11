@@ -1,8 +1,8 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 /**
- * SEO Component;
- * Provides comprehensive SEO meta tags and structured data;
+ * SEO Component
+ * Provides comprehensive SEO meta tags and structured data
  *
 export interface SEOProps {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -23,7 +23,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
+  l: string }[]
 }
   titl,
   e: 'Zion Tech Group - AI & IT Solutions',
@@ -98,7 +98,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (structuredData) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return structuredData;
+      return structuredData
     }
     const,
   baseStructuredData: Record,
@@ -129,12 +129,12 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (publishDate) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate
     }
     if (modifiedDate) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate
     }
     return baseStructuredData;
   }

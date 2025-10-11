@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface LoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
@@ -16,22 +16,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ()
     secondary: 'text-gray-600',
     white: 'text-white'
   }
-<<<<<<< HEAD
   return (
     </LoadingSpinnerProps><div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       </div><div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
       {text && (
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
-        </p>
       )}
     </div>
-=======
-  return ();
-      )};
-    </div>;
->>>>>>> main
   );
 };
 
 export default LoadingSpinner;
+  )
+}
+export default LoadingSpinner</div></div></p>

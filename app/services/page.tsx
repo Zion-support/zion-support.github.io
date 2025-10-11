@@ -15,7 +15,6 @@ const ServicesPage: React.FC = () => {
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
       category: 'ai',
-<<<<<<< HEAD
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
@@ -72,25 +71,12 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
       benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
-=======
-      price: '$299/month',
-      features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration']
-    },
-    {
-      id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern businesses',
-      category: 'it',
-      price: '$2,500/month',
-      features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery']
->>>>>>> main
     },
     {
       id: 3,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security solutions to protect your business',
       category: 'it',
-<<<<<<< HEAD
       features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Employee Training'],
       price: 'Starting at $1,800/month',
       marketPrice: '$3000-12000/month',
@@ -188,25 +174,14 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
     },
-=======
-      price: '$1,800/month',
-      features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring']
-    }
->>>>>>> main
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
-<<<<<<< HEAD
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-=======
-    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length }
-  ];
-
->>>>>>> main
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -217,19 +192,12 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         </Helmet><title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
-=======
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services for modern businesses. From AI chatbots to cloud infrastructure and cybersecurity." />
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, business solutions" />
->>>>>>> main
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         </main><div className="
           </div><div className="max-w-6xl mx-auto">
@@ -237,15 +205,6 @@ const ServicesPage: React.FC = () => {
             </div><div className="text-center mb-12">
               </div><h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Services
-=======
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                Our <span className="text-cyan-400">Services</span>
->>>>>>> main
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Comprehensive AI and IT solutions designed to transform your business and drive growth.
@@ -254,21 +213,11 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
             {/* Search and Filter */}
             <div className="mb-12">
               </div><div className="flex flex-col md:flex-row gap-4 mb-8">
                 </div><div className="flex-1 relative">
                   </div><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-=======
-        {/* Search and Filter Section */}
-        <section className="py-8 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
->>>>>>> main
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -284,13 +233,8 @@ const ServicesPage: React.FC = () => {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
-<<<<<<< HEAD
                     {categories.map(category => (
                       </select><option key={category.id} value={category.id}>
-=======
-                    {categories.map((category) => (
-                      <option key={category.id} value={category.id}>
->>>>>>> main
                         {category.name} ({category.count})
                       </option>
                     ))}
@@ -305,7 +249,6 @@ const ServicesPage: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {filteredServices.map((service, index) => (
                 </div><div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
                   </div><div className="flex items-center mb-4">
@@ -334,7 +277,6 @@ const ServicesPage: React.FC = () => {
                         </ul><li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           </li><CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </li>
                       ))}
                     </ul>
                   </div>
@@ -368,31 +310,12 @@ const ServicesPage: React.FC = () => {
                       Get Quote
                     </a>
                   </div>
-=======
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-all duration-300">
-                    Learn More
-                  </button>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
             {/* CTA Section */}
             <div className="mt-16 text-center">
               </div><div className="bg-slate-800/50 rounded-lg p-8">
@@ -416,29 +339,6 @@ const ServicesPage: React.FC = () => {
                     Call: (302) 464-0950
                   </a>
                 </div>
-=======
-        {/* CTA Section */}
-        <section className="py-16 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg p-8 text-center border border-cyan-500/20">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss your project and find the perfect solution for your business needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Free Consultation
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
->>>>>>> main
               </div>
             </div>
           </div>
@@ -451,3 +351,55 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+                      {service.features.length > 4 && (
+                        <li className="text-gray-400 text-sm">+{service.features.length - 4} more features
+                      )}
+                  <div className="mb-6">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}
+                    <div className="text-sm text-gray-300">Contact for custom pricing
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                      Get Quote
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">Learn More
+              ))}
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center mt-12 space-x-2">
+                <$2 />
+                  onClick={() =>setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
+                  Previous
+                <div className="flex space-x-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                    <$2 />
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                        currentPage === page
+                          ? 'bg-cyan-500 text-white'
+                          : 'bg-white/10 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                  ))}
+                <$2 />
+                  onClick={() =>setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
+                  Next
+            )}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss your project and find the perfect solution for your business needs.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Free Consultation
+              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">View Portfolio
+  )
+}
+export default ServicesPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></h1></h2></h2></h3></h4></ul></li></li></section></section></section></section>

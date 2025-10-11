@@ -166,7 +166,6 @@ const ApiPage: React.FC = () => {
   ];
   const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
-<<<<<<< HEAD
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
   ]
@@ -286,18 +285,11 @@ const ApiPage: React.FC = () => {
                     </span>
                   </div>
                 </div>
-=======
-    { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },;
-    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' };
-  ];
-  return() {authenticationMethods.map((method, index) => ()
->>>>>>> main
               ))}
             </div>
           </section>
 
           {/* Rate Limits */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2>
             <div className="cyber-card-enhanced p-8">
@@ -306,21 +298,10 @@ const ApiPage: React.FC = () => {
                   </table><thead>
                     </thead><tr className="border-b border-gray-700">
                       </tr><th className="text-left text-white py-3 px-4">Tier</th>
-=======
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2>
-            <div className="cyber-card-enhanced p-8" /></div>
-              <div className="overflow-x-auto" /></div>
-                <table className="w-full" /></table>
-                  <thead></thead>
-                    <tr className="border-b border-gray-700" /></tr>
-                      <th className="text-left text-white py-3 px-4">Tier</th>
->>>>>>> main
                       <th className="text-left text-white py-3 px-4">Monthly Requests</th>
                       <th className="text-left text-white py-3 px-4">Burst Limit</th>
                     </tr>
                   </thead>
-<<<<<<< HEAD
                   <tbody>
                     {rateLimits.map((limit, index) => (
                       </tbody><tr key={index} className="border-b border-gray-800">
@@ -328,10 +309,6 @@ const ApiPage: React.FC = () => {
                         <td className="py-3 px-4 text-gray-300">{limit.requests}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
                       </tr>
-=======
-                  <tbody></tbody>
-                    {rateLimits.map((limit, index) => ()
->>>>>>> main
                     ))}
                   </tbody>
                 </table>
@@ -340,7 +317,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* API Endpoints */}
-<<<<<<< HEAD
           <section id="endpoints" className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
             <div className="space-y-8">
@@ -383,22 +359,6 @@ const ApiPage: React.FC = () => {
                             <div className="bg-slate-800 rounded p-3">
                               </div><div className="text-xs text-gray-400 mb-2">Request:</div>
                               <pre className="text-green-400 text-xs overflow-x-auto">
-=======
-          <section id="endpoints" className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
-            <div className="space-y-8" /></div>
-              {apiEndpoints.map((category, categoryIndex) => ()
-                    {category.endpoints.map((endpoint, endpointIndex) => ()
-                              {endpoint.parameters.map((param, paramIndex) => ()
-                              ))}
-                            </ul>
-                          </div>
-                          <div></div>
-                            <h4 className="text-white font-semibold mb-2">Example</h4>
-                            <div className="bg-slate-800 rounded p-3" /></div>
-                              <div className="text-xs text-gray-400 mb-2">Request:</div>
-                              <pre className="text-green-400 text-xs overflow-x-auto" /></pre>
->>>>>>> main
                                 {JSON.stringify(endpoint.example.request, null, 2)}
                               </pre>
                               <div className="text-xs text-gray-400 mb-2 mt-3">Response:</div>
@@ -417,7 +377,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* SDKs and Libraries */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -443,40 +402,12 @@ const ApiPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
                 <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
                   View on Packagist </a><ExternalLink className="w-4 h-4 inline ml-1" />
-=======
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Code className="w-12 h-12 text-blue-400 mx-auto mb-4" / /></Code>
-                <h3 className="text-lg font-semibold text-white mb-2">JavaScript/Node.js</h3>
-                <p className="text-gray-300 mb-4">Official SDK for JavaScript and Node.js applications</p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  View on GitHub <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Cpu className="w-12 h-12 text-green-400 mx-auto mb-4" / /></Cpu>
-                <h3 className="text-lg font-semibold text-white mb-2">Python</h3>
-                <p className="text-gray-300 mb-4">Python SDK with full type hints and async support</p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  View on PyPI <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Database className="w-12 h-12 text-purple-400 mx-auto mb-4" / /></Database>
-                <h3 className="text-lg font-semibold text-white mb-2">PHP</h3>
-                <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  View on Packagist <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
->>>>>>> main
                 </a>
               </div>
             </div>
           </section>
 
           {/* Support */}
-<<<<<<< HEAD
           <section className="mb-16">
             </section><div className="
               </div><h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
@@ -488,17 +419,6 @@ const ApiPage: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
-=======
-          <section className="mb-16" /></section>
-            <div className="cyber-card-enhanced p-8 text-center" /></div>
-              <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
-              <p className="text-gray-300 mb-6" /></p>
-                Our developer support team is here to help you integrate our APIs successfully.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4" /></div>
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
->>>>>>> main
                   Contact Support
                 </a>
                 <a href="/docs"

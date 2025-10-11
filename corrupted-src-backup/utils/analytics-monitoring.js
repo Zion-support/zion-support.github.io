@@ -1,11 +1,10 @@
-// Advanced analytics and monitoring;
+// Advanced analytics and monitoring
 export const analyticsUtils = {
-  // Performance monitoring;
+  // Performance monitoring
   measurePerformance: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const _navigation = performance.getEntriesByType('navigation')[0];
-      const _paint = performance.getEntriesByType('paint');
-
+      const _navigation = performance.getEntriesByType('navigation')[0]
+      const _paint = performance.getEntriesByType('paint')
       const metrics = {
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
@@ -17,10 +16,10 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
 
       return metrics;
     }
-    return null;
+    return null
   },
 
-  // Error tracking;
+  // Error tracking
   trackError: (error, context = {}) => {
     const errorData = {
       message: error.message
@@ -35,10 +34,10 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
 
     // Send to analytics service;
     //     // You can integrate with services like Sentry, LogRocket, etc.
-    return errorData;
+    return errorData
   },
 
-  // User behavior tracking;
+  // User behavior tracking
   trackUserInteraction: (action, element, metadata = {}) => {
     const interactionData = {
       action,
@@ -55,18 +54,18 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
     //     return interactionData;
   },
 
-  // Core Web Vitals;
+  // Core Web Vitals
   measureCoreWebVitals: () => {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        //           getCLS(console.log);
-        //           getFID(console.log);
-        //           getFCP(console.log);
-        //           getLCP(console.log);
-        //           getTTFB(console.log);
+        //           getCLS(console.log)
+        //           getFID(console.log)
+        //           getFCP(console.log)
+        //           getLCP(console.log)
+        //           getTTFB(console.log)
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }}

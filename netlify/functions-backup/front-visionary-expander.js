@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('front-visionary-expander function triggered')}
-    // Front visionary expansion simulation;
+    // Front visionary expansion simulation
     const result = {
       statusCode: 200,
       headers: {,

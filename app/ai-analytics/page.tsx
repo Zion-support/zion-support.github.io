@@ -8,7 +8,6 @@ import { BarChart, TrendingUp, Database, Brain, CheckCircle, ArrowRight, Star, C
 const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -50,10 +49,9 @@ const AiAnalyticsPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
+  ]
   const useCases = [
     {
-=======
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Advanced machine learning models to predict future trends and outcomes',
@@ -73,7 +71,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
->>>>>>> main
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       benefits: ['Interactive dashboards', 'Automated reporting', 'KPI tracking']
@@ -104,25 +101,20 @@ const AiAnalyticsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
-    <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group | Advanced Data Analytics Solutions</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics solutions. Predictive analytics, machine learning, and business intelligence services." />
-        <meta name="keywords" content="AI analytics, data analytics, machine learning, business intelligence, predictive analytics, data science" />
->>>>>>> main
       </Helmet>
       
+      <Helmet>
+        <title>AI Analytics - Zion Tech Group
+<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       <Navigation />
       
       <main className="pt-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section><div className="
             </div><div className="text-center">
@@ -131,7 +123,6 @@ const AiAnalyticsPage: React.FC = () => {
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent analytics powered by cutting-edge AI technology.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
@@ -139,38 +130,12 @@ const AiAnalyticsPage: React.FC = () => {
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More,
   </
-=======
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                AI <span className="text-cyan-400">Analytics</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transform your data into actionable insights with our advanced AI-powered analytics solutions. 
-                Make data-driven decisions that drive business growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Free Consultation
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
->>>>>>> main
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section><div className="
             </div><div className="text-center mb-16">
@@ -179,49 +144,39 @@ const AiAnalyticsPage: React.FC = () => {
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI analytics platform can revolutionize your business intelligence.
-=======
-        <section className="py-16 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Our AI analytics platform provides comprehensive tools for data analysis, 
-                machine learning, and business intelligence.
->>>>>>> main
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-<<<<<<< HEAD
                 </div><div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   </div><div className="flex items-center mb-4">
                     </div><feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-=======
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-cyan-500/20">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
->>>>>>> main
                   </div>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Get Started
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">Learn More
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful AI Analytics Features
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover how our AI analytics platform can revolutionize your business intelligence.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}
+                  <p className="text-gray-600 mb-4">{feature.description}
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                       </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         </li><CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-=======
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> main
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
               ))}
             </div>
           </div>
@@ -343,43 +298,16 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section><div className="
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Analytics?
-            </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI analytics platform.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
   </
-=======
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg p-8 text-center border border-cyan-500/20">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Transform your data into actionable insights. Get a free consultation and see how 
-                our AI analytics can drive your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Free Consultation
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
-              </div>
-            </div>
->>>>>>> main
           </div>
         </section>
       </main>
@@ -390,3 +318,8 @@ const AiAnalyticsPage: React.FC = () => {
 };
 
 export default AiAnalyticsPage;
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial
+      <Footer />
+  )
+}
+export default AiAnalyticsPage</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>

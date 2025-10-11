@@ -1,6 +1,5 @@
-#!/usr/bin/env node;
-import https from 'https';
-
+#!/usr/bin/env node
+import https from 'https'
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
@@ -34,13 +33,13 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   if (prs.length === 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-    // console.log(`📋 Found ${prs.length} open PR(s):`);
+    // console.log(`📋 Found ${prs.length} open PR(s):`)
     prs.forEach(pr => {)
 )
     prs.forEach(pr => {/* TODO: Fix JSX expression */})
-    });
+    })
   }
 }
 
-main().catch(console.error);
+main().catch(console.error)
 `

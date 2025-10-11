@@ -1,4 +1,4 @@
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
+import React, { Component, type ErrorInfo, type ReactNode } from 'react'
 interface ErrorFallbackProps {
     error: Error,
   resetError: () => void
@@ -41,9 +41,6 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback></ErrorFallback>
     }
-    return this.props.children;
+    return this.props.children
   }
-}
-  </button>
-  </button>
-  </path>
+}</div></div></div></div></div></div></div></p></p></h3>

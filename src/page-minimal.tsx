@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -8,7 +8,7 @@ export const metadata = {
 }
 export default function HomePage() {
   return (
-          <div>Coming Soon</div>
+          <div>Coming Soon
   )
           <div className="min-h-screen bg-white">
       {/* Header */}
@@ -17,12 +17,10 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
-// Zion Tech Group;
-          </Link>
-            </div>
+// Zion Tech Group
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
-Home;
+Home
               <Link href="/services" className="text-gray-900 hover:text-blue-600">
                 Services
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
@@ -49,7 +47,7 @@ Home;
 // >
 //                 Explore Our Services
           <Link className="w-5 h-5 ml-2" />
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              < href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"$2 />
                 <Phone className="w-5 h-5 mr-2" />
 // Call +1 302 464 0950,
           </a>
@@ -59,9 +57,8 @@ Home;
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Zion Tech Group?
-          </h2>
               <p className="text-xl text-gray-600">
-                We deliver measurable results through innovative AI solutions;
+                We deliver measurable results through innovative AI solutions
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -88,13 +85,12 @@ Ready to Transform Your Business?
                 href="/contact" Get Started Today
                 href="/blog" View Our Blog,
                 <ArrowRight className="w-5 h-5 ml-2" />
-      </main>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group
             <p className="text-gray-400 mb-6">
-              Advanced AI and IT Solutions for Enterprise Transformation;
+              Advanced AI and IT Solutions for Enterprise Transformation
             <div className="flex justify-center space-x-6">
               <Link href="/services" className="text-gray-400 hover: text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>

@@ -29,7 +29,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
       setCount(currentCount);
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate)
       }
     }
 
@@ -39,7 +39,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
     <React.Fragment>
       ) => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(animationFrame)
       }
     }
   }, [end, duration]);

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('auto-scheduler function triggered')}
-    // Auto-scheduling simulation;
+    // Auto-scheduling simulation
     const result = {
       statusCode: 200,
       headers: {,

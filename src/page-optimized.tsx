@@ -1,16 +1,16 @@
-'use client';
-import React, { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
-const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional;
+'use client'
+import React, { lazy } from 'react'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
+// Fallback component
+const EmptyComponent = () => null
+// Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() =>;
+  import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
 //   )
-);
+)
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     // TODO: Add content
@@ -30,13 +30,12 @@ export default function OptimizedHomePage() {
   }
 }
   return (
-          <div>Coming Soon</div>
+          <div>Coming Soon
   )
           <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
         <div />
-      </AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">

@@ -6,6 +6,6 @@ export function cn(...inputs: ClassValue[]) {
     // TODO: Add content
   }
 }
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 

@@ -79,18 +79,11 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   }
 }
-<<<<<<< HEAD
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
-=======
-    address: string,
-    addres,
-  s: string}
-export const,
-  ultimate2026Services: Ultimate2026Service[] = [,
     feature,
   s: [
       'Ultimate platform'
@@ -137,7 +130,7 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
@@ -163,7 +156,7 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -219,7 +212,6 @@ export const,
     }
   }
 ];
-<<<<<<< HEAD
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
@@ -243,9 +235,6 @@ i,"
       "All technologies","
       "Maximum capabilities","
       "Premium features","
-=======
-;
->>>>>>> main
     id: "2026-ultimate-service",
     name: "2026 Ultimate Service Platform",
     tagline: "The ultimate platform for 2026",
@@ -256,14 +245,13 @@ i,"
       "All technologies",
       "Maximum capabilities",
       "Premium features",
->>>>>>> cursor/delete-records-e539
       "24/7 support"
-    ];
+    ]
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,"
@@ -276,7 +264,7 @@ i,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -284,7 +272,7 @@ i,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

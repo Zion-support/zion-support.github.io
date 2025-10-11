@@ -11,7 +11,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
   const keywordsString = keywords.join(', ');
 
-<<<<<<< HEAD
   return (
     </SEOOptimizerProps><Helmet>
       </Helmet><title>{title}</title>
@@ -31,10 +30,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
-=======
-  return ()
->>>>>>> main
   );
 };
 
 export default SEOOptimizer;
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO meta tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+      )}
+  )
+}
+export default SEOOptimizer
+</li>

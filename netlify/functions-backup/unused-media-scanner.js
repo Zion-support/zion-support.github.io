@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    // Unused media scanning simulation;
+    // Unused media scanning simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -15,7 +15,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',;
-;
     'Proven track record of success';
   ];
 return ()

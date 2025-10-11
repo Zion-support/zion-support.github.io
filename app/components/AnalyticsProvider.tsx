@@ -22,9 +22,25 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
+    // Initialize analytics
+    const initAnalytics = () => {
+      // Add Google Analytics or other analytics services here
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        // Example: Initialize Google Analytics
+        // gtag('config', 'GA_MEASUREMENT_ID')
+      }
+      setIsInitialized(true)
+    }
+
+    initAnalytics()
+  }, [])
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (!isInitialized) return
+
+    // Track event with analytics service
+    if (typeof window !== 'undefined') {
+      console.log('Analytics Event:', eventName, properties)
       
       // Configure Google Analytics
       gtag()
@@ -32,28 +48,37 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     }
   }, []);
 
-<<<<<<< HEAD
   const trackEvent = (eventName: string, parameters: Record</AnalyticsProviderProps><string, any> = {}) => {
-=======
-  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {;
->>>>>>> main
     if (typeof window === 'undefined') return;
 
     // Google Analytics
     if ('gtag' in window) {
-<<<<<<< HEAD
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record</string><string, any>) => void }).gtag;
       gtag('event', eventName, {
         event_category: parameters.category || 'engagement',
         event_label: parameters.label,
         value: parameters.value,
         ...parameters,
-=======
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-      gtag()
->>>>>>> main
       })
+      // Example: Send to Google Analytics
+      // gtag('event', eventName, properties)
     }
+  }
+
+  const trackPageView = (pageName: string) => {
+    if (!isInitialized) return
+
+    // Track page view
+    if (typeof window !== 'undefined') {
+      console.log('Page View:', pageName)
+      
+      // Example: Send to Google Analytics
+      // gtag('config', 'GA_MEASUREMENT_ID', {
+      //   page_title: pageName,
+      //   page_location: window.location.href
+      // })
+    }
+  }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
@@ -63,7 +88,6 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
-;
     // Google Analytics;
     if ('gtag' in window) {;
       const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
@@ -82,15 +106,15 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     trackPageView,
   }
 
-<<<<<<< HEAD
   return (
     </string><AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-=======
-  return ()
->>>>>>> main
   );
 }
 
 export default undefined;
+  )
+}
+
+export default AnalyticsProvider

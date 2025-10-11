@@ -4,17 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {}
     }
-  ];
+  ]
   const benefits = [
-=======
-    {};
-    };
-  ];
-const benefits = [
->>>>>>> main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -25,7 +18,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',;
-;
     'Proven track record of success';
   ];
 return ()

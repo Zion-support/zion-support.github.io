@@ -1,6 +1,6 @@
 /**
- * Environment Configuration;
- * Centralizes all environment variables with validation and type safety;
+ * Environment Configuration
+ * Centralizes all environment variables with validation and type safety
  */
 
 interface EnvConfig {
@@ -33,8 +33,8 @@ class EnvironmentConfig {
   private config: EnvConfig,
 
   private constructor() {,
-    this.config = this.loadConfig();
-    this.validate();
+    this.config = this.loadConfig()
+    this.validate()
 interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 
@@ -43,17 +43,17 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
-    return EnvironmentConfig.instance;
+    return EnvironmentConfig.instance
   }
 
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
-      // Check both regular and NEXT_PUBLIC_ prefixed versions;
+      // Check both regular and NEXT_PUBLIC_ prefixed versions
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
+      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || ''
     }
-    return defaultValue || '';
+    return defaultValue || ''
   }
 
   private getBooleanEnvVar(ke,
@@ -70,26 +70,26 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   private loadConfig(): EnvConfig {
     return {
-      // App Configuration;
+      // App Configuration
       NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
       APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
 
-      // Analytics;
+      // Analytics
       GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
-      // API Configuration;
+      // API Configuration
       API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com'),
       API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
 
-      // Feature Flags;
+      // Feature Flags
       ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS', true),
       ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING', true),
       ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
 
-      // Logging;
+      // Logging
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
 
-      // Build Configuration;
+      // Build Configuration
       BUILD_ID: this.getEnvVar('BUILD_ID'),
       VERSION: this.getEnvVar('VERSION', '1.0.0')}
   }
@@ -97,14 +97,14 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   private validate(): void {
     const errors: string[] = [],
 ,
-    // Validate NODE_ENV;
+    // Validate NODE_ENV
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
-      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
+      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)
     }
 
-    // Validate URLs;
+    // Validate URLs
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
+      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`)
   private getNumberEnvVar(ke,
   y: string, defaultValu)
   e: number): number {/* TODO: Fix JSX expression */}
@@ -115,33 +115,33 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private validate(): void {/* TODO: Fix JSX expression */}`
-  NODE_ENV: ${this.config.NODE_ENV}`);
+  NODE_ENV: ${this.config.NODE_ENV}`)
     }
 
-    // Validate URLs;
+    // Validate URLs
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
-  APP_URL: ${this.config.APP_URL}`);
+  APP_URL: ${this.config.APP_URL}`)
     }
 
     if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
-  API_BASE_URL: ${this.config.API_BASE_URL}`);
+  API_BASE_URL: ${this.config.API_BASE_URL}`)
     }
 
-    // Validate timeout;
+    // Validate timeout
     if (this.config.API_TIMEOUT < 0) {
-      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
+      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)
     }
 
     if (errors.length > 0) {
-      //       // In production, we might want to throw, but in development just warn;
+      //       // In production, we might want to throw, but in development just warn
       if (this.config.NODE_ENV === 'production') {
-        throw new Error(`Environment validation failed: ${errors.join(', ')}`);
+        throw new Error(`Environment validation failed: ${errors.join(', ')}`)
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
-  positive: ${this.config.API_TIMEOUT}`);
+  positive: ${this.config.API_TIMEOUT}`)
     }
 
     if (errors.length > 0) {/* TODO: Fix JSX expression */}`
-  failed: ${errors.join(', ')}`);
+  failed: ${errors.join(', ')}`)
       }
     }
   }
@@ -172,9 +172,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  // Convenience getters;
+  // Convenience getters
   public getAppUrl(): string {
-    return this.config.APP_URL;
+    return this.config.APP_URL
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
   }
 

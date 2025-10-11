@@ -15,7 +15,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ()
     lg: 'w-12 h-12'
   }
 
-<<<<<<< HEAD
   return (
     </LoadingSpinnerProps><div className="flex flex-col items-center justify-center p-8">
       </div><Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
@@ -58,27 +57,10 @@ export const StatsSkeleton: React.FC = () => (
         </div><div className="h-8 bg-gray-600 rounded mb-2"></div>
         <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
       </div>
-=======
-  return ();
-      )};
-    </div>;
-  );
-}
-
-export const PageLoader: React.FC = () => ()
-);
-
-export const ServiceCardSkeleton: React.FC = () => ()
-);
-
-export const StatsSkeleton: React.FC = () => ()
-    {Array.from({ length: 4 }).map((_, index) => ()
->>>>>>> main
     ))}
   </div>
 );
 
-<<<<<<< HEAD
 export const ContentSkeleton: React.FC = () => (
   <div className="space-y-6 animate-pulse">
     </div><div className="h-8 bg-gray-600 rounded w-3/4"></div>
@@ -89,7 +71,3 @@ export const ContentSkeleton: React.FC = () => (
     </div>
   </div>
 );
-=======
-export const ContentSkeleton: React.FC = () => ()
-);
->>>>>>> main

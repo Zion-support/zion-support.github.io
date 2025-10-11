@@ -83,7 +83,6 @@ const CommunityPage: React.FC = () => {
     {
       icon: Award,
       title: 'Recognition',
-<<<<<<< HEAD
       description: 'Showcase your projects and get community recognition'
     }
   ]
@@ -143,35 +142,20 @@ const CommunityPage: React.FC = () => {
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
-=======
-      description: 'Showcase your projects and get community recognition';
-    };
-  ];
-  return() {communityStats.map((stat, index) => ()
->>>>>>> main
             ))}
           </div>
 
           {/* Tabs */}
-<<<<<<< HEAD
           <div className="mb-8">
             </div><div className="flex flex-wrap justify-center gap-4">
-=======
-          <div className="mb-8" /></div>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
->>>>>>> main
               {[
                 { id: 'overview', name: 'Overview' },
                 { id: 'events', name: 'Events' },
                 { id: 'forums', name: 'Forums' },
                 { id: 'benefits', name: 'Benefits' }
-<<<<<<< HEAD
               ].map((tab) => (
                 </div><button
                   key={tab.id}
-=======
-              ].map((tab) => ()
->>>>>>> main
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === tab.id
@@ -185,7 +169,6 @@ const CommunityPage: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-12">
@@ -286,19 +269,10 @@ const CommunityPage: React.FC = () => {
                         </a><ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </div>
-=======
-          {/* Overview Tab */},
-    {activeTab === 'overview' && ()
-          )},
-    {/* Events Tab */},
-    {activeTab === 'events' && ()
-                  {events.map((event, index) => ()
->>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           )}
 
           {/* Forums Tab */}
@@ -331,17 +305,10 @@ const CommunityPage: React.FC = () => {
                         </a><ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                     </div>
-=======
-          )},
-    {/* Forums Tab */},
-    {activeTab === 'forums' && ()
-                  {forums.map((forum, index) => ()
->>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           )}
 
           {/* Benefits Tab */}
@@ -362,17 +329,10 @@ const CommunityPage: React.FC = () => {
                         <p className="text-gray-300">{benefit.description}</p>
                       </div>
                     </div>
-=======
-          )},
-    {/* Benefits Tab */},
-    {activeTab === 'benefits' && ()
-                  {benefits.map((benefit, index) => ()
->>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           )}
 
           {/* Join Community CTA */}
@@ -387,19 +347,6 @@ const CommunityPage: React.FC = () => {
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-=======
-          )},
-    {/* Join Community CTA */}
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center" /></div>
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-              Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
-              Start connecting, learning, and growing today.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              <a href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
->>>>>>> main
                 Join Now
               </a>
               <a href="/contact"
@@ -410,7 +357,6 @@ const CommunityPage: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-<<<<<<< HEAD
           <div className="cyber-card-enhanced p-8 mt-8">
             </div><h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -419,48 +365,23 @@ const CommunityPage: React.FC = () => {
                 <div>
                   </div><div className="text-white font-semibold">Email</div>
                   <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-=======
-          <div className="cyber-card-enhanced p-8 mt-8" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6" /></div>
-              <div className="flex items-center space-x-3" /></div>
-                <Mail className="w-6 h-6 text-cyan-400" / /></Mail>
-                <div></div>
-                  <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300" /></a>
->>>>>>> main
                     community@ziontechgroup.com
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-3">
                 </div><Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Phone</div>
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-=======
-              <div className="flex items-center space-x-3" /></div>
-                <Phone className="w-6 h-6 text-cyan-400" / /></Phone>
-                <div></div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300" /></a>
->>>>>>> main
                     +1 (302) 464-0950
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-3">
                 </div><MapPin className="w-6 h-6 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Address</div>
-=======
-              <div className="flex items-center space-x-3" /></div>
-                <MapPin className="w-6 h-6 text-cyan-400" / /></MapPin>
-                <div></div>
-                  <div className="text-white font-semibold">Address</div>
->>>>>>> main
                   <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
                 </div>
               </div>
@@ -473,3 +394,44 @@ const CommunityPage: React.FC = () => {
 };
 
 export default CommunityPage;
+        <title>Community | Zion Tech Group
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts." />
+        <meta name="keywords" content="community, developers, tech community, networking, Zion Tech Group" />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Community
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
+            Connect, learn, and grow together.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our community provides opportunities for networking, learning, and collaboration.
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+              <p className="text-gray-300">{feature.description}
+          ))}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Join Our Community?
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}
+            ))}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Join?
+          <p className="text-xl text-purple-100 mb-8">
+            Become part of our growing community and start connecting with like-minded professionals.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Users className="mr-2 h-5 w-5" />
+              Join Community
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Learn More
+  )
+}
+export default CommunityPage</div></div></div></div></div></div></div></div></div></div></span></button></p></p></p></p></h1></h2></h2></h3>

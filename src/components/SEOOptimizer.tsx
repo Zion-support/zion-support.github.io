@@ -1,23 +1,23 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    // Add breadcrumb structured data;
-    addBreadcrumbStructuredData();
-    // Add FAQ structured data;
-    addFAQStructuredData();
-    // Add organization structured data;
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    // Add breadcrumb structured data
+    addBreadcrumbStructuredData()
+    // Add FAQ structured data
+    addFAQStructuredData()
+    // Add organization structured data
+    addOrganizationStructuredData()
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`)
     if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.setAttribute('content', content);
@@ -94,7 +94,7 @@ const,
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
-    });
+    })
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -103,13 +103,13 @@ const,
         custom_map: {
           page_type: page
         }
-      });
+      })
     }
-  }, [mergedSEOData, page]);
+  }, [mergedSEOData, page])
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{mergedSEOData.title}</title>
+      <title>{mergedSEOData.title}
       <meta name="description" content={mergedSEOData.description} />
       <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
@@ -160,7 +160,6 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedSEOData.structuredData)}
-      </script>
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({

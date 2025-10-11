@@ -5,15 +5,10 @@
  */;
 import React from 'react';
 // Debounce function for performance optimization;
-<<<<<<< HEAD
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
   func: T,
   wait: number,
 ): ((...args: Parameters</T><T>) => void) => {
-=======
-export const debounce = <T extends (...args: unknown[]) => unknown>()
-): ((...args: Parameters<T>) => void) => {
->>>>>>> main
     let timeout: NodeJS.Timeout,
   return (
     <React.Fragment>
@@ -23,7 +18,6 @@ export const debounce = <T extends (...args: unknown[]) => unknown>()
   func: T,
   wait: number
   }
-<<<<<<< HEAD
 ): ((...args: Parameters</T><T>) => void) => {}
   let timeout: NodeJS.Timeout,
   return (
@@ -31,25 +25,15 @@ export const debounce = <T extends (...args: unknown[]) => unknown>()
       ...args: Parameters</T><T>
     </React.Fragment>
   ) => {}
-=======
-): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout,;
-  return (...args: Parameters<T>) => {};
->>>>>>> main
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }
 }
 // Throttle function for performance optimization;
-<<<<<<< HEAD
 export const throttle = </T><T extends (...args: unknown[]) => unknown>(,
   func: T,
   limit: number,
 ): ((...args: Parameters</T><T>) => void) => {
-=======
-export const throttle = <T extends (...args: unknown[]) => unknown>()
-): ((...args: Parameters<T>) => void) => {
->>>>>>> main
     let inThrottle: boolean,
   return (
     <React.Fragment>
@@ -62,17 +46,12 @@ export const throttle = <T extends (...args: unknown[]) => unknown>()
   }
 ): ((...args: Parameters</T><T>) => void) => {}
   let inThrottle: boolean,
-<<<<<<< HEAD
   return (
     <React.Fragment>
       ...args: Parameters</T><T>
     </React.Fragment>
   ) => {}
     if (!inThrottle) {}
-=======
-  return (...args: Parameters<T>) => {};
-    if (!inThrottle) {};
->>>>>>> main
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
@@ -92,11 +71,65 @@ export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
   private metrics: Map</string><string, number> = new Map();
   private observers: PerformanceObserver[] = [],
+'use client'
+/**
+ * Performance Enhancement Utilities
+ * Advanced performance optimization tools for the application
+ */
+import React from 'react'
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  wait: number,
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout
+  return (...args: Parameters<T>) => {,
+  func: T,
+  wait: number;}
+): ((...args: Parameters<T>) => void) => {}
+  let timeout: NodeJS.Timeout
+  return (...args: Parameters<T>) => {}
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait)
+  }
+}
+// Throttle function for performance optimization
+export const throttle = <T extends (...args: unknown[]) => unknown>(
+  func: T,
+  limit: number,
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean,
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {,
+  func: T,
+  limit: number;}
+): ((...args: Parameters<T>) => void) => {}
+  let inThrottle: boolean,
+  return (...args: Parameters<T>) => {}
+    if (!inThrottle) {}
+      func(...args)
+      inThrottle = true
+      setTimeout(() => (inThrottle = false), limit)
+    }
+  }
+}
+// Performance monitoring utilities
+export class PerformanceMonitor {
+  private static instance: PerformanceMonitor,
+  private metrics: Map<string, number> = new Map()
+  private observers: PerformanceObserver[] = []
+  static getInstance(): PerformanceMonitor {,
+    if (!PerformanceMonitor.instance) {,
+// Performance monitoring utilities;}
+export class PerformanceMonitor {}
+  private static instance: PerformanceMonitor,
+  private metrics: Map<string, number> = new Map()
+  private observers: PerformanceObserver[] = []
   static getInstance(): PerformanceMonitor {}
     if (!PerformanceMonitor.instance) {}
-      PerformanceMonitor.instance = new PerformanceMonitor();
+      PerformanceMonitor.instance = new PerformanceMonitor()
     }
-    return PerformanceMonitor.instance;
+    return PerformanceMonitor.instance
   }
   // Track component render time;
   trackRender(componentName: string, renderTime: number) {
@@ -104,7 +137,7 @@ export class PerformanceMonitor {}
   // Track component render time
   }
   trackRender(componentName: string, renderTime: number) {}
-    this.metrics.set(`${componentName}_render`, renderTime);
+    this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {}
       }
   }
@@ -116,32 +149,22 @@ export class PerformanceMonitor {}
   }
   trackMemory(componentName: string) {}
     if ('memory' in performance) {}
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
       if (memory) {}
-<<<<<<< HEAD
 export const debounce = </string><T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   wai,;
-=======
-export const debounce = <T extends (...arg);
-  s: unknown[]) => unknown>()
->>>>>>> main
   t: number;)
 ): ((...arg),
   s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
   }
 }
 // Throttle function for performance optimization;
-<<<<<<< HEAD
 export const throttle = </T><T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   limi,;
-=======
-export const throttle = <T extends (...arg);
-  s: unknown[]) => unknown>()
->>>>>>> main
   t: number;)
 ): ((...arg),
   s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
@@ -149,9 +172,30 @@ export const throttle = <T extends (...arg);
   }
 }
 // Performance monitoring utilities;
+export const debounce = <T extends (...arg)
+  s: unknown[]) => unknown>(fun,
+  c: T,
+  wai,
+  t: number;)
+): ((...arg)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  }
+}
+// Throttle function for performance optimization
+export const throttle = <T extends (...arg)
+  s: unknown[]) => unknown>(fun,
+  c: T,
+  limi,
+  t: number;)
+): ((...arg)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+    }
+  }
+}
+// Performance monitoring utilities
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
-    return PerformanceMonitor.instance;
+    return PerformanceMonitor.instance
   }
   // Track component render time;
   trackRender()
@@ -162,12 +206,12 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
       }ms`);
 }
   }
-  // Track memory usage;
-  trackMemory(componentNam);
+  // Track memory usage
+  trackMemory(componentNam)
   e: string) {/* TODO: Fix JSX expression */}
-  e: number } }).memory;
-      if (memory) {/* TODO: Fix JSX expression */}`;
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+  e: number } }).memory
+      if (memory) {/* TODO: Fix JSX expression */}`
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
       }
     }
   }
@@ -189,10 +233,10 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
   }
   getMetrics() {/* TODO: Fix JSX expression */}
   }
-  // Clear metrics;
+  // Clear metrics
   clearMetrics() {/* TODO: Fix JSX expression */}
   }
-  // Monitor long tasks;
+  // Monitor long tasks
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
 const observer = new PerformanceObserver((list) => {;
@@ -201,16 +245,16 @@ const observer = new PerformanceObserver((list) => {;
   // Get performance metrics
   }
   getMetrics() {}
-    return Object.fromEntries(this.metrics);
+    return Object.fromEntries(this.metrics)
   }
-  // Clear metrics;
+  // Clear metrics
   clearMetrics() {}
-    this.metrics.clear();
+    this.metrics.clear()
   }
-  // Monitor long tasks;
+  // Monitor long tasks
   startLongTaskMonitoring() {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
-      return;
+      return
     }
     const observer = new PerformanceObserver((list) => {}
       list.getEntries().forEach((entry) => {};
@@ -229,19 +273,14 @@ observer.observe({ entryTypes: ['longtask'] })
     this.observers = []
   }
 }
-// React hook for performance monitoring;
+// React hook for performance monitoring
 export const usePerformanceMonitor = (;) => {
     return ()
   )
   }
 // React hook for performance monitoring;}
-<<<<<<< HEAD
 export const usePerformanceMonitor = (componentName: string) => {}
   const renderStartTime = useRef</T><number>(0);
-=======
-export const usePerformanceMonitor = (componentName: string) => {};
-  const renderStartTime = useRef<number>(0);
->>>>>>> main
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {}
     renderStartTime.current = performance.now();
@@ -262,6 +301,23 @@ export const usePerformanceMonitor = (componentName: string) => {};
         if (entry.duration > 50) {
     // Tasks longer than 50ms
   }
+  const renderStartTime = useRef<number>(0)
+  const monitor = PerformanceMonitor.getInstance()
+  useEffect(() => {}
+    renderStartTime.current = performance.now()
+    return () => {,;}
+    return () => {}
+      const renderTime = performance.now() - renderStartTime.current
+      monitor.trackRender(componentName, renderTime)
+      monitor.trackMemory(componentName)
+    }
+  }, [componentName, monitor])
+  return {}
+    trackRender: (fn: () => void) => {}
+      const start = performance.now()
+      fn();,
+      const duration = performance.now() - start
+        if (entry.duration > 50) {// Tasks longer than 50ms;}
         }
       })
     })
@@ -269,12 +325,12 @@ export const usePerformanceMonitor = (componentName: string) => {};
   s: ['longtask'] })
     this.observers.push(observer);
   }
-  // Cleanup observers;
+  // Cleanup observers
   cleanup() {/* TODO: Fix JSX expression */}
   }
 }
-// React hook for performance monitoring;
-export const usePerformanceMonitor = (componentNam);
+// React hook for performance monitoring
+export const usePerformanceMonitor = (componentNam)
   e: string) => {/* TODO: Fix JSX expression */}
     }
   }, [componentName, monitor]);
@@ -370,8 +426,8 @@ export const optimizeScrollPerformance = () => {};
       for (const entry of list.getEntries()) {};
         const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {}
-          clsEntries.push(entry);
-          clsValue += layoutEntry.value;
+          clsEntries.push(entry)
+          clsValue += layoutEntry.value
         }
       }
 observer.observe({ entryTypes: ['layout-shift'] })
@@ -557,12 +613,28 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
   };
 };
 // Initialize performance enhancements;
-<<<<<<< HEAD
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }
-}`;</number>
-=======
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */};
-    };
-}`;
->>>>>>> main
+}`</number>
+// Memory usage monitoring
+export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
+  }
+  const memory = (performance as unknown as {/* TODO: Fix JSX expression */})
+  t: number} }).memory
+  return {/* TODO: Fix JSX expression */}
+  }
+}
+// Performance metrics collection
+export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
+    },
+    pain,
+  t: {/* TODO: Fix JSX expression */}
+    },
+    memor,
+  y: getMemoryUsage()
+  }
+}
+// Initialize performance enhancements
+export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
+    }
+};`

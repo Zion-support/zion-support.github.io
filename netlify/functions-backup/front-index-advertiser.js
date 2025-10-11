@@ -1,5 +1,5 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {execSync('node automation/front-index-advertiser.cjs || true', {)
       stdio: inherit),
         shell: true}
@@ -14,7 +14,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
   try {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     return {/* TODO: Fix JSX expression */}
   k: 'front-index-advertiser' });
     }

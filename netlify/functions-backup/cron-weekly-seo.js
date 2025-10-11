@@ -14,7 +14,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         exports.handler = async function() {}' try {'' const base_url = process.env.URL || process.env.DEPLOY_URL || ''}'' const pages = ['/', '/learn', '/dao', '/certifications'} '/blog']; const results = []; ${p}`)); } token}); } return { try {} const resp = await fetch (url); const html = await resp.text (); const ms = Date.now () - t0;' const title = (html.match (/<title>(.*?)<\/title>/i) || [])[1] || '';'' const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test (html);' const h1Count = (html.match (/<h1[^>]*>/gi) || []).length; const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math.min(60)
         h1Count * 10) - Math.min(20)
         Math.floor (ms / 500)); return {url, ms, title, hasMetaDesc, h1Count} "score": Math.max(0)
-        score;
+        score
       } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {updated_at: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file({owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null)
         2), message: 'chore (automation): weekly SEO report'} token;
       }); } return {
@@ -52,7 +52,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         score;")`
       } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {/* TODO: Fix JSX expression */}
   t: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file ({/* TODO: Fix JSX expression */})
-  e: 'chore (automation): weekly SEO report'} token;
+  e: 'chore (automation): weekly SEO report'} token
       }); } return {/* TODO: Fix JSX expression */}"
       }) } }async function scorePage(_url) {const t0 = Date && Date.now()} try {} const resp = await fetch(url), const html = await resp && resp.text(),' const ms = Date && Date.now() - t0,'' const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '','"' const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html), const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length, const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60)
         h1Count * 10) - Math && Math.min(20)
@@ -66,3 +66,4 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
       }) } } }async function scorePage(url) {/* TODO: Fix JSX expression */}
       } } catch (e) {/* TODO: Fix JSX expression */}
   e: 0 } } } exports.handler = async function() {/* TODO: Fix JSX expression */}"`
+</h1></h1></h1></h1></h1></h1></h1></h1></h1>

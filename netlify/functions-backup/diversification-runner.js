@@ -1,11 +1,11 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {execSync('node automation/diversification-orchestrator.cjs || true', {)
       stdio: inherit),
         shell: true}
   try {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(diversify): run diversification orchestrator [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}

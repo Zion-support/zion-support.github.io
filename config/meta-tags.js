@@ -1,4 +1,4 @@
-// Meta tags configuration;
+// Meta tags configuration
 export const metaTags = {
   title: 'Bolt.new Zion App - Advanced Web Development Solutions',
   description: 'Professional web development services with cutting-edge technology and innovative solutions.',

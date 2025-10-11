@@ -1,18 +1,18 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: object;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  structuredData?: object
+  canonical?: string
+  noindex?: boolean
+  nofollow?: boolean
 }
 const SEOHead: React.FC,
           <SEOHeadProps> = ({

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('metadata-optimizer-runner function triggered')}
-    // Metadata optimization simulation;
+    // Metadata optimization simulation
     const result = {
       statusCode: 200,
       headers: {,

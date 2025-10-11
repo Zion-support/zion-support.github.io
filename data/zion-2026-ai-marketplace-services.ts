@@ -1,7 +1,7 @@
 export type Zion2026AIMarketplaceService =
-  id: string;
-  name: string;
-  description: string;
+  id: string
+  name: string
+  description: string
   category: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development'
   price: unknown;
     monthly: number;
@@ -591,7 +591,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export type Zion2026AIMarketplaceService = i,
   d: string, nam,
   e: string, descriptio,

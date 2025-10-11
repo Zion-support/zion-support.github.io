@@ -90,8 +90,7 @@ export const,
   a: {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
-
+    }}]
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
 

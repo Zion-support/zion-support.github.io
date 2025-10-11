@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('a11y-alt-text-runner function triggered')}
-    // Simple accessibility check simulation;
+    // Simple accessibility check simulation
     const result = {
       statusCode: 200,
       headers: {,

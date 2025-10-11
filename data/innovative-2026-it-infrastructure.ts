@@ -239,7 +239,7 @@ export const,
       reviews: 400,
     },
         'AI-powered edge orchestration',
-    // Edge Computing Orchestration Platform;
+    // Edge Computing Orchestration Platform
       id: 'edge - computing - orchestration',
       name: 'Edge Computing Orchestration Platform',
       tagline: unknown,
@@ -278,7 +278,7 @@ export const,
       review,
   s: 400},
         'AI-powered edge orchestration',
-    // Edge Computing Orchestration Platform;
+    // Edge Computing Orchestration Platform
       i,
   d: 'edge - computing - orchestration',
       nam,
@@ -399,7 +399,7 @@ export const,
       rating: 4 && 4.8
       reviews: 600,
     },
-    // Zero - Trust Network Architecture;
+    // Zero - Trust Network Architecture
       id: 'zero - trust - network - architecture',
       name: 'Zero - Trust Network Architecture',
       tagline: unknown,
@@ -437,7 +437,7 @@ export const,
   g: 4 && 4.8,
       review,
   s: 600},
-    // Zero - Trust Network Architecture;
+    // Zero - Trust Network Architecture
       i,
   d: 'zero - trust - network - architecture',
       nam,
@@ -559,7 +559,7 @@ export const,
       reviews: 450,
     },
         'AI-powered CI/CD automation',
-    // AI - Powered DevOps Platform;
+    // AI - Powered DevOps Platform
       id: 'ai - powered - devops - platform'
       name: 'AI - Powered DevOps Platform',
       tagline: 'Automate and optimize your development pipeline with AI',
@@ -597,7 +597,7 @@ export const,
       review,
   s: 450},
         'AI-powered CI/CD automation',
-    // AI - Powered DevOps Platform;
+    // AI - Powered DevOps Platform
       i,
   d: 'ai - powered - devops - platform',
       nam,
@@ -749,7 +749,7 @@ export const,
   s: 1250},
         'Quantum-resistant encryption',
         'Multi-layer security',
-    // Quantum - Safe Data Storage;
+    // Quantum - Safe Data Storage
       id: 'quantum - safe - data - storage'
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
@@ -924,7 +924,7 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
   reviews: number,
 }
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
-  // Quantum-Enhanced Cloud Infrastructure;
+  // Quantum-Enhanced Cloud Infrastructure
     id: 'quantum-enhanced-cloud-platform', name: 'Quantum-Enhanced Cloud Platform',
     tagline: 'Next-generation cloud infrastructure with quantum computing capabilities', price: '$599',
     period: '/month',
@@ -1052,9 +1052,9 @@ export const,
     reviews: 550
     real_implementation: true,
     implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
-    launch_date: '2025 - 11 - 20', customers: 1100;
-    rating: 4.8;
-    reviews: 550;
+    launch_date: '2025 - 11 - 20', customers: 1100
+    rating: 4.8
+    reviews: 550
 ]
 export interface Innovative2026ITInfrastructureService {
   id: string;
@@ -1135,7 +1135,7 @@ export interface Innovative2026ITInfrastructureService {
   y: 'Quantum & Cloud Infrastructure', realServic,
   e: true,
     technolog,
-  y: ['Quantum ComputingKubernetesDockerTerraformPythonGoRustAWS', 'Azure'];
+  y: ['Quantum ComputingKubernetesDockerTerraformPythonGoRustAWS', 'Azure']
     integration,
   s: ['AWS ServicesAzure ServicesGoogle CloudKubernetesDockerTerraformAnsibleJenkins'], useCase,
   s: ['High-performance computingCryptographic applicationsMachine learning accelerationFinancial modelingDrug discoveryClimate modeling'],
@@ -1281,8 +1281,8 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   review,
   s: number}
 export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
-  // Quantum-Enhanced Cloud Infrastructure;
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
+  // Quantum-Enhanced Cloud Infrastructure
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
@@ -1291,7 +1291,7 @@ export const,
     period: '/month',
     description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
     features: [
-      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
+      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
       'Global edge computing networkQuantum-safe data storage'
     ];
     popular: true;
@@ -1334,7 +1334,7 @@ export const,
     period: '/month',
     description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
     features: [
-      'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics';
+      'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics'
       'Automated scalingMulti-cloud edge integration'
     ];
     popular: true;
@@ -1377,7 +1377,7 @@ export const,
     period: '/month',
     description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
     features: [
-      'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting';
+      'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting'
       'Real-time monitoringAutomated response'
     ];
     popular: true;
@@ -1420,7 +1420,7 @@ export const,
     period: '/month',
     description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
     features: [
-      'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning';
+      'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning'
       'Cost optimizationTeam collaboration tools'
     ];
     popular: true;
@@ -1463,7 +1463,7 @@ export const,
     period: '/month';
     description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
     features: [
-      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
+      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'
       'API accessMobile applications'
     ];
     popular: true;
@@ -1507,7 +1507,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.';
+  s: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.'
     launchDat,
   e: '2025-08-15',
     customer,
@@ -1534,7 +1534,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.';
+  s: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.'
     launchDat,
   e: '2025-07-20',
     customer,
@@ -1561,7 +1561,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.';
+  s: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.'
     launchDat,
   e: '2025-09-10',
     customer,
@@ -1588,7 +1588,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.';
+  s: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.'
     launchDat,
   e: '2025-10-15',
     customer,
@@ -1615,7 +1615,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.';
+  s: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
     launchDat,
   e: '2025-11-20',
     customer,
@@ -1654,8 +1654,8 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   review,
   s: number}
 export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
-  // Quantum-Enhanced Cloud Infrastructure;
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [
+  // Quantum-Enhanced Cloud Infrastructure
   {
     id: 'quantum-enhanced-cloud-platform';
     name: 'Quantum-Enhanced Cloud Platform';
@@ -1664,7 +1664,7 @@ export const,
     period: '/month',
     description: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.';
     features: [
-      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
+      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
       'Global edge computing networkQuantum-safe data storage'
     ];
     popular: true;
@@ -1707,7 +1707,7 @@ export const,
     period: '/month',
     description: 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real-time applications.';
     features: [
-      'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics';
+      'AI-powered edge orchestrationGlobal edge network managementReal-time load balancingEdge AI model deploymentIoT device management5G network optimizationEdge security and compliancePerformance analytics'
       'Automated scalingMulti-cloud edge integration'
     ];
     popular: true;
@@ -1750,7 +1750,7 @@ export const,
     period: '/month',
     description: 'Comprehensive zero-trust network security platform that continuously verifies every user, device, and connection, providing enterprise-grade security for modern distributed networks.';
     features: [
-      'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting';
+      'Continuous identity verificationMicro-segmentationAI-powered threat detectionJust-in-time accessMulti-factor authenticationDevice trust scoringNetwork traffic analysisCompliance reporting'
       'Real-time monitoringAutomated response'
     ];
     popular: true;
@@ -1793,7 +1793,7 @@ export const,
     period: '/month',
     description: 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.';
     features: [
-      'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning';
+      'AI-powered CI/CD automationIntelligent testing and QAPerformance optimizationPredictive issue detectionAutomated rollbackInfrastructure as codeMonitoring and alertingSecurity scanning'
       'Cost optimizationTeam collaboration tools'
     ];
     popular: true;
@@ -1836,7 +1836,7 @@ export const,
     period: '/month';
     description: 'Advanced data storage platform that uses quantum-resistant encryption algorithms to protect your data against future quantum computing threats.';
     features: [
-      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
+      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'
       'API accessMobile applications'
     ];
     popular: true;
@@ -1886,7 +1886,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.';
+  s: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.'
     launchDat,
   e: '2025-08-15',
     customer,
@@ -1913,7 +1913,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.';
+  s: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.'
     launchDat,
   e: '2025-07-20',
     customer,
@@ -1940,7 +1940,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.';
+  s: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.'
     launchDat,
   e: '2025-09-10',
     customer,
@@ -1967,7 +1967,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.';
+  s: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.'
     launchDat,
   e: '2025-10-15',
     customer,
@@ -1994,7 +1994,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.';
+  s: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
     launchDat,
   e: '2025-11-20',
     customer,
@@ -2446,7 +2446,7 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550, ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550, ]} ]; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

@@ -1,5 +1,5 @@
-//SEO improvements;
-// //Optimize meta tags;
+//SEO improvements
+// //Optimize meta tags
 const optimizeMetaTags = () => {
     //   //Add meta tag optimization logic here
   }
@@ -11,7 +11,7 @@ const addStructuredData = () => {
 
 //Optimize sitemap;
 const optimizeSitemap = () => {
-  //   //Add sitemap optimization logic here;
+  //   //Add sitemap optimization logic here
 const optimizeMetaTags = () => {/* TODO: Fix JSX expression */}
 }
 

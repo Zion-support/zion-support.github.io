@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('orphan-pages-detector function triggered')}
-    // Orphan pages detection simulation;
+    // Orphan pages detection simulation
     const result = {
       statusCode: 200,
       headers: {,

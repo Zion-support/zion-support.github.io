@@ -5,7 +5,7 @@ exports.handler = async function () {try {
     execSync('node automation/broken-image-scanner.cjs || true', {)
       stdio: inherit),
         shell: true}
-    });
+    })
     execSync('node automation/optimize-images.cjs || true', {stdio: inherit),
         shell: true}
 exports.config = {/* TODO: Fix JSX expression */}
@@ -13,10 +13,10 @@ exports.config = {/* TODO: Fix JSX expression */}
 }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     execSync('node automation/optimize-images.cjs || true', {/* TODO: Fix JSX expression */}
   l: true})
-    });
+    })
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): fix broken refs and optimize [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}

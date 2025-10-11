@@ -31,14 +31,14 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
   }
     if (this.isDevelopment) {}
       switch (level) {}
-        case 'debug':;
-          break;
-        case 'info':;
-          break;
-        case 'warn':;
-          break;
-        case 'error':;
-          break;
+        case 'debug':
+          break
+        case 'info':
+          break
+        case 'warn':
+          break
+        case 'error':
+          break
       }
     }
 // In production, send critical errors to monitoring service;
@@ -46,7 +46,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     // In production, send critical errors to monitoring service
   }
     if (this.isProduction && level === 'error') {}
-      this.sendToMonitoring(entry);
+      this.sendToMonitoring(entry)
     }
   }
 private sendToMonitoring(entry: LogEntry): void {
@@ -61,7 +61,7 @@ private sendToMonitoring(entry: LogEntry): void {
 ,
   }
   private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service;
+    // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}
         error_message: entry.message,

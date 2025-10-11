@@ -51,7 +51,7 @@ module.exports = {
     events: true,
   },
   sitemapOptimization: {
-    dynamic: true;
+    dynamic: true
     priority: {
       home: 1;
       services: 0.9;

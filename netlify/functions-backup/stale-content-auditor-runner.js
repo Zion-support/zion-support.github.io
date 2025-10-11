@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('stale-content-auditor-runner function triggered')}
-    // Stale content auditing simulation;
+    // Stale content auditing simulation
     const result = {
       statusCode: 200,
       headers: {,

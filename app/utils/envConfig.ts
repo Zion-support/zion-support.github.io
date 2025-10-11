@@ -1,8 +1,8 @@
-'use client';
-/**;
- * Environment Configuration Manager;
- * Provides type-safe access to environment variables with validation;
- */;
+'use client'
+/**
+ * Environment Configuration Manager
+ * Provides type-safe access to environment variables with validation
+ */
 export interface EnvConfig {}
   nodeEnv: 'development' | 'production' | 'test',
   apiUrl: string,
@@ -28,11 +28,11 @@ class EnvironmentConfig {}
   private config: EnvConfig
   private isInitialized = false,
   constructor() {}
-    this.config = this.loadConfig();
+    this.config = this.loadConfig()
     this.isInitialized = true;}
   }
   private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults;
+    // Safely access environment variables with defaults
     return {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';
@@ -51,9 +51,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Get the entire configuration object;
-   */;
+  /**
+   * Get the entire configuration object
+   */
   public getConfig(): Readonly<EnvConfig> {}
     return Object.freeze({ ...this.config })
   public getConfig(): Readonly</EnvConfig><EnvConfig> {/* TODO: Fix JSX expression */}
@@ -70,23 +70,23 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public get</K><K extends keyof EnvConfig>(ke);
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if running in production;
-   */;
+  /**
+   * Check if running in production
+   */
   public isProduction(): boolean {}
     return this.config.nodeEnv === 'production';}
   public isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if running in development;
-   */;
+  /**
+   * Check if running in development
+   */
   public isDevelopment(): boolean {}
     return this.config.nodeEnv === 'development';}
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Check if running in test mode;
-   */;
+  /**
+   * Check if running in test mode
+   */
   public isTest(): boolean {}
     return this.config.nodeEnv === 'test';}
   public isTest(): boolean {/* TODO: Fix JSX expression */}
@@ -124,7 +124,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       valid: missing.length === 0,
       missing}
     }
-  public validate(requiredVar);
+  public validate(requiredVar)
   s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
   }, {/* TODO: Fix JSX expression */}
       }
@@ -146,11 +146,14 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
-    return headers;
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`
+    }
+    return headers
   }
-  /**;
-   * Log configuration in development mode;
-   */;
+  /**
+   * Log configuration in development mode
+   */
   public logConfig(): void {}
     if (this.isDevelopment()) {}
   public logConfig(): void {/* TODO: Fix JSX expression */}
@@ -173,8 +176,20 @@ export const isDevelopment = () => envConfig.isDevelopment();
 export const isTest = () => envConfig.isTest();
 export const getConfig = () => envConfig.getConfig();
 export const getApiHeaders = () => envConfig.getApiHeaders();
-<<<<<<< HEAD
-`;</string>
-=======
-`;
->>>>>>> main
+`</string>
+// Export singleton instance
+export const envConfig = new EnvironmentConfig()
+// Export convenient helper functions
+export const isProduction = () => envConfig.isProduction()
+export const isDevelopment = () => envConfig.isDevelopment()
+export const isTest = () => envConfig.isTest()
+export const getConfig = () => envConfig.getConfig()
+export const getApiHeaders = () => envConfig.getApiHeaders()
+export const envConfig = new EnvironmentConfig()
+// Export convenient helper functions
+export const isProduction = () => envConfig.isProduction()
+export const isDevelopment = () => envConfig.isDevelopment()
+export const isTest = () => envConfig.isTest()
+export const getConfig = () => envConfig.getConfig()
+export const getApiHeaders = () => envConfig.getApiHeaders()
+`

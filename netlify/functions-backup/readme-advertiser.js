@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('readme-advertiser function triggered')}
-    // Readme advertising simulation;
+    // Readme advertising simulation
     const result = {
       statusCode: 200,
       headers: {,

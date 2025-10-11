@@ -1,8 +1,8 @@
-'use client';
-/**;
- * Advanced Error Tracking and Reporting System;
- * Provides comprehensive error tracking with categorization and analytics;
- */;
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System
+ * Provides comprehensive error tracking with categorization and analytics
+ */
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
 export enum ErrorCategory {
@@ -49,7 +49,7 @@ static getInstance(): ErrorTrackingService {
       ErrorTrackingService.instance = new ErrorTrackingService()
   }
     }
-    return ErrorTrackingService.instance;
+    return ErrorTrackingService.instance
   }
 private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return;
@@ -144,11 +144,11 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
     }
-    return ErrorTrackingService.instance;
+    return ErrorTrackingService.instance
   }
-  /**;
-   * Set up global error handlers;
-   */;
+  /**
+   * Set up global error handlers
+   */
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
         }
       })
@@ -163,14 +163,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   /**;
    * Track an error with metadata;
    */;
-<<<<<<< HEAD
   trackError(erro,;
   r: Error,
     metadat,;
   a: Partial</ErrorMetadata><ErrorMetadata> & {/* TODO: Fix JSX expression */}
-=======
-  trackError()
->>>>>>> main
   y: ErrorSeverity })
   ): string {/* TODO: Fix JSX expression */}
     }
@@ -182,10 +178,28 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
       // Notify listeners;
       this.notifyListeners(trackedError);
       // Maintain max stored errors;
+  /**
+   * Track an error with metadata
+   */
+  trackError(erro,
+  r: Error,
+    metadat,
+  a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
+  y: ErrorSeverity })
+  ): string {/* TODO: Fix JSX expression */}
+    }
+    const existingError = this.errors.get(errorId)
+    if (existingError) {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+      }
+      this.errors.set(errorId, trackedError)
+      // Notify listeners
+      this.notifyListeners(trackedError)
+      // Maintain max stored errors
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
       }
     }
-    // Log the error;`;
+    // Log the error;`
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
     })
     // Send to external service if critical;
@@ -208,7 +222,7 @@ private simpleHash(str: string): string {
       hash = hash & hash // Convert to 32-bit integer
   }
     }
-    return Math.abs(hash).toString(36);
+    return Math.abs(hash).toString(36)
   }
 addListener(listener: (error: TrackedError) => void): void {
     ,
@@ -230,8 +244,8 @@ private notifyListeners(error: TrackedError): void {
    */;
   private generateErrorId(messag);
   e: string): string {/* TODO: Fix JSX expression */}
-    }`;
-    return `err_${Math.abs(hash).toString(36)}`;
+    }`
+    return `err_${Math.abs(hash).toString(36)}`
   }
   /**;
    * Add an error listener;
@@ -247,10 +261,10 @@ private notifyListeners(error: TrackedError): void {
   r: (erro),
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Notify all listeners of a new error;
-   */;
-  private notifyListeners(erro);
+  /**
+   * Notify all listeners of a new error
+   */
+  private notifyListeners(erro)
   r: TrackedError): void {/* TODO: Fix JSX expression */}
       } catch (listenerError) {/* TODO: Fix JSX expression */}
       }
@@ -277,7 +291,6 @@ clearErrors(): void {
   }
 getErrorStats(): {
     total: number,
-<<<<<<< HEAD
     byCategory: Record</void><ErrorCategory>
     bySeverity: Record</ErrorCategory><ErrorSeverity, number>
   }
@@ -286,16 +299,6 @@ getErrorStats(): {
   }
     const byCategory: Record</ErrorSeverity><ErrorCategory, number> = {} as Record</ErrorCategory><ErrorCategory>
     const bySeverity: Record</ErrorCategory><ErrorSeverity, number> = {} as Record</ErrorSeverity><ErrorSeverity>
-=======
-    byCategory: Record<ErrorCategory></ErrorCategory>
-    bySeverity: Record<ErrorSeverity, number></ErrorSeverity>
-  }
-  }, {
-    const errors = this.getErrors();
-  };
-    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>;
-    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>;
->>>>>>> main
     // Initialize counters;
     Object.values(ErrorCategory).forEach()
     );
@@ -328,68 +331,115 @@ export const errorTracking = ErrorTrackingService.getInstance();
    * Report critical errors to external service;
    */;
   private async reportToExternalService(errorI);
-<<<<<<< HEAD
   d: string): Promise</ErrorSeverity><void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },;
           bod,;
-=======
+  y: JSON.stringify(error),
+
+  private async reportToExternalService(errorId: string): Promise<void> {,
+    // In a real implementation, this would send to an external service
+    // like Sentry, LogRocket, or a custom error reporting service;}
+    logger.info('Error reported to external service', { errorId })
+  }
+
+  getErrors(): TrackedError[] {
+    return Array.from(this.errors.values());}
+  }
+
+  getErrorById(id: string): TrackedError | undefined {,;}
+    return this.errors.get(id)}
+
+  clearErrors(): void {
+    this.errors.clear();}
+  }
+
+  getErrorStats(): {
+    total: number,
+    byCategory: Record<ErrorCategory, number>
+    bySeverity: Record<ErrorSeverity, number>}
+  } {
+    const errors = this.getErrors();}
+    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>
+    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>
+    // Initialize counters
+    Object.values(ErrorCategory).forEach(category => {)
+      byCategory[category] = 0;);}
+    })
+    Object.values(ErrorSeverity).forEach(severity => {)
+      bySeverity[severity] = 0;);}
+    })
+    // Count errors
+    errors.forEach(error => {)
+      byCategory[error.metadata.category]++)
+      bySeverity[error.metadata.severity]++);}
+    })
+    return {
+      total: errors.length
+      byCategory,
+      bySeverity;}
+    }
+  }
+}
+
+// Export singleton instance
+export const errorTracking = ErrorTrackingService.getInstance()
+  /**
+   * Report critical errors to external service
+   */
+  private async reportToExternalService(errorI)
   d: string): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
->>>>>>> main
-  y: JSON.stringify(error),
+  y: JSON.stringify(error)
         })
       }
     } catch (reportError) {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Get all tracked errors;
-   */;
+  /**
+   * Get all tracked errors
+   */
   getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Get errors by category;
-   */;
-  getErrorsByCategory(categor);
+  /**
+   * Get errors by category
+   */
+  getErrorsByCategory(categor)
   y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Get errors by severity;
-   */;
-  getErrorsBySeverity(severit);
+  /**
+   * Get errors by severity
+   */
+  getErrorsBySeverity(severit)
   y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Get error statistics;
-   */;
+  /**
+   * Get error statistics
+   */
   getStatistics(): {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   } {/* TODO: Fix JSX expression */}
     const byCategory = {} as Record</void><ErrorCategory>
     const bySeverity = {} as Record</ErrorCategory><ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */})
     })
-=======
-  }, {/* TODO: Fix JSX expression */}
-    const byCategory = {} as Record<ErrorCategory></ErrorCategory>
-    const bySeverity = {} as Record<ErrorSeverity></ErrorSeverity>
-    errors.forEach(error => {/* TODO: Fix JSX expression */});
-    });
->>>>>>> main
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+    const byCategory = {} as Record<ErrorCategory, number>
+    const bySeverity = {} as Record<ErrorSeverity, number>
+    errors.forEach(error => {/* TODO: Fix JSX expression */})
+    })
+    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10)
     return {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Clear all errors;
-   */;
+  /**
+   * Clear all errors
+   */
   clearErrors(): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Clear errors older than specified time;
-   */;
-  clearOldErrors(maxAg);
+  /**
+   * Clear errors older than specified time
+   */
+  clearOldErrors(maxAg)
   e: number): void {/* TODO: Fix JSX expression */}
       }
     }
@@ -416,8 +466,26 @@ export const removeErrorListener = ();
   r: (erro);
   r: TrackedError) => void) =>
   errorTracking.removeListener(listener)
-<<<<<<< HEAD
 `,</Omit>
-=======
-`,
->>>>>>> main
+export const errorTracking = ErrorTrackingService.getInstance()
+export default ErrorTrackingService
+// Export convenience functions for easier testing and usage
+export const trackError = (erro)
+  r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
+  })
+}
+export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
+  }))
+  return {/* TODO: Fix JSX expression */}
+  }
+}
+export const clearErrorHistory = () => errorTracking.clearErrors()
+export const addErrorListener = (listene,
+  r: (erro)
+  r: TrackedError) => void) =>
+  errorTracking.addListener(listener)
+export const removeErrorListener = (listene,
+  r: (erro)
+  r: TrackedError) => void) =>
+  errorTracking.removeListener(listener)
+`

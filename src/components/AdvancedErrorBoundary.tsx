@@ -1,5 +1,5 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface ErrorBoundaryState {
     hasError: boolean
   error: Error | null
@@ -44,7 +44,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       error,
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    });
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
     console.error('Error caught by boundary:', error, errorInfo)
@@ -75,7 +75,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorReport),
-      });
+      })
     } catch (reportError) {
     console.error('Failed to report error:', reportError)
   }
@@ -105,28 +105,19 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <div className="flex-shrink-0">
                 <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
               <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong;
-  </
+                <h3 className="text-lg font-medium text-gray-900">Something went wrong
                 <p className="text-sm text-gray-500">
                   We're sorry, but something unexpected happened.
-                </p>
-              </div>
-            </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:
                 <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.message}
                   {this.state.error.stack && `\n\n${this.state.error.stack}`}
-                </pre>
-              </div>
             )}
             <div className="flex space-x-3">
-              <button
+              <$2 />
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 Try Again,
@@ -140,17 +131,10 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
                 Error ID: {this.state.errorId}
-              </p>
             )}
-          </div>
-        </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default AdvancedErrorBoundary;
-  </button>
-  </button>
-  </h3>
-  </ErrorBoundaryState>
+export default AdvancedErrorBoundary</div></div></div></div></div></div></div></p></p></p></p></h3></h4>

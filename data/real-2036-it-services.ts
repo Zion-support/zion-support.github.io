@@ -541,7 +541,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
-];
+]
 export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
@@ -2042,7 +2042,7 @@ export const real2036ITServices = [
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]}
   }
-];
+]
 export const real2036ITServices = [ i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform'' taglin,

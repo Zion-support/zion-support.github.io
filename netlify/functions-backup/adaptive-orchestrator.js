@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('adaptive-orchestrator function triggered')}
-    // Adaptive orchestration logic simulation;
+    // Adaptive orchestration logic simulation
     const result = {
       statusCode: 200,
       headers: {,

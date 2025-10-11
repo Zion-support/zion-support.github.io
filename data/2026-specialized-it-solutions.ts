@@ -454,7 +454,7 @@ export const,
   s: 45},
       'AI-powered threat detection and analysis',
       'Real-time security monitoring and alerting',
-  // Cybersecurity & Threat Intelligence;
+  // Cybersecurity & Threat Intelligence
     id: 'ai - cybersecurity - threat - intelligence',
     name: 'AI Cybersecurity Threat Intelligence Platform',
     tagline: unknown,
@@ -564,7 +564,7 @@ export const,
     reviews: 78,
   },
       'AI-powered ETL pipeline automation',
-  // Data Engineering & Analytics;
+  // Data Engineering & Analytics
     id: 'ai - data - engineering - platform',
     name: 'AI Data Engineering Platform',
     tagline: unknown,
@@ -596,7 +596,7 @@ export const,
     review,
   s: 78},
       'AI-powered ETL pipeline automation',
-  // Data Engineering & Analytics;
+  // Data Engineering & Analytics
     i,
   d: 'ai - data - engineering - platform',
     nam,
@@ -700,7 +700,7 @@ export const,
     reviews: 34,
   },
       'AI-powered API design and documentation',
-  // API Management & Integration;
+  // API Management & Integration
     id: 'ai - api - management - platform',
     name: 'AI API Management Platform',
     tagline: unknown,
@@ -732,7 +732,7 @@ export const,
     review,
   s: 34},
       'AI-powered API design and documentation',
-  // API Management & Integration;
+  // API Management & Integration
     i,
   d: 'ai - api - management - platform',
     nam,
@@ -831,7 +831,7 @@ export const,
     reviews: 22,
   },
       'AI-powered network performance monitoring',
-  // Network Monitoring & Management;
+  // Network Monitoring & Management
     id: 'ai - network - monitoring - suite',
     name: 'AI Network Monitoring Suite',
     tagline: unknown,
@@ -863,7 +863,7 @@ export const,
     review,
   s: 22},
       'AI-powered network performance monitoring',
-  // Network Monitoring & Management;
+  // Network Monitoring & Management
     i,
   d: 'ai - network - monitoring - suite',
     nam,
@@ -955,7 +955,7 @@ export const,
     reviews: 39,
   },
       'AI-powered query optimization',
-  // Database Management & Optimization;
+  // Database Management & Optimization
     id: 'ai - database - optimization - platform',
     name: 'AI Database Optimization Platform',
     tagline: unknown,
@@ -987,7 +987,7 @@ export const,
     review,
   s: 39},
       'AI-powered query optimization',
-  // Database Management & Optimization;
+  // Database Management & Optimization
     i,
   d: 'ai - database - optimization - platform',
     nam,
@@ -1097,7 +1097,7 @@ export const,
     reviews: 28,
   },
       'AI-powered ticket routing and prioritization',
-  // IT Service Management;
+  // IT Service Management
     id: 'ai - itsm - platform'
     name: 'AI IT Service Management Platform',
     tagline: 'Intelligent IT service management with AI - powered automation',
@@ -1124,7 +1124,7 @@ export const,
     review,
   s: 28},
       'AI-powered ticket routing and prioritization',
-  // IT Service Management;
+  // IT Service Management
     i,
   d: 'ai - itsm - platform',
     nam,
@@ -1231,7 +1231,7 @@ export const,
     reviews: 45,
   },
       'AI-powered backup optimization',
-  // Backup & Disaster Recovery;
+  // Backup & Disaster Recovery
     id: 'ai-backup-disaster-recovery'
     name: 'AI Backup & Disaster Recovery Platform',
     tagline: 'Intelligent backup and recovery with AI-powered automation',
@@ -1258,7 +1258,7 @@ export const,
     review,
   s: 45},
       'AI-powered backup optimization',
-  // Backup & Disaster Recovery;
+  // Backup & Disaster Recovery
     i,
   d: 'ai-backup-disaster-recovery'
     nam,
@@ -1356,7 +1356,7 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: export const specializedITSolutions2026: SpecializedITSolution2026[] = [,
-  // Cloud Infrastructure & DevOps;
+  // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
@@ -1389,7 +1389,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     implementationDetail,
   s: export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [,
-  // Cloud Infrastructure & DevOps;
+  // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDat,
   e: '2024-05-25'
@@ -1635,7 +1635,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.4
     reviews: 33,
   }
-];
+]
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category),
     i,
@@ -1647,7 +1647,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     perio,
   d: '/month',
     descriptio,
-  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.';
+  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.'
     feature,
   s: [,
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers'
@@ -2102,7 +2102,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   g: 4.4,
     review,
   s: 33}
-];
+]
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
@@ -2116,8 +2116,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return specializedITSolutions2026.filter(solution =>)
-    const _price = parseInt(solution.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
+    const _price = parseInt(solution.price.replace('$') ''))
+    return price >= minPrice && price <= maxPrice
   })
 }
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
@@ -2138,11 +2138,11 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
+    const _price = parse_int (solution.price.replace ('$') ''))
+    return price >= min_price && price <= max_price
+  })
+}    return price >= min_price && price <= max_price
+  })
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string}
@@ -2190,11 +2190,14 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   max_pric,
   e: number) =>: unknown,
   return specializedITSolutions2026.filter (solution =>)
-    const _price = parse_int (solution.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-}    return price >= min_price && price <= max_price;
-  });
+    const _price = parse_int (solution.price.replace ('$') ''))
+    return price >= min_price && price <= max_price
+  })
+}    return price >= min_price && price <= max_price
+  })
+}
+
+export interface SpecializedITSolution2026
 }
 export interface SpecializedITSolution2026;
 }

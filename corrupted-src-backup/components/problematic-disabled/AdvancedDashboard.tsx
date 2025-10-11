@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-// import AdvancedCacheManager from '../utils/advancedCache';
-// import { securityAuditor } from '../utils/securityAuditor';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
+import React, { useState, useEffect } from "react"
+// import AdvancedCacheManager from '../utils/advancedCache'
+// import { securityAuditor } from '../utils/securityAuditor'
+// import EnhancedUXManager from '../utils/enhancedUXManager'
 interface DashboardData {/* TODO: Fix JSX expression */}
   }
   performance: {
@@ -19,5 +19,5 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   y: {/* TODO: Fix JSX expression */}
   }
 }
-export default AdvancedDashboard;
+export default AdvancedDashboard
 }"

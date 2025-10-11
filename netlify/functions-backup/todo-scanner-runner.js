@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    //     // Todo scanning simulation;
+    //     // Todo scanning simulation
     const result = {
       statusCode: 200,
       headers: {,

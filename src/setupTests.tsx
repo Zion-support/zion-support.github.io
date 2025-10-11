@@ -1,7 +1,7 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 /**
- * Jest setup file for testing environment;
+ * Jest setup file for testing environment
  */
 /* eslint-disable no-console */
 import '@testing-library/jest-dom';
@@ -18,7 +18,7 @@ console.error = (...args) => {
 }
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
-const originalConsoleError = console.error;
+const originalConsoleError = console.error
 // eslint-disable-next-line no-console
 console.error = (...args) => {
     const message = args[0]?.toString?.() || args[0]?.message || '';
@@ -26,7 +26,7 @@ console.error = (...args) => {
       message.includes('navigation (except hash changes)')) {// TODO: Add content
   }
 }
-    return;
+    return
   }
   originalConsoleError(...args);
 }
@@ -86,7 +86,7 @@ console.warn = (...args) => {
 }
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || ''
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
   // TODO: Add content,
 }
@@ -108,7 +108,7 @@ console.info = (...args) => {
 }
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
@@ -125,7 +125,7 @@ console.error = (...args) => {
   originalConsoleError(...args);
 }
 // Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
+delete (window as unknown as Record<string, unknown>).location
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('front-ads-promoter function triggered')}
-    // Front ads promotion simulation;
+    // Front ads promotion simulation
     const result = {
       statusCode: 200,
       headers: {,

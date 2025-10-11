@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const getAllPages = () => {return [}
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/services', priority: 0.9, changefreq: 'weekly' },
@@ -16,13 +16,13 @@ const generateSitemap = (pages: Array<{ url: string; priority: number, changefre
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `}
           <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <priority>${page.priority}</priority>
-    <changefreq>${page.changefreq}</changefreq>
+    <loc>${baseUrl}${page.url}
+    <priority>${page.priority}
+    <changefreq>${page.changefreq}
   </url>`).join('
 ')}
-</urlset>`;
-  return sitemap;
+</urlset>`
+  return sitemap
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -36,9 +36,6 @@ ${pages.map(page => `}
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
       <Footer />
     </div>
   ),

@@ -15,7 +15,6 @@ const AiAutomationPage: React.FC = () => {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
@@ -52,85 +51,20 @@ return (
         </Helmet><title>Ai Automation - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-=======
-      title: 'Intelligent Decision Making',
-      description: 'AI-powered decision engines that learn and adapt',
-      benefits: ['Smart routing', 'Predictive actions', 'Continuous learning']
-    },
-    {
-      icon: Settings,
-      title: 'Process Optimization',
-      description: 'Continuously optimize processes for maximum efficiency',
-      benefits: ['Performance monitoring', 'Auto-optimization', 'ROI tracking']
-    },
-    {
-      icon: Shield,
-      title: 'Error Prevention',
-      description: 'Proactive error detection and prevention systems',
-      benefits: ['Quality assurance', 'Risk mitigation', 'Compliance monitoring']
-    }
-  ];
-
-  const automationTypes = [
-    {
-      title: 'Document Processing',
-      description: 'Automatically extract, classify, and process documents',
-      icon: '📄',
-      benefits: ['OCR processing', 'Data extraction', 'Document routing']
-    },
-    {
-      title: 'Customer Service',
-      description: 'Automate customer interactions and support processes',
-      icon: '💬',
-      benefits: ['Ticket routing', 'Response generation', 'Escalation management']
-    },
-    {
-      title: 'Data Entry',
-      description: 'Eliminate manual data entry with intelligent automation',
-      icon: '📊',
-      benefits: ['Form processing', 'Data validation', 'Database updates']
-    },
-    {
-      title: 'Email Management',
-      description: 'Automate email processing and response generation',
-      icon: '📧',
-      benefits: ['Smart categorization', 'Auto-responses', 'Priority routing']
-    },
-    {
-      title: 'Inventory Management',
-      description: 'Automate inventory tracking and reorder processes',
-      icon: '📦',
-      benefits: ['Stock monitoring', 'Reorder alerts', 'Demand forecasting']
-    },
-    {
-      title: 'Financial Processing',
-      description: 'Automate financial workflows and reporting',
-      icon: '💰',
-      benefits: ['Invoice processing', 'Payment matching', 'Financial reporting']
-    }
-  ];
-
-  const benefits = [
-    { metric: '90%', description: 'Reduction in manual tasks' },
-    { metric: '75%', description: 'Faster process completion' },
-    { metric: '95%', description: 'Error reduction' },
-    { metric: '300%', description: 'ROI improvement' }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Automation - Zion Tech Group | Intelligent Process Automation</title>
-        <meta name="description" content="Transform your business with AI-powered automation solutions. Streamline workflows, reduce errors, and increase efficiency with intelligent process automation." />
-        <meta name="keywords" content="AI automation, process automation, workflow automation, intelligent automation, business process automation" />
->>>>>>> main
       </Helmet>
       
+    'Gain competitive advantage with advanced technology'
+  ]
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Ai Automation - Zion Tech Group
+        <meta name="description" content="Advanced AI-powered ai automation solution for modern businesses." />
+        <meta name="keywords" content="AI ai automation, artificial intelligence, ai automation, AI solutions, intelligent automation" />
       <Navigation />
       
       <main className="pt-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
@@ -228,9 +162,6 @@ return (
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
           </section><div className="
@@ -255,31 +186,6 @@ return (
                 <button>
                   Learn More
                 </button>
-=======
-        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold text-white mb-6">
-                AI <span className="text-cyan-400">Automation</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transform your business with intelligent automation solutions that streamline workflows, 
-                reduce errors, and increase efficiency. Let AI handle the repetitive tasks while you focus on growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Free Consultation
-                </a>
-                <a 
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
->>>>>>> main
               </div>
             </div>
           </div>
@@ -450,3 +356,12 @@ return (
 };
 
 export default AiAutomationPage;
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
+      <Footer />
+  )
+}
+export default AiAutomationPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></ul></li></section></section></section></section>

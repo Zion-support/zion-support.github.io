@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('front-index-orchestrator function triggered')}
-    // Front index orchestration simulation;
+    // Front index orchestration simulation
     const result = {
       statusCode: 200,
       headers: {,

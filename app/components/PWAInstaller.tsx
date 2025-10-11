@@ -14,7 +14,6 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -31,10 +30,11 @@ return (
 };
 
 export default PWAInstallerPage;
-=======
-    'Cost-effective pricing plans',;
-;
-    'Proven track record of success';
-  ];
-return ()
->>>>>>> main
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PWAInstaller | Zion Tech Group
+        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
+}
+export default PWAInstallerPage</div>

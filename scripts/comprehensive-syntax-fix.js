@@ -1,14 +1,11 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🔧 Comprehensive syntax fix for all files...');
-
-// Comprehensive syntax fixes;
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+console.log('🔧 Comprehensive syntax fix for all files...')
+// Comprehensive syntax fixes
 const fixes = [
   // Fix semicolons in object properties;
   { pattern: /color: 'text-\w+-\d+'\}/g, replacement: "color: 'text-\\w+-\\d+'" },
@@ -29,7 +26,7 @@ function fixFile(filePath) {
     let modified = false;
 
     fixes.forEach(fix => {)
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
         content = newContent;
         modified = true
@@ -37,28 +34,26 @@ function fixFile(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content)
+      console.log(`✅ Fixed: ${filePath}`)
+      return true
     }
-    return false;
+    return false
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Find all TypeScript/JavaScript files;
+// Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     let files = [];
   
   try {
-    const items = fs.readdirSync(dir);
-    
+    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {
           files = files.concat(findFiles(fullPath, extensions))
@@ -71,7 +66,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     // Skip directories we can't read
   }
   
-  return files;
+  return files
 }
 
 // Main fix process;
@@ -85,6 +80,5 @@ files.forEach(file => {
   if (fixFile(file)) {
     fixedCount++
   }
-});
-
-console.log(`\n🎉 Comprehensive syntax fix complete! Modified ${fixedCount} files.`);
+})
+console.log(`\n🎉 Comprehensive syntax fix complete! Modified ${fixedCount} files.`)

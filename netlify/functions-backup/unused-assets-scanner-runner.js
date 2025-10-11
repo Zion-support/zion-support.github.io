@@ -1,7 +1,7 @@
-const { execSync } = require('child_process');
+const { execSync } = require('child_process')
 function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *' }

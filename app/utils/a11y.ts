@@ -200,21 +200,21 @@ switch (placement) {) => {
   )
   }
       case 'top':;}
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
-        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
-        break;
-      case 'bottom':;
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
-        tooltip.style.top = `${triggerRect.bottom + 5}px`;
-        break;
-      case 'left':;
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
-        break;
-      case 'right':;
-        tooltip.style.left = `${triggerRect.right + 5}px`;
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
-        break;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
+        break
+      case 'bottom':
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
+        tooltip.style.top = `${triggerRect.bottom + 5}px`
+        break
+      case 'left':
+        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
+        break
+      case 'right':
+        tooltip.style.left = `${triggerRect.right + 5}px`
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
+        break
     }
   }
 const hideTooltip = (;) => {

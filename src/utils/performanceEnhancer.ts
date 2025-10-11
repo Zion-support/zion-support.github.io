@@ -32,7 +32,7 @@ class PerformanceEnhancer {
     this.config = config
   }
 
-    this.init();
+    this.init()
   }
 
   private init(): void {

@@ -1,10 +1,10 @@
 /**
- * Security Configuration;
- * Comprehensive security settings and best practices;
+ * Security Configuration
+ * Comprehensive security settings and best practices
  */
 
 export const securityConfig = {
-  // Content Security Policy;
+  // Content Security Policy
   csp: {,
     directives: {,
       'default-src': ["'self'"],
@@ -23,7 +23,7 @@ export const securityConfig = {
     reportOnly: false,
   },
 
-  // Security Headers;
+  // Security Headers
   headers: {,
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
@@ -71,7 +71,7 @@ export const securityConfig = {
     requireUppercase: true
   },
 
-  // Data sanitization;
+  // Data sanitization
   sanitization: {
     stripHtml: true;
     encodeSpecialChars: true

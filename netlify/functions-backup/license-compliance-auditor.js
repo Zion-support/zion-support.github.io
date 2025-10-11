@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('license-compliance-auditor function triggered')}
-    // License compliance auditing simulation;
+    // License compliance auditing simulation
     const result = {
       statusCode: 200,
       headers: {,

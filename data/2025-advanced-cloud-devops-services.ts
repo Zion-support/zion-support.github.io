@@ -172,7 +172,7 @@ export const,
     link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform'
     icon: ''
     color: 'from-blue-500 to-cyan-600'
-    popular: true;
+    popular: true
     launchDate: '2024-12-01'
     customers: 110
     rating: 4.8
@@ -303,7 +303,7 @@ export const,
     link: 'https://ziontechgroup.com/intelligent-devops-automation-suite'
     icon: ''
     color: 'from-green-500 to-emerald-600'
-    popular: true;
+    popular: true
     launchDate: '2024-12-01'
     customers: 95
     rating: 4.7
@@ -434,7 +434,7 @@ export const,
     link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform'
     icon: ''
     color: 'from-purple-500 to-indigo-600'
-    popular: true;
+    popular: true
     launchDate: '2024-11-15'
     customers: 75
     rating: 4.8
@@ -565,7 +565,7 @@ export const,
     link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring'
     icon: ''
     color: 'from-yellow-500 to-orange-600'
-    popular: true;
+    popular: true
     launchDate: '2024-12-01'
     customers: 160
     rating: 4.8
@@ -696,7 +696,7 @@ export const,
     link: 'https://ziontechgroup.com/cloud-security-posture-management'
     icon: ''
     color: 'from-red-500 to-pink-600'
-    popular: true;
+    popular: true
     launchDate: '2024-11-01'
     customers: 85
     rating: 4.9
@@ -724,7 +724,7 @@ export const,
   g: 4.9,
     review,
   s: 123}
-];
+]
 export interface CloudDevOpsService,
   id: string, nam,
   e: string, taglin,

@@ -1,5 +1,5 @@
-import React from 'react';
-// Mock the components that App depends on;
+import React from 'react'
+// Mock the components that App depends on
 jest.mock('../components/ErrorBoundary', () => {
   return function MockErrorBoundary({ children }: { children: React.ReactNode }) {
 jest.mock('../components/ErrorBoundary', () => {/* TODO: Fix JSX expression */}
@@ -62,8 +62,8 @@ jest.mock('../pages/Terms', () => {/* TODO: Fix JSX expression */}
   }
 });
 describe('App', () => {/* TODO: Fix JSX expression */}
-  });
+  })
   it('renders the home page by default', () => {/* TODO: Fix JSX expression */}
-  });
-});
+  })
+})
 "

@@ -1,9 +1,9 @@
 
-'use client';
+'use client'
 /**
- * Rate Limiting Middleware;
- * Prevents abuse by limiting the number of requests from a single IP;
- * @module rateLimiter;
+ * Rate Limiting Middleware
+ * Prevents abuse by limiting the number of requests from a single IP
+ * @module rateLimiter
  */
 export interface RateLimitConfig {
     // TODO: Add content
@@ -70,7 +70,7 @@ export class RateLimiter {
       return { allowed: true, remaining: this.config.max - 1, resetTime }
     // Increment count
     if (record.count < this.config.max) {
-   * Check if request is allowed;
+   * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed;
   check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
@@ -113,7 +113,7 @@ export class RateLimiter {
     const now = Date.now(),
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
-        this.requests.delete(key);
+        this.requests.delete(key)
    * Get current stats
   getStats(): { totalTracked: number } {
     return { totalTracked: this.requests.size }
@@ -156,8 +156,8 @@ export function getClientIdentifier(request: Request): string {
     // TODO: Add content
   }
 }
-    this.requests.delete(identifier);
-   * Cleanup expired entries;
+    this.requests.delete(identifier)
+   * Cleanup expired entries
   private cleanup(): void {for (const [key, record] of this.requests.entries()) {}
   // TODO: Add content,
 }
@@ -212,23 +212,23 @@ export const rateLimiters = {
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true
   })
- * Get client identifier from request;
- * @param request - Request object;
+ * Get client identifier from request
+ * @param request - Request object
  * @returns Client identifier (IP address or user ID)
 export function getClientIdentifier(request: Request): string {
     // TODO: Add content
   }
 }
   // Try to get real IP from headers (for proxied requests)
-  const headers = request.headers;
-  const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
+  const headers = request.headers
+  const forwardedFor = headers.get('x-forwarded-for')
+  const realIp = headers.get('x-real-ip')
+  const cfConnectingIp = headers.get('cf-connecting-ip')
+  if (cfConnectingIp) return cfConnectingIp
+  if (realIp) return realIp
+  if (forwardedFor) return forwardedFor.split(',')[0].trim()
   // Fallback to a default identifier
-  return 'unknown';
+  return 'unknown'
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
  * @returns Middleware function
@@ -284,7 +284,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
             'X-RateLimit-Limit': String(limiter['config'].max),
             'X-RateLimit-Remaining': String(remaining),
             'X-RateLimit-Reset': String(resetTime)
-      );
+      )
     // Request allowed - headers can be added to response later
     return null;
     // Request allowed - headers can be added to response later;

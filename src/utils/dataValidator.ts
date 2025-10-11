@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
@@ -67,7 +67,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
 export class ValidationError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//   constructor();
+//   constructor()
   messag,
   e: string,
     public,
@@ -77,8 +77,8 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */}
   ) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    super(message);
-    this.name = 'ValidationError';
+    super(message)
+    this.name = 'ValidationError'
   }
 }
 /**
@@ -103,7 +103,7 @@ export function validateEmail(email: string): boolean {return emailRegex.test(em
 
 }
 /**
- * Validate URL;
+ * Validate URL
  */
 
 export function validateURL(url: string): boolean {
@@ -114,14 +114,14 @@ export function validateURL(url: string): boolean {
   try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const parsed = new URL(url);
+    const parsed = new URL(url)
     return parsed.protocol === 'htt,
   p:' || parsed.protocol === 'http,
   s: ',
   } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return false;
+    return false
   }
 }
 /**
@@ -132,8 +132,8 @@ export function validatePhoneNumber(phone: string): boolean {
   }
 
 }
-  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-  return phoneRegex.test(phone);
+  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+  return phoneRegex.test(phone)
 }
 /**
  * Validate string length
@@ -151,10 +151,10 @@ export function validateStringLength(value: string, min: number, max?: number): 
   if (max !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return value.length >= min && value.length;
-          <= max;
+    return value.length >= min && value.length
+          <= max
   }
-  return value.length >= min;
+  return value.length >= min
 }
 /**
  * Validate number range
@@ -168,8 +168,8 @@ export function validateNumberRange(value: number, min: number, max: number): bo
   }
 
 }
-  return value >= min && value;
-          <= max;
+  return value >= min && value
+          <= max
 }
 /**
  * Validate credit card number (basic Luhn algorithm)
@@ -180,41 +180,41 @@ export function validateCreditCard(cardNumber: string): boolean {
   if (cleaned.length < 13 || cleaned.length > 19) return false;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+    let digit = parseInt(cleaned[i], 10)
     if (isEven) {
 
 export function validateCreditCard(cardNumber: string): boolean {// TODO: Add content
   }
 
 }
-  const cleaned = cardNumber.replace(/\s/g, '');
-  if (!/^\d+$/.test(cleaned)) return false;
+  const cleaned = cardNumber.replace(/\s/g, '')
+  if (!/^\d+$/.test(cleaned)) return false
   if (cleaned.length;)
-          < 13 || cleaned.length > 19) return false;
-  let isEven = false;
+          < 13 || cleaned.length > 19) return false
+  let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    let digit = parseInt(cleaned[i], 10);
+    let digit = parseInt(cleaned[i], 10)
     if (isEven) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      digit *= 2;
-      if (digit > 9) digit -= 9;
+      digit *= 2
+      if (digit > 9) digit -= 9
     }
-    sum += digit;
-    isEven = !isEven;
+    sum += digit
+    isEven = !isEven
   }
     let digit = parseInt(cleaned[i], 10)
     if (isEven) {/* TODO: Fix JSX expression */}
   }
-      digit *= 2;
-      if (digit > 9) digit -= 9;
+      digit *= 2
+      if (digit > 9) digit -= 9
     }
-    sum += digit;
-    isEven = !isEven;
+    sum += digit
+    isEven = !isEven
   }
-  return sum % 10 === 0;
+  return sum % 10 === 0
 }
 /**
  * Validate date
@@ -227,7 +227,7 @@ export function validateDate(value: unknown): boolean {
     const date = new Date(value);
     return !isNaN(date.getTime())
   }
-  return false;
+  return false
 }
 /**
  * Validate date range
@@ -246,21 +246,21 @@ export function validateDate(value: unknown): boolean {// TODO: Add content
   if (value instanceof Date) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return !isNaN(value.getTime());
+    return !isNaN(value.getTime())
   }
   if (typeof value === 'string') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const date = new Date(value);
-    return !isNaN(date.getTime());
+    const date = new Date(value)
+    return !isNaN(date.getTime())
   }
     const date = new Date(value)
     return !isNaN(date.getTime())
   }
-  return false;
+  return false
 }
 /**
- * Validate date range;
+ * Validate date range
  */
 
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
@@ -268,12 +268,12 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   }
 
 }
-  if (!validateDate(date)) return false;
-  const time = date.getTime();
+  if (!validateDate(date)) return false
+  const time = date.getTime()
   if (min && time;)
-          < min.getTime()) return false;
-  if (max && time > max.getTime()) return false;
-  return true;
+          < min.getTime()) return false
+  if (max && time > max.getTime()) return false
+  return true
 }
 /**
  * Sanitize HTML to prevent XSS
@@ -282,14 +282,14 @@ export function sanitizeHTML(html: string): string {
     // Remove script tags
   let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers
- * Sanitize HTML to prevent XSS;
+ * Sanitize HTML to prevent XSS
  */
 
 export function sanitizeHTML(html: string): string {// TODO: Add content
   }
 
 }
-  // Remove script tags;
+  // Remove script tags
 let clean = html.replace(/
 
           <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
@@ -334,7 +334,7 @@ export function createCustomValidator,
   e: T) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const isValid = validator(value);
+    const isValid = validator(value)
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -345,7 +345,7 @@ export function createCustomValidator,
   }
 }
 /**
- * Validate a single field against a rule;
+ * Validate a single field against a rule
  */
 
 function validateFieldRule(value: unknown, rule: FieldRule): boolean {
@@ -357,33 +357,33 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   O: Add content,}
 }
     case 'required':
-      if (value === null || value === undefined) return false;
-      if (typeof value === 'string' && value.trim() === '') return false;
-      if (Array.isArray(value) && value.length === 0) return false;
-      return true;
+      if (value === null || value === undefined) return false
+      if (typeof value === 'string' && value.trim() === '') return false
+      if (Array.isArray(value) && value.length === 0) return false
+      return true
     case 'email':
-      return typeof value === 'string' && validateEmail(value);
-    case 'url':
-      return typeof value === 'string' && validateURL(value);
-    case 'number':
-      if (typeof value !== 'number') return false;
-      if (rule.min !== undefined && value < rule.min) return false;
       return typeof value === 'string' && validateEmail(value)
     case 'url':
       return typeof value === 'string' && validateURL(value)
     case 'number':
-      if (typeof value !== 'number') return false;
+      if (typeof value !== 'number') return false
+      if (rule.min !== undefined && value < rule.min) return false
+      return typeof value === 'string' && validateEmail(value)
+    case 'url':
+      return typeof value === 'string' && validateURL(value)
+    case 'number':
+      if (typeof value !== 'number') return false
       if (rule.min !== undefined && value;)
-          < rule.min) return false;
-      if (rule.max !== undefined && value > rule.max) return false;
-      return true;
+          < rule.min) return false
+      if (rule.max !== undefined && value > rule.max) return false
+      return true
     case 'string':
-      if (typeof value !== 'string') return false;
-      if (rule.minLength !== undefined && value.length < rule.minLength) return false;
-      if (rule.maxLength !== undefined && value.length > rule.maxLength) return false;
-      return true;
+      if (typeof value !== 'string') return false
+      if (rule.minLength !== undefined && value.length < rule.minLength) return false
+      if (rule.maxLength !== undefined && value.length > rule.maxLength) return false
+      return true
     case 'custom':
-      return rule.custom ? rule.custom(value) : true;
+      return rule.custom ? rule.custom(value) : true
     default:
       return rule.custom ? rule.custom(value) : true,
   default: return true,
@@ -407,7 +407,7 @@ export function validateForm<T extends Record<string, unknown>>(
   }
     }
     if (fieldErrors.length > 0) {
-      errors[field] = fieldErrors;
+      errors[field] = fieldErrors
       // Track validation errors
       errorTracking.trackError(
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
@@ -419,7 +419,7 @@ export function validateForm<T extends Record<string, unknown>>(
             errors: fieldErrors
           }
         }
-      );
+      )
     }
   }
   return {
@@ -448,8 +448,8 @@ export function validateForm<T extends Record<string, unknown>>()
   for (const field in rules) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const value = data[field];
-    const fieldRules = rules[field] || [];
+    const value = data[field]
+    const fieldRules = rules[field] || []
     const,
   fieldErrors: string[] = [],
     for (const rule of fieldRules) {/* TODO: Fix JSX expression */}
@@ -458,14 +458,14 @@ export function validateForm<T extends Record<string, unknown>>()
       if (!validateFieldRule(value, rule)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        fieldErrors.push(rule.message);
+        fieldErrors.push(rule.message)
       }
     }
     if (fieldErrors.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      errors[field] = fieldErrors;
-      // Track validation errors;
+      errors[field] = fieldErrors
+      // Track validation errors
 //       errorTracking.trackError()
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {/* TODO: Fix JSX expression */}
@@ -499,7 +499,7 @@ export function validateForm<T extends Record<string, unknown>>()
   }
 }
 /**
- * Validation rules builder;
+ * Validation rules builder
  */
 
 export const ValidationRulesBuilder = {
@@ -518,10 +518,10 @@ export const ValidationRulesBuilder = {
   e: T) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (value === null || value === undefined) return false;
-      if (typeof value === 'string' && value.trim() === '') return false;
-      if (Array.isArray(value) && value.length === 0) return false;
-      return true;
+      if (value === null || value === undefined) return false
+      if (typeof value === 'string' && value.trim() === '') return false
+      if (Array.isArray(value) && value.length === 0) return false
+      return true
     },
     message:   ,
 $4}),
@@ -618,7 +618,7 @@ class DataValidator {
 }
 
   validate: (value: string) => pattern.test(value),
-//     message;
+//     message
   }),
   range: (min: number, max: number): ValidationRule,
           <number> => ({
@@ -649,7 +649,7 @@ class DataValidator {
   }
 
 }
-// Legacy class-based API for backward compatibility;
+// Legacy class-based API for backward compatibility
 class DataValidator {/* TODO: Fix JSX expression */}
   }
   private static,
@@ -664,28 +664,28 @@ class DataValidator {/* TODO: Fix JSX expression */}
     if (!DataValidator.instance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      DataValidator.instance = new DataValidator();
+      DataValidator.instance = new DataValidator()
     }
-    return DataValidator.instance;
+    return DataValidator.instance
   }
-  isEmail = validateEmail;
-  isURL = validateURL;
-  isPhoneNumber = validatePhoneNumber;
-  hasLength = validateStringLength;
-  isInRange = validateNumberRange;
-  isCreditCard = validateCreditCard;
-  isDate = validateDate;
-  isDateInRange = validateDateRange;
-  sanitizeHTML = sanitizeHTML;
+  isEmail = validateEmail
+  isURL = validateURL
+  isPhoneNumber = validatePhoneNumber
+  hasLength = validateStringLength
+  isInRange = validateNumberRange
+  isCreditCard = validateCreditCard
+  isDate = validateDate
+  isDateInRange = validateDateRange
+  sanitizeHTML = sanitizeHTML
   isRequired(value: unknown): boolean {
   isRequired(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (value === null || value === undefined) return false;
-    if (typeof value === 'string' && value.trim() === '') return false;
-    if (Array.isArray(value) && value.length === 0) return false;
-    return true;
+    if (value === null || value === undefined) return false
+    if (typeof value === 'string' && value.trim() === '') return false
+    if (Array.isArray(value) && value.length === 0) return false
+    return true
   }
   isArray(value: unknown): value is unknown[] {
     return Array.isArray(value)
@@ -696,32 +696,32 @@ class DataValidator {/* TODO: Fix JSX expression */}
   matchesPattern(value: string, pattern: RegExp): boolean {
     return pattern.test(value)
   }
-  rules = ValidationRulesBuilder;
+  rules = ValidationRulesBuilder
 }
-export const dataValidator = DataValidator.getInstance();
+export const dataValidator = DataValidator.getInstance()
   isArray(valu)
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return Array.isArray(value);
+    return Array.isArray(value)
   }
   isObject(valu)
   e: unknown): value is Record,
           <string, unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return typeof value === 'object' && value !== null && !Array.isArray(value);
+    return typeof value === 'object' && value !== null && !Array.isArray(value)
   }
   matchesPattern(valu,
   e: string, patter)
   n: RegExp): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return pattern.test(value);
+    return pattern.test(value)
   }
     return pattern.test(value)
   }
-  rules = ValidationRulesBuilder;
+  rules = ValidationRulesBuilder
 }
 export const dataValidator = DataValidator.getInstance()"`
 

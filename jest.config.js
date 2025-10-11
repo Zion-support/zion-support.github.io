@@ -46,4 +46,4 @@ export default {
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ]
-};
+}

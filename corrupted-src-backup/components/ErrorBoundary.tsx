@@ -1,5 +1,5 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -51,7 +51,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
-      });
+      })
     }
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
@@ -62,23 +62,21 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
-          <div className="text-center p-8 max-w-md"></div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
-            </p>
-:src/components/ErrorBoundary.tsx;
+:src/components/ErrorBoundary.tsx
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
                 Error ID: {this.state.errorId}
-              </p>
             )}
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button
+              <$2 />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <$2 />
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
@@ -91,19 +89,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 Go Home,
               </button>,
             </div>,
-            <button;
+            <$2 />
               onClick={() => window.location.reload()}
               className="mt-4 text-gray-400 hover: text-white text-sm underline",
-            <button;
+            <$2 />
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
-              </p>
             )}
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-              <button></button>
+            < className="flex flex-col,"$2 />
+  sm:flex-row gap-4 justify-center">
+              <button>
                 onClick={this.handleRetry}"
                 className="bg-blue-600,"
   hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -124,7 +121,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               onClick={() => window.location.reload()}"
               className="mt-4 text-gray-400,"
   hover:text-white text-sm underline"
-            <button></button>
+            <button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
   hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -132,9 +129,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               Or refresh the page,
             </button>
           </div>,
-        </div>);
+        </div>)
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default ErrorBoundary;"`
+export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>

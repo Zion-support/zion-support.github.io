@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('ai-changelog-runner function triggered')}
-    // AI changelog generation simulation;
+    // AI changelog generation simulation
     const result = {
       statusCode: 200,
       headers: {,

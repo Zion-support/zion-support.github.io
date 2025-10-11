@@ -1,10 +1,10 @@
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/20 * * * *' }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   const _run = cmd => execSync(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
   try {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {

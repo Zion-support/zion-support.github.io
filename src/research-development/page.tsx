@@ -1,12 +1,12 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+'use client'
+import React, { useState } from 'react'
 const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
     {
       id: 'ai',
@@ -40,7 +40,7 @@ $4},
       bgColor: 'bg-yellow-500/10',
       description:     ,
 $4}
-  ];
+  ]
   const researchProjects = {
     ai: [
       {
@@ -219,7 +219,7 @@ $4},
       impact: 'High',
       link:     ,
 $4}
-  ];
+  ]
   const achievements = [
     {
       icon: Award,
@@ -241,7 +241,7 @@ $4},
       title: 'Global Collaborations',
       description:     ,
 $4}
-  ];
+  ]
   return (
     <React.Fragment>
       <Navigation />
@@ -255,13 +255,11 @@ $4}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
-            </p>
-          </div>
           {/* Research Areas Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
-                <button
+                <$2 />
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
@@ -271,10 +269,8 @@ $4}
                   }`}
                 >
                   <area.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span className="font-medium">{area.name}
               ))}
-            </div>
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
@@ -349,7 +345,7 @@ $4}
       descriptio,
   n: 'Researching next-generation technologies'
     }
-  ];
+  ]
   const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -695,7 +691,7 @@ $4}
       lin,
   k: '#'
     }
-  ];
+  ]
   const achievements = [
   // TOD,
   O: Add items
@@ -740,13 +736,13 @@ $4}
       descriptio,
   n: 'Partnerships with leading universities and research institutions'
     }
-  ];
+  ]
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
-      <Navigation /></Navigation>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
@@ -759,9 +755,9 @@ $4}
           </div>
           {/* Research Areas Tabs */}"
           <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => ()}
-          <button></button>
+          <button>
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
@@ -776,176 +772,138 @@ $4}
 //                 >
           "
           <area.icon className="w-5 h-5 mr-2" /></area>"
-                  <span className="font-medium">{area.name}</span>
-                </button>
+                  <span className="font-medium">{area.name}
               ))}
             </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 {researchAreas.find(area => area.id === activeTab)?.description}
-              </p>
-            </div>
-          </div>
           {/* Research Projects */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Current Research Projects;
-  </
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Current Research Projects
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
-                    </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
-                  </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}
+                      <p className="text-gray-300 text-sm mb-4">{project.description}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Status</div>
-                      <div className={`text-sm font-medium ${
+                      <div className="text-sm text-gray-400 mb-1">Status
+                      < className={`text-sm font-medium ${$2 />
                         project.status === 'Completed' ? 'text-green-400' : 
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
                       }`}>
                         {project.status}
-                      </div>
-                    </div>
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Timeline</div>
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
+                      <div className="text-sm text-gray-400 mb-1">Timeline
+                      <div className="text-sm text-white">{project.timeline}
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Team</div>
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
+                      <div className="text-sm text-gray-400 mb-1">Team
+                      <div className="text-sm text-white">{project.team}
                     <div>
-                      <div className="text-sm text-gray-400 mb-1">Funding</div>
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
+                      <div className="text-sm text-gray-400 mb-1">Funding
+                      <div className="text-sm text-white">{project.funding}
                   <div>
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
+                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:
                     <ul className="space-y-1">
                       {project.outcomes.map((outcome, outcomeIndex) => (
                         <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
           {/* Research Projects */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Current Research Projects;
-          </h2>"
-            <div className="grid grid-cols-1,"
-  lg:grid-cols-2 gap-8"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Current Research Projects</$1>"
+            < className="grid grid-cols-1,"$2 />
+  lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
+          < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>
+                      <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>"
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm mb-4">{project.description}
                   </div>"
-                  <div className="grid grid-cols-2 gap-4 mb-4"></div>
+                  <div className="grid grid-cols-2 gap-4 mb-4">
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
-                      <div className={`text-sm font-medium ${}
+                      < className={`text-sm font-medium ${}$2 />
   // TOD,
   O: Add content,
 }
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}></div>
+                      }`}>
                         {project.status}
-          </div>
-                    </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>"
-                      <div className="text-sm text-white">{project.timeline}</div>
-                    </div>
+                      <div className="text-sm text-white">{project.timeline}
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Team</div>"
-                      <div className="text-sm text-white">{project.team}</div>
-                    </div>
+                      <div className="text-sm text-white">{project.team}
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Funding</div>"
-                      <div className="text-sm text-white">{project.funding}</div>
-                    </div>
-                  </div>
+                      <div className="text-sm text-white">{project.funding}
                   <div></div>"
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Outcomes:</div>"
-                    <ul className="space-y-1"></ul>
+                    <ul className="space-y-1">
                       {project.outcomes.map((outcome, outcomeIndex) => ()}"
           <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"></li>"
-                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">
                           {outcome}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
           {/* Publications */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Recent Publications;
-  </
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Recent Publications
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
                 {publications.map((pub, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}
+                    <div className="text-sm text-gray-300 mb-2">{pub.authors}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <span>{pub.journal}</span>
-                        <span>•</span>
-                        <span>{pub.year}</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
+                        <span>{pub.journal}
+                        <span>•
+                        <span>{pub.year}
+                        < className={`px-2 py-1 rounded text-xs ${$2 />
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>
-                          {pub.impact} Impact;
-  </
-                      </div>
-                      <a
+                        }`}>{pub.impact} Impact
+                      <$2 />
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
                         Read Paper →
-                      </a>
           {/* Publications */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Recent Publications;
-          </h2>"
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Recent Publications</$1>"
             <div className="max-w-4xl mx-auto"></div>"
-              <div className="space-y-6"></div>
+              <div className="space-y-6">
                 {publications.map((pub, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
+          < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>"
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>"
                     <div className="flex items-center justify-between"></div>"
-                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
-                        <span>{pub.journal}</span>
-                        <span></span>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <span>{pub.journal}
+                        <span>
                         <span>{pub.year}</span>`
-                        <span className={`px-2 py-1 rounded text-xs ${}
+                        < className={`px-2 py-1 rounded text-xs ${}$2 />
   // TOD,
   O: Add content,
 }
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
-                        }`}></span>
-                          {pub.impact} Impact;
-          </span>
-                      </div>
-                      <a></a>
+                        }`}>
+                          {pub.impact} Impact
+                      <a>
                         href={pub.link}"
                         className="text-cyan-400,"
   hover: text-cyan-300 text-sm font-medium"
@@ -955,45 +913,33 @@ $4}
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
           {/* Achievements */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Research Achievements;
-  </
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Research Achievements
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}
           {/* Achievements */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Research Achievements;
-          </h2>"
-            <div className="grid grid-cols-1,
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Research Achievements</$1>"
+            < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => ()}"
           <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                    <achievement.icon className="w-8 h-8 text-cyan-400" /></achievement>
+                    <achievement.icon className="w-8 h-8 text-cyan-400" />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>"
-                  <p className="text-gray-300 text-sm">{achievement.description}</p>
-                </div>
+                  <p className="text-gray-300 text-sm">{achievement.description}
               ))}
-            </div>
-          </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Collaborate With Our Research Team;
-  </
+            <h2 className="text-2xl font-bold text-white mb-4">Collaborate With Our Research Team
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
               universities, research institutions, and industry leaders.
@@ -1020,8 +966,7 @@ $4}
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
-// Collaborate With Our Research Team;
-          </h2>"
+// Collaborate With Our Research Team</h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
@@ -1031,10 +976,9 @@ $4}
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           "
-          <BookOpen className="w-5 h-5 mr-2" /></BookOpen>
-// Start Collaboration;
-          </a>
-              <a
+          <BookOpen className="w-5 h-5 mr-2" />
+// Start Collaboration
+              <$2 />
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
@@ -1057,7 +1001,6 @@ $4}
     </div>
   ),
 }
-export default ResearchDevelopmentPage;
-  </a>
+export default ResearchDevelopmentPage</a>
   </a>
   </a>

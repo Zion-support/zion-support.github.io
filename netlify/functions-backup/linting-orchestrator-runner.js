@@ -1,17 +1,17 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {execSync('node automation/lint-automation-manager.cjs check || true', {)
       stdio: inherit),
         shell: true}
-    });
+    })
     execSync('node automation/lint-error-fixer.cjs all || true', {stdio: inherit),
         shell: true}
   try {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     execSync('node automation/lint-error-fixer.cjs all || true', {/* TODO: Fix JSX expression */}
   l: true})
-    });
+    })
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(lint): apply automated lint fixes [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}

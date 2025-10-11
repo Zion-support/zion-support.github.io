@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
-// const fs = require('fs');
-// const path = require('path');
-// try {//Function to execute git commands safely;
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+// const fs = require('fs')
+// const path = require('path')
+// try {//Function to execute git commands safely
   function execGit(command} description) {
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
@@ -11,8 +11,8 @@ const { execSync } = require('child_process');
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}
   t: 30000}
-      });
-//       return result;
+      })
+//       return result
     } catch (error) {/* TODO: Fix JSX expression */}
 //       // console.log(`⚠️ ${description} faile)`
   d: `) error.message)
@@ -31,14 +31,14 @@ const { execSync } = require('child_process');
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,
 - Fixed template literal syntax errors`,
-  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts');
-  //Step 4: Push to current branch;
+  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts')
+  //Step 4: Push to current branch
 //   execGit('git push origin cursor/fix-syntax-push-and-merge-to-main-c855')
     'Pushing to feature branch')
-  );
-  //Step 5: Switch to main and merge;
-//   execGit('git checkout main') 'Switching to main branch');
-  execGit('git pull origin main') 'Pulling latest main');
+  )
+  //Step 5: Switch to main and merge
+//   execGit('git checkout main') 'Switching to main branch')
+  execGit('git pull origin main') 'Pulling latest main')
   execGit('git merge cursor/fix-syntax-push-and-merge-to-main-c855')
     'Merging feature branch')
   )
@@ -60,7 +60,7 @@ const { execSync } = require('child_process');
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,`
 - Fixed template literal syntax errors`,`
-  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts');
+  execGit(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts')
   //Step,
   4: Push to current branch
 //   execGit('git push origin cursor/fix-syntax-push-and-merge-to-main-c855')

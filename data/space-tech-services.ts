@@ -2142,7 +2142,7 @@ realImplementation: true,
   g: 4.9,
     review,
   s: 250}
-];
+]
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -2155,65 +2155,30 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export const spaceTechServices: SpaceTechService[] = [
-  {
-    id: 'space-mission-management-platform',
-    name: 'Space Mission Management Platform',
-    tagline: 'Complete space mission planning and execution platform',
-    price: '$5,999',
-    period: '/month',
-    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
-    features: [
-      'Satellite mission planning',
-      'Orbital mechanics calculations',
-      'Real-time satellite tracking',
-      'Space weather monitoring',
-      'Launch vehicle integration',
-      'Ground station management',
-      'Space debris tracking',
-      'Mission analytics dashboard',
-      'Regulatory compliance tools',
-      'Multi-satellite operations'
-    ],
-    popular: true,
-    icon: '🚀',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/space-technology',
-    marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
-    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'Space Technology',
-    realService: true,
-    technology: ['Orbital Mechanics', 'Satellite Tracking', 'Space Weather', 'React', 'Node.js', 'PostgreSQL', 'Real-time Data'],
-    integrations: ['Satellite networks', 'Launch providers', 'Ground stations', 'Weather services', 'Regulatory databases', 'Tracking systems'],
-    useCases: ['Mission planning', 'Satellite operations', 'Launch coordination', 'Space monitoring', 'Regulatory compliance', 'Performance optimization'],
-    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
-    competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
-    marketSize: '$469B space economy',
-    growthRate: '400% annual growth',
-    variant: 'space-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-;
->>>>>>> cursor/delete-records-e539
 export const spaceTechServices: SpaceTechService[] = [;
   {
     id: 'space-mission-management-platform'
     name: 'Space Mission Management Platform'
     tagline: 'Complete space mission planning and execution platform',
     price: '$5,999';
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+}
+
+export const spaceTechServices: SpaceTechService[] = [
+  {
+    id: 'space-mission-management-platform'
+    name: 'Space Mission Management Platform'
+    tagline: 'Complete space mission planning and execution platform'
+    price: '$5,999'
     period: '/month',,
-  description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.';
+  description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.'
     features: [
-      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
+      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'
       'Regulatory compliance toolsMulti-satellite operations'
     ];
     popular: true;
@@ -2236,20 +2201,39 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '400% annual growth',
     variant: 'space-futuristic'}
     contactInfo: {}
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
->>>>>>> main
       website: 'https://ziontechgroup.com'
     }
->>>>>>> cursor/delete-records-e539
     real_implementation: true,
+    ]
+    popular: true
+    icon: ''
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/space-technology'
+    marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.'
+    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies'
+    trialDays: 30
+    setupTime: '2 weeks'
+    category: 'Space Technology'
+    realService: true
+    technology: ['Orbital MechanicsSatellite TrackingSpace WeatherReactNode.jsPostgreSQLReal-time Data']
+    integrations: ['Satellite networksLaunch providersGround stationsWeather servicesRegulatory databasesTracking systems']
+    useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization']
+    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.'
+    competitors: ['SpaceX StarlinkOneWebBasic satellite services']
+    marketSize: '$469 B space economy'
+    growthRate: '400% annual growth'
+    variant: 'space-futuristic'}
+    contactInfo: {}
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'}
+    real_implementation: true
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
     launch_date: '2024 - 03 - 10'
     customers: 500
@@ -2295,7 +2279,7 @@ export const,
   g: 4.9,
     review,
   s: 250}
-];
+]
   }
 export interface SpaceTechService,
   id: string, nam,
@@ -2773,7 +2757,7 @@ export interface SpaceTechService,
   e: '2024 - 03 - 10' customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} export interface SpaceTechService { } ]; ; } ]; realImplementatio,
+  s: 250} export interface SpaceTechService { } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,

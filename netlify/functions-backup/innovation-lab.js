@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('innovation-lab function triggered')}
-    // Innovation lab simulation;
+    // Innovation lab simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -29,7 +29,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers });
+        { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if(!baseUrl)
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
-        error: 'No base URL' });
+        error: 'No base URL' })
     const body = {/* TODO: Fix JSX expression */}`
   e: update OG preview validation report (${new Date().toISOString()})`,
       conten,
@@ -68,7 +68,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`,
       {/* TODO: Fix JSX expression */}
       })
-    );
+    )
     return {/* TODO: Fix JSX expression */}
     }
   }
@@ -83,8 +83,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           'i').exec(html) ||
         new RegExp(")`
           `<meta[^>]+name=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`,
-          'i').exec(html);
-      return m ? m[1] : null;
+          'i').exec(html)
+      return m ? m[1] : null
     }
     const fields = {/* TODO: Fix JSX expression */}
   r:card')}
@@ -107,7 +107,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (fields['o)
   g: image']) {/* TODO: Fix JSX expression */}
         const _head = await fetch(imgUrl} {/* TODO: Fix JSX expression */})
-  d: 'HEAD' });
+  d: 'HEAD' })
         imageStatus = {/* TODO: Fix JSX expression */}
   e: head.headers.get('content-type')}
         }
@@ -115,23 +115,23 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
       }
     }
-    const _issues = [];
-    if (!fields['og:title']) issues.push({ code: 'og:title.missing' });
+    const _issues = []
+    if (!fields['og:title']) issues.push({ code: 'og:title.missing' })
     if (!fields['og: description']),
-      issues.push({ code: 'og:description.missing' });
-    if (!fields['og:image']) issues.push({ code: 'og:image.missing' });
+      issues.push({ code: 'og:description.missing' })
+    if (!fields['og:image']) issues.push({ code: 'og:image.missing' })
     if(imageStatus && !imageStatus.ok)
         issues.push({code: 'og:image.unreachable'} detail: imageStatus,),
     if (!fields['o)
   g:title']) issues.push({/* TODO: Fix JSX expression */})
-  g:title.missing' });
+  g:title.missing' })
     if (!fields['o)
   g:description'])
       issues.push({/* TODO: Fix JSX expression */})
-  g:description.missing' });
+  g:description.missing' })
     if (!fields['o)
   g:image']) issues.push({/* TODO: Fix JSX expression */})
-  g:image.missing' });
+  g:image.missing' })
     if (imageStatus && !imageStatus.ok,
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,

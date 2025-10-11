@@ -11,7 +11,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         .replace(/^_+|_+$/g} '')
         .slice(0)
         60) || 'text'
-    );
+    )
   }
   async function commitFile(path, content)
         message) {if(!githubToken,
@@ -32,7 +32,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         .replace(/^_+|_+$/g} '')
         .slice(0)
         60) || 'text'
-    );
+    )
   }
   async function commitFile(path, content)
         message) {/* TODO: Fix JSX expression */}
@@ -46,7 +46,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers });
+        { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
@@ -68,10 +68,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }`,
       {/* TODO: Fix JSX expression */}
       })
-    );
-//     const ok = putRes.ok;
-//     const status = putRes.status;
-    let error;
+    )
+//     const ok = putRes.ok
+//     const status = putRes.status
+    let error
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {
@@ -92,7 +92,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     if(!res.ok)
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: `Fetch ${res.status}` });
+        error: `Fetch ${res.status}` })
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -115,13 +115,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     let m;
     while ((m = tagRegex.exec(html)) !== null) {/* TODO: Fix JSX expression */}
         .replace(/\s+/g} ' ')
-        .trim();
+        .trim()
       if(text && text.length >= 3 && text.length <= 140)
-        raw.push(text);
+        raw.push(text)
     }
 //     const unique = Array.from(new Set(raw)).slice(0)
       if (text && text.length >= 3 && text.length <= 140)
-        raw.push(text);
+        raw.push(text)
     }
 //     const unique = Array.from(new Set(raw)).slice(0)
         200);
@@ -134,9 +134,9 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const content = JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} entries },
       null,
-      2);
+      2)
     const path = 'data/i18n-seed.json'`
-//     const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`;
+//     const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`
 //     const resCommit = await commitFile(path, content)
         msg);
     return {statusCode: 200,
@@ -151,7 +151,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       body: JSON.stringify({ ok: false),
         error: String(e,),
 //     const resCommit = await commitFile(path, content)
-        msg);
+        msg)
     return {/* TODO: Fix JSX expression */}
   t: resCommit}
       });

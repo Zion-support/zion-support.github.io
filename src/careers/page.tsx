@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -107,7 +107,7 @@ const CareersPage: React.FC = () => {
       ],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     }
-  ];
+  ]
   const benefits = [
     {
       icon: Heart,
@@ -129,7 +129,7 @@ const CareersPage: React.FC = () => {
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
     }
-  ];
+  ]
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -137,7 +137,7 @@ const CareersPage: React.FC = () => {
     'Mentorship programs and career development support',
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -149,9 +149,8 @@ const CareersPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View Open Positions
@@ -180,14 +179,9 @@ const CareersPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}
+                <p className="text-gray-600">{benefit.description}
             ))}
-          </div>
-        </div>
-      </section>
       {/* Company Culture */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -200,40 +194,27 @@ const CareersPage: React.FC = () => {
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
                 and everyone has the opportunity to grow and succeed.
-              </p>
               <ul className="space-y-4">
                 {culture.map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-600">{item}</span>
-                  </li>
+                    <span className="text-gray-600">{item}
                 ))}
-              </ul>
-            </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-600 mb-2">50+</div>
-                  <div className="text-gray-600">Team Members</div>
-                </div>
+                  <div className="text-3xl font-bold text-cyan-600 mb-2">50+
+                  <div className="text-gray-600">Team Members
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-gray-600">Years Experience</div>
-                </div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">15+
+                  <div className="text-gray-600">Years Experience
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
-                  <div className="text-gray-600">Countries</div>
-                </div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">25+
+                  <div className="text-gray-600">Countries
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">99%</div>
-                  <div className="text-gray-600">Satisfaction</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  <div className="text-3xl font-bold text-green-600 mb-2">99%
+                  <div className="text-gray-600">Satisfaction
       {/* Open Positions */}
       <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -251,74 +232,52 @@ const CareersPage: React.FC = () => {
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <span className="flex items-center">
                           <Briefcase className="w-4 h-4 mr-1" />
                           {position.department}
-                        </span>
                         <span className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
                           {position.location}
-                        </span>
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {position.type}
-                        </span>
                         <span className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
                           {position.experience}
-                        </span>
-                      </div>
-                    </div>
-                    <Link
+                    <$2 />
                       to="/contact"
                       className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
                       Apply Now <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                  <p className="text-gray-600 mb-6">{position.description}</p>
+                  <p className="text-gray-600 mb-6">{position.description}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3">Requirements
                       <ul className="space-y-2">
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                             {req}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3">Benefits
                       <ul className="space-y-2">
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                             {benefit}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
-          </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Send Us Your Resume
@@ -335,8 +294,7 @@ const CareersPage: React.FC = () => {
     </div>
   ),
 }
-export default CareersPage;
-  </Link>
+export default CareersPage</Link>
   </Link>
   </p>
   </h2>

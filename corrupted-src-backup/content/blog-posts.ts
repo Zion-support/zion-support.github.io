@@ -63,17 +63,17 @@ export const blogPosts: BlogPost[] = [,
     description:
       'Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.',
     content: `,
-# Enterprise Agents in Production: Budgets, Approvals, and Rollback;
+# Enterprise Agents in Production: Budgets, Approvals, and Rollback
 This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
 
-## Ship Safely;
-- Signed tools with scopes and quotas;
-- Budget-aware action routing with KPI-linked SLIs;
-- Canary routes and one-click rollback hooks;
-## Outcomes;
-- Incident rate stable as automation expands;
-- Faster delivery without runaway spend;
-- Clear accountability via weekly scorecards;
+## Ship Safely
+- Signed tools with scopes and quotas
+- Budget-aware action routing with KPI-linked SLIs
+- Canary routes and one-click rollback hooks
+## Outcomes
+- Incident rate stable as automation expands
+- Faster delivery without runaway spend
+- Clear accountability via weekly scorecards
     `,
     author: 'Zion Tech Group AI Operations',
     date: '2025-10-04',
@@ -102,17 +102,17 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     description:
       'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
     content: `,
-# Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts;
+# Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts
 Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
 
-## What You'll Ship;
-- Policy tests in CI that gate risky changes;
-- KPI-linked scorecards across reliability, latency, and cost;
-- Budget-aware routing and circuit breakers;
-- Canary playbooks with instant rollback hooks;
-## Outcomes;
-- 8–12x deployment velocity with lower change-failure rate;
-- 30–70% GenAI cost reduction via quality tiers and caches;
+## What You'll Ship
+- Policy tests in CI that gate risky changes
+- KPI-linked scorecards across reliability, latency, and cost
+- Budget-aware routing and circuit breakers
+- Canary playbooks with instant rollback hooks
+## Outcomes
+- 8–12x deployment velocity with lower change-failure rate
+- 30–70% GenAI cost reduction via quality tiers and caches
     `,
     author: 'Zion Tech Group AI Governance',
     date: '2025-10-01',
@@ -135,4 +135,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

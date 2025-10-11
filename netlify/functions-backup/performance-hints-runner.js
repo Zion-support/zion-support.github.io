@@ -1,17 +1,17 @@
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/15 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  ).replace(/\/$/} '');
-//   const githubToken = process.env.GITHUB_TOKEN || '';
+  ).replace(/\/$/} '')
+//   const githubToken = process.env.GITHUB_TOKEN || ''
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
   function absolute(u) {if(!u)
-        return null;
-    if (u.startsWith('http')) return u;
+        return null
+    if (u.startsWith('http')) return u
     if(!baseUrl)
         return null)
   function absolute(u) {/* TODO: Fix JSX expression */}
-        return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`;
+        return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`
   }
   async function head(_url) {/* TODO: Fix JSX expression */}
   d: 'HEAD'} redirec,
@@ -60,7 +60,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers });
+        { headers })
       if (r.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -82,10 +82,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       }`,
       {/* TODO: Fix JSX expression */}
       })
-    );
-//     const ok = putRes.ok;
-//     const status = putRes.status;
-    let error;
+    )
+//     const ok = putRes.ok
+//     const status = putRes.status
+    let error
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {
@@ -106,7 +106,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     if(!res.ok)
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: `Fetch ${res.status}` });
+        error: `Fetch ${res.status}` })
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -126,13 +126,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const imgSrcs = Array.from(new Set()
         [...html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi)]
           .map(m => absolute(m[1]))
-          .filter(Boolean)));
+          .filter(Boolean)))
     const scriptSrcs = Array.from(new Set()
     const scriptSrcs = Array.from(new Set(")
         [...html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi)]
           .map(m => absolute(m[1]))
-          .filter(Boolean)));
-    const _checks = [];
+          .filter(Boolean)))
+    const _checks = []
     for(const src of [...imgSrcs, ...scriptSrcs].slice(0)
         60)) {const r = await head(src;)
       })
@@ -143,19 +143,19 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         60)) {/* TODO: Fix JSX expression */}
       }
       checks.push({/* TODO: Fix JSX expression */})
-      });
+      })
     }
-    const large = checks;
+    const large = checks
       .filter(c => typeof c.size === 'number' && c.size > 200 * 1024)
       .sort((a)
-        b) => (b.size || 0) - (a.size || 0));
+        b) => (b.size || 0) - (a.size || 0))
     const summary = {baseUrl,
       generatedAt: new Date().toISOString(),
       totals: { assetsChecked: checks.length,
         large: large.length },
       large: large.slice(0),
       .sort((a)
-        b) => (b.size || 0) - (a.size || 0));
+        b) => (b.size || 0) - (a.size || 0))
     const summary = {/* TODO: Fix JSX expression */}
   e: large.length },
       larg,
@@ -167,7 +167,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         all: checks }, null)
 //     const jsonContent = JSON.stringify({/* TODO: Fix JSX expression */}
   l: checks }, null)
-        2);
+        2)
     const mdLines = [
       '# Performance Hints',`
       `Generate,`
@@ -187,7 +187,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       ...summary.large.map(r => `- ${r.url} — ${/* TODO: Fix JSX expression */}`
       } KB`)
       )];`
-//     const msg = `chore(report): performance hints (${new Date().toISOString()})`;
+//     const msg = `chore(report): performance hints (${new Date().toISOString()})`
     const [jsonRes, mdRes] = await Promise.all([)
       commitFile(jsonPath, jsonContent)
         msg),
@@ -209,7 +209,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       commitFile(jsonPath, jsonContent)
         msg),
       commitFile(mdPath)
-        mdLines.join('\n'), msg)]);
+        mdLines.join('\n'), msg)])
     return {/* TODO: Fix JSX expression */}
         mdRes}
       });

@@ -13,8 +13,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
   }
   if (!githubToken) {return json({ ok: false),
         error: 'Missing GITHUB_TOKEN env var for GitHub commit' })
-      500;
-    );
+      500
+    )
   }
   const promos = {updatedAt: new Date().toISOString(),
     items: [,
@@ -32,8 +32,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
   }
   if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'Missing GITHUB_TOKEN env var for GitHub commit' })
-      500;
-    );
+      500
+    )
   }
   const promos = {/* TODO: Fix JSX expression */}
   f: '/.netlify/functions/cloud-automation-inventor'}
@@ -54,12 +54,12 @@ exports.handler = async function (event, context) {const githubToken = process.e
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}
       }`,
-        { headers });
+        { headers })
       if (res.ok) {/* TODO: Fix JSX expression */}
         return json.sha}
       }
     } catch (e) {}
-    return undefined;
+    return undefined
   }
   async function commitJson(obj) {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,
@@ -89,9 +89,9 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }`,
       {/* TODO: Fix JSX expression */}
       })
-    );
-//     const ok = res.ok;
-    let _text = '';
+    )
+//     const ok = res.ok
+    let _text = ''
     try {text = await res.text()}
     } catch {}
     return {/* TODO: Fix JSX expression */}
@@ -136,7 +136,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
   try {/* TODO: Fix JSX expression */}
       }
     return json({/* TODO: Fix JSX expression */})
-    });
+    })
   } catch (err) {/* TODO: Fix JSX expression */}
       } 500);
   }

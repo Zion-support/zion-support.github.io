@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('continuous-orchestrator function triggered')}
-    // Continuous orchestration simulation;
+    // Continuous orchestration simulation
     const result = {
       statusCode: 200,
       headers: {,

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('sitemap_runner function triggered')}
-    // Sitemap running simulation;
+    // Sitemap running simulation
     const result = {
       statusCode: 200,
       headers: {,

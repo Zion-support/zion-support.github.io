@@ -206,7 +206,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.'
     launchDate: '2024-01-01'
     customers: 34;
@@ -219,7 +219,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 2. Biotechnology & Synthetic Biology Platform;
+  // 2. Biotechnology & Synthetic Biology Platform
     id: 'biotechnology-synthetic-biology',
     name: 'Biotechnology & Synthetic Biology Platform',
     tagline: 'Design and engineer life with AI-powered synthetic biology',
@@ -363,7 +363,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.'
     launchDate: '2024-02-01'
     customers: 67;
@@ -376,7 +376,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 3. Renewable Energy & Smart Grid Optimization;
+  // 3. Renewable Energy & Smart Grid Optimization
     id: 'renewable-energy-smart-grid',
     name: 'Renewable Energy & Smart Grid Optimization Platform',
     tagline: 'AI-powered renewable energy optimization and smart grid management',
@@ -520,7 +520,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.'
     launchDate: '2024-01-15'
     customers: 123;
@@ -533,7 +533,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 4. Advanced Robotics & Automation Platform;
+  // 4. Advanced Robotics & Automation Platform
     id: 'advanced-robotics-automation',
     name: 'Advanced Robotics & Automation Platform',
     tagline: 'Next-generation robotics with AI-powered autonomy and learning',
@@ -677,7 +677,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.'
     launchDate: '2024-02-15'
     customers: 89;
@@ -690,7 +690,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 5. Quantum Internet & Secure Communications;
+  // 5. Quantum Internet & Secure Communications
     id: 'quantum-internet-secure-communications',
     name: 'Quantum Internet & Secure Communications Platform',
     tagline: 'Unhackable quantum communications for the future internet',
@@ -834,7 +834,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.'
     launchDate: '2024-03-01'
     customers: 23;
@@ -847,7 +847,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 6. Advanced Materials & Nanotechnology Platform;
+  // 6. Advanced Materials & Nanotechnology Platform
     id: 'advanced-materials-nanotechnology',
     name: 'Advanced Materials & Nanotechnology Platform',
     tagline: 'Design revolutionary materials with AI and nanotechnology',
@@ -991,7 +991,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.'
     launchDate: '2024-01-15'
     customers: 78;
@@ -1004,7 +1004,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 7. Autonomous Transportation & Mobility Platform;
+  // 7. Autonomous Transportation & Mobility Platform
     id: 'autonomous-transportation-mobility',
     name: 'Autonomous Transportation & Mobility Platform',
     tagline: 'Revolutionary autonomous transportation and smart mobility solutions',
@@ -1148,7 +1148,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.'
     launchDate: '2024-02-01'
     customers: 156;
@@ -1161,7 +1161,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 8. Digital Twin & Simulation Platform;
+  // 8. Digital Twin & Simulation Platform
     id: 'digital-twin-simulation',
     name: 'Digital Twin & Simulation Platform',
     tagline: 'Create virtual replicas of physical systems with AI-powered simulation',
@@ -1305,7 +1305,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.'
     launchDate: '2024-01-01'
     customers: 189;
@@ -1318,7 +1318,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 9. Edge Computing & IoT Platform;
+  // 9. Edge Computing & IoT Platform
     id: 'edge-computing-iot-platform',
     name: 'Edge Computing & IoT Platform',
     tagline: 'Intelligent edge computing for real-time IoT processing and analytics',
@@ -1462,7 +1462,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.'
     launchDate: '2024-02-15'
     customers: 234;
@@ -1475,7 +1475,7 @@ export const,
       currency: 'USD',
       period: 'month'}
   },
-  // 10. Metaverse & Virtual Reality Platform;
+  // 10. Metaverse & Virtual Reality Platform
     id: 'metaverse-virtual-reality',
     name: 'Metaverse & Virtual Reality Platform',
     tagline: 'Build immersive virtual worlds and metaverse experiences',
@@ -1619,7 +1619,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.'
     launchDate: '2024-03-01'
     customers: 123;
@@ -1714,7 +1714,7 @@ export const getServicesByCategory = (category: string) =>
   d: 'month'
     }
   }
-];
+]
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),

@@ -1,10 +1,10 @@
-// netlify/functions/content-staleness-runner.js;
+// netlify/functions/content-staleness-runner.js
 exports.handler = async function () {
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {/* TODO: Fix JSX expression */}
   o: 'inherit'}
-    });
+    })
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(reports): staleness audit [ci skip]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}

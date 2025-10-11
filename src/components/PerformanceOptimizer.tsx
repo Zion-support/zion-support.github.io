@@ -1,5 +1,5 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 interface PerformanceOptimizerProps {
     enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -23,7 +23,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     codeSplit: false,
     resourceHints: 0,
     serviceWorker: false
-  });
+  })
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages()
@@ -45,8 +45,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
   const optimizeImages = () => {
-    const images = document.querySelectorAll('img');
-    let optimized = 0;
+    const images = document.querySelectorAll('img')
+    let optimized = 0
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
@@ -54,7 +54,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimized++
   }
       // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
+      img.setAttribute('decoding', 'async')
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
     img.setAttribute('fetchpriority', 'high')
@@ -71,21 +71,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img)
   }
           }
-        });
+        })
       }, {
         rootMargin: '50px 0px',
         threshold: 0.1
-      });
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
+      })
+      const lazyImages = document.querySelectorAll('img[data-src]')
+      lazyImages.forEach((img) => observer.observe(img))
+      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))
     }
   }
   const preloadCriticalResources = () => {
@@ -100,7 +100,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         as: 'style',
         type: 'text/css'
       }
-    ];
+    ]
     criticalResources.forEach((resource) => {
     const link = document.createElement('link');
       link.rel = 'preload';
@@ -125,7 +125,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
+    ]
     hints.forEach((hint) => {
     const link = document.createElement('link');
       link.rel = hint.rel;
@@ -140,8 +140,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        const registration = await navigator.serviceWorker.register('/sw.js')
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))
         } catch (error) {
           // Service Worker registration failed - handled silently in production
         }
@@ -159,15 +159,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'
-              });
+              })
             }
           }
         }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
     }
   }, []);
   return null;
 }
-export default PerformanceOptimizer;
-  </PerformanceOptimizerProps>
+export default PerformanceOptimizer</PerformanceOptimizerProps>

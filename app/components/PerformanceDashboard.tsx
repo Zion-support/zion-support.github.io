@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react'
 interface PerformanceMetrics {
     loadTime: number;
   renderTime: number
@@ -12,15 +12,11 @@ interface PerformanceProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   }
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-<<<<<<< HEAD
   const [metrics, setMetrics] = useState</PerformanceProps><PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
-=======
-  const [metrics, setMetrics] = useState<PerformanceMetrics>()
->>>>>>> main
   })
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState</PerformanceMetrics><string[]>([]);
@@ -31,17 +27,28 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       const loadTime = navigation;
         ? navigation.loadEventEnd - navigation.fetchStart;
         : 0;
+  })
+  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [alerts, setAlerts] = useState<string[]>([])
+  useEffect(() => {
+    const updateMetrics = () => {
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming
+      const loadTime = navigation
+        ? navigation.loadEventEnd - navigation.fetchStart
+        : 0
       // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
+      const renderStart = performance.now()
+      const renderTime = performance.now() - renderStart
       // Measure memory usage
-      let memoryUsage = 0;
+      let memoryUsage = 0
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+        memoryUsage = memory?.usedJSHeapSize || 0
       }
       // Measure FPS (simplified)
-      let fps = 60;
+      let fps = 60
       if ('requestAnimationFrame' in window) {
     let lastTime = performance.now();
         let frameCount = 0;
@@ -92,21 +99,12 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   }
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
-<<<<<<< HEAD
   }
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
     const k = 1024,
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-=======
-  };
-  const formatBytes = (bytes: number) => {;
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024,;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
->>>>>>> main
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
   }
   const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {;
@@ -114,7 +112,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'
   }
-<<<<<<< HEAD
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       </div><div className="flex items-center justify-between mb-6">
@@ -131,8 +128,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           }`}
         >
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
-        </button>
-      </div>
       {alerts.length > 0 && (
         <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
           </div><div className="flex items-center gap-2 mb-2">
@@ -142,69 +137,45 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           <ul className="space-y-1">
             {alerts.map((alert, index) => (
               </ul><li key={index} className="text-red-300 text-sm">• {alert}</li>
-=======
-  return() {alerts.map((alert, index) => ()
->>>>>>> main
+          <div className="flex items-center gap-2 mb-2">
+            <AlertTriangle className="w-5 h-5 text-red-400" />
+            <h4 className="text-red-400 font-semibold">Performance Alerts
+          <ul className="space-y-1">
+            {alerts.map((alert, index) => (
+              <li key={index} className="text-red-300 text-sm">• {alert}
             ))}
-          </ul>
-        </div>
       )}
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         </div><div className="bg-white/5 rounded-lg p-4">
           </div><div className="flex items-center gap-2 mb-2">
             </div><Zap className="w-4 h-4 text-blue-400" />
-=======
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" /></div>
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <Zap className="w-4 h-4 text-blue-400" / /></Zap>
->>>>>>> main
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`} /></div>
             {metrics.loadTime.toFixed(0)}ms
   </
         </div>
-<<<<<<< HEAD
         <div className="bg-white/5 rounded-lg p-4">
           </div><div className="flex items-center gap-2 mb-2">
             </div><Cpu className="w-4 h-4 text-green-400" />
-=======
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <Cpu className="w-4 h-4 text-green-400" / /></Cpu>
->>>>>>> main
             <span className="text-gray-300 text-sm">Render Time</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`} /></div>
             {metrics.renderTime.toFixed(2)}ms
   </
         </div>
-<<<<<<< HEAD
         <div className="bg-white/5 rounded-lg p-4">
           </div><div className="flex items-center gap-2 mb-2">
             </div><MemoryStick className="w-4 h-4 text-purple-400" />
-=======
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <MemoryStick className="w-4 h-4 text-purple-400" / /></MemoryStick>
->>>>>>> main
             <span className="text-gray-300 text-sm">Memory Usage</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`} /></div>
             {formatBytes(metrics.memoryUsage)}
           </div>
         </div>
-<<<<<<< HEAD
         <div className="bg-white/5 rounded-lg p-4">
           </div><div className="flex items-center gap-2 mb-2">
             </div><TrendingUp className="w-4 h-4 text-orange-400" />
-=======
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <TrendingUp className="w-4 h-4 text-orange-400" / /></TrendingUp>
->>>>>>> main
             <span className="text-gray-300 text-sm">FPS</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`} /></div>
@@ -212,13 +183,10 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="mt-6 text-center">
         </div><p className="text-gray-400 text-sm">
-=======
       <div className="mt-6 text-center" /></div>
         <p className="text-gray-400 text-sm" /></p>
->>>>>>> main
           {isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}
         </p>
       </div>

@@ -513,7 +513,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.'
     launchDate: '2024-10-01'
     customers: 156
@@ -796,7 +796,7 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
@@ -1586,7 +1586,7 @@ export const,
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
@@ -1595,7 +1595,7 @@ export const,
   }];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
@@ -1700,55 +1700,6 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export const advancedITServices: AdvancedITService[] = [
-  {
-    id: 'quantum-cloud-platform',
-    name: 'Quantum Cloud Platform',
-    tagline: 'Next-generation quantum computing in the cloud',
-    price: '$9,999',
-    period: '/month',
-    description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    features: [
-      'Quantum computing resources',
-      'Quantum algorithm library',
-      'Hybrid classical-quantum workflows',
-      'Quantum machine learning',
-      'Quantum cryptography',
-      'Performance optimization',
-      'Real-time quantum monitoring',
-      'Advanced analytics dashboard',
-      'API for integration',
-      '24/7 quantum support'
-    ],
-    popular: true,
-    icon: '☁️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-platform',
-    marketPosition: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trialDays: 30,
-    setupTime: '1 month',
-    category: 'Quantum Computing',
-    realService: true,
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'AI/ML', 'Quantum Cryptography'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Research platforms', 'Financial systems'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
-    roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
-    competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
-    marketSize: '$500M quantum computing market',
-    growthRate: '500% annual growth',
-    variant: 'quantum-cloud',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-;
->>>>>>> cursor/delete-records-e539
 export const advancedITServices: AdvancedITService[] = [;
   {
     id: 'quantum-cloud-platform'
@@ -1757,8 +1708,24 @@ export const advancedITServices: AdvancedITService[] = [;
     price: '$9,999';
     period: '/month',
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.';
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+}
+
+export const advancedITServices: AdvancedITService[] = [
+  {
+    id: 'quantum-cloud-platform'
+    name: 'Quantum Cloud Platform'
+    tagline: 'Next-generation quantum computing in the cloud'
+    price: '$9,999'
+    period: '/month'
+    description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.'
     features: [
-      'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboard';
+      'Quantum computing resourcesQuantum algorithm libraryHybrid classical-quantum workflowsQuantum machine learningQuantum cryptographyPerformance optimizationReal-time quantum monitoringAdvanced analytics dashboard'
       'API for integration24/7 quantum support'
     ];
     popular: true;
@@ -1781,26 +1748,50 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '500% annual growth',
     variant: 'quantum-cloud'}
     contactInfo: {}
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
->>>>>>> main
       website: 'https://ziontechgroup.com'
     };
     realImplementation: true;
->>>>>>> cursor/delete-records-e539
     implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
     launchDate: '2024-12-01';
     customers: 8
     rating: 4.9
     reviews: 4,
+    ]
+    popular: true
+    icon: ''
+    color: 'from-blue-600 to-indigo-700'
+    textColor: 'text-blue-400'
+    link: 'https://ziontechgroup.com/quantum-cloud-platform'
+    marketPosition: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket'
+    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors'
+    trialDays: 30
+    setupTime: '1 month'
+    category: 'Quantum Computing'
+    realService: true
+    technology: ['Quantum ComputingCloud InfrastructureQuantum AlgorithmsAI/MLQuantum Cryptography']
+    integrations: ['AWSAzureGoogle CloudResearch platformsFinancial systems']
+    useCases: ['Drug discoveryFinancial modelingCryptographyOptimization problems']
+    roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage'
+    competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI']
+    marketSize: '$500 M quantum computing market'
+    growthRate: '500% annual growth'
+    variant: 'quantum-cloud'}
+    contactInfo: {}
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'}
+    realImplementation: true
+    implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.'
+    launchDate: '2024-12-01'
+    customers: 8
+    rating: 4.9
+    reviews: 4
   }
   {
     id: 'edge-computing-orchestrator'
@@ -1810,7 +1801,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.';
     features: [
-      'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gateway';
+      'Intelligent resource allocationReal-time performance optimizationEdge device managementLoad balancingSecurity and complianceMonitoring and analyticsAutomated scalingAPI gateway'
       'Integration tools24/7 support'
     ];
     popular: true;
@@ -1852,7 +1843,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.';
     features: [
-      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIs';
+      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsCompliance toolsReal-time monitoringAutomated responseIntegration APIs'
       'Security dashboard24/7 security support'
     ];
     popular: true;
@@ -1894,7 +1885,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.';
     features: [
-      'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIs';
+      'AI-powered automationIntelligent testingPredictive monitoringPerformance optimizationSecurity scanningCompliance automationReal-time analyticsIntegration APIs'
       'Mobile applications24/7 support'
     ];
     popular: true;
@@ -1936,7 +1927,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.';
     features: [
-      'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
+      'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard'
       'Mobile applications24/7 support'
     ];
     popular: true;
@@ -1978,7 +1969,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.';
     features: [
-      'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs';
+      'Quantum computing integrationAI-powered optimizationAdvanced securityEnergy efficiencyPerformance monitoringScalabilityCompliance toolsIntegration APIs'
       '24/7 supportQuantum support team'
     ];
     popular: true;
@@ -2020,7 +2011,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.';
     features: [
-      'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIs';
+      'AI threat detectionReal-time monitoringAutomated responseBehavioral analyticsNetwork segmentationCompliance toolsPerformance analyticsIntegration APIs'
       'Security dashboard24/7 security support'
     ];
     popular: true;
@@ -2062,7 +2053,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.';
     features: [
-      'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
+      'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard'
       'Mobile applications24/7 support'
     ];
     popular: true;
@@ -2104,7 +2095,7 @@ export const advancedITServices: AdvancedITService[] = [;
     period: '/month',
     description: 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and window.window.window.performance.';
     features: [
-      'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIs';
+      'AI migration planningCost optimizationPerformance analysisSecurity assessmentCompliance toolsAutomated migrationReal-time monitoringIntegration APIs'
       'Migration dashboard24/7 support'
     ];
     popular: true;
@@ -2168,7 +2159,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
+  s: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.'
     launchDat,
   e: '2024-12-01',
     customer,
@@ -2246,7 +2237,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';
+  s: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.'
     launchDat,
   e: '2024-08-01',
     customer,
@@ -2272,7 +2263,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';
+  s: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.'
     launchDat,
   e: '2024-07-01',
     customer,
@@ -2387,7 +2378,7 @@ export const,
   s: 45}
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,
