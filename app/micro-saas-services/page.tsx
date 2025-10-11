@@ -1,20 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign, Zap, Star, Users, TrendingUp, BarChart3, Mail, Calendar, FileText, Camera, Headphones, CreditCard, Lock, Wifi, Cloud, Cpu, Target, Lightbulb, Rocket, Award } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
 
 const MicroSaasServicesPage: React.FC = () => {
   const microSaasServices = [
     {
-<<<<<<< HEAD
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Task Manager Pro',
       description: 'Intelligent task management with AI-powered prioritization, deadline tracking, and productivity insights.',
@@ -29,7 +22,8 @@ const MicroSaasServicesPage: React.FC = () => {
       pricing: '$19/month',
       popular: true,
       link: '/ai-task-manager',
-      category: 'Productivity'
+      category: 'Productivity',
+      setupTime: '5 minutes'
     },
     {
       icon: <Database className="w-12 h-12 text-green-500" />,
@@ -46,234 +40,261 @@ const MicroSaasServicesPage: React.FC = () => {
       pricing: '$15/month',
       popular: false,
       link: '/ai-expense-tracker',
-      category: 'Finance'
+      category: 'Finance',
+      setupTime: '2 minutes'
     },
     {
       icon: <Shield className="w-12 h-12 text-purple-500" />,
       title: 'AI Password Manager',
-      description: 'Advanced password management with AI-powered security recommendations and breach monitoring.',
+      description: 'Advanced password management with AI-powered security analysis and breach monitoring.',
       features: [
         'AI security scoring',
         'Breach monitoring',
         'Password generation',
         'Secure sharing',
         'Multi-device sync',
-        'Two-factor authentication'
+        'Dark web monitoring'
       ],
       pricing: '$12/month',
       popular: true,
       link: '/ai-password-manager',
-      category: 'Security'
+      category: 'Security',
+      setupTime: '3 minutes'
     },
     {
       icon: <Code className="w-12 h-12 text-orange-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation with AI-powered templates, payment tracking, and client management.',
+      title: 'AI Code Reviewer',
+      description: 'Automated code review with AI-powered suggestions, security scanning, and best practices enforcement.',
       features: [
-        'AI-generated templates',
-        'Payment tracking',
-        'Client management',
-        'Tax calculations',
-        'Multi-currency support',
-        'Automated reminders'
+        'Automated code analysis',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code quality scoring',
+        'Git integration',
+        'Team collaboration tools'
       ],
-      pricing: '$25/month',
+      pricing: '$29/month',
       popular: false,
-      link: '/ai-invoice-generator',
-      category: 'Business'
+      link: '/ai-code-reviewer',
+      category: 'Development',
+      setupTime: '10 minutes'
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights, symptom tracking, and wellness recommendations.',
+      title: 'AI Social Media Scheduler',
+      description: 'Intelligent social media management with AI-powered content optimization and optimal posting times.',
       features: [
-        'Symptom tracking',
-        'AI health insights',
-        'Medication reminders',
-        'Wellness recommendations',
-        'Doctor appointment scheduling',
-        'Health data export'
+        'AI content optimization',
+        'Optimal posting times',
+        'Hashtag suggestions',
+        'Multi-platform posting',
+        'Analytics dashboard',
+        'Content calendar'
       ],
-      pricing: '$18/month',
-      popular: false,
-      link: '/ai-health-tracker',
-      category: 'Health'
+      pricing: '$25/month',
+      popular: true,
+      link: '/ai-social-media-scheduler',
+      category: 'Marketing',
+      setupTime: '5 minutes'
     },
     {
-      icon: <Globe className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time zone handling.',
+      icon: <Globe className="w-12 h-12 text-cyan-500" />,
+      title: 'AI Website Analyzer',
+      description: 'Comprehensive website analysis with AI-powered SEO insights, performance optimization, and competitor analysis.',
       features: [
-        'AI meeting scheduling',
-        'Time zone optimization',
-        'Meeting insights',
-        'Team coordination',
-        'Integration with major calendars',
-        'Smart notifications'
+        'SEO analysis and recommendations',
+        'Performance optimization',
+        'Competitor analysis',
+        'Content suggestions',
+        'Technical audit',
+        'Monthly reports'
+      ],
+      pricing: '$35/month',
+      popular: false,
+      link: '/ai-website-analyzer',
+      category: 'SEO',
+      setupTime: '15 minutes'
+    },
+    {
+      icon: <Mail className="w-12 h-12 text-indigo-500" />,
+      title: 'AI Email Signature Generator',
+      description: 'Professional email signature generator with AI-powered design suggestions and brand consistency.',
+      features: [
+        'AI design suggestions',
+        'Brand consistency check',
+        'Multiple templates',
+        'Social media integration',
+        'Mobile optimization',
+        'Team management'
+      ],
+      pricing: '$8/month',
+      popular: false,
+      link: '/ai-email-signature-generator',
+      category: 'Communication',
+      setupTime: '2 minutes'
+    },
+    {
+      icon: <Calendar className="w-12 h-12 text-pink-500" />,
+      title: 'AI Meeting Assistant',
+      description: 'Smart meeting management with AI-powered scheduling, transcription, and action item extraction.',
+      features: [
+        'AI meeting transcription',
+        'Action item extraction',
+        'Smart scheduling',
+        'Meeting analytics',
+        'Integration with calendars',
+        'Voice recognition'
       ],
       pricing: '$22/month',
       popular: true,
-      link: '/ai-smart-calendar',
-      category: 'Productivity'
+      link: '/ai-meeting-assistant',
+      category: 'Productivity',
+      setupTime: '5 minutes'
     },
     {
-      icon: <Clock className="w-12 h-12 text-indigo-500" />,
-      title: 'AI Time Tracker',
-      description: 'Advanced time tracking with AI-powered project analysis and productivity optimization.',
+      icon: <FileText className="w-12 h-12 text-yellow-500" />,
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with AI-powered text extraction, classification, and data entry automation.',
       features: [
-        'Automatic time tracking',
-        'Project analysis',
-        'Productivity insights',
-        'Team time reports',
-        'Client billing integration',
-        'Mobile time tracking'
+        'OCR text extraction',
+        'Document classification',
+        'Data entry automation',
+        'Form processing',
+        'Batch processing',
+        'API integration'
+      ],
+      pricing: '$18/month',
+      popular: false,
+      link: '/ai-document-processor',
+      category: 'Automation',
+      setupTime: '10 minutes'
+    },
+    {
+      icon: <Camera className="w-12 h-12 text-teal-500" />,
+      title: 'AI Image Optimizer',
+      description: 'Advanced image optimization with AI-powered compression, format conversion, and quality enhancement.',
+      features: [
+        'AI-powered compression',
+        'Format conversion',
+        'Quality enhancement',
+        'Batch processing',
+        'CDN integration',
+        'API access'
+      ],
+      pricing: '$14/month',
+      popular: false,
+      link: '/ai-image-optimizer',
+      category: 'Media',
+      setupTime: '3 minutes'
+    },
+    {
+      icon: <Headphones className="w-12 h-12 text-violet-500" />,
+      title: 'AI Voice Cloner',
+      description: 'Professional voice cloning service with AI-powered voice synthesis and customization options.',
+      features: [
+        'High-quality voice cloning',
+        'Multiple voice options',
+        'Custom voice training',
+        'Text-to-speech synthesis',
+        'API integration',
+        'Commercial licensing'
+      ],
+      pricing: '$45/month',
+      popular: true,
+      link: '/ai-voice-cloner',
+      category: 'Media',
+      setupTime: '20 minutes'
+    },
+    {
+      icon: <CreditCard className="w-12 h-12 text-emerald-500" />,
+      title: 'AI Invoice Generator',
+      description: 'Smart invoice generation with AI-powered template suggestions and automated billing workflows.',
+      features: [
+        'AI template suggestions',
+        'Automated billing',
+        'Payment tracking',
+        'Tax calculations',
+        'Multi-currency support',
+        'Client management'
       ],
       pricing: '$16/month',
       popular: false,
-      link: '/ai-time-tracker',
-      category: 'Productivity'
-    },
-    {
-      icon: <DollarSign className="w-12 h-12 text-emerald-500" />,
-      title: 'AI Budget Planner',
-      description: 'Smart budget planning with AI-powered financial forecasting and spending optimization.',
-      features: [
-        'AI financial forecasting',
-        'Spending optimization',
-        'Goal tracking',
-        'Investment insights',
-        'Bill reminders',
-        'Financial reports'
-      ],
-      pricing: '$20/month',
-      popular: false,
-      link: '/ai-budget-planner',
-      category: 'Finance'
-=======
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Content Writer Pro',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Product descriptions', 'SEO optimization'],
-      pricing: '$29/month',
-      link: '/ai-content-writer-pro',
-      popular: true,
-      duration: 'Instant setup'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Analytics Dashboard',
-      description: 'Get actionable insights from your data with beautiful, customizable dashboards.',
-      features: ['Real-time analytics', 'Custom dashboards', 'Data visualization', 'Automated reports'],
-      pricing: '$49/month',
-      link: '/analytics-dashboard',
-      popular: true,
-      duration: '1-2 weeks'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      title: 'Email Assistant',
-      description: 'Automate your email marketing with AI-powered personalization and optimization.',
-      features: ['Email templates', 'A/B testing', 'Personalization', 'Analytics tracking'],
-      pricing: '$39/month',
-      link: '/email-assistant',
-      popular: false,
-      duration: '1 week'
-    },
-    {
-      icon: <Star className="w-8 h-8 text-yellow-500" />,
-      title: 'Lead Generation',
-      description: 'Find and qualify leads automatically with our AI-powered lead generation system.',
-      features: ['Lead scoring', 'Contact enrichment', 'CRM integration', 'Follow-up automation'],
-      pricing: '$59/month',
-      link: '/lead-generation',
-      popular: false,
-      duration: '2-3 weeks'
+      link: '/ai-invoice-generator',
+      category: 'Finance',
+      setupTime: '5 minutes'
     }
+  ];
+
+  const categories = [
+    { name: 'All', count: microSaasServices.length },
+    { name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length },
+    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length },
+    { name: 'Security', count: microSaasServices.filter(s => s.category === 'Security').length },
+    { name: 'Development', count: microSaasServices.filter(s => s.category === 'Development').length },
+    { name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length },
+    { name: 'SEO', count: microSaasServices.filter(s => s.category === 'SEO').length },
+    { name: 'Communication', count: microSaasServices.filter(s => s.category === 'Communication').length },
+    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
+    { name: 'Media', count: microSaasServices.filter(s => s.category === 'Media').length }
   ];
 
   const benefits = [
     {
+      title: 'Instant Setup',
+      description: 'Get started in minutes with our one-click deployment',
+      icon: <Zap className="w-6 h-6 text-blue-500" />
+    },
+    {
       title: 'Affordable Pricing',
-      description: 'Start from just $29/month with no setup fees',
+      description: 'Start from just $8/month with no hidden fees',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Quick Setup',
-      description: 'Get up and running in minutes, not months',
-      icon: <Clock className="w-6 h-6 text-blue-500" />
+      title: '24/7 Support',
+      description: 'Round-the-clock support from our expert team',
+      icon: <Users className="w-6 h-6 text-purple-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Trusted by 1000+ businesses worldwide',
-      icon: <Star className="w-6 h-6 text-yellow-500" />
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance',
+      icon: <Shield className="w-6 h-6 text-red-500" />
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Finance', 'Security', 'Business', 'Health'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredServices = selectedCategory === 'All' 
-    ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory);
-
   const stats = [
-<<<<<<< HEAD
-    { number: '50,000+', label: 'Active Users' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '15+', label: 'Micro SAAS Apps' },
-=======
-    { number: '1000+', label: 'Active Users' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '50+', label: 'Micro Apps' },
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-    { number: '24/7', label: 'Support' }
+    { number: '500+', label: 'Micro SAAS Solutions' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '10,000+', label: 'Happy Customers' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity. Affordable, intelligent tools for modern businesses." />
-        <meta name="keywords" content="micro saas, AI tools, productivity software, business automation, AI applications" />
+        <meta name="description" content="Discover our comprehensive collection of micro SAAS services designed to solve specific business problems with AI-powered solutions." />
+        <meta name="keywords" content="micro saas, saas services, business tools, productivity apps, AI solutions" />
       </Helmet>
       
       <Navigation />
       
       <main className="pt-20 px-4 py-20">
-=======
-        <meta name="description" content="Powerful micro SAAS applications designed to streamline your business operations. Affordable, easy-to-use solutions for modern businesses." />
-        <meta name="keywords" content="micro saas, saas applications, business tools, productivity, automation" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Powerful AI-driven micro software solutions designed to streamline your business operations, 
-              boost productivity, and solve specific business challenges with intelligent automation.
-=======
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Micro SAAS Services
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
-              Powerful, affordable micro applications designed to solve specific business problems and boost productivity.
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
+              Discover our comprehensive collection of micro SAAS services designed to solve specific business problems 
+              with AI-powered solutions. Each service is focused, affordable, and ready to deploy in minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started Today
+                Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
@@ -295,275 +316,105 @@ const MicroSaasServicesPage: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          <div className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">Browse by Category</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-full px-6 py-3 border border-white/20 hover:bg-white/20 transition-all duration-300 text-white font-medium"
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Micro SAAS Services Grid */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Our Micro SAAS Applications</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Our Micro SAAS Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+              {microSaasServices.map((service, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Popular
                       </span>
                     </div>
                   )}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                    <span className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                  <div className="mb-4">
+                    <span className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
                       {service.category}
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
+                    {service.features.length > 4 && (
+                      <li className="text-sm text-gray-400">
+                        +{service.features.length - 4} more features
+                      </li>
+                    )}
                   </ul>
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-2xl font-bold text-white">{service.pricing}</span>
-                    <Link 
-                      to={service.link}
-                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                    >
-                      Try Free
-                    </Link>
+                    <div className="text-sm text-gray-400">Setup: {service.setupTime}</div>
                   </div>
+                  <Link 
+                    to={service.link}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block w-full text-center"
+                  >
+                    Get Started
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Pricing Plans */}
+          {/* Benefits Section */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-white mb-6">$12<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    1 Micro SAAS App
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Basic AI Features
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Email Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Mobile App Access
-                  </li>
-                </ul>
-                <Link 
-                  to="/contact" 
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center block"
-                >
-                  Get Started
-                </Link>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-500 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Services?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-white mb-6">$29<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Up to 5 Micro SAAS Apps
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Advanced AI Features
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Priority Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Team Collaboration
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    API Access
-                  </li>
-                </ul>
-                <Link 
-                  to="/contact" 
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center block"
-                >
-                  Get Started
-                </Link>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-white mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Unlimited Micro SAAS Apps
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Premium AI Features
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    24/7 Phone Support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Custom Integrations
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Dedicated Account Manager
-                  </li>
-                </ul>
-                <Link 
-                  to="/contact" 
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center block"
-                >
-                  Contact Sales
-                </Link>
-              </div>
+              ))}
             </div>
-=======
-      {/* Services Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Micro SAAS Applications</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose from our collection of powerful micro applications
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 mb-20">
-            {microSaasServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-2xl font-bold text-white">{service.pricing}</span>
-                  {service.popular && (
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      Popular
-                    </span>
-                  )}
-                </div>
-                <div className="text-sm text-gray-400 mb-6">Setup: {service.duration}</div>
-                <Link 
-                  to={service.link}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Why Choose Micro SAAS?</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Get the benefits of enterprise software at a fraction of the cost
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-4 flex justify-center">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
           </div>
 
-<<<<<<< HEAD
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Boost Your Productivity?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start your free trial today and experience the power of AI-driven micro SAAS solutions.
-=======
-      {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Boost Your Productivity?</h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
-                Start using our micro SAAS applications today and see the difference they can make.
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
+                Choose from our extensive collection of micro SAAS services and start solving your business challenges today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Free Trial
+                  Get Free Consultation
                 </Link>
                 <Link 
-                  to="/services" 
+                  to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-<<<<<<< HEAD
-                  Learn More
-=======
-                  View All Services
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
+                  Explore AI Services
                 </Link>
               </div>
             </div>
@@ -576,8 +427,4 @@ const MicroSaasServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaasServicesPage;
-=======
-export default MicroSaasServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
