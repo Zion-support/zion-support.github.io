@@ -48,9 +48,7 @@ function fixMergeConflicts(content) {
   
   // Remove merge conflict markers and keep HEAD version
   fixed = fixed
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-  
+    .replace(/\n([\s\S]*?)\n([\s\S]*?)    .replace(/\n([\s\S]*?)  
   // Remove duplicate Helmet tags
   fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
     const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];
@@ -99,7 +97,7 @@ function processFile(filePath) {
     let hasChanges = false;
     
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
       fixed = fixMergeConflicts(fixed);
       hasChanges = true;

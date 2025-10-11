@@ -22,11 +22,7 @@ const AboutPage: React.FC = () => {
       title: 'Excellence',
       description: 'We maintain the highest standards of quality and innovation in everything we do.'
     }
-<<<<<<< HEAD
   ];
-=======
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 
   const values = [
     {
@@ -44,11 +40,7 @@ const AboutPage: React.FC = () => {
       title: 'Impact',
       description: 'We focus on creating solutions that make a meaningful difference in the world and drive positive change.'
     }
-<<<<<<< HEAD
   ];
-=======
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 
   const team = [
     {
@@ -66,22 +58,14 @@ const AboutPage: React.FC = () => {
       role: 'Head of AI Research',
       description: 'Leading expert in natural language processing and computer vision technologies.'
     }
-<<<<<<< HEAD
   ];
-=======
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and IT solutions." />
-<<<<<<< HEAD
         <meta name="keywords" content="about us, team, mission, values, AI experts, IT solutions" />
-=======
-        <meta name="keywords" content="about us, AI company, IT solutions, team, mission, values" />
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       </Helmet>
       <Navigation />
       
@@ -107,10 +91,6 @@ const AboutPage: React.FC = () => {
                 Our core principles guide everything we do
               </p>
             </div>
-<<<<<<< HEAD
-=======
-            
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -137,10 +117,6 @@ const AboutPage: React.FC = () => {
                 The principles that guide our work and relationships
               </p>
             </div>
-<<<<<<< HEAD
-=======
-            
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon;
@@ -156,19 +132,6 @@ const AboutPage: React.FC = () => {
               })}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Mission</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              We focus on creating solutions that make a positive difference in the world and our clients' businesses.
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         </section>
 
         {/* Team Section */}
@@ -180,12 +143,7 @@ const AboutPage: React.FC = () => {
                 The experts behind our innovative solutions
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                   <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -194,17 +152,12 @@ const AboutPage: React.FC = () => {
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-<<<<<<< HEAD
                   <p className="text-purple-400 font-medium mb-3">{member.role}</p>
-=======
-                  <p className="text-purple-400 mb-4">{member.role}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
                   <p className="text-gray-300">{member.description}</p>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -226,21 +179,12 @@ const AboutPage: React.FC = () => {
               </button>
             </div>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         </section>
       </main>
       
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default AboutPage;
-=======
-  )
-}
-
-export default AboutPage
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
