@@ -33,6 +33,8 @@ const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
+const ZionChatAiPage = React.lazy(() => import('./app/zion-chat-ai/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
@@ -47,6 +49,11 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiVideoAnalysisPage = React.lazy(() => import('./app/ai-video-analysis/page'));
+const AiSpeechSynthesisPage = React.lazy(() => import('./app/ai-speech-synthesis/page'));
+const AiSentimentAnalysisPage = React.lazy(() => import('./app/ai-sentiment-analysis/page'));
+const AiChatbotEnterprisePage = React.lazy(() => import('./app/ai-chatbot-enterprise/page'));
+const AiContentModerationPage = React.lazy(() => import('./app/ai-content-moderation/page'));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
@@ -96,6 +103,8 @@ const App: React.FC = () => {
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                            <Route path="/zion-chat-ai" element={<ZionChatAiPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/demo" element={<DemoPage />} />
@@ -110,6 +119,11 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-video-analysis" element={<AiVideoAnalysisPage />} />
+                            <Route path="/ai-speech-synthesis" element={<AiSpeechSynthesisPage />} />
+                            <Route path="/ai-sentiment-analysis" element={<AiSentimentAnalysisPage />} />
+                            <Route path="/ai-chatbot-enterprise" element={<AiChatbotEnterprisePage />} />
+                            <Route path="/ai-content-moderation" element={<AiContentModerationPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
