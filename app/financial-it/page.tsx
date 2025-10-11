@@ -1,219 +1,131 @@
-const FinancialITPage: React.FC = () => {
-    const features = [
-    {
-      icon: DollarSign,
-      title: 'SOX Compliance',
-      description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
-  },
-    {
-    icon: Zap,
-      title: 'Financial Data Security',
-      description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
-const services = [
-    {icon: '🏦',
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring'],
-  },
-    {
-    icon: Clock,
-      title: 'Real-time Processing',
-      description: 'High-frequency trading and real-time financial data processing capabilities.',
-      benefits: ['Low latency', 'High throughput', 'Real-time analytics'],
-  },
-    {
-    icon: Users,
-      title: 'Regulatory Compliance',
-      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',
-      benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management'],
-  },
-    {
-    icon: Shield,
-      title: 'Fraud Detection',
-      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
-      benefits: ['Real-time detection', 'Machine learning', 'Risk scoring'],
-  },
-    {
-    icon: BarChart,
-      title: 'Financial Analytics',
-      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'],
-  }
-    ]
-const services = [
-    }
-  ]
-  const services = [
-    {
-    icon: '🏦',
-      title: 'Banking Solutions',
-      description: 'Core banking systems and digital banking platforms',},
-    {icon: '💳',
-      title: 'Payment Processing',
-      description: 'Secure payment gateways and transaction processing',},
-    {icon: '📊',
-      title: 'Risk Management',
-      description: 'Advanced risk assessment and management tools',},
-    {icon: '🔒',
-      title: 'Security Services',
-const benefits = [
-  ]
-  const benefits = [
-    'SOX Compliance Ready',
-    'Bank-level Security',
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-        <title>Financial IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Star,
+      title: 'Advanced AI Technology',
+      description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
+      benefits: ['Machine learning', 'Natural language processing', 'Computer vision', 'Predictive analytics']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time capabilities.',
+      benefits: ['Real-time processing', 'Scalable infrastructure', 'Optimized algorithms', 'Cloud deployment']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance for enterprise applications.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance standards']
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and multi-language support.',
+      benefits: ['Multi-region deployment', 'Localization', '24/7 support', 'Global infrastructure']
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="page, AI solutions, IT services, technology" />
       </Helmet>
-      <Navigation />
-      {/* Hero Section */} <section className="py-20 px-4">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-    'Advanced Analytics'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>Financial IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation>
-      {/* Hero Section */}
-      </Navigation><section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Powerful AI-driven solutions for modern businesses
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-sm text-gray-400 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-            </button>
-          </div>
-        </div>
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-            {features.map((feature, index) => (
-                <div key={index}className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-green-400/50 transition-all duration-300 group"></div>,
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300"></div>,
-                  <feature />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                <ul>
 
-                      {benefit} </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our experts to learn more about our solutions and get started today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
+                Contact Us
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-            ))}
-      {/* Services Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-      <section className="py-20 px-4">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services
-            </h2>
-            <p></p>
-              Comprehensive IT solutions for all aspects of financial services and banking operations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-            {
-    services.map((service, index) => ()
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Financial Services
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of financial services and banking operations.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}
-                <p className="text-gray-300">{service.description}
-            ))}
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-            </h2>
-            <p>Experience the benefits of modern financial technology with our proven solutions.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,
-            {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle />
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        ))
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
-            </button>
-          </div>
-        ))
-      </section>
-      <Footer /></Footer>
-  ),
-}
-export default FinancialITPage
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?
-          <p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
-            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
-      <Footer />
-  )
-}
-export default FinancialITPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></li></section></section></section></section></section>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default PagePage;

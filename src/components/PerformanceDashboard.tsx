@@ -20,7 +20,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   });
 fps
       }
->>>>>>> main
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
   })
@@ -164,5 +163,4 @@ export default PerformanceDashboard</div>
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
->>>>>>> main
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></h4></ul></li>

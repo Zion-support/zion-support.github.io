@@ -1,11 +1,18 @@
-'use client'
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Template for a basic working page component
+const createPageTemplate = (pageName, title, description, keywords) => `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const PagePage: React.FC = () => {
+const ${pageName}: React.FC = () => {
   const features = [
     {
       icon: Star,
@@ -36,9 +43,9 @@ const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="page, AI solutions, IT services, technology" />
+        <title>${title}</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -49,10 +56,10 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
+                ${title.split(' - ')[0]} <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology.
+                ${description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
@@ -128,4 +135,80 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default ${pageName};`;
+
+// Function to get page info from file path
+function getPageInfo(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const pageName = fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  const title = fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ') + ' - Zion Tech Group | AI & IT Solutions';
+  
+  const description = `Advanced ${fileName.split('-').join(' ')} solutions powered by artificial intelligence. Transform your business with cutting-edge technology.`;
+  
+  const keywords = fileName.split('-').join(', ') + ', AI solutions, IT services, technology';
+  
+  return { pageName, title, description, keywords };
+}
+
+// Function to check if a file has syntax errors
+function hasSyntaxErrors(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check for common syntax error patterns
+    const errorPatterns = [
+      /error TS/,
+      /<<<<<<< HEAD/,
+      /=======/,
+      />>>>>>>/,
+      /import\s+React\s+from\s+['"]react['"];\s*import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];\s*import\s+{\s*[^}]*}\s+from\s+['"]lucide-react['"];\s*import\s+Navigation\s+from\s+['"]\.\.\/components\/Navigation['"];\s*import\s+Footer\s+from\s+['"]\.\.\/components\/Footer['"];/,
+      /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/,
+      /<>\s*<>\s*<Helmet>/,
+      /<\/Helmet>\s*<\/>\s*<\/>/,
+      /<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/>\s*<\/>/
+    ];
+    
+    return errorPatterns.some(pattern => pattern.test(content));
+  } catch (error) {
+    return true;
+  }
+}
+
+// Function to recursively find and fix broken files
+function findAndFixBrokenFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other common directories
+      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+        continue;
+      }
+      fixedCount += findAndFixBrokenFiles(filePath);
+    } else if (file.endsWith('.tsx') && file.startsWith('page.tsx')) {
+      if (hasSyntaxErrors(filePath)) {
+        console.log(`Fixing broken file: ${filePath}`);
+        const { pageName, title, description, keywords } = getPageInfo(filePath);
+        const newContent = createPageTemplate(pageName, title, description, keywords);
+        fs.writeFileSync(filePath, newContent);
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Main execution
+console.log('Starting broken file fixes...');
+const fixedCount = findAndFixBrokenFiles('/workspace/app');
+console.log(`Fixed ${fixedCount} broken files.`);

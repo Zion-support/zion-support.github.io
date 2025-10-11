@@ -307,14 +307,12 @@ const ServicesPage: React.FC = () => {
               <Link
   
               <$2 />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
               </Link>
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
           </div>
         </div>
@@ -350,4 +348,3 @@ export default ServicesPage</Link>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></h2></h3></h3></h3></h3></ul></ul></ul></li></li></li></section></section></section></section></section>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe

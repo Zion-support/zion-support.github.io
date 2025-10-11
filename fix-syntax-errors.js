@@ -1,222 +1,152 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = []
-  const items = fs.readdirSync(dir)
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
-        files = files.concat(findFiles(fullPath, extensions))
+import fs from 'fs';
+import path from 'path';
+
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common issues
+    const fixes = [
+      // Fix broken import statements
+      {
+        pattern: /import\s+React\s+from\s+['"]react['"];\s*import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];\s*import\s+{\s*[^}]*}\s+from\s+['"]lucide-react['"];\s*import\s+Navigation\s+from\s+['"]\.\.\/components\/Navigation['"];\s*import\s+Footer\s+from\s+['"]\.\.\/components\/Footer['"];/,
+        replacement: `'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Target, Users, Award, ArrowRight } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'`
+      },
+      // Fix broken JSX fragments
+      {
+        pattern: /<>\s*<>\s*<Helmet>/,
+        replacement: '<>\n      <Helmet>'
+      },
+      // Fix missing closing tags
+      {
+        pattern: /<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/>\s*<\/>/,
+        replacement: '<h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </>\n        </>'
+      },
+      // Fix broken JSX structure
+      {
+        pattern: /<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/,
+        replacement: '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>'
+      },
+      // Fix broken function declarations
+      {
+        pattern: /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/,
+        replacement: 'const $1: React.FC = () => {\n  const $2 = ['
+      },
+      // Fix broken array declarations
+      {
+        pattern: /const\s+(\w+)\s*=\s*\[\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*\]/,
+        replacement: `const $1 = [
+    {
+      icon: $2,
+      title: '$3',
+      description: '$4',
+      benefits: [$5]
+    },
+    {
+      icon: $6,
+      title: '$7',
+      description: '$8',
+      benefits: [$9]
+    },
+    {
+      icon: $10,
+      title: '$11',
+      description: '$12',
+      benefits: [$13]
+    },
+    {
+      icon: $14,
+      title: '$15',
+      description: '$16',
+      benefits: [$17]
+    },
+    {
+      icon: $18,
+      title: '$19',
+      description: '$20',
+      benefits: [$21]
+    },
+    {
+      icon: $22,
+      title: '$23',
+      description: '$24',
+      benefits: [$25]
+    }
+  ]`
       }
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)
+    ];
+    
+    // Apply fixes
+    for (const fix of fixes) {
+      if (fix.pattern.test(content)) {
+        content = content.replace(fix.pattern, fix.replacement);
+        modified = true;
+      }
+    }
+    
+    // Additional specific fixes for common patterns
+    content = content
+      // Fix broken JSX fragments
+      .replace(/<>\s*<>\s*<Helmet>/g, '<>\n      <Helmet>')
+      .replace(/<\/Helmet>\s*<\/>\s*<\/>/g, '</Helmet>\n      </>\n    </>')
+      // Fix missing semicolons
+      .replace(/(\w+)\s*=\s*\[([^\]]*)\]\s*$/gm, '$1 = [$2];')
+      // Fix broken function returns
+      .replace(/return\s*\(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>')
+      // Fix broken JSX structure
+      .replace(/<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
+        '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>')
+      // Fix broken closing tags
+      .replace(/<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
+        '</h1>\n            <h3>$1</h3>\n            <p>$2</p>\n          </div>');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find and fix syntax errors
+function findAndFixSyntaxErrors(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other common directories
+      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+        continue;
+      }
+      fixedCount += findAndFixSyntaxErrors(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
     }
   }
   
-  return files
-}
-
-// Function to fix specific syntax errors
-function fixSyntaxErrors(filePath) {
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Fix missing commas in object literals
-    const commaFixes = [
-      // Fix missing comma after array in object
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
-      },
-      // Fix missing comma after object property
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      },
-      // Fix missing comma after string array
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      }
-    ]
-    for (const fix of commaFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-        content = newContent
-        modified = true
-      }
-    }
-    
-    // Fix missing semicolons in array declarations
-    const semicolonFixes = [
-      // Fix missing semicolon after array declaration
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2];\n  const $3 = ['
-      },
-      // Fix missing semicolon after const declaration
-      {
-        pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: 'const $1 = [$2];\n  const $3 = ['
-      }
-    ]
-    for (const fix of semicolonFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-        content = newContent
-        modified = true
-      }
-    }
-    
-    // Fix JSX closing tag issues
-    const jsxFixes = [
-      // Fix unclosed JSX elements
-      {
-        pattern: /<(\w+)([^>]*?)(?<!\/)>([^<]*?)(?=<\w+|\s*$)/g,
-        replacement: (match, tagName, attributes, content) => {
-          // Skip self-closing tags
-          if (match.endsWith('/>') || ['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-            return match
-          }
-          // Add closing tag if missing
-          if (!content.includes(`</${tagName}>`)) {
-            return `<${tagName}${attributes}>${content}</${tagName}>`
-          }
-          return match
-        }
-      },
-      // Fix meta tags
-      {
-        pattern: /<meta\s+([^>]*?)(?<!\/)>/g,
-        replacement: (match, attributes) => {
-          if (!match.includes('/>') && !match.includes('</meta>')) {
-            return `<meta ${attributes} />`
-          }
-          return match
-        }
-      }
-    ]
-    for (const fix of jsxFixes) {
-      if (typeof fix.replacement === 'function') {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
-      } else {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
-      }
-    }
-    
-    // Fix specific parsing errors
-    const specificFixes = [
-      // Fix missing closing bracket in features array
-      {
-        pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
-        replacement: 'const features = [$1];\n  const benefits'
-      },
-      // Fix missing semicolon after features array
-      {
-        pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
-        replacement: 'const features = [$1];\n  const benefits'
-      },
-      // Fix missing comma in object properties
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
-      }
-    ]
-    for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-        content = newContent
-        modified = true
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`Fixed syntax errors in: ${filePath}`)
-      return true
-    }
-    
-    return false
-  } catch (error) {
-    console.error(`Error fixing syntax errors in ${filePath}:`, error.message)
-    return false
-  }
+  return fixedCount;
 }
 
 // Main execution
-console.log('Starting syntax error fixes...')
-const appDir = path.join(__dirname, 'app')
-const files = findFiles(appDir)
-let fixedCount = 0
-let errorCount = 0
-for (const file of files) {
-  try {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++
-    }
-  } catch (error) {
-    console.error(`Failed to process ${file}:`, error.message)
-    errorCount++
-  }
-}
-
-console.log(`\nFixed ${fixedCount} files`)
-console.log(`Errors: ${errorCount} files`)
-// Run linting to check remaining issues
-console.log('\nRunning linting to check remaining issues...')
-try {
-  execSync('pnpm run lint', { stdio: 'inherit' })
-} catch (error) {
-  console.log('Linting completed with some remaining issues to fix manually')
-}
-    let content = fs.readFileSync(filePath, 'utf8')
-    // Fix common syntax issues
-    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>')
-    // Fix missing closing brackets for features array
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
-    // Fix malformed JSX structure
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
-    // Fix missing closing tags
-    content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
-      '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>')
-    // Ensure proper JSX structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;')
-    }
-    
-    fs.writeFileSync(filePath, content, 'utf8')
-    console.log(`✅ Fixed syntax errors in ${filePath}`)
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message)
-  }
-}
-
-// Process all files
-console.log('🔧 Fixing syntax errors...\n')
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    fixFile(filePath)
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`)
-  }
-})
-console.log('\n✨ Syntax error fixes complete!')
+console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixSyntaxErrors('/workspace');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

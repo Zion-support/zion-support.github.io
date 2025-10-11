@@ -148,4 +148,3 @@ export default async function handler(req, res) {
 }
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

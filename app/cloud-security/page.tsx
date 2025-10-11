@@ -64,7 +64,6 @@
 
               Email Us
   </
->>>>>>> main
           </div>
         </div>
         <div className="text-center">

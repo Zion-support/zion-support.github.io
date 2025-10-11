@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-      <Helmet>
-        <title>Case Studies - Zion Tech Group | Success Stories</title>
-        <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
-        <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Success Stories
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions.
-            </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -70,5 +52,3 @@
 }
 
 export default CaseStudiesPage
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

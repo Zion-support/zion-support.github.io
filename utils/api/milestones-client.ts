@@ -108,7 +108,6 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),
   if (!res.ok) throw new Error(await res.text())
   return res.json()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export async function fetchMilestones(projectId: string) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {

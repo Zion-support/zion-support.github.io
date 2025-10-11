@@ -164,7 +164,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res.status(404).json({ error: 'Tenant not found' })
     return res.status(200).json({ tenant: result })
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return res.status(405).json({ error: 'Method not allowed' })
 }

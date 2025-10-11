@@ -21,7 +21,6 @@
       description: 'Interactive visualizations that update in real-time with your business data',
       details: ['Live Data Streaming', 'Custom Dashboards', 'Interactive Charts', 'Mobile Responsive']
     },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     {
       icon: Target,
       title: 'Predictive Modeling',
@@ -463,4 +462,3 @@ return (
 }
 
 export default AiDataAnalyticsPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

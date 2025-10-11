@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 
 import React, { useEffect } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -86,10 +82,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 'use client'
 import React, { useEffect } from 'react'
 
@@ -153,5 +145,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }
 
 export default AccessibilityEnhancer
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

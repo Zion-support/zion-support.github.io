@@ -118,7 +118,5 @@ const page = await browser.new_page (),
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

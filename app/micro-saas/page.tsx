@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts = [
-    {
-    },
-    {
-      icon: '👥',
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs'],
-      price: '$149/month',
-    },
-    {
-      icon: '🔒',
-      title: 'Security Monitoring Suite',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring'],
-      price: '$199/month',
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
-      price: '$299/month',
-    }
-  ];
-
-  const benefits = [
-  ];
-
-
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
-
->>>>>>> main
   return (
           </div>
         </div>
@@ -194,11 +156,9 @@ const MicroSaasPage: React.FC = () => {
         </div>
   );
 };
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
 
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
