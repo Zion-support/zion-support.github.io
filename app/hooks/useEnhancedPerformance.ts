@@ -9,28 +9,20 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0
   })
 
-  const [isOptimized, setIsOptimized] = useState(false)
-
-  const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return
 
     // Measure load time
-    const loadTime = performance.now()
     
     // Measure memory usage
-    const memoryUsage = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0
     
     // Measure render time
-    const renderStart = performance.now()
     requestAnimationFrame(() => {
-      const renderTime = performance.now() - renderStart
       
       setMetrics(prev => ({
         ...prev,
@@ -41,19 +33,16 @@ export const useEnhancedPerformance = () => {
     })
   }, [])
 
-  const optimizePerformance = useCallback(() => {
     // Enable performance optimizations
     setIsOptimized(true)
     
     // Preload critical resources
     if (typeof window !== 'undefined') {
-      const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.webp'
       ]
       
       criticalResources.forEach(resource => {
-        const link = document.createElement('link')
         link.rel = 'preload'
         link.href = resource
         link.as = resource.endsWith('.woff2') ? 'font' : 'image'
@@ -64,9 +53,7 @@ export const useEnhancedPerformance = () => {
 
   useEffect(() => {
     measurePerformance()
-    
-    const interval = setInterval(measurePerformance, 5000)
-    
+
     return () => clearInterval(interval)
   }, [measurePerformance])
 

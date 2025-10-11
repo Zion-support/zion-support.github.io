@@ -6,7 +6,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const AI3DGenerationPage: React.FC = () => {
-  const features = [
     {
       icon: Box,
       title: 'AI-Powered 3D Modeling',
@@ -31,9 +30,7 @@ const AI3DGenerationPage: React.FC = () => {
       description: 'Create smooth animations and rigs automatically using AI-powered motion generation.',
       benefits: ['Auto-rigging', 'Motion capture', 'Keyframe generation', 'Physics simulation']
     }
-  ];
-
-  const useCases = [
+  ]
     {
       icon: Brain,
       title: 'Game Development',
@@ -58,9 +55,7 @@ const AI3DGenerationPage: React.FC = () => {
       description: 'Create interactive 3D educational content and training simulations.',
       benefits: ['Educational models', 'Interactive simulations', 'VR/AR content', 'Training scenarios']
     }
-  ];
-
-  const pricingTiers = [
+  ]
     {
       name: 'Starter',
       price: '$29',
@@ -99,8 +94,7 @@ const AI3DGenerationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -130,11 +124,25 @@ const AI3DGenerationPage: React.FC = () => {
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   View Gallery
                 </button>
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
 
-export default PagePage;
+export default function Ai3DGenerationPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI 3D Generation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page services and solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
               </div>
               <p className="text-gray-300 mb-4">
                 Cutting-edge tools and technologies to deliver superior results.
@@ -325,7 +333,7 @@ export default PagePage;
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AI3DGenerationPage;
+export default AI3DGenerationPage

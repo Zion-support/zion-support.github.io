@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
@@ -7,6 +8,27 @@ import Footer from '../components/Footer';
 
 export default PagePage;
   const features = [
+=======
+'use client'
+import { CheckCircle } from 'lucide-react'
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional page services and solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6202
     {
       icon: <Eye className="w-8 h-8" />,
       title: 'Visual Accessibility',
@@ -31,9 +53,7 @@ export default PagePage;
       description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
       benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
     }
-  ];
-
-  const services = [
+  ]
     {
       icon: <Shield className="w-8 h-8" />,
       title: 'Accessibility Audits',
@@ -46,16 +66,12 @@ export default PagePage;
       description: 'Hands-on assistance implementing accessibility features and best practices.',
       benefits: ['Code implementation', 'Design consultation', 'Testing support', 'Training sessions']
     }
-  ];
-
-  const standards = [
+  ]
     'WCAG 2.1 AA Compliance',
     'Section 508 Compliance',
     'ADA Compliance',
     'EN 301 549 Compliance'
-  ];
-
-  const benefits = [
+  ]
     {
       icon: <BarChart className="w-8 h-8" />,
       title: 'Increased Reach',
@@ -76,8 +92,7 @@ export default PagePage;
       title: 'Brand Reputation',
       description: 'Demonstrate your commitment to inclusion and social responsibility.'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -325,7 +340,6 @@ export default PagePage;
 
       <Footer />
     </div>
-  );
-};
-
-export default AccessibilityPage;
+  )
+}
+export default AccessibilityPage

@@ -1,14 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-
+'use client'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
@@ -26,16 +23,12 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Home
               </Link>
               <Link href="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                About
               </Link>
               <Link href="/services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Services
               </Link>
               <Link href="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contact
               </Link>
               <Link href="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 AI Services
@@ -58,16 +51,12 @@ export default function Navigation() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg border-t border-white/20">
             <Link href="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              Home
             </Link>
             <Link href="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              About
             </Link>
             <Link href="/services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              Services
             </Link>
             <Link href="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              Contact
             </Link>
             <Link href="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               AI Services
@@ -76,5 +65,5 @@ export default function Navigation() {
         </div>
       )}
     </nav>
-  );
+  )
 }

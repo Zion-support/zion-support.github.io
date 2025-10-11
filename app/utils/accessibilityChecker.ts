@@ -20,7 +20,6 @@ export class AccessibilityChecker {
   private issues: AccessibilityIssue[] = []
 
   checkElement(element: HTMLElement): AccessibilityIssue[] {
-    const elementIssues: AccessibilityIssue[] = []
 
     // Check for alt text on images
     if (element.tagName === 'IMG') {
@@ -115,7 +114,6 @@ export class AccessibilityChecker {
       score: Math.round(score),
       passed: total - errors - warnings,
       failed: errors,
-      warnings
     }
   }
 
