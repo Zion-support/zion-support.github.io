@@ -295,6 +295,7 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Create, deploy, and manage AI-powered chatbots for customer support, lead generation, and more." />
@@ -304,6 +305,26 @@ const AiChatbotBuilderPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Chatbot Builder
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai chatbot builder solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+=======
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -323,10 +344,25 @@ const AiChatbotBuilderPage: React.FC = () => {
                 </button>
               </div>
 >>>>>>> origin/main
+>>>>>>> origin/main
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+=======
 <<<<<<< HEAD
         {/* Features Section */} <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
@@ -352,6 +388,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             ))}
           </div>
         </section>
+>>>>>>> origin/main
 
         {/* Use Cases Section */} <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
@@ -375,17 +412,28 @@ const AiChatbotBuilderPage: React.FC = () => {
                           {benefit} </li>
                       ))}
                     </ul>
-                  )}
+                  </div>
                 </div>
               ))}
 
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+=======
         {/* Benefits Section */} <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Solution?;</h2>
+>>>>>>> origin/main
               </h2>
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
@@ -442,11 +490,21 @@ const AiChatbotBuilderPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+          ))
         </section>
 
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+=======
         {/* Use Cases Section */}
 
+>>>>>>> origin/main
               </h2>
               <p className="text-xl text-gray-300">
                 Discover how chatbots can transform your business
@@ -491,7 +549,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
+          ))
         </section>
       </div>
       <Footer>
@@ -619,7 +677,7 @@ export default AiChatbotBuilderPage;
       </main>
       
       <Footer />
-    </>
+
   );
 };
 =======

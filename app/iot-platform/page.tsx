@@ -51,6 +51,13 @@ return ()
 =======
       {/* Use Cases Section */}
       <section className="py-20 px-4">
+<<<<<<< HEAD
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              IoT Use Cases
+=======
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -63,6 +70,7 @@ return ()
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>IoT Use Cases;</h2>
+>>>>>>> origin/main
             </h2>
             <p>Our IoT platform supports a wide range of industries and applications,</p>
               from smart manufacturing to connected cities.
@@ -78,6 +86,12 @@ return ()
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        </section>
+=======
       {/* Benefits Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -96,6 +110,7 @@ return ()
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     useCases.map((useCase, index) => ()
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">IoT Use Cases

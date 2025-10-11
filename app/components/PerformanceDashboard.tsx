@@ -121,6 +121,38 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         renderTime,
         memoryUsage,
 <<<<<<< HEAD
+        fps,
+      });
+    };
+
+    updateMetrics();
+
+    // Update metrics every 5 secondsreturn () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true</div>
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+      >
+        Show Performance
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <button
+          onClick={() => setIsVisible(false</div>
+          className="text-gray-500 hover:text-gray-700"
+        >
+          ×
+        </button>
+=======
+<<<<<<< HEAD
         fps;}setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
       // Check for performance alerts;
@@ -202,6 +234,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
               ? 'bg-red-600 text-white hover: bg-red-700',
               : 'bg-green-600 text-white hover: bg-green-700',}`}
         >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'</button>} </button>
+>>>>>>> origin/main
       </div>
 =======
     if (bytes === 0) return '0 Bytes'

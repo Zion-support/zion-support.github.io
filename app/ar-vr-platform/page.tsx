@@ -59,7 +59,14 @@ const ARVRPlatformPage: React.FC = () => {
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
+<<<<<<< HEAD
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+=======
       {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -111,7 +118,14 @@ const ARVRPlatformPage: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+=======
+<<<<<<< HEAD
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
@@ -168,6 +182,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
                 <span className="text-gray-300">{benefit}</span>
               </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -185,7 +200,14 @@ Experience the power of our AR/VR platform solutions for your business.
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+=======
       {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12">,</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>

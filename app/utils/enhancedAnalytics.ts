@@ -7,10 +7,24 @@
 export interface AnalyticsEvent {category: string,}
   action: string,
   label?: string;
+<<<<<<< HEAD
+  value?: number;
+  metadata?: Record<string, unknown>;}
+=======
   value?: number;}metadata?: Record<string>}
+>>>>>>> origin/main
 }
 export interface UserProperties {userId?: string;}
   sessionId?: string;
+<<<<<<< HEAD
+  userType?: string;
+export interface AnalyticsEvent {}
+  category: string
+  action: string
+  label?: string
+  value?: number
+  metadata?: Record<string, unknown>;}</strin>
+=======
   userType?: string;}export interface AnalyticsEvent {}}category: string;,
   action: string;,
   label?: string;
@@ -27,6 +41,7 @@ export interface AnalyticsEvent {
   value?: number
   }
   metadata?: Record<string>}
+>>>>>>> origin/main
 }
 export interface UserProperties {
     userId?: string
@@ -57,7 +72,11 @@ export interface UserProperties {}
   userId?: string
   sessionId?: string
   userType?: string
+<<<<<<< HEAD
+  [key: string]: unknown;}
+=======
   [key: string]: unknown,}
+>>>>>>> origin/main
 }
 class EnhancedAnalytics {}
   private queue: AnalyticsEvent[] = [],}
@@ -90,6 +109,22 @@ class EnhancedAnalytics {}
     this.sessionId = this.generateSessionId()
     this.setupOfflineHandling()
     this.setupPeriodicFlush();}
+<<<<<<< HEAD
+  }
+  private generateSessionId(): string {}
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
+  }
+  private setupOfflineHandling(): void {}
+    if (typeof window !== 'undefined') {}
+      window.addEventListener('online', () => {}
+        this.flushOfflineQueue();}
+      })
+      window.addEventListener('beforeunload', () => {}
+        this.flush();}
+      })
+    }
+=======
+>>>>>>> origin/main
   }
   private generateSessionId(): string {}
     return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
@@ -122,6 +157,13 @@ class EnhancedAnalytics {}
     }
   }
   public initialize(config?: { userId?: string; userType?: string }): void {
+<<<<<<< HEAD
+    if (this.isInitialized) return;
+    this.isInitialized = true;
+    this.userProperties = {
+  public initialize(config?: { userId?: string; userType?: string }): void {}
+=======
+>>>>>>> origin/main
     if (this.isInitialized) return
     this.isInitialized = true
     this.userProperties = {}
@@ -131,11 +173,17 @@ class EnhancedAnalytics {}
 >>>>>>> origin/main
     this.userProperties = {}
       ...this.userProperties,
+<<<<<<< HEAD
+      sessionId: this.sessionId;
+      ...config}
+    }
+=======
 >>>>>>> origin/main
       sessionId: this.sessionId,
       ...config}
     }
 <<<<<<< HEAD
+>>>>>>> origin/main
     // Track initialization;
     this.trackEvent({)
     );
@@ -147,12 +195,30 @@ class EnhancedAnalytics {}
       category: 'System'),
       action: 'Analytics Initialized'),
       metadata: {,
+<<<<<<< HEAD
+    // Track initialization
+    this.trackEvent({</div>
+      category: 'System',
+      action: 'Analytics Initialized',
+      metadata: {}
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent}
+      }
+    })
+  }
+  public setUserProperties(properties: UserProperties): void {,
+    this.userProperties = {,
+      ...this.userProperties;
+      ...properties}
+    }
+=======
     // Track initialization;}this.trackEvent({)}category: 'System',
       action: 'Analytics Initialized',
       metadata: {,}timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,}
       }
     })
+>>>>>>> origin/main
   }
   public setUserProperties(properties: UserProperties): void {,}
     ,
@@ -196,7 +262,11 @@ class EnhancedAnalytics {}
 >>>>>>> origin/main
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+        url: typeof window !== 'undefined' ? window.location.href : ''}
+=======
         url: typeof window !== 'undefined' ? window.location.href : '',}
+>>>>>>> origin/main
       }
     }
 <<<<<<< HEAD
@@ -205,6 +275,10 @@ class EnhancedAnalytics {}
     // Send to gtag if available;
     this.sendToGtag(enrichedEvent);
     // Check if we should flush;
+<<<<<<< HEAD
+    if (this.queue.length >= this.batchSize) {
+      this.flush();}
+=======
     if (this.queue.length >= this.batchSize) {}this.flush();}
 =======
     // Add to queue
@@ -214,6 +288,7 @@ class EnhancedAnalytics {}
     // Check if we should flush
     if (this.queue.length >= this.batchSize) {}
       this.flush();}
+>>>>>>> origin/main
 >>>>>>> origin/main
     }
   }
@@ -243,10 +318,16 @@ class EnhancedAnalytics {}
     if(typeof window !== 'undefined' &&)
       ()
         window as {),
+<<<<<<< HEAD
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+        }
+      ).gtag;
+=======
   }
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag
+>>>>>>> origin/main
     ) {
     // Check if we should flush
   }
@@ -259,12 +340,25 @@ class EnhancedAnalytics {}
       typeof window !== 'undefined' &&
       (
         window as {}
+<<<<<<< HEAD
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+=======
           gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
+>>>>>>> origin/main
         }
       ).gtag
     ) {}
       (
         window as unknown as {}
+<<<<<<< HEAD
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+        }
+      ).gtag('event', event.action, {)
+        event_category: event.category;)
+        event_label: event.label),
+        value: event.value)).gtag('event', event.action, {</div>
+        event_category: event.category,
+=======
           gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
     if ()
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
@@ -279,6 +373,7 @@ class EnhancedAnalytics {}
 >>>>>>> origin/main
         event_category: event.category;),
         event_label: event.label),}value: event.value)).gtag('event', event.action, {)}event_category: event.category,
+>>>>>>> origin/main
         event_label: event.label,
         value: event.value,
         ...event.metadata}
@@ -295,7 +390,14 @@ class EnhancedAnalytics {}
       action: 'Page View'),
       label: pagePath),
       metadata: {,
+<<<<<<< HEAD
+        pageTitle: pageTitle || document.title),
+  public trackPageView(pagePath: string, pageTitle?: string): void {}
+    this.trackEvent({</div>
+      category: 'Navigation',
+=======
         pageTitle: pageTitle || document.title),}public trackPageView(pagePath: string, pageTitle?: string): void {}}this.trackEvent({)}category: 'Navigation',
+>>>>>>> origin/main
       action: 'Page View',
       label: pagePath,
 <<<<<<< HEAD
@@ -321,6 +423,39 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private batchSize = 10
   private flushInterval = 30000; // 30 seconds
   private,
+<<<<<<< HEAD
+  offlineQueue: AnalyticsEvent[] = [];
+  constructor() {/* TODO: Fix JSX expression */}
+  }
+  private generateSessionId(): string {/* TODO: Fix JSX expression */}
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+  }
+  private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
+      });
+      window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
+      });
+    }
+  }
+  private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */}
+      }, this.flushInterval);
+    }
+  }
+  public initialize(config?: { userId?: string; userType?: string }): void {/* TODO: Fix JSX expression */}
+    };
+    // Track initialization;
+    this.trackEvent({/* TODO: Fix JSX expression */}
+      })
+    });
+  }
+  public setUserProperties(propertie)
+  s: UserProperties): void {/* TODO: Fix JSX expression */}
+    };
+  }
+  public trackEvent(even)
+  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
+      }
+    };
+=======
   offlineQueue: AnalyticsEvent[] = [],
   constructor() {/* TODO: Fix JSX expression */,}}
   private generateSessionId(): string {/* TODO: Fix JSX expression */,}}return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
@@ -344,11 +479,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackEvent(even);
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */,}}}
     }
+>>>>>>> origin/main
     // Add to queue;
     this.queue.push(enrichedEvent);
     // Send to gtag if available;
     this.sendToGtag(enrichedEvent);
     // Check if we should flush;
+<<<<<<< HEAD
+=======
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */,}}
   }
   private sendToGtag(even);
@@ -398,17 +536,26 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     // Send to gtag if available
     this.sendToGtag(enrichedEvent)
     // Check if we should flush
+>>>>>>> origin/main
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */}
     }
   }
   private sendToGtag(even)
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
         }
+<<<<<<< HEAD
+      ).gtag;
+    ) {/* TODO: Fix JSX expression */}
+        }
+      ).gtag('event', event.action, {/* TODO: Fix JSX expression */})
+      });
+=======
       ).gtag
     ) {/* TODO: Fix JSX expression */}
         }
       ).gtag('event', event.action, {/* TODO: Fix JSX expression */})
       })
+>>>>>>> origin/main
     }
   }
   public trackPageView(pagePat)
@@ -426,6 +573,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 =======
       action),
       label),
+<<<<<<< HEAD
+      value}
+    })
+  }
+  public trackError(error: Error, context?: Record<string, unknown>): void {
+=======
   }
       value}
 >>>>>>> origin/main
@@ -435,6 +588,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackError(error: Error, context?: Record<string, unknown>): void {this.trackEvent({);}
 =======
   public trackError(error: Error, context?: Record</string><string, unknown>): void {
+>>>>>>> origin/main
     this.trackEvent({)
 >>>>>>> origin/main
       category: 'Error'),
@@ -449,6 +603,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         stack: error.stack),
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {}
+<<<<<<< HEAD
+    this.trackEvent({</div>
+      category: 'User Interaction',
+      action,
+      label,
+      value}
+    })
+  }
+  public trackError(error: Error, context?: Record<string, unknown>): void {}
+    this.trackEvent({</div>
+=======
     this.trackEvent({)}
       category: 'User Interaction',
       action,
@@ -462,6 +627,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 =======
   public trackError(error: Error, context?: Record</string><string, unknown>): void {}
     this.trackEvent({)}
+>>>>>>> origin/main
       category: 'Error',
 >>>>>>> origin/main
       action: 'Error Occurred',
@@ -480,10 +646,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 =======
   public trackUserInteraction(actio)
   n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+    });
+  }
+  public trackError(erro)
+  r: Error, context?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+=======
     })
   }
   public trackError(erro)
   r: Error, context?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
       }
     })
   }
@@ -493,7 +666,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       category: 'Performance'),
       action: metric),
       value: Math.round(value),
+<<<<<<< HEAD
+      metadata: {,
+  public trackPerformance(metric: string, value: number, rating?: string): void {}
+    this.trackEvent({</div>
+      category: 'Performance',
+=======
       metadata: {,}public trackPerformance(metric: string, value: number, rating?: string): void {}}this.trackEvent({)}category: 'Performance',
+>>>>>>> origin/main
       action: metric,
       value: Math.round(value),
 <<<<<<< HEAD
@@ -536,18 +716,30 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   }
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({)
+<<<<<<< HEAD
+      category: 'Conversion')
+=======
       category: 'Conversion'),
+>>>>>>> origin/main
       action: conversionType),
       value),
   }
   public trackConversion(conversionType: string, value?: number): void {}
+<<<<<<< HEAD
+    this.trackEvent({</div>
+=======
     this.trackEvent({)}
+>>>>>>> origin/main
       category: 'Conversion',
       action: conversionType,
 >>>>>>> origin/main
       value,
       metadata: {`}
+<<<<<<< HEAD
+        conversionId: `conv-${Date.now(</div>
+=======
         conversionId: `conv-${Date.now()}
+>>>>>>> origin/main
   public trackConversion(conversionTyp)
   e: string, value?: number): void {/* TODO: Fix JSX expression */}`
   d: `conv-${Date.now()}`
@@ -555,6 +747,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   public trackCustomEvent(category: string;)
+<<<<<<< HEAD
+    action: string;),
+    label?: string),
+    value?: number),
+    metadata?: Record<string, unknown>
+=======
     action: string,),
     label?: string),
     value?: number),
@@ -572,13 +770,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     // Check if online;
 =======
     metadata?: Record</string><string>
+>>>>>>> origin/main
   ): void {
     this.trackEvent({)
       category)
       action)
       label)
       value)
+<<<<<<< HEAD
+=======
   }
+>>>>>>> origin/main
       metadata}
     })
   }
@@ -624,13 +826,24 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,
     label?: string,
     value?: number,
+<<<<<<< HEAD
+    metadata?: Record<string, unknown>
+  ): void {}
+    this.trackEvent({</div>
+=======
     metadata?: Record<string, unknown>}
   ): void {}
     this.trackEvent({)}
+>>>>>>> origin/main
       category,
       action,
       label,
       value,
+<<<<<<< HEAD
+      metadata}
+    })
+  }
+=======
 >>>>>>> origin/main
       metadata}
     })
@@ -652,6 +865,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     // Merge offline queue into main queue;
     this.queue.push(...this.offlineQueue);
 =======
+>>>>>>> origin/main
   private flush(): void {}
     if (this.queue.length === 0) return
     // Check if online
@@ -660,10 +874,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       this.queue = []
       return;}
     }
+<<<<<<< HEAD
+    // In a real implementation, send to analytics backend;
+    if (process.env['NODE_ENV'] === 'development') {}
+      }
+    // Clear queue;
+=======
     // In a real implementation, send to analytics backend
     if (process.env['NODE_ENV'] === 'development') {}
       }
     // Clear queue
+>>>>>>> origin/main
     this.queue = []
   }
   private flushOfflineQueue(): void {
@@ -676,6 +897,36 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     this.queue.push(...this.offlineQueue)
 >>>>>>> origin/main
     this.offlineQueue = []
+<<<<<<< HEAD
+    // Flush;
+    this.flush();}
+  }
+  public getQueueSize(): number {}
+    return this.queue.length;}
+  }
+  public getSessionId(): string {}
+    return this.sessionId;}
+  }
+  public getUserProperties(): UserProperties {}
+    return { ...this.userProperties }
+  }
+  public getAnalyticsSummary(): {
+    queueSize: number,
+    offlineQueueSize: number,
+    sessionId: string,
+    userProperties: UserProperties;}
+  } {
+    return {
+      queueSize: this.queue.length;
+      offlineQueueSize: this.offlineQueue.length;
+      sessionId: this.sessionId;
+  public getAnalyticsSummary(): {}
+    queueSize: number
+    offlineQueueSize: number
+    sessionId: string,
+    userProperties: UserProperties;}
+  } {}
+=======
     // Flush
     this.flush();}
   }
@@ -706,12 +957,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   } {}return {}}queueSize: this.queue.length,
 =======
   }, {}
+>>>>>>> origin/main
     return {}
       queueSize: this.queue.length,
 >>>>>>> origin/main
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
+<<<<<<< HEAD
+      userProperties: this.getUserProperties(</div>
+=======
       userProperties: this.getUserProperties(),}
+>>>>>>> origin/main
     }
   }
 }
@@ -762,6 +1018,17 @@ export default analytics
     value?: number,
     metadata?: Record<string, unknown></string>)
   ): void {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+    });
+  }
+  private flush(): void {/* TODO: Fix JSX expression */}
+    }
+    // In a real implementation, send to analytics backend;
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+      }
+    // Clear queue;
+    this.queue = [];
+=======
     })
   }
   private flush(): void {/* TODO: Fix JSX expression */}
@@ -771,6 +1038,7 @@ export default analytics
       }
     // Clear queue
     this.queue = []
+>>>>>>> origin/main
   }
   private flushOfflineQueue(): void {/* TODO: Fix JSX expression */}
   }
@@ -779,6 +1047,19 @@ export default analytics
   public getSessionId(): string {/* TODO: Fix JSX expression */}
   }
   public getUserProperties(): UserProperties {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+    return { ...this.userProperties };
+  }
+  public getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */}
+    };
+  }
+}
+// Export singleton instance;
+export const analytics = new EnhancedAnalytics();
+export default analytics;
+`
+=======
     return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
@@ -791,3 +1072,4 @@ export default analytics
 export const analytics = new EnhancedAnalytics()
 export default analytics
 `
+>>>>>>> origin/main

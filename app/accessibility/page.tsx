@@ -109,6 +109,7 @@ const standards = [
 
   return (
     <>
+  </>
       <Helmet>
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -139,8 +140,14 @@ const standards = [
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+=======
         </div><section className="relative py-20 px-4 overflow-hidden">
           </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+>>>>>>> origin/main
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -161,7 +168,14 @@ const standards = [
           </div>
         </section>
 <<<<<<< HEAD
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Accessibility Features;</h2>
@@ -228,9 +242,16 @@ const standards = [
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* Standards Compliance */}
+        <section className="py-20 px-4">
+        </section>
+=======
         
 <<<<<<< HEAD
         {/* Standards Compliance */} <section className="py-20 px-4 bg-white/5">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-4">Standards Compliance;</h2>
@@ -271,9 +292,16 @@ const standards = [
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
         
 <<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Make Your Digital Experience Accessible?</h2>
@@ -350,6 +378,14 @@ const standards = [
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      ))
+
+  );
+};
+
+export default AccessibilityPage;
+=======
       </div>
     </>
   )
@@ -363,3 +399,4 @@ export default AccessibilityPage
   )
 }
 export default AccessibilityPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></ul></li></section></section></section></section>
+>>>>>>> origin/main

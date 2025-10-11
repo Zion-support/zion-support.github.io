@@ -342,7 +342,12 @@ const ConsultationPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
+    <>
+  </>
+=======
     <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/main
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
@@ -816,10 +821,46 @@ const ConsultationPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 (302) 464-0950</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/analyze-improve-and-deploy-application-975f
+      </div>
+
+=======
         </div>
       </section>
 >>>>>>> main
     </div>
+>>>>>>> origin/main
   );
 };
 <<<<<<< HEAD

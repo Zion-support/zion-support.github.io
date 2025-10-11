@@ -162,9 +162,19 @@ export default SEOHead
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       {/* Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
+        {JSON.stringify(structuredData || defaultStructuredData</div>
+      </script>
+    </Helmet>
+  );
+};
+
+export default SEOHead;
+=======
         {JSON.stringify(structuredData || defaultStructuredData)}
   )
 }
 export default SEOHead
 </li>
 </li>
+>>>>>>> origin/main

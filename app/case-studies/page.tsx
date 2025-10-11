@@ -212,7 +212,12 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+    <>
+  </>
+=======
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/main
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
@@ -478,6 +483,13 @@ const CaseStudiesPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+      </div>
+
+  );
+};
+=======
 =======
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -495,6 +507,7 @@ const CaseStudiesPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         </div>
       </section>
+>>>>>>> origin/main
 >>>>>>> origin/main
 
       <Footer />

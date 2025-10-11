@@ -307,6 +307,33 @@ export default PagePage
   ]
 
   return (
+<<<<<<< HEAD
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+=======
     <>
       <Helmet>
         </Helmet><title>Smart City Infrastructure - Zion Tech Group</title>
@@ -354,10 +381,25 @@ export default PagePage
                   Learn More;
                 </button>
               </div>
+>>>>>>> origin/main
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+=======
 <<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
@@ -389,12 +431,26 @@ export default PagePage
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
+>>>>>>> origin/main
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+=======
 <<<<<<< HEAD
         {/* Services Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
           <div className="max-w-7xl mx-auto">
@@ -456,9 +512,20 @@ export default PagePage
                 </div>
               ))}
             </div>
+>>>>>>> origin/main
           </div>
         </section>
 
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+=======
 <<<<<<< HEAD
         {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
@@ -545,6 +612,7 @@ export default PagePage
   ),
 }
 export default SmartCityInfrastructurePage
+>>>>>>> origin/main
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

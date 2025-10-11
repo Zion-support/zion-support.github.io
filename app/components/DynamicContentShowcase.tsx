@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
 import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react';
@@ -26,30 +28,16 @@ const DynamicContentShowcase: React.FC = () => {
 =======
 >>>>>>> origin/main
 
+>>>>>>> origin/main
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
-
-interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  stats?: {
-    value: string;
-    label: string;
-  }[];
-}
-
-interface Testimonial {
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+<<<<<<< HEAD
+
+  const features = [
+=======
   const [isPlaying, setIsPlaying] = useState(true);
 >>>>>>> origin/main
 
@@ -62,6 +50,7 @@ const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const features = [
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
     {
 <<<<<<< HEAD
 =======
@@ -84,6 +73,9 @@ const DynamicContentShowcase: React.FC = () => {
 >>>>>>> main
 =======
       title: 'AI-Powered Intelligence',
+<<<<<<< HEAD
+      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
+=======
       description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
       stats: [
         { value: '95%', label: 'Accuracy' },
@@ -93,6 +85,7 @@ const DynamicContentShowcase: React.FC = () => {
 =======
       color: 'from-purple-500 to-pink-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
     },
@@ -131,6 +124,9 @@ const DynamicContentShowcase: React.FC = () => {
 >>>>>>> main
 =======
       title: 'Lightning Fast Performance',
+<<<<<<< HEAD
+      description: 'Optimized for speed with sub-second response times and seamless user experience'
+=======
       description: 'Optimized for speed with sub-second response times and seamless user experience',
       stats: [
         { value: '< 100ms', label: 'Response' },
@@ -140,6 +136,7 @@ const DynamicContentShowcase: React.FC = () => {
 =======
       color: 'from-yellow-500 to-orange-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
     },
@@ -159,6 +156,9 @@ const DynamicContentShowcase: React.FC = () => {
 =======
 <<<<<<< HEAD
       title: 'Enterprise Security',
+<<<<<<< HEAD
+      description: 'Bank-level security with end-to-end encryption and compliance standards'
+=======
       description: 'Bank-level security with end-to-end encryption and compliance standards',
       stats: [
         { value: '256-bit', label: 'Encryption' },
@@ -172,6 +172,7 @@ const DynamicContentShowcase: React.FC = () => {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
     },
     {
       id: 5,
@@ -183,6 +184,9 @@ const DynamicContentShowcase: React.FC = () => {
     {
       id: 6,
       title: 'Global Scalability',
+<<<<<<< HEAD
+      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+=======
       description: 'Scale effortlessly across multiple regions with automatic load balancing',
 <<<<<<< HEAD
       stats: [
@@ -190,6 +194,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Support' }
       ]
+>>>>>>> origin/main
     }
   ];
 
@@ -252,6 +257,9 @@ const DynamicContentShowcase: React.FC = () => {
 >>>>>>> origin/main
   ];
 
+<<<<<<< HEAD
+  const testimonials = [
+=======
   const testimonials: Testimonial[] = [
 =======
   ]
@@ -285,17 +293,21 @@ const DynamicContentShowcase: React.FC = () => {
 >>>>>>> main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
+      content: 'This solution transformed our operations completely. The AI insights are incredible.',
       rating: 5
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
+<<<<<<< HEAD
+      content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
+=======
 <<<<<<< HEAD
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
 =======
@@ -304,6 +316,7 @@ const DynamicContentShowcase: React.FC = () => {
 =======
       content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
       rating: 5
@@ -328,6 +341,9 @@ const DynamicContentShowcase: React.FC = () => {
 =======
       company: 'InnovateLab',
       role: 'Product Manager',
+<<<<<<< HEAD
+      content: 'The best investment we made this year. ROI was evident within the first month.',
+=======
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
       rating: 5
     },
@@ -337,6 +353,7 @@ const DynamicContentShowcase: React.FC = () => {
       role: 'VP Engineering',
 <<<<<<< HEAD
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
       rating: 5
@@ -421,48 +438,31 @@ const DynamicContentShowcase: React.FC = () => {
 =======
 =======
   useEffect(() => {
-    if (!isPlaying) return;
-    
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
-    
     return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
+  }, []);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Dynamic <span className="text-cyan-400">Content Showcase</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
+              <span>Start Demo</span>
               <ArrowRight className="w-5 h-5" />
+            </button>
+            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Learn More
             </button>
           </div>
@@ -470,10 +470,11 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -483,29 +484,24 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                
-                {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
         </div>
+<<<<<<< HEAD
+    ))
+  );
+};
+
+=======
       </section>
 
       {/* Testimonials Section */}
@@ -1035,3 +1031,4 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
 }
 export default DynamicContentShowcase</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></button></button></button></button></a></a></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></h4></section></section></section></section></section>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main

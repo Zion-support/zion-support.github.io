@@ -80,6 +80,14 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -96,6 +104,7 @@ return (
               <span>Main;</span>
 =======
               </h1><span>
+>>>>>>> origin/main
                 Main
 >>>>>>> origin/main
               </span>
@@ -181,6 +190,7 @@ return (
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -244,6 +254,7 @@ return (
 >>>>>>> origin/main
               </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -257,7 +268,7 @@ return (
             ))}
 <<<<<<< HEAD
           </div>
-        </div>
+        ))
       </section>
       {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -265,6 +276,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -284,6 +302,7 @@ return (
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
+>>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p></p>
@@ -310,7 +329,7 @@ return (
               </button>
             </div>
           </div>
-        </div>
+        ))
       </section>
     </div>
   ),

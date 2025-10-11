@@ -127,9 +127,15 @@ export async function registerServiceWorker()
               config.onUpdate(registration);}
             }
           } else {
+<<<<<<< HEAD
+            // Content cached for offline use;
+            if (config.onSuccess) {
+    const registration = await navigator.serviceWorker.register('/service-worker.js', {</div>
+=======
             // Content cached for offline use
             if (config.onSuccess) {}
     const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
+>>>>>>> origin/main
       scope: '/'}
     })
     // Handle updates

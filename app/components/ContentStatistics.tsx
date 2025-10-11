@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
+import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';
 =======
@@ -8,12 +14,16 @@ import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, A
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 >>>>>>> origin/main
+>>>>>>> origin/main
 
 const ContentStatistics: React.FC = () => {,
   const [counters, setCounters] = useState({)
     clients: 0,
     projects: 0,
     satisfaction: 0,
+<<<<<<< HEAD
+    years: 0
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     years: 0;,});
@@ -23,6 +33,7 @@ const ContentStatistics: React.FC = () => {,
     years: 0,
     countries: 0,
     uptime: 0
+>>>>>>> origin/main
 >>>>>>> origin/main
   });
 <<<<<<< HEAD
@@ -49,13 +60,17 @@ const ContentStatistics: React.FC = () => {
   })
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const targetCounters = {
-    clients: 10000,
-    projects: 5000,
+    clients: 500,
+    projects: 1000,
     satisfaction: 99,
+<<<<<<< HEAD
+    years: 10
+=======
 <<<<<<< HEAD
     years: 15,
     countries: 50,
     uptime: 99
+>>>>>>> origin/main
 >>>>>>> origin/main
   };
 >>>>>>> origin/main
@@ -73,6 +88,9 @@ const ContentStatistics: React.FC = () => {
       value: counters.clients,
       label: 'Happy Clients',
       suffix: '+',
+<<<<<<< HEAD
+      color: 'text-cyan-400'
+=======
 <<<<<<< HEAD
       color: 'text-cyan-400',},
     {icon: Award,
@@ -125,46 +143,28 @@ const ContentStatistics: React.FC = () => {
 =======
       color: 'text-blue-400',
       description: 'Businesses trust our solutions'
+>>>>>>> origin/main
     },
     {
       icon: Award,
       value: counters.projects,
       label: 'Projects Completed',
       suffix: '+',
-      color: 'text-purple-400',
-      description: 'Successful implementations'
+      color: 'text-purple-400'
     },
     {
       icon: TrendingUp,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
       suffix: '%',
-      color: 'text-green-400',
-      description: 'Customer satisfaction rate'
+      color: 'text-green-400'
     },
     {
       icon: Clock,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400',
-      description: 'Industry expertise'
-    },
-    {
-      icon: Globe,
-      value: counters.countries,
-      label: 'Countries Served',
-      suffix: '+',
-      color: 'text-cyan-400',
-      description: 'Global presence'
-    },
-    {
-      icon: BarChart3,
-      value: counters.uptime,
-      label: 'Uptime Guarantee',
-      suffix: '%',
-      color: 'text-red-400',
-      description: 'Service reliability'
+      color: 'text-yellow-400'
     }
 <<<<<<< HEAD
   ];
@@ -173,18 +173,19 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
+      description: 'Bank-level security with encryption and compliance standards'
+=======
       description: 'Bank-level security with encryption and compliance standards',
       stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
 =======
@@ -200,12 +201,12 @@ const ContentStatistics: React.FC = () => {
       description: 'Leading the industry with cutting-edge AI solutions'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
@@ -284,6 +285,8 @@ const ContentStatistics: React.FC = () => {
   ];
 >>>>>>> origin/main
 
+<<<<<<< HEAD
+=======
   const achievements = [
     {
       icon: Star,
@@ -306,8 +309,9 @@ const ContentStatistics: React.FC = () => {
 <<<<<<< HEAD
   ];
 
+>>>>>>> origin/main
   useEffect(() => {
-    const duration = 3000; // 3 seconds
+    const duration = 2000; // 2 seconds
     const steps = 60;
     const stepDuration = duration / steps;
 
@@ -320,6 +324,7 @@ const ContentStatistics: React.FC = () => {
         current += increment;
         if (current >= target) {
           current = target;
+          clearInterval(timers[0]);
         }
         setCounters(prev => ({
           ...prev,
@@ -500,6 +505,10 @@ export default ContentStatistics
     }
   }, [])
   return (
+<<<<<<< HEAD
+          ))
+        </div>
+=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -624,6 +633,7 @@ export default ContentStatistics
             </button>
           </div>
         </div>
+>>>>>>> origin/main
       </div>
     </div>
   );

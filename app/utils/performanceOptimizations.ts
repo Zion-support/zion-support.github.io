@@ -1,4 +1,14 @@
 'use client'
+<<<<<<< HEAD
+// Performance optimization utilities;
+// Debounce utility for performance;
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number,
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {,
+=======
 // Performance optimization utilities
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(,
@@ -15,6 +25,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
       ...args: Parameters</T><T>
     </React.Fragment>
   ) => {,
+>>>>>>> origin/main
     clearTimeout(timeout),
   func: T,
 <<<<<<< HEAD
@@ -22,6 +33,22 @@ export const debounce = <T extends (...args: any[]) => any>(,
   return (...args: Parameters<T>) => {,}clearTimeout(timeout);
 =======
   wait: number
+<<<<<<< HEAD
+): ((...args: Parameters<T>) => void) => {}
+  let timeout: NodeJS.Timeout
+  return (...args: Parameters<T>) => {}
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait);}
+  }
+}
+// Throttle utility for performance;
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number,
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean,
+  return (...args: Parameters<T>) => {
+=======
   }
 ): ((...args: Parameters</T><T>) => void) => {}
   let timeout: NodeJS.Timeout,
@@ -52,6 +79,7 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
     </React.Fragment>
   ) => {
 >>>>>>> origin/main
+>>>>>>> origin/main
     if (!inThrottle) {,
       func(...args),
       inThrottle = true
@@ -62,6 +90,8 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
       inThrottle = true;
 =======
   limit: number
+<<<<<<< HEAD
+=======
   }
 ): ((...args: Parameters</T><T>) => void) => {}
   let inThrottle: boolean,
@@ -101,17 +131,26 @@ export const throttle = <T extends (...args: any[]) => any>(
       inThrottle = true
   func: T,
   limit: number;}
+>>>>>>> origin/main
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args)
       inThrottle = true
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
       setTimeout(() => (inThrottle = false), limit);}
     }
   }
 }
+<<<<<<< HEAD
+// Intersection Observer hook for lazy loading;
+export const useIntersectionObserver = (
+  callback: (entries: IntersectionObserverEntry[]) => void;
+=======
 // Intersection Observer hook for lazy loading
 export const useIntersectionObserver = ()
   callback: (entries: IntersectionObserverEntry[]) => void,
@@ -122,6 +161,7 @@ export const useIntersectionObserver = ()
         ? new IntersectionObserver(callback, {)
     );
 =======
+>>>>>>> origin/main
   options: IntersectionObserverInit = {}
 ) => {}
   const observer = useMemo()
@@ -131,7 +171,13 @@ export const useIntersectionObserver = ()
     )
 >>>>>>> origin/main
             threshold: 0.1),
+<<<<<<< HEAD
+            rootMargin: '50px'),
+        ? new IntersectionObserver(callback, {</div>
+            threshold: 0.1,
+=======
             rootMargin: '50px'),}? new IntersectionObserver(callback, {)}threshold: 0.1,
+>>>>>>> origin/main
             rootMargin: '50px',
             ...options}
           })
@@ -218,9 +264,15 @@ export const useIntersectionObserver = ()
       if (observer && element) {}
         observer.observe(element)
         return () => observer.unobserve(element);}
+<<<<<<< HEAD
+'use client';
+// Performance optimization utilities;
+// Debounce utility for performance;
+=======
 'use client'
 // Performance optimization utilities
 // Debounce utility for performance
+>>>>>>> origin/main
 export const debounce = <T extends (...arg)
   s: any[]) => any>(fun,
   c: T,
@@ -228,9 +280,15 @@ export const debounce = <T extends (...arg)
   t: number;)
 ): ((...arg)
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+  };
+};
+// Throttle utility for performance;
+=======
   }
 }
 // Throttle utility for performance
+>>>>>>> origin/main
 export const throttle = <T extends (...arg)
   s: any[]) => any>(fun,
   c: T,
@@ -239,10 +297,16 @@ export const throttle = <T extends (...arg)
 ): ((...arg)
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
     }
+<<<<<<< HEAD
+  };
+};
+// Intersection Observer hook for lazy loading;
+=======
 >>>>>>> origin/main
   }
 }
 // Intersection Observer hook for lazy loading
+>>>>>>> origin/main
 export const useIntersectionObserver = (callbac,
   k: (entrie)
   s: IntersectionObserverEntry[]) => void,
@@ -285,7 +349,12 @@ export const useLazyImage = useCallback((...args) => {;
   const observe = useCallback((elemen)
   t: Element | null) => {/* TODO: Fix JSX expression */}
       }
+<<<<<<< HEAD
+      return () => {}
+    },
+=======
       return () => {},
+>>>>>>> origin/main
     [observer]
   )
   const disconnect = useCallback(() => {}
@@ -333,6 +402,21 @@ export const useLazyImage = useCallback((...args) => {}
             const img = new Image()
             img.onload = () => {}
               setImageSrc(src)
+<<<<<<< HEAD
+              setIsLoaded(true);}
+            }
+            img.onerror = () => {}
+              setIsError(true);}
+            }
+  );
+  const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
+    }
+  }, [observer]);
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  }, [disconnect]);
+  return { observe, disconnect };
+};
+=======
 >>>>>>> origin/main
               setIsLoaded(true);}
             }
@@ -343,6 +427,7 @@ export const useLazyImage = useCallback((...args) => {}
   }, [observer]);
   useEffect(() => {/* TODO: Fix JSX expression */,}}, [disconnect]);
   return {observe, disconnect}}}
+>>>>>>> origin/main
 // Image lazy loading hook;
 export const useLazyImage = (sr);
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */,}const {observe}}= useIntersectionObserver(useCallback();
@@ -362,19 +447,33 @@ export const useLazyImage = (sr)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   const { observe } = useIntersectionObserver(useCallback()
       (entries) => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+            };
+            img.onerror = () => {/* TODO: Fix JSX expression */}
+            };
+            img.src = src;
+=======
             }
             img.onerror = () => {/* TODO: Fix JSX expression */}
             }
             img.src = src
+>>>>>>> origin/main
 >>>>>>> origin/main
           }
         })
       },
       [src, isLoaded, isError]
 <<<<<<< HEAD
+    )
+  )
+  return { imageSrc, isLoaded, isError, observe }
+}
+=======
+<<<<<<< HEAD
     );
   );
   return {imageSrc, isLoaded, isError, observe}}}
+>>>>>>> origin/main
 // Performance monitoring hook;
 <<<<<<< HEAD
 export const usePerformanceMonitoring = useCallback((...args) => {const [metrics, setMetrics] = useState<{
@@ -385,6 +484,13 @@ export const usePerformanceMonitoring = useCallback((...args) => {;
     fcp?: number;
     lcp?: number;
     fid?: number;
+<<<<<<< HEAD
+    cls?: number;
+    ttfb?: number;}
+  }>({})
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+=======
     cls?: number;}ttfb?: number;}
 =======
     )
@@ -403,6 +509,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {
   }>({})
 <<<<<<< HEAD
   useEffect(() => {if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     const updateMetrics = useCallback((...args) => {
 =======
   useEffect(() => {
@@ -446,11 +553,18 @@ export const usePerformanceMonitoring = useCallback((...args) => {
       setMetrics({)
         fcp)
         lcp)
+<<<<<<< HEAD
+        ttfb: navigation?.responseStart - navigation?.requestStart}
+      })
+    }
+    // Monitor performance after page load;
+=======
   }
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
     // Monitor performance after page load
+>>>>>>> origin/main
     if (document.readyState === 'complete') {
     // Performance monitoring hook
   }
@@ -469,6 +583,14 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       const paint = performance.getEntriesByType('paint')
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+<<<<<<< HEAD
+      setMetrics({</div>
+        fcp,
+        lcp,
+        ttfb: navigation?.responseStart - navigation?.requestStart}
+      })
+    }
+=======
 >>>>>>> origin/main
       setMetrics({)}
         fcp,
@@ -489,13 +611,18 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         getLCP((metric) => setMetrics(prev => ({...prev, lcp: metric.value ,)})));
         getTTFB((metric) => setMetrics(prev => ({...prev, ttfb: metric.value ,)})));
 =======
+>>>>>>> origin/main
     // Monitor performance after page load
     if (document.readyState === 'complete') {}
       updateMetrics();}
     } else {}
       window.addEventListener('load', updateMetrics);}
     }
+<<<<<<< HEAD
+    // Monitor Core Web Vitals;
+=======
     // Monitor Core Web Vitals
+>>>>>>> origin/main
     if ('web-vitals' in window) {}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
@@ -503,6 +630,15 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
         getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+<<<<<<< HEAD
+      })
+    }
+    return () => {}
+      window.removeEventListener('load', updateMetrics);}
+    }
+  }, [])
+  return metrics;
+=======
 >>>>>>> origin/main
       })
     }
@@ -510,6 +646,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     }
   }, [])
   return metrics
+>>>>>>> origin/main
 }
 <<<<<<< HEAD
 // Memory usage monitoring;
@@ -520,6 +657,13 @@ export const useMemoryMonitoring = useCallback((...args) => {;
     const [memoryInfo, setMemoryInfo] = useState<{;
 >>>>>>> origin/main
     usedJSHeapSize?: number;
+<<<<<<< HEAD
+    totalJSHeapSize?: number;
+    jsHeapSizeLimit?: number;}
+  }>({})
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
+=======
     totalJSHeapSize?: number;}jsHeapSizeLimit?: number;}
 =======
 // Memory usage monitoring
@@ -533,6 +677,7 @@ export const useMemoryMonitoring = useCallback((...args) => {
   }>({})
 <<<<<<< HEAD
   useEffect(() => {if (typeof window === 'undefined' || !('memory' in performance)) return;
+>>>>>>> origin/main
     const updateMemoryInfo = useCallback((...args) => {
 =======
   useEffect(() => {
@@ -572,10 +717,55 @@ export const useMemoryMonitoring = useCallback((...args) => {}
     const updateMemoryInfo = useCallback((...args) => {}
       const memory = (performance as any).memory
       if (memory) {}
+<<<<<<< HEAD
+        setMemoryInfo({</div>
+=======
         setMemoryInfo({)}
+>>>>>>> origin/main
           usedJSHeapSize: memory.usedJSHeapSize,
 >>>>>>> origin/main
           totalJSHeapSize: memory.totalJSHeapSize,
+<<<<<<< HEAD
+          jsHeapSizeLimit: memory.jsHeapSizeLimit}
+        })
+  );
+  return { imageSrc, isLoaded, isError, observe };
+};
+// Performance monitoring hook;
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+  }>({});
+  useEffect(() => {/* TODO: Fix JSX expression */}
+      });
+    };
+    // Monitor performance after page load;
+    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+    }
+    // Monitor Core Web Vitals;
+    if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+  s: metric.value })));
+        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  d: metric.value })));
+        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  p: metric.value })));
+        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  p: metric.value })));
+        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+  b: metric.value })));
+      });
+    }
+    return () => {/* TODO: Fix JSX expression */}
+    };
+  }, []);
+  return metrics;
+};
+// Memory usage monitoring;
+export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
+  }>({});
+  useEffect(() => {/* TODO: Fix JSX expression */}
+        });
+=======
           jsHeapSizeLimit: memory.jsHeapSizeLimit,}
         })
 <<<<<<< HEAD
@@ -645,13 +835,18 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
         })
 >>>>>>> origin/main
+>>>>>>> origin/main
       }
     }
     updateMemoryInfo()
     const interval = setInterval(updateMemoryInfo, 5000)
     return () => clearInterval(interval)
   }, [])
+<<<<<<< HEAD
+  return memoryInfo;
+=======
   return memoryInfo
+>>>>>>> origin/main
 }
 <<<<<<< HEAD
 // Resource preloading utility;
@@ -710,8 +905,13 @@ export const preloadResource = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   const link = document.createElement('link')
   link.rel = 'preload'
+<<<<<<< HEAD
+  link.href = href;
+  link.as = as;
+=======
   link.href = href
   link.as = as
+>>>>>>> origin/main
   document.head.appendChild(link);}
 }
 // Critical resource preloading
@@ -728,11 +928,25 @@ export const preloadCriticalResources = useCallback((...args) => {}
   // Preload critical images
   preloadResource('/images/hero-bg.webp', 'image')
   preloadResource('/images/logo.svg', 'image')
+<<<<<<< HEAD
+  // Preload critical CSS;
+=======
   // Preload critical CSS
+>>>>>>> origin/main
   preloadResource('/styles/critical.css', 'style');}
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = useCallback((...args) => {
+<<<<<<< HEAD
+  const [bundleSize, setBundleSize] = useState<{
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
+    imageSize?: number;}
+  }>({})
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+=======
     const [bundleSize, setBundleSize] = useState<{
     totalSize?: number
     jsSize?: number
@@ -743,6 +957,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
   }>({})
 <<<<<<< HEAD
   useEffect(() => {if (typeof window === 'undefined') return;
+>>>>>>> origin/main
     const calculateBundleSize = useCallback((...args) => {
 =======
   useEffect(() => {
@@ -829,6 +1044,24 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
           imageSize += size;}
         }
       })
+<<<<<<< HEAD
+      setBundleSize({)
+        totalSize)
+        jsSize)
+        cssSize)
+        imageSize}
+      })
+    }
+    // Calculate after page load;
+    if (document.readyState === 'complete') {
+      setBundleSize({</div>
+        totalSize,
+        jsSize,
+        cssSize,
+        imageSize}
+      })
+    }
+=======
       setBundleSize()
     )
         totalSize)
@@ -854,17 +1087,27 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     if (document.readyState === 'complete') {}calculateBundleSize();}
     } else {}}window.addEventListener('load', calculateBundleSize);}
 =======
+>>>>>>> origin/main
     // Calculate after page load
     if (document.readyState === 'complete') {}
       calculateBundleSize();}
     } else {}
       window.addEventListener('load', calculateBundleSize);}
+<<<<<<< HEAD
+    }
+    return () => {}
+      window.removeEventListener('load', calculateBundleSize);}
+    }
+  }, [])
+  return bundleSize;
+=======
 >>>>>>> origin/main
     }
     return () => {}window.removeEventListener('load', calculateBundleSize);}
     }
   }, [])
   return bundleSize
+>>>>>>> origin/main
 }
 <<<<<<< HEAD
 export default {}}debounce,;
@@ -885,6 +1128,9 @@ export default {}
   useMemoryMonitoring,
   preloadResource,
   preloadCriticalResources,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
   useBundleSizeMonitoring}
 }
@@ -892,6 +1138,17 @@ export default {}
 <<<<<<< HEAD
 // Resource preloading utility;
 export const preloadResource = (hre,
+<<<<<<< HEAD
+  f: string, a)
+  s: string) => {/* TODO: Fix JSX expression */}
+};
+// Critical resource preloading;
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+};
+// Bundle size monitoring;
+export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
+  }>({});
+=======
   f: string, a);
   s: string) => {/* TODO: Fix JSX expression */,}}
 // Critical resource preloading;
@@ -911,10 +1168,18 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 // Bundle size monitoring
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   }>({})
+>>>>>>> origin/main
   useEffect(() => {/* TODO: Fix JSX expression */}
         } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
         }
+<<<<<<< HEAD
+      });
+      setBundleSize({/* TODO: Fix JSX expression */})
+      });
+    };
+    // Calculate after page load;
+=======
 >>>>>>> origin/main
       })
       setBundleSize({/* TODO: Fix JSX expression */,)})
@@ -928,13 +1193,23 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   return bundleSize;
 =======
     // Calculate after page load
+>>>>>>> origin/main
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
     return () => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+    };
+  }, []);
+  return bundleSize;
+};
+export default {/* TODO: Fix JSX expression */}
+};
+=======
     }
   }, [])
   return bundleSize
 >>>>>>> origin/main
 }
 export default {/* TODO: Fix JSX expression */,}}}
+>>>>>>> origin/main

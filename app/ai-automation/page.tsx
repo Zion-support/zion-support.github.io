@@ -58,6 +58,7 @@ return(<>)
   ];
 return (
     <>
+  </>
       <Helmet>
 >>>>>>> origin/main
         <title>Ai Automation - Zion Tech Group</title>
@@ -65,6 +66,17 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Automation
+=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
         {/* Hero Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -78,6 +90,7 @@ return (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Automation;</h1>
+>>>>>>> origin/main
             </h1>
             <p>Advanced AI-powered ai automation solution for modern businesses.</p>
             </p>
@@ -89,7 +102,14 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
         {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -119,14 +139,21 @@ return (
                           {benefit} </li>
                       ))}
                     </ul>
-                  )}
+                  </div>
                 </div>
               ))}
 
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
         {/* Benefits Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -150,16 +177,46 @@ return (
                 </div>
               ))}
             </div>
-          </div>
+          ))
         </section>
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+=======
         {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
+>>>>>>> origin/main
             </div>
-          </div>
+          ))
         </section>
+<<<<<<< HEAD
+      </div>
+      <Footer />
+
+  );
+};
+=======
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>Ready to Get Started?</h2>
@@ -177,6 +234,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Zap, CheckCircle, ArrowRight } from 'lucide-react'
+>>>>>>> origin/main
 
 const AIAutomationPage: React.FC = () => {
   const features = [

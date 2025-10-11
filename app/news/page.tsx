@@ -58,6 +58,17 @@ const benefits = [
 =======
     'Proven track record of success';
   ];
+<<<<<<< HEAD
+
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+=======
 {/* Hero Section */}
       <section className="py-20 px-4">
 >>>>>>> origin/main
@@ -84,6 +95,7 @@ const benefits = [
               <span>Page;</span>
 =======
               </h1><span>
+>>>>>>> origin/main
                 Page
 >>>>>>> origin/main
               </span>
@@ -190,6 +202,7 @@ const benefits = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -204,6 +217,13 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
+<<<<<<< HEAD
+          </div>
+        ))
+      </section>
+
+=======
+>>>>>>> origin/main
       {/* Benefits Section */}
       <section className="py-20 px-4">
           </section>< className="$2 />
@@ -244,6 +264,7 @@ const benefits = [
 >>>>>>> origin/main
               </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -256,7 +277,11 @@ const benefits = [
                 <p className="text-gray-300 text-lg">{benefit}
             ))}
 <<<<<<< HEAD
+          ))
+=======
+<<<<<<< HEAD
           </div>
+>>>>>>> origin/main
         </div>
       </section>
       {/* CTA Section */} <section className="py-20 px-4">
@@ -265,6 +290,13 @@ const benefits = [
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -284,6 +316,7 @@ const benefits = [
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
+>>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p></p>
@@ -309,7 +342,7 @@ const benefits = [
 >>>>>>> origin/main
               </button>
             </div>
-          </div>
+          ))
         </div>
       </section>
     </div>

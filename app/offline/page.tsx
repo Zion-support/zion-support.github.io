@@ -25,6 +25,14 @@ import { Helmet } from 'react-helmet-async'
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -41,6 +49,7 @@ import { Helmet } from 'react-helmet-async'
               <span>Page;</span>
 =======
               </h1><span>
+>>>>>>> origin/main
                 Page
 >>>>>>> origin/main
               </span>

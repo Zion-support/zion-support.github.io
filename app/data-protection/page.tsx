@@ -83,6 +83,7 @@ return (
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -146,6 +147,7 @@ return (
 >>>>>>> origin/main
               </div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -155,7 +157,12 @@ return (
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+<<<<<<< HEAD
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              ))
+=======
                 <p className="text-gray-300 text-lg">{benefit}
+>>>>>>> origin/main
             ))}
 <<<<<<< HEAD
           </div>
@@ -167,6 +174,13 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -186,6 +200,7 @@ return (
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
+>>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p></p>

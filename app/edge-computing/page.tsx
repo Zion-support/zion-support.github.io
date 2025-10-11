@@ -496,6 +496,7 @@ export default EdgeComputingPage
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -512,6 +513,7 @@ export default EdgeComputingPage
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features
@@ -532,6 +534,7 @@ export default EdgeComputingPage
             ))}
       {/* Services Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services
@@ -545,6 +548,7 @@ export default EdgeComputingPage
             ))}
       {/* Use Cases Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases
@@ -556,8 +560,16 @@ export default EdgeComputingPage
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}
                 <p className="text-gray-300">{useCase.description}
             ))}
+<<<<<<< HEAD
+          </div>
+        ))
+      </section>
+
+=======
+>>>>>>> origin/main
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?
@@ -569,14 +581,35 @@ export default EdgeComputingPage
                   <CheckCircle className="w-8 h-8 text-white" />
                 <h3 className="text-lg font-semibold text-white">{benefit}
             ))}
+<<<<<<< HEAD
+          ))
+        </div>
+      </section>
+
+=======
+>>>>>>> origin/main
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?
           <p className="text-xl text-gray-300 mb-8">Transform your applications with ultra-low latency edge computing solutions
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
+          ))
+        </div>
+      </section>
+
+=======
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
+>>>>>>> origin/main
       <Footer />
   )
 }

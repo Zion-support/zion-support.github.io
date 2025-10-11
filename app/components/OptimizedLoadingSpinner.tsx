@@ -6,20 +6,40 @@ interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+<<<<<<< HEAD
+  fullScreen?: boolean;
+}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
+  ({
+    size = 'md',
+=======
   fullScreen?: boolean;}}
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,)
   ({size = 'md',
+>>>>>>> origin/main
     variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
+<<<<<<< HEAD
+    fullScreen = false,
+  }) => {
+    const sizeClasses = useMemo(
+=======
     fullScreen = false,}}) => {const sizeClasses = useMemo(;)
+>>>>>>> origin/main
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
+<<<<<<< HEAD
+        xl: 'h-16 w-16',
+      }),
+=======
         xl: 'h-16 w-16',}}),
+>>>>>>> origin/main
       []
     );
 const textSizeClasses = useMemo(;)
@@ -27,7 +47,12 @@ const textSizeClasses = useMemo(;)
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
+<<<<<<< HEAD
+        xl: 'text-xl',
+      }),
+=======
         xl: 'text-xl',}}),
+>>>>>>> origin/main
       []
     );
 const colorClasses = useMemo(;)
@@ -35,7 +60,12 @@ const colorClasses = useMemo(;)
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
+<<<<<<< HEAD
+        purple: 'border-purple-600 bg-purple-600',
+      }),
+=======
         purple: 'border-purple-600 bg-purple-600',}}),
+>>>>>>> origin/main
       []
     );
 <<<<<<< HEAD
@@ -114,19 +144,33 @@ const renderSpinner = useMemo(() => {
     switch (variant) {
         case 'dots':
           return (
+<<<<<<< HEAD
+            <div className='flex space-x-1' role='status' aria-label='Loading'>
+              {[0, 1, 2].map(i => ())
+                <div
+=======
             </OptimizedLoadingSpinnerProps><div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
                 <$2 />
   }
 
+>>>>>>> origin/main
                   key={i}
           return ()
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
+<<<<<<< HEAD
+                />
+              ))}))
+          );
+
+        case 'pulse':
+=======
                 / /></div>
               ))}</div>
           )
 case 'pulse':
+>>>>>>> origin/main
           return (
     <React.Fragment>
       <;$2 />
@@ -210,6 +254,28 @@ export default OptimizedLoadingSpinner/>
               aria-label='Loading'/>
           )
         case 'skeleton':
+<<<<<<< HEAD
+          return ())
+            <div className='space-y-2' role='status' aria-label='Loading'>))
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+              />))
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '75%' }}
+              />))
+              <div
+                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                style={{ width: '50%' }}
+              />))
+          );
+
+        case 'bars':
+          return (
+            <div className='flex space-x-1' role='status' aria-label='Loading'>
+              {[0, 1, 2, 3].map(i => ())
+                <div
+=======
           return (
             <div className='space-y-2' role='status' aria-label='Loading'>
               <$2 />
@@ -229,6 +295,7 @@ export default OptimizedLoadingSpinner/>
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => (
                 <$2 />
+>>>>>>> origin/main
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{;}
@@ -236,14 +303,48 @@ export default OptimizedLoadingSpinner/>
                     animationDelay: `${i * 0.1}s`,
                   }}
                 />
+<<<<<<< HEAD
+              ))}))
+          );
+
+=======
               ))}
           )
+>>>>>>> origin/main
         case 'spinner':
         default:
           return (
             <$2 />
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
+<<<<<<< HEAD
+              aria-label='Loading'
+            />
+          );
+      }
+    }, [size, variant, color, sizeClasses, colorClasses]);
+
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
+    }, [fullScreen, className]);
+
+    return ())
+      <div className={containerClasses}>))
+        <div className='text-center'>
+          {renderSpinner}
+          {text && ())
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
+              {text}
+            </p>
+          </div>
+        </div>
+    );
+  }
+);
+
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+export default OptimizedLoadingSpinner;
+=======
               aria-label='Loading'/>
           )
       }
@@ -264,3 +365,4 @@ export default OptimizedLoadingSpinner/>
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
 </div></div></div></div></p>
+>>>>>>> origin/main

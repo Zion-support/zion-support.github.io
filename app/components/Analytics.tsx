@@ -317,11 +317,17 @@ export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({chil
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
     <>
+  </>
       <Analytics />
+<<<<<<< HEAD
+      {children}
+
+=======
   },
     {children}
 >>>>>>> origin/main
     </>
+>>>>>>> origin/main
   );
 =======
 // Extend Window interface for gtag

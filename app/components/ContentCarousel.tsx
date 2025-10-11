@@ -527,6 +527,20 @@ export default ContentCarousel
           </button>
         </div>
 
+<<<<<<< HEAD
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index</div>
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+=======
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-2 mt-8">
 =======
@@ -664,6 +678,7 @@ export default ContentCarousel
             />
           ))}
 <<<<<<< HEAD
+>>>>>>> origin/main
         </div>
 
         {/* Additional Info */}

@@ -81,6 +81,7 @@ const FiveGImplementationPage: React.FC = () => {
   ]
   return (
     <>
+  </>
       <Helmet>
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -111,8 +112,14 @@ const FiveGImplementationPage: React.FC = () => {
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+=======
         </div><section className="relative py-20 px-4 overflow-hidden">
           </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+>>>>>>> origin/main
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -153,9 +160,16 @@ const FiveGImplementationPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo
         {/* Features Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
+        </section>
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl font-bold text-white mb-4">
+>>>>>>> origin/main
                 Advanced 5G Features
               </h2>
               <p className="text-xl text-gray-300" /></p>
@@ -192,7 +206,7 @@ const FiveGImplementationPage: React.FC = () => {
 >>>>>>> origin/main
                       ))}
                     </ul>
-                  )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -236,9 +250,16 @@ const FiveGImplementationPage: React.FC = () => {
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
+        </section>
+          <div className="container mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
           </section>< className="$2 />
             </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
               </div><h2 className="text-3xl font-bold text-white mb-6">
+>>>>>>> origin/main
                 Ready to Implement 5G?
               </h2>
               <p className="text-xl text-gray-300 mb-8" /></p>
@@ -256,6 +277,14 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      ))
+
+  );
+};
+
+export default FiveGImplementationPage;
+=======
       </div>
     </>
   )
@@ -269,3 +298,4 @@ export default FiveGImplementationPage
   )
 }
 export default FiveGImplementationPage</div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></section></section></section>
+>>>>>>> origin/main

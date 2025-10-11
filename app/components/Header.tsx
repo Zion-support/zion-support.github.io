@@ -17,12 +17,21 @@ import Navigation from './Navigation'
 >>>>>>> origin/main
 const Header: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <>
+  </>
+      <Navigation />
+      {/* Spacer to prevent content from going under fixed header */}
+      <div className="h-16 lg:h-20" />
+
+=======
     <React.Fragment>
       </React><Navigation />
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
 <<<<<<< HEAD
     </>
+>>>>>>> origin/main
 >>>>>>> origin/main
   );
 };

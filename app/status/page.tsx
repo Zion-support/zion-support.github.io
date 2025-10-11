@@ -169,6 +169,14 @@ return(</h1>)
           <p>Real-time status of all our services. We're committed to providing reliable,</p>
             high-performance AI and IT solutions.
           </p>
+<<<<<<< HEAD
+          
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="flex items-center gap-2">
+              {getStatusIcon(overallStatus</div>
+              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
+                {overallStatus === 'operational' ? 'All Systems Operational' : 
+=======
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
 
@@ -249,6 +257,7 @@ return() {getStatusIcon(overallStatus)}
                 {
     overallStatus === 'operational' ? 'All Systems Operational' :
   }
+>>>>>>> origin/main
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
@@ -257,13 +266,31 @@ return() {getStatusIcon(overallStatus)}
               Refresh
             </button>
           </div>
+<<<<<<< HEAD
+          
+          <p className="text-gray-400 text-sm">
+            Last updated: {lastUpdated.toLocaleString(</div>
+=======
           <p></p>
             Last updated: {lastUpdated.toLocaleString()}
+>>>>>>> origin/main
           </p>
         </div>
       </section>
 
       {/* Services Status */}
+<<<<<<< HEAD
+      <section className="py-16 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    {getStatusIcon(service.status</div>
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -302,13 +329,19 @@ return() {getStatusIcon(overallStatus)}
             {
     services.map((service, index) => ()
                     {getStatusIcon(service.status)}
+>>>>>>> origin/main
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
                   <span></span>
                     {service.status}
 
                   </span>
+<<<<<<< HEAD
+                ))
+                
+=======
                 </div>
+>>>>>>> origin/main
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 <div className="space-y-2 text-sm" / /></div>
                   <div className="flex justify-between" / /></div>
@@ -324,7 +357,7 @@ return() {getStatusIcon(overallStatus)}
                     <span className="text-white">{service.lastIncident}</span>
 >>>>>>> origin/main
                   </div>
-                </div>
+                ))
               </div>
             ))}
           </div>
@@ -338,6 +371,11 @@ return() {getStatusIcon(overallStatus)}
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
       {/* Recent Incidents */}
+<<<<<<< HEAD
+      <section className="py-16 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -348,6 +386,7 @@ return() {getStatusIcon(overallStatus)}
           </div>
         </section>
         <div className="max-w-7xl mx-auto" / /></div>
+>>>>>>> origin/main
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
 <<<<<<< HEAD
           <div className="space-y-6"></div>
@@ -376,16 +415,22 @@ return() {getStatusIcon(overallStatus)}
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
                     </div>
+<<<<<<< HEAD
+                  ))
+                  <div className="flex items-center gap-2">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
+=======
                   </div>
                   <div className="flex items-center gap-2" / /></div>
                     <span></span>
+>>>>>>> origin/main
                       {incident.severity}
                     </span>
                     <span></span>
                       {incident.status}
 
                     </span>
-                  </div>
+                  ))
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
                 <div /></div>
@@ -516,6 +561,11 @@ return() {getStatusIcon(overallStatus)}
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
       {/* Performance Metrics */}
+<<<<<<< HEAD
+      <section className="py-16 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -526,6 +576,7 @@ return() {getStatusIcon(overallStatus)}
           </div>
         </section>
         <div className="max-w-7xl mx-auto" / /></div>
+>>>>>>> origin/main
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>,
@@ -593,6 +644,12 @@ return() {getStatusIcon(overallStatus)}
               <div className="text-3xl font-bold text-white mb-2">1.2M
               <div className="text-gray-400">Requests Today
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -615,6 +672,7 @@ return() {getStatusIcon(overallStatus)}
 =======
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <h2></h2>
+>>>>>>> origin/main
             Need More Information?
           </h2>
           <p></p>

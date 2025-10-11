@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async'
 const AutonomousSystemsPage: React.FC = () => {
     return (
     <>
+  </>
       <Helmet>
         </Helmet><title>Autonomous Systems - Zion Tech Group</title>
         <meta>
@@ -30,9 +31,15 @@ const AutonomousSystemsPage: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+  );
+};
+=======
     </>,
 <<<<<<< HEAD
   )}};
+>>>>>>> origin/main
 
 export default AutonomousSystemsPage;
 =======

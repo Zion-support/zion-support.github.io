@@ -18,24 +18,43 @@ const AccessibilityCheckerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+<<<<<<< HEAD
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+=======
       description: 'Advanced AI technology to transform your business operations and improve efficiency';}
+>>>>>>> origin/main
     },
     {
       icon: Zap,
       title: 'High Performance',
+<<<<<<< HEAD
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+=======
       description: 'Lightning-fast processing and real-time analytics for optimal results';}
+>>>>>>> origin/main
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
+      description: 'Bank-level security with encryption and compliance standards'
+=======
       description: 'Bank-level security with encryption and compliance standards';}
+>>>>>>> origin/main
     },
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
+
+=======
       description: 'Worldwide deployment and support for international businesses';}
     }
   ]
+>>>>>>> origin/main
 >>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
@@ -59,6 +78,10 @@ const AccessibilityCheckerPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+        </section>
+=======
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -87,6 +110,10 @@ const AccessibilityCheckerPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+        </section>
+=======
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -106,13 +133,21 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+<<<<<<< HEAD
+            )</div>
+=======
             ))}
+>>>>>>> origin/main
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
+        </section>
+=======
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -129,13 +164,21 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+<<<<<<< HEAD
+            )</div>
+=======
             ))}
+>>>>>>> origin/main
           </div>
-        </div>
+        ))
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+        </section>
+=======
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -155,10 +198,15 @@ const AccessibilityCheckerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        ))
       </section>
     </div>
   );
+<<<<<<< HEAD
+};
+
+export default AccessibilityCheckerPage;
+=======
 }
 
 export default AccessibilityCheckerPage;
@@ -239,4 +287,5 @@ export default AccessibilityCheckerPage;
 }
 export default AccessibilityCheckerPage
 </span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
+>>>>>>> origin/main
 >>>>>>> origin/main

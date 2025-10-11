@@ -226,6 +226,7 @@ return (
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -290,11 +291,18 @@ return (
         </div>
       </section>
 <<<<<<< HEAD
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
       {/* Services Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
 =======
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions
@@ -341,6 +349,15 @@ return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+=======
       {/* Benefits Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -349,6 +366,7 @@ return (
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>
+>>>>>>> origin/main
               Financial Services
             </h2>
             <p></p>
@@ -372,6 +390,13 @@ return (
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
+<<<<<<< HEAD
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our Financial IT Solutions?
+=======
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -384,6 +409,7 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Financial IT Solutions?</h2>
+>>>>>>> origin/main
             </h2>
             <p>Experience the benefits of modern financial technology with our proven solutions.</p>
             </p>
@@ -397,7 +423,7 @@ return (
               </div>
             ))}
           </div>
-        </div>
+        ))
       </section>
       {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -418,6 +444,10 @@ return (
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
+<<<<<<< HEAD
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+=======
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -427,6 +457,7 @@ return (
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center" / /></div>
+>>>>>>> origin/main
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
 <<<<<<< HEAD
           <p>Join leading financial institutions using our specialized IT solutions for compliance and security;</p>
@@ -448,7 +479,7 @@ return (
 >>>>>>> origin/main
             </button>
           </div>
-        </div>
+        ))
       </section>
       <Footer /></Footer>
   ),

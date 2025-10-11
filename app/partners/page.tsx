@@ -28,6 +28,11 @@ import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } 
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+
+const PartnersPage: React.FC = () => {
+  const partners = [
+=======
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 >>>>>>> origin/main
@@ -69,6 +74,7 @@ const PartnersPage: React.FC = () => {
 >>>>>>> origin/main
 =======
 >>>>>>> main
+>>>>>>> origin/main
     {
       id: '1',
       name: 'Microsoft',
@@ -81,6 +87,11 @@ const PartnersPage: React.FC = () => {
     {
       id: '1',
       name: 'Microsoft',
+<<<<<<< HEAD
+      logo: '/api/placeholder/200/100',
+      description: 'Strategic partnership for Azure cloud solutions and AI services',
+      category: 'Cloud & AI'
+=======
       logo: '/images/partners/microsoft.png',
 <<<<<<< HEAD
       description: 'Strategic cloud and AI solutions partner',
@@ -89,10 +100,44 @@ const PartnersPage: React.FC = () => {
       tier: 'strategic'
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
     },
     {
       id: '2',
       name: 'Amazon Web Services',
+<<<<<<< HEAD
+      logo: '/api/placeholder/200/100',
+      description: 'Leading cloud infrastructure and machine learning platform provider',
+      category: 'Cloud Computing'
+    },
+    {
+      name: 'Google Cloud',
+      logo: '/api/placeholder/200/100',
+    },
+    {
+      name: 'IBM',
+      logo: '/api/placeholder/200/100',
+  ];
+
+  return (
+    <>
+  </>
+      <Helmet>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  ))
+                ))}
+              </div>
+=======
       logo: '/images/partners/aws.png',
 <<<<<<< HEAD
       description: 'Preferred cloud infrastructure partner',
@@ -542,10 +587,14 @@ const PartnersPage: React.FC = () => {
   );
 };
 =======
+>>>>>>> origin/main
             </div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+
+=======
     </>
 <<<<<<< HEAD
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];];];
@@ -956,10 +1005,13 @@ const PartnersPage: React.FC = () => {
 >>>>>>> origin/main
 =======
 >>>>>>> main
+>>>>>>> origin/main
   );
 };
 
 export default PartnersPage;
+<<<<<<< HEAD
+=======
 =======
   )
 }
@@ -1168,4 +1220,5 @@ export default PartnersPage
   )
 }
 export default PartnersPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></button></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h3></h3></h3></main></section></section></section></section></section></section></section>
+>>>>>>> origin/main
 >>>>>>> origin/main

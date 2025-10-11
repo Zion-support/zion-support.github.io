@@ -129,17 +129,24 @@ const PricingPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+    <>
+  </>
+=======
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/main
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
-        <meta property="og:title" content="Pricing - Zion Tech Group" />
-        <meta property="og:description" content="Transparent pricing for AI and IT solutions" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
 
+<<<<<<< HEAD
+  );
+};
+
+export default PricingPage;
+=======
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -395,3 +402,4 @@ export default PricingPage;
 
 export default PricingPage
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main

@@ -112,15 +112,22 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
         this.trackError(new Error(event.reason), {}
   private setupGlobalErrorHandler(): void {}
     if (typeof window !== 'undefined') {}
-      window.addEventListener('error', event => {)}
-        this.trackError(event.error, {)}
+      window.addEventListener('error', event => {</div>
+        this.trackError(event.error, {</div>
           component: 'Global',
           action: 'Uncaught Error'}
 >>>>>>> origin/main
         })
       })
+<<<<<<< HEAD
+      window.addEventListener('unhandledrejection', event => {</div>
+        this.trackError(new Error(event.reason), {}
+          component: 'Global',
+          action: 'Unhandled Promise Rejection'}
+=======
       window.addEventListener('unhandledrejection', event => {)}this.trackError(new Error(event.reason), {}component: 'Global',
           action: 'Unhandled Promise Rejection',}
+>>>>>>> origin/main
         })
       })
     }
@@ -237,8 +244,12 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       ).gtag()
     )
         description: error.message),
+<<<<<<< HEAD
+        fatal: false)).gtag('event', 'exception', {</div>
+=======
   }
         fatal: false)).gtag('event', 'exception', {)}
+>>>>>>> origin/main
         description: error.message,
 >>>>>>> origin/main
         fatal: false,
@@ -287,16 +298,25 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       recent: this.errors.slice(-10),}
 =======
     return {
+<<<<<<< HEAD
+      total: this.errors.length;
+    this.errors.forEach(error => {</div>
+=======
     total: this.errors.length
   }
     this.errors.forEach(error => {)}
+>>>>>>> origin/main
       const component = error.context.component || 'Unknown'
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {}
       total: this.errors.length,
       byComponent,
+<<<<<<< HEAD
+      recent: this.errors.slice(-10</div>
+=======
       recent: this.errors.slice(-10)}
+>>>>>>> origin/main
 >>>>>>> origin/main
     }
   }

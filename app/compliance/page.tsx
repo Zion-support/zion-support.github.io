@@ -140,6 +140,29 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Ensure Compliance?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our compliance experts to discuss your requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+=======
+<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           </h2>
@@ -171,6 +194,7 @@ const CompliancePage: React.FC = () => {
               </button><Mail className="mr-2 h-5 w-5" />
               Email Us
   
+>>>>>>> origin/main
 >>>>>>> origin/main
           </div>
         </div>

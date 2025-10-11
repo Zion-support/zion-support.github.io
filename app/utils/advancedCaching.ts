@@ -90,11 +90,23 @@ return (
         <meta />
         <meta />
       </Helmet>
+<<<<<<< HEAD
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AdvancedCaching
+=======
       {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>,
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
               <span>AdvancedCaching;</span>
+>>>>>>> origin/main
               </span>
               <br>
               <span className="text-white">Solutions</span>
@@ -145,11 +157,20 @@ return (
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>,
 =======
       {/* Features Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AdvancedCaching?
+=======
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
 >>>>>>> origin/main
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our AdvancedCaching?,</h2>
+>>>>>>> origin/main
             </h2>
 <<<<<<< HEAD
             <p>Our advancedcaching solutions deliver unmatched performance, security, and scalability.;</p>
@@ -167,7 +188,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
@@ -175,11 +196,20 @@ return (
       {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>,
 =======
       {/* Benefits Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+=======
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section></section>
 >>>>>>> origin/main
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
+>>>>>>> origin/main
             </h2>
 <<<<<<< HEAD
             <p>Experience the power of our advancedcaching solutions for your business.,</p>
@@ -203,15 +233,26 @@ return (
                 </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
 >>>>>>> origin/main
               </div>
-            ))}
+            )</div>
           </div>
-        </div>
+        ))
       </section>
+<<<<<<< HEAD
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+=======
 <<<<<<< HEAD
       {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"></section>,
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
             <h2>Ready to Get Started?;</h2>
+>>>>>>> origin/main
             </h2>
             <p>Contact our experts to discuss your advancedcaching needs and get a customized solution.;</p>
             </p>
@@ -244,7 +285,7 @@ return (
               </button>
             </div>
           </div>
-        </div>
+        ))
       </section>
     </div>
   ),

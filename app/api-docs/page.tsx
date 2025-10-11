@@ -134,6 +134,17 @@ export default function APIDocsPage() {
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
+<<<<<<< HEAD
+      
+            </div>
+          ))
+        </div>
+      </section>
+
+      {/* Quick Start */}
+      <section className="py-16 px-4">
+        </section>
+=======
       {/* Hero Section */}
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -172,6 +183,7 @@ export default function APIDocsPage() {
       </section>
 <<<<<<< HEAD
       {/* Quick Start */} <section className="py-16 px-4">
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,</div>
@@ -212,10 +224,17 @@ export default function APIDocsPage() {
 <<<<<<< HEAD
               </button>
             </div>
-          </div>
+          ))
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* API Endpoints */}
+      <section className="py-16 px-4">
+        </section>
+=======
       {/* API Endpoints */} <section className="py-16 px-4">
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">{filteredEndpoints.map((category, categoryIndex) => (</div>
@@ -270,24 +289,43 @@ export default function APIDocsPage() {
                               : 'bg-blue-500/20 text-blue-400'
                           }`}>
                             {endpoint.method}
+<<<<<<< HEAD
+                          </span>
+                          <code className="text-purple-400 font-mono">{endpoint.path}</code>
+                        </div>
+                        <button
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`</div>
+                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        >
+=======
                           <code className="text-purple-400 font-mono">{endpoint.path}
                         <$2 />
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
 >>>>>>> origin/main
+>>>>>>> origin/main
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             </button><React.Fragment>
                               </React><Check className="w-4 h-4" />
                               Copied!
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
                           ) : (
 <<<<<<< HEAD
                             <>
+  </>
                               <Copy className="w-4 h-4" />
 <<<<<<< HEAD
                               Copy;
                             </React.Fragment>
 =======
                               Copy
+<<<<<<< HEAD
+
+                          </div>
+=======
                             </>
 >>>>>>> origin/main
 =======
@@ -297,6 +335,7 @@ export default function APIDocsPage() {
                             </React.Fragment>
 >>>>>>> origin/main
                           )}
+>>>>>>> origin/main
                         </button>
                       </div>
                       <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>
@@ -317,7 +356,14 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
+=======
       {/* CTA Section */} <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
             Ready to Get Started?

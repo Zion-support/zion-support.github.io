@@ -614,8 +614,18 @@ export default function DocsPage() {
         keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
       />
       <Navigation />
+<<<<<<< HEAD
+      
+            </div>
+          ))
+        </div>
+      </section>
+
+=======
+>>>>>>> origin/main
       {/* Popular Docs */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -636,6 +646,7 @@ export default function DocsPage() {
             ))}
       {/* Documentation Categories */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -660,9 +671,15 @@ export default function DocsPage() {
                           <p className="text-gray-300 text-sm">{doc.description}
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                   ))}
+<<<<<<< HEAD
+                ))
+              </div>
+=======
+>>>>>>> origin/main
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need Help?

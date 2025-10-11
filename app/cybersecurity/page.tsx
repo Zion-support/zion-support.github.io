@@ -122,6 +122,7 @@ const CybersecurityPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -139,8 +140,13 @@ const CybersecurityPage: React.FC = () => {
                 </div>
 >>>>>>> origin/main
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+<<<<<<< HEAD
+                <p className="text-gray-300">{feature.description}</p>
+              ))
+=======
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
+>>>>>>> origin/main
             ))}
           </div>
         </div>
@@ -170,6 +176,7 @@ const CybersecurityPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -217,6 +224,7 @@ const CybersecurityPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

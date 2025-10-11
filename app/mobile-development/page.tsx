@@ -63,6 +63,16 @@ const MobileDevelopmentPage: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+=======
+<<<<<<< HEAD
       {/* Benefits Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -74,6 +84,7 @@ const MobileDevelopmentPage: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
+>>>>>>> origin/main
             </h2>
             <p>Experience the power of our page solutions for your business.</p>
             </p>

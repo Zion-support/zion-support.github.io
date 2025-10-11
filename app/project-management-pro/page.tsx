@@ -84,6 +84,7 @@ return(<>)
   ];
 return (
     <>
+  </>
       <Helmet>
 >>>>>>> origin/main
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
@@ -98,9 +99,17 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+<<<<<<< HEAD
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4">
+        </section>
+=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 <<<<<<< HEAD
         {/* Hero Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -219,6 +228,7 @@ return (
                   Call (302) 464-0950
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Platform Features
@@ -276,6 +286,10 @@ return (
                   </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+<<<<<<< HEAD
+        </section>
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -295,8 +309,17 @@ return (
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
+          ))
         </section>
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
 <<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
@@ -307,6 +330,7 @@ return (
           <div className="max-w-4xl mx-auto text-center" / /></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
               <h2></h2>
+>>>>>>> origin/main
                 Ready to Manage Better?
               </h2>
               <p></p>
@@ -333,9 +357,16 @@ return (
                 </button>
               </div>
             </div>
-          </div>
+          ))
         </section>
       </div>
+<<<<<<< HEAD
+
+  );
+};
+
+export default ProjectManagementProPage;
+=======
     </>
   ),
 }
@@ -352,3 +383,4 @@ export default ProjectManagementProPage
   )
 }
 export default ProjectManagementProPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
+>>>>>>> origin/main

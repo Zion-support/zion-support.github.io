@@ -54,6 +54,7 @@ return(<>)
   ];];
 return (
     <>
+  </>
       <Helmet>
 >>>>>>> origin/main
         <title>Page - Zion Tech Group</title>
@@ -90,6 +91,15 @@ return (
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Page
+=======
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -103,6 +113,7 @@ return (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Page;</h1>
+>>>>>>> origin/main
             </h1>
 <<<<<<< HEAD
             <p>Advanced page solutions powered by AI technology.</p>
@@ -127,7 +138,14 @@ return (
           </div>
         </section>
 <<<<<<< HEAD
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -224,7 +242,13 @@ return (
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                       ))}
+<<<<<<< HEAD
+                    </ul>
+                  </div>
+                </div>
+=======
                   )}
+>>>>>>> origin/main
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -235,6 +259,15 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
 <<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
@@ -250,6 +283,7 @@ return (
           <div className="max-w-4xl mx-auto text-center" / /></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
               <h2></h2>
+>>>>>>> origin/main
                 Ready to Get Started?
               </h2>
               <p></p>
@@ -267,9 +301,19 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      ))
+      <Footer />
+
+  );
+};
+
+export default PagePage;
+=======
       </div>
       <Footer></Footer>
     </>
   ),
 }
 export default PagePage</$1></h3>
+>>>>>>> origin/main
