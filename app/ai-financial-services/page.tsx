@@ -2,9 +2,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 
 const AiFinancialServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <>
       <Helmet>

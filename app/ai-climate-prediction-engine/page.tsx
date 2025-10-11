@@ -13,11 +13,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
   const features = const features = const features = [
     {
       icon: Globe,
-<<<<<<< HEAD
-      title: 'Global Climate Modeling',;
-      description: 'Advanced AI models for global climate prediction with high-resolution forecasting',;
-      benefits: ['95% accuracy in predictions', 'Global coverage', 'Real-time updates'];
-=======
       title: 'Global Climate Modeling',
       description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
       benefits: [''95% accuracy in predictions', 'Global coverage', 'Real-time updates''];
@@ -25,7 +20,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Extreme Weather Prediction',
       description: 'AI-powered prediction of extreme weather events and natural disasters',
       benefits: [''Early warning systems', 'Disaster preparedness', 'Risk assessment'']
@@ -93,9 +87,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
         'Training programs'
       ],
       popular: false;
-<<<<<<< HEAD
-    };
-=======
     }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ];
@@ -117,30 +108,12 @@ const AIClimatePredictionEngine: React.FC = () => {,
     {title: 'Urban Planning',
       description: 'Climate data for sustainable urban development and infrastructure planning',
       icon: Target,
-<<<<<<< HEAD
-      results: 'Enhanced urban resilience';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-green-500/30" /></div>
-                <Globe className="w-5 h-5 text-green-400" / /></Globe>
-                <span className="text-green-400 font-semibold">Climate Technology</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" /></h1>
-                AI Climate Prediction Engine
-              </h1>
-=======
       results: 'Enhanced urban resilience'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
         <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
@@ -175,33 +148,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
                 extreme weather prediction, and comprehensive climate risk assessment.
               </p></p></p>
               
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" /></div>
-                <div className="flex items-center space-x-2 text-green-400" /></div>
-                  <BarChart className="w-5 h-5" / /></BarChart>
-                  <span className="font-semibold">95% Accuracy</span>
-                </div>
-                <div className="flex items-center space-x-2 text-cyan-400" /></div>
-                  <Shield className="w-5 h-5" / /></Shield>
-                  <span className="font-semibold">Early Warning</span>
-                </div>
-                <div className="flex items-center space-x-2 text-blue-400" /></div>
-                  <Globe className="w-5 h-5" / /></Globe>
-                  <span className="font-semibold">Global Coverage</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                <a href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:scale-105" /></a>
-                  <Phone className="w-5 h-5 mr-2" / /></Phone>
-                  Call (302) 464-0950
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105" /></a>
-                  <Mail className="w-5 h-5 mr-2" / /></Mail>
-                  Get Quote
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 </div></div><div className="flex items-center space-x-2 text-green-400">
                   </div></div><BarChart className="w-5 h-5" />
@@ -237,16 +183,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent" /></h2>
-                Advanced Climate Prediction Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-                Our AI-powered climate prediction engine provides cutting-edge solutions 
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -260,11 +196,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, idx) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div></div><div;
@@ -292,15 +223,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
         </section>
 
         {/* Use Cases Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" /></h2>
-                Climate Prediction Applications
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -314,10 +236,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {useCases.map((useCase, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 </div></div><div;
@@ -340,15 +258,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent" /></h2>
-                Climate-Ready Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -362,33 +271,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-              {pricingPlans.map((plan, index) => ()
-                  )}
-                  
-                  <div className="text-center mb-8" /></div>
-                    <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center" /></div>
-                      <span className="text-5xl font-bold text-green-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8" /></ul>
-                    {plan.features.map((feature, idx) => ()
-                    ))}
-                  </ul>
-                  
-                  <a href="tel:+13024640950"
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-green-500 to-cyan-600 text-white hover:from-green-600 hover:to-cyan-700'
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                    }`} /></a>
-                    Get Started
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 </div></div><div;
@@ -443,27 +325,6 @@ const AIClimatePredictionEngine: React.FC = () => {,
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-blue-500/10" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent" /></h2>
-              Predict Climate Change with AI
-            </h2>
-            <p className="text-xl text-gray-300 mb-8" /></p>
-              Join leading climate scientists and organizations using our AI-powered 
-              climate prediction engine to make informed decisions about our planet's future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <a href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:scale-105" /></a>
-                <Phone className="w-5 h-5 mr-2" / /></Phone>
-                Call (302) 464-0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105" /></a>
-                <Mail className="w-5 h-5 mr-2" / /></Mail>
-                Get Free Quote
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 via-cyan-500/10 to-blue-500/10">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">

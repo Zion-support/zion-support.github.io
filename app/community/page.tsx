@@ -6,15 +6,6 @@ import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Ph
 const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
-<<<<<<< HEAD
-  const communityStats = const communityStats = const communityStats = [
-    { icon: Users, value: '5,000+', label: 'Active Members' },
-    { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },;
-    { icon: Star, value: '4.9', label: 'Average Rating' };
-  ];
-  const events = const events = const events = [
-=======
   const features = [
     
       icon: Users, value: '5,000+', label: 'Active Members' },
@@ -25,7 +16,6 @@ const CommunityPage: React.FC = () => {,
     {
       icon: Star, value: '4.9', label: 'Average Rating' }
   ];];];
->>>>>>> origin/main
   const events = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
@@ -73,14 +63,8 @@ const CommunityPage: React.FC = () => {,
       description: 'General tech discussions and community updates',
       posts: 2100,
       members: 3000;
-<<<<<<< HEAD
-    };
-  ];
-  const benefits = const benefits = const benefits = [
-=======
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
@@ -98,13 +82,9 @@ const CommunityPage: React.FC = () => {,
       description: 'Showcase your projects and get community recognition';
     };
   ];
-<<<<<<< HEAD
-  return() {communityStats.map((stat, index) => ()
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
@@ -158,10 +138,6 @@ const CommunityPage: React.FC = () => {,
           </div>
 
           {/* Tabs */}
-<<<<<<< HEAD
-          <div className="mb-8" /></div>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-=======
           <div className="mb-8">
             </div></div><div className="flex flex-wrap justify-center gap-4">
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -170,9 +146,6 @@ const CommunityPage: React.FC = () => {,
                 { id: 'events', name: 'Events' },
                 { id: 'forums', name: 'Forums' },
                 { id: 'benefits', name: 'Benefits' }
-<<<<<<< HEAD
-              ].map((tab) => ()
-=======
               ].map((tab) => (
                 </div></div><button;)
                   key={tab.id})
@@ -189,19 +162,8 @@ const CommunityPage: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Overview Tab */}{activeTab === 'overview' && (
-=======
           {/* Overview Tab */},
-<<<<<<< HEAD
-    {activeTab === 'overview' && ()
-          )},
-    {/* Events Tab */},
-    {activeTab === 'events' && ()
-                  {events.map((event, index) => ()
-=======
     {activeTab === 'overview' && (
->>>>>>> origin/main
             <div className="space-y-12">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2></h2></h2>
@@ -260,7 +222,6 @@ const CommunityPage: React.FC = () => {,
           )},
     {/* Events Tab */},
     {activeTab === 'events' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2></h2></h2>)
@@ -304,19 +265,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Forums Tab */}{activeTab === 'forums' && (
-=======
           )},
     {/* Forums Tab */},
-<<<<<<< HEAD
-    {activeTab === 'forums' && ()
-                  {forums.map((forum, index) => ()
-=======
     {activeTab === 'forums' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2></h2></h2>)
@@ -349,19 +300,9 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Benefits Tab */}{activeTab === 'benefits' && (
-=======
           )},
     {/* Benefits Tab */},
-<<<<<<< HEAD
-    {activeTab === 'benefits' && ()
-                  {benefits.map((benefit, index) => ()
-=======
     {activeTab === 'benefits' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2></h2></h2>)
@@ -383,29 +324,8 @@ const CommunityPage: React.FC = () => {,
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Join Community CTA */} <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
-=======
           )},
     {/* Join Community CTA */}
-<<<<<<< HEAD
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center" /></div>
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-              Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
-              Start connecting, learning, and growing today.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              <a href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                Join Now
-              </a>
-              <a href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
-                Learn More
-=======
           <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
             </div></div><h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2></h2></h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -428,34 +348,6 @@ const CommunityPage: React.FC = () => {,
           </div>
 
           {/* Contact Information */}
-<<<<<<< HEAD
-          <div className="cyber-card-enhanced p-8 mt-8" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6" /></div>
-              <div className="flex items-center space-x-3" /></div>
-                <Mail className="w-6 h-6 text-cyan-400" / /></Mail>
-                <div></div>
-                  <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300" /></a>
-                    community@ziontechgroup.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3" /></div>
-                <Phone className="w-6 h-6 text-cyan-400" / /></Phone>
-                <div></div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300" /></a>
-                    +1 (302) 464-0950
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3" /></div>
-                <MapPin className="w-6 h-6 text-cyan-400" / /></MapPin>
-                <div></div>
-                  <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
-=======
           <div className="cyber-card-enhanced p-8 mt-8">
             </div></div><h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2></h2></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

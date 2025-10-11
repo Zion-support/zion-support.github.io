@@ -32,24 +32,12 @@ const process = const process = const process = [
     {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-<<<<<<< HEAD
-      icon: Shield,}}
-  ]
-return(<>)
-=======
       icon: Shield,
   };
     };
   ];
-<<<<<<< HEAD
-return ()
-const WebDevelopmentPage: React.FC = () => {
-  const webServices = const webServices = const webServices = [
-    {
-=======
 return (
     <>
->>>>>>> origin/main
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";)
@@ -133,11 +121,6 @@ const WebDevelopmentPage: React.FC = () => {
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield;
-<<<<<<< HEAD
-    };
-  ];
-  return ()
-=======
     }
   ];];];
   return (
@@ -219,15 +202,10 @@ const WebDevelopmentPage: React.FC = () => {
               </a>
             </div>,
           </section>,
-<<<<<<< HEAD
-,;
-          {/* Services Grid */}/>
-=======
 ,
           {/* Services Grid */}
 
       />
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div></div><Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
@@ -266,24 +244,6 @@ const WebDevelopmentPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
-}, {/* Services Grid */}
-          <section className="mb-20" /></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" /></h2>
-              Our Web Development Services
->>>>>>> origin/main
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {webServices.map((service, index) => ()
-    webServices.map((service, index) => ()
-              Our Web Development Services;)
-            </h2>);
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
-              {
-    webServices.map((service, index) => ()
-    webServices.map((service, index) => ()
-    service.features.map((feature, featureIndex) => ()
-=======
 } {/* Services Grid */}
           <section className="mb-20">
             </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -361,11 +321,6 @@ const WebDevelopmentPage: React.FC = () => {
                     </ul>
                   </div>
                   {
-<<<<<<< HEAD
-    service.benefits && ()
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => ()
-                      {service.features.map((feature, featureIndex) => ()
-=======
     service.benefits && (;)
                     <div className="mb-6"></div></div></div>)
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">service.benefits.map((benefit, benefitIndex) => (</ul>
@@ -387,10 +342,6 @@ const WebDevelopmentPage: React.FC = () => {
                     </ul>
                   </div>
                   
-<<<<<<< HEAD
-                  {service.benefits && ()
-                        {service.benefits.map((benefit, benefitIndex) => ()
-=======
                   {service.benefits && (
                     <div className="mb-6">
                       </div></div><h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>)
@@ -420,11 +371,6 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
 
-<<<<<<< HEAD
-                  <a href="/contact"
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button block" /></a>
-                    Get Started
-=======
                   <a;
                     href="/contact" className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button block"
                   >
@@ -437,14 +383,6 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Technologies */}
-<<<<<<< HEAD
-          <section className="mb-20" /></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" /></h2>
-              Technologies We Use
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" /></div>
-              {technologies.map((tech, index) => ()
-=======
           <section className="mb-20">
             </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Technologies We Use;
@@ -466,14 +404,6 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* Process */}
-<<<<<<< HEAD
-          <section className="mb-20" /></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" /></h2>
-              Our Development Process
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {process.map((step, index) => ()
-=======
           <section className="mb-20">
             </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Development Process;
@@ -494,25 +424,6 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-          <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-            <div className="cyber-card p-12 max-w-4xl mx-auto" / /></div>
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              <h2></h2>
-                Ready to Build Your Next Web Application?
-              </h2>
-              <p></p>
-                Let's discuss your project requirements and create a custom solution that drives your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-=======
           <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -536,9 +447,6 @@ const WebDevelopmentPage: React.FC = () => {
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div></div></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2></h2></h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p></p></p>
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 <a;
@@ -557,25 +465,6 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-          <section className="text-center" /></section>
-            <div className="cyber-card p-12 max-w-4xl mx-auto" /></div>
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text" /></h2>
-                Ready to Build Your Next Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8" /></p>
-                Let's discuss your project requirements and create a custom solution that drives your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                <a href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300" /></a>
-                  Start Your Project
-                </a>
-                <a href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
-                  Call +1 302 464 0950
-
-=======
           <section className="text-center">
             </section></section><div className="cyber-card p-12 max-w-4xl mx-auto">
               </div></div><h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">

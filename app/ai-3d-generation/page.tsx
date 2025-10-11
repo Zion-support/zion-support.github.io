@@ -5,14 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const Ai3dGenerationPage: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
     const features = [
     
       icon: Brain,
@@ -48,25 +40,6 @@ const benefits = const benefits = const benefits = [
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-<<<<<<< HEAD
-return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" /></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6" /></h1>
-              AI 3D Generation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
-              Advanced AI-powered 3D generation solution for modern businesses
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300" /></button>
-                Get Started
-              </button>
-              <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
-                View Demo
-              </button>
-=======
 return (
     <>
       <Helmet>
@@ -99,21 +72,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4" /></h2>
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300" /></p>
-                Advanced AI technology that drives results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                      {feature.benefits.map((benefit, idx) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -149,20 +107,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4" /></h2>
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300" /></p>
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {benefits.map((benefit, index) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -187,24 +131,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
-              <h2 className="text-4xl font-bold text-white mb-6" /></h2>
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8" /></p>
-                Contact our experts to discuss your requirements and get started today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300" /></button>
-                  Contact Us
-                </button>
-                <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
-                  Learn More
-                </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">

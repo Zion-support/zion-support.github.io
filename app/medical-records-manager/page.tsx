@@ -3,10 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
 const MedicalRecordsManagerPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -27,19 +23,12 @@ const MedicalRecordsManagerPage: React.FC = () => {
       description: 'Comprehensive analytics on patient data, treatment outcomes, and healthcare metrics for informed decision-making.'},
     {icon: Lock,
       title: 'Advanced Security',
-<<<<<<< HEAD
-      description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.';
-    };
-  ];
-  return() {features.map((feature, index) => ()
-=======
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
         <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
@@ -79,4 +68,3 @@ const MedicalRecordsManagerPage: React.FC = () => {
 
 export default MedicalRecordsManagerPage;
   </h1>
->>>>>>> origin/main

@@ -12,9 +12,6 @@ interface PerformanceProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   }
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics>()
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics>(
     loadTime: 0,
     renderTime: 0,
@@ -24,19 +21,8 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   })
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
-<<<<<<< HEAD
-  useEffect(() => {const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation;
-=======
   useEffect(() => {
     const updateMetrics = () => {;
-<<<<<<< HEAD
-      const navigation = const navigation = const navigation = performance.getEntriesByType();
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = const loadTime = navigation;
-=======
       const navigation = performance.getEntriesByType()
         'navigation';)
       )[0] as PerformanceNavigationTiming;
@@ -84,23 +70,14 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     }
     if (isMonitoring) {updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
-<<<<<<< HEAD
-      return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
-=======
       return () => clearInterval(interval)
   }
   }, [isMonitoring, onMetricsUpdate]);
   const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {;
->>>>>>> origin/main
     const newAlerts: string[] = [],
     if (currentMetrics.loadTime > 3000) 
       newAlerts.push('Load time is above 3 seconds')
   }
-<<<<<<< HEAD
-  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
-    if (bytes === 0) return '0 Bytes'
-=======
     if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
     // 50MB;
       newAlerts.push('Memory usage is high')
@@ -122,13 +99,9 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   }
   const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {;
     if (value <= thresholds.good) return 'text-green-400';
->>>>>>> origin/main
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'
   }
-<<<<<<< HEAD
-  return() {alerts.map((alert, index) => ()
-=======
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       </div></div><div className="flex items-center justify-between mb-6">
@@ -161,33 +134,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           </ul>
         </div>
       )}
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" /></div>
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <Zap className="w-4 h-4 text-blue-400" / /></Zap>
-            <span className="text-gray-300 text-sm">Load Time</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`} /></div>
-            {metrics.loadTime.toFixed(0)}ms
-  </
-        </div>
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <Cpu className="w-4 h-4 text-green-400" / /></Cpu>
-            <span className="text-gray-300 text-sm">Render Time</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`} /></div>
-            {metrics.renderTime.toFixed(2)}ms
-  </
-        </div>
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <MemoryStick className="w-4 h-4 text-purple-400" / /></MemoryStick>
-            <span className="text-gray-300 text-sm">Memory Usage</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`} /></div>
-=======
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         </div></div><div className="bg-white/5 rounded-lg p-4">
           </div></div><div className="flex items-center gap-2 mb-2">
@@ -217,14 +163,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
             {formatBytes(metrics.memoryUsage)}
           </div></div></div>
         </div>
-<<<<<<< HEAD
-        <div className="bg-white/5 rounded-lg p-4" /></div>
-          <div className="flex items-center gap-2 mb-2" /></div>
-            <TrendingUp className="w-4 h-4 text-orange-400" / /></TrendingUp>
-            <span className="text-gray-300 text-sm">FPS</span>
-          </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`} /></div>
-=======
         <div className="bg-white/5 rounded-lg p-4">
           </div></div><div className="flex items-center gap-2 mb-2">
             </div></div><TrendingUp className="w-4 h-4 text-orange-400" />
@@ -236,10 +174,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           </div></div></div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="mt-6 text-center" /></div>
-        <p className="text-gray-400 text-sm" /></p>
-=======
       <div className="mt-6 text-center">
         </div></div><p className="text-gray-400 text-sm">
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

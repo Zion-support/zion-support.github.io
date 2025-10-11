@@ -4,12 +4,6 @@ import {Helmet}}from 'react-helmet-async';
 import {ChevronDown, ChevronUp}}from 'lucide-react';
 const FAQPage: React.FC = () => {,
   const [openItems, setOpenItems] = useState<number[]>([]);
-<<<<<<< HEAD
-  const toggleItem = const toggleItem = const toggleItem = (index: number) => {
-    setOpenItems()
-      prev.includes(index) ;
-        ? prev.filter(item => item !== index);
-=======
   const toggleItem = (index: number) => 
     setOpenItems(prev => )
       prev.includes(index) 
@@ -49,27 +43,12 @@ const FAQPage: React.FC = () => {,
     },
     {
       question: "What industries do you serve?",
-<<<<<<< HEAD
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.";
-    };
-  ];
-  return() {faqs.map((faq, index) => ()
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? ()
-                    ) : ()
-                    )}
-                  </button>
-                  {openItems.includes(index) && ()
-=======
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />

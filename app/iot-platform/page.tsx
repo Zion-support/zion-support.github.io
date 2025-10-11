@@ -14,9 +14,6 @@ import {CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight}}from
     {}
     }
   ]
-<<<<<<< HEAD
-return ()
-=======
 return (
             <p>
               Our IoT platform provides everything you need to build, deploy, and scale;
@@ -33,22 +30,6 @@ return (
         </div>
       </section>
       {/* Use Cases Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              IoT Use Cases
-            </h2>
-            <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -68,11 +49,6 @@ return (
               from smart manufacturing to connected cities.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-            {
-    useCases.map((useCase, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
             {
     useCases.map((useCase, index) => (
@@ -88,22 +64,6 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Why Choose Our IoT Platform?
-            </h2>
-            <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -123,10 +83,6 @@ return (
               security, and performance.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div></div></div>
             {benefits.map((benefit, index) => (
                 <div key=index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div></div></div>
@@ -145,11 +101,6 @@ return (
             and discover how we can help you succeed.
           </p></p></p>
             </button>
-<<<<<<< HEAD
-            <button></button>
-              Schedule Demo
-            </button>
-=======
             <button>
               Schedule Demo;
             </button></button></button>

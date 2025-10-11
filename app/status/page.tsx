@@ -6,9 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-<<<<<<< HEAD
-const refreshStatus = const refreshStatus = async () => {;
-=======
 const refreshStatus = async () => 
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ;
@@ -56,10 +53,6 @@ const services = const services = const services = [
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-<<<<<<< HEAD
-      description: 'System monitoring and alerts',}}
-  ]
-=======
       description: 'System monitoring and alerts'
   };
     };
@@ -77,25 +70,16 @@ const incidents = const incidents = const incidents = [
   },
     {
     id: 2,
->>>>>>> origin/main
       title: 'Database Connection Issues',
       status: 'resolved',
       severity: 'major',
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-<<<<<<< HEAD
-      affectedServices: ['Database', 'API Services']}}
-  ]
-=======
       affectedServices: ['Database', 'API Services']
   }
     }
   ];
-<<<<<<< HEAD
-const getStatusIcon = const getStatusIcon = ()
-    switch (status) {;
-=======
 const getStatusIcon = (;)
     switch (status) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -105,12 +89,6 @@ const getStatusIcon = (;)
       case 'degraded':;
         return <AlertTriangle></AlertTriangle>
       case 'outage':;
-<<<<<<< HEAD
-        return <XCircle></XCircle>
-      default:;) => {
-  return ()
-  )
-=======
         return <XCircle>
 
       default:;) => 
@@ -121,10 +99,6 @@ const getStatusIcon = (;)
         return <Clock>}
     }
   }
-<<<<<<< HEAD
-const getStatusColor = const getStatusColor = ()
-    switch (status) {;
-=======
 const getStatusColor = (;)
     switch (status) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -134,11 +108,6 @@ const getStatusColor = (;)
         return 'text-yellow-400';
       case 'outage':;
         return 'text-red-400';
-<<<<<<< HEAD
-      default:;) => {
-  return ()
-  )
-=======
       default:;) => 
   return ()
     $3)
@@ -147,10 +116,6 @@ const getStatusColor = (;)
         return 'text-gray-400';}
     }
   }
-<<<<<<< HEAD
-const getSeverityColor = const getSeverityColor = ()
-    switch (severity) {;
-=======
 const getSeverityColor = (;)
     switch (severity) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -160,11 +125,6 @@ const getSeverityColor = (;)
         return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
       case 'minor':;
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-<<<<<<< HEAD
-      default:;) => {
-  return ()
-  )
-=======
       default:;) => 
   return ()
     $3)
@@ -178,10 +138,6 @@ const overallStatus = services.every(service => service.status === 'operational'
     : services.some(service => service.status === 'outage');
       ? 'outage';
       : 'degraded';
-<<<<<<< HEAD
-return() {getStatusIcon(overallStatus)}
-              <span></span>
-=======
 return (
           </h1>
           <p>
@@ -199,11 +155,6 @@ return (
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span></span></span>
             </div>
-<<<<<<< HEAD
-            <button></button>
-              <RefreshCw></RefreshCw>
-              Refresh
-=======
             <button>
               </button></button><RefreshCw>
               Refresh;
@@ -217,21 +168,6 @@ return (
       </section>
 
       {/* Services Status */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {
-    services.map((service, index) => ()
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -258,21 +194,6 @@ return (
 
                   </span></span></span>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                <div className="space-y-2 text-sm" / /></div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Uptime:</span>
-                    <span className="text-white">{service.uptime}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Response Time:</span>
-                    <span className="text-white">{service.responseTime}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Last Incident:</span>
-                    <span className="text-white">{service.lastIncident}</span>
-=======
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p></p></p>
                 <div className="space-y-2 text-sm"></div></div></div>
                   <div className="flex justify-between"></div></div></div>
@@ -296,30 +217,6 @@ return (
       </section>
 
       {/* Recent Incidents */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
-          <div className="space-y-6" / /></div>
-            {
-    incidents.map((incident) => ()
-                      <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
-                      <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2" / /></div>
-                    <span></span>
-                      {incident.severity}
-                    </span>
-                    <span></span>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -354,12 +251,6 @@ return (
                     </span></span></span>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-4">{incident.description}</p>
-                <div / /></div>
-                  <span className="text-gray-400 text-sm">Affected Services: </span>
-                  <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
-=======
                 <p className="text-gray-300 mb-4">{incident.description}</p></p></p>
                 <div />
                   </div></div><span className="text-gray-400 text-sm">Affected Services: </span></span></span>
@@ -372,42 +263,6 @@ return (
         </div>
       </section>
       {/* Performance Metrics */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <TrendingUp / /></TrendingUp>
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400">Overall Uptime</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Zap / /></Zap>
-              <div className="text-3xl font-bold text-white mb-2">45ms</div>
-              <div className="text-gray-400">Avg Response Time</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Users / /></Users>
-              <div className="text-3xl font-bold text-white mb-2">50K+</div>
-              <div className="text-gray-400">Active Users</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Activity / /></Activity>
-              <div className="text-3xl font-bold text-white mb-2">1.2M</div>
-              <div className="text-gray-400">Requests Today</div>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -448,30 +303,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <h2></h2>
-            Need More Information?
-          </h2>
-          <p></p>
-            Subscribe to status updates or contact our support team for more details.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-            <button></button>
-              Subscribe to Updates
-            </button>
-            <button></button>
-              Contact Support
-            </button>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

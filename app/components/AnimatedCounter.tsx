@@ -9,9 +9,6 @@ interface AnimatedCounterProps {end: number,}
   className?: string;
 }
 
-<<<<<<< HEAD
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
-=======
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
@@ -50,10 +47,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     }
   }, [end, duration]);
 
-<<<<<<< HEAD
-  return() {prefix}, {count.toLocaleString()}, {suffix}
-    </span>
-=======
   return ()
     <span className={className}>)
       {prefix} {count.toLocaleString()} {suffix}

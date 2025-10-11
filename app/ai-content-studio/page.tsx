@@ -25,13 +25,9 @@ import Footer from '../components/Footer';
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
   ]
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
         <meta name="keywords" content="AI content studio, artificial intelligence, content creation, AI solutions, intelligent design" />
@@ -71,16 +67,6 @@ import Footer from '../components/Footer';
       </main>
     </>
   );
-<<<<<<< HEAD
-}, {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /></h2>
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-=======
 } {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
@@ -93,11 +79,6 @@ import Footer from '../components/Footer';
                 Discover how our AI platform can revolutionize your business operations.
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, benefitIndex) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div></div><div key=index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -121,17 +102,6 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8" /></p>
-              Join thousands of businesses already using our AI platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
-=======
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -145,10 +115,6 @@ import Footer from '../components/Footer';
               Start Your Free Trial,
   </button></button></
           </div>
-<<<<<<< HEAD
-            {features.map((feature, index) => ()
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-=======
             {features.map((feature, index) => (
               <div key=index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 </div></div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -171,18 +137,6 @@ import Footer from '../components/Footer';
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-16" /></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Studio?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-              Experience the benefits of our proven solutions
-  </
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -205,21 +159,6 @@ import Footer from '../components/Footer';
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8" /></p>
-            Transform your content creation with our AI Content Studio solutions today
-  </
-          <div className="flex flex-col sm: flex-row gap-4 justify-center" /></div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /></button>
-              Start Free Trial
-  </
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-              Contact Sales
-  </
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-4xl mx-auto text-center">
           </div></div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2></h2></h2>
@@ -237,22 +176,3 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentStudioPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

@@ -6,9 +6,6 @@ interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enableUserBehaviorTracking?: boolean;
   }
 }
-<<<<<<< HEAD
-const Analytics: React.FC<AnalyticsProps> = ()
-=======
 const Analytics: React.FC<AnalyticsProps> = ({
     enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -35,9 +32,6 @@ if (enableUserBehaviorTracking) {
   }
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-<<<<<<< HEAD
-const initializeGoogleAnalytics = const initializeGoogleAnalytics = ();
-=======
 const initializeGoogleAnalytics = (;
     // Load Google Analytics;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -48,11 +42,6 @@ const initializeGoogleAnalytics = (;
 // Initialize gtag;
     (window as any).dataLayer = (window as any).dataLayer || [],
     function gtag(...args: any[]) {
-<<<<<<< HEAD
-    ) => {
-  return ()
-  )
-=======
     ) => 
   return ()
     $3)
@@ -62,19 +51,6 @@ const initializeGoogleAnalytics = (;
     }
     (window as any).gtag = gtag;
 gtag('js', new Date());
-<<<<<<< HEAD
-    gtag()
-    })
-  }
-const initializePerformanceMonitoring = const initializePerformanceMonitoring = ()
-    if ('PerformanceObserver' in window) {;
-    // Monitor Core Web Vitals;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === 'largest-contentful-paint') {) => {;
-  return ()
-  )
-=======
     gtag('config', 'GA_MEASUREMENT_ID', {
     page_title: document.title,
       page_location: window.location.href,
@@ -102,7 +78,6 @@ const initializePerformanceMonitoring = (;)
               trackEvent('web_vitals', 'CLS', (entry as any).value)
   }
             }
->>>>>>> origin/main
           }
         }
       })
@@ -117,14 +92,6 @@ observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layou
       })
     }
   }
-<<<<<<< HEAD
-const initializeErrorTracking = const initializeErrorTracking = ()
-    window.addEventListener('error', (event) => {
-    trackEvent()
-        colno: event.colno,) => {
-  return ()
-  )
-=======
 const initializeErrorTracking = (;)
     // Track JavaScript errors;)
     window.addEventListener('error', (event) => {
@@ -142,9 +109,6 @@ const initializeErrorTracking = (;)
     });
 // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
-<<<<<<< HEAD
-    trackEvent()
-=======
     trackEvent('error', 'unhandled_promise_rejection', 
         reason: event.reason,
         promise: event.promise;)
@@ -154,10 +118,6 @@ const initializeErrorTracking = (;)
     })
 // Track resource loading errors;
     window.addEventListener('error', (event) => {
-<<<<<<< HEAD
-    if (event.target !== window) {
-        trackEvent()
-=======
     if (event.target !== window) 
         trackEvent('error', 'resource_error', )
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -170,12 +130,6 @@ const initializeErrorTracking = (;)
       }
     }, true);
   }
-<<<<<<< HEAD
-const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
-      page_location: window.location.href,) => {
-  return ()
-  )
-=======
 const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {)
@@ -211,9 +165,6 @@ const initializeUserBehaviorTracking = (;
 if (tagName === 'a') 
 
         const href = (target as HTMLAnchorElement).href;
-<<<<<<< HEAD
-        trackEvent()
-=======
         trackEvent('engagement', 'link_click', )
           link_url: href,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -221,9 +172,6 @@ if (tagName === 'a')
   }
         })
       } else if (tagName === 'button') {
-<<<<<<< HEAD
-    trackEvent()
-=======
     trackEvent('engagement', 'button_click', )
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           button_text: target.textContent?.trim(),
@@ -235,18 +183,6 @@ if (tagName === 'a')
 // Track form submissions;
     document.addEventListener('submit', (event) => {
     const form = event.target as HTMLFormElement;
-<<<<<<< HEAD
-      trackEvent()
-      })
-    })
-  }
-const trackEvent = const trackEvent = ()
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag()
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
-  return ()
-  )
-=======
       trackEvent('engagement', 'form_submit', 
         form_id: form.id,
         form_class: form.className,
@@ -281,14 +217,7 @@ declare global {
 
 export default Analytics;
 // Analytics Provider for context;
-<<<<<<< HEAD
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
-=======
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
-    return ()
-=======
     return (
     <>
       <Analytics />

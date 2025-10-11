@@ -3,14 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 const AccessibilityPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-      icon: Eye,
-      title: 'Visual Accessibility',;
-      description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',;
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'];
-=======
   const features = [
     
       icon: Eye,
@@ -21,7 +13,6 @@ const AccessibilityPage: React.FC = () => {
     },
     {
       icon: MousePointer,
->>>>>>> origin/main
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: [''Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls'']
@@ -67,18 +58,9 @@ const standards = const standards = const standards = [
       status: 'Fully Compliant';
     };
   ];
-<<<<<<< HEAD
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" /></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
-              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
@@ -96,16 +78,6 @@ const standards = const standards = const standards = [
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></button>
-                Get Accessibility Audit
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
-                Learn More
-              </button>
-=======
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div></div><button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -119,15 +91,6 @@ const standards = const standards = const standards = [
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-3xl font-bold text-white mb-4" /></h2>
-                Comprehensive Accessibility Features
-              </h2>
-              <p className="text-xl text-gray-300" /></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -139,11 +102,6 @@ const standards = const standards = const standards = [
                 Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, benefitIndex) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 </div></div><div;
@@ -173,15 +131,6 @@ const standards = const standards = const standards = [
         </section>
         
         {/* Standards Compliance */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 bg-white/5" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-3xl font-bold text-white mb-4" /></h2>
-                Standards Compliance
-              </h2>
-              <p className="text-xl text-gray-300" /></p>
-=======
         <section className="py-20 px-4 bg-white/5">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -193,10 +142,6 @@ const standards = const standards = const standards = [
                 We ensure full compliance with international accessibility standards and regulations.
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {standards.map((standard, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
                 </div></div><div;
@@ -219,24 +164,6 @@ const standards = const standards = const standards = [
         </section>
         
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
-              <h2 className="text-3xl font-bold text-white mb-6" /></h2>
-                Ready to Make Your Digital Experience Accessible?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8" /></p>
-                Contact us today for a comprehensive accessibility audit and implementation plan.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></button>
-                  Get Accessibility Audit
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
-                  Contact Us
-                </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">

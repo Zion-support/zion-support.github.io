@@ -7,10 +7,6 @@ const DocsPage: React.FC = () => {,
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
-  const categories = const categories = const categories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen },
-=======
   const categories = [
      id: 'all', name: 'All Documentation', icon: BookOpen },
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -38,7 +34,6 @@ const DocsPage: React.FC = () => {,
     },
     {
       id: 2,
->>>>>>> origin/main
       title: 'AI Services Documentation',
       description: 'Comprehensive guide to our AI-powered services',
       category: 'ai-services',
@@ -105,26 +100,6 @@ const DocsPage: React.FC = () => {,
       ]
     }
   ];
-<<<<<<< HEAD
-  const quickLinks = const quickLinks = const quickLinks = [
-    { title: 'API Reference', url: '/api', icon: Code },
-    { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
-    { title: 'Community', url: '/community', icon: Users },;
-    { title: 'Support', url: '/support', icon: Shield };
-  ];
-  const filteredDocs = const filteredDocs = selectedCategory === 'all' ;
-    ? documentation ;
-    : documentation.filter(doc => doc.category === selectedCategory);
-
-  const searchResults = const searchResults = const searchResults = searchQuery 
-    ? documentation.filter()
-        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-    : filteredDocs;
-
-  return ()
-=======
   const quickLinks = [
     {
       title: 'API Reference', url: '/api', icon: Code },
@@ -137,7 +112,6 @@ const DocsPage: React.FC = () => {,
   ];];];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation ;
->>>>>>> origin/main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery;
@@ -187,10 +161,6 @@ const DocsPage: React.FC = () => {,
           </div>
 
           {/* Quick Links */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" /></div>
-            {quickLinks.map((link, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {quickLinks.map((link, index) => (
               </div></div><a;
@@ -206,12 +176,6 @@ const DocsPage: React.FC = () => {,
           </div>
 
           {/* Category Filter */}
-<<<<<<< HEAD
-          <div className="mb-8" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
-            <div className="flex flex-wrap gap-4" /></div>
-              {categories.map((category) => ()
-=======
           <div className="mb-8">
             </div></div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2></h2></h2>
             <div className="flex flex-wrap gap-4">
@@ -225,10 +189,6 @@ const DocsPage: React.FC = () => {,
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                 >
-<<<<<<< HEAD
-                  <category.icon className="w-5 h-5" /></category>
-                  <span>{category.name}</span>
-=======
                   </button></button><category.icon className="w-5 h-5" />
                   <span>{category.name}</span></span></span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -238,11 +198,6 @@ const DocsPage: React.FC = () => {,
           </div>
 
           {/* Documentation List */}
-<<<<<<< HEAD
-          <div className="space-y-6" /></div>
-            {searchResults.map((doc) => ()
-                    {doc.sections.map((section, sectionIndex) => ()
-=======
           <div className="space-y-6">
             {searchResults.map((doc) => (
               </div></div><div key=doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
@@ -295,19 +250,6 @@ const DocsPage: React.FC = () => {,
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                <div className="flex items-center justify-between" /></div>
-                  <div className="flex space-x-4" /></div>
-                    <a href={`/docs/${doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center" /></a>
-                      Read Guide
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
-                    <a href={`/docs/${doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center" /></a>
-                      <Download className="w-4 h-4 mr-2" / /></Download>
-                      Download PDF
-=======
                 <div className="flex items-center justify-between">
                   </div></div><div className="flex space-x-4">
                     </div></div><a;
@@ -331,16 +273,8 @@ const DocsPage: React.FC = () => {,
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* No Results */}{searchResults.length === 0 && searchQuery && (
-=======
           {/* No Results */},
-<<<<<<< HEAD
-    {searchResults.length === 0 && searchQuery && ()
-                onClick={() => setSearchQuery('')}
-=======
     {searchResults.length === 0 && searchQuery && (
->>>>>>> origin/main
             <div className="cyber-card-enhanced p-8 text-center">
               </div></div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3></h3></h3>
@@ -355,24 +289,8 @@ const DocsPage: React.FC = () => {,
                 Clear Search;
               </button></button></button>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
-=======
           )},
     {/* Additional Resources */}
-<<<<<<< HEAD
-          <div className="cyber-card-enhanced p-8 mt-16" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <a href="/tutorials"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <BookOpen className="w-8 h-8 text-cyan-400" / /></BookOpen>
-                <div></div>
-                  <div className="text-white font-semibold">Tutorials</div>
-                  <div className="text-gray-300 text-sm">Step-by-step guides</div>
-=======
           <div className="cyber-card-enhanced p-8 mt-16">
             </div></div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2></h2></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -387,14 +305,6 @@ const DocsPage: React.FC = () => {,
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/api"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Code className="w-8 h-8 text-green-400" / /></Code>
-                <div></div>
-                  <div className="text-white font-semibold">API Reference</div>
-                  <div className="text-gray-300 text-sm">Complete API documentation</div>
-=======
               <a;
                 href="/api" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -406,14 +316,6 @@ const DocsPage: React.FC = () => {,
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/community"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Users className="w-8 h-8 text-purple-400" / /></Users>
-                <div></div>
-                  <div className="text-white font-semibold">Community</div>
-                  <div className="text-gray-300 text-sm">Developer community</div>
-=======
               <a;
                 href="/community" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -425,14 +327,6 @@ const DocsPage: React.FC = () => {,
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/support"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Shield className="w-8 h-8 text-orange-400" / /></Shield>
-                <div></div>
-                  <div className="text-white font-semibold">Support</div>
-                  <div className="text-gray-300 text-sm">Get help and support</div>
-=======
               <a;
                 href="/support" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >

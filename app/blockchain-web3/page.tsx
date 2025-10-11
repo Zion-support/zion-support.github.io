@@ -3,14 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [
-    {
-      icon: Zap,
-      title: 'Smart Contracts',;
-      description: 'Automated, self-executing contracts with the terms directly written into code.',;
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
-=======
     const features = [
     
       icon: Zap,
@@ -37,16 +29,10 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: [''24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'']
   },
-<<<<<<< HEAD
-  ];
-return() {features.map((feature, index) => ()
-    feature.benefits.map((benefit, benefitIndex) => ()
-=======
   ];];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>

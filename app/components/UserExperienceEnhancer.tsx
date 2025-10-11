@@ -10,13 +10,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
-<<<<<<< HEAD
-    const enhanceUX = const enhanceUX = ();
-      const interactiveElements = document.querySelectorAll('button, a, input');
-      interactiveElements.forEach((element, index) => {) => {
-  return ()
-  )
-=======
     const enhanceUX = (;
       // Add smooth scrolling;
       document.documentElement.style.scrollBehavior = 'smooth';

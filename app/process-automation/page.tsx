@@ -28,10 +28,6 @@ import {Zap,}
   }
 } from 'lucide-react'
 const ProcessAutomationPage: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [
-    {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -52,10 +48,6 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-<<<<<<< HEAD
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.',}}
-  ]
-=======
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   };
     };
@@ -74,13 +66,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Custom automation solutions';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -119,22 +107,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Our Automation Solutions
-              </h2>
-              <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -153,10 +125,6 @@ return (
                 We provide comprehensive process automation services to transform your business operations.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-              {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -171,22 +139,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Key Benefits
-              </h2>
-              <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -205,10 +157,6 @@ return (
                 Transform your business with our comprehensive process automation services.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
-              {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -221,32 +169,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-4xl mx-auto text-center" / /></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
-              <h2></h2>
-                Ready to Automate Your Processes?
-              </h2>
-              <p></p>
-                Contact our automation experts to discuss your process optimization needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-                <button></button>
-                  <Phone></Phone>
-                  Call (302) 464-0950
-                </button>
-                <button></button>
-                  <Mail></Mail>
-                  Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

@@ -10,14 +10,6 @@ interface ServiceCardProps {
   onSelect?: () => void,
   className?: string;
   }
-<<<<<<< HEAD
-const ServiceCard: React.FC<ServiceCardProps> = ()
-}) => {
-  return ()
-      )}
-      <div className="mb-4" /></div>
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors" /></h3>
-=======
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -44,15 +36,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </h3></h3></h3>
         <p className="text-gray-300 text-sm">{description}</p></p></p>
       </div>
-<<<<<<< HEAD
-      <div className="space-y-2 mb-6" /></div>
-        {features.map((feature, index) => ()
-        ))}
-      </div>
-      {price && ()
-      )},
-    {onSelect && ()
-=======
       <div className="space-y-2 mb-6">
         {features.map((feature, index) => (
           </div></div><div key=index} className="flex items-center gap-2">
@@ -82,4 +65,3 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
 export default ServiceCard;
   </ServiceCardProps>
->>>>>>> origin/main

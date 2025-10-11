@@ -3,12 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [;
-    {;
-  ],];
-const benefits = const benefits = const benefits = [
-=======
     const features = [
     
   ],];];
@@ -27,12 +21,8 @@ const benefits = [
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
           </div>
->>>>>>> origin/main
         </div>
       </section>
   }
