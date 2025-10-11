@@ -1,41 +1,56 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const LoadingPage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const LoadingPage: React.FC = () => {
-  const features = [
+>>>>>>> origin/main
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
+  }
     }
-  ];
-
+<<<<<<< HEAD
+  ];];];
+>>>>>>> origin/main
+const benefits = [
+=======
+  ]
   const benefits = [
+>>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+
     '24/7 technical support',
+
     'Easy integration with existing systems',
+
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ];
 
   return (
@@ -151,3 +166,8 @@ const LoadingPage: React.FC = () => {
 };
 
 export default LoadingPage;
+=======
+  ]
+}
+export default LoadingPage
+>>>>>>> origin/main

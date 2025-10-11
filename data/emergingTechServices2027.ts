@@ -1,124 +1,124 @@
 export type EmergingTechService2027 =
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  pricing: unknown;
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string};
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
-  technicalSpecs: unknown;
-    performance: string;
-    scalability: string;
-    security: string;
-    compliance: string[]};
-  roi: string;
-  estimatedDelivery: string;
-  contactInfo: unknown;
-    phone: string;
-    email: string;
-    website: string;
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  pricing: unknown
+    monthly: number
+    yearly: number
+    custom: string
+    currency: string,
+    pricingModel: string}
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  technologies: string[]
+  integrations: string[]
+  support: string[]
+  link: string
+  badge: string
+  icon: string
+  image: string
+  innovationLevel: string
+  marketSize: string
+  competitors: string[]
+  technicalSpecs: unknown
+    performance: string
+    scalability: string
+    security: string,
+    compliance: string[]}
+  roi: string
+  estimatedDelivery: string
+  contactInfo: unknown
+    phone: string
+    email: string
+    website: string,
     address: string}}
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
-  // Quantum Internet Infrastructure;
+  // Quantum Internet Infrastructure,
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure",
     description: "Next-generation quantum internet infrastructure enabling ultra-secure communications, quantum entanglement distribution, and quantum network protocols for government, financial, and research institutions.",
     category: "Quantum Technology"
     subcategory: "Quantum Internet"
-    pricing: unknown;
-      monthly: 25000;
-      yearly: 250000;
+    pricing: unknown
+      monthly: 25000
+      yearly: 250000,
       custom: "Enterprise quantum network solutions",
       currency: "$",
       pricingModel: "Enterprise subscription with quantum network access",
   i,
-  d: string;
+  d: string,
   titl,
-  e: string;
+  e: string,
   descriptio,
-  n: string;
+  n: string,
   categor,
-  y: string;
+  y: string,
   subcategor,
-  y: string;
+  y: string,
   pricin,
-  g: unknown;
+  g: unknown,
     monthl,
-  y: number;
+  y: number,
     yearl,
-  y: number;
+  y: number,
     custo,
-  m: string;
+  m: string,
     currenc,
   y: string,
     pricingMode,
-  l: string};
+  l: string}
   feature,
-  s: string[];
+  s: string[],
   benefit,
-  s: string[];
+  s: string[],
   useCase,
-  s: string[];
+  s: string[],
   targetAudienc,
-  e: string[];
+  e: string[],
   technologie,
-  s: string[];
+  s: string[],
   integration,
-  s: string[];
+  s: string[],
   suppor,
-  t: string[];
+  t: string[],
   lin,
-  k: string;
+  k: string,
   badg,
-  e: string;
+  e: string,
   ico,
-  n: string;
+  n: string,
   imag,
-  e: string;
+  e: string,
   innovationLeve,
-  l: string;
+  l: string,
   marketSiz,
-  e: string;
+  e: string,
   competitor,
-  s: string[];
+  s: string[],
   technicalSpec,
-  s: unknown;
+  s: unknown,
     performanc,
-  e: string;
+  e: string,
     scalabilit,
-  y: string;
+  y: string,
     securit,
   y: string,
     complianc,
-  e: string[]};
+  e: string[]}
   ro,
-  i: string;
+  i: string,
   estimatedDeliver,
-  y: string;
+  y: string,
   contactInf,
-  o: unknown;
+  o: unknown,
     phon,
-  e: string;
+  e: string,
     emai,
-  l: string;
+  l: string,
     websit,
   e: string,
     addres,
@@ -203,7 +203,7 @@ export const,
     innovationLevel: "Breakthrough",
     marketSize: "$2.1 B by 2027",
     competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       performance: "Quantum speed advantage",
       scalability: "Global quantum network",
       security: "Quantum-secured",
@@ -211,21 +211,21 @@ export const,
     },
     roi: "1000-2000%"
     estimatedDelivery: "24-36 weeks"
-    contactInfo: unknown;
+    contactInfo: unknown,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Space-Based Quantum Computing;
+  // Space-Based Quantum Computing
     id: "space-based-quantum-computing",
     title: "Space-Based Quantum Computing",
     description: "Revolutionary space-based quantum computing platform leveraging zero-gravity environment for enhanced quantum coherence and computational power, enabling breakthrough scientific discoveries and space exploration.",
     category: "Space Technology"
     subcategory: "Quantum Computing"
-    pricing: unknown;
-      monthly: 50000;
-      yearly: 500000;
+    pricing: unknown
+      monthly: 50000
+      yearly: 500000,
       custom: "Space quantum computing missions",
       currency: "$",
       pricingModel: "Mission-based pricing with quantum computing access",
@@ -349,7 +349,7 @@ export const,
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 B by 2027",
     competitors["NASA", "SpaceX", "Blue Origin"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       performance: "Space-optimized quantum processing",
       scalability: "Multi-satellite constellation",
       security: "Space-grade security",
@@ -357,21 +357,21 @@ export const,
     },
     roi: "1500-3000%"
     estimatedDelivery: "36-48 weeks"
-    contactInfo: unknown;
+    contactInfo: unknown,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Biocomputing Platform;
+  // Biocomputing Platform
     id: "biocomputing-platform",
     title: "Biocomputing Platform",
     description: "Revolutionary DNA and cellular computing platform that leverages biological processes for massive parallel processing, energy efficiency, and novel computational paradigms beyond traditional silicon-based systems.",
     category: "Biotechnology"
     subcategory: "Biocomputing"
-    pricing: unknown;
-      monthly: 15000;
-      yearly: 150000;
+    pricing: unknown
+      monthly: 15000
+      yearly: 150000,
       custom: "Biocomputing research partnerships",
       currency: "$",
       pricingModel: "Research partnership with biocomputing access",
@@ -495,7 +495,7 @@ export const,
     innovationLevel: "Breakthrough",
     marketSize: "$3.2 B by 2027",
     competitors["Microsoft Research", "IBM Research", "Google Research"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       performance: "Biological parallel processing",
       scalability: "Cellular network expansion",
       security: "Biological security protocols",
@@ -503,21 +503,21 @@ export const,
     },
     roi: "800-1500%"
     estimatedDelivery: "18-24 weeks"
-    contactInfo: unknown;
+    contactInfo: unknown,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Neuromorphic Computing Platform;
+  // Neuromorphic Computing Platform
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.",
     category: "Advanced AI"
     subcategory: "Neuromorphic Computing"
-    pricing: unknown;
-      monthly: 12000;
-      yearly: 120000;
+    pricing: unknown
+      monthly: 12000
+      yearly: 120000,
       custom: "Neuromorphic computing solutions",
       currency: "$",
       pricingModel: "Platform subscription with neuromorphic processing",
@@ -641,7 +641,7 @@ export const,
     innovationLevel: "Advanced",
     marketSize: "$2.8 B by 2027",
     competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       performance: "Neuromorphic processing",
       scalability: "Neural network expansion",
       security: "Cognitive security",
@@ -649,21 +649,21 @@ export const,
     },
     roi: "600-1200%"
     estimatedDelivery: "20-28 weeks"
-    contactInfo: unknown;
+    contactInfo: unknown,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Fusion Energy Computing Platform;
+  // Fusion Energy Computing Platform
     id: "fusion-energy-computing-platform",
     title: "Fusion Energy Computing Platform",
     description: "Revolutionary fusion energy computing platform that combines fusion power generation with advanced computing infrastructure, providing clean, unlimited energy for high-performance computing and data centers.",
     category: "Energy Technology"
     subcategory: "Fusion Computing"
-    pricing: unknown;
-      monthly: 35000;
-      yearly: 350000;
+    pricing: unknown
+      monthly: 35000
+      yearly: 350000,
       custom: "Fusion energy computing solutions",
       currency: "$",
       pricingModel: "Energy-as-a-service with computing infrastructure",
@@ -787,7 +787,7 @@ export const,
     innovationLevel: "Revolutionary",
     marketSize: "$4.5 B by 2027",
     competitors["ITER", "Commonwealth Fusion", "General Fusion"],
-    technicalSpecs: unknown;
+    technicalSpecs: unknown,
       performance: "Fusion-powered computing",
       scalability: "Modular fusion systems",
       security: "Energy security protocols",
@@ -795,7 +795,7 @@ export const,
     },
     roi: "1200-2500%"
     estimatedDelivery: "48-60 weeks"
-    contactInfo: unknown;
+    contactInfo: unknown,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -842,43 +842,43 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export type EmergingTechService2027 = i,
-  d: string; titl,
-  e: string; descriptio,
-  n: string; categor,
-  y: string; subcategor,
-  y: string; pricin,
+  d: string, titl,
+  e: string, descriptio,
+  n: string, categor,
+  y: string, subcategor,
+  y: string, pricin,
   g: monthl,
-  y: number; yearl,
-  y: number; custo,
-  m: string; currenc,
+  y: number, yearl,
+  y: number, custo,
+  m: string, currenc,
   y: string, pricingMode,
-  l: string}; feature,
-  s: string[]; benefit,
-  s: string[]; useCase,
-  s: string[]; targetAudienc,
-  e: string[]; technologie,
-  s: string[]; integration,
-  s: string[]; suppor,
-  t: string[]; lin,
-  k: string; badg,
-  e: string; ico,
-  n: string; imag,
-  e: string; innovationLeve,
-  l: string; marketSiz,
-  e: string; competitor,
-  s: string[]; technicalSpec,
+  l: string} feature,
+  s: string[], benefit,
+  s: string[], useCase,
+  s: string[], targetAudienc,
+  e: string[], technologie,
+  s: string[], integration,
+  s: string[], suppor,
+  t: string[], lin,
+  k: string, badg,
+  e: string, ico,
+  n: string, imag,
+  e: string, innovationLeve,
+  l: string, marketSiz,
+  e: string, competitor,
+  s: string[], technicalSpec,
   s: performanc,
-  e: string; scalabilit,
-  y: string; securit,
+  e: string, scalabilit,
+  y: string, securit,
   y: string, complianc,
-  e: string[]}; ro,
-  i: string; estimatedDeliver,
-  y: string; contactInf,
+  e: string[]} ro,
+  i: string, estimatedDeliver,
+  y: string, contactInf,
   o: phon,
-  e: string; emai,
-  l: string; websit,
+  e: string, emai,
+  l: string, websit,
   e: string, addres,
   s: string}} export const,
   EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [ // Quantum Internet Infrastructure,"

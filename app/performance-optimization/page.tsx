@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -17,25 +19,40 @@ const PagePage: React.FC = () => {
     },
     {
       icon: Shield,
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
+},
+    {icon: Shield,
+>>>>>>> origin/main
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+
     '24/7 technical support',
+
     'Easy integration with existing systems',
+
     'Cost-effective pricing plans',
+<<<<<<< HEAD
+
+<<<<<<< HEAD
     'Proven track record of success'
+<<<<<<< HEAD
   ];
 
   return (
@@ -94,11 +111,35 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+=======
+  ]
+return(</div>)
+=======
+    'Proven track record of success';
+  ];];];
+return (
+          </div>
+>>>>>>> origin/main
+        </div>
+      </section>
+              </div>
+=======
+    'Proven track record of success'
+  ]
+return ()
+>>>>>>> origin/main
+            ))}
+          </div>
+        </div>
+      </section>
+          </div>
+>>>>>>> origin/main
               </div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -151,3 +192,7 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
+=======
+}
+export default PagePage
+>>>>>>> origin/main

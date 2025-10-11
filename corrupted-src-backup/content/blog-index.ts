@@ -1,23 +1,23 @@
 /**
- * Blog Content Index;
- * Centralized index of all blog posts for easy discovery and navigation;
+ * Blog Content Index
+ * Centralized index of all blog posts for easy discovery and navigation
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  featured?: boolean;,
-  valueProposition: string;
+  slug: string
+  title: string
+  description: string
+  category: string
+  date: string
+  readTime: string
+  tags: string[]
+  featured?: boolean,,
+  valueProposition: string,
 export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
 /**
- * October 2025 Breakthrough Content;
+ * October 2025 Breakthrough Content
  */
 export const october2025Breakthroughs: BlogPost[] = [,
   {,
@@ -35,7 +35,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'AI evolution',
       'machine learning',
       'enterprise AI'],
-    featured: true;
+    featured: true,
     valueProposition: '$25M annual savings'},
   {
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
@@ -52,7 +52,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'quantum algorithms',
       'supply chain',
       'portfolio optimization'],
-    featured: true;
+    featured: true,
     valueProposition: '$42M annual value creation'},
   {
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
@@ -69,7 +69,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'AI orchestration',
       'workflow automation',
       'digital transformation'],
-    featured: true;
+    featured: true,
     valueProposition: '$67M annual savings'},
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
@@ -80,7 +80,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03',
     readTime: '10 min',
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
-    featured: true;
+    featured: true,
     valueProposition: '$215M annual value'},
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security'
@@ -90,7 +90,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03',
     readTime: '9 min',
     tags: ['security', 'zero trust', 'automation', 'rollback'],
-    featured: true;
+    featured: true,
     valueProposition: '$42M annual savings'},
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
@@ -101,7 +101,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-03',
     readTime: '11 min',
     tags: ['quantum', 'optimization', 'supply chain'],
-    featured: true;
+    featured: true,
     valueProposition: '$127M annual savings'},
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
@@ -112,7 +112,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     date: '2025-10-02',
     readTime: '9 min',
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
-    featured: true;
+    featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
 export const,
   october2025Breakthroughs: BlogPost[] = [
@@ -129,19 +129,17 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
-
+  }]
 /**
- * All blog posts combined;
+ * All blog posts combined
  */
 export const,
-  allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
-
+  allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
 /**
- * Helper functions;
+ * Helper functions,
  */,
 export function getFeaturedPosts(): BlogPost[] {,
-  return allBlogPosts.filter(post => post.featured);
+  return allBlogPosts.filter(post => post.featured)
  */
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
 }
@@ -154,19 +152,19 @@ export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
-    const _value = post.valueProposition.match(/\$(\d+)M/);
-:corrupted-src-backup/content/blog-index.ts;
+    const _value = post.valueProposition.match(/\$(\d+)M/)
+:corrupted-src-backup/content/blog-index.ts
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
-  }, 0);
-  return `$${totalValue}M+ total value proposition`;
+  }, 0)
+  return `$${totalValue}M+ total value proposition`
 }
 
 export const blogStats = {
-  totalPosts: allBlogPosts.length;
-  featuredPosts: getFeaturedPosts().length;
-  categories: getAllCategories().length;
-  tags: getAllTags().length;
+  totalPosts: allBlogPosts.length
+  featuredPosts: getFeaturedPosts().length
+  categories: getAllCategories().length
+  tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
 export const blogStats = {/* TODO: Fix JSX expression */}
-};
+}
 `

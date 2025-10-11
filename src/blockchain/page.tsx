@@ -1,6 +1,2 @@
-import React from 'react';
-
-
-export default BlockchainPage;
-
-
+import React from 'react'
+export default BlockchainPage

@@ -1,17 +1,12 @@
-'use client';
-import React, { useState } from 'react';
-
-
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+'use client'
+import React, { useState } from 'react'
 const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
     {
       id: 'ai',
@@ -45,8 +40,7 @@ $4},
       bgColor: 'bg-yellow-500/10',
       description:     ,
 $4}
-  ];
-
+  ]
   const solutions = {
     ai: [
       {
@@ -184,8 +178,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
-
+  }
   const benefits = [
     {
       icon: Star,
@@ -207,29 +200,25 @@ $4},
       title: 'Expert Team',
       description:     ,
 $4}
-  ];
-
+  ]
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions
-            </h1>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Our Solutions,
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
-            </p>
-          </div>
-
           {/* Solution Categories Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
-                <button
+                <$2 />
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
@@ -239,25 +228,21 @@ $4}
                   }`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}</span>
-                </button>
+                  <span className="font-medium">{category.name}
               ))}
-            </div>
-            
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-
-  );
-};
-  const [activeTab, setActiveTab] = useState('ai');
+  )
+}
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'ai',
       nam,
@@ -272,8 +257,8 @@ $4}
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'it',
       nam,
@@ -288,8 +273,8 @@ $4}
   n: 'Robust and scalable IT infrastructure solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'security',
       nam,
@@ -304,8 +289,8 @@ $4}
   n: 'Comprehensive security solutions for your digital assets'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'automation',
       nam,
@@ -319,17 +304,17 @@ $4}
       descriptio,
   n: 'Streamline operations with intelligent automation'
     }
-  ];
+  ]
   const solutions = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Analytics',
         descriptio,
@@ -344,8 +329,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Marketing Automation',
         descriptio,
@@ -360,8 +345,8 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Support',
         descriptio,
@@ -376,8 +361,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Process Automation',
         descriptio,
@@ -397,8 +382,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Cloud Migration',
         descriptio,
@@ -413,8 +398,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'IT Infrastructure Management',
         descriptio,
@@ -429,8 +414,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'DevOps & CI/CD',
         descriptio,
@@ -445,8 +430,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Database Management',
         descriptio,
@@ -466,8 +451,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Cybersecurity Suite',
         descriptio,
@@ -482,8 +467,8 @@ $4}
   r: 'text-red-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Security Monitoring',
         descriptio,
@@ -498,8 +483,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Compliance Management',
         descriptio,
@@ -514,8 +499,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Security Training',
         descriptio,
@@ -535,8 +520,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Business Process Automation',
         descriptio,
@@ -551,8 +536,8 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'IT Automation',
         descriptio,
@@ -567,8 +552,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Marketing Automation',
         descriptio,
@@ -583,8 +568,8 @@ $4}
   r: 'text-pink-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Data Automation',
         descriptio,
@@ -599,14 +584,14 @@ $4}
   r: 'text-green-400'
       }
 //     ]
-  };
+  }
   const benefits = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Star,
       titl,
@@ -615,8 +600,8 @@ $4}
   n: '300% average ROI and 95% process automation for our clients'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Shield,
       titl,
@@ -625,8 +610,8 @@ $4}
   n: 'Bank-level security and compliance for all our solutions'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Globe,
       titl,
@@ -635,8 +620,8 @@ $4}
   n: '24/7 support and services across multiple time zones'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Users,
       titl,
@@ -644,44 +629,32 @@ $4}
       descriptio,
   n: 'Certified professionals with years of industry experience'
     }
-  ];
+  ]
   return (<div>Coming Soon</div>)
   )
-    
-          <>
-      <Navigation /></Navigation>
+          <React.Fragment>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Our Solutions;
+            < className="text-4xl,"$2 />
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Our Solutions
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Comprehensive technology solutions designed to transform your business operations;
+// Comprehensive technology solutions designed to transform your business operations,
 //               and drive innovation across every aspect of your organization.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-          </div>
           {/* Solution Categories Tabs */}"
           <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => ()}
-          <button></button>
+          <button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
@@ -689,27 +662,14 @@ $4}
   hover:bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
           "
           <category.icon className="w-5 h-5 mr-2" /></category>"
-                  <span className="font-medium">{category.name}</span>
-                </button>
+                  <span className="font-medium">{category.name}
               ))}
             </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-gray-300 max-w-2xl mx-auto">
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
-              </p>
-            </div>
-          </div>
-
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -718,241 +678,155 @@ $4}
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                    </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
-                  </div>
-                  
+                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
                     <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
           {/* Solutions Grid */}"
           <div className="mb-16"></div>"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
+            < className="grid grid-cols-1,"$2 />
+  md:grid-cols-2 gap-8">
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
+          < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} />
                     </div>"
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}
                   </div>"
                   <div className="mb-4"></div>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
-                    <ul className="space-y-1"></ul>
+                    <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
-                    </div>
-                    <a
+                    <$2 />
                       href="/contact"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
                   <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                    <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
                     </div>
-
-                    <a
-                      href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-
+                    <$2 />
+                      href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
 // >
-//                       Learn More;"
+//                       Learn More,"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                     </a>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Solutions?
-            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
           {/* Benefits Section */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 // Why Choose Our Solutions?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
-            <div className="grid grid-cols-1,
+            < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => ()}"
           <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>
+                    <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
+                  <p className="text-gray-300 text-sm">{benefit.description}
               ))}
-            </div>
-          </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <$2 />
                 href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <Phone className="w-5 h-5 mr-2" />
                 Get Free Consultation
-              </a>
-              <a
+  
+              <$2 />
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-              </a>
-              <a
+  
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
+                Email Us,
+  
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Ready to Transform Your Business?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-// Get a free consultation and discover how our solutions can revolutionize your operations;
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+// Get a free consultation and discover how our solutions can revolutionize your operations
 //               and drive unprecedented growth.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <$2 />
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
-          </a>
-
-              <a
+          <Phone className="w-5 h-5 mr-2" />
+// Get Free Consultation
+              <$2 />
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
+// (302) 464-0950
           </a>
-
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
+// Email Us
           </a>
             </div>
           </div>
         </div>
       </div>
-
       <Footer />
-    </>
-
+    </React.Fragment>
     </div>
-  );
-};
-
-
-export default SolutionsPage;
-
-
+  ),
+}
+export default SolutionsPage</a>
+  </a>
+  </a>
+  </a>
+</div></div></div></div></div></div></div></div></div></div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>

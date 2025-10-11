@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
+=======
+'use client'
+import React, { memo } from 'react'
+import { Link } from 'react-router-dom'
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react'
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
@@ -15,8 +22,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -40,8 +51,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
@@ -59,9 +74,13 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
+<<<<<<< HEAD
   ];
 
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
@@ -75,16 +94,24 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -92,8 +119,12 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -101,8 +132,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -115,8 +150,12 @@ const Footer: React.FC = memo(() => {
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
+<<<<<<< HEAD
   ];
 
+=======
+  ]
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
@@ -125,11 +164,11 @@ const Footer: React.FC = memo(() => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <Link href="/" className="flex items-center space-x-2 group">
+              <Link to="/" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-lg">Z</span>
-                </div>
+                  <span className="text-white font-bold text-lg">Z
                 <div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">AI & IT Solutions</p>
                 </div>
@@ -141,10 +180,17 @@ const Footer: React.FC = memo(() => {
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
 
+=======
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
+                  <p className="text-sm text-cyan-400">AI & IT Solutions
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
+              and digital transformation services. Transform your business with cutting-edge technology.
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
-                <a
+                <$2 />
                   key={index}
                   href={social.url}
                   target="_blank"
@@ -153,30 +199,37 @@ const Footer: React.FC = memo(() => {
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                </a>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* Micro SAAS Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
+=======
+                  <$2 />
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
-                </li>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}
               ))}
               <li>
+<<<<<<< HEAD
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -185,33 +238,48 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
+=======
+                <$2 />
+                  href="/ai-services"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  View All AI Services →
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
+=======
+                  <$2 />
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
-                </li>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}
               ))}
               <li>
+<<<<<<< HEAD
                 <Link 
-                  href="/it-services"
+                  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
+=======
+                <$2 />
+                  href="/it-services"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   View All IT Services →
-                </Link>
-              </li>
               <li>
+<<<<<<< HEAD
                 <Link
-                href="/micro-saas"
+                to="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
               >
                 View All Solutions
@@ -221,75 +289,79 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
+=======
+                <$2 />
+                href="/micro-saas"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group">
+                View All Solutions
+                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* AI & IT Services */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400" />
               AI & IT Services
+<<<<<<< HEAD
             </h4>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             <div className="space-y-4">
               <div>
-                <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
+                <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services
                 <div className="space-y-2">
                   {aiServices.slice(0, 4).map((service, index) => (
-                    <Link
+                    <$2 />
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
+                      <span>{service.name}
                   ))}
-                </div>
-              </div>
               <div>
-                <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
+                <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services
                 <div className="space-y-2">
                   {itServices.slice(0, 4).map((service, index) => (
-                    <Link
+                    <$2 />
                       key={index}
-                      href={service.url}
+                      to={service.url}
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
                     >
                       <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
+                      <span>{service.name}
                   ))}
+<<<<<<< HEAD
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
+          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-cyan-400" />
               <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Call us anytime</div>
-              </div>
-            </div>
+                <div className="text-white font-medium">{contactInfo.phone}
+                <div className="text-gray-400 text-sm">Call us anytime
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-cyan-400" />
               <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email us</div>
-              </div>
-            </div>
+                <div className="text-white font-medium">{contactInfo.email}
+                <div className="text-gray-400 text-sm">Email us
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-cyan-400" />
               <div>
-                <div className="text-white font-medium">Middletown, DE</div>
-                <div className="text-gray-400 text-sm">{contactInfo.address}</div>
-              </div>
-            </div>
+                <div className="text-white font-medium">Middletown, DE
+                <div className="text-gray-400 text-sm">{contactInfo.address}
             <div className="flex items-center space-x-3">
               <Clock className="w-5 h-5 text-cyan-400" />
               <div>
+<<<<<<< HEAD
                 <div className="text-white font-medium">{contactInfo.hours}</div>
                 <div className="text-gray-400 text-sm">Business hours</div>
               </div>
@@ -297,50 +369,65 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
+=======
+                <div className="text-white font-medium">{contactInfo.hours}
+                <div className="text-gray-400 text-sm">Business hours
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         {/* Company Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Company
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
+=======
+                  <$2 />
+                    href={link.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                     {link.name}
-                  </Link>
-                </li>
               ))}
-            </ul>
-          </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Support
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link 
-                    href={link.url}
+                    to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
+=======
+                  <$2 />
+                    href={link.url}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                     {link.name}
-                  </Link>
-                </li>
               ))}
-            </ul>
-          </div>
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-white mb-4">Quick Links
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+<<<<<<< HEAD
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
             </ul>
           </div>
+=======
+              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link>
+              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link>
+              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link>
+              <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link>
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
+            <h4 className="text-sm font-semibold text-white mb-4">Newsletter
+            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.
             <div className="flex space-x-2">
               <input
                 type="email"
@@ -349,39 +436,48 @@ const Footer: React.FC = memo(() => {
               />
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
                 Subscribe
+<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </div>
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
               © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
             </div>
+=======
+              <Link href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
+                Privacy Policy</span>
+              <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Terms of Service
+              <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Cookie Policy
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
-                <span>Enterprise Security</span>
-              </div>
+                <span>Enterprise Security
               <div className="flex items-center space-x-2">
                 <Award className="w-4 h-4 text-yellow-400" />
-                <span>ISO 27001 Certified</span>
-              </div>
+                <span>ISO 27001 Certified
               <div className="flex items-center space-x-2">
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
@@ -391,8 +487,24 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 });
 
 Footer.displayName = 'Footer';
 export default Footer;
+=======
+  ),
+})
+Footer.displayName = 'Footer'
+export default Footer</Link>
+  </Link>
+  </Link>
+  </button>
+  </li>
+  </li>
+  </li>
+  </li>
+  </h4>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></p></p></p></p></p></h3></h3></h3></h3></h4></h4></h4></h4></h5></h5></ul></ul></ul></ul></ul></li></li></li></li></li></li></li>
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe

@@ -1,36 +1,36 @@
 
 'use client'
 /**
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
+ * Comprehensive Monitoring Utility
+ * Real-time application monitoring, performance tracking, and error reporting
+ * Comprehensive Monitoring Utility
+ * Real-time application monitoring, performance tracking, and error reporting
  */
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
+  lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
+  inp?: number
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   messag,
-  e: string;
-  stack?: string;
-  component?: string;,
+  e: string
+  stack?: string
+  component?: string,,
     timestam,
-  p: number;,
+  p: number,,
     userAgen,
-  t: string;,
+  t: string,,
     ur,
-  l: string;
+  l: string,
 class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
 
 class MonitoringService {
@@ -64,39 +64,38 @@ class MonitoringService {
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        let clsValue = 0;
+            this.metrics.fid = (entry as any).processingStart - entry.startTime,
+            this.reportMetric('fid', this.metrics.fid)
+  })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
+        let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value || 0;
-              this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-            }
+              clsValue += (entry as any).value || 0
+              this.metrics.cls = clsValue,
+              this.reportMetric('cls', clsValue)
+  }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+            this.metrics.fcp = entry.startTime
+            this.reportMetric('fcp', entry.startTime)
+  })
+        })
+        fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
-        // console.error('Error setting up performance observers:', error);
-      }
+    // console.error('Error setting up performance observers:', error)
+  }
     }
   }
 
@@ -122,9 +121,9 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming;
+            const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // console.warn('Slow resource detected:', {
               //   name: resourceEntry.name,
@@ -132,12 +131,12 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
             }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+          })
+        })
+        resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (_error) {
-        // console.error('Error monitoring resources:', _error);
-      }
+    // console.error('Error monitoring resources:', _error)
+  }
     }
   }
 
@@ -201,7 +200,7 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory
       if (memory) {
         // console.log('[Memory]', {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
@@ -232,5 +231,4 @@ class MonitoringService {
 
 const monitoring = new MonitoringService()
 export default monitoring;`
-
 
