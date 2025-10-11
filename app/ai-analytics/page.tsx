@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 'use client';
-=======
-'use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-=======
-import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
-=======
-import {  CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users   } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target, Brain, Eye, Users } from 'lucide-react';
 
 const AiAnalyticsPage: React.FC = () => {
   const features = [
@@ -54,211 +42,193 @@ const AiAnalyticsPage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+  const stats = [
+    { number: '500+', label: 'AI Models Deployed', icon: Brain },
+    { number: '99.9%', label: 'Accuracy Rate', icon: Target },
+    { number: '10K+', label: 'Data Points Processed', icon: BarChart },
+    { number: '24/7', label: 'Real-time Monitoring', icon: Eye }
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce Optimization',
+      description: 'Optimize product recommendations and pricing strategies',
+      icon: ShoppingCart
+    },
+    {
+      title: 'Customer Behavior Analysis',
+      description: 'Understand customer patterns and preferences',
+      icon: Users
+    },
+    {
+      title: 'Predictive Maintenance',
+      description: 'Prevent equipment failures before they happen',
+      icon: Shield
+    },
+    {
+      title: 'Financial Forecasting',
+      description: 'Accurate financial predictions and risk assessment',
+      icon: TrendingUp
+    }
+  ];
+
   return (
-<<<<<<< HEAD
     <>
+      <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and intelligent reporting." />
+        <meta name="keywords" content="AI analytics, data analytics, business intelligence, predictive analytics, data visualization" />
+      </Helmet>
+      <Navigation />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Analytics</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
+                Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and intelligent reporting.
               </p>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Ai Analytics
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  View Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Analytics Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered analytics platform provides comprehensive insights to drive your business forward.
+              </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    <feature.icon className="h-8 w-8" />
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-=======
-    <&gt;
-      <Helmet&gt;
-        <title&gt;AI Analytics - Zion Tech Group</title&gt;
-      </Helmet&gt;
-      <Navigation /&gt;
-            </div&gt;
-          </div&gt;
-        </section&gt;
-
-          <div className="max-w-7xl mx-auto"&gt;</div&gt;
-            <div className="text-center"&gt;</div&gt;
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6"&gt;</h1&gt;,</h1&gt;
-                AI Analytics;
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"&gt;</p&gt;Transform your business with intelligent analytics powered by cutting-edge AI technology.</p&gt;
-              </p&gt;
-              </div&gt;
-            ))}
-          </div>
-
-  );
-}
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2></h2>,</h2>
-                Powerful AI Analytics Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p></p>Discover how our AI analytics platform can revolutionize your business intelligence.</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow"></div></div>,</div>
-                  <div className="flex items-center mb-4"></div></div>
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900"></h3></h3>{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4"></p></p>{feature.description</p&gt;}</p>
-                  <ul className="space-y-2"></ul>
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600"></li>
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit} </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                     ))}
                   </ul>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-=======
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven analytics and transform your business.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
-                    <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
+                <div key={index} className="flex items-center bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
-=======
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section></section>,</section>
-          <div className="max-w-4xl mx-auto text-center"></div></div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2></h2>,</h2>
-              Ready to Transform Your Analytics?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8"></p></p>Join thousands of businesses already using our AI analytics platform.</p>
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold"></button>,</button>
-              Start Your Free Trial;
-  </
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See how our AI analytics platform can be applied across different industries and use cases.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300 text-sm">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Data?
+            </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions.
+              Start using our AI analytics platform today and unlock the power of your data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       
-=======
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

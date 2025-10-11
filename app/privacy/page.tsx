@@ -80,12 +80,6 @@ const PrivacyPage: React.FC = () => {
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

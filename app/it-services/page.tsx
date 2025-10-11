@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Shield, Cloud, Database, Code, Users, Settings, Zap, Brain, BarChart, Target, TrendingUp, Globe, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { 
   Server, 
   Cloud, 
@@ -18,9 +11,30 @@ import {
   Code, 
   Settings, 
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Users,
+  Zap,
+  Brain,
+  BarChart,
+  Target,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  Calendar,
+  FileText,
+  MessageCircle,
+  Heart,
+  DollarSign,
+  Box,
+  Monitor,
+  Package,
+  Mic,
+  Workflow,
+  Eye,
+  Wifi,
+  MessageSquare,
+  ShoppingCart
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const ITServicesPage: React.FC = () => {
   const services = [
@@ -29,14 +43,8 @@ const ITServicesPage: React.FC = () => {
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for your business needs.',
       icon: Cloud,
-<<<<<<< HEAD
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Monitoring'],
       price: 'From $500/month'
-=======
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', '24/7 Monitoring']
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     },
     {
       id: 2,
@@ -47,285 +55,125 @@ const ITServicesPage: React.FC = () => {
       price: 'From $1,000/month'
     },
     {
-<<<<<<< HEAD
       id: 3,
       title: 'Database Management',
-      description: 'Optimize and maintain your database infrastructure.',
+      description: 'Optimize and maintain your database infrastructure for peak performance.',
       icon: Database,
-      features: ['Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'],
       price: 'From $800/month'
     },
     {
       id: 4,
-      title: 'Network Solutions',
-      description: 'Design and implement robust network infrastructure.',
-      icon: Wifi,
-      features: ['Network Design', 'Security Implementation', 'Monitoring', 'Support'],
-      price: 'From $600/month'
+      title: 'Software Development',
+      description: 'Custom software solutions tailored to your specific requirements.',
+      icon: Code,
+      features: ['Web Applications', 'API Development', 'Mobile Apps', 'Quality Assurance'],
+      price: 'From $2,000/project'
     },
     {
       id: 5,
-      title: 'IT Support',
-      description: '24/7 technical support for your business operations.',
-      icon: Users,
-      features: ['Help Desk', 'Remote Support', 'On-site Service', 'Training'],
-      price: 'From $300/month'
+      title: 'IT Consulting',
+      description: 'Strategic IT guidance to help you make informed technology decisions.',
+      icon: Settings,
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Best Practices'],
+      price: 'From $150/hour'
     },
     {
       id: 6,
-      title: 'System Administration',
-      description: 'Comprehensive system management and maintenance.',
-      icon: Settings,
-      features: ['Server Management', 'User Management', 'Security Updates', 'Monitoring'],
-      price: 'From $700/month'
+      title: 'Server Management',
+      description: 'Complete server administration and maintenance services.',
+      icon: Server,
+      features: ['Server Setup', 'Performance Monitoring', 'Security Updates', '24/7 Support'],
+      price: 'From $300/month'
     }
   ];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Fast Implementation',
-      description: 'Quick deployment and setup of IT solutions'
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability'
-    },
-    {
-      icon: Users,
-      title: 'Expert Support',
-      description: '24/7 support from certified professionals'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Scalable Solutions',
-      description: 'Solutions that grow with your business'
-=======
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Code, Shield, Database, Users, ArrowRight, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+  const stats = [
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Zap },
+    { number: '24/7', label: 'Support Available', icon: Shield },
+    { number: '50+', label: 'Enterprise Clients', icon: Users },
+    { number: '5+', label: 'Years Experience', icon: Target }
+  ];
 
-const ItServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const industries = [
+    { name: 'Healthcare', count: 15, icon: Heart },
+    { name: 'Finance', count: 12, icon: DollarSign },
+    { name: 'E-commerce', count: 10, icon: ShoppingCart },
+    { name: 'Education', count: 8, icon: GraduationCap },
+    { name: 'Manufacturing', count: 6, icon: Settings },
+    { name: 'Real Estate', count: 4, icon: Home }
+  ];
 
-  const services = [
+  const testimonials = [
     {
-      id: 1,
-      title: 'Cloud Architecture',
-      description: 'Design and implement scalable cloud solutions for modern businesses.',
-      category: 'cloud',
-      icon: Cloud,
-      features: ['AWS, Azure, GCP expertise', 'Scalable infrastructure', 'Cost optimization', 'Security compliance']
+      name: 'Dr. Sarah Williams',
+      company: 'MediCare Solutions',
+      role: 'IT Director',
+      content: 'Zion Tech Group transformed our IT infrastructure. We now have 99.9% uptime and our team is more productive than ever.',
+      rating: 5
     },
     {
-      id: 2,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      category: 'development',
-      icon: Code,
-      features: ['React, Next.js, Vue.js', 'Mobile-first design', 'Performance optimization', 'SEO friendly']
+      name: 'Michael Chen',
+      company: 'FinanceFlow Inc.',
+      role: 'CTO',
+      content: 'Their cybersecurity solutions are top-notch. We feel confident that our data is protected with their comprehensive security measures.',
+      rating: 5
     },
     {
-      id: 3,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions.',
-      category: 'security',
-      icon: Shield,
-      features: ['Threat assessment', 'Security monitoring', 'Compliance management', 'Incident response']
-    },
-    {
-      id: 4,
-      title: 'Database Design',
-      description: 'Optimize data storage and retrieval with custom database solutions.',
-      category: 'database',
-      icon: Database,
-      features: ['SQL & NoSQL databases', 'Data modeling', 'Performance tuning', 'Backup & recovery']
-    },
-    {
-      id: 5,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development and deployment with automation tools.',
-      category: 'devops',
-      icon: Users,
-      features: ['CI/CD pipelines', 'Container orchestration', 'Infrastructure as code', 'Monitoring & logging']
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+      name: 'Emily Rodriguez',
+      company: 'EduTech Systems',
+      role: 'Technical Lead',
+      content: 'The cloud migration was seamless. Our applications are now more scalable and cost-effective than before.',
+      rating: 5
     }
-  ]
-
-  const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'cloud', name: 'Cloud Services' },
-    { id: 'development', name: 'Web Development' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'database', name: 'Database' },
-    { id: 'devops', name: 'DevOps' }
-  ]
-
-  const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
-  )
+  ];
 
   return (
     <>
-<<<<<<< HEAD
-=======
       <Helmet>
-        <title>IT Services - Zion Tech Group | Technology Solutions</title>
-        <meta name="description" content="Comprehensive IT services including cloud architecture, web development, cybersecurity, database design, and DevOps. Modern technology solutions for your business." />
-        <meta name="keywords" content="IT services, cloud architecture, web development, cybersecurity, database design, DevOps, technology solutions" />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom software development." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, software development, IT consulting" />
       </Helmet>
+      <Navigation />
       
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-      icon: Database,
-      title: 'Database Management',
-      description: 'Optimize and manage your data infrastructure',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions for your business needs',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    },
-    {
-      icon: Settings,
-      title: 'IT Support',
-      description: '24/7 technical support and maintenance services',
-      features: ['Help Desk', 'Remote Support', 'System Updates', 'Troubleshooting']
-    }
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Assessment',
-      description: 'We analyze your current IT infrastructure and identify areas for improvement.'
-    },
-    {
-      step: '02',
-      title: 'Planning',
-      description: 'We develop a comprehensive strategy tailored to your specific requirements.'
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Our expert team implements the solution with minimal disruption to your operations.'
-    },
-    {
-      step: '04',
-      title: 'Support',
-      description: 'We provide ongoing support and maintenance to ensure optimal performance.'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
-        <meta name="description" content="Professional IT services including infrastructure management, cloud solutions, cybersecurity, and custom development. Transform your business with our expert IT support." />
-        <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, database management, custom development, IT support" />
-      </Helmet>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+                IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive IT solutions to keep your business running smoothly and securely.
+                Comprehensive IT solutions designed to optimize your technology infrastructure and drive business growth.
               </p>
-=======
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Modern technology solutions to power your business. From cloud architecture to cybersecurity, we provide comprehensive IT services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Started
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                View Portfolio
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  View Portfolio
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our IT Services?
-              </h2>
-              <p className="text-xl text-gray-300">
-                We provide reliable, secure, and scalable IT solutions tailored to your business needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
                 </div>
-=======
-        {/* Category Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.name}
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               ))}
-=======
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Professional <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">IT Services</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive IT solutions designed to optimize your business operations and drive growth through technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                  Get Started
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Services
-                </button>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
@@ -333,122 +181,98 @@ const ItServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our IT Services
               </h2>
-              <p className="text-xl text-gray-300">
-<<<<<<< HEAD
-                Comprehensive IT solutions designed to meet your business requirements.
-=======
-                Comprehensive technology solutions for modern businesses
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From cloud infrastructure to cybersecurity, we provide comprehensive IT solutions tailored to your needs.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-lg font-bold text-cyan-400">{service.price}</div>
-                  </div>
-                  
-                  <button className="w-full cyber-button group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
+                      <div key={index} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                         {feature}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
-<<<<<<< HEAD
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
+                  </div>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-cyan-400 font-semibold">{service.price}</span>
+                  </div>
+
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     Learn More
-                    <ArrowRight className="w-4 h-4 inline ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
-=======
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        {/* Industries Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Process
+                Industries We Serve
               </h2>
-              <p className="text-xl text-gray-300">
-                How we deliver exceptional IT solutions
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We have experience across multiple industries, delivering tailored IT solutions for each sector.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{step.step}</span>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <industry.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+                  <h3 className="text-sm font-semibold text-white mb-1">{industry.name}</h3>
+                  <p className="text-xs text-gray-400">{industry.count} projects</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what our clients have to say about our IT services.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -456,62 +280,24 @@ const ItServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              Let's discuss how our IT services can help streamline your operations and improve efficiency.
+              Let's discuss how our IT services can help you achieve your technology goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="cyber-button-secondary">
-                Schedule Consultation
-                <Calendar className="w-5 h-5 ml-2" />
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Modernize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our IT services can help you build a robust, scalable technology foundation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Start Your IT Transformation
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Consultation
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-              Let's discuss how our IT services can help streamline your operations and boost productivity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Start Your Project
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                Get a Free Assessment
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Schedule Consultation
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+                View Case Studies
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
       
       <Footer />
@@ -519,18 +305,4 @@ const ItServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ITServicesPage;
-=======
-
-        <Footer />
-      </div>
-    </>
-  )
-}
-
-export default ItServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
