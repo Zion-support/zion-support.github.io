@@ -1,15 +1,10 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-rfp-bid-writer',
@@ -743,8 +738,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		link: '/services/mobile-first-surveys',
 		marketPosition: 'Simple alternative to Typeform for mobile use-cases.',
 		targetAudience: 'Marketing, Research, Founders',
-=======
-
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder',
@@ -808,12 +801,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
 		marketPosition: 'Faster than legacy survey tools; better mobile UX',
 		targetAudience: 'Product, CX, research teams',
->>>>>>> origin/auto/autonomy-17186719616
 		trialDays: 7,
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-<<<<<<< HEAD
 		technology: ['Next.js', 'Postgres', 'Tailwind'],
 		integrations: ['Zapier', 'HubSpot', 'Segment'],
 		useCases: ['Lead capture', 'Product research', 'CSAT/NPS'],
@@ -880,7 +871,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		link: '/services/affiliate-tracking-studio',
 		marketPosition: 'Straightforward alternative to Post Affiliate Pro.',
 		targetAudience: 'SaaS, eCommerce',
-=======
 		technology: ['Twilio', 'Next.js', 'Vercel/Netlify'],
 		integrations: ['HubSpot', 'Sheets', 'Slack'],
 		useCases: ['NPS', 'Feature feedback', 'Onboarding'],
@@ -1624,12 +1614,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		link: 'https://ziontechgroup.com/services/api-breaking-change-watcher',
 		marketPosition: 'Operationalize API hygiene',
 		targetAudience: 'Platform + API teams',
->>>>>>> origin/auto/autonomy-17186719616
 		trialDays: 7,
 		setupTime: '1 hour',
 		category: 'Developer Tools',
 		realService: true,
-<<<<<<< HEAD
 		technology: ['Next.js', 'Postgres'],
 		integrations: ['Stripe', 'Shopify', 'Zapier'],
 		useCases: ['Referrals', 'Payouts', 'Attribution'],
@@ -1680,7 +1668,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 36,
 		rating: 4.6,
 		reviews: 14
-=======
 		technology: ['OpenAPI', 'GraphQL'],
 		integrations: ['GitHub', 'Slack'],
 		useCases: ['Schema governance', 'Release safety'],
@@ -1871,6 +1858,5 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 24,
 		rating: 4.6,
 		reviews: 6
->>>>>>> origin/auto/autonomy-17186719616
 	}
 ];

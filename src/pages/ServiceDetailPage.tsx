@@ -16,7 +16,6 @@ const ServiceDetailPage: React.FC<ServiceDetailPageProps> = () => {
       const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
       setService(foundService);
     }
-=======
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '@/data/comprehensiveServices';
@@ -302,7 +301,6 @@ export default function ServiceDetailPage() {
                     ))}
                   </div>
                 </div>
-=======
   const getDiscountedPrice = (price: number, tier: string) => {
     const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
     if (pricingTier) {
@@ -330,7 +328,6 @@ export default function ServiceDetailPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <SEO 
         title={`${service.title} - Zion Tech Group`}
-=======
   return (
     <>
       <SEO 

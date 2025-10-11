@@ -1,11 +1,9 @@
 export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant';
-
 export interface RouterResult {
   intent: ZionChain;
   confidence: number;
   notes?: string;
 }
-
 export interface ReflexMetrics {
   signupsLastHour?: number;
   disputeFlagsLastHour?: number;
@@ -14,13 +12,11 @@ export interface ReflexMetrics {
   baselineDisputeFlags?: number;
   baselineVelocity?: number;
 }
-
 export interface ReflexTrigger {
   action: 'launchRewardPopup' | 'escalateSupport' | 'notifyAdmin';
   reason: string;
   severity: 'low' | 'medium' | 'high';
 }
-
 export interface LogEntry {
   id: string;
   timestamp: string;
@@ -30,15 +26,12 @@ export interface LogEntry {
   latencyMs?: number;
   payload?: Record<string, unknown>;
 }
-
 import fs from 'fs';
 import path from 'path';
 import { randomUUID } from 'uuid';
-
 const dataDir = path.resolve(process.cwd(), 'data', 'zion-brain');
 const logsPath = path.join(dataDir, 'logs.json');
 const statePath = path.join(dataDir, 'state.json');
-
 function ensureDataFiles(): void {
   try {
     if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -48,7 +41,6 @@ function ensureDataFiles(): void {
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
 }
-
 export function detectIntent(text: string): RouterResult {
   const lower = (text || '').toLowerCase();
   const rules: Array<{ chain: ZionChain; keywords: string[] }> = [
@@ -56,13 +48,9 @@ export function detectIntent(text: string): RouterResult {
     { chain: 'daoExplainer', keywords: ['dao', 'governance token', 'proposal', 'treasury'] },
     { chain: 'tokenomicsSimulator', keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'] },
     { chain: 'governanceSummarizer', keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'] },
-<<<<<<< HEAD
     { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] }];
-=======
     { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] },
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   for (const rule of rules) {
     if (rule.keywords.some((k) => lower.includes(k))) {
       return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' };
@@ -71,19 +59,15 @@ export function detectIntent(text: string): RouterResult {
   // Fallback simple heuristic
   return { intent: 'nationAssistant', confidence: 0.5, notes: 'Default fallback' };
 }
-
 export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<{ routed: boolean; message: string }> {
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` };
 }
-
 export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   const baselineSignups = metrics.baselineSignups ?? 20;
   const baselineDisputes = metrics.baselineDisputeFlags ?? 2;
   const baselineVelocity = metrics.baselineVelocity ?? 100; // tokens/min
-
   const triggers: ReflexTrigger[] = [];
-
   if ((metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
     triggers.push({ action: 'launchRewardPopup', reason: 'Surge in signups detected', severity: 'medium' });
   }
@@ -93,14 +77,11 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   if ((metrics.zionVelocity ?? baselineVelocity) < baselineVelocity * 0.6) {
     triggers.push({ action: 'notifyAdmin', reason: 'Drop in ZION$ velocity', severity: 'high' });
   }
-
   return triggers;
 }
-
 export async function optimizePrompt(original: string, userIntent?: string): Promise<{ optimized: string; suggestions: string[] }> {
   const apiKey = process.env.OPENAI_API_KEY;
   const targetInstruction = 'Review this prompt and rewrite it to be 30% faster and more specific to user intent.';
-
   // Heuristic fast path if no API key
   if (!apiKey) {
     const tightened = heuristicTighten(original, userIntent);
@@ -109,36 +90,28 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
       suggestions: [
         'Removed vague qualifiers and redundant phrases',
         'Added explicit constraints and output format',
-<<<<<<< HEAD
         userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor']};
-=======
         userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor',
       ],
     };
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   try {
     const { OpenAI } = await import('openai');
     const openai = new OpenAI({ apiKey });
     const system = 'You optimize prompts for speed and specificity. Prefer precise constraints, avoid open-ended wording. Reduce token count while improving clarity. Return only the rewritten prompt.';
     const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize:\n${original}`;
-
     const resp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-<<<<<<< HEAD
         { role: 'user', content: user }],
       temperature: 0.2,
       max_tokens: 400});
-=======
         { role: 'user', content: user },
       ],
       temperature: 0.2,
       max_tokens: 400,
     });
->>>>>>> origin/auto/autonomy-17186719616
     const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighten(original, userIntent);
     return { optimized, suggestions: ['Used OpenAI optimization for speed and specificity'] };
   } catch {
@@ -146,7 +119,6 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
     return { optimized: tightened, suggestions: ['OpenAI not available at runtime; applied heuristic tightening'] };
   }
 }
-
 function heuristicTighten(text: string, userIntent?: string): string {
   const trimmed = (text || '').replace(/\s+/g, ' ').trim();
   const withoutFillers = trimmed
@@ -160,7 +132,6 @@ function heuristicTighten(text: string, userIntent?: string): string {
   const withConstraints = `${withoutFillers}\n\nConstraints: respond in under 6 bullets; include only actionable steps; max 120 words; avoid repetition.${userIntent ? ` Intent: ${userIntent}.` : ''}`;
   return withConstraints;
 }
-
 export function readLogs(): { entries: LogEntry[] } {
   ensureDataFiles();
   try {
@@ -170,7 +141,6 @@ export function readLogs(): { entries: LogEntry[] } {
     return { entries: [] };
   }
 }
-
 export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   ensureDataFiles();
   try {
@@ -178,19 +148,15 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
     const enriched: LogEntry = {
       id: randomUUID(),
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
       ...entry};
-=======
       ...entry,
     };
->>>>>>> origin/auto/autonomy-17186719616
     current.entries.push(enriched);
     fs.writeFileSync(logsPath, JSON.stringify(current, null, 2));
   } catch {
     // ignore
   }
 }
-
 export function readState<T = unknown>(): T {
   ensureDataFiles();
   try {
@@ -200,7 +166,6 @@ export function readState<T = unknown>(): T {
     return {} as unknown as T;
   }
 }
-
 export function writeState<T = unknown>(state: T): void {
   ensureDataFiles();
   try {

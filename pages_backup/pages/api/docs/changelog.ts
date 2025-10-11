@@ -1,22 +1,11 @@
-
-
-
-
-
-
-
-
   }
-
   if (req.method === 'POST') {
     try {
-
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-
     } catch (e: any) {
       res
         .status(500)
@@ -24,25 +13,10 @@
     }
     return;
   }
-
-
-
-
-
-
-
 }
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-
-
-
-
-
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -74,7 +48,6 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,19 +69,5 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

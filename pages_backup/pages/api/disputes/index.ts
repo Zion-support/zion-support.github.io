@@ -1,60 +1,27 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-
-
-
-
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
   const user = parseUserFromRequest(req);
-
-
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
     if (user && user.role !== "admin") {
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
-
       );
     }
     return res && res.status(200).json({ disputes: filtered });
-
-
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
-
-
   }
-
-
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -65,7 +32,6 @@ export default async function handler(
       talentUserId,
       reason,
       reasonDetails,
-
     if (
       !projectId |
       !clientUserId |
@@ -74,16 +40,8 @@ export default async function handler(
       !description
     ) {
       return res && res.status(400).json({ error: "Missing required fields" });
-
-
-
-
-
     }
     const id = generateCaseId();
-
-
-
     let filtered = all;
     // Check condition
 if ( {) {
@@ -95,7 +53,6 @@ if ( {) {
     }
     return res.status (200).json ({ disputes: filtered });
   }
-
   // Check condition
 if ( {) {
   $2
@@ -109,7 +66,6 @@ if ( {) {
       talentUserId,
       reason,
       reason_details,
-
       description,
     } = req.body || {}
 ;
@@ -120,12 +76,7 @@ if ( {) {
       return res.status (400).json ({ error: "Missing required fields" });
     }
     const id = generateCaseId ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const dispute: DisputeCase = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
       id,
       projectId: String(projectId),
       entityType,
@@ -166,13 +117,9 @@ if ( {) {
     await createDispute(dispute);
     return res && res.status(201).json({ dispute });
   }
-
-
-
   res && res.setHeader("Allow", "GET,POST");
   return res && res.status(405).end("Method Not Allowed");
 }
-
       project_id: String (project_id),
       entity_type,
       entity_id,
@@ -197,7 +144,6 @@ if ( {) {
 res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -285,10 +231,6 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
-
-
-
-
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -298,11 +240,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
-
 }
   } catch (error) {
     console.error("Error:", error);
@@ -325,16 +265,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface AIEmergingTechService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface AIEmergingTechService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
   {
@@ -100,10 +92,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.8,
     reviews: 1800
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -156,10 +144,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.9,
     reviews: 280
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Cybersecurity Platform
   {
     id: 'ai-cybersecurity-platform',
@@ -212,10 +196,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.7,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Robotics Platform
   {
     id: 'autonomous-robotics-platform',
@@ -268,10 +248,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.8,
     reviews: 180
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain AI Platform
   {
     id: 'blockchain-ai-platform',
@@ -324,10 +300,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.7,
     reviews: 420
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Edge AI Computing Platform
   {
     id: 'edge-ai-computing-platform',
@@ -380,10 +352,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.6,
     reviews: 580
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Drug Discovery Platform
   {
     id: 'ai-drug-discovery-platform',
@@ -436,10 +404,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.9,
     reviews: 120
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Climate Modeling Platform
   {
     id: 'ai-climate-modeling-platform',

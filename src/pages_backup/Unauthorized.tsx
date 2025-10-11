@@ -64,7 +64,6 @@ import Link from 'next / link';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

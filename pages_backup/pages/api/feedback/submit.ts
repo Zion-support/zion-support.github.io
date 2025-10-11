@@ -1,33 +1,15 @@
-
-
-
-
-
-
-
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-
-
-
-
-
-
   if (req && req.method !== "POST") return res && res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {};
   if (!responseId || !rating || !["up", "down"].includes(rating)) {
     return res && res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -36,24 +18,11 @@
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
   };
-
-
-
-
-
-
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
   return res && res.status(200).json({ ok: true });
-
 }
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -140,30 +109,10 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
-
-
-
-
-
-
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -185,21 +134,5 @@ export default function handler(req, res) {
   write_all (rows);
   return res.status (200).json ({ ok: true });
 }
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

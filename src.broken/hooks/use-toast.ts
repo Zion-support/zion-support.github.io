@@ -1,26 +1,19 @@
 import React from 'react';
 import { toast as sonnerToast } from 'sonner';
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
-
 const variantStyles = {
   info: { background: '#1e3a8a', color: '#fff' },
-<<<<<<< HEAD
   error: { background: '#7f1d1d', color: '#fff' }};
-=======
   error: { background: '#7f1d1d', color: '#fff' },
 };
->>>>>>> origin/auto/autonomy-17186719616
-
 // Deduplication settings
 const DEDUPE_DELAY = 3000; // 3 seconds
 let lastKey = '';
 let lastShown = 0;
-
 interface ToastActionProps {
   label: string;
   onClick: () => void;
 }
-
 interface ToastProps {
   title?: string;
   description?: string;
@@ -32,7 +25,6 @@ interface ToastProps {
   priority?: ToastPriority;
   persistent?: boolean;
 }
-
 const shouldShow = (key: string): boolean => {
   const now = Date.now();
   if (key === lastKey && (now - lastShown) < DEDUPE_DELAY) {
@@ -42,7 +34,6 @@ const shouldShow = (key: string): boolean => {
   lastShown = now;
   return true;
 };
-
 /**
  * Enhanced toast adapter that uses the global toast manager
  */
@@ -50,14 +41,10 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
-<<<<<<< HEAD
       type: ToastType.INFO});
-=======
       type: ToastType.INFO,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   const { 
     title, 
     description, 
@@ -68,7 +55,6 @@ const toastAdapter = (props: ToastProps | string) => {
     priority,
     persistent = false 
   } = props;
-
   // Map variant to toast type
   let type: ToastType;
   switch (variant) {
@@ -82,11 +68,9 @@ const toastAdapter = (props: ToastProps | string) => {
       type = ToastType.INFO;
       break;
   }
-
   // Use title as message if no description, otherwise use description
   const message = description || title || '';
   const toastTitle = title && description ? title : undefined;
-
   return globalToastManager.showToast({
     message,
     title: toastTitle,
@@ -95,31 +79,23 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
-<<<<<<< HEAD
     onRetry});
-=======
     onRetry,
   });
->>>>>>> origin/auto/autonomy-17186719616
 };
-
 // Convenience methods that use the global toast manager
 toastAdapter.success = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.success(message, options);
 };
-
 toastAdapter.error = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.error(message, options);
 };
-
 toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.info(message, options);
 };
-
 toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
   return showToast.warning(message, options);
 };
-
 toastAdapter.dismiss = (toastId?: string | number) => {
   if (toastId) {
     globalToastManager.dismissToast(String(toastId));
@@ -127,7 +103,6 @@ toastAdapter.dismiss = (toastId?: string | number) => {
     globalToastManager.dismissAll();
   }
 };
-
 // Enhanced useToast hook with global toast manager integration
 export const useToast = () => ({
   toast: toastAdapter,
@@ -138,13 +113,11 @@ export const useToast = () => ({
       globalToastManager.dismissAll();
     }
   },
-  
   // Additional methods from global toast manager
   showToast: globalToastManager.showToast.bind(globalToastManager),
   getActiveToasts: globalToastManager.getActiveToasts.bind(globalToastManager),
   getQueueLength: globalToastManager.getQueueLength.bind(globalToastManager),
   dismissAll: globalToastManager.dismissAll.bind(globalToastManager),
-  
   // Convenience methods
   success: showToast.success,
   error: showToast.error,
@@ -153,11 +126,7 @@ export const useToast = () => ({
   networkError: showToast.networkError,
   authError: showToast.authError,
   validationError: showToast.validationError,
-<<<<<<< HEAD
   criticalError: showToast.criticalError});
-=======
   criticalError: showToast.criticalError,
 });
->>>>>>> origin/auto/autonomy-17186719616
-
 export const toast = toastAdapter;

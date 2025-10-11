@@ -15,10 +15,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',

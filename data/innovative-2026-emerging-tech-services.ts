@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-
 import { ServiceVariant } from '../types/service-variants';
-
-
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026EmergingTechService {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +11,6 @@ export interface Innovative2026EmergingTechService {
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -39,10 +31,8 @@ export interface Innovative2026EmergingTechService {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-
         'Brain-inspired neural architecture',
   real_implementation: boolean;
   implementation_details: string;
@@ -55,11 +45,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   [;
     // Neuromorphic Computing Platform;
     {
-
-
-
-
-
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
@@ -97,19 +82,16 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       ],
       roi: 'Average customer sees 400% ROI within 8 months through improved AI efficiency and breakthrough capabilities.',
       competitors: [;
-
         'Intel Loihi',
         'IBM TrueNorth',
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS',
       ],
-
       market_size: '$12.8B market',
       growth_rate: '380% annual growth',
       variant: 'quantum - futuristic',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -123,7 +105,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4 && 4.9,
       reviews: 40,
     },
-
         'DNA-based data storage',
     // DNA Computing Platform;
     {
@@ -303,7 +284,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       description:;
         'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next - generation display experiences for entertainment, education, and business.',
       features: [;
-
         '3D holographic projection',
         'Interactive holographic displays',
         'Real - time 3D rendering',
@@ -317,8 +297,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       ],
       popular: false,
       icon: '🌟',
-
-
       color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
@@ -356,20 +334,16 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       ],
       roi: 'Average customer sees 300% ROI within 4 months through improved engagement and new business opportunities.',
       competitors: [;
-
-
         'Looking Glass',
         'Light Field Lab',
         'RealView',
         'Hologram USA',
         'HoloLens',
       ],
-
       market_size: '$23.4B market',
       growth_rate: '280% annual growth',
       variant: 'ai - futuristic',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -383,12 +357,10 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4 && 4.7,
       reviews: 100,
     },
-
         'Multi-modal biometric authentication',
         'AI-powered recognition',
     // Biometric Authentication Platform;
     {
-
       id: 'biometric-authentication-platform-2026'
       name: 'Biometric Authentication Platform 2026'
       tagline:
@@ -504,15 +476,10 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       ],
       roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.',
       competitors: [;
-
-
-
-
       market_size: '$18.7B market',
       growth_rate: '480% annual growth',
       variant: 'quantum - futuristic',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -520,7 +487,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       },
       real_implementation: true,
       implementation_details:;
-
       id: 'neuromorphic-computing-platform-2026'
       name: 'Neuromorphic Computing Platform 2026'
       tagline:
@@ -1015,12 +981,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       rating: 4 && 4.9,
       reviews: 30,
     },
-
   ];
-
-
 export const getPopularEmergingTechServices = () => {;
-
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
@@ -1109,9 +1071,7 @@ export const getPopularEmergingTechServices = () => {
       reviews: 30,
     },
   ];
-
 export const getPopularEmergingTechServices = () => {;
-
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 // DNA Computing Platform realImplementation: true;
@@ -1125,11 +1085,9 @@ export const getPopularEmergingTechServices = () =>: any {
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launch_date: '2026 - 01 - 20';
 customers: 45;
-
 rating: 4 && 4.9;
 reviews: 25 
 };
-
 // Photonic Computing Platform realImplementation: true;
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launchDate: '2026-02-01';
@@ -1139,11 +1097,9 @@ reviews: 25;
 implementation_details: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 launch_date: '2026 - 02 - 01';
 customers: 120;
-
 rating: 4 && 4.8;
 reviews: 60 
 };
-
 // Holographic Display Platform realImplementation: true;
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launchDate: '2026-02-15';
@@ -1153,11 +1109,9 @@ reviews: 60;
 implementation_details: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 launch_date: '2026 - 02 - 15';
 customers: 200;
-
 rating: 4 && 4.7;
 reviews: 100 
 };
-
 // Biometric Authentication Platform realImplementation: true;
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launchDate: '2026-03-01';
@@ -1167,11 +1121,9 @@ reviews: 100;
 implementation_details: 'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.';
 launch_date: '2026 - 03 - 01';
 customers: 350;
-
 rating: 4 && 4.8;
 reviews: 175 
 };
-
 // Quantum Internet Platform realImplementation: true;
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launchDate: '2026-01-25';
@@ -1181,40 +1133,23 @@ reviews: 175;
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 launch_date: '2026 - 01 - 25';
 customers: 60;
-
 rating: 4 && 4.9;
 reviews: 30 
-
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
-
-
-
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
-
-
-
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-
-
-
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
-
-
     return price >= minPrice && price <= maxPrice;
   });};
-
   });}
-
-
-
 export interface Innovative2026EmergingTechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1264,7 +1199,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '380% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
   textColor: string;
   link: string;
   marketPosition: string;
@@ -1294,7 +1228,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   rating: number;
   reviews: number;
 }
-
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [
   // Neuromorphic Computing Platform
   {
@@ -1338,13 +1271,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
-<<<<<<< HEAD
     launchDate: '2026-01-10', customers: 80,
     rating: 4.9,
     reviews: 40
@@ -1352,24 +1283,20 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   // DNA Computing Platform
   {
     id: 'dna-computing-platform-2026', name: 'DNA Computing Platform 2026',
-=======
     launchDate: '2026-01-10',
     customers: 80,
     rating: 4.9,
     reviews: 40
   },
-
   // DNA Computing Platform
   {
     id: 'dna-computing-platform-2026',
     name: 'DNA Computing Platform 2026',
->>>>>>> origin/auto/autonomy-17186719616
     tagline: 'Molecular computing for complex problem solving and data storage',
     price: '$2,999',
     period: '/month',
     description: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',
     features: [
-<<<<<<< HEAD
       'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development';
       'Laboratory integrationProfessional bioengineering support'
     ];
@@ -1386,7 +1313,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '520% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
       'DNA-based data storage',
       'Molecular problem solving',
       'Ultra-dense information encoding',
@@ -1420,13 +1346,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
-<<<<<<< HEAD
     launchDate: '2026-01-20', customers: 45,
     rating: 4.9,
     reviews: 25
@@ -1434,24 +1358,20 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   // Photonic Computing Platform
   {
     id: 'photonic-computing-platform-2026', name: 'Photonic Computing Platform 2026',
-=======
     launchDate: '2026-01-20',
     customers: 45,
     rating: 4.9,
     reviews: 25
   },
-
   // Photonic Computing Platform
   {
     id: 'photonic-computing-platform-2026',
     name: 'Photonic Computing Platform 2026',
->>>>>>> origin/auto/autonomy-17186719616
     tagline: 'Light-speed computing with photonic processors and optical interconnects',
     price: '$1,999',
     period: '/month',
     description: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.',
     features: [
-<<<<<<< HEAD
       'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems';
       'Custom photonic designProfessional engineering support'
     ];
@@ -1468,7 +1388,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '420% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
       'Photonic processors',
       'Optical interconnects',
       'Light-based computing',
@@ -1502,13 +1421,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-<<<<<<< HEAD
     launchDate: '2026-02-01', customers: 120,
     rating: 4.8,
     reviews: 60
@@ -1536,13 +1453,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '280% annual growth', variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
     launchDate: '2026-02-01',
     customers: 120,
     rating: 4.8,
     reviews: 60
   },
-
   // Holographic Display Platform
   {
     id: 'holographic-display-platform-2026',
@@ -1585,13 +1500,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
-<<<<<<< HEAD
     launchDate: '2026-02-15', customers: 200,
     rating: 4.7,
     reviews: 100
@@ -1619,13 +1532,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '320% annual growth', variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
     launchDate: '2026-02-15',
     customers: 200,
     rating: 4.7,
     reviews: 100
   },
-
   // Biometric Authentication Platform
   {
     id: 'biometric-authentication-platform-2026',
@@ -1668,13 +1579,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',
-<<<<<<< HEAD
     launchDate: '2026-03-01', customers: 350,
     rating: 4.8,
     reviews: 175
@@ -1682,24 +1591,20 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   // Quantum Internet Platform
   {
     id: 'quantum-internet-platform-2026', name: 'Quantum Internet Platform 2026',
-=======
     launchDate: '2026-03-01',
     customers: 350,
     rating: 4.8,
     reviews: 175
   },
-
   // Quantum Internet Platform
   {
     id: 'quantum-internet-platform-2026',
     name: 'Quantum Internet Platform 2026',
->>>>>>> origin/auto/autonomy-17186719616
     tagline: 'Ultra-secure quantum communication network for the future',
     price: '$5,999',
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
     features: [
-<<<<<<< HEAD
       'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services';
       '24/7 network operationsGovernment compliance features'
     ];
@@ -1716,7 +1621,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     growthRate: '480% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
       'Quantum key distribution (QKD)',
       'Quantum secure communication',
       'Quantum network infrastructure',
@@ -1750,23 +1654,18 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> origin/auto/autonomy-17186719616
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-<<<<<<< HEAD
     launchDate: '2026-01-25', customers: 60,
-=======
     launchDate: '2026-01-25',
     customers: 60,
->>>>>>> origin/auto/autonomy-17186719616
     rating: 4.9,
     reviews: 30
   }
 ];
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {
   return innovative2026EmergingTechServices.filter(service => service.popular)
 };
@@ -1775,19 +1674,11 @@ export const getEmergingTechServicesByCategory = (category: string) => {
     service.category.toLowerCase().includes(category.toLowerCase())
   )
 };
-
-
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-
-
-
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })
-
-
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {;
   id: string,;
@@ -1828,7 +1719,6 @@ export interface Innovative2026EmergingTechService {;
   customers: number,;
   rating: number,;
   reviews: number;
-
 }
 ;
 export const getEmergingTechServicesByPriceRange = (
@@ -1844,35 +1734,18 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
-
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
 };
-
-=======
-
 export const getPopularEmergingTechServices = () => {
   return innovative2026EmergingTechServices.filter(service => service.popular);
 };
-
 export const getEmergingTechServicesByCategory = (category: string) => {
   return innovative2026EmergingTechServices.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   );
 };
-
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> origin/auto/autonomy-17186719616

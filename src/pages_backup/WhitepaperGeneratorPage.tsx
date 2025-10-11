@@ -611,7 +611,6 @@ import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -963,7 +962,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     try {
@@ -1664,7 +1662,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

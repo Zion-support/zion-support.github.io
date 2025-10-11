@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
-
 export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
 export interface UIKit {
-
 export interface UIKit {;
   components: Record<string, any>;
   tokens: TokenSet;
@@ -36,12 +32,10 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       lg: 24
       xl: 32
     }
-    
     return this.props.children;
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-
     };
   }
   if (kind === 'chakra') {
@@ -60,7 +54,6 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     'components/Button && Button.tsx':
       "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
   };
-
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   const base = process && process.env.LOVABLE_CMS_URL;
   if (!base) return null;
@@ -70,7 +63,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
-
   }
 // Design mapping utilities
 export interface DesignElement {
@@ -82,8 +74,6 @@ export interface DesignElement {
   children?: DesignElement[];
   parent?: string;
 }
-
-
 export interface DesignSystem {
   id: string;
   name: string;
@@ -93,7 +83,6 @@ export interface DesignSystem {
   assets: DesignElement[];
   lastUpdated: Date;
 }
-
 export interface FigmaNode {
   id: string;
   name: string;
@@ -133,36 +122,21 @@ export interface FigmaNode {
     textAlignVertical?: string;
   };
 }
-
-
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
   const tokens = await buildTokenSet(fileId);
     };
   };
 }
-
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
   const tokens = await buildTokenSet(fileId);
-
   return {
-
-
-
     id,
     type,
     name,
     properties,
     children: []
-
-
-
-
-
   };
 }
-
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
@@ -170,19 +144,14 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     }
     tokens
   }
-
   };
-
 }
-
-=======
 export type DesignMapSection = {
   id: string
   title: string
   description?: string
   items: { id: string; title: string; description?: string }[]
 }
-
 export type DesignMap = {
   route: string
   products: {
@@ -195,7 +164,6 @@ export type DesignMap = {
     mobile: DesignMapSection[]
   }
 }
-
 export function getZionDesignMap(): DesignMap {
   return {
     route: '/design-map',
@@ -446,20 +414,17 @@ export function getZionDesignMap(): DesignMap {
     },
   }
 }
-
 export type TokenSet = {
   colors: Record<string, string>
   typography: {
     fontSizes: Record<string, string>
   }
 }
-
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction
   const tailwindConfig = require('../tailwind.config.js')
   const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
   const colors: Record<string, string> = {}
-
   function flattenColors(prefix: string, obj: any) {
     Object.entries(obj || {}).forEach(([key, value]) => {
       const newKey = prefix ? `${prefix}.${key}` : key
@@ -470,18 +435,13 @@ export async function buildTokenSet(): Promise<TokenSet> {
       }
     })
   }
-
   flattenColors('', extendedColors)
-
   const typography = {
     fontSizes: tailwindConfig?.theme?.extend?.fontSize || {},
   }
-
   return { colors, typography }
 }
-
 export type UIKitKind = 'tailwind' | 'chakra' | 'react'
-
 export function buildUIKit(kind: UIKitKind): Record<string, string> {
   if (kind === 'tailwind') {
     return {
@@ -502,7 +462,6 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
     'components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
   }
 }
-
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   const base = process.env.LOVABLE_CMS_URL
   if (!base) return null
@@ -514,4 +473,3 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -14,49 +5,25 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-
-
-
     }
-
-
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
-
     }
-
     const leaders = Array && Array.from(map && map.entries())
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
-
-
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-
-
   }
-
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -90,15 +57,10 @@ export default async function handler(req, res) {
   }
 }
 ;
-
-
-
-
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-
     const { data, error } = await supabase
       .from("referral_events")
       .select("partner_code, event, created_at")
@@ -115,7 +77,6 @@ export default async function handler(req, res) {
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10);
     return res.status(200).json({ leaders });
-
   } catch (e: any) {
     const { data, error } = await supabase;
       .from('referral_events');
@@ -143,16 +104,6 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);

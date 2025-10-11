@@ -1,18 +1,10 @@
 import { UnifiedService } from '../types/unified-service-types';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -25,11 +17,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks',
-<<<<<<< HEAD
       enterprise: 'Custom pricing available'
-=======
       enterprise: 'Custom enterprise pricing available'
->>>>>>> origin/auto/autonomy-17186719616
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
@@ -44,7 +33,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Integration capabilities',
       'Custom workflows'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '⚠️',
     color: 'from-orange-600 via-red-600 to-pink-600',
@@ -64,7 +52,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.8,
     reviews: 67,
     contactInfo: contact
-=======
     benefits: [
       'Reduce risk exposure by 60%',
       'Improve compliance by 85%',
@@ -111,16 +98,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: 'autonomous-business-process-optimization',
     name: 'Autonomous Business Process Optimization',
     tagline: 'AI-powered business process automation and optimization',
-<<<<<<< HEAD
     price: '$699',
     period: '/month',
-=======
     price: {
       monthly: 699,
       yearly: 6990,
@@ -129,7 +113,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       setupTime: '2-3 weeks',
       enterprise: 'Custom enterprise pricing available'
     },
->>>>>>> origin/auto/autonomy-17186719616
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [
       'Process analysis AI',
@@ -143,7 +126,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Custom workflows',
       'Reporting dashboard'
     ],
-<<<<<<< HEAD
     popular: true,
     icon: '⚙️',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -164,7 +146,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.7,
     reviews: 52,
     contactInfo: contact
-=======
     benefits: [
       'Improve process efficiency by 70%',
       'Reduce operational costs by 45%',
@@ -211,7 +192,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: 'ai-enterprise-knowledge-management',

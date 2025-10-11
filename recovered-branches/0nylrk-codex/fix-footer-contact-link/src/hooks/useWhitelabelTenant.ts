@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-
 export interface WhitelabelTenant {
   id: string;
   brand_name: string;
@@ -21,17 +20,14 @@ export interface WhitelabelTenant {
   dns_verified: boolean;
   email_template_override: Record<string, any> | null;
 }
-
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const loadTenant = async () => {
       setIsLoading(true);
       setError(null);
-
       // If running in the browser, bail out early when offline
       if (typeof navigator !== 'undefined' && !navigator.onLine) {
         setError('No internet connection');
@@ -39,43 +35,34 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         setIsLoading(false);
         return;
       }
-
       try {
         // Get the current hostname, fallback to localhost if not available
         const hostname = window.location.hostname || 'localhost';
         const functionName = 'tenant-detector';
-        
         // Build the query parameters
         const params = externalSubdomain 
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
-
         const { data, error: functionError } = await supabase.functions.invoke(
           `${functionName}${params}`,
           {
             headers: {
-<<<<<<< HEAD
               'Content-Type': 'application/json'}}
-=======
               'Content-Type': 'application/json',
             },
           }
->>>>>>> origin/auto/autonomy-17186719616
         );
-
         if (functionError) {
           console.error('Edge Function error:', functionError);
           setError('Failed to load tenant configuration. Please try again later.');
           setTenant(null);
           return;
         }
-
         if (!data) {
           console.warn('No tenant data received');
           setTenant(null);
           return;
         }
-
         if (data.tenant) {
           setTenant(data.tenant);
         } else {
@@ -97,18 +84,14 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         setIsLoading(false);
       }
     };
-
     loadTenant();
   }, [externalSubdomain]);
-
   return { tenant, isLoading, error };
 }
-
 // Hook to check if current user is a tenant admin
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const checkAdminStatus = async () => {
       if (!tenantId) {
@@ -116,14 +99,12 @@ export function useTenantAdminStatus(tenantId?: string) {
         setIsLoading(false);
         return;
       }
-
       try {
         const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
         if (sessionError || !sessionData.session) {
           setIsAdmin(false);
           return;
         }
-
         const userId = sessionData.session.user.id;
         const { data, error } = await supabase
           .from('tenant_administrators')
@@ -131,7 +112,6 @@ export function useTenantAdminStatus(tenantId?: string) {
           .eq('tenant_id', tenantId)
           .eq('user_id', userId)
           .single();
-
         setIsAdmin(!!data && !error);
       } catch (err) {
         console.error('Error checking tenant admin status:', err);
@@ -140,9 +120,7 @@ export function useTenantAdminStatus(tenantId?: string) {
         setIsLoading(false);
       }
     };
-
     checkAdminStatus();
   }, [tenantId]);
-
   return { isAdmin, isLoading };
 }

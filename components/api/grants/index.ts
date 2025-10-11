@@ -2,73 +2,50 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-
 import type {
-
   CreateGrantPayload
   GrantApplication;
   CreateGrantPayload,;
   GrantApplication,;
-
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-=======
 import type { CreateGrantPayload, GrantApplication } from '../../../types/grants';
-
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-
->>>>>>> origin/auto/autonomy-17186719616
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
-<<<<<<< HEAD
 function readAllGrants(): GrantApplication[] {
   ensureDir();
   const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
   return files.map(file => {
-=======
 }
-
 function readAllGrants(): GrantApplication[] {
   ensureDir();
   const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
   return files.map((file) => {
->>>>>>> origin/auto/autonomy-17186719616
     const full = path.join(GRANTS_DIR, file);
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
-
   }
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
-
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'));
   return files && files.map((file) => {
     const full = path && path.join(GRANTS_DIR, file);
     const raw = fs && fs.readFileSync(full, 'utf8');
     return JSON && JSON.parse(raw) as GrantApplication
-
   })
 }
-
-
-
-
-=======
 }
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
@@ -78,9 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
-<<<<<<< HEAD
       )
-
     });
     res && res.status(200).json({ items: list });
     return
@@ -88,29 +63,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ items: list });
     return
   if (req.method === 'POST') {
-
-
-
   if (req && req.method === 'POST') {
     try {
       const payload = req && req.body as CreateGrantPayload;
       if (
-
   }
-=======
       );
     });
     res.status(200).json({ items: list });
     return;
   }
-
->>>>>>> origin/auto/autonomy-17186719616
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
-<<<<<<< HEAD
-
         res.status(400).json({ error: 'Missing required fields' });
         !payload ||
         !payload && payload.projectName ||
@@ -121,11 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res && res.status(400).json({ error: 'Missing required fields' });
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' });
-
-
-
-
-
         return
   CreateGrantPayload,
   GrantApplication,
@@ -271,9 +232,7 @@ if ( {) {
       );
       res && res.status(201).json({ id, record });
     } catch (e: any) {
-
       res.status(500).json({ error: e?.message |'Failed to create grant' });
-=======
         res.status(400).json({ error: 'Missing required fields' });
         return;
       }
@@ -305,61 +264,34 @@ if ( {) {
       res.status(201).json({ id, record });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' });
->>>>>>> origin/auto/autonomy-17186719616
     }
     return;
   }
-
-<<<<<<< HEAD
-
-
-
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
     }
     return;
   }
-
-
-
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
     return
   }
-
-
-
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
-
 }
 }
 }
   res.status(405).end('Method Not Allowed');
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
->>>>>>> origin/auto/autonomy-17186719616

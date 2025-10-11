@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2029MicroSaasService {
-=======
 export interface InnovativeMicroSaas2029 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -31,18 +27,15 @@ export interface InnovativeMicroSaas2029 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-=======
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -311,10 +304,8 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     customers: 23,
     rating: 4.7,
     reviews: 56
-=======
   };
 }
-
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
   {
     id: "2029-innovative-micro-saas",
@@ -337,6 +328,5 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

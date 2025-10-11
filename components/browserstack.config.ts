@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
-
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -17,7 +14,6 @@
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-
 import { define_config, devices } from @playwright / test';
 default define_config ({
   test_dir: tests / e2e',  use: {
@@ -37,7 +33,6 @@ default define_config ({
     {
       name: Mobile Chrome',      use: {
         browser_name: chromium',        ...devices['Pixel 5']}
-
     }
     {
       name: Mobile Safari',      use: {
@@ -46,11 +41,8 @@ default define_config ({
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-
 });
 });
-
-=======
 import { defineConfig, devices } from @playwright/test';;
 default defineConfig({
   testDir: tests/e2e',  use: {
@@ -80,4 +72,3 @@ default defineConfig({
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }],  ]
 });
->>>>>>> origin/auto/autonomy-17186719616

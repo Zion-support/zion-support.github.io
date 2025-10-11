@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface AdvancedITInfrastructureService {
   id: string;
   name: string;
@@ -43,7 +39,6 @@ export interface AdvancedITInfrastructureService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
   // Multi-Cloud Orchestration Platform
   {
@@ -64,8 +59,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Integration with existing DevOps tools',
       'Custom automation and orchestration',
       '24/7 cloud operations support'
-=======
-
 export const advancedITInfrastructureServices2025: AdvancedITInfrastructureService[] = [
   // Quantum-Enhanced Cloud Infrastructure
   {
@@ -86,7 +79,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Performance monitoring',
       'Cost optimization',
       'Global edge computing network'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '☁️',
@@ -99,7 +91,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     setupTime: '1-2 weeks',
     category: 'Quantum Cloud Computing',
     realService: true,
-<<<<<<< HEAD
     technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform'],
     integrations: ['AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins'],
     useCases: ['Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance'],
@@ -108,7 +99,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$25B multi-cloud management market',
     growthRate: '35% annual growth',
     variant: 'multi-cloud-enterprise',
-=======
     technology: ['Quantum computing, Kubernetes, Docker, React, Node.js, PostgreSQL, Redis'],
     integrations: ['AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum'],
     useCases: ['AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography'],
@@ -117,7 +107,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$45.2B cloud computing market',
     growthRate: '50% annual growth',
     variant: 'quantum-cloud-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -131,10 +120,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.9,
     reviews: 15
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
@@ -185,7 +170,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     launchDate: '2024-10-15',
     customers: 45,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 45
   },
   // Zero-Trust Network Security Platform
@@ -211,10 +195,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     popular: false,
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
-=======
     reviews: 28
   },
-
   // Zero-Trust Security Architecture
   {
     id: 'zero-trust-security-architecture',
@@ -238,7 +220,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-orange-600',
->>>>>>> origin/auto/autonomy-17186719616
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-architecture',
     marketPosition: 'Competes with Palo Alto ($50/month), Cisco ($100/month), Fortinet ($200/month). Our advantage: AI-powered continuous verification reduces security incidents by 90%.',
@@ -247,7 +228,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     setupTime: '2-4 weeks',
     category: 'Cybersecurity',
     realService: true,
-<<<<<<< HEAD
     technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
     integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'],
     useCases: ['Network security, Access control, Compliance, Threat protection, Audit reporting'],
@@ -255,7 +235,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     competitors: ['Traditional network security vendors, Zero-trust startups'],
     marketSize: '$40B network security market',
     growthRate: '30% annual growth in zero-trust segment',
-=======
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'],
     useCases: ['Identity management, Network security, Access control, Threat detection, Compliance'],
@@ -300,7 +279,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],
     marketSize: '$22.5B cybersecurity market',
     growthRate: '40% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'zero-trust-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -309,7 +287,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Zero-trust network security platform implementing comprehensive security architecture with continuous authentication.',
     launchDate: '2025-02-01',
     customers: 34,
@@ -680,20 +657,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 5.0,
     reviews: 12
   },
-=======
     implementationDetails: 'Comprehensive zero-trust security architecture with continuous verification and automated response capabilities.',
     launchDate: '2024-09-20',
     customers: 78,
     rating: 4.9,
     reviews: 56
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Data Center Platform
   {
     id: 'autonomous-data-center-platform',
     name: 'Autonomous Data Center Platform',
-<<<<<<< HEAD
     tagline: 'Self-managing data center infrastructure',
     price: '$12,500',
     period: '/month',
@@ -713,7 +686,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     popular: true,
     icon: '🏢',
     color: 'from-blue-500 to-cyan-600',
-=======
     tagline: 'Self-managing data center infrastructure with AI optimization',
     price: '$1,299',
     period: '/month',
@@ -733,7 +705,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     popular: true,
     icon: '🏢',
     color: 'from-blue-600 to-cyan-600',
->>>>>>> origin/auto/autonomy-17186719616
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-data-center-platform',
     marketPosition: 'Competes with Equinix ($500/month), Digital Realty ($1000/month), CyrusOne ($800/month). Our advantage: AI automation reduces operational costs by 60% and improves reliability.',
@@ -742,7 +713,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     setupTime: '4-6 weeks',
     category: 'Data Center Infrastructure',
     realService: true,
-<<<<<<< HEAD
     technology: ['Artificial Intelligence', 'Machine Learning', 'Data Center Management', 'Infrastructure Automation', 'Python', 'TensorFlow', 'React'],
     integrations: ['Data center management systems', 'Monitoring tools', 'Power management systems', 'Cooling systems', 'Security systems'],
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Maintenance automation'],
@@ -751,7 +721,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$35B+ potential market',
     growthRate: '500%+ annual growth',
     variant: 'autonomous-infrastructure',
-=======
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     integrations: ['VMware, Hyper-V, OpenStack, AWS, Azure, GCP'],
     useCases: ['Infrastructure management, Capacity planning, Performance optimization, Cost optimization, Disaster recovery'],
@@ -797,7 +766,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$35.8B data center market',
     growthRate: '35% annual growth',
     variant: 'data-center-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -805,7 +773,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.',
     launchDate: '2025-04-05',
     customers: 8,
@@ -831,14 +798,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Custom quantum network deployment',
       'Quantum network performance analytics',
       '24/7 quantum network operations'
-=======
     implementationDetails: 'AI-powered autonomous data center platform with intelligent infrastructure management and optimization capabilities.',
     launchDate: '2024-08-15',
     customers: 34,
     rating: 4.8,
     reviews: 22
   },
-
   // Quantum Networking Platform
   {
     id: 'quantum-networking-platform',
@@ -858,7 +823,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Global network presence',
       'Real-time monitoring',
       'Advanced reporting'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🌐',
@@ -871,7 +835,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     setupTime: '3-5 weeks',
     category: 'Quantum Networking',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum Computing', 'Quantum Key Distribution', 'Quantum Cryptography', 'Network Security', 'Python', 'Quantum SDKs'],
     integrations: ['Existing network infrastructure', 'Security systems', 'Monitoring tools', 'Cloud platforms', 'API services'],
     useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Defense applications', 'Research networks'],
@@ -880,7 +843,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$45B+ potential market',
     growthRate: '700%+ annual growth',
     variant: 'quantum-networking',
-=======
     technology: ['Quantum computing, Python, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers'],
     useCases: ['Secure communications, Network optimization, Quantum encryption, Government networks, Financial networks'],
@@ -889,7 +851,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     marketSize: '$28.5B networking market',
     growthRate: '55% annual growth',
     variant: 'quantum-networking-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -897,25 +858,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',
-=======
     implementationDetails: 'Quantum networking platform with unbreakable encryption and intelligent network optimization capabilities.',
->>>>>>> origin/auto/autonomy-17186719616
     launchDate: '2024-07-20',
     customers: 19,
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // New Advanced IT Infrastructure Services for 2025
   {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
-<<<<<<< HEAD
     tagline: 'Next-generation quantum cloud computing',
     price: '$18,500',
     period: '/month',
@@ -930,7 +883,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Custom quantum application development',
       'Integration with existing cloud platforms',
       'Advanced quantum analytics',
-=======
     tagline: 'Next-generation quantum-enhanced cloud computing',
     price: '$12,500',
     period: '/month',
@@ -945,12 +897,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Custom quantum application development',
       'Integration with existing cloud platforms',
       'Advanced quantum cloud analytics',
->>>>>>> origin/auto/autonomy-17186719616
       'Comprehensive quantum cloud management'
     ],
     popular: true,
     icon: '☁️',
-<<<<<<< HEAD
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
@@ -967,7 +917,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     competitors: ['None - First to market'],
     marketSize: '$50B+ potential market',
     growthRate: '800%+ annual growth',
-=======
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
@@ -984,7 +933,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     competitors: ['IBM Quantum Cloud', 'Amazon Braket', 'Azure Quantum', 'Google Quantum Cloud'],
     marketSize: '$45B+ potential market',
     growthRate: '600%+ annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-cloud',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -993,7 +941,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.',
     launchDate: '2025-01-30',
     customers: 5,
@@ -1003,27 +950,21 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform-v2',
-=======
     implementationDetails: 'Advanced quantum cloud infrastructure platform with quantum computing integration, enhanced security, and comprehensive cloud management capabilities.',
     launchDate: '2025-02-01',
     customers: 6,
     rating: 5.0,
     reviews: 4
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
->>>>>>> origin/auto/autonomy-17186719616
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management and optimization',
     price: '$6,800',
     period: '/month',
-<<<<<<< HEAD
     description: 'Advanced edge computing orchestration platform that provides intelligent resource management, real-time optimization, and seamless edge-to-cloud integration for modern distributed computing environments.',
-=======
     description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and provides seamless edge-to-cloud integration for modern applications.',
->>>>>>> origin/auto/autonomy-17186719616
     features: [
       'Intelligent edge resource orchestration',
       'Real-time performance optimization',
@@ -1041,15 +982,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
-<<<<<<< HEAD
     marketPosition: 'Leading edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud integration capabilities.',
     targetAudience: ['IoT companies', 'Telecommunications', 'Manufacturing companies', 'Smart city initiatives', 'Edge computing providers'],
     trialDays: 45,
-=======
     marketPosition: 'Leading edge computing orchestration platform with intelligent resource management and seamless cloud integration capabilities.',
     targetAudience: ['IoT companies', 'Telecommunications', 'Manufacturing companies', 'Smart city initiatives', 'Edge computing providers'],
     trialDays: 30,
->>>>>>> origin/auto/autonomy-17186719616
     setupTime: '6-8 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
@@ -1068,32 +1006,25 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.',
     launchDate: '2025-02-20',
     customers: 28,
     rating: 4.9,
     reviews: 19
   },
-=======
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management, seamless cloud integration, and advanced analytics.',
     launchDate: '2025-02-15',
     customers: 23,
     rating: 4.8,
     reviews: 16
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // Zero Trust Security Architecture Platform
   {
     id: 'zero-trust-security-architecture-platform',
     name: 'Zero Trust Security Architecture Platform',
     tagline: 'Advanced zero trust security implementation',
-<<<<<<< HEAD
     price: '$9,500',
-=======
     price: '$8,500',
->>>>>>> origin/auto/autonomy-17186719616
     period: '/month',
     description: 'Comprehensive zero trust security architecture platform that implements advanced security principles, continuous verification, and least-privilege access controls for modern enterprise environments.',
     features: [
@@ -1113,11 +1044,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     color: 'from-red-500 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-architecture-platform',
-<<<<<<< HEAD
     marketPosition: 'Advanced zero trust security architecture platform with comprehensive security implementation, continuous verification, and enterprise-grade protection capabilities.',
-=======
     marketPosition: 'Advanced zero trust security architecture platform with comprehensive security implementation and continuous verification capabilities.',
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: ['Large enterprises', 'Government agencies', 'Financial institutions', 'Healthcare organizations', 'Technology companies'],
     trialDays: 45,
     setupTime: '8-10 weeks',
@@ -1129,11 +1057,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores.',
     competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'CyberArk'],
     marketSize: '$12.8B zero trust security market',
-<<<<<<< HEAD
     growthRate: '38% annual growth',
-=======
     growthRate: '40% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'zero-trust',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -1142,32 +1067,25 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection capabilities.',
     launchDate: '2025-03-10',
     customers: 18,
     rating: 5.0,
     reviews: 12
   },
-=======
     implementationDetails: 'Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection.',
     launchDate: '2025-03-01',
     customers: 18,
     rating: 4.9,
     reviews: 12
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Data Center Platform
   {
     id: 'autonomous-data-center-platform',
     name: 'Autonomous Data Center Platform',
     tagline: 'Self-managing data center infrastructure',
-<<<<<<< HEAD
     price: '$12,500',
-=======
     price: '$15,500',
->>>>>>> origin/auto/autonomy-17186719616
     period: '/month',
     description: 'Revolutionary autonomous data center platform that uses AI and machine learning to automatically manage, optimize, and maintain data center infrastructure without human intervention.',
     features: [
@@ -1184,36 +1102,30 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     ],
     popular: true,
     icon: '🏢',
-<<<<<<< HEAD
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-data-center-platform',
     marketPosition: 'First-to-market autonomous data center platform with AI-powered management, optimization, and comprehensive infrastructure automation capabilities.',
-=======
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/autonomous-data-center-platform',
     marketPosition: 'First-to-market autonomous data center platform with AI-powered management and comprehensive infrastructure optimization capabilities.',
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: ['Data center operators', 'Cloud providers', 'Large enterprises', 'Technology companies', 'Infrastructure providers'],
     trialDays: 60,
     setupTime: '10-12 weeks',
     category: 'Autonomous Infrastructure',
     realService: true,
     technology: ['Artificial Intelligence', 'Machine Learning', 'Data Center Management', 'Infrastructure Automation', 'Python', 'TensorFlow', 'React'],
-<<<<<<< HEAD
     integrations: ['Data center management systems', 'Monitoring tools', 'Power management systems', 'Cooling systems', 'Security systems'],
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Maintenance automation'],
     roi: 'Data center operators report 600% ROI with 70% reduction in operational costs and 80% improvement in energy efficiency.',
     competitors: ['None - First to market'],
     marketSize: '$35B+ potential market',
-=======
     integrations: ['Data center management systems', 'Monitoring tools', 'Power management systems', 'Cooling systems', 'Network equipment'],
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Predictive maintenance'],
     roi: 'Data center operators report 700% ROI with 60% reduction in operational costs and 80% improvement in energy efficiency.',
     competitors: ['None - First to market'],
     marketSize: '$25B+ potential market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '500%+ annual growth',
     variant: 'autonomous-infrastructure',
     contactInfo: {
@@ -1223,32 +1135,25 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.',
     launchDate: '2025-04-05',
     customers: 8,
     rating: 5.0,
     reviews: 5
   },
-=======
     implementationDetails: 'Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure integration.',
     launchDate: '2025-03-15',
     customers: 8,
     rating: 5.0,
     reviews: 6
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Networking Infrastructure
   {
     id: 'quantum-networking-infrastructure',
     name: 'Quantum Networking Infrastructure',
     tagline: 'Next-generation quantum communication networks',
-<<<<<<< HEAD
     price: '$22,500',
-=======
     price: '$18,500',
->>>>>>> origin/auto/autonomy-17186719616
     period: '/month',
     description: 'Revolutionary quantum networking infrastructure that provides unbreakable communication channels, quantum key distribution, and future-proof network infrastructure for secure communications.',
     features: [
@@ -1270,13 +1175,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     link: 'https://ziontechgroup.com/quantum-networking-infrastructure',
     marketPosition: 'First-to-market quantum networking infrastructure with quantum key distribution and unbreakable communication capabilities.',
     targetAudience: ['Government agencies', 'Defense contractors', 'Financial institutions', 'Telecommunications', 'Research institutions'],
-<<<<<<< HEAD
     trialDays: 90,
     setupTime: '16-20 weeks',
-=======
     trialDays: 60,
     setupTime: '12-16 weeks',
->>>>>>> origin/auto/autonomy-17186719616
     category: 'Quantum Networking',
     realService: true,
     technology: ['Quantum Computing', 'Quantum Key Distribution', 'Quantum Cryptography', 'Network Security', 'Python', 'Quantum SDKs'],
@@ -1295,25 +1197,20 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',
-<<<<<<< HEAD
     launchDate: '2025-05-01',
     customers: 3,
     rating: 5.0,
     reviews: 2
   },
-=======
     launchDate: '2025-04-01',
     customers: 4,
     rating: 5.0,
     reviews: 3
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Infrastructure Management
   {
     id: 'ai-powered-infrastructure-management',
     name: 'AI-Powered Infrastructure Management',
-<<<<<<< HEAD
     tagline: 'Intelligent infrastructure management and optimization',
     price: '$7,800',
     period: '/month',
@@ -1329,7 +1226,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Integration with infrastructure tools',
       'Advanced infrastructure analytics',
       'Comprehensive infrastructure insights'
-=======
     tagline: 'Intelligent infrastructure automation and optimization',
     price: '$7,200',
     period: '/month',
@@ -1345,14 +1241,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Integration with cloud platforms',
       'Advanced infrastructure insights',
       'Comprehensive infrastructure management'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: false,
     icon: '🤖',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-infrastructure-management',
-<<<<<<< HEAD
     marketPosition: 'Advanced AI-powered infrastructure management platform with intelligent monitoring, optimization, and comprehensive infrastructure automation capabilities.',
     targetAudience: ['Infrastructure engineers', 'Cloud architects', 'DevOps teams', 'IT operations', 'Technology companies'],
     trialDays: 45,
@@ -1365,7 +1259,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Infrastructure teams report 480% ROI with 65% reduction in management time and 55% improvement in resource utilization.',
     competitors: ['ServiceNow', 'BMC Helix', 'BMC TrueSight', 'IBM Tivoli'],
     marketSize: '$15.2B infrastructure management market',
-=======
     marketPosition: 'Advanced AI-powered infrastructure management platform with intelligent automation, optimization, and comprehensive management capabilities.',
     targetAudience: ['Infrastructure engineers', 'Cloud architects', 'DevOps teams', 'IT operations', 'Technology companies'],
     trialDays: 30,
@@ -1378,7 +1271,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Infrastructure teams report 480% ROI with 65% reduction in provisioning time and 55% improvement in resource utilization.',
     competitors: ['Terraform', 'Ansible', 'Chef', 'Puppet'],
     marketSize: '$12.8B infrastructure management market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '32% annual growth',
     variant: 'ai-infrastructure',
     contactInfo: {
@@ -1388,26 +1280,18 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive AI-powered infrastructure management platform with intelligent monitoring, optimization, and seamless infrastructure tool integration.',
     launchDate: '2025-05-15',
-=======
     implementationDetails: 'Comprehensive AI-powered infrastructure management platform with intelligent automation, optimization, and seamless cloud platform integration.',
     launchDate: '2025-04-15',
->>>>>>> origin/auto/autonomy-17186719616
     customers: 25,
     rating: 4.8,
     reviews: 18
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Hybrid Cloud Orchestration Platform
   {
     id: 'hybrid-cloud-orchestration-platform',
     name: 'Hybrid Cloud Orchestration Platform',
-<<<<<<< HEAD
     tagline: 'Seamless hybrid cloud management and optimization',
     price: '$8,500',
     period: '/month',
@@ -1441,7 +1325,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Multi-cloud organizations report 420% ROI with 60% reduction in cloud management complexity and 50% improvement in cost efficiency.',
     competitors: ['Terraform', 'Ansible', 'Kubernetes', 'Cloud Foundry'],
     marketSize: '$18.5B hybrid cloud market',
-=======
     tagline: 'Seamless multi-cloud and hybrid cloud management',
     price: '$9,500',
     period: '/month',
@@ -1475,7 +1358,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Multi-cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.',
     competitors: ['Terraform', 'Kubernetes', 'Cloud Foundry', 'OpenShift'],
     marketSize: '$15.2B hybrid cloud market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '28% annual growth',
     variant: 'hybrid-cloud',
     contactInfo: {
@@ -1486,18 +1368,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
-<<<<<<< HEAD
     launchDate: '2025-06-01',
-=======
     launchDate: '2025-05-01',
->>>>>>> origin/auto/autonomy-17186719616
     customers: 32,
     rating: 4.7,
     reviews: 24
   }
-<<<<<<< HEAD
 ];
 export default advancedITInfrastructure2025;
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616

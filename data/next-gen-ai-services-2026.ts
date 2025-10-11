@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface NextGenAIService2026 {
   id: string;
   name: string;
@@ -43,7 +39,6 @@ export interface NextGenAIService2026 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   // AI Creative Studio Platform
   {
@@ -304,15 +299,12 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 120,
     rating: 4.9,
     reviews: 80
-=======
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: 'ai-emotional-intelligence-platform',
@@ -543,6 +535,5 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 203,
     rating: 4.7,
     reviews: 445
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

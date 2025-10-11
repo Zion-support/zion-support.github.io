@@ -1,26 +1,19 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
->>>>>>> origin/auto/autonomy-17186719616
-
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
-
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
   );
-
   try {
     // Get pending jobs
     const { data: jobs, error: fetchError } = await supabaseAdmin
@@ -28,9 +21,7 @@ serve(async (req) => {
       .select('*')
       .eq('status', 'pending')
       .lt('scheduled_for', new Date().toISOString());
-
     if (fetchError) throw fetchError;
-
     for (const job of jobs || []) {
       // Process job based on type
       switch (job.job_type) {
@@ -65,7 +56,6 @@ serve(async (req) => {
           break;
         // Add more job types as needed
       }
-
       // Update job status
       await supabaseAdmin
         .from('scheduled_jobs')
@@ -75,16 +65,13 @@ serve(async (req) => {
         })
         .eq('id', job.id);
     }
-
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
       status: 200});
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500});
-=======
       status: 200,
     });
   } catch (error) {
@@ -92,10 +79,8 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });
-
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
@@ -107,10 +92,8 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       match_viewed: "Check out your AI matched talent recommendations",
       talent_invited: "Invite talent to your job posting to get responses"
     };
-    
     const message = milestoneMessages[milestone] || "Continue your onboarding process";
     const title = `Action needed: ${message}`;
-    
     // Insert notification
     await supabase.from('notifications').insert({
       user_id: userId,
@@ -119,15 +102,12 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       type: 'onboarding_reminder',
       read: false
     });
-    
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
-    
   } catch (error) {
     console.error("Error processing onboarding reminder:", error);
   }
 }
-
 async function processResumeScoring(supabase, applicationId) {
   try {
     // Call the resume-scorer function to process the application
@@ -137,38 +117,30 @@ async function processResumeScoring(supabase, applicationId) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
         body: JSON.stringify({ applicationId })}
-=======
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
         body: JSON.stringify({ applicationId }),
       }
->>>>>>> origin/auto/autonomy-17186719616
     );
-
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
     }
-
     console.log(`Successfully scored application ${applicationId}`);
-    
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
       .single();
-      
     if (application) {
       const { data: job } = await supabase
         .from("jobs")
         .select("client_id, title")
         .eq("id", application.job_id)
         .single();
-        
       if (job) {
         // Create notification for the client
         await supabase.from("notifications").insert({
@@ -185,11 +157,9 @@ async function processResumeScoring(supabase, applicationId) {
     console.error("Error processing resume scoring:", error);
   }
 }
-
 async function processContentGeneration(supabase, contentType) {
   try {
     console.log(`Starting scheduled content generation for ${contentType}`);
-    
     // Call the content generation function
     const response = await fetch(
       `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
@@ -197,32 +167,23 @@ async function processContentGeneration(supabase, contentType) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-=======
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
->>>>>>> origin/auto/autonomy-17186719616
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
         })}
-=======
         }),
       }
->>>>>>> origin/auto/autonomy-17186719616
     );
-
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-
     const contentData = await response.json();
     console.log(`Successfully generated ${contentType} content`);
-    
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -231,10 +192,8 @@ async function processContentGeneration(supabase, contentType) {
         .select('email')
         .eq('role', 'admin')
         .limit(1);
-      
       if (adminProfiles && adminProfiles.length > 0) {
         const adminEmail = adminProfiles[0].email;
-        
         // Send test newsletter to admin
         await fetch(
           `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,
@@ -242,28 +201,20 @@ async function processContentGeneration(supabase, contentType) {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-<<<<<<< HEAD
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-=======
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
             },
->>>>>>> origin/auto/autonomy-17186719616
             body: JSON.stringify({
               subject: contentData.subject,
               previewText: contentData.previewText,
               body: contentData.body,
               testMode: true,
-<<<<<<< HEAD
-
               testEmail: adminEmail
             })}
-=======
               testEmail: adminEmail
             }),
           }
->>>>>>> origin/auto/autonomy-17186719616
         );
-        
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
@@ -274,7 +225,6 @@ async function processContentGeneration(supabase, contentType) {
         });
       }
     }
-    
     return contentData;
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error);

@@ -1,24 +1,12 @@
-<<<<<<< HEAD
 // Stub AI pricing utility - placeholder for missing functionality;
-
 export const getAIPricing = async (service: string) => {
   // Placeholder implementation;
   return { price: 99, currency: 'USD', success: true }
 }
-
 export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
 }
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
   return { price: 99, currency: 'USD', success: true }
@@ -39,29 +27,15 @@ export const calculateAICost = async (usage: any) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
 };
-
 };
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-=======
 // Stub AI pricing utility - placeholder for missing functionality
 export const getAIPricing = async (service: string) => {
   // Placeholder implementation
   return { price: 99, currency: 'USD', success: true };
 };
-
 export const calculateAICost = async (usage: any) => {
   // Placeholder implementation
   return { cost: 0, success: true };
 };
->>>>>>> origin/auto/autonomy-17186719616

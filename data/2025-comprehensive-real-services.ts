@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -24,9 +23,7 @@ export interface ComprehensiveService {
   setupTime: string;
   competitors: string[];
   roi: string;
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface ComprehensiveRealService2025 {
   id: string;
   name: string;
@@ -62,12 +59,10 @@ export interface ComprehensiveRealService2025 {
   };
   realImplementation: boolean;
   implementationDetails: string;
->>>>>>> origin/auto/autonomy-17186719616
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -549,17 +544,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     customers: 950,
     rating: 4.9,
     reviews: 520
-=======
   keyBenefits: string[];
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const comprehensiveRealServices2025: ComprehensiveRealService2025[] = [
   {
     id: 'ai-business-intelligence-suite',
@@ -701,6 +693,5 @@ export const comprehensiveRealServices2025: ComprehensiveRealService2025[] = [
     rating: 4.9,
     reviews: 89,
     keyBenefits: ['Reduced customer churn', 'Increased expansion revenue', 'Improved customer satisfaction', 'Automated workflows']
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

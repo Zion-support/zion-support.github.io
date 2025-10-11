@@ -1,23 +1,19 @@
-
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
-
 export function useWallet() {
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   async function fetchWallet() {
     if (!user?.id) {
       setWallet(null);
       setLoading(false);
       return;
     }
-
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -25,11 +21,9 @@ export function useWallet() {
         .select('*')
         .eq('user_id', user.id)
         .single();
-
       if (error) {
         throw error;
       }
-
       setWallet(data);
     } catch (err: any) {
       console.error('Error fetching wallet:', err);
@@ -38,7 +32,6 @@ export function useWallet() {
       setLoading(false);
     }
   }
-
   async function fetchTransactions() {
     if (!user?.id) {
       setTransactions([]);
@@ -50,14 +43,12 @@ export function useWallet() {
         .select('*')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
-
       if (error) throw error;
       setTransactions((data || []) as TokenTransaction[]);
     } catch (err: any) {
       console.error('Error fetching transactions:', err);
     }
   }
-
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
@@ -68,17 +59,13 @@ export function useWallet() {
         amount,
         transaction_type: 'earn',
         reason: reason || null,
-<<<<<<< HEAD
         created_at: new Date().toISOString()},
       ...prev]);
-=======
         created_at: new Date().toISOString(),
       },
       ...prev,
     ]);
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
@@ -91,22 +78,17 @@ export function useWallet() {
         amount,
         transaction_type: 'burn',
         reason: reason || null,
-<<<<<<< HEAD
         created_at: new Date().toISOString()},
       ...prev]);
-=======
         created_at: new Date().toISOString(),
       },
       ...prev,
     ]);
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   useEffect(() => {
     fetchWallet();
     fetchTransactions();
   }, [user?.id]);
-
   return {
     wallet,
     transactions,
@@ -115,10 +97,7 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-<<<<<<< HEAD
     spendTokens};
-=======
     spendTokens,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

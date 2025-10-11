@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
@@ -16,22 +14,16 @@ export type ProposalMeta = {;
   supportingMultiverses: string[],;
   languages: string[],;
   status: ProposalStatus,;
-
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
-
-=======
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
-
 export type ProposalMeta = {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   createdAt: string;
   updatedAt: string;
   title: string;
@@ -42,12 +34,7 @@ export type ProposalMeta = {
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
-<<<<<<< HEAD
-
-
-
   artifacts: {;
-
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -56,8 +43,6 @@ export type ProposalMeta = {
 },;
 export type ProposalPayload = {
   title: string;
-
-=======
   artifacts: {
     markdownPath?: string;
     jsonPath?: string;
@@ -67,10 +52,8 @@ export type ProposalPayload = {
     signature?: string;
   };
 };
-
 export type ProposalPayload = {
   title: string;
->>>>>>> origin/auto/autonomy-17186719616
   targetInstitution: string;
   type: string;
   regionalScope: string;
@@ -79,8 +62,6 @@ export type ProposalPayload = {
   contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
-<<<<<<< HEAD
-
 };
 const dataDir = path.join(process.cwd(), 'dataproposals'),;
 const publicDir = path.join(process.cwd(), 'publicproposals'),;
@@ -95,21 +76,15 @@ function ensureDirs() {;
 ;
 export function createProposal(payload: ProposalPayload): ProposalMeta {;
   ensureDirs(),;
-
-=======
 };
-
 const dataDir = path.join(process.cwd(), 'data', 'proposals');
 const publicDir = path.join(process.cwd(), 'public', 'proposals');
-
 function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
-
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs();
->>>>>>> origin/auto/autonomy-17186719616
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -117,10 +92,8 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(proposalDir, { recursive: true });
   fs.mkdirSync(publicProposalDir, { recursive: true });
-<<<<<<< HEAD
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
-
   const meta: ProposalMeta = {id;
     createdAt;
     updatedAt;
@@ -142,14 +115,8 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   return meta;
 }
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
-
-
-
-=======
-
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
-
   const meta: ProposalMeta = {
     id,
     createdAt,
@@ -167,19 +134,14 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
       jsonPath: path.relative(process.cwd(), jsonPath),
     },
   };
-
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
-
   const metaPath = path.join(proposalDir, 'meta.json');
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
-
   return meta;
 }
-
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   ensureDirs();
->>>>>>> origin/auto/autonomy-17186719616
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -187,23 +149,15 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
-
-<<<<<<< HEAD
-
-=======
 export function listProposals(): ProposalMeta[] {
   ensureDirs();
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map((id) => {
->>>>>>> origin/auto/autonomy-17186719616
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
-
-<<<<<<< HEAD
-
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
@@ -217,7 +171,6 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
-
   }
 },;
 export type ProposalPayload = {;
@@ -423,8 +376,6 @@ export function getProposal(id: string): ProposalMeta | null {;
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
-
-=======
 export function getProposal(id: string): ProposalMeta | null {
   try {
     const metaPath = path.join(dataDir, id, 'meta.json');
@@ -434,17 +385,13 @@ export function getProposal(id: string): ProposalMeta | null {
     return null;
   }
 }
-
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
->>>>>>> origin/auto/autonomy-17186719616
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-<<<<<<< HEAD
-
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
@@ -455,42 +402,16 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   }
 }
 ;
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
 }
-
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {
   return updateProposalMeta(id, (meta) => ({
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
->>>>>>> origin/auto/autonomy-17186719616

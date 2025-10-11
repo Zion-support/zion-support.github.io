@@ -1,15 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { v4 as uuidv4  } from 'uuid';
-=======
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> origin/auto/autonomy-17186719616
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-
-<<<<<<< HEAD
-
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -18,57 +12,34 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
-
-
-
-
-
-
-
-
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
-
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 }
-
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'));
 }
-
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
   const id = uuidv4();
-
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
->>>>>>> origin/auto/autonomy-17186719616
 1) 7-10 concise interview questions mixing visionary and technical angles
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-<<<<<<< HEAD
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
   let generated: any = null;
   try {
@@ -110,10 +81,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
           'Talent networks become protocols when incentives, reputation, and opportunity align.'
       });
     }
-=======
-
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
-
   let generated: any = null;
   try {
     const apiKey = process.env.OPENAI_API_KEY;
@@ -153,8 +121,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.',
       });
     }
-
->>>>>>> origin/auto/autonomy-17186719616
     try {
       generated = JSON.parse(content);
     } catch {
@@ -162,7 +128,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       const match = content.match(/\{[\s\S]*\}$/);
       if (match) generated = JSON.parse(match[0]);
     }
-<<<<<<< HEAD
     if (!generated |!generated.title |!generated.transcript) {
       return res
         .status(500)
@@ -171,7 +136,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
-
     const episode = {
       id
       createdAt: new Date().toISOString()
@@ -203,28 +167,17 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   } catch (error: any) {
     console.error(error);
     return res.status(500).json({ error: error?.message |'Unknown error' })
-
-
-
 }
     const episode = {
-
-
-
     writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode });
   } catch (error: any) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
   }    episodes && episodes.unshift(episode);
-=======
-
     if (!generated || !generated.title || !generated.transcript) {
       return res.status(500).json({ error: 'Failed to generate structured content' });
->>>>>>> origin/auto/autonomy-17186719616
     }
-
     const episodes = readEpisodes();
     const episode = {
       id,
@@ -232,7 +185,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       persona,
       invitee,
       topic,
-<<<<<<< HEAD
       title: generated && generated.title,
       questions: generated && generated.questions || [],
       timeMarkers: generated && generated.timeMarkers || {
@@ -248,14 +200,12 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     };
     episodes && episodes.unshift(episode);
     writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode });
   } catch (error: any) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
   }    episodes && episodes.unshift(episode);
     writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
@@ -264,26 +214,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
     const episode = {
-
-
-
-
-
-
 }
   }
-
 }
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
       title: generated.title,
       questions: generated.questions || [],
       timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' },
@@ -295,11 +228,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     };
     episodes.unshift(episode);
     writeEpisodes(episodes);
-
     return res.status(200).json({ episode });
   } catch (error: any) {
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

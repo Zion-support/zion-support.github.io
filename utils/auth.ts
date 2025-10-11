@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 export function parseUserFromRequest (req: NextApiRequest): User {
@@ -30,30 +28,22 @@ if ( {) {
   }
 }
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
-
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: 'guest', email: 'guest@example.com', role: 'guest' };
   }
-  
   // Simple mock for admin users
   if (authHeader.includes('admin')) {
     return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
   }
-  
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 }
-
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
   const authHeader = req.headers.authorization;
@@ -77,19 +67,13 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
   try {;
     const user = parseUserFromRequest(req);
     ensureAdmin(user);
-
-
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
-
-
 // Additional auth utilities for login;
-
 export interface DemoUser {
-
 // Additional auth utilities for login
 export interface DemoUser {;
   id: string;
@@ -101,18 +85,15 @@ const demoUsers: DemoUser[] = [];
 export function ensureDemoUsers(): void {
   if (demoUsers.length === 0) {
     demoUsers.push(
-
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
-
     );
   }
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
-
     id: `user-${Date.now()}`
     name
     role
@@ -120,24 +101,13 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
   }
 }
 export function upsertUser(user: DemoUser): void {
-
     id: `user-${Date.now()}`,
     name,
     role,
     email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`;
   };
 }
-
 export function upsertUser(user: DemoUser): void {;
-
-
-
-
-
-
-
-
-
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -145,21 +115,16 @@ export function upsertUser(user: DemoUser): void {;
     demoUsers.push(user);
   }
 }
-
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
   res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 }
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   const cookieHeader = req.headers.cookie |'';
-
-
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
   res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 }
-
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const cookieHeader = req.headers.cookie || '';
-
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
 const demo_users: DemoUser[] = [];
@@ -210,27 +175,18 @@ if (return null) {
     return null;
   }
 }
-
-
   }
 }
-
-
   }
 }
-
-=======
 import type { NextApiRequest } from 'next';
-
 export function getRequestUserEmail(req: NextApiRequest): string | null {
   const emailHeader = req.headers['x-user-email'];
   if (Array.isArray(emailHeader)) return emailHeader[0] || null;
   return (emailHeader as string) || null;
 }
-
 export function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false;
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
   return admins.includes(email.toLowerCase());
 }
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,17 +1,4 @@
-
-
-
-
-
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -20,15 +7,12 @@ import { rateLimit } from "../../utils/rateLimit";
 const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
-
-
   if (req && req.method === "POST") {
     const { conversationId, sender, text, attachments } = req && req.body || {};
     if (
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
-
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -56,8 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAtIso: now
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     }
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -72,9 +54,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(400).json({ error: 'Invalid message' });
       return;
     }
-
-
-
     const now = new Date().toISOString();
     const msg: Message = {
       id: uuidv4(),
@@ -85,11 +64,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAtIso: now,
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     };
-
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations);
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -171,53 +148,24 @@ export default function handler(req, res) {
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations),;
-
     res.status(201).json({ message: msg });
     return
   }
-
-
-
-
-
-
-
-
   if (req.method === "GET") {
-
-
   if (req.method === 'GET') {
-
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
       return;
     }
     res && res.status(200).json({ conversation: conv });
     return;
   }
-
-
-
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
-
       res.status(404).json({ error: "Conversation not found" });
       res.status(404).json({ error: 'Conversation not found' });
-
 }
   } catch (error) {
     console.error("Error:", error);
@@ -231,33 +179,14 @@ export default function handler(req, res) {
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {;
       res.status(404).json({ error: 'Conversation not found' });
-
-
-
       return;
-
     }
     res.status(200).json({ conversation: conv });
     return
   }
-
-
-
-
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
-
-
-
-
-
-
-
-
-
 res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -268,33 +197,13 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
-
-
-
-
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

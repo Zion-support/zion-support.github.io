@@ -14,10 +14,6 @@ export interface ExtraService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const extraServices: ExtraService[] = [
   {
     id: "cloud-migration-expert",

@@ -100,7 +100,6 @@ function PrimaryNav() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const trimmed = query.trim();    if (trimmed) {
@@ -372,7 +371,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             {/* Compact controls group */}
@@ -451,7 +449,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <ModeToggle />
             <LanguageSelector />
@@ -565,7 +562,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             {mobileMenuOpen ? (

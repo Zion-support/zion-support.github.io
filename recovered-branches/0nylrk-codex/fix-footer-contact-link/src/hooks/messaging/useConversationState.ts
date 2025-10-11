@@ -1,7 +1,5 @@
-
 import { useState } from 'react';
 import { Conversation, Message } from '@/types/messaging';
-
 /**
  * Hook to manage messaging state
  */
@@ -12,7 +10,6 @@ export function useConversationState() {
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-
   return {
     // State
     messages,
@@ -26,10 +23,7 @@ export function useConversationState() {
     activeConversation,
     setActiveConversation,
     isLoading,
-<<<<<<< HEAD
     setIsLoading};
-=======
     setIsLoading,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/SecurityDashboard.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityDashboard from "./components/SecurityDashboard" describe("SecurityDashboard",() => {" test("renders without crashing",() => {" render(<SecurityDashboard / />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<SecurityDashboard / />) }) test("handles user interactions",() => {" render(<SecurityDashboard / />) }) test("applies correct styling",() => {" render(<SecurityDashboard / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import SecurityDashboard from '../components/SecurityDashboard" describe('SecurityDashboard',() => {' test('renders without crashing',() => {' render(<SecurityDashboard / />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityDashboard / />) }) test('handles user interactions',() => {' render(<SecurityDashboard / />) }) test('applies correct styling',() => {' render(<SecurityDashboard / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import SecurityDashboard from '../components/SecurityDashboard" describe('SecurityDashboard',() => {' test('renders without crashing',() => {' render(<SecurityDashboard / />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<SecurityDashboard / />) }) test('handles user interactions',() => {' render(<SecurityDashboard / />) }) test('applies correct styling',() => {' render(<SecurityDashboard / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/SecurityDashboard.test.js

@@ -1,13 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { Readable } from 'stream';
-
 // Lazy imports to keep optional deps optional
 let Web3Storage: any;
 let getFilesFromPath: any;
 let createIpfsClient: any;
 let PinataSDK: any;
-
 async function lazyLoadDeps() {
   try {
     const web3 = await import('web3.storage');
@@ -23,33 +21,26 @@ async function lazyLoadDeps() {
     PinataSDK = (pinata as any).default || pinata;
   } catch {}
 }
-
 export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
-
 export interface IpfsResult {
   cid: string;
   provider: IpfsClientChoice | 'none';
 }
-
 function env(name: string): string | undefined {
   return process.env[name] || process.env[name.toLowerCase()];
 }
-
 function bufferToStream(buffer: Buffer): Readable {
   const stream = new Readable();
   stream.push(buffer);
   stream.push(null);
   return stream;
 }
-
 export async function addJSON(content: unknown): Promise<IpfsResult> {
   const json = Buffer.from(JSON.stringify(content, null, 2));
   return addBuffer(json, 'data.json');
 }
-
 export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult> {
   await lazyLoadDeps();
-
   // 1) Try Web3.Storage
   const web3Token = env('WEB3_STORAGE_TOKEN');
   if (Web3Storage && web3Token) {
@@ -58,7 +49,6 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
     const cid = await client.put([fileLike], { wrapWithDirectory: false });
     return { cid, provider: 'web3.storage' };
   }
-
   // 2) Try Pinata
   const pinataJwt = env('PINATA_JWT');
   const pinataApiKey = env('PINATA_API_KEY');
@@ -68,15 +58,11 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt })
       : new PinataSDK(pinataApiKey, pinataSecret);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-<<<<<<< HEAD
       pinataMetadata: { name: filename }} as any);
-=======
       pinataMetadata: { name: filename },
     } as any);
->>>>>>> origin/auto/autonomy-17186719616
     return { cid: res.IpfsHash, provider: 'pinata' };
   }
-
   // 3) Try local IPFS
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001';
   if (createIpfsClient) {
@@ -84,13 +70,10 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
     const { cid } = await ipfs.add({ path: filename, content: buffer });
     return { cid: cid.toString(), provider: 'local-ipfs' };
   }
-
   return { cid: '', provider: 'none' };
 }
-
 export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   await lazyLoadDeps();
-
   // Prefer Web3.Storage for directories
   const web3Token = env('WEB3_STORAGE_TOKEN');
   if (Web3Storage && web3Token) {
@@ -120,7 +103,6 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
       return { cid, provider: 'web3.storage' };
     }
   }
-
   // Pinata bulk upload (pack as CAR is better; for now add recursively via local ipfs)
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001';
   if (createIpfsClient) {
@@ -141,7 +123,6 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
       }
     }
     for (const f of walk(dirPath)) files.push(f);
-
     let rootCid = '';
     for await (const res of ipfs.addAll(files, { wrapWithDirectory: true, pin: true })) {
       if (res.path === '') rootCid = res.cid?.toString?.() || rootCid;
@@ -149,11 +130,9 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
     }
     if (rootCid) return { cid: rootCid, provider: 'local-ipfs' };
   }
-
   // As a last resort, try Pinata pinByHash after local add (requires prior add)
   return { cid: '', provider: 'none' };
 }
-
 export async function publishManifesto(topic: string, message: string): Promise<boolean> {
   await lazyLoadDeps();
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001';
@@ -166,13 +145,9 @@ export async function publishManifesto(topic: string, message: string): Promise<
     return false;
   }
 }
-
 export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
-<<<<<<< HEAD
   votes: 'zion.dao.votes'};
-=======
   votes: 'zion.dao.votes',
 };
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,69 +1,33 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
-
-
   if (idx === -1) {
-
     res.status(404).json({ error: "Job not found" });
     return;
-
   }
   if (req.method === "GET") {
     res.status(200).json({ job: jobs[idx] });
     return;
   }
-
-
   if (req && req.method === "GET") {
     res && res.status(200).json({ job: jobs[idx] });
     return;
-
   }
-
   if (req && req.method === "PATCH") {
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
-
-
       return;
     }
     const {
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -137,13 +101,10 @@ export default function handler(req, res) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
-
       res.status(403).json({ error: 'Forbidden' });
       return
     }
-
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
-
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;
@@ -152,8 +113,6 @@ export default function handler(req, res) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-
-
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -200,8 +159,6 @@ if (job.status = status as Job["status"]) {
   res.set_header ("Allow", "GET, PATCH");
   res.status (405).end ("Method Not Allowed");
 }
-
-
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -236,8 +193,6 @@ if (job.status = status as Job["status"]) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
     const {
       title,
       description,
@@ -260,17 +215,10 @@ if (job.status = status as Job["status"]) {
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === "string") job.status = status as Job["status"];
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
     res.status(200).json({ job });
     return;
   }
-
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
-

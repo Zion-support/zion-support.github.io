@@ -1,6 +1,4 @@
-
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-
 export interface ThemeColors {
   primaryColor: string;
   backgroundColor: string;
@@ -9,13 +7,8 @@ export interface ThemeColors {
   buttonColor: string;
   cardBackground: string;
 }
-
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
   switch (preset) {
     case 'dark':
       return {
@@ -24,12 +17,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#e2e8f0',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
         cardBackground: '#1e293b'};
-=======
         cardBackground: '#1e293b',
       };
->>>>>>> origin/auto/autonomy-17186719616
     case 'neon':
       return {
         primaryColor,
@@ -37,12 +27,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#f8fafc',
         accentColor: '#00ffbb',
         buttonColor: primaryColor,
-<<<<<<< HEAD
         cardBackground: '#0f172a'};
-=======
         cardBackground: '#0f172a',
       };
->>>>>>> origin/auto/autonomy-17186719616
     case 'corporate':
       return {
         primaryColor,
@@ -50,12 +37,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#334155',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
         cardBackground: '#ffffff'};
-=======
         cardBackground: '#ffffff',
       };
->>>>>>> origin/auto/autonomy-17186719616
     case 'startup':
       return {
         primaryColor,
@@ -63,12 +47,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#fafafa',
         accentColor: '#ff7f50',
         buttonColor: primaryColor,
-<<<<<<< HEAD
         cardBackground: '#1e2127'};
-=======
         cardBackground: '#1e2127',
       };
->>>>>>> origin/auto/autonomy-17186719616
     case 'light':
     default:
       return {
@@ -77,15 +58,11 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#0f172a',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-<<<<<<< HEAD
         cardBackground: '#f8fafc'};
-=======
         cardBackground: '#f8fafc',
       };
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
-
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
   const root = document.documentElement;
@@ -95,7 +72,6 @@ export function applyThemeColors(colors: ThemeColors) {
   root.style.setProperty('--accent-color', colors.accentColor);
   root.style.setProperty('--button-color', colors.buttonColor);
   root.style.setProperty('--card-background', colors.cardBackground);
-  
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;

@@ -1,4 +1,3 @@
-
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -6,31 +5,17 @@
   res: NextApiResponse,
 ) {;
   const { id } = req.query;
-
   if (typeof id !== "string")
-
     return res && res.status(400).json({ error: "Invalid id" });
-
-
   const user = parseUserFromRequest(req);
-
   if (req && req.method === "GET") {
-
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-
-
     }
     return res && res.status(200).json({ dispute });
   }
-
-
-
 }
-
-
-
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -48,13 +33,6 @@
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 }
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -95,8 +73,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 ;
 export default async /**
  * handler - Function description
@@ -113,20 +89,6 @@ function handler() {
 if ( {) {
   $2
 }
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

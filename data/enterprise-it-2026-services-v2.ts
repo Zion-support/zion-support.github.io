@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EnterpriseIT2026ServiceV2 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -38,12 +32,10 @@ export interface EnterpriseIT2026ServiceV2 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
 }
 export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
@@ -68,7 +60,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -78,7 +69,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
   rating: number;
   reviews: number;
 }
-
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
@@ -132,7 +122,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 520
   },
-
   // Multi-Cloud Orchestration Platform
   {
     id: 'multi-cloud-orchestration-platform',
@@ -185,7 +174,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 750
   },
-
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',
@@ -238,7 +226,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Quantum-Ready Infrastructure Platform
   {
     id: 'quantum-ready-infrastructure-platform',
@@ -291,7 +278,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -344,7 +330,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 350
   },
-
   // AI-Powered Data Governance Platform
   {
     id: 'ai-powered-data-governance-platform',
@@ -397,7 +382,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 280
   },
-
   // Blockchain Enterprise Platform
   {
     id: 'blockchain-enterprise-platform',
@@ -450,7 +434,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.7,
     reviews: 420
   },
-
   // AI-Powered DevOps Platform
   {
     id: 'ai-powered-devops-platform',
@@ -503,7 +486,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.8,
     reviews: 580
   },
-
   // Quantum Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform',
@@ -555,6 +537,5 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280,
     rating: 4.9,
     reviews: 180
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

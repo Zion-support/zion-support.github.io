@@ -122,7 +122,6 @@ const MarketplaceFilterControls = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
@@ -578,7 +577,6 @@ function MarketplacePageContent() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
@@ -835,7 +833,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

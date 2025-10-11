@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTech2026Service {
   id: string;
   name: string;
@@ -43,7 +39,6 @@ export interface EmergingTech2026Service {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neural Interface Development Platform
   {
@@ -186,8 +181,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     roi: 'Event organizers achieve 600% ROI through increased attendance and premium ticket pricing.',
     competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
     marketSize: '$74.2B market',
-=======
-
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform
   {
@@ -226,7 +219,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     roi: 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'Qualcomm Zeroth', 'SpiNNaker'],
     marketSize: '$8.7B market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
@@ -236,7 +228,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.',
     launchDate: '2026-05-01',
     customers: 180,
@@ -281,14 +272,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Siemens Mindsphere', 'PTC ThingWorx', 'GE Predix', 'Rockwell Automation', 'Schneider Electric'],
     marketSize: '$198.4B market',
     growthRate: '250% annual growth',
-=======
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, real-time learning, and autonomous decision-making capabilities. Includes custom hardware integration and robotics control.',
     launchDate: '2026-04-01',
     customers: 150,
     rating: 4.9,
     reviews: 100
   },
-
   // DNA Computing Platform
   {
     id: 'dna-computing-platform-2026',
@@ -327,7 +316,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Microsoft DNA Storage', 'Catalog DNA', 'Twist Bioscience', 'Illumina', 'Pacific Biosciences'],
     marketSize: '$12.5B market',
     growthRate: '500% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -336,7 +324,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.',
     launchDate: '2026-05-15',
     customers: 120,
@@ -380,14 +367,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     roi: 'Space companies achieve 1000%+ ROI through improved satellite operations and mission success rates.',
     competitors: ['Maxar', 'Planet Labs', 'Spire', 'SpaceX', 'Blue Origin'],
     marketSize: '$469.0B market',
-=======
     implementationDetails: 'Advanced DNA computing platform with molecular data storage, parallel processing, and biological integration. Includes laboratory equipment integration and bioinformatics analysis.',
     launchDate: '2026-05-01',
     customers: 80,
     rating: 4.9,
     reviews: 60
   },
-
   // Photonic Computing Platform
   {
     id: 'photonic-computing-platform-2026',
@@ -440,7 +425,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 80
   },
-
   // Holographic Display Platform
   {
     id: 'holographic-display-platform-2026',
@@ -478,7 +462,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     roi: 'Average customer sees 400% ROI within 12 months through enhanced engagement and immersive experiences.',
     competitors: ['Looking Glass', 'Voxon', 'RealView', 'HoloLens', 'Magic Leap'],
     marketSize: '$18.9B market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
@@ -488,7 +471,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.',
     launchDate: '2026-06-01',
     customers: 65,
@@ -585,14 +567,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Universal Robots', 'ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa'],
     marketSize: '$43.8B market',
     growthRate: '300% annual growth',
-=======
     implementationDetails: 'Advanced holographic display platform with true 3D visualization, interactive interfaces, and multi-user collaboration. Includes content creation tools and AR/VR integration.',
     launchDate: '2026-03-20',
     customers: 300,
     rating: 4.7,
     reviews: 200
   },
-
   // Swarm Robotics Platform
   {
     id: 'swarm-robotics-platform-2026',
@@ -631,7 +611,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Boston Dynamics', 'iRobot', 'KUKA', 'ABB', 'FANUC'],
     marketSize: '$22.3B market',
     growthRate: '380% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -640,7 +619,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full-featured AI robotics platform with comprehensive robot programming and coordination tools.',
     launchDate: '2026-07-01',
     customers: 150,
@@ -685,14 +663,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['SAP Supply Chain', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Infor'],
     marketSize: '$15.5B market',
     growthRate: '250% annual growth',
-=======
     implementationDetails: 'Advanced swarm robotics platform with multi-robot coordination, autonomous task allocation, and scalable networks. Includes mission planning tools and performance analytics.',
     launchDate: '2026-04-10',
     customers: 200,
     rating: 4.8,
     reviews: 150
   },
-
   // Quantum Internet Platform
   {
     id: 'quantum-internet-platform-2026',
@@ -731,7 +707,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Traditional ISPs', 'Quantum network providers', 'Security companies', 'Telecommunications companies'],
     marketSize: '$28.7B market',
     growthRate: '500% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -740,7 +715,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.',
     launchDate: '2026-07-15',
     customers: 180,
@@ -785,14 +759,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Zoom Events', 'Hopin', 'vFairs', '6Connex', 'ON24'],
     marketSize: '$18.6B market',
     growthRate: '220% annual growth',
-=======
     implementationDetails: 'Advanced quantum internet platform with quantum-secured infrastructure, key distribution, and post-quantum cryptography. Includes network management and security monitoring.',
     launchDate: '2026-05-15',
     customers: 100,
     rating: 4.9,
     reviews: 80
   },
-
   // Biometric AI Platform
   {
     id: 'biometric-ai-platform-2026',
@@ -831,7 +803,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Apple Face ID', 'Microsoft Windows Hello', 'Google Pixel Imprint', 'Samsung Knox', 'BioCatch'],
     marketSize: '$32.1B market',
     growthRate: '280% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -840,20 +811,17 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.',
     launchDate: '2026-08-01',
     customers: 320,
     rating: 4.8,
     reviews: 198
-=======
     implementationDetails: 'Advanced biometric AI platform with multi-modal authentication, AI-powered verification, and comprehensive security features. Includes integration APIs and compliance management.',
     launchDate: '2026-03-25',
     customers: 500,
     rating: 4.8,
     reviews: 350
   },
-
   // Quantum Energy Platform
   {
     id: 'quantum-energy-platform-2026',
@@ -905,6 +873,5 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 180,
     rating: 4.8,
     reviews: 120
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

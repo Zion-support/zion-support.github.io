@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
-
-=======
 export interface InnovativeAIAutomationService {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -36,24 +31,15 @@ export interface InnovativeAIAutomationService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-
-
     website: string;
   }
-
-
-=======
     website: string;
   };
->>>>>>> origin/auto/autonomy-17186719616
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
@@ -368,15 +354,12 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       }
       realImplementation: true
       implementationDetails:
-
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01',
       customers: 35,
       rating: 4.9,
       reviews: 28,
     },;
-
-
   ];    features: [
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
       'Comprehensive medical reportsHIPAA-compliant security'
@@ -403,10 +386,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35
     rating: 4.9
-
     reviews: 28
-
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -438,7 +418,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     email: string,;
     address: string,;
     website: string;
-
   },;
   realImplementation: boolean,;
   implementationDetails: string,;
@@ -668,17 +647,10 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     customers: 35,;
     rating: 4.9,;
     reviews: 28;
-
-
   }
 ];
-
-
-
-=======
   reviews: number;
 }
-
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] = [
   // AI-Powered Autonomous Business Process Orchestrator
   {
@@ -732,7 +704,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 45
   },
-
   // AI-Powered Predictive Customer Intelligence Platform
   {
     id: 'ai-predictive-customer-intelligence',
@@ -785,7 +756,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.8,
     reviews: 78
   },
-
   // AI-Powered Autonomous Code Generation & Deployment
   {
     id: 'ai-autonomous-code-generation',
@@ -838,7 +808,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 62
   },
-
   // AI-Powered Autonomous Financial Trading Platform
   {
     id: 'ai-autonomous-financial-trading',
@@ -891,7 +860,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4.9,
     reviews: 38
   },
-
   // AI-Powered Autonomous Healthcare Diagnosis Platform
   {
     id: 'ai-autonomous-healthcare-diagnosis',
@@ -945,4 +913,3 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

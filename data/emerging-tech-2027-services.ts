@@ -14,10 +14,6 @@ export interface EmergingTech2027Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
     id: "2027-emerging-tech",

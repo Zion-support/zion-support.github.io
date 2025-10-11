@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const innovativeAIAutomationServices2025 = [
   {
     id: 'ai-autonomous-business-manager',
@@ -264,9 +263,7 @@ export const innovativeAIAutomationServices2025 = [
     ],
     integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
     compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeAIAutomationService {
   id: string;
   name: string;
@@ -307,14 +304,12 @@ export interface InnovativeAIAutomationService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   {
     id: 'ai-autonomous-code-review',
@@ -546,7 +541,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.7,
     reviews: 89
   },
-
   // Autonomous Data Analytics Platform
   {
     id: 'autonomous-data-analytics',
@@ -617,7 +611,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$20B HR software market',
     growthRate: '20% annual growth',
     variant: 'ai-hr',
-=======
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -626,13 +619,10 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
-=======
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.',
     launchDate: '2025-01-28',
     customers: 234,
     rating: 4.8,
     reviews: 167
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

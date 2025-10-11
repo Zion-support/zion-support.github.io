@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
->>>>>>> origin/auto/autonomy-17186719616
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-
-<<<<<<< HEAD
-
-
-
   const section = String(req && req.query.section || "General");
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
@@ -44,10 +31,8 @@ function handler() {
 }
   const full_path = path.join (
     resolveDataPath (path.join ("dataroom", section)),
-
     file,
   );
-
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   res && res.setHeader(
@@ -60,16 +45,12 @@ function handler() {
   res && res.setHeader(
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
-
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
-
 }
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
->>>>>>> origin/auto/autonomy-17186719616
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
@@ -77,11 +58,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: 'Not found' });
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream';
   res.setHeader('Content-Type', contentType);
-<<<<<<< HEAD
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(fullPath)}"`);
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res)
-
 }
   if ()) {
   $2
@@ -127,7 +106,6 @@ import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");
   if (!file) return res.status(400).json({ error: "Missing file" });
@@ -154,7 +132,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
-
 }
     return res.status (404).json ({ error: "Not found" });
   const content_type =;
@@ -173,33 +150,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
-
-
-
-
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
   res.setHeader('Content-Disposition', `attachment; filename="${path.basename(fullPath)}"`);
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> origin/auto/autonomy-17186719616

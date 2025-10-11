@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type InnovativeMicroSaasV2 = {
 	id: string;
 	title: string;
@@ -19,9 +18,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 		reviews: 42,
 	},
 ];
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeMicroSaasV2 {
   id: string;
   name: string;
@@ -62,7 +59,6 @@ export interface InnovativeMicroSaasV2 {
   rating: number;
   reviews: number;
 }
-
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
@@ -321,4 +317,3 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     reviews: 912
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

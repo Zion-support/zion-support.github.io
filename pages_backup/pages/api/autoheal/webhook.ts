@@ -1,23 +1,19 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
-
     } catch (e) {
       // ignore if missing
     }
 return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e)
-
     return res.status(500).json({ error: 'Failed to process webhook' })
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
@@ -29,23 +25,14 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
 ;
   try {
-
     const { app, severity, message, stack, metadata } = req.body || {},
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
-
-
-
-
-
-
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `,
-
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
     // trigger workflow dispatch
     try {
@@ -58,14 +45,12 @@ inputs: { issue_number: String(issue.data.number) }} as any)
     } catch (e) {
       // ignore if missing
     }
-
 return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e),
     return res.status(500).json({ error: 'Failed to process webhook' })
   };
 };
-
     const { app, severity, message, stack, metadata } = req.body || {};
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,;
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
@@ -109,27 +94,15 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
-
     } catch (e) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
     } catch (e) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
       // ignore if missing;
     }
-
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
   }
 }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 ;
-
     return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (error) {
     console.error(e);
@@ -142,9 +115,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
   }
 }
-

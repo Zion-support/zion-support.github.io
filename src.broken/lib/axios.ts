@@ -1,27 +1,22 @@
 import axios from 'axios';
 import { safeStorage } from '@/utils/safeStorage';
-
 type FulfilledFn = (value: any) => any | Promise<any>;
 type RejectedFn = (error: any) => any | Promise<any>;
-
 class InterceptorManager {
   handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = [];
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
     this.handlers.push({ fulfilled, rejected });
   }
 }
-
 export interface AxiosInstance {
   defaults: { headers: { common: Record<string, string> } };
   interceptors: { response: InterceptorManager };
   get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>;
   post(url: string, data?: any, config?: RequestInit): Promise<any>;
 }
-
 export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
   const baseURL = config.baseURL || '';
   const withCreds = !!config.withCredentials;
-
   const instance: AxiosInstance = {
     defaults: { headers: { common: {} } },
     interceptors: { response: new InterceptorManager() },
@@ -31,12 +26,9 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : '';
       const headers = {
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
         ...(init as any).headers};
-=======
         ...(init as any).headers,
       };
->>>>>>> origin/auto/autonomy-17186719616
       const opts = { ...init, headers } as RequestInit;
       delete (opts as any).params;
       return request(baseURL + url + params, 'GET', opts);
@@ -45,20 +37,16 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       const headers = {
         'Content-Type': 'application/json',
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
         ...(init as any).headers};
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
       return request(baseURL + url, 'POST', opts);
     }};
-=======
         ...(init as any).headers,
       };
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
       return request(baseURL + url, 'POST', opts);
     },
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   // Request interceptor
   instance.interceptors.request.use(
     (config: any) => {
@@ -75,7 +63,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       return Promise.reject(error);
     }
   );
-
   // Response interceptor
   instance.interceptors.response.use(
     (response: any) => response,
@@ -90,9 +77,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       return Promise.reject(error);
     }
   );
-
   return instance;
 };
-
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
 export default createAxiosInstance;

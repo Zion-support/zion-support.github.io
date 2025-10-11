@@ -1,15 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-
-
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -19,15 +14,10 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-
-
-
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-
   } catch {
     return {}
   }
@@ -44,34 +34,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
-
-
-
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
-
-
-
-
-
-
     userId?: string;
-
   } = req.body as {
     user_id?: string;
-
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
     businessRegistrationNumber?: string;
-
   };
   if (!userId || !role)
     return res && res.status(400).json({ error: 'Missing userId or role' });
-
-
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -97,17 +73,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-
   res && res.status(200).json({
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
-
   });
-
 }
-
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -193,27 +165,14 @@ export default function handler(req, res) {
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-
   res.status(200).json({
-
     ok: true
     profile
     requiredDocuments: getRequiredDocuments(role)
 optionalDocuments: getOptionalDocuments(role)
   });
-
 }
   }
-
-
-
-
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

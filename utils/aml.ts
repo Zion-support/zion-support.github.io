@@ -1,78 +1,43 @@
-<<<<<<< HEAD
-
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
-=======
 export type WatchlistMatch = {
->>>>>>> origin/auto/autonomy-17186719616
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-<<<<<<< HEAD
-
 }
 ;
-
 export type AmlCheckResult = {
 };
-
 export type AmlCheckResult = {;
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
-
 }
 export interface AmlProvider {
 };
 export interface AmlProvider {;
-
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
-
 }
 class MockAmlProvider implements AmlProvider {
-
     const name = params && params.fullLegalName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } };
-
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
-
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } };
-
     }
     return { status: 'clear' }
   }
 }
-
-
-
-
-
-
-
-
 // Singleton instance
 export const amlManager = new AmlManager();
 // Utility functions
@@ -125,38 +90,24 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 }
-
 export function getAmlProvider(): AmlProvider {
   return new MockAmlProvider();
 }
-
-
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
-
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
 };
-
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: 'mock' | 'remote';
 };
-
 export interface AmlProvider {
   checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>;
   checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>;
 }
-
 class MockAmlProvider implements AmlProvider {
   async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {
     const lowered = fullLegalName.toLowerCase();
@@ -172,7 +123,6 @@ class MockAmlProvider implements AmlProvider {
       provider: 'mock',
     };
   }
-
   async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {
     const lowered = businessName.toLowerCase();
     const isSanction = lowered.includes('banned');
@@ -184,14 +134,10 @@ class MockAmlProvider implements AmlProvider {
     };
   }
 }
-
 let provider: AmlProvider = new MockAmlProvider();
-
 export function setAmlProvider(custom: AmlProvider) {
   provider = custom;
 }
-
 export function getAmlProvider(): AmlProvider {
   return provider;
 }
->>>>>>> origin/auto/autonomy-17186719616

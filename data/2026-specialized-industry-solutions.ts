@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export interface SpecializedIndustrySolution {
-=======
 export interface SpecializedIndustrySolution2026 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -40,24 +36,18 @@ export interface SpecializedIndustrySolution2026 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-}
-=======
   benefits: string[];
   capabilities: string[];
   marketAdvantage: string;
   averageMarketPrice: string;
   featuresCapabilities: string[];
 }
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -257,8 +247,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Performance monitoring',
       'Multi-carrier integration',
       'Mobile app for drivers'
-=======
-
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
   // Financial Technology Services
   {
@@ -331,7 +319,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Fraud detection'
     ]
   },
-
   // Energy & Sustainability Services
   {
     id: 'smart-energy-optimization-platform',
@@ -403,7 +390,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Sustainability reporting'
     ]
   },
-
   // Transportation & Logistics Services
   {
     id: 'autonomous-logistics-platform',
@@ -475,7 +461,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Sustainability tracking'
     ]
   },
-
   // Education Technology Services
   {
     id: 'ai-personalized-learning-platform',
@@ -547,7 +532,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Learning analytics'
     ]
   },
-
   // Real Estate Technology Services
   {
     id: 'ai-real-estate-analytics-platform',
@@ -619,7 +603,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Market forecasting'
     ]
   },
-
   // Legal Technology Services
   {
     id: 'ai-legal-research-platform',
@@ -691,7 +674,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Document generation'
     ]
   },
-
   // Manufacturing Technology Services
   {
     id: 'smart-manufacturing-ai-platform',
@@ -743,7 +725,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Enhance quality control',
       'Optimize energy consumption',
       'Reduce operational costs'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     capabilities: [
       'Production optimization',
@@ -763,7 +744,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Energy management',
       'Performance analytics'
     ]
-<<<<<<< HEAD
   },
   {
     id: 'ai-powered-healthcare-diagnostics',
@@ -1017,7 +997,5 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology'
-=======
   }
->>>>>>> origin/auto/autonomy-17186719616
 ];

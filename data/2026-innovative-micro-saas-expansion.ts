@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeMicroSaasService2026 {
   id: string;
   name: string;
@@ -39,14 +38,12 @@ export interface InnovativeMicroSaasService2026 {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -94,7 +91,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.8,
     reviews: 23
   },
-
   // AI Content Creation & Marketing
   {
     id: 'ai-content-factory-pro',
@@ -141,7 +137,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.7,
     reviews: 34
   },
-
   // AI Customer Service & Support
   {
     id: 'ai-customer-service-automation',
@@ -188,7 +183,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 28
   },
-
   // AI-Powered E-commerce Optimization
   {
     id: 'ai-ecommerce-optimizer',
@@ -235,7 +229,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 19
   },
-
   // AI-Powered HR & Recruitment
   {
     id: 'ai-hr-recruitment-suite',
@@ -282,7 +275,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 22
   },
-
   // AI-Powered Financial Management
   {
     id: 'ai-financial-management-platform',
@@ -329,7 +321,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 31
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management-suite',
@@ -376,7 +367,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 26
   },
-
   // AI-Powered Learning & Training
   {
     id: 'ai-learning-management-system',
@@ -423,7 +413,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 21
   },
-
   // AI-Powered Healthcare Solutions
   {
     id: 'ai-healthcare-assistant',
@@ -471,22 +460,15 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     reviews: 18
   }
 ];
-
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) => {
   return innovativeMicroSaasServices2026.filter(service => service.category === category);
 };
-
 export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 };
-
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     return price >= minPrice && price <= maxPrice;
   });
 };

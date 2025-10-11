@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -28,11 +25,8 @@ export interface EmergingTechService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   variant: ServiceVariant;
-=======
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -46,7 +40,6 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet Security Platform
   {
@@ -86,8 +79,6 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['No direct competitors', 'Traditional encryption vendors', 'Custom solutions'],
     marketSize: '$15B quantum security market',
     growthRate: '800% annual growth',
-=======
-
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
@@ -127,7 +118,6 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)', 'No direct quantum internet competitors'],
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -136,7 +126,6 @@ export const emergingTechServices: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.',
     launchDate: '2024-01-01',
     customers: 12,
@@ -182,14 +171,12 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$8B neural interface market',
     growthRate: '600% annual growth',
     variant: 'neural-quantum',
-=======
     implementationDetails: 'Fully functional quantum internet platform with quantum key distribution, post-quantum cryptography, and quantum network infrastructure. Includes quantum security operations center and 24/7 monitoring.',
     launchDate: '2024-12-01',
     customers: 15,
     rating: 4.9,
     reviews: 8
   },
-
   // Advanced AI & Robotics Services
   {
     id: 'ai-robotics-automation-platform',
@@ -229,7 +216,6 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$45B robotics market, 25% annual growth',
     growthRate: '25% annual growth',
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -237,7 +223,6 @@ export const emergingTechServices: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.',
     launchDate: '2024-02-15',
     customers: 34,
@@ -283,14 +268,12 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$65B autonomous vehicle market',
     growthRate: '450% annual growth',
     variant: 'neural-cyberpunk',
-=======
     implementationDetails: 'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.',
     launchDate: '2024-11-15',
     customers: 45,
     rating: 4.7,
     reviews: 23
   },
-
   // Quantum Energy & Sustainability Services
   {
     id: 'quantum-energy-optimization',
@@ -330,7 +313,6 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$200B energy management market, smart grid segment growing 300% annually',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -338,7 +320,6 @@ export const emergingTechServices: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.',
     launchDate: '2024-01-15',
     customers: 18,
@@ -383,14 +364,12 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['SpaceX', 'Blue Origin', 'Rocket Lab', 'Custom solutions'],
     marketSize: '$450B space economy',
     growthRate: '700% annual growth',
-=======
     implementationDetails: 'Fully functional quantum energy optimization platform with quantum AI algorithms, smart grid management, and renewable energy optimization. Includes energy operations center and 24/7 monitoring.',
     launchDate: '2024-12-15',
     customers: 8,
     rating: 4.8,
     reviews: 5
   },
-
   // Advanced Metaverse & AR/VR Services
   {
     id: 'metaverse-ai-development-platform',
@@ -443,7 +422,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.6,
     reviews: 67
   },
-
   // Quantum Logistics & Supply Chain Services
   {
     id: 'quantum-logistics-optimization',
@@ -496,7 +474,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.7,
     reviews: 19
   },
-
   // Advanced Cybersecurity & Threat Intelligence
   {
     id: 'quantum-cybersecurity-suite',
@@ -549,7 +526,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Quantum Financial Trading & Analytics
   {
     id: 'quantum-financial-trading-platform',
@@ -602,7 +578,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 6
   },
-
   // Advanced IoT & Smart City Services
   {
     id: 'ai-iot-smart-city-platform',
@@ -692,7 +667,6 @@ export const emergingTechServices: EmergingTechService[] = [
     competitors: ['Traditional space communication', 'Basic satellite networks', 'Manual space operations'],
     marketSize: '$350B space market, quantum segment growing 500% annually',
     growthRate: '500% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-space',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -701,7 +675,6 @@ export const emergingTechServices: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.',
     launchDate: '2024-01-01',
     customers: 8,
@@ -747,7 +720,6 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$95B biotech market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
-=======
     implementationDetails: 'Advanced quantum space communication network with satellite quantum key distribution, interplanetary protocols, and comprehensive space operations.',
     launchDate: '2024-08-01',
     customers: 15,
@@ -792,7 +764,6 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -800,13 +771,11 @@ export const emergingTechServices: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.',
     launchDate: '2024-02-01',
     customers: 25,
     rating: 4.9,
     reviews: 20
-=======
     implementationDetails: 'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.',
     launchDate: '2024-07-15',
     customers: 8,
@@ -863,6 +832,5 @@ export const emergingTechServices: EmergingTechService[] = [
     customers: 35,
     rating: 4.8,
     reviews: 28
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

@@ -38,7 +38,6 @@ export interface InnovativeAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-content-generator',
@@ -180,8 +179,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$20B AI video market',
     growthRate: '300% annual growth',
     variant: 'quantum-video-advanced',
-=======
-
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -221,7 +218,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -229,7 +225,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully functional quantum AI video platform with professional quality, autonomous editing, brand customization, and comprehensive analytics.',
     launchDate: '2024-04-15',
     customers: 180,
@@ -274,7 +269,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$25B customer service market',
     growthRate: '180% annual growth',
     variant: 'autonomous-service-advanced',
-=======
     implementationDetails: 'Fully functional quantum AI BCI platform with FDA approval pathway, research partnerships, and clinical trial capabilities.',
     launchDate: '2024-12-01',
     customers: 15,
@@ -676,7 +670,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$100B quantum internet market',
     growthRate: '400% annual growth',
     variant: 'quantum-entanglement',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -684,7 +677,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully autonomous customer service platform with 24/7 operation, quantum AI understanding, emotional intelligence, and comprehensive analytics.',
     launchDate: '2024-03-01',
     customers: 320,
@@ -780,7 +772,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$40B marketing automation market',
     growthRate: '200% annual growth',
     variant: 'autonomous-marketing-advanced',
-=======
     implementationDetails: 'Quantum internet security platform with quantum key distribution and ultra-secure network infrastructure.',
     launchDate: '2024-11-15',
     customers: 12,
@@ -825,7 +816,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     marketSize: '$300B supply chain management',
     growthRate: '200% annual growth',
     variant: 'quantum-matrix',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -833,18 +823,15 @@ export const innovativeAIServices: InnovativeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully autonomous marketing platform with 24/7 operation, quantum AI optimization, multi-channel orchestration, and comprehensive analytics.',
     launchDate: '2024-01-01',
     customers: 220,
     rating: 4.8,
     reviews: 298
-=======
     implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01',
     customers: 67,
     rating: 4.7,
     reviews: 34
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

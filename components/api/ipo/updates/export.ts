@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 import PDFDocument from "pdfkit";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-
-
   if (!requireSuperadminApi(req, res)) return;
-
   const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
   const u = updates.find((x: any) => x.id === id),
@@ -32,7 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
-
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -41,10 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
-
-
-
-
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -72,28 +51,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
-
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const id = String(req.query.id || '');
@@ -115,4 +77,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
 }
->>>>>>> origin/auto/autonomy-17186719616

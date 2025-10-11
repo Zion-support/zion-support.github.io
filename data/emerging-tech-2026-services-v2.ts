@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -37,12 +31,10 @@ export interface EmergingTech2026ServiceV2 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
 }
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
@@ -67,7 +59,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -77,7 +68,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   rating: number;
   reviews: number;
 }
-
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
   {
@@ -131,7 +121,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 85
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -184,7 +173,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Synthetic Biology AI Platform
   {
     id: 'synthetic-biology-ai-platform',
@@ -237,7 +225,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.7,
     reviews: 180
   },
-
   // Fusion Energy AI Platform
   {
     id: 'fusion-energy-ai-platform',
@@ -290,7 +277,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
     reviews: 65
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -343,7 +329,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 280
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -396,7 +381,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.7,
     reviews: 120
   },
-
   // Brain-Computer Interface Platform
   {
     id: 'brain-computer-interface-platform',
@@ -449,7 +433,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.8,
     reviews: 65
   },
-
   // Quantum Internet Platform
   {
     id: 'quantum-internet-platform',
@@ -501,6 +484,5 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     customers: 65,
     rating: 4.9,
     reviews: 45
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

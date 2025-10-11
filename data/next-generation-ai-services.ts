@@ -38,7 +38,6 @@ export interface NextGenerationAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -78,8 +77,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
-=======
-
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems
   {
@@ -120,7 +117,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$50B autonomous systems market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -128,18 +124,14 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully functional quantum BCI platform with FDA approval pathway, quantum encryption, real-time neural processing, and comprehensive research tools.',
     launchDate: '2024-06-01',
-=======
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
     launchDate: '2024-12-01',
->>>>>>> origin/auto/autonomy-17186719616
     customers: 150,
     rating: 4.9,
     reviews: 89
   },
-<<<<<<< HEAD
   {
     id: 'autonomous-ai-venture-capital',
     name: 'Autonomous AI Venture Capital Platform',
@@ -178,8 +170,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$300B venture capital market',
     growthRate: '200% annual growth',
     variant: 'quantum-financial-advanced',
-=======
-
   // Quantum AI Computing Platform
   {
     id: 'quantum-ai-computing-platform',
@@ -219,7 +209,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$1.5B quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -227,7 +216,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully autonomous AI platform with SEC compliance, real-time market analysis, automated investment execution, and comprehensive reporting.',
     launchDate: '2024-05-15',
     customers: 75,
@@ -252,14 +240,12 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Real-time analytics',
       'API for research integration',
       'Multi-omics data analysis'
-=======
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
     reviews: 45
   },
-
   // Neural Interface Development Platform
   {
     id: 'neural-interface-development-platform',
@@ -312,7 +298,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.7,
     reviews: 67
   },
-
   // AI-Powered Space Exploration Platform
   {
     id: 'ai-space-exploration-platform',
@@ -365,7 +350,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.9,
     reviews: 28
   },
-
   // Biotech AI Drug Discovery Platform
   {
     id: 'biotech-ai-drug-discovery',
@@ -385,13 +369,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Personalized medicine algorithms',
       'Drug interaction prediction',
       'Regulatory compliance tools'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-ai-drug-discovery',
     marketPosition: 'First quantum AI drug discovery platform. Competes with Insitro ($100M+ funding) and Recursion ($2B+ funding) with quantum-level precision.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Medical centers, Drug development labs, Healthcare companies',
@@ -458,7 +440,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$469B space economy',
     growthRate: '400% annual growth',
     variant: 'quantum-space-advanced',
-=======
     link: 'https://ziontechgroup.com/biotech-ai-drug-discovery',
     marketPosition: 'Leading AI drug discovery platform. Competes with Insilico Medicine, BenevolentAI, and Atomwise.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Medical device companies, Healthcare providers',
@@ -474,7 +455,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$50B AI drug discovery market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -482,7 +462,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully autonomous space mission control platform with regulatory compliance, real-time mission management, automated operations, and comprehensive analytics.',
     launchDate: '2024-03-15',
     customers: 25,
@@ -578,14 +557,12 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$15T global logistics market',
     growthRate: '150% annual growth',
     variant: 'quantum-logistics-advanced',
-=======
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
     reviews: 52
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-platform',
@@ -625,7 +602,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     marketSize: '$15B algorithmic trading market',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -633,20 +609,17 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully autonomous logistics platform with real-time optimization, automated decision making, comprehensive analytics, and regulatory compliance.',
     launchDate: '2024-01-15',
     customers: 180,
     rating: 4.8,
     reviews: 298
-=======
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
     reviews: 58
   },
-
   // AI-Powered Metaverse Development Platform
   {
     id: 'ai-metaverse-development-platform',
@@ -699,7 +672,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.6,
     reviews: 95
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -752,7 +724,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -805,7 +776,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.9,
     reviews: 33
   },
-
   // AI-Powered Manufacturing Platform
   {
     id: 'ai-manufacturing-platform',
@@ -857,6 +827,5 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     customers: 220,
     rating: 4.7,
     reviews: 125
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

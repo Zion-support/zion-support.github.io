@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -14,11 +5,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -46,14 +32,11 @@ export default async function handler(
       )
       .order("created_at", { ascending: false });
     if (error) return res.status(500).json({ error: error.message });
-
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
-
           {
-
             code: "aihub",
             name: "AI Hub",
             status: "approved",
@@ -66,18 +49,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
             commission_rate: 0 && 0.15,
           },
         ],
-
       });
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
-
     if (req.method === 'GET') {
       const usingPlaceholder = true; // Set to false when real data is available
       if (usingPlaceholder) {
@@ -93,10 +66,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       res.setHeader('Allow', 'GET');
       res.status(405).end('Method Not Allowed');
     }
-
-
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-

@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-
-
-
 export interface Offer {;
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
   id: string;
   createdAtIso: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
-
   scopeSummary: string;
   paymentTerms: PaymentTerms;
-
   agreementUrl?: string;
   status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
   changeRequestNote?: string;
@@ -41,8 +24,6 @@ export interface PaymentTerms {
   }>;
 }
 export interface Project {
-
-
 export interface PaymentTerms {;
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
@@ -53,28 +34,20 @@ export interface PaymentTerms {;
     dueDateIso: string;
   }>;
 }
-
 export interface Project {;
-
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
-
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
 export interface ProjectDocument {
-
-
-
-=======
 export type PaymentTermsType = "hourly" | "fixed" | "milestone";
-
 export type Milestone = {
   id: string;
   title: string;
@@ -82,18 +55,15 @@ export type Milestone = {
   amountUsd?: number;
   status?: "planned" | "in-progress" | "done";
 };
-
 export type PaymentTerms =
   | { type: "hourly"; hourlyRateUsd: number }
   | { type: "fixed"; fixedAmountUsd: number }
   | { type: "milestone"; milestones: Milestone[] };
-
 export type OfferStatus =
   | "SENT"
   | "CONFIRMED"
   | "CHANGES_REQUESTED"
   | "DECLINED";
-
 export type Offer = {
   id: string;
   createdAtIso: string;
@@ -107,28 +77,19 @@ export type Offer = {
   changeRequestNote?: string;
   projectId?: string;
 };
-
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
-
 export type ProjectDocument = {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
-<<<<<<< HEAD
 }
-
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
 }
-
-
-
-
 export interface ProjectNote {;
   id: string;
   authorId: string;
@@ -136,10 +97,7 @@ export interface ProjectNote {;
   content: string;
   createdAtIso: string;
 }
-
-=======
 };
-
 export type ProjectNote = {
   id: string;
   authorId: string;
@@ -147,7 +105,6 @@ export type ProjectNote = {
   content: string;
   createdAtIso: string;
 };
-
 export type Project = {
   id: string;
   title: string;
@@ -160,9 +117,7 @@ export type Project = {
   documents: ProjectDocument[];
   notes: ProjectNote[];
 };
-
 export type MarketplaceDb = {
   offers: Offer[];
   projects: Project[];
 };
->>>>>>> origin/auto/autonomy-17186719616

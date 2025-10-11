@@ -25,13 +25,10 @@ import {
   Phone, 
   FileText, 
   Shield, 
-=======
 import { motion } from 'framer-motion';
-=======
 import { 
   Brain, 
   Shield, 
-=======
 import { SEO } from '../components/SEO';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
 import { Badge } from '../components/ui/badge.js';
@@ -301,7 +298,6 @@ export default function Sitemap() {
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information' },
         { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Accessibility tools' },
         { name: 'Accessibility Scanner', path: '/accessibility-scanner', description: 'Accessibility scanning' }
-=======
   ShoppingCart, 
   Building, 
   FileText, 
@@ -421,7 +417,6 @@ export default function Sitemap() {
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
         { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -540,7 +535,6 @@ import {
   FileText, 
   Shield, 
   Cookie, 
-=======
   Brain, 
   Cpu,
   Cloud,
@@ -608,8 +602,6 @@ export default function Sitemap() {
     { path: '/accessibility', title: 'Accessibility', description: 'Accessibility commitment', icon: Users }
   ];
 
-=======
-=======
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
     <motion.div
       key={title}
@@ -637,7 +629,6 @@ export default function Sitemap() {
         ))}
       </ul>
     </motion.div>
-=======
   const quickLinks = [
     { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
     { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
@@ -652,8 +643,6 @@ export default function Sitemap() {
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
         canonical="https://ziontechgroup.com/sitemap"
-=======
-=======
       />
       
       <Header />
@@ -779,7 +768,6 @@ export default function Sitemap() {
 
   return (
     </>
-=======
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
     <div key={title} className="mb-8">
       <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -929,7 +917,6 @@ export default function Sitemap() {
         </div>
       </section>
     </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
@@ -944,8 +931,6 @@ export default function Sitemap() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Navigate through our comprehensive range of services, solutions, and resources. 
             Find everything you need to transform your business with cutting-edge technology.
-=======
-=======
 import { 
   Brain, 
   Cpu, 

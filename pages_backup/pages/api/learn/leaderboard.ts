@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -6,24 +5,17 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
-
-
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
     const entries = Object.values(users as any).map((u: any) => ({
-
-
     res.status(200).json({ leaderboard: top })
-
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
-
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -31,7 +23,6 @@ import fs from 'fs';
 import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
-
   try {
     const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
     const entries = Object.values (users as any).map ((u: any) => ({
@@ -45,26 +36,11 @@ export default function handler(req, res) {
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
-
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

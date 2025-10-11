@@ -1,42 +1,24 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
-
-
 const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
 const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
-
   }
   try {
     const { roomName, identity, name, audioOnly } = req.body |{}
@@ -51,19 +33,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
     const { roomName, identity, name, audioOnly } = req.body || {};
-
     if (!roomName || !identity) {
       return res.status(400).json({ error: 'Missing roomName or identity' });
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
     }
-
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       identity: String(identity),
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
-
     });
     at.addGrant({
       roomJoin: true
@@ -80,27 +59,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
-
-
     at.addGrant({
-
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-
-
       canPublishData: true,
       canSubscribe: true
     });
-
     const token = await at.toJwt();
-
     return res.status(200).json({
       token,
       url: LIVEKIT_HOST
     });
   } catch (err: any) {
-
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -129,7 +100,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -165,8 +135,6 @@ if ( {) {
       identity: String (identity),
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
-
-
     }),;
     at.addGrant({;
       roomJoin: true,;
@@ -179,96 +147,61 @@ if ( {) {
       token;
       url: LIVEKIT_HOST});
   } catch (error) {
-
-
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
   }
-
-
     });
-
 ;
     at.add_grant ({
       room_join: true,
       room: String (room_name),
       can_publish: audio_only ? false : true,
-
       canPublishData: true,
       can_subscribe: true,
     });
-
       return res.status(400).json({ error: 'Missing roomName or identity' })
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
     }
-
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       identity: String(identity), name: name ? String(name) : String(identity),
       ttl: 60 * 60, // 1 hour
     });
-
     at.addGrant({
       roomJoin: true, room: String(roomName),
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
-
-
-
-
-
     const token = await at && at.toJwt();
-
     return res && res.status(200).json({
-
       token,
-
-
-
-
-
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   }
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
   }
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
-
-
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
-
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
-
   }
   try {
-
     });
     at.addGrant({
       roomJoin: true
@@ -285,19 +218,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
-
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

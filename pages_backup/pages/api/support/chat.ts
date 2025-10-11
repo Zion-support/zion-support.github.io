@@ -1,7 +1,3 @@
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
@@ -27,17 +23,11 @@ export default async function handler(
     : { intentMatched: false, matchedArticleIds: [] }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
-
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-
-
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
   if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
@@ -45,13 +35,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
   const lastUser = [...messages].reverse().find((m) => m.role === 'user');
   const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-
-
   // Build context with top matched articles as brief references
-
-
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
@@ -79,22 +63,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         intentMatched: intent && intent.intentMatched,
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
-
-
   const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
-
   const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
-
   try {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [sysMessage, ...messages],
       temperature: 0.2
     });
-
   } catch (e: any) {
     return res.status(200).json({
       assistantMessage:
@@ -104,7 +83,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
-
   }
   if ()) {
   $2
@@ -155,17 +133,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       meta: {
         intentMatched: intent.intentMatched,
         matchedArticleIds: intent.matchedArticleIds,
-
         links: matched_articles.map ((a) => ({
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
-
     });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   } catch (e: any) {
-
-

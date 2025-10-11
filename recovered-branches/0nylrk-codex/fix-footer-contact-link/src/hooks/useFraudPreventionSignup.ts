@@ -1,12 +1,9 @@
-
 import { useState, useCallback } from 'react';
 import { checkSignupPatterns } from '@/services/fraud/signupCheck';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-
 export function useFraudPreventionSignup() {
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
-  
   // Get the user's IP address (in a real app, you'd do this server-side)
   const getIP = async (): Promise<string | undefined> => {
     try {
@@ -18,19 +15,15 @@ export function useFraudPreventionSignup() {
       return undefined;
     }
   };
-  
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true);
     try {
       const ipAddress = await getIP();
-      
       // Check for suspicious patterns
       const fraudCheck = await checkSignupPatterns(email, ipAddress);
-      
       if (fraudCheck.isSuspicious) {
         console.log('Suspicious signup detected:', fraudCheck.reasons);
-        
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
           user_email: email,
@@ -43,11 +36,9 @@ export function useFraudPreventionSignup() {
           timestamp: new Date().toISOString(),
           status: 'pending'
         });
-        
         if (error) {
           console.error('Error creating fraud flag:', error);
         }
-        
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
         if (fraudCheck.reasons.some(r => 
@@ -57,19 +48,14 @@ export function useFraudPreventionSignup() {
           toast({
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-<<<<<<< HEAD
             variant: "destructive"});
-=======
             variant: "destructive",
           });
->>>>>>> origin/auto/autonomy-17186719616
           return false;
         }
-        
         // Otherwise, allow but flag for review
         return true;
       }
-      
       // No suspicious patterns found
       return true;
     } catch (error) {
@@ -80,13 +66,9 @@ export function useFraudPreventionSignup() {
       setIsCheckingFraud(false);
     }
   }, []);
-  
   return {
     isCheckingFraud,
-<<<<<<< HEAD
     checkFraudBeforeSignup};
-=======
     checkFraudBeforeSignup,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

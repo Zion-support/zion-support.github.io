@@ -1,10 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 export interface InnovativeNewService2025 {
-=======
-
 export interface InnovativeNewService {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -30,11 +26,8 @@ export interface InnovativeNewService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   variant: ServiceVariant;
-=======
   variant: string;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -48,7 +41,6 @@ export interface InnovativeNewService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const innovativeNewServices2025: InnovativeNewService2025[] = [
   // AI-Powered Content Intelligence Platform
   {
@@ -89,8 +81,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     marketSize: '$15B+ content marketing market',
     growthRate: '150%+ annual growth',
     variant: 'ai-creative',
-=======
-
 export const innovativeNewServices2025: InnovativeNewService[] = [
   // AI-Powered Legal Document Analysis
   {
@@ -131,7 +121,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$15.2B legal tech market',
     growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -139,7 +128,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full-stack AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.',
     launchDate: '2025-01-15',
     customers: 45,
@@ -246,15 +234,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.',
     launchDate: '2025-01-20',
-=======
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
     launchDate: '2025-01-15',
->>>>>>> origin/auto/autonomy-17186719616
     customers: 28,
     rating: 4.9,
     reviews: 15
   },
-<<<<<<< HEAD
   // Blockchain-Powered Supply Chain Intelligence
   {
     id: 'blockchain-supply-chain-intelligence',
@@ -294,8 +279,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$18B+ blockchain supply chain market',
     growthRate: '250%+ annual growth',
     variant: 'supply-chain-futuristic',
-=======
-
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication',
@@ -335,7 +318,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$8.7B quantum security market',
     growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -343,7 +325,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Complete blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.',
     launchDate: '2025-02-15',
     customers: 35,
@@ -493,14 +474,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$45B+ AI healthcare market',
     growthRate: '350%+ annual growth',
     variant: 'ai-healthcare',
-=======
     implementationDetails: 'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10',
     customers: 15,
     rating: 4.8,
     reviews: 8
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics',
@@ -540,7 +519,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$45.8B AI healthcare market',
     growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -548,7 +526,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Complete AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.',
     launchDate: '2025-01-25',
     customers: 25,
@@ -594,14 +571,12 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$20B+ edge computing market',
     growthRate: '280%+ annual growth',
     variant: 'edge-futuristic',
-=======
     implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05',
     customers: 22,
     rating: 4.9,
     reviews: 12
   },
-
   // Autonomous Supply Chain Optimization
   {
     id: 'autonomous-supply-chain-optimization',
@@ -641,7 +616,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$19.2B supply chain software market',
     growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -649,20 +623,17 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Complete edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.',
     launchDate: '2025-02-05',
     customers: 38,
     rating: 4.8,
     reviews: 20
-=======
     implementationDetails: 'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12',
     customers: 35,
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading',
@@ -714,6 +685,5 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     customers: 12,
     rating: 4.9,
     reviews: 6
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

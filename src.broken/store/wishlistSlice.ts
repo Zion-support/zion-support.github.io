@@ -1,28 +1,20 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-
 export interface WishlistItem {
   id: string;
   type: string;
   data?: any;
 }
-
 export interface WishlistState {
   items: WishlistItem[];
 }
-
 const initialState: WishlistState = {
-<<<<<<< HEAD
   items: []};
-=======
   items: [],
 };
->>>>>>> origin/auto/autonomy-17186719616
-
 export const getApiUrl = () => {
   const env = (import.meta as any)?.env ?? process.env;
   return env.VITE_API_URL || env.API_URL || '';
 };
-
 export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   'wishlist/loadFromDB',
   async (userId: string) => {
@@ -31,7 +23,6 @@ export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
     return (await res.json()) as WishlistItem[];
   }
 );
-
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
@@ -44,22 +35,15 @@ const wishlistSlice = createSlice({
     },
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
       state.items = state.items.filter((item) => item.id !== action.payload.id);
-<<<<<<< HEAD
     }},
-=======
     },
   },
->>>>>>> origin/auto/autonomy-17186719616
   extraReducers: (builder) => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload;
     });
-<<<<<<< HEAD
   }});
-=======
   },
 });
->>>>>>> origin/auto/autonomy-17186719616
-
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

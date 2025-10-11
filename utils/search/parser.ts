@@ -1,64 +1,41 @@
-<<<<<<< HEAD
-
 // Search parser utilities
 export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
   return {
-
     keywords: []
     skills: []
     location: null
     type: null
-
   }
-
   const words = query && query.toLowerCase().split(/\s+/);
   const keywords: string[] = [];
   const skills: string[] = [];
-  
   // Simple keyword extraction
   for (const word of words) {
     if (word && word.length > 2) {
       keywords && keywords.push(word);
     }
   }
-
-
-
-
-
-  
   if (keywords && keywords.length > 0) {
     filters && filters.keywords = keywords;
   }
-  
   // Extract skills (simple heuristic)
   const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
-  
   for (const word of words) {
     if (skillKeywords && skillKeywords.includes(word)) {
       skills && skills.push(word);
     }
   }
-  
   if (skills && skills.length > 0) {
     filters && filters.skills = skills;
   }
-  
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
     keywords: [],
     skills: [],
     location: null,
     type: null;
   };
 };
-
 export const searchAll = (parsed: any, access: any) => {
   // Add search functionality here
   return {
@@ -66,48 +43,17 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: [];
-
   };
 };
-
-
-
-
-
-
-
-
-
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
-
 }
-
-
-
-
-
-
 };
-
 }
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
-
 export type ParsedFilters = {
   type: SearchType;
   skills: string[];
@@ -117,7 +63,6 @@ export type ParsedFilters = {
   availability?: 'full-time' | 'part-time' | 'contract';
   keywords: string[];
 };
-
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase();
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
@@ -145,7 +90,6 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
   }
   return {};
 }
-
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
   const lower = text.toLowerCase();
   if (/(full\s*-?\s*time)/.test(lower)) return 'full-time';
@@ -153,7 +97,6 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
   if (/(contract|freelance)/.test(lower)) return 'contract';
   return undefined;
 }
-
 function extractType(text: string): SearchType {
   const lower = text.toLowerCase();
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent';
@@ -161,7 +104,6 @@ function extractType(text: string): SearchType {
   if (/(projects?|gigs?)/.test(lower)) return 'projects';
   return 'all';
 }
-
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase();
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
@@ -170,11 +112,9 @@ function extractLocation(text: string): string | undefined {
   if (/remote/.test(lower)) return 'remote';
   return undefined;
 }
-
 const COMMON_SKILLS = [
   'react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql'
 ];
-
 function extractSkills(text: string): string[] {
   const lower = text.toLowerCase();
   const found = new Set<string>();
@@ -188,7 +128,6 @@ function extractSkills(text: string): string[] {
   }
   return Array.from(found);
 }
-
 function extractKeywords(text: string): string[] {
   return text
     .toLowerCase()
@@ -197,7 +136,6 @@ function extractKeywords(text: string): string[] {
     .filter(Boolean)
     .filter((w) => w.length > 2 && !['show', 'me', 'with', 'and', 'for', 'the', 'a', 'an', 'to', 'by', 'of', 'under', 'over', 'in'].includes(w));
 }
-
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
   const base: ParsedFilters = {
     type: extractType(query),
@@ -207,10 +145,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     ...extractBudget(query),
     keywords: extractKeywords(query),
   };
-
   const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   if (!apiKey) return base;
-
   try {
     const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`;
     const user = `Query: ${query}`;
@@ -247,4 +183,3 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     return base;
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

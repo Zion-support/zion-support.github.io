@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface EnterpriseITBreakthroughService2029 {
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   marketPosition: string;
   targetAudience: string;
-=======
   period: string;
   description: string;
   features: string[];
@@ -32,21 +26,16 @@ export interface EnterpriseITBreakthroughService2029 {
   technology: string[];
   integrations: string[];
   useCases: string[];
->>>>>>> origin/auto/autonomy-17186719616
   roi: string;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   realImplementation: boolean;
-=======
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
   category: string;
   technology: string[];
@@ -304,7 +293,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Incident response",
       "Compliance management"
     ]
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -314,7 +302,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   rating: number;
   reviews: number;
 }
-
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [
   {
     id: 'autonomous-devops-platform',
@@ -519,6 +506,5 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180,
     rating: 4.9,
     reviews: 95
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

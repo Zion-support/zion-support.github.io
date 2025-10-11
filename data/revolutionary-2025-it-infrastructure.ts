@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 export const revolutionary2025ITInfrastructure: Array<Record<string, any>> = []
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2025ITService {
   id: string;
   name: string;
@@ -42,7 +39,6 @@ export interface Revolutionary2025ITService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
   {
@@ -93,7 +89,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 145
   },
-
   // ☁️ Quantum Cloud Infrastructure Services
   {
     id: 'quantum-cloud-infrastructure',
@@ -143,7 +138,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 78
   },
-
   // 🚀 Autonomous DevOps & Infrastructure Services
   {
     id: 'autonomous-devops-platform',
@@ -193,7 +187,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 198
   },
-
   // 🧠 AI-Powered Data Management Services
   {
     id: 'ai-data-management-platform',
@@ -243,7 +236,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 145
   },
-
   // 🌐 Edge Computing & IoT Orchestration Services
   {
     id: 'edge-computing-orchestrator',
@@ -293,7 +285,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 95
   },
-
   // 🔐 Blockchain & Web3 Infrastructure Services
   {
     id: 'blockchain-web3-infrastructure',
@@ -343,7 +334,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // 🎯 API Management & Integration Services
   {
     id: 'api-management-integration',
@@ -393,7 +383,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.8,
     reviews: 178
   },
-
   // 📊 Business Intelligence & Analytics Services
   {
     id: 'business-intelligence-analytics',
@@ -443,7 +432,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     rating: 4.9,
     reviews: 234
   },
-
   // 🚀 Digital Transformation & Innovation Services
   {
     id: 'digital-transformation-innovation',
@@ -494,6 +482,4 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     reviews: 52
   }
 ];
-
 export default revolutionary2025ITServices;
->>>>>>> origin/auto/autonomy-17186719616

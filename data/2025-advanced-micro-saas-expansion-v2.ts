@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
 export const advancedMicroSaasExpansion2025V2 = [
   {
-
-
     name: 'AI Content Factory Pro',
     description: 'Advanced AI - powered content creation and management platform',
     category: 'AI & Data',
@@ -21,7 +9,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Content calendar management',
       'Performance analytics',
     ],
-=======
 export const advancedMicroSaasExpansion2025V2 = [
   {
     name: 'AI Content Factory Pro',
@@ -34,13 +21,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Content calendar management',
       'Performance analytics'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Content Marketing Automation',
     description: 'Intelligent content marketing workflow automation',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$199 / month',
     features: [;
       'Automated content scheduling',
@@ -48,7 +33,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Lead nurturing workflows',
       'ROI tracking',
     ],
-=======
     pricing: '$199/month',
     features: [
       'Automated content scheduling',
@@ -56,13 +40,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Lead nurturing workflows',
       'ROI tracking'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Content Personalization',
     description: 'Dynamic content personalization engine',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$249 / month',
     features: [;
       'User behavior analysis',
@@ -82,7 +64,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Collaboration tools',
       'Creative analytics',
     ],
-=======
     pricing: '$249/month',
     features: [
       'User behavior analysis',
@@ -102,13 +83,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Collaboration tools',
       'Creative analytics'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Customer Intelligence Platform',
     description: 'Comprehensive customer intelligence and analytics',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$349 / month',
     features: [;
       'Customer journey mapping',
@@ -128,7 +107,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Churn prediction',
       'Success metrics',
     ],
-=======
     pricing: '$349/month',
     features: [
       'Customer journey mapping',
@@ -148,13 +126,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Churn prediction',
       'Success metrics'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Customer Success Automation',
     description: 'Automated customer success workflows',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$229 / month',
     features: [;
       'Workflow automation',
@@ -198,7 +174,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Training modules',
       'Progress tracking',
     ],
-=======
     pricing: '$229/month',
     features: [
       'Workflow automation',
@@ -242,13 +217,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Training modules',
       'Progress tracking'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Ethics & Governance',
     description: 'AI ethics and governance framework',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$499 / month',
     features: [;
       'Ethics guidelines',
@@ -268,7 +241,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Risk scoring',
       'Alert management',
     ],
-=======
     pricing: '$499/month',
     features: [
       'Ethics guidelines',
@@ -288,13 +260,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Risk scoring',
       'Alert management'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Financial Intelligence Suite',
     description: 'Comprehensive financial intelligence platform',
     category: 'Financial Services',
-<<<<<<< HEAD
     pricing: '$449 / month',
     features: [;
       'Market analysis',
@@ -314,7 +284,6 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Patient data integration',
       'Clinical decision support',
     ],
-=======
     pricing: '$449/month',
     features: [
       'Market analysis',
@@ -334,13 +303,11 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Patient data integration',
       'Clinical decision support'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'AI Logistics Platform',
     description: 'Intelligent logistics optimization platform',
     category: 'Transportation',
-<<<<<<< HEAD
     pricing: '$379 / month',
     features: [;
       'Route optimization',
@@ -386,13 +353,11 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
   {
-
     name: 'AI Threat Detection'
     description: 'Advanced AI threat detection system'
     category: 'Cybersecurity'
     pricing: '$549/month'
     features: [
-
       'Real-time monitoring'
       'Threat intelligence'
       'Automated response'
@@ -405,13 +370,10 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Incident management',
     ],
   },;
-
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
   }
 ];
-
-
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -421,8 +383,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics';
     ];
-
-
   },;
   {;
     name: 'AI Content Marketing Automation',;
@@ -585,12 +545,9 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-
   }
 ];
 ;
-
-
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -764,8 +721,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ];
   }
 ];
-
-=======
     pricing: '$379/month',
     features: [
       'Route optimization',
@@ -821,7 +776,5 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Automated response',
       'Incident management'
     ]
-
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
 export function verifySignature(
   payload: unknown,
   signature?: string | null
@@ -28,42 +20,30 @@ export function verifySignature(
     return false;
   }
 }
-
-
-
 }
-
-
 export function signPayload(payload: any, privateKey?: string): SignatureResult {
   const timestamp = Date && Date.now();
   const nonce = crypto && crypto.randomBytes(16).toString('hex');
-  
   // Create a simple signature using the payload, timestamp, and nonce
   const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
   const signature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
-  
   return {
     signature,
     timestamp,
     nonce
   };
 }
-
-=======
 import crypto from "crypto";
-
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || "";
   return raw.length > 0 ? raw : null;
 }
-
 export function signPayload(payload: unknown): string | null {
   const secret = getSyncSecret();
   if (!secret) return null;
   const body = typeof payload === "string" ? payload : JSON.stringify(payload);
   return crypto.createHmac("sha256", secret).update(body).digest("hex");
 }
-
 export function verifySignature(payload: unknown, signature?: string | null): boolean {
   const secret = getSyncSecret();
   if (!secret) return true;
@@ -77,4 +57,3 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
     return false;
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

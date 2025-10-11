@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-
-
 const generateId = () => Math.random().toString(36).slice(2, 10);
-
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -56,11 +50,8 @@ export const store = {getCompanyBySlug(slug: string) {;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {const company = companiesById[companyId];
     if (!company) return null;
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
-=======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
-
 const generateId = () => Math.random().toString(36).slice(2, 10);
-
 const seedCompany: CompanyRecord = {
   id: 'cmp_acme',
   name: 'Acme Corporation',
@@ -90,10 +81,8 @@ const seedCompany: CompanyRecord = {
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },
   ],
 };
-
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
-
 export const store = {
   getCompanyBySlug(slug: string) {
     return companiesBySlug[slug] || null;
@@ -128,47 +117,36 @@ export const store = {
     const company = companiesById[companyId];
     if (!company) return null;
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role };
->>>>>>> origin/auto/autonomy-17186719616
     company.members.push(member);
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' });
     return member;
-<<<<<<< HEAD
   }
   removeMember(companyId: string, memberId: string): boolean {const company = companiesById[companyId];
-=======
   },
   removeMember(companyId: string, memberId: string): boolean {
     const company = companiesById[companyId];
->>>>>>> origin/auto/autonomy-17186719616
     if (!company) return false;
     const before = company.members.length;
     company.members = company.members.filter(m => m.id !== memberId);
     const changed = company.members.length !== before;
-<<<<<<< HEAD
     if (changed) {;
-=======
     if (changed) {
->>>>>>> origin/auto/autonomy-17186719616
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
       company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
     }
     return changed;
-<<<<<<< HEAD
   }
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {const company = companiesById[companyId];
-=======
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
     const company = companiesById[companyId];
->>>>>>> origin/auto/autonomy-17186719616
     if (!company) return false;
     const member = company.members.find(m => m.id === memberId);
     if (!member) return false;
     member.role = role;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } });
     return true;
-<<<<<<< HEAD
   }
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {const company = companiesById[companyId];
     if (!company) return false;
@@ -177,13 +155,6 @@ export const store = {
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-
-
-
-
-
-
-
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -202,10 +173,8 @@ export const store = {
     { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
     { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
   invoices: [;
-
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
-
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },;
 export const store = {;
@@ -223,7 +192,6 @@ export const store = {;
       name: input.name || 'New Company',;
       slug,;
       logoUrl: input.logoUrl,;
-
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
 export const store = {;
@@ -241,10 +209,6 @@ export const store = {;
       name: input.name || 'New Company';
       slug;
       logoUrl: input.logoUrl;
-
-
-
-
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -259,27 +223,20 @@ export const store = {;
     return record;
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
-
     const company = companiesById[companyId],;
     if (!company) return null,;
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
     company.members.push(member),;
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),;
-
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
     company.members.push(member);
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
-
-
-
-
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
-
     const company = companiesById[companyId],;
     if (!company) return false,;
     const before = company.members.length,;
@@ -297,7 +254,6 @@ export const store = {;
     const member = company.members.find(m => m.id === memberId),;
     if (!member) return false,;
     member.role = role,;
-
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
@@ -313,34 +269,24 @@ export const store = {;
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     member.role = role;
-
-
-
-
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
-
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const company = companiesById[companyId],;
     if (!company) return false,;
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
-
     return true;
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
   }};
-
-
-=======
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
     const company = companiesById[companyId];
@@ -354,4 +300,3 @@ export const store = {;
     return company ? company.invoices : [];
   },
 };
->>>>>>> origin/auto/autonomy-17186719616

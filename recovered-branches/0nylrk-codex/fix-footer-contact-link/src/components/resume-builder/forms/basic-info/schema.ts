@@ -1,6 +1,4 @@
-
 import { z } from "zod";
-
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
   title: z.string().min(1, "Professional title is required"),
@@ -10,11 +8,7 @@ export const basicInfoSchema = z.object({
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
   github: z.string().optional(),
-<<<<<<< HEAD
   hourlyRate: z.number().positive().optional()});
-=======
   hourlyRate: z.number().positive().optional(),
 });
->>>>>>> origin/auto/autonomy-17186719616
-
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;

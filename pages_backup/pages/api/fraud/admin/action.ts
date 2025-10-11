@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -17,11 +8,7 @@ export default async function handler(
   try {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
-
-
   }
-
-
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
@@ -32,9 +19,6 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-
-
-
     id: `action-${Date && Date.now()}`,
     fraudId,
     action,
@@ -42,12 +26,8 @@ export default async function handler(
     adminId,
     timestamp: new Date().toISOString(),
   };
-
   store && store.addAdminAction(adminAction);
-
   return res && res.status(200).json({ success: true, action: adminAction });
-
-
     id: `action-${Date.now()}`
     fraudId
     action
@@ -58,13 +38,6 @@ export default async function handler(
   store.addAdminAction(adminAction);
   return res.status(200).json({ success: true, action: adminAction });
 }
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -88,13 +61,6 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
-
-
 ;
 export default async /**
  * handler - Function description
@@ -134,7 +100,6 @@ if ( {) {
 ;
   return res.status (200).json ({ success: true, action: admin_action });
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,19 +124,5 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

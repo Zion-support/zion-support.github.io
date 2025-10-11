@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
 // Stub talent data - placeholder for missing functionality
-
 export const TALENT_PROFILES = [
   {
     id: '1'
@@ -27,9 +24,7 @@ export const TALENT_PROFILES = [
     createdAt: new Date().toISOString()
     originalLanguage: 'en'
 translations: {}
-=======
 // Stub talent data - placeholder for missing functionality
->>>>>>> origin/auto/autonomy-17186719616
 export const TALENT_PROFILES = [
   {
     id: '1',
@@ -54,7 +49,6 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
-<<<<<<< HEAD
 translations: {},
   },;
 ];
@@ -87,10 +81,6 @@ export const TALENT_PROFILES = [;
   }
 ];
 ;
-
-
-=======
     translations: {}
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

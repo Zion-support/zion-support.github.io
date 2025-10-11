@@ -1,18 +1,10 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'managed-ml-feature-store-starter',
@@ -1348,7 +1340,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8
   },
   {
-<<<<<<< HEAD
     id: 'pii-redaction-proxy',
     name: 'PII Redaction Proxy',
     tagline: 'Lossless PII masking for logs, prompts, and data pipelines',
@@ -1411,7 +1402,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/license-key-usage-metering',
     marketPosition: 'Developer-first licensing and metering without heavy ecommerce suites.',
     targetAudience: 'SaaS product and platform teams',
-=======
     id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -1473,12 +1463,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/sales-copilot-for-outreach',
     marketPosition: 'Combines best of Outreach/Salesloft with native AI writing and logging.',
     targetAudience: 'SDRs, AEs, RevOps',
->>>>>>> origin/auto/autonomy-17186719616
     trialDays: 14,
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-<<<<<<< HEAD
     technology: ['Next.js', 'Stripe Billing', 'PostgreSQL'],
     integrations: ['Stripe', 'Webhook', 'Slack'],
     useCases: ['License distribution', 'Feature gating', 'Usage-based billing'],
@@ -1958,7 +1946,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
   }
 ];
-=======
     technology: ['Next.js', 'LLM APIs', 'Webhooks'],
     integrations: ['Salesforce', 'HubSpot', 'Gmail/Outlook'],
     useCases: ['Outbound sequences', 'Call notes', 'CRM hygiene'],
@@ -2386,5 +2373,3 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
   }
 ];
-
->>>>>>> origin/auto/autonomy-17186719616

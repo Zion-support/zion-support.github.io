@@ -1,26 +1,15 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
 import fs from "fs";
 import path from "path";
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
-
-
-
 function load(): Record<string, KycProfile> {
   try {
-
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import type { KycProfile } from "../../../utils / kyc";
 import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';
@@ -34,26 +23,17 @@ function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, "utf8");
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return {}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-
-
   });
-
 }
-
-=======
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role)})
-
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * handler - Function description
  */
@@ -78,9 +58,5 @@ function handler() {
     optional_documents: getOptionalDocuments (profile.role),
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

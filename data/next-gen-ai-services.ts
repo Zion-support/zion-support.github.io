@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface NextGenAIService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface NextGenAIService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -100,10 +92,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 2
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum AI Content Factory
   {
     id: 'quantum-ai-content-factory',
@@ -156,10 +144,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 95
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Autonomous Research Platform
   {
     id: 'ai-autonomous-research-platform',
@@ -212,10 +196,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 6
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum AI Video Production Studio
   {
     id: 'quantum-ai-video-studio',
@@ -268,10 +248,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.7,
     reviews: 23
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Quantum Computing Platform
   {
     id: 'ai-quantum-computing-platform',
@@ -324,10 +300,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 4
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Neural Network Evolution Platform
   {
     id: 'neural-network-evolution',
@@ -380,10 +352,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 3
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum AI Creativity Engine
   {
     id: 'quantum-ai-creativity-engine',
@@ -436,7 +404,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.6,
     reviews: 38
   },
-<<<<<<< HEAD
   // New AI Services
   {
     id: 'ai-neural-interface-pro',
@@ -475,8 +442,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Neuralink', 'Kernel', 'Synchron', 'Paradromics'],
     marketSize: '$2.5B BCI market',
     growthRate: '500% annual growth',
-=======
-
   // New Innovative AI Services
   {
     id: 'ai-emotional-intelligence-platform',
@@ -515,7 +480,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Traditional sentiment analysis tools ($50K+)', 'Basic emotion detection APIs ($5K+)'],
     marketSize: '$15B emotional AI market',
     growthRate: '400% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'neural-quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -524,7 +488,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption.',
     launchDate: '2024-12-01',
     customers: 15,
@@ -568,14 +531,12 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
     marketSize: '$1.8B quantum computing market',
     growthRate: '400% annual growth',
-=======
     implementationDetails: 'Full-stack emotional AI platform with real-time processing, multi-modal input support, and comprehensive API ecosystem.',
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
     reviews: 89
   },
-
   {
     id: 'ai-quantum-optimization-engine',
     name: 'AI Quantum Optimization Engine',
@@ -613,7 +574,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     competitors: ['Traditional optimization software ($100K+)', 'Basic optimization tools ($20K+)'],
     marketSize: '$8B optimization software market',
     growthRate: '250% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -622,7 +582,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.',
     launchDate: '2024-11-15',
     customers: 25,
@@ -667,14 +626,12 @@ export const nextGenAIServices: NextGenAIService[] = [
     marketSize: '$450B space industry',
     growthRate: '300% annual growth in AI space applications',
     variant: 'quantum-space',
-=======
     implementationDetails: 'Advanced optimization engine with quantum-inspired algorithms, scalable architecture, and comprehensive integration capabilities.',
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
     reviews: 52
   },
-
   {
     id: 'ai-autonomous-decision-platform',
     name: 'AI Autonomous Decision Platform',
@@ -713,7 +670,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     marketSize: '$25B decision support market',
     growthRate: '300% annual growth',
     variant: 'neural-cyberpunk',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -721,7 +677,6 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities.',
     launchDate: '2024-10-01',
     customers: 8,
@@ -766,14 +721,12 @@ export const nextGenAIServices: NextGenAIService[] = [
     marketSize: '$150B drug discovery market',
     growthRate: '250% annual growth in AI applications',
     variant: 'ai-futuristic',
-=======
     implementationDetails: 'Comprehensive autonomous decision platform with advanced AI algorithms, continuous learning, and enterprise-grade security.',
     launchDate: '2024-10-01',
     customers: 45,
     rating: 4.9,
     reviews: 38
   },
-
   {
     id: 'ai-creative-intelligence-suite',
     name: 'AI Creative Intelligence Suite',
@@ -812,7 +765,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     marketSize: '$12B creative software market',
     growthRate: '180% annual growth',
     variant: 'holographic-advanced',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -820,22 +772,18 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.',
     launchDate: '2024-09-15',
     customers: 18,
     rating: 4.7,
     reviews: 245
   },
-=======
     implementationDetails: 'Full creative AI suite with advanced design generation, collaboration tools, and comprehensive integration capabilities.',
     launchDate: '2024-09-15',
     customers: 320,
     rating: 4.7,
     reviews: 245
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   {
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -887,10 +835,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 156
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Predictive Analytics Platform
   {
     id: 'ai-predictive-analytics-platform',
@@ -943,10 +887,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -999,10 +939,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 289
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',
@@ -1055,10 +991,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Financial Trading Platform
   {
     id: 'ai-financial-trading-platform',
@@ -1111,10 +1043,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 18
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics',
