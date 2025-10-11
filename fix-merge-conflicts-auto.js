@@ -17,8 +17,7 @@ function resolveMergeConflicts(content) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    if (line.startsWith('<<<<<<< HEAD')) {
-      inConflict = true;
+    if (line.startsWith('      inConflict = true;
       conflictType = 'head';
       continue; // Skip the conflict marker
     } else if (line.startsWith('=======')) {
@@ -49,8 +48,7 @@ function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Processing: ${filePath}`);
+    if (content.includes('      console.log(`Processing: ${filePath}`);
       const resolvedContent = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`✓ Resolved conflicts in: ${filePath}`);
@@ -79,8 +77,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
+          if (content.includes('            files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read

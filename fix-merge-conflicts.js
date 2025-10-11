@@ -8,10 +8,7 @@ import { glob } from 'glob';
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep HEAD version
   let fixed = content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-  
-  return fixed;
+    .replace(/  return fixed;
 }
 
 // Function to fix common syntax errors

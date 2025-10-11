@@ -114,7 +114,6 @@ const AI3DGenerationPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -131,20 +130,12 @@ const AI3DGenerationPage: React.FC = () => {
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI-powered 3D model generation and rendering solutions for creative professionals" />
         <meta name="keywords" content="AI, 3D generation, 3D modeling, computer graphics, AI art, 3D rendering" />
-=======
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered 3D content generation technology for creating stunning 3D models, animations, and visualizations." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, 3D content creation, computer graphics" />
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       </Helmet>
       
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -166,30 +157,11 @@ const AI3DGenerationPage: React.FC = () => {
       
       <Footer />
     </>
-=======
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">3D Generation</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Create stunning 3D content with the power of artificial intelligence. Generate models, animations, and visualizations from simple text descriptions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Start Creating
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                View Demo
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -255,9 +227,6 @@ const AI3DGenerationPage: React.FC = () => {
     </>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -339,7 +308,6 @@ const AI3DGenerationPage: React.FC = () => {
                 Choose the plan that fits your creative needs
               </p>
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -494,45 +462,6 @@ const AI3DGenerationPage: React.FC = () => {
       
       <Footer />
     </>
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  tier.name === 'Professional' 
-                    ? 'border-purple-400/50 scale-105' 
-                    : 'border-white/20 hover:border-purple-400/50'
-                }`}>
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-300 mb-4">{tier.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{tier.price}</span>
-                      <span className="text-gray-300 ml-1">{tier.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.name === 'Professional'
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'border border-white text-white hover:bg-white hover:text-purple-600'
-                  }`}>
-                    {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         </section>
 
         {/* CTA Section */}
@@ -558,7 +487,6 @@ const AI3DGenerationPage: React.FC = () => {
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </>
       <Footer />
     </>
@@ -590,10 +518,3 @@ export default Ai3dGenerationPage
     </>
     </>
   );
-=======
-    </div>
-  )
-}
-
-export default AI3DGenerationPage
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
