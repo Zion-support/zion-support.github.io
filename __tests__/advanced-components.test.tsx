@@ -1,27 +1,36 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { HelmetProvider } from 'react-helmet-async'
 import { MemoryRouter } from 'react-router-dom'
+
 // Mock components
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>}
+  return <div data-testid="error-boundary">{children}</div>
+}
+
 const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>}
+  return <div data-testid="seo-optimizer">{title} - {description}</div>
+}
+
 const AdvancedPerformanceMonitor = () => {
-  return <div data-testid="performance-monitor">Performance Monitor</div>}
+  return <div data-testid="performance-monitor">Performance Monitor</div>
+}
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error')}
-  return <div>Test content</div>}
-// Test component for error boundary tests
-// const TestComponent = () => <div>Test component</div>
-// Mock onError callback
-// const onError = jest.fn()
-// Mock helmet context
-// const helmetContext = {}
+    throw new Error('Test error')
+  }
+  return <div>Test content</div>
+}
+
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
-    // Test implementation
+    render(
+      <AdvancedErrorBoundary>
+        <div>Test content</div>
+      </AdvancedErrorBoundary>
+    )
+    expect(screen.getByText('Test content')).toBeInTheDocument()
   })
 })
 
@@ -187,7 +196,8 @@ describe('AdvancedPerformanceMonitor', () => {
       configurable: true,
     })
     // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as any})
+    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver
+  })
   afterEach(() => {
     jest.clearAllMocks()})
   it('renders nothing in production mode', () => {
@@ -252,16 +262,8 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-<<<<<<< HEAD
       )
     }).not.toThrow()
     consoleSpy.mockRestore()
   })
 })
-=======
-      );
-    }).not.toThrow();
-    consoleSpy.mockRestore();
-  });
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
