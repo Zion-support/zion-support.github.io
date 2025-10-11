@@ -131,7 +131,7 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}
     }
     const observer = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if (entry.duration > 50) {// Tasks longer than 50ms}}ms`);
         }
-observer.observe({entryTypes: ['longtask'] ,)})
+observer.observe({entryTypes: ['longtask'] ,)});
     this.observers.push(observer);
   }
   // Cleanup observers;
@@ -156,10 +156,10 @@ export const usePerformanceMonitor = (componentName: string) => {,}const renderS
       fn();,
       const duration = performance.now() - start;
         if (entry.duration > 50) {// Tasks longer than 50ms;}}
-      })
-    })
-    observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['longtask'] ,})
+      });
+    });
+    observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['longtask'] ,});
     this.observers.push(observer);
   }
   // Cleanup observers;
@@ -240,7 +240,7 @@ export const optimizeScrollPerformance = () => {}
           clsValue += layoutEntry.value;
         }
       }
-observer.observe({entryTypes: ['layout-shift'] ,)})
+observer.observe({entryTypes: ['layout-shift'] ,)});
     return () => {}observer.disconnect();
       return clsValue;
     let clsValue = 0
@@ -257,7 +257,7 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
           clsValue += layoutEntry.value
         }
       }
-observer.observe({ entryTypes: ['layout-shift'] })
+observer.observe({ entryTypes: ['layout-shift'] });
     return () => {}
       observer.disconnect()
       return clsValue
@@ -272,19 +272,19 @@ observer.observe({ entryTypes: ['layout-shift'] })
   const requestTick = () => {/* TODO: Fix JSX expression */,}}
   }
       }
-    })
-    observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['layout-shift'] ,})
+    });
+    observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['layout-shift'] ,});
     return () => {/* TODO: Fix JSX expression */,}}
   }
   const trackLCP = () => {/* TODO: Fix JSX expression */,}}
       }
-    })
+    });
   }
   const trackFID = () => {/* TODO: Fix JSX expression */,}}
     const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}}
       }
-    })
+    });
     limit: memory.jsHeapSizeLimit,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}}
 }
@@ -315,7 +315,7 @@ export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX express
 // Memory usage monitoring
 export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
   }
-  const memory = (performance as unknown as {/* TODO: Fix JSX expression */})
+  const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
   t: number} }).memory
   return {/* TODO: Fix JSX expression */}
   }

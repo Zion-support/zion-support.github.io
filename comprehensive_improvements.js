@@ -18,22 +18,22 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 // const performanceScript = `import { execSync } from 'child_process'
 // // Optimize images
 // try {
-    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' })
+    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' });
 //     } catch (error) {
 //     }
 
 // Optimize CSS
 // try {
-    execSync('pnpm run build:optimized', { stdio: 'pipe' })
+    execSync('pnpm run build:optimized', { stdio: 'pipe' });
 //     } catch (error) {
 // try {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
+  o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 
 // Optimize CSS
 // try {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
+  o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
@@ -73,20 +73,20 @@ fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript)
 // // 5. Create comprehensive test suite;`
 // // const testSuite = `import { describe, it, expect } from '@jest/globals'
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
-    })
+    });
     it('should pass performance test', () => {
     //         const startTime = Date.now()
         // Simulate some work
 //         const endTime = Date.now()
         expect(endTime - startTime).toBeLessThan(1000)
-  })
+  });
     it('should pass accessibility test', () => {
         // Basic accessibility check
         expect(document).toBeDefined()
     it('should pass performance test', () => {/* TODO: Fix JSX expression */}
-    })
+    });
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
-    })
+    });
 });`
 `
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite)
@@ -102,7 +102,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite)
 // // const monitoringScript = `import { execSync } from 'child_process'
 // // Monitor performance
 // try {/* TODO: Fix JSX expression */}
-    })
+    });
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `

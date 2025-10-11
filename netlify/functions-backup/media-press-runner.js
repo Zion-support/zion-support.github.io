@@ -4,7 +4,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  })
+  });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -12,8 +12,8 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 }
 exports.config = {// Top-of-funnel and newsroom refresh cadence
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
-  g: 'utf8'})
-  })
+  g: 'utf8'});
+  });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,

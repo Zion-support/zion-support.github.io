@@ -88,7 +88,7 @@ export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
 }
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
   } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
@@ -116,8 +116,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m'
                    ? 'md:gr, i, d-co, l, s-2'
                   : 'md : gr, i, d-c, o, l, s-, 1'
-               })
-          `})
+               });
+          `});
           >)
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (
                }

@@ -19,7 +19,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical}) => {
   const _location = useLocation()
 const,
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`
   //   const canonicalUrl = canonical || currentUrl
@@ -108,7 +108,7 @@ const,
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      })
+      });
     }
     // Custom analytics tracking
     if (typeof window !== 'undefined' && (window as any).analytics) {
@@ -117,7 +117,7 @@ const,
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }, [title, currentUrl, type])
   return(<Helmet>
@@ -200,7 +200,7 @@ const,
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)
-                item: currentUrl,)})
+                item: currentUrl,)});
             ])
   return (<Helmet>
       {/* Basic Meta Tags */}

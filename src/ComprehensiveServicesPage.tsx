@@ -46,7 +46,7 @@ import { SEO } from '@/components/SEO'
         (priceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 5000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 15000) ||
         (priceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 15000)
       return matchesSearch && matchesCategory && matchesPrice
-    })
+    });
   }, [searchTerm, selectedCategory, selectedSubcategory])
   const getSubcategoriesForCategory = (category: string) => {
     if (category === 'all') return []
@@ -115,7 +115,7 @@ export default function ComprehensiveServicesPage() {
       (priceRange === 'mid-range' && service.price.starter > 200 && service.price.starter <= 500) ||
       (priceRange === 'premium' && service.price.starter > 500)
     return matchesCategory && matchesSearch && matchesPrice
-  })
+  });
   const ServiceCard = ({ service }: { service: any }) => {
     const CategoryIcon = getCategoryIcon(service.category)
     return (
@@ -151,7 +151,7 @@ export default function ComprehensiveServicesPage() {
             <span className="text-sm font-medium">{service.rating}</span>
             <span className="text-zion-slate text-sm">({service.reviewCount} reviews)</span>
           </div>
-          
+
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <DollarSign className="w-4 h-4 text-zion-cyan" />
@@ -202,7 +202,7 @@ export default function ComprehensiveServicesPage() {
           >
             Learn More <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
           </a>
-          
+
           <div className="flex gap-2">
             <$2 />
               href={`mailto:${service.contactInfo.email}`}
@@ -220,7 +220,7 @@ export default function ComprehensiveServicesPage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Discover our complete range of IT services designed to transform your business. From AI development to cybersecurity, we have the expertise you need.
           </p>
-          
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -247,7 +247,7 @@ export default function ComprehensiveServicesPage() {
                 <option key={category.id} value={category.name}>{category.name}</option>
               ))}
             </select>
-            
+
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
@@ -312,7 +312,7 @@ export default function ComprehensiveServicesPage() {
     category: '',
     pricingModel: '',
     priceRange: ''
-  })
+  });
   const filteredServices = useMemo(() => {
     return COMPREHENSIVE_SERVICES.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(filters.search.toLowerCase()) ||
@@ -329,9 +329,9 @@ export default function ComprehensiveServicesPage() {
           matchesPriceRange = service.price >= min
         }
       }
-      
+
       return matchesSearch && matchesCategory && matchesPricingModel && matchesPriceRange
-    })
+    });
   }, [filters])
   const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured)
   const categories = SERVICE_CATEGORIES
@@ -556,7 +556,7 @@ const ComprehensiveServicesPage = () => {
               We deliver innovative, scalable, and cost-effective technology solutions that drive real business transformation
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-zion-blue-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -565,7 +565,7 @@ const ComprehensiveServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
               <p className="text-gray-600">Certified professionals with 10+ years of experience in cutting-edge technologies</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Circle className="h-8 w-8 text-zion-purple" />
@@ -573,7 +573,7 @@ const ComprehensiveServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Custom Solutions</h3>
               <p className="text-gray-600">Tailored approaches designed specifically for your business needs and objectives</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-cyan-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-zion-cyan" />
@@ -581,7 +581,7 @@ const ComprehensiveServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Rapid Delivery</h3>
               <p className="text-gray-600">Agile methodology ensuring quick turnaround times without compromising quality</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="h-8 w-8 text-green-600" />
@@ -713,7 +713,7 @@ export default function ComprehensiveServicesPage() {
           if (selectedPricingTier === 'startup') return discountedPrice <= 5000
           if (selectedPricingTier === 'smb') return discountedPrice <= 15000
           return true; // enterprise
-        })
+        });
       }
     }
 
@@ -731,7 +731,7 @@ export default function ComprehensiveServicesPage() {
         default:
           return 0
       }
-    })
+    });
     return filtered
   }, [searchTerm, selectedCategory, selectedPricingTier, sortBy])
   const getDiscountedPrice = (price: number, tier: string) => {
@@ -830,7 +830,7 @@ export default function ComprehensiveServicesPage() {
     else if (priceRange === '15k-30k') matchesPrice = (service.price || 0) >= 15000 && (service.price || 0) < 30000
     else if (priceRange === 'over-30k') matchesPrice = (service.price || 0) >= 30000
     return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice
-  })
+  });
   const getSubcategories = () => {
     if (selectedCategory === 'all') return []
     const categoryKey = selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES
@@ -927,7 +927,7 @@ export default function ComprehensiveServicesPage() {
                 />
               </div>
             </div>
-            
+
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <SelectValue placeholder="Category" />
@@ -1001,7 +1001,7 @@ export default function ComprehensiveServicesPage() {
                       </Badge>
                     </div>
                   </div>
-                  
+
                   <div className={`flex-1 ${viewMode === 'list' ? 'lg:pl-6' : ''}`}>
                     <CardHeader className="pb-4">
                       <CardTitle className="text-2xl text-white group-hover:text-zion-cyan transition-colors">
@@ -1011,7 +1011,7 @@ export default function ComprehensiveServicesPage() {
                         {service.description}
                       </CardDescription>
                     </CardHeader>
-                    
+
                     <CardContent className="pt-0">
                       {/* Pricing and Rating */}
                       <div className="flex items-center justify-between mb-6">
@@ -1081,7 +1081,7 @@ export default function ComprehensiveServicesPage() {
               of innovative services and solutions.
             </p>
           </div>
-          
+
           {filteredServices.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
@@ -1242,7 +1242,7 @@ export default function ComprehensiveServicesPage() {
                       <span>{service.availability}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -1303,7 +1303,7 @@ export default function ComprehensiveServicesPage() {
               <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
               <p className="text-zion-slate-light">Cutting-edge AI, blockchain, and emerging technologies</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-zion-purple" />
@@ -1311,7 +1311,7 @@ export default function ComprehensiveServicesPage() {
               <h3 className="text-xl font-bold text-white mb-2">Expert Team</h3>
               <p className="text-zion-slate-light">Certified professionals with years of industry experience</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-zion-cyan" />
@@ -1377,7 +1377,7 @@ export default function ComprehensiveServicesPage() {
               We stand behind every service with comprehensive guarantees and ongoing support
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_GUARANTEES.map((guarantee, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark rounded-lg">
@@ -1415,7 +1415,7 @@ export default function ComprehensiveServicesPage() {
                     <Badge className="mt-2 bg-zion-cyan text-white">Most Popular</Badge>
                   )}
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
@@ -1449,7 +1449,7 @@ export default function ComprehensiveServicesPage() {
             Let's discuss how our comprehensive IT and AI services can drive your business forward. 
             Get a free consultation and customized solution proposal.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
               <Link to="/contact">Schedule Free Consultation</Link>
@@ -1483,7 +1483,7 @@ export default function ComprehensiveServicesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Flexible Scheduling</h3>
               <p className="text-zion-slate-light">Work around your schedule with minimal disruption</p>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 rounded-full bg-zion-purple/20 flex items-center justify-center">
@@ -1718,7 +1718,7 @@ export default function ComprehensiveServicesPage() {
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-semibold mb-6 text-zion-cyan">Contact Information</h3>
               <div className="space-y-4">
@@ -1737,7 +1737,7 @@ export default function ComprehensiveServicesPage() {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a></p>
           </div>

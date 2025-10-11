@@ -8,7 +8,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight request
   if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders })
+    return new Response("ok", { headers: corsHeaders });
   }
   try {
     const supabaseClient = createClient(
@@ -40,28 +40,28 @@ serve(async (req) => {
         eventsByDate[date][event.event_type] = 0
       }
       eventsByDate[date][event.event_type]++
-    })
+    });
     // Convert to array for easier consumption by frontend
     const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date))
     return new Response(JSON.stringify(result), {
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"},
-      status: 200})
+      status: 200});
         "Content-Type": "application/json",
       },
       status: 200,
-    })
+    });
   } catch (error) {
     console.error("Error:", error.message)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"},
-      status: 500})
+      status: 500});
         "Content-Type": "application/json",
       },
       status: 500,
-    })
+    });
   }
-})
+});

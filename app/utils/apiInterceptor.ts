@@ -158,9 +158,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   async get</T><T = unknown>(ur,
   l: string,
     confi,
-  g: Partial</T><RequestConfig> = {})
+  g: Partial</T><RequestConfig> = {});
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' })
+  d: 'GET' });
   }
   /**
    * POST request
@@ -169,9 +169,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   l: string,
     body?: unknown,
     confi,
-  g: Partial</T><RequestConfig> = {})
+  g: Partial</T><RequestConfig> = {});
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body })
+  d: 'POST', body });
   }
   /**
    * PUT request
@@ -180,9 +180,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   l: string,
     body?: unknown,
     confi,
-  g: Partial</T><RequestConfig> = {})
+  g: Partial</T><RequestConfig> = {});
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body })
+  d: 'PUT', body });
   }
   /**
    * DELETE request
@@ -190,9 +190,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   async delete</APIResponse><T = unknown>(ur,
   l: string,
     confi,
-  g: Partial</T><RequestConfig> = {})
+  g: Partial</T><RequestConfig> = {});
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' })
+  d: 'DELETE' });
   }
   /**
    * PATCH request
@@ -201,9 +201,9 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   l: string,
     body?: unknown,
     confi,
-  g: Partial</T><RequestConfig> = {})
+  g: Partial</T><RequestConfig> = {});
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body })
+  d: 'PATCH', body });
   }
   /**
    * Prepare request configuration
@@ -251,7 +251,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     }
   }
   y: string, respons);
-  e: APIResponse): void {/* TODO: Fix JSX expression */,}}})
+  e: APIResponse): void {/* TODO: Fix JSX expression */,}}});
   }
   /**;
    * Clear cache;
@@ -300,7 +300,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   private buildHeaders(confi)
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-    })
+    });
     return headers
   }
   /**
@@ -340,7 +340,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   private setInCache()
   y: string, respons)
   e: APIResponse): void {/* TODO: Fix JSX expression */}
-    })
+    });
   }
   /**
    * Clear cache

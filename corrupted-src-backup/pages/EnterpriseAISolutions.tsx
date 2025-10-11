@@ -93,7 +93,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
                     {feature}
                   </li>)
                 ))}
-          ))}
-  )
+          ))});
 }
 "</div></div></div></div></div></div></div></div></div></p></p></h1></h3></ul>

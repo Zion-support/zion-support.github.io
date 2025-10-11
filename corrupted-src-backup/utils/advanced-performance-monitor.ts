@@ -84,7 +84,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       firstContentfulPaint: avgFCP;)
       largestContentfulPaint: avgLCP,),
       cumulativeLayoutShift: avgCLS),
-      firstInputDelay: avgFID)})
+      firstInputDelay: avgFID)});
     return {
       averageLoadTime: avgLoadTime
       averageFCP: avgFCP
@@ -92,8 +92,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       averageCLS: avgCLS
       averageFID: avgFID,
       performanceScore,
-    const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */})
-    })
+    const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */});
+    });
     return {/* TODO: Fix JSX expression */}
     }
   }
@@ -107,16 +107,16 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       const _entries = list.getEntries()
       entries.forEach(entry => {)
         this.handlePerformanceEntry(entry)
-  })
-    })
+  });
+    });
     try {
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     try {/* TODO: Fix JSX expression */}
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
@@ -131,39 +131,39 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
     getCLS(metric => {)
           this.updateMetric('cumulativeLayoutShift', metric.value)
-  })
+  });
         getFID(metric => {
     )
           this.updateMetric('firstInputDelay', metric.value)
-  })
+  });
         getFCP(metric => {
     )
           this.updateMetric('firstContentfulPaint', metric.value)
-  })
+  });
         getLCP(metric => {
     )
           this.updateMetric('largestContentfulPaint', metric.value)
-  })
+  });
         getTTFB(metric => {
     )
           this.updateMetric('loadTime', metric.value)
-  })
-      })
+  });
+      });
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-        })
-        getFID(metric => {/* TODO: Fix JSX expression */})
-        })
-        getFCP(metric => {/* TODO: Fix JSX expression */})
-        })
-        getLCP(metric => {/* TODO: Fix JSX expression */})
-        })
-        getTTFB(metric => {/* TODO: Fix JSX expression */})
-        })
-      })
-      .catch(error => {/* TODO: Fix JSX expression */})
-        //         })
+        });
+        getFID(metric => {/* TODO: Fix JSX expression */});
+        });
+        getFCP(metric => {/* TODO: Fix JSX expression */});
+        });
+        getLCP(metric => {/* TODO: Fix JSX expression */});
+        });
+        getTTFB(metric => {/* TODO: Fix JSX expression */});
+        });
+      });
+      .catch(error => {/* TODO: Fix JSX expression */});
+        //         });
   }
 
   /**
@@ -340,7 +340,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     else if (metrics.firstInputDelay > 100) score -= 5
     return Math.max(0, Math.min(100, score))
   private calculatePerformanceScore(metric,
-  s: {/* TODO: Fix JSX expression */})
+  s: {/* TODO: Fix JSX expression */});
   }): number {/* TODO: Fix JSX expression */}
   }
 

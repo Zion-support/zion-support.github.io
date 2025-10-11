@@ -72,7 +72,7 @@ class EnvironmentConfig {
           <EnvConfig> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return Object.freeze({ ...this.config })
+    return Object.freeze({ ...this.config });
   }
   /**
    * Get a specific configuration value
@@ -204,7 +204,7 @@ class EnvironmentConfig {
         'Sentry DSN Set': !!this.config.sentryDsn,
 
         'GA Tracking ID Set': !!this.config.gaTrackingId
-      })
+      });
       console.groupEnd()
     }
   }

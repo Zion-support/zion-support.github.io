@@ -11,8 +11,8 @@ function resolveConflicts(filePath) {
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts
 // Get list of files with conflicts
-const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */})
-  g: 'utf8' })
+const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */});
+  g: 'utf8' });
 const conflictFiles = gitStatus
   .split('\n')
   .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
@@ -36,21 +36,21 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
         skipUntilNextMarker = true
         continue
   }
-      
+
       if (line.includes('')) {
     skipUntilNextMarker = false
         continue
   }
-      
+
       if (line.includes('>>>>>>>')) {
     continue
   }
-      
+
       if (!skipUntilNextMarker) {
     resolvedLines.push(line)
   }
     }
-    
+
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)
@@ -63,7 +63,7 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
 
 try {
   // Get list of files with conflicts
-  const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+  const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
   if (!conflictFiles.trim()) {
     console.log('✅ No merge conflicts found')
     process.exit(0)
@@ -82,16 +82,16 @@ try {
     }
     // Check if file has conflict markers
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
     console.log('📝 Added resolved files to git staging')
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 
   console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`)
   // Add all resolved files
-  execSync('git add .', { stdio: 'inherit' })
+  execSync('git add .', { stdio: 'inherit' });
   // Commit the resolution
-  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' })
+  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' });
   console.log('✅ All conflicts resolved and committed!')
 } catch (error) {
     console.error('❌ Error resolving conflicts:', error.message)

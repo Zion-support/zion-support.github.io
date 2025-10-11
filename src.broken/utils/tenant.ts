@@ -61,7 +61,7 @@ export function updateTenant(tenantId: string, partial: Partial<Omit<Tenant, 'id
       const updated: Tenant = { ...t, ...partial, branding: { ...t.branding, ...(partial as any).branding }, updatedAt: new Date().toISOString() }
       result = updated
       return updated
-    })
+    });
     return { tenants }
   }, FALLBACK)
   return result
@@ -74,7 +74,7 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
       const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() }
       result = updated
       return updated
-    })
+    });
     return { tenants }
   }, FALLBACK)
   return result

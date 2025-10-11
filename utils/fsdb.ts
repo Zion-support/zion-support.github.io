@@ -13,7 +13,7 @@ export function read_json < T>(file_path: string, default_value: T): T {
   await writeAllDisputes(all)
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   }
@@ -24,24 +24,24 @@ export function writeJson<T>(filePath: string, data: T): void {
     const path = require('path')
     const dir = path.dirname(filePath)
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true })
+      fs.mkdirSync(dir, { recursive: true });
     }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
 }
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
+  await mkdir(dir, { recursive: true });
   return dir
   } catch (error) {
   } catch (error) {
     const dir = path && path.dirname(filePath),
     if (!fs && fs.existsSync(dir)) {
-      fs && fs.mkdirSync(dir, { recursive: true })
+      fs && fs.mkdirSync(dir, { recursive: true });
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -71,10 +71,10 @@ export function generateCaseId(): string {
 }
 async function ensureBaseFiles() {
   try {
-    await mkdir(ROOT, { recursive: true })
+    await mkdir(ROOT, { recursive: true });
   } catch {}
   try {
-    await mkdir(UPLOADS_ROOT, { recursive: true })
+    await mkdir(UPLOADS_ROOT, { recursive: true });
   } catch {}
   try {
     await readFile(DISPUTES_FILE, 'utf8')
@@ -117,7 +117,7 @@ export function getDisputeUploadDir(caseId: string): string {
 }
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
+  await mkdir(dir, { recursive: true });
   return dir
 }
 }
@@ -126,7 +126,7 @@ export function getDisputeUploadDir(caseId: string): string {
 }
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
+  await mkdir(dir, { recursive: true });
   return dir
 }
 }

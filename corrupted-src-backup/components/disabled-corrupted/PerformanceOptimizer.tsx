@@ -15,7 +15,7 @@ c, d, n: fa, l, s, e);
 }
 interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */}
  }
-const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   });
 con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([])

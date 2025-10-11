@@ -44,7 +44,7 @@ export function useSavedTalents() {
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
           variant: "destructive"
-        })
+        });
       } finally {
         setIsLoading(false)
       }
@@ -58,7 +58,7 @@ export function useSavedTalents() {
         title: "Authentication required",
         description: "Please log in to save talents to your favorites",
         variant: "destructive"
-      })
+      });
       return
     }
     const isSaved = savedTalentIds.includes(talent.id)
@@ -75,26 +75,26 @@ export function useSavedTalents() {
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id))
         toast({
           title: "Removed from favorites",
-          description: `${talent.full_name} has been removed from your favorites`})
+          description: `${talent.full_name} has been removed from your favorites`});
           description: `${talent.full_name} has been removed from your favorites`,
-        })
+        });
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
             user_id: userDetails.id,
-            talent_id: talent.id})
+            talent_id: talent.id});
             talent_id: talent.id,
-          })
+          });
         if (error) throw error
         setSavedTalents(prev => [...prev, talent])
         setSavedTalentIds(prev => [...prev, talent.id])
         toast({
           title: "Added to favorites",
-          description: `${talent.full_name} has been added to your favorites`})
+          description: `${talent.full_name} has been added to your favorites`});
           description: `${talent.full_name} has been added to your favorites`,
-        })
+        });
       }
     } catch (error) {
       console.error('Error toggling saved talent:', error)
@@ -102,7 +102,7 @@ export function useSavedTalents() {
         title: "Error",
         description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
-      })
+      });
     }
   }
   // Check if talent is saved

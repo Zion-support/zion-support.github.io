@@ -5,10 +5,10 @@ import {
   FeedbackRecord
 } from "../../utils/feedback/store"
 function ok(res: NextApiResponse, data: any) {
-  return res && res.status(200).json({ ok: true, ...data })
+  return res && res.status(200).json({ ok: true, ...data });
 }
 function bad(res: NextApiResponse, msg: string, code = 400) {
-  return res && res.status(code).json({ ok: false, error: msg })
+  return res && res.status(code).json({ ok: false, error: msg });
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
@@ -23,7 +23,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-      })
+      });
     }
     const db = admin.firestore ()
     await db.collection ("interaction_feedback").doc (doc.id).set (doc)
@@ -54,20 +54,20 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   }
   const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc && doc.id })
+  return ok(res, { id: doc && doc.id });
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 function ok(res: NextApiResponse, data: any) {
   return res.status(200).json({
     ok: true,
     ...data
-  })
+  });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   const { rating, comment, kind, context } = req.body || {}
@@ -81,24 +81,24 @@ function ok(res: NextApiResponse, data: any) {
   if (saveFeedbackFallback (doc)) {
   $2
 }
-  return ok (res, { id: doc.id })
+  return ok (res, { id: doc.id });
 }
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
     error: msg
-  })
+  });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default async function handler(req, res) {
@@ -114,34 +114,34 @@ export default async function handler(req, res) {
   }
   return ok(res, {
     id: doc.id
-  })
+  });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid",
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store",
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 async function tryWriteToFirestore(req, res) {
@@ -157,7 +157,7 @@ async function tryWriteToFirestore(req, res) {
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
         }),
-      })
+      });
     }
     const db = admin.firestore()
     await db.collection("interaction_feedback").doc(doc.id).set(doc)
@@ -170,18 +170,18 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
+          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})});
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const db = admin.firestore(),
@@ -191,28 +191,28 @@ export default async function handler(
     return false
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default async function handler(req, res) {
@@ -236,34 +236,34 @@ export default async function handler(req, res) {
     context: context || undefined},
   const wrote = await tryWriteToFirestore(doc),
   if (!wrote) saveFeedbackFallback(doc),
-  return ok(res, { id: doc.id })
+  return ok(res, { id: doc.id });
 import type { NextApiRequest, NextApiResponse } from "next"
 import { v4 as uuidv4 } from "uuid"
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store"
 function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -277,18 +277,18 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID
           clientEmail: FIREBASE_CLIENT_EMAIL
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
+          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})});
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const db = admin.firestore()
@@ -298,28 +298,28 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     return false
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -342,7 +342,7 @@ export default async function handler(req, res) {
   }
 const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc.id })
+  return ok(res, { id: doc.id });
 }
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general"
   const user = {
@@ -359,17 +359,17 @@ const wrote = await tryWriteToFirestore(doc)
     context: context || undefined},
   const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc.id })
+  return ok(res, { id: doc.id });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

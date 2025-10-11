@@ -3,20 +3,20 @@ class ErrorBoundary extends React.Component {
     super(props)
     this.state = { hasError: false }
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
@@ -72,14 +72,10 @@ export default function Ecommerce() {
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
 
-
-
-
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -206,6 +202,5 @@ export default function Ecommerce() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
-
 
               <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>

@@ -3,7 +3,7 @@ exports.config = {/* TODO: Fix JSX expression */}
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
   const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true,
-      })
+      });
   try {// Generate site reports and search indexes
     run('node scripts/seo-audit.js || true')
     run('node scripts/generate-search-index.js || true')
@@ -22,7 +22,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     return {
       statusCode: 200,
       body: JSON.stringify({ ok: true),
-        tool: 'auto-reports-suite' })
+        tool: 'auto-reports-suite' });
     }
   } catch (e) {return {
       statusCode: 200,
@@ -31,14 +31,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   const run = cmd => execSync(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
-      })
+      });
   try {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {/* TODO: Fix JSX expression */}
-  l: 'auto-reports-suite' })
+  l: 'auto-reports-suite' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

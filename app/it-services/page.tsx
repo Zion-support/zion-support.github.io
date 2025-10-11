@@ -43,19 +43,19 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm: px-6 l, g:px-8">
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -64,11 +64,11 @@ return (
     </>
   )
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -84,7 +84,7 @@ Our IT Services>
                 Transform your data into actionable insights with our advanced AI analytics platform
               </p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,16 +94,16 @@ Our IT Services>
                   </ul>
                   </button>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -118,16 +118,16 @@ Ready to Optimize Your IT Infrastructure?>
               </p>
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

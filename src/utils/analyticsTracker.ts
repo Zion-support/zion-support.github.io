@@ -47,7 +47,7 @@ class AnalyticsTracker {
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
-        })
+        });
       }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {}
@@ -139,7 +139,7 @@ class AnalyticsTracker {
   e: event.value,
           non_interactio,
   n: event.nonInteraction,)
-        })
+        });
       }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
@@ -167,7 +167,7 @@ class AnalyticsTracker {
           page_path: path,
           page_title: document.title,
           page_location: window.location.href
-        })
+        });
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -197,7 +197,7 @@ class AnalyticsTracker {
   e: Math.round(metrics.value),
           metric_ratin,
   g: metrics.rating,
-        })
+        });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -225,7 +225,7 @@ class AnalyticsTracker {
           event_label: metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
-        })
+        });
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -244,7 +244,7 @@ class AnalyticsTracker {
           description: error.message,
           fatal: error.severity === 'critical',
           error_severity: error.severity
-        })
+        });
       }
       // Always log errors to console
       // // console.error('[Analytics Error]', error)
@@ -265,7 +265,7 @@ class AnalyticsTracker {
           value: Math.round(value),
           event_category: category,
           event_label: label
-        })
+        });
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -284,7 +284,7 @@ class AnalyticsTracker {
           send_to: conversionId,
           value: value,
           currency:         ,
-$4})
+$4});
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -314,7 +314,7 @@ $4})
   y: category,
           event_labe,
   l: label,
-        })
+        });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -356,7 +356,7 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       analyticsTracker.initialize()
-    })
+    });
   }
 }
 export default analyticsTracker

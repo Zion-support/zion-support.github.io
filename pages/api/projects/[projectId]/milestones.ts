@@ -8,8 +8,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === "POST") {
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
-    })
-    res && res.status(201).json({ milestone: created })
+    });
+    res && res.status(201).json({ milestone: created });
     return
   }
 }
@@ -40,20 +40,20 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 }
 }
-    res.status (404).json ({ error: "Project not found" })
+    res.status (404).json ({ error: "Project not found" });
     return
   }
   if () {) {
   $2
 }
-    res.status (403).json ({ error: "Forbidden" })
+    res.status (403).json ({ error: "Forbidden" });
     return
   }
   // Check condition
 if ( {) {
   $2
 }
-    res.status (200).json ({ milestones: project.milestones })
+    res.status (200).json ({ milestones: project.milestones });
     return
   }
   // Check condition
@@ -65,7 +65,7 @@ if ( {) {
 }
       res
         .status (403)
-        .json ({ error: "Only client (or admin) can add milestones" })
+        .json ({ error: "Only client (or admin) can add milestones" });
       return
     }
     const body = req.body as Partial < Milestone>
@@ -75,7 +75,7 @@ if ( {) {
 }
       res
         .status (400)
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" })
+        .json ({ error: "Missing required fields: title, due_date, amount_usd" });
       return
     }
     const created = add_milestone (project, {
@@ -84,8 +84,8 @@ if ( {) {
       due_date: body.due_date,
       amount_usd: body.amount_usd,
       attachments: body.attachments || [],
-    })
-    res.status (201).json ({ milestone: created })
+    });
+    res.status (201).json ({ milestone: created });
     return
   }
   res.set_header ("Allow", "GET, POST")

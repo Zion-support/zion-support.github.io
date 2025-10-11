@@ -3,13 +3,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   try {execSync('node automation/ai-changelog-generator.cjs || true', {)
       stdio: inherit),
         shell: true}
-    })
+    });
     execSync('node automation/git-sync.cjs || true', {stdio: inherit),
         shell: true}
-    })
+    });
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'ai-changelog-updater' })
+        task: 'ai-changelog-updater' });
     }
   } catch (e) {return {
       statusCode: 200,
@@ -17,15 +17,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
   try {/* TODO: Fix JSX expression */}
   l: true}
-    })
+    });
     execSync('node automation/git-sync.cjs || true', {/* TODO: Fix JSX expression */}
-  l: true})
-    })
+  l: true});
+    });
     return {/* TODO: Fix JSX expression */}
-  k: 'ai-changelog-updater' })
+  k: 'ai-changelog-updater' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

@@ -248,7 +248,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 >
                   <Target, classNam, e='w-5 h-5' />)
                   Request, Dem, o;)
-})
+});
                 >
                   <Target, classNam, e='w-5 h-5' />
                   Request, Dem, o

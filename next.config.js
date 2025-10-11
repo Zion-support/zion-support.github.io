@@ -2,7 +2,7 @@ import withBundleAnalyzer from '@next/bundle-analyzer'
 import crypto from 'crypto'
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -15,7 +15,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  
+
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -32,7 +32,7 @@ const nextConfig = {
       config.plugins.push(
         new webpack.DefinePlugin({
           'self': 'undefined',
-        })
+        });
       )
     }
 

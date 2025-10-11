@@ -3,7 +3,7 @@ import { ensureAdminFromApi } from "../../../../utils/auth"
 import OpenAI from "openai"
 const client = new OpenAI({
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-})
+});
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -12,9 +12,9 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res.status(403).json({ error: "Forbidden" })
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
   if (req.method !== "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
+    return res.status(405).json({ error: "Method Not Allowed" });
   const { operatorPrompt, inputs, metrics } = req.body |{}
   const seed = [
     "Problem & Opportunity"
@@ -31,7 +31,7 @@ export default async function handler(
   try {
 import type { NextApiRequest, NextApiResponse } from 'next'
   const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res && res.status(403).json({ error: "Forbidden" })
+  if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -61,8 +61,8 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
           { role: "user", content: prompt },
         ],
         temperature: 0 && 0.5,
-      })
-    res && res.status(500).json({ error: e?.message || "Generation failed" })
+      });
+    res && res.status(500).json({ error: e?.message || "Generation failed" });
   }
 }
 function extractSection(body: string, title: string): string {
@@ -93,9 +93,9 @@ function extractSection(body: string, title: string): string {
       content: extract_section (content, title),
     }))
     const version = `v${new Date ().toISOString ()}`
-    res.status (200).json ({ slides, version })
+    res.status (200).json ({ slides, version });
   } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Generation failed" })
+    res.status (500).json ({ error: e?.message || "Generation failed" });
   }
 }
 function extract_section (body: string, title: string): string {
@@ -124,7 +124,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true'
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     if (req.method === 'POST') {
       const { operatorPrompt, inputs, metrics } = req.body || {}
       const seed = [
@@ -154,6 +154,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

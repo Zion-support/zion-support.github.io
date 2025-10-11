@@ -33,9 +33,9 @@ export const getRecentContent = (limit: number = 3) => {
 export const getRecentContent = (limi)
   t: number = 3) => {/* TODO: Fix JSX expression */}
   e: string }).date).getTime() : 0
-      const _bTime = 'date' in b ? new Date((b as {/* TODO: Fix JSX expression */})
+      const _bTime = 'date' in b ? new Date((b as {/* TODO: Fix JSX expression */});
   e: string }).date).getTime() : 0
       return bTime - aTime
-    })
+    });
     .slice(0, limit)
 }

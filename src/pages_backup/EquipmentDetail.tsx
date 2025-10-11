@@ -219,7 +219,6 @@ setLoading(false);
 return
             ;}
 
-
                 // It's a ProductListing, convert it;
 equipment_data = convertProductListingToEquipmentDetails (;
 stored_data as ProductListing)
@@ -231,7 +230,7 @@ return
           } catch (storage_error) {;
 logErrorToProduction ('Error reading from session_storage:', {;,
 data: storage_error,
-            })
+            });
           }
         }
         // If not found anywhere, set error;
@@ -398,7 +397,7 @@ return
           } catch (storage_error) {;
 logErrorToProduction ('Error reading from session_storage:', {;,
 data: storage_error,
-            })
+            });
           }
         }
         // If not found anywhere, set error;
@@ -421,7 +420,6 @@ title: 'Authentication Required'},;,
 description: 'Please log in to add items to cart',;,
 variant: 'destructive',
 
-
       });
 return
     ;}
@@ -430,23 +428,18 @@ setIsAdding(true),;
 quantity}}),;
 toast({;,
 title: "Added to Cart",;,
-description: `${equipment.name} has been added to your cart.`})
+description: `${equipment.name} has been added to your cart.`});
     } catch (error) {;
 toast({;,
 title: "Error"},;,
 description: "Failed to add item to cart. Please try again.",;,
-variant: "destructive"})
+variant: "destructive"});
     } finally {;
 setIsAdding(false)
     }
   },;
 const inCart = items.some(item => item.id === equipment?.id);,;
 quantity}}),
-
-
-
-
-
 
   // Loading state;
 if (loading) {;
@@ -486,7 +479,7 @@ Loading equipment details...</$1></$1></$1></$1>
           } catch (storageError) {;
 logErrorToProduction('Error reading from sessionStorage:', {;,
 data: storageError,
-            })
+            });
           }
         }
 
@@ -527,13 +520,13 @@ quantity,
 toast({;,
 title: 'Added to Cart',;,
 description: `${equipment && equipment.name} has been added to your cart.`,
-      })
+      });
     } catch (error) {;
 toast({;,
 title: 'Error'},;,
 description: 'Failed to add item to cart. Please try again.',;,
 variant: 'destructive',
-      })
+      });
     } finally {;
 setIsAdding(false)
     }
@@ -668,12 +661,12 @@ price: equipment.price,;
 quantity}}),;
 toast({;,
 title: "Added to Cart",;,
-description: `${equipment.name} has been added to your cart.`})
+description: `${equipment.name} has been added to your cart.`});
     } catch (error) {;
 toast({;,
 title: "Error"},;,
 description: "Failed to add item to cart. Please try again.",;,
-variant: "destructive"})
+variant: "destructive"});
     } finally {;
 setIsAdding(false)
     }
@@ -779,10 +772,6 @@ Equipment</$1>
           <div className='grid lg:grid-cols-2 gap-12'>
           <div className="grid lg:grid-cols-2 gap-12">
 
-
-
-
-
                       />
                     </button>
                   ))}
@@ -817,7 +806,6 @@ i < Math && Math.floor(equipment && equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
 
-
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">}`}
@@ -832,7 +820,6 @@ i < Math && Math.floor(equipment && equipment.rating!)
 
               </div>
               {/* Price */}
-
 
                   <div className="flex gap-3 text-zion-slate-light">
                     <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />

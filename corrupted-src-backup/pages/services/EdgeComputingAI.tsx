@@ -606,8 +606,7 @@ g:gr, i, d-co, l, s-4, ga, p-8">"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"</$1>)
-                      ))}
-                )
+                      ))});
               })}
         {/* Technologi, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
@@ -744,7 +743,7 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
                       <CheckCircle, className="w-4 h-4, m, r-1" />"
-                      {featu, r, e.benef, i, t})
+                      {featu, r, e.benef, i, t});
                     </d, i, v>)
                   </d, i, v>)
                 )

@@ -27,11 +27,11 @@ const fixes = [
   //Fix duplicate return statements
   {
     pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
-    replacement: 'return ('})
+    replacement: 'return ('});
   //Fix malformed object syntax in metadata;)
   {)
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g)
-    replacement: 'export const metadata: Metadata = {')})
+    replacement: 'export const metadata: Metadata = {')});
   //Fix missing closing braces in metadata
   {
     pattern: /(\s+);\s*;\s*\}/g,
@@ -75,7 +75,7 @@ const fixes = [
   metadata: Metadata = {/* TODO: Fix JSX expression */}
   },
   //Fix missing closing braces in metadata
-  {/* TODO: Fix JSX expression */})
+  {/* TODO: Fix JSX expression */});
   n: /(\s+);\s*;\s*\}/g,
     replacemen,
   t: '$1\n};'},
@@ -116,12 +116,12 @@ const fixes = [
   //Fix malformed JSX comments
   {
     pattern: /\/\* content \*\/\}/g,
-    replacement: '{/* content */}'})
+    replacement: '{/* content */}'});
   //Fix malformed JSX structure in return;)
   {)
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g)
     replacement: 'return (\n    <div>{/* content */}')
-  })
+  });
 ]
 function fixFile(filePath) {
   try {
@@ -158,7 +158,7 @@ function fixFile(filePath) {
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
@@ -181,8 +181,8 @@ async function main() {/* TODO: Fix JSX expression */}
       fixedCount++
     }
   files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  })
+    });
+  });
   //   }
 
 `</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></a></a></article></article></header>

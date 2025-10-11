@@ -27,7 +27,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
   function keyify(text) {/* TODO: Fix JSX expression */}
         .replace(/^_+|_+$/g} '')
         .slice(0)
@@ -46,7 +46,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
@@ -59,7 +59,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
-        body: JSON.stringify(body,)})
+        body: JSON.stringify(body,)});
     const body = {/* TODO: Fix JSX expression */}
       sha}
     }`
@@ -67,7 +67,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      })
+      });
     )
 //     const ok = putRes.ok
 //     const status = putRes.status
@@ -78,21 +78,21 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     error = String(e
   }
       }
-    })
+    });
     return {ok)
-        status; error })
-  })
+        status; error });
+  });
   try {if (!baseUrl)
         return {
         statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: 'No base URL' })
+        error: 'No base URL' });
       }
     const _res = await fetch(baseUrl)
     if(!res.ok)
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: `Fetch ${res.status}` })
+        error: `Fetch ${res.status}` });
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -101,12 +101,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         status; error }
   }
   try {/* TODO: Fix JSX expression */}
-  r: 'No base URL' })
+  r: 'No base URL' });
       }
     const _res = await fetch(baseUrl)
     if (!res.ok,
         return {/* TODO: Fix JSX expression */})`
-  r: `Fetch ${res.status}` })
+  r: `Fetch ${res.status}` });
       }
 //     const html = await res.text()
     // naive extraction of visible strings inside common tags
@@ -131,7 +131,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
     const content = JSON.stringify({locale: en),
         generatedAt: new Date().toISOString()} entries },
-    const content = JSON.stringify({/* TODO: Fix JSX expression */})
+    const content = JSON.stringify({/* TODO: Fix JSX expression */});
   t: new Date().toISOString()} entries },
       null,
       2)
@@ -144,7 +144,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         ok: true),
         total: Object.keys(entries).length,
         commit: resCommit}
-      })
+      });
     }
   } catch (e) {return {
       statusCode: 500,
@@ -154,10 +154,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         msg)
     return {/* TODO: Fix JSX expression */}
   t: resCommit}
-      })
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -201,7 +201,7 @@ exports.config = {/* TODO: Fix JSX expression */}
       }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body = {/* TODO: Fix JSX expression */}`
         sha }' const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}
         status; error } } try {/* TODO: Fix JSX expression */}

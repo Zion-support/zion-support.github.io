@@ -417,8 +417,7 @@ export function validateForm<T extends Record<string, unknown>>(
             field,
             errors: fieldErrors
           }
-        }
-      )
+        });
     }
   }
   return {
@@ -482,8 +481,7 @@ export function validateForm<T extends Record<string, unknown>>()
             error,
   s: fieldErrors,
           }
-        }
-  )
+        });
     }
   }
 
@@ -551,7 +549,7 @@ $4}),
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,
     message
-  })
+  });
 }
 // Legacy class-based API for backward compatibility
 class DataValidator {
@@ -639,7 +637,7 @@ class DataValidator {
   validat,
   e: validator,
 //     message;)
-  })
+  });
 }
 // Legacy class-based API for backward compatibility
 class DataValidator {

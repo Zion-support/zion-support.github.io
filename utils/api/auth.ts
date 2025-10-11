@@ -30,7 +30,7 @@ export function requireUser(
 ): CurrentUser | null {
   const user = getCurrentUser(req)
   if (!user) {
-    res.status(401).json({ error: 'Unauthorized' })
+    res.status(401).json({ error: 'Unauthorized' });
     return null
   }
   return user

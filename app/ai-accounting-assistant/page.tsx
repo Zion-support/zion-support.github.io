@@ -114,7 +114,6 @@ const AIAccountingAssistantPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -122,23 +121,17 @@ const AIAccountingAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-=======
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-        <title>AI Accounting Assistant - Zion Tech Group</title>
+      <Helmet>        <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="
     g: px-8"
           <div className="max-w-7xl mx-auto"
@@ -160,35 +153,15 @@ const AIAccountingAssistantPage: React.FC = () => {
                   Watch Demo
                 </button>
               </div>
-      
+
       <Footer />
-    </>
-=======
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accounting Assistant</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your accounting workflow with AI-powered automation. From bookkeeping to compliance, our intelligent assistant handles it all.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Demo
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-            </div>
+    </>            </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -219,7 +192,7 @@ const AIAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto"
                 Tailored solutions for different business types
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-4 gap-8"
@@ -233,7 +206,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-4"
                     <p className="text-gray-300"
                   </div>
-      
+
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -247,15 +220,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -299,7 +268,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Comprehensive accounting solutions powered by artificial intelligence
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
                 const Icon = service.icon
@@ -336,8 +305,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
-<<<<<<< HEAD
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -346,21 +314,21 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
-      
+
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -381,16 +349,16 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />
@@ -399,72 +367,3 @@ const AIAccountingAssistantPage: React.FC = () => {
 };
 
 export default AiAccountingAssistantPage;
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  tier.name === 'Professional' 
-                    ? 'border-purple-400/50 scale-105' 
-                    : 'border-white/20 hover:border-purple-400/50'
-                }`}>
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-300 mb-4">{tier.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{tier.price}</span>
-                      <span className="text-gray-300 ml-1">{tier.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.name === 'Professional'
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'border border-white text-white hover:bg-white hover:text-purple-600'
-                  }`}>
-                    {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Accounting?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using AI to streamline their accounting processes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
-  )
-}
-
-export default AIAccountingAssistantPage
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

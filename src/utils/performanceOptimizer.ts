@@ -103,7 +103,7 @@ class PerformanceOptimizer {
 }
       this.measureLoadTime()
       this.measureMemoryUsage()
-    })
+    });
     // Monitor render performance
     this.measureRenderTime()
   }
@@ -169,10 +169,10 @@ class PerformanceOptimizer {
 }
             this.metrics.renderTime = entry.duration
           }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['measure'] });
       this.observers.push(observer)
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -192,9 +192,9 @@ class PerformanceOptimizer {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -219,10 +219,10 @@ class PerformanceOptimizer {
           const fidEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}
   t: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['first-input'] });
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -246,11 +246,11 @@ class PerformanceOptimizer {
 }
             clsValue += clsEntry.value
           }
-        })
+        });
         this.metrics.cls = clsValue
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['layout-shift'] });
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -276,12 +276,10 @@ class PerformanceOptimizer {
 }
             this.metrics.fcp = entry.startTime
           }
-        }
-  )
-      }
-  )
+        });
+      });
       observer.observe({/* TODO: Fix JSX expression */}
-  s: ['paint'] })
+  s: ['paint'] });
   )
 //       this.observers.push(observer)
 
@@ -314,12 +312,10 @@ class PerformanceOptimizer {
 }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
           }
-        }
-  )
-      }
-  )
+        });
+      });
       observer.observe({/* TODO: Fix JSX expression */}
-  s: ['navigation'] })
+  s: ['navigation'] });
   )
 //       this.observers.push(observer)
 
@@ -337,7 +333,7 @@ class PerformanceOptimizer {
     if (typeof window !== 'undefined' && 'memory' in performance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      const memory = (performance as Performance & {/* TODO: Fix JSX expression */})
+      const memory = (performance as Performance & {/* TODO: Fix JSX expression */});
   t: number } }).memory
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -368,7 +364,7 @@ class PerformanceOptimizer {
   e: number,,
     jsHeapSizeLimi,
   t: number,)
-      })
+      });
     }).memory
     if (memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -414,8 +410,7 @@ class PerformanceOptimizer {
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp')
         }
       }
-    }
-  )
+    });
   }
   /**
    * Check if browser supports WebP
@@ -476,13 +471,13 @@ class PerformanceOptimizer {
               lazyObserver.unobserve(element)
             }
           }
-        })
-      })
+        });
+      });
       lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         lazyObserver.observe(element)
-      })
+      });
     }
     this.metrics.lazyLoading = true
   }
@@ -517,13 +512,12 @@ class PerformanceOptimizer {
   O: Add content,}
 }
         if (process.env.NODE_ENV === 'development') {}
-      })
+      });
       .catch((error) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         if (process.env.NODE_ENV === 'development') {}
-      }
-  )
+      });
   }
   /**
    * Get current performance metrics
@@ -584,7 +578,7 @@ class PerformanceOptimizer {
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -593,10 +587,8 @@ class PerformanceOptimizer {
           img.removeAttribute('data-src')
           imageObserver.unobserve(img)
         }
-      }
-  )
-    }
-  )
+      });
+    });
     images.forEach(img => imageObserver.observe(img))
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
   }
@@ -620,7 +612,7 @@ class PerformanceOptimizer {
   s: 'style' }]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource.href
@@ -628,7 +620,7 @@ class PerformanceOptimizer {
       if (resource.type) link.type = resource.type
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin
       document.head.appendChild(link)
-    })
+    });
     logger.info('Critical resource hints added', 'PerformanceOptimizer')
   }
   /**
@@ -683,7 +675,7 @@ class PerformanceOptimizer {
         if (typeof value === 'number') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          (window as unknown as {/* TODO: Fix JSX expression */})
+          (window as unknown as {/* TODO: Fix JSX expression */});
   g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -693,11 +685,10 @@ class PerformanceOptimizer {
             metric_rating: value,
 
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
-          })
+          });
   )
         }
-      }
-  )
+      });
     }
   }
   /**

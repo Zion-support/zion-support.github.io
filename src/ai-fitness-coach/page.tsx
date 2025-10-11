@@ -70,19 +70,19 @@ const AIFitnessCoachPage: React.FC = () => {
               </div>
               <p className="text-xl text-gray-300 mb-8">
                 Personalized fitness and nutrition plans powered by AI analysis
-  
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                   Start Free Trial
-  
+
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
                   Watch Demo,
-  
+
               </div>
             </div>
           </section>
@@ -151,7 +151,7 @@ const AIFitnessCoachPage: React.FC = () => {
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                   Start Your Free Trial
-  
+
                 <$2 />
                   href="tel:+13024640950"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">

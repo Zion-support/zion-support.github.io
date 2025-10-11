@@ -1,5 +1,4 @@
 
-
 // Sitemap generator utility
 export interface SitemapUrl {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -37,9 +36,7 @@ ${
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.8}</priority>`
   </url>`
-  }
-  )
-
+  });
   .join('
 ')}
 

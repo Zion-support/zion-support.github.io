@@ -40,7 +40,7 @@ export default function AICostOptimizationBreakthrough2026() {
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
             Contact Us,
-  
+
           </div>"
           <div className="text-center mb-8"></div>"
             <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">

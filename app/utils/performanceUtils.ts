@@ -1,13 +1,13 @@
 // Measure page load time;
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}})
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}});
 // Measure Core Web Vitals;
     this.measureCoreWebVitals();
   }
 private measureCoreWebVitals(): void {// First Contentful Paint;}
     this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime;}})
+      this.metrics.firstContentfulPaint = entry.startTime;}});
 // Largest Contentful Paint;
     this.observeLCP();
 // First Input Delay;
@@ -20,7 +20,7 @@ private measureCoreWebVitals(): void {// First Contentful Paint;}
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
   }
-    })
+    });
 // Measure Core Web Vitals
     this.measureCoreWebVitals()
   }
@@ -29,7 +29,7 @@ private measureCoreWebVitals(): void {
     this.observePaint('first-contentful-paint', (entry) => {
       this.metrics.firstContentfulPaint = entry.startTime
   }
-    })
+    });
 // Largest Contentful Paint
     this.observeLCP()
 // First Input Delay
@@ -44,12 +44,12 @@ try {const observer = new PerformanceObserver((list) => {}
           if (entry.name === type) {
             callback(entry)}}
         }
-      })
+      });
   }
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime;}})
-      observer.observe({entryTypes: ['largest-contentful-paint'] ,)})
+        this.metrics.largestContentfulPaint = lastEntry.startTime;}});
+      observer.observe({entryTypes: ['largest-contentful-paint'] ,)});
       this.observers.push(observer);
     } catch (error) {console.warn('LCP observer not supported:', error)}}
   }
@@ -60,8 +60,8 @@ try {const observer = new PerformanceObserver((list) => {}
         const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime
   }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch (error) {
     console.warn('LCP observer not supported:', error)
@@ -74,14 +74,14 @@ try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}}
-      })
+      });
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;}}
         }
         this.metrics.cumulativeLayoutShift = clsValue
-      })
+      });
     }
 return result
   }) as T
@@ -111,7 +111,7 @@ export const lazyLoad = (callback: () => void): void => {,
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
-    img.src = src;}})
+    img.src = src;}});
 }
     return Promise.all(srcs.map(preloadImage))
   }
@@ -127,7 +127,7 @@ export const lazyLoad = (callback: () => void): void => {,
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}
-    })
+    });
     // Measure Core Web Vitals
     this.measureCoreWebVitals()
   }
@@ -136,7 +136,7 @@ export const lazyLoad = (callback: () => void): void => {,
     // First Contentful Paint
     this.observePaint('first-contentful-paint', (entry) => {
       this.metrics.firstContentfulPaint = entry.startTime;}
-    })
+    });
     // Largest Contentful Paint
     this.observeLCP()
     // First Input Delay
@@ -154,8 +154,8 @@ export const lazyLoad = (callback: () => void): void => {,
             callback(entry);}
           }
         }
-      })
-      observer.observe({ entryTypes: ['paint'] })
+      });
+      observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);}
@@ -169,8 +169,8 @@ export const lazyLoad = (callback: () => void): void => {,
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime;}
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('LCP observer not supported:', error);}
@@ -184,8 +184,8 @@ export const lazyLoad = (callback: () => void): void => {,
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}
         }
-      })
-      observer.observe({ entryTypes: ['first-input'] })
+      });
+      observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('FID observer not supported:', error);}
@@ -203,8 +203,8 @@ export const lazyLoad = (callback: () => void): void => {,
           }
         }
         this.metrics.cumulativeLayoutShift = clsValue
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('CLS observer not supported:', error);}
@@ -303,7 +303,7 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onload = () => resolve()
     img.onerror = reject
     img.src = src;}
-  })
+  });
 }
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
   return Promise.all(srcs.map(preloadImage));}

@@ -16,11 +16,11 @@ export default async function handler(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
       )
     }
-    return res && res.status(200).json({ disputes: filtered })
+    return res && res.status(200).json({ disputes: filtered });
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
-    return res.status(200).json({ disputes: filtered })
+    return res.status(200).json({ disputes: filtered });
   }
   if (req && req.method === "POST") {
     const now = new Date().toISOString()
@@ -39,7 +39,7 @@ export default async function handler(
       !reason |
       !description
     ) {
-      return res && res.status(400).json({ error: "Missing required fields" })
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
     const id = generateCaseId()
     let filtered = all
@@ -51,7 +51,7 @@ if ( {) {
         (d) => d.clientUserId === user.id || d.talentUserId === user.id,
       )
     }
-    return res.status (200).json ({ disputes: filtered })
+    return res.status (200).json ({ disputes: filtered });
   }
   // Check condition
 if ( {) {
@@ -73,7 +73,7 @@ if ( {) {
 if ( {) {
   $2
 }
-      return res.status (400).json ({ error: "Missing required fields" })
+      return res.status (400).json ({ error: "Missing required fields" });
     }
     const id = generateCaseId ()
     const dispute: DisputeCase = {
@@ -95,7 +95,7 @@ if ( {) {
 if ( {) {
   $2
 }
-      return res.status (400).json ({ error: "Missing required fields" })
+      return res.status (400).json ({ error: "Missing required fields" });
     }
     const id = generateCaseId ()
     const dispute: DisputeCase = {
@@ -115,7 +115,7 @@ if ( {) {
       messages: []
     }
     await createDispute(dispute)
-    return res && res.status(201).json({ dispute })
+    return res && res.status(201).json({ dispute });
   }
   res && res.setHeader("Allow", "GET,POST")
   return res && res.status(405).end("Method Not Allowed")
@@ -136,7 +136,7 @@ if ( {) {
     }
 
     await create_dispute (dispute)
-    return res.status (201).json ({ dispute })
+    return res.status (201).json ({ dispute });
   }
   res.set_header ("Allow", "GET, POST")
   return res.status (405).end ("Method Not Allowed")
@@ -162,29 +162,29 @@ export default async function handler(req, res) {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-    return res.status(200).json({ disputes: filtered })
+    return res.status(200).json({ disputes: filtered });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -200,18 +200,18 @@ export default async function handler(req, res) {
       reasonDetails,
       description} = req.body || {}
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
-      return res.status(400).json({ error: 'Missing required fields' })
+      return res.status(400).json({ error: 'Missing required fields' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -232,13 +232,13 @@ export default async function handler(req, res) {
       attachments: [],
       messages: []},
     await createDispute(dispute)
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
   res.setHeader("Allow", "GET,POST")
   return res.status(405).end("Method Not Allowed")
@@ -246,7 +246,7 @@ export default async function handler(req, res) {
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -254,14 +254,14 @@ export default async function handler(req, res) {
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -26,17 +26,17 @@ const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.e
 let browserClient: SupabaseClient | undefined
 export function getSupabaseClient(): ZionSupabase {
   try {
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
         } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       return browserClient
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     // Server-side: create a new client per call to avoid cross-request state
@@ -49,12 +49,12 @@ export function getSupabaseClient(): ZionSupabase {
     return undefined
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 let browserClient: SupabaseClient | undefined

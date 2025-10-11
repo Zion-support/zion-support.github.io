@@ -11,11 +11,11 @@ import React from 'react'
 
         {/* Hero Section */}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>

@@ -27,7 +27,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: true,
     error: null
-  })
+  });
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
@@ -64,21 +64,21 @@ export function usePricingSuggestionAnalytics(days = 30) {
           ...mockData,
           isLoading: false,
           error: null
-        })
+        });
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
-        //   .select(...)
+        //   .select(...props)
         //   .gte('created_at', `now() - interval '${days} days'`)
         // if (error) throw error
-        // Process data and setAnalytics({...})
+        // Process data and setAnalytics({...props});
       } catch (error) {
         console.error("Error fetching pricing suggestion analytics:", error)
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
-        })
+        });
       }
     }
     fetchAnalytics()

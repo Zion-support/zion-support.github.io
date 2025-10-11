@@ -8,7 +8,7 @@ const corsHeaders = {
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { to, subject, html } = await req.json()
@@ -16,24 +16,24 @@ serve(async (req) => {
       from: "Lovable <onboarding@resend.dev>",
       to: [to],
       subject,
-      html})
+      html});
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       html,
-    })
+    });
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
-    })
+    });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
-    })
+    });
   }
-})
+});

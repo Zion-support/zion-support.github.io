@@ -12,7 +12,7 @@ interface EmailRequest {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { user_id, notification_id } = await req.json() as EmailRequest
@@ -46,8 +46,7 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
         status: 200,
-      }
-    )
+      });
   } catch (error) {
     console.error("Error sending email notification:", error.message)
     return new Response(
@@ -56,7 +55,6 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 500}
         status: 500,
-      }
-    )
+      });
   }
-})
+});

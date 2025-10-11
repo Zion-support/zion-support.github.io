@@ -47,7 +47,7 @@ function readFromDisk(): TokenStoreData | null {
     const raw = fs.readFileSync(STORE_FILE, 'utf8')
 function ensureDataDir(): void {
   try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   } catch {}
 }
 function readFromDisk(): TokenStoreData | null {

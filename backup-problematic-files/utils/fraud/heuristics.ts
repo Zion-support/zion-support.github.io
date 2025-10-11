@@ -11,7 +11,7 @@ function containsVagueJobClaims(text: string): string[] {
     if (lower.includes(phrase)) {
       reasons.push(`vague_job_claim:"${phrase}"`)
     }
-  })
+  });
   return reasons
 }
 function containsVagueJobClaims(text: string): string[] {
@@ -23,7 +23,7 @@ function containsVagueJobClaims(text: string): string[] {
 }
       reasons.push (`Contains suspicious job phrase: "${phrase}"`)
     }
-  })
+  });
   return reasons
 }
 export interface HeuristicDeps {

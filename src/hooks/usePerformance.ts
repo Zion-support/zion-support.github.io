@@ -10,14 +10,14 @@ export const usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0})
+    networkLatency: 0});
   const optimize = useCallback(() => {
     // Performance optimization logic
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
         console.log('Running performance optimizations...')
-  })
+  });
     }
   }, [])
   useEffect(() => {
@@ -30,7 +30,7 @@ export const usePerformance = () => {
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
           renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
           memoryUsage: memory ? memory.usedJSHeapSize : 0,
-          networkLatency: navigation ? navigation.responseEnd - navigation.requestStart : 0})
+          networkLatency: navigation ? navigation.responseEnd - navigation.requestStart : 0});
       }
     }
 
@@ -85,13 +85,13 @@ export const _usePerformance = () => {
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             if ()
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as {/* TODO: Fix JSX expression */})
+              !(entry as unknown as {/* TODO: Fix JSX expression */});
   t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -99,10 +99,9 @@ export const _usePerformance = () => {
               cumulativeLayoutShift += (entry as unknown as { value: number }).value
             }
           }
-        }
-  )
+        });
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['layout-shift'] })
+  s: ['layout-shift'] });
   )
       }
       // Measure FID (First Input Delay)
@@ -114,7 +113,7 @@ export const _usePerformance = () => {
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -128,14 +127,13 @@ export const _usePerformance = () => {
 }
 
               firstInputDelay =
-                (entry as unknown as {/* TODO: Fix JSX expression */})
+                (entry as unknown as {/* TODO: Fix JSX expression */});
   t: number }).processingStart - entry.startTime
             }
           }
-        }
-  )
+        });
         observer.observe({/* TODO: Fix JSX expression */}
-  s: ['first-input'] })
+  s: ['first-input'] });
   )
       }
         loadTim,

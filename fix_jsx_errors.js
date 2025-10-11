@@ -42,8 +42,8 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       }]
     patterns.forEach(fix => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false

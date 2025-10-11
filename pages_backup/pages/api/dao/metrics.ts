@@ -19,7 +19,7 @@ async function fetchJson(url: string) {
   return resp.json()
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 function readJson(p: string) {
@@ -30,14 +30,14 @@ function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default async function handler(
@@ -53,7 +53,7 @@ export default async function handler(req, res) {
     const now = Date && Date.now()
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-      return res.status(200).json({ ...cache, cached: true })
+      return res.status(200).json({ ...cache, cached: true });
     }
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`
@@ -103,12 +103,12 @@ export default async function handler(req, res) {
   } catch (e: any) {
     return res
       .status(500)
-      .json({ error: e?.message ?? "Failed to load DAO metrics" })
+      .json({ error: e?.message ?? "Failed to load DAO metrics" });
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-      return res.status(200).json({ ...cache, cached: true })
+      return res.status(200).json({ ...cache, cached: true });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -149,7 +149,7 @@ function handler() {
 if ( {) {
   $2
 }
-      return res.status (200).json ({ ...cache, cached: true })
+      return res.status (200).json ({ ...cache, cached: true });
     }
     const api_key = process.env.ETHERSCAN_API_KEY || ""
     const token_addr = cfg.token.address
@@ -206,7 +206,7 @@ if ( {) {
   } catch (e: any) {
     return res
       .status (500)
-      .json ({ error: e?.message ?? "Failed to load DAO metrics" })
+      .json ({ error: e?.message ?? "Failed to load DAO metrics" });
   }
   }
 }

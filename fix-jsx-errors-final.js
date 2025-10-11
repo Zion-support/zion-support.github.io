@@ -14,7 +14,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`
       }
       return match
-    })
+    });
     //Fix malformed <br> tags
     content = content.replace(/<br\s*>\s*<\/br>/g, '<br />')
     content = content.replace(/<br\s*>\s*$/gm, '<br />')

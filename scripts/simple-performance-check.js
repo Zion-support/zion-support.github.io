@@ -6,21 +6,21 @@ import { execSync } from 'child_process'
 try {
   const _distPath = path.join(process.cwd(), 'dist')
   if (fs.existsSync(distPath)) {
-    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' })
+    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
     // Check total size
     const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim()
     // Check for large files
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' })
+    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
     if (largeFiles.trim()) {} else {}
   } else {
 try {/* TODO: Fix JSX expression */}
-  g: 'utf8' })
+  g: 'utf8' });
     // Check total size
-    const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})
+    const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */});
   g: 'utf8' }).trim()
     // Check for large files
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})
-  g: 'utf8' })
+    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */});
+  g: 'utf8' });
     if (largeFiles.trim()) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -46,8 +46,8 @@ try {/* TODO: Fix JSX expression */}
 try {
   const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))
 try {/* TODO: Fix JSX expression */}
-  const _dependencies = Object.keys(packageJson.dependencies || {})
-  const _devDependencies = Object.keys(packageJson.devDependencies || {})
+  const _dependencies = Object.keys(packageJson.dependencies || {});
+  const _devDependencies = Object.keys(packageJson.devDependencies || {});
   // Check for potential performance issues
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse']
   const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => )
@@ -67,12 +67,12 @@ try {
   const _viteConfig = fs.readFileSync('vite.config.js', 'utf8')
   const _netlifyToml = fs.readFileSync('netlify.toml', 'utf8')
   if (viteConfig.includes('maxParallelFileOps')) {} else {}
-  
+
   if (netlifyToml.includes('NODE_OPTIONS')) {} else {
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
-  
+
   if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
@@ -89,7 +89,7 @@ const report = {
 const report = {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim(),
   functionsCoun,
-  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})
+  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */});
   g: 'utf8' }).trim(),
   optimizationStatu,
   s: 'Completed',

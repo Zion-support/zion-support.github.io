@@ -124,7 +124,7 @@ export async function register() {
       maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 100,
       attachStacktrace: true,
       sendDefaultPii: false, // Don't send personally identifiable information
-    })
+    });
     console.log("instrumentation.ts: Server-side Sentry initialized successfully")
   } catch (error) {
     console.error("instrumentation.ts: Failed to initialize Sentry:", error)

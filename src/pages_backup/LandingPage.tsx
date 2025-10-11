@@ -28,15 +28,10 @@ export default function LandingPage() {;
 }
 const { t } = useTranslation(),;
 const { isRTL } = useLanguage(),
-  
-
-
 
   // Tools and features showcase;
 const toolsFeatures = [;
     {
-
-
 
   // Tools and features showcase;
 const toolsFeatures = [;
@@ -190,7 +185,6 @@ import { Zap; } from 'lucide-react';
 export default function LandingPage() { const { t}  } = useTranslation(),;
 const { isRTL  } = useLanguage(),
 
-  
   // Tools and features showcase;
 const toolsFeatures = [;
     {;,
@@ -247,7 +241,6 @@ keywords={t("home.seo_keywords")}
       />
       <Header />
       <HeroSection />
-      
 
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
@@ -269,7 +262,7 @@ key={index}
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
-          
+
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}}`}>
             {toolsFeatures.map((feature), index) => (
               <$2 />;
@@ -278,8 +271,6 @@ href={feature.link} ;
 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-
-
 
                   {feature.icon}
                 </div>
@@ -307,15 +298,11 @@ className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/5
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
 
-      
-
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-
-
 
           </div></$1></$1>
       {/* Features Section */}

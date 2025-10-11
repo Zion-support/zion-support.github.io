@@ -310,7 +310,7 @@ message: `Image ${index + 1} is missing alt text`,;,
 element: `img[src="${img['src']}"]`,;,
 fix: 'Add descriptive alt text to the image',;,
 codeExample: '<img src="..." alt="Description of image" />'
-        })
+        });
       }
       // Check for empty alt on decorative images without role;
 if (alt === '' && role !== 'presentation') {;
@@ -320,7 +320,7 @@ codeExample: '
 
           "
           <img src="..." alt="Description of image" />'
-        })
+        });
   )
       }
       // Check for empty alt on decorative images without role;
@@ -339,9 +339,9 @@ message: `Image ${index + 1} has empty alt without role="presentation"`,;,
 element: `img[src="${img['src']}"]`,;,
 fix: 'Add role="presentation" to decorative images',;,
 codeExample: '<img src="..." alt="" role="presentation" />'
-        })
+        });
       }
-    })
+    });
   }
   /**
    * Check heading hierarchy
@@ -363,11 +363,10 @@ codeExample: '
 
           "
           <img src="..." alt="" role="presentation" />'
-        })
+        });
   )
       }
-    }
-  )
+    });
   }
   /**
    * Check heading hierarchy
@@ -402,13 +401,12 @@ message: `Heading level skipped from h${previousLevel} to h${level}`,;,
 element: heading.tagName.toLowerCase(),;,
 fix: 'Maintain sequential heading hierarchy',;,
 codeExample: `Use h${previousLevel + 1} instead of h${level}`
-        })
+        });
       }
       // Check for empty headings;
 if (!heading.textContent?.trim()) {;
 this.addIssue({;,
-type: 'empty-heading'}
-  )
+type: 'empty-heading'});
       }
       // Check for empty headings;
 if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
@@ -425,10 +423,10 @@ wcagCriterion: '2.4.6',;,
 message: `Empty ${heading.tagName} at position ${index + 1}`,;,
 element: heading.tagName.toLowerCase(),;,
 fix:         ,;
-$4})
+$4});
       }
       previousLevel = level
-    })
+    });
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;;
 if (h1Count > 1) {;
@@ -436,11 +434,10 @@ this.addIssue({;,
 type: 'multiple-h1'},;,
 fix: 'Add descriptive text to the heading'
 
-        }
-  )
+        });
       }
       previousLevel = level
-    })
+    });
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;;
 if (h1Count > 1) {/* TODO: Fix JSX expression */}
@@ -457,7 +454,7 @@ wcagCriterion: '2.4.6',;,
 message: `Found ${h1Count} h1 elements (should have only one)`,;,
 element: 'h1',;,
 fix:       ,;
-$4})
+$4});
     }
   }
   /**
@@ -472,8 +469,7 @@ links.forEach((link), index) => {;,
 fix: 'Use only one h1 per page for the main heading'
 
 }
-      }
-  )
+      });
     }
   }
   /**
@@ -515,7 +511,7 @@ message: `Link ${index + 1} has no accessible text`,;,
 element: `a[to="${link.getAttribute('href')}"]`,;,
 fix: 'Add descriptive text or aria-label to the link',;,
 codeExample: '<Link to="..." aria-label="Description">...</Link>'
-        })
+        });
       }
       // Check for generic link text;
 if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {;
@@ -525,8 +521,7 @@ codeExample: '
 
           "
           <Link to="..." aria-label="Description">...</Link>'
-        }
-  )
+        });
       }
       // Check for generic link text;
 if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
@@ -544,7 +539,7 @@ message: `Link ${index + 1} has generic text: "${text}"`,;,
 element: `a[to="${link.getAttribute('href')}"]`,;,
 fix: 'Use descriptive link text that explains the destination',;,
 codeExample: 'Use "Read full article" instead of "Read more"'
-        })
+        });
       }
       // Check for links opening in new window without warning;
 const target = link.getAttribute('target');;
@@ -554,8 +549,7 @@ target === '_blank' &&
         !text?.includes('(opens in new window)')
       ) {;
 this.addIssue({;,
-type: 'new-window-no-warning'}
-  )
+type: 'new-window-no-warning'});
       }
       // Check for links opening in new window without warning;
 const target = link.getAttribute('target');;
@@ -582,9 +576,9 @@ element: `a[to="${link.getAttribute('href')}"]`,;,
 fix: 'Add indication that link opens in new window',;,
 codeExample:
             '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
-        })
+        });
       }
-    })
+    });
   }
   /**
    * Check buttons for accessibility
@@ -608,11 +602,9 @@ type: 'button-no-text'},
 
           "
           <Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
-        }
-  )
+        });
       }
-    }
-  )
+    });
   }
   /**
    * Check buttons for accessibility
@@ -648,9 +640,9 @@ message: `Button ${index + 1} has no accessible text`,;,
 element: 'button',;,
 fix: 'Add text content or aria-label to the button',;,
 codeExample: '<button aria-label="Close dialog">×</button>'
-        })
+        });
       }
-    })
+    });
   }
   /**
    * Check form elements for accessibility
@@ -677,11 +669,10 @@ codeExample: '
 
           "
           <button aria-label="Close dialog"></button>'
-        })
+        });
   )
       }
-    }
-  )
+    });
   }
   /**
    * Check form elements for accessibility
@@ -722,7 +713,7 @@ element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
 fix: 'Associate a label with the form control',;,
 codeExample: '<label for="email">Email:</label><input id="email" name="email" />
   </input>'
-        })
+        });
       }
     });,
 codeExample: '
@@ -730,11 +721,9 @@ codeExample: '
           "
           <label for="email">Emai,";,
 l:</label><input id="email" name="email" />'
-        }
-  )
+        });
       }
-    }
-  )
+    });
   }
   /**
    * Check color contrast (basic check)
@@ -781,9 +770,9 @@ wcagCriterion: '1.4.3',;,
 message: 'Element has inline color without explicit background',;,
 element: el.tagName.toLowerCase(),;,
 fix:         ,;
-$4})
+$4});
       }
-    })
+    });
   }
   /**
    * Check keyboard accessibility
@@ -802,11 +791,9 @@ this.addIssue({;,
 type: 'interactive-not-focusable'},;,
 fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
 
-        }
-  )
+        });
       }
-    }
-  )
+    });
   }
   /**
    * Check keyboard accessibility
@@ -840,9 +827,9 @@ message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,;,
 element: el.tagName.toLowerCase(),;,
 fix: 'Remove tabindex="-1" or use tabindex="0"',;,
 codeExample: '<button tabindex="0">Accessible button</button>'
-        })
+        });
       }
-    })
+    });
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');;
 clickableNonInteractive.forEach(el => {;
@@ -857,10 +844,9 @@ codeExample: '
 
           "
           <button tabindex="0">Accessible button</button>'
-        }
-  )
+        });
       }
-    })
+    });
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');;
 clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
@@ -884,9 +870,9 @@ message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,;,
 element: el.tagName.toLowerCase(),;,
 fix: 'Add role, tabindex, and keyboard event handlers, or use a button',;,
 codeExample:         ,;
-$4})
+$4});
       }
-    })
+    });
   }
   /**
    * Check ARIA usage
@@ -926,11 +912,9 @@ type: 'invalid-aria-role'},;,
 codeExample: '
 
           <button onClick={handleClick}>Click me</button>'
-        }
-  )
+        });
       }
-    }
-  )
+    });
   }
   /**
    * Check ARIA usage
@@ -986,7 +970,7 @@ wcagCriterion: '4.1.2',;,
 message: `Invalid ARIA role: "${role}"`,;,
 element: el.tagName.toLowerCase(),;,
 fix:         ,;
-$4})
+$4});
       }
       // Check aria-labelledby references;
 const labelledBy = el.getAttribute('aria-labelledby');;
@@ -997,8 +981,7 @@ this.addIssue({;,
 type: 'aria-labelledby-missing'},;,
 fix: 'Use a valid ARIA role or remove the role attribute'
 
-        }
-  )
+        });
       }
       // Check aria-labelledby references;
 const labelledBy = el.getAttribute('aria-labelledby');;
@@ -1020,10 +1003,10 @@ wcagCriterion: '4.1.2',;,
 message: `aria-labelledby references non-existent element: "${labelledBy}"`,;,
 element: el.tagName.toLowerCase(),;,
 fix:           ,;
-$4})
+$4});
         }
       }
-    })
+    });
   }
   /**
    * Check for proper use of landmark regions
@@ -1039,12 +1022,10 @@ this.addIssue({;,
 type: 'missing-main-landmark'},;,
 fix: 'Ensure the referenced element exists'
 
-          }
-  )
+          });
         }
       }
-    }
-  )
+    });
   }
   /**
    * Check for proper use of landmark regions
@@ -1072,7 +1053,7 @@ wcagCriterion: '2.4.1',;,
 message: 'Page is missing a main landmark',;,
 fix: 'Add a <main> element or role="main"',;,
 codeExample:       ,;
-$4})
+$4});
     }
   }
   /**
@@ -1085,7 +1066,7 @@ private addIssue(issue: Omit<A11yIssue, 'id'>): void {;
 this.issues.push({;,
 id: this.generateIssueId()},
       ...issue
-    })
+    });
   }
   /**
    * Generate unique issue ID
@@ -1151,7 +1132,7 @@ return 'No accessibility issues found. Great job!';
           <main> element or role="main"',;
 codeExampl,;,
 e: '<main><!-- Main content --></main>'
-      })
+      });
   )
     }
   }
@@ -1172,7 +1153,7 @@ private addIssue(issue: Omit<A11yIssue, 'id'>): void {
   i);,
 d: this.generateIssueId(),
 //       ...issue
-    })
+    });
   }
   /**
    * Generate unique issue ID

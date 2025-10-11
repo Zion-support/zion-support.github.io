@@ -10,7 +10,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Extract request data
@@ -55,13 +55,13 @@ serve(async (req) => {
               content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
               ${content}
               Only provide the translated text, no explanations or additional comments.`}],
-          temperature: 0.3})})
+          temperature: 0.3})});
               Only provide the translated text, no explanations or additional comments.`,
             },
           ],
           temperature: 0.3,
         }),
-      })
+      });
       if (!response.ok) {
         const errorData = await response.json()
         throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -78,8 +78,7 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in translate-content function:", error)
     return new Response(
@@ -93,7 +92,6 @@ serve(async (req) => {
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
+      });
   }
-})
+});

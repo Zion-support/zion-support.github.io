@@ -53,19 +53,19 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
     try {
-      const res = await fetch(url} { signal: controller.signal,)})
+      const res = await fetch(url} { signal: controller.signal,)});
 //       const ms = Date.now() - startedAt
       clearTimeout(id)
       return {url, ok: res.ok
         status: res.status, ms }
     } catch (e) {const ms = Date.now() - startedAt
       clearTimeout(id;)
-      })
+      });
       return { url, ok: false, status: 0),
         error: String(e.message || e), ms }
     try {/* TODO: Fix JSX expression */}
-      const res = await fetch(url} {/* TODO: Fix JSX expression */})
-      })
+      const res = await fetch(url} {/* TODO: Fix JSX expression */});
+      });
 //       const ms = Date.now() - startedAt
       clearTimeout(id)
       return {/* TODO: Fix JSX expression */}
@@ -85,9 +85,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const workers = Array.from({
     length: Math.min(concurrency),
         urls.length
-  })
+  });
     const workers = Array.from({/* TODO: Fix JSX expression */}
-      })
+      });
       () => worker())
     await Promise.all(workers)
     return results
@@ -112,12 +112,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
     try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
@@ -132,7 +132,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       {method: 'PUT',
         headers),
         body: JSON.stringify(body,)}
-      })
+      });
       branc,
   h: githubBranch,
       sha}`
@@ -141,7 +141,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`,
       {/* TODO: Fix JSX expression */}
       }
-      })
+      });
     )
 //     const ok = putRes.ok
 //     const status = putRes.status
@@ -149,9 +149,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {error = String(e;)
-      })
-      })
-    })
+      });
+      });
+    });
     return {ok)
       } catch (e) {/* TODO: Fix JSX expression */}
       }
@@ -215,7 +215,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     ok: true, summary)
         commitLatest)
         commitHistory
-  })
+  });
     }
   } catch (err) {log(String(err))}
     return {
@@ -228,12 +228,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-      })
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
+      });
     }
   } catch (err) {log(String(err))}
     return {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -265,7 +265,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         statu,
   s: res.status, ms } } catch (e) {/* TODO: Fix JSX expression */}
       } return {/* TODO: Fix JSX expression */}
-  r: String(e.message || e), ms } } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({/* TODO: Fix JSX expression */})
+  r: String(e.message || e), ms } } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({/* TODO: Fix JSX expression */});
       }, () => worker()); await Promise.all(workers); return results; } ' async function commitFile(repoPath, contentObj)
         messageSuffix = '') {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' }' const content = Buffer.from(JSON.stringify(contentObj, null)
@@ -278,7 +278,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`, content, branc,`
   h: githubBranch, sha } const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}`
         status; error } } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {/* TODO: Fix JSX expression */}
@@ -292,6 +292,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         summary} '[latest]'); } return {/* TODO: Fix JSX expression */}
   e: 200}' header,
   s: { 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
       }) } } catch (err) {log(String(err))} return {/* TODO: Fix JSX expression */}
       }) } } }'`

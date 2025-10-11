@@ -5,7 +5,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals')
     const log = (metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TODO: Fix JSX expression */});
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
     }

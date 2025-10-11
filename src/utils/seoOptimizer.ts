@@ -398,7 +398,7 @@ class SEOOptimizer {
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
         keywords: this.generateKeywords()
-      })
+      });
     }
     this.addStructuredData(structuredData)
   }
@@ -433,7 +433,7 @@ class SEOOptimizer {
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)
   }
-      }).observe({ entryTypes: ['largest-contentful-paint'] })
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
       new PerformanceObserver((list) => {
@@ -446,7 +446,7 @@ class SEOOptimizer {
     // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
   }
-      }).observe({ entryTypes: ['layout-shift'] })
+      }).observe({ entryTypes: ['layout-shift'] });
     }
   }
   /**
@@ -458,7 +458,7 @@ class SEOOptimizer {
         metric_name: metric,
         metric_value: Math.round(value),
         event_category:       ,
-$4})
+$4});
     }
   }
   /**
@@ -516,7 +516,7 @@ Disallow: /static/`,
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`)
       }
-    })
+    });
     // Check for heading structure
     const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {
@@ -581,8 +581,7 @@ export default seoOptimizer
   n: this.currentPageData.section,
         keyword)
   s: this.generateKeywords()
-      }
-  )
+      });
     }
     this.addStructuredData(structuredData)
   }
@@ -637,7 +636,7 @@ private addStructuredData(data: unknown): void {
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)
         }
       }).observe({/* TODO: Fix JSX expression */}
-  s: ['largest-contentful-paint'] })
+  s: ['largest-contentful-paint'] });
   )
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
@@ -659,7 +658,7 @@ private addStructuredData(data: unknown): void {
           this.trackSEOMetric('poor_cls', clsValue)
         }
       }).observe({/* TODO: Fix JSX expression */}
-  s: ['layout-shift'] })
+  s: ['layout-shift'] });
   )
     }
   }
@@ -683,8 +682,7 @@ private addStructuredData(data: unknown): void {
         metric_value: Math.round(value),
         event_category: 'seo'
 
-      }
-  )
+      });
     }
   }
   /**
@@ -785,7 +783,7 @@ const images = document.querySelectorAll('img')
 }`
         issues.push(`Image ${index + 1} is missing alt text`)
       }
-    })
+    });
     // Check for heading structure
 const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
@@ -796,8 +794,7 @@ const h1s = document.querySelectorAll('h1')
   O: Add content,}
 }
       issues.push('Page has multiple H1 tags')
-    }
-  )
+    });
     // Check for heading structure
 const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}

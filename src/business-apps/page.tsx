@@ -11,10 +11,10 @@ const BusinessAppsPage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
-  
+
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
-  
+
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
         {/* Key Benefits */}
@@ -34,7 +34,7 @@ const BusinessAppsPage: React.FC = () => {
               <div className="text-4xl mb-4">📊</div>"
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>"
               <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions
-        {/* Apps by Category */})
+        {/* Apps by Category */});
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>

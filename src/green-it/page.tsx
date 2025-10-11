@@ -165,7 +165,7 @@ valuevalue: '100%',
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Green IT Solutions,
-  
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.

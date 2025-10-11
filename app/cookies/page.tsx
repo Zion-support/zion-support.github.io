@@ -25,10 +25,7 @@ const CookiesPage: React.FC = () => {const features = [
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -40,7 +37,7 @@ const CookiesPage: React.FC = () => {const features = [
               Learn about how we use cookies and similar technologies to improve your experience on our website.
             </p>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -54,7 +51,7 @@ const CookiesPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -64,11 +61,6 @@ const CookiesPage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-      <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -80,16 +72,16 @@ const CookiesPage: React.FC = () => {const features = [
   )
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -103,7 +95,7 @@ const CookiesPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -113,10 +105,7 @@ const CookiesPage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
                   <div>
@@ -125,15 +114,15 @@ const CookiesPage: React.FC = () => {const features = [
                       When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.
                     </p>
                   </div>
-      
+
       <Footer />
     </>
                 </div>
-      
+
       <Footer />
     </>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -147,7 +136,7 @@ const CookiesPage: React.FC = () => {const features = [
                   <li>• Advertising networks - for targeted advertising</li>
                 </ul>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -160,11 +149,11 @@ const CookiesPage: React.FC = () => {const features = [
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -188,19 +177,19 @@ const CookiesPage: React.FC = () => {const features = [
                 privacy@ziontechgroup.com
               </a>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </main>
-      
+
       <Footer />
     </div>
-      
+
       <Footer />
     </>
   );

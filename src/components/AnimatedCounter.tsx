@@ -22,8 +22,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
           observer.disconnect()
   }
       },
-      { threshold: 0.1 }
-    )
+      { threshold: 0.1 });
     if (counterRef.current) {
     observer.observe(counterRef.current)
   }

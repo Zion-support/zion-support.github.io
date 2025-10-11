@@ -46,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d && d.setDate(d && d.getDate() - (13 - i))
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`
     return `${d.getMonth() + 1}/${d.getDate()}`
-  })
+  });
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -162,7 +162,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now)
     d.setDate(d.getDate() - (13 - i))
     return `${d.getMonth() + 1}/${d.getDate()}`
-  })
+  });
   const marketplace = [
     { key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand(15, 60), trend: generateSeries(14, 40),
     }

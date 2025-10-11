@@ -42,9 +42,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     } finally {
       setIsLoading(false)
     }
@@ -63,7 +63,7 @@ export function useReviews(projectId?: string) {
         .eq("reviewee_id", userId)
         .eq("is_visible", true)
         .eq("status", "approved")
-        .order("created_at", { ascending: false })
+        .order("created_at", { ascending: false });
       if (error) throw error
       setReviews(data || [])
     } catch (err: any) {
@@ -71,9 +71,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to load reviews",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     } finally {
       setIsLoading(false)
     }
@@ -94,9 +94,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "You must be logged in to submit a review",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return false
     }
     setIsSubmitting(true)
@@ -105,17 +105,17 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .insert({
           ...review,
-          reviewer_id: user.id})
+          reviewer_id: user.id});
           reviewer_id: user.id,
-        })
+        });
         .select()
         .single()
       if (error) throw error
       toast({
         title: "Success",
-        description: "Your review has been submitted and is pending approval"})
+        description: "Your review has been submitted and is pending approval"});
         description: "Your review has been submitted and is pending approval",
-      })
+      });
       setUserReview(data)
       return true
     } catch (err: any) {
@@ -125,16 +125,16 @@ export function useReviews(projectId?: string) {
         toast({
           title: "Error",
           description: "You have already submitted a review for this project",
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
       } else {
         toast({
           title: "Error",
           description: "Failed to submit review",
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
       }
       return false
     } finally {
@@ -155,11 +155,11 @@ export function useReviews(projectId?: string) {
       if (error) throw error
       toast({
         title: "Success",
-        description: "Your review has been updated"})
+        description: "Your review has been updated"});
         description: "Your review has been updated",
-      })
+      });
       if (userReview) {
-        setUserReview({ ...userReview, ...updates })
+        setUserReview({ ...userReview, ...updates });
       }
       return true
     } catch (err: any) {
@@ -167,9 +167,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to update review",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return false
     } finally {
       setIsSubmitting(false)
@@ -184,27 +184,27 @@ export function useReviews(projectId?: string) {
         .insert({
           review_id: reviewId,
           reporter_id: user.id,
-          reason})
+          reason});
           reason,
-        })
+        });
       if (error) {
         // Check for unique constraint violation
         if (error.code === "23505") {
           toast({
             title: "Error",
             description: "You have already reported this review",
-            variant: "destructive"})
+            variant: "destructive"});
             variant: "destructive",
-          })
+          });
         } else {
           throw error
         }
       } else {
         toast({
           title: "Report Submitted",
-          description: "Thank you. Our team will review your report"})
+          description: "Thank you. Our team will review your report"});
           description: "Thank you. Our team will review your report",
-        })
+        });
         return true
       }
     } catch (err: any) {
@@ -212,9 +212,9 @@ export function useReviews(projectId?: string) {
       toast({
         title: "Error",
         description: "Failed to report review",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
     return false
   }

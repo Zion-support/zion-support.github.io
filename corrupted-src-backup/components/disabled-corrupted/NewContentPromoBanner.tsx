@@ -5,7 +5,7 @@ interface NewContentPromoBannerProp, s {
   classNa, m, e ?  : string
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
-const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   } const featuredConten, t = [
     {/* TODO: Fix JSX expression */}
@@ -97,7 +97,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                     <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">
                       {it, e, m.t, i, t, l, e}
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.description})
+                      {it, e, m.description});
                     </p>)
                     </h4>"
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">

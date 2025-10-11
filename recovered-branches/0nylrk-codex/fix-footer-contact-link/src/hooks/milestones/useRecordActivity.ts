@@ -20,9 +20,9 @@ export const useRecordActivity = () => {
           action,
           previous_status: previousStatus,
           new_status: newStatus,
-          comment})
+          comment});
           comment,
-        })
+        });
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)

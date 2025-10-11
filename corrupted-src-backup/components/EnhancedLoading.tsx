@@ -12,7 +12,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
   const renderSpinner = () => (
     <$2 />
 const,
-  EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
+  EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   }
   const renderSpinner = () => (<div></div>
@@ -23,9 +23,9 @@ const,
     <div className="flex space-x-1">
       {[0, 1, 2].map(i => ()
         <;)$2 />
-          key={i})
-          className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`})
-          style={{})
+          key={i});
+          className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`});
+          style={{});
             animationDelay: `${i * 0.2}s`)
             animationDuration: '1s'),
       {[0, 1, 2].map(i => (
@@ -44,8 +44,7 @@ const,
             animationDuratio,
   n: '1s'}}
         />)
-      ))}
-  )
+      ))});
 `
   const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
   )

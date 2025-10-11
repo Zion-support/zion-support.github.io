@@ -18,7 +18,7 @@ export function useJobSuggestions(talentId?: string) {
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
-          .order("created_at", { ascending: false })
+          .order("created_at", { ascending: false });
         if (error) throw error
         setJobMatches(data || [])
       } catch (error) {
@@ -26,9 +26,9 @@ export function useJobSuggestions(talentId?: string) {
         toast({
           title: "Error",
           description: "Failed to load job suggestions",
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
       } finally {
         setIsLoading(false)
       }
@@ -39,7 +39,7 @@ export function useJobSuggestions(talentId?: string) {
     try {
       const updates = {
         status,
-        ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+        ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {});
       }
       const { error } = await supabase
         .from("job_talent_matches")
@@ -59,21 +59,21 @@ export function useJobSuggestions(talentId?: string) {
         toast({
           title: "Application Submitted",
           description: "You've successfully applied to this job"
-        })
+        });
       } else if (status === 'declined') {
         toast({
           title: "Job Declined",
           description: "This job will be removed from your suggestions"
-        })
+        });
       }
     } catch (error) {
       console.error("Error updating job match status:", error)
       toast({
         title: "Error",
         description: "Failed to update job status",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
   }
   // Filter matches by status

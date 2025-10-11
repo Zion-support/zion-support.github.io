@@ -92,10 +92,10 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
   const project = projects.find(p => p.id === id)
   if (!project) return null
-  Object.assign(project, updates, { updatedAt: new Date().toISOString() })
+  Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   const project = projects && projects.find(p => p && p.id === id)
   if (!project) return null,
-  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() })
+  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
@@ -126,11 +126,11 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = project.milestones.find(m => m.id === milestoneId)
   if (!milestone) return null
-  Object.assign(milestone, updates, { updatedAt: new Date().toISOString() })
+  Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString()
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId)
   if (!milestone) return null,
-  Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() })
+  Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project && project.updatedAt = new Date().toISOString()
   return milestone
 }
@@ -170,7 +170,7 @@ export function update_project (id: string, updates: Partial < Project>): Projec
 if (return null) {
   $2
 }
-  Object.assign (project, updates, { updated_at: new Date ().toISOString () })
+  Object.assign (project, updates, { updated_at: new Date ().toISOString () });
   return project
 }
 export function add_milestone (project: Project, milestone: Omit < Milestone, 'id' | 'created_at' | 'updated_at'>): Milestone {
@@ -192,7 +192,7 @@ export function update_milestone (project: Project, milestone_id: string, update
 if (return null) {
   $2
 }
-  Object.assign (milestone, updates, { updated_at: new Date ().toISOString () })
+  Object.assign (milestone, updates, { updated_at: new Date ().toISOString () });
   project.updated_at = new Date ().toISOString ()
   return milestone
 }

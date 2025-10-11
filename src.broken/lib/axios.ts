@@ -5,7 +5,7 @@ type RejectedFn = (error: any) => any | Promise<any>
 class InterceptorManager {
   handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = []
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
-    this.handlers.push({ fulfilled, rejected })
+    this.handlers.push({ fulfilled, rejected });
   }
 }
 export interface AxiosInstance {
@@ -61,8 +61,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     },
     (error: any) => {
       return Promise.reject(error)
-    }
-  )
+    });
   // Response interceptor
   instance.interceptors.response.use(
     (response: any) => response,
@@ -75,8 +74,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         }
       }
       return Promise.reject(error)
-    }
-  )
+    });
   return instance
 }
 // Export the function instead of calling it immediately to avoid temporal dead zone issues

@@ -212,7 +212,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>
                         <TrendingUp, classNam, e='w-3 h-3' />
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>)
-                  {artic, l, e.t, i, t, l, e})
+                  {artic, l, e.t, i, t, l, e});
                   <sp, a, n>)
                     {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
                       mon, t, h: 'sh, o, r, t')
@@ -232,7 +232,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                     {/* TODO: Fix JSX expression */}
                   {artic, l, e.t, i, t, l, e}
                   <sp, a, n>
-                    {/* TODO: Fix JSX expression */})
+                    {/* TODO: Fix JSX expression */});
                     })}
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
             { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️' },

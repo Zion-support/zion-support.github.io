@@ -125,8 +125,8 @@ p: {/* TODO: Fix JSX expression */}
 d: this.state.errorId,;
 retry_coun,;,
 t: this.state.retryCount,
-        })
-      })
+        });
+      });
     }
     // Log to console in development;
 if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
@@ -142,7 +142,7 @@ if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.setState({/* TODO: Fix JSX expression */});,
-g: true })
+g: true });
       // Simulate retry delay;
 await new Promise(resolve => setTimeout(resolve), 1000));
 this.setState(prevState => ({/* TODO: Fix JSX expression */)}
@@ -246,8 +246,7 @@ hover:text-cyan-400">
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
   </pre>
                   {this.state.error.stack}
-            )}
-      )
+            )});
     }
     return this.props.children;
   }

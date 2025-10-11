@@ -23,11 +23,11 @@ export default async function handler(
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req)
     const { id } = req && req.body as { id?: string }
-    if (!id) return res && res.status(400).json({ error: 'Missing id' })
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
 import {  supabase   } from '../../../utils/supabase/client'
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || ''
@@ -36,25 +36,25 @@ function getUserId(req: NextApiRequest): string {
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req)
     const { id } = req.body as { id?: string }
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     const { error } = await supabase
       .from('notifications')
-      .update({ read_status: true })
+      .update({ read_status: true });
       .eq('id', id)
       .eq('user_id', userId)
     if (error) return res.status(200).json({ ok: true }), // tolerate in dev
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
-    return res && res.status(200).json({ ok: true })
+    return res && res.status(200).json({ ok: true });
   } catch (e) {
-    return res && res.status(500).json({ error: 'Unexpected error' })
+    return res && res.status(500).json({ error: 'Unexpected error' });
   }
-    return res && res.status(200).json({ ok: true })
+    return res && res.status(200).json({ ok: true });
   } catch (e) {
-    return res && res.status(500).json({ error: 'Unexpected error' })
+    return res && res.status(500).json({ error: 'Unexpected error' });
   }
 }
 }
@@ -89,34 +89,34 @@ function handler() {
 }
     const { error } = await supabase
       .from ('notifications')
-      .update ({ read_status: true })
+      .update ({ read_status: true });
       .eq ('id', id)
       .eq ('user_id', user_id)
     if (return res.status (200).json ({ ok: true })) {
   $2
 } // tolerate in dev
-    return res.status (200).json ({ ok: true })
+    return res.status (200).json ({ ok: true });
   } catch (e) {
-    return res.status (500).json ({ error: 'Unexpected error' })
+    return res.status (500).json ({ error: 'Unexpected error' });
   }
-    return res.status (200).json ({ ok: true })
+    return res.status (200).json ({ ok: true });
   } catch (e) {
-    return res.status (500).json ({ error: 'Unexpected error' })
+    return res.status (500).json ({ error: 'Unexpected error' });
 }
     const {_error} = await supabase
       .from('notifications')
-      .update({_read_status: true})
+      .update({_read_status: true});
       .eq('id', id)
       .eq('user_id', userId),
     if (error) return res.status(200).json({ ok: true }), // tolerate in dev
-    return res.status(200).json({ ok: true })
+    return res.status(200).json({ ok: true });
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
+    return res.status(500).json({ error: 'Unexpected error' });
 }
 }
     if (error) return res.status(200).json({ ok: true }); // tolerate in dev
-    return res.status(200).json({ ok: true })
+    return res.status(200).json({ ok: true });
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
+    return res.status(500).json({ error: 'Unexpected error' });
   }
 }

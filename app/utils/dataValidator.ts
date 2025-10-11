@@ -116,7 +116,7 @@ export function createCustomValidator</T><T>(validato,
             errors: fieldErrors,
 export function validateForm</string><T extends Record<string, unknown>>(dat,
   a: T,
-        } )
+        });
     }
   }
   return {isValid: Object.keys(errors).length === 0,}
@@ -160,7 +160,7 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
   custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({
     ,
     validate: validator,
-    message;}})
+    message;}});
 }
 class DataValidator {
     private static instance: DataValidator,
@@ -169,20 +169,20 @@ class DataValidator {
   }
   }),
   emai,
-  l: (): ValidationRule</T><string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule</T><string> => ({/* TODO: Fix JSX expression */});
   }),
   ur,
-  l: (): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */});
   }),
   minLengt,
   h: (mi),
   n: number): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */}`
   }),
   emai,
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */});
   }),
   ur,
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */});
   }),
   minLengt,
   h: (mi),
@@ -197,7 +197,7 @@ class DataValidator {
   patter,
   n: ()
   n: RegExp, messag)
-  e: string): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */})
+  e: string): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */});
   }),
   rang,
   e: (mi,
@@ -209,8 +209,8 @@ class DataValidator {
   m: </number><T>(validato,
   r: (valu),
   e: T) => boolean, messag,
-  e: string): ValidationRule</T><T> => ({/* TODO: Fix JSX expression */})
-  })
+  e: string): ValidationRule</T><T> => ({/* TODO: Fix JSX expression */});
+  });
 }
 // Legacy class-based API for backward compatibility
   h: (mi)
@@ -225,7 +225,7 @@ class DataValidator {
   patter,
   n: (patter,
   n: RegExp, messag)
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */});
   }),
   rang,
   e: (mi,
@@ -237,8 +237,8 @@ class DataValidator {
   m: <T>(validato,
   r: (valu)
   e: T) => boolean, messag,
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
-  })
+  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */});
+  });
 }
   e: string, patter)
   }

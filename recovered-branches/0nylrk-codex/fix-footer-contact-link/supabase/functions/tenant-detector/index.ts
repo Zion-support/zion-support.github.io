@@ -28,9 +28,9 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders})
+      headers: corsHeaders});
       headers: corsHeaders,
-    })
+    });
   }
   try {
     const url = new URL(req.url)
@@ -115,4 +115,4 @@ serve(async (req) => {
       },
     )
   }
-})
+});

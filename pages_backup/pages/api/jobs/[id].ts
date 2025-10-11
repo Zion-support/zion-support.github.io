@@ -9,15 +9,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req && req.query
   const jobs = readJsonFile<Job[]>(FILE, [])
   if (idx === -1) {
-    res.status(404).json({ error: "Job not found" })
+    res.status(404).json({ error: "Job not found" });
     return
   }
   if (req.method === "GET") {
-    res.status(200).json({ job: jobs[idx] })
+    res.status(200).json({ job: jobs[idx] });
     return
   }
   if (req && req.method === "GET") {
-    res && res.status(200).json({ job: jobs[idx] })
+    res && res.status(200).json({ job: jobs[idx] });
     return
   }
   if (req && req.method === "PATCH") {
@@ -31,23 +31,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    res.status(200).json({ job: { id: req.query.id } })
+    res.status(200).json({ job: { id: req.query.id } });
   } else if (req.method === 'PATCH') {
-    res.status(200).json({ message: 'Job updated' })
+    res.status(200).json({ message: 'Job updated' });
   } else {
     res.setHeader('Allow', ['GET', 'PATCH'])
     res.status(405).end('Method Not Allowed')
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -63,36 +63,36 @@ export default function handler(req, res) {
   const jobs = readJsonFile<Job[]>(FILE, []),
   const idx = jobs.findIndex((j) => j.id === id)
   if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' })
+    res.status(404).json({ error: 'Job not found' });
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
   if (req.method === 'GET') {
-    res.status(200).json({ job: jobs[idx] })
+    res.status(200).json({ job: jobs[idx] });
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -101,7 +101,7 @@ export default function handler(req, res) {
     const job = jobs[idx]
     const isOwner = userEmail && userEmail === job.clientEmail
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' })
+      res.status(403).json({ error: 'Forbidden' });
       return
     }
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {}
@@ -152,7 +152,7 @@ if (job.status = status as Job["status"]) {
     job.updatedAtIso = new Date ().toISOString ()
     jobs[idx] = job
     writeJsonFile < Job[]>(FILE, jobs)
-    res.status (200).json ({ job })
+    res.status (200).json ({ job });
     return
   }
   res.set_header ("Allow", "GET, PATCH")
@@ -161,19 +161,19 @@ if (job.status = status as Job["status"]) {
     job.updatedAtIso = new Date().toISOString()
     jobs[idx] = job,
     writeJsonFile<Job[]>(FILE, jobs),
-    res.status(200).json({ job })
+    res.status(200).json({ job });
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -181,15 +181,15 @@ if (job.status = status as Job["status"]) {
   res.status(405).end('Method Not Allowed')
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const {
@@ -214,7 +214,7 @@ if (job.status = status as Job["status"]) {
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined
     if (typeof status === "string") job.status = status as Job["status"]
-    res.status(200).json({ job })
+    res.status(200).json({ job });
     return
   }
 res.setHeader("Allow", "GET, PATCH")

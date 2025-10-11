@@ -3,9 +3,9 @@ import fs from 'fs'
 import path from 'path'
 // Get all TypeScript and JavaScript files
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  
+
   for (const item of items) {
-    
+
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
@@ -15,7 +15,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
     }
   }
-  
+
   return files
 }
 
@@ -29,7 +29,7 @@ function fixConsoleStatements(content) {
 
 // Fix unused imports by removing them
 function fixUnusedImports(content) {
-  
+
   // Find all used identifiers
   lines.forEach(line => {)
     if (matches) {
@@ -40,7 +40,7 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Fix unused imports by removing them
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
-  })
+  });
   // Remove unused import lines
   const filteredLines = lines.filter(line => {)
     if (importMatch) {
@@ -50,7 +50,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
       }
     }
     return true;)
-  })
+  });
   return filteredLines.join('\n')
 }
 
@@ -63,14 +63,13 @@ function fixUnusedVariables(content) {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     }
     return match.replace(varName, `_${varName}`)
-  })
+  });
   return content
 }
 
 // Main function
 function main() {
 
-  
   files.forEach(file => {)
     try {)
       // Apply fixes;)
@@ -87,10 +86,10 @@ function main() {
 function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  })
+  });
 }
 
 // Run if this is the main module

@@ -7,11 +7,11 @@ function writeFileEnsuringDir(targetPath)
 function writeFileEnsuringDir(targetPath)
         content) {/* TODO: Fix JSX expression */}
       } {/* TODO: Fix JSX expression */}
-      })
+      });
   fs.writeFileSync(targetPath, content) 'utf8')
 }
 function getGitInfo() {/* TODO: Fix JSX expression */}
-      return execSync(cmd} {/* TODO: Fix JSX expression */})
+      return execSync(cmd} {/* TODO: Fix JSX expression */});
   g: 'utf8' }).trim()
     } catch {return ''}
     }
@@ -25,7 +25,7 @@ function getGitInfo() {/* TODO: Fix JSX expression */}
   }
 }
 function walkDir(dir)
-  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true,)})
+  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true,)});
   const _files = []
   for (const entry of entries) {
     if (ignoreDirs.has(entry.name)) continue
@@ -34,8 +34,8 @@ function walkDir(dir)
   }
     if (entry.isDirectory()) files.push(...walkDir(full)
 function walkDir(dir)
-  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
-      })
+  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */});
+      });
   const _files = []
   for (const entry of entries) {/* TODO: Fix JSX expression */}
       }
@@ -96,7 +96,7 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   lines.push(`- Siz,
   e: ${/* TODO: Fix JSX expression */})`
       lines.push(`- ${ext}: ${count}`)
-    })
+    });
   return lines.join('\n')
 }
 exports.config = { schedule: '*/2 * * * *' }
@@ -104,7 +104,7 @@ exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..')
     const _git = getGitInfo()
     const stats = getRepoStats(root;)
-      })
+      });
     const insights = { generatedAt: new Date().toISOString(), git,
         stats }
 //     const reportsDir = path.join(root, 'public') 'reports')
@@ -124,44 +124,44 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       toMarkdown(insights))
     try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
         { stdio: 'inherit'} shell: true,
-      })
+      });
       )
       execSync('git add public/reports/repo-insights.*', {stdio: inherit),
         shell: true}
     try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
-      })
+      });
       )
       execSync('git add public/reports/repo-insights.*', {/* TODO: Fix JSX expression */}
-  l: true})
-      })
+  l: true});
+      });
       execSync()
         'git commit -m "chore(reports): update repo insights [skip ci]" || true',
         {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true })
+  l: true });
       execSync('git push origin main || true', {stdio: inherit),
         shell: true}
-      })
+      });
     } catch {}
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        report: '/reports/repo-insights.json' })
+        report: '/reports/repo-insights.json' });
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
       execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
-  l: true})
-      })
+  l: true});
+      });
     } catch {}
     return {/* TODO: Fix JSX expression */}
-  t: '/reports/repo-insights.json' })
+  t: '/reports/repo-insights.json' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -193,9 +193,9 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
 const fs = require('fs');' const path = require('path');' const { execSync } = require('child_process'); function writeFileEnsuringDir(targetPath)
         content) {/* TODO: Fix JSX expression */}
       } {/* TODO: Fix JSX expression */}
-      });' fs.writeFileSync(targetPath, content) 'utf8'); } function getGitInfo() {function safe(cmd) {' try { return execSync(cmd} {/* TODO: Fix JSX expression */})
+      });' fs.writeFileSync(targetPath, content) 'utf8'); } function getGitInfo() {function safe(cmd) {' try { return execSync(cmd} {/* TODO: Fix JSX expression */});
   g: 'utf8' }).trim(); } catch {return ''} } }' const lastCommitHash = safe('git rev-parse HEAD');' const lastCommitMsg = safe('git log -1 --pretty=%B');' const lastCommitAuthor = safe('git log -1 --pretty=%an');' const lastCommitDate = safe('git log -1 --pretty=%aI');' const branch = safe('git rev-parse --abbrev-ref HEAD'); return {/* TODO: Fix JSX expression */}
-        lastCommitDate; branch } } ' function walkDir(dir, ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
+        lastCommitDate; branch } } ' function walkDir(dir, ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */});
       }); const files = []; for (const entry of entries) {/* TODO: Fix JSX expression */}
       } if (entry.isDirectory()) files.push(...walkDir(full)
         ignoreDirs)); else files.push(full); } return files; } function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}

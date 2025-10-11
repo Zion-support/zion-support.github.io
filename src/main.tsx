@@ -34,17 +34,17 @@ if ('serviceWorker' in navigator) {
                   window.location.reload()
                 }
               }
-            })
+            });
           }
-        })
-      })
+        });
+      });
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registration failed: ', registrationError)
         }
-      })
-  })
+      });
+  });
 }
 const root = document.getElementById('root')
 if (root) {

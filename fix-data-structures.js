@@ -31,7 +31,7 @@ function fixDataStructures(filePath) {
       return `${key}: ${value},`
     }
     return match
-  })
+  });
   // Fix missing commas in object properties
   const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g
   if (missingCommaPattern.test(content)) {
@@ -65,14 +65,14 @@ function fixDataStructures(filePath) {
 // Get all TypeScript files with errors
 function getFilesWithErrors() {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' })
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
     const files = new Set()
     output.split('\n').forEach(line => {
       const match = line.match(/^([^(]+)\((\d+),(\d+)\):/)
       if (match) {
         files.add(match[1])
       }
-    })
+    });
     return Array.from(files)
   } catch (error) {
     return []
@@ -89,12 +89,12 @@ function main() {
     if (fixDataStructures(file)) {
       fixedCount++
     }
-  })
+  });
   console.log(`✅ Fixed ${fixedCount} files`)
   // Run type check again
   console.log('\n🔍 Running type check...')
   try {
-    execSync('pnpm run type-check', { stdio: 'inherit' })
+    execSync('pnpm run type-check', { stdio: 'inherit' });
     console.log('✅ All TypeScript errors fixed!')
   } catch (error) {
     console.log('⚠️  Some errors remain, continuing...')

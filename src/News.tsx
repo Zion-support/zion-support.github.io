@@ -505,7 +505,7 @@ year: 'numeric',;,
 month: 'long',;,
 day: 'numeric' 
 }
-    })
+    });
   }
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -541,7 +541,7 @@ initial={{ opacity: 0}}, y: 20 }}
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
 For press releases, media interviews, or company information, please contact our communications team.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
 Contact Press Team
@@ -786,7 +786,7 @@ Latest News & Updates
 Stay informed about our latest developments, product updates, industry insights,;
 and company milestones as we continue to innovate and grow.
             </p>
-            
+
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -838,7 +838,7 @@ Latest News
 Stay updated with our latest developments and industry insights
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
@@ -856,10 +856,10 @@ variants={fadeInUp}
                   <div className="text-center mb-4">
                     <div className="text-6xl mb-2">{article.image}</div>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4">{featuredArticle.title}</h3>
                   <p className="text-gray-300 mb-6">{featuredArticle.excerpt}</p>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
@@ -871,13 +871,13 @@ variants={fadeInUp}
                         <span>{new Date(featuredArticle.date).toLocaleDateString()}</span>
                       </div>
                     </div>
-                    
+
                     <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">;
 Read Full Article
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="relative">
                   <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl border border-green-400/30 flex items-center justify-center">
                     <Newspaper className="w-16 h-16 text-green-400" />
@@ -930,15 +930,15 @@ Press Release
                       </span>
                     )}
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {item.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {item.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center">
@@ -959,7 +959,7 @@ Press Release
                       {item.views}
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.slice(0, 3).map((tag), index) => (
                       <$2 />;
@@ -970,7 +970,7 @@ key={index}
                       </span>
                     ))}
                   </div>
-                  
+
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
 Read Full Article
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -993,7 +993,7 @@ Read Full Article
 Stay updated with our latest insights, product launches, and industry developments
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article => !article.featured).map((article) => (
               <article key={article.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -1004,15 +1004,15 @@ Stay updated with our latest insights, product launches, and industry developmen
                     </span>
                     <span className="text-gray-400 text-xs">{article.readTime}</span>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-white mb-3 leading-tight">
                     {article.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {article.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(article.date)}</span>
                     <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">;
@@ -1042,7 +1042,7 @@ Press Releases
 Official announcements and company milestones
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
@@ -1060,15 +1060,15 @@ variants={fadeInUp}
                   <div className="mb-4">
                     <span className="text-blue-400 text-sm font-medium">Press Release</span>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-3 leading-tight">
                     {release.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {release.summary}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(release.date)}</span>
                     <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">;
@@ -1345,15 +1345,15 @@ Press Release
                     </span>
                   )}
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                   {item.title}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                   {item.excerpt}
                 </p>
-                
+
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-400">
                     <div className="flex items-center">
@@ -1370,7 +1370,7 @@ Press Release
                     {item.readTime}
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 2).map((tag), index) => (
                     <$2 />;
@@ -1381,7 +1381,7 @@ key={index}
                     </span>
                   ))}
                 </div>
-                
+
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
 Read Article
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />

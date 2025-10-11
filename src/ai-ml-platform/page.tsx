@@ -143,10 +143,10 @@ const AIMLPlatformPage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
-  
+
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-  
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us,

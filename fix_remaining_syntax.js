@@ -15,7 +15,7 @@ function getAllTsFiles(dir) {
       files.push(fullPath)
     }
   }
-  
+
   return files
 }
 
@@ -24,36 +24,36 @@ function fixRemainingSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
     // Fix specific syntax issues
-    
+
     // 1. Fix extra semicolons in object properties
     content = content.replace(/description:\s*'[^']*',\s*;/g, (match) => {
       return match.replace(/,\s*;/, ',')
-    })
+    });
     // 2. Fix missing commas after object properties
     content = content.replace(/benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       if (!match.includes(',')) {
         return match.replace(/}\s*$/, '},')
       }
       return match
-    })
+    });
     // 3. Fix malformed object syntax
     content = content.replace(/description:\s*'[^']*',\s*benefits:\s*\[[^\]]*\]\s*}\s*$/gm, (match) => {
       return match.replace(/}\s*$/, '},')
-    })
+    });
     // 4. Fix missing closing brackets for arrays
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {
       if (!arrayPart.trim().endsWith(']') && !arrayPart.trim().endsWith('],')) {
         return arrayPart + ']' + spaces + nextPart
       }
       return match
-    })
+    });
     // 5. Fix missing semicolons after const declarations
     content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, declaration, nextPart) => {
       if (!declaration.trim().endsWith(';') && !declaration.trim().endsWith('}') && !declaration.trim().endsWith(')')) {
         return declaration + ';' + nextPart
       }
       return match
-    })
+    });
     // 6. Fix malformed JSX return statements
     content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>')
     // 7. Fix missing closing tags
@@ -62,7 +62,7 @@ function fixRemainingSyntaxErrors(filePath) {
         return match + '\n      </main>\n    </>\n  );\n}'
       }
       return match
-    })
+    });
     // 8. Fix missing export statements
     if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {
       const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
@@ -70,7 +70,7 @@ function fixRemainingSyntaxErrors(filePath) {
         content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
       }
     }
-    
+
     // 9. Fix extra semicolons in object properties
     content = content.replace(/,\s*;/g, ',')
     // 10. Fix missing commas in object arrays
@@ -83,7 +83,7 @@ function fixRemainingSyntaxErrors(filePath) {
       console.log(`✓ Fixed remaining syntax errors in: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message)
@@ -104,7 +104,7 @@ tsFiles.forEach(filePath => {
   } else {
     console.log(`⚠ File not found: ${filePath}`)
   }
-})
+});
 console.log(`\nSummary:`)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)

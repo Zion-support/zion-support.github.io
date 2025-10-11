@@ -65,7 +65,7 @@ export const useIntersectionObserver = ()
             rootMargi,
   n: '50px',
 //             ...options;)
-          })
+          });
         : null,
 //     [callback, options]
   )
@@ -135,8 +135,7 @@ export const useLazyImage = (sr)
             }
             img.src = src
           }
-        }
-  )
+        });
       },
 //       [src, isLoaded, isError]
 //     )
@@ -156,7 +155,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     fid?: number
     cls?: number
     ttfb?: number
-  }>({})
+  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -175,7 +174,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 //         lcp,
         ttf,
   b: navigation?.responseStart - navigation?.requestStart,)
-      })
+      });
     }
     // Monitor performance after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
@@ -191,17 +190,17 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   s: metric.value })))
-        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   d: metric.value })))
-        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value })))
-        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value })))
-        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
+        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */});
   b: metric.value })))
-      })
+      });
     }
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -222,7 +221,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
     usedJSHeapSize?: number
     totalJSHeapSize?: number
     jsHeapSizeLimit?: number
-  }>({})
+  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -243,7 +242,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   e: memory.totalJSHeapSize,
           jsHeapSizeLimi,
   t: memory.jsHeapSizeLimit,)
-        })
+        });
       }
     }
     const interval = setInterval(updateMemoryInfo, 5000)
@@ -290,7 +289,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     jsSize?: number
     cssSize?: number
     imageSize?: number
-  }>({})
+  }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -320,7 +319,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 }
           imageSize += size
         }
-      })
+      });
       setBundleSize({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -328,7 +327,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 //         jsSize,
 //         cssSize,
 //         imageSize;)
-      })
+      });
     }
     // Calculate after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}

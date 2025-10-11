@@ -19,17 +19,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts = posts.sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()))
     const o = parseInt(String(offset || 0), 10) || 0
     const l = parseInt(String(limit || 20), 10) || 20
-    return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
+    return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length });
   }
   if (req.method === 'POST') {
     if (!requireAdmin(req, res)) return
     const body = req.body as Partial<BlogPost>
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
-      return res.status(400).json({ error: 'Missing required fields' })
+      return res.status(400).json({ error: 'Missing required fields' });
     }
     const posts = readPosts()
     if (posts.some((p) => p.slug === body.slug)) {
-      return res.status(409).json({ error: 'Slug already exists' })
+      return res.status(409).json({ error: 'Slug already exists' });
     }
     const post: BlogPost = {
       id: uuidv4(),

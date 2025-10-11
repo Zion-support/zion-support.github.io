@@ -138,7 +138,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div></div>
               <h3 className="text-2xl font-bold text-white mb-2">
                 Fortune 100 Financial Services: $410M Annual Value Creation,
-  
+
               <p className="text-gray-300">
                 $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
             </div>
@@ -289,7 +289,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />
               Typical assessment value: $75K • Yours free,
-  
+
         {/* Trust Indicators */}
         <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400"></div>

@@ -9,7 +9,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Get personalization request data
@@ -62,10 +62,10 @@ serve(async (req) => {
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
-        temperature: 0.7})})
+        temperature: 0.7})});
         temperature: 0.7,
       }),
-    })
+    });
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -93,15 +93,15 @@ serve(async (req) => {
     }
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+      headers: { ...corsHeaders, "Content-Type": "application/json" }});
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-    })
+    });
   } catch (error) {
     console.error("Error in personalize-email function:", error)
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+      headers: { ...corsHeaders, "Content-Type": "application/json" }});
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-    })
+    });
   }
-})
+});

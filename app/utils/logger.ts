@@ -160,7 +160,7 @@ this.logs.push(logEntry)
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
     }
 
-    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
+    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });
   }
 
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string&gt;</<<<string&gt;this</string&gt;</string&gt;.log(LogLevel.FATAL, message, context, metadata);}
@@ -284,10 +284,10 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     // For example: Sentry, LogRocket, DataDog, etc.;
     // Example implementation: ;,
     // fetch('/api/logs', {);
-    //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',})
+    //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',});
     //   body: JSON.stringify(entry),
     // }).catch(err => {)
-    )}//   // })
+    )}//   // });
     // Format the log entry
     const formattedMessage = this.formatLogEntry(logEntry)
     // Output to console in development
@@ -355,8 +355,8 @@ export const logger = new Logger();
   s: {// 'Content-Type': 'application/json'},
     //   bod,
   y: JSON.stringify(entry),
-    // }).catch(err => {/* TODO: Fix JSX expression */,)})
-    //   // })
+    // }).catch(err => {/* TODO: Fix JSX expression */,)});
+    //   // });
   }
    * Get string representation of log level;
    */;

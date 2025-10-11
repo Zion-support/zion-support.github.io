@@ -1,6 +1,5 @@
 import { ArrowLeft } from 'lucide-react'
 
-
 import {  Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -26,11 +25,6 @@ export default function CaseStudy() {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-
-
-
-
-
 
 export default function CaseStudy() {
   const router = useRouter()
@@ -68,12 +62,8 @@ export default function CaseStudy() {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
 
-
-
-
   if (!study) {
     return (
-
 
         Case study not found.
       </div>
@@ -93,17 +83,11 @@ export default function CaseStudy() {
   }
   return (
 
-
-
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-
-
-
-
 
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
@@ -119,15 +103,12 @@ export default function CaseStudy() {
                 <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
                   <Link href="/case-studies">Case Studies</Link>
 
-
-
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
                 <BreadcrumbLink asChild aria-current="page">
-
 
                   <span>{study.title}</span>
                 </BreadcrumbLink>
@@ -151,8 +132,6 @@ export default function CaseStudy() {
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
 
-
-
           </Button>
           <img
             src={study.companyLogo}
@@ -162,8 +141,6 @@ export default function CaseStudy() {
             loading='lazy'
             className="h-12 mb-4"
             loading="lazy"
-
-
 
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
@@ -184,8 +161,6 @@ export default function CaseStudy() {
                 Download PDF
               </Link>
 
-
-
             </Button>
           )}
           <$2 />
@@ -193,11 +168,8 @@ export default function CaseStudy() {
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
 
-
 }
 }
-
-
 
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />
@@ -207,10 +179,7 @@ export default function CaseStudy() {
           <p className="mt-8 text-white font-semibold"></$1></$1></$1>
     </>
   )
-}
-
-
-  )
+});
 }
 
 import Link from 'next / link'

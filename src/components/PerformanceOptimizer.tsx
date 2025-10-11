@@ -23,7 +23,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     codeSplit: false,
     resourceHints: 0,
     serviceWorker: false
-  })
+  });
   useEffect(() => {
     if (enableImageOptimization) {
       optimizeImages()
@@ -63,7 +63,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (!img.getAttribute('alt')) {
     img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
   }
-    })
+    });
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))
   }
   const setupLazyLoading = () => {
@@ -78,11 +78,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               observer.unobserve(img)
   }
           }
-        })
+        });
       }, {
         rootMargin: '50px 0px',
         threshold: 0.1
-      })
+      });
       const lazyImages = document.querySelectorAll('img[data-src]')
       lazyImages.forEach((img) => observer.observe(img))
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))
@@ -110,7 +110,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.type = resource.type
   }
       document.head.appendChild(link)
-    })
+    });
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))
   }
   const setupCodeSplitting = () => {
@@ -134,7 +134,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.crossOrigin = hint.crossorigin
   }
       document.head.appendChild(link)
-    })
+    });
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))
   }
   const registerServiceWorker = async () => {
@@ -159,12 +159,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'
-              })
+              });
             }
           }
         }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
     }
   }, [])
   return null

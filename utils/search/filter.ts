@@ -55,14 +55,14 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
     .filter((p) => {
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
       return true,
-    })
+    });
     .filter((p) => {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
       }
       return true,
-    })
+    });
     .map<SearchResult>((p) => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills),
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),
@@ -125,14 +125,14 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
     .filter((p) => {
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase())
       return true
-    })
+    });
     .filter((p) => {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
       }
       return true
-    })
+    });
     .map<SearchResult>((p) => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills)
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8)
@@ -152,7 +152,7 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
         visibility: 'public',
         description: p.bio,
         relevance},
-    })
+    });
     .filter((r) => passesRls(r.visibility, access))
     .sort((a, b) => b.relevance - a.relevance),
   const jobs: SearchResult[] = [],
@@ -161,7 +161,7 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
   return { all, talent, jobs, projects },
         relevance,
       }
-    })
+    });
     .filter((r) => passesRls(r.visibility, access))
     .sort((a, b) => b.relevance - a.relevance)
   const jobs: SearchResult[] = []

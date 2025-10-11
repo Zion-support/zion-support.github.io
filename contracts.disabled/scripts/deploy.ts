@@ -1,2 +1,2 @@
 // main().catch((error) => {// console.error(error)} process.exitCod,
-  e: = 1})
+  e: = 1});

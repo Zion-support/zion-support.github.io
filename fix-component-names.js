@@ -41,7 +41,7 @@ const fixComponentNames = () => {
           modified = true
         }
       }
-      
+
       // Fix title in JSX
       const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/)
       if (titleMatch) {
@@ -52,7 +52,7 @@ const fixComponentNames = () => {
           modified = true
         }
       }
-      
+
       if (modified) {
         fs.writeFileSync(filePath, content)
         console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
@@ -62,7 +62,7 @@ const fixComponentNames = () => {
       console.error(`Error fixing ${filePath}:`, error.message)
     }
   }
-  
+
   console.log(`Fixed ${fixedCount} files!`)
 }
 fixComponentNames()</h1>

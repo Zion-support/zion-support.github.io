@@ -24,7 +24,7 @@ const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && tra
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json')
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
-    fs && fs.mkdirSync(DATA_DIR, { recursive: true })
+    fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 }
 function loadTransactions(): TokenTransaction[] {
@@ -43,7 +43,7 @@ function ensureDataDir() {
   if () {) {
   $2
 }
-    fs.mkdir_sync (DATA_DIR, { recursive: true })
+    fs.mkdir_sync (DATA_DIR, { recursive: true });
   }
 }
 function load_transactions (): TokenTransaction[] {

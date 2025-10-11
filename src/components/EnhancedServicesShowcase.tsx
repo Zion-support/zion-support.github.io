@@ -101,14 +101,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
-  
+
         <div className="grid grid-cols-2 gap-2">
           <$2 />
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Email,
-  
+
           <$2 />
             href={service.contact.demo}
             target="_blank"
@@ -116,7 +116,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo,
-  
+
         </div>
       </div>
       {/* Use Cases */}
@@ -151,7 +151,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text">
             Our Services,
-  
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
           {/* Contact Info Banner */}

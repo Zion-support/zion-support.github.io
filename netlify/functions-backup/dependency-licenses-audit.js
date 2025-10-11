@@ -2,21 +2,21 @@ const _fs = require('fs')
 const _fsp = require('fs/promises')
 const _path = require('path')
 const { spawnSync } = require('child_process')
-function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' })
+function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
-  g: 'utf8' })
+  g: 'utf8' });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
   r: res.stderr || '',
   }
 }
-async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
-  e: true })
+async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */});
+  e: true });
 }
 async function fetchPackageInfo(_name) versionRange) {const cleaned = String(versionRange || '').replace(/^\^|~|>=?|<=?|=|\s/g} '')
   const byRangeUrl = cleaned
@@ -102,7 +102,7 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
   g: 8px)border-botto,"
   m:1px solid #223)" class="${cls}">${r.classification.label}</td>`
     </tr>`
-    })
+    });
     .join('\n');`
   return `<!doctype html>"
 <html lang="en"><head></head>"
@@ -183,12 +183,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         versionWanted: deps[name],
         version: 'unknown'),
         license: 'unknown'),
-        classification: { level: 'warn'} label: 'unknown' })
+        classification: { level: 'warn'} label: 'unknown' });
         error: String(e)} catch (e) {/* TODO: Fix JSX expression */}
   l: 'warn'} labe,
-  l: 'unknown' })
+  l: 'unknown' });
         erro,
-  r: String(e)})
+  r: String(e)});
     }
   }
   await ensureDir(outDir)

@@ -118,7 +118,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
           localStorage.removeItem(key)
   clearStorage() {/* TODO: Fix JSX expression */}
         }
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
@@ -141,7 +141,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
           }
         }
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
@@ -217,7 +217,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
         }
         return {/* TODO: Fix JSX expression */}
   d: true }
-      })
+      });
     )
   }
 

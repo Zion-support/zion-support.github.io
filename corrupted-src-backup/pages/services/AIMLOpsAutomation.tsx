@@ -245,7 +245,7 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                     <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                   <li, className='flex, item, s-sta, r, t'>
                     <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />)
-        {/* CTA, Sect, i, o, n */})
+        {/* CTA, Sect, i, o, n */});
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>)
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g: px-8'>),
             <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>

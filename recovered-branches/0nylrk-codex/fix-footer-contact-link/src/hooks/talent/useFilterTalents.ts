@@ -79,12 +79,12 @@ export function useFilterTalents(talents: TalentProfile[]) {
     result = result.filter(talent => {
       const hourlyRate = talent.hourly_rate || 0
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
-    })
+    });
     // Filter by experience range
     result = result.filter(talent => {
       const years = talent.years_experience || 0
       return years >= experienceRange[0] && years <= experienceRange[1]
-    })
+    });
     // Sort talents
     switch (sortOption) {
       case 'price-low':

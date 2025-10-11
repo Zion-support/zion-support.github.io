@@ -500,7 +500,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
@@ -540,7 +540,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               From data collection to treatment optimization, our AI streamlines every aspect of healthcare delivery.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {healthcareProcesses.map((process, index) => (
               <$2 />
@@ -575,7 +575,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               to deliver exceptional results for healthcare providers and patients.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-red-500/50 transition-all duration-300">
@@ -611,7 +611,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               From patient analytics to clinical research, our AI platform covers every aspect of modern healthcare analytics.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
@@ -644,7 +644,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               Our AI healthcare analytics solutions are tailored to meet the unique needs of different types of healthcare organizations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
@@ -728,7 +728,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               Flexible pricing options designed to scale with your healthcare organization's needs and growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
@@ -763,7 +763,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -772,7 +772,7 @@ const AIHealthcareAnalytics: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <$2 />
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${

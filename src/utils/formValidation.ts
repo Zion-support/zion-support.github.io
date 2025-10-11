@@ -255,8 +255,7 @@ export const _validationRules = {
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}`
 
-  }
-  )
+  });
 }
 /**
  * Validate a single field with multiple rules

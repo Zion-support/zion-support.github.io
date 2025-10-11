@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
  announcement.setAttribute('aria-atomic', 'true')
  announcement.className = 'sr-only'
 const,
-  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
  announcement.textContent = `Navigated to ${title}`
  document.body.appendChild(announcement)
@@ -41,12 +41,12 @@ const,
  if (titleElement) {
  observer.observe(titleElement.parentNode as Node, {)
  childList: true),
- subtree: true)})
+ subtree: true)});
  }
  const handleContrastChange = (e: MediaQueryListEvent) => {,
  setIsHighContrast(e.matches)
  if (titleElement) {/* TODO: Fix JSX expression */}
- })
+ });
  }
  const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
  }
@@ -79,9 +79,9 @@ const,
  const _main = document.querySelector('main')
  if (main) {,
  (main as HTMLElement).focus()
- (main as HTMLElement).scrollIntoView({ behavior: 'smooth' })
+ (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  useEffect(() => {/* TODO: Fix JSX expression */}
-  r: 'smooth' })
+  r: 'smooth' });
  }
  }
  // Skip to navigation with Alt + N
@@ -90,9 +90,9 @@ const,
  const _nav = document.querySelector('nav')
  if (nav) {
  (nav as HTMLElement).focus()
- (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' })
+ (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
-  r: 'smooth' })
+  r: 'smooth' });
  }
  }
  // Close modals/dropdowns with Escape
@@ -104,7 +104,7 @@ const,
  (closeButton as HTMLElement).click()
  if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
  }
- })
+ });
  }
  // Navigate through interactive elements with Tab (visual indicator)
  if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
@@ -229,7 +229,7 @@ const,
  }
  }, [announceToScreenReader])
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>)
- {children})
+ {children});
  useEffect(() => {/* TODO: Fix JSX expression */}
  }
  }, [announceToScreenReader])

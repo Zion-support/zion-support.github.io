@@ -10,7 +10,7 @@ export default function NewServices2026Bann, e, r({)
       title: 'AI, Autonomous, Cloud O, p, s',
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
-export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */})
+export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */});
 }: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -72,7 +72,6 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
               >
                 Learn, mor, e →
             </Li, n, k>)
-          ))}
-  )
+          ))});
 }
 `</div></div></div></div></div>

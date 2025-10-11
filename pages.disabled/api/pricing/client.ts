@@ -19,7 +19,7 @@ export default function ClientPage() {
       "scope": body.scope ? String(body.scope) : undefined,
       "experienceLevel": body.experienceLevel as ClientBudgetRequest['experienceLevel']}
     const suggestion = await generateClientBudgetSuggestion(input)
-    await logPricingAnalytics({ "kind": 'client_suggestion', "payload": { input, suggestion } })
+    await logPricingAnalytics({ "kind": 'client_suggestion', "payload": { input, suggestion } });
     return res.status(200).json({ suggestion, "disclaimer": 'Based on market data & trends' })} catch (error) {
     return res.status(500).json({ "error": 'Failed to generate budget suggestion' })}
 }

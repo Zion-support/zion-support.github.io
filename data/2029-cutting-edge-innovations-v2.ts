@@ -1471,7 +1471,7 @@ export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPric
   return cuttingEdge2029Services.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
     implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',

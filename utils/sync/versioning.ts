@@ -24,12 +24,12 @@ export function nextVersionFor(currentVersion: string, type: 'major' | 'minor' |
   const version = parseVersion(currentVersion)
   switch (type) {
     case 'major':
-      return versionToString({ major: version && version.major + 1, minor: 0, patch: 0 })
+      return versionToString({ major: version && version.major + 1, minor: 0, patch: 0 });
     case 'minor':
-      return versionToString({ major: version && version.major, minor: version && version.minor + 1, patch: 0 })
+      return versionToString({ major: version && version.major, minor: version && version.minor + 1, patch: 0 });
     case 'patch':
     default:
-      return versionToString({ major: version && version.major, minor: version && version.minor, patch: version && version.patch + 1 })
+      return versionToString({ major: version && version.major, minor: version && version.minor, patch: version && version.patch + 1 });
   }
 }
 export function isVersionGreater(a: string, b: string): boolean {

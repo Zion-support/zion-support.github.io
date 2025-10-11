@@ -243,7 +243,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */}
       }
       retu, r, n { ...iss, u, e, ty, p, e, sco, r, e }
-    })
+    });
     const, error, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'err, o, r').leng, t, h;'
     const, warning, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'warni, n, g').leng, t, h;'
     const, overallScor, e = Ma, t, h.rou, n, d(issu, e, s.redu, c, e((s, u, m, iss, u, e) => s, u, m + iss, u, e.sco, r, e, 0) / issu, e, s.leng, t, h)
@@ -261,7 +261,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         imag, e, s: { to, t, a
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
         lin, k, s: { to, t, a;)
-  l: 45, intern, a, l: 32, extern, a, l: 13 })
+  l: 45, intern, a, l: 32, extern, a, l: 13 });
         wordCou, n, t: 28, 4, 7;)
         readabilitySco, r, e: 72,)}
       lastUpdat, e, d: Da, t, e.n, o, w()
@@ -281,7 +281,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7
         readabilitySco, r, e: 72,
-      })
+      });
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s','
@@ -296,7 +296,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         readabilitySco, r, e: 72,
       }
       lastUpdat, e, d: Da, t, e.n, o, w()
-    })
+    });
     setIsRunni, n, g(fal, s, e)
   }
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
@@ -338,7 +338,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
     const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */});
   }) || []
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))]
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w']
@@ -382,7 +382,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
 isRunni, n, g ? (
 <React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
-Analyzi, n, g...)
+Analyzi, n, g...props)
 </React.Fragment>)
 ) : (
 <React.Fragment>{}

@@ -884,7 +884,7 @@ const AIHRRecruitment = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
@@ -918,7 +918,7 @@ const AIHRRecruitment = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-600/20 to-cyan-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-sm font-medium mb-6">
@@ -926,7 +926,7 @@ const AIHRRecruitment = () => {
               AI-Powered HR & Recruitment
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               AI HR & Recruitment
@@ -935,13 +935,13 @@ const AIHRRecruitment = () => {
               Transform Hiring with Intelligent Automation
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Revolutionize your recruitment process with AI-powered tools that screen candidates, 
             predict success, and automate hiring workflows. Find the best talent faster while 
             reducing bias and improving retention.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
               <span className="relative z-10">Start Free Trial</span>
@@ -1026,7 +1026,7 @@ const AIHRRecruitment = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
@@ -1094,7 +1094,7 @@ const AIHRRecruitment = () => {
               Our AI platform streamlines every aspect of the hiring process while ensuring quality and fairness
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1136,7 +1136,7 @@ const AIHRRecruitment = () => {
             automation and data-driven insights.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon
@@ -1186,7 +1186,7 @@ const AIHRRecruitment = () => {
               From talent acquisition to employee retention, our AI platform covers every aspect of modern HR management.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 text-center">
@@ -1210,7 +1210,7 @@ const AIHRRecruitment = () => {
               Our AI platform streamlines every stage of the recruitment process for maximum efficiency.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {recruitmentStages.map((stage, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
@@ -1305,7 +1305,7 @@ const AIHRRecruitment = () => {
               Tailored AI recruitment solutions designed for the unique needs of different industries.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
@@ -1372,7 +1372,7 @@ const AIHRRecruitment = () => {
               Our AI recruitment platform adapts to your specific hiring requirements and industry needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <$2 />
@@ -1394,7 +1394,7 @@ const AIHRRecruitment = () => {
               See the real impact of AI-powered HR on your organization's bottom line and team performance.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
@@ -1412,7 +1412,7 @@ const AIHRRecruitment = () => {
               See the measurable impact our AI recruitment platform delivers for businesses.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
@@ -1436,7 +1436,7 @@ const AIHRRecruitment = () => {
               Flexible pricing options designed to scale with your organization's HR needs and growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
@@ -1457,7 +1457,7 @@ const AIHRRecruitment = () => {
               Choose the plan that fits your recruitment needs. All plans include a 14-day free trial.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
@@ -1472,7 +1472,7 @@ const AIHRRecruitment = () => {
                     </span>
                   </div>
                 )}
-                
+
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -1482,7 +1482,7 @@ const AIHRRecruitment = () => {
                   <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -1491,7 +1491,7 @@ const AIHRRecruitment = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
@@ -1568,9 +1568,9 @@ const AIHRRecruitment = () => {
                       <p className="text-gray-400">{service.price}</p>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
+
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -1579,7 +1579,7 @@ const AIHRRecruitment = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <$2 />
                     to="/contact"
                     className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
@@ -1602,7 +1602,7 @@ const AIHRRecruitment = () => {
               Advanced AI capabilities that streamline every aspect of the recruitment process
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {recruitmentFeatures.map((feature, index) => {
               const Icon = feature.icon
@@ -1617,7 +1617,7 @@ const AIHRRecruitment = () => {
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
@@ -1656,7 +1656,7 @@ const AIHRRecruitment = () => {
             See how AI HR & Recruitment is transforming talent acquisition across different industries.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
@@ -1690,7 +1690,7 @@ const AIHRRecruitment = () => {
             Built on the latest AI and HR technology for maximum efficiency and accuracy.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
             const Icon = tech.icon
@@ -1717,7 +1717,7 @@ const AIHRRecruitment = () => {
             Flexible pricing options designed to scale with your recruitment needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
@@ -1732,7 +1732,7 @@ const AIHRRecruitment = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
                 <div className="mb-4">
@@ -1741,7 +1741,7 @@ const AIHRRecruitment = () => {
                 </div>
                 <p className="text-gray-300">{tier.description}</p>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
@@ -1750,7 +1750,7 @@ const AIHRRecruitment = () => {
                   </li>
                 ))}
               </ul>
-              
+
               <$2 />
                 to="/contact"
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
@@ -1837,7 +1837,7 @@ const AIHRRecruitment = () => {
               Schedule Demo
             </button>
           </div>
-          
+
           <div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
               Need enterprise pricing? <a href="/contact" className="text-green-400 hover:text-green-300 underline">Contact our sales team</a>
@@ -1900,7 +1900,7 @@ export default AIHRRecruitment
               Discover how AI is transforming talent acquisition across industries and company sizes
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon
@@ -1933,7 +1933,7 @@ export default AIHRRecruitment
               Transform your hiring process from manual and time-consuming to intelligent and efficient
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4">
@@ -2117,7 +2117,7 @@ export default AIHRRecruitment
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link to="/services/ai-business-intelligence" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
@@ -2130,7 +2130,7 @@ export default AIHRRecruitment
                 </div>
               </div>
             </Link>
-            
+
             <Link to="/services/ai-marketing-automation" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
                 <div className="flex items-center justify-between">
@@ -2142,7 +2142,7 @@ export default AIHRRecruitment
                 </div>
               </div>
             </Link>
-            
+
             <Link to="/services/ai-legal-tech" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
                 <div className="flex items-center justify-between">

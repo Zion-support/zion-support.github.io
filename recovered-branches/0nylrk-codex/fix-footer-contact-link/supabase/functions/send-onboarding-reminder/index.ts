@@ -20,9 +20,9 @@ serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders})
+      headers: corsHeaders});
       headers: corsHeaders,
-    })
+    });
   }
   try {
     const supabase = createClient(
@@ -38,8 +38,7 @@ serve(async (req: Request) => {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+        });
     }
     // Get user data
     const { data: userData, error: userError } = await supabase
@@ -54,8 +53,7 @@ serve(async (req: Request) => {
           status: 404,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+        });
     }
     // Create message based on role and missing milestone
     const milestoneMessages = {
@@ -97,9 +95,9 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-      `})
+      `});
       `,
-    })
+    });
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
@@ -107,8 +105,7 @@ serve(async (req: Request) => {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+        });
     }
     // Create notification in database
     const { data: notification, error: notificationError } = await supabase.rpc(
@@ -119,8 +116,7 @@ serve(async (req: Request) => {
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
         _type: "onboarding"}
         _type: "onboarding",
-      }
-    )
+      });
     if (notificationError) {
       console.error("Failed to create notification:", notificationError)
     }
@@ -136,8 +132,7 @@ serve(async (req: Request) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   } catch (error) {
     console.error(error)
     return new Response(
@@ -146,7 +141,6 @@ serve(async (req: Request) => {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   }
-})
+});

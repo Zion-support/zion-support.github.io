@@ -118,7 +118,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -136,7 +136,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -154,7 +154,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -172,7 +172,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -187,7 +187,7 @@ export class AIMarketResearchService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -205,7 +205,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ format })})
+        body: JSON && JSON.stringify({ format })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -223,7 +223,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ ...request, schedule })})
+        body: JSON && JSON.stringify({ ...request, schedule })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -323,7 +323,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -344,7 +344,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -365,7 +365,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -386,7 +386,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -404,7 +404,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / realtime?keyword=${encodeURIComponent (keyword)}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -425,7 +425,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ format })})
+        body: JSON.stringify ({ format })});
       // Check condition
 if ( {) {
   $2
@@ -446,7 +446,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ ...request, schedule })})
+        body: JSON.stringify ({ ...request, schedule })});
       // Check condition
 if ( {) {
   $2
@@ -481,7 +481,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -501,7 +501,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -521,7 +521,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -541,7 +541,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -558,7 +558,7 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -578,7 +578,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ format }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -598,7 +598,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ ...request, schedule }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }

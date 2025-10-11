@@ -16,7 +16,7 @@ return { hasError: true;, error }
 this.setState({);
 error),;
 errorInfo
-    })
+    });
     // Log error to console in development;
 if (process.env.NODE_ENV === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo)
@@ -36,7 +36,7 @@ console.group('🚨 Error Boundary Caught Error')
     // In production, you might want to send this to an error reporting service;
 if (process.env.NODE_ENV === 'production') {
       // Example: send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo })
+      // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -70,7 +70,7 @@ r: Error): State {/* TODO: Fix JSX expression */}
   componentDidCatch(erro,;,
 r: Error, errorInf);,
 o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    })
+    });
     // Log error to console in development;
 if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
@@ -82,7 +82,7 @@ if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
     // Log to console in development;
 if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  a: errorInfo })
+  a: errorInfo });
     }
   }
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>";
@@ -116,8 +116,7 @@ Error Details (Development),
             {/* TODO: Fix JSX expression */}
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
-            )}
-      )
+            )});
     }
     return this.props.children;
   }

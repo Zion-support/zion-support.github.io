@@ -9,7 +9,7 @@ function execGitCommand(command, description) {
     const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'})
+      stdio: 'pipe'});
     console.log(`✅ ${description} completed`)
     return result
   } catch (error) {
@@ -55,11 +55,11 @@ async function main() {
     } catch (error) {
       console.log(`❌ Error with ${branch}: ${error.message}`)
     }
-    
+
     // Small delay between merges
     await new Promise(resolve => setTimeout(resolve, 500))
   }
-  
+
   // Final status
   console.log('\n📊 Final Status: '),
   execGitCommand('git status', 'Final git status')

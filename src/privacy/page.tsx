@@ -78,7 +78,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Privacy Policy,
-  
+
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             <div className="flex flex-wrap justify-center gap-4">
@@ -207,7 +207,7 @@ export default function PrivacyPage() {
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
-  
+
           </div>
         </div>
       </section>

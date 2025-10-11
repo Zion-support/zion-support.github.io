@@ -18,7 +18,7 @@ export interface Branding {
   subdomain?: string
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -95,7 +95,7 @@ export interface GeneratedAsset {
   requestedRoutes?: string[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -128,7 +128,7 @@ export interface GeneratedAsset {
   requestedRoutes?: string[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -139,7 +139,7 @@ export interface DeployLogEntry {
   details?: Record<string, unknown> | string
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -149,7 +149,7 @@ export interface GeneratedAsset {
   description?: string
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -179,7 +179,7 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
   adminKeyConfigured: boolean
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export interface DeployModules {
@@ -237,7 +237,7 @@ export interface AccessControlConfig {
   adminKeyConfigured: boolean
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 }

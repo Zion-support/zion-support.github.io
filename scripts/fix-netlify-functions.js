@@ -21,7 +21,7 @@ function fixNetlifyFunction(content) {
 function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2')
     // Fix malformed JSON.stringify calls
-    .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */})
+    .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */});
     .replace(/(\w+)\s*}\s*\)/g, '$1\n      })')
     .replace(/(\w+)\s*\)\s*}/g, '$1\n      }')
     // Clean up extra whitespace and newlines
@@ -53,7 +53,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
   }
 
   // Add proper error handling if missing
-  if (!fixed.includes('try {/* TODO: Fix JSX expression */})
+  if (!fixed.includes('try {/* TODO: Fix JSX expression */});
     const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/)
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
@@ -99,7 +99,7 @@ async function main() {/* TODO: Fix JSX expression */}
       }
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  })
+  });
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }

@@ -10,7 +10,7 @@ interface NewContentPromotionBannerProp, s {
   classNa, m, e ?  : string
 interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */}
  }
-const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
    }
   if (!isVisib, l, e) return, nul, l

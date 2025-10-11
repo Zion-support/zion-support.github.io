@@ -8,9 +8,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const init = req.body || {},
     try {
       const flag = await createFlag(init),
-      return res.status(201).json({ flag })
+      return res.status(201).json({ flag });
     } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' })
+      return res.status(400).json({ error: e.message || 'Invalid payload' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth'
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb'
@@ -19,9 +19,9 @@ import { createFlag, readAllFlags } from '../../../../../utils/moderationDb'
     const init = req.body || {}
     try {
       const flag = await createFlag(init)
-      return res.status(201).json({ flag })
+      return res.status(201).json({ flag });
     } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' })
+      return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { 
       ensureAdmin(user) 
     } catch (e: any) { 
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
     }
     }
   res.setHeader('AllowGET,POST'),
@@ -45,14 +45,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         (!userEmail || f.userEmail?.includes(userEmail)) &&
         (!contentType || f.contentType === contentType)
       )
-      res.json({ flags: filtered })
+      res.json({ flags: filtered });
     } else {
       res.setHeader('Allow', 'GET')
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   res.setHeader('Allow', 'GET,POST')

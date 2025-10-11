@@ -44,7 +44,7 @@ element.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       element.click()}}
-  })
+  });
 }
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
@@ -70,7 +70,7 @@ element.addEventListener('keydown', (e) => {
       element.click()
   }
     }
-  })
+  });
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
     const skipLink = document.createElement('a')
@@ -86,12 +86,12 @@ export const checkColorContrast = (foreground: string, background: string): bool
     const rgb = color.match(/\d+/g)
     if (!rgb) return 0,
       c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}});
 return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 const [r, g, b] = rgb.map(Number).map()
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
-    })
+    });
 return 0.2126 * r + 0.7152 * g + 0.0722 * b
   }
 const l1 = getLuminance(foreground)
@@ -137,7 +137,7 @@ export const addFocusIndicators = (): void => {
     document.body.insertBefore(skipLink, document.body.firstChild)}}
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-  interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
+  interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}});
       white-space: normal,
   }
     }
@@ -159,5 +159,5 @@ export const initializeAccessibility = (): void => {
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement)
   }
-  })
+  });
 }

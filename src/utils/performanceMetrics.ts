@@ -171,11 +171,11 @@ export class PerformanceMetrics {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
-              })
+              });
             }
           }
-        })
-        navObserver.observe({ entryTypes: ['navigation'] })
+        });
+        navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver)
         // Paint timing
         const paintObserver = new PerformanceObserver(list => {
@@ -188,11 +188,11 @@ export class PerformanceMetrics {
                 unit: 'ms',
                 timestamp: new Date(),
                 category:               ,
-$4})
+$4});
             }
           }
-        })
-        paintObserver.observe({ entryTypes: ['paint'] })
+        });
+        paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver)
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver(list => {
@@ -206,10 +206,10 @@ $4})
               unit: 'ms',
               timestamp: new Date(),
               category:             ,
-$4})
+$4});
           }
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver)
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {
@@ -221,18 +221,17 @@ $4})
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart,
 
                 }
-              }
-  )
+              });
             }
           }
-        })
-        navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] })
+        });
+        navObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['navigation'] });
         this.observers.push(navObserver)
         // Paint timing
 const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -250,18 +249,17 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
                 timestamp: new Date(),
                 category: 'load'
 
-              }
-  )
+              });
             }
           }
-        })
-        paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] })
+        });
+        paintObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['paint'] });
         this.observers.push(paintObserver)
         // Largest Contentful Paint
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           if (lastEntry) {/* TODO: Fix JSX expression */}
@@ -278,12 +276,11 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
               timestamp: new Date(),
               category: 'load'
 
-            }
-  )
+            });
           }
-        })
-        lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver)
 // Layout Shift
         const clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
@@ -300,9 +297,9 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
             unit: 'score',
             timestamp: new Date(),
             category:           ,
-$4})
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+$4});
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver)
       } catch (error) {
           this.recordMetric({/* TODO: Fix JSX expression */}
@@ -315,10 +312,10 @@ $4})
             timestamp: new Date(),
             category: 'runtime'
 
-          })
-        })
-        clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+          });
+        });
+        clsObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['layout-shift'] });
         this.observers.push(clsObserver)
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -382,7 +379,7 @@ $4})
         serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading
       }
-    })
+    });
   }
   /**
    * Record network request timing
@@ -399,8 +396,7 @@ $4})
         domParsing: perfData.domComplete - perfData.domLoading,
 
       }
-    }
-  )
+    });
   }
   /**
    * Record network request timing
@@ -424,7 +420,7 @@ $4})
         url,
         status
       }
-    })
+    });
   }
   /**
    * Record memory usage
@@ -442,8 +438,7 @@ $4})
 //         url,
 //         status
       }
-    }
-  )
+    });
   }
   /**
    * Record memory usage
@@ -471,7 +466,7 @@ $4})
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
-    })
+    });
   }
   /**
    * Measure function execution time
@@ -486,7 +481,7 @@ $4})
       unit: 'ms',
       timestamp: new Date(),
       category:     ,
-$4})
+$4});
     return result
   }
   /**
@@ -502,7 +497,7 @@ $4})
       unit: 'ms',
       timestamp: new Date(),
       category:     ,
-$4})
+$4});
     return result
   }
   /**
@@ -529,8 +524,7 @@ $4})
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
 
       }
-    }
-  )
+    });
   }
   /**
    * Measure function execution time
@@ -554,8 +548,7 @@ $4})
       timestamp: new Date(),
       category: 'runtime'
 
-    }
-  )
+    });
     return result
   }
   /**
@@ -580,8 +573,7 @@ $4})
       timestamp: new Date(),
       category: 'runtime'
 
-    }
-  )
+    });
     return result
   }
   /**

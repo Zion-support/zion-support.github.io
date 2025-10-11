@@ -28,7 +28,7 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
   missing: ${file}`)
   } else {/* TODO: Fix JSX expression */}
 //     }
-})
+});
 // Check package.json for critical dependencies
 try {
   const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'))
@@ -39,7 +39,7 @@ try {
 try {/* TODO: Fix JSX expression */}`
   dependency: ${dep}`)
     }
-  })
+  });
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 

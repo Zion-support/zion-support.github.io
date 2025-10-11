@@ -10,7 +10,7 @@ if (hrefMatches) {
     if (href.startsWith('/')) {,
       footerLinks.push(href.substring(1)); // Remove leading slash
   }
-  })
+  });
 }
 
 // Read the Navigation component
@@ -24,14 +24,14 @@ if (pathMatches) {
     if (path.startsWith('/')) {,
       navLinks.push(path.substring(1)); // Remove leading slash
   }
-  })
+  });
 }
 
 // Get all existing pages
 const existingPages = []
 const { execSync } = require('child_process')
 try {
-  const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' })
+  const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
   existingPages.push(...result.trim().split('\n').filter(Boolean))
 } catch (error) {
     console.error('Error getting existing pages:', error.message)

@@ -30,7 +30,7 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
   try {
     const fullPath = path.join(DATA_DIR, filePath)
     const dir = path.dirname(fullPath)
-    await fs.mkdir(dir, { recursive: true })
+    await fs.mkdir(dir, { recursive: true });
     await fs.writeFile(fullPath, JSON.stringify(data, null, 2))
   } catch (error) {
     console.error('Error writing JSON file:', error)
@@ -42,7 +42,7 @@ import path from 'path'
 const dataRoot = path.join(process.cwd(), 'data')
 function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true })
+    fs.mkdirSync(dirPath, { recursive: true });
   }
 }
 export function readJson<T>(relativePath: string, fallback: T): T {

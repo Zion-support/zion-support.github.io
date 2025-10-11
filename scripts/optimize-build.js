@@ -111,14 +111,14 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)
     }
   }
-  
+
   if (issues.length > 0) {
     // console.log('⚠️  Performance issues found: '),
   for (const file of files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`)
     }
   }
-  
+
   if (issues.length > 0) {/* TODO: Fix JSX expression */}`
     issues.forEach(issue => // console.log(`   - ${issue}`))
   } else {/* TODO: Fix JSX expression */}
@@ -137,7 +137,7 @@ async function optimize() {/* TODO: Fix JSX expression */}
   // console.log('🚀 Starting build optimization...\n')
   try {/* TODO: Fix JSX expression */}
     }
-    
+
     await checkPerformance()
     optimizeImages()
     optimizeCSS()

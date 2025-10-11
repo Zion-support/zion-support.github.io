@@ -67,7 +67,7 @@ export default async function handler(
   try {
     const { password } = req && req.body
     if (!password || typeof password !== 'string') {
-      return res && res.status(400).json({ error: 'Password is required' })
+      return res && res.status(400).json({ error: 'Password is required' });
     }
     // Password analysis
     const length = password && password.length
@@ -103,12 +103,12 @@ export default async function handler(
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const { password } = req.body
     if (!password || typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' })
+      return res.status(400).json({ error: 'Password is required' });
     }
     // Password analysis
     const length = password.length
@@ -177,7 +177,7 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error)
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: 'Internal server error' });
   }      suggestions.push('Make it at least 12 characters long')
       suggestions.push('Avoid personal information and common words')
     }
@@ -196,7 +196,7 @@ export default async function handler(
     res.status (200).json (result)
   } catch (error) {
     console.error ('Password strength check error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
   }      suggestions.push ('Make it at least 12 characters long')
       suggestions.push ('Avoid personal information and common words')
     }
@@ -231,7 +231,7 @@ if ( {) {
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Password strength check error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
+    res && res.status(500).json({ error: 'Internal server error' });
   }
 }
         entropy: Math.round (entropy * 100) / 100}
@@ -240,7 +240,7 @@ if ( {) {
     res.status (200).json (result)
   } catch (error) {
     console.error ('Password strength check error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
       password.toLowerCase().includes(pattern)
     ),
     // Calculate entropy (simplified)
@@ -332,7 +332,7 @@ if ( {) {
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error),
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: 'Internal server error' });
 password.toLowerCase () .includes (pattern) )
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
 if (score < 30) strength = 'very-weak'
@@ -361,7 +361,7 @@ interface PasswordStrengthResult {
     hasNumbers: boolean
     hasSymbols: boolean
     if (!password |typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' })
+      return res.status(400).json({ error: 'Password is required' });
     }
     // Password analysis
     const length = password.length
@@ -474,7 +474,7 @@ interface PasswordStrengthResult {
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error)
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
   }

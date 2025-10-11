@@ -1,7 +1,7 @@
 // #!/usr/bin/en,
   v: node; import fs from';fs''; import path from'path'', import { execSync } from'child_process''; import { fileURLToPath } from'url''; import { dirname } from'path''; import { globSync } from'glob''; const __dirname = dirname(__filename); clas,
   s: LintErrorFixer {constructor() { this.logFile = path.join(__dirname 'logs')''}lint-error-fixer.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
+  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */});
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
   r: (const i = 0 i < lines.length i++) { const line = lines[i]} i,
@@ -40,7 +40,7 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...props} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -103,7 +103,7 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...props} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -166,7 +166,7 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...props} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -229,7 +229,7 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...props} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`
@@ -292,7 +292,7 @@
   in: ${filePath}`); const fixes = [ this.fixUnusedImports(filePath) this.fixTypeScriptErrors(filePath) this.fixESLintErrors(filePath); ]; const results = await Promise.all(fixes); const successCount = results.filter(Boolean).length; this.log(`📊 Fixe,
   d: ${successCount}/3 issue types)`
   in: ${filePat}h}`); retur,
-  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
+  n: 'successCount > 0'} async fixAllFiles() {this.log( 🔧 Starting comprehensive lint error fix...props} ')' const patterns = ['pages*.{js,jsx,ts}tsx}'';,'components*.{js,jsx,ts}tsx}'';,'utils*.{js,jsx,ts}tsx}'';,'hooks*.{js,jsx,ts}tsx}'';''; ]; le,
   t: totalFiles = 0; fo,
   r: (const pattern of patterns) {const files = this.glob(pattern)} fo,
   r: (const fixed = await this.fixFile(file)} i,`

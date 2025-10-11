@@ -1366,27 +1366,27 @@ company: "Investment Firm"
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-          
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
                 <Building className="w-8 h-8 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
 Success Stories
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 & Case Studies
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
 Discover how our AI-powered solutions have transformed businesses across industries.;
 Real results, measurable impact, and proven success stories from organizations;
 that trusted Zion Tech Group.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25">;
 View All Case Studies
@@ -1410,7 +1410,7 @@ Our solutions deliver measurable, impactful results across all industries;
 and business sizes.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {metrics.map((metric), index) => {;
 const Icon = metric.icon;;
@@ -1444,7 +1444,7 @@ Explore detailed case studies showcasing real implementations,;
 challenges overcome, and measurable results achieved.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study), index) => {;
 const Icon = study.icon;;
@@ -1460,9 +1460,9 @@ return (;
                           {study.industry}
                         </span>
                       </div>
-                      
+
                       <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                      
+
                       <div className="space-y-4 mb-6">
                         <div>
                           <h4 className="text-sm font-semibold text-yellow-400 mb-1">Challenge</h4>
@@ -1473,7 +1473,7 @@ return (;
                           <p className="text-gray-300 text-sm">{study.solution}</p>
                         </div>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-sm font-semibold text-green-400 mb-2">Results</h4>
                         <ul className="space-y-1">
@@ -1505,7 +1505,7 @@ Our solutions have been successfully implemented across diverse industries,;
 delivering measurable results and transformative impact.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               {industries.map((industry), index) => (
                 <div key={index} className="group">
@@ -2608,7 +2608,7 @@ Case Studies
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
 Discover how organizations across industries are transforming their businesses with Zion Tech Group solutions.
           </p>
-          
+
           {/* Filters */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <select className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
@@ -2726,7 +2726,7 @@ Trusted Across Industries
 Our solutions have delivered measurable results across diverse sectors
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industry) => (
               <$2 />;
@@ -2759,7 +2759,7 @@ Explore real-world examples of how our AI solutions have delivered;
 measurable results for organizations like yours.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study), index) => (
               <$2 />;
@@ -2788,17 +2788,17 @@ key={index}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
                   <p className="text-gray-300 text-sm">{study.challenge}</p>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
                   <p className="text-gray-300 text-sm">{study.solution}</p>
                 </div>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Results</h4>
                   <ul className="space-y-1">
@@ -2971,7 +2971,7 @@ Explore our most impactful client transformations and the technologies that made
             </p>
             ))}
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
               <$2 />;
@@ -2987,19 +2987,19 @@ key={caseStudy.id}
                     <div className="text-lg font-semibold text-white">{caseStudy.company}</div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{caseStudy.title}</h3>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-blue-400 mb-2">Challenge</h4>
                   <p className="text-gray-300">{caseStudy.challenge}</p>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-green-400 mb-2">Solution</h4>
                   <p className="text-gray-300">{caseStudy.solution}</p>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Results</h4>
                   <ul className="space-y-2">
@@ -3011,7 +3011,7 @@ key={caseStudy.id}
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
@@ -3025,7 +3025,7 @@ key={index}
                     ))}
                   </div>
                 </div>
-                
+
                 <$2 />;
 to={`/case-studies/${caseStudy.id}}`}
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
@@ -3041,7 +3041,7 @@ animate={{ opacity: 1}}, y: 0 }}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${study.color}} p-3 mb-4`}>
                   <study.icon className="w-full h-full text-white" />
                 </div>
-                
+
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 mb-2">
                     {study.industry}
@@ -3053,7 +3053,7 @@ animate={{ opacity: 1}}, y: 0 }}
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-300 mb-2">Challenge:</h4>
                   <p className="text-gray-400 text-sm mb-3">{study.challenge}</p>
-                  
+
                   <h4 className="font-semibold text-gray-300 mb-2">Solution:</h4>
                   <p className="text-gray-400 text-sm mb-3">{study.solution}</p>
                 </div>
@@ -3231,7 +3231,7 @@ All Success Stories
 Browse our complete collection of client success stories across all industries and technologies.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {caseStudies.map((caseStudy) => (
               <$2 />;
@@ -3247,14 +3247,14 @@ key={caseStudy.id}
                     <div className="text-sm font-semibold text-white">{caseStudy.company}</div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-3">{caseStudy.title}</h3>
-                
+
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-blue-400 mb-1">Challenge</h4>
                   <p className="text-gray-300 text-sm line-clamp-2">{caseStudy.challenge}</p>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-green-400 mb-1">Results</h4>
                   <ul className="space-y-1">
@@ -3266,7 +3266,7 @@ key={caseStudy.id}
                     ))}
                   </ul>
                 </div>
-                
+
                 <$2 />;
 to={`/case-studies/${caseStudy.id}}`}
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm"
@@ -3291,7 +3291,7 @@ Success Across Industries
 Our AI solutions have delivered measurable results across diverse industry sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry), index) => (
               <$2 />;
@@ -3320,7 +3320,7 @@ What Our Clients Say
 Hear directly from the leaders who have experienced our AI transformation firsthand.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial), index) => (
               <$2 />;
@@ -3332,11 +3332,11 @@ key={index}
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <blockquote className="text-gray-300 mb-6 italic">
                   "{testimonial.quote}"
                 </blockquote>
-                
+
                 <div>
                   <div className="font-semibold text-white">{testimonial.author}</div>
                   <div className="text-gray-400 text-sm">{testimonial.position}</div>
@@ -3588,7 +3588,7 @@ key={index}
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-3 gap-4 text-sm">
                   <div className="text-center">
                     <Clock className="h-5 w-5 text-zion-cyan mx-auto mb-1" />
@@ -3659,7 +3659,7 @@ title="Case Studies | Success Stories - Zion Tech Group";
 description="Explore our client success stories and case studies. See how Zion Tech Group has helped businesses transform with AI, cybersecurity, and innovative technology solutions.";
 keywords="case studies, client success stories, digital transformation, AI solutions, cybersecurity, technology consulting"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <motion.section;
@@ -3679,7 +3679,7 @@ initial={{ y: 20}}, opacity: 0 }}
                 <Award className="w-4 h-4 mr-2" />;
 Proven Results & Success Stories
               </motion.div>
-              
+
               <motion.h1;
 initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
@@ -3691,7 +3691,7 @@ Client
 Success Stories
                 </span>
               </motion.h1>
-              
+
               <motion.p;
 initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
@@ -3772,7 +3772,7 @@ key={study.id}
                         <h3 className="text-xl font-bold text-white">{study.title}</h3>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-4 mb-6">
                       <div>
                         <div className="text-sm text-gray-400 font-medium">Client</div>
@@ -3964,7 +3964,7 @@ keywords="case studies, success stories, AI transformation, digital transformati
 type="website";
 url="https://ziontechgroup.com/case-studies"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 overflow-hidden">
@@ -4046,7 +4046,7 @@ type: "website",;,
 url: "https://ziontechgroup.com/case-studies"
         }}
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -4074,7 +4074,7 @@ Explore Services
                 </Link>
               </div>
             </div>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               {stats.map((stat), index) => (
@@ -4102,7 +4102,7 @@ Success Stories
 Real projects, real results, real transformation. See how our solutions have delivered measurable impact.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study), index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
@@ -4118,18 +4118,18 @@ Real projects, real results, real transformation. See how our solutions have del
                       <p className="text-gray-300 mb-4">{study.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Challenge</h4>
                       <p className="text-gray-300 text-sm">{study.challenge}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Solution</h4>
                       <p className="text-gray-300 text-sm">{study.solution}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Results</h4>
                       <ul className="space-y-1">
@@ -4141,7 +4141,7 @@ Real projects, real results, real transformation. See how our solutions have del
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Impact</h4>
                       <p className="text-gray-300 text-sm">{study.impact}</p>
@@ -4164,7 +4164,7 @@ Industries We Serve
 Our expertise spans across multiple industries, delivering tailored solutions for unique business challenges.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {industries.map((industry), index) => (
                 <div key={index} className="text-center">
@@ -4216,12 +4216,12 @@ Join hundreds of companies that have transformed their business with our AI-powe
                     <h4 className="font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300 text-sm">{study.solution}</p>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold text-white mb-2">Results</h4>
                     <ul className="space-y-1">
@@ -4365,17 +4365,17 @@ and proven success stories.
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
                   <p className="text-cyan-400 font-semibold mb-4">{study.client}</p>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300">{study.challenge}</p>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300">{study.solution}</p>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
                     <ul className="space-y-2">
@@ -4489,7 +4489,7 @@ return (;
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-blue-900/20"></div>
         <div className="absolute inset-0 bg-gray-800/20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-400 text-sm font-medium mb-6">
@@ -4535,7 +4535,7 @@ Read Full Case Study
                     </svg>
                   </Link>
                 </div>
-                
+
                 <div className="w-full h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
                   <svg className="w-16 h-16 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -4638,7 +4638,7 @@ export default CaseStudies</$1>
 Discover how Zion Tech Group has helped businesses across industries achieve their digital transformation goals.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">;
 Case studies coming soon. We're working on showcasing our client success stories.

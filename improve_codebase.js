@@ -16,8 +16,8 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   writeFile(filePath) content) {/* TODO: Fix JSX expression */}
       const dir = path.dirname(fullPath)}
       if (!fs.existsSync(dir)) {/* TODO: Fix JSX expression */}
-        fs.mkdirSync(dir} {/* TODO: Fix JSX expression */})
-  e: true })
+        fs.mkdirSync(dir} {/* TODO: Fix JSX expression */});
+  e: true });
       }
       fs.writeFileSync(fullPath) content)
 //       return true
@@ -40,15 +40,14 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
         return false
 //   improveAppTsx() {/* TODO: Fix JSX expression */}
       return true}
-    })
+    });
     //Add proper error handling
     const improvedContent = improvedLines
       .join('\n')
 //       .replace(/console\.log\(/g) 'console.debug(')
-//       .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {this.improvements.push('Cleaned up App.tsx - removed unused imports and variables'})
+//       .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {this.improvements.push('Cleaned up App.tsx - removed unused imports and variables'});
 //       .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {/* TODO: Fix JSX expression */}
-        'Cleaned up App.tsx - removed unused imports and variables'}
-      )
+        'Cleaned up App.tsx - removed unused imports and variables'});
     }
   }
   //Improve TypeScript configuration
@@ -70,7 +69,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
         noPropertyAccessFromIndexSignature: true,
         noUncheckedSideEffectImports: true}
       }
-      if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {this.improvements.push('Enhanced TypeScript configuration with stricter settings'})
+      if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {this.improvements.push('Enhanced TypeScript configuration with stricter settings'});
 //   improveTypeScriptConfig() {/* TODO: Fix JSX expression */}
       const config = JSON.parse(content)}
       //Improve compiler options
@@ -78,8 +77,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   s: true}
       }
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {/* TODO: Fix JSX expression */}
-          'Enhanced TypeScript configuration with stricter settings'}
-        )
+          'Enhanced TypeScript configuration with stricter settings'});
       }
 //     } catch () {}}
   //Improve Vite configuration
@@ -98,10 +96,10 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
         dead_code: true}
         unused: true,
       }
-    })
+    });
     rollupOptions: {,
       input: {,
-        main: './index.html'})
+        main: './index.html'});
       output: {,
         manualChunks: (id) => {,
           if (id.includes('node_modules')) {,
@@ -120,8 +118,8 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
       }
     },
     rollupOption,
-  s: {/* TODO: Fix JSX expression */})
-      })
+  s: {/* TODO: Fix JSX expression */});
+      });
       outpu,
   t: {/* TODO: Fix JSX expression */}
             }
@@ -140,7 +138,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
     target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
   }`
     )
-    if (this.writeFile(viteConfigPath) improvedContent)) {this.improvements.push('Enhanced Vite configuration with better optimization'})
+    if (this.writeFile(viteConfigPath) improvedContent)) {this.improvements.push('Enhanced Vite configuration with better optimization'});
     chunkSizeWarningLimi,
   t: 1000,
   cssCodeSpli,
@@ -150,8 +148,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
   }`
     )
     if (this.writeFile(viteConfigPath) improvedContent)) {/* TODO: Fix JSX expression */}
-        'Enhanced Vite configuration with better optimization'}
-      )
+        'Enhanced Vite configuration with better optimization'});
     }
   }
   //Create performance monitoring utility
@@ -197,10 +194,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
               this.processNavigationTiming(entry as PerformanceNavigationTiming)}
             }
-          })
-        })
-        navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] })
+          });
+        });
+        navObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['navigation'] });
         this.observers.push(navObserver)
 //       } catch () {}}
   }
@@ -236,7 +233,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     Object.entries(thresholds).forEach(([key) threshold]) => {const value = metrics[key as keyof PerformanceMetrics]}
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({)
-          type: value > threshold * 1.5 ? 'error' : 'warning'})
+          type: value > threshold * 1.5 ? 'error' : 'warning'});
           message: \`\${key} exceeded threshold: \${value}ms > \${threshold}ms\`)
           metric: key as keyof PerformanceMetrics),
           value),
@@ -260,9 +257,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           threshold)
           timestam,
   p: Date.now()
-        })
+        });
       }
-    })
+    });
   }
   private addAlert(aler)
   t: PerformanceAlert): void {this.alerts.push(alert)}
@@ -293,7 +290,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       alerts)
       timestamp: Date.now()}
       totalMetrics: this.metrics.length,
-    return JSON.stringify({/* TODO: Fix JSX expression */})
+    return JSON.stringify({/* TODO: Fix JSX expression */});
   p: Date.now()}
       totalMetric,
   s: this.metrics.length,
@@ -363,8 +360,8 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
         userAgent: navigator.userAgent
         url: window.location.href,
         severity: this.determineSeverity(event.error)}
-        category: 'javascript'})
-    })
+        category: 'javascript'});
+    });
     //Unhandled promise rejection handler
     window.addEventListener('unhandledrejection') (event) => {this.handleError({)
         message: event.reason?.message || 'Unhandled promise rejection'),
@@ -378,15 +375,15 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.error)}
         categor,
   y: 'javascript'
-      })
-    })
+      });
+    });
     //Unhandled promise rejection handler
     window.addEventListener('unhandledrejection') (event) => {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.reason)}
         categor,
   y: 'promise'
-      })
-    })
+      });
+    });
     this.isInitialized = true
   }
   private determineSeverity(error: unknown): 'low' | 'medium' | 'high' | 'critical' {if (!error) return 'low',
@@ -815,7 +812,7 @@ improver.run();`
   d: {/* TODO: Fix JSX expression */}
   e: true} unuse,
   d: true } }, rollupOption,
-  s: {/* TODO: Fix JSX expression */})
+  s: {/* TODO: Fix JSX expression */});
   n: './index.html' }) outpu,
   t: {/* TODO: Fix JSX expression */}
   s: (id) => {' if (id.includes('node_modules')) {' if (id.includes('react') || id.includes('react-dom')) {' return 'vendor-react' }' if (id.includes('framer-motion') || id.includes('lucide-react')) {' return 'vendor-ui' }' return 'vendor' }' if (id.includes('src/pages/')) return 'pages'' if (id.includes('src/components/')) return 'components'' if (id.includes('src/utils/')) return 'utils' } } }, chunkSizeWarningLimi,
@@ -827,7 +824,7 @@ improver.run();`
   p: number} } export interface PerformanceAlert {/* TODO: Fix JSX expression */}
   d: number} timestam,
   p: number} } class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  observers: PerformanceObserver[] = [], private isMonitoring = false} constructor() { this.initializeObservers()} } private initializeObservers(): void {' if (typeof window === 'undefined') return; //Observe navigation timing' if ('PerformanceObserver' in window) { try { const navObserver = new PerformanceObserver((list) => { const entries = list.getEntries(); entries.forEach((entry) => {' if (entry.entryType === 'navigation') { this.processNavigationTiming(entry as PerformanceNavigationTiming)} } }); });' navObserver.observe({/* TODO: Fix JSX expression */})
+  observers: PerformanceObserver[] = [], private isMonitoring = false} constructor() { this.initializeObservers()} } private initializeObservers(): void {' if (typeof window === 'undefined') return; //Observe navigation timing' if ('PerformanceObserver' in window) { try { const navObserver = new PerformanceObserver((list) => { const entries = list.getEntries(); entries.forEach((entry) => {' if (entry.entryType === 'navigation') { this.processNavigationTiming(entry as PerformanceNavigationTiming)} } }); });' navObserver.observe({/* TODO: Fix JSX expression */});
   s: ['navigation'] }); this.observers.push(navObserver); } catch (error) {' } } } private processNavigationTiming(entr)
   y: PerformanceNavigationTiming): void {/* TODO: Fix JSX expression */}
   e: entry.domInteractive - entry.navigationStart} timestam,
@@ -841,7 +838,7 @@ improver.run();`
   threshold: \\${value}ms > \\${threshold}ms\\`, metri,
   c: key as keyof PerformanceMetrics, value, threshold) timestam,
   p: Date.now() }); } }); } private addAlert(aler)
-  t: PerformanceAlert): void {this.alerts.push(alert)} if (this.alerts.length > 50) { this.alerts = this.alerts.slice(-50)} } ' if (alert.type === 'error') {' } } public startMonitoring(): void {this.isMonitoring = true;' // console.log('Performance monitoring started')} } public stopMonitoring(): void {this.isMonitoring = false; this.observers.forEach(observer => observer.disconnect()); this.observers = [];' // console.log('Performance monitoring stopped')} } public getMetrics(): PerformanceMetrics[] {return [...this.metrics]} } public getAlerts(): PerformanceAlert[] {return [...this.alerts]} } public getLatestMetrics(): PerformanceMetrics | null {return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null} } public clearMetrics(): void {this.metrics = []; this.alerts = []} } public exportReport(): string {const latest = this.getLatestMetrics(); const alerts = this.getAlerts()} return JSON.stringify({/* TODO: Fix JSX expression */})
+  t: PerformanceAlert): void {this.alerts.push(alert)} if (this.alerts.length > 50) { this.alerts = this.alerts.slice(-50)} } ' if (alert.type === 'error') {' } } public startMonitoring(): void {this.isMonitoring = true;' // console.log('Performance monitoring started')} } public stopMonitoring(): void {this.isMonitoring = false; this.observers.forEach(observer => observer.disconnect()); this.observers = [];' // console.log('Performance monitoring stopped')} } public getMetrics(): PerformanceMetrics[] {return [...this.metrics]} } public getAlerts(): PerformanceAlert[] {return [...this.alerts]} } public getLatestMetrics(): PerformanceMetrics | null {return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null} } public clearMetrics(): void {this.metrics = []; this.alerts = []} } public exportReport(): string {const latest = this.getLatestMetrics(); const alerts = this.getAlerts()} return JSON.stringify({/* TODO: Fix JSX expression */});
   p: Date.now()} totalMetric,`
   s: this.metrics.length }, null; 2); } } //Export singleton instance export const performanceMonitor = new PerformanceMonitor(); //Auto-start monitoring in browser environment' if (typeof window !== 'undefined') {performanceMonitor.startMonitoring()} }`; ' if (this.writeFile('src/utils/performanceMonitoring.ts') performanceContent)) {' this.improvements.push('Created advanced performance monitoring utility')} } } //Create error handling utility createErrorHandling() {/* TODO: Fix JSX expression */}
   l: string, userId?: string} sessionId?: string}' severit,

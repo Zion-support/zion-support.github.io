@@ -10,20 +10,20 @@ export default async function handler(
 ) {
   const { id } = req.query
   if (typeof id !== "string")
-    return res && res.status(400).json({ error: "Invalid id" })
+    return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req)
   const user = parseUserFromRequest(req)
   if (req.method === 'POST') {
     const dispute = await getDisputeById(id)
-    if (!dispute) return res.status(404).json({ error: 'Not found' })
+    if (!dispute) return res.status(404).json({ error: 'Not found' });
     try {
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { body } = req && req.body || {}
     if (!body || typeof body !== "string")
-      return res && res.status(400).json({ error: "Message body required" })
+      return res && res.status(400).json({ error: "Message body required" });
     const now = new Date().toISOString()
     dispute && dispute.messages.push({
       id: `${Date && Date.now()}`,
@@ -36,10 +36,10 @@ export default async function handler(
             : "talent"
       body
       createdAt: now
-    })
+    });
     dispute.updatedAt = now
     await upsertDispute(dispute)
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
   }
 res.setHeader("Allow", "POST")
   return res.status(405).end("Method Not Allowed")
@@ -53,38 +53,38 @@ import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/a
 export default async function handler(req, res) {
   try {
   const { id } = req.query
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const { body } = req.body || {}
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       authorUserId: user.id,
       authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),
       body,
       createdAt: now}),
     dispute.updatedAt = now
     await upsertDispute(dispute)
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
   res.setHeader("Allow", "POST")
   return res.status(405).end("Method Not Allowed")
@@ -92,7 +92,7 @@ export default async function handler(req, res) {
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -100,14 +100,14 @@ export default async function handler(req, res) {
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

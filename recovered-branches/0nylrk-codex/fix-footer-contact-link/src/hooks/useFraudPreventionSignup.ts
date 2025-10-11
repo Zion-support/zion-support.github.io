@@ -35,7 +35,7 @@ export function useFraudPreventionSignup() {
           ip_address: ipAddress,
           timestamp: new Date().toISOString(),
           status: 'pending'
-        })
+        });
         if (error) {
           console.error('Error creating fraud flag:', error)
         }
@@ -48,9 +48,9 @@ export function useFraudPreventionSignup() {
           toast({
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-            variant: "destructive"})
+            variant: "destructive"});
             variant: "destructive",
-          })
+          });
           return false
         }
         // Otherwise, allow but flag for review

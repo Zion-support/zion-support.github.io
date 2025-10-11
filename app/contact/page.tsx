@@ -9,11 +9,11 @@ email: '',;,
 company: '',;,
 phone: '',;,
 service: '',;,
-message: ''} })
+message: ''} });
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 setFormData({} ...formData},
       [e.target.name]: e.target.value
-    })
+    });
   }
 
 const handleSubmit = (e: React.FormEvent) => {;
@@ -62,16 +62,16 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
         <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
           <div className="
@@ -84,11 +84,11 @@ Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text 
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -107,27 +107,24 @@ return (
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
                       <Icon className="w-6 h-6 text-white"
                     </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                     <p className="text-cyan-400 mb-2">{info.value}</p>
                     <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
-      
+
       <Footer />
     </>
                 )
               })}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -144,7 +141,7 @@ Send us a Message
                 <p className="text-lg text-gray-300 mb-8"
 Fill out the form below and we'll get back to you as soon as possible. We're here to help you succeed.
                 </p>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                     <div>
@@ -162,7 +159,7 @@ placeholder="Your full name"
                       />
   </input>
                     </div>
-      
+
       <Footer />
     </>
                     <div>
@@ -180,11 +177,11 @@ placeholder="your@email.com"
                       />
   </input>
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -202,7 +199,7 @@ placeholder="Your company name"
                       />
   </input>
                     </div>
-      
+
       <Footer />
     </>
                     <div>
@@ -219,11 +216,11 @@ placeholder="+1 (555) 123-4567"
                       />
   </input>
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                   <div>
@@ -242,7 +239,7 @@ value={formData.service} onChange={handleChange} className="
                       ))}
                     </select>
                   </div>
-      
+
       <Footer />
     </>
                   <div>
@@ -258,7 +255,7 @@ placeholder="Tell us about your project or requirements..."
                     />
   </textarea>
                   </div>
-      
+
       <Footer />
     </>
                   <button;
@@ -270,7 +267,7 @@ Send Message
                   </button>
                 </form>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -288,86 +285,86 @@ Why Choose Us?
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">2</span>
                     </div>
-      
+
       <Footer />
     </>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">3</span>
                     </div>
-      
+
       <Footer />
     </>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">4</span>
                     </div>
-      
+
       <Footer />
     </>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-      
+
       <Footer />
     </>
                   </div>
-      
+
       <Footer />
     </>
                 </div>
-      
+
       <Footer />
     </>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

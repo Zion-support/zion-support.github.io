@@ -5,10 +5,10 @@ import axios from "axios"
 import { v4 as uuidv4 } from "uuid"
 import { nextVersionFor } from "../../../utils/sync/versioning"
   if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" })
+    return res && res.status(405).json({ error: "Method not allowed" });
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: "Sync disabled for this instance" });
   }
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string
@@ -16,12 +16,12 @@ import { nextVersionFor } from "../../../utils/sync/versioning"
     timestamp?: number
   }
   if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" })
+    return res.status(400).json({ error: "milestoneId, title required" });
   const version = nextVersionFor(state, milestoneId)
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req, res) {
   try {
-  res.status(200).json({ message: 'Manifesto day processed' })
+  res.status(200).json({ message: 'Manifesto day processed' });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 import { signPayload } from "../../../utils/sync/signature",
@@ -33,12 +33,12 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: "Sync disabled for this instance" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
@@ -116,20 +116,20 @@ export default async function handler(req, res) {
       .map(async (peer) => {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
-          await axios.post(url, body, { headers, timeout: 5000 })
+          await axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
-      })
+      });
   )
   return res
     .status(200)
-    .json({ status: "created", version, eventId: event.eventId })
+    .json({ status: "created", version, eventId: event.eventId });
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 
   upsert_event (state, event)
@@ -147,16 +147,16 @@ if (headers["x - zion - signature"] = sig) {
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string ()
         try {
-          await axios.post (url, body, { headers, timeout: 5000 })
+          await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
       }),
   )
   return res
     .status (200)
-    .json ({ status: "created", version, event_id: event.event_id })
+    .json ({ status: "created", version, event_id: event.event_id });
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

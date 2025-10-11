@@ -186,8 +186,7 @@ const,
                       {stat.number}
                     </div>"
                     <div className="text-gray-300 font-medium">{stat.label}
-                ))}
-  )
+                ))});
 }
 const AIWorkflowAutomationPage = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

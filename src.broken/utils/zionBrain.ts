@@ -34,7 +34,7 @@ const logsPath = path.join(dataDir, 'logs.json')
 const statePath = path.join(dataDir, 'state.json')
 function ensureDataFiles(): void {
   try {
-    if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
+    if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
     if (!fs.existsSync(logsPath)) fs.writeFileSync(logsPath, JSON.stringify({ entries: [] }, null, 2))
     if (!fs.existsSync(statePath)) fs.writeFileSync(statePath, JSON.stringify({ metrics: {} }, null, 2))
   } catch {
@@ -69,13 +69,13 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   const baselineVelocity = metrics.baselineVelocity ?? 100; // tokens/min
   const triggers: ReflexTrigger[] = []
   if ((metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
-    triggers.push({ action: 'launchRewardPopup', reason: 'Surge in signups detected', severity: 'medium' })
+    triggers.push({ action: 'launchRewardPopup', reason: 'Surge in signups detected', severity: 'medium' });
   }
   if ((metrics.disputeFlagsLastHour ?? 0) > baselineDisputes * 2) {
-    triggers.push({ action: 'escalateSupport', reason: 'Spike in dispute flags', severity: 'high' })
+    triggers.push({ action: 'escalateSupport', reason: 'Spike in dispute flags', severity: 'high' });
   }
   if ((metrics.zionVelocity ?? baselineVelocity) < baselineVelocity * 0.6) {
-    triggers.push({ action: 'notifyAdmin', reason: 'Drop in ZION$ velocity', severity: 'high' })
+    triggers.push({ action: 'notifyAdmin', reason: 'Drop in ZION$ velocity', severity: 'high' });
   }
   return triggers
 }
@@ -97,7 +97,7 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
   }
   try {
     const { OpenAI } = await import('openai')
-    const openai = new OpenAI({ apiKey })
+    const openai = new OpenAI({ apiKey });
     const system = 'You optimize prompts for speed and specificity. Prefer precise constraints, avoid open-ended wording. Reduce token count while improving clarity. Return only the rewritten prompt.'
     const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize:\n${original}`
     const resp = await openai.chat.completions.create({
@@ -106,12 +106,12 @@ export async function optimizePrompt(original: string, userIntent?: string): Pro
         { role: 'system', content: system },
         { role: 'user', content: user }],
       temperature: 0.2,
-      max_tokens: 400})
+      max_tokens: 400});
         { role: 'user', content: user },
       ],
       temperature: 0.2,
       max_tokens: 400,
-    })
+    });
     const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighten(original, userIntent)
     return { optimized, suggestions: ['Used OpenAI optimization for speed and specificity'] }
   } catch {

@@ -13,10 +13,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const dir = resolveDataPath(path && path.join("dataroom", section))
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([])
   const files = fs && fs.readdirSync(dir).map((name) => ({ name }))
-  appendAuditLog({ type: "file_list", section })
+  appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files)
   const files = fs && fs.readdirSync(dir).map((name) => ({ name }))
-  appendAuditLog({ type: "file_list", section })
+  appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files)
 }
 import type { NextApiRequest, NextApiResponse  } from './next'
@@ -33,10 +33,10 @@ function handler() {
   $2
 }
   const files = fs.readdir_sync (dir).map ((name) => ({ name }))
-  appendAuditLog ({ type: "file_list", section })
+  appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files)
   const files = fs.readdir_sync (dir).map ((name) => ({ name }))
-  appendAuditLog ({ type: "file_list", section })
+  appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files)
 }
 import type { NextApiRequest, NextApiResponse  } from 'next'
@@ -48,6 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const dir = resolveDataPath(path.join('dataroom', section))
   if (!fs.existsSync(dir)) return res.status(200).json([])
   const files = fs.readdirSync(dir).map((name) => ({ name }))
-  appendAuditLog({ type: 'file_list', section })
+  appendAuditLog({ type: 'file_list', section });
   res.status(200).json(files)
 }

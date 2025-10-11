@@ -88,7 +88,7 @@ export function MicroSaasShowcase() {
             Discover innovative solutions that transform businesses. From AI-powered chatbots to comprehensive IT consulting, 
             we offer cutting-edge services at competitive prices.
           </p>
-          
+
           {/* Contact Info */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -176,7 +176,7 @@ export function MicroSaasShowcase() {
                 <p className="text-sm text-muted-foreground line-clamp-2">
                   {service.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-1 mt-3">
                   {service.tags.slice(0, 2).map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary" className="text-xs bg-zion-purple/10 text-zion-purple hover:bg-zion-purple/20">
@@ -308,7 +308,7 @@ export function MicroSaasShowcase() {
               Join thousands of businesses that have transformed their operations with our 
               innovative solutions. Get started today with a free consultation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light">
                 <Link to="/micro-saas-services">
@@ -316,7 +316,7 @@ export function MicroSaasShowcase() {
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </Button>
-              
+
               <Button variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
                 <Link to="/request-quote">
                   <span>Get Free Quote</span>
@@ -361,16 +361,16 @@ export function MicroSaasShowcase() {
                        service.pricingModel === 'hourly' ? 'Hourly' : 'Custom'}
                     </Badge>
                   </div>
-                  
+
                   <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
                     {service.title}
                   </CardTitle>
-                  
+
                   <CardDescription className="text-zion-slate-light">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between">
@@ -387,7 +387,7 @@ export function MicroSaasShowcase() {
                       <span className="text-white">{service.rating}</span>
                     </div>
                   </div>
-                  
+
                   {/* AI Score */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-slate-light">AI Score:</span>
@@ -395,7 +395,7 @@ export function MicroSaasShowcase() {
                       {service.aiScore}/100
                     </Badge>
                   </div>
-                  
+
                   {/* Key Benefits */}
                   <div>
                     <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
@@ -408,7 +408,7 @@ export function MicroSaasShowcase() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   {/* Market Price */}
                   <div className="bg-zion-blue-dark/50 rounded-lg p-3">
                     <p className="text-sm text-zion-slate-light mb-1">Market Price:</p>
@@ -435,7 +435,7 @@ export function MicroSaasShowcase() {
               Our team of experts is ready to help you implement the perfect solution. 
               Get in touch today for a free consultation and competitive quote.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 

@@ -47,7 +47,7 @@ industry: 'Artificial, Intelligen, c, e',;
 servic, e, s: [,;
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
+const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
      },;
 addre, s, s: {/* TODO: Fix JSX expression */}
@@ -99,7 +99,7 @@ servic, e, s: [
   </link>
       {/* Performance, Hint, s */}
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
-      {/* Structured, Dat, a */})
+      {/* Structured, Dat, a */});
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
   } return (<Helm;, e, t></Helm>
       <title>{title}</title>

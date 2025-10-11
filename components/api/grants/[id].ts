@@ -11,12 +11,12 @@ import type { GrantApplication, UpdateGrantPayload  } from '../../../types/grant
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 }
 function grantPath(id: string) {
@@ -26,12 +26,12 @@ function readGrant(id: string): GrantApplication | null {
   ensureDir()
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 }
 function grantPath(id: string) {
@@ -68,7 +68,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
   const { id } = req.query as { id: string }
   if (!id) {
-    res.status(400).json({ error: 'Missing id' })
+    res.status(400).json({ error: 'Missing id' });
     return
   if (req.method === 'PUT') {
   if (req && req.method === 'GET') {
@@ -84,7 +84,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ...existing
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload
-      res.status(404).json({ error: 'Not found' })
+      res.status(404).json({ error: 'Not found' });
       return
     }
     const payload = req.body as UpdateGrantPayload
@@ -97,14 +97,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       updatedAt: new Date().toISOString(),
     } as GrantApplication
     writeGrant(next)
-    res && res.status(200).json({ record: next })
+    res && res.status(200).json({ record: next });
     return
   }
   res.status(405).end('Method Not Allowed')
       status: payload.submit ? 'Submitted' : existing.status
       updated_at: new Date ().toISOString ()} as GrantApplication
     write_grant (next)
-    res.status (200).json ({ record: next })
+    res.status (200).json ({ record: next });
     return
   }
   res.set_header ('Allow', 'GET, PUT')
@@ -113,7 +113,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       updated_at: new Date ().toISOString (),
     } as GrantApplication
     write_grant (next)
-    res.status (200).json ({ record: next })
+    res.status (200).json ({ record: next });
     return
   }
   res.set_header ('Allow', 'GET, PUT')
@@ -138,22 +138,22 @@ function writeGrant(record: GrantApplication) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
   if (!id) {
-    res.status(400).json({ error: 'Missing id' })
+    res.status(400).json({ error: 'Missing id' });
     return
   }
   if (req.method === 'GET') {
     const g = readGrant(id)
     if (!g) {
-      res.status(404).json({ error: 'Not found' })
+      res.status(404).json({ error: 'Not found' });
       return
     }
-    res.status(200).json({ record: g })
+    res.status(200).json({ record: g });
     return
   }
   if (req.method === 'PUT') {
     const existing = readGrant(id)
     if (!existing) {
-      res.status(404).json({ error: 'Not found' })
+      res.status(404).json({ error: 'Not found' });
       return
     }
     const payload = req.body as UpdateGrantPayload
@@ -164,7 +164,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       updatedAt: new Date().toISOString(),
     } as GrantApplication
     writeGrant(next)
-    res.status(200).json({ record: next })
+    res.status(200).json({ record: next });
     return
   }
   res.setHeader('Allow', 'GET, PUT')

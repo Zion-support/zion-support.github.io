@@ -80,7 +80,7 @@ class SecurityEnhancer {
       input.name = 'csrf-token'
       input.value = token
       form.appendChild(input)
-    })
+    });
   }
   private monitorSuspiciousActivity(): void {
     // Monitor for suspicious patterns
@@ -109,14 +109,14 @@ class SecurityEnhancer {
                 this.metrics.securityViolations++
                 }
             }
-          })
+          });
         }
-      })
-    })
+      });
+    });
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    })
+    });
     this.eventListeners.push(() => observer.disconnect())
   }
   private monitorNetworkRequests(): void {

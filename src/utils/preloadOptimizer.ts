@@ -34,8 +34,7 @@ const fontPreloads = [
     link.href = href
     link.crossOrigin = 'anonymous'
 //     document.head.appendChild(link)
-  }
-  )
+  });
   // Preload critical images
 const criticalImages = [
 
@@ -55,8 +54,7 @@ const criticalImages = [
     link.as = 'image'
     link.href = src
 //     document.head.appendChild(link)
-  }
-  )
+  });
 }
 
 export const preloadRoute = (route: string) => {
@@ -88,8 +86,7 @@ const routeResources = {/* TODO: Fix JSX expression */}
       link.rel = 'prefetch'
       link.href = resource
 //       document.head.appendChild(link)
-    }
-  )
+    });
   }
 }
 
@@ -103,9 +100,9 @@ export const optimizeImages = () => {
 const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
 //     img.setAttribute('loading', 'lazy')
-  })
+  });
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -115,7 +112,7 @@ const images = document.querySelectorAll('img[data-lazy]')
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -128,10 +125,8 @@ const images = document.querySelectorAll('img[data-lazy]')
 //             imageObserver.unobserve(img)
           }
         }
-      }
-  )
-    }
-  )
+      });
+    });
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
@@ -147,16 +142,15 @@ export const optimizeThirdPartyScripts = () => {
 const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
 //     script.setAttribute('defer', '')
-  })
+  });
   // Load analytics after page load
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-    document.addEventListener('DOMContentLoaded', () => {}
-  )
+    document.addEventListener('DOMContentLoaded', () => {});
   } else {/* TODO: Fix JSX expression */}
   }
 }

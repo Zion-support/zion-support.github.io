@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   async function headOrGetContentLength(_url) {/* TODO: Fix JSX expression */}
       const _headRes = await fetch(url;} {/* TODO: Fix JSX expression */});,
-d: 'HEAD' })
+d: 'HEAD' });
 //       const len = headRes.headers.get('content-length');;
 if(len);
 if (len);
@@ -74,7 +74,7 @@ sha}
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo;}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers);,
-body: JSON.stringify(body,)})
+body: JSON.stringify(body,)});
     );
 return {;;,
 ok: putRes.ok;,
@@ -85,7 +85,7 @@ error: putRes.ok ? undefined : await putRes.text()
   if (!baseUrl) {return {};;,
 statusCode: 200},;,
 body: JSON.stringify({ ok: false),;,
-error: 'No base URL' })
+error: 'No base URL' });
     }
   }
   try {const htmlRes = await fetch(baseUrl);;
@@ -115,13 +115,13 @@ const putRes = await fetch(`http;,;,
 s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      })
+      });
     );
 return {/* TODO: Fix JSX expression */;}
     }
   }
   if (!baseUrl) {/* TODO: Fix JSX expression */}
-  r: 'No base URL' })
+  r: 'No base URL' });
     }
   }
   try {/* TODO: Fix JSX expression */}
@@ -185,7 +185,7 @@ statusCode: 200,;,
 body: JSON.stringify({ ok: true),;
 report),;
 commit
-  })
+  });
     }
   } catch (err) {return {};;,
 statusCode: 200},;,
@@ -196,7 +196,7 @@ b) => b[1] - a[1])
       .slice(0)
         10)
       .map(([url);
-bytes]) => ({/* TODO: Fix JSX expression */})
+bytes]) => ({/* TODO: Fix JSX expression */});
       }))
 //     const KB = 1024;;
 const budgets={/* TODO: Fix JSX expression */;}
@@ -218,10 +218,10 @@ largestAssets}
 report)
     );
 return {/* TODO: Fix JSX expression */;}
-      })
+      });
     }
   } catch (err) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -280,7 +280,7 @@ t: Buffer.from(JSON.stringify(data), null)
         2)).toString('base64'), branc,`;,
 h: githubBranch, sha }' const putRes = await fetch(`http;,;,
 s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); return {/* TODO: Fix JSX expression */;}
   r: putRes.ok ? undefined : await putRes.text() } } if (!baseUrl) {/* TODO: Fix JSX expression */}
   r: 'No base URL' }) } } try {/* TODO: Fix JSX expression */}"
@@ -288,7 +288,7 @@ s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */
         20); const sizes = {;} let totalJs = 0;, totalCss = 0, totalImg = 0; for (const u of scriptSrcs) {const s = await headOrGetContentLength(u);; sizes[u] = s; totalJs += s} } for (const u of cssHrefs) {const s = await headOrGetContentLength(u);; sizes[u] = s; totalCss += s} } for (const u of imgSrcs) {const s = await headOrGetContentLength(u);; sizes[u] = s; totalImg += s} } const largestAssets = Object.entries(sizes).sort((a);;
 b) => b[1]-a[1]).slice(0)
         10).map(([url);
-bytes]) => ({/* TODO: Fix JSX expression */})
+bytes]) => ({/* TODO: Fix JSX expression */});
       })); const KB = 1024;; const budgets={/* TODO: Fix JSX expression */;}
   b: 1500 } const report={/* TODO: Fix JSX expression */;}
   g: imgSrcs.length }, total,;,

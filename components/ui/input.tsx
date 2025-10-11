@@ -16,8 +16,7 @@ className
       />
   </input>
     )
-  }
-)
+  });
 Input.displayName = 'Input'
 export {Input}
   </HTMLInputElement>

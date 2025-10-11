@@ -51,7 +51,7 @@ const PricingPage: React.FC = () => {const features = [
   return (
     <>
 </p>
-            
+
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-12">
               <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'} `}>
@@ -78,21 +78,21 @@ const PricingPage: React.FC = () => {const features = [
                 </span>
               )}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
 
                 </div>
-      
+
       <Footer />
     </>
         {/* FAQ Section */}
@@ -106,7 +106,7 @@ const PricingPage: React.FC = () => {const features = [
                 Discover the powerful features that make our solutions stand out.
               </p>
             </div>
-      
+
       <Footer />
     </>
             <div className="space-y-8">
@@ -118,7 +118,7 @@ const PricingPage: React.FC = () => {const features = [
                   Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.
                 </p>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -129,7 +129,7 @@ const PricingPage: React.FC = () => {const features = [
                   Absolutely! We offer custom pricing and solutions for large enterprises with specific requirements. Contact us to discuss your needs.
                 </p>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -140,7 +140,7 @@ const PricingPage: React.FC = () => {const features = [
                   Support includes email support, documentation, and access to our knowledge base. Higher tiers include priority support and dedicated account managers.
                 </p>
               </div>
-      
+
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -151,15 +151,15 @@ const PricingPage: React.FC = () => {const features = [
                   Yes, we offer a 14-day free trial for all our plans. No credit card required to get started.
                 </p>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -173,7 +173,7 @@ const PricingPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -204,22 +204,21 @@ const PricingPage: React.FC = () => {const features = [
                 Schedule Demo
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />
     </>
   )
 }
-
 
   </Footer>

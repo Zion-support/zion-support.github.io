@@ -47,21 +47,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       courses.push(body)
     }
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
-    res.status(200).json({ ok: true, course: body })
+    res.status(200).json({ ok: true, course: body });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to save course' })
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' });
   }
 }
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
-    res.status(200).json({ ok: true, course: body })
+    res.status(200).json({ ok: true, course: body });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to save course' })
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' });
   }
 }
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
-    res.json({ success: true })
+    res.json({ success: true });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

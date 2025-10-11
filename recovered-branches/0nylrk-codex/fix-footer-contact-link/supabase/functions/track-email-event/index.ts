@@ -13,14 +13,14 @@ serve(async (req) => {
   const redirectUrl = url.searchParams.get("redirect")
   // Validate required parameters
   if (!type || !campaignId || !userId) {
-    return new Response("Missing required parameters", { status: 400 })
+    return new Response("Missing required parameters", { status: 400 });
   }
   try {
     // Update the email campaign record based on event type
     if (type === "open") {
       await supabase
         .from("email_campaigns")
-        .update({ opened_at: new Date().toISOString() })
+        .update({ opened_at: new Date().toISOString() });
         .eq("id", campaignId)
         .eq("user_id", userId)
       // Return a 1x1 transparent GIF
@@ -40,12 +40,11 @@ serve(async (req) => {
             "Expires": "0"}}
             "Expires": "0",
           },
-        }
-      )
+        });
     } else if (type === "click") {
       await supabase
         .from("email_campaigns")
-        .update({ clicked_at: new Date().toISOString() })
+        .update({ clicked_at: new Date().toISOString() });
         .eq("id", campaignId)
         .eq("user_id", userId)
       // Redirect to the specified URL or default to dashboard
@@ -53,12 +52,12 @@ serve(async (req) => {
       return new Response(null, {
         status: 302,
         headers: {
-          Location: destination}})
+          Location: destination}});
           Location: destination,
         },
-      })
+      });
     }
-    return new Response("Invalid event type", { status: 400 })
+    return new Response("Invalid event type", { status: 400 });
   } catch (error) {
     console.error("Error tracking email event:", error)
     // If it was a click event, still try to redirect the user
@@ -66,11 +65,11 @@ serve(async (req) => {
       return new Response(null, {
         status: 302,
         headers: {
-          Location: redirectUrl}})
+          Location: redirectUrl}});
           Location: redirectUrl,
         },
-      })
+      });
     }
-    return new Response("Error processing event", { status: 500 })
+    return new Response("Error processing event", { status: 500 });
   }
-})
+});

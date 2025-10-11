@@ -10,8 +10,7 @@ export default function LazyComponent({
 const DefaultFallback = () => (
   <div className="flex items-center justify-center p-8">
     <div className="cyber-loader">
-    <span className="ml-3 text-cyan-400">Loading...
-)
+    <span className="ml-3 text-cyan-400">Loading...props)
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children
 }) => {
   return (
@@ -111,8 +110,7 @@ const,
   O: Add content,}
 }
 //         threshold,
-//         rootMargin}
-    )
+//         rootMargin});
     if (elementRef.current) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -186,7 +184,7 @@ const fontPreloads = [
     link.as = 'style'
     link.href = href
     document.head.appendChild(link)
-  })
+  });
   // Preload critical images
 const imagePreloads = [
   // TOD,
@@ -202,7 +200,7 @@ const imagePreloads = [
     link.as = 'image'
     link.href = src
     document.head.appendChild(link)
-  })
+  });
 }
 export default LazyComponent</P>
   </P>

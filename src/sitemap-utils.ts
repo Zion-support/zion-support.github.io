@@ -33,7 +33,7 @@ export const generateSitemap = (pages: Array;)
 `
     sitemap += `  </url>
 `
-  })
+  });
   sitemap += '</urlset>'
   return sitemap
 }

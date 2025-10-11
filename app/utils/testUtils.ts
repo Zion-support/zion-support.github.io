@@ -94,9 +94,9 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
     Object.defineProperty(global, 'window', {)
       value: {)
         ...overrides}
-      })
+      });
       writable: true,
-    })
+    });
  * Wait for a condition to be true;
  */;
 export const waitFor = async (conditio);
@@ -126,7 +126,7 @@ export const mockFetch = (respons,
   header,
 ): void => {/* TODO: Fix JSX expression */}
   h: typeof fetch }).fetch = jest.fn(() =>
-      Promise.resolve({/* TODO: Fix JSX expression */})
+      Promise.resolve({/* TODO: Fix JSX expression */});
       } as Response)
 /**
  * Mock local storage
@@ -138,7 +138,7 @@ export const mockFetch = (respons,
   e: unknown,
   status = 200,
   header,
-  s: Record<string, string> = {})
+  s: Record<string, string> = {});
   y: string, valu);
   e: string): void {/* TODO: Fix JSX expression */,}}}
 }
@@ -165,7 +165,7 @@ export const mockWindow = (override)
       },
       writabl,
   e: true,
-    })
+    });
   }
 }
 export const createMockPerformance = (): Performance => {}
@@ -212,7 +212,7 @@ export const createMockPerformance = (): Performance => {}
     measur,
   e: (nam)
   e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
-  N: () => ({})
+  N: () => ({});
     },
     getEntriesByNam,
   e: (nam)
@@ -425,7 +425,7 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   let lastError: Error
   for (let i = 0; i < maxRetries, i++) {}
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
-  })
+  });
   return { promise, resolve, reject }
 }
 /**

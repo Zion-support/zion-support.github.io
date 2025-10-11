@@ -9,9 +9,9 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     tracesSampleRate: 0.1,
     // ...
     // Note: if you want to override the automatic release value, do so here
-    //   release: process.env.npm_package_version})
+    //   release: process.env.npm_package_version});
     //   release: process.env.npm_package_version,
-  })
+  });
 }
 export function captureException(error: unknown, context?: any): void { // Added context capability
   // The @sentry/nextjs SDK handles initialization.

@@ -67,7 +67,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025,
-  
+
             <span className='text-2xl'>⚡</span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
@@ -144,8 +144,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             { value: '5M+', label: 'Data Points Processed' }].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}
-              <div className="text-gray-300">{stat.label}
-  )
+              <div className="text-gray-300">{stat.label});
 export default UltimateBusinessIntelligence2025Banner
 'use client'
 import React, { useState, useEffect } from 'react'

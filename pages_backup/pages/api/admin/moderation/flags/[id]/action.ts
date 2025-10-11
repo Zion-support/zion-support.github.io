@@ -13,13 +13,13 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth'
 import { updateFlagStatus } from '../../../../../../utils/moderationDb'
 import type { ModerationStatus } from '../../../../../../types/moderation'
       await updateFlagStatus(id, status, adminNotes)
-      res.json({ success: true })
+      res.json({ success: true });
     } else {
       res.setHeader('Allow', 'POST')
       res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -14,10 +14,10 @@ function fixLintWarnings(filePath) {
       if (varName.startsWith('_')) return match
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `const _${varName} = `
-    })
+    });
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
       return `let _${varName} = `
-    })
+    });
     // Fix unused imports
     content = content.replace(/import React from 'react';/g, '')
     content = content.replace(/import { Link } from 'react-router-dom';/g, '')
@@ -26,7 +26,7 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '')
     if (filePath.includes('setupTests') || filePath.includes('test')) {/* TODO: Fix JSX expression */}
     }
-    
+
     // Fix any types
     content = content.replace(/: any/g, ': unknown')
     // Remove unused variable assignments
@@ -38,26 +38,26 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/const registrationError = /g, 'const _registrationError = ')
     if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */}
     }
-    
+
     if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/import { Link } from 'react-router-dom';/g, '')
     }
-    
+
     if (filePath.includes('service-template.tsx')) {/* TODO: Fix JSX expression */}
     }
-    
+
     if (filePath.includes('page.tsx') && !filePath.includes('page-original')) {/* TODO: Fix JSX expression */}
     }
-    
+
     if (filePath.includes('page-optimized.tsx')) {/* TODO: Fix JSX expression */}
     }
-    
+
     if (filePath.includes('sitemap/page.tsx')) {/* TODO: Fix JSX expression */}
     }
-    
+
     if (filePath.includes('micro-saas/page-original.tsx')) {/* TODO: Fix JSX expression */}
     }
-    
+
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8')
     return true
@@ -84,7 +84,7 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   walkDir(dir)
   return files
 }

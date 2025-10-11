@@ -20,21 +20,21 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     }
 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
-      })
+      });
       res.on('end', () => {/* TODO: Fix JSX expression */}
-  a: jsonData })
+  a: jsonData });
         } catch (error) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))
         }
-      })
-    })
+      });
+    });
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
-    })
+    });
     if (data) {/* TODO: Fix JSX expression */}
     }
 
     req.end()
-  })
+  });
 }
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
@@ -74,7 +74,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
     // Merge the PR
     const mergeData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
-      merge_method: 'merge'})
+      merge_method: 'merge'});
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`)
       'PUT')
       mergeData
@@ -87,7 +87,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
   e: `Merge PR #${prNumber}: ${title}`,
       merge_metho,
   d: 'merge')
-    })
+    });
 `
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       'PUT',
@@ -132,7 +132,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-      
+
       // Add a small delay between merges
       await new Promise(resolve => setTimeout(resolve, 1000))
     }
@@ -148,7 +148,7 @@ mergeAllPRs().then(() => {
     )
 )
   process.exit(1)
-  })
+  });
 mergeAllPRs().then(() => {/* TODO: Fix JSX expression */}
-}).catch(error => {/* TODO: Fix JSX expression */})
+}).catch(error => {/* TODO: Fix JSX expression */});
 });`

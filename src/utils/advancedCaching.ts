@@ -152,7 +152,7 @@ class AdvancedCache
       hits: 0,
       lastAccessed: Date.now()
 
-    })
+    });
     // Update access order
     this.updateAccessOrder(key)
     // Save to storage if needed
@@ -270,7 +270,7 @@ class AdvancedCache
 }
         keysToDelete.push(key)
       }
-    })
+    });
     keysToDelete.forEach(key => this.delete(key))
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -319,8 +319,8 @@ class AdvancedCache
   s: entry.hits,
         ag,
   e: now - entry.lastAccessed,)
-      })
-    })
+      });
+    });
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

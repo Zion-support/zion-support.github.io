@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
-  
+
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     {name: 'Cloud Architecture', href: '/services/cloud'},
@@ -13,14 +13,14 @@ const EnhancedFooter: React.FC = () => {
     {name: 'Data Analytics', href: '/services/analytics'},
     {name: 'DevOps', href: '/services/devops'},
   ]
-  
+
   const products = [
     {name: 'AI Platform', href: '/products/ai-platform'},
     {name: 'Cloud Suite', href: '/products/cloud-suite'},
     {name: 'Analytics Dashboard', href: '/products/analytics'},
     {name: 'Mobile SDK', href: '/products/mobile-sdk'},
   ]
-  
+
   const quickLinks = [
     {name: 'About Us', href: '/about'},
     {name: 'Contact', href: '/contact'},
@@ -73,7 +73,7 @@ const EnhancedFooter: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -88,7 +88,7 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
@@ -103,7 +103,7 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -119,7 +119,7 @@ const EnhancedFooter: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -145,7 +145,7 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">

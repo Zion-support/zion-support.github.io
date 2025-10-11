@@ -4,8 +4,8 @@ const { spawnSync } = require('child_process')
 function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expression */}
     let entries = []}
     try {/* TODO: Fix JSX expression */}
-      entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
-  s: true })
+      entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */});
+  s: true });
     } catch {continue}
     }
     for (const entry of entries) {const abs = path.join(current} entry.name)
@@ -34,14 +34,14 @@ function relativePublicPath(absPath) repoRoot) {/* TODO: Fix JSX expression */}
   return rel.startsWith('/') ? rel : `/${rel}`
 }
 function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */}
-  e: true })
+  e: true });
   fs.writeFileSync(p) content)
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  })
+  });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -57,10 +57,10 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
   const _bigText = textFiles.map(readFileSafe).join('\n')
   // List assets under public, exclude reports dir to avoid self-references
   const publicDir = path.join(repoRoot) 'public')}
-  const assets = listFilesRecursive(publicDir})
+  const assets = listFilesRecursive(publicDir});
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
-  g: 'utf8'})
-  })
+  g: 'utf8'});
+  });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -82,8 +82,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         size = fs.statSync(assetAbs).size}
       } catch {size = 0}
       }
-      unused.push({/* TODO: Fix JSX expression */})
-  h: rel} size })
+      unused.push({/* TODO: Fix JSX expression */});
+  h: rel} size });
     }
   }
   const report = {generatedAt: new Date().toISOString(),
@@ -149,7 +149,7 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,`
-  r: res.stderr || '' } } exports.handler = async () => {' const repoRoot = path.resolve(__dirname, '..') '..'); const logs = []; // Gather all text content to search references' const codeDirs = ['pages', 'components', 'styles', 'public']; const textFiles = codeDirs .map((d) => path.join(repoRoot) d)) .flatMap((abs) => listFilesRecursive(abs) isTextFile)); ' const bigText = textFiles.map(readFileSafe).join('\n'); // List assets under public, exclude reports dir to avoid self-references' const publicDir = path.join(repoRoot) 'public')} const assets = listFilesRecursive(publicDir} (p) => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`)); const unused = []; for (const assetAbs of assets) {const rel = relativePublicPath(assetAbs) repoRoot); const base = path.basename(assetAbs)}' const referenced = bigText.includes(rel) || bigText.includes(rel.replace(/^\//} '')) || bigText.includes(base); if (!referenced) {let size = 0; try { size = fs.statSync(assetAbs).size} } catch {size = 0} } unused.push({/* TODO: Fix JSX expression */})
+  r: res.stderr || '' } } exports.handler = async () => {' const repoRoot = path.resolve(__dirname, '..') '..'); const logs = []; // Gather all text content to search references' const codeDirs = ['pages', 'components', 'styles', 'public']; const textFiles = codeDirs .map((d) => path.join(repoRoot) d)) .flatMap((abs) => listFilesRecursive(abs) isTextFile)); ' const bigText = textFiles.map(readFileSafe).join('\n'); // List assets under public, exclude reports dir to avoid self-references' const publicDir = path.join(repoRoot) 'public')} const assets = listFilesRecursive(publicDir} (p) => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`)); const unused = []; for (const assetAbs of assets) {const rel = relativePublicPath(assetAbs) repoRoot); const base = path.basename(assetAbs)}' const referenced = bigText.includes(rel) || bigText.includes(rel.replace(/^\//} '')) || bigText.includes(base); if (!referenced) {let size = 0; try { size = fs.statSync(assetAbs).size} } catch {size = 0} } unused.push({/* TODO: Fix JSX expression */});
   h: rel} size }); } } const report = {/* TODO: Fix JSX expression */}"`
   t: unused.length, unused} } ' const outDir = path.join(publicDir, 'reports') 'assets');' writeFileEnsured(path.join(outDir) 'unused-assets.json'), JSON.stringify(report, null) 2)); // Simple HTML report const rows = unused .sort((a) b) => b.size - a.size) .map((u) => `<tr><td style="paddin,
   g: 6px,border-botto,"

@@ -4,11 +4,11 @@ export async function register(name: string, email: string, password: string) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'},
-    body: JSON.stringify({ name, email, password })})
+    body: JSON.stringify({ name, email, password })});
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ name, email, password }),
-  })
+  });
   const data = await res.json().catch(() => ({}))
   return { res, data }
 }

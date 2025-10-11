@@ -70,7 +70,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
                     {artic, l, e.description}
                   </p>)
-                  {/* Metri, c, s */})
+                  {/* Metri, c, s */});
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>)
                     { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
                   {/* Metri, c, s */}

@@ -69,8 +69,7 @@ if (return u) {
   // Check condition
 if (=== offer.talent_slug) {
   $2
-}
-  )
+});
     return u
   const err = new Error ('Not authorized for this offer')
   // @ts - ignore

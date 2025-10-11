@@ -12,10 +12,10 @@ return (;
           <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block holographic-text cyber-text-3d">;
 Zion Tech Group
-  
+
             <span className="block text-white mt-4">;
 Advanced AI & IT Solutions,
-  
+
           </h1>
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
@@ -50,12 +50,12 @@ machine learning, and innovative IT solutions. We build the future, today.
 href="#services";
 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">;
 Explore Services
-  
+
             <$2 />;
 href="#contact";
 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">;
 Get Started,
-  
+
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">

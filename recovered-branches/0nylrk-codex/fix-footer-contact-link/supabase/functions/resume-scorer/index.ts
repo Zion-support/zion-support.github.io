@@ -9,7 +9,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || ""
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || ""
@@ -17,8 +17,7 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey)
   try {
@@ -70,7 +69,7 @@ serve(async (req) => {
           Headline: ${resume.headline || ""}
           Work Experience:
           ${resume.work_history.map((job: any) => 
-            `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
+            `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'});
             ${job.description || ""}`
           ).join("\n\n")}
           Education:
@@ -150,10 +149,10 @@ serve(async (req) => {
             }`
           }
         ],
-        temperature: 0.5})})
+        temperature: 0.5})});
         temperature: 0.5,
       }),
-    })
+    });
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json()
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
@@ -181,7 +180,7 @@ serve(async (req) => {
         match_breakdown: matchResult.breakdown,
         match_suggestion: matchResult.suggestion,
         scored_at: new Date().toISOString()
-      })
+      });
       .eq("id", applicationId)
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError.message}`)
@@ -195,8 +194,7 @@ serve(async (req) => {
       { 
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in resume-scorer function:", error)
     return new Response(
@@ -204,7 +202,6 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   }
-})
+});

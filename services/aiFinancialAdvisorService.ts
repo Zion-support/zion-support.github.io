@@ -266,7 +266,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -284,7 +284,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })})
+        body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -302,7 +302,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -317,7 +317,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -332,7 +332,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -364,7 +364,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -384,7 +384,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -404,7 +404,7 @@ export class AIFinancialAdvisorService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -421,7 +421,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -438,7 +438,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -467,7 +467,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ targetAllocation })})
+        body: JSON && JSON.stringify({ targetAllocation })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -491,7 +491,7 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })})
+        body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -522,7 +522,7 @@ export class AIFinancialAdvisorService {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -543,7 +543,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, risk_tolerance, investment_horizon })})
+        body: JSON.stringify ({ user_id, risk_tolerance, investment_horizon })});
       // Check condition
 if ( {) {
   $2
@@ -564,7 +564,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -582,7 +582,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/api / financial / goals/${user_id}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -600,7 +600,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/api / financial / market - analysis/${market}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -632,7 +632,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ target_allocation })})
+        body: JSON.stringify ({ target_allocation })});
       // Check condition
 if ( {) {
   $2
@@ -659,7 +659,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, target_age, desired_income })})
+        body: JSON.stringify ({ user_id, target_age, desired_income })});
       // Check condition
 if ( {) {
   $2
@@ -682,7 +682,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ userId, taxYear })})
+        body: JSON && JSON.stringify({ userId, taxYear })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -707,7 +707,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ userId, reportType })})
+        body: JSON && JSON.stringify({ userId, reportType })});
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
@@ -757,7 +757,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, report_type })})
+        body: JSON.stringify ({ user_id, report_type })});
       // Check condition
 if ( {) {
   $2
@@ -782,7 +782,7 @@ if ( {) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ targetAllocation }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -808,7 +808,7 @@ if ( {) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ userId, targetAge, desiredIncome }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -834,7 +834,7 @@ if ( {) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ userId, taxYear }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
@@ -861,7 +861,7 @@ if ( {) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ userId, reportType }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }

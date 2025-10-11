@@ -36,7 +36,7 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
   }
   return layer[0],
     choice: vote.choice,
-  })
+  });
   return sha256Hex(canonical)
 }
 export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {

@@ -706,8 +706,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               className="text-left">
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left">)
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
-        {/* Services Grid */})
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`});
+        {/* Services Grid */});
         <div className="text-left">)
           {filteredServices.map((service) => (
               {pricingModels.map(pricing => (

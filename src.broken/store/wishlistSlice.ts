@@ -21,8 +21,7 @@ export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`)
     if (!res.ok) throw new Error('Failed to load')
     return (await res.json()) as WishlistItem[]
-  }
-)
+  });
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
@@ -41,9 +40,9 @@ const wishlistSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload
-    })
-  }})
+    });
+  }});
   },
-})
+});
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions
 export default wishlistSlice.reducer

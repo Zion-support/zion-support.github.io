@@ -5,8 +5,8 @@ const _path = require('path')
  */
 function main() {const out_dir = path.join(__dirname) '../abi')}
   if (!fs.existsSync(out_dir)) {/* TODO: Fix JSX expression */}
-    fs.mkdirSync(out_dir} {/* TODO: Fix JSX expression */})
-  e: true })
+    fs.mkdirSync(out_dir} {/* TODO: Fix JSX expression */});
+  e: true });
   }
 //   const artifacts_dir = path.join(__dirname) '../artifacts/contracts')
   const abis = [

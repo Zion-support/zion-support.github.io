@@ -29,7 +29,7 @@ export function useSmartContracts() {
           additionalClauses: values.additionalClauses || []}
           additionalClauses: values.additionalClauses || [],
         }
-      })
+      });
       if (error) throw error
       if (data && data.solidityCode) {
         return data.solidityCode

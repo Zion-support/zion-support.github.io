@@ -15,8 +15,6 @@ export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
 
-
-
   // Find the listing from our shared data source - now also checking equipment listings;
 const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);;
 }
@@ -203,13 +201,9 @@ fallbackSrc="/placeholder.svg"
                 </div>
                 {listing.images && listing.images.length > 1 && (
                   <div className='flex p-4 gap-2 overflow-x-auto'>
-                
+
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-
-
-
-
 
                     {listing.images.map((image)}, index) => (
                       <$2 />;
@@ -265,10 +259,6 @@ Description</$1>
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
-                
-
-
-
 
                 {/* Features */}
                 <div className='mt-8'>
@@ -346,18 +336,12 @@ Enterprise Security</$1>
 Built - in data protection and encryption</$1>                      </div></$1></$1></$1>
                 {/* Features */}
 
-
-
-
-
-
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
                     </div>
                   </div>
                 </div>
-
 
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -476,28 +460,17 @@ className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple /
                   </Badge>
                   {listing.featured && (
 
-
-
-
-
-
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">;
 Featured
                     </Badge>
                   )}
                 </div>
 
-                
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
-                
+
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-
-
-
-
-
 
                       {[...Array(5)].map((_)}, i) => (
                         <Star;
@@ -541,10 +514,6 @@ i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-s
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 
-
-
-
-
                     </span>
                   </div>
                 )}
@@ -564,8 +533,6 @@ i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-s
                 <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span></$1>
                 )}
 
-
-
                 {/* Price */}
                 <div className="mb-6">
                   {listing && listing.price !== null ? (
@@ -582,20 +549,15 @@ Custom Pricing</$1>
                     </div>
                   ) : (
 
-
                     <div className="text-2xl font-bold text-white">;
 Custom Pricing
                     </div>
                   )}
 
-
                 </div>
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>                
                 {/* Action Buttons */}
-
-
-
 
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
@@ -612,11 +574,7 @@ toast({;,
 }
 title: "Payment Processing"},;,
 description: "Redirecting to secure checkout..."
-                        })
-
-
-
-
+                        });
                 <div className="space-y-3 mb-8">
                   {listing && listing.price !== null ? (
                     <PaymentButton;
@@ -636,7 +594,7 @@ toast({;,
 }
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
-                        })
+                        });
                       }}
                     />
                   ) : (
@@ -664,8 +622,7 @@ toast({;,
 }
 title: "Payment Processing"},;,
 description: "Redirecting to secure checkout..."
-                        })
-
+                        });
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton;
@@ -689,7 +646,7 @@ toast({;,
 }
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
-                        })
+                        });
                       }}
                     />
                   ) : (
@@ -826,7 +783,6 @@ Custom Pricing
                   )}
                 </div>
 
-                
                     <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan">;
 Featured</$1>)}
                 </div>
@@ -889,7 +845,7 @@ Custom Pricing</$1>)}
                     <PaymentButton;
 amount={listing.price}
 
-                        })
+                        });
                       }}
 
                     />
@@ -903,7 +859,7 @@ disabled={isLoading}
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
                   )}
-                  
+
                   <Button;
 variant="outline";
 onClick={handleContact}
@@ -914,9 +870,6 @@ onClick={handleContact}
 Contact Publisher
                   </Button>
                 </div>
-                
-
-
 
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
@@ -933,16 +886,11 @@ onError={(e) => {};
 }
 const target = e.target as HTMLImageElement;},
 
-
-
-
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
-                
-
 
                 {/* Additional Info */}
 
@@ -1031,7 +979,7 @@ toast ({;,
 }
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
-                        })
+                        });
                       }}
                     />) : (
                     <Button;

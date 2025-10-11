@@ -17,11 +17,11 @@ describe('Advanced Components', () => {
       </MemoryRouter>
     )
     expect(screen.getByText('Test content')).toBeInTheDocument()
-  })
+  });
   it('handles error when shouldThrow is true', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => {});
     // In React testing, errors are caught by error boundaries
     // We just verify the component doesn't crash the test
     expect(() => {
@@ -32,5 +32,5 @@ describe('Advanced Components', () => {
       )
     }).not.toThrow()
     consoleSpy.mockRestore()
-  })
-})
+  });
+});

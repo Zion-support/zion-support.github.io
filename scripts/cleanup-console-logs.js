@@ -16,7 +16,7 @@ function removeConsoleLogs(filePath) {
       fs.writeFileSync(filePath, content, 'utf8')
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
-    
+
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}
   }
@@ -41,7 +41,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         '**/*.test.*')
         '**/*.spec.*'
       ]
-    })
+    });
     files.forEach(file => {
     )
       totalFiles++;)
@@ -49,11 +49,11 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         modifiedFiles++
   }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    })
+    });
     files.forEach(file => {/* TODO: Fix JSX expression */}
-      })
-    })
-  })
+      });
+    });
+  });
 //   //   //   }
 
 // Run the cleanup

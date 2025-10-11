@@ -30,7 +30,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       return () => {
         document.head.removeChild(script)
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
       }
     }
@@ -61,7 +61,7 @@ const,
   //   const finalStructuredData = structuredData || defaultStructuredData
   return(<React.Fragment>)
       <Helmet>)
-        {/* Basic Meta Tags */})
+        {/* Basic Meta Tags */});
         <title>{title}</title>)
         <meta name="description" content={description} />)
         <meta name="keywords" content={keywords.join(', ')} />
@@ -174,8 +174,7 @@ const,
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}"
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-      {children}
-  )
+      {children});
 }
 export default SEOEnhancer
 "`

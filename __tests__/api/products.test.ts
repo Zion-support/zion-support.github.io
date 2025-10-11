@@ -20,8 +20,7 @@ jest.mock('@prisma/client', () => {
   return {
     PrismaClient: jest.fn(() => mPrismaClient)
   }
-})
-
+});
 describe('/api/products', () => {
   let mockPrisma: any
 
@@ -36,12 +35,10 @@ describe('/api/products', () => {
       }
     }
     jest.clearAllMocks()
-  })
-
+  });
   afterEach(() => {
     jest.resetAllMocks()
-  })
-
+  });
   it('should return products successfully', async () => {
     const mockProducts = [
       { id: 1, name: 'Product 1', price: 100 },
@@ -49,40 +46,35 @@ describe('/api/products', () => {
     ]
 
     mockPrisma.product.findMany.mockResolvedValue(mockProducts)
-    
+
     productHandler.mockImplementation(async (req, res) => {
       const products = await mockPrisma.product.findMany()
       return res.status(200).json(products)
-    })
-
+    });
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    })
-
+    });
     await productHandler(req, res)
 
     expect(res._getStatusCode()).toBe(200)
     expect(res._getJSONData()).toEqual(mockProducts)
-  })
-
+  });
   it('should handle database errors', async () => {
     mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'))
-    
+
     productHandler.mockImplementation(async (req, res) => {
       try {
         await mockPrisma.product.findMany()
       } catch (error) {
-        return res.status(500).json({ error: 'Internal server error' })
+        return res.status(500).json({ error: 'Internal server error' });
       }
-    })
-
+    });
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    })
-
+    });
     await productHandler(req, res)
 
     expect(res._getStatusCode()).toBe(500)
     expect(res._getJSONData()).toHaveProperty('error')
-  })
-})
+  });
+});

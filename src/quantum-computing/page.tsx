@@ -38,7 +38,7 @@ const QuantumComputingPage: React.FC = () => {
                 <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">✓</span>
                   Financial modeling
-  
+
               </ul>
             </div>
             <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg">
@@ -60,12 +60,12 @@ const QuantumComputingPage: React.FC = () => {
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
                 Explore Quantum Solutions
-  
+
               <$2 />
                 href="/consultation"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Schedule Consultation,
-  
+
             </div>
           </div>
         </div>

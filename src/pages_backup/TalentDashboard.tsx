@@ -73,9 +73,6 @@ import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
 
-
-
-
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState("job-matches")
   const onboardingStatus = null
@@ -106,11 +103,6 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
-
-
-
-
-
 
   return (
     <>
@@ -143,7 +135,6 @@ function TalentDashboardContent() {
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
 
           <div>
             <Card className="mb-8">
@@ -198,13 +189,11 @@ function TalentDashboardContent() {
                   <Button className='w-full' asChild>
                     <Link href='/messages'>
                       <MessageSquare className='h-4 w-4 mr-2' />
-                
+
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
-
-
 
                       Messages
                     </Link>
@@ -212,12 +201,6 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-
-
-            
-
-
-
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
@@ -404,8 +387,6 @@ function TalentDashboardContent() {
                       Messages</$1></$1></$1></$1></$1>
             <Card className="mt-8">
 
-
-
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
@@ -436,13 +417,12 @@ function TalentDashboardContent() {
               <TabsList className='mb-6'>
                 <TabsTrigger value='job-matches' className='flex items-center'>
                   <BriefcaseIcon className='h-4 w-4 mr-2' />
-          
+
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-
 
                   AI Job Matches
                 </TabsTrigger>
@@ -454,14 +434,12 @@ function TalentDashboardContent() {
                 <SuggestedJobs />
               </TabsContent>
               <TabsContent value='applications' className='mt-0'>
-              
+
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-              
+
               <TabsContent value="applications" className="mt-0">
-
-
 
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -476,12 +454,11 @@ function TalentDashboardContent() {
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
                     <p className='text-muted-foreground'>
-              
+
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-
 
                       You haven't saved any jobs yet.
                     </p>
@@ -497,8 +474,6 @@ function TalentDashboardContent() {
       </main>
     </>
   )
-
-
 
             <div className='mt-8'>
               <UpcomingInterviewsCard /></$1>

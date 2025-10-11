@@ -38,7 +38,7 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
             threshold: 0.1),
             rootMargin: '50px',
             ...options}
-          })
+          });
         : null,
     [callback, options]
     ,
@@ -104,7 +104,7 @@ export const useLazyImage = useCallback((...args) => {
               setIsLoaded(true);}
             }
             img.onerror = () => {}setIsError(true);}
-            } )
+            });
 // Image lazy loading hook;
 export const useLazyImage = (sr);
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */,}const {observe}}= useIntersectionObserver(useCallback();
@@ -124,14 +124,14 @@ export const useLazyImage = (sr)
   const { observe } = useIntersectionObserver(useCallback()
       (entries) => {/* TODO: Fix JSX expression */}
           }
-        })
+        });
       },
       [src, isLoaded, isError]
 // Performance monitoring hook;
     fcp?: number;
     lcp?: number;
     fid?: number;
-  }>({})
+  }>({});
     const updateMetrics = useCallback((...args) => {
   useEffect(() => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -141,7 +141,7 @@ export const useLazyImage = (sr)
       setMetrics({);
         fcp);
         lcp)}ttfb: navigation?.responseStart - navigation?.requestStart,}
-      })
+      });
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {// Performance monitoring hook;}export const usePerformanceMonitoring = useCallback((...args) => {}const [metrics, setMetrics] = useState<{}fcp?: number;
@@ -149,7 +149,7 @@ export const useLazyImage = (sr)
     fid?: number;
     cls?: number;
     ttfb?: number;}
-  }>({})
+  }>({});
   useEffect(() => {}if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
@@ -165,7 +165,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     fid?: number
     cls?: number
     ttfb?: number;}
-  }>({})
+  }>({});
   useEffect(() => {}
     if (typeof window === 'undefined') return
     const updateMetrics = useCallback((...args) => {}
@@ -177,7 +177,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
-      })
+      });
     }
     // Monitor performance after page load
     if (document.readyState === 'complete') {}
@@ -192,7 +192,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
         getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
         getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      })
+      });
     }
     return () => {}window.removeEventListener('load', updateMetrics);}
     }
@@ -200,7 +200,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   return metrics
 }
     usedJSHeapSize?: number;
-  }>({})
+  }>({});
     const updateMemoryInfo = useCallback((...args) => {
   useEffect(() => {
       const memory = (performance as any).memory;
@@ -271,7 +271,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = useCallback((...args) => {
-  }>({})
+  }>({});
     const calculateBundleSize = useCallback((...args) => {
   useEffect(() => {
       const resources = performance.getEntriesByType('resource');
@@ -296,7 +296,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
         jsSize,
         cssSize,
         imageSize}
-      })
+      });
     }
     // Calculate after page load
     if (document.readyState === 'complete') {}
@@ -316,9 +316,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
         } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
         }
-      })
-      setBundleSize({/* TODO: Fix JSX expression */,)})
-      })
+      });
+      setBundleSize({/* TODO: Fix JSX expression */,)});
+      });
     }
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}

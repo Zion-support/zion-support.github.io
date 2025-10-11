@@ -53,7 +53,7 @@ function handler() {
       "README.md"
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
     )
-    const buffer = await zip.generateAsync({ type: "nodebuffer" })
+    const buffer = await zip.generateAsync({ type: "nodebuffer" });
     res.setHeader("Content-Type", "application/zip")
     res.setHeader(
       "Content-Disposition",
@@ -61,7 +61,7 @@ function handler() {
     )
     res.status(200).send(buffer)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || "Export failed" })
+    res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -73,11 +73,11 @@ export default async function handler(req, res) {
       map,
       tokens,
       message: 'Design export completed'
-    })
+    });
   } catch (e: unknown) {
     res.status(500).json({
       error: e?.message || 'Export failed'
-    })
+    });
 import JSZip from 'jszip'
 import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map'
 export default async function handler(req, res) {
@@ -95,7 +95,7 @@ export default async function handler(req, res) {
       "README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
     )
-    const buffer = await zip.generateAsync({ type: "nodebuffer" })
+    const buffer = await zip.generateAsync({ type: "nodebuffer" });
     res.setHeader("Content-Type", "application/zip")
     res.setHeader(
       "Content-Disposition",
@@ -103,7 +103,7 @@ export default async function handler(req, res) {
     )
     res.status(200).send(buffer)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || "Export failed" })
+    res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
     // UIKit folder
@@ -120,30 +120,30 @@ export default async function handler(req, res) {
     )
     res.status(200).send(buffer)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message |"Export failed" })
+    res.status(500).json({ error: e?.message |"Export failed" });
   } catch (error) {
-    res.status(500).json({ error: e?.message || 'Export failed' })
+    res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   }

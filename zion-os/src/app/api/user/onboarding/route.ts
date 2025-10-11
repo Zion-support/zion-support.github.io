@@ -5,13 +5,13 @@ export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession()
 if (!session?.user?.email) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email }
       data: { onboardingCompleted: true }
-    })
+    });
     return NextResponse.json(
       {
         message: 'Onboarding completed successfully'
@@ -23,8 +23,7 @@ if (!session?.user?.email) {
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted,
         },
       },
-      { status: 200 }
-    )
+      { status: 200 });
   } catch (error) {
     console.error('Onboarding completion error:', error)
     return NextResponse.json(
@@ -35,8 +34,7 @@ if (!session?.user?.email) {
           onboarding_completed: updated_user.onboarding_completed,
         },
       },
-      { status: 200 }
-    )
+      { status: 200 });
   } catch (error) {
     console.error ('Onboarding completion error:', error)
     return NextResponse.json (
@@ -50,8 +48,7 @@ export async function POST(request: NextRequest) {
     if (!session?.user?.email) {
       return NextResponse.json(
         { error: "Unauthorized" },
-        { status: 401 }
-      )
+        { status: 401 });
     }
 
     // Update user's onboarding status
@@ -68,14 +65,12 @@ export async function POST(request: NextRequest) {
           role: updatedUser.role,
           onboardingCompleted: updatedUser.onboardingCompleted}
       },
-      { status: 200 }
-    )
+      { status: 200 });
   } catch (error) {
     console.error("Onboarding completion error:", error)
     return NextResponse.json(
       { error: "Internal server error" }
-      { status: 500 }
-    )
+      { status: 500 });
   }
 export async function POST(request: NextRequest) { try {
     const body = await request.json()
@@ -98,19 +93,16 @@ export async function POST(request: NextRequest) { try {
         role: updatedUser.role,
         onboardingCompleted: updatedUser.onboardingCompleted
       }
-      { status: 200 }
-    )
+      { status: 200 });
   } catch (error) {
     console.error('Onboarding completion error:', error)
     return NextResponse.json(
       { error: 'Internal server error' }
       { error: 'Internal server error' },
-      { status: 500 }
-    )
+      { status: 500 });
   }
 }
-      { status: 500 }
-    )
+      { status: 500 });
   }
 }
 }
@@ -123,14 +115,13 @@ export async function POST(request: NextRequest) {
     if (!session?.user?.email) {
       return NextResponse.json(
         { error: "Unauthorized" },
-        { status: 401 }
-      )
+        { status: 401 });
     }
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email },
       data: { onboardingCompleted: true },
-    })
+    });
     return NextResponse.json(
       { 
         message: "Onboarding completed successfully",
@@ -142,13 +133,11 @@ export async function POST(request: NextRequest) {
           onboardingCompleted: updatedUser.onboardingCompleted,
         }
       },
-      { status: 200 }
-    )
+      { status: 200 });
   } catch (error) {
     console.error("Onboarding completion error:", error)
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
-    )
+      { status: 500 });
   }
 }

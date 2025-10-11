@@ -742,7 +742,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 }
 }

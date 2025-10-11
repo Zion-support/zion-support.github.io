@@ -31,7 +31,7 @@ function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
       file.endsWith('.jsx')
     ) {/* TODO: Fix JSX expression */}
     }
-  })
+  });
   return fileList
 }
 
@@ -198,22 +198,22 @@ files.forEach(file => {
   if (processFile(file)) {
     filesImproved++
   }
-})
+});
 // Generate report
 // // // // // // if (config.improvements.length > 0) {
   //   config.improvements.slice(0, 20).forEach((improvement, i) => {
 files.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
+  });
+});
 // Generate report
 // // // // // // if (config.improvements.length > 0) {/* TODO: Fix JSX expression */}
-    //     })
+    //     });
   if (config.improvements.length > 20) {/* TODO: Fix JSX expression */}
     //     }
   //   }
 
 if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
-    //     })
+    //     });
   //   }
 
 // Save detailed report

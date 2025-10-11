@@ -17,30 +17,24 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
 describe('Environment Validation', () => {
   beforeEach(() => {
     jest.resetModules()
-  })
-
+  });
   afterEach(() => {
     process.env = ORIGINAL_ENV
-  })
-
+  });
   it('should validate environment variables', () => {
     mockProcessEnv({
       NODE_ENV: 'test',
       VITE_APP_TITLE: 'Test App'
-    })
-    
+    });
     expect(process.env.NODE_ENV).toBe('test')
     expect(process.env.VITE_APP_TITLE).toBe('Test App')
-  })
-
+  });
   it('should handle missing environment variables', () => {
     mockProcessEnv({
       NODE_ENV: undefined,
       VITE_APP_TITLE: undefined
-    })
-    
+    });
     expect(process.env.NODE_ENV).toBeUndefined()
     expect(process.env.VITE_APP_TITLE).toBeUndefined()
-  })
-})
-
+  });
+});

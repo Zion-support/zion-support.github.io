@@ -37,7 +37,7 @@ class SEOOptimizer {
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
     }
-    
+
     console.log(`   ✅ Checked ${htmlFiles.length} HTML files`)
     this.optimizations.push('Meta tags validation')
   }
@@ -47,7 +47,7 @@ class SEOOptimizer {
     console.log('📝 Checking heading structure...')
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    })
+    });
     let headingIssues = 0
     for (const file of tsxFiles) {
       try {
@@ -64,12 +64,12 @@ class SEOOptimizer {
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`)
           headingIssues++
         }
-        
+
       } catch (error) {
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
     }
-    
+
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`)
     if (headingIssues > 0) {
       console.log(`   ⚠️  Found ${headingIssues} heading structure issues`)
@@ -82,7 +82,7 @@ class SEOOptimizer {
     console.log('🖼️  Checking alt attributes...')
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    })
+    });
     let altIssues = 0
     for (const file of tsxFiles) {
       try {
@@ -95,12 +95,12 @@ class SEOOptimizer {
             altIssues++
           }
         }
-        
+
       } catch (error) {
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
     }
-    
+
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`)
     if (altIssues > 0) {
       console.log(`   ⚠️  Found ${altIssues} missing alt attributes`)
@@ -113,7 +113,7 @@ class SEOOptimizer {
     console.log('🔗 Checking internal links...')
     const tsxFiles = await glob('src/**/*.tsx', {)
       ignore: ['**/node_modules/**', '**/dist/**'])
-    })
+    });
     let linkCount = 0
     for (const file of tsxFiles) {
     try {
@@ -125,7 +125,7 @@ class SEOOptimizer {
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
     }
-    
+
     console.log(`   ✅ Found ${linkCount} internal links`)
     this.optimizations.push('Internal links analysis')
   }
@@ -137,19 +137,19 @@ class SEOOptimizer {
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`)
     this.optimizations.forEach((opt, index) => {
       console.log(`   ${index + 1}. ${opt}`)
-    })
+    });
     if (this.issues.length > 0) {
       console.log(`\n⚠️  Issues found: ${this.issues.length}`)
       this.issues.slice(0, 10).forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`)
-      })
+      });
       if (this.issues.length > 10) {
         console.log(`   ... and ${this.issues.length - 10} more issues`)
       }
     } else {
     console.log('\n✅ No SEO issues found!')
   }
-    
+
     console.log('\n🚀 SEO Recommendations: ')
     console.log('   1. Add structured data (JSON-LD)')
     console.log('   2. Implement breadcrumb navigation')
@@ -281,7 +281,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
   const metaOptimizations = {/* TODO: Fix JSX expression */}
   }
-  
+
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
     JSON.stringify(metaOptimizations, null, 2)
@@ -317,7 +317,7 @@ Allo,
   Allow: /contact,
   Allow: /ai-services,`
   Allow: /it-services`,
-  
+
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt)
   // console.log('  - Robots.txt)
   generated: public/robots.txt'),
@@ -336,7 +336,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   s://linkedin.com/company/ziontechgroup"
     ]
   }
-  
+
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
     JSON.stringify(structuredData, null, 2)

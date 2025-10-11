@@ -43,7 +43,7 @@ this.setState({;
 error},;
 errorInfo,;,
 errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    })
+    });
     // Log error to console in development;
 if (process.env.NODE_ENV === 'development') {;
 console.error('Error caught by boundary:', error, errorInfo)
@@ -75,7 +75,7 @@ headers: {
           'Content-Type': 'application/json',
         },;,
 body: JSON.stringify(errorReport),
-      })
+      });
     } catch (reportError) {;
 console.error('Failed to report error:', reportError)
   }
@@ -87,7 +87,7 @@ hasError: false},;,
 error: null,;,
 errorInfo: null,;,
 errorId: null
-    })
+    });
   }
   private handleReload = () => {;
 if (typeof window !== 'undefined') {;
@@ -125,18 +125,17 @@ We're sorry, but something unexpected happened.
 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">;
 Try Again,
-  
+
               <$2 />;
 onClick={this.handleReload}
                 className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">;
 Reload Page,
-  
+
             </div>
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">;
 Error ID: {this.state.errorId}
-            )}
-      )
+            )});
     }
     return this.props.children;
   }

@@ -32,7 +32,7 @@ export const lazyLoadImages = () => {
         img.src = img.dataset.src || ''
 export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 }
 

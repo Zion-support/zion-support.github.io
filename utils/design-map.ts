@@ -433,7 +433,7 @@ export async function buildTokenSet(): Promise<TokenSet> {
       } else if (typeof value === 'object') {
         flattenColors(newKey, value)
       }
-    })
+    });
   }
   flattenColors('', extendedColors)
   const typography = {

@@ -31,10 +31,10 @@ export const usePageLoadPerformance = () => {
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           }
           // Track paint metrics if available
-          paintEntries.forEach(entry => {/* TODO: Fix JSX expression */})
+          paintEntries.forEach(entry => {/* TODO: Fix JSX expression */});
             } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
             }
-          })
+          });
           // Track performance metrics
           analytics.trackPerformance('page_load', metrics.loadComplete)
           analytics.trackPerformance('dom_content_loaded', metrics.domContentLoaded)
@@ -71,7 +71,7 @@ export const useComponentPerformance = (componentNam)
       analytics.trackPerformance(\`\${componentName}_render\`, renderTime)
       analytics.track('component_performance', 'render', componentName, undefined, renderTime)
     }
-  })
+  });
   return {
     renderCount: renderCount.current
   return {/* TODO: Fix JSX expression */}
@@ -151,7 +151,7 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}
           }
           Object.entries(networkMetrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
             analytics.trackPerformance(\`network_\${key}\`, value)
-          })
+          });
         }
       }
     }
@@ -183,8 +183,8 @@ export const useScrollPerformance = () => {/* TODO: Fix JSX expression */}
   scrollTimeout: NodeJS.Timeout
     const handleScroll = () => {/* TODO: Fix JSX expression */}
     }
-    window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true })
+    window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */});
+  e: true });
     return () => {/* TODO: Fix JSX expression */}
     }
   }, [])

@@ -106,7 +106,7 @@ export default function ServiceDetailPage() {
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               {service.description}
             </p>
-            
+
             {/* Service Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
@@ -205,7 +205,7 @@ export default function ServiceDetailPage() {
                 {/* Pricing Card */}
                 <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
                   <h3 className="text-xl font-bold text-white mb-4">Pricing</h3>
-                  
+
                   {/* Tier Selector */}
                   <div className="mb-6">
                     <label className="block text-sm font-medium text-zion-slate-light mb-2">

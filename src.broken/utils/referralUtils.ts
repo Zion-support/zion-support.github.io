@@ -16,7 +16,7 @@ export function formatDate(date: Date | string | undefined): string {
       year: 'numeric',
     }).format(d)
   } catch (e) {
-    logErrorToProduction('Error formatting date:', { data:  e })
+    logErrorToProduction('Error formatting date:', { data:  e });
     return '-'
   }
 }
@@ -56,16 +56,16 @@ export async function trackReferral(userId: string, email: string) {
         userId,
         email,
         ipAddress: '', // This will be captured by the server
-      })})
+      })});
       }),
-    })
+    });
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code
       safeStorage.removeItem('referral_code')
       return true
     }
   } catch (error) {
-    logErrorToProduction('Error tracking referral:', { data: error })
+    logErrorToProduction('Error tracking referral:', { data: error });
   }
   return false
 }

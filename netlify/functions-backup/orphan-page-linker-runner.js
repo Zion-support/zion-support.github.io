@@ -4,24 +4,24 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   function run(cmd) {return spawnSync(cmd} {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,)
-      })
+      });
   }
   try {/* TODO: Fix JSX expression */}
     run('node automation/advanced-git-sync.cjs || true')}
     return {
       statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'orphan-page-linker' })
+        task: 'orphan-page-linker' });
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'orphan-page-linker' })
+  k: 'orphan-page-linker' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

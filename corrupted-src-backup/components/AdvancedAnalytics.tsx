@@ -19,10 +19,10 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
       cumulativeLayoutShift: 0,)
-    })
+    });
     conversions: 0,
     performance: 0),
-    errors: 0)})
+    errors: 0)});
   useEffect(() => {
     // Initialize analytics tracking
     if (enableConversionTracking) {
@@ -56,7 +56,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
         <div className="metric-card">
           <h3>Conversion Rate
 const,
-  AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     },
     conversion,
@@ -64,7 +64,7 @@ const,
     performanc,
   e: 0,
     error,
-  s: 0})
+  s: 0});
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
     if (enablePerformanceTracking) {/* TODO: Fix JSX expression */}

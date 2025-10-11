@@ -3,20 +3,20 @@ class ErrorBoundary extends React.Component {
     super(props)
     this.state = { hasError: false }
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
@@ -59,9 +59,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-
-
-
 
 } from '@/components / ui / alert - dialog'
 import { Avatar } from '@/components / ui / avatar'
@@ -145,14 +142,14 @@ function ProjectDetailsContent() {
   const { projectId } = router.query as { projectId?: string },
   const { user } = useAuth(),
   const { getProjectById, updateProjectStatus } = useProjects(),
-  
+
   const [project, setProject] = useState<Project | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [notes, setNotes] = useState<any[]>([]),
   const [newNote, setNewNote] = useState(""),
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
-  
+
   // Load project data
   useEffect(() => {
     async function loadProject() {
@@ -173,7 +170,6 @@ function ProjectDetailsContent() {
                               No notes yet. Add the first note to this project.
                             </p>
                           </div>
-
 
                         )}
 
@@ -206,9 +202,6 @@ function ProjectDetailsContent() {
                         )}
                       </div>
 
-
-
-                      
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -218,8 +211,6 @@ function ProjectDetailsContent() {
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
-
-
 
                           <Button
                             onClick={handleSubmitNote}
@@ -234,25 +225,22 @@ function ProjectDetailsContent() {
                 </Card>
               </TabsContent>
               <TabsContent value='reviews'>
-              
-              <TabsContent value="reviews">
 
+              <TabsContent value="reviews">
 
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
           <div className='order-1 lg:order-2 lg:col-span-1'>
-          
-          <div className="order-1 lg:order-2 lg:col-span-1">
 
+          <div className="order-1 lg:order-2 lg:col-span-1">
 
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-
 
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
@@ -339,15 +327,11 @@ function ProjectDetailsContent() {
                           loading="lazy"
                         />
 
-
-
-
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
-
 
                     </div></$1></$1></$1>
               <TabsContent value='reviews'>
@@ -529,9 +513,6 @@ function ProjectDetailsContent() {
                           size='sm'
                           className='mt-2'
 
-
-
-
                         </Button>
                       )}
                     </div>
@@ -569,11 +550,8 @@ function ProjectDetailsContent() {
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
-
                           loading="lazy"
                         />
-
-
 
                       ) : (
                         <User className="h-6 w-6" />
@@ -653,7 +631,6 @@ function ProjectDetailsContent() {
                       {isTalent && (
                         <Button
 
-
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -681,7 +658,7 @@ function ProjectDetailsContent() {
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive"})
+        variant: "destructive"});
     }
   },
   const handleSubmitNote = async () => {
@@ -693,7 +670,7 @@ function ProjectDetailsContent() {
         .insert({
           project_id: project.id,
           user_id: user.id,
-          content: newNote})
+          content: newNote});
         .select(),
       if (error) throw error,
       // Refresh notes
@@ -701,13 +678,13 @@ function ProjectDetailsContent() {
       setNewNote(""),
       toast({
         title: "Note added",
-        description: "Your note has been added to the project."})
+        description: "Your note has been added to the project."});
     } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err }),
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
-        variant: "destructive"})
+        variant: "destructive"});
     } finally {
       setIsSubmittingNote(false)
     }
@@ -723,7 +700,7 @@ function ProjectDetailsContent() {
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!"})
+          description: "The project is now in progress. Congratulations!"});
       }
     }
   },
@@ -1055,8 +1032,6 @@ function ProjectDetailsContent() {
             {/* Project Status Card */}
             <Card className="mt-6">
 
-
-
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -1077,26 +1052,23 @@ function ProjectDetailsContent() {
                     <span className='text-sm font-medium'>Start Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.start_date), 'PPP')}
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
 
-
-
                     </span>
                   </div>
                 </div>
               </CardContent>
-
 
                           onClick={() =>
                             router && router.push(
@@ -1171,8 +1143,6 @@ function ProjectDetailsContent() {
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
 
-
-
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
@@ -1180,11 +1150,10 @@ function ProjectDetailsContent() {
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
 
-
                   </Button>
                 </CardFooter>
               )}
-              
+
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
@@ -1265,7 +1234,7 @@ if (throw error) {
 }catch (err: any) {'
   logErrorToProduction ('Error adding note:', {
   data: err
-})
+});
 toast ({
 }finally {
   setIsSubmittingNote (false)
@@ -1283,7 +1252,7 @@ if ( {) {
   set_project ({
   ...project
 status: new_status
-})
+});
 //If offer was accepted, show a special toast // Check condition
 if ( {) {
   $2
@@ -1298,9 +1267,6 @@ case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
 
-
-
-
 }
 setIsSubmittingNote (true)
 try {
@@ -1309,7 +1275,7 @@ try {
 }catch (err: any) {'
   logErrorToProduction ('Error adding note:', {
   data: err 
-})
+});
 toast ({
 }finally {
   setIsSubmittingNote (false) 
@@ -1321,7 +1287,7 @@ if (success) {
   setProject ({
   ...project
 status: newStatus 
-})
+});
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
 };"
@@ -1472,7 +1438,4 @@ const ProjectDetails = () => {
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
-
-
-
 

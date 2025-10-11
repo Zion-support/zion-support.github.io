@@ -194,5 +194,5 @@ export function getConfig() {
 }
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig()
-  tokenStore.setConfig({ ...current, ...partial })
+  tokenStore.setConfig({ ...current, ...partial });
 }

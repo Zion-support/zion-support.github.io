@@ -39,7 +39,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
           <p, className='te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
             Discover, breakthrough, AI innovations, delivering, unprecedented;)
             efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>)
-              {' '})
+              {' '});
             Discover, breakthrough, AI innovations, delivering, unprecedented
             efficien, c, y:</p> <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
           <h2, className='te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t'>

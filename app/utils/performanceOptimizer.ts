@@ -45,16 +45,16 @@ const logger = {/* TODO: Fix JSX expression */},
   }
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */,}}}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['measure'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['measure'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
-  private observeLCP() {/* TODO: Fix JSX expression */,}})
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['largest-contentful-paint'] ,})
+  private observeLCP() {/* TODO: Fix JSX expression */,}});
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
@@ -65,10 +65,10 @@ const logger = {/* TODO: Fix JSX expression */},
   }
   private observeFID() {/* TODO: Fix JSX expression */,}t: number ,}
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['first-input'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['first-input'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}}
         const entries = list.getEntries()
@@ -76,18 +76,18 @@ const logger = {/* TODO: Fix JSX expression */},
         this.metrics.lcp = lastEntry.startTime
   private measureRenderTime(): void {/* TODO: Fix JSX expression */}
           }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['measure'] });
       this.observers.push(observer)
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   private observeLCP() {/* TODO: Fix JSX expression */}
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch {
     // Ignore if not supported
@@ -111,10 +111,10 @@ const logger = {/* TODO: Fix JSX expression */},
   private observeFID() {/* TODO: Fix JSX expression */}
   t: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['first-input'] });
       this.observers.push(observer)
     } catch {
     // Ignore if not supported
@@ -127,10 +127,10 @@ const logger = {/* TODO: Fix JSX expression */},
       const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {}clsValue += clsEntry.value;
           }
-        })
+        });
         this.metrics.cls = clsValue;
-      })
-      observer.observe({entryTypes: ['layout-shift'] ,)})
+      });
+      observer.observe({entryTypes: ['layout-shift'] ,)});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
@@ -142,19 +142,19 @@ const logger = {/* TODO: Fix JSX expression */},
   }
   private observeCLS() {/* TODO: Fix JSX expression */,}e: number ,}
           if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */,}}
-        })
+        });
         this.metrics.cls = clsValue;
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['layout-shift'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['layout-shift'] ,});
       this.observers.push(observer);
     } catch {/* TODO: Fix JSX expression */,}}}
   }
   private observeFCP() {/* TODO: Fix JSX expression */,}}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['paint'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['paint'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
@@ -185,14 +185,14 @@ images.forEach((img) => imageObserver.observe(img))
               lazyObserver.unobserve(element)
             }
           }
-        })
-      })
-      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */,}})
+        });
+      });
+      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */,}});
     }
     this.metrics.lazyLoading = true
   }
-      })
-    })
+      });
+    });
     images.forEach(img => imageObserver.observe(img))
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
   }
@@ -200,13 +200,13 @@ images.forEach((img) => imageObserver.observe(img))
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
   s: 'style' }]
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
-    })
+    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */});
+    });
     logger.info('Critical resource hints added', 'PerformanceOptimizer')
   }
-          })
+          });
         }
-      })
+      });
     }
   }
   generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}

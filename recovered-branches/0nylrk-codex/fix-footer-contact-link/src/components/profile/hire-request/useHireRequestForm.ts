@@ -36,7 +36,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }).refine(data => data.budgetMax >= data.budgetMin, {
     message: "Maximum budget must be greater than or equal to minimum budget",
     path: ["budgetMax"]
-  })
+  });
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -48,7 +48,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       budgetMin: talent.hourly_rate || 25,
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
-  })
+  });
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true)

@@ -149,7 +149,7 @@ return (;
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">;
 Help Center,
-  
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
 Find answers, get support, and learn how to make the most of our AI and IT services.;
 We're here to help you succeed.

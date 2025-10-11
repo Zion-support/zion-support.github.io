@@ -26,7 +26,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
     // Test 2: Parallel operations
 //     const parallelStart = Date.now(),
-    const parallelPromises = Array.from({ length: 5 })
+    const parallelPromises = Array.from({ length: 5 });
       (_)
         i) =>
         new Promise(resolve =>)
@@ -84,7 +84,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     try {const timeoutPromise = new Promise((resolve),
         reject) => {,
         setTimeout(() => reject(new Error('Operation timed out'))} 100)
-      })
+      });
       await Promise.race([)
         timeoutPromise)
         new Promise(resolve => setTimeout(resolve)
@@ -96,7 +96,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     const timeoutStart = Date.now(),
     try {/* TODO: Fix JSX expression */}
         setTimeout(() => reject(new Error('Operation timed out'))} 100)
-      })
+      });
       await Promise.race([
         timeoutPromise,
         new Promise(resolve => setTimeout(resolve)
@@ -131,7 +131,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     reject(new Error(`Attempt ${retryAttempts)
         failed`))
   }
-        })
+        });
         retrySuccess = true
       } catch (error) {
     if (retryAttempts === 3) {
@@ -193,13 +193,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           averageTestDuration: (
             totalDuration / Object.keys(asyncTests).length
           ).toFixed(0,)}
-        })
+        });
         nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now
       try {/* TODO: Fix JSX expression */}
             resolve('retry-success')}
           } else {/* TODO: Fix JSX expression */}
           }
-        })
+        });
         retrySuccess = true
       } catch (error) {/* TODO: Fix JSX expression */}
         }
@@ -248,7 +248,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     return {/* TODO: Fix JSX expression */}
   s: 'error'}
-      })
+      });
     }
   }
 }

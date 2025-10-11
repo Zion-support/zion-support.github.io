@@ -30,7 +30,7 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { service, quoteDetails } = await req.json() as RequestBody
@@ -85,8 +85,8 @@ serve(async (req) => {
               }
             ],
             temperature: 0.5
-          })
-        })
+          });
+        });
         const aiResult = await openAIResponse.json()
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
           aiAnalysis = aiResult.choices[0].message.content
@@ -118,15 +118,15 @@ serve(async (req) => {
       .select()
     if (error) throw error
     return new Response(JSON.stringify({ success: true, data }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in process-quote function:', error)
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    })
+    });
   }
-})
+});

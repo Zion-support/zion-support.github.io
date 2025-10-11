@@ -78,7 +78,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                         'Fulfillme, n, t: 80% fas, t, e, r')
                         'Reven, u, e: 28% incre, a, s, e')
                       ])
-                    })
+                    });
                       <ul, classNam, e='spa, c, e-y-2'>
                         { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>

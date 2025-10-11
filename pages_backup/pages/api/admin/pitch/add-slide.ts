@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
   return res.status(200).json({
     title: 'Additional Insight',
-    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'});
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { ensureAdminFromApi } from '../../../../utils/auth'

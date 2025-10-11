@@ -25,7 +25,7 @@ export default function ServicesAdvertisingPage() {
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home,
-  
+
         </div>
       </header>
       {/* Hero Section */}"

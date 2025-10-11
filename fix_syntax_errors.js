@@ -15,7 +15,7 @@ function getAllTsFiles(dir) {
       files.push(fullPath)
     }
   }
-  
+
   return files
 }
 
@@ -24,7 +24,7 @@ function fixSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
     // Fix common syntax issues
-    
+
     // 1. Fix missing semicolons after array declarations
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*$/gm, '$1;')
     // 2. Fix missing commas in arrays (look for patterns like } followed by {)
@@ -35,7 +35,7 @@ function fixSyntaxErrors(filePath) {
         return match + ';'
       }
       return match
-    })
+    });
     // 4. Fix malformed JSX fragments - ensure proper opening/closing
     content = content.replace(/<React\.Fragment>\s*$/gm, '<>')
     content = content.replace(/<\/React\.Fragment>\s*$/gm, '</>')
@@ -45,7 +45,7 @@ function fixSyntaxErrors(filePath) {
         return arrayPart + ']' + spaces + nextPart
       }
       return match
-    })
+    });
     // 6. Fix missing commas in object arrays
     content = content.replace(/}\s*\n\s*]\s*$/gm, '}\n  ]')
     // 7. Fix missing semicolons after array declarations that end with ]
@@ -58,7 +58,7 @@ function fixSyntaxErrors(filePath) {
         return match + '\n      </main>\n    </>\n  );\n}'
       }
       return match
-    })
+    });
     // 10. Fix missing export statements
     if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {
       const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
@@ -66,7 +66,7 @@ function fixSyntaxErrors(filePath) {
         content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
       }
     }
-    
+
     // Clean up extra whitespace
     content = content.replace(/\n\n\n+/g, '\n\n')
     content = content.trim() + '\n'
@@ -75,7 +75,7 @@ function fixSyntaxErrors(filePath) {
       console.log(`✓ Fixed syntax errors in: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message)
@@ -96,7 +96,7 @@ tsFiles.forEach(filePath => {
   } else {
     console.log(`⚠ File not found: ${filePath}`)
   }
-})
+});
 console.log(`\nSummary:`)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)

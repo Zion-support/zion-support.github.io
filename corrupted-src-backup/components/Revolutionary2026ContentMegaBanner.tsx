@@ -226,7 +226,7 @@ featur, e, d: fal, s, e
             <div, className="flex, item, s-center, ga, p-2"></div>"
               <span, className="w-6 h-6">🚀</sp, a, n>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Autonomous, Operation, s
-        {/* Featured, Content, Grid */})
+        {/* Featured, Content, Grid */});
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)$2 />
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
@@ -266,7 +266,7 @@ featur, e, d: fal, s, e
                         <sp, a, n>TRENDI, N, G
                     )}
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
+              {/* TODO: Fix JSX expression */});
               )}
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"

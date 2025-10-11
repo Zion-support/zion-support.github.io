@@ -202,7 +202,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               </d, i, v>"
               <div, className="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">"
                 Enterprise, Saving, s
-        {/* Featured, Articles, Grid */})
+        {/* Featured, Articles, Grid */});
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">")
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";)
           {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
@@ -257,7 +257,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                         <TrendingUp, className="w-3 h-3" />"
                         <sp, a, n>TRENDI, N, G
                     )}
-                    {/* TODO: Fix JSX expression */})
+                    {/* TODO: Fix JSX expression */});
                     )}"
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">"
                       BREAKTHROU, G, H

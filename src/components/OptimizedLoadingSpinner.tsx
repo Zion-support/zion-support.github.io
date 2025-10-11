@@ -62,8 +62,7 @@ className="opacity-75""
           </svg>
       </div>
     ),
-  }
-)
+  });
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
@@ -105,7 +104,6 @@ $4}
         </svg>
       </div>
     ),
-  }
-)
+  });
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner</div></p></a>

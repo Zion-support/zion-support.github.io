@@ -53,7 +53,7 @@ export const Image: React.FC<ImageProps> = ({
       width: '100%',
       height: '100%',
       objectFit:     ,
-$4})
+$4});
   }
   if (hasError) {
     return (
@@ -156,7 +156,7 @@ quality = 75,
       width: '100%',
       height: '100%',
       objectFit: 'cover'
-    })
+    });
   }
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}

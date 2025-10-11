@@ -12,8 +12,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
       return `{ ${body.trim()} }`
-    }
-  )
+    });
   // Fix specific patterns we've seen
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
@@ -36,7 +35,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   // Fix variable name issues
   content = content.replace()
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
-    'const _memory = (performance as {/* TODO: Fix JSX expression */})
+    'const _memory = (performance as {/* TODO: Fix JSX expression */});
   e: number } }).memory;\n          memoryUsage = _memory?.'
   )
   return content
@@ -87,7 +86,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   walkDir(dir)
   return files
 }

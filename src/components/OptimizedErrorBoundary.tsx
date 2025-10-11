@@ -37,7 +37,7 @@ errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 this.setState({;
 error},;
 errorInfo
-    })
+    });
     // Log error to console in development;
 if (process.env['NODE_ENV'] === 'development') {}
     // Call custom error handler if provided;
@@ -94,7 +94,7 @@ custom_map: {;,
 error_id: this.state.errorId,;,
 component_stack: errorInfo.componentStack
         }
-      })
+      });
     }
   }
   private resetErrorBoundary = () => {;
@@ -109,7 +109,7 @@ hasError: false},;,
 error: null,;,
 errorInfo: null,;,
 errorId:       ,;
-$4})
+$4});
     }, 100)
   }
   private handleRetry = () => {;
@@ -216,8 +216,7 @@ onClick={() => window.location.reload()}
 Reload Page
         {errorId && (
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}
-        )}
-  )
+        )});
 );
 ErrorFallback.displayName = 'ErrorFallback';
 className='px-4 py-2 bg-gray-600 text-white rounded-md,;,

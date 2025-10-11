@@ -75,7 +75,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
             Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
           </p>)
-          {/* Achievement, Stat, s */})
+          {/* Achievement, Stat, s */});
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">

@@ -59,18 +59,17 @@ class MonitoringService {
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
-  })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+  });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
         let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {
     const entries = list.getEntries()
@@ -80,19 +79,18 @@ class MonitoringService {
               this.metrics.cls = clsValue,
               this.reportMetric('cls', clsValue)
   }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
     const entries = list.getEntries()
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime
             this.reportMetric('fcp', entry.startTime)
-  })
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
+  });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
     // console.error('Error setting up performance observers:', error)
   }
@@ -107,10 +105,10 @@ class MonitoringService {
             // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
-            // })
+            // });
           }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+        });
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
       } catch (error) {
         // Long task API might not be available
       }
@@ -129,11 +127,11 @@ class MonitoringService {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
-              // })
+              // });
             }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
+          });
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
     // console.error('Error monitoring resources:', _error)
   }
@@ -148,9 +146,8 @@ class MonitoringService {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
-    })
-
+      });
+    });
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -158,8 +155,8 @@ class MonitoringService {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
-    })
+      });
+    });
   }
 
   private reportMetric(name: string, value: number): void {
@@ -175,7 +172,7 @@ class MonitoringService {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-      })
+      });
     }
   }
 
@@ -206,7 +203,7 @@ class MonitoringService {
         //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        // })
+        // });
       }
     }
   }
@@ -223,7 +220,7 @@ class MonitoringService {
         //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
         //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        // })
+        // });
       }
     }
   }

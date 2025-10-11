@@ -36,10 +36,10 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
           }
         }
       }
-      
+
       newLines.push(line)
     }
-    
+
     if (modified) {/* TODO: Fix JSX expression */}
   errors: ${path.relative(__dirname, filePath)}`)
     }
@@ -51,7 +51,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 // Process all blog files
 blogFiles.forEach(file => {)
   fixParsingErrors(file)
-blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
-})
+blogFiles.forEach(file => {/* TODO: Fix JSX expression */});
+});
 `
 console.log(`Processed ${blogFiles.length} blog files`);`

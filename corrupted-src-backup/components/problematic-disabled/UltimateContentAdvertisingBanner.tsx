@@ -94,7 +94,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" /></Clock>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content
         </div>)
-        {/* Features, G, r, i, d */})
+        {/* Features, G, r, i, d */});
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">)
           { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
         {/* Features, G, r, i, d */}

@@ -24,7 +24,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) 
           onClick={onClose}
         />
       )}
-      
+
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
@@ -40,7 +40,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) 
             <X className="w-6 h-6" />
           </button>
         </div>
-        
+
         <nav className="p-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => {

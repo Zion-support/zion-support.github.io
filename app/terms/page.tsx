@@ -5,15 +5,15 @@ import Footer from '../components/Footer'
 const PagePage: React.FC = () => {return (
               </p>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -27,7 +27,7 @@ const PagePage: React.FC = () => {return (
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -58,7 +58,7 @@ const PagePage: React.FC = () => {return (
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -88,7 +88,7 @@ const PagePage: React.FC = () => {return (
     r: bg-blue-600 hove, r:text-white transition-colors"
                 Schedule Demo
               </button>
-      
+
       <Footer />
     </>
   );}

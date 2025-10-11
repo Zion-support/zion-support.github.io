@@ -8,7 +8,7 @@ exports.handler = async () => {const logs = []}
       logs.push(`$ ${cmd}`)
       execSync(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true })
+  l: true });
       logs.push('ok=true')
     } catch (e) {/* TODO: Fix JSX expression */}`
       logs.push(`error=${String(e)}`)

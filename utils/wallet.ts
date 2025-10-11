@@ -15,7 +15,7 @@ if ( {) {
   try {
     const accounts = await window.ethereum.request ({
       method: 'eth_requestAccounts',
-    })
+    });
     return accounts
   } catch (error) {
     throw new Error ('Failed to connect to MetaMask')
@@ -38,7 +38,7 @@ if ( {) {
   try {
     const accounts = await window.ethereum.request ({
       method: 'eth_accounts',
-    })
+    });
     return accounts
   } catch (error) {
     return []
@@ -62,7 +62,7 @@ if ( {) {
     const balance = await window.ethereum.request ({
       method: 'eth_getBalance',
       params: [address, 'latest'],
-    })
+    });
     return balance
   } catch (error) {
     throw new Error ('Failed to get balance')
@@ -86,7 +86,7 @@ if ( {) {
     const signature = await window.ethereum.request ({
       method: 'personal_sign',
       params: [message, address],
-    })
+    });
     return signature
   } catch (error) {
     throw new Error ('Failed to sign message')
@@ -111,7 +111,7 @@ export async function connectMetaMask(): Promise<string[] | null> {
   const provider = getEthereumProvider()
   if (!provider) return null
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' })
+    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
     return accounts
   } catch (e) {
     return null
@@ -121,7 +121,7 @@ export async function getAccounts(): Promise<string[] | null> {
   const provider = getEthereumProvider()
   if (!provider) return null
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_accounts' })
+    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
     return accounts
   } catch (e) {
     return null

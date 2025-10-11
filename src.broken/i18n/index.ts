@@ -33,13 +33,13 @@ i18n
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']
-    }})
+    }});
     },
-  })
+  });
   .catch(error => {
-    logErrorToProduction('Error initializing i18next or its detector:', { data: error })
+    logErrorToProduction('Error initializing i18next or its detector:', { data: error });
     // This helps prevent an unhandled promise rejection if init fails.
-  })
+  });
   // Add this check at the beginning of the relevant section
   if (typeof window !== 'undefined') {
     // For RTL language support
@@ -48,9 +48,9 @@ i18n
     i18n.on('languageChanged', (lng) => {
       document.documentElement.dir = i18n.dir()
   // Save language preference to cookie and localStorage
-  Cookies.set('zion_language', lng, { expires: 365 })
+  Cookies.set('zion_language', lng, { expires: 365 });
   safeStorage.setItem('zion_language', lng)
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
-})
+});
 export default i18n

@@ -50,8 +50,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
               'Content-Type': 'application/json'}}
               'Content-Type': 'application/json',
             },
-          }
-        )
+          });
         if (functionError) {
           console.error('Edge Function error:', functionError)
           setError('Failed to load tenant configuration. Please try again later.')

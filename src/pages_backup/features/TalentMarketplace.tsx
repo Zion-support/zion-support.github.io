@@ -3,20 +3,20 @@ class ErrorBoundary extends React.Component {
     super(props)
     this.state = { hasError: false }
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
@@ -68,14 +68,10 @@ export default function TalentMarketplace() {
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
 
-
-
-
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -202,6 +198,5 @@ export default function TalentMarketplace() {
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
-
 
               <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>

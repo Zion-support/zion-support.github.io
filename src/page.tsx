@@ -129,7 +129,7 @@ useEffect(() => {;
 setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true);, 100);
     preloadComponents();
-    
+
     // Initialize performance optimizations;
 initializePerformanceOptimizations();
 ;
@@ -200,10 +200,10 @@ return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
-      
+
       {/* SEO Optimizer */}
       <SEOOptimizer />
-      
+
       {/* Accessibility Enhancer */}
       <AccessibilityEnhancer />
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
@@ -225,17 +225,17 @@ AI-Powered Enterprise Solutions & Digital Transformation
                     </div>
                   </p>
                 </div>
-                
+
                     </span>
                   </div>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
           </div>
         </div>
       </section>
@@ -246,17 +246,17 @@ AI-Powered Enterprise Solutions & Digital Transformation
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                   </p>
                 </div>
-                
+
                     </span>
                   </div>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
           </div>
         </div>
       </section>
@@ -267,17 +267,17 @@ AI-Powered Enterprise Solutions & Digital Transformation
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                   </p>
                 </div>
-                
+
                     </span>
                   </div>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
           </div>
         </div>
       </section>
@@ -290,20 +290,20 @@ Advanced specialized solutions for complex business challenges.;
 Cutting-edge technology meets practical business needs.
             </p>
           </div>
-          
+
                   </p>
                 </div>
-                
+
                     </span>
                   </div>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
                   </ul>
                 </div>
-                
+
           </div>
         </div>
       </section>
@@ -317,12 +317,12 @@ Cutting-edge technology meets practical business needs.
                 +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               </a>
             </div>
-            
+
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
   </div>
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />

@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +115,7 @@ const HomePage: React.FC = () => {
                 Experience the benefits of working with industry leaders.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
@@ -148,7 +148,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
     </>

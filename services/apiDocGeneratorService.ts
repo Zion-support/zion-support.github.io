@@ -328,8 +328,7 @@ export class APIDocGeneratorService {
           ],
           tags: ['Users'],
           deprecated: false
-        }
-      )
+        });
     }
     return endpoints
   }
@@ -371,7 +370,7 @@ export class APIDocGeneratorService {
         ],
         tags: ['Products'],
         deprecated: false
-      })
+      });
     }
     return endpoints
   }
@@ -413,7 +412,7 @@ export class APIDocGeneratorService {
         ],
         tags: ['Orders'],
         deprecated: false
-      })
+      });
     }
     return endpoints
   }
@@ -511,7 +510,7 @@ export class APIDocGeneratorService {
           body: this.generateExampleResponse(endpoint.responses[0])
         },
         tags: endpoint.tags
-      })
+      });
     }
     return examples
   }

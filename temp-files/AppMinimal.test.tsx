@@ -10,5 +10,5 @@ describe('App Minimal', () => {
     render(<App />)
     // Just check that the component renders without throwing an error
     expect(true).toBe(true)
-  })
-})
+  });
+});

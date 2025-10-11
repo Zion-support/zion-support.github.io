@@ -206,7 +206,7 @@ function u() {/* TODO: Fix JSX expression */}
                 expirationTime: (f = a + f),
                 sortIndex: -1}
             return ((r = {/* TODO: Fix JSX expression */}
-  x: -1})
+  x: -1});
               }),
               a > i
                 ? ((r.sortIndex = a),

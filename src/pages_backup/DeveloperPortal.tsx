@@ -1,5 +1,5 @@
 const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
+
   // Define the tabs;
 const tabs: TabDefinition[] = [
 
@@ -8,8 +8,6 @@ const tabs: TabDefinition[] = [
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ]
-
-
 
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
@@ -45,7 +43,7 @@ export function DeveloperPortal() {;
 }
 const { user } = useAuth(),;
 const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
+
   // Define the tabs;
 const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
@@ -107,7 +105,7 @@ onClick={() => setActiveTab(tab.id)}
       </div>
       {/* Tab content */}
       <div>
-      
+
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
@@ -243,9 +241,6 @@ activeTab === tab && tab.id
         </div></$1>
       {/* Tab content */}
 
-
-
-
         </div></$1>
       {/* Tab content */}
       <div>
@@ -276,14 +271,7 @@ onClick={() => setActiveTab(tab && tab.id)}
       <div>
       <div>
 
-
-
-
-
-
       <div>
-
-
 
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
@@ -301,18 +289,10 @@ return (;
       <DeveloperPortal />
     </ProtectedRoute>
 
-
-
-
-
       </div></$1>
   )
 }
+});
 }
-
-  )
-
-}
-}
-  )
+});
 }</$1>

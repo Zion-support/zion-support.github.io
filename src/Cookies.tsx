@@ -9,7 +9,7 @@ title="Cookie Policy - Zion Tech Group";
 description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience.";
 keywords="cookie policy, cookies, privacy, Zion Tech Group, data collection"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
 }
         {/* Hero Section */}
@@ -18,7 +18,7 @@ keywords="cookie policy, cookies, privacy, Zion Tech Group, data collection"
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
           </div>
-          
+
           <motion.div;
 className="max-w-7xl mx-auto text-center relative z-10";
 initial={{ opacity: 0}}, y: 30 }}
@@ -36,7 +36,7 @@ Cookie
                 {" "}Policy
               </span>
             </motion.h1>
-            
+
             <motion.p;
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
 initial={{ opacity: 0}}, y: 30 }}
@@ -46,7 +46,7 @@ initial={{ opacity: 0}}, y: 30 }}
 Learn about how we use cookies and similar technologies to enhance your browsing experience;
 and provide personalized services on our website.
             </motion.p>
-            
+
             <motion.div;
 className="text-sm text-gray-400";
 initial={{ opacity: 0}}, y: 30 }}
@@ -75,7 +75,7 @@ What Are Cookies?
 Cookies are small text files that are stored on your device when you visit our website
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center";
 initial={{ opacity: 0}}, y: 30 }}
@@ -101,7 +101,7 @@ Cookies can be either "session cookies" (which are deleted when you close your b
                   </p>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <div className="text-8xl mb-4">🍪</div>
                 <p className="text-gray-400 text-sm">Cookies help us provide a better experience</p>
@@ -127,7 +127,7 @@ Types of Cookies We Use
 We use different types of cookies for various purposes to enhance your experience
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 gap-8";
 variants={staggerContainer}
@@ -144,7 +144,7 @@ variants={fadeInUp}
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">{type.name}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{type.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Examples:</h4>
                     <ul className="space-y-1">
@@ -156,7 +156,7 @@ variants={fadeInUp}
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="text-sm text-gray-400">
                     <span className="font-medium">Duration:</span> {type.duration}
                   </div>
@@ -241,7 +241,7 @@ We use cookies for several purposes, including:
                 <h2 className="text-2xl font-bold text-white mb-4 mt-8">;
 Types of Cookies We Use
                 </h2>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3 mt-6">Essential Cookies</h3>
                 <p className="text-zion-slate-light mb-4">;
 These cookies are essential for the website to function and cannot be switched off in our systems.;
@@ -296,7 +296,7 @@ Specific Cookie Information
                 <p className="text-zion-slate-light mb-4">;
 Below is a list of the main cookies we use and their purposes:
                 </p>
-                
+
                 <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Essential Cookies</h4>
                   <ul className="space-y-2 text-zion-slate-light">
@@ -563,7 +563,7 @@ Managing Your Cookie Preferences
 You have control over how cookies are used on our website
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-3 gap-8";
 variants={staggerContainer}

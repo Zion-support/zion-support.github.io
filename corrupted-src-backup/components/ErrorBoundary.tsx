@@ -51,11 +51,11 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
-      })
+      });
     }
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  d: undefined })
+  d: undefined });
   }
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   }

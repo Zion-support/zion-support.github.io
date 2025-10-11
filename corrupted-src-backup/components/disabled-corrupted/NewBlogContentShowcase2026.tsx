@@ -80,7 +80,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
             Stay, ahead, of the, curve, with content, from industry-leading, expert, s.
           </p>)
-          {/* Blog, Stat, s */})
+          {/* Blog, Stat, s */});
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">

@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
     const { item, translated } = applyTranslations(base, lang)
-    return res && res.status(200).json({ item, translated })
+    return res && res.status(200).json({ item, translated });
   } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message })
+    return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'GET') {
@@ -14,14 +14,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()
       if (error) throw error
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)
-      return res && res.status(200).json({ item, translated })
+      return res && res.status(200).json({ item, translated });
     }
     const base = LOCAL.find((t) => t.slug === slug) |null
-    if (!base) return res.status(404).json({ error: 'Not found' })
+    if (!base) return res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang)
-    return res.status(200).json({ item, translated })
+    return res.status(200).json({ item, translated });
   } catch (e: any) {
-    return res.status(500).json({ error: e.message })
+    return res.status(500).json({ error: e.message });
 }
 }
 }
@@ -52,13 +52,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { data, error } = await supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()
       if (error) throw error
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)
-      return res.status(200).json({ item, translated })
+      return res.status(200).json({ item, translated });
     }
     const base = LOCAL.find((t) => t.slug === slug) || null
-    if (!base) return res.status(404).json({ error: 'Not found' })
+    if (!base) return res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang)
-    return res.status(200).json({ item, translated })
+    return res.status(200).json({ item, translated });
   } catch (e: any) {
-    return res.status(500).json({ error: e.message })
+    return res.status(500).json({ error: e.message });
   }
 }

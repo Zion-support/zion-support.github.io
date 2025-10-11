@@ -45,7 +45,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.addEventListener('keydown', e => {)
       this.handleKeyboardNavigation(e)
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
-    })
+    });
     // Make all interactive elements focusable
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     )
@@ -55,8 +55,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         element.setAttribute('tabindex', '0')
   }
     interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
   }
 
   /**
@@ -119,7 +119,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Track focus changes
     document.addEventListener('focusin', e => {)
       this.manageFocus(e.target as HTMLElement)
-  })
+  });
     // Trap focus in modals
     document.addEventListener('keydown', e => {
     )
@@ -127,11 +127,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         this.trapFocusInModal(e)
   }
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
-    })
+    });
     // Trap focus in modals
     document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
   }
 
   /**
@@ -144,12 +144,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Remove focus indicator after blur
     element.addEventListener('blur', () => {
       element.classList.remove('focus-visible')
-  })
+  });
     // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {
   private manageFocus(elemen)
   t: HTMLElement): void {/* TODO: Fix JSX expression */}
-    })
+    });
     // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
       this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`)
@@ -193,7 +193,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', label)
   private enhanceARIALabels(): void {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     // Add ARIA labels to form inputs
     const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach(input => {
@@ -205,8 +205,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _inputs = document.querySelectorAll('inpu)
   t: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach(input => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     // Add ARIA descriptions
     this.addARIADescriptions()
   }
@@ -235,10 +235,10 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
             fi,
   x: 'Increase color contrast to at least 4.5:1',
             severit,
-  y: 'high'})
+  y: 'high'});
         }
       }
-    })
+    });
   }
 
   /**
@@ -255,7 +255,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
           element: img,)
           message: 'Image missing alt text'),
           fix: 'Add descriptive alt text'),
-          severity: 'high')})
+          severity: 'high')});
       }
 
       // Add loading="lazy" for non-critical images
@@ -268,7 +268,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         img.width = img.naturalWidth || 800
         img.height = img.naturalHeight || 600
   private optimizeImages(): void {/* TODO: Fix JSX expression */}
-        })
+        });
       }
 "
       // Add loading="lazy" for non-critical images
@@ -278,7 +278,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       // Add width and height attributes
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   /**
@@ -302,13 +302,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private enhanceForms(): void {/* TODO: Fix JSX expression */}
           }
         }
-      })
+      });
       // Add form validation
       form.addEventListener('submit', e => {)
         this.validateForm(form as HTMLFormElement, e)
-      form.addEventListener('submit', e => {/* TODO: Fix JSX expression */})
-      })
-    })
+      form.addEventListener('submit', e => {/* TODO: Fix JSX expression */});
+      });
+    });
   }
 
   /**
@@ -382,7 +382,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
           break
   private calculateScore(): number {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     return Math.max(0, score)
   }
 
@@ -510,7 +510,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         element.setAttribute('aria-describedby', descId)
         element.parentNode?.appendChild(descElement)
       }
-    })
+    });
   }
 
   private announceToScreenReader(message: string): void {

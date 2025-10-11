@@ -15,7 +15,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableNotifications = true
 }) => {
   const [isOnline, setIsOnline] = useState(true)
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
   // Handle online/offline status
   useEffect(() => {
     const handleOffline = () => setIsOnline(false)
@@ -40,9 +40,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
   // Handle online/offline status
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
@@ -80,8 +80,8 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}`
             setLoading(`link-${href}`, true)
           }
-        })
-      })
+        });
+      });
     }
   }, [enableLoadingStates, setLoading])
   // Error boundary enhancement
@@ -96,7 +96,7 @@ const,
             fatal: false
   // Error boundary enhancement,
   useEffect(() => {/* TODO: Fix JSX expression */}
-          })
+          });
         }
       }
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
@@ -107,7 +107,7 @@ const,
             fatal: false
       const handleUnhandledRejection = (even)
   t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
-          })
+          });
         }
       }
       window.addEventListener('error', handleError)
@@ -128,19 +128,19 @@ const,
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_hidden', {
               event_category:             ,
-$4})
+$4});
           }
         } else {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
               event_category:             ,
-$4})
+$4});
   // Analytics enhancement
   useEffect(() => {/* TODO: Fix JSX expression */}
-            })
+            });
           }
         } else {/* TODO: Fix JSX expression */}
-            })
+            });
           }
         }
       }
@@ -157,21 +157,21 @@ $4})
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
                 value: 25
-              })
+              });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
                 value: 50
-              })
+              });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
                 value: 75
-              })
+              });
             }
           } else if (maxScrollDepth >= 90) {
             if ('gtag' in window) {
@@ -181,16 +181,16 @@ $4})
       // Track scroll depth
       let maxScrollDepth = 0,
       const handleScroll = () => {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           } else if (maxScrollDepth >= 90) {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           }
         }
@@ -204,22 +204,22 @@ $4})
             name: 'time_on_page',
             value: timeOnPage,
             event_category:           ,
-$4})
+$4});
       // Track time on page
       const startTime = Date.now()
       const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
-          })
+          });
         }
       }
       document.addEventListener('visibilitychange', handleVisibilityChange)
-      window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload)
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange)
         window.removeEventListener('scroll', handleScroll)
         window.removeEventListener('beforeunload', handleBeforeUnload)
-      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true })
+      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */});
+  e: true });
       window.addEventListener('beforeunload', handleBeforeUnload)
       return () => {/* TODO: Fix JSX expression */}
       }
@@ -258,7 +258,7 @@ $4})
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category:               ,
-$4})
+$4});
             }
           } else if (entry.entryType === 'first-input') {
             if ('gtag' in window) {
@@ -266,7 +266,7 @@ $4})
                 name: 'FID',
                 value: Math.round(entry.processingStart - entry.startTime),
                 event_category:               ,
-$4})
+$4});
             }
           } else if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
@@ -275,26 +275,26 @@ $4})
                   name: 'CLS',
                   value: Math.round((entry as any).value * 1000),
                   event_category:                 ,
-$4})
+$4});
   // Performance monitoring
   useEffect(() => {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-              })
+              });
             }
           } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-                })
+                });
               }
             }
           }
         }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       return () => {
         observer.disconnect()
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       return () => {/* TODO: Fix JSX expression */}
       }
     }

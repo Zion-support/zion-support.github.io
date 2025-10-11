@@ -53,7 +53,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
           Explore, the, latest breakthrough, technologies, transforming industries, worldwid, e. 
           Our, expert, team shares, cuttin, g-edge, insights, you can, implement, today.
         </p>)
-        {/* Articles, G, r, i, d */})
+        {/* Articles, G, r, i, d */});
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
         {/* Articles, G, r, i, d */}

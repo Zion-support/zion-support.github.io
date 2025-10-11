@@ -183,7 +183,7 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string; valu
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
     const drift = (seed() - 0.5) * 0.03; // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift))
-    series.push({ label: months[date.getMonth()], value: Math.round(current) })
+    series.push({ label: months[date.getMonth()], value: Math.round(current) });
   }
   return series
 async function maybeGetGptRecommendation(
@@ -192,7 +192,7 @@ async function maybeGetGptRecommendation(
 ) {  const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined
   try {
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const skillsStr = input.skills.join(', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
@@ -228,7 +228,7 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
     const drift = (seed() - 0.5) * 0.03, // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift))
-    series.push({ label: months[date.getMonth()], value: Math.round(current) })
+    series.push({ label: months[date.getMonth()], value: Math.round(current) });
   }
   return series
 }
@@ -238,7 +238,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined
   try {
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join()
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
     const completion = await client.chat.completions.create({
@@ -253,7 +253,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
       ]
       temperature: 0.2
       max_tokens: 300
-    })
+    });
     return completion.choices?.[0]?.message?.content |undefined
   } catch {
     return undefined
@@ -261,7 +261,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' }
         { role: 'user', content: prompt }]
       temperature: 0.2,
-      max_tokens: 300})
+      max_tokens: 300});
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
   const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'],
   const now = new Date()
@@ -272,7 +272,7 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1),
     const drift = (seed() - 0.5) * 0.03, // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift)),
-    series.push({ label: months[date.getMonth()], value: Math.round(current) })
+    series.push({ label: months[date.getMonth()], value: Math.round(current) });
   }
   return series
 }
@@ -291,7 +291,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   const body: RequestBody = req.body;
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
@@ -328,7 +328,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       ],
       temperature: 0.2,
       max_tokens: 300,
-    })
+    });
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
     return undefined
@@ -336,7 +336,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   const body: RequestBody = req.body;
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
@@ -421,7 +421,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     min
     max
     country
-  })
+  });
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly,
     recommendedMonthlyUsd: recommendedMonthly,
@@ -435,7 +435,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const tags: string[] = []
   if (remote) tags.push('Remote Premium')
   if (undersupplied) tags.push('Undersupplied Skill')
-  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country })
+  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly,
     recommendedMonthlyUsd: recommendedMonthly,
@@ -453,7 +453,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())))
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill')
-  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country })
+  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),

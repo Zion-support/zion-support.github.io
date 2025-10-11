@@ -15,20 +15,20 @@ export default async function handler(
         const { data, error } = await supabaseClient
           .from('talent_profiles')
           .select('*')
-          .order('created_at', { ascending: false })
+          .order('created_at', { ascending: false });
         if (error) throw error
-        return res && res.status(200).json({ items: data as TalentProfile[] })
+        return res && res.status(200).json({ items: data as TalentProfile[] });
       }
-      return res && res.status(200).json({ items: LOCAL })
+      return res && res.status(200).json({ items: LOCAL });
     } catch (e: any) {
-      return res && res.status(500).json({ error: e && e.message })
+      return res && res.status(500).json({ error: e && e.message });
     }  }
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim())
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {
-      return res && res.status(500).json({ error: e && e.message })
+      return res && res.status(500).json({ error: e && e.message });
     }
   }
   if (req && req.method === 'POST') {
@@ -64,13 +64,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           translations: item.translations as any
         } as any)
         if (error) throw error
-        return res && res.status(201).json({ slug: item && item.slug })
+        return res && res.status(201).json({ slug: item && item.slug });
       }
       }
       // Fallback: return the slug as if saved
-      return res && res.status(201).json({ slug: item && item.slug })
+      return res && res.status(201).json({ slug: item && item.slug });
     } catch (e: any) {
-      return res && res.status(500).json({ error: e && e.message })
+      return res && res.status(500).json({ error: e && e.message });
     }
   }
 return res
@@ -91,13 +91,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     try {
       if (hasSupabase) {
-        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false })
+        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
         if (error) throw error
-        return res.status(200).json({ items: data as TalentProfile[] })
+        return res.status(200).json({ items: data as TalentProfile[] });
       }
-      return res.status(200).json({ items: LOCAL })
+      return res.status(200).json({ items: LOCAL });
     } catch (e: any) {
-      return res.status(500).json({ error: e.message })
+      return res.status(500).json({ error: e.message });
     }
   }
   if (req.method === 'POST') {
@@ -305,12 +305,12 @@ if ( {) {
 if (throw error) {
   $2
 }
-        return res.status (201).json ({ slug: item.slug })
+        return res.status (201).json ({ slug: item.slug });
       }
       // Fallback: return the slug as if saved
-      return res.status (201).json ({ slug: item.slug })
+      return res.status (201).json ({ slug: item.slug });
     } catch (e: any) {
-      return res.status (500).json ({ error: e.message })
+      return res.status (500).json ({ error: e.message });
     }
   }
 return res
@@ -335,12 +335,12 @@ return res
           translations: item.translations as any,
         } as any)
         if (error) throw error
-        return res.status(201).json({ slug: item.slug })
+        return res.status(201).json({ slug: item.slug });
       }
       // Fallback: return the slug as if saved
-      return res.status(201).json({ slug: item.slug })
+      return res.status(201).json({ slug: item.slug });
     } catch (e: any) {
-      return res.status(500).json({ error: e.message })
+      return res.status(500).json({ error: e.message });
     }
   }
   return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')

@@ -10,7 +10,7 @@ export const errorHandler = ()
   const appError = error instanceof AppError ? error : new AppError(error.message)
 message: appError.message,
     stack: appError.stack,
-  })
+  });
   return {/* TODO: Fix JSX expression */,}}}
 }
 }

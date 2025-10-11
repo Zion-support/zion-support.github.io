@@ -20,7 +20,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       mediaQuery.addEventListener('change', handleChange)
       return () => mediaQuery.removeEventListener('change', handleChange)
 const,
-  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     }
     return undefined
@@ -122,7 +122,7 @@ const,
       role="main""
       aria-label="Main content"
     >
-      {/* Skip to main content link */})
+      {/* Skip to main content link */});
       <;)$2 />
         href="#main-content")
         className="skip-link")
@@ -136,13 +136,13 @@ const,
           const _main = document.querySelector('main') || document.querySelector('#main-content')
           if (main) {}
             (main as HTMLElement).focus();}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' })
+            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
-        onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' })
+        onClick={/* TODO: Fix JSX expression */});
+  r: 'smooth' });
           }
         }}
       >

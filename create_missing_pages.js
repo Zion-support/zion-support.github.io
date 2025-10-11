@@ -561,7 +561,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               Powerful capabilities designed to transform your business,
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             ${config.features.map(feature => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
@@ -625,7 +625,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
                 +1 302 464 0950
               </a>
             </div>
-            
+
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" /></Mail>
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
@@ -634,7 +634,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" /></MapPin>
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
@@ -656,11 +656,11 @@ export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + 
   // Create directory if it doesn't exist
   const dirPath = `app/${pageName}`
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true })
+    fs.mkdirSync(dirPath, { recursive: true });
   }
 
   // Write the page file
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent)
   console.log(`Created page: ${pageName}`)
-})
+});
 console.log(`Created ${missingPages.length} missing pages`)</div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></p></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></main></section></section></section>

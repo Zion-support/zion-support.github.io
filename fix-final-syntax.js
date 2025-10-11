@@ -77,6 +77,6 @@ filesToFix.forEach(file => {)
     fixedCount++
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
+  });
+});
 // `

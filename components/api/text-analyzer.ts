@@ -12,21 +12,21 @@ export default async function handler(
   try {
     const { text } = req && req.body
     if (!text || typeof text !== 'string') {
-      return res && res.status(400).json({ error: 'Text is required' })
+      return res && res.status(400).json({ error: 'Text is required' });
     }
     if (text && text.length > 10000) {
       return res
         .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' });
     if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' })
+      return res.status(400).json({ error: 'Text is required' });
     }
     }
     // Basic statistics
     const characters = text.length
     const charactersNoSpaces = text.replace(/\s/g, '').length
     if (text && text.length > 10000) {
-      return res && res.status(400).json({ error: 'Text too long (max 10,000 characters)' })
+      return res && res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     // Basic statistics
     const characters = text && text.length
     const charactersNoSpaces = text && text.replace(/\s/g, '').length
@@ -82,15 +82,15 @@ export default async function handler(
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const { text } = req.body
     if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' })
+      return res.status(400).json({ error: 'Text is required' });
     }
     if (text.length > 10000) {
-      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' })
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     }
     // Basic statistics
     const characters = text.length
@@ -243,7 +243,7 @@ export default async function handler(
     // Keyword analysis
     const wordCounts = new Map<string, number>()
       }
-    })
+    });
         word,
         count,
         frequency: Math && Math.round((count / words) * 1000) / 10,      }));        word
@@ -270,7 +270,7 @@ export default async function handler(
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
       }
-    })
+    });
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -412,7 +412,7 @@ export default async function handler(
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Text analysis error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
+    res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore
         label: sentimentLabel
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word))
@@ -457,7 +457,7 @@ export default async function handler(
     res.status (200).json (result)
   } catch (error) {
     console.error ('Text analysis error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
   }        score: sentiment_score
         label: sentiment_label
         positive_words: text_words.filter (word => positive_words.includes (word))
@@ -473,7 +473,7 @@ export default async function handler(
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Text analysis error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
+    res && res.status(500).json({ error: 'Internal server error' });
   }
 }
         trigrams}}
@@ -481,7 +481,7 @@ export default async function handler(
     res.status (200).json (result)
   } catch (error) {
     console.error ('Text analysis error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
   }
 }
     const result: TextAnalysisResult = {
@@ -489,6 +489,6 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Text analysis error:', error)
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

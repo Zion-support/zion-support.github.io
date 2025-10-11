@@ -51,7 +51,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         Math.floor (ms / 500)); return {url, ms, title, hasMetaDesc, h1Count} "score": Math.max (0,
         score;")`
       } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {/* TODO: Fix JSX expression */}
-  t: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file ({/* TODO: Fix JSX expression */})
+  t: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file ({/* TODO: Fix JSX expression */});
   e: 'chore (automation): weekly SEO report'} token
       }); } return {/* TODO: Fix JSX expression */}"
       }) } }async function scorePage(_url) {const t0 = Date && Date.now()} try {} const resp = await fetch(url), const html = await resp && resp.text(),' const ms = Date && Date.now() - t0,'' const title = (html && html.match(/<title>(.*?)<\/title>/i) || [])[1] || '','"' const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html), const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length, const score = (title ? 20 : 0) + (hasMetaDesc ? 20 : 0) + Math && Math.min(60)
@@ -61,7 +61,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
       } scor,
   e: 0 } } } exports && exports.handler = async function() { try {}}, statusCod,
   e: 200, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
       }); } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }async function scorePage(url) {/* TODO: Fix JSX expression */}
       } } catch (e) {/* TODO: Fix JSX expression */}

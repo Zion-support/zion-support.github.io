@@ -523,7 +523,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number
 ) =>
   website: "https://ziontechgroup.com"
     return price >= minPrice && price <= maxPrice
-  })
+  });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services"
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
@@ -553,7 +553,7 @@ const contact = {mobile: "+1 302 464 0950"
   return emergingTechServices2025.filter(service => {)
     const _price = parseInt(service.price.monthly.toString()) || 0
     return price >= minPrice && price <= maxPrice}
-  })
+  });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services"
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
@@ -1014,7 +1014,7 @@ export const getEmergingTechServicesByPriceRange = (min_price: number)
   return emergingTechServices2025.filter (service =>
     const _price = parse_int (service.price.monthly.to_string ()) || 0
     return price >= min_price && price <= max_price
-  })
+  });
 }import { MicroSaasService   } from './enhanced - real - micro - saas - services'
 const contact =
   mobile: "+1 302 464 0950",
@@ -1956,10 +1956,10 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) || 0
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
     return price >= min_price && price <= max_price
-  })
+  });
 }
 export interface EmergingTechService
 }

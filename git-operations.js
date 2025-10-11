@@ -11,7 +11,7 @@ const { execSync } = require('child_process')
 // try {/* TODO: Fix JSX expression */}
   function execGit(command} description) {/* TODO: Fix JSX expression */}
   t: 30000}
-      })
+      });
 //       return result
     } catch (error) {/* TODO: Fix JSX expression */}
 //       // console.log(`⚠️ ${description} faile)`

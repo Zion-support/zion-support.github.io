@@ -4,7 +4,7 @@ import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react'
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
-  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
+  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     },
     cya,
@@ -26,7 +26,7 @@ const,
   const currentColor = colorClasses[color]
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
-      }`})
+      }`});
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

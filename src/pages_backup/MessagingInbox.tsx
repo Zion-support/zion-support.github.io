@@ -108,7 +108,7 @@ setActiveCall(roomId)
     // Show toast notification;
 toast.success("Starting video call", {;,
 description: "Initializing video call connection..."
-    })
+    });
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   }
@@ -118,12 +118,12 @@ setActiveCall(roomId),;
 const roomId = `msg-${activeConversation.id;}`,;
 setActiveCall(roomId),
 
-    })
+    });
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   }
     }),
-    
+
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   },;
@@ -197,7 +197,7 @@ setActiveCall(roomId),
     // Show toast notification;
 toast.success("Starting video call", {;,
 description: "Initializing video call connection..."
-    })
+    });
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   }
@@ -288,7 +288,7 @@ setActiveCall (room_id)
     // Show toast notification;
 toast.success ("Starting video call", {;,
 description: "Initializing video call connection..."
-    })
+    });
     // Navigate to video call page;
 router.push (`/call/${room_id}`), // Changed from navigate
   }
@@ -351,9 +351,5 @@ markAsRead}/>)
 }{
   /* Conversation Detail */ 
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
-}'"}
-
-
-
-  )
+}'"});
 }

@@ -25,18 +25,18 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") {
-    res && res.status(405).json({ error: "Method not allowed" })
+    res && res.status(405).json({ error: "Method not allowed" });
     return
   }
   const { project } = req && req.body as { project: any }
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
-    res && res.status(400).json({ error: "Invalid payload" })
+    res && res.status(400).json({ error: "Invalid payload" });
     return
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`
   const options = {
     )
-    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" })
+    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
   } finally {
     try {
       await fs && fs.unlink(tmpPath)
@@ -58,21 +58,21 @@ export const config = {
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' })
+    res.status(405).json({ error: 'Method not allowed' });
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
   const { project } = req.body as { project: any }
   if (!project?.meta || !Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: 'Invalid payload' })
+    res.status(400).json({ error: 'Invalid payload' });
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   const tmpPath = `/tmp/${randomUUID()}.epub`,
@@ -88,7 +88,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message |"Failed to build EPUB" })
+    res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
     try {
       await fs.unlink(tmpPath)
@@ -109,7 +109,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"')
     res.status(200).send(buf)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build EPUB' })
+    res.status(500).json({ error: e?.message || 'Failed to build EPUB' });
   } finally {
     try { await fs.unlink(tmpPath) } catch {}
   }
@@ -164,14 +164,14 @@ function handler() {
 if ( {) {
   $2
 }
-    res.status (405).json ({ error: "Method not allowed" })
+    res.status (405).json ({ error: "Method not allowed" });
     return
   }
   const { project } = req.body as { project: any }
   if () {) {
   $2
 }
-    res.status (400).json ({ error: "Invalid payload" })
+    res.status (400).json ({ error: "Invalid payload" });
     return
   }
   const tmp_path = `/tmp/${randomUUID ()}.epub`
@@ -195,7 +195,7 @@ if ( {) {
     )
     res.status(200).send(buf)
   } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Failed to build EPUB" })
+    res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
     try {
       await fs.unlink (tmp_path)

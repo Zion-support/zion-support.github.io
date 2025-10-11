@@ -12,7 +12,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Use service role key for admin privileges
@@ -53,9 +53,9 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
                 ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-              `})
+              `});
               `,
-            })
+            });
             results.push(`Reminder sent to client: ${clientEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
@@ -77,9 +77,9 @@ serve(async (req) => {
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
                 ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
-              `})
+              `});
               `,
-            })
+            });
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
@@ -88,21 +88,21 @@ serve(async (req) => {
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
-          .update({ reminder_sent: new Date().toISOString() })
+          .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id)
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
       status: 200,
-    })
+    });
   } catch (error) {
     console.error("Error in send-interview-reminder function:", error)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       status: 500,
-    })
+    });
   }
-})
+});

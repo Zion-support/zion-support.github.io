@@ -22,11 +22,11 @@ export const lazyLoadBanner = (
 export const lazyLoadBanner = (importF)
   n: () => Promise<BannerModule>,
       // Retry once after a delay
-      return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */})
-            })
+      return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */});
+            });
         }, 1000)
-      })
-    })
+      });
+    });
   )
 }
 
@@ -42,8 +42,8 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload
 export const preloadBanner = (importF)
   n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
-        })
-      })
+        });
+      });
   }
 }
 
@@ -61,11 +61,10 @@ export const createBannerLoader = () => {
 export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
           }
         }
-      })
+      });
     },
     {/* TODO: Fix JSX expression */}
-  n: '50px' }
-  )
+  n: '50px' });
   return {/* TODO: Fix JSX expression */}
   }
 }

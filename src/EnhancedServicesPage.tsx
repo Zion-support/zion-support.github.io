@@ -77,7 +77,7 @@ description="Explore our complete range of AI, IT infrastructure, and micro SAAS
 keywords="AI services, IT services, micro SAAS, cybersecurity, cloud migration, digital transformation, Zion Tech Group"
       />
       <Header />
-      
+
       <main className="flex-1 relative">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 relative overflow-hidden">
@@ -91,7 +91,7 @@ Comprehensive Tech Services
 Transform your business with our complete ecosystem of AI, IT infrastructure, and micro SAAS solutions.;
 Expert-led services designed for the modern enterprise.
               </p>
-              
+
               {/* Contact CTA */}
               <div className="bg-zion-blue-dark/50 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/30 max-w-2xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
@@ -766,7 +766,7 @@ value={searchQuery}
                       className="bg-zion-blue-dark/50 border-zion-purple/30 text-white placeholder:text-zion-slate-light"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Category</label>
                     <Select value={selectedCategory} onValueChange={setSelectedCategory}>
@@ -782,7 +782,7 @@ value={searchQuery}
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Pricing Model</label>
                     <Select value={selectedPricing} onValueChange={setSelectedPricing}>
@@ -798,7 +798,7 @@ value={searchQuery}
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div>
                     <label className="text-sm font-medium text-white mb-2 block">Sort By</label>
                     <Select value={sortBy} onValueChange={setSortBy}>
@@ -959,7 +959,7 @@ value={searchTerm}
 We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -968,7 +968,7 @@ We combine cutting-edge technology with proven business expertise to deliver sol
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Global Reach</h3>
               <p className="text-zion-slate">Serving clients worldwide with 24/7 support and local expertise</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-zion-purple" />
@@ -976,7 +976,7 @@ We combine cutting-edge technology with proven business expertise to deliver sol
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-grade security and compliance with industry standards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-zion-cyan" />
@@ -984,7 +984,7 @@ We combine cutting-edge technology with proven business expertise to deliver sol
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Innovation First</h3>
               <p className="text-zion-slate">Cutting-edge AI and emerging technology solutions</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-green-600" />
@@ -1119,7 +1119,7 @@ ${service.price.toLocaleString()}
                       <span className="text-sm text-gray-500">per {service.pricingModel}</span>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {service.description}
                   </p>
@@ -1207,7 +1207,7 @@ Key Benefits
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="flex gap-3">
                       <$2 />;
 href={`mailto:${service.contactInfo.email}}?subject=Inquiry about ${service.title}`}
@@ -1271,7 +1271,7 @@ Ready to Transform Your Business?
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
 Connect with Zion Tech Group today and discover how our innovative micro SAAS services can revolutionize your operations, enhance security, and drive growth.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -1279,14 +1279,14 @@ Connect with Zion Tech Group today and discover how our innovative micro SAAS se
                 <p className="text-gray-300">+1 302 464 0950</p>
                 <p className="text-sm text-gray-400">Available Mon-Fri, 9AM-6PM EST</p>
               </div>
-              
+
               <div className="text-center">
                 <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 <p className="text-sm text-gray-400">24/7 support available</p>
               </div>
-              
+
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>

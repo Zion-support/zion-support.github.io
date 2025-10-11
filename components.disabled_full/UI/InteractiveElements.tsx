@@ -184,9 +184,9 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   n: "}; "-100px" });} const controls = useAnimation();} direction?: "up" | "down" | "left" | "right"} ; " direction = "up" const ref = useRef<HTMLDivElement>(null);} const isInView = useInView(ref {/* TODO: Fix JSX expression */}
   e: 'true'}margi,")
   n: "-100px" })} ; " children,className = "; delay = 0; interface InteractiveCardProps {} onClick?: () => void} ; const,"
-  InteractiveCard: React.FC<InteractiveCardProps> = ({) onClick)} const ref = useRef(null)," const isInView = useInView(ref {/* TODO: Fix JSX expression */})
+  InteractiveCard: React.FC<InteractiveCardProps> = ({) onClick)} const ref = useRef(null)," const isInView = useInView(ref {/* TODO: Fix JSX expression */});
   e: 'tru')e}margi,"
-  n: "-100px"})" const isInView = useInView();} const controls = useAnimation();} const isInView = useInView(ref {/* TODO: Fix JSX expression */})
+  n: "-100px"})" const isInView = useInView();} const controls = useAnimation();} const isInView = useInView(ref {/* TODO: Fix JSX expression */});
   e: 'true' });} useEffect(() => {/* TODO: Fix JSX expression */}"
   f: (isInView) {"}; controls.start("visible")}" if (isInView) {"} controls.start("visible")} ;},[isInView,controls]);} const directionVariants = {},visibl,
   e: {y: 0}opacit,
@@ -277,7 +277,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   r: 'className?: strin',g} ; expor,
   t: const,
   FadeIn: React.FC<FadeInProps> = ({/* TODO: Fix JSX expression */}"
-  FadeIn: React.FC<FadeInProps> = ({} duration = 0.6}"} const isInView = useInView(ref {/* TODO: Fix JSX expression */})
+  FadeIn: React.FC<FadeInProps> = ({} duration = 0.6}"} const isInView = useInView(ref {/* TODO: Fix JSX expression */});
   e: 'tru')e}margi,"
   n: "-50px"})" const isInView = useInView(ref {/* TODO: Fix JSX expression */}
   e: 'true'}margi,")

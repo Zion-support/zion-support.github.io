@@ -7,7 +7,7 @@ const corsHeaders = {
 }
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
@@ -35,17 +35,16 @@ serve(async (req) => {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
-        "Content-Type": "application/json"}})
+        "Content-Type": "application/json"}});
         "Content-Type": "application/json",
       },
-    })
+    });
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
         return new Response(
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
-          { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        )
+          { headers: { ...corsHeaders, "Content-Type": "application/json" } });
       }
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -82,8 +81,7 @@ serve(async (req) => {
           trainingFiles: data.training_file,
         } : null
       }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } });
   } catch (error) {
     console.error("Error in check-training-status function:", error)
     return new Response(
@@ -92,7 +90,6 @@ serve(async (req) => {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
+      });
   }
-})
+});

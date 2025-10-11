@@ -1,5 +1,4 @@
 
-
 'use client'
 // Enhanced Error Handler
 export class AppError extends Error {/* TODO: Fix JSX expression */}
@@ -34,7 +33,7 @@ export const _errorHandler = (error: AppError | Error) => {
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500,
 
-  })
+  });
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -63,7 +62,6 @@ export const asyncHandler = (f,
 }
       next(error)
     }
-  }
-  )
+  });
 }
 

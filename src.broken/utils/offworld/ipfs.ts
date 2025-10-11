@@ -44,9 +44,9 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
   // 1) Try Web3.Storage
   const web3Token = env('WEB3_STORAGE_TOKEN')
   if (Web3Storage && web3Token) {
-    const client = new Web3Storage({ token: web3Token })
+    const client = new Web3Storage({ token: web3Token });
     const fileLike = new File([buffer], filename)
-    const cid = await client.put([fileLike], { wrapWithDirectory: false })
+    const cid = await client.put([fileLike], { wrapWithDirectory: false });
     return { cid, provider: 'web3.storage' }
   }
   // 2) Try Pinata
@@ -55,7 +55,7 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
   const pinataSecret = env('PINATA_API_SECRET')
   if (PinataSDK && (pinataJwt || (pinataApiKey && pinataSecret))) {
     const pinata = pinataJwt
-      ? new PinataSDK({ pinataJWTKey: pinataJwt })
+      ? new PinataSDK({ pinataJWTKey: pinataJwt });
       : new PinataSDK(pinataApiKey, pinataSecret)
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
       pinataMetadata: { name: filename }} as any)
@@ -66,8 +66,8 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
   // 3) Try local IPFS
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
   if (createIpfsClient) {
-    const ipfs = createIpfsClient({ url: ipfsUrl })
-    const { cid } = await ipfs.add({ path: filename, content: buffer })
+    const ipfs = createIpfsClient({ url: ipfsUrl });
+    const { cid } = await ipfs.add({ path: filename, content: buffer });
     return { cid: cid.toString(), provider: 'local-ipfs' }
   }
   return { cid: '', provider: 'none' }
@@ -77,12 +77,12 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   // Prefer Web3.Storage for directories
   const web3Token = env('WEB3_STORAGE_TOKEN')
   if (Web3Storage && web3Token) {
-    const client = new Web3Storage({ token: web3Token })
+    const client = new Web3Storage({ token: web3Token });
     if (!getFilesFromPath) {
       // Fallback: manually collect files
       const files: File[] = []
       function walk(current: string, base = '') {
-        const entries = fs.readdirSync(current, { withFileTypes: true })
+        const entries = fs.readdirSync(current, { withFileTypes: true });
         for (const entry of entries) {
           const full = path.join(current, entry.name)
           const rel = path.posix.join(base, entry.name)
@@ -95,22 +95,22 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
         }
       }
       walk(dirPath)
-      const cid = await client.put(files, { wrapWithDirectory: true })
+      const cid = await client.put(files, { wrapWithDirectory: true });
       return { cid, provider: 'web3.storage' }
     } else {
       const files = await getFilesFromPath(dirPath)
-      const cid = await client.put(files, { wrapWithDirectory: true })
+      const cid = await client.put(files, { wrapWithDirectory: true });
       return { cid, provider: 'web3.storage' }
     }
   }
   // Pinata bulk upload (pack as CAR is better; for now add recursively via local ipfs)
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
   if (createIpfsClient) {
-    const ipfs = createIpfsClient({ url: ipfsUrl })
+    const ipfs = createIpfsClient({ url: ipfsUrl });
     // Add recursively
     const files: any[] = []
     function* walk(dir: string, base = ''): any {
-      const entries = fs.readdirSync(dir, { withFileTypes: true })
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
       for (const entry of entries) {
         const full = path.join(dir, entry.name)
         const rel = path.posix.join(base, entry.name)
@@ -138,7 +138,7 @@ export async function publishManifesto(topic: string, message: string): Promise<
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
   if (!createIpfsClient) return false
   try {
-    const ipfs = createIpfsClient({ url: ipfsUrl })
+    const ipfs = createIpfsClient({ url: ipfsUrl });
     await ipfs.pubsub.publish(topic, new TextEncoder().encode(message))
     return true
   } catch {

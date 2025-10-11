@@ -17,7 +17,7 @@ const ContentPromotion = lazy(() =>
   }
 }
     return { default: EmptyComponent } as { default: React.ComponentType }
-  })
+  });
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     // TODO: Add content

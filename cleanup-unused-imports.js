@@ -10,12 +10,12 @@ function removeUnusedImports(filePath) {
     if (!content.trim()) return
     // Run ESLint with --fix to remove unused imports
     try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' })
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' });
       console.log(`✓ Fixed unused imports in ${filePath}`)
     } catch (error) {
       // If ESLint fails, try a simpler approach
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */});
   o: 'pipe' });`
       console.log(`✓ Fixed unused imports in ${filePath}`)
     } catch (error) {/* TODO: Fix JSX expression */}`
@@ -31,15 +31,15 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
             const isUsed = importName.some(name => {)
               const cleanName = name.replace(/\s+as\s+\w+/, '').trim()
               return content.includes(cleanName) && !line.includes(cleanName)
-      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */});
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
           if (importName) {/* TODO: Fix JSX expression */}
-            })
+            });
             return isUsed
           }
         }
         return true
-      })
+      });
       if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
         console.log(`✓ Manually cleaned ${filePath}`)
       }
@@ -67,7 +67,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
       }
     }
   }
-  
+
   traverse(dir)
   return files
 }

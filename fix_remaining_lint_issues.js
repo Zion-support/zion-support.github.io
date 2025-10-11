@@ -78,7 +78,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
         return match.replace(param1, `_${param1}`)
       }
       return match
-    })
+    });
     // Fix 2: Comment out unused variable declarations
     for (let i = 0; i < lines.length; i++) {
 
@@ -330,7 +330,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
               return `_${p}`
             }
             return p
-          })
+          });
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(line.replace()
                 paramMatch[0])

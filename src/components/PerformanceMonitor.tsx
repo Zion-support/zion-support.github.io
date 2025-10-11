@@ -12,7 +12,7 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null})
+    ttfb: null});
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     // Web Vitals measurement
@@ -22,8 +22,8 @@ const PerformanceMonitor: React.FC = () => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
-      })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
@@ -32,9 +32,9 @@ const PerformanceMonitor: React.FC = () => {
             ...prev, 
             fid: entry.processingStart - entry.startTime 
           }))
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
@@ -44,9 +44,9 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += entry.value,
             setMetrics(prev => ({ ...prev, cls: clsValue }))
           }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
@@ -54,9 +54,9 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
           }
-        })
-      })
-      fcpObserver.observe({ entryTypes: ['paint'] })
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
@@ -82,19 +82,19 @@ const PerformanceMonitor: React.FC = () => {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'LCP',
-            value: Math.round(metrics.lcp)})
+            value: Math.round(metrics.lcp)});
         }
         if (metrics.fid !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'FID',
-            value: Math.round(metrics.fid)})
+            value: Math.round(metrics.fid)});
         }
         if (metrics.cls !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'CLS',
-            value: Math.round(metrics.cls * 1000) / 1000})
+            value: Math.round(metrics.cls * 1000) / 1000});
         }
       }
     }

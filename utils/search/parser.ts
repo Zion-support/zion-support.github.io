@@ -162,8 +162,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
         ],
         temperature: 0.1,
         response_format: { type: 'json_object' }
-      })
-    })
+      });
+    });
     if (!resp.ok) throw new Error(`${resp.status}`)
     const data = await resp.json()
     const content = data.choices?.[0]?.message?.content

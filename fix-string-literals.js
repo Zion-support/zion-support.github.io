@@ -20,7 +20,7 @@ function fixStringLiterals(filePath) {
           modified = true
         }
       }
-      
+
       // Fix unterminated single quotes
       if (line.includes("'") && !line.match(/'[^']*'/)) {
         const quoteCount = (line.match(/'/g) || []).length
@@ -29,7 +29,7 @@ function fixStringLiterals(filePath) {
           modified = true
         }
       }
-      
+
       // Fix unterminated template literals
       if (line.includes('`') && !line.match(/`[^`]*`/)) {
         const backtickCount = (line.match(/`/g) || []).length
@@ -38,81 +38,81 @@ function fixStringLiterals(filePath) {
           modified = true
         }
       }
-      
+
       // Fix incomplete imports
       if (line.startsWith('import ') && !line.endsWith(';') && !line.includes('{') && !line.includes('(')) {
         line = line + ';'
         modified = true
       }
-      
+
       // Fix incomplete exports
       if (line.startsWith('export ') && !line.endsWith(';') && !line.includes('{') && !line.includes('(')) {
         line = line + ';'
         modified = true
       }
-      
+
       // Fix incomplete function declarations
       if (line.match(/^\s*function\s+\w+\s*\(\s*\)\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  return null;\n}')
         modified = true
       }
-      
+
       // Fix incomplete arrow functions
       if (line.match(/^\s*const\s+\w+\s*=\s*\(\s*\)\s*=>\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  return null;\n}')
         modified = true
       }
-      
+
       // Fix incomplete JSX elements
       if (line.match(/<\w+\s*$/)) {
         line = line + '>'
         modified = true
       }
-      
+
       // Fix incomplete JSX closing tags
       if (line.match(/<\/\s*$/)) {
         line = line + 'div>'
         modified = true
       }
-      
+
       // Fix incomplete object declarations
       if (line.match(/^\s*const\s+\w+\s*=\s*{\s*$/)) {
         line = line.replace(/\{\s*$/, '{\n  // TODO: Add properties\n}')
         modified = true
       }
-      
+
       // Fix incomplete array declarations
       if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
         line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]')
         modified = true;}
-      
+
       // Fix incomplete function calls
       if (line.match(/^\s*\w+\s*\(\s*$/)) {
         line = line.replace(/\(\s*$/, '()')
         modified = true
       }
-      
+
       // Fix incomplete object property access
       if (line.match(/^\s*\w+\.\s*$/)) {
         line = line.replace(/\.\s*$/, '')
         modified = true
       }
-      
+
       // Fix incomplete comments
       if (line.match(/\/\*[^*]*$/)) {
         line = line + ' */'
         modified = true
       }
-      
+
       // Fix incomplete single-line comments
       if (line.trim() === '//') {
         line = '// TODO: Add comment'
         modified = true
       }
-      
+
       newLines.push(line)
     }
-    
+
     content = newLines.join('\n')
     // Fix empty files
     if (content.trim().length === 0) {
@@ -125,19 +125,19 @@ function fixStringLiterals(filePath) {
 }`
       modified = true
     }
-    
+
     // Ensure file ends with newline
     if (!content.endsWith('\n')) {
       content += '\n'
       modified = true
     }
-    
+
     if (modified) {
       fs.writeFileSync(filePath, content)
       console.log(`✅ Fixed: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)
@@ -170,7 +170,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       // Skip directories we can't read
     }
   }
-  
+
   traverse(dir)
   return files
 }

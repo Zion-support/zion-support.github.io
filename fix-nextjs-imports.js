@@ -49,8 +49,8 @@ const replacements = [
   {
     from: 'const router = useRouter();',
     to: 'const navigate = useNavigate();\n  const location = useLocation();'},
-  { from: 'router.push(', to: 'navigate(' })
-  { from: 'router.replace(', to: 'navigate(' })
+  { from: 'router.push(', to: 'navigate(' });
+  { from: 'router.replace(', to: 'navigate(' });
   { from: 'router.back()', to: 'navigate(-1)' },
   { from: 'router.pathname', to: 'location.pathname' },
   { from: 'router.query', to: 'new URLSearchParams(location.search)' },
@@ -59,7 +59,7 @@ const replacements = [
   { from: 'href=', to: 'to=', context: 'Link' },
   { from: '< href=', to: '<Link to=' },$2 />
   // Dynamic import patterns
-  { from: 'dynamic(() => import(', to: 'lazy(() => import(' })
+  { from: 'dynamic(() => import(', to: 'lazy(() => import(' });
   { from: 'loading: () => <', to: 'fallback={<' },
   {/* TODO: Fix JSX expression */}
   o: '// Metadata moved to Helmet component' },
@@ -77,7 +77,7 @@ const replacements = [
   o: 'navigate(' },
   {/* TODO: Fix JSX expression */}
   o: 'navigate(' },
-  {/* TODO: Fix JSX expression */})
+  {/* TODO: Fix JSX expression */});
   o: 'navigate(-1)' },
   {/* TODO: Fix JSX expression */}
   o: 'location.pathname' },
@@ -93,7 +93,7 @@ const replacements = [
   {/* TODO: Fix JSX expression */}
   o: 'lazy(() => import(' },
   {/* TODO: Fix JSX expression */}
-  o: 'fallback={<' })
+  o: 'fallback={<' });
   // Image patterns (replace with regular img or custom component)
   {/* TODO: Fix JSX expression */}
   o: '<img' },
@@ -139,7 +139,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           modified = true
         }
       }
-    })
+    });
     // Additional cleanup
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
@@ -155,13 +155,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
-          })
-        })
+          });
+        });
         return ()
           Object.entries(imports)
             .join('\n') + '\n'
         )
-      })
+      });
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
@@ -185,7 +185,7 @@ async function main() {
         '**/*backup*/**',
         '**/*corrupted*/**',
         '**/*temp*/**',
-        '**/*.broken/**']})
+        '**/*.broken/**']});
     files.forEach(file => {)
       totalFiles++;)
       if (processFile(file)) {
@@ -195,14 +195,11 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    })
+    });
     files.forEach(file => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
   }
-
-
-
 
   if (fixedFiles > 0) {} else {
   if (fixedFiles > 0) {/* TODO: Fix JSX expression */}

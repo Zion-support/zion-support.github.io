@@ -2,14 +2,14 @@
   r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
   Report: ' {/* TODO: Fix JSX expression */}
   l: errorReport.url} timestam)
-  p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
+  p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */});
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version=7} sentry_key=${process.env.SENTRY_KEY}` }) bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: errorReport.error.message} stacktrac,
-  e: {/* TODO: Fix JSX expression */})
+  e: {/* TODO: Fix JSX expression */});
   s: parseStackTrace(errorReport.error.stack) }, tag,
   s: {/* TODO: Fix JSX expression */}
   t: 'frontend'} ur,

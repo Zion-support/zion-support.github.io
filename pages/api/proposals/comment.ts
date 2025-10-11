@@ -7,7 +7,7 @@ async function ensure() {
   try {
     await fs && fs.readJson(FILE_PATH)
   } catch {
-    await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })
+    await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 });
   }
 }
 export default async function handler(
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
   }
-  res.status(405).json({ error: 'Method not allowed' })
+  res.status(405).json({ error: 'Method not allowed' });
 }
   if (req && req.method === "POST") {
     const body = req && req.body || {}
@@ -46,20 +46,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       createdAt: new Date().toISOString(),
     }
     data && data.comments.push(comment)
-    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 })
+    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(comment)
   }
-  res && res.status(405).json({ error: "Method not allowed" })
+  res && res.status(405).json({ error: "Method not allowed" });
 }
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
       text: body.text || '',
       createdAt: new Date().toISOString()}
     data.comments.push(comment)
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 })
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment)
   }
-  res.status(405).json({ error: 'Method not allowed' })
+  res.status(405).json({ error: 'Method not allowed' });
 }
 import type { NextApiRequest, NextApiResponse } from './next'
 import fs from './fs - extra'
@@ -73,7 +73,7 @@ function ensure() {
   try {
     await fs.read_json (FILE_PATH)
   } catch {
-    await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 })
+    await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 });
   }
 }
 export default async /**
@@ -103,8 +103,8 @@ if ( {) {
       created_at: new Date ().toISOString (),
     }
     data.comments.push (comment)
-    await fs.write_json (FILE_PATH, data, { spaces: 2 })
+    await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (comment)
   }
-  res.status (405).json ({ error: "Method not allowed" })
+  res.status (405).json ({ error: "Method not allowed" });
 }

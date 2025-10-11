@@ -19,7 +19,7 @@ async function closeDuplicatePRs() {
             headers: {)
               Accept: 'application/vnd.github.v3+json')
               'Content-Type': 'application/json')
-            })
+            });
             body: JSON.stringify({)
               state: 'closed'),
               body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`),
@@ -30,9 +30,8 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
           {/* TODO: Fix JSX expression */}
             },
             bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-            })}
-        )
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
+            })});
         if (closeResponse.ok) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }

@@ -226,17 +226,12 @@ className="relative z-10 rounded-lg shadow-xl";
 loading="lazy"
                 />
 
-
-
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-
-
-
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
@@ -247,12 +242,9 @@ Our comprehensive suite of AI-powered hiring tools help you streamline your recr
 find better candidates, and make data-driven decisions.
               </p>
             </div>
-            
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
-
-
-
 
                 <CardHeader>
                   <Briefcase className='h-10 w-10 text-zion-purple mb-2' />
@@ -283,8 +275,6 @@ Template
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
                     <li className="flex items-center">
 
-
-
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
                       <span>Industry-specific templates</span>
                     </li>
@@ -292,12 +282,10 @@ Template
                 </CardContent>
               </Card>
               <Card className='bg-card border border-border'>
-              
+
               <Card className="bg-card border border-border">
 
-              
               <Card className="bg-card border border-border">
-
 
                 <CardHeader>
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
@@ -336,9 +324,6 @@ Automatically evaluate and score candidate resumes against job requirements.
                 </CardContent>
               </Card>
 
-
-
-
                     <li className="flex items-center">
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable scoring criteria</span>
@@ -348,19 +333,13 @@ Automatically evaluate and score candidate resumes against job requirements.
                 </CardContent>
               </Card>
 
-
               <Card className='bg-card border border-border'>                <CardHeader>
-              
+
               <Card className="bg-card border border-border">
                 <CardHeader>
 
-
-
-
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
-
 
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
@@ -392,15 +371,9 @@ Data
                 </CardContent>
               </Card>
 
-
-
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
 
-
-
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
 
@@ -421,7 +394,6 @@ Add an AI assistant to your careers page to answer applicant questions.
                       <span>Customizable branding</span>
                     </li>
 
-
                     <li className="flex items-center">
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
@@ -431,12 +403,10 @@ Add an AI assistant to your careers page to answer applicant questions.
                 </CardContent>
               </Card>
               <Card className='bg-card border border-border'>
-              
+
               <Card className="bg-card border border-border">
 
-              
               <Card className="bg-card border border-border">
-
 
                 <CardHeader>
 
@@ -466,8 +436,6 @@ Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
                     <li className="flex items-center">
 
-
-
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
                     </li>
@@ -475,9 +443,8 @@ Data
                 </CardContent>
               </Card>
               <Card className='bg-card border border-border'>
-              
-              <Card className="bg-card border border-border">
 
+              <Card className="bg-card border border-border">
 
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
@@ -512,7 +479,6 @@ Custom
                       <span>Co-branded or white-labeled</span>
                     </li>
 
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
 
@@ -532,8 +498,6 @@ Customize the platform with your company's branding and identity.
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-
-
 
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
@@ -564,12 +528,6 @@ faster, reduce time-to-hire, and improve candidate experience.
 Join leading companies using Zion Hire AI to find better talent faster,;
 reduce time-to-hire, and improve candidate experience.
 
-
-
-
-
-
-
             </p>
             <Button;
 size='lg';
@@ -582,9 +540,6 @@ size="lg";
 className="bg-zion-purple hover: bg-zion-purple-light text-white";
 asChild
             >
-
-
-
 
               <Link href="/enterprise/demo">;
 Schedule a Demo
@@ -1023,9 +978,6 @@ asChild
 Schedule a Demo</$1></$1></$1></$1></$1>
   )
 }
-
-
-
 
     </>)
 }

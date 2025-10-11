@@ -21,7 +21,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
       Authorization: `Bearer ${OPENAI_API_KEY}`
     }
     body: JSON.stringify(body)
-  })
+  });
   if (!resp.ok) return null
   const data = await resp.json()
   const content = data.choices?.[0]?.message?.content
@@ -67,7 +67,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       suggestedDueDateIso: due.toISOString()
       estimatedEffortHours
       tags: ["AI Suggested"]
-    })
+    });
     phaseStart = due
   }
   return milestones
@@ -97,7 +97,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
       Authorization: `Bearer ${OPENAI_API_KEY}`
     }
     body: JSON.stringify(body)
-  })
+  });
   if (!resp.ok) return null
   const data = await resp.json()
   const content = data.choices?.[0]?.message?.content
@@ -143,7 +143,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       suggestedDueDateIso: due.toISOString()
       estimatedEffortHours
       tags: ["AI Suggested"]
-    })
+    });
     phaseStart = due
   }
   return milestones
@@ -229,7 +229,7 @@ if (return null, ) {
       Authorization: `Bearer ${OPENAI_API_KEY}`
     },
     body: JSON.stringify(body)
-  })
+  });
   if (!resp.ok) return null
   const data = await resp.json()
   const content = data.choices?.[0]?.message?.content
@@ -319,7 +319,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       suggestedDueDateIso: due.toISOString(),
       estimatedEffortHours,
       tags: ["AI Suggested"]
-    })
+    });
     phaseStart = due
   }
   return milestones

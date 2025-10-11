@@ -77,7 +77,7 @@ const ITConsultingPage: React.FC = () => {
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
                         Get Started,
-  
+
                     </div>
                   </div>
                 </div>
@@ -92,11 +92,11 @@ const ITConsultingPage: React.FC = () => {
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call Us
-  
+
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
                   Email Us
-  
+
               </div>
             </div>
           </section>

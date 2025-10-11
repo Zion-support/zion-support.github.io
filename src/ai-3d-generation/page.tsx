@@ -83,9 +83,9 @@ return (;
         <link rel="canonical" href="https://ziontechgroup.com/ai-3d-generation" />
   </link>
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -204,7 +204,7 @@ Get Free Quote
           </section>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

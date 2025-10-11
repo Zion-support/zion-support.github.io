@@ -6,10 +6,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
   if (!requireSuperadminApi(req, res)) return
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body || {}
   const commits = readJsonFile('deal/soft-commits.json', [] as any[])
   const record = { amount, timestamp: new Date().toISOString() }
@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req && req.body || {}
   const commits = readJsonFile('deal/soft-commits && commits.json', [] as any[])
   const record = { amount, timestamp: new Date().toISOString() }

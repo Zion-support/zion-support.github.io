@@ -7,7 +7,7 @@
   k: 'errorReport.componentStack'}timestam,
   p: 'errorReport.timestamp';userAgen,
   t: 'errorReport.userAgent';ur,
-  l: 'errorReport.url' }); res.status(200).json({/* TODO: Fix JSX expression */})
+  l: 'errorReport.url' }); res.status(200).json({/* TODO: Fix JSX expression */});
   e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
@@ -19,7 +19,7 @@
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
+  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */});
   e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
@@ -31,7 +31,7 @@
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
+  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */});
   e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
@@ -43,7 +43,7 @@
   k: errorReport.componentStack}timestam,
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
-  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
+  l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */});
   e: 'Error reported successfully' })} catch (error) {/* TODO: Fix JSX expression */}
   e: 'Internal server error' })} }module.exports = {}; '
 "

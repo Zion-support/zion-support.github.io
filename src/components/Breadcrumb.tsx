@@ -27,8 +27,8 @@ const Breadcrumb: React.FC = () => {
         name)
         href: currentPath),
         current: isLast
-  })
-    })
+  });
+    });
     return breadcrumbs
   }
   const breadcrumbs = generateBreadcrumbs()

@@ -38,7 +38,7 @@ export async function generateContract(
       milestones: milestoneData}
       milestones: milestoneData,
     }
-  })
+  });
   if (error) {
     throw error
   }

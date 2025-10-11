@@ -12,11 +12,11 @@ export default function handler(req, res) {
 
   const { destination, weight, dimensions } = req.body || {}
   if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' })
+    return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
+    fs.mkdirSync(dir, { recursive: true });
   }
 
   let existing = []

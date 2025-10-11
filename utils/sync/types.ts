@@ -24,7 +24,7 @@ export interface Peer {
   paused?: boolean
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -37,7 +37,7 @@ export interface InstanceConfig {
   secretConfigured: boolean
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -101,7 +101,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   timestamp: number
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -121,7 +121,7 @@ export interface ProposalVoteEntry {
   choice: string
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -131,7 +131,7 @@ export interface ProposalPayload extends BaseEventPayload {
   votes: ProposalVoteEntry[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -154,7 +154,7 @@ export interface TokenTransferPayload extends BaseEventPayload {
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -186,7 +186,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -198,7 +198,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   timestamp: number
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -214,7 +214,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {
   period?: string, // e.g., 2025-Q3
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -253,12 +253,12 @@ export interface MultiverseState {
   events: SyncEvent[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -276,7 +276,7 @@ export interface MultiverseState {
   events: SyncEvent[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export interface LeaderboardEntryPayload extends BaseEventPayload {

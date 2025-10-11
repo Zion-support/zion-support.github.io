@@ -53,7 +53,7 @@ export const enhanceFormAccessibility = (form) => {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
       }
     }
-  })
+  });
 }
 
 // 4. ARIA labels for buttons
@@ -63,5 +63,5 @@ export const addAriaLabels = () => {
     if (!button.textContent.trim()) {
       button.setAttribute('aria-label', 'Button')
     }
-  })
+  });
 }

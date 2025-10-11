@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
     envUrlActuallyProvided: !!envSupabaseUrl,
     envKeyActuallyProvided: !!envSupabaseAnonKey,
     actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
-  }})
+  }});
 }
 // Enhanced helper function to check online status
 async function checkOnline(): Promise<boolean> {
@@ -70,7 +70,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
     // Use real fetch for other cases
     return fetch(url, options)
   } catch (error) {
-    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error })
+    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error });
     return {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error

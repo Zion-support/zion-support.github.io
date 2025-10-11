@@ -26,7 +26,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   )
 }
 export default LoadingSpinner</LoadingSpinnerProps>
-      <p className="text-gray-300 text-sm animate-pulse">{text}
-  )
+      <p className="text-gray-300 text-sm animate-pulse">{text});
 }
 export default LoadingSpinner</div></p>

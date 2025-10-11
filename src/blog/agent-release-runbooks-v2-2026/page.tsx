@@ -10,7 +10,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page,
-  
+
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
           <div>

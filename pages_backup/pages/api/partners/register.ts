@@ -16,11 +16,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") return res.status($1).json({ $2 })
+  if (req.method !== "POST") return res.status($1).json({ $2 });
   const { name, niche, socials, payout_method, desired_code } = req.body |{}
-  if (!name |!desired_code) return res.status($1).json({ $2 })
+  if (!name |!desired_code) return res.status($1).json({ $2 });
   const code = sanitizeCode(desired_code)
-  if (!code) return res.status($1).json({ $2 })
+  if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
@@ -29,7 +29,7 @@ export default async function handler(
     if (usingPlaceholder) {
       return res
         .status(200)
-        .json({ ok: true, code, status: "pending", mock: true })
+        .json({ ok: true, code, status: "pending", mock: true });
     }
     const supabase = getServerSupabase()
     const { data: existing, error: existingErr } = await supabase
@@ -38,12 +38,12 @@ export default async function handler(
       .eq("code", code)
       .maybeSingle()
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
+    return res.status(500).json({ error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req, res) {
   try {
   if (req.method === 'POST') {
-    res.status(201).json({ message: 'Partner registered' })
+    res.status(201).json({ message: 'Partner registered' });
   } else {
     res.status(405).end('Method Not Allowed')
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -77,7 +77,7 @@ if ( {) {
 }
       return res
         .status (200)
-        .json ({ ok: true, code, status: "pending", mock: true })
+        .json ({ ok: true, code, status: "pending", mock: true });
     }
     const supabase = getServerSupabase ()
     const { data: existing, error: existing_err } = await supabase
@@ -98,19 +98,19 @@ if ( {) {
 }
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending',
-      commission_rate: 0.15})
-    if (error) return res.status(500).json({ error: error.message })
+      commission_rate: 0.15});
+    if (error) return res.status(500).json({ error: error.message });
     name,
       niche: niche || null,
       socials: socials || null,
       payout_method: payout_method || null,
       status: 'pending',
       commission_rate: 0.15
-    })
-    if (error) return res.status(500).json({ error: 'Database error' })
-    return res.status(200).json({ ok: true, code, status: 'pending' })
+    });
+    if (error) return res.status(500).json({ error: 'Database error' });
+    return res.status(200).json({ ok: true, code, status: 'pending' });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
+    return res.status(500).json({ error: e?.message });
   }
   }
 }

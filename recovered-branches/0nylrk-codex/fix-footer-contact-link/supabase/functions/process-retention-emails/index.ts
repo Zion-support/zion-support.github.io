@@ -12,7 +12,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Call the database function to schedule retention emails
@@ -49,8 +49,7 @@ serve(async (req) => {
                 "Authorization": `Bearer ${supabaseServiceKey}`,
               },
               body: JSON.stringify(job),
-            }
-          )
+            });
           if (!reminderResponse.ok) {
             const errorText = await reminderResponse.text()
             console.error(`Failed to process job ${job.id}: ${errorText}`)
@@ -58,9 +57,9 @@ serve(async (req) => {
             await supabase
               .from("scheduled_jobs")
               .update({
-                status: "failed"})
+                status: "failed"});
                 status: "failed",
-              })
+              });
               .eq("id", job.id)
           } else {
             processedJobs.push(job.id)
@@ -71,9 +70,9 @@ serve(async (req) => {
           await supabase
             .from("scheduled_jobs")
             .update({
-              status: "failed"})
+              status: "failed"});
               status: "failed",
-            })
+            });
             .eq("id", job.id)
         }
       }
@@ -92,8 +91,7 @@ serve(async (req) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in process-retention-emails function:", error)
     return new Response(
@@ -105,7 +103,6 @@ serve(async (req) => {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   }
-})
+});

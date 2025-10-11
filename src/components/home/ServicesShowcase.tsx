@@ -47,7 +47,7 @@ export function ServicesShowcase() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Discover our extensive portfolio of micro SAAS services, cutting-edge IT solutions, and innovative AI services designed to transform your business.
           </p>
-          
+
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
@@ -114,7 +114,7 @@ export function ServicesShowcase() {
             <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
             <p className="text-zion-slate-light">Your trusted partner for innovative technology solutions</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-zion-cyan/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
@@ -123,7 +123,7 @@ export function ServicesShowcase() {
               <h4 className="text-lg font-semibold text-white mb-2">AI-First Approach</h4>
               <p className="text-zion-slate-light text-sm">Cutting-edge AI, machine learning, and emerging technologies</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-purple/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-6 w-6 text-zion-purple" />
@@ -131,7 +131,7 @@ export function ServicesShowcase() {
               <h4 className="text-lg font-semibold text-white mb-2">Enterprise Security</h4>
               <p className="text-zion-slate-light text-sm">Bank-level security and compliance for your business</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-zion-cyan/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="h-6 w-6 text-zion-cyan" />

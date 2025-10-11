@@ -87,8 +87,7 @@ export function ensureDemoUsers(): void {
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-    )
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' });
   }
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
@@ -134,8 +133,7 @@ if ( {) {
 }
     demo_users.push (
       { id: 'admin - 1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-    )
+      { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' });
   }
 }
 export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): DemoUser {

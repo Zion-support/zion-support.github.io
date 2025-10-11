@@ -45,7 +45,7 @@ About
             </Link>
 
               </button>
-              
+
                             <Link;
 to={`/${category.title.toLowerCase().replace(' '}}, '-')}`}
                     <Link;

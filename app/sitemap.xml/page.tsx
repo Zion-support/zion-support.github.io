@@ -42,25 +42,25 @@ export default SitemapXMLPage
     </>
   )
       </div>
-      
+
       <Footer />
     </>
     </>
   )
       </div>
-      
+
       <Footer />
     </>
     </>
   )
       </div>
-      
+
       <Footer />
     </>
     </>
   )
       </div>
-      
+
       <Footer />
     </>
     </>

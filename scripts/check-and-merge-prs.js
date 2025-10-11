@@ -9,15 +9,15 @@ try {
   // Check if we're on main branch
   if (currentBranch !== 'main') {
     console.log('Switching to main branch...')
-    execSync('git checkout main', { stdio: 'inherit' })
+    execSync('git checkout main', { stdio: 'inherit' });
   }
 
   // Pull latest changes
   console.log('Pulling latest changes from main...')
-  execSync('git pull origin main', { stdio: 'inherit' })
+  execSync('git pull origin main', { stdio: 'inherit' });
   // Check for any merge conflicts
   console.log('Checking for merge conflicts...')
-  const status = execSync('git status --porcelain', { encoding: 'utf8' })
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
   if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
     console.log('❌ Merge conflicts detected!')
     console.log('Conflicted files: ')
@@ -25,8 +25,8 @@ try {
     // Try to resolve conflicts automatically
     console.log('Attempting to resolve conflicts...'),
     try {,
-      execSync('git add .', { stdio: 'inherit' })
-      execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' })
+      execSync('git add .', { stdio: 'inherit' });
+      execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
       console.log('✅ Conflicts resolved automatically')
     } catch (error) {
     console.log('❌ Could not resolve conflicts automatically')
@@ -39,7 +39,7 @@ try {
   // Try to merge our improvements branch
   console.log('Attempting to merge improvements branch...')
   try {
-    execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' })
+    execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' });
     console.log('✅ Successfully merged improvements branch')
   } catch (error) {
     console.log('❌ Could not merge improvements branch automatically')
@@ -49,7 +49,7 @@ try {
   // Push changes to main
   console.log('Pushing changes to main...')
   try {
-    execSync('git push origin main', { stdio: 'inherit' })
+    execSync('git push origin main', { stdio: 'inherit' });
     console.log('✅ Successfully pushed to main branch')
   } catch (error) {
     console.log('❌ Could not push to main branch')

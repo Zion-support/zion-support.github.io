@@ -28,7 +28,7 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  cumulativeLayoutShift: 0, // Would need to be measured with observer
  firstInputDelay: 0 // Would need to be measured with observer
 const,
-  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
+  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
  }
  setMetrics(metrics)
@@ -63,7 +63,7 @@ const,
  }
  // Preload critical resources
  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
- })
+ });
  }
  // Optimize images
  const optimizeImages = () => {
@@ -81,7 +81,7 @@ const,
  // Add decoding="async" for better performance
  if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
  }
- })
+ });
  }
  // Intersection Observer for animations
  const setupIntersectionObserver = () => {
@@ -92,11 +92,10 @@ const,
  entry.target.classList.add('animate-fade-in')
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
  }
- })
+ });
  },
  {/* TODO: Fix JSX expression */}
-  d: 0.1 }
- )
+  d: 0.1 });
  const elements = document.querySelectorAll('.animate-on-scroll')
  elements.forEach(el => observer.observe(el))
  }

@@ -18,7 +18,7 @@ export default function BlogPost(): React.JSX.Element {
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Edge 2025 Oct 02 Private Experiments V4
-  
+
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>

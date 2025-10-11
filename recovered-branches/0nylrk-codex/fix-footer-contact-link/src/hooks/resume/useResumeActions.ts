@@ -22,7 +22,7 @@ export function useResumeActions() {
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
-        })
+        });
         .select('id')
         .single()
       if (error) throw error
@@ -48,7 +48,7 @@ export function useResumeActions() {
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
-        })
+        });
         .eq('id', resumeId)
         .eq('user_id', user.id)
       if (error) throw error
@@ -70,13 +70,13 @@ export function useResumeActions() {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
-        .update({ is_active: false })
+        .update({ is_active: false });
         .eq('user_id', user.id)
       if (resetError) throw resetError
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
-        .update({ is_active: true })
+        .update({ is_active: true });
         .eq('id', resumeId)
         .eq('user_id', user.id)
       if (error) throw error

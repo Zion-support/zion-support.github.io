@@ -14,20 +14,20 @@ try {
       skipUntilNextMarker = true
       continue
   }
-    
+
     if (line.includes('')) {
     skipUntilNextMarker = false
       continue
   }
-    
+
     if(line.includes('      continue;)
-    })
+    });
     )
     if (!skipUntilNextMarker) {
     resolvedLines.push(line)
   }
   }
-  
+
   // Write the resolved content
   writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'))
   console.log('✅ Merge conflicts resolved successfully!')

@@ -150,13 +150,13 @@ href="/contact";
 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                   <Phone className="w-5 h-5 mr-2" />;
 Contact Us
-  
+
                 <$2 />;
 href="/";
 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" />;
 Back to Home,
-  
+
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@ Back to Home,
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">;
 Request a Quote,
-  
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
 Get a detailed, no-obligation quote for your AI and IT project.;
 Our experts will provide you with a comprehensive proposal within 24 hours.
@@ -217,7 +217,7 @@ placeholder="Enter your email"
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">;
 Company Name,
-  
+
                       <input;
 type="text";
 name="company";
@@ -231,7 +231,7 @@ placeholder="Enter your company name"
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">;
 Phone Number,
-  
+
                       <input;
 type="tel";
 name="phone";
@@ -263,7 +263,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">;
 Project Size,
-  
+
                       <select;
 name="projectSize";
 value={formData.projectSize}
@@ -303,7 +303,7 @@ placeholder="Describe your project requirements and goals..."
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">;
 Specific Requirements,
-  
+
                     <textarea;
 name="requirements";
 value={formData.requirements}
@@ -320,8 +320,7 @@ disabled={isSubmitting}
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Submitting...
-                    ) : (
+Submitting...props) : (
                       'Request Quote'
                     )}
             {/* Sidebar */}
@@ -636,7 +635,7 @@ md: text-5xl font-bold text-white mb-6 neon-text"></h1>
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">;
 Coming Soon,
-  
+
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -776,8 +775,7 @@ type="submit" disabled={isSubmitting}
                     {isSubmitting ? ()}"
           <div className="flex items-center justify-center"></div>"
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
-// Submitting...
-                    ) : ()
+// Submitting...props) : ()
 // 'Request Quote'
                     )}
             {/* Sidebar */}"

@@ -123,7 +123,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
 
   private parseCSV(cs)
   v: string): ChartData {/* TODO: Fix JSX expression */}
-        })
+        });
       }
     }
 
@@ -140,7 +140,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   t: number, mi,
   n: number = 0, ma)
   x: number = 100): ChartData {/* TODO: Fix JSX expression */}
-      })
+      });
     }
 
     return { points }

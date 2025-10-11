@@ -53,7 +53,7 @@ export default async function handler(
       : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
     ).forEach(t => {
       tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1
-    })
+    });
     res.status(200).json({
       profileViews
       quoteInvites
@@ -63,7 +63,7 @@ export default async function handler(
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
-    })
+    });
   } catch (e) {
     res.status(200).json({
       profileViews: 27
@@ -75,7 +75,7 @@ export default async function handler(
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
-    })
+    });
   }
 }
 }
@@ -106,14 +106,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { tag: 'node' },
       { tag: 'ai' },
       { tag: 'react' },
-    ]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1; })
+    ]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1; });
     res.status(200).json({
       profileViews,
       quoteInvites,
       jobApplications,
       successRate,
       topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value })),
-    })
+    });
   } catch (e) {
     res.status(200).json({
       profileViews: 27,
@@ -125,6 +125,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'node', value: 1 },
         { label: 'ai', value: 1 },
       ],
-    })
+    });
   }
 }

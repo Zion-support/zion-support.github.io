@@ -44,7 +44,7 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
             Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution
         </div>)
-        {/* Articles, G, r, i, d */})
+        {/* Articles, G, r, i, d */});
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
         {/* Articles, G, r, i, d */}

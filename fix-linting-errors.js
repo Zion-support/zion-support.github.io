@@ -20,7 +20,6 @@ const filesToFix = [
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   }
 
-
   // Fix unused variables by prefixing with underscore
   const unusedVarPatterns = [
     // Unused imports
@@ -29,7 +28,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
       fix: (match, imports) => {
         const unusedImports = importList.filter(imp => {)
           return !content.includes(varName) || content.split(varName).length <= 2
-        })
+        });
         if (unusedImports.length > 0) {
           const fixedImports = importList
             .map(imp => {)
@@ -38,12 +37,12 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fi,
   x: (match, imports) => {/* TODO: Fix JSX expression */}
-        })
+        });
         if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
                 return imp.replace(varName, `_${varName}`)
               }
               return imp
-            })
+            });
             .join(', ')
           return match.replace(imports, fixedImports)
         }
@@ -71,7 +70,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
               return param.replace(paramName, `_${paramName}`)
             }
             return param
-          })
+          });
           .join(', ')
         return match.replace(params, fixedParams)
       }}]
@@ -92,11 +91,11 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 filesToFix.forEach(fixUnusedVariables)
 // Run linter to check results
 try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' })
+  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
 } catch (error) {
 
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 "`

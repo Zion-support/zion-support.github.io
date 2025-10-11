@@ -10,7 +10,7 @@ const feedbackData: FeedbackRecord[] = []
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime')
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json')
 function ensureDataFile(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })
+  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(DB_PATH))
     fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8')
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
@@ -71,7 +71,7 @@ export type FeedbackRecord = {
 const DATA_DIR = path.join(process.cwd(), "data", "runtime")
 const DB_PATH = path.join(DATA_DIR, "feedback.json")
 function ensureDataFile(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8")
 }
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {

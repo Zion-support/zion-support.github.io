@@ -113,7 +113,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
           // Enhanced tab navigation
   public optimizeAccessibility(): void {/* TODO: Fix JSX expression */}
         }
-      })
+      });
     }
 
     // Add skip links
@@ -156,7 +156,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
         description: pageData.description
         url: pageData.url,
   public optimizeSEO(pageDat,
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
   }): void {/* TODO: Fix JSX expression */}
       }
       if (pageData.image) {/* TODO: Fix JSX expression */}
@@ -218,9 +218,9 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
    * Add skip links for accessibility
    */
   private addSkipLinks(): void {/* TODO: Fix JSX expression */}
-    })
+    });
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-    })
+    });
     document.body.insertBefore(skipLink, document.body.firstChild)
   }
 

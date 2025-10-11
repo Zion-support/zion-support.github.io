@@ -28,7 +28,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
             {  bann, e, r.ic, o, n  && (
               <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }
 const,
-  EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({/* TODO: Fix JSX expression */})
+  EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   } retu, r, n (<, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}$2 />
     ></div>

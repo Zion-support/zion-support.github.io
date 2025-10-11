@@ -983,7 +983,7 @@ Micro SAAS Services
 Affordable, focused software solutions designed specifically for small businesses, startups, and entrepreneurs. 
             <span className="text-zion-cyan font-medium"> Transform your business with cutting-edge technology.</span>
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
             <div className="text-center">
@@ -1023,7 +1023,7 @@ value={searchTerm}
               </div>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <select;
 value={selectedCategory}
@@ -1036,7 +1036,7 @@ value={selectedCategory}
                 </option>
               ))}
             </select>
-            
+
             <select;
 value={selectedPricing}
               onChange={(e) => setSelectedPricing(e.target.value)}
@@ -1109,10 +1109,10 @@ Clear Filters
                   </div>
                 </div>
               </div>
-              
+
               {/* Description */}
               <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-              
+
               {/* Pricing */}
               <div className="mb-6 p-4 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-xl border border-zion-cyan/20">
                 <div className="text-3xl font-bold text-white mb-1">
@@ -1205,7 +1205,7 @@ Explore Our Full Service Portfolio →
             {/* Background decoration */}
             <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-blue-500/5 to-purple-500/5"></div>
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400"></div>
-            
+
             <div className="relative z-10">
               <h2 className="text-3xl font-bold text-white mb-4 animate-neon-pulse">Ready to Scale Your Business?</h2>
               <p className="text-gray-300 mb-8 text-lg">;
@@ -1237,7 +1237,7 @@ Our micro SAAS solutions are designed to grow with your business needs
           <div className="relative bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10 backdrop-blur-sm border border-zion-cyan/30 rounded-3xl p-12 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)] animate-pulse"></div>
-            
+
             <div className="relative">
               <div className="mb-8">
                 <div className="inline-flex items-center gap-2 px-6 py-3 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-4">
@@ -1249,22 +1249,22 @@ Ready to Transform Your Business?
             {/* Background decoration */}
             <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan"></div>
-            
+
             <div className="relative">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
                 <Zap className="w-4 h-4" />;
 Get Started Today
               </div>
-              
+
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Scale Your Business</span>?
               </h2>
-              
+
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">;
 Our micro SAAS solutions are designed to grow with your business needs. 
                 <span className="text-zion-cyan font-medium"> Transform your operations with cutting-edge technology.</span>
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
                 <div className="group">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-cyan/40 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30 group-hover:border-zion-cyan/50 transition-all duration-300">
@@ -1275,7 +1275,7 @@ Our micro SAAS solutions are designed to grow with your business needs.
                     {microSaasServices[0].contactInfo.phone}
                   </a>
                 </div>
-                
+
                 <div className="group">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-purple/20 to-zion-purple/40 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-purple/30 group-hover:border-zion-purple/50 transition-all duration-300">
                     <Mail className="w-8 h-8 text-zion-purple group-hover:text-zion-purple-light transition-colors" />
@@ -1285,7 +1285,7 @@ Our micro SAAS solutions are designed to grow with your business needs.
                     {microSaasServices[0].contactInfo.email}
                   </a>
                 </div>
-                
+
                 <div className="group">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-green-400/40 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-green-400/30 group-hover:border-green-400/50 transition-all duration-300">
                     <MapPin className="w-8 h-8 text-green-400 group-hover:text-green-300 transition-colors" />
@@ -1294,7 +1294,7 @@ Our micro SAAS solutions are designed to grow with your business needs.
                   <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
                 </div>
               </div>
-              
+
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
@@ -1304,7 +1304,7 @@ href={`mailto:${microSaasServices[0].contactInfo.email}}`}
                   <Mail className="w-5 h-5" />;
 Request Demo
                 </a>
-                
+
                 <$2 />;
 href={`tel:${microSaasServices[0].contactInfo.phone}}`}
                   className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-xl hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
@@ -1313,16 +1313,16 @@ href={`tel:${microSaasServices[0].contactInfo.phone}}`}
 Call Now
                 </a>
               </div>
-              
+
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6">;
 Let's Build the Future Together
               </h2>
-              
+
               <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto leading-relaxed">;
 Our cutting-edge micro SAAS solutions are designed to scale with your business needs. 
                 <span className="text-zion-cyan font-semibold"> Start your digital transformation journey today.</span>
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
                 <div className="group">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1350,7 +1350,7 @@ description="Discover our comprehensive suite of micro SAAS services including A
 keywords="micro SAAS, AI services, IT solutions, development platforms, business automation"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -1360,7 +1360,7 @@ keywords="micro SAAS, AI services, IT solutions, development platforms, business
             <div className="absolute top-20 right-0 w-96 h-96 bg-zion-cyan/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
             <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-zion-purple-light/20 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
           </div>
-          
+
           <div className="relative container mx-auto px-4 text-center">
             <div className="mb-8">
               <Badge className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 mb-4 px-4 py-2 text-sm">
@@ -1368,7 +1368,7 @@ keywords="micro SAAS, AI services, IT solutions, development platforms, business
 Premium Micro SAAS Solutions
               </Badge>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
 Micro SAAS Services
@@ -1376,13 +1376,13 @@ Micro SAAS Services
               <br />
               <span className="text-white">That Scale Your Business</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">;
 Discover our curated collection of intelligent, innovative, and diversified micro SAAS solutions.;
 From AI-powered platforms to enterprise-grade IT services, we deliver cutting-edge technology;
 that drives real business value.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button;
 size="lg";
@@ -1416,7 +1416,7 @@ value={searchTerm}
                   className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light focus:border-zion-cyan"
                 />
               </div>
-              
+
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white">
                   <SelectValue placeholder="Select Category" />
@@ -1429,7 +1429,7 @@ value={searchTerm}
                   ))}
                 </SelectContent>
               </Select>
-              
+
               <Select value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
                 <SelectTrigger className="w-48 bg-zion-blue-dark border-zion-blue-light text-white">
                   <SelectValue placeholder="Price Range" />
@@ -1506,7 +1506,7 @@ keywords="micro SAAS, AI services, IT solutions, business automation, cloud serv
 canonical="https://ziontechgroup.com/micro-saas-services"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -1517,7 +1517,7 @@ style={{};,
 backgroundImage: `url("data:image/svg+xml},%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
             }}
           ></div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-white to-zion-purple-light bg-clip-text text-transparent">;
@@ -1578,7 +1578,7 @@ Contact Sales
 Our most popular and highly-rated services that businesses trust for their digital transformation
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service) => (
                 <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50">
@@ -1605,7 +1605,7 @@ Featured
 Market average: {service.marketPrice}
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2 mb-4">
                       <h4 className="font-semibold text-sm">Key Benefits:</h4>
                       <ul className="space-y-1">
@@ -1734,7 +1734,7 @@ value={searchQuery}
 
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark relative overflow-hidden">
       <FuturisticAnimatedBackground />
-      
+
       {/* Header Section */}
       <motion.div;
 className="relative z-10 text-center py-20 px-4";
@@ -1877,11 +1877,11 @@ Coming Soon
                         </Badge>
                       )}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
@@ -2508,7 +2508,7 @@ Schedule Consultation
             </Button>
           </div>
         </div>
-        
+
         {/* Animated background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full animate-pulse"></div>
@@ -2606,7 +2606,7 @@ Featured Services
 Our most popular and highly-rated services that are transforming businesses worldwide
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getFeaturedServices().slice(0, 6).map((service) => (
               <FeaturedServiceCard key={service.id} service={service} />
@@ -2626,7 +2626,7 @@ New & Upcoming Services
 Stay ahead of the curve with our latest innovations and upcoming releases
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getNewServices().slice(0, 6).map((service) => (
               <NewServiceCard key={service.id} service={service} />
@@ -2667,7 +2667,7 @@ Flexible Pricing Plans
 Choose the plan that fits your business needs and scale as you grow
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([key), tier]) => (
               <Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}}`}>
@@ -2722,7 +2722,7 @@ Services by Category
 Explore our comprehensive range of micro SAAS solutions organized by industry and function
             </p>
           </div>
-          
+
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
@@ -2737,7 +2737,7 @@ return (;
                 )
               })}
             </TabsList>
-            
+
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (
@@ -2813,7 +2813,7 @@ alt={service.title}
                         </div>
                       </div>
                     </div>
-                    
+
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-2 mb-2">
@@ -2827,7 +2827,7 @@ alt={service.title}
                         {service.description}
                       </CardDescription>
                     </CardHeader>
-                    
+
                     <CardContent className="space-y-4">
                       {/* Pricing */}
                       <div className="bg-zion-blue/30 rounded-lg p-4">
@@ -2917,7 +2917,7 @@ Ready to Transform Your Business?
 Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
@@ -2954,7 +2954,7 @@ Get in touch with our team to discuss your needs and discover how our micro SAAS
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
               <div className="space-y-4">
@@ -2974,7 +2974,7 @@ View All Services
                   </Button>
                 </Link>
               </div>
-              
+
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
                 <h4 className="font-medium text-zion-blue mb-2">Why Choose Zion Tech Group?</h4>
                 <ul className="text-sm text-gray-600 space-y-1">
@@ -3067,7 +3067,7 @@ Featured
 Market: {service.marketPrice}
           </div>
         </div>
-        
+
         <div className="space-y-2 mb-4">
           <h4 className="font-semibold text-sm">Key Features:</h4>
           <ul className="space-y-1">
@@ -3128,7 +3128,7 @@ Contact Sales Team
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   )

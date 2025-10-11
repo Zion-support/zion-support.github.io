@@ -21,10 +21,6 @@ const getDefaultCategories = (t: any) => [
   }
   },
 
-
-
-
-
   {
     id: "talents"
     name: t('categories.talents')
@@ -199,9 +195,6 @@ export function CategoriesSection({
 }: CategoriesSectionProps) {
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
-  
-
-
 
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
@@ -214,9 +207,6 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-
-
-
 
         title: cat.name,
         icon: getIcon(cat.iconName)})),
@@ -286,17 +276,9 @@ export function CategoriesSection(): any ({
           <p className="text-zion-slate-light text-md">
             {t('home && home.no_categories_support')}
 
-
           </p></$1></$1>
     )
   }
-
-
-
-
-
-
-
 
   }
 
@@ -315,7 +297,7 @@ export function CategoriesSection(): any ({
             <$2 />
               key = {category.id,}
               href = {category.link |'#',}
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {displayCategories.map((category) => (
@@ -365,7 +347,6 @@ export function CategoriesSection(): any ({
               </Link>            ))}
           </div>
         </div>
-        
 
           </Link>
         </div>

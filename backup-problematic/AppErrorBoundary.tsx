@@ -108,7 +108,7 @@ o: ErrorInfo) {/* TODO: Fix JSX expression */}
     // Here you could send error to monitoring service
   }
   resetError() {/* TODO: Fix JSX expression */}
-  r: undefined })
+  r: undefined });
   }
   render() {/* TODO: Fix JSX expression */}
       return <ErrorFallback error={this.state.error;} resetError={this.resetError} />

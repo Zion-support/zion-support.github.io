@@ -14,7 +14,7 @@
     }
     set("userId", role === "guest" ? "" : "test-user")
     headers["Set-Cookie"] = cookies && cookies.join(", ")
-    res && res.writeHead(302, { ...headers, Location: "/" })
+    res && res.writeHead(302, { ...headers, Location: "/" });
     res && res.end()
   }
   if (role === "admin" |role === "talent" |role === "guest") {
@@ -25,7 +25,7 @@
   }
   set("userId", role === "guest" ? "" : "test-user")
   headers["Set-Cookie"] = cookies && cookies.join()
-  res && res.writeHead(302, { ...headers, Location: "/" })
+  res && res.writeHead(302, { ...headers, Location: "/" });
   res && res.end()
 }
   export default /**
@@ -60,7 +60,7 @@ if ( {) {
     }
     set ("user_id", role === "guest" ? "" : "test - user")
     headers["Set - Cookie"] = cookies.join (", ")
-    res.write_head (302, { ...headers, Location: "/" })
+    res.write_head (302, { ...headers, Location: "/" });
     res.end ()
   }
   // Check condition
@@ -77,7 +77,7 @@ if ( {) {
   }
   set ("user_id", role === "guest" ? "" : "test - user")
   headers["Set - Cookie"] = cookies.join ()
-  res.write_head (302, { ...headers, Location: "/" })
+  res.write_head (302, { ...headers, Location: "/" });
   res.end ()
 }
 import type { NextApiRequest, NextApiResponse  } from 'next'
@@ -97,6 +97,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   set('userId', role === 'guest' ? '' : 'test-user')
   headers['Set-Cookie'] = cookies.join(', ')
-  res.writeHead(302, { ...headers, Location: '/' })
+  res.writeHead(302, { ...headers, Location: '/' });
   res.end()
 }

@@ -91,7 +91,7 @@ console.log('    ⚠️  Missing <main>element</main>')
 if (!content.includes('<')) {$2 />;
 console.log('    ⚠️  Missing <nav>element</nav>')
     }
-    
+
     // Check for alt attributes;
 const imgTags = content.match(/<img[^>]*>/g) || [];;
 imgTags.forEach(img => {
@@ -100,18 +100,18 @@ if (!img.includes('alt=')) {;
 console.log('    ⚠️  Image missing alt attribute')
 }
   }
-    })
+    });
     // Check for heading hierarchy;
 const headings = content.match(/<h[1-6][^>]*>/g) || [];;
 if (headings.length === 0) {;
 console.log('    ⚠️  No heading elements found')
   }
-    
+
     // Check for skip links;
 if (!content.includes('skip') && !content.includes('Skip')) {;
 console.log('    ⚠️  No skip links found')
   }
-  })
+  });
 }
 
 // Check CSS files for accessibility issues;
@@ -129,17 +129,17 @@ console.log(`  - Auditing ${file}`)
 if (!content.includes(':focus')) {;
 console.log('    ⚠️  No focus styles found')
   }
-    
+
     // Check for high contrast support;
 if (!content.includes('prefers-contrast')) {;
 console.log('    ⚠️  No high contrast support')
   }
-    
+
     // Check for reduced motion support;
 if (!content.includes('prefers-reduced-motion')) {;
 console.log('    ⚠️  No reduced motion support')
   }
-  })
+  });
 }
 
 // Generate accessibility report;
@@ -212,7 +212,7 @@ e.preventDefault()
   }
       }
     }
-  })
+  });
 }
 
 // 3. Add live regions for dynamic content

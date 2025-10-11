@@ -92,7 +92,7 @@ function cleanProblematicFiles() {
         } else if (filePath.endsWith('.js')) {
           content = `// JavaScript file placeholder\nexport {};`
         }
-        
+
         fs.writeFileSync(filePath, content, 'utf8')
         console.log(`✓ Cleaned: ${filePath}`)
       }

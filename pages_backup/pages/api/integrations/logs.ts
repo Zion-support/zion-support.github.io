@@ -2,22 +2,22 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState } from "../../../lib/integrations/fileStore"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "Method not allowed" })
+    return res && res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req && req.query as { providerId?: string }
   const state = readState()
   const logs = providerId
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { readState } from '../../../lib/integrations/fileStore'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId } = req.query as { providerId?: string }
   const state = readState()
   const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs
-  res.status(200).json({ logs })
+  res.status(200).json({ logs });
 }
 import type { NextApiRequest, NextApiResponse } from './next'
 import { read_state  } from '../../../lib / integrations / file_store'
@@ -34,5 +34,5 @@ function handler() {
   const logs = provider_id
     ? state.logs.filter ((l) => l.provider_id === provider_id)
     : state.logs
-  res.status (200).json ({ logs })
+  res.status (200).json ({ logs });
 }

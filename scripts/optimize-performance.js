@@ -12,25 +12,25 @@ function optimizeComponent(filePath) {
 function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
       // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`)
     }
-    
+
     // Add useCallback to event handlers
     if (content.includes('onClick') && !content.includes('useCallback')) {
     if (content.includes('onClick') && !content.includes('useCallback')) {/* TODO: Fix JSX expression */}`
       // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`)
     }
-    
+
     // Check for missing key props in lists
     if (content.includes('.map(') && !content.includes('key=')) {
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}`
       // console.log(`⚠️  Component ${filePath} has .map() without key props`)
     }
-    
+
     // Check for inline object/function definitions in JSX
     if (content.includes('style={{') || content.includes('onClick={()')) {}
     if (content.includes('style={/* TODO: Fix JSX expression */})`
       // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`)
     }
-    
+
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`❌ Error processing ${filePath}:`, error.message)
@@ -44,15 +44,15 @@ async function addPerformanceOptimizations() {
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**'])
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 }
-  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})
-  })
+  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */});
+  });
   // console.log('🚀 Analyzing components for performance optimizations...\n')
   let totalFiles = 0
   let optimizedFiles = 0
   for (const file of componentFiles) {/* TODO: Fix JSX expression */}
     }
   }
-  
+
   // console.log(`\n📊 Performance Analysis Summary: `),
   // console.log(`   Total components analyzed: ${totalFiles}`)
   // console.log(`   Components with optimization opportunities: ${optimizedFiles}`)
@@ -103,15 +103,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       src={src}
       alt={alt}
       width={width}
-      height={height})
-      className={\`\${className}\`})
-      loading={priority ? 'eager' : 'lazy'})
+      height={height});
+      className={\`\${className}\`});
+      loading={priority ? 'eager' : 'lazy'});
       decoding="async")
-      style={{})
+      style={{});
         width: width ? \`\${width}px\` : 'auto')
         height: height ? \`\${height}px\` : 'auto'
 const,
-  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
+  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
       src={src}
       alt={alt}

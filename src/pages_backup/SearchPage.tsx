@@ -91,9 +91,6 @@ description: string
 }
 function highlight(text: string, term: string) {
 
-
-
-
 }
   },;
 const handleSubmit = (e: React.FormEvent) => {;;
@@ -398,7 +395,7 @@ $2
 set_results ([]);';
 logErrorToProduction ('Search API response structure is not as expected:', {;,
 data: data
-})
+});
 }catch (error) {';
 logErrorToProduction ('Search failed:', {;,
 data: error

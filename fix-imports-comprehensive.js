@@ -85,7 +85,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     for (let i = 0; i < importLines.length; i++) {/* TODO: Fix JSX expression */}
         }
         modified = true
-      } else if (line.includes('import {/* TODO: Fix JSX expression */})
+      } else if (line.includes('import {/* TODO: Fix JSX expression */});
         line.includes("} from 'lucide-react'")
       ) {
         //Skip existing lucide-react imports
@@ -128,14 +128,14 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 directories.forEach(dir => {)
   if (fs.existsSync(dir)) {
     const dirFiles = fs
-      .readdirSync(dir, { recursive: true })
-directories.forEach(dir => {/* TODO: Fix JSX expression */})
-  e: true })
+      .readdirSync(dir, { recursive: true });
+directories.forEach(dir => {/* TODO: Fix JSX expression */});
+  e: true });
       .filter(file => file.endsWith('.tsx'))
       .map(file => path.join(dir, file))
     files.push(...dirFiles)
   }
-})
+});
 // Process each file
 files.forEach(fixImportsInFile)
 // "</Link>

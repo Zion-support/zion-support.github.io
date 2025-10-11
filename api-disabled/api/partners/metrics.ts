@@ -5,12 +5,12 @@
   y: "USD"; }); } total_signups, total_visits, total_profile_completions, total_job_creations, conversion_rat,
   e: total_signups ? total_profile_completions / total_signups : 0,
   payout_amount: total_profile_completions * 50,"
-  currency: "USD" return res.status(500).json({/* TODO: Fix JSX expression */})
+  currency: "USD" return res.status(500).json({/* TODO: Fix JSX expression */});
   r: e?.message }) } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: ") error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
-  r: "Internal server error" }); } } return res.status (500).json ({/* TODO: Fix JSX expression */})
-  r: e?.message }); return res.status(500).json({/* TODO: Fix JSX expression */})
-  r: e?.message }); return res.status(500).json({/* TODO: Fix JSX expression */})
+  r: "Internal server error" }); } } return res.status (500).json ({/* TODO: Fix JSX expression */});
+  r: e?.message }); return res.status(500).json({/* TODO: Fix JSX expression */});
+  r: e?.message }); return res.status(500).json({/* TODO: Fix JSX expression */});
   r: e?.message }) } } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: ") error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"

@@ -20,12 +20,12 @@ export const _usePerformanceMonitoring = () => {
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      fetch(url, {/* TODO: Fix JSX expression */})
+      fetch(url, {/* TODO: Fix JSX expression */});
   e: true }).catch(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         // Analytics reporting failed
-      })
+      });
     }
   }, [])
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -48,9 +48,7 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
-
-  )
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect()
   }, [reportWebVitals])
   return { reportWebVitals }

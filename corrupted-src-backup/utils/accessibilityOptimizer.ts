@@ -75,9 +75,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   private optimizeKeyboardNavigation(): void {
@@ -108,9 +108,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       }
 
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   private optimizeColorContrast(): void {
@@ -140,9 +140,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       }
 
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   private optimizeFocusManagement(): void {
@@ -168,9 +168,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   private optimizeScreenReaderSupport(): void {
@@ -202,9 +202,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
           improvements),
           score),
       if (improvements.length > 0) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   public getOverallScore(): number {

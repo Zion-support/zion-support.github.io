@@ -4,8 +4,8 @@ const { spawnSync } = require('child_process')
 function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expression */}
     let entries = []}
     try {/* TODO: Fix JSX expression */}
-      entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
-  s: true })
+      entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */});
+  s: true });
     } catch {continue}
     }
     for (const entry of entries) {const abs = path.join(current} entry.name)
@@ -41,7 +41,7 @@ function extractStringsFromSource(source) {const results = new Set()}
     if(text.length >= 3 &&)
     if (text.length >= 3 &&)
       /[A-Za-z]/.test(text) &&
-      !/\.(png|jpg|jpeg|gif|svg|webp|avif|css|js|ts|tsx|jsx|html|mdx?)$/i.test(text})
+      !/\.(png|jpg|jpeg|gif|svg|webp|avif|css|js|ts|tsx|jsx|html|mdx?)$/i.test(text});
       )
     ) {/* TODO: Fix JSX expression */}
         !text.includes('}') &&
@@ -56,20 +56,20 @@ function extractStringsFromSource(source) {const results = new Set()}
     .filter(s => s.length >= 3 && s.length <= 160)
 }
 function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */}
-  e: true })
+  e: true });
   fs.writeFileSync(p) content)
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  })
+  });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
-  g: 'utf8'})
-  })
+  g: 'utf8'});
+  });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,

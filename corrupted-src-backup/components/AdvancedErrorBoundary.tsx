@@ -22,7 +22,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    this.setState({ error, errorInfo })
+    this.setState({ error, errorInfo });
     // Log error to monitoring service
     //     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -30,7 +30,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
         description: error.toString(),
         fatal: false,
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
   render() {
@@ -48,8 +48,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
   e: 'pre-wrap' }}>
               {this.state.error && this.state.error.toString()}
               <br />
-              {this.state.errorInfo?.componentStack}
-        )
+              {this.state.errorInfo?.componentStack});
       )
     }
     return this.props.children

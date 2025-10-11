@@ -290,7 +290,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       timestamp: new Date().toISOString()
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type:     ,
-$4})
+$4});
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
@@ -317,8 +317,7 @@ $4})
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600">
-          <span className="ml-2 text-gray-600">Loading system metrics...
-    )
+          <span className="ml-2 text-gray-600">Loading system metrics...props)
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor

@@ -17,7 +17,7 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" })
+    return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
     const { project_id, from_role, from_id, rating, text, categories, anonymous } =
@@ -33,33 +33,33 @@ if ( {) {
     }
     const project = await findProjectById(projectId)
     if (!project) {
-      })
+      });
     }
-      return res.status(404).json({ error: 'Project not found' })
+      return res.status(404).json({ error: 'Project not found' });
     }
     if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
+      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' });
     if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
+      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' });
     }
     const toRole = counterpartRole(fromRole)
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug
     if (expectedFromId !== fromId) {
-      return res.status(403).json({ error: 'Invalid reviewer for this project' })
+      return res.status(403).json({ error: 'Invalid reviewer for this project' });
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId)
     if (existing) {
         error: "You have already submitted a review for this project",
-      })
-      return res.status(409).json({ error: 'You have already submitted a review for this project' })
-      return res.status(409).json({ error: 'You have already submitted a review for this project' })
+      });
+      return res.status(409).json({ error: 'You have already submitted a review for this project' });
+      return res.status(409).json({ error: 'You have already submitted a review for this project' });
     }
-      .json({ message: "Review submitted", reviewId: review && review.id })
+      .json({ message: "Review submitted", reviewId: review && review.id });
   } catch (error: any) {
     return res
       .status(500)
-      .json({ error: "Internal server error", details: error?.message })
+      .json({ error: "Internal server error", details: error?.message });
   }
 }
       id: uuidv4(),
@@ -96,7 +96,7 @@ if ( {) {
       removed: false,
       createdAt: now}
     await upsertReview(review)
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
   } catch (error: any) {
   }
 }

@@ -10,7 +10,7 @@ const optimizePerformance = () => {
   // 3. Generate critical CSS
   // 4. Optimize fonts
   // 5. Generate service worker
-  
+
   console.log('Performance optimizations completed')
   }
 

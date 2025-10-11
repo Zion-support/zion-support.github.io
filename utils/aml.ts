@@ -113,8 +113,8 @@ class MockAmlProvider implements AmlProvider {
     const isPep = lowered.includes('minister') || lowered.includes('president')
     const isOfac = lowered.includes('sanction')
     const matches: WatchlistMatch[] = []
-    if (isPep) matches.push({ list: 'PEP', name: fullLegalName, score: 0.9 })
-    if (isOfac) matches.push({ list: 'OFAC', name: fullLegalName, score: 0.95 })
+    if (isPep) matches.push({ list: 'PEP', name: fullLegalName, score: 0.9 });
+    if (isOfac) matches.push({ list: 'OFAC', name: fullLegalName, score: 0.95 });
     return {
       status: matches.length ? 'review' : 'clear',
       matches,

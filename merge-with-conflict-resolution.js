@@ -21,21 +21,21 @@ function resolveConflicts(filePath) {
         skipUntilNextMarker = true
         continue
   }
-      
+
       if (line.includes('')) {
     skipUntilNextMarker = false
         continue
   }
-      
+
       if (line.includes('>>>>>>>')) {
     continue
   }
-      
+
       if (!skipUntilNextMarker) {
     resolvedLines.push(line)
   }
     }
-    
+
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)
@@ -50,13 +50,13 @@ function mergeBranch(branchName) {
   try {
     console.log(`\n🔄 Attempting to merge ${branchName}...`)
     // Try to merge the branch
-    execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' })
+    execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' });
     console.log(`✅ Successfully merged ${branchName}`)
     return true
   } catch (error) {
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`)
     // Check for conflicts
-    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {
       console.log(`🔧 Resolving conflicts in ${conflictFiles.split('\n').length} files...`)
       const files = conflictFiles.trim().split('\n')
@@ -71,9 +71,9 @@ function mergeBranch(branchName) {
 
       console.log(`✅ Resolved conflicts in ${resolvedCount} files`)
       // Add all resolved files
-      execSync('git add .', { stdio: 'inherit' })
+      execSync('git add .', { stdio: 'inherit' });
       // Commit the resolution
-      execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: 'inherit' })
+      execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: 'inherit' });
       console.log(`✅ Successfully merged ${branchName} with conflict resolution`)
       return true
     } else {
@@ -97,7 +97,7 @@ try {
   for (const branch of branchesToMerge) {
     try {
       // Check if branch has unique commits
-      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' })
+      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       if (!uniqueCommits.trim()) {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`)
         continue
@@ -122,7 +122,7 @@ try {
   console.log(`❌ Failed to merge: ${failedCount} branches`)
   // Push all changes
   console.log('\n📤 Pushing all changes to origin/main...')
-  execSync('git push origin main', { stdio: 'inherit' })
+  execSync('git push origin main', { stdio: 'inherit' });
   console.log('🎉 Merge process completed!')
 } catch (error) {
     console.error('❌ Error during merge process:', error.message)

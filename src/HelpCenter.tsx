@@ -1447,7 +1447,6 @@ Help Center
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;
 Find answers to your questions, learn how to use our platform, and get the support you need.
 
-
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -1459,7 +1458,7 @@ How can we help you?
 Find answers to common questions, learn how to use our platform,;
 and get support when you need it most.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -1477,14 +1476,14 @@ Search
                 </button>
               </div>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;
 How Can We
               <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">;
 Help You?
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
 Find answers to your questions, get technical support, and access comprehensive;
 resources to make the most of our AI-powered solutions.
@@ -1625,7 +1624,7 @@ Help Center
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
 Find answers to your questions, learn how to use our services, and get the support you need.
           </p>
-          
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-12">;
 const filteredCategories = Object.entries(helpCategories).filter(([key);, category]) =>;
@@ -1648,7 +1647,7 @@ return (;
               <p className="text-xl text-zion-slate-light">Find answers to your questions and get the support you need</p>
             </div>
           </div>
-          
+
           {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -1941,7 +1940,7 @@ title="Help Center | Zion Tech Group";
 description="Get help and support for using the Zion Tech Group platform. Find answers to common questions and learn how to use our features.";
 canonical="https://ziontechgroup.com/help"
       />
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -1975,7 +1974,7 @@ type: "website",;,
 url: "https://ziontechgroup.com/help"
         }}
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1987,7 +1986,7 @@ Help Center
               <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">;
 Get the help you need with our comprehensive support resources, documentation, and expert assistance.
               </p>
-              
+
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto mb-8">
                 <div className="relative">
@@ -2014,7 +2013,7 @@ Get Help Fast
 Choose the support option that works best for you.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option), index) => (
               <$2 />;
@@ -2126,10 +2125,10 @@ key={category.id}
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color}} rounded-xl flex items-center justify-center mb-6`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
                 <p className="text-gray-400 mb-4">{category.description}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{category.articleCount} articles</span>
                   <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">;
@@ -2152,7 +2151,7 @@ Browse Articles
 Most viewed and helpful articles from our knowledge base
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredArticles.map((article) => (
               <$2 />;
@@ -2172,10 +2171,10 @@ key={article.id}
                     </span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-lg font-semibold text-white mb-3">{article.title}</h3>
                 <p className="text-gray-300 mb-4">{article.excerpt}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-400">
                     <Star className="w-4 h-4 mr-1 text-yellow-400" />
@@ -2200,7 +2199,7 @@ Read Article
 Quick answers to the most common questions
           </p>
         </div>
-        
+
         <div className="space-y-4">
           {faqs.map((faq) => (
             <$2 />;
@@ -2218,7 +2217,7 @@ onClick={() => toggleFaq(faq.id)}
                   <ChevronRight className="w-5 h-5 text-gray-400" />
                 )}
               </button>
-              
+
               {expandedFaqs.has(faq.id) && (
                 <div className="px-6 pb-4">
                   <p className="text-gray-300">{faq.answer}</p>
@@ -2238,7 +2237,7 @@ onClick={() => toggleFaq(faq.id)}
 Multiple ways to get help when you need it
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel), index) => {;
 const Icon = channel.icon;;
@@ -2251,10 +2250,10 @@ key={index}
                   <div className={`w-16 h-16 bg-gradient-to-r ${channel.color}} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{channel.description}</p>
-                  
+
                   <div className="space-y-2 text-sm">
                     <div className="text-gray-300">
                       <span className="font-medium">Availability:</span> {channel.availability}
@@ -2263,7 +2262,7 @@ key={index}
                       <span className="font-medium">Response:</span> {channel.responseTime}
                     </div>
                   </div>
-                  
+
                   <button className="w-full mt-4 py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200">;
 Get Help
                   </button>
@@ -2321,7 +2320,7 @@ initial={{ opacity: 0}}, y: 20 }}
           >;
 Find answers to common questions and get the support you need
           </motion.p>
-          
+
           {/* Search Bar */}
           <motion.div;
 className="max-w-2xl mx-auto";
@@ -2408,7 +2407,7 @@ Multiple Ways to Get Help
 Choose the support channel that works best for you
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel), index) => (
               <$2 />;
@@ -2439,7 +2438,7 @@ Browse by Category
 Find help organized by topic to quickly locate the information you need.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {categories.map((category) => (
                 <$2 />;
@@ -2485,7 +2484,7 @@ key={categoryIndex}
                   <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{category.title}</h3>
                 </div>
-                
+
                 <div className="space-y-6">
                   {category.questions.map((item), questionIndex) => (
                     <div key={questionIndex} className="border-b border-gray-700 pb-4 last:border-b-0">
@@ -2506,7 +2505,7 @@ key={categoryIndex}
 Explore more ways to learn and get the most out of our platform
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -2518,7 +2517,7 @@ Explore more ways to learn and get the most out of our platform
 Watch Videos
             </button>
           </div>
-          
+
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <FileText className="w-8 h-8 text-white" />
@@ -2626,7 +2625,7 @@ onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                     )}
                   </div>
                 </button>
-                
+
                 {isExpanded && (
                   <div className="px-6 pb-6 border-t border-gray-700/50">
                     <div className="pt-4 space-y-3">
@@ -2726,7 +2725,6 @@ Join Community
         </div>
       </div>
 
-
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq), index) => (
               <$2 />;
@@ -2763,7 +2761,7 @@ Find the help you need by exploring our organized categories;
 of support articles and resources.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {categories.map((category) => {};
 const Icon = category.icon;;
@@ -2804,7 +2802,7 @@ isActive ? 'text-blue-300' : 'text-gray-500'}`}>
 Find the help you need by browsing our organized categories
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category), index) => (
               <motion.div;
@@ -2925,7 +2923,7 @@ onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
                     )}
                   </div>
                 </button>
-                
+
                 {isExpanded && (
                   <div className="px-6 pb-6 border-t border-gray-700/50">
                     <div className="pt-4">
@@ -2986,7 +2984,7 @@ className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white fon
 Find answers to common questions, access helpful resources, and get the support you need.;
 Our team is here to help you succeed with our technology solutions.
             </motion.p>
-            
+
             <motion.div;
 className="max-w-2xl mx-auto";
 initial={{ opacity: 0}}, y: 30 }}

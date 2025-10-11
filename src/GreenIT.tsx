@@ -564,7 +564,7 @@ description: "Average annual savings for enterprise clients"
     }
   ];
 return (;
-    
+
       <SEO;
 title="Green IT Solutions - Sustainable Technology";
 description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.";
@@ -579,7 +579,7 @@ canonical="https://ziontechgroup.com/marketplace/category/green-it"
 Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
-          
+
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -708,7 +708,7 @@ Green IT Success
                         </span>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <div>
                         <h4 className="text-white font-semibold mb-3">Challenge:</h4>
@@ -805,6 +805,6 @@ Download Green IT Guide
           </div>
         </div>
       </main>
-    
+
   )
 }</div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>

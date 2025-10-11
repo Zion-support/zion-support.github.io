@@ -17,7 +17,7 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     files.push(fullPath)
   }
   }
-  
+
   return files
 }
 
@@ -37,7 +37,7 @@ const fixMergeConflicts = (filePath) => {
       console.log(`Fixed merge conflicts in: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)

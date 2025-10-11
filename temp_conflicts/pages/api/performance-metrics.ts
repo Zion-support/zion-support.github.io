@@ -59,7 +59,7 @@ export default async function handler(
         return,
       }
       // Log performance metrics (in production, you would store these in a database)
-      // Removed // // // console.log('🔧 Performance Report:', { ... }),
+      // Removed // // // console.log('🔧 Performance Report:', { ...props}),
       // Log critical performance issues
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor'),
       if (poorMetrics.length > 0) {
@@ -69,11 +69,11 @@ export default async function handler(
       const performanceReport = req['body']
       // Validate the report structure
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
-        res.status(400).json({ error: 'Invalid performance report format' })
+        res.status(400).json({ error: 'Invalid performance report format' });
         return
       }
       // Log performance metrics (in production, you would store these in a database)
-      // Removed console.log('🔧 Performance Report:', { ... })
+      // Removed console.log('🔧 Performance Report:', { ...props});
       // Log critical performance issues
       const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor')
       if (poorMetrics.length > 0) {
@@ -100,7 +100,7 @@ export default async function handler(
               type: 'performance',
               data: performanceReport,
               timestamp: Date.now()
-            })
+            });
           }),
         } catch (error) {
           console.error('Error sending to analytics:', error),
@@ -121,25 +121,25 @@ export default async function handler(
       message: 'Internal server error' 
     }),
     return,
-          })
+          });
         } catch (error) {
           console.error('Error sending to analytics:', error)
         }
       }
-      res.status(200).json({ success: true, message: 'Performance data recorded' })
+      res.status(200).json({ success: true, message: 'Performance data recorded' });
     } catch (error) {
       console.error('Error processing request:', error)
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
-      })
+      });
     }
   } catch (error) {
     console.error('Error processing request:', error)
     res.status(500).json({ 
       success: false, 
       message: 'Internal server error' 
-    })
+    });
     return
   }
   if (req.method === 'GET') {
@@ -160,7 +160,7 @@ export default async function handler(
           total: performanceMetrics.length,
           average: calculateAverages(performanceMetrics)
         }),
-        })
+        });
       } else if (type === 'error') {
         const limitedErrors = errorLogs
           .slice(-Number(limit))
@@ -174,7 +174,7 @@ export default async function handler(
           data: limitedErrors,
           total: errorLogs.length
         }),
-        })
+        });
       } else if (type === 'summary') {
         res.status(200).json({
           success: true,
@@ -190,7 +190,7 @@ export default async function handler(
             }
           }
         }),
-        })
+        });
       } else {
         res.status(400).json({ 
           success: false, 
@@ -210,21 +210,21 @@ export default async function handler(
       success: false, 
       message: `Method ${req.method} Not Allowed` 
     }),
-        })
+        });
       }
     } catch (error) {
       console.error('Error retrieving data:', error)
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
-      })
+      });
     }
   } else {
     res.setHeader('Allow', ['POST', 'GET'])
     res.status(405).json({ 
       success: false, 
       message: `Method ${req.method} Not Allowed` 
-    })
+    });
   }
 }
 function calculateAverages(metrics: PerformanceData[]) {
@@ -237,7 +237,7 @@ function calculateAverages(metrics: PerformanceData[]) {
     cls: acc.cls + metric.cls,
     ttfb: acc.ttfb + metric.ttfb
   }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 }),
-  }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 })
+  }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 });
   return {
     fcp: Math.round(sums.fcp / metrics.length),
     lcp: Math.round(sums.lcp / metrics.length),

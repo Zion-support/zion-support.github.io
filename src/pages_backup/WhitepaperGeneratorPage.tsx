@@ -96,7 +96,7 @@ parsed.push ({;,
 id: `section-${id_counter++}-${title.toLowerCase ().replace (/\s+/g, '-')}`,;
 title,;
 content,
-        })
+        });
       }
       // Check condition;
 if (.length > 0) {) {};
@@ -106,7 +106,7 @@ $2
 id: 'section - 0-full - draft',;,
 title: 'Full Draft',;,
 content: draft.trim (),
-        })
+        });
       }
       return parsed;
     },
@@ -491,7 +491,7 @@ distribution_breakdown,}
         const { data: link_response, error: linkFuncError } =;
 await supabase.functions.invoke ('create - shared - whitepaper', {;,
 body: whitepaper_payload,
-          })
+          });
         // Check condition;
 if (;
 throw new Error () {;
@@ -683,10 +683,10 @@ while ((match = sectionRegex.exec(draft)) !== null) {;
 }
 const title = (match[1] || match[2] || `Section ${idCounter + 1;}`).trim(),;
 const content = (match[3] || '').trim();,;
-parsed.push({ id: `section-${idCounter++}}-${title.toLowerCase().replace(/\s+/g, '-')}`, title, content })
+parsed.push({ id: `section-${idCounter++}}-${title.toLowerCase().replace(/\s+/g, '-')}`, title, content });
     }
     if (parsed.length === 0 && draft.trim().length > 0) {;
-parsed.push({ id: 'section-0-full-draft'}, title: 'Full Draft', content: draft.trim() })
+parsed.push({ id: 'section-0-full-draft'}, title: 'Full Draft', content: draft.trim() });
     }
     return parsed;
   }, []),;
@@ -1574,14 +1574,9 @@ onClick={() => removeDistributionItem(item.id)}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
 
-
-
-
               )}
             </div>
           )}
-
-
 
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
@@ -1609,10 +1604,6 @@ Submitting to counsel...
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-
-
-
-
 
         </form>
         </form>
@@ -1736,7 +1727,6 @@ className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
 
-
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (;
@@ -1744,11 +1734,6 @@ tokenSupply={tokenSupply}        />
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
-
-
-
-
-
 
               <WhitepaperSectionEditor;
 key={section.id}
@@ -1789,11 +1774,6 @@ className='w-full'
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
-
-
-
-
-
 
 '"
 }

@@ -40,13 +40,13 @@ if (fs.existsSync(indexPath)) {
           \`
           skipLink.addEventListener('focus', function() {
             this.style.top = '6 px'
-          })
+          });
           skipLink.addEventListener('blur', function() {
             this.style.top = '-40 px'
-          })
+          });
           document.body.insertBefore(skipLink, document.body.firstChild)
         }
-        
+
         // High contrast mode toggle
         function addHighContrastToggle() {
           const toggle = document.createElement('button')
@@ -68,10 +68,10 @@ if (fs.existsSync(indexPath)) {
           toggle.addEventListener('click', function() {
             document.body.classList.toggle('high-contrast')
             this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'
-          })
+          });
           document.body.appendChild(toggle)
         }
-        
+
         // Font size controls
         function addFontSizeControls() {
           const controls = document.createElement('div')
@@ -94,24 +94,24 @@ if (fs.existsSync(indexPath)) {
           increaseBtn.addEventListener('click', () => {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
             document.documentElement.style.fontSize = (currentSize + 2) + 'px'
-          })
+          });
           const decreaseBtn = document.createElement('button')
           decreaseBtn.textContent = 'A-'
           decreaseBtn.addEventListener('click', () => {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
             document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'
-          })
+          });
           const resetBtn = document.createElement('button')
           resetBtn.textContent = 'Reset'
           resetBtn.addEventListener('click', () => {
             document.documentElement.style.fontSize = '16 px'
-          })
+          });
           controls.appendChild(increaseBtn)
           controls.appendChild(decreaseBtn)
           controls.appendChild(resetBtn)
           document.body.appendChild(controls)
         }
-        
+
         // Focus management for modals and dropdowns
         function enhanceFocusManagement() {
           // Trap focus in modals
@@ -137,7 +137,7 @@ if (fs.existsSync(indexPath)) {
                 }
               }
             }
-            
+
             // Close modals with Escape key
             if (e.key === 'Escape') {
               const modal = document.querySelector('.modal:not([style*="display: none"])')
@@ -146,9 +146,9 @@ if (fs.existsSync(indexPath)) {
                 if (closeBtn) closeBtn.click()
               }
             }
-          })
+          });
         }
-        
+
         // Add ARIA labels to interactive elements
         function addAriaLabels() {
           // Add aria-labels to buttons without text
@@ -159,7 +159,7 @@ if (fs.existsSync(indexPath)) {
               const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase()
               button.setAttribute('aria-label', \`\${iconName} button\`)
             }
-          })
+          });
           // Add role="button" to clickable divs
           const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]')
           clickableDivs.forEach(div => {
@@ -167,16 +167,16 @@ if (fs.existsSync(indexPath)) {
               div.setAttribute('role', 'button')
               div.setAttribute('tabindex', '0')
             }
-          })
+          });
           // Add aria-expanded to collapsible elements
           const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]')
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded')) {
               element.setAttribute('aria-expanded', 'false')
             }
-          })
+          });
         }
-        
+
         // Announce page changes to screen readers
         function addLiveRegion() {
           const liveRegion = document.createElement('div')
@@ -202,7 +202,7 @@ if (fs.existsSync(indexPath)) {
             liveRegion.textContent = 'Page navigation complete'
           }
         }
-        
+
         // Initialize accessibility features
         document.addEventListener('DOMContentLoaded', function() {
           addSkipLink()
@@ -211,7 +211,7 @@ if (fs.existsSync(indexPath)) {
           enhanceFocusManagement()
           addAriaLabels()
           addLiveRegion()
-        })
+        });
         // Add high contrast styles
         const highContrastStyles = \`
           .high-contrast {

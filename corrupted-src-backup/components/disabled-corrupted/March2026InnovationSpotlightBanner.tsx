@@ -54,7 +54,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 lab, e, l: 'Enhancem, e, n, t')
                 ic, o, n: '📈'),
                 col, o, r: 'te, x, t-emera, l, d-40, 0')
-              })
+              });
             ].m, a, p((st, a, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'>
               {
@@ -64,7 +64,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 col, o, r: 'te, x, t-emera, l, d-40, 0'}].m, a, p((st, a, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'>
               {/* TODO: Fix JSX expression */}
-              })
+              });
             ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'>
                 <div, className='te, x, t-4xl, m, b-2'>{st, a, t.ic, o, n}
                 <div, className='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'>

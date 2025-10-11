@@ -17,7 +17,7 @@ function fixFile(filePath) {
       modified = true
       return headContent.trim()
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    })
+    });
     // Fix common syntax issues
     content = content
       // Remove any remaining conflict markers
@@ -32,7 +32,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),
       .replace(/[\s\S]*?
       // Fix common syntax patterns
-      .replace(/\{/* TODO: Fix JSX expression */})
+      .replace(/\{/* TODO: Fix JSX expression */});
   O: Add content\n}')
       .replace(/\[\s*$/gm, '[\n  // TOD)
   O: Add items\n]')
@@ -55,12 +55,12 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         const lines = match.split('\n')
         return lines[0] + ';'
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
-      })
+      });
       // Remove empty lines with just spaces
       .replace(/^\s*\n/gm, '\n')
       // Fix missing closing braces
       .replace(/\{\s*$/, '{\n  // TODO: Add content\n}')
-      .replace(/\{/* TODO: Fix JSX expression */})
+      .replace(/\{/* TODO: Fix JSX expression */});
   O: Add content\n}')
     // Additional specific fixes for common patterns
     const lines = content.split('\n')
@@ -82,7 +82,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
       // Track brace/bracket/paren counts
       braceCount += (line.match(/\{/g) || []).length
-      braceCount += (line.match(/\{/* TODO: Fix JSX expression */})
+      braceCount += (line.match(/\{/* TODO: Fix JSX expression */});
       braceCount -= (line.match(/\}/g) || []).length
       bracketCount += (line.match(/\[/g) || []).length
       bracketCount -= (line.match(/\]/g) || []).length
@@ -152,7 +152,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   d: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -177,7 +177,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
       }
     }
   }
-  
+
   traverse(dir)
   return files
 }
@@ -211,7 +211,7 @@ console.log(`- Errors: ${errorCount}`)
 // Run linting to check for remaining issues
 console.log('\nRunning linting to check for remaining issues...')
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
   console.log('Linting passed!')
 } catch (error) {/* TODO: Fix JSX expression */}
 }"`

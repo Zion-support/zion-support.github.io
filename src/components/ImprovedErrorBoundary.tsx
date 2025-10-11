@@ -42,7 +42,7 @@ component: errorInfo.componentStack ?? undefined,;,
 timestamp: Date.now(),;,
 userAgent: navigator.userAgent,;,
 url: window.location.href
-    })
+    });
     // Call custom error handler if provided;
 if (this.props.onError) {;
 this.props.onError(error, errorInfo)
@@ -130,7 +130,7 @@ userAgen,;,
 t: navigator.userAgent,;
 ur,;,
 l: window.location.href,
-    })
+    });
     // Call custom error handler if provided;
 if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -156,7 +156,7 @@ y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       (window as unknown as {/* TODO: Fix JSX expression */}
-  t: Record,})
+  t: Record,});
           <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -171,8 +171,8 @@ t: {/* TODO: Fix JSX expression */}
   componentStac,;,
 k: errorInfo.componentStack,
           }
-        })
-      })
+        });
+      });
     }
   }
   componentDidUpdate(prevProps: Props): void {;
@@ -198,7 +198,7 @@ this.setState({;,
 hasError: false},;,
 error: null,;,
 errorInfo: null
-    })
+    });
   }
   handleReload = (): void => {;
 window.location.reload()
@@ -236,7 +236,7 @@ erro,;,
 r: null,;
 errorInf,;,
 o: null,)
-    })
+    });
   }
   handleReload = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -322,8 +322,7 @@ This error has occurred {this.state.errorCount} times
             {this.state.errorCount > 1 && ()}
           <p style={styles.errorCount}>;
 This error has occurred {this.state.errorCount} times
-            )}
-      )
+            )});
     }
     return this.props.children;
   }
@@ -419,8 +418,7 @@ marginTop: '24px',;,
 fontSize: '14px',;,
 color:   ,;
 $4}
-}
-      )
+});
     }
     return this.props.children;
   }

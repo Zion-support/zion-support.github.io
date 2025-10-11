@@ -14,7 +14,7 @@
   w: Date().toISOString(})} this.logFile = path.join(__dirname) // // // // // // // // fs.appendFileSync(this.logFile) logMessage)} log(message) {/* TODO: Fix JSX expression */}
   t: timestamp = new Date().toISOString()} cons,`
   t: logMessage = \\`[\\${timestamp}] \\${message}\\\\n\\`; fs.appendFileSync(this.logFile) logMessage)} asyn,
-  c: analyzeCodeQuality() {try { // Analyze TypeScript complexity}' const result = execSync('' 'npx tsc --noEmit' {/* TODO: Fix JSX expression */})
+  c: analyzeCodeQuality() {try { // Analyze TypeScript complexity}' const result = execSync('' 'npx tsc --noEmit' {/* TODO: Fix JSX expression */});
   g: 'utf8 }); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); return null} } calculateComplexity() {/* TODO: Fix JSX expression */}
   y: { const files = this.getTypeScriptFiles()} cons,
   t: totalComplexity = 0} files.forEach(fil)

@@ -193,12 +193,12 @@ export default PageComponent;`;
 filesToFix.forEach(filePath => {
   const fullPath = path.join(__dirname, filePath);
   const dir = path.dirname(fullPath);
-  
+
   // Ensure directory exists
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-  
+
   // Generate component name from file path
   const componentName = filePath
     .split('/')
@@ -207,10 +207,10 @@ filesToFix.forEach(filePath => {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('') + 'Page';
-  
+
   // Replace PageComponent with actual component name
   const content = baseTemplate.replace(/PageComponent/g, componentName);
-  
+
   // Write the file
   fs.writeFileSync(fullPath, content);
   console.log(`Fixed: ${filePath}`);

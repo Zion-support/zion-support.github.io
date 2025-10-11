@@ -534,7 +534,7 @@ return (;
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"
                       <CheckCircle, className="w-4 h-4, m, r-1" />"
-                      {featu, r, e.benef, i, t})
+                      {featu, r, e.benef, i, t});
                     </d, i, v>)
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,

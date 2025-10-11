@@ -34,14 +34,13 @@ const ${componentName}: React.FC<${componentName}Props> = ({
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
       {children || (
         <div className="p-4 text-center text-gray-600">
-const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
+const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
       {/* TODO: Fix JSX expression */}
           <h3 className="text-lg font-semibold mb-2">${componentName}
           <p>Component</p> placeholder - implementation needed
-      )}
-  )
+      )});
 }
 export default ${componentName};`
 `
@@ -93,7 +92,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       content.includes('const,') ||
       (content.includes('{/* TODO: Fix JSX expression */}
       //       } else {/* TODO: Fix JSX expression */}
-      //       })
+      //       });
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }

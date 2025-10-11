@@ -45,7 +45,6 @@ export const Link: React.FC,
       aria-label={ariaLabel}
       {...props}
 // >
-      {children}
-  )
+      {children});
 }
 export default Link</Link></a>

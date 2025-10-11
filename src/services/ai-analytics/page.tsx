@@ -161,7 +161,7 @@ icon$5: Award,
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               AI Analytics Services,
-  
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.

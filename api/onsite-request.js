@@ -16,7 +16,7 @@ export default function handler(req, res) {
 
   try {
     const { name, email, phone } = req.body || {}
-    
+
     if (!name || !email || !phone) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')

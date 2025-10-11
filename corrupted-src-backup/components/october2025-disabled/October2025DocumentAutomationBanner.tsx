@@ -43,7 +43,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
           <p, className='te, x, t-2xl, m, d:te, x, t-3xl, fon, t-bold, tex, t-indi, g, o-100, m, b-4'>
             Transform, Operations, with AI-Powered, Document, Processing</$1>)
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>)
-            Discover, how, leading enterprises, achi, e, v, e{' '})
+            Discover, how, leading enterprises, achi, e, v, e{' '});
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>)
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
             Transform, Operations, with AI-Powered, Document, Processing

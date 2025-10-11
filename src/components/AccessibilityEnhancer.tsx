@@ -51,7 +51,7 @@ link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`
 link.setAttribute('target', '_blank');
 link.setAttribute('rel', 'noopener noreferrer')
         }
-      })
+      });
       // Add ARIA labels to images;
 const images = document.querySelectorAll('img: not([alt])');,;
 images.forEach(img => {;
@@ -59,7 +59,7 @@ if (!img.getAttribute('alt')) {;
 }
 img.setAttribute('alt'}, '')
   }
-      })
+      });
       // Add ARIA labels to form inputs;
 const inputs = document.querySelectorAll('input: not([aria-label])');,;
 inputs.forEach(input => {;
@@ -68,7 +68,7 @@ const label = document.querySelector(`label[for="${input.getAttribute('id');}"]`
 if (label && !input.getAttribute('aria-label')) {;
 input.setAttribute('aria-label', label.textContent?.trim() || '')
   }
-      })
+      });
       // Add skip links;
 const skipLink = document.createElement('a');;
 skipLink.href = '#main-content';

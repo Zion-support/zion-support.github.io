@@ -4,11 +4,11 @@ exports.config = {schedule: '*/1 * * * *'} // every minute
 exports.handler = async function () {try {
     execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true')
       { stdio: 'inherit'} shell: true,
-      })
+      });
     )
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'ultrafast-git-sync' })
+        task: 'ultrafast-git-sync' });
     }
   } catch (e) {return {
       statusCode: 200,
@@ -20,13 +20,13 @@ exports.config = {/* TODO: Fix JSX expression */}
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
-      })
+      });
     )
     return {/* TODO: Fix JSX expression */}
-  k: 'ultrafast-git-sync' })
+  k: 'ultrafast-git-sync' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

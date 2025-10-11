@@ -30,7 +30,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix Image component priority prop
-    if (content.includes('priority={/* TODO: Fix JSX expression */})
+    if (content.includes('priority={/* TODO: Fix JSX expression */});
       content = content.replace(/priority=\{[^}]*\}/g, '')
       modified = true
     }
@@ -71,8 +71,8 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory
   files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  })
+    });
+  });
 }
 
 main().catch(console.error)

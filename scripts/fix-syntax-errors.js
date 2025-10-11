@@ -38,7 +38,7 @@ function fixSyntaxErrors(content) {
         return match + '\n    });'
       }
       return match
-    })
+    });
     fixed = true
   }
 
@@ -50,7 +50,7 @@ function fixSyntaxErrors(content) {
         return match + '\n      });'
       }
       return match
-    })
+    });
     fixed = true
   }
 
@@ -62,7 +62,7 @@ function fixSyntaxErrors(content) {
         return match + '\n    }'
       }
       return match
-    })
+    });
     fixed = true
   }
 
@@ -74,7 +74,7 @@ function fixSyntaxErrors(content) {
         return match + '\n    });'
       }
       return match
-    })
+    });
     fixed = true
   }
 
@@ -86,7 +86,7 @@ function fixSyntaxErrors(content) {
         return match + '\n  }'
       }
       return match
-    })
+    });
     fixed = true
   }
 
@@ -118,7 +118,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()})
+      cwd: process.cwd()});
     allFiles.push(...files)
   }
 

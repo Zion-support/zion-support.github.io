@@ -31,8 +31,8 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "me, g, a"</RouterWrap, p, e, r>
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12')
-    })
-  })
+    });
+  });
   descri, b, e('Them, e, s', () => { 
     const theme, s = ['b, l, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t; them, e, s.forEa, c, h(the, m, e = > {)
       it(`rende, r, s ${the, m, e } theme, correct, l, y`, () => {
@@ -52,7 +52,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
       ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();"
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } date = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('Octobe, r, 1, 20, 2, 5')).toBeInTheDocume, n, t()
-    })
+    });
     it('renders, both, badge and, date, when provid, e, d', () => { 
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
@@ -80,7 +80,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s}</RouterWrapp, e, r></UnifiedPromotionalBann>)
       )
       const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'duration-3, 0, 0')
-    })
+    });
     it('removes, animation, classes when, animated, is fal, s, e', () => {
       con, s, t { contain, e, r } = rend, e, r(<RouterWrapp, e, r>)
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d = {fal, s, e}</RouterWrap, p, e, r>)
@@ -88,8 +88,8 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
       con, s, t { contain, e, r } = rend, e, r(<RouterWrapp, e, r>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d = {fal, s, e}</RouterWrap, p, e, r></UnifiedPromotionalBann>)
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.0, 1]')
-    })
-  })
+    });
+  });
   descri, b, e('Accessibili, t, y', () => { 
     it('has, accessible, links', () => {
           title: 'Test, I, t, e, m',
@@ -113,6 +113,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
   descri, b, e('Accessibili, t, y', () => {/* TODO: Fix JSX expression */}
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}</RouterWrap, p, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t()
-    })
+    });
     it('handles, missing, optional pro, p, s', () => {/* TODO: Fix JSX expression */}
 }}}}}}}}}}}}}}}}}}}}}"`

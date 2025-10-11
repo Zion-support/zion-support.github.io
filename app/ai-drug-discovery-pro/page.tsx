@@ -38,7 +38,7 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -46,7 +46,7 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -66,15 +66,15 @@ const PagePage: React.FC = () => {const features = [
                   View Demo
                 </button>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -86,7 +86,7 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">AI Analytics Features</h2>
               <p className="text-xl text-gray-300">Powerful tools for data analysis and insights</p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,10 +96,7 @@ const PagePage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -115,16 +112,16 @@ const PagePage: React.FC = () => {const features = [
   )
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -136,7 +133,7 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,24 +143,19 @@ const PagePage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-      <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -186,22 +178,22 @@ const PagePage: React.FC = () => {const features = [
                 Schedule Demo
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -213,7 +205,7 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,7 +214,7 @@ const PagePage: React.FC = () => {const features = [
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
-      
+
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -236,16 +228,16 @@ const PagePage: React.FC = () => {const features = [
                     ))}
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -257,7 +249,7 @@ const PagePage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -266,21 +258,21 @@ const PagePage: React.FC = () => {const features = [
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
-      
+
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -301,16 +293,16 @@ const PagePage: React.FC = () => {const features = [
                 Learn More
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

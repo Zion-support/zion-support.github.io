@@ -15,9 +15,9 @@ export const checkOnline = async (): Promise<boolean> => {
     const id = setTimeout(() => controller.abort(), 3000)
     await fetch('https://clients3.google.com/generate_204', {
       mode: 'no-cors',
-      signal: controller.signal})
+      signal: controller.signal});
       signal: controller.signal,
-    })
+    });
     clearTimeout(id)
     return true
   } catch {
@@ -39,6 +39,6 @@ export const safeFetch: typeof fetch = async (input, init) => {
 }
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   global: { fetch: safeFetch }
-})
+});
 // Helper function to get profiles table
 export const getFromProfiles = () => supabase.from('profiles')

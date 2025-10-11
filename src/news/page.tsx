@@ -90,10 +90,10 @@ keywords={['AI news', 'technology updates', 'product launches', 'success stories
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">;
 News & Updates
-  
+
             <p className="text-xl text-cyan-400 mb-8">;
 Stay informed with our latest innovations and success stories,
-  
+
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">;
 Discover the latest developments in AI technology, product launches,;
 client success stories, and industry insights from Zion Tech Group.
@@ -182,7 +182,7 @@ className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-sla
   </input>
                 <button className="cyber-button px-8 py-3 font-semibold">;
 Subscribe,
-  
+
               </div>
               <p className="text-gray-400 text-sm mt-4">;
 No spam, unsubscribe at any time.

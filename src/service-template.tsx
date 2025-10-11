@@ -35,7 +35,7 @@ const,
             Service Template
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Blog Post
-  
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"

@@ -484,17 +484,17 @@ key={member.id}
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                     <p className="text-cyan-400 font-semibold mb-1">{member.role}</p>
                     <p className="text-gray-400 text-sm">{member.department}</p>
                   </div>
-                  
+
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     {member.bio}
                   </p>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
@@ -508,7 +508,7 @@ key={index}
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Achievements</h4>
                     <ul className="space-y-1">
@@ -520,7 +520,7 @@ key={index}
                       ))}
                     </ul>
                   </div>
-                  
+
                   {/* Social Links */}
                   <div className="flex justify-center space-x-4">
                     {member.linkedin && (
@@ -575,17 +575,17 @@ key={member.id}
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-                
+
                 <div className="text-center mb-4">
                   <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
                   <p className="text-cyan-400 text-sm font-medium mb-1">{member.role}</p>
                   <p className="text-gray-400 text-xs">{member.department}</p>
                 </div>
-                
+
                 <p className="text-gray-300 text-xs mb-4 leading-relaxed line-clamp-3">
                   {member.bio}
                 </p>
-                
+
                 <div className="mb-4">
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Expertise</h4>
                   <div className="flex flex-wrap gap-1">
@@ -841,7 +841,7 @@ Meet the visionaries and experts driving innovation at Zion Tech Group
                     <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                     <p className="text-blue-400 text-lg mb-3">{member.role}</p>
                     <p className="text-gray-300 mb-4">{member.bio}</p>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -909,7 +909,7 @@ innovation to deliver transformative results.
 href={member.linkedin}
                       target="_blank";
 rel="noopener noreferrer"
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {departments.map((dept), index) => (
               <$2 />;
@@ -947,7 +947,6 @@ href={`mailto:${member.email}}`}
           ))}
         </div>
       </div>
-
 
         {/* Join Our Team */}
         <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">

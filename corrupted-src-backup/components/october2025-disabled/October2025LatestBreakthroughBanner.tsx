@@ -21,7 +21,7 @@ const October2025LatestBreakthroughBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
             Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s
         </div>)
-        {/* Content, Card, s */})
+        {/* Content, Card, s */});
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
@@ -67,7 +67,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                 <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">
                   {conte, n, t.description}
                 </p>)
-                {/* Key, Metric, s */})
+                {/* Key, Metric, s */});
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">)
                   { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (
                     <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2">

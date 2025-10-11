@@ -7,7 +7,7 @@
   q: 'NextApiRequest')re,`
   s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
   t: req.headers['user-agent']}i)
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */});
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
   p: new Date().toISOString() } })} export const asyncHandler = (f)
   n: Function) => (re,
@@ -19,7 +19,7 @@
   q: NextApiRequest)re,`
   s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
   t: req.headers['user-agent']}i)
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */});
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
   p: new Date().toISOString() } })} export const asyncHandler = (f)
   n: Function) => (re,
@@ -31,7 +31,7 @@
   q: NextApiRequest)re,`
   s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
   t: req.headers['user-agent']}i)
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */});
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
   p: new Date().toISOString() } })} export const asyncHandler = (f)
   n: Function) => (re,
@@ -43,7 +43,7 @@
   q: NextApiRequest)re,`
   s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
   t: req.headers['user-agent']}i)
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */});
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
   p: new Date().toISOString() } })} export const asyncHandler = (f)
   n: Function) => (re,
@@ -55,7 +55,7 @@
   q: NextApiRequest)re,`
   s: NextApiResponse) => {const { statusCode = 500}message } = err; // console.error(`API Error [${statusCode}]: ${message}`,{/* TODO: Fix JSX expression */}
   t: req.headers['user-agent']}i)
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */})
+  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress }); res.status(statusCode).json({/* TODO: Fix JSX expression */});
   e: process.env['NODE_ENV'] === 'production' ? 'Internal Server Error' : message)statusCode}timestam,
   p: new Date().toISOString() } })} export const asyncHandler = (f)
   n: Function) => (re,

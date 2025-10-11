@@ -121,9 +121,9 @@ export interface LoggerConfig {
  *
  * @example
  * ```typescript
- * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})
-  d: '123' })
- * logger.error('API request failed', {/* TODO: Fix JSX expression */})
+ * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */});
+  d: '123' });
+ * logger.error('API request failed', {/* TODO: Fix JSX expression */});
   r: err }, err);`
  * ```
  */
@@ -191,7 +191,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier
    * @example;`
    * ```typescript
-   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */})
+   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */});
   s: componentProps }, 'MyComponent');`
    * ```
    */
@@ -210,7 +210,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier
    * @example;`
    * ```typescript
-   * logger.info('User action completed', {/* TODO: Fix JSX expression */})
+   * logger.info('User action completed', {/* TODO: Fix JSX expression */});
   n: 'submit_form' }, 'FormComponent');`
    * ```
    */
@@ -229,7 +229,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier
    * @example;`
    * ```typescript
-   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */})
+   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */});
   i: 'oldFunction' }, 'LegacyModule');`
    * ```
    */
@@ -606,8 +606,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 //           ...entry,
           timestam)
   p: entry.timestamp.toISOString()
-        })
-      })
+        });
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -619,8 +619,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
   error: error instanceof Error ? error.message : String(error)
 
-      }
-  )
+      });
     }
   }
   /**
@@ -756,7 +755,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
         bySource[log.source] = (bySource[log.source] || 0) + 1
       }
-    })
+    });
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

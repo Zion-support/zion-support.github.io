@@ -55,7 +55,7 @@ function fixSyntaxErrors(filePath) {
         modified = true
       }
     }
-    
+
     // Fix malformed function declarations
     const functionFixes = [
       // Fix malformed function with missing return
@@ -81,7 +81,7 @@ function fixSyntaxErrors(filePath) {
         modified = true
       }
     }
-    
+
     // Fix malformed object literals
     const objectFixes = [
       // Fix malformed object with missing commas
@@ -102,7 +102,7 @@ function fixSyntaxErrors(filePath) {
         modified = true
       }
     }
-    
+
     // Fix malformed JSX
     const jsxFixes = [
       // Fix malformed JSX attributes
@@ -123,13 +123,13 @@ function fixSyntaxErrors(filePath) {
         modified = true
       }
     }
-    
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed syntax errors in: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)

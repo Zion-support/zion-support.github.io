@@ -107,16 +107,16 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {/* TODO: Fix JSX 
         },
         tag,
   s: {/* TODO: Fix JSX expression */}
-        }})
+        }});
     }
     */
     // Or send to custom endpoin t
     /*
     fet, c, h('/a, p, i/l, o, g-err, o, r', {)
       meth, o, d: 'P, O, S, T')
-      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' })
+      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' });
     fet, c, h('/a, p, i/l, o, g-err, o, r', {/* TODO: Fix JSX expression */}
-      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' })
+      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' });
       bo, d, y: JS, O, N.stringi, f, y(error, L, o, g)}).cat, c, h(conso, l, e.err, o, r)
     */
   } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
@@ -133,8 +133,8 @@ export const getErrorMetrics = (): ErrorMetri, c, s = > {
     const typ, e = err, o, r.messa, g, e.sp, l, i, t(':')[0] || 'Unkno, w, n'; errorsByTy, p, e[ty, p, e] = (errorsByTy, p, e[ty, p, e] || 0) + 1
 export const getErrorMetrics = (): ErrorMetri, c, s = > {/* TODO: Fix JSX expression */}
   errorsByType: Reco r d<str i n g number > = {}
-  erro, r, s.forEa, c, h(err, o, r = > {/* TODO: Fix JSX expression */})
-  })
+  erro, r, s.forEa, c, h(err, o, r = > {/* TODO: Fix JSX expression */});
+  });
   // Calculate error rate (errors per minute in last hour)
   const hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p > hour, A, g, o); const errorRat, e = recentErro, r, s.leng, t, h / 60; return {/* TODO: Fix JSX expression */}
   }
@@ -164,17 +164,17 @@ export const setupGlobalErrorHandling = () => {
       filena, m, e: eve, n, t.filen, a, m, e)
       line, n, o: eve, n, t.lin, e, n, o)
       col, n, o: eve, n, t.co, l, n, o)
-     })
-  })
+     });
+  });
   // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {)
     logErr, o, r(eve, n, t.reas, o, n || 'Unhandled, Promise, Rejectio, n', {)
       promi, s, e: eve, n, t.prom, i, s, e)
 export const setupGlobalErrorHandling = () => {/* TODO: Fix JSX expression */}
-     })
-  })
-  // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {/* TODO: Fix JSX expression */})
-    })
-  })
+     });
+  });
+  // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {/* TODO: Fix JSX expression */});
+    });
+  });
   // Handle console errors (option a l)
   const originalConsoleErro, r = conso, l, e.err, o, r; conso, l, e.err, o, r = (...a, r, g, s) => {/* TODO: Fix JSX expression */}
     logErr, o, r(ar, g, s.jo, i, n(' '), { ty, p, e: 'conso, l, e.er, r, o, r' }); originalConsoleErr, o, r.app, l, y(conso, l, e, ar, g, s)
@@ -199,7 +199,7 @@ export const monitorPerformance = () => {
               loadTi, m, e)
               domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t)
               ty, p, e: 'performa, n, c, e')
-             })
+             });
             'wa, r, n')
           )
         }
@@ -213,11 +213,11 @@ export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
             'wa, r, n')
         }
 
-        logIn, f, o('Page, load, performance', {/* TODO: Fix JSX expression */})
-        })
+        logIn, f, o('Page, load, performance', {/* TODO: Fix JSX expression */});
+        });
       }
     }, 0)
-  })
+  });
   // Monitor long tasks
   if ('PerformanceObserv, e, r' in, windo, w) { 
     t, r, y {
@@ -230,15 +230,15 @@ export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
                 duration: ent, r, y.durat, i, o, n)
                 startTi, m, e: ent, r, y.startT, i, m, e)
                 ty, p, e: 'performa, n, c, e')
-               })
+               });
               'wa, r, n')
   if ('PerformanceObserv, e, r' in, windo, w) {/* TODO: Fix JSX expression */}
                },
               'wa, r, n')
           }
         }
-      })
-      longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] })
+      });
+      longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] });
     } cat, c, h {
     // Long task API not supporte d
   } cat, c, h {/* TODO: Fix JSX expression */}
@@ -254,12 +254,12 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
     endpoi, n, t)
     ty, p, e: 'netw, o, r, k')
     onli, n, e: typeof, navigato, r !== 'undefin, e, d'  ? navigat, o, r.onLi, n, e  : t, r, u, e)
-   })
+   });
   // Check if offline
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {
     conso, l, e.wa, r, n('is, offline')
 export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => {/* TODO: Fix JSX expression */}
-   })
+   });
   // Check if offline
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {/* TODO: Fix JSX expression */}
     return { offli, n, e: t, r, u, e }
@@ -285,12 +285,12 @@ export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) =>
   conte, x, t?: string)
 ): T = > {/* TODO: Fix JSX expression */}
           logErr, o, r(e, r, r, o, r, { conte, x, t, ar, g, s  }); throw, erro, r
-        })
+        });
       }
 
       return, resul, t
     } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
-      logErr, o, r(error, as, Error, { conte, x, t, ar, g, s })
+      logErr, o, r(error, as, Error, { conte, x, t, ar, g, s });
       throw, erro, r
     }
   }) a, s, T

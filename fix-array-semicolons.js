@@ -8,7 +8,7 @@ function fixArraySemicolons(filePath) {
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '')
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
-    })
+    });
     fs.writeFileSync(filePath, content)
     console.log(`Fixed array semicolons)`
   in: ${filePath}`)
@@ -44,8 +44,8 @@ function main() {/* TODO: Fix JSX expression */}
         fixedCount++
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
-    })
-  })
+    });
+  });
   `
   console.log(`Fixed ${fixedCount} files`)
 }

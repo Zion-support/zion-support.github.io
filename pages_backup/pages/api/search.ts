@@ -18,7 +18,7 @@ import { searchAll, suggestDidYouMean } from '../../utils/search/filter'
       counts: {
       },
       results
-    })
+    });
   } catch (e: any) {
   }
 }

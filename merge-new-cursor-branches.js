@@ -18,12 +18,12 @@ const newCursorBranches = [
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
+  o: 'pipe' });
 //     return {/* TODO: Fix JSX expression */}
   s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -39,8 +39,7 @@ function branchExists(branchName) {
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */}
-  o: 'pipe' }
-    )
+  o: 'pipe' });
     return true
   } catch {/* TODO: Fix JSX expression */}
   }
@@ -59,7 +58,7 @@ for (const branch of newCursorBranches) {
       branch)
       status: 'not_found'),
 for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
-    })
+    });
     continue
   }
 
@@ -71,7 +70,7 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     mergedCount++
 //     results.push({)
       branch)
-      status: 'merged')})
+      status: 'merged')});
   } else {
 //     //Try to abort the merge if there was a conflict
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`)
@@ -84,11 +83,11 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     `Merge ${branch}`)
   )
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    })
+    });
   } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`)
-    results.push({/* TODO: Fix JSX expression */})
-    })
+    results.push({/* TODO: Fix JSX expression */});
+    });
   }
 }
 

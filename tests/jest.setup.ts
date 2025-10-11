@@ -45,7 +45,7 @@ fetchMock.enableMocks()
 // Reset fetch mocks before each test to ensure isolation
 beforeEach(() => {
   fetchMock.resetMocks()
-})
+});
 // Jest-DOM matchers
 import '@testing-library/jest-dom'
 import { TextEncoder, TextDecoder } from 'util'
@@ -76,7 +76,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-})
+});
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError
 // global.import = {
 //   // @ts-expect-error
@@ -350,7 +350,7 @@ jest.mock('firebase/firestore', () => {
       addDoc: jest.fn(() => Promise.resolve({ id: 'mockedDocId' })),
       onSnapshot: jest.fn(() => jest.fn()), // Returns an unsubscribe function
     }
-  })
+  });
   const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {
     let basePath = ''
     if (typeof firestoreInstanceOrCollectionRef.path === 'string') {
@@ -366,7 +366,7 @@ jest.mock('firebase/firestore', () => {
       delete: jest.fn(() => Promise.resolve()),
       onSnapshot: jest.fn(() => jest.fn()), // Returns an unsubscribe function
     }
-  })
+  });
   return {
     getFirestore: jest.fn(() => ({
       // For v8 style: db.collection('path')
@@ -394,7 +394,7 @@ jest.mock('firebase/firestore', () => {
     },
     // Add other Firestore exports your code uses
   }
-})
+});
 jest.mock('firebase/auth', () => ({
   getAuth: jest.fn(() => ({
     // Mock Auth instance properties/methods if needed, e.g., currentUser
@@ -515,7 +515,7 @@ jest.mock('vitest', () => {
     beforeAll: global.beforeAll,
     afterAll: global.afterAll,
   } as unknown as Record<string, unknown>
-})
+});
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
 // -----------------------------
@@ -528,7 +528,7 @@ jest.mock('@/context/auth/AuthProvider', () => {
     login: jest.fn(),
     logout: jest.fn(),
     signUp: jest.fn(),
-  })
+  });
   const AuthProvider = ({ children }: any) => children
   return {
     __esModule: true,
@@ -544,13 +544,13 @@ jest.mock ('@/context / AnalyticsContext', () => {
   const AnalyticsProvider = ({ children }: any) =>: any children,
     useAuth,
   }
-})
+});
 // Analytics Context
 jest.mock('@/context/AnalyticsContext', () => {
   const useAnalytics = () => ({
     trackEvent: jest.fn(),
     trackPageView: jest.fn(),
-  })
+  });
   const AnalyticsProvider = ({ children }: any) => children
   return {
     __esModule: true,
@@ -566,13 +566,13 @@ jest.mock ('@/context / WhitelabelContext', () => {
   const WhitelabelProvider = ({ children }: any) =>: any children,
     useAnalytics,
   }
-})
+});
 // Whitelabel Context
 jest.mock('@/context/WhitelabelContext', () => {
   const useWhitelabel = () => ({
     brand: 'default',
     theme: 'light',
-  })
+  });
   const WhitelabelProvider = ({ children }: any) => children
   return {
     __esModule: true,
@@ -587,12 +587,12 @@ jest.mock ('@/context / FeedbackContext', () => {
   const FeedbackProvider = ({ children }: any) =>: any children,
     useWhitelabel,
   }
-})
+});
 // Feedback Context
 jest.mock('@/context/FeedbackContext', () => {
   const useFeedback = () => ({
     open: jest.fn(),
-  })
+  });
   const FeedbackProvider = ({ children }: any) => children
   return {
     __esModule: true,
@@ -718,7 +718,7 @@ if ( {) {
 }
     useFeedback,
   }
-})
+});
 // react-redux hooks
 jest.mock('react-redux', () => {
   const actualRedux = jest.requireActual('react-redux')
@@ -734,18 +734,18 @@ jest.mock('react-redux', () => {
       return typeof selector === 'function' ? selector(mockState) : mockState
     }),
   }
-})
+});
 // Cart Context – simple noop implementation for tests
 jest.mock('@/context/CartContext', () => {
-  const useCart = () => ({ items: [], dispatch: jest.fn() })
+  const useCart = () => ({ items: [], dispatch: jest.fn() });
   const CartProvider = ({ children }: { children: React.ReactNode }) => children
   return { __esModule: true, useCart, CartProvider, default: CartProvider }
-})
+});
 // Wishlist hook – return empty list helpers
 jest.mock('@/hooks/useWishlist', () => {
-  const useWishlist = () => ({ items: [] as string[], toggle: jest.fn(), isWishlisted: () => false })
+  const useWishlist = () => ({ items: [] as string[], toggle: jest.fn(), isWishlisted: () => false });
   return { __esModule: true, useWishlist, default: useWishlist }
-})
+});
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
 if (typeof window.IntersectionObserver === 'undefined') {
   class MockIntersectionObserver {
@@ -789,7 +789,7 @@ jest.mock('@supabase/ssr/dist/main/cookies', () => ({
 jest.mock('@/context', () => {
   const useEnqueueSnackbar = () => jest.fn()
   return { __esModule: true, useEnqueueSnackbar }
-})
+});
 // Extend Vitest shim with restoreAllMocks for suites that call it
 // @ts-ignore - vi is added by the vitest mock above
 if (global.vi && !global.vi.restoreAllMocks) {
@@ -806,7 +806,7 @@ jest.mock('@supabase/ssr', () => ({
 jest.mock('@/hooks/use-toast', () => {
   const toastFn = jest.fn()
   return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) }
-})
+});
 // Minimal MSW mocks to satisfy tests without parsing ESM bundles
 jest.mock('msw', () => ({ rest: { get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() } }))
 jest.mock('msw/node', () => ({ setupServer: () => ({ listen: jest.fn(), resetHandlers: jest.fn(), close: jest.fn() }) }))

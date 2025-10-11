@@ -4,9 +4,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
-        error: 'GITHUB_TOKEN required' })
+        error: 'GITHUB_TOKEN required' });
   if (!githubToken) {/* TODO: Fix JSX expression */}
-  r: 'GITHUB_TOKEN required' })
+  r: 'GITHUB_TOKEN required' });
     }
   }
   const ghHeaders = {/* TODO: Fix JSX expression */}
@@ -20,8 +20,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 }`
     const res = await fetch(`http,`
   s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20`,
-      {/* TODO: Fix JSX expression */})
-      })
+      {/* TODO: Fix JSX expression */});
+      });
     )
     const _arr = await res.json()
     return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []
@@ -52,7 +52,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         headers: {)
           Authorization: `Bearer ${openaiKey}`)
           'Content-Type': 'application/json')
-        })
+        });
         body: JSON.stringify({model: 'gpt-4o-mini'),
           messages: [{ role: 'user'} content: prompt }])
           temperature: 0
@@ -77,7 +77,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: prompt }],
           temperatur,
   e: 0,)
-      })})
+      })});
       const _json = await res.json()
 //       const content = json?.choices?.[0]?.message?.content?.trim()
       try {const arr = JSON.parse(content)
@@ -93,11 +93,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function addLabels(issueNumber)
         labels) {if(!labels || labels.length === 0)
         return { ok: true,)
-        skipped: true })
+        skipped: true });
     const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`)
       {method: POST),
         headers: ghHeaders),
-        body: JSON.stringify({ labels,)})})
+        body: JSON.stringify({ labels,)})});
     return {ok: res.ok,
         status: res.status }
   }
@@ -116,7 +116,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     issue: issue.number),
         labels: finalLabels),
         result: res
-  })
+  });
   }
   const log = {generatedAt: new Date().toISOString(),
     totalOpen: issues.length
@@ -129,14 +129,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         const path = 'data/reports/ai-issue-labeler-log.json'
     const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
-      { headers })
+      { headers });
   async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}
   d: true }`
     const res = await fetch(`http,`
   s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`,
-      {/* TODO: Fix JSX expression */})
-      })})
+      {/* TODO: Fix JSX expression */});
+      })});
     return {/* TODO: Fix JSX expression */}
   s: res.status }
   }
@@ -144,8 +144,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const _actions = []
   for (const issue of issues) {/* TODO: Fix JSX expression */}
       }
-    actions.push({/* TODO: Fix JSX expression */})
-      })
+    actions.push({/* TODO: Fix JSX expression */});
+      });
   }
   const log = {/* TODO: Fix JSX expression */}
     actions}
@@ -154,7 +154,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
-      { headers })
+      { headers });
     if (getRes.ok) {/* TODO: Fix JSX expression */}
       sha = j.sha}
     }
@@ -174,7 +174,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           conten,
   t: Buffer.from(JSON.stringify(log, null)
         2)).toString('base64'),
-          sha})})
+          sha})});
     return {
     statusCode: 200
       body: JSON.stringify({)
@@ -182,8 +182,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         log),
         store: { ok: putRes.ok),
         status: putRes.status
-  })
-      })
+  });
+      });
     }
   } catch (e) {return {
       statusCode: 200
@@ -191,13 +191,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         ok: true,)
         log)
         store: { ok: false),
-        error: String(e,)})
+        error: String(e,)});
     return {/* TODO: Fix JSX expression */}
-      })
-      })
+      });
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      }})
+      }});
     }
   }
 }
@@ -264,10 +264,10 @@ exports.handler = async function(event, context) {const githubToken = process.en
       } } catch {} return null; } catch {return null} } } async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}`
   d: true } const res = await fetch(`http,`
-  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {/* TODO: Fix JSX expression */})
+  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`, {/* TODO: Fix JSX expression */});
       }) }); return {/* TODO: Fix JSX expression */}
   s: res.status } } const issues = await listRecentIssues(); const actions = []; for (const issue of issues) {/* TODO: Fix JSX expression */}
-      } actions.push({/* TODO: Fix JSX expression */})
+      } actions.push({/* TODO: Fix JSX expression */});
       }); } const log = {/* TODO: Fix JSX expression */}`
         actions } // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`

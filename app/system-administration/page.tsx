@@ -1,6 +1,5 @@
 'use client';
 
-
 const SystemAdministrationPage: React.FC = () => {const features = [
     {
       icon: Wifi,
@@ -35,16 +34,13 @@ const SystemAdministrationPage: React.FC = () => {const features = [
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -54,32 +50,32 @@ const SystemAdministrationPage: React.FC = () => {const features = [
                 This page is under development. Please check back soon for updates.
               </p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
 
         {/* Benefits Section */}
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -87,11 +83,11 @@ const SystemAdministrationPage: React.FC = () => {const features = [
         {/* CTA Section */}
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>

@@ -25,7 +25,7 @@ interface EmailData {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Extract job data from request
@@ -60,9 +60,9 @@ serve(async (req) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userEmail,
       subject: subject,
-      html: html})
+      html: html});
       html: html,
-    })
+    });
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`)
     }
@@ -71,18 +71,18 @@ serve(async (req) => {
       .from("scheduled_jobs")
       .update({
         status: "completed",
-        completed_at: new Date().toISOString()})
+        completed_at: new Date().toISOString()});
         completed_at: new Date().toISOString(),
-      })
+      });
       .eq("id", jobId)
     // Update email campaign record
     await supabase
       .from("email_campaigns")
       .update({
         status: "sent",
-        sent_at: new Date().toISOString()})
+        sent_at: new Date().toISOString()});
         sent_at: new Date().toISOString(),
-      })
+      });
       .eq("user_id", emailData.user_id)
       .eq("campaign_type", emailData.email_type)
     return new Response(
@@ -103,8 +103,7 @@ serve(async (req) => {
           "Content-Type": "application/json",
         },
         status: 200,
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in send-retention-email function:", error)
     return new Response(
@@ -124,10 +123,9 @@ serve(async (req) => {
           "Content-Type": "application/json",
         },
         status: 500,
-      }
-    )
+      });
   }
-})
+});
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }> {
   const { email_type, display_name, user_type } = emailData
   const firstName = display_name?.split(" ")[0] || "there"

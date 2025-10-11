@@ -189,7 +189,7 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
           <= 0.03928
 // ? normalized / 12.92;)
         : Math.pow((normalized + 0.055) / 1.055, 2.4)
-    })
+    });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b
   }
   const lum1 = getLuminance(color1)
@@ -250,12 +250,12 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   O: Add content,}
 }
     skipLink.style.top = '0'
-  })
+  });
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     skipLink.style.top = '-40px'
-  })
+  });
   return skipLink
 }
 /**
@@ -300,8 +300,7 @@ export function getAriaInvalid(hasError: boolean): {
   O: Add content,}
 }
     'aria-invalid': hasError,
-    ...(hasError && { 'aria-describedby': generateId('error') }
-  )
+    ...(hasError && { 'aria-describedby': generateId('error') });
   }
 }
 /**

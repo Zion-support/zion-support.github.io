@@ -45,13 +45,13 @@ function fixFile(filePath) {
         modified = true
       }
     }
-    
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -71,10 +71,10 @@ async function main() {
   for (const pattern of priorityFiles) {
     const files = await glob(pattern, {
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
-    })
+    });
     allFiles = [...allFiles, ...files]
   }
-  
+
   // Remove duplicates
   allFiles = [...new Set(allFiles)]
   console.log(`Found ${allFiles.length} files to check...`)

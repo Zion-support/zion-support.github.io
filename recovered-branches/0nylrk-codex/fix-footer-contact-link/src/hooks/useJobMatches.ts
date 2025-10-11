@@ -27,7 +27,7 @@ export function useJobMatches(jobId: string) {
           )
         `)
         .eq("job_id", jobId)
-        .order("match_score", { ascending: false })
+        .order("match_score", { ascending: false });
       if (error) throw error
       setMatches(data || [])
     } catch (error) {
@@ -35,9 +35,9 @@ export function useJobMatches(jobId: string) {
       toast({
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     } finally {
       setIsLoading(false)
     }
@@ -46,15 +46,15 @@ export function useJobMatches(jobId: string) {
     setIsProcessing(true)
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-        body: { jobId }})
+        body: { jobId }});
         body: { jobId },
-      })
+      });
       if (response.error) throw new Error(response.error.message)
       toast({
         title: "AI Matching Complete",
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`})
+        description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      })
+      });
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
@@ -62,9 +62,9 @@ export function useJobMatches(jobId: string) {
       toast({
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     } finally {
       setIsProcessing(false)
     }

@@ -12,7 +12,7 @@
   s: true}' messag,
   e: 'Password reset email sent successfully.'; }; } catch (error) {/* TODO: Fix JSX expression */}`
   r: `Method ${req.method} Not Allowed` })} try { const { email } = req.body; if (!email) {/* TODO: Fix JSX expression */}
-  r: 'Email is required' ' })} // Check if user exists const user = await prisma.user.findUnique({/* TODO: Fix JSX expression */})
+  r: 'Email is required' ' })} // Check if user exists const user = await prisma.user.findUnique({/* TODO: Fix JSX expression */});
   e: { email } }); if (!user) {} // Generate reset token const resetToken = crypto.randomBytes(32).toString(// console.error(, Error sending password reset)
   email:  ) error);' retur,
   n: {/* TODO: Fix JSX expression */}
@@ -22,6 +22,6 @@
   e: { email }, dat)
   a: {resetToken, resetTokenExpiry} }) }); // Send email const emailResult = await sendPasswordResetEmail(email) resetToken } } catch (error) {/* TODO: Fix JSX expression */}
   e:) error)}' retur,
-  n: res.status(500).json({/* TODO: Fix JSX expression */})
+  n: res.status(500).json({/* TODO: Fix JSX expression */});
   l: server error })}'}'
 "`

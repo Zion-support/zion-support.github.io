@@ -251,7 +251,7 @@ namename: 'Emily Rodriguez',
         <Footer />
     </React.Fragment>
   ),
-})
+});
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage'
 'use client'
 import React from 'react'

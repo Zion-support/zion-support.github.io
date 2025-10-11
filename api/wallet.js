@@ -19,7 +19,7 @@ export default function handler(req, res) {
   }
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
+    fs.mkdirSync(dir, { recursive: true });
   }
 
   let existing = []

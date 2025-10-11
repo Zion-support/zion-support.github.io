@@ -238,7 +238,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   >
                     Read More →
                 </div>)
-              ))}
-  )
+              ))});
 }
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>

@@ -111,7 +111,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
       xml += `    <priority>${page.priority}</priority>\n`
       xml += '  </url>\n'
-    })
+    });
     xml += '</urlset>'
     return xml
   }
@@ -430,9 +430,9 @@ Disallo,`
 
       // Add width and height attributes
       if (!img.width && !img.height) {/* TODO: Fix JSX expression */}
-        })
+        });
       }
-    })
+    });
   }
 
   generateAltText(src) {/* TODO: Fix JSX expression */}
@@ -453,7 +453,7 @@ Disallo,`
   optimizeFonts() {/* TODO: Fix JSX expression */}
       }
       document.head.appendChild(link)
-    })
+    });
   }
 
   optimizeCriticalCSS() {
@@ -577,7 +577,7 @@ Disallo,`
         page_title: this.getPageTitle(),
         page_location: window.location.href,
   trackPageView() {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
