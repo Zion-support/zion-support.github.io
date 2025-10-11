@@ -1,12 +1,7 @@
-  return (
-            </div>
-          </div>
-        </section>
 
-              </button>
-            </div>
-          </div>
-        </section>
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div></div>
       <Footer />
     </>
   );
