@@ -26,6 +26,19 @@ export default function Footer() {
               <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">AI Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors">AI Content Generator</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-400 hover:text-white transition-colors">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-analytics-dashboard" className="text-gray-400 hover:text-white transition-colors">AI Analytics Dashboard</Link></li>
+              <li><Link to="/ai-computer-vision" className="text-gray-400 hover:text-white transition-colors">AI Computer Vision</Link></li>
+              <li><Link to="/ai-conversational-ai" className="text-gray-400 hover:text-white transition-colors">AI Conversational AI</Link></li>
             </ul>
           </div>
 
