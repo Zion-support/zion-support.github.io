@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -6,116 +5,156 @@ const TutorialsPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-cyan-400">Tutorials</span>
+            <span className="text-cyan-400">Tutorials</span> & Guides
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Learn how to implement AI and IT solutions with our step-by-step guides.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Learn how to leverage AI and IT solutions with our comprehensive 
+            tutorials and step-by-step guides.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">AI Basics</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                Getting Started with AI
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Learn the fundamentals of artificial intelligence and how to 
+                implement AI solutions in your business.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">15 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">Cybersecurity</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                Security Best Practices
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Essential cybersecurity practices to protect your business 
+                from common threats and vulnerabilities.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">20 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">Cloud Computing</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                Cloud Migration Guide
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Step-by-step guide to migrating your infrastructure to the cloud 
+                with minimal downtime.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">25 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">Data Analytics</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                Data Visualization
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Learn how to create compelling data visualizations and 
+                interactive dashboards for better insights.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">18 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">Web Development</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                Modern Web Apps
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Build responsive and performant web applications using 
+                modern frameworks and best practices.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">30 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <div className="mb-6">
+              <span className="text-cyan-400 text-sm font-medium">DevOps</span>
+              <h3 className="text-xl font-bold text-white mt-2 mb-4">
+                CI/CD Pipeline Setup
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Set up automated deployment pipelines for faster and 
+                more reliable software delivery.
+              </p>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-400 text-sm">22 min read</span>
+              <a href="#" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Read tutorial →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Need More Help?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Can't find what you're looking for? Our experts are here to help 
+            you with personalized guidance and support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
+              Contact Support
+            </a>
+            <a
+              href="/consultation"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              Book Consultation
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { BookOpen, Play, ArrowRight } from 'lucide-react'
 
-const TutorialsPage: React.FC = () => {
-  const tutorials = [
-    {
-      title: 'Getting Started with AI',
-      description: 'Learn the basics of artificial intelligence and how to implement it in your business.',
-      duration: '30 min',
-      level: 'Beginner'
-    },
-    {
-      title: 'Cloud Infrastructure Setup',
-      description: 'Step-by-step guide to setting up your cloud infrastructure for optimal performance.',
-      duration: '45 min',
-      level: 'Intermediate'
-    },
-    {
-      title: 'Cybersecurity Best Practices',
-      description: 'Essential security measures to protect your business from cyber threats.',
-      duration: '60 min',
-      level: 'Advanced'
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Learn & <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Grow</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Master the latest technologies with our comprehensive tutorials and guides.
-            </p>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/main
-
-      {/* Tutorials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tutorials.map((tutorial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {tutorial.level}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{tutorial.title}</h3>
-                <p className="text-gray-300 mb-6">{tutorial.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-sm">{tutorial.duration}</span>
-                  <button className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Start
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Learn?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start your learning journey with our comprehensive tutorials and expert guidance.
-          </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get Started
-          </button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default TutorialsPage
+export default TutorialsPage;

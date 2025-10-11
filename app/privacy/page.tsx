@@ -1,77 +1,93 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 
 const PrivacyPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-  const dataTypes = [
-    {
-      category: 'Personal Information',
-      icon: User,
-    },
-    {
-      category: 'Usage Data',
-      icon: Database,
-    },
-    {
-      category: 'Technical Data',
-      icon: Server,
-    }
-  ];
-  const purposes = [
-    {
-    }
-  ];
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
-    {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-    },
-    {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-    },
-    {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-    },
-    {
-      title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: Lock
-    },
-    {
-      title: 'Objection',
-      description: 'Object to certain types of processing',
-      icon: Shield
-    }
-  ]
-
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
->>>>>>> main
   return (
     <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-cyan-400">Privacy Policy</span>
+            Privacy <span className="text-cyan-400">Policy</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Your privacy is important to us. Learn how we protect your data.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Your privacy is important to us. This policy explains how we collect, 
+            use, and protect your information.
+          </p>
+        </div>
+
+        <div className="prose prose-invert max-w-none">
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+            <h2 className="text-2xl font-bold text-white mb-6">Information We Collect</h2>
+            <p className="text-gray-300 mb-4">
+              We collect information you provide directly to us, such as when you create an account, 
+              make a purchase, or contact us for support.
+            </p>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Name and contact information</li>
+              <li>• Business information and requirements</li>
+              <li>• Payment and billing information</li>
+              <li>• Communication preferences</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">How We Use Your Information</h2>
+            <p className="text-gray-300 mb-4">
+              We use the information we collect to provide, maintain, and improve our services.
+            </p>
+            <ul className="text-gray-300 space-y-2">
+              <li>• To provide and deliver our services</li>
+              <li>• To process transactions and send related information</li>
+              <li>• To send technical notices and support messages</li>
+              <li>• To respond to your comments and questions</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Information Sharing</h2>
+            <p className="text-gray-300 mb-4">
+              We do not sell, trade, or otherwise transfer your personal information to third parties 
+              without your consent, except as described in this policy.
+            </p>
+            <p className="text-gray-300">
+              We may share your information in the following circumstances:
+            </p>
+            <ul className="text-gray-300 space-y-2 mt-4">
+              <li>• With your explicit consent</li>
+              <li>• To comply with legal obligations</li>
+              <li>• To protect our rights and prevent fraud</li>
+              <li>• In connection with a business transfer</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Data Security</h2>
+            <p className="text-gray-300 mb-4">
+              We implement appropriate security measures to protect your personal information against 
+              unauthorized access, alteration, disclosure, or destruction.
+            </p>
+            <p className="text-gray-300">
+              However, no method of transmission over the internet or electronic storage is 100% secure, 
+              so we cannot guarantee absolute security.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Contact Us</h2>
+            <p className="text-gray-300 mb-4">
+              If you have any questions about this Privacy Policy, please contact us:
+            </p>
+            <div className="text-gray-300 space-y-2">
+              <p>Email: privacy@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-gray-400 text-sm">
+            Last updated: January 2024
           </p>
         </div>
       </div>
@@ -80,77 +96,3 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
 };
 
 export default PrivacyPage;
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const PrivacyPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Policy</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your information.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-8">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>
-              <p className="text-gray-300">
-                We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
-              <p className="text-gray-300">
-                We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Information Sharing</h2>
-              <p className="text-gray-300">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Data Security</h2>
-              <p className="text-gray-300">
-                We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
-              <p className="text-gray-300">
-                If you have any questions about this Privacy Policy, please contact us at privacy@ziontechgroup.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default PrivacyPage
->>>>>>> origin/main
