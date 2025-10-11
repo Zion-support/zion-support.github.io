@@ -58,7 +58,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
@@ -78,10 +77,6 @@ const HomePage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Key Features
@@ -89,26 +84,15 @@ const HomePage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
-<<<<<<< HEAD
-            </div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-<<<<<<< HEAD
                     <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div><p className="text-gray-300 mb-4">{feature.description}</p>
-=======
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
