@@ -122,7 +122,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
+    </div>
+  );
 };
 
 export default EnhancedAccessibilityEnhancerPage;
