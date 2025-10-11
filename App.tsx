@@ -40,6 +40,8 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
 const TermsPage = React.lazy(() => import('./app/terms/page'))
 const CookiesPage = React.lazy(() => import('./app/cookies/page'))
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'))
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
@@ -98,6 +100,8 @@ const App: React.FC = () => {
                             <Route path="/terms" element={<TermsPage />} />
                             <Route path="/cookies" element={<CookiesPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                             
                             {/* AI Service Pages */}
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />

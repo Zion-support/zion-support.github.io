@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -49,11 +50,6 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
                 </Link>
               </li>
               <li>
-                <Link href="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
                 <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cybersecurity
                 </Link>
@@ -61,6 +57,21 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
               <li>
                 <Link href="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link href="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link href="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Mobile Development
                 </Link>
               </li>
             </ul>
@@ -98,6 +109,43 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
             </ul>
           </div>
 
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-cyan-400">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link href="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Contact</h3>
@@ -108,7 +156,7 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
@@ -147,6 +195,6 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
       </div>
     </footer>
   );
-});
+};
 
 export default Footer
