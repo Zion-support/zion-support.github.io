@@ -182,4 +182,4 @@ const EnhancedFooter: React.FC = () => {
   )
 }
 
-export default EnhancedFooter
+export default EnhancedFooter;

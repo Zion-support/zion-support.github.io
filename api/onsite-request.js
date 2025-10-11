@@ -62,7 +62,7 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
-      requestId: request.id
+      requestId: Date.now().toString()
     }))
 
   } catch (error) {
