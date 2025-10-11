@@ -1,21 +1,35 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
+<<<<<<< HEAD
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
+=======
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
   }
 
   const services = [
     {
+<<<<<<< HEAD
       title: 'AI Services',
       href: '/ai-services',
 <<<<<<< HEAD
@@ -118,20 +132,70 @@ export default function Navigation() {
         { title: '5G Security', href: '/5g-implementation' }
       ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+=======
+      name: 'AI Services',
+      icon: <Brain className="w-4 h-4" />,
+      path: '/ai-services',
+      description: 'AI-powered solutions for your business'
+    },
+    {
+      name: 'IT Services',
+      icon: <Cpu className="w-4 h-4" />,
+      path: '/it-services',
+      description: 'Complete IT infrastructure solutions'
+    },
+    {
+      name: 'Micro SAAS',
+      icon: <Smartphone className="w-4 h-4" />,
+      path: '/micro-saas-services',
+      description: 'Affordable micro applications'
+    },
+    {
+      name: 'Cloud Services',
+      icon: <Cloud className="w-4 h-4" />,
+      path: '/cloud-services',
+      description: 'Professional cloud solutions'
+    },
+    {
+      name: '5G Implementation',
+      icon: <Wifi className="w-4 h-4" />,
+      path: '/5g-implementation',
+      description: 'Next-generation connectivity'
+    },
+    {
+      name: 'Digital Transformation',
+      icon: <Zap className="w-4 h-4" />,
+      path: '/digital-transformation',
+      description: 'Transform your business digitally'
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
     }
   ]
 
   return (
+<<<<<<< HEAD
     <nav className="bg-gray-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+=======
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
@@ -151,11 +215,25 @@ export default function Navigation() {
               <button
                 onClick={toggleServices}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+=======
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                to="/"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
@@ -232,6 +310,59 @@ export default function Navigation() {
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+=======
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDropdown('services')}
+                  className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                
+                {activeDropdown === 'services' && (
+                  <div className="absolute left-0 mt-2 w-96 bg-white rounded-md shadow-lg z-50 border">
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Services</h3>
+                      <div className="grid grid-cols-2 gap-4">
+                        {services.map((service, index) => (
+                          <Link
+                            key={index}
+                            to={service.path}
+                            className="flex items-start p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <div className="flex-shrink-0 mr-3 text-purple-600">
+                              {service.icon}
+                            </div>
+                            <div>
+                              <div className="font-medium text-gray-900">{service.name}</div>
+                              <div className="text-sm text-gray-500">{service.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/contact"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             >
               Contact
             </Link>
@@ -241,7 +372,11 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
+<<<<<<< HEAD
               className="text-gray-300 hover:text-white p-2 rounded-md"
+=======
+              className="text-gray-900 hover:text-purple-600 p-2 rounded-md"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -251,22 +386,34 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
+<<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
               <Link
                 to="/"
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+=======
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <Link
+                to="/"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link
                 to="/about"
+<<<<<<< HEAD
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+=======
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
                 onClick={toggleMenu}
               >
                 About
               </Link>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
               {/* Mobile Services */}
               <div className="px-3 py-2">
@@ -339,15 +486,46 @@ export default function Navigation() {
                   </div>
                 )}
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+=======
+              {/* Mobile Services */}
+              <div className="px-3 py-2">
+                <div className="text-gray-900 font-medium mb-2">Services</div>
+                <div className="space-y-1 ml-4">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      className="text-gray-600 hover:text-purple-600 block px-3 py-2 rounded-md text-sm"
+                      onClick={toggleMenu}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
               </div>
 
               <Link
                 to="/contact"
+<<<<<<< HEAD
                 className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+=======
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium"
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
+<<<<<<< HEAD
+=======
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center mt-4"
+                onClick={toggleMenu}
+              >
+                Get Started
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             </div>
           </div>
         )}
