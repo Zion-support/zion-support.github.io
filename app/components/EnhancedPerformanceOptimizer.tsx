@@ -1,153 +1,130 @@
 'use client'
 import React, { useEffect } from 'react'
 
+const EnhancedPerformanceOptimizer: React.FC = () => {
+  const features = [
+    {
+      title: 'Advanced Caching',
+      description: 'Intelligent caching strategies that reduce load times by up to 80%',
+      icon: '⚡'
+    },
+    {
+      title: 'Code Splitting',
+      description: 'Automatic code splitting for optimal bundle sizes and faster loading',
+      icon: '📦'
+    },
+    {
+      title: 'Image Optimization',
+      description: 'Automatic image compression and lazy loading for better performance',
+      icon: '🖼️'
+    },
+    {
+      title: 'CDN Integration',
+      description: 'Global content delivery network for lightning-fast content delivery',
+      icon: '🌐'
+    }
+  ]
 
+  useEffect(() => {
+    // Performance optimization logic
+    const optimizePerformance = () => {
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/main.woff2',
+        '/images/hero-bg.jpg'
+      ]
+      
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        document.head.appendChild(link)
+      })
+    }
+
+    optimizePerformance()
+  }, [])
+
+  return (
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen">
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedPerformanceOptimizer?
+              Why Choose Our Performance Optimizer?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancedperformanceoptimizer solutions deliver unmatched performance, security, and scalability.
+              Our performance optimization solutions deliver unmatched speed, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <div className="text-4xl mb-4 text-center">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                <p className="text-gray-300 text-center">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
+      {/* Performance Metrics Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Performance Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancedperformanceoptimizer solutions for your business.
+              See the measurable improvements our optimization delivers
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-green-400 mb-2">80%</div>
+              <div className="text-xl text-white mb-2">Faster Load Times</div>
+              <div className="text-gray-300">Average improvement in page load speed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">95%</div>
+              <div className="text-xl text-white mb-2">Better Core Web Vitals</div>
+              <div className="text-gray-300">Improved Google performance scores</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">60%</div>
+              <div className="text-xl text-white mb-2">Reduced Bounce Rate</div>
+              <div className="text-gray-300">Better user engagement and retention</div>
+            </div>
           </div>
-        ))
+        </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedperformanceoptimizer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your Performance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let us help you achieve lightning-fast performance and better user experience
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Started
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+              Learn More
+            </button>
           </div>
-        ))
+        </div>
       </section>
     </div>
-  );
-};
-const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/hero-bg.jpg',
-        '/logo.png'
-      ]
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.as = 'image'
-        link.href = src
-        document.head.appendChild(link)
-      })
-    }
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy'
-        }
-        if (!img.decoding) {
-          img.decoding = 'async'
-        }
-      })
-    }
-
-    // Add performance monitoring
-    const addPerformanceMonitoring = () => {
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-          if (perfData) {
-            console.log('Performance metrics:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
-            })
-          }
-        })
-      }
-    }
-
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    addPerformanceMonitoring()
-
-    // Re-optimize when DOM changes
-    const observer = new MutationObserver(() => {
-      optimizeImages()
-    })
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
-
-  return <>{children}</>
+  )
 }
 
-export default PerformanceOptimizer
+export default EnhancedPerformanceOptimizer

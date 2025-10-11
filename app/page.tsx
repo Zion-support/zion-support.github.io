@@ -63,30 +63,100 @@ const HomePage: React.FC = () => {
   const aiServices = [
     {
       icon: Brain,
-        {/* Navigation */}
-        <Navigation />
-        {/* Skip to main content for accessibility */}
-        <a
-          href="#main-content"
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Intelligent automation of business processes with decision-making capabilities and exception handling.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
+      title: 'AI-Powered Analytics',
+      description: 'Advanced data analytics with machine learning insights',
+      price: '$2,500/month',
+      features: ['Real-time insights', 'Predictive analytics', 'Custom dashboards']
+    },
+    {
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Intelligent automation of business processes with decision-making capabilities',
+      price: '$3,000/month',
+      features: ['Process automation', 'Exception handling', 'Workflow optimization']
+    },
+    {
+      icon: Shield,
+      title: 'AI Security Solutions',
+      description: 'Advanced threat detection and security automation',
+      price: '$2,800/month',
+      features: ['Threat detection', 'Security automation', 'Compliance monitoring']
+    }
+  ];
+
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Navigation */}
+      <Navigation />
+      {/* Skip to main content for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50"
+      >
+        Skip to main content
+      </a>
+
+      <main id="main-content" className="relative">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+                <br />
+                <span className="text-2xl sm:text-4xl lg:text-5xl text-gray-300">
+                  AI-Powered Solutions
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+                Transform your business with cutting-edge AI technology, advanced automation, and intelligent solutions designed for the future.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Get Started Today
+                </button>
+                <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 sm:py-24 bg-gray-900/50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our AI Services
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive AI solutions tailored to your business needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {aiServices.map((service, index) => (
+                <Suspense key={index} fallback={<ServiceCardSkeleton />}>
+                  <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                    <div className="text-4xl mb-4 text-center">🤖</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{service.title}</h3>
+                    <p className="text-gray-600 mb-4 text-center leading-relaxed">
+                      {service.description}
+                    </p>
+                    <div className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">{service.price}</div>
+                      <a href={`/ai-${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                        Learn More →
+                      </a>
+                    </div>
+                  </article>
+                </Suspense>
+              ))}
           </div>
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
@@ -263,6 +333,7 @@ const HomePage: React.FC = () => {
                 </article>
               </Suspense>
             </div>
+          </div>
           </div>
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
@@ -983,55 +1054,12 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </main>
-      {/* Footer */}
-      <Footer />
-    </div>
+        
+        {/* Footer */}
+        <Footer />
+      </div>
     </>
   );
 };
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content
-        </a>
-        
-        {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
-          <ContentPromotionBanner />
-        </Suspense>
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
-          {/* Hero Section */}
-          <section
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-              isLoaded && isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}
-            aria-labelledby="hero-heading"
-          >
-            <div className="max-w-6xl mx-auto">
-              <h1 
-                id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
-                data-text="Zion Tech Group"
-              >
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
-                Advanced AI and IT Solutions
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-                startups, and enterprises worldwide with proven results and 24/7 expert support.
-              </p>
-            </div>
-          </section>
-        </main>
-        
-        <Footer />
-      </div>
-    </React.Fragment>
-  );
-}
 
 export default HomePage;
