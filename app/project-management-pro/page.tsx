@@ -142,8 +142,13 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
       
+=======
+      </main>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );

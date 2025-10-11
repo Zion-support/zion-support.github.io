@@ -125,6 +125,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -138,6 +139,9 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
+=======
+                Contact Sales
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </button>
             </div>
           </div>

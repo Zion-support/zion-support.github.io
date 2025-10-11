@@ -1,9 +1,21 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+
+  const benefits = [
+    'Enhanced productivity and efficiency',
+    'Reduced operational costs',
+    'Improved decision making',
+    'Scalable solutions',
+    '24/7 availability',
+    'Expert support'
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -125,6 +137,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -144,6 +157,9 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );

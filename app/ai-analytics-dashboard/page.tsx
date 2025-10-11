@@ -266,6 +266,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -323,6 +324,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );

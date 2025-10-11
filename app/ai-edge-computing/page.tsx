@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -19,6 +20,9 @@ const PagePage: React.FC = () => {
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
+=======
+    {},
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
@@ -149,4 +153,8 @@ const PagePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
+=======
+export default AiEdgeComputingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

@@ -149,4 +149,8 @@ const PagePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
+=======
+export default AiMarketingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

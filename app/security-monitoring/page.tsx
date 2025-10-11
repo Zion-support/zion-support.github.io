@@ -124,6 +124,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -144,6 +145,8 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );

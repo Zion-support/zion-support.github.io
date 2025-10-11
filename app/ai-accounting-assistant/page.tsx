@@ -393,7 +393,10 @@ const AiAccountingAssistantPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a51
 =======
                 Contact Sales
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-54c9
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </button>
             </div>
           </div>

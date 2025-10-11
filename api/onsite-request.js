@@ -17,6 +17,7 @@ export default function handler(req, res) {
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const request = {
       id: Date.now().toString(),
       timestamp: new Date().toISOString(),
@@ -30,12 +31,18 @@ export default function handler(req, res) {
       res.end(JSON.stringify({ error: 'Name, email, phone, and company are required' }))
 =======
     const { name, email, phone, company, message, service } = req.body || {}
+=======
+    const { name, email, phone, company, message, preferredDate, serviceType } = req.body || {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     
     if (!name || !email || !phone) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ error: 'Name, email, and phone are required' }))
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a51
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       return
     }
 
@@ -44,6 +51,7 @@ export default function handler(req, res) {
       name,
       email,
       phone,
+<<<<<<< HEAD
 <<<<<<< HEAD
       company,
       location: location || 'Not specified',
@@ -56,6 +64,13 @@ export default function handler(req, res) {
       service: service || 'General inquiry',
       timestamp: new Date().toISOString()
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a51
+=======
+      company: company || 'Not specified',
+      message: message || 'No message provided',
+      preferredDate: preferredDate || 'Not specified',
+      serviceType: serviceType || 'General consultation',
+      timestamp: new Date().toISOString()
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     }
 
     res.setHeader('Content-Type', 'application/json')

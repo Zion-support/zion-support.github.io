@@ -43,6 +43,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -71,6 +72,9 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
