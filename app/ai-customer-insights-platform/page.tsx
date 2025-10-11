@@ -1,78 +1,78 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Mic, Volume2, Brain, Zap, DollarSign, Clock, Star, Users } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, Users, TrendingUp, MessageSquare, DollarSign, Clock, Star, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AICustomerInsightsPlatformPage: React.FC = () => {
   const features = [
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities that understand context, intent, and emotional nuances in conversations.',
-      benefits: ['Context awareness', 'Intent recognition', 'Emotion detection', 'Multi-language support']
+      title: 'Sentiment Analysis',
+      description: 'AI-powered sentiment analysis across all customer touchpoints to understand emotions and satisfaction levels.',
+      benefits: ['Real-time sentiment tracking', 'Multi-language support', 'Emotion detection', 'Trend analysis']
     },
     {
-      title: 'Custom Voice Training',
-      description: 'Train the AI with your brand voice and specific terminology for personalized interactions.',
-      benefits: ['Brand voice cloning', 'Custom vocabulary', 'Tone adaptation', 'Industry-specific training']
+      title: 'Predictive Analytics',
+      description: 'Predict customer behavior, churn risk, and lifetime value using advanced machine learning algorithms.',
+      benefits: ['Churn prediction', 'LTV forecasting', 'Purchase probability', 'Behavioral patterns']
     },
     {
-      title: 'Multi-Channel Integration',
-      description: 'Deploy across phone systems, websites, mobile apps, and smart devices seamlessly.',
-      benefits: ['Phone integration', 'Web chat', 'Mobile apps', 'IoT devices']
+      title: 'Customer Journey Mapping',
+      description: 'Visualize and analyze complete customer journeys to identify optimization opportunities.',
+      benefits: ['Journey visualization', 'Touchpoint analysis', 'Conversion optimization', 'Experience scoring']
     },
     {
-      title: 'Real-time Analytics',
-      description: 'Comprehensive analytics dashboard with conversation insights and performance metrics.',
-      benefits: ['Call analytics', 'Sentiment tracking', 'Performance metrics', 'Custom reporting']
+      title: 'Real-time Dashboards',
+      description: 'Comprehensive dashboards with live customer insights and actionable recommendations.',
+      benefits: ['Live data updates', 'Custom metrics', 'Alert system', 'Mobile access']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$199',
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 1,000 calls/month',
-        'Basic voice recognition',
-        'Standard integrations',
+        'Up to 10,000 customers',
+        'Basic sentiment analysis',
+        'Standard dashboards',
         'Email support',
-        'Basic analytics',
-        '1 voice profile'
+        'API access',
+        'Basic integrations'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$499',
       period: '/month',
-      description: 'Ideal for growing businesses and call centers',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 10,000 calls/month',
-        'Advanced NLP',
-        'Custom voice training',
-        'Priority support',
+        'Up to 100,000 customers',
         'Advanced analytics',
-        'Multiple voice profiles',
-        'API access',
-        'Custom integrations'
+        'Custom dashboards',
+        'Priority support',
+        'Advanced integrations',
+        'Predictive modeling',
+        'Custom reports',
+        'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,299',
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited calls',
+        'Unlimited customers',
         'AI model customization',
         'White-label solution',
         'Dedicated support',
-        'Custom analytics',
+        'Custom integrations',
         'Advanced security',
         'On-premise deployment',
         'SLA guarantee'
@@ -83,50 +83,52 @@ const AIVoiceAssistantPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Alex Thompson',
-      role: 'Customer Service Director, ServiceCorp',
-      content: 'AI Voice Assistant has reduced our call handling time by 60% and improved customer satisfaction scores significantly. The natural conversations are incredible.',
+      name: 'Rachel Kim',
+      role: 'VP of Customer Success, RetailCorp',
+      content: 'AI Customer Insights Platform helped us reduce churn by 35% and increase customer satisfaction by 50%. The predictive analytics are incredibly accurate.',
       rating: 5,
-      avatar: 'AT'
+      avatar: 'RK'
     },
     {
-      name: 'Sarah Mitchell',
-      role: 'CEO, TechStart',
-      content: 'The custom voice training feature allowed us to maintain our brand personality while automating routine inquiries. Our customers love the seamless experience.',
+      name: 'James Wilson',
+      role: 'Head of Marketing, TechFlow',
+      content: 'The sentiment analysis gives us real-time insights into how customers feel about our products. It has transformed our customer experience strategy.',
       rating: 5,
-      avatar: 'SM'
+      avatar: 'JW'
     },
     {
-      name: 'David Park',
-      role: 'Operations Manager, RetailPlus',
-      content: 'Implementation was smooth and the results exceeded our expectations. The analytics help us continuously improve our customer interactions.',
+      name: 'Maria Garcia',
+      role: 'CEO, E-commerce Plus',
+      content: 'Finally, a platform that makes sense of all our customer data. The journey mapping feature helped us identify critical improvement areas.',
       rating: 5,
-      avatar: 'DP'
+      avatar: 'MG'
     }
   ];
 
   const stats = [
-    { number: '10K+', label: 'Active Deployments' },
-    { number: '50M+', label: 'Calls Processed' },
-    { number: '60%', label: 'Faster Resolution' },
-    { number: '95%', label: 'Customer Satisfaction' }
+    { number: '500+', label: 'Companies' },
+    { number: '50M+', label: 'Customers Analyzed' },
+    { number: '35%', label: 'Avg. Churn Reduction' },
+    { number: '50%', label: 'Satisfaction Increase' }
   ];
 
-  const useCases = [
-    { title: 'Customer Support', description: 'Handle inquiries 24/7 with intelligent routing', icon: '🎧' },
-    { title: 'Sales Qualification', description: 'Qualify leads and schedule appointments', icon: '💼' },
-    { title: 'Appointment Booking', description: 'Automate scheduling and confirmations', icon: '📅' },
-    { title: 'Order Processing', description: 'Process orders and track shipments', icon: '📦' },
-    { title: 'Technical Support', description: 'Troubleshoot issues with step-by-step guidance', icon: '🔧' },
-    { title: 'Lead Generation', description: 'Capture and qualify potential customers', icon: '🎯' }
+  const dataSources = [
+    { name: 'CRM Systems', icon: '👥' },
+    { name: 'Email Marketing', icon: '📧' },
+    { name: 'Social Media', icon: '📱' },
+    { name: 'Support Tickets', icon: '🎫' },
+    { name: 'Website Analytics', icon: '📊' },
+    { name: 'Mobile Apps', icon: '📲' },
+    { name: 'Surveys', icon: '📝' },
+    { name: 'Call Centers', icon: '☎️' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI voice assistant with natural language processing, custom voice training, and multi-channel integration. Transform customer interactions with intelligent voice automation." />
-        <meta name="keywords" content="AI voice assistant, voice automation, natural language processing, voice recognition, customer service automation, voice AI" />
+        <title>AI Customer Insights Platform - Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer insights platform with sentiment analysis, predictive analytics, and customer journey mapping. Transform customer data into actionable business intelligence." />
+        <meta name="keywords" content="AI customer insights, sentiment analysis, predictive analytics, customer journey mapping, customer intelligence, churn prediction" />
       </Helmet>
       
       <Navigation />
@@ -135,21 +137,21 @@ const AIVoiceAssistantPage: React.FC = () => {
       <section className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
               <Zap className="w-4 h-4 mr-2" />
-              AI-Powered Voice Intelligence
+              AI-Powered Customer Intelligence
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Assistant
+              AI Customer Insights Platform
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform customer interactions with our advanced AI voice assistant featuring natural language processing, 
-              custom voice training, and seamless multi-channel integration. Deliver exceptional customer experiences 24/7.
+              Transform your customer data into actionable insights with AI-powered sentiment analysis, 
+              predictive analytics, and comprehensive customer journey mapping. Make data-driven decisions that drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -181,7 +183,7 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Advanced AI Capabilities</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful voice AI technology that understands and responds naturally
+              Powerful AI-driven insights to understand and predict customer behavior
             </p>
           </div>
           
@@ -204,22 +206,21 @@ const AIVoiceAssistantPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Data Sources Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Use Cases</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Connect All Your Data Sources</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your business operations with intelligent voice automation
+              Integrate with your existing tools and platforms for comprehensive insights
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {dataSources.map((source, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <div className="text-2xl mb-2">{source.icon}</div>
+                <div className="text-sm text-white font-medium">{source.name}</div>
               </div>
             ))}
           </div>
@@ -232,16 +233,16 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Flexible Pricing Plans</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your call volume and feature requirements
+              Choose the plan that fits your customer data volume and analysis needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-500' : ''}`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -266,7 +267,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                   to="/contact" 
                   className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700' 
+                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700' 
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
@@ -285,7 +286,7 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See how companies are transforming customer service with AI voice technology
+              See how companies are transforming their customer experience with AI insights
             </p>
           </div>
           
@@ -293,7 +294,7 @@ const AIVoiceAssistantPage: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -317,15 +318,15 @@ const AIVoiceAssistantPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Customer Interactions?</h2>
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Unlock Customer Insights?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start your free trial today and experience the power of AI-driven voice automation.
+                Start your free trial today and discover the power of AI-driven customer intelligence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Free Trial
                 </Link>
@@ -346,4 +347,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AIVoiceAssistantPage;
+export default AICustomerInsightsPlatformPage;
