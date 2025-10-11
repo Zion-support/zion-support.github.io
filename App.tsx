@@ -43,7 +43,7 @@ const SitemapPage = React.lazy(() => import('./app/sitemap/page'))
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
-const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+// const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
 const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'))
 const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
@@ -120,7 +120,7 @@ const App: React.FC = () => {
                             {/* AI Service Pages */}
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
-                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                            {/* <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} /> */}
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
                             <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                             <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />

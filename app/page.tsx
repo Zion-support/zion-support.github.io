@@ -63,31 +63,83 @@ const HomePage: React.FC = () => {
   const aiServices = [
     {
       icon: Brain,
-        {/* Navigation */}
-        <Navigation />
-        {/* Skip to main content for accessibility */}
-        <a
-          href="#main-content"
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Intelligent automation of business processes with decision-making capabilities and exception handling.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
+      title: "AI Automation",
+      description: "Intelligent automation of business processes with decision-making capabilities and exception handling.",
+      price: "Starting at $399/month",
+      link: "/ai-automation",
+      emoji: "⚙️"
+    },
+    {
+      icon: Cloud,
+      title: "AI Healthcare",
+      description: "Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.",
+      price: "Starting at $599/month",
+      link: "/ai-healthcare",
+      emoji: "🏥"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
+      {/* Navigation */}
+      <Navigation />
+      {/* Skip to main content for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
+      {/* Hero Section */}
+      <main id="main-content" className="relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                AI-Powered
+              </span>{" "}
+              Solutions
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+              Transform your business with cutting-edge AI and IT solutions. We deliver intelligent automation, 
+              advanced analytics, and innovative technology that drives real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+              <button 
+                onClick={handlePhoneClick}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
           </div>
+
+          {/* Primary Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
+            {aiServices.map((service, index) => (
+              <Suspense key={index} fallback={<ServiceCardSkeleton />}>
+                <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">{service.emoji}</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    {service.description}
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">{service.price}</div>
+                    <a href={service.link} className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+            ))}
+          </div>
+
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -196,7 +248,7 @@ const HomePage: React.FC = () => {
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$99/month</div>
-                    <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                    <a href="/ai-services" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
                   </div>
@@ -569,7 +621,7 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-        </section>
+        </div>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -983,55 +1035,10 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </main>
-      {/* Footer */}
-      <Footer />
-    </div>
-    </>
-  );
-};
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content
-        </a>
-        
-        {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
-          <ContentPromotionBanner />
-        </Suspense>
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
-          {/* Hero Section */}
-          <section
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-              isLoaded && isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}
-            aria-labelledby="hero-heading"
-          >
-            <div className="max-w-6xl mx-auto">
-              <h1 
-                id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
-                data-text="Zion Tech Group"
-              >
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
-                Advanced AI and IT Solutions
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-                startups, and enterprises worldwide with proven results and 24/7 expert support.
-              </p>
-            </div>
-          </section>
-        </main>
-        
+        {/* Footer */}
         <Footer />
       </div>
-    </React.Fragment>
-  );
-}
+    );
+  };
 
 export default HomePage;
