@@ -205,9 +205,53 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleServices}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Users className="w-4 h-4" />
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Link to="/about" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Users className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">About Us</div>
+                        <div className="text-sm text-gray-400">Our story & mission</div>
+                      </div>
+                    </Link>
+                    <Link to="/team" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Users className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Our Team</div>
+                        <div className="text-sm text-gray-400">Meet the experts</div>
+                      </div>
+                    </Link>
+                    <Link to="/careers" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Workflow className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Careers</div>
+                        <div className="text-sm text-gray-400">Join our team</div>
+                      </div>
+                    </Link>
+                    <Link to="/blog" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <FileText className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Blog</div>
+                        <div className="text-sm text-gray-400">Latest insights</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
@@ -262,6 +306,27 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link
+                to="/team"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Team
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/careers"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Careers
               </Link>
               <Link
                 to="/contact"

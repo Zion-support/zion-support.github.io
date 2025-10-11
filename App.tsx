@@ -42,6 +42,21 @@ const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
+// Additional AI Services
+const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
+const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
+const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+
+// IT Services
+const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
+const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
+
+// Company Pages
+const TeamPage = React.lazy(() => import('./app/team/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -89,6 +104,21 @@ const App: React.FC = () => {
                             <Route path="/terms" element={<TermsPage />} />
                             <Route path="/cookies" element={<CookiesPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            
+                            {/* Additional AI Services */}
+                            <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                            <Route path="/ai-automation" element={<AiAutomationPage />} />
+                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            
+                            {/* IT Services */}
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                            <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                            <Route path="/web-development" element={<WebDevelopmentPage />} />
+                            <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            
+                            {/* Company Pages */}
+                            <Route path="/team" element={<TeamPage />} />
                           </Routes>
                         </Suspense>
                       </main>
