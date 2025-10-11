@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
             </div>
@@ -15,24 +16,39 @@ Why Choose Our Solution?
 Proven results that drive business growth
               </p>
             </div>
+=======
+'use client';
+import React from 'react';
+import React from 'react';
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit), index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+
+
+        {/* Benefits Section */}
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>;
+Why Choose Our Solution?
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
+
+              <p>;
+Proven results that drive business growth
+
+            <div>
+              {benefits.map((benefit), index) => (</div>
+                <div></div>
+                  <div></div>
                     <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
+
+                  <p>{benefit}</p>
               ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-  </div>
+        <section></section>
+          <div>
+
       <Footer />
     </>
   )

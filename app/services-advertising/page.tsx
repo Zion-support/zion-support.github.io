@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -9,20 +10,38 @@ import {Helmet} from 'react-helmet-async'
     <>
 <Helmet>
       </Helmet>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+  ];
+const features = [
+    // Features will be added here
+  ];
+    // Features will be added here
+  ];
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <>
+      <Helmet>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div>
         {/* Hero Section */}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* Features Section */}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* Benefits Section */}
+<<<<<<< HEAD
                 </div>
               )
     </>
@@ -30,14 +49,15 @@ import {Helmet} from 'react-helmet-async'
             </div>
           </div>
         </section>
+=======
+
+              ))}
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
         {/* CTA Section */}
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      
+
       <Footer />
     </>
   )

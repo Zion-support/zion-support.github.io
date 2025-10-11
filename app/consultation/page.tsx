@@ -1,47 +1,88 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react';
 import {Helmet;} from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import { ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
     {;,
 icon: Brain,;,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
+<<<<<<< HEAD
 benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']},
+=======
+
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: BarChart,;,
 title: 'Advanced Analytics',;,
 description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
+<<<<<<< HEAD
 benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+=======
+
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: TrendingUp,;,
 title: 'Performance Optimization',;,
 description: 'AI-powered insights to optimize your business performance.',;,
+<<<<<<< HEAD
 benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+=======
+
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     {;,
 icon: Target,;,
 title: 'Precision Targeting',;,
 description: 'Target specific goals and objectives with precision.',;,
+<<<<<<< HEAD
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
 
 const benefits = [
+=======
+
+  ];
+;
+const benefits = [;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
+<<<<<<< HEAD
   ]
 
 return (
+=======
+  ];
+;
+return (
+    <div className="min-h-screen bg-gray-50">
+      ;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
     <>
 
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
+<<<<<<< HEAD
       </Helmet>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -62,62 +103,91 @@ Learn More
             </div>
           </div>
         </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
+        {/* Hero Section */}
+        <section></section>
+          <div></div>
+            <div></div>
+              <h1>
+
+              <div></div>
+                <button>;
+Get Started</button>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+
+                <button>;
+Learn More
+
+
+
+
+
+        {/* Features Section */}</button>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2>Powerful Features</h2>
+              <p>Everything you need to succeed with AI</p>
+            <div>
+              {features.map((feature), index) => (</div>
+                <div></div>
+                  <div></div>
                     <feature.icon className="h-8 w-8" />
-                  </div>
+
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <p>{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
+<<<<<<< HEAD
                       </li>
                     )
     </>
   )
                   </ul>
                 </div>
+=======
+
+                    ))}
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
               ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit), index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
+        <section></section>
+          <div></div>
+            <div>
+
+            <div>
+              {benefits.map((benefit), index) => (</div>
+                <div></div>
+                  <div></div>
                     <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
+
+                  <p>{benefit}</p>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
+=======
+
+
+        </section>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
 Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      
+
+
+
+
+
       <Footer />
     </>
   )
