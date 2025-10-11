@@ -294,8 +294,12 @@ export default PagePage;
   );
 };
 
+<<<<<<< HEAD
 export default FiveGImplementationPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 =======
 export default FiveGImplementationPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+=======
+export default FiveGImplementationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175

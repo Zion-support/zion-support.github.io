@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -16,6 +17,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Clock, Users, Target, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +32,10 @@ const ConsultationPage: React.FC = () => {
     company: '',
     phone: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
     service: '',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
     message: ''
   });
 
@@ -55,6 +66,7 @@ const ConsultationPage: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
+<<<<<<< HEAD
   const services = [
     'AI Strategy & Implementation',
     'Cloud Migration & Infrastructure',
@@ -156,16 +168,26 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
         <meta name="keywords" content="AI consultation, IT consulting, technology consulting, business transformation, expert advice" />
       </Helmet>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
+=======
+      <Navigation />
+      
+      <main className="pt-20">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
         {/* Hero Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,8 +206,8 @@ const ConsultationPage: React.FC = () => {
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Free Consultation
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Free <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Consultation</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get expert advice on your AI and IT needs. Schedule a free consultation with our specialists.
@@ -201,6 +223,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -263,12 +286,13 @@ const ConsultationPage: React.FC = () => {
 
         {/* Contact Form Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
+        {/* Consultation Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Schedule Your Consultation</h2>
-              <p className="text-xl text-gray-300">Fill out the form below and we'll get back to you within 24 hours</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -282,8 +306,8 @@ const ConsultationPage: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Your full name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your full name"
                     />
                   </div>
                   <div>
@@ -297,11 +321,12 @@ const ConsultationPage: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="your@email.com"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your email"
                     />
                   </div>
                 </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -313,8 +338,8 @@ const ConsultationPage: React.FC = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Your company name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your company name"
                     />
                   </div>
                   <div>
@@ -327,54 +352,69 @@ const ConsultationPage: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Your phone number"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your phone number"
                     />
                   </div>
                 </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service} className="bg-slate-800">
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
+                    Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                    placeholder="Tell us about your project or questions..."
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Tell us about your project or requirements..."
                   />
                 </div>
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto"
-                  >
-                    Schedule Consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
               </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+              <p className="text-xl text-gray-300">Prefer to reach out directly? We're here to help.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-8 w-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 (555) 123-4567</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">consultation@ziontech.com</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Office</h3>
+                <p className="text-gray-300">123 Tech Street, Innovation City</p>
+              </div>
             </div>
           </div>
         </section>

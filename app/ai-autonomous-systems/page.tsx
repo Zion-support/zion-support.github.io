@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
@@ -9,6 +10,12 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Factory, Stethoscope, Building, CheckCircle, ArrowRight, Zap, Shield } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, Factory, Stethoscope, Building, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const AiAutonomousSystemsPage: React.FC = () => {
   const features = [
@@ -33,11 +40,35 @@ const AiAutonomousSystemsPage: React.FC = () => {
     {
       icon: Building,
       title: 'Transportation',
+<<<<<<< HEAD
       description: 'Self-driving vehicles and autonomous transportation systems.',
       benefits: ['Autonomous vehicles', 'Fleet management', 'Route optimization', 'Safety systems']
+=======
+      description: 'Autonomous vehicles and transportation systems for safer, efficient mobility.',
+      benefits: ['Self-driving vehicles', 'Fleet management', 'Route optimization', 'Safety systems']
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
     }
+  ]
+
+  const benefits = [
+    'Increased efficiency by up to 60%',
+    'Reduced operational costs',
+    '24/7 autonomous operation',
+    'Enhanced safety and reliability',
+    'Scalable and adaptable systems',
+    'Real-time monitoring and control'
+  ]
+
+  const benefits = [
+    'Increase operational efficiency by up to 90%',
+    'Reduce human error and improve safety',
+    '24/7 autonomous operation capabilities',
+    'Real-time decision making and adaptation',
+    'Seamless integration with existing systems',
+    'Scalable solutions for any industry'
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Increased efficiency and productivity',
     'Reduced operational costs',
@@ -128,11 +159,42 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Autonomous Systems - Zion Tech Group</title>
+        <meta name="description" content="Build intelligent autonomous systems with our AI solutions. Self-driving vehicles, smart manufacturing, and autonomous infrastructure for the future." />
+        <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
+      </Helmet>
+
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+              AI Autonomous Systems
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build intelligent autonomous systems that operate independently and adapt to changing conditions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </div>
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -153,14 +215,23 @@ const PagePage: React.FC = () => {
             </div>
 
 <<<<<<< HEAD
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI technology that drives autonomous operations</p>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <feature.icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
+<<<<<<< HEAD
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
               {features.map((feature, index) => (
@@ -185,6 +256,16 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
               ))}
             </div>
@@ -192,6 +273,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -212,12 +294,21 @@ const PagePage: React.FC = () => {
             </div>
 
 <<<<<<< HEAD
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Autonomous Systems?</h2>
+              <p className="text-xl text-gray-300">Transform your operations with intelligent automation</p>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="flex-shrink-0">
+                    <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
+<<<<<<< HEAD
                   <p className="text-lg text-white font-medium">{benefit}</p>
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
@@ -228,6 +319,9 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium"></p></p>{benefit}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+=======
+                  <p className="text-gray-300">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
               ))}
             </div>
@@ -235,6 +329,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -260,11 +355,28 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the future of autonomous technology with our AI-powered solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </div>
           </div>
         </section>
       </main>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
@@ -303,3 +415,11 @@ export default PagePage;
 
 export default AiAutonomousSystemsPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+=======
+      <Footer />
+    </div>
+  );
+};
+
+export default AiAutonomousSystemsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7175
