@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
@@ -16,6 +16,9 @@ export default function Footer() {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
+=======
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Code, Smartphone } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
 
 export default function Footer() {
   const aiServices = [
@@ -25,7 +28,7 @@ export default function Footer() {
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
     { name: 'AI Automation Suite', path: '/ai-automation' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
@@ -34,7 +37,7 @@ export default function Footer() {
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'Blockchain Solutions', path: '/blockchain' }
-  ];
+  ]
 
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/ai-task-manager' },
@@ -43,11 +46,12 @@ export default function Footer() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' }
-  ];
+  ]
 
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+<<<<<<< HEAD
     { name: 'AI Services', path: '/ai-services' },
     { name: 'IT Services', path: '/it-services' },
     { name: 'Micro SAAS', path: '/micro-saas-services' },
@@ -56,14 +60,18 @@ export default function Footer() {
   ];
 
   const legal = [
+=======
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
     { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' },
-    { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'Compliance', path: '/compliance' }
-  ];
+    { name: 'Terms of Service', path: '/terms' }
+  ]
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 <<<<<<< HEAD
@@ -85,14 +93,24 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+                <span className="text-white font-bold text-sm">Z</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-gray-400 mb-4">
-              Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
+              Advanced AI and IT solutions for modern businesses. Transforming ideas into reality with cutting-edge technology.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -100,15 +118,17 @@ export default function Footer() {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services.
             </p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
             <div className="flex space-x-4">
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                <Twitter className="w-5 h-5" />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
               </a>
 =======
             <p className="text-gray-300 mb-6 max-w-md">
@@ -130,9 +150,9 @@ export default function Footer() {
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div>
@@ -174,20 +194,23 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-purple-400 mr-2" />
                 <span className="text-gray-400">New York, NY</span>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
           {/* AI Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">AI Services</h3>
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="h-5 w-5 mr-2 text-purple-400" />
+              AI Services
+            </h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm font-semibold">
-                  All AI Services
-                </Link>
-              </li>
-              {aiServices.slice(0, 5).map((service, index) => (
+              {aiServices.map((service, index) => (
                 <li key={index}>
-                  <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
               ))}
@@ -196,6 +219,7 @@ export default function Footer() {
 
 <<<<<<< HEAD
           {/* IT Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
 =======
@@ -262,6 +286,43 @@ export default function Footer() {
                   >
                     {resource.name}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Code className="h-5 w-5 mr-2 text-blue-400" />
+              IT Services
+            </h3>
+            <ul className="space-y-2">
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SaaS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Smartphone className="h-5 w-5 mr-2 text-green-400" />
+              Micro SaaS
+            </h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
                   </Link>
                 </li>
               ))}
@@ -270,6 +331,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Micro SAAS Services */}
         <div className="mb-12">
@@ -281,6 +343,18 @@ export default function Footer() {
             {microSaasServices.map((service, index) => (
               <Link key={index} to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm">
                 {service.name}
+=======
+        {/* Quick Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-wrap justify-center gap-6">
+            {quickLinks.map((link, index) => (
+              <Link 
+                key={index}
+                to={link.path} 
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                {link.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
               </Link>
             ))}
 =======
@@ -288,6 +362,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -323,16 +398,37 @@ export default function Footer() {
                 <p className="text-white">San Francisco, CA</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
+=======
+        {/* Contact Info */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex items-center justify-center space-x-2 text-gray-400">
+              <Mail className="h-5 w-5" />
+              <span>contact@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-400">
+              <Phone className="h-5 w-5" />
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-400">
+              <MapPin className="h-5 w-5" />
+              <span>New York, NY</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </div>
           </div>
         </div>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        {/* Copyright */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
@@ -428,12 +524,18 @@ export default function Footer() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
           </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
         </div>
       </div>
     </footer>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
