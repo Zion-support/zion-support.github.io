@@ -1,26 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AiapiManagementPage: React.FC = () => {
-  const features = [
-    {
-      title: 'AI API Management',
-      description: 'Professional AI API management solutions for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
-=======
 const AIApiManagementPage: React.FC = () => {
   const features = [
     {
@@ -28,7 +11,6 @@ const AIApiManagementPage: React.FC = () => {
       description: 'Centralized API gateway for seamless integration and management.',
       benefits: ['Traffic Control', 'Rate Limiting', 'Authentication', 'Monitoring'],
       icon: <Shield className="w-8 h-8 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
     },
     {
       title: 'AI Model Integration',
@@ -47,39 +29,6 @@ const AIApiManagementPage: React.FC = () => {
       description: 'Comprehensive analytics and performance insights.',
       benefits: ['Real-time Metrics', 'Usage Analytics', 'Performance Reports', 'Cost Optimization'],
       icon: <BarChart3 className="w-8 h-8 text-orange-400" />
-=======
-const AIAPIManagementPage: React.FC = () => {
-  const features = [
-    {
-      title: 'API Gateway Management',
-      description: 'Centralized API gateway with advanced routing, load balancing, and traffic management.',
-      benefits: ['High Availability', 'Load Balancing', 'Rate Limiting', 'Traffic Analytics']
-    },
-    {
-      title: 'AI Model Integration',
-      description: 'Seamless integration with various AI models and machine learning services.',
-      benefits: ['Multi-Model Support', 'Auto-Scaling', 'Model Versioning', 'Performance Monitoring']
-    },
-    {
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with authentication, authorization, and compliance features.',
-      benefits: ['OAuth 2.0', 'API Key Management', 'Audit Logging', 'GDPR Compliance']
-    },
-    {
-      title: 'Monitoring & Analytics',
-      description: 'Real-time monitoring, analytics, and insights for your AI API infrastructure.',
-      benefits: ['Real-time Metrics', 'Performance Tracking', 'Error Monitoring', 'Usage Analytics']
-    },
-    {
-      title: 'Developer Experience',
-      description: 'Comprehensive developer tools and documentation for seamless integration.',
-      benefits: ['API Documentation', 'SDK Generation', 'Testing Tools', 'Developer Portal']
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Intelligent cost management and optimization for AI API usage.',
-      benefits: ['Usage Optimization', 'Cost Analytics', 'Budget Controls', 'Resource Scaling']
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
     }
   ];
 
@@ -124,48 +73,6 @@ const AIAPIManagementPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional AI API management services to help your business succeed and grow.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Contact us today to learn more about our AI API management services.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Contact Us
-                  </button>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                    Learn More
-                  </button>
-                </div>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful API Management Features
               </h2>
@@ -211,69 +118,15 @@ const AIAPIManagementPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-=======
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Comprehensive AI API Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional AI API management services to help your business succeed and grow.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-                <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Contact us today to learn more about our AI API management services.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Contact Us
-                  </button>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                    Learn More
-                  </button>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-=======
         
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
         <Footer />
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AiapiManagementPage;
-=======
 export default AIApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-=======
-export default AIAPIManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
