@@ -64,18 +64,9 @@ const EnhancedHeader: React.FC = () => {
               </Link>
             </nav>
           </div>
-<<<<<<< HEAD
         )}
       </div>
     </header>
   );
 };
-=======
-        </div>
-      </header>
-    </>
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-
 export default EnhancedHeader;
