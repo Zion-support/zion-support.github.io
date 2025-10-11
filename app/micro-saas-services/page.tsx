@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -115,7 +114,6 @@ const MicroSAASServicesPage: React.FC = () => {
       role: 'Small Business Owner',
       content: 'AI Expense Tracker has simplified our financial management. The receipt scanning feature is incredibly accurate.',
       rating: 5
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, DollarSign, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -175,7 +173,6 @@ const MicroSaasServicesPage: React.FC = () => {
       pricing: '$15/month',
       popular: false,
       link: '/micro-saas-services/ai-expense-tracker'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
     }
   ];
 
@@ -190,13 +187,10 @@ const MicroSaasServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Powerful micro SAAS applications including AI task management, expense tracking, password management, and more. Affordable solutions for modern businesses." />
         <meta name="keywords" content="micro SAAS, AI applications, task management, expense tracking, password manager, invoice generator, productivity tools" />
-=======
         <meta name="description" content="Powerful micro SAAS solutions for modern businesses. AI-powered tools for content creation, analytics, email management, and more." />
         <meta name="keywords" content="micro saas, ai tools, business software, content creation, analytics, email management" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
       </Helmet>
       
       {/* Hero Section */}
@@ -207,11 +201,8 @@ const MicroSaasServicesPage: React.FC = () => {
               Micro SAAS Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-<<<<<<< HEAD
               Powerful, AI-powered micro applications designed to solve specific business problems. Affordable, easy-to-use solutions that deliver immediate value.
-=======
               Powerful, AI-driven micro software solutions designed to streamline your business operations and boost productivity.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -229,7 +220,6 @@ const MicroSaasServicesPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -249,7 +239,6 @@ const MicroSaasServicesPage: React.FC = () => {
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-=======
 
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
@@ -306,14 +295,12 @@ const MicroSaasServicesPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Micro SAAS Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -321,7 +308,6 @@ const MicroSaasServicesPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Micro SAAS Applications</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Choose from our suite of specialized AI-powered applications
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -329,12 +315,10 @@ const MicroSaasServicesPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Micro SAAS?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Built with modern technology and designed for maximum efficiency
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {microSAAS.map((app, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative">
                 {app.popular && (
@@ -403,7 +387,6 @@ const MicroSaasServicesPage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <Zap className="w-12 h-12 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
@@ -419,7 +402,6 @@ const MicroSaasServicesPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-4">Easy Integration</h3>
               <p className="text-gray-300">Seamlessly integrate with your existing tools and workflows in minutes.</p>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
           </div>
         </div>
       </section>
@@ -429,15 +411,12 @@ const MicroSaasServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Boost Your Productivity?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Start your free trial today and experience the power of AI-driven micro applications.
-=======
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Start your 30-day free trial today. No credit card required.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -450,11 +429,8 @@ const MicroSaasServicesPage: React.FC = () => {
                   to="/about" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-<<<<<<< HEAD
                   View All Apps
-=======
                   Schedule Demo
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 </Link>
               </div>
             </div>
@@ -465,8 +441,5 @@ const MicroSaasServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default MicroSAASServicesPage;
-=======
 export default MicroSaasServicesPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668

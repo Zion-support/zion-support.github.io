@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
-=======
-import { CheckCircle, Brain, Zap, Eye, MessageSquare, BarChart3, Shield, Cog, ArrowRight } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3, Cog } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +7,6 @@ const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
@@ -87,40 +81,8 @@ const AIServicesPage: React.FC = () => {
       title: 'Accuracy',
       description: 'Achieve 95%+ accuracy in AI-powered tasks and predictions',
       icon: <Star className="w-6 h-6 text-yellow-500" />
-=======
-      title: 'Machine Learning',
-      description: 'Build intelligent systems that learn and adapt to your business needs.',
-      features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],
-      applications: ['Fraud Detection', 'Customer Segmentation', 'Demand Forecasting', 'Quality Control']
     },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
-      title: 'Natural Language Processing',
-      description: 'Transform text and speech into actionable insights and automated responses.',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
-      applications: ['Customer Support', 'Content Moderation', 'Document Processing', 'Voice Assistants']
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-purple-500" />,
-      title: 'Computer Vision',
-      description: 'Extract meaningful information from images and videos for business automation.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
-      applications: ['Quality Inspection', 'Security Monitoring', 'Medical Imaging', 'Autonomous Vehicles']
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-500" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors to make data-driven business decisions.',
-      features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],
-      applications: ['Sales Forecasting', 'Market Analysis', 'Risk Management', 'Resource Planning']
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-red-500" />,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation that reduces manual work.',
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Decision Automation'],
-      applications: ['Invoice Processing', 'Customer Onboarding', 'Inventory Management', 'Report Generation']
-    },
+
     {
       icon: <Shield className="w-8 h-8 text-indigo-500" />,
       title: 'AI Security',
@@ -188,8 +150,6 @@ const AIServicesPage: React.FC = () => {
       step: '05',
       title: 'Monitoring & Optimization',
       description: 'Continuous monitoring and optimization ensure your AI solutions perform at peak efficiency.'
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
-=======
 import { CheckCircle, ArrowRight, Brain, Zap, Eye, MessageCircle, BarChart, Shield, Users, Clock, DollarSign, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -249,7 +209,6 @@ const AiServicesPage: React.FC = () => {
       pricing: '$349/month',
       popular: false,
       category: 'HR'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
     }
   ];
 
@@ -297,31 +256,23 @@ const AiServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI services including content generation, chatbots, analytics, and automation. Transform your business with cutting-edge artificial intelligence." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, chatbots, content generation, analytics" />
-=======
         <meta name="description" content="Advanced AI services including machine learning, computer vision, natural language processing, and predictive analytics. Transform your business with cutting-edge AI solutions." />
         <meta name="keywords" content="AI services, machine learning, computer vision, natural language processing, predictive analytics, AI solutions, artificial intelligence" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
       </Helmet>
       
       {/* Hero Section */}
       <section className="pt-20 px-4 py-20">
-<<<<<<< HEAD
-=======
         <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, NLP, computer vision, and predictive analytics from Zion Tech Group." />
         <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, predictive analytics, AI automation, artificial intelligence" />
       </Helmet>
       
       <main className="pt-20 px-4 py-20">
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
               AI Services & Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -353,14 +304,11 @@ const AiServicesPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Services?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience the power of artificial intelligence with our proven solutions
-=======
               AI Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Harness the power of artificial intelligence to transform your business operations, 
               enhance decision-making, and drive innovation across every aspect of your organization.
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
-=======
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -405,7 +353,6 @@ const AiServicesPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our AI Capabilities</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive AI expertise across all major domains
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -423,30 +370,25 @@ const AiServicesPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {aiCapabilities.map((capability, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{capability.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{capability.title}</h3>
                 <p className="text-gray-300">{capability.description}</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* AI Services Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -464,7 +406,6 @@ const AiServicesPage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
-=======
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -483,16 +424,13 @@ const AiServicesPage: React.FC = () => {
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
                       Popular
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                     </span>
                   </div>
                 )}
                 <div className="mb-4">{service.icon}</div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-=======
                 <div className="mb-2">
                   <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
                     {service.category}
@@ -505,7 +443,6 @@ const AiServicesPage: React.FC = () => {
                   <div className="text-gray-400 text-sm">per month</div>
                 </div>
                 <ul className="space-y-2 mb-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -513,7 +450,6 @@ const AiServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
                 <div className="mb-6">
                   <span className="text-2xl font-bold text-white">{service.pricing}</span>
                 </div>
@@ -522,13 +458,11 @@ const AiServicesPage: React.FC = () => {
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Learn More
-=======
                 <Link 
                   to="/contact"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Get Started
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -537,8 +471,6 @@ const AiServicesPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* AI Process */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -627,17 +559,14 @@ const AiServicesPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our AI services can accelerate your digital transformation and drive measurable results.
-=======
 
           {/* AI Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -767,34 +696,25 @@ const AiServicesPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
-=======
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Harness the Power of AI?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Get a free AI consultation and discover how artificial intelligence can transform your business.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Your AI Journey
-=======
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Free AI Consultation
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 </Link>
                 <Link 
                   to="/about" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-<<<<<<< HEAD
                   Schedule Consultation
-=======
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Get Started Today
@@ -804,30 +724,18 @@ const AiServicesPage: React.FC = () => {
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
                   Explore All Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
-=======
                   Learn About Us
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 </Link>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </section>
-=======
       </main>
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
-=======
       </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AIServicesPage;
-=======
 export default AiServicesPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
