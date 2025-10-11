@@ -128,7 +128,6 @@ const AIApiManagementPage: React.FC = () => {
             ))}
           </div>
         </section>
-      </main>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
