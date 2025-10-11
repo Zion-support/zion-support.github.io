@@ -43,7 +43,7 @@ const benefits = [;
     'Seamless integration with existing systems'
   ];
 ;
-return (;
+return(;
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -60,8 +60,8 @@ return (;
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;)
+  Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
             </div>
           </div>
@@ -137,3 +137,6 @@ Start Free Trial
   );
 };
 
+
+</div>
+</div>

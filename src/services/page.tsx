@@ -10,8 +10,8 @@ const ServicesPage: React.FC = () => {
   const aiServicesData = aiServices.map(service => ({
     icon: Brain,
     title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
+    description: service.description,)
+  features: service.features.slice(0, 4),
     price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
     popular: service.pricing.starter.price < 3000,
     link: service.website.replace('https://ziontechgroup.com', '')
@@ -20,8 +20,8 @@ const ServicesPage: React.FC = () => {
   const itServicesData = itServices.map(service => ({
     icon: Database,
     title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
+    description: service.description,)
+  features: service.features.slice(0, 4),
     price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
     popular: service.pricing.starter.price < 2000,
     link: service.website.replace('https://ziontechgroup.com', '')
@@ -30,8 +30,8 @@ const ServicesPage: React.FC = () => {
   const microSaasServicesData = microSaasServices.map(service => ({
     icon: BarChart3,
     title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
+    description: service.description,)
+  features: service.features.slice(0, 4),
     price: `$${service.pricing.starter.price}/month`,
     popular: service.pricing.starter.price < 200,
     link: service.website.replace('https://ziontechgroup.com', '')
@@ -46,8 +46,8 @@ const ServicesPage: React.FC = () => {
               Comprehensive AI and IT solutions designed to transform your business operations and drive growth
             </p>
               </a>
-              <Link
-                to="/contact"
+              <Link;
+  to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation

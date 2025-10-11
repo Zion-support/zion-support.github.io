@@ -91,8 +91,8 @@ Enterprise, Success, Stories
 Enterprise, Success, Stories
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Heart className="h-8 w-8 text-pink-400 ,>;
-Customer Experience Impact</$1>"
+                <Heart className="h-8 w-8 text-pink-400 ,>;)
+  Customer Experience Impact</$1>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
@@ -251,7 +251,6 @@ Schedule Your CX Transformation Assessment"
 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
   </div>
@@ -316,3 +315,82 @@ The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89%
 With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.;
 Schedule, Your, CX Transformation, Assessmen, t
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></article>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </ArrowLeft>
+                </h2>
+                </p>
+                </h2>
+                </ul>
+                </h3>
+                </ul>
+                </h3>
+                </ul>
+                </h3>
+                </ul>
+                </h3>
+                </h2>
+                </section>
+                </ul>
+                </h3>
+                </h2>
+                </section>
+                </ul>
+                </h3>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </ul>
+                </h3>
+                </section>
+                </ul>
+                </h3>
+                </p>
+                </h3>
+                </p>
+                </h3>
+                </p>
+                </h3>
+                </p>
+                </h3>
+                </p>
+                </h3>
+                </section>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </li>
+                </ul>
+                </Users>
+                </li>
+                </DollarSign>
+                </li>
+                </TrendingUp>
+                </li>
+                </li>
+                </ul>
+                </Users>
+                </li>
+                </DollarSign>
+                </li>
+                </TrendingUp>
+                </li>
+                </Sparkles>
+                </ul>
+                </Heart>
+                </div>
+                </meta>
+                </meta>
+                </title>
+                </div>
+                </title>

@@ -30,8 +30,8 @@ const, October2025BreakthroughBanne, r = () => {
   d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y
-const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
+            Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;
+  const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Background, Effect, s */}
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></div>"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>"
@@ -61,10 +61,10 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations</$1>"
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">"
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t,
-  s: Sovereign, Agents, with 94% decision, accurac, y
-            Quantum, ML, achieving 1000x, speedu, p, and, Neuromorphic, Edge Computing, at, 10,000x, energy, efficiency.
+            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t;
+  Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t,
+  s: Sovereign, Agents, with 94% decision, accurac, y;
+  Quantum, ML, achieving 1000x, speedu, p, and, Neuromorphic, Edge Computing, at, 10,000x, energy, efficiency.
           {/* Featured, Articles, Grid */}"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
             {/* Articl, e, 1: Sovereign, Agent, s */}
@@ -79,11 +79,11 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e">AI, Sovereign, Agents
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-            {/* Artic, l, e
+            {/* Artic, l, e;
   1: Sovereign, Agent, s */}
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
-            {/* Artic, l, e 
+            {/* Artic, l, e;
   1: Sovereign, Agent, s */}
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">"
@@ -107,7 +107,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 Autonomous, Decisio, n-Making, Revolutio, n</$1>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">"
                 94% accura, c, y • $4, 5, M+ savin, g, s • 10 x, efficiency, gains
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/ai-soverei, g, n-agen, t, s-enterpri, s, e-20, 2, 5"
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
               <Li, n, k;"
@@ -146,7 +146,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 1000x, Computational, Speed Breakthrou, g, h</$1>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">"
                 1000 x, speedu, p • $89 M, saving, s • Impossible, problems, solved
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/ai-quant, u, m-machi, n, e-learni, n, g-20, 2, 5"
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, hove, r: te, x, t-indi, g, o-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
               <Li, n, k;"
@@ -188,7 +188,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 Bra, i, n-Inspired, AI, at 0.001W, Powe, r</$1>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">"
                 10,000 x, energy, efficiency • 10, 0, M+ devic, e, s • Re, a, l-time, learnin, g
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/ai-neuromorph, i, c-ed, g, e-computi, n, g-20, 2, 5"
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, hove, r: te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, grou, p-ho, v, e
               <Li, n, k;"
@@ -202,7 +202,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-cent, e, r">"
             <Li, n, k
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e
           {/* CTA, Sectio, n */}"
@@ -214,7 +214,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
             ></Li>"
               Explore, All, Articles <Link, className="w-5 h-5  /></Link>"
               Explore, All, Articles <Link, className="w-5 h-5" />"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-whi, t, e/20, hov, e
             <Li, n, k;"

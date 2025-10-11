@@ -154,7 +154,6 @@ return () => clearInterval(interval);
   }, []),;
 const width = 800;,;
 const height = 400;,;
-function project(lat: number, lng: number) {;
 const x = ((lng + 180) / 360) * width;,;
 const y = ((90 - lat) / 180) * height;,;
 }
@@ -162,7 +161,7 @@ return { x;, y }
   }
 ;
 const topRegions = INSTANCES.sort((a);, b) => b.talent - a.talent).slice(0, 5),;
-return (;
+return(;
     <div className='min-h-screen bg-background'>
       <NextSeo;
 title='Global Zion Map';
@@ -176,8 +175,8 @@ description='Overview of Zion deployments'
           <div className='relative' style={{ width}}, height }}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {};
-}
-const { x}, y } = project(i.lat, i.lng);
+})
+  const { x}, y } = project(i.lat, i.lng);
 const color = null;;
 i.governance === 'admin'
                   ? 'bg-red-500'
@@ -196,7 +195,7 @@ i.governance === 'admin'
 }
 const { x}, y } = project(i.lat, i.lng),;
 const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500';,;
-return (;
+return(;
 
 
 
@@ -206,8 +205,8 @@ return (;
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <$2 />;
-className={`absolute ${color}} rounded-full p-1`}
-                        style={{ left: x}}, top: y }}
+className={`absolute ${color}} rounded-full p-1`})
+  style={{ left: x}}, top: y }}
                       >
                         <MapPin className="w-4 h-4 text-white" />
                       </div>
@@ -232,21 +231,21 @@ className={`absolute ${color}} rounded-full p-1`}
           <div className='relative' style={{ width}}, height }}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES && INSTANCES.map(i => {};
-}
-const { x}, y } = project(i && i.lat, i && i.lng);
+})
+  const { x}, y } = project(i && i.lat, i && i.lng);
 const color =;;
 i && i.governance === 'admin'
                   ? 'bg-red-500'
                   : i && i.governance === 'hybrid'
                     ? 'bg-yellow-500'
-                    : 'bg-green-500';              return (;
+                    : 'bg-green-500';              return(;
                 <TooltipProvider key={i && i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <$2 />;
 className={`absolute ${color}} rounded-full p-1`}
-;
-style={{ left: x}}, top: y }}>
+;)
+  style={{ left: x}}, top: y }}>
                         <MapPin className='w-4 h-4 text-white' /></$1></$1>
                     <TooltipContent>
                       <div className='text-sm space-y-1'>
@@ -356,7 +355,6 @@ text: string;
 export default /**
  * GlobalMapPage - Function description
  */;
-function GlobalMapPage() {;
 }
 const [feed}, set_feed] = useState < FeedItem[]>([]);
 useEffect ((), ) => {;
@@ -380,14 +378,13 @@ const height = 400;
   /**
  * project - Function description
  */;
-function project() {;
 const coordinate_x = ((lng + 180) / 360) * width;;
 const coordinate_y = ((90 - lat) / 180) * height;;
 }
 return { x;}, y }
   }
   const top_regions = INSTANCES.sort ((a);, b) => b.talent - a.talent).slice (0, 5);
-return (;
+return(;
     <div className='min - h-screen bg - background'>
       <NextSeo;
 title='Global Zion Map';
@@ -400,20 +397,20 @@ description='Overview of Zion deployments'
           <div className='relative' style={{ width}}, height }}>
             <Globe className='w - full h - full text - secondary' />
             {INSTANCES.map (index => {};
-}
-const { x}, y } = project (i.lat, i.lng);
+})
+  const { x}, y } = project (i.lat, i.lng);
 const color =;;
 i.governance === 'admin'
                   ? 'bg - red - 500'
                   : i.governance === 'hybrid'
                     ? 'bg - yellow - 500'
-                    : 'bg - green - 500'; return (;
+                    : 'bg - green - 500'; return(;
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger as_child>
                       <;$2 />;
-className={`absolute ${color}} rounded - full p - 1`}
-                        style={{ left: x}}, top: y }}
+className={`absolute ${color}} rounded - full p - 1`})
+  style={{ left: x}}, top: y }}
                       >
                         <MapPin className='w - 4 h - 4 text - white' /></$1></$1>
                     <TooltipContent>
@@ -447,3 +444,17 @@ Top Regions by Talent</$1>
 }
 
 </$1></li></main>
+</section>
+</section>
+</TooltipContent>
+</TooltipTrigger>
+</Tooltip>
+</TooltipProvider>
+</main>
+</ul>
+</TooltipContent>
+</TooltipTrigger>
+</Tooltip>
+</TooltipProvider>
+</main>
+</main>

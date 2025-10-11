@@ -19,7 +19,7 @@ s: {' 'Content-Type': 'application/json' }, bod,;,
 y: JSON.stringify({/* TODO: Fix JSX expression */}
   k: error.stack} nam,;,
 e: error.name }, errorInf,;,
-o: {/* TODO: Fix JSX expression */}
+o: {/* TODO: Fix JSX expression */})
   k: errorInfo.componentStack }, ur);,
 l: window.location.href) timestam,;,
 p: Date.now(), userAgen,;,

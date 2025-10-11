@@ -3,7 +3,7 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
+  title: string;,
   description: string;
   keywords: string[];
   canonicalUrl?: string;
@@ -127,19 +127,19 @@ const,
       }))
     }
   }, [seoData, enableStructuredData])
-  // Generate Open Graph data
+  // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableOpenGraph])
-  // Generate Twitter Card data
+  // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableTwitterCards])
-  // Generate meta tags
+  // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
@@ -178,8 +178,8 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]')
+      // Update canonical URL;
+  let canonicalLink = document.querySelector('link[rel="canonical"]')
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
@@ -253,3 +253,6 @@ export default AdvancedSEOOptimizer
 }"
   </AdvancedSEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li>
+
+</title>
+</AdvancedSEOOptimizerProps>

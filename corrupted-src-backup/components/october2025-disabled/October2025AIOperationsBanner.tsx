@@ -24,8 +24,8 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
             Transform, Your, Enterprise Operatio, n, s
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">)
+  Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
@@ -55,8 +55,8 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
             Transform, Your, Enterprise Operatio, n, s</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">)
+  Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
           {/* TODO: Fix JSX expression */}"

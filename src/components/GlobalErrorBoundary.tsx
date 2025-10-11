@@ -40,7 +40,7 @@ if (this.props.fallback) {;
 return this.props.fallback;
   }
       // Default error UI;
-return (;
+return(;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️
@@ -49,8 +49,8 @@ return (;
 We're sorry, but something unexpected happened. Please try refreshing the page.
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
-                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">;
-Error Details (Development Only)
+                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">;)
+  Error Details (Development Only)
                 <pre className="text-xs text-red-400 overflow-auto">
   </pre>
                   {this.state.error.toString()}
@@ -78,3 +78,7 @@ Go Home</span>
   }
 }
 export { GlobalErrorBoundary }</div></div></div></div></p></p></h1>
+</summary>
+</details>
+</p>
+</h1>

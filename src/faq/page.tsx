@@ -7,8 +7,8 @@ const FAQPage: React.FC = () => {;
 const [searchTerm, setSearchTerm] = useState('');
 const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (index: number) => {;;
-setOpenItems(prev =>;
-prev.includes(index) 
+setOpenItems(prev =>;)
+  prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )
@@ -77,12 +77,12 @@ answer:   ,;
 $4];
 const filteredData = faqData.map(category => ({);
     ...category,;,
-questions: category.questions.filter(q =>;
-q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+questions: category.questions.filter(q =>;)
+  q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-return (;
+return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -99,8 +99,8 @@ Find answers to common questions about our AI and IT services, pricing, and supp
               <input;
 type="text";
 placeholder="Search FAQs...";
-value={searchTerm}
-                onChange={(e) =>
+value={searchTerm})
+  onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
@@ -399,3 +399,13 @@ export default FaqPage</div>
   </div>
   </div>
 </div></div></div></div></div></div></span></span></button></p></p></p></p></p></h2></h2>
+</p>
+</span>
+</button>
+</p>
+</p>
+</h2>
+</p>
+</span>
+</h2>
+</p>

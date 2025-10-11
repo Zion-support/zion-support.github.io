@@ -66,8 +66,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
@@ -76,8 +75,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
-            natural language and escalates complex issues to human agents seamlessly.
+            Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands )
+  natural language and escalates complex issues to human agents seamlessly.
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -151,3 +150,18 @@ export default AICustomerSupportBotPage</button>
   </div>
   </div>
 </div></div></div></span></p></p></p></h1></h2></h2></h3></h3></ul></li>
+</h2>
+</p>
+</span>
+</h3>
+</h2>
+</li>
+</ul>
+</p>
+</h3>
+</p>
+</h1>
+</div>
+</title>
+</Helmet>
+</div>

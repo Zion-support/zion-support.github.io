@@ -1,6 +1,6 @@
 const, October2025UltimateEnterpriseBanne, r = () => {
-  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t
-  return(<, className="relative, p, y-16, p, x-4, s, m: px-6 l,$2 />
+  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
+  return(<, className="relative, p, y-16, p, x-4, s, m: px-6 l,$2 />)
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
@@ -13,7 +13,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>
-    <, className="relative, p, y-16, p, x-4, s, m: px-6 l$2 />
+    <, className="relative, p, y-16, p, x-4, s, m: px-6 l$2 />,
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
@@ -212,9 +212,9 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
               ))}
             {/* CTA, Butto, n */}
-            <Li, n, k
+            <Li, n, k;
   to={multiCloudConte, n, t.c, t, a.li, n, k}
-              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   to={multiCloudConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -350,9 +350,9 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
               ))}
             {/* CTA, Butto, n */}
-            <Li, n, k
+            <Li, n, k;
   to={conversationalAIConte, n, t.c, t, a.li, n, k}
-              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   to={conversationalAIConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -451,7 +451,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <Li, n, k
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
         {/* Bottom, CT, A */}"
@@ -468,7 +468,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
   r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
             >
               Schedule, Free, Assessment
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e
             <Li, n, k;"

@@ -2,8 +2,8 @@ import React from 'react'
 import Reac, t, { useState } fr, o, m 'rea, c, t'
 interface NewContentPromoBannerProp, s {
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g'
-  classNa, m, e ?  : string
-interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
+  classNa, m, e ?  : string;
+  interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -32,7 +32,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; if (isDismiss, e, d) return, nul, l
+  ]; if (isDismiss, e, d) return, nul, l;
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
@@ -52,8 +52,8 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />
               <span, className="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT
               <Star, className="w-5 h-5, animat, e-sp, i, n" />
-            <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6;)
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-2">)
+  Just, Publishe, d: New, Guides, for 20, 2, 6;)
             </h3>)
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
               Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)
@@ -84,8 +84,8 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
               Just, Publishe, d: New, Guides, for 20, 2, 6</$1>"
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
-              and, privac, y‑first, observabilit, y.
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,)
+  and, privac, y‑first, observabilit, y.
             {/* Featured, content, grid */}"
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
               {/* TODO: Fix JSX expression */}"

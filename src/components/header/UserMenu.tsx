@@ -2,9 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export function UserMenu() {
   // For now, we'll show a simple login button
-  // In a real app, this would check authentication state
-  return (
-    <div className="flex items-center gap-2">
+  // In a real app, this would check authentication state;
+  return(<div className="flex items-center gap-2">
       <$2 />
         to="/login"
         className="flex items-center gap-2 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
@@ -16,8 +15,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/Button'
-import { User, LogOut, Settings, UserPlus } from 'lucide-react'
-export function UserMenu() {
+import { User, LogOut, Settings, UserPlus } from 'lucide-react')
   const { user, logout } = useAuth()
 import React, { useState } from 'react'
 import { User, Settings, LogOut, ChevronDown } from 'lucide-react'
@@ -40,22 +38,20 @@ export const UserMenu: React.FC = () => {
     }
   }
   if (!user) {
-    return (
-      <div className="flex items-center space-x-4">
+    return(<div className="flex items-center space-x-4">
         <Button variant="outline" size="sm">
           Sign In
         </Button>
-        <Button size="sm">
-          Sign Up
+        <Button size="sm">)
+  Sign Up
         </Button>
       </div>
     )
   }
 
-  return (
-    <div className="relative">
-      <$2 />
-        onClick={() => setIsOpen(!isOpen)}
+  return(<div className="relative">
+      <$2 />)
+  onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors"
       >
         <Avatar className="w-8 h-8">

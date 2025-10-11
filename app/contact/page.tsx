@@ -9,8 +9,8 @@ name: '',;,
 email: '',;,
 company: '',;,
 phone: '',;,
-service: '',;,
-message: ''
+service: '',;,)
+  message: ''
 }
   });
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
@@ -64,7 +64,7 @@ const services = [;
     'IT Consulting',
     'Other'
   ];
-return (;
+return(;
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
@@ -82,8 +82,8 @@ return (;
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;)
+  Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
             </div>
           </div>
@@ -294,3 +294,4 @@ Why Choose Us?
 }
 ;
 export default ContactPage
+</HTMLInputElement>

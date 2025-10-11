@@ -205,7 +205,7 @@ milestones: [
       ]
     }
   ];
-return (;
+return(;
       {/* Mission Pillars */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -213,8 +213,8 @@ return (;
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">;
 Our Mission Pillars
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-Four core pillars that guide our mission and drive our impact across the technology landscape.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;)
+  Four core pillars that guide our mission and drive our impact across the technology landscape.
             </p>
           </div>
           
@@ -327,11 +327,11 @@ transformative power of advanced technology.
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {coreValues.map((value), index) => {;
 const Icon = value.icon;;
-return (;
+return(;
               <$2 />;
 }
-key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+key={index})
+  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -363,11 +363,11 @@ key={index}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {missionPillars.map((pillar), index) => {;
 const Icon = pillar.icon;;
-return (;
+return(;
                 <$2 />;
 }
-key={index}
-                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
+key={index})
+  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -416,11 +416,11 @@ key={idx}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {impactAreas.map((area), index) => {;
 const Icon = area.icon;;
-return (;
+return(;
               <$2 />;
 }
-key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+key={index})
+  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -512,3 +512,4 @@ Join Our Team
   )
 }
 export default Mission</$1></div></p></section>
+</section>

@@ -138,8 +138,7 @@ const CareersPage: React.FC = () => {
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -170,8 +169,8 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Work With Us?
             </h2>
-            <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community,
+            <p className="text-xl text-gray-600">)
+  We offer more than just a job - we offer a career and a community,
   
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -303,3 +302,58 @@ export default CareersPage</Link>
   </Link>
   </Link>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></li></section></section></section>
+</li>
+</ul>
+</h4>
+</li>
+</ul>
+</h4>
+</div>
+</span>
+</span>
+</span>
+</span>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</div>
+</span>
+</li>
+</ul>
+</p>
+</h2>
+</div>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</p>
+</div>
+</section>
+</p>
+</div>

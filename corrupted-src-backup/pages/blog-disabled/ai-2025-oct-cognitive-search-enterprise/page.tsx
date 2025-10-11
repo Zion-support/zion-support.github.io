@@ -160,8 +160,8 @@ organizati, o, n. Leaders, make, data-driven, decisions, with;
 comprehensive, contex, t.;
 Start, Your, Knowledge Transformati, o, n;
 Start, Your, Knowledge Transformati, o, n
-                <Brain, classNam, e='ml-2 h-5 w-5' />;
-Start, Your, Knowledge Transformati, o, n
+                <Brain, classNam, e='ml-2 h-5 w-5' />;)
+  Start, Your, Knowledge Transformati, o, n
                 <Brain, className='ml-2 h-5 w-5' />
               <ul className="space-y-4 text-lg">)
                 <li className="flex items-start gap-3">)
@@ -340,7 +340,6 @@ className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-l
 Start Your Knowledge Transformation",
                 <Brain className="ml-2 h-5 w-5 ">,
                 <Brain className="ml-2 h-5 w-5" />);
-export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
   </div>
@@ -405,3 +404,65 @@ export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX ex
   </Search>
   </Brain>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section>
+</h2>
+</h2>
+</h2>
+</h2>
+</h3>
+</h3>
+</h2>
+</h3>
+</p>
+</h3>
+</p>
+</h3>
+</div>
+</h3>
+</h3>
+</div>
+</h3>
+</div>
+</h2>
+</h3>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</ul>
+</p>
+</h3>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</section>
+</p>
+</p>
+</p>
+</section>
+</p>
+</p>
+</section>
+</p>
+</section>
+</ul>
+</ul>
+</div>
+</ul>
+</ul>
+</ul>
+</div>
+</div>
+</meta>
+</meta>
+</title>
+</div>
+</title>

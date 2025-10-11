@@ -15,7 +15,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
         <$2 />
-const,
+const,)
   October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
      > {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
@@ -43,9 +43,9 @@ const,
             aria-label="New product launch announcement"
           >
              aria-hidden="true" <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025
-             aria-hidden="true"</div> <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025
-             aria-hidden="true"
+              🚀 JUST LAUNCHED - OCTOBER 2025;
+  aria-hidden="true"</div> <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025;
+  aria-hidden="true"
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
             Cognitive Mesh Orchestration Platform
           </h1>
@@ -147,3 +147,11 @@ const,
     </section>)
 })
 "</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></h1></ul>
+</p>
+</span>
+</span>
+</span>
+</span>
+</span>
+</div>
+</div>

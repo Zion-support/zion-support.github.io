@@ -1,8 +1,8 @@
 interface ServiceStatus {
 
-  name: string
+  name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
-  description: string
+  description: string,
   lastChecked: string
 }
 
@@ -95,8 +95,8 @@ export default function Status() {
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
 
   useEffect(() => {
-    // Try to load external status page, fallback after timeout
-    const timeout = setTimeout(() => {
+    // Try to load external status page, fallback after timeout;
+  const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
 import { SEO } from "@/components/SEO",
@@ -139,19 +139,18 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
   }
 ],
-export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
   const [showFallback, setShowFallback] = useState(false),
   const [uptime, setUptime] = useState<number | null>(null),
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
   useEffect(() => {
-    // Try to load external status page, fallback after timeout
-    const timeout = setTimeout(() => {
+    // Try to load external status page, fallback after timeout;
+  const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
       }
-    }, 5000), // 5 second timeout
-    return () => clearTimeout(timeout)
+    }, 5000), // 5 second timeout;
+  return () => clearTimeout(timeout)
   }, [externalStatusLoaded]),
   useEffect(() => {
     async function fetchUptime() {
@@ -195,7 +194,6 @@ export default function Status() {
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
 
   const formatUptime = (seconds: number) => {
@@ -209,10 +207,9 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
     return parts.join(' ')
   },
 
-  return (
-    <>
-      <SEO
-        title="API Status"
+  return(<>
+      <SEO;
+  title="API Status"
         description="View real-time service availability and uptime statistics."
         canonical="https://app.ziontechgroup.com/status"
       />
@@ -220,8 +217,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
-            <p className="text-zion-slate-light text-lg">
-              Real-time monitoring of Zion platform services
+            <p className="text-zion-slate-light text-lg">)
+  Real-time monitoring of Zion platform services
             </p>
             {uptime !== null && (
               <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptime(uptime)}</p>
@@ -241,8 +238,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <iframe
-                    src={statusUrl}
+                  <iframe;
+  src={statusUrl}
                     title="Zion Status Page"
                     className="w-full border-0 rounded"
                     height="600"
@@ -250,8 +247,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                     onError={() => setShowFallback(true)}
                   />
                   <div className="mt-4 text-center">
-                    <Button
-                      variant="outline"
+                    <Button;
+  variant="outline"
                       onClick={() => setShowFallback(true)}
                       className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                     >
@@ -299,10 +296,10 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                 <p className="text-zion-slate-light mb-4">
                   For detailed incident history and real-time updates:
                 </p>
-                <Button
-                  variant="outline"
-                  asChild
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                <Button;
+  variant="outline"
+                  asChild;
+  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
                   <$2 />
                     href={statusUrl} 
@@ -328,17 +325,17 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   If you're experiencing issues not reflected here, please contact our support team.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Button
-                    variant="outline"
-                    asChild
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                  <Button;
+  variant="outline"
+                    asChild;
+  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                   >
                     <Link href="/contact">Contact Support</Link>
                   </Button>
-                  <Button
-                    variant="outline"
-                    asChild
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
+                  <Button;
+  variant="outline"
+                    asChild;
+  className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
                   >
                     <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
                       @ZionTechGroup
@@ -368,7 +365,6 @@ interface ServiceStatus {
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
  * Status - Function description
  */
-function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
 }
   )
 }
@@ -377,3 +373,9 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 
 
 </a>
+</div>
+</iframe>
+</div>
+</SEO>
+</number>
+</number>

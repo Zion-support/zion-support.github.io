@@ -2,18 +2,18 @@
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
     interface ImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+  src: string,
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
+  _blurDataURL?: string;
+  fill?: boolean;
+  sizes?: string;
+  style?: React.CSSProperties;
   onLoad?: () => void,
   onError?: () => void
   }
@@ -56,18 +56,16 @@ export const Image: React.FC<ImageProps> = ({
 $4})
   }
   if (hasError) {
-    return (
-      <$2 />
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
+    return(<$2 />
+        className={`bg-gray-200 flex items-center justify-center ${className}`})
+  style={imageStyle}
         {...props}
       >
         <span className="text-gray-500 text-sm">Failed to load image
     )
   }
-  return (
-    <img
-      src={src}
+  return(<img;
+  src={src}
       alt={alt}
       width={width}
       height={height}
@@ -75,8 +73,8 @@ $4})
       style={imageStyle}
       sizes={sizes}
       loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
+      onLoad={handleLoad})
+  onError={handleError}
       {...props}
     />
   )
@@ -90,18 +88,18 @@ const,
   O: Add content,
 }
   src: string,,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+    alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
-  onLoad?: () => void
+  _blurDataURL?: string;
+  fill?: boolean;
+  sizes?: string;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
   onError?: () => void,
 }
 export const Image: React.FC,
@@ -190,3 +188,9 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 export default Image;"`</div></div></span></span>
+</img>
+</span>
+</ImageProps>
+</img>
+</span>
+</ImageProps>

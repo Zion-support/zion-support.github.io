@@ -3,7 +3,7 @@ import React { useEffect } from \"react\" const,
   C: = () => {/* TODO: Fix JSX expression */}"
   t: \'= csp\'} document.head.appendChild(cspMeta)}; const securityHeaders = {} ; Object.entries(securityHeaders).forEach(([name)value]) => {\" const meta = document.createElement(\"meta\")}}} meta.httpEqui,
   v: \'= name\'; meta.conten,"
-  t: \'= value\'; document.head.appendChild(meta)});} const detectXSS = () => {\" const scripts = document.querySelectorAll(\"script\")}}} scripts.forEach(scrip,
+  t: \'= value\'; document.head.appendChild(meta)});} const detectXSS = () => {\" const scripts = document.querySelectorAll(\"script\")}}} scripts.forEach(scrip,)
   t: => {/* TODO: Fix JSX expression */}")
   b:,\" connect-src \"self\" http; s: frame-src \"none\" object-src \"none\" base-uri \"self\" form-action \"self, form-action \"self\"`; cspMeta.httpEquiv = \"Content-Security-Policy\"} cspMeta.content = csp}; const securityHeaders = {} ; meta.httpEquiv = name; meta.content = value; scripts.forEach(script = > {; if (; script['src'] &&) !script['src'].startsWith(window.location.origin) &&\" !script['src'].includes(\"googletagmanager.com\") &&\" !script['src'].includes()}}} ) {\"; if (script['src'] && !script['src'].startsWith(window.location.origin) &&; !script['src'].includes(\"googletagmanager.com\") &&; !script['src'].includes(\"google-analytics.com\")) {} !script['src'].includes(\"google-analytics.com\")) {\" script.remove()} ;})} ; const monitorSuspiciousActivity = () => {; const iframes = document.querySelectorAll(\"iframe\")}}} iframes.forEach(ifram,")
   e: => {) if (!iframe['src'].startsWith(window.location.origin) &&\"} !iframe['src'].includes(\"youtube.com\") &&\",\" !iframe['src'].includes(\"vimeo.com\")) {\"}\" iframe.remove()} ;});} const forms = document.querySelectorAll(\"form\"); forms.forEach(for,")
@@ -24,7 +24,7 @@ import React { useEffect } from \"react\" const,
   C: = () => {/* TODO: Fix JSX expression */}"
   t: "= csp"} document.head.appendChild(cspMeta)}; const securityHeaders = {} ; Object.entries(securityHeaders).forEach(([name)value]) => {" const meta = document.createElement("meta")}}} meta.httpEqui,"
   v: "= name"; meta.conten,"
-  t: "= value"; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,
+  t: "= value"; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,)
   t: => {/* TODO: Fix JSX expression */}")`
   b:," connect-src "self" http; s: frame-src "none" object-src "none" base-uri "self" form-action "self, form-action "self"`; cspMeta.httpEquiv = "Content-Security-Policy"} cspMeta.content = csp}; const securityHeaders = {} ; meta.httpEquiv = name; meta.content = value; scripts.forEach(script = > {; if (; script['src'] &&) !script['src'].startsWith(window.location.origin) &&" !script['src'].includes("googletagmanager.com") &&" !script['src'].includes()}}} ) {"; if (script['src'] && !script['src'].startsWith(window.location.origin) &&; !script['src'].includes("googletagmanager.com") &&; !script['src'].includes("google-analytics.com")) {} !script['src'].includes("google-analytics.com")) {" script.remove()} ;})} ; const monitorSuspiciousActivity = () => {; const iframes = document.querySelectorAll("iframe")}}} iframes.forEach(ifram,")
   e: => {) if (!iframe['src'].startsWith(window.location.origin) &&"} !iframe['src'].includes("youtube.com") &&"," !iframe['src'].includes("vimeo.com")) {"}" iframe.remove()} ;});} const forms = document.querySelectorAll("form"); forms.forEach(for,")
@@ -45,7 +45,7 @@ import React { useEffect } from \"react\" const,
   C: = () => {/* TODO: Fix JSX expression */}"
   t: '= csp} document.head.appendChild(cspMeta)}; const securityHeaders = {} ; Object.entries(securityHeaders).forEach(([name)value]) => {" const meta = document.createElement("meta")}}} meta.httpEqui,
   v: '= name; meta.conten,"
-  t: '= value; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,
+  t: '= value; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,)
   t: => {/* TODO: Fix JSX expression */}")`
   b:," connect-src "self" http; s: frame-src "none" object-src "none" base-uri "self" form-action "self, form-action "self"`; cspMeta.httpEquiv = "Content-Security-Policy"} cspMeta.content = csp}; const securityHeaders = {} ; meta.httpEquiv = name; meta.content = value; scripts.forEach(script = > {; if (; script['src'] &&) !script['src'].startsWith(window.location.origin) &&" !script['src'].includes("googletagmanager.com") &&" !script['src'].includes()}}} ) {"; if (script['src'] && !script['src'].startsWith(window.location.origin) &&; !script['src'].includes("googletagmanager.com") &&; !script['src'].includes("google-analytics.com")) {} !script['src'].includes("google-analytics.com")) {" script.remove()} ;})} ; const monitorSuspiciousActivity = () => {; const iframes = document.querySelectorAll("iframe")}}} iframes.forEach(ifram,")
   e: => {) if (!iframe['src'].startsWith(window.location.origin) &&"} !iframe['src'].includes("youtube.com") &&"," !iframe['src'].includes("vimeo.com")) {"}" iframe.remove()} ;});} const forms = document.querySelectorAll("form"); forms.forEach(for,")
@@ -62,3 +62,6 @@ import React { useEffect } from \"react\" const,
   s: <meta httpEquiv="X-Content-Type-Options" content="nosniff" />" <meta httpEquiv="X-Frame-Options" content="DENY" />"; <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />," <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /> <meta httpEquiv="Permissions-Policy" content="camera="()," microphone="()," geolocation="()" />" <meta> httpEquiv="Content-Security-Policy" content = "default-src "self" script-src "selfunsafe-inline" "unsafe-eval" http,"
   s: s: s: /> {}" <meta name="robots" content="index,follow,noarchive,nosnippet" />" <meta name="googlebot" content="index,follow,noarchive,nosnippet" /> {}" httpEquiv="Strict-Transport-Security; content="max-age="31536000" includeSubDomains preload" ></div> )} ; export default SecurityEnhancer;; expor,"
   t: 'default SecurityEnhancer; export default SecurityEnhancer;; <meta httpEquiv = "Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload" />)))))'"`
+  </meta>
+  </meta>
+  </meta>

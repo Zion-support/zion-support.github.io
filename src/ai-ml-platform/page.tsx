@@ -47,8 +47,7 @@ const AIMLPlatformPage: React.FC = () => {
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = []
-  return (
-    {
+  return({
     // TODO: Add content
   }
 }
@@ -153,15 +152,15 @@ const AIMLPlatformPage: React.FC = () => {
           </button>"
             < className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-400,"
-  hover: text-slate-900 transition-colors"></button>
-Learn More
+  hover: text-slate-900 transition-colors"></button>)
+  Learn More
           </div>
       <Footer />
     </div>
   ),
 }
-export default $1
-export default AiMlPlatformPage</p>
+export default $1;
+  export default AiMlPlatformPage</p>
   </h1>
   </section>
   </main>
@@ -171,3 +170,5 @@ export default AiMlPlatformPage</p>
   </div>
   </div>
 </h1>
+</title>
+</Helmet>

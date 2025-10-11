@@ -1,5 +1,5 @@
-:src/pages/blog/ai-2025-oct-multimodal-enterprise-intelligence/index.tsx
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
+:src/pages/blog/ai-2025-oct-multimodal-enterprise-intelligence/index.tsx;
+  impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
       <Helm, e, t>
         <title>
       <Helm, e, t>
@@ -11,3 +11,5 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='multimoda, l, A, I, enterprise, intelligenc, e, computer, visio, n, N, L, P, audio, A, I, unified, AI, platform, G, P, T-4V, Claude, Visio, n, DA, L, L-E 3'
         />
+        </title>
+        </title>

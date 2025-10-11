@@ -24,8 +24,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIAnalyticsPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -163,8 +162,8 @@ icon$5: Award,
               AI Analytics Services,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-              Make data-driven decisions that drive growth and optimize performance.
+              Transform your data into actionable insights with our advanced AI-powered analytics platform. )
+  Make data-driven decisions that drive growth and optimize performance.
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
@@ -272,16 +271,16 @@ icon$5: Award,
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Data?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey with AI analytics today. Get a free consultation and discover 
-              how our platform can revolutionize your business intelligence.
+              Start your journey with AI analytics today. Get a free consultation and discover;
+  how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                Get Free Consultation
-                href="tel:+13024640950"
+                Get Free Consultation;
+  href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
@@ -348,14 +347,14 @@ export default AIAnalyticsPage
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Data?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey with AI analytics today. Get a free consultation and discover
-              how our platform can revolutionize your business intelligence.
+              Start your journey with AI analytics today. Get a free consultation and discover;
+  how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+  href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
@@ -394,3 +393,22 @@ export default AiAnalyticsPage</div>
   </div>
   </div>
 </span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li></li>
+</p>
+</h2>
+</p>
+</li>
+</ul>
+</p>
+</span>
+</p>
+</ul>
+</h2>
+</span>
+</ul>
+</p>
+</h2>
+</span>
+</span>
+</span>
+</p>
+</h1>

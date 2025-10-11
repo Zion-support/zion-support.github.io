@@ -24,7 +24,6 @@ import { SocialShareSection; } from "@/components/SocialShareSection",;
 import { useTranslation; } from "react-i18next",;
 import { useLanguage; } from "@/context/LanguageContext",;
 import { ArrowRight;, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react';
-export default function LandingPage() {;
 }
 const { t } = useTranslation(),;
 const { isRTL } = useLanguage(),
@@ -80,7 +79,6 @@ link: '/mobile-launch',
 export default /**
  * LandingPage - Function description
  */;
-function LandingPage() {;
 }
 const { t } = use_translation ();
 const { isRTL } = use_language ()
@@ -124,8 +122,8 @@ icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,;,
 link: '/mobile - launch',
     },
   ];
-return (;;
-title={t('home && home.seo_title')}
+return(;;)
+  title={t('home && home.seo_title')}
         description={t('home && home.seo_description')}
         keywords={t('home && home.seo_keywords')}
         canonical='https://app && app.ziontechgroup.com/'      />
@@ -187,7 +185,6 @@ import { useTranslation; } from "react-i18next";
 import { useLanguage; } from "@/context/LanguageContext";
 import { ArrowRight;, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react';
 import { Zap; } from 'lucide-react';
-export default function LandingPage() { const { t}  } = useTranslation(),;
 const { isRTL  } = useLanguage(),
 
   
@@ -228,11 +225,11 @@ icon: <Smartphone className = "h-6 w-6 text-zion-purple" />,;,
 link: "/mobile-launch"
     }
   ];
-return (;
+return(;
 
     <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO;
-title={t('home.seo_title')}
+      <SEO;)
+  title={t('home.seo_title')}
         description={t('home.seo_description')}
         keywords={t('home.seo_keywords')}
         canonical='https://app.ziontechgroup.com/'      />
@@ -441,3 +438,10 @@ className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'}} h - 4 w - 4`}
       <FloatingCTA /></$1>)
 }
 </$1></div></p></p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>

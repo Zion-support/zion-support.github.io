@@ -243,7 +243,7 @@ title: 'Global Collaborations',;,
 description:     ,;
 $4}
   ];
-return (;
+return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -254,8 +254,8 @@ return (;
 Research & Development,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-Pushing the boundaries of technology through cutting-edge research and innovation.;
-Our R&D team is dedicated to creating the next generation of AI and IT solutions.
+Pushing the boundaries of technology through cutting-edge research and innovation.;)
+  Our R&D team is dedicated to creating the next generation of AI and IT solutions.
           {/* Research Areas Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -1005,3 +1005,29 @@ export default ResearchDevelopmentPage</a>
   </a>
   </a>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>
+</h2>
+</span>
+</h2>
+</span>
+</span>
+</span>
+</h2>
+</span>
+</ul>
+</h2>
+</ul>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</p>
+</span>
+</button>
+</p>
+</p>
+</span>
+</p>

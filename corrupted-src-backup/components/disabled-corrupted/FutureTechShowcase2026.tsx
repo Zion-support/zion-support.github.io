@@ -61,8 +61,8 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
             Future, Technology, Showcase 20, 2, 6
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Experience, the, next generation, of, AI and, technology, breakthroughs.
-            From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
+            Experience, the, next generation, of, AI and, technology, breakthroughs.)
+  From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
         </div>)
         {/* Future, Tech, Articles Gr, i, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
@@ -170,8 +170,8 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                 Lead, the, Future Technology, Revolutio, n
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-                Be, among, the first, enterprises, to deploy, these, revolutionary
-                technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
+                Be, among, the first, enterprises, to deploy, these, revolutionary;
+  technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                 <, hre, f='/bl, o, g'$2 />
                   className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'

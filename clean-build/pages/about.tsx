@@ -22,8 +22,8 @@ About <span className="text-yellow-300">Zion Tech Group
               <h1 className="text-4xl md:text-5xl font-bold mb-6">;
 About</h1> <span className="text-yellow-300">Zion Tech Group
               <p className="text-xl">;
-We are a leading technology solutions provider dedicated to transforming businesses;
-through innovative digital solutions and cutting-edge technology.
+We are a leading technology solutions provider dedicated to transforming businesses;)
+  through innovative digital solutions and cutting-edge technology.
             </div>)
           </div>)
         </section>)
@@ -109,9 +109,8 @@ challenges.
                       🔒
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity
                   <p className="text-gray-600">;
-export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<React.Fragment>;
+  return(<React.Fragment>;
       <Head>
         <title>About Us - Zion Tech Group
         <meta>;
@@ -347,11 +346,53 @@ href="/services"";
 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,;,
 hover:bg-white,";,
 hover:text-blue-600 transition-colors"
-              >;
-View Our Services
+              >;)
+  View Our Services
       </div>,
     </React.Fragment>,
     </React.Fragment>)
   )
 }
 "</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h3></h3></h3></h3></h3></li></li></section></section></section>
+</p>
+</p>
+</span>
+</span>
+</span>
+</span>
+</p>
+</p>
+</span>
+</p>
+</p>
+</span>
+</p>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</title>
+</p>
+</span>
+</p>
+</span>
+</p>
+</span>
+</p>
+</p>
+</p>
+</p>
+</p>
+</span>
+</title>
+</Head>

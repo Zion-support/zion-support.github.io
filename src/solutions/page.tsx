@@ -201,8 +201,7 @@ $4},
       description:     ,
 $4}
   ]
-  return (
-    <React.Fragment>
+  return(<React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -212,8 +211,8 @@ $4}
               Our Solutions,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive technology solutions designed to transform your business operations 
-              and drive innovation across every aspect of your organization.
+              Comprehensive technology solutions designed to transform your business operations )
+  and drive innovation across every aspect of your organization.
           {/* Solution Categories Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -764,8 +763,8 @@ $4}
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can revolutionize your operations 
-              and drive unprecedented growth.
+              Get a free consultation and discover how our solutions can revolutionize your operations;
+  and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />
@@ -830,3 +829,14 @@ export default SolutionsPage</a>
   </a>
   </a>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>
+</p>
+</ul>
+</p>
+</ul>
+</h4>
+</p>
+</p>
+</span>
+</button>
+</span>
+</p>

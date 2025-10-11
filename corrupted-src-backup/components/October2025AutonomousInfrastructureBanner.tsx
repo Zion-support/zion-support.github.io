@@ -10,7 +10,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
       </d, i, v>
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />)
   g:px-8, p, y-12">"
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-10">
@@ -484,9 +484,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           <Li, n, k
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-autonomo, u, s-infrastructu, r, e-orchestrati, o, n-revoluti, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -516,11 +516,11 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>"
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Read, Technical, Deep Di, v, e</d, i, v>";"
             <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0">"
-              18-min, re, a
+              18-min, re, a;
   d: Complete, architectur, e, ML, model, s, Python, code, examples, implementation, roadma, p
-          <Li, n, k
+          <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-glob, a, l-financi, a, l-servic, e, s-autonomo, u, s-infrastructu, r, e-4, 1, 0-milli, o, n-succe, s, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -549,11 +549,11 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>"
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Vi, e, w $410M, Success, Story</d, i, v>";"
             <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0">"
-              Fortune, 100, case st, u, d
+              Fortune, 100, case st, u, d;
   y: 99.9, 9, 4% upti, m, e, 87% cost, reductio, n, 47x, RO, I, 12-month, journe, y
-          <Li, n, k
+          <Li, n, k;
   to="/servic, e, s/autonomo, u, s-infrastructu, r, e-orchestrati, o, n-servic, e, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -592,9 +592,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <Li, n, k
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove;
   r:sca, l, e-1, 0, 5"
             ></Li>Request</Li>, Free, Assessment
               <Link, className="w-5 h-5  />

@@ -1,10 +1,10 @@
-:src/components/PerformanceMonitor.tsx
-import React, { useEffect, useState } from 'react'
+:src/components/PerformanceMonitor.tsx;
+  import React, { useEffect, useState } from 'react'
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ,
-  children
+  children;
   enableReporting = true,
   enableLongTaskMonitoring = true
   }) => {
@@ -12,8 +12,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setLongTasks] = useState<PerformanceEntry[]>([])
   useEffect(() => {
     // Initialize performance monitoring
-    // Add critical resource hints manually
-    if (typeof document !== 'undefined') {
+    // Add critical resource hints manually;
+  if (typeof document !== 'undefined') {
       const hints = [
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -23,9 +23,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       hints.forEach(hint => {
     )
         const _link = document.createElement('link')
-        link.rel = hint.rel
-        link.href = hint.href
-        if (hint.crossOrigin) {
+        link.rel = hint.rel;
+  link.href = hint.href;
+  if (hint.crossOrigin) {
           link.crossOrigin = hint.crossOrigin
   }
 const,
@@ -52,8 +52,8 @@ const,
     if (pageLoadMetrics) {/* TODO: Fix JSX expression */}
       }
     }
-    // Monitor long tasks if enabled
-    if (enableLongTaskMonitoring) {
+    // Monitor long tasks if enabled;
+  if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries])
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
@@ -63,15 +63,15 @@ const,
       }
     }
   }, [enableReporting, enableLongTaskMonitoring])
-  // Monitor Web Vitals using Performance Observer
+  // Monitor Web Vitals using Performance Observer;
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-    const observer = new PerformanceObserver((list) => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  const observer = new PerformanceObserver((list) => {
       const _entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-//           const lcp = entry.startTime
-          setMetrics(prev => ({ ...prev, LCP: lcp }))
+//           const lcp = entry.startTime;
+  setMetrics(prev => ({ ...prev, LCP: lcp }))
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp })
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -115,12 +115,12 @@ interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ,
-  enabled = true
+  enabled = true;
   budget = {,
-    maxBundleSize: 500, // 500KB
-    maxImageSize: 100, // 100KB
-    maxFirstLoad: 3000, // 3 seconds
-    maxInteractive: 2000 // 2 seconds
+    maxBundleSize: 500, // 500KB;
+  maxImageSize: 100, // 100KB;
+  maxFirstLoad: 3000, // 3 seconds;
+  maxInteractive: 2000 // 2 seconds
   },
   onMetricsUpdate,
   onBudgetViolation
@@ -139,8 +139,8 @@ const,
   const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }))
       onMetricsUpdate?.(newMetrics)
-      // Check performance budget
-      const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget)
+      // Check performance budget;
+  const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget)
       setBudgetStatus(budgetCheck)
       if (!budgetCheck.passed) {/* TODO: Fix JSX expression */}
       }
@@ -148,28 +148,28 @@ const,
   }, [budget, onMetricsUpdate, onBudgetViolation])
   useEffect(() => {
     if (!enabled) return
-    // Initial metrics
-    updateMetrics()
-    // Monitor long tasks
-    const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
+    // Initial metrics;
+  updateMetrics()
+    // Monitor long tasks;
+  const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
 //       })
-    // Monitor Web Vitals
-    const reportVitals = (newMetrics: WebVitalsMetrics) => {,
+    // Monitor Web Vitals;
+  const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
 //       })
-    // Monitor Web Vitals
-    const reportVitals = (newMetric)
+    // Monitor Web Vitals;
+  const reportVitals = (newMetric)
   s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }))
       performanceOptimizer.reportWebVitals(newMetrics)
     }
-    // Set up performance monitoring
-    if ('PerformanceObserver' in window) {
+    // Set up performance monitoring;
+  if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'paint') {
-            const _paintEntry = entry as PerformancePaintTiming
-            if (paintEntry.name === 'first-contentful-paint') {
+            const _paintEntry = entry as PerformancePaintTiming;
+  if (paintEntry.name === 'first-contentful-paint') {
               reportVitals({ FCP: paintEntry.startTime })
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   P: paintEntry.startTime })
@@ -188,15 +188,14 @@ const,
     return () => {/* TODO: Fix JSX expression */}
     }
   }, [enabled, updateMetrics])
-  if (!enabled) return null
+  if (!enabled) return null;
   return(<div className="performance-monitor">)
       {/* Toggle button */})
       <;)$2 />
-  return (
-    <div className="performance-monitor">
+  return(<div className="performance-monitor">
       {/* Toggle button */}
-      <$2 />
-        onClick={() => setIsVisible(!isVisible)}
+      <$2 />)
+  onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance monitor",
       >,
@@ -355,3 +354,23 @@ export default PerformanceMonitor
   </WebVitalsMetrics>
   </PerformanceMonitorProps>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></h3>
+</span>
+</span>
+</span>
+</span>
+</span>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -68,8 +68,7 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Project Manager | Zion Tech Group
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
@@ -84,8 +83,8 @@ const AiProjectManagerPage: React.FC = () => {
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
   
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">)
+  Learn More
   
       <Footer />
   ),
@@ -101,3 +100,5 @@ export default AIProjectManagerPage</button>
   </div>
   </div>
 </h1>
+</title>
+</Helmet>

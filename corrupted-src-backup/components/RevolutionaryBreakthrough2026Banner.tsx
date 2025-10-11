@@ -36,8 +36,8 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
         <, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'$2 />
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          />
-          <p, classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
-            Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
+          <p, classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>)
+  Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
               <, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
               >
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>)

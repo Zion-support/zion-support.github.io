@@ -51,8 +51,8 @@ const [selectedPricing, setSelectedPricing] = useState<string>('all');
 const [selectedSupport, setSelectedSupport] = useState<string>('all');
 const [sortBy, setSortBy] = useState<string>('name')
   // Filter services based on search and filters;
-const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {;;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {;;)
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 const matchesCategory = selectedCategory === 'all' ||;;
@@ -69,7 +69,7 @@ const handleContact = (service: ProductListing) => {;;
 setContactService(service)
 }
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-zion-blue">
       <SEO;
 title="Comprehensive Tech Services - Zion Tech Group";
@@ -88,8 +88,8 @@ keywords="AI services, IT services, micro SAAS, cybersecurity, cloud migration, 
 Comprehensive Tech Services
               </h1>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">;
-Transform your business with our complete ecosystem of AI, IT infrastructure, and micro SAAS solutions.;
-Expert-led services designed for the modern enterprise.
+Transform your business with our complete ecosystem of AI, IT infrastructure, and micro SAAS solutions.;)
+  Expert-led services designed for the modern enterprise.
               </p>
               
               {/* Contact CTA */}
@@ -157,7 +157,7 @@ if (price <= 14999) return 'text-blue-500';;
 return 'text-purple-500';
 }
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO;
 title="Enhanced IT & AI Services - ZionTech Group";
@@ -180,8 +180,8 @@ we have the tools you need to succeed.
           <div className="flex flex-wrap justify-center gap-4">
             <Button;
 size="lg";
-className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
-onClick={() => handleContact(ENHANCED_SERVICES[0])}
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";)
+  onClick={() => handleContact(ENHANCED_SERVICES[0])}
             >
               <span className="mr-2">{tab.icon}</span>
               {tab.label}
@@ -412,7 +412,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
     }
     return iconMap[category] || <Zap className="w-5 h-5" />;
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Enterprise IT & AI Services - Zion Tech Group";
@@ -474,8 +474,8 @@ Call +1 302 464 0950
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  // Sort services;
-const sortedServices = [...filteredServices].sort((a);, b) => {;
+  // Sort services;)
+  const sortedServices = [...filteredServices].sort((a);, b) => {;
 switch (sortBy) {;
 case 'price-low':;
 return a.price - b.price;;
@@ -597,8 +597,8 @@ filtered = filtered.filter(service => service.price.pricingModel === selectedPri
     // Search filter;
 if (searchQuery) {;
 const query = searchQuery.toLowerCase();;
-filtered = filtered.filter(service =>;
-service.title.toLowerCase().includes(query) ||;
+filtered = filtered.filter(service =>;)
+  service.title.toLowerCase().includes(query) ||;
 service.description.toLowerCase().includes(query) ||;
 service.tags.some(tag => tag.toLowerCase().includes(query))
       )
@@ -650,7 +650,7 @@ default: return <Zap className="h-5 w-5 text-gray-400" />;
     }
   }
   const filteredServices = getFilteredServices();;
-return (;
+return(;
     <SimpleFuturisticBackground>
       <div className="min-h-screen py-20">
         <div className="container mx-auto px-4">
@@ -716,8 +716,8 @@ New
 Premium
               </TabsTrigger>
               <TabsTrigger value="custom" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                <Filter className="h-4 w-4 mr-2" />;
-Custom
+                <Filter className="h-4 w-4 mr-2" />;)
+  Custom
               </TabsTrigger>
             </TabsList>
 
@@ -918,7 +918,7 @@ default: return <Zap className="h-5 w-5 text-gray-400" />;
 }
     }
   }
-  return (;
+  return(;
       <div className="bg-zion-blue py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -926,8 +926,8 @@ default: return <Zap className="h-5 w-5 text-gray-400" />;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <Input;
 placeholder="Search services...";
-value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+value={searchTerm})
+  onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light"
               />
             </div>
@@ -1430,3 +1430,15 @@ Demo
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></main></section>
+</SelectContent>
+</Select>
+</string>
+</string>
+</string>
+</div>
+</section>
+</main>
+</string>
+</string>
+</string>
+</string>

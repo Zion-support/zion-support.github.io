@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import Analytics from './components/Analytics';;
 export default function RootLayout({;
-children}: {;,
-children: React.ReactNode
+children}: {;,)
+  children: React.ReactNode
   }) {;
 const structuredData={'@context': 'https://schema.org';},
     '@type': 'TechCompany',;,
@@ -88,7 +88,7 @@ name$5: 'Cloud Infrastructure',;,
 description:       ,;
 $4]
   }
-  return (;
+  return(;
     <html lang='en'>
       <head>
         <meta charSet="UTF-8" />
@@ -166,8 +166,8 @@ $4]
         <meta name='twitter:site' content='@ziontechgroup' />
         <meta name='twitter:creator' content='@ziontechgroup' />
         <script;
-type='application/ld+json';
-dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}}
+type='application/ld+json';)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}}
         />
       <body className='antialiased'>
         <ErrorBoundary>
@@ -197,3 +197,4 @@ export default SrcPage,
 }
   </script>
 </li></li></li></li></li></li></li></li></li></li></li>
+</head>

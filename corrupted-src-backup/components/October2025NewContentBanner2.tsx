@@ -6,61 +6,61 @@ const, October2025NewContentBanner, 2 = () => {
     {
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s","
       descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performance","
-      ic, o, n: Le, a, f
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
+      ic, o, n: Le, a, f;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0","
       bad, g, e: "Green, A, I"
     }
     {
       tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
       descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, systems","
-      ic, o, n: DollarSi, g, n
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
+      ic, o, n: DollarSi, g, n;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0","
       bad, g, e: "FinTe, c, h"
     }
     {
       tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
       descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ languag, e, s","
-      ic, o, n: M, i, c
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
+      ic, o, n: M, i, c;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0","
       bad, g, e: "Voice, A, I"
     }
     {
       tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
       descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, RO, I","
-      ic, o, n: B, o, t
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
+      ic, o, n: B, o, t;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0","
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s","
       descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performance","
-      ic, o, n: Le, a, f
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
+      ic, o, n: Le, a, f;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0","
       bad, g, e: "Green, A, I"
     }
     {
       tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
       descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, systems","
-      ic, o, n: DollarSi, g, n
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
+      ic, o, n: DollarSi, g, n;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0","
       bad, g, e: "FinTe, c, h"
     }
     {
       tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
       descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ languag, e, s","
-      ic, o, n: M, i, c
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
+      ic, o, n: M, i, c;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0","
       bad, g, e: "Voice, A, I"
     }
     {
       tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
       descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, RO, I","
-      ic, o, n: B, o, t
-      sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
+      ic, o, n: B, o, t;
+  sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0","
       bad, g, e: "Automati, o, n"
     }
@@ -68,8 +68,8 @@ const, October2025NewContentBanner, 2 = () => {
   return(<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">"
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>")
+  const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -84,7 +84,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return ("
+  return("
     <section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-10">";"
@@ -113,24 +113,23 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>"</$1>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
             Latest, AI, Breakthroughs & Innovatio, n, s</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from, sustainable, computing to, intelligent, automation
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">")
+  Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from, sustainable, computing to, intelligent, automation
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
-            const, Ico, n = artic, l, e.ic, o, n
-            return(<Li, n, k
+            const, Ico, n = artic, l, e.ic, o, n;
+  return(<Li, n, k
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
           {newArticl, e, s.m, a, p((artic, l, e) => {
-            const, Ico, n = artic, l, e.ic, o, n
-            return (
-              <Li, n, k
+            const, Ico, n = artic, l, e.ic, o, n;
+  return(<Li, n, k;
   k, e, y={artic, l, e.sl, u, g}
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
-                classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e
+                classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
   r:-transla, t, e-y-1"
               >
                 {/* Bad, g, e */}
@@ -171,7 +170,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e
-                  <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
+                  <ArrowRight, className="w-5 h-5, grou, p-ho, v, e)
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
                 {/* Hover, Gradient, Effect */})
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`)
@@ -192,7 +191,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="te, x, t-cent, e, r">"
           <Li, n, k
         <div, className="te, x, t-cent, e, r">"
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e
         {/* CTA, Sectio, n */}"

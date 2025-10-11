@@ -77,8 +77,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
             Latest, AI, Solutions & Insigh, t, s
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to
-            enterprise, organization, s
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to)
+  enterprise, organization, s
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
@@ -97,14 +97,14 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
             Latest, AI, Solutions & Insigh, t, s
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to
-            enterprise, organization, s
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
+  enterprise, organization, s
         {/* Featured, Content, Car, d, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>
           {/* TODO: Fix JSX expression */}
               <, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hove,$2 />
-  r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
-                sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
+  r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l')
+  sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
               >
                 <, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`}$2 />
                  />
@@ -150,8 +150,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
                       Published, Octobe, r , 1, 20, 2, 5</$1> <, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}$2 />
                     >
-                      Read, Full, Article
-                      Read, Full, Article
+                      Read, Full, Article;
+  Read, Full, Article
                       <Link, classNam, e = 'w-4 h-4, m, l-2' />
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
                       Published, Octobe, r , 1, 20, 2, 5;`

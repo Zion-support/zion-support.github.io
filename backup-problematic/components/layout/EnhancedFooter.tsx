@@ -6,10 +6,8 @@ const EnhancedFooter = React.memo(function EnhancedFooter({ className = '' }: En
       <h3 className="text-lg font-semibold text-blue-800">EnhancedFooter</h3>)
       <p className="text-blue-600">This component is under development.</p>)
     </div>)
-  return (
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
-      <h3 className="text-lg font-semibold text-blue-800">EnhancedFooter
-const EnhancedFooter = React.memo(function EnhancedFooter({ className = '' }: EnhancedFooterProps) {/* TODO: Fix JSX expression */}
+  return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className="text-lg font-semibold text-blue-800">EnhancedFooter)
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
       <h3 className="text-lg font-semibold text-blue-800">EnhancedFooter</h3>"
       <p className="text-blue-600">This component is under development.
@@ -17,3 +15,5 @@ const EnhancedFooter = React.memo(function EnhancedFooter({ className = '' }: En
 })
 export default EnhancedFooter
 "`</div></div></p></h3>
+</p>
+</div>

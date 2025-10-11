@@ -711,8 +711,8 @@ event.preventDefault()
 case 'Escape':
           // Close modals and dropdowns;
 const modals = document.querySelectorAll('[role="dialog"];, [aria-modal="true"]');
-modals.forEach(modal => {;
-if (modal instanceof HTMLElement) {;
+modals.forEach(modal => {;)
+  if (modal instanceof HTMLElement) {;
 modal.style.display = 'none'
 }
             }
@@ -1086,8 +1086,8 @@ const rect = accessibilityRef.current?.getBoundingClientRect();;
 if (rect) {;
 setDragOffset({;,
 }
-x: e.clientX - rect.left},;,
-y: e.clientY - rect.top
+x: e.clientX - rect.left},;,)
+  y: e.clientY - rect.top
         })
       }
     }
@@ -1120,10 +1120,10 @@ document.removeEventListener('mouseup', handleDragEnd)
     }
   }, [isDragging, dragOffset]);
 if (isMinimized) {;
-return (;
+return(;
       <$2 />;
-ref={accessibilityRef}
-        className={`fixed ${getPositionClasses()}} z-50`}
+ref={accessibilityRef})
+  className={`fixed ${getPositionClasses()}} z-50`}
         onMouseDown={handleDragStart}
       >
         <$2 />;
@@ -1137,9 +1137,9 @@ aria-label="Open accessibility panel"
     )
   }
 ;
-return (;
-    <>;
-onClick={() => setIsOpen(!isOpen)}
+return(;
+    <>;)
+  onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()}} z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 ${className}`}
         whileHover={{ scale: 1.1}}}
         whileTap={{ scale: 0.9}}}
@@ -1329,12 +1329,12 @@ buttonRef.current?.focus()
 }
     }
   }
-  return (;
+  return(;
     <>
       {/* Accessibility Toggle Button */}
       <$2 />;
-ref={buttonRef}
-        onClick={() => setIsOpen(!isOpen)}
+ref={buttonRef})
+  onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-gray-900";
 aria-label="Accessibility settings";
 aria-expanded={isOpen}
@@ -1352,11 +1352,11 @@ default:;
 return 'bottom-6 right-6';
     }
   }
-  return (;
+  return(;
     <>
       {/* Accessibility Button */}
-      <$2 />;
-onClick={() => setIsOpen(!isOpen)}
+      <$2 />;)
+  onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()}} z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50`}
         aria-label="Accessibility Settings";
 aria-expanded={isOpen}
@@ -2190,8 +2190,8 @@ largeText: false,;,
 reducedMotion: false,;,
 screenReader: false,;,
 keyboardNavigation: false,;,
-focusIndicator: true,;,
-colorBlindSupport: false,
+focusIndicator: true,;,)
+  colorBlindSupport: false,
                     });
 announceChange('Accessibility settings reset to default')
                   }}
@@ -2285,8 +2285,8 @@ setAccessibilityScore(Math.min(100), score))
   }, [settings])
   // Handle voice commands;
 const handleVoiceCommand = useCallback((command: string) => {;;
-const matchedCommand = voiceCommands.find(cmd =>;;
-command.includes(cmd.command) || cmd.command.includes(command)
+const matchedCommand = voiceCommands.find(cmd =>;;)
+  command.includes(cmd.command) || cmd.command.includes(command)
     );
 if (matchedCommand) {;
 switch (matchedCommand.action) {;
@@ -2378,8 +2378,8 @@ soundEffects: false,;,
 autoPlay: false,;,
 showFocusRings: true,;,
 showKeyboardShortcuts: false,;,
-showScreenReaderHints: false,;,
-showAccessibilityInfo: false
+showScreenReaderHints: false,;,)
+  showAccessibilityInfo: false
     })
   }, [])
   // Tab component;
@@ -2398,9 +2398,9 @@ activeTab === id
     </button>
   );
 if (!isVisible) {;
-return (;
-      <motion.button;
-onClick={() => setIsVisible(true)}
+return(;
+      <motion.button;)
+  onClick={() => setIsVisible(true)}
         className="fixed bottom-4 left-4 z-50 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300";
 whileHover={{ scale: 1.1}}}
         whileTap={{ scale: 0.9}}}
@@ -2412,7 +2412,7 @@ aria-label="Open accessibility settings"
     )
   }
 ;
-return (;
+return(;
     <AnimatePresence>
       <motion.div;
 initial={{ opacity: 0}}, x: -100, scale: 0.9 }}
@@ -2427,8 +2427,8 @@ initial={{ opacity: 0}}, x: -100, scale: 0.9 }}
               <Accessibility className="w-6 h-6" />
               <h3 className="text-lg font-semibold">Accessibility</h3>
             </div>
-            <$2 />;
-onClick={() => setIsVisible(false)}
+            <$2 />;)
+  onClick={() => setIsVisible(false)}
               className="text-white/80 hover:text-white transition-colors";
 aria-label="Close accessibility settings"
             >
@@ -3080,3 +3080,15 @@ Reset to Default
     </>
   )
 }</$1></div></div></div></div></div></div></div></a></a>
+</HTMLDivElement>
+</HTMLButtonElement>
+</HTMLElement>
+</HTMLAudioElement>
+</any>
+</AccessibilitySettings>
+</HTMLDivElement>
+</HTMLDivElement>
+</string>
+</AccessibilitySettings>
+</EnhancedAccessibilityProps>
+</EnhancedAccessibilityProps>

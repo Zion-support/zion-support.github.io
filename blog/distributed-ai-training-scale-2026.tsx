@@ -50,8 +50,8 @@ to="/<blog" className="text-left"></blog>"
           {/* Header */}"
           <header className="text-left"></header>"
             <div className="text-left"></div>"
-              <span className="text-left">;
-Machine Learning Infrastructure
+              <span className="text-left">;)
+  Machine Learning Infrastructure
               <
               <span className="text-left">
                 🔥 NEW - September 30, 2025
@@ -503,3 +503,19 @@ export default DistributedAITrainingScale2026
   </span>
   </article>
 </div></div></div></div></div></div></div></div></div></span></span></span></a></h2></h3></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</h3>
+</h2>
+</p>
+</p>
+</li>
+</li>
+</li>
+</li>
+</ul>
+</li>
+</li>
+</li>
+</li>
+</ul>
+</ul>
+</title>

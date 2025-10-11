@@ -37,3 +37,4 @@ r:image" content={image} /></meta>"
       <link rel="canonical" href={url} />
 }"
 </li></li>
+</title>

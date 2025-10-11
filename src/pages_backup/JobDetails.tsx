@@ -61,7 +61,6 @@ deadline?: string;
 export default /**
  * JobDetails - Function description
  */;
-function JobDetails() {;
 }
 const router = use_router ();}; // Init router;
 const { job_id: rawJobId } = router.query; // Get job_id from query;
@@ -73,7 +72,6 @@ error: any
   }
 ;
 deadline?: string;
-export default function JobDetails() {;
 const router = useRouter();; // Init router;
 }
 const { jobId: rawJobId } = router.query; // Get jobId from query;
@@ -113,13 +111,12 @@ deadline?: string
 }
 ;
 deadline?: string;
-export default function JobDetails() {;
-return (;
+return(;
     <>
       <SEO;
 }
-title={`${job.title}} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
+title={`${job.title}} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`})
+  description={job.description.substring(0, 160)}
       />
       <Header />
 
@@ -220,13 +217,13 @@ $2
 if ( {) {};
 $2
 }
-    return (;
+    return(;
       <>
         <Header />
         <div className='container mx - auto px - 4 py - 16 text - center'>
           <h1 className='text - 2xl font - bold mb - 4'>Job Not Found</h1>
-          <p className='mb - 8'>;
-The job you're looking for doesn't exist or has been removed.</$1>
+          <p className='mb - 8'>;)
+  The job you're looking for doesn't exist or has been removed.</$1>
           <Button on_click={() => router.push ('/careers')}>View All Jobs</Button>        </div>
       </>)
   }
@@ -256,11 +253,11 @@ setIsApplyModalOpen (false)
 }
   }
   const isOwnJob = user?.id === job.client_id;;
-return (;
+return(;
     <>
       <SEO;
-title={`${job.title}} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
-        description={job.description.substring (0, 160),}
+title={`${job.title}} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`})
+  description={job.description.substring (0, 160),}
       />
       <Header />
       <main className='container mx - auto px - 4 py - 8'>
@@ -357,7 +354,7 @@ isOpen={isApplyModalOpen}
   );
 return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick={';
   () => router && router.push ('/careers')}>View All Jobs</Button> </div> </>) 
-}router && router.push (`/login?redirect=$ {;
+}router && router.push(`/login?redirect=$ {;
 encodeURIComponent (`/jobs/$ {';
 jobId || '' 
       {/* Job application modal */}
@@ -367,8 +364,8 @@ job={{};,
 id: job.id},;,
 title: job.title,;,
 description: job.description,;,
-company_name: job.company_name ?? 'Company',;,
-budget: format_budget (job.budget),;,
+company_name: job.company_name ?? 'Company',;,)
+  budget: format_budget (job.budget),;,
 client_id: job.client_id,
           }}
           is_open={isApplyModalOpen}
@@ -376,9 +373,9 @@ client_id: job.client_id,
     </>);
 return (<> <Header /> <div className="container mx - auto px - 4 py - 16 text - center" > <h1 className="text - 2xl font - bold mb - 4" >Job Not Found</h1> <p className="mb - 8" >The job you're looking for doesn't exist or has been removed.</p> <Button on_click={';
   () => router.push ('/careers')}>View All Jobs</Button> </div> </>) 
-}router.push (`/login?redirect=$ {;
-encodeURIComponent (`/jobs/$ {';
-job_id || '' 
+}router.push(`/login?redirect=$ {;
+encodeURIComponent (`/jobs/$ {';)
+  job_id || '' 
 }`) 
 }`)
 //Added null check for jobId return
@@ -423,3 +420,26 @@ description: job.description,;,
 company_name: job.company_name ?? "Company",;,
 budget: formatBudget(job.budget),
 
+
+</ApplyToJobModal>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Card>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</CardHeader>
+</Card>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>

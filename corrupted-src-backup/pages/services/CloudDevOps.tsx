@@ -262,8 +262,8 @@ return(<React.Fragment>
         <me, t, a;
 na, m, e="descripti, o, n";
 content="Expert, Clou, d & DevOps, services, including mul, t, i-cloud, strateg, y, CI/CD, automatio, n, infrastructure, as, code, and, advanced, monitoring. 99.99% uptime, SL, A." /><meta name="keywor, d, s" content="cloud, service, s, devops, consultin, g, CI/CD, automatio, n, infrastructure, as, code, cloud, migratio, n, kubernet, e, s, dock, e, r" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/clo, u, d-devo, p, s/>
-  </link>";
-const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+  </link>";)
+  const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -312,7 +312,7 @@ const, service, s = [
     {/* TODO: Fix JSX expression */}
     }
   ];
-return (<React.Fragment>;
+return(<React.Fragment>;
       <Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions
         <me, t, a;";
@@ -336,7 +336,7 @@ g:px-8">"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
 Clo, u, d &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">;
-Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
+Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e;
   90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
@@ -349,8 +349,8 @@ Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, 
 Clo, u, d &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s</sp, a, n>"</h1>
               <, className="te, x, t-x, l, m;$2 />;,
 d: te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">";
-Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
-                90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
+Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e;
+  90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
                 <$2 />
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
@@ -366,7 +366,7 @@ g:px-8">""
 Clo, u, d & <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">;
-Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
+Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e;
   90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -377,8 +377,8 @@ Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, 
 Clo, u, d & <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s</sp, a, n>"</$1>"
               <, className="te, x, t-x, l, m,"$2 />;,
 d: te, x, t-2xl, tex, t-gre, e, n-100, ma, x-w-4xl, m, x-auto, m, b-8">";
-Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e
-                90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
+Expert, cloud, infrastructure and, DevOps, services that, deliver, 99.99% upti, m, e;
+  90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
                 <a></a>";
@@ -498,8 +498,8 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                 <p, className="te, x, t-gr, a, y-6, 0, 0">A, W, S, Azu, r, e, GCP, expertis, e</p>"
         {/* Servic, e, s */}
         <section, className="py-20">
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,)
+  g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
@@ -544,8 +544,8 @@ return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8"></div>"
+            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,)
+  g:gr, i, d-co, l, s-4, ga, p-8"></div>"
               {servic, e, s.m, a, p((servi), c, e, ind, e, x) => {;
 const, Ico, n = servi, c, e.ic, o, n;
 return (;
@@ -622,8 +622,8 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
 const, Ico, n = featu, r, e.ic, o, n;
 }
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">;
-return (;
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">;)
+  return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">
                       <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
@@ -640,11 +640,11 @@ return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, sha
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8"></div>"
+            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,)
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
-return (;
+return(;
 }
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">"
@@ -664,8 +664,8 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
-            <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+            <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,)
+  g:gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">";"
@@ -898,3 +898,7 @@ View, Case, Studies;"
 export default CloudDevOps
 }}}}"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</title>
+</Helmet>
+</title>
+</Helmet>

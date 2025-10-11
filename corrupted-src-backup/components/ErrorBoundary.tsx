@@ -18,10 +18,10 @@ class ErrorBoundary extends Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     ,
-//     // Report error to analytics/monitoring service
-    this.reportError(error, errorInfo)
-    // Call custom error handler if provided
-    if (this.props.onError) {
+//     // Report error to analytics/monitoring service;
+  this.reportError(error, errorInfo)
+    // Call custom error handler if provided;
+  if (this.props.onError) {
       this.props.onError(error, errorInfo)
   }
   }
@@ -30,8 +30,8 @@ class ErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
         description: error.message,)
-        fatal: false)
-        custom_map: {,
+        fatal: false),
+  custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack,
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
@@ -42,7 +42,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-  componentDidCatch(erro,
+  componentDidCatch(erro,)
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     }
@@ -135,3 +135,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
 }
 export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>
+</p>
+</p>
+</h1>

@@ -5,8 +5,8 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
             <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
-              Revolutionary, AI, Services Now, Availabl, e
-              Revolutionary, AI, Services Now, Availabl, e
+              Revolutionary, AI, Services Now, Availabl, e;
+  Revolutionary, AI, Services Now, Availabl, e
           <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (
               <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />

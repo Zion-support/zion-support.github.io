@@ -92,8 +92,7 @@ namename: 'Channel Partners',
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
   const partnerTypes = [],
-  return (
-    {
+  return({
     // TODO: Add content
   }
 }
@@ -174,10 +173,9 @@ namename: 'Channel Partners',
   const benefits = [
 icon: Globe,
       title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network',
-const PagePage: React.FC = () => {
-  return (
-    <React.Fragment>
+      description: 'Access to worldwide markets and customers through our partner network',)
+  const PagePage: React.FC = () => {
+  return(<React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -187,8 +185,8 @@ const PagePage: React.FC = () => {
               Our Partners,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We work with industry-leading technology partners to deliver comprehensive solutions 
-              that drive innovation and business success.
+              We work with industry-leading technology partners to deliver comprehensive solutions )
+  that drive innovation and business success.
           {/* Partner Types */}
           <div className="mb-16">
             {partnerTypes.map((type, index) => (
@@ -247,8 +245,8 @@ const PagePage: React.FC = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
@@ -323,11 +321,11 @@ const PagePage: React.FC = () => {
 // >
           "
           <Handshake className="w-5 h-5 mr-2" />
-// Become a Partner
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+// Become a Partner;
+  href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
@@ -352,3 +350,16 @@ export default PartnersPage</a>
   </div>
   </div>
 </div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>
+</p>
+</h2>
+</span>
+</ul>
+</p>
+</span>
+</ul>
+</p>
+</h2>
+</p>
+</p>
+</h2>
+</p>

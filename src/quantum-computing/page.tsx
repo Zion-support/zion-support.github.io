@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const QuantumComputingPage: React.FC = () => {
-    return (
-    <React.Fragment>
+    return(<React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group
         <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
@@ -23,8 +22,8 @@ const QuantumComputingPage: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential
               <p className="text-gray-300 mb-6 text-lg">
-                Our quantum computing solutions leverage the principles of quantum mechanics to solve 
-                complex optimization problems that are intractable for classical computers.
+                Our quantum computing solutions leverage the principles of quantum mechanics to solve;
+  complex optimization problems that are intractable for classical computers.
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">✓</span>
@@ -63,8 +62,8 @@ const QuantumComputingPage: React.FC = () => {
   
               <$2 />
                 href="/consultation"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation,
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">)
+  Schedule Consultation,
   
             </div>
           </div>
@@ -83,3 +82,20 @@ export default QuantumComputingPage</a>
   </p>
   </h1>
 </div></div></div></div></div></div></p></p></p></p></h2></h2></h3></h4></h4></h4>
+</h2>
+</h4>
+</p>
+</h4>
+</p>
+</h4>
+</div>
+</div>
+</h3>
+</div>
+</p>
+</h2>
+</div>
+</p>
+</div>
+</title>
+</Helmet>

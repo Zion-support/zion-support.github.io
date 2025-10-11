@@ -39,7 +39,7 @@ const benefits = [;
     'Seamless integration with existing systems'
   ];
 ;
-return (;
+return(;
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -58,8 +58,8 @@ return (;
 Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">;
-Learn More
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">;)
+  Learn More
                 </button>
               </div>
             </div>

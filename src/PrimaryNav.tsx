@@ -96,8 +96,8 @@ router
         .then(() => setQuery(''))
         .catch(err =>;
 logErrorToProduction('Search navigation failed', err, {;,
-query: trimmed;,
-component: 'PrimaryNav'
+query: trimmed;,)
+  component: 'PrimaryNav'
           })
         ) }
   const handle_submit = (e: React.FormEvent) =>: any {;;
@@ -110,13 +110,12 @@ $2
 router
         .push (`/search?q=${encodeURIComponent (trimmed)}`)
         .then (() => set_query (''))
-        .catch (err =>;
+        .catch(err =>;
 logErrorToProduction ('Search navigation failed', err, {;,
-query: trimmed,;,
-component: 'PrimaryNav',
+query: trimmed,;,)
+  component: 'PrimaryNav',
           })) }
   }
-export function PrimaryNav() {;
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
 const [loginOpen, setLoginOpen] = useState(false),;
 }
@@ -158,7 +157,7 @@ data-testid='header'>
 openLoginModal={returnToPath => setLoginOpen(true)}
 
             />          </div>;
-return (;
+return(;
     <>
       <$2 />;
 className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
@@ -170,8 +169,8 @@ data-testid="header"
           <Logo />
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
-            <ResponsiveNavigation;
-openLoginModal={returnToPath => setLoginOpen(true)}
+            <ResponsiveNavigation;)
+  openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
@@ -190,8 +189,8 @@ value={query}
                 onChange={setQuery}
                 onSelectSuggestion={sugg => {};
 }
-log_debug ('PrimaryNav search suggestion selected:'}, {;,
-suggestion: sugg,
+log_debug('PrimaryNav search suggestion selected:'}, {;,)
+  suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation
                   // Check condition;
 if ( {) {};
@@ -219,8 +218,8 @@ router.push (`/search?q=${encodeURIComponent (sugg.text)}`)
 ;
 onSelectSuggestion={sugg => {};
 }
-logDebug('PrimaryNav search suggestion selected:'}, {;,
-suggestion: sugg,
+logDebug('PrimaryNav search suggestion selected:'}, {;,)
+  suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation;
 if (sugg && sugg.id) {;
 onSelectSuggestion={(sugg) => {};
@@ -245,12 +244,12 @@ router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
 if (typeof window !== 'undefined' && window && window.gtag) {;
 window && window.gtag('event', 'search_suggestion_click', {;,
 search_term: sugg && sugg.text,;,
-suggestion_type: sugg && sugg.type,;,
-suggestion_id: sugg && sugg.id || sugg && sugg.slug,
+suggestion_type: sugg && sugg.type,;,)
+  suggestion_id: sugg && sugg.id || sugg && sugg.slug,
                     })
                   }
-                  // // // // // console && console.log('PrimaryNav search suggestion selected:',;
-sugg)
+                  // // // // // console && console.log('PrimaryNav search suggestion selected:',;)
+  sugg)
                   // Handle different suggestion types with proper navigation;
 if(sugg && sugg.id) {
                     // Product listings with IDs go to product detail page`;
@@ -268,8 +267,8 @@ router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)
 if(typeof window !== 'null' && window && window.gtag) {;
 window && window.gtag('event',search_suggestion_click', {;,
 search_term: sugg && sugg.text,;,
-suggestion_type: sugg && sugg.type,;,
-suggestion_id: sugg && sugg.id || sugg && sugg.slug
+suggestion_type: sugg && sugg.type,;,)
+  suggestion_id: sugg && sugg.id || sugg && sugg.slug
 })}
                 }}
                 searchSuggestions={suggestions,}
@@ -286,14 +285,14 @@ set_query ('')
 if ( {) {};
 $2
 }
-                    window.gtag ('event', 'search_suggestion_click', {;,
+                    window.gtag('event', 'search_suggestion_click', {;,
 search_term: sugg.text,;,
-suggestion_type: sugg.type,;,
-suggestion_id: sugg.id || sugg.slug,
+suggestion_type: sugg.type,;,)
+  suggestion_id: sugg.id || sugg.slug,
                     })
                   }
-                  // // // // // console.log ('PrimaryNav search suggestion selected:',;
-sugg)
+                  // // // // // console.log('PrimaryNav search suggestion selected:',;)
+  sugg)
                   // Handle different suggestion types with proper navigation
                   // Check condition;
 if ( {) {};
@@ -320,10 +319,10 @@ router.push (`/search/${sugg.slug || slugify (sugg.text)}`)}
 if ( {) {};
 $2
 }
-                    window.gtag ('event', search_suggestion_click', {;,
+                    window.gtag('event', search_suggestion_click', {;,
 search_term: sugg.text,;,
-suggestion_type: sugg.type,;,
-suggestion_id: sugg.id || sugg.slug
+suggestion_type: sugg.type,;,)
+  suggestion_id: sugg.id || sugg.slug
                     })
                   }
                 }}
@@ -790,3 +789,11 @@ Contact</$1></$1></$1></$1>)}
         </AnimatePresence></$1></$1>)}
 '"`
 }
+
+</div>
+</div>
+</LoginModal>
+</MobileBottomNav>
+</LoginModal>
+</MobileBottomNav>
+</div>

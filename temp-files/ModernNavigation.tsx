@@ -23,8 +23,8 @@ const,
           {/* Desktop Navigation */}
           <div className="hidden md: flex space-x-8">,
             {navigationItems.map(item => (,
-              <$2 />
-                key={item.name})
+              <$2 />)
+  key={item.name})
                 href={item.href})
                 className="text-gray-700 hover: text-blue-600 transition-colors")
               >),
@@ -42,7 +42,7 @@ const,
             {/* TODO: Fix JSX expression */}
                 key={item.name}
                 href={item.href}"
-                className="text-gray-700,"
+                className="text-gray-700,")
   hover:text-blue-600 transition-colors"
               >
                 {item.name}
@@ -72,8 +72,8 @@ const,
                 key={item.name}
                 href={item.href}"
                 className="block text-gray-700,"
-  hover:text-blue-600 py-2"
-                onClick={() => setIsOpen(false)}
+  hover:text-blue-600 py-2")
+  onClick={() => setIsOpen(false)}
               >
                 {item.name}
             ))}
@@ -82,3 +82,15 @@ const,
 }
 export default ModernNavigation
 "`</div></div></div></div></div></div></div></div></button></button></Link></nav></nav></nav>
+</div>
+</button>
+</button>
+</nav>
+</Link>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</nav>
+</ModernNavigationProps>

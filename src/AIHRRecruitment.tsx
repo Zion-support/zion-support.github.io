@@ -95,8 +95,8 @@ const AIHRRecruitment: React.FC = () => {
     {
       icon: Shield,
       title: "Bias-Free Hiring",
-      description: "AI algorithms designed to eliminate unconscious bias in recruitment"
-      icon: Brain,
+      description: "AI algorithms designed to eliminate unconscious bias in recruitment",
+  icon: Brain,
       title: "AI-Powered Candidate Matching",
       description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates."
     },
@@ -123,8 +123,8 @@ const AIHRRecruitment: React.FC = () => {
     {
       icon: Clock,
       title: "Streamlined Onboarding",
-      description: "Automated onboarding workflows that ensure smooth transitions for new hires."
-      description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
+      description: "Automated onboarding workflows that ensure smooth transitions for new hires.",
+  description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
       benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
     }
   ]
@@ -165,7 +165,6 @@ const AIHRRecruitment: React.FC = () => {
   Shield,
   TrendingUp
 } from 'lucide-react'
-export default function AIHRRecruitment() {
   const services = [
     {
       title: 'AI-Powered Talent Acquisition',
@@ -284,8 +283,8 @@ export default function AIHRRecruitment() {
   Clock,
   DollarSign,
   TrendingUp,
-  UserCheck
-import { SEO } from '../../components/SEO'
+  UserCheck;
+  import { SEO } from '../../components/SEO'
 import { 
   Users, 
   Search, 
@@ -303,7 +302,6 @@ import {
   BarChart3,
   Award
 } from 'lucide-react'
-export default function AIHRRecruitment() {
   const features = [
     {
     }
@@ -331,8 +329,8 @@ export default function AIHRRecruitment() {
     },
     {
       title: "Employee Retention",
-      description: "Predictive analytics for employee satisfaction and retention"
-      title: "AI-Powered Candidate Screening",
+      description: "Predictive analytics for employee satisfaction and retention",
+  title: "AI-Powered Candidate Screening",
       description: "Intelligent resume parsing and candidate matching using advanced NLP and ML algorithms",
       icon: Search,
       benefits: ["90% faster screening", "Bias-free evaluation", "Skills-based matching", "Cultural fit analysis"]
@@ -551,8 +549,8 @@ import {
   PieChart,
   LineChart,
   Building,
-  GraduationCap
-import { Link } from 'react-router-dom'
+  GraduationCap;
+  import { Link } from 'react-router-dom'
 import { 
   Users, 
   Search, 
@@ -651,8 +649,7 @@ const AIHRRecruitment = () => {
       benefits: ["Safety training verification", "Skills assessment", "Performance tracking"]
     }
   ]
-  return (
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  return(<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
@@ -684,8 +681,8 @@ const AIHRRecruitment = () => {
     {
       title: 'Improved Diversity',
       description: 'Enhance diversity and inclusion with unbiased AI algorithms',
-      icon: Users
-      industry: "Technology",
+      icon: Users,
+  industry: "Technology",
       title: "Technical Talent Acquisition",
       description: "AI-powered screening for technical roles with skill assessment and cultural fit analysis",
       metrics: ["60% faster hiring", "40% better quality hires", "30% cost reduction"]
@@ -839,8 +836,8 @@ const AIHRRecruitment = () => {
     {
       title: 'Talent Development',
       description: 'AI-driven career path planning and skill development programs.',
-      icon: '📈'
-      description: "Tailored solutions for large organizations with complex hiring requirements",
+      icon: '📈',
+  description: "Tailored solutions for large organizations with complex hiring requirements",
       features: [
         "Unlimited job postings",
         "Custom AI models",
@@ -865,8 +862,8 @@ const AIHRRecruitment = () => {
               Talent Acquisition
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Leverage artificial intelligence to find, screen, and hire the best talent 
-              faster and more efficiently than ever before.
+              Leverage artificial intelligence to find, screen, and hire the best talent;
+  faster and more efficiently than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
@@ -905,11 +902,11 @@ const AIHRRecruitment = () => {
             </div>
           </div>
     <div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
-      <SEO 
-        title="AI HR & Recruitment Platform - Zion Tech Group" 
+      <SEO;
+  title="AI HR & Recruitment Platform - Zion Tech Group" 
         description="Revolutionize your hiring process with AI-powered recruitment. Faster hiring, better candidates, and improved retention."
-        keywords="AI recruitment, HR automation, AI hiring, candidate screening, recruitment software, HR technology"
-        canonical="https://ziontechgroup.com/services/ai-hr-recruitment"
+        keywords="AI recruitment, HR automation, AI hiring, candidate screening, recruitment software, HR technology")
+  canonical="https://ziontechgroup.com/services/ai-hr-recruitment"
       />
 
       {/* Hero Section with Futuristic Background */}
@@ -938,8 +935,8 @@ const AIHRRecruitment = () => {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Revolutionize your recruitment process with AI-powered tools that screen candidates, 
-            predict success, and automate hiring workflows. Find the best talent faster while 
-            reducing bias and improving retention.
+            predict success, and automate hiring workflows. Find the best talent faster while;
+  reducing bias and improving retention.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -999,8 +996,7 @@ const AIHRRecruitment = () => {
     "Improve candidate experience",
     "Better employee retention rates"
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+  return(<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1036,8 +1032,8 @@ const AIHRRecruitment = () => {
       </section>
 
       {/* Features Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1047,15 +1043,15 @@ const AIHRRecruitment = () => {
               AI-Powered HR Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive AI HR platform streamlines every aspect of the recruitment process, 
-              from initial candidate discovery to final hiring decisions.
+              Our comprehensive AI HR platform streamlines every aspect of the recruitment process, )
+  from initial candidate discovery to final hiring decisions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
+              <motion.div;
+  key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1073,8 +1069,8 @@ const AIHRRecruitment = () => {
               Powerful AI Features for Modern HR
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI recruitment platform combines cutting-edge technology with proven HR practices 
-              to deliver exceptional hiring results.
+              Our AI recruitment platform combines cutting-edge technology with proven HR practices;
+  to deliver exceptional hiring results.
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1101,8 +1097,8 @@ const AIHRRecruitment = () => {
               AI-Powered Features That Transform HR
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI HR platform combines cutting-edge technology with human expertise to deliver 
-              exceptional results in talent acquisition and management.
+              Our AI HR platform combines cutting-edge technology with human expertise to deliver;
+  exceptional results in talent acquisition and management.
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -1132,15 +1128,15 @@ const AIHRRecruitment = () => {
             Why Choose AI HR & Recruitment?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI-powered platform revolutionizes talent acquisition with intelligent 
-            automation and data-driven insights.
+            Our AI-powered platform revolutionizes talent acquisition with intelligent;
+  automation and data-driven insights.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon
-            return (
+            const Icon = feature.icon;
+  return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-white" />
@@ -1237,8 +1233,8 @@ const AIHRRecruitment = () => {
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1253,8 +1249,8 @@ const AIHRRecruitment = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+            <motion.div;
+  initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1270,8 +1266,8 @@ const AIHRRecruitment = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
+            <motion.div;
+  initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1333,8 +1329,8 @@ const AIHRRecruitment = () => {
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1350,8 +1346,8 @@ const AIHRRecruitment = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <motion.div
-                key={industry}
+              <motion.div;
+  key={industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1518,8 +1514,8 @@ const AIHRRecruitment = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1556,8 +1552,8 @@ const AIHRRecruitment = () => {
             Join forward-thinking organizations that have already revolutionized their HR processes with AI. 
             Start building better teams today with intelligent recruitment and management.
             {services.map((service, index) => {
-              const Icon = service.icon
-              return (
+              const Icon = service.icon;
+  return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -1605,8 +1601,8 @@ const AIHRRecruitment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {recruitmentFeatures.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -1627,8 +1623,8 @@ const AIHRRecruitment = () => {
                     ))}
                   </ul>
             {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-green-400" />
@@ -1693,8 +1689,8 @@ const AIHRRecruitment = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
-            const Icon = tech.icon
-            return (
+            const Icon = tech.icon;
+  return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -1773,8 +1769,8 @@ const AIHRRecruitment = () => {
             Ready to Transform Your Recruitment?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading organizations that are already leveraging AI-powered recruitment 
-            to find and hire the best talent faster.
+            Join leading organizations that are already leveraging AI-powered recruitment;
+  to find and hire the best talent faster.
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
@@ -1801,8 +1797,8 @@ const AIHRRecruitment = () => {
             AI HR & Recruitment
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Revolutionize your hiring process with intelligent AI that finds, screens, and matches 
-            the best candidates while eliminating bias and reducing time-to-hire.
+            Revolutionize your hiring process with intelligent AI that finds, screens, and matches;
+  the best candidates while eliminating bias and reducing time-to-hire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
@@ -1825,8 +1821,8 @@ const AIHRRecruitment = () => {
             Ready to Transform Your Recruitment?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have already revolutionized their hiring process 
-            with AI-powered recruitment.
+            Join thousands of businesses that have already revolutionized their hiring process;
+  with AI-powered recruitment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
@@ -1848,8 +1844,8 @@ const AIHRRecruitment = () => {
     </div>
   )
 }
-export default AIHRRecruitment
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+export default AIHRRecruitment;
+  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
             </Link>
@@ -1857,8 +1853,8 @@ export default AIHRRecruitment
               to="/pricing"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
-              View Pricing Plans
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              View Pricing Plans;
+  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Free Trial
             </Link>
@@ -1903,8 +1899,8 @@ export default AIHRRecruitment
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon
-              return (
+              const Icon = useCase.icon;
+  return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -1951,8 +1947,8 @@ export default AIHRRecruitment
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
@@ -2061,8 +2057,8 @@ export default AIHRRecruitment
               Ready to Transform Your Hiring?
             </h2>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already using our AI-powered recruitment platform 
-              to find and hire the best talent faster and more efficiently.
+              Join hundreds of companies already using our AI-powered recruitment platform;
+  to find and hire the best talent faster and more efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
@@ -2163,3 +2159,27 @@ export default AIHRRecruitment
 export default AIHRRecruitment
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+</section>
+</section>
+</li>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</section>
+</SEO>
+</section>

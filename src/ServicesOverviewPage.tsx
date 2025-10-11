@@ -416,10 +416,9 @@ export default function ServicesOverviewPage() {
   const getCategoryColor = (color: string) => {
     return `bg-gradient-to-br ${color}`
   }
-  return (
-    <>
-      <SEO 
-        title="Services Overview - Zion Tech Group" 
+  return(<>
+      <SEO;
+  title="Services Overview - Zion Tech Group" 
         description="Explore our comprehensive range of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for every business need."
         keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT services overview"
         canonical="https://ziontechgroup.com/services-overview"
@@ -435,12 +434,12 @@ export default function ServicesOverviewPage() {
               Complete Service Portfolio
             </GradientHeading>
             <p className="text-zion-slate-light text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              From AI-powered automation to enterprise cybersecurity, discover our comprehensive suite of 
-              technology services designed to transform your business and drive innovation.
+              From AI-powered automation to enterprise cybersecurity, discover our comprehensive suite of;
+  technology services designed to transform your business and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
+              <Button;
+  size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
                 asChild
               >
@@ -449,8 +448,8 @@ export default function ServicesOverviewPage() {
                   Get Free Consultation
                 </a>
               </Button>
-              <Button 
-                size="lg"
+              <Button;
+  size="lg"
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
                 asChild
@@ -504,8 +503,8 @@ export default function ServicesOverviewPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <GradientHeading>Service Categories</GradientHeading>
-              <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
-                Explore our comprehensive range of technology services across multiple domains
+              <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">)
+  Explore our comprehensive range of technology services across multiple domains
               </p>
             </div>
             
@@ -543,8 +542,8 @@ export default function ServicesOverviewPage() {
                       </div>
                     </div>
                     
-                    <Button 
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                    <Button;
+  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                       asChild
                     >
                       <a href={`/comprehensive-services?category=${category.id}`}>
@@ -639,8 +638,8 @@ export default function ServicesOverviewPage() {
                     ))}
                   </ul>
                   
-                  <Button 
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  <Button;
+  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                     asChild
                   >
                     <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry">
@@ -722,13 +721,13 @@ export default function ServicesOverviewPage() {
               Ready to Get Started?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
-              Contact our team today for a free consultation and discover how our comprehensive services 
-              can transform your business and drive innovation.
+              Contact our team today for a free consultation and discover how our comprehensive services;
+  can transform your business and drive innovation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button 
-                size="lg"
+              <Button;
+  size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
                 asChild
               >
@@ -737,8 +736,8 @@ export default function ServicesOverviewPage() {
                   Schedule Free Consultation
                 </a>
               </Button>
-              <Button 
-                size="lg"
+              <Button;
+  size="lg"
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
                 asChild
@@ -786,7 +785,7 @@ export default function ServicesOverviewPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
-              Get Free Consultation
+              Get Free Consultation;
   Cloud, 
   Shield, 
   Server, 
@@ -829,7 +828,6 @@ const categoryColors = {
   "IoT & Smart Solutions": "from-yellow-500 to-orange-500",
   "Blockchain & Web3": "from-gray-500 to-blue-500"
 }
-export default function ServicesOverviewPage() {
   const getServicesByCategory = (category: string) => {
     return ENHANCED_SERVICES.filter(service => service.category === category)
   }
@@ -839,10 +837,9 @@ export default function ServicesOverviewPage() {
     }
     return `$${price}`
   }
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO
-        title="Complete IT & AI Services Overview - Zion Tech Group"
+  return(<div className="min-h-screen bg-background">
+      <SEO;
+  title="Complete IT & AI Services Overview - Zion Tech Group"
         description="Explore our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for every business need."
         keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT consulting, blockchain, IoT, enterprise solutions"
         canonical="https://ziontechgroup.com/services-overview"
@@ -855,8 +852,8 @@ export default function ServicesOverviewPage() {
             Complete Technology Solutions
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            From AI-powered automation to enterprise cybersecurity, we provide comprehensive technology services
-            that transform businesses and drive innovation across all industries.
+            From AI-powered automation to enterprise cybersecurity, we provide comprehensive technology services;
+  that transform businesses and drive innovation across all industries.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
@@ -902,8 +899,8 @@ export default function ServicesOverviewPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Service Categories
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services designed to meet every business need
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">)
+  Explore our comprehensive range of technology services designed to meet every business need
             </p>
           </div>
 
@@ -911,10 +908,9 @@ export default function ServicesOverviewPage() {
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
               {SERVICE_CATEGORIES.map((category) => {
                 const Icon = categoryIcons[category as keyof typeof categoryIcons]
-                return (
-                  <TabsTrigger
-                    key={category}
-                    value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                return(<TabsTrigger;
+  key={category})
+  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
                     className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-zion-blue data-[state=active]:text-white"
                   >
                     <Icon className="h-6 w-6" />
@@ -928,10 +924,9 @@ export default function ServicesOverviewPage() {
               const services = getServicesByCategory(category)
               const Icon = categoryIcons[category as keyof typeof categoryIcons]
               const gradient = categoryColors[category as keyof typeof categoryColors]
-              return (
-                <TabsContent
-                  key={category}
-                  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+              return(<TabsContent;
+  key={category})
+  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
                   className="space-y-8"
                 >
                   {/* Category Header */}
@@ -1193,3 +1188,6 @@ export default function ServicesOverviewPage() {
     </div>
   )
 }</div></div></div></Link>
+</SEO>
+</Button>
+</SEO>

@@ -65,7 +65,6 @@ import {logErrorToProduction;} from '@/utils / production_logger';
 export default /**
  * MessagingInbox - Function description
  */;
-function MessagingInbox() {;
 const {;
 }
 conversations},;
@@ -106,8 +105,8 @@ setActiveCall(roomId);
 const roomId = `msg-${activeConversation.id;}`;
 setActiveCall(roomId)
     // Show toast notification;
-toast.success("Starting video call", {;,
-description: "Initializing video call connection..."
+toast.success("Starting video call", {;,)
+  description: "Initializing video call connection..."
     })
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
@@ -127,7 +126,7 @@ router.push(`/call/${roomId}`), // Changed from navigate
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   },;
-return (;
+return(;
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -135,8 +134,8 @@ return (;
             <h1 className={`text-${isMobile ? '2xl' : '3xl'}} font-bold text-white flex items-center gap-2`}>
               <MessageSquare className="h-6 w-6" />;
 Messages
-            </h1>;
-useEffect((),) => {
+            </h1>;)
+  useEffect((),) => {
             {activeConversation && (
               <Button;
 }
@@ -159,7 +158,6 @@ import { Button; } from '@/components/ui/button',;
 import { LoadingSpinner; } from '@/components/ui/enhanced-loading-states',;
 import { useRouter; } from 'next/router', // Changed from react-router-dom;
 import {logErrorToProduction;} from '@/utils/productionLogger',;
-export default function MessagingInbox() {;
 const {;
 }
 conversations},;
@@ -195,13 +193,13 @@ return
 const roomId = `msg-${activeConversation.id;}`,;
 setActiveCall(roomId),
     // Show toast notification;
-toast.success("Starting video call", {;,
-description: "Initializing video call connection..."
+toast.success("Starting video call", {;,)
+  description: "Initializing video call connection..."
     })
     // Navigate to video call page;
 router.push(`/call/${roomId}`), // Changed from navigate
   }
-  return (;
+  return(;
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -213,8 +211,8 @@ Messages</$1>
               <Button;
 onClick={startVideoCall},}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">
-                <Video className="h-4 w-4" />;
-Start Call</$1>
+                <Video className="h-4 w-4" />;)
+  Start Call</$1>
             )}
 
           </div>
@@ -250,15 +248,15 @@ loadData ()
 activeConversation && activeConversation.id 
 }`;
 setActiveCall (roomId)
-//Show toast notification //Navigate to video call page router && router.push (`/call/$ {;
-roomId 
+//Show toast notification //Navigate to video call page router && router.push(`/call/$ {;)
+  roomId 
 }`), //Changed from navigate 
 }
-return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <className={$2 />;
+return(<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <className={$2 />;
   `text-$ {;
 isMobile ? '2xl' : '3xl'}font-bold text-white flex items-center gap-2` "
-}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={;
-startVideoCall "}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) 
+}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={;)
+  startVideoCall "}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) 
 }</div> </div>) : (<ConversationsListconversations={;
 conversations}activeConversation={;
 activeConversation}setActiveConversation={;
@@ -286,14 +284,14 @@ return
     const room_id = `msg-${active_conversation.id;}`;
 setActiveCall (room_id)
     // Show toast notification;
-toast.success ("Starting video call", {;,
-description: "Initializing video call connection..."
+toast.success("Starting video call", {;,)
+  description: "Initializing video call connection..."
     })
     // Navigate to video call page;
 router.push (`/call/${room_id}`), // Changed from navigate
   }
 ;
-return (;
+return(;
     <ProtectedRoute>
       <div className="min - h-screen bg - zion - blue">
         <div className="container mx - auto py - 8 px - 4">
@@ -307,8 +305,8 @@ Messages</$1>
 on_click={startVideoCall}, }
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"
               >
-                <Video className="h - 4 w - 4" />;
-Start Call</$1>)}
+                <Video className="h - 4 w - 4" />;)
+  Start Call</$1>)}
           </div>
           <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">
             <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}}]`}>
@@ -334,15 +332,15 @@ load_data ()
 active_conversation.id 
 }`;
 setActiveCall (room_id)
-//Show toast notification //Navigate to video call page router.push (`/call/$ {;
-room_id 
+//Show toast notification //Navigate to video call page router.push(`/call/$ {;)
+  room_id 
 }`), //Changed from navigate 
 }
-return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div className="container mx - auto py - 8 px - 4" > <div className="flex justify - between items - center mb - 6" > < className={$2 />;
+return(<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div className="container mx - auto py - 8 px - 4" > <div className="flex justify - between items - center mb - 6" > < className={$2 />;
   `text-$ {;
 is_mobile ? '2xl' : '3xl'}font - bold text - white flex items - center gap - 2` "
-}> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={;
-startVideoCall "}className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) 
+}> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={;)
+  startVideoCall "}className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) 
 }</div> </div>) : (<ConversationsList conversations={;
 conversations}active_conversation={;
 active_conversation}setActiveConversation={;
@@ -357,3 +355,13 @@ markAsRead}/>)
 
   )
 }
+
+</div>
+</ProtectedRoute>
+</h1>
+</string>
+</ProtectedRoute>
+</string>
+</string>
+</string>
+</string>

@@ -14,8 +14,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">"</div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>'
-const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>')
+  const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -403,7 +403,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">"
               <div, className="te, x, t-yell, o, w-1, 0, 0">"
                 <span, className="fo, n, t-bold, tex, t-2xl, tex, t-yell, o, w-3, 0, 0">2,8, 4, 7% R, O, I</sp, a, n> achieved, in, just 18, months, with <span, className="fo, n, t-bo, l, d">3.2-month, payback, period</sp, a, n>"
-              <Li, n, k
+              <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hov, e</$1>"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-yell, o, w-4, 0, 0/30">";"
@@ -482,7 +482,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <Li, n, k
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">"
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">"
-          <Li, n, k
+          <Li, n, k;
   to="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
         {/* Call, to, Action Butto, n, s */}"
@@ -499,7 +499,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <SparklesIcon, className="w-6 h-6" />"
             Read, the, Revolutionary Gui, d, e;"
             <LinkIcon, className="w-6 h-6" />"
-          <Li, n, k
+          <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r: fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
           <Li, n, k;"
@@ -513,7 +513,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <TruckIcon, className="w-6 h-6" />"
             Vi, e, w $4.2B, Case, Study;"
             <LinkIcon, className="w-6 h-6" />"
-          <Li, n, k
+          <Li, n, k;
   to="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e
           <Li, n, k;"
@@ -542,7 +542,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
               <Li, n, k
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-              <Li, n, k
+              <Li, n, k;
   to="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t"
                 classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-2xl, hove, r:sca, l, e-105, hov, e
         {/* Free, Assessment, CTA */}"

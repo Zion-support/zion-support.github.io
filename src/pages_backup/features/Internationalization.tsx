@@ -45,7 +45,6 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-export default function Internationalization() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -54,8 +53,7 @@ export default function Internationalization() {
     "url": "https://app.ziontechgroup.com/features/internationalization"
 
   }
-  return (
-    <>
+  return(<>
             <li>
               Automatic language detection ensures a localized experience.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
@@ -64,13 +62,13 @@ export default function Internationalization() {
             <div>
               <p className='font - semibold'>Which languages are supported?</p>
               <p className='text - zion - slate - light'>
-                The platform currently supports English, Spanish, Portuguese and
-                more.</$1></$1>
+                The platform currently supports English, Spanish, Portuguese and;
+  more.</$1></$1>
             <div>
               <p className='font - semibold'>Can I suggest new translations?</p>
               <p className='text - zion - slate - light'>
-                Yes, community contributions help us continually add new
-                languages.</$1></$1></$1>
+                Yes, community contributions help us continually add new;
+  languages.</$1></$1></$1>
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
@@ -81,11 +79,11 @@ export default function Internationalization() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
 
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -96,8 +94,8 @@ export default function Internationalization() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
             />
@@ -124,8 +122,8 @@ export default function Internationalization() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/'>Explore Zion</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -136,8 +134,8 @@ export default function Internationalization() {
             Our interface and search support multiple languages so you can collaborate without barriers.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
+            <img;
+  src="https://placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
             />
@@ -178,7 +176,6 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-export default function Internationalization() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -186,18 +183,17 @@ export default function Internationalization() {
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
     "url": "https://app.ziontechgroup.com/features/internationalization"
   }
-  return (
-    <>
-      <SEO
-        title="Internationalization"
+  return(<>
+      <SEO;
+  title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <script;
+  type="application/ld+json")
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -206,10 +202,25 @@ export default function Internationalization() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Our interface and search support multiple languages so you can collaborate without barriers.</$1>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
 
 
               <Link href="/">Explore Zion</Link></$1></$1></$1></$1></$1></div></main>
+              </img>
+              </div>
+              </p>
+              </div>
+              </main>
+              </SEO>
+              </img>
+              </Button>
+              </div>
+              </img>
+              </div>
+              </main>
+              </div>
+              </div>
+              </div>

@@ -21,23 +21,22 @@ const categoryIcons = {
   "Blockchain & Web3": <Code className="h-8 w-8 text-zion-cyan" />,
   "IoT & Edge Computing": <Server className="h-8 w-8 text-zion-cyan" />
 }
-// Get featured services from each category
-const getFeaturedServices = () => {
+// Get featured services from each category;
+  const getFeaturedServices = () => {
   const categories = [
     "AI & Machine Learning",
     "Cloud & DevOps", 
     "Cybersecurity",
     "Data & Analytics"
   ]
-  return categories.map(category => {
-    const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category)
+  return categories.map(category => {)
+  const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category)
     return services[0]; // Get first service from each category
   }).filter(Boolean)
 }
 export function ServicesShowcase() {
   const featuredServices = getFeaturedServices()
-  return (
-    <section className="py-20 bg-zion-blue-dark">
+  return(<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -72,8 +71,8 @@ export function ServicesShowcase() {
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Phone className="mr-2 h-5 w-5" />
-              Get Free Consultation
+              <Phone className="mr-2 h-5 w-5" />)
+  Get Free Consultation
             </Button>
           </div>
         </div>
@@ -192,3 +191,4 @@ export function ServicesShowcase() {
     </section>
   )
 }</div></div>
+</div>

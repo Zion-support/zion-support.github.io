@@ -75,7 +75,7 @@ const stats = [;
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
     { icon: Globe, number: '25+', label: 'Countries Served' }
   ];
-return (;
+return(;
     <React.Fragment>
       <SEOOptimizer;
 title="News & Updates - Zion Tech Group";
@@ -95,8 +95,8 @@ News & Updates
 Stay informed with our latest innovations and success stories,
   
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">;
-Discover the latest developments in AI technology, product launches,;
-client success stories, and industry insights from Zion Tech Group.
+Discover the latest developments in AI technology, product launches,;)
+  client success stories, and industry insights from Zion Tech Group.
           {/* Stats Section */}
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -123,8 +123,8 @@ client success stories, and industry insights from Zion Tech Group.
                         <Calendar className="w-4 h-4 mr-2" />
                         {new Date(article.date).toLocaleDateString('en-US', {;,
 year: 'numeric',;,
-month: 'long',;,
-day: 'numeric' 
+month: 'long',;,)
+  day: 'numeric' 
                         })}
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
                     {article.title}
@@ -153,8 +153,8 @@ Read More
                         <Calendar className="w-3 h-3 mr-1" />
                         {new Date(article.date).toLocaleDateString('en-US', {;,
 month: 'short',;,
-day: 'numeric',;,
-year: 'numeric'
+day: 'numeric',;,)
+  year: 'numeric'
                         })}
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {article.title}
@@ -200,3 +200,37 @@ export default NewsPage</button>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></a></a></p></p></p></p></h3></h3></main></section></section></section></section></section></article></article>
+</section>
+</p>
+</h3>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</p>
+</p>
+</section>
+</main>
+</div>

@@ -312,7 +312,6 @@ MessageSquare,;
 Star,;
 Play
 } from 'lucide-react';
-export default function Sitemap() {;
 const sitemapSections = [;
     {;,
 }
@@ -438,7 +437,6 @@ Mail,;
 Phone,;
 MapPin
 } from "lucide-react";
-export default function Sitemap() {;
 const sitemapSections = [;
     {;,
 }
@@ -547,7 +545,6 @@ Award,;
 Mail,;
 ArrowRight
 } from 'lucide-react';
-export default function Sitemap() {;
 const mainPages = [;
 }
     { path: '/'}, title: 'Home', description: 'Welcome to Zion Tech Group', icon: Home },
@@ -627,7 +624,7 @@ const quickLinks = [;
     { name: 'Contact Sales', path: '/contact-sales', icon: MessageSquare, color: 'bg-purple-100 text-purple-700' },
     { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
   ];
-return (;
+return(;
     <>
       <SEO;
 title="Sitemap | Zion AI Marketplace";
@@ -645,8 +642,8 @@ canonical="https://ziontechgroup.com/sitemap"
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
 Site Navigation Guide
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;)
+  Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation.
             </p>
           </div>
 
@@ -757,9 +754,9 @@ Visit Help Center →
       <Footer />
     </>
   );
-return (;
-    </>;
-const renderPageSection = (title: string;, pages: any[], IconComponent: any) => (
+return(;
+    </>;)
+  const renderPageSection = (title: string;, pages: any[], IconComponent: any) => (
     <div key={title} className="mb-8">
       <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
         <IconComponent className="w-5 h-5 mr-2 text-cyan-400" />
@@ -1045,7 +1042,7 @@ pages: [
       ]
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1054,10 +1051,13 @@ return (;
 Site Map
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-Explore all the pages and resources available on the Zion Tech Group website.;
-Find exactly what you're looking for with our comprehensive site navigation.
+Explore all the pages and resources available on the Zion Tech Group website.;)
+  Find exactly what you're looking for with our comprehensive site navigation.
           </p>
         </div>
       </div>
 
 </div></div></div></p></li></section>
+</p>
+</div>
+</div>

@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react'
 interface ImageOptimizerProps {
-    src: string
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  priority?: boolean
-  placeholder?: string
+    src: string,
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: string;
   onLoad?: () => void,
   onError?: () => void
   }
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
-  src
+  src;
   alt,
   className = '',
   width,
@@ -26,8 +26,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isInView, setIsInView] = useState(priority)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)</HTMLImageElement>useEffect</HTMLImageElement>(() => {
-    if (priority) return
-    const observer = new IntersectionObserver(
+    if (priority) return;
+  const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
@@ -53,8 +53,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     onError?.()
   }
   const generatePlaceholder = () => {
-    if (placeholder) return placeholder
-    const svg = `
+    if (placeholder) return placeholder;
+  const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
@@ -71,8 +71,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
   if (hasError) {
     return(<$2 />
-        className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        className={`bg-slate-800 flex items-center justify-center ${className}`})
+  style={{ width, height }}
       >
         <div className="text-gray-400 text-center">
           <div className="text-4xl mb-2">⚠️
@@ -83,16 +83,16 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
   return(<$2 />
       ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      className={`relative overflow-hidden ${className}`})
+  style={{ width, height }}
     >
       {/* Placeholder */})
       {!isLoaded && ()
         <img;)
       {/* Placeholder */}
       {!isLoaded && (
-        <img
-          src={generatePlaceholder()}
+        <img;
+  src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
           style={{ filter: 'blur(1 px)' }}
@@ -100,8 +100,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       )}
       {/* Actual Image */}
       {isInView && (
-        <img
-          src={src}
+        <img;
+  src={src}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'}
@@ -117,3 +117,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   )
 }
 export default ImageOptimizer</ImageOptimizerProps>
+
+</img>
+</img>

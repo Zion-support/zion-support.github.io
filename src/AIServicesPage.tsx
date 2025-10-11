@@ -17,8 +17,8 @@ import { Search;, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Dat
 import { enhancedAIServices2025; } from '@/data/comprehensiveServices2025';
 import { Search;, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react';
 import { motion; } from 'framer-motion';
-const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>;;
-service.category.includes('AI') ||;
+const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>;;)
+  service.category.includes('AI') ||;
 service.category.includes('Machine Learning') ||;
 service.category.includes('Automation')
 );
@@ -39,14 +39,14 @@ PieChart
 } from 'lucide-react';
 import { ENHANCED_SERVICES; } from '@/data/enhancedServices'
 // Filter AI services;
-const AI_SERVICES = ENHANCED_SERVICES.filter(service =>;;
-service.category.includes('AI') ||;
+const AI_SERVICES = ENHANCED_SERVICES.filter(service =>;;)
+  service.category.includes('AI') ||;
 service.category.includes('Machine Learning') ||;
 service.category.includes('Automation')
 );
 export default function AIServicesPage() {;
 const [selectedTab, setSelectedTab] = useState('overview');
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
 }
       {/* Hero Section */}
@@ -79,8 +79,8 @@ kleber@ziontechgroup.com
           </div>;
 import React from 'react';;
 import { motion; } from 'framer-motion';
-import { Brain;, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react';
-const AIServicesPage = () => {;;
+import { Brain;, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react';)
+  const AIServicesPage = () => {;;
 const aiServices = [;
     {;,
 }
@@ -623,8 +623,8 @@ website: "https://ziontechgroup.com"
 const categories = ['all';, 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing'];
 const pricingModels = ['all';, 'Freemium', 'Subscription', 'One-time'];
 const categories = ['all';, 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Customer Service', 'Marketing AI', 'Security AI', 'Supply Chain AI'];
-const filteredServices = aiServices.filter(service => {;;
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const filteredServices = aiServices.filter(service => {;;)
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;;
@@ -1137,8 +1137,7 @@ description: "Access to AI specialists and technical support team",;,
 icon: <Users className="h-6 w-6 text-cyan-500" />
   }
 ];
-export default function AIServicesPage() {;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue">
       <SEO;
 title="AI Services - Zion Tech Group";
@@ -1171,8 +1170,8 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rou
             {/* Enhanced Category Filter */}
             <div className="relative">
               <select;
-value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+value={selectedCategory})
+  onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
               >
                 {categories.map(category => ()
@@ -1357,14 +1356,14 @@ Comprehensive AI solutions designed to address your specific business challenges
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aiServices.map((service), index) => {;
 const IconComponent = service.icon;;
-return (;
+return(;
               <motion.div;
 }
 key={service.title}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
-                transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color}} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                   <IconComponent className="w-8 h-8" />
@@ -1441,14 +1440,14 @@ We combine cutting-edge AI technology with proven expertise to deliver solutions
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
-return (;
+return(;
               <motion.div;
 }
 key={benefit.title}
                 initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1}}, x: 0 }}
-                transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className={`p-3 bg-zion-purple/20 rounded-lg ${benefit.color}}`}>
@@ -1822,14 +1821,14 @@ Experience the power of artificial intelligence with our comprehensive suite of 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={benefit.title}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color}} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -1920,14 +1919,14 @@ Comprehensive AI solutions designed to address your specific business challenges
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service), index) => {;
 const IconComponent = service.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={index}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.8}}, delay: index * 0.1 }}
-                  className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
+                  transition={{ duration: 0.8}}, delay: index * 0.1 }})
+  className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2046,14 +2045,14 @@ Discover the transformative benefits that AI can bring to your business operatio
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={index}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.8}}, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
+                  transition={{ duration: 0.8}}, delay: index * 0.1 }})
+  className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2213,8 +2212,7 @@ description: "AI models continuously improve and adapt to your specific business
 icon: <Brain className="h-6 w-6" />
   }
 ];
-export default function AIServicesPage() {;
-return (;
+return(;
     <div className="min-h-screen bg-background">
 }
       {/* Hero Section */}
@@ -2250,8 +2248,8 @@ View Demo
             <h2 className="text-3xl font-bold text-zion-blue mb-4">
               {filteredServices.length} AI Services Found
             </h2>
-            <p className="text-zion-slate-light">;
-Discover AI solutions that can transform your business operations and customer experience
+            <p className="text-zion-slate-light">;)
+  Discover AI solutions that can transform your business operations and customer experience
             </p>
           </div>
 
@@ -2509,7 +2507,7 @@ Ready to explore AI solutions for your business? Contact our experts today.
 
 // AI Service Card Component;
 function AIServiceCard({ service }: { service: any }) {;
-return (;
+return(;
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
@@ -2517,8 +2515,8 @@ return (;
             {service.category}
           </Badge>
           {service.featured && (
-            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">;
-Featured
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">;)
+  Featured
             </Badge>
           )}
         </div>
@@ -2574,8 +2572,8 @@ Learn More
 function UseCaseCard({ icon, title, description, examples }: {;,
 icon: React.ReactNode,;,
 title: string,;,
-description: string,;,
-examples: string[] 
+description: string,;,)
+  examples: string[] 
 }) {;
 return (;
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
@@ -2608,8 +2606,8 @@ function PricingCard({ title, price, description, features, popular }: {;,
 title: string;,
 price: string;,
 description: string;,
-features: string[];,
-popular: boolean
+features: string[];,)
+  popular: boolean
 }) {;
 return (;
     <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'}} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}>
@@ -3066,8 +3064,7 @@ const industries = [;
   "Media & Entertainment",
   "Government & Public Sector"
 ];
-export default function AIServicesPage() {;
-return (;
+return(;
     <>
 }
       {/* Hero Section */}
@@ -3108,8 +3105,8 @@ Schedule AI Consultation
 AI-Powered Solutions
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
-Choose from our range of AI services designed to address specific business challenges;
-and drive measurable results.
+Choose from our range of AI services designed to address specific business challenges;)
+  and drive measurable results.
             </p>
           </div>
           
@@ -3445,7 +3442,6 @@ BarChart,;
 Smartphone,
 
 } from "lucide-react";
-export default function AIServicesPage() {;
 const aiServices = [;
     {;,
 }
@@ -3714,7 +3710,7 @@ setFilteredServices(aiServices)
 setFilteredServices(aiServices.filter(service => service.category === selectedCategory))
     }
   }, [selectedCategory]);
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -3781,9 +3777,9 @@ MessageSquare,;
 Bot,;
 Network
 } from "lucide-react";
-import { AI_SERVICES; } from "@/data/expandedServices";
-const AIServicesPage = () => {;;
-return (;
+import { AI_SERVICES; } from "@/data/expandedServices";)
+  const AIServicesPage = () => {;;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 }
       {/* Hero Section */}
@@ -3807,8 +3803,8 @@ Get AI Consultation
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">;
-Contact AI Experts
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">;)
+  Contact AI Experts
                 </Button>
               </Link>
             </div>
@@ -4802,7 +4798,6 @@ ArrowRight,;
 CheckCircle,;
 Star
 } from 'lucide-react';
-export default function AIServicesPage() {;
 const aiServices = [;
     {;,
 }
@@ -4961,7 +4956,7 @@ const categories = [;
     { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
     { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length }
   ];
-return (;
+return(;
     <>
       <SEO;
 title="AI Services - Zion Tech Group";
@@ -5011,8 +5006,8 @@ to machine learning implementation, we deliver intelligent solutions that drive 
 Comprehensive AI Solutions
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">;
-Choose from our extensive portfolio of AI services, each designed to address specific business challenges;
-and drive measurable results.
+Choose from our extensive portfolio of AI services, each designed to address specific business challenges;)
+  and drive measurable results.
               </p>
             </div>
 
@@ -5123,3 +5118,32 @@ Get a free consultation and discover how AI can transform your operations.
 export default AIServicesPage
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>
+</Card>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</string>
+</string>

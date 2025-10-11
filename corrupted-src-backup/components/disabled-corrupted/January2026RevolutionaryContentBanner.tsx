@@ -49,7 +49,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             Revolutionary, AI, Breakthrough,
   s: The, Future, is He, r, e
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'>
-            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
+            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,)
   t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
         </div>)
         {/* Content, Gri, d */})

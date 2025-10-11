@@ -92,8 +92,8 @@ if (existing) {/* TODO: Fix JSX expression */}
     // Log SEO optimization;
 logger.info('SEO optimization applied', {;
 page,;,
-title: mergedSEOData.title,;,
-description: mergedSEOData.description 
+title: mergedSEOData.title,;,)
+  description: mergedSEOData.description 
 }
     })
     // Track page view for analytics;
@@ -101,8 +101,8 @@ if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {;,
 page_title: mergedSEOData.title,;,
 page_location: mergedSEOData.canonical,;,
-custom_map: {;,
-page_type: page
+custom_map: {;,)
+  page_type: page
         }
       })
     }
@@ -209,8 +209,8 @@ description: 'Comprehensive cybersecurity solutions'
                 '@type': 'Offer',;,
 itemOffered: {
                   '@type': 'Service',;,
-name: 'Cloud Infrastructure',;,
-description: 'Scalable cloud infrastructure solutions'
+name: 'Cloud Infrastructure',;,)
+  description: 'Scalable cloud infrastructure solutions'
                 }
               }
             ]
@@ -224,3 +224,5 @@ SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
   </SEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li></li></li>
+</script>
+</title>

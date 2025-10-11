@@ -13,8 +13,8 @@ company: '',;,
 phone: '',;,
 password: '',;,
 confirmPassword: '',;,
-agreeToTerms: false,;,
-subscribeNewsletter: false
+agreeToTerms: false,;,)
+  subscribeNewsletter: false
 }
   });
 const [showPassword, setShowPassword] = useState(false);
@@ -87,8 +87,8 @@ confirmPasswor,;,
 d: '',;
 agreeToTerm,;,
 s: false,;
-subscribeNewslette,;,
-r: false,)
+subscribeNewslette,;,)
+  r: false,)
   });
 const [showPassword, setShowPassword] = useState(false);
 const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -141,7 +141,7 @@ icon: Award,;,
 title: 'Proven Results',;,
 description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -200,8 +200,8 @@ value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
 placeholder="Create a password"
                     <$2 />;
-type="button";
-onClick={() => setShowPassword(!showPassword)}
+type="button";)
+  onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     Confirm Password;
@@ -393,3 +393,36 @@ Trusted by 1000+ companies worldwide;"
       <Footer />
   );
 export default SignupPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>
+</p>
+</p>
+</p>
+</h2>
+</p>
+</div>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</div>
+</div>
+</label>
+</div>
+</div>
+</p>
+</h1>
+</p>
+</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</HTMLInputElement>
+</HTMLInputElement>

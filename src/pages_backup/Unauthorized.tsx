@@ -89,3 +89,12 @@ export default function Unauthorized() {
             >
               {t ('errors.login_different_account')}
             </Link></$1></$1></$1></$1></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>

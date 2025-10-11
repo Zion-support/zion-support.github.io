@@ -30,8 +30,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Terms of Service', href: '/legal/terms' },
   ]
 
-  return (
-    <footer className="bg-gray-900 text-white">
+  return(<footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -42,8 +41,8 @@ const EnhancedFooter: React.FC = () => {
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital
-              presence with cutting-edge AI, cloud architecture and innovative development services.
+              Leading technology solutions provider helping businesses transform their digital;
+  presence with cutting-edge AI, cloud architecture and innovative development services.
             </p>
             <div className="flex space-x-4">
               <a
@@ -59,7 +58,7 @@ const EnhancedFooter: React.FC = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/ziontechgroup"
+  href="https://github.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Github className="w-5 h-5" />
@@ -143,6 +142,7 @@ const EnhancedFooter: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">

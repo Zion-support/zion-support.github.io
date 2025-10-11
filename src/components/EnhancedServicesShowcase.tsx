@@ -16,20 +16,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'ai': return Brain
-      case 'micro-saas': return Zap
-      case 'it': return Cloud
-      case 'emerging-tech': return Rocket,
+      case 'ai': return Brain;
+  case 'micro-saas': return Zap;
+  case 'it': return Cloud;
+  case 'emerging-tech': return Rocket,
       default: return Target
   }
   }
   const CategoryIcon = getCategoryIcon(service.category)
-  return (
-    <$2 />
+  return(<$2 />
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
         isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
-      onMouseEnter={() => setIsHovered(true)}
+      }`})
+  onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
         animationDelay: `${index * 100}ms`,
@@ -144,8 +143,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   }, [selectedCategory])
   const popularServices = services.filter(service => service.popular)
   const newServices = services.filter(service => service.new)
-  return (
-    <section className="py-16 px-4">
+  return(<section className="py-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -174,8 +172,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className="text-gray-400 text-sm">Visit our site
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <$2 />
-            onClick={() =>setSelectedCategory('all')}
+          <$2 />)
+  onClick={() =>setSelectedCategory('all')}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
@@ -261,3 +259,52 @@ export default EnhancedServicesShowcase</a>
   </span>
   </ServiceCardProps>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></h3></h3></h4></h4></li>
+</p>
+</div>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h4>
+</div>
+</li>
+</h4>
+</div>
+</p>
+</span>
+</div>
+</h3>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>

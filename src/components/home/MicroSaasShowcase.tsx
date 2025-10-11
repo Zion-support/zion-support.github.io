@@ -64,8 +64,7 @@ export function MicroSaasShowcase() {
         return "from-gray-500 to-slate-600"
     }
   }
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
+  return(<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10"></div>
@@ -75,8 +74,8 @@ export function MicroSaasShowcase() {
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div;
+  initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -85,8 +84,8 @@ export function MicroSaasShowcase() {
             Featured Micro SAAS & AI Services
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Discover innovative solutions that transform businesses. From AI-powered chatbots to comprehensive IT consulting, 
-            we offer cutting-edge services at competitive prices.
+            Discover innovative solutions that transform businesses. From AI-powered chatbots to comprehensive IT consulting, )
+  we offer cutting-edge services at competitive prices.
           </p>
           
           {/* Contact Info */}
@@ -120,8 +119,8 @@ export function MicroSaasShowcase() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
+            <motion.div;
+  key={service.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -146,8 +145,8 @@ export function MicroSaasShowcase() {
                 </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
-            <Card 
-              key={service.id} 
+            <Card;
+  key={service.id} 
               className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
               style={{
                 animationDelay: `${index * 100}ms`,
@@ -155,8 +154,8 @@ export function MicroSaasShowcase() {
               }}
             >
               <div className="relative">
-                <img 
-                  src={service.image} 
+                <img;
+  src={service.image} 
                   alt={service.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -305,8 +304,8 @@ export function MicroSaasShowcase() {
               Ready to Accelerate Your Business?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have transformed their operations with our 
-              innovative solutions. Get started today with a free consultation.
+              Join thousands of businesses that have transformed their operations with our;
+  innovative solutions. Get started today with a free consultation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -345,12 +344,12 @@ export function MicroSaasShowcase() {
       <style>{`
         @keyframes fadeInUp {
           from {
-            opacity: 0
-            transform: translateY(30px)
+            opacity: 0,
+  transform: translateY(30px)
           }
           to {
-            opacity: 1
-            transform: translateY(0)
+            opacity: 1,
+  transform: translateY(0)
           }
         }
       `}</style>
@@ -421,8 +420,8 @@ export function MicroSaasShowcase() {
         </div>
 
         {/* CTA Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div;
+  initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center"
@@ -437,8 +436,8 @@ export function MicroSaasShowcase() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button;
+  size="lg" 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
                 asChild
               >
@@ -447,8 +446,8 @@ export function MicroSaasShowcase() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
+              <Button;
+  size="lg" 
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
                 onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
@@ -462,3 +461,4 @@ export function MicroSaasShowcase() {
     </section>
   )
 }
+</img>

@@ -26,8 +26,8 @@ const GlobalFinTechAITransformatio, n = () => {
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
                 $127M, Annual, Value Creati, o, n
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
-              How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent
-              automation, and, predictive analyti, c, s.
+              How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent;
+  automation, and, predictive analyti, c, s.
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
@@ -36,8 +36,8 @@ const GlobalFinTechAITransformatio, n = () => {
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Annual, Value, Created
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
-const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>)
+  const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
@@ -134,10 +134,10 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
               <div, className='spa, c, e-y-6'>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
-                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
-                    invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
-                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
-                    invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
+                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are;
+  invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
+                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are;
+  invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         Chief, Technology, Officer
                       <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
@@ -150,20 +150,20 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         Client, Company
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
-                    "The, fraud, detection platform, alone, paid for, the, entire
-                    initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
-                    down, 9, 2%, and, our, team can, focus, on strategic, work, instead
-                    of, chasing, fraud."
-                    Schedule, Consultatio, n
-                    Schedule, Consultatio, n
+                    "The, fraud, detection platform, alone, paid for, the, entire;
+  initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are;
+  down, 9, 2%, and, our, team can, focus, on strategic, work, instead;
+  of, chasing, fraud."
+                    Schedule, Consultatio, n;
+  Schedule, Consultatio, n
                     <Zap, classNam, e='w-5 h-5' />
                     Schedule, Consultatio, n
                     <Zap, className='w-5 h-5' />
 }}
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>"
-                    "The, fraud, detection platform, alone, paid for, the, entire
-                    initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
-                    down, 9, 2%, and, our, team can, focus, on strategic, work, instead;"
+                    "The, fraud, detection platform, alone, paid for, the, entire;
+  initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are;
+  down, 9, 2%, and, our, team can, focus, on strategic, work, instead;"
                     of, chasing, fraud."
                     Schedule, Consultatio, n
                     <Zap, classNam, e='w-5 h-5' />
@@ -171,3 +171,11 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     <Zap, className='w-5 h-5' />
 }}"
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></a></p></p></h1></h2></h2></h3></h3></h3></h3></h4></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></article>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</title>

@@ -135,11 +135,11 @@ questionquestion: 'Is there a free trial available?',;,
 answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.';
 const getCurrentArticles = () => {;;
 return helpArticles[activeCategory as keyof typeof helpArticles] || [];;
-const filteredArticles = getCurrentArticles().filter(article =>;;
-article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+const filteredArticles = getCurrentArticles().filter(article =>;;)
+  article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-return (;
+return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -160,8 +160,8 @@ We're here to help you succeed.
               <input;
 type="text";
 placeholder="Search help articles...";
-value={searchTerm}
-                onChange={(e) =>
+value={searchTerm})
+  onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
               />
@@ -395,3 +395,16 @@ export default HelpPage,
   </div>
   </div>
 </div></div></div></div></span></span></a></p></p></p></p></p></h3></h3></h3></h3></article>
+</p>
+</h3>
+</p>
+</h3>
+</p>
+</h3>
+</span>
+</p>
+</h3>
+</span>
+</p>
+</div>
+</div>

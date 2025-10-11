@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
+// eslint-disable-next-line react-refresh/only-export-components;
+  export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 }
@@ -70,8 +70,8 @@ Home
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
-Expert Team
-                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
+Expert Team;
+  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <Link className="w-6 h-6 text-purple-600" />
                   Fast Implementation,
@@ -82,8 +82,8 @@ Expert Team
 Ready to Transform Your Business?
             <p className="text-xl mb-8 text-blue-100">
               Let's discuss how our AI solutions can drive your success.
-                href="/contact" Get Started Today
-                href="/blog" View Our Blog,
+                href="/contact" Get Started Today;
+  href="/blog" View Our Blog,
                 <ArrowRight className="w-5 h-5 ml-2" />
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -130,3 +130,7 @@ Ready to Transform Your Business?
   </div>
   </div>
 </div></div></Link></Link></h2></h3></main>
+</h3>
+</h2>
+</main>
+</div>

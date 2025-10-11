@@ -57,12 +57,11 @@ icon$5: BarChart,
 icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
+import Footer from '../components/Footer')
+  const PagePage: React.FC = () => {
   return (
           <div>Coming Soon
   )
@@ -231,8 +230,8 @@ Why Choose Our Analytics Tools?"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              Call (302) 464-0950
-              href="mailto:kleber@ziontechgroup.com"
+              Call (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
   ),
@@ -242,8 +241,8 @@ Ready to Unlock Your Data?
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-Call (302) 464-0950
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+Call (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
   ),
 }
@@ -272,3 +271,11 @@ export default AnalyticsToolsPage</div>
   </div>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></h3></h3></h4></ul></li></section></section>
+</span>
+</ul>
+</h4>
+</span>
+</p>
+</p>
+</title>
+</Helmet>

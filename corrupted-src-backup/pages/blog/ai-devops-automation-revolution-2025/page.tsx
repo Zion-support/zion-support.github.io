@@ -14,7 +14,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <, className="te, x, t-4xl, m, d: te, x, t-5x, l, l$2 />
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-            AI-Powered, DevOps, Automation Revolut, i, o
+            AI-Powered, DevOps, Automation Revolut, i, o;
   n: 10x, Faster, Deployments with, Zero, Downtime
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, leadin, g-relax, e, d">"
             Transform, your, software delivery, pipeline, with autonomous, AI, agents that, predict, failures, au, t, o-heal, infrastructur, e, and, optimize, deployments in, rea, l-ti, m, e—achieving, 9, 9.99% uptime, and, 10 x faster, release, velocity.
@@ -43,7 +43,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12">
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r)
   s: </p>,
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
@@ -55,7 +55,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
             <div, className="spa, c, e-y-6">"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r;
   s:
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
@@ -88,7 +88,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">📊 Re, a, l-Time, Intelligence, Dashboard</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">"
-export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}
         <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">";"
@@ -182,11 +181,11 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2 x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">"
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor;
   m: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">"
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor;
   m:
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">"
@@ -250,7 +249,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <li>Audit, current, DevOps pipeline, and, identify automation, opportunitie, s
                   <li>Deploy, A, I-powered, monitoring, and alerti, n, g
                   <li>Implement, intelligent, log analysis, and, anomaly detecti, o, n
-                  <li>Expec, t, e
+                  <li>Expec, t, e;
   d: 40% reduction, in, alert noi, s, e, 3x, faster, incident respon, s, e
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">Phas, e, 2: Automated, Deploymen, t (Wee, k, 3-6)</h3>"
@@ -269,7 +268,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <li>Implement, autonomous, CI/CD, with, progressive deployment, strategie, s
                   <li>Enable, A, I-powered, test, selection and, optimizatio, n
                   <li>Deploy, automated, rollback and, canary, analysis
-                  <li>Expec, t, e
+                  <li>Expec, t, e;
   d: 5x, faster, deployments, 90% reduction, in, failed releas, e, s
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">Phas, e, 3: Se, l, f-Healing, Infrastructur, e (Wee, k, 7-10)</h3>"
@@ -348,7 +347,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>"
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">"
-                    <li>• Infrastructure, optimizati, o
+                    <li>• Infrastructure, optimizati, o;
   n: $1.6M</li>,
                     <li>• Reduced, incident, response: $80, 0, K
                     <li>• Eliminated, manual, processes: $60, 0, K
@@ -390,7 +389,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                     <li>• 80% time, saved, on deploymen, t, s
                     <li>• 95% reduction, in, toil and, manual, work
                     <li>• Zero, o, n-call, burden, from infrastructure, issue, s
-                    <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO
+                    <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO;
   I: 8, 5, 0% in, Year, 1</li>"
                     <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>"
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO,"
@@ -431,3 +430,29 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
 }
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h3></h3></h3></h4></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></article></header></header>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>

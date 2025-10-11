@@ -13,8 +13,8 @@ name: '',;,
 email: '',;,
 company: '',;,
 phone: '',;,
-service: '',;,
-message:   ,;
+service: '',;,)
+  message:   ,;
 }
 $4});
 const [isSubmitted, setIsSubmitted] = useState(false);
@@ -75,13 +75,13 @@ const achievements = [;
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">;
-Contact Us</span>
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">;)
+  Contact Us</span>
       </div>
   );
 export default ContactPage,
@@ -154,7 +154,7 @@ answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, fr
     }
   ];
 if (isSubmitted) {;
-return (;
+return(;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center p-8">
           <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -179,14 +179,14 @@ Your message has been sent successfully. Our team will get back to you within 24
             <$2 />;
 href="/";
 className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
-              <ArrowRight className="w-5 h-5 mr-2" />;
-Back to Home</span>
+              <ArrowRight className="w-5 h-5 mr-2" />;)
+  Back to Home</span>
           </div>
         </div>
       </div>
     )
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -262,8 +262,8 @@ type="tel";
 name="phone";
 value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";
-placeholder="+1 (555) 123-4567"
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";)
+  placeholder="+1 (555) 123-4567"
                     />
   </input>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -429,3 +429,123 @@ Common questions about our services and process
               ))}
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></a></p></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h3></h3></h3></h3></section></section></section></section>
+</p>
+</h3>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</div>
+</h3>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</div>
+</label>
+</div>
+</option>
+</option>
+</label>
+</div>
+</option>
+</option>
+</label>
+</div>
+</option>
+</option>
+</label>
+</div>
+</div>
+</label>
+</div>
+</label>
+</div>
+</div>
+</label>
+</div>
+</label>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</div>
+</section>
+</span>
+</div>
+</span>
+</div>
+</div>
+</p>
+</h1>
+</div>
+</div>
+</div>
+</section>
+</div>
+</span>
+</span>
+</div>
+</div>
+</strong>
+</p>
+</div>
+</p>
+</h1>
+</div>
+</div>
+</div>
+</a>
+</div>
+</HTMLInputElement>
+</HTMLInputElement>

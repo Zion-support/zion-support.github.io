@@ -28,11 +28,10 @@ const AppHeader = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ]
-  return (
-    <>
+  return(<>
       <$2 />
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className={cn(
+        style={{ "--nav-height": "64px" } as React.CSSProperties})
+  className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
         )}
@@ -110,8 +109,8 @@ const AppHeader = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
+            <motion.div;
+  initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden border-t border-border bg-background"

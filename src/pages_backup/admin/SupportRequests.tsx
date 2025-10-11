@@ -1,16 +1,15 @@
-// Mock data for support requests
-
-const MOCK_SUPPORT_REQUESTS = [
+// Mock data for support requests;
+  const MOCK_SUPPORT_REQUESTS = [
   {
-    id: 'SR-1001'
-    user: 'john.doe@example.com'
-    userId: 'user-123'
-    issue: 'Cannot access account after password reset'
-    status: 'open'
-    priority: 'high'
-    createdAt: '2023-12-15T14:30:00Z'
-    lastUpdated: '2023-12-15T15:45:00Z'
-    category: 'authentication'
+    id: 'SR-1001',
+  user: 'john.doe@example.com'
+    userId: 'user-123',
+  issue: 'Cannot access account after password reset'
+    status: 'open',
+  priority: 'high'
+    createdAt: '2023-12-15T14:30:00Z',
+  lastUpdated: '2023-12-15T15: 45:00Z',
+  category: 'authentication'
   }
   {
     id: 'SR - 1001',
@@ -117,15 +116,15 @@ export default function SupportRequests() {
 
 
   
-  // Apply filters to the request data
+  // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
+    // Apply search query filter)
+  if (searchQuery && 
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false
-import React, { useState } from "react",
+      return false;
+  import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -135,8 +134,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO",
-// Mock data for support requests
-const MOCK_SUPPORT_REQUESTS = [
+// Mock data for support requests;
+  const MOCK_SUPPORT_REQUESTS = [
   {
     id: "SR-1001",
     user: "john.doe@example.com",
@@ -215,50 +214,49 @@ const MOCK_SUPPORT_REQUESTS = [
     category: "profile"
   }
 ],
-export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
-  // Apply filters to the request data
+  // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery &&
+    // Apply search query filter)
+  if (searchQuery &&
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
     }
 
-    // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {
+    // Apply status filter;
+  if (statusFilter && request.status !== statusFilter) {
       return false
     }
 
-    // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {
+    // Apply priority filter;
+  if (priorityFilter && request.priority !== priorityFilter) {
       return false
     }
 
-    // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {
+    // Apply category filter;
+  if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
 
 
 
 
-  // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(
-    r => r && r.status === 'open'
-  ).length
-  const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(
-    r => r && r.status === 'in-progress'
-  ).length
-  const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(
-    r => r && r.status === 'resolved'
-  ).length
-  const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length
+  // Count by status for the summary dashboard;
+  const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter()
+  r => r && r.status === 'open'
+  ).length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter()
+  r => r && r.status === 'in-progress'
+  ).length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter()
+  r => r && r.status === 'resolved'
+  ).length;
+  const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length;
   const resetFilters = () => {
     setSearchQuery('')
     setStatusFilter(null)
@@ -269,10 +267,9 @@ export default function SupportRequests() {
 
 
 
-  return (
-    <>
-      <SEO 
-        title="Support Requests | Admin Dashboard"
+  return(<>
+      <SEO;
+  title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
       <div className="container mx-auto px-4 py-8">
@@ -404,8 +401,8 @@ export default function SupportRequests() {
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
                   placeholder="Search by ID, user or issue..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value={searchQuery})
+  onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
@@ -478,8 +475,8 @@ export default function SupportRequests() {
 
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10'                /></$1>
-              <Select
-                value={statusFilter || ''}
+              <Select;
+  value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
               
@@ -524,8 +521,8 @@ export default function SupportRequests() {
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
-                          <Badge
-                            variant={
+                          <Badge;
+  variant={
                               request.status === 'open'
                                 ? 'default'
                                 : request.status === 'in-progress'
@@ -537,8 +534,8 @@ export default function SupportRequests() {
                           </Badge>
                         </TableCell>
                         <TableCell>
-                          <Badge
-                            variant={
+                          <Badge;
+  variant={
                               request.priority === 'high'
                                 ? 'destructive'
                                 : request.priority === 'medium'
@@ -556,7 +553,7 @@ export default function SupportRequests() {
 
     return true
   }),
-  // Count by status for the summary dashboard
+  // Count by status for the summary dashboard;
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
@@ -567,10 +564,9 @@ export default function SupportRequests() {
     setPriorityFilter(null)
     setCategoryFilter(null)
   }
-  return (
-    <>
-      <SEO
-        title="Support Requests | Admin Dashboard"
+  return(<>
+      <SEO;
+  title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
       <div className="container mx-auto px-4 py-8">
@@ -612,14 +608,14 @@ export default function SupportRequests() {
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
-                  placeholder="Search by ID, user or issue..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                <Input;
+  placeholder="Search by ID, user or issue..."
+                  value={searchQuery})
+  onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 /></$1>
-              <Select
-                value={status_filter || ''}
+              <Select;
+  value={status_filter || ''}
                 onValueChange={value => setStatusFilter (value || null)}
               >
                 <SelectTrigger className='w-[180px]'>
@@ -629,8 +625,8 @@ export default function SupportRequests() {
                   <SelectItem value='open'>Open</SelectItem>
                   <SelectItem value='in - progress'>In Progress</SelectItem>
                   <SelectItem value='resolved'>Resolved</SelectItem></$1></$1>
-              <Select
-                value={priority_filter || ''}
+              <Select;
+  value={priority_filter || ''}
                 onValueChange={value => setPriorityFilter (value || null)}
 
 
@@ -642,8 +638,8 @@ export default function SupportRequests() {
                   <SelectItem value="high">High</SelectItem>
                   <SelectItem value="medium">Medium</SelectItem>
                   <SelectItem value="low">Low</SelectItem></$1></$1>
-              <Select
-                value={category_filter || ''}
+              <Select;
+  value={category_filter || ''}
                 onValueChange={value => setCategoryFilter (value || null)}
 
 
@@ -658,8 +654,8 @@ export default function SupportRequests() {
                   <SelectItem value="disputes">Disputes</SelectItem>
                   <SelectItem value="verification">Verification</SelectItem>
                   <SelectItem value="profile">Profile</SelectItem></$1></$1>
-              <Button
-                variant='outline'
+              <Button;
+  variant='outline'
                 on_click={reset_filters}
                 className='md:w - auto'
               >
@@ -689,8 +685,8 @@ export default function SupportRequests() {
                           {request && request.issue}
                         </TableCell>
                         <TableCell>
-                          <Badge
-                            variant={
+                          <Badge;
+  variant={
                               request && request.status === 'open'
                                 ? 'default'
                                 : request && request.status === 'in-progress'
@@ -700,9 +696,9 @@ export default function SupportRequests() {
                             {request && request.status}
                           </Badge></$1>
                         <TableCell>
-                          <Badge
-                            variant={
-                              request && request.priority === 'high'
+                          <Badge;
+  variant={)
+  request && request.priority === 'high'
                                 ? 'destructive'
                                 : request && request.priority === 'medium'
                                   ? 'default'
@@ -716,8 +712,8 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>
                           {new Date(request && request.lastUpdated).toLocaleDateString()}
-              <Button
-                variant='outline'
+              <Button;
+  variant='outline'
                 on_click={reset_filters}
                 className='md:w - auto'
               >
@@ -738,7 +734,7 @@ export default function SupportRequests() {
                       <TableHead > Last Updated</TableHead>
                       <TableHead > Actions</TableHead></$1></$1>
                   <TableBody>
-                    {filtered_requests.map (request => (                      <TableRow key={request.id}>
+                    {filtered_requests.map(request => (                      <TableRow key={request.id}>
                         <TableCell className='font - medium'>
                           {request.id}
                         </TableCell>
@@ -755,8 +751,8 @@ export default function SupportRequests() {
                             {request.status}
                           </Badge></$1>
                         <TableCell>
-                          <Badge variant={
-                            request.priority === 'high'
+                          <Badge variant={)
+  request.priority === 'high'
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
@@ -817,20 +813,20 @@ export default function SupportRequests() {
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
               <p className='text-zion-slate-light'>
-                This tab will show support requests that have been escalated by
-                agents or the system.</$1></$1></$1>
+                This tab will show support requests that have been escalated by;
+  agents or the system.</$1></$1></$1>
           <TabsContent value='ai-flagged' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>
               <p className='text-zion-slate-light'>
-                This tab shows issues that our AI system has identified as
-                requiring human attention.</$1></$1></$1>
+                This tab shows issues that our AI system has identified as;
+  requiring human attention.</$1></$1></$1>
           <TabsContent value='need-response' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>
               <p className='text-zion-slate-light'>
-                These support requests have been waiting for an agent response
-                for over 24 hours.</$1></$1></$1></$1></$1>
+                These support requests have been waiting for an agent response;
+  for over 24 hours.</$1></$1></$1></$1></$1>
     </>
   )
   return true
@@ -867,20 +863,20 @@ export default function SupportRequests() {
             <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>
               <h3 className='text - xl font - medium mb - 4'>Escalated Requests</h3>
               <p className='text - zion - slate - light'>
-                This tab will show support requests that have been escalated by
-                agents or the system.</$1></$1></$1>
+                This tab will show support requests that have been escalated by;
+  agents or the system.</$1></$1></$1>
           <TabsContent value='ai - flagged' className='mt - 6'>
             <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>
               <h3 className='text - xl font - medium mb - 4'>AI Flagged Issues</h3>
               <p className='text - zion - slate - light'>
-                This tab shows issues that our AI system has identified as
-                requiring human attention.</$1></$1></$1>
+                This tab shows issues that our AI system has identified as;
+  requiring human attention.</$1></$1></$1>
           <TabsContent value='need - response' className='mt - 6'>
             <div className='bg - zion - blue - light / 20 p - 8 rounded - lg text - center'>
               <h3 className='text - xl font - medium mb - 4'>Awaiting Response</h3>
               <p className='text - zion - slate - light'>
-                These support requests have been waiting for an agent response
-                for over 24 hours.</$1></$1></$1></$1></$1>
+                These support requests have been waiting for an agent response;
+  for over 24 hours.</$1></$1></$1></$1></$1>
     </>)
   return true
 })
@@ -909,3 +905,107 @@ export default function SupportRequests() {
 
 
 
+
+</TableRow>
+</p>
+</div>
+</TabsContent>
+</p>
+</div>
+</TabsContent>
+</p>
+</div>
+</TabsContent>
+</p>
+</div>
+</TabsContent>
+</p>
+</div>
+</TabsContent>
+</p>
+</div>
+</TabsContent>
+</Button>
+</Button>
+</TableRow>
+</TableHeader>
+</Table>
+</CardContent>
+</Card>
+</Button>
+</TableRow>
+</TableRow>
+</TableHeader>
+</Table>
+</CardContent>
+</Card>
+</Button>
+</SelectContent>
+</SelectTrigger>
+</Select>
+</SelectContent>
+</SelectTrigger>
+</Select>
+</SelectContent>
+</SelectTrigger>
+</Select>
+</Input>
+</div>
+</TabsContent>
+</TabsList>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</div>
+</Button>
+</div>
+</p>
+</div>
+</div>
+</div>
+</SEO>
+</TableRow>
+</TableRow>
+</Table>
+</CardContent>
+</Card>
+</Select>
+</SelectTrigger>
+</SelectTrigger>
+</SelectTrigger>
+</TabsContent>
+</TabsContent>
+</TabsList>
+</Tabs>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</CardHeader>
+</Card>
+</div>
+</Button>
+</div>
+</p>
+</div>
+</div>
+</div>
+</Tabs>
+</Tabs>
+</Button>
+</div>
+</div>
+</SEO>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>

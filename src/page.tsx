@@ -331,3 +331,8 @@ Cutting-edge technology meets practical business needs.
 };
 ;
 export default HomePage;
+
+</div>
+</h2>
+</h2>
+</h2>

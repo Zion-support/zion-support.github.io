@@ -3,7 +3,7 @@ import React from 'react'
 interface ModernLoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'accent'
-  text?: string
+  text?: string;
   fullScreen?: boolean
   }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
@@ -25,11 +25,11 @@ $4}
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-    animate-spin
-    border-2
-    border-current
-    border-t-transparent
-    rounded-full
+    animate-spin;
+  border-2;
+  border-current;
+  border-t-transparent;
+  rounded-full
   `
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
@@ -49,7 +49,7 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'accent'
-  text?: string
+  text?: string;
   fullScreen?: boolean
 }
 const,
@@ -107,8 +107,10 @@ const,
     </div>
   )
 }
-export default ModernLoadingSpinner
-export default ModernLoadingSpinner;"`
+export default ModernLoadingSpinner;
+  export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
 </div></div></div></div></div></p></p>
+</p>
+</p>

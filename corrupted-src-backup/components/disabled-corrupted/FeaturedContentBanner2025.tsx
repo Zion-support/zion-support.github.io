@@ -27,8 +27,8 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
           </div>"
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Featured, Conten, t</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">)
+  Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
         </div>)
 )
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)

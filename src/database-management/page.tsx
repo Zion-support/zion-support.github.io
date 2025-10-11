@@ -30,8 +30,7 @@ const DatabaseManagementPage: React.FC = () => {
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -53,8 +52,8 @@ const DatabaseManagementPage: React.FC = () => {
               <Database className="w-5 h-5" />
               +1 302 464 0950
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Database Services
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">)
+  Database Services
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -81,3 +80,14 @@ export default DatabaseManagementPage</h2>
   </p>
   </h1>
 </div></div></div></div></p></p></h3></ul></li></main></section></section>
+</li>
+</ul>
+</h3>
+</div>
+</section>
+</div>
+</p>
+</p>
+</section>
+</main>
+</div>

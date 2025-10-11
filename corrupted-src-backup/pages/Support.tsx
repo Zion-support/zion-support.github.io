@@ -78,8 +78,8 @@ const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
     }
   ];
-const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q =>;
-selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
+const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q =>;)
+  selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
   ).filt, e, r(f, a, q =>);
 f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||;
 f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
@@ -104,7 +104,7 @@ return(<React.Fragment>
             <div, className="te, x, t-cent, e, r">
               <, className="te, x, t-4x, l, m$2 />;,
 d:te, x, t-5xl, fon, t-bold, m, b-6">;
-return (<React.Fragment>;
+return(<React.Fragment>;
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
@@ -128,8 +128,8 @@ Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, ass
                   <inp, u, t;
 ty, p, e="te, x, t";
 placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s...";
-val, u, e={searchQue, r, y}
-                    onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
+val, u, e={searchQue, r, y})
+  onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                     classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u
               {/* Search, Ba, r */}"
               <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
@@ -232,7 +232,7 @@ return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">
             <, className="te, x, t-4x, l, m$2 />;
-return (;
+return(;
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
@@ -259,8 +259,8 @@ Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
                 <inp, u, t;
 ty, p, e="te, x, t";
 placehold, e, r="Search, our, knowledge ba, s, e...";
-val, u, e={searchQue, r, y}
-                  onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
+val, u, e={searchQue, r, y})
+  onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                   classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u
             {/* Search, Ba, r */}"
             <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
@@ -378,3 +378,4 @@ View, Documentatio, n;"
 }
 export default Support;"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></section></section></section></section></section></section></section></section>
+</Helmet>

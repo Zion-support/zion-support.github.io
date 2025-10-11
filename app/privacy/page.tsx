@@ -81,7 +81,7 @@ email: 'privacy@ziontechgroup.com',;,
 phone: '+1 (302) 464-0950',;,
 address: '364 E Main St STE 1008, Middletown, DE 19709'}
 ;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
@@ -97,8 +97,8 @@ return (;
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Policy</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;)
+  Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
           </p>
           <div className="flex items-center justify-center text-cyan-400">
             <Shield className="w-6 h-6 mr-2" />

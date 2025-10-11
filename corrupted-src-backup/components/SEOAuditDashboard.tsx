@@ -4,41 +4,41 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t"
 interface, SEOIssu, e {
-    id: stri, n, g
-ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o'
-tit, l, e: stri, n, g
-descripti, o, n: stri, n, g
-impa, c, t: 'hi, g, h' | 'medi, u, m' | 'l, o, w'
+    id: stri, n, g;
+  ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o'
+tit, l, e: stri, n, g;
+  descripti, o, n: stri, n, g;
+  impa, c, t: 'hi, g, h' | 'medi, u, m' | 'l, o, w'
 catego, r, y: 'conte, n, t' | 'technic, a, l' | 'performan, c, e' | 'accessibili, t, y' | 'mobi, l, e'
-f, i, x: stri, n, g
-sc, o, r
+f, i, x: stri, n, g;
+  sc, o, r;
   e: numb, e, r
   }
 interface, SEORepor, t {
-    overallSco, r, e: numb, e, r
-totalIssu, e, s: numb, e, r
-erro, r, s: numb, e, r
-warnin, g, s: numb, e, r
-issu, e, s: SEOIss, u, e[]
+    overallSco, r, e: numb, e, r;
+  totalIssu, e, s: numb, e, r;
+  erro, r, s: numb, e, r;
+  warnin, g, s: numb, e, r;
+  issu, e, s: SEOIss, u, e[]
 metri, c, s: {,
-pageTit, l, e: stri, n, g
-metaDescripti, o, n: stri, n, g
-overallSco, r, e: numb, e, r
-totalIssu, e, s: numb, e, r
-erro, r, s: numb, e, r
-warnin, g, s: numb, e, r
-issu, e, s: SEOIss, u, e[]
-metr, i, c
+pageTit, l, e: stri, n, g;
+  metaDescripti, o, n: stri, n, g;
+  overallSco, r, e: numb, e, r;
+  totalIssu, e, s: numb, e, r;
+  erro, r, s: numb, e, r;
+  warnin, g, s: numb, e, r;
+  issu, e, s: SEOIss, u, e[]
+metr, i, c;
   s: {,
-pageTit, l, e: stri, n, g
-metaDescripti, o, n: stri, n, g
-headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h
+pageTit, l, e: stri, n, g;
+  metaDescripti, o, n: stri, n, g;
+  headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
   6: numb, e, r
   }
-    imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l
+    imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;
   t: numb, e, r }
-    lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a
-interface, SEOIssu, e {/* TODO: Fix JSX expression */}
+    lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;
+  interface, SEOIssu, e {/* TODO: Fix JSX expression */}
 }
 interface, SEORepor, t {/* TODO: Fix JSX expression */}
 }
@@ -46,11 +46,11 @@ interface, SEORepor, t {/* TODO: Fix JSX expression */}
   t: numb, e, r }
     lin, k, s: {/* TODO: Fix JSX expression */}
   l: numb, e, r }
-    wordCou, n, t: numb, e, r
-    readabilitySco, r, e: numb, e, r
-    wordCou, n, t: numb, e, r
-    readabilitySc, o, r
-    readabilitySc, o, r,
+    wordCou, n, t: numb, e, r;
+  readabilitySco, r, e: numb, e, r;
+  wordCou, n, t: numb, e, r;
+  readabilitySc, o, r;
+  readabilitySc, o, r,
   e: numb, e, r
   }
   lastUpdat, e, d: numb, e, r
@@ -181,11 +181,11 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   ]
   const, runSEOAudi, t = asy, n, c () => {
     setIsRunni, n, g(tr, u, e)
-    // Simulate, audit, process
+    // Simulate, audit, process;
   await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0))
-    // Simulate, some, issues based, on, random facto, r, s
-  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {
-      let, typ, e = iss, u, e.ty, p, e;)
+    // Simulate, some, issues based, on, random facto, r, s;
+  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {)
+  let, typ, e = iss, u, e.ty, p, e;)
       let, scor, e = iss, u, e.sco, r, e;)
       // Simulate, some, issues being, fixed, or appeari, n, g;)
   if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {
@@ -248,39 +248,39 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
     const, warning, s = issu, e, s.filt, e, r(i => i.ty, p, e === 'warni, n, g').leng, t, h;'
     const, overallScor, e = Ma, t, h.rou, n, d(issu, e, s.redu, c, e((s, u, m, iss, u, e) => s, u, m + iss, u, e.sco, r, e, 0) / issu, e, s.leng, t, h)
     setRepo, r, t({
-      overallSco, r, e
-      totalIssu, e, s: issu, e, s.leng, t, h
-      erro, r, s
-      warnin, g, s
-      issu, e, s
-      metri, c, s: {,
+      overallSco, r, e;
+  totalIssu, e, s: issu, e, s.leng, t, h;
+  erro, r, s;
+  warnin, g, s;
+  issu, e, s;
+  metri, c, s: {,
         pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s'
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.'
         headin, g, s: { h,
   1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
-        imag, e, s: { to, t, a
-  l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: { to, t, a;)
+        imag, e, s: { to, t, a;
+  l: 24, withA, l, t: 18, withoutA, l, t: 6 })
+  lin, k, s: { to, t, a;)
   l: 45, intern, a, l: 32, extern, a, l: 13 })
         wordCou, n, t: 28, 4, 7;)
         readabilitySco, r, e: 72,)}
       lastUpdat, e, d: Da, t, e.n, o, w()
-        pageTi, t, l
+        pageTi, t, l;
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s','
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.','
         headin, g, s: { h,
   1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
-        imag, e, s: { to, t, a
+        imag, e, s: { to, t, a;
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: { to, t, a
-    setRepo, r, t({/* TODO: Fix JSX expression */}
+        lin, k, s: { to, t, a;
+  setRepo, r, t({/* TODO: Fix JSX expression */}
   6: 2 }
         imag, e, s: {/* TODO: Fix JSX expression */}
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
-        wordCou, n, t: 28, 4, 7
-        readabilitySco, r, e: 72,
+        wordCou, n, t: 28, 4, 7)
+  readabilitySco, r, e: 72,
       })
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
@@ -292,8 +292,8 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   l: 24, withA, l, t: 18, withoutA, l, t: 6 }
         lin, k, s: {/* TODO: Fix JSX expression */}
   l: 45, intern, a, l: 32, extern, a, l: 13 }
-        wordCou, n, t: 28, 4, 7
-        readabilitySco, r, e: 72,
+        wordCou, n, t: 28, 4, 7;
+  readabilitySco, r, e: 72,
       }
       lastUpdat, e, d: Da, t, e.n, o, w()
     })
@@ -320,7 +320,7 @@ ca, s, e 'hi, g, h':'
 retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';'
 ca, s, e 'medi, u, m':'
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';'
-defa, u, l
+defa, u, l;
   t:
 retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */}
@@ -334,8 +334,8 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
   }
   const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */}
   }
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {
-    const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {)
+  const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
   const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
@@ -365,7 +365,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
             <Search, className="w-6 h-6" />"
             SEO, Audit, Dashboard</$1>"
           <p, className="te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations</p>"
-        <butt, o, n
+        <butt, o, n;
   onCli, c, k={runSEOAud, i, t}
           disabl, e, d={isRunni, n, g}
           classNa, m, e={
@@ -378,8 +378,8 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';'
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'`
           }`}`;`
         >
-          {
-isRunni, n, g ? (
+          {)
+  isRunni, n, g ? (
 <React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
@@ -471,7 +471,7 @@ Analyzi, n, g...)
                     <sp, a, n>Word, Cou, n
                 <div, className="spa, c, e-y-1, tex, t-sm">"
                   <div, className="flex, justif, y-betwe, e, n">"
-                    <sp, a, n>Word, Cou, n
+                    <sp, a, n>Word, Cou, n;
   t:
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>"
                   <div, className="flex, justif, y-betwe, e, n">"
@@ -580,7 +580,7 @@ Analyzi, n, g...)
           <div, className="flex, fle, x-wrap, ga, p-4, m, b-6">"
             <d, i, v></d>"
               <label, className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Catego, r, y</lab, e, l>"
-              <sele, c, t
+              <sele, c, t;
   val, u, e={selectedCatego, r, y}
                 onChan, g, e={(e) => setSelectedCatego, r, y(e.targ, e, t.val, u, e)}"
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
@@ -593,7 +593,7 @@ Analyzi, n, g...)
                 ))}
             <d, i, v></d>"
               <label, className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Impa, c, t</lab, e, l>"
-              <sele, c, t
+              <sele, c, t;
   val, u, e={selectedImpa, c, t}
                 onChan, g, e={(e) => setSelectedImpa, c, t(e.targ, e, t.val, u, e)}"
                 classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
@@ -683,3 +683,4 @@ Analyzi, n, g...)
 }
 export default SEOAuditDashboard;"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></h2></h2></h2></h3></h4></h4></h4></h4>
+</CheckCircle>

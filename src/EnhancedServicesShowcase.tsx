@@ -37,11 +37,10 @@ export default function EnhancedServicesShowcase() {
     ? comprehensiveServices 
     : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()))
     ? ENHANCED_SERVICES 
-    : ENHANCED_SERVICES.filter(service => 
-        SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
+    : ENHANCED_SERVICES.filter(service => )
+  SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
       )
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+  return(<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -103,17 +102,17 @@ export default function EnhancedServicesShowcase() {
 
         {/* Category Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Button
-            variant={selectedCategory === 'all' ? 'default' : 'outline'}
-            onClick={() => setSelectedCategory('all')}
+          <Button;
+  variant={selectedCategory === 'all' ? 'default' : 'outline'})
+  onClick={() => setSelectedCategory('all')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             All Services
           </Button>
           {serviceCategories.map((category) => (
           {SERVICE_CATEGORIES.map((category) => (
-            <Button
-              key={category.id}
+            <Button;
+  key={category.id}
               variant={selectedCategory === category.id ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category.id)}
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
@@ -286,19 +285,18 @@ export default function EnhancedServicesShowcase() {
   )
 }
 
-// Service Card Component
-function ServiceCard({ service }: { service: any }) {
+// Service Card Component;
+  function ServiceCard({ service }: { service: any }) {
   const [showDetails, setShowDetails] = useState(false)
-  return (
-    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+  return(<Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
             {service.category}
           </Badge>
           {service.featured && (
-            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
-              Featured
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">)
+  Featured
             </Badge>
           )}
         </div>
@@ -352,8 +350,8 @@ function ServiceCard({ service }: { service: any }) {
 
           {/* Action Buttons */}
           <div className="flex gap-2">
-            <Button 
-              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
+            <Button;
+  className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
               onClick={() => setShowDetails(!showDetails)}
             >
               {showDetails ? 'Hide Details' : 'View Details'}

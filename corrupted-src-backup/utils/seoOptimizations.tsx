@@ -321,8 +321,8 @@ e: string) => {/* content */}
 g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
         page_titl,;,
 e: title,;
-page_locatio,;,
-n: url,)
+page_locatio,;,)
+  n: url,)
       })
     }
   },
@@ -350,8 +350,8 @@ d: string, value?: number) => {/* content */}
 g: Function }).gtag('event', 'conversion', {/* content */}
         send_t,;,
 o: conversionId,;
-valu,;,
-e: value,)
+valu,;,)
+  e: value,)
       })
     }
   }
@@ -375,8 +375,8 @@ c: {/* TODO: Fix JSX expression */});,
 a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
         metric_nam,;,
-e: metric.name,;
-metric_valu);,
+e: metric.name,;)
+  metric_valu);,
 e: Math.round(metric.value),;
 metric_i,;,
 d: metric.id,;
@@ -439,7 +439,7 @@ return(<div> </div><Helmet>
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />;
-return (<div> </div><Helmet>;
+return(<div> </div><Helmet>;
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
@@ -464,8 +464,8 @@ r:card" content="summary_large_image" /></meta>"
 r:title" content={fullTitle} /></meta>"
       <meta name="twitte,";,
 r:description" content={description} /></meta>"
-      <meta name="twitte,";,
-r:image" content={fullImage} />
+      <meta name="twitte,";,)
+  r:image" content={fullImage} />
       {/* Structured Data */}
       {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}
@@ -492,3 +492,6 @@ document.head.appendChild(meta)
   }
 }"`
 </li></li>
+</meta>
+</meta>
+</string>

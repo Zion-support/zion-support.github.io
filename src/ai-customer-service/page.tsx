@@ -2,7 +2,7 @@
 import { Helmet } from 'react-helmet-async'
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet>
+  return(<div><Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
@@ -138,7 +138,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
             </p>"
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
-              < href="te,"$2 />
+              < href="te,"$2 />)
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
   l: (302) 464-0950,
@@ -157,3 +157,30 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
   ),
 }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</p>
+</p>
+</p>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</title>

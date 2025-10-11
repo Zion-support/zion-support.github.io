@@ -6,8 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CompliancePage: React.FC = () => {
   const certifications = [],
-  return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
+  return({ name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
@@ -46,7 +45,7 @@ const CompliancePage: React.FC = () => {
   n: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
+    })
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -126,3 +125,7 @@ Compliance Areas;"
 export default CompliancePage</div>
   </div>
 </span></p></p></h2></h2></h2></ul>
+</h2>
+</ul>
+</h2>
+</h2>

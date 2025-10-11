@@ -40,8 +40,8 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                  Ne, x, t-Gen, Automation, Capabilities
-const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
+                  Ne, x, t-Gen, Automation, Capabilities)
+  const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
                 { val, u, e: '$3., 2, T', lab, e, l: 'Automation, Market, 202, 5' },
                 { val, u, e: '8, 5%', lab, e, l: 'Cost, Reducti, o, n' },
                 { val, u, e: '9, 4%', lab, e, l: 'Accuracy, Ra, t, e' },
@@ -69,8 +69,8 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                             {capabili, t, y.description}
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
                   <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
-                  Industry, Application, s & Resul, t, s
-                      industry: 'Reta, i, l & E-comme, r, c, e',
+                  Industry, Application, s & Resul, t, s;
+  industry: 'Reta, i, l & E-comme, r, c, e',
                       savin, g, s: '$6.8, M',
                       automati, o, n: '8, 9%',
                       results: [)
@@ -120,3 +120,4 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                     Book, Free, Assessment
                     <Rocket, classNam, e='w-5 h-5' />
 }}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></a></p></h1></h2></h2></h2></h2></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></article>
+</title>

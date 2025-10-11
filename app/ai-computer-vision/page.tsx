@@ -21,8 +21,7 @@ const PagePage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
-  return (
-    <>
+  return(<>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -31,8 +30,8 @@ const PagePage: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+  Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
             </div>
           </div>

@@ -1,9 +1,9 @@
 import { ArrowLeft } from 'lucide-react'
 
 
-import {  Breadcrumb
+import {  Breadcrumb;
   BreadcrumbList
-  BreadcrumbItem
+  BreadcrumbItem;
   BreadcrumbLink
   BreadcrumbSeparator
 } from '@/components/ui/breadcrumb'
@@ -11,16 +11,15 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
 export default function CaseStudy() {
   const router = useRouter()
-  const slug = router.query.slug as string
-  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
+  const slug = router.query.slug as string;
+  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb;
   BreadcrumbList
-  BreadcrumbItem
+  BreadcrumbItem;
   BreadcrumbLink
   BreadcrumbSeparator} from '@/components/ui/breadcrumb'
 
-export default function CaseStudy() {
   const router = useRouter()
-  const slug = router.query.slug as string
+  const slug = router.query.slug as string;
   const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
@@ -32,9 +31,8 @@ export default function CaseStudy() {
 
 
 
-export default function CaseStudy() {
   const router = useRouter()
-  const slug = router.query.slug as string
+  const slug = router.query.slug as string;
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
 import { ArrowLeft } from 'lucide-react'
@@ -54,7 +52,6 @@ import { getBreadcrumbsForPath } from '@/utils/routeUtils'
 
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-export default function CaseStudy() {
   const router = useRouter(),
   const slug = router && router.query.slug as string,
   const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),
@@ -65,37 +62,28 @@ export default function CaseStudy() {
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
 
   if (!study) {
-    return (
-      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+    return(<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
 
 
 
-
+)
   if (!study) {
-    return (
-
-
-        Case study not found.
+    return()
+  Case study not found.
       </div>
     )
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-export default function CaseStudy() {
   const router = useRouter()
-  const slug = router && router.query.slug as string
+  const slug = router && router.query.slug as string;
   const study = CASE_STUDIES && CASE_STUDIES.find((s) => s && s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
   if (!study) {
-    return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
-        Case study not found.</$1>
+    return(<div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">)
+  Case study not found.</$1>
     )
   }
-  return (
-
-
-
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
+  return(<BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -134,8 +122,8 @@ export default function CaseStudy() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <Button
-            variant="outline"
+          <Button;
+  variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
@@ -154,8 +142,8 @@ export default function CaseStudy() {
 
 
           </Button>
-          <img
-            src={study.companyLogo}
+          <img;
+  src={study.companyLogo}
             alt={`${study.company} logo`}
 
             className='h-12 mb-4'
@@ -180,8 +168,8 @@ export default function CaseStudy() {
                 Download PDF
               </a>
             <Button variant="secondary" className="mb-6" asChild>
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">
-                Download PDF
+              <a href={study.pdf} target="_blank" rel="noopener noreferrer">)
+  Download PDF
               </Link>
 
 
@@ -230,9 +218,8 @@ import { getBreadcrumbsForPath } from '@/utils / route_utils'
 export default /**
  * CaseStudy - Function description
  */
-function CaseStudy() {
   const router = use_router ()
-  const slug = router.query.slug as string
+  const slug = router.query.slug as string;
   const study = CASE_STUDIES.find (string => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`);  Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
@@ -241,35 +228,30 @@ function CaseStudy() {
 export default /**
  * CaseStudy - Function description
  */
-function CaseStudy() {
   const router = use_router (),
   const slug = router.query.slug as string,
   const study = CASE_STUDIES.find ((s, ) => s.slug === slug),
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`),
-  // Check condition
-if ( {) {
+  // Check condition;
+  if ( {) {
   $2
 }
-    return (
-      <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>        Case study not found.import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd'
+    return(<div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>        Case study not found.import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd'
 export default /**
  * CaseStudy - Function description
- */
-function CaseStudy() {
+ */)
   const router = use_router ()
-  const slug = router.query.slug as string
+  const slug = router.query.slug as string;
   const study = CASE_STUDIES.find ((s) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath (`/case - studies/${slug}`)
-  // Check condition
-if ( {) {
+  // Check condition;
+  if ( {) {
   $2
 }
-    return (
-      <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">
-        Case study not found.</$1>)
+    return(<div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">)
+  Case study not found.</$1>)
   }
-  return (
-    <>
+  return(<>
       <SEO title={study.title} description={study.excerpt} />
       <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>
         <div className='container mx - auto max - w-3xl'>
@@ -295,8 +277,8 @@ if ( {) {
               <BreadcrumbItem>
                 <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current="page">
                   <span>{study.title}</span></$1></$1></$1></$1>
-          <Button
-            variant='outline'
+          <Button;
+  variant='outline'
             className='mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white'
             as_child
           >
@@ -307,8 +289,8 @@ if ( {) {
           >
             <Link href="/case - studies">
               <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies</$1>
-          <img
-            src = {study.company_logo, }
+          <img;
+  src = {study.company_logo, }
             alt={`${study.company} logo`}
             className='h - 12 mb - 4'
             loading='lazy'
@@ -322,8 +304,8 @@ if ( {) {
           <p className="text - zion - slate - light mb - 8">{study.excerpt}</p>
           {study.pdf && (
             <Button variant="secondary" className="mb - 6" as_child>
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">
-                Download PDF</$1></$1>)}
+              <a href={study.pdf} target="_blank" rel="noopener noreferrer">)
+  Download PDF</$1></$1>)}
           <;$2 />
             className='prose prose - invert'
             dangerouslySetInnerHTML={{ __html: study.content }}
@@ -335,3 +317,33 @@ if ( {) {
     </>)
 }
 </$1></div></Link></a></a></a></p></p>
+</p>
+</a>
+</Button>
+</Button>
+</img>
+</Link>
+</Button>
+</BreadcrumbLink>
+</BreadcrumbItem>
+</BreadcrumbItem>
+</BreadcrumbLink>
+</BreadcrumbItem>
+</BreadcrumbLink>
+</BreadcrumbItem>
+</BreadcrumbList>
+</Breadcrumb>
+</BreadcrumbLink>
+</BreadcrumbItem>
+</BreadcrumbList>
+</Breadcrumb>
+</div>
+</div>
+</div>
+</a>
+</Button>
+</Button>
+</img>
+</BreadcrumbLink>
+</div>
+</div>

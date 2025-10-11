@@ -17,7 +17,7 @@ const AIABTestingPage: React.FC = () => {
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation /></Navigation>"
       <main className="container mx-auto px-4 py-16 pt-24"></main>"
         <section className="text-center mb-16"></section>"
@@ -51,7 +51,7 @@ const AIABTestingPage: React.FC = () => {
             A/B Testing Features,
           </h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => (}"
               < key={index} className="cyber-card p-6,"$2 />

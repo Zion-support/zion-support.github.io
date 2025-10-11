@@ -18,8 +18,7 @@ export default function October2025AIRevolutionBann, e, r({)
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' />
             <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'>
 interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
- }
-export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
+ })
 }: October2025AIRevolutionBannerPro, p, s) {/* TODO: Fix JSX expression */}
     <, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}$2 />
     >
@@ -35,14 +34,14 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
-            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides</$1>
+            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
+  The, Complete, AI Revoluti, o, n: 3, Essential, Guides</$1>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
-            with, AI, in 20, 2, 5.
+            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
+  with, AI, in 20, 2, 5.
         {/* Featured, Articles, Grid */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
           {/* Articl, e, 1: Autonomous, AI, Agen, t, s */}
@@ -133,8 +132,8 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'>
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'>
-              Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve
-              99.2% safety, complia, n, c, e, prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
+              Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve;
+  99.2% safety, complia, n, c, e, prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
             <div, classNam, e = 'grid, gri, d-co, l, s-3, ga, p-3, m, b-4'>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'>
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-4, 0, 0'>99.2%

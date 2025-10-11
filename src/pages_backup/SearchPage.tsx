@@ -103,14 +103,14 @@ if (query.trim()) {;
 router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
   },;
-return (;
+return(;
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput;
 value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {};
+            onChange={setQuery})
+  onSelectSuggestion={(suggestion) => {};
 const searchTerm = suggestion.text.trim();;
 }
 setQuery(searchTerm)};              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
@@ -254,23 +254,23 @@ return
 ;}
 }setLoading (true);
 try {;
-const res = await fetch (`/api/search?query=$ {;;
-encodeURIComponent (term)
+const res = await fetch(`/api/search?query=$ {;;)
+  encodeURIComponent (term)
 }`);
 const data = await res.json ();;
 if (data && data.results && Array.isArray (data.results) ) {;
 setResults (data.results)
   // Add key prop to force re - render when route changes;
 const page_key = `search-${route_key;}-${router.as_path}`;
-return (;
+return(;
     <div key={page_key}>
       <main className="container mx - auto px - 4 py - 8">
         <form on_submit={handle_submit} className="mb - 6">
   </form>
           <EnhancedSearchInput;
 value={query}
-            on_change={set_query}
-            onSelectSuggestion={(suggestion) => {};
+            on_change={set_query})
+  onSelectSuggestion={(suggestion) => {};
 const search_term = suggestion.text.trim ();;
 }
 set_query (search_term)};              router.push (`/search?q=${encodeURIComponent (search_term)}`)
@@ -386,8 +386,8 @@ $2
 return
 ;}set_loading (true);
 try {;
-const res = await fetch (`/api / search?query=$ {;;
-encodeURIComponent (term)
+const res = await fetch(`/api / search?query=$ {;;)
+  encodeURIComponent (term)
 }`);
 const data = await res.json ();;
 if () {) {};
@@ -396,12 +396,12 @@ $2
   set_results (data.results)
 }else {;
 set_results ([]);';
-logErrorToProduction ('Search API response structure is not as expected:', {;,
-data: data
+logErrorToProduction('Search API response structure is not as expected:', {;,)
+  data: data
 })
 }catch (error) {';
-logErrorToProduction ('Search failed:', {;,
-data: error
+logErrorToProduction('Search failed:', {;,)
+  data: error
 });
 set_results ([])
 }finally {;
@@ -409,8 +409,8 @@ set_loading (false)
 }
 const handle_submit = (e: React.FormEvent) =>: any {;;
 e.prevent_default ();
-router.push (`/search?q=$ {;
-encodeURIComponent (query.trim () )
+router.push(`/search?q=$ {;)
+  encodeURIComponent (query.trim () )
 }`)
 }
 //Add key prop to force re - render when route changes </div>)
@@ -533,3 +533,29 @@ Contact Us</$1></$1>
     </>)
 }
 }
+
+</Link>
+</Link>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</TabsTrigger>
+</TabsTrigger>
+</TabsTrigger>
+</TabsTrigger>
+</TabsList>
+</Tabs>
+</div>
+</TabsTrigger>
+</TabsTrigger>
+</TabsTrigger>
+</TabsTrigger>
+</TabsList>
+</Tabs>
+</div>
+</div>
+</div>

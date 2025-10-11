@@ -2,8 +2,8 @@ import React from 'react'
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6'
 interface NewServicesPromoBannerProp, s {
     varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d'
-  showCou, n, t?: number
-  featuredOn, l, y?: boolean
+  showCou, n, t?: number;
+  featuredOn, l, y?: boolean;
   classNa, m, e ?  : string
   }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</NewServicesPromoBannerPro>varia</NewServicesPromoBannerPro>, n, t = 'def, a, u, l, t',
@@ -27,8 +27,8 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
               <span, className="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
               Revolutionary, AI, Services Now, Availabl, e
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">
-              Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s</$1>)
+            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">)
+  Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s</$1>)
           </div>)
           <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
             { servic, e, s.m, a, p((serv, i, c, e) = > (
@@ -117,8 +117,8 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
         <div, className="flex, item, s-center, ga, p-3, m, b-6">
           <Rocket, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
           <h2, className="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available
-        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">
-          Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e;)
+        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">)
+  Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e;)
         </p>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
           { servic, e, s.m, a, p((serv, i, c, e) = > (
@@ -161,7 +161,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
       <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
         <div, className="flex, item, s-center, justif, y-between, m, b-6">
           <div, className="flex, item, s-center, ga, p-3">
-            <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" />
+            <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" />)
   if (varia, n, t = == 'g, r, i, d') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}></div>"
         <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>"
@@ -211,7 +211,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}
             <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
   }`
-  // Default variant return (<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+  // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}></div>"
       <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
         <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Rocket>"
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d
@@ -222,8 +222,8 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <div, className="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</div>"
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>"
             <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
-              Explore, Servic, e →
+            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">)
+  Explore, Servic, e →
           </div>)
         ))}
       </div>

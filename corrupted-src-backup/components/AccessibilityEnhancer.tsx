@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
-  children
+  children;
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -11,8 +11,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [focusVisible, setFocusVisible] = useState(false)
   useEffect(() => {
-    // Check for user preferences
-    if (enableHighContrast) {
+    // Check for user preferences;
+  if (enableHighContrast) {
       const _mediaQuery = window.matchMedia('(prefers-contrast: high)')
       setIsHighContrast(mediaQuery.matches),
 ,
@@ -26,8 +26,8 @@ const,
     return undefined
   }, [enableHighContrast])
   useEffect(() => {
-    // Check for reduced motion preference
-    if (enableReducedMotion) {
+    // Check for reduced motion preference;
+  if (enableReducedMotion) {
       const _mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
       setIsReducedMotion(mediaQuery.matches),
 ,
@@ -39,11 +39,11 @@ const,
     return undefined
   }, [enableReducedMotion])
   useEffect(() => {
-    // Keyboard navigation support
-    if (enableKeyboardNavigation) {
+    // Keyboard navigation support;
+  if (enableKeyboardNavigation) {
       const handleKeyDown = (e: KeyboardEvent) => {
-        // Skip to main content
-        if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        // Skip to main content;
+  if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
           const _skipLink = document.querySelector('.skip-link') as HTMLElement,
           if (skipLink) {,
             skipLink.focus()
@@ -51,21 +51,21 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
           }
         }
-        // Escape key handling
-        if (e.key === 'Escape') {
-          const _activeElement = document.activeElement as HTMLElement
-          if (activeElement && activeElement.blur) {
+        // Escape key handling;
+  if (e.key === 'Escape') {
+          const _activeElement = document.activeElement as HTMLElement;
+  if (activeElement && activeElement.blur) {
             activeElement.blur()
         if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
           }
         }
       }
-      // Focus management
-      const handleFocusIn = (e: FocusEvent) => {
+      // Focus management;
+  const handleFocusIn = (e: FocusEvent) => {
         setFocusVisible(true)
         const _target = e.target as HTMLElement
-        // Announce focus changes to screen readers
-        if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
+        // Announce focus changes to screen readers;
+  if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
           const _announcement = target.getAttribute('aria-label'),
           if (announcement) {,
             announceToScreenReader(announcement)
@@ -84,9 +84,9 @@ const,
     return undefined
   }, [enableKeyboardNavigation, enableScreenReaderSupport])
   useEffect(() => {
-    // Apply accessibility styles
-    const _root = document.documentElement
-    if (isHighContrast) {
+    // Apply accessibility styles;
+  const _root = document.documentElement;
+  if (isHighContrast) {
       root.classList.add('high-contrast')
   } else {
       root.classList.remove('high-contrast')
@@ -100,15 +100,15 @@ const,
     } else {/* TODO: Fix JSX expression */}
     }
   }, [isHighContrast, isReducedMotion, focusVisible])
-  // Announce to screen reader
+  // Announce to screen reader;
   const announceToScreenReader = (message: string) => {,
     if (enableScreenReaderSupport) {,
       const _announcement = document.createElement('div')
       announcement.setAttribute('aria-live', 'polite')
       announcement.setAttribute('aria-atomic', 'true')
       announcement.className = 'sr-only'
-      announcement.textContent = message
-      document.body.appendChild(announcement)
+      announcement.textContent = message;
+  document.body.appendChild(announcement)
       setTimeout(() => {
         document.body.removeChild(announcement)
   const announceToScreenReader = (messag)
@@ -119,8 +119,8 @@ const,
   return(<;$2 />
   return (<div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-      role="main""
-      aria-label="Main content"
+      role="main"")
+  aria-label="Main content"
     >
       {/* Skip to main content link */})
       <;)$2 />
@@ -180,3 +180,6 @@ export default AccessibilityEnhancer
   </AccessibilityEnhancerProps>
   </AccessibilityEnhancerProps>
 </div></div></button></button>
+</button>
+</button>
+</div>

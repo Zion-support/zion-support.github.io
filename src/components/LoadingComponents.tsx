@@ -6,3 +6,4 @@ const,
       {/* Component content */}
   )
 }
+</LoadingComponentsProps>

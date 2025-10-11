@@ -37,8 +37,7 @@ $4}
     '95% Process Automation',
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
@@ -53,8 +52,8 @@ $4}
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
   
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">)
+  Learn More
   
       <Footer />
   ),
@@ -87,8 +86,8 @@ export default function AIServicesPage() {
         'API integration capabilities',
         'Performance monitoring & analytics'
       ],
-      pricing: {
-        starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
+      pricing: {,
+  starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
         professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
       },
@@ -108,8 +107,8 @@ export default function AIServicesPage() {
         'Data visualization tools',
         'Automated reporting'
       ],
-      pricing: {
-        starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
+      pricing: {,
+  starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
         professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
         enterprise: { price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations'] }
       },
@@ -129,8 +128,8 @@ export default function AIServicesPage() {
         'Human handoff capabilities',
         'Performance analytics'
       ],
-      pricing: {
-        starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
+      pricing: {,
+  starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
         professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
       },
@@ -150,8 +149,8 @@ export default function AIServicesPage() {
         'Brand voice consistency',
         'Content scheduling & publishing'
       ],
-      pricing: {
-        starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
+      pricing: {,
+  starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
         professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
         enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
       },
@@ -171,8 +170,8 @@ export default function AIServicesPage() {
         'Compliance monitoring',
         'Security analytics dashboard'
       ],
-      pricing: {
-        starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
+      pricing: {,
+  starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
         professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
         enterprise: { price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee'] }
       },
@@ -192,8 +191,8 @@ export default function AIServicesPage() {
         'A/B testing framework',
         'Performance monitoring'
       ],
-      pricing: {
-        starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
+      pricing: {,
+  starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
         professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
         enterprise: { price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee'] }
       },
@@ -208,8 +207,7 @@ export default function AIServicesPage() {
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
     { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
   ]
-  return (
-    <React.Fragment>
+  return(<React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
@@ -231,8 +229,8 @@ export default function AIServicesPage() {
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg">
+                  href="tel:+13024640950")
+  className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
   
@@ -350,3 +348,42 @@ export default function AIServicesPage() {
   </div>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></h1></h1></h2></h2></h3></h4></h4></ul></li></section></section>
+</p>
+</h2>
+</h4>
+</li>
+</ul>
+</h4>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</span>
+</h2>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</span>
+</h1>
+</div>
+</title>
+</Helmet>
+</div>
+</h1>
+</div>
+</div>
+</title>
+</Helmet>
+</div>

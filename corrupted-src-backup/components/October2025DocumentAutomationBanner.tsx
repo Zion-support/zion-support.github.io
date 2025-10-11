@@ -15,8 +15,8 @@ const, October2025DocumentAutomationBanne, r = () => {
         {/* Breaking, News, Badge */}
         <div, className="flex, justif, y-center, m, b-4">
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e">
-            <FileText, className="w-4 h-4, m, r-2  />
-            NEW, RELEAS, E - OCTOBE, R, 1, 20, 2, 5
+            <FileText, className="w-4 h-4, m, r-2  />)
+  NEW, RELEAS, E - OCTOBE, R, 1, 20, 2, 5
             <FileText, className="w-4 h-4, m, l-2  />
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n">"
       {/* Animated, background, elements */}
@@ -29,7 +29,7 @@ const, October2025DocumentAutomationBanne, r = () => {
       <div, className="absolute, inse, t-0, opacit, y-10">"</div>
         <div, className="absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"</div>
         <div, className="absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }} />'</d, i, v>
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">"</div>
@@ -223,14 +223,14 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
                 <FileText, className="w-4 h-4, m, r-2" />"
                 COMPREHENSIVE, IMPLEMENTATION, GUIDE</$1>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">"
-                Intelligent, Document, Automation: Complete, Technical, Guide
-                Intelligent, Document, Automatio,
+                Intelligent, Document, Automation: Complete, Technical, Guide;
+  Intelligent, Document, Automatio,
   n: Complete, Technical, Guide</$1>"
               <p, className="te, x, t-indi, g, o-100, tex, t-sm, m, b-4">"
                 Master, A, I-powered, document, processing with, advanced, OCR, N, L, P, and, workflow, automation. 
-                Learn, proven, strategies achieving, 9, 4% faster, processin, g, 99.2% accura, c, y, a, n, d $47M, saving, s
+                Learn, proven, strategies achieving, 9, 4% faster, processin, g, 99.2% accura, c, y, a, n, d $47M, saving, s;
   while, eliminating, manual operatio, n, s.
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-docume, n, t-automati, o, n-revoluti, o, n"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-600, hove, r:to-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
               <Li, n, k;"
@@ -266,15 +266,15 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
                 <FileText, className="w-4 h-4, m, r-2" />"
                 FORTUNE, 500, SUCCESS STO, R, Y</$1>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">"
-                Insurance, Lead, e
-  r: $47M, Saved, Processing 2.4M, Document, s
-                Insurance, Lead, e,
+                Insurance, Lead, e;
+  r: $47M, Saved, Processing 2.4M, Document, s;
+  Insurance, Lead, e,
   r: $47M, Saved, Processing 2.4M, Document, s</$1>"
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, m, b-4">"
-                Real, transformatio, n: Ho, w, a $18B, insurance, company achiev, e, d $47M, annual, savings
-                94% faster, processin, g (45, day, s → 2.7, day, s), and, 9, 9.2% accuracy, by, automating
+                Real, transformatio, n: Ho, w, a $18B, insurance, company achiev, e, d $47M, annual, savings;
+  94% faster, processin, g (45, day, s → 2.7, day, s), and, 9, 9.2% accuracy, by, automating;
   2.4M, documents, annually with, zero, manual interventi, o, n.
-              <Li, n, k
+              <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-insuran, c, e-compa, n, y-docume, n, t-automati, o, n-47-milli, o, n-succe, s, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
               <Li, n, k;"
@@ -449,14 +449,14 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
             Ready, to, Transform Your, Document, Operations?
           </h3>"
           <p, className="te, x, t-indi, g, o-100, m, b-6, ma, x-w-2xl, m, x-au, t, o">"
-            Schedule, a, Document Automation, Assessment, with Zion, Tech, Group and, discover, how AI, can, deliver
+            Schedule, a, Document Automation, Assessment, with Zion, Tech, Group and, discover, how AI, can, deliver;
   3, 4, 0% ROI, and, eliminate 90% of, manual, processing
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <Li, n, k
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-indi, g, o-600, fon, t-bold, rounde, d-lg, hove, r: bg-indi, g, o-50, transitio, n-all, shado, w-xl, hov, e</$1>"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -469,7 +469,7 @@ const, October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expressio
               Schedule, Assessmen, t;"
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""

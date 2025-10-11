@@ -4,60 +4,59 @@ const, October2025AIOperationsBanne, r = () => {
       tit, l, e: "AI-Powered, DevSecOps, Automation","
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
-      ic, o, n: Shie, l, d
-      sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
+      ic, o, n: Shie, l, d;
+  sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
     {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
-      ic, o, n: TrendingDo, w, n
-      sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
+      ic, o, n: TrendingDo, w, n;
+  sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
-      ic, o, n: Activi, t, y
-      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
+      ic, o, n: Activi, t, y;
+  sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
       tit, l, e: "AI-Powered, DevSecOps, Automation","
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
-      ic, o, n: Shie, l, d
-      sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
+      ic, o, n: Shie, l, d;
+  sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
     {
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
-      ic, o, n: TrendingDo, w, n
-      sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
+      ic, o, n: TrendingDo, w, n;
+  sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
-      ic, o, n: Activi, t, y
-      sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
+      ic, o, n: Activi, t, y;
+  sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
     }
   ]
   return(<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)$2 />
   g:px-8, relative, overflow-hidd, e, n">")
     <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,),$2 />
-  return (
-    <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l$2 />
+  return(<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l$2 />,
   g:px-8, relative, overflow-hidd, e, n">"
-    <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l$2 />
+    <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l$2 />,
   g:px-8, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">"
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>")
+  const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -68,7 +67,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return (<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"$2 />
+  return(<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, relative, overflow-hidd, e, n">""
     <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, relative, overflow-hidd, e, n">"
@@ -103,16 +102,16 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
             Transform, Your, Enterprise Operatio, n, s</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
-            Three, revolutionary, platforms delivering, unprecedented, ROI, securi, t, y, and, operational, excellence
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">")
+  Three, revolutionary, platforms delivering, unprecedented, ROI, securi, t, y, and, operational, excellence
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
-            const, Ico, n = artic, l, e.ic, o, n
-            return(<Li, n, k
-            return (
-              <Li, n, k
+            const, Ico, n = artic, l, e.ic, o, n;
+  return(<Li, n, k;
+  return (
+              <Li, n, k;
   k, e, y={ind, e, x}
                 to={artic, l, e.li, n, k}
                 classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
@@ -158,7 +157,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                     <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>"
-                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e
+                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e)
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>)
                 </d, i, v>)
                   {/* C, T, A */}"
@@ -182,7 +181,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"
         <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
         {/* Bottom, CT, A */}"
@@ -198,7 +197,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
               <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hov, e
             <Li, n, k;"

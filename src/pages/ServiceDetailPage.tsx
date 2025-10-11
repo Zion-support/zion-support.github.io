@@ -6,7 +6,7 @@ interface ServiceDetailPageProps {}
 
 const ServiceDetailPage: React.FC<ServiceDetailPageProps> = () => {
   const params = useParams()
-  const id = params.id
+  const id = params.id;
   const [service, setService] = useState<any>(null)
   const [selectedTier, setSelectedTier] = useState<string>('basic')
   useEffect(() => {
@@ -45,8 +45,7 @@ export default function ServiceDetailPage() {
     setService(foundService)
   }, [id])
   if (!service) {
-    return (
-import React from 'react'
+    return(import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -70,8 +69,7 @@ const pricingModelColors: Record<string, string> = {
   "project-based": "bg-purple-100 text-purple-800",
   "one-time": "bg-green-100 text-green-800",
   "usage-based": "bg-orange-100 text-orange-800",
-}
-export default function ServiceDetailPage() {
+})
   const { serviceId } = useParams()
   const service = EXPANDED_SERVICES.find(s => s.id === serviceId)
   if (!service) {
@@ -211,8 +209,8 @@ export default function ServiceDetailPage() {
                     <label className="block text-sm font-medium text-zion-slate-light mb-2">
                       Select Tier
                     </label>
-                    <select
-                      value={selectedTier}
+                    <select;
+  value={selectedTier}
                       onChange={(e) => setSelectedTier(e.target.value)}
                       className="w-full bg-zion-blue/30 border border-zion-blue/50 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-gold"
                     >
@@ -311,16 +309,15 @@ export default function ServiceDetailPage() {
     }
     return null
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <SEO 
-        title={`${service.title} - Zion Tech Group`}
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <SEO;
+  title={`${service.title} - Zion Tech Group`}
   return (
     <>
-      <SEO 
-        title={`${service.title} | Zion Tech Group`}
-        description={service.description}
-        keywords={service.tags.join(', ')}
+      <SEO;
+  title={`${service.title} | Zion Tech Group`}
+        description={service.description})
+  keywords={service.tags.join(', ')}
         canonical={`https://ziontechgroup.com/services/${service.id}`}
       />
 
@@ -338,3 +335,15 @@ export default function ServiceDetailPage() {
       </section>
 
 </div></div></div></div></div></div></div></a></a>
+</SEO>
+</SEO>
+</div>
+</div>
+</div>
+</div>
+</div>
+</string>
+</any>
+</string>
+</any>
+</ServiceDetailPageProps>

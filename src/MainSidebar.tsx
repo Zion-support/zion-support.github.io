@@ -69,20 +69,20 @@ const contactInfo = [;
     { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
     { icon: MapPin, text: 'San Francisco, CA', href: '#location' },
   ];
-return (;
+return(;
     <>
       {/* Overlay */}
       {isOpen && (
         <$2 />;
-className="fixed inset-0 bg-black/50 z-40 lg:hidden";
-onClick={onClose}
+className="fixed inset-0 bg-black/50 z-40 lg:hidden";)
+  onClick={onClose}
         />
       )}
       
       {/* Sidebar */}
       < className={cn($2 />
-        "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",;
-isOpen ? "translate-x-0" : "-translate-x-full"
+        "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",;)
+  isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex flex-col h-full">
           {/* Header */}
@@ -114,15 +114,15 @@ onClick={onClose}
                   {section.items.map((item) => {};
 const IconComponent = item.icon;;
 const isActive = location.pathname === item.href;;
-return (;
+return(;
 }
                       <li key={item.name}>
                         <$2 />;
 to={item.href}
                           onClick={onClose}
                           className={cn(
-                            "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",;
-isActive
+                            "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",;)
+  isActive
                               ? "bg-zion-purple/20 text-zion-cyan"
                               : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
                           )}
@@ -146,12 +146,12 @@ Contact Info
             <div className="space-y-2">
               {contactInfo.map((contact) => {};
 const IconComponent = contact.icon;;
-return (;
+return(;
                   <$2 />;
 }
 key={contact.text}
-                    href={contact.href}
-                    className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    href={contact.href})
+  className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     <IconComponent className="w-3 h-3 mr-2" />
                     {contact.text}

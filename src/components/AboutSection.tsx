@@ -36,7 +36,7 @@ icon: (
       )
     }
   ];
-return (;
+return(;
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -62,8 +62,8 @@ Our team of expert developers, data scientists, and IT professionals;
 work tirelessly to deliver solutions that not only meet your current;
 needs but also scale with your future ambitions.
             <div className="cyber-card-advanced p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">;
-Why Choose Us?
+              <h3 className="text-2xl font-bold text-white mb-6">;)
+  Why Choose Us?
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,3 +154,53 @@ about technology and committed to delivering exceptional results.
   </h3>
   </h3>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></h4></h4></ul></li></li></li></li>
+</p>
+</h4>
+</span>
+</div>
+</div>
+</p>
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</span>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</ul>
+</div>
+</p>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</p>
+</span>
+</h2>
+</div>
+</div>
+</svg>
+</svg>
+</svg>

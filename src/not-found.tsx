@@ -38,8 +38,7 @@ export default function NotFound() {
       icon: '📞'
     },
   ]
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+  return(<div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
         {/* Error Code */}
         <div className="mb-8">
@@ -49,8 +48,8 @@ export default function NotFound() {
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found
           <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
+            The page you're looking for doesn't exist or has been moved. )
+  Don't worry, let's get you back on track!
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {popularPages.map((page, index) => (
@@ -88,3 +87,10 @@ export default function NotFound() {
   </h2>
   </h1>
 </div></div></div></div></div></p></p></h3>
+</p>
+</h3>
+</p>
+</div>
+</div>
+</div>
+</div>

@@ -33,8 +33,8 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               <Link, className="w-5 h-5" />
             <, t, o="/ca, s, e-studi, e, s"$2 />
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
-              <Zap, className="w-5 h-5" />
-              View, Case, Studies
+              <Zap, className="w-5 h-5" />)
+  View, Case, Studies
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
@@ -51,7 +51,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
                 {  it, e, m.isN, e, w  && (
                   <span, classNam, e = "bg-r, e, d-500, tex, t-white, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m">
                     N, E, W
-  ]; return (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
+  ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" />
@@ -78,8 +78,8 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             </Li, n, k>"
             <, t, o="/ca, s, e-studi, e, s" "$2 />
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
-              <Zap, className="w-5 h-5" />
-              View, Case, Studies
+              <Zap, className="w-5 h-5" />)
+  View, Case, Studies
         {/* Featured, Content, Car, d, s */}"
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
             {/* TODO: Fix JSX expression */}"

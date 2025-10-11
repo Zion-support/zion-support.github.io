@@ -60,8 +60,8 @@ return
       set_loading (true),;
 set_error (null),;
 try {;
-const { data: response_data}, error: func_error } = await supabase.functions.invoke ('get - shared - whitepaper', {;,
-body: { id }}),;
+const { data: response_data}, error: func_error } = await supabase.functions.invoke('get - shared - whitepaper', {;,)
+  body: { id }}),;
 if (throw new Error (`Supabase function error: ${func_error.message)}`), ) {;
 $2
 }
@@ -174,15 +174,14 @@ return
       setLoading(true),;
 setError(null),;
 try {;
-const { data: responseData}, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;,
-body: { id }}),
+const { data: responseData}, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;,)
+  body: { id }}),
       }
       setLoading(true);
 setError(null);
 try {;
-const { data: responseData}, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {;,
-body: { id }});
-if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
+const { data: responseData}, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {;,)
+  body: { id }});
 if (responseData && (responseData as any).error) throw new Error((responseData as any).error);
 if (!responseData |!(responseData as any).whitepaper_data) {;
 throw new Error('Shared whitepaper not found or data is invalid.')
@@ -237,7 +236,7 @@ return (;
     )
   }
   const { whitepaper_data: whitepaper } = sharedData;
-return (;
+return(;
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
             <Button asChild variant="outline">
@@ -246,8 +245,8 @@ return (;
                  </Link>
             </Button>
             {!sharedData.is_public && isAdmin && (
-                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
-Private (Admin View)
+                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;)
+  Private (Admin View)
                 </span>
             )}
         </div>
@@ -267,8 +266,8 @@ export default WhitepaperViewPage
       setLoading(true),;
 setError(null),;
 try {;
-const { data: responseData}, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;,
-body: { id }}),
+const { data: responseData}, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;,)
+  body: { id }}),
     },;
 fetchWhitepaper()
   }, [id]),;
@@ -307,15 +306,15 @@ return (;
   }
 ;
 const { whitepaper_data: whitepaper } = sharedData,;
-return (;
+return(;
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
             <Button asChild variant="outline">
                  <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back</$1></$1>
             {!sharedData && sharedData.is_public && isAdmin && (
-                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
-Private (Admin View)</$1>
+                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;)
+  Private (Admin View)</$1>
             )}
         </div>
       <WhitepaperPreviewPanel;
@@ -369,7 +368,7 @@ $2
           <Link href="/"><ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link></$1></$1>)
   }
   const { whitepaper_data: whitepaper } = shared_data,;
-return (;
+return(;
     <div className="container mx - auto p - 4 md:p - 8 bg - gray - 50 min - h-screen">
         <div className="mb - 6 flex justify - between items - center">
             <Button as_child variant="outline">
@@ -377,8 +376,8 @@ return (;
                     <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back</$1></$1>
             {!shared_data.is_public && is_admin && (
                 <span className="px - 3 py - 1 text - xs font - semibold text - yellow - 800 bg - yellow - 200 rounded - full">
-  </span>;
-Private (Admin View)</$1>)}
+  </span>;)
+  Private (Admin View)</$1>)}
         </div>
       <WhitepaperPreviewPanel;
 sections={whitepaper.sections,}
@@ -391,3 +390,28 @@ export default WhitepaperViewPage,;
 setError("No whitepaper ID provided."),;
 setLoading(false),
 
+
+</Link>
+</Button>
+</div>
+</Button>
+</div>
+</Button>
+</div>
+</Button>
+</div>
+</span>
+</Button>
+</div>
+</Button>
+</div>
+</Button>
+</div>
+</Button>
+</div>
+</string>
+</SharedWhitepaper>
+</string>
+</SharedWhitepaper>
+</string>
+</SharedWhitepaper>

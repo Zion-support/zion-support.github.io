@@ -25,8 +25,8 @@
                 AI, FinTech, Transformation
           <, t, o='/<bl, o, g'$2 />
             className='bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
-          >
-            Explore, All, Content →
+          >)
+  Explore, All, Content →
           </Li, n, k>)
         </div>)
       </div>)
@@ -56,8 +56,8 @@
               Explore, Security, Solutions
             <, t, o='/bl, o, g/ai-cybersecuri, t, y-<20, 2, 6'$2 />
               className='bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-r, e, d-600, transitio, n-colo, r, s'
-            >
-              Read, Security, Guide
+            >)
+  Read, Security, Guide
           </div>)
         </div>)
       </div>)
@@ -95,8 +95,8 @@
               <div, className='te, x, t-sm, opacit, y-90'>Spee, c, h & Sound, A, I
           <, t, o='/servic, e, s/ai-multimod, a, l-<enterpri, s, e'$2 />
             className='bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            Explore, Multimodal, AI →
+          >)
+  Explore, Multimodal, AI →
           </Li, n, k>)
         </div>)
       </div>)
@@ -134,8 +134,8 @@
               <div, className='te, x, t-sm, opacit, y-90'>AI, operation, s
           <, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'$2 />
             className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            Read, Sustainability, Guide →
+          >)
+  Read, Sustainability, Guide →
           </Li, n, k>)
         </div>)
       </div>)
@@ -177,8 +177,8 @@
                   $8M, ROI, with 98% automati, o, n
           <, t, o='/<bl, o, g'$2 />
             className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            View, All, Latest Conte, n, t →
+          >)
+  View, All, Latest Conte, n, t →
           </Li, n, k>)
         </div>)
       </div>)
@@ -215,8 +215,8 @@
               <div, className='te, x, t-sm, opacit, y-90'>Fully, automate, d
           <, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'$2 />
             className='bg-white, tex, t-cy, a, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            Read, Complete, Guide →
+          >)
+  Read, Complete, Guide →
           </Li, n, k>)
         </div>)
       </div>)
@@ -235,8 +235,8 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6
             <span, className='te, x, t-sm, opacit, y-90'></span>FinTech</span>, Revolutio, n
-          <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
-            AI, FinTech, Transformation 20, 2, 6;)
+          <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>)
+  AI, FinTech, Transformation 20, 2, 6;)
           </h2>)
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>)
             Revolutionize, your, financial services, with, AI-powered, automat, i, o, n)
@@ -292,8 +292,8 @@
               <div, className='te, x, t-sm, opacit, y-90'>Return, on, investment
           <, t, o='/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6'$2 />
             className='bg-white, tex, t-oran, g, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            View, Case, Study →
+          >)
+  View, Case, Study →
           </Li, n, k>)
         </div>)
       </div>)
@@ -335,28 +335,23 @@
               Sustainabili, t, y
           <, t, o='/<bl, o, g'$2 />
             className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            Explore, All, Content →
+          >)
+  Explore, All, Content →
           </Li, n, k>)
         </div>)
       </div>)
     </d, i, v > )
-// Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}
  }
 // AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
 // AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
-// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
 // New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {/* TODO: Fix JSX expression */}
  }
 // AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {/* TODO: Fix JSX expression */}
  }
-// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
-// AI Retail Automation Banner export function AIRetailAutomationBann e r() {/* TODO: Fix JSX expression */}
  }
-// Latest 2026 Content Banner export function Latest2026ContentBann e r() {/* TODO: Fix JSX expression */}
  }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3>

@@ -63,7 +63,7 @@ const,
   s://zion.app${canonicalUrl}`
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
   }
-  return (<Helmet></Helmet>
+  return(<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
@@ -98,7 +98,7 @@ const,
       {/* Performance hints */}"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
-      <nk rel="preconnect" href="http,"$2 />
+      <nk rel="preconnect" href="http,"$2 />)
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}"

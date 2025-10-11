@@ -21,8 +21,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management
           <div, className="te, x, t-center, m, b-16">"
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">"
-const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">")
+  const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Head, e, r */}"
           <div, className="te, x, t-center, m, b-16"></div>"
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>"
@@ -38,8 +38,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"
               Smart, Appointment, Scheduler</$1>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">"
-              Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management
-              and, automated, reminders. Streamline, your, practice with, intelligent, scheduling.
+              Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;
+  and, automated, reminders. Streamline, your, practice with, intelligent, scheduling.
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">"
               <div, className="flex, item, s-center, justif, y-center, m, b-4">"
                 <span, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-6, 0, 0">Starting, a, t $49/mon, t, h</sp, a, n>"
@@ -51,7 +51,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   hr, e, f="te
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
                 <$2 />
-  hr, e, f="te
+  hr, e, f="te;
   l: +130246409, 5, 0" 
             </p>"
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";"
@@ -245,7 +245,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3" />"
                     Email, suppor, t
                 <$2 />
-  hr, e, f="te
+  hr, e, f="te;
   l: +130246409, 5, 0" 
                 <a></a>"
   hr, e, f="te,"
@@ -372,7 +372,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
                 <$2 />
-  hr, e, f="te
+  hr, e, f="te;
   l: +130246409, 5, 0" 
           {/* Contact, Sectio, n */}"
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
@@ -406,3 +406,5 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
 }
 export default SmartAppointmentScheduler;"
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></p></h1></h1></h1></h2></h2></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section>
+</title>
+</Helmet>

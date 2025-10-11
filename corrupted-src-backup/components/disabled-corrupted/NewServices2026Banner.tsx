@@ -10,7 +10,6 @@ export default function NewServices2026Bann, e, r({)
       title: 'AI, Autonomous, Cloud O, p, s',
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
-export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */})
 }: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -38,9 +37,9 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
              }`}
           >
             NEW, 2026, SERVICES</$1> <, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}$2 />
-          >
-            Latest, AI, Services
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
+          >)
+  Latest, AI, Services
+  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     >
       <div, className='container, m, x-auto, p, x-6'>
@@ -66,8 +65,8 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
               >
                 {s.title}`
               </d, i, v > <, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-5, 0, 0'  : 'te, x, t-whi, t, e/7, 0'  }, mt-2, tex, t-sm`}$2 />
-              >
-                Learn, mor, e →)
+              >)
+  Learn, mor, e →)
               </div>)
               >
                 Learn, mor, e →

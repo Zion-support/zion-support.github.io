@@ -15,7 +15,7 @@ const tabs: TabDefinition[] = [
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],;
-return (;
+return(;
 
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
@@ -40,8 +40,8 @@ id: string,;,
 label: string,;,
 icon: LucideIcon
 }
-;
-export function DeveloperPortal() {;
+;)
+  export function DeveloperPortal() {;
 }
 const { user } = useAuth(),;
 const [activeTab, setActiveTab] = useState<string>("documentation"),
@@ -53,7 +53,7 @@ const tabs: TabDefinition[] = [
     { id: 'webhooks', label: 'Webhooks', icon: Webhook }
     { id: 'logs', label: 'Logs', icon: List }
   ];
-return (;
+return(;
 
     <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
       <div className='mb-8'>
@@ -77,8 +77,8 @@ Access the Zion API, manage your API keys, and set up webhooks.
 activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
-                }`}
-                onClick={(,) => setActiveTab(tab.id),}
+                }`})
+  onClick={(,) => setActiveTab(tab.id),}
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -114,7 +114,7 @@ onClick={() => setActiveTab(tab.id)}
           {tabs.map((tab) => {};
 }
 const Icon = tab.icon;},;
-return (;
+return(;
               <$2 />;
 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${};
@@ -143,8 +143,7 @@ label: string;,
 icon: LucideIcon;
 export /**
  * DeveloperPortal - Function description
- */;
-function DeveloperPortal() {;
+ */;)
 }
 const { user } = use_auth ();
 const [active_tab, setActiveTab] = useState < string>('documentation')
@@ -155,7 +154,7 @@ const tabs: TabDefinition[] = [
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ];
-return (;
+return(;
     <div className='w - full max - w-7xl mx - auto p - 4 md:p - 8'>
       <div className='mb - 8'>
         <h1 className='text - 3xl font - bold text - white flex items - center'>
@@ -170,8 +169,8 @@ Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
         <div className='flex flex - wrap -mb - px'>
           {tabs.map (tab => {};
 const Icon = tab.icon;;
-}
-on_click={() => setActiveTab (tab.id)}                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${};
+})
+  on_click={() => setActiveTab (tab.id)}                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${};
 active_tab === tab.id
                     ? "text - white border - zion - purple"
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700"}`}
@@ -202,7 +201,6 @@ interface TabDefinition {;,
 id: string;,
 label: string;,
 icon: LucideIcon;
-export function DeveloperPortal() {;
 }
 const { user } = useAuth();
 const [activeTab, setActiveTab] = useState<string>('documentation')
@@ -213,7 +211,7 @@ const tabs: TabDefinition[] = [
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ];
-return (;
+return(;
     <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
       <div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
@@ -227,8 +225,8 @@ Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
         <div className='flex flex-wrap -mb-px'>
           {tabs && tabs.map(tab => {};
 const Icon = tab && tab.icon;;
-}
-onClick={() => setActiveTab(tab && tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${};
+})
+  onClick={() => setActiveTab(tab && tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${};
 activeTab === tab && tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"}`}
@@ -316,3 +314,15 @@ return (;
 }
   )
 }</$1>
+</h1>
+</string>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h1>
+</string>
+</string>

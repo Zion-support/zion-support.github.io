@@ -52,8 +52,7 @@ import { SEO } from '@/components/SEO'
     if (category === 'all') return []
     return serviceSubcategories[category as keyof typeof serviceSubcategories] || []
   }
-  return (
-import React, { useState } from 'react'
+  return(import React, { useState } from 'react'
 import { SEO } from '../components/SEO'
 import { 
   Brain, 
@@ -84,8 +83,8 @@ import {
   Monitor
 } from 'lucide-react'
 import { INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SAAS_CATEGORIES } from '../data/innovativeMicroSaasServices'
-import { SPECIALIZED_IT_SERVICES, SPECIALIZED_IT_CATEGORIES } from '../data/specializedITServices'
-export default function ComprehensiveServicesPage() {
+import { SPECIALIZED_IT_SERVICES, SPECIALIZED_IT_CATEGORIES } from '../data/specializedITServices')
+  export default function ComprehensiveServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [priceRange, setPriceRange] = useState('all')
@@ -106,8 +105,8 @@ export default function ComprehensiveServicesPage() {
     return iconMap[category] || Globe
   }
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || )
+  service.category.toLowerCase().includes(selectedCategory.toLowerCase())
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesPrice = priceRange === 'all' || 
@@ -118,8 +117,7 @@ export default function ComprehensiveServicesPage() {
   })
   const ServiceCard = ({ service }: { service: any }) => {
     const CategoryIcon = getCategoryIcon(service.category)
-    return (
-      <div className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 group">
+    return(<div className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 group">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
@@ -139,8 +137,8 @@ export default function ComprehensiveServicesPage() {
           </div>
           {service.status === 'Active' && (
             <div className="flex items-center gap-1 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              Active
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>)
+  Active
             </div>
           )}
         </div>
@@ -225,8 +223,8 @@ export default function ComprehensiveServicesPage() {
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-              <Input
-                type="text"
+              <Input;
+  type="text"
                 placeholder="Search for services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -237,8 +235,8 @@ export default function ComprehensiveServicesPage() {
 
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4">
-            <select
-              value={selectedCategory}
+            <select;
+  value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white"
             >
@@ -248,8 +246,8 @@ export default function ComprehensiveServicesPage() {
               ))}
             </select>
             
-            <select
-              value={priceRange}
+            <select;
+  value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
               className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white"
             >
@@ -284,7 +282,6 @@ import {
 } from "lucide-react"
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "@/data/comprehensiveServices"
 import { SEO } from "@/components/SEO"
-export default function ComprehensiveServicesPage() {
   DollarSign, 
   CheckCircle, 
   TrendingUp, 
@@ -300,13 +297,12 @@ export default function ComprehensiveServicesPage() {
 } from 'lucide-react'
 import { SEO } from '@/components/SEO'
 interface FilterState {
-  search: string
-  category: string
-  pricingModel: string
+  search: string,
+  category: string;
+  pricingModel: string,
   priceRange: string
 }
 
-export default function ComprehensiveServicesPage() {
   const [filters, setFilters] = useState<FilterState>({
     search: '',
     category: '',
@@ -314,14 +310,14 @@ export default function ComprehensiveServicesPage() {
     priceRange: ''
   })
   const filteredServices = useMemo(() => {
-    return COMPREHENSIVE_SERVICES.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(filters.search.toLowerCase()) ||
+    return COMPREHENSIVE_SERVICES.filter(service => {)
+  const matchesSearch = service.title.toLowerCase().includes(filters.search.toLowerCase()) ||
                            service.description.toLowerCase().includes(filters.search.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(filters.search.toLowerCase()))
-      const matchesCategory = !filters.category || service.category === filters.category
-      const matchesPricingModel = !filters.pricingModel || service.pricingModel === filters.pricingModel
-      let matchesPriceRange = true
-      if (filters.priceRange) {
+      const matchesCategory = !filters.category || service.category === filters.category;
+  const matchesPricingModel = !filters.pricingModel || service.pricingModel === filters.pricingModel;
+  let matchesPriceRange = true;
+  if (filters.priceRange) {
         const [min, max] = filters.priceRange.split('-').map(Number)
         if (max) {
           matchesPriceRange = service.price >= min && service.price <= max
@@ -334,7 +330,7 @@ export default function ComprehensiveServicesPage() {
     })
   }, [filters])
   const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured)
-  const categories = SERVICE_CATEGORIES
+  const categories = SERVICE_CATEGORIES;
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning':
@@ -368,8 +364,8 @@ export default function ComprehensiveServicesPage() {
       case 'project-based':
         return 'Project-based'
       default:
-        return model
-import React from 'react'
+        return model;
+  import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -449,8 +445,7 @@ const ComprehensiveServicesPage = () => {
         return 'bg-gray-100 text-gray-800 border-gray-200'
     }
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple to-zion-blue-dark text-white">
         <div className="container mx-auto px-4 py-16">
@@ -600,8 +595,8 @@ const ComprehensiveServicesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Service Categories
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions across all major domains
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">)
+  Comprehensive technology solutions across all major domains
             </p>
           </div>
 
@@ -678,47 +673,46 @@ const ComprehensiveServicesPage = () => {
   ExternalLink
 } from 'lucide-react'
 import { SEO } from '@/components/SEO'
-export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('featured')
-  const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {)
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
   const [selectedPricingTier, setSelectedPricingTier] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('rating')
   const filteredServices = useMemo(() => {
     let filtered = COMPREHENSIVE_SERVICES
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    // Filter by search term;
+  if (searchTerm) {
+      filtered = filtered.filter(service =>)
+  service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
+    // Filter by category;
+  if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
-    // Filter by pricing tier
-    if (selectedPricingTier !== 'all') {
+    // Filter by pricing tier;
+  if (selectedPricingTier !== 'all') {
       const tier = SERVICE_PRICING_TIERS[selectedPricingTier as keyof typeof SERVICE_PRICING_TIERS]
       if (tier) {
-        filtered = filtered.filter(service => {
-          const discountedPrice = service.price * (1 - tier.discount)
-          if (selectedPricingTier === 'startup') return discountedPrice <= 5000
-          if (selectedPricingTier === 'smb') return discountedPrice <= 15000
-          return true; // enterprise
+        filtered = filtered.filter(service => {)
+  const discountedPrice = service.price * (1 - tier.discount)
+          if (selectedPricingTier === 'startup') return discountedPrice <= 5000;
+  if (selectedPricingTier === 'smb') return discountedPrice <= 15000;
+  return true; // enterprise
         })
       }
     }
 
-    // Sort services
-    filtered.sort((a, b) => {
+    // Sort services;
+  filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
           return (a.price || 0) - (b.price || 0)
@@ -747,10 +741,9 @@ export default function ComprehensiveServicesPage() {
     }
     return `$${price}`
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <SEO 
-        title="Comprehensive IT & AI Services - Zion Tech Group" 
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <SEO;
+  title="Comprehensive IT & AI Services - Zion Tech Group" 
         description="Discover our comprehensive range of micro SAAS services, IT solutions, and AI services. Expert consulting, development, and support for businesses of all sizes."
         keywords="IT services, AI services, micro SAAS, technology consulting, cybersecurity, cloud migration, data analytics"
         canonical="https://ziontechgroup.com/services"
@@ -811,30 +804,29 @@ const supportLevelColors = {
   "basic": "bg-gray-100 text-gray-800",
   "premium": "bg-blue-100 text-blue-800",
   "enterprise": "bg-purple-100 text-purple-800"
-}
-export default function ComprehensiveServicesPage() {
+})
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all')
   const [priceRange, setPriceRange] = useState<string>('all')
-  // Filter services based on search and filters
-  const filteredServices = EXPANDED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  // Filter services based on search and filters;
+  const filteredServices = EXPANDED_SERVICES.filter(service => {)
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory
-    let matchesPrice = true
-    if (priceRange === 'under-5k') matchesPrice = (service.price || 0) < 5000
-    else if (priceRange === '5k-15k') matchesPrice = (service.price || 0) >= 5000 && (service.price || 0) < 15000
-    else if (priceRange === '15k-30k') matchesPrice = (service.price || 0) >= 15000 && (service.price || 0) < 30000
-    else if (priceRange === 'over-30k') matchesPrice = (service.price || 0) >= 30000
-    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
+  const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+  let matchesPrice = true;
+  if (priceRange === 'under-5k') matchesPrice = (service.price || 0) < 5000;
+  else if (priceRange === '5k-15k') matchesPrice = (service.price || 0) >= 5000 && (service.price || 0) < 15000;
+  else if (priceRange === '15k-30k') matchesPrice = (service.price || 0) >= 15000 && (service.price || 0) < 30000;
+  else if (priceRange === 'over-30k') matchesPrice = (service.price || 0) >= 30000;
+  return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice
   })
   const getSubcategories = () => {
     if (selectedCategory === 'all') return []
-    const categoryKey = selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES
-    return EXPANDED_SERVICE_SUBCATEGORIES[categoryKey] || []
+    const categoryKey = selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES;
+  return EXPANDED_SERVICE_SUBCATEGORIES[categoryKey] || []
   }
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -860,10 +852,9 @@ export default function ComprehensiveServicesPage() {
   const getDeliveryTime = (availability: string) => {
     return availability || 'Contact for timeline'
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO 
-        title="Comprehensive IT & AI Services - Zion Tech Group" 
+  return(<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEO;
+  title="Comprehensive IT & AI Services - Zion Tech Group" 
         description="Discover our complete range of professional IT services, AI solutions, and technology consulting. From AI development to cybersecurity, cloud migration to blockchain solutions."
         keywords="IT services, AI development, cybersecurity, cloud migration, blockchain, IoT, mobile development, web development, Zion Tech Group"
         canonical="https://ziontechgroup.com/comprehensive-services"
@@ -919,10 +910,10 @@ export default function ComprehensiveServicesPage() {
             <div className="lg:col-span-2">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <Input
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                <Input;
+  placeholder="Search services..."
+                  value={searchTerm})
+  onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
                 />
               </div>
@@ -1056,8 +1047,8 @@ export default function ComprehensiveServicesPage() {
                       </div>
 
                       {/* CTA Button */}
-                      <Button 
-                        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 group-hover:shadow-lg transition-all duration-300"
+                      <Button;
+  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 group-hover:shadow-lg transition-all duration-300"
                         asChild
                       >
                         <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}>
@@ -1077,8 +1068,8 @@ export default function ComprehensiveServicesPage() {
               {filteredServices.length} Services Available
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Discover the perfect solution for your business needs from our comprehensive portfolio 
-              of innovative services and solutions.
+              Discover the perfect solution for your business needs from our comprehensive portfolio;
+  of innovative services and solutions.
             </p>
           </div>
           
@@ -1109,8 +1100,8 @@ export default function ComprehensiveServicesPage() {
               </button>
             </div>
               {/* Pricing Tier Filter */}
-              <select
-                value={selectedPricingTier}
+              <select;
+  value={selectedPricingTier}
                 onChange={(e) => setSelectedPricingTier(e.target.value)}
                 className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none"
               >
@@ -1123,8 +1114,8 @@ export default function ComprehensiveServicesPage() {
               </select>
 
               {/* Sort */}
-              <select
-                value={sortBy}
+              <select;
+  value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none"
               >
@@ -1146,8 +1137,8 @@ export default function ComprehensiveServicesPage() {
               <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 {/* Service Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={service.images[0]}
+                  <img;
+  src={service.images[0]}
                     alt={service.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -1205,8 +1196,8 @@ export default function ComprehensiveServicesPage() {
             {ALL_EXPANDED_SERVICES.filter(service => service.featured).slice(0, 6).map((service) => (
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-zion-purple/20">
                 <div className="relative">
-                  <img 
-                    src={service.images[0]} 
+                  <img;
+  src={service.images[0]} 
                     alt={service.title}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
@@ -1271,8 +1262,8 @@ export default function ComprehensiveServicesPage() {
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <p className="text-zion-slate-light text-lg">No services match your current filters.</p>
-              <Button 
-                onClick={() => {
+              <Button;
+  onClick={() => {
                   setSearchQuery('')
                   setSelectedCategory('all')
                   setSelectedSubcategory('all')
@@ -1747,3 +1738,51 @@ export default function ComprehensiveServicesPage() {
   )
 }
 export default ComprehensiveServicesPage</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></section></section></section></section></section>
+</Button>
+</Link>
+</section>
+</section>
+</section>
+</img>
+</CardContent>
+</div>
+</div>
+</img>
+</div>
+</div>
+</div>
+</CardHeader>
+</div>
+</Input>
+</SEO>
+</div>
+</string>
+</string>
+</string>
+</div>
+</div>
+</section>
+</SEO>
+</div>
+</string>
+</string>
+</string>
+</Card>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</FilterState>
+</div>
+</Input>
+</div>
+</div>
+</div>
+</div>
+</div>

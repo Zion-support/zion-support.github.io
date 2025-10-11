@@ -1,8 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-        return (
-import { Link } from 'react-router-dom'
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
+        return(import { Link } from 'react-router-dom')
+  const _UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
     {
@@ -12,8 +11,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       category: 'blog',
-      metrics: {
-        roi: '30,000%',
+      metrics: {,
+  roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
         timeline:       ,
@@ -69,8 +68,8 @@ readingTimereadingTime: '45 min read',
             <span className="text-2xl">⚡</span>
           <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos,s transforming enterprises worldwide</p>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence;
+  content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
             <$2 />
@@ -117,8 +116,8 @@ readingTimereadingTime: '45 min read',
         {/* Call to Action */}
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions
-                to="/contact"
+            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions;
+  to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <ath$2 />
                     strokeLinecap="round"
@@ -250,3 +249,20 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 export default UltimateBusinessIntelligenceShowcase2025,
   </path>
 </div></div></div></div></div></div></div></span></span></span></span></span></span></a></p></p></p></p></h3></h3></h3>
+</h3>
+</span>
+</span>
+</div>
+</span>
+</svg>
+</p>
+</h3>
+</span>
+</div>
+</p>
+</h3>
+</span>
+</span>
+</div>
+</div>
+</div>

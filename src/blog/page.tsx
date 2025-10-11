@@ -2,15 +2,15 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import ContentPreviewCard from '../components/ContentPreviewCard'
 interface BlogPost {
-    id: string
-  title: string
-  description: string
-  category: string
-  readTime: string
-  date: string
-  path: string
-  image: string
-  featured: boolean
+    id: string,
+  title: string;
+  description: string,
+  category: string;
+  readTime: string,
+  date: string;
+  path: string,
+  image: string;
+  featured: boolean;
   stats?: {
     views: number,
     engagement: number
@@ -174,8 +174,8 @@ export default function BlogPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🌟 Featured Articles
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
-                <ContentPreviewCard
-                  key={post.id}
+                <ContentPreviewCard;
+  key={post.id}
                   {...post}
                 />
               ))}
@@ -186,8 +186,8 @@ export default function BlogPage() {
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
+              <ContentPreviewCard;
+  key={post.id}
                 {...post}
               />
             ))}
@@ -217,3 +217,22 @@ export default function BlogPage() {
   </p>
   </string>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></h1></h2></section></section></header>
+</section>
+</h2>
+</section>
+</p>
+</h1>
+</header>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

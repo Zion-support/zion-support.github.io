@@ -31,8 +31,8 @@ const categories = [;
     { id: 'database', name: 'Database' },
     { id: 'devops', name: 'DevOps' }
   ];
-const filteredServices = services.filter(service =>;;
-selectedCategory === 'all' || service.category === selectedCategory
+const filteredServices = services.filter(service =>;;)
+  selectedCategory === 'all' || service.category === selectedCategory
   );
 return (;
     <>

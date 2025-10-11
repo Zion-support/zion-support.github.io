@@ -4,7 +4,7 @@ const ITServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
-  // IT Services data
+  // IT Services data;
   const itServices = [
     {
       id: 1,
@@ -107,8 +107,8 @@ const ITServicesPage: React.FC = () => {
       duration: "8-16 weeks",
       expertise: "Senior Cloud Architects",
       technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -153,8 +153,8 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "IT Operations Specialists",
       technologies: ["Monitoring Tools", "Automation", "Cloud Platforms", "Security Tools"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -199,8 +199,8 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "Network Engineers",
       technologies: ["Cisco", "Juniper", "Aruba", "SD-WAN", "WiFi 6", "5G"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -249,8 +249,8 @@ const ITServicesPage: React.FC = () => {
       duration: "2-4 weeks",
       expertise: "Security Analysts",
       technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -295,8 +295,8 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "Security Engineers",
       technologies: ["SIEM", "EDR", "SOAR", "Threat Intel", "Analytics"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -345,8 +345,8 @@ const ITServicesPage: React.FC = () => {
       duration: "12-24 weeks",
       expertise: "AI Specialists",
       technologies: ["TensorFlow", "PyTorch", "Azure ML", "AWS SageMaker", "Python"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -391,8 +391,8 @@ const ITServicesPage: React.FC = () => {
       duration: "8-16 weeks",
       expertise: "ML Engineers",
       technologies: ["Python", "R", "TensorFlow", "PyTorch", "MLflow", "Kubernetes"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -424,8 +424,8 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "DevOps Engineers",
       technologies: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -471,8 +471,8 @@ const ITServicesPage: React.FC = () => {
       duration: "6-12 weeks",
       expertise: "DevOps Engineers",
       technologies: ["Terraform", "Ansible", "CloudFormation", "ARM Templates"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -504,8 +504,8 @@ const ITServicesPage: React.FC = () => {
       duration: "8-16 weeks",
       expertise: "Data Architects",
       technologies: ["Snowflake", "Databricks", "AWS Redshift", "Azure Synapse"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -535,8 +535,8 @@ const ITServicesPage: React.FC = () => {
       duration: "6-12 weeks",
       expertise: "BI Developers",
       technologies: ["Power BI", "Tableau", "Qlik", "Looker", "SQL", "Python"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -568,8 +568,8 @@ const ITServicesPage: React.FC = () => {
       duration: "16-32 weeks",
       expertise: "Digital Transformation Consultants",
       technologies: ["Cloud", "AI/ML", "IoT", "Automation", "Analytics"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {,
+  phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
@@ -577,13 +577,13 @@ const ITServicesPage: React.FC = () => {
   ]
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database']
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
-  const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = itServices.filter(service => {)
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
-    return matchesSearch && matchesCategory && matchesPricing
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+  return matchesSearch && matchesCategory && matchesPricing
   })
   const formatPrice = (price: number, model: string) => {
     switch (model) {
@@ -618,8 +618,7 @@ const ITServicesPage: React.FC = () => {
       default: return 'text-gray-400'
     }
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -629,8 +628,8 @@ const ITServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
-export default ITServicesPage
-import React from 'react'
+export default ITServicesPage;
+  import React from 'react'
 import React from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -842,12 +841,11 @@ const SERVICE_BENEFITS = [
     title: 'Expert Support',
     description: 'Access to certified IT professionals and 24/7 technical support'
   }
-]
-export default function ITServicesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
-      <SEO 
-        title="IT Services & Solutions - Zion Tech Group" 
+])
+  export default function ITServicesPage() {
+  return(<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
+      <SEO;
+  title="IT Services & Solutions - Zion Tech Group" 
         description="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure, managed services, and more. Expert IT solutions for businesses."
         keywords="IT services, cloud computing, cybersecurity, network infrastructure, managed IT services, software development, disaster recovery"
         canonical="https://ziontechgroup.com/it-services"
@@ -888,8 +886,7 @@ import {
   Star,
   TrendingUp,
 
-} from "lucide-react"
-export default function ITServicesPage() {
+} from "lucide-react")
   const itServices = [
     {
       id: "cloud-migration",
@@ -1204,8 +1201,7 @@ export default function ITServicesPage() {
       setFilteredServices(itServices.filter(service => service.category === selectedCategory))
     }
   }, [selectedCategory])
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
+  return(<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
@@ -1226,8 +1222,8 @@ export default function ITServicesPage() {
               <Settings className="h-5 w-5 mr-2" />
               Get IT Consultation
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Comprehensive IT services to modernize your infrastructure, enhance security, 
-            and drive business growth through technology innovation.
+            Comprehensive IT services to modernize your infrastructure, enhance security, )
+  and drive business growth through technology innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
@@ -1265,8 +1261,8 @@ export default function ITServicesPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-              <Button
-                key={category}
+              <Button;
+  key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
                 className={`${
@@ -1510,7 +1506,6 @@ export default function ITServicesPage() {
   Clock,
   DollarSign
 } from 'lucide-react'
-export default function ITServicesPage() {
   const itServices = [
     {
       id: 'cloud-migration',
@@ -1680,10 +1675,9 @@ export default function ITServicesPage() {
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
   ]
-  return (
-    <>
-      <SEO 
-        title="IT Services - Zion Tech Group" 
+  return(<>
+      <SEO;
+  title="IT Services - Zion Tech Group" 
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, and infrastructure solutions. Expert IT consulting and managed services."
         keywords="IT services, cloud migration, cybersecurity, DevOps, managed IT services, IT consulting"
         canonical="https://ziontechgroup.com/it-services"
@@ -1730,16 +1724,16 @@ export default function ITServicesPage() {
                 Enterprise IT Solutions
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Choose from our comprehensive portfolio of IT services, each designed to address specific 
-                business challenges and drive measurable results.
+                Choose from our comprehensive portfolio of IT services, each designed to address specific )
+  business challenges and drive measurable results.
               </p>
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((category, index) => (
-                <Button
-                  key={index}
+                <Button;
+  key={index}
                   variant={category.active ? "default" : "outline"}
                   className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"}
                 >
@@ -1850,3 +1844,10 @@ export default function ITServicesPage() {
 }
 }
 export default ITServicesPage</$1></div></div></div></div></div></div></div>
+</SEO>
+</Button>
+</SEO>
+</any>
+</string>
+</string>
+</string>

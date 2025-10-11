@@ -1,23 +1,22 @@
 }
   {
-    title: "Comprehensive Services"
-    link: "/comprehensive - services"
+    title: "Comprehensive Services",
+  link: "/comprehensive - services"
 }
   {
-    title: "Services Comparison"
-    link: "/services - comparison"
+    title: "Services Comparison",
+  link: "/services - comparison"
 }
-// Default static categories with translation keys
-
-const getDefaultCategories = (t: any,) => [
+// Default static categories with translation keys;
+  const getDefaultCategories = (t: any,) => [
 const getDefaultCategories = (t: any) => [
   {
-    id: "services"
-    name: t('categories.services')
-    description: t('categories.services_desc')
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services"
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
+    id: "services",
+  name: t('categories.services')
+    description: t('categories.services_desc'),
+  iconName: "Briefcase", // Corresponds to lucide icon name;
+  link: "/services",
+  color: "from-purple-500 to-indigo-600", // Keep color for styling
   }
   },
 
@@ -26,26 +25,26 @@ const getDefaultCategories = (t: any) => [
 
 
   {
-    id: "talents"
-    name: t('categories.talents')
-    description: t('categories.talents_desc')
-    iconName: "Users"
-    link: "/talent"
-    color: "from-cyan-500 to-blue-600"}
+    id: "talents",
+  name: t('categories.talents')
+    description: t('categories.talents_desc'),
+  iconName: "Users"
+    link: "/talent",
+  color: "from-cyan-500 to-blue-600"}
   {
-    id: "equipment"
-    name: t('categories.equipment')
-    description: t('categories.equipment_desc')
-    iconName: "HardDrive"
-    link: "/equipment"
-    color: "from-amber-500 to-orange-600"}
+    id: "equipment",
+  name: t('categories.equipment')
+    description: t('categories.equipment_desc'),
+  iconName: "HardDrive"
+    link: "/equipment",
+  color: "from-amber-500 to-orange-600"}
   {
-    id: "innovation"
-    name: t('categories.innovation')
-    description: t('categories.innovation_desc')
-    iconName: "Lightbulb"
-    link: "/innovation"
-    color: "from-emerald-500 to-green-600"}]
+    id: "innovation",
+  name: t('categories.innovation')
+    description: t('categories.innovation_desc'),
+  iconName: "Lightbulb"
+    link: "/innovation",
+  color: "from-emerald-500 to-green-600"}]
 
     id: "innovation",
     name: t('categories.innovation'),
@@ -54,8 +53,8 @@ const getDefaultCategories = (t: any) => [
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 
-// Helper to get icon component from name
-const getIcon = (iconName?: string,) => {
+// Helper to get icon component from name;
+  const getIcon = (iconName?: string,) => {
   switch (iconName) {
     case "Briefcase": return <Briefcase className="w-10 h-10" />
     case "Users": return <Users className="w-10 h-10" />
@@ -100,9 +99,9 @@ const special_services = [{
     link: "/services - comparison"
 }
 export function CategoriesSection({
-  showTitle = true
+  showTitle = true;
   className
-  style
+  style)
   categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
   const { t } = useTranslation()
@@ -122,8 +121,8 @@ const getSpecialServices = (t: any) => [
 import { GradientHeading } from "./GradientHeading",
 import Link from "next/link",
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
+  import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
@@ -131,20 +130,20 @@ interface CategoryType {
   id: string,
   name: string,
   description?: string,
-  iconName?: string, // Example field if categories have icons
+  iconName?: string, // Example field if categories have icons;
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
 }
 
-// Default static categories with translation keys
-const getDefaultCategories = (t: any) => [
+// Default static categories with translation keys;
+  const getDefaultCategories = (t: any) => [
   {
     id: "services",
     name: t('categories.services'),
     description: t('categories.services_desc'),
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services",
+    iconName: "Briefcase", // Corresponds to lucide icon name;
+  link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
   },
   {
@@ -168,8 +167,8 @@ const getDefaultCategories = (t: any) => [
     iconName: "Lightbulb",
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
-// Helper to get icon component from name
-const getIcon = (iconName?: string) => {
+// Helper to get icon component from name;
+  const getIcon = (iconName?: string) => {
   switch (iconName) {
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
@@ -191,10 +190,9 @@ interface CategoriesSectionProps {
   categories?: CategoryType[], // Accept categories as a prop
 }
 
-export function CategoriesSection({
   showTitle = true,
   className,
-  style,
+  style,)
   categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
   const { t } = useTranslation(),
@@ -203,23 +201,23 @@ export function CategoriesSection({
 
 
 
-  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
+  // Use fetchedCategories if provided, otherwise fallback to defaultCategories;
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
-        id: cat.id
-        title: cat.name, // Map name to title
-        description: cat.description |"No description available."
-        icon: getIcon(cat.iconName), // Get icon component
-        link: cat.link |`/category/${cat.id}`, // Construct link if not provided
-        // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
+        id: cat.id,
+  title: cat.name, // Map name to title;
+  description: cat.description |"No description available.",)
+  icon: getIcon(cat.iconName), // Get icon component;
+  link: cat.link |`/category/${cat.id}`, // Construct link if not provided
+        // Assign a default color or implement logic to assign colors;
+  color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
 
 
 
 
-        title: cat.name,
-        icon: getIcon(cat.iconName)})),
+        title: cat.name,)
+  icon: getIcon(cat.iconName)})),
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
@@ -247,33 +245,32 @@ const getSpecialServices = (t: any,) => [
   }
 ]
 interface CategoriesSectionProps {
-  showTitle?: boolean
-  className?: string
-  style?: React && React.CSSProperties
+  showTitle?: boolean;
+  className?: string;
+  style?: React && React.CSSProperties;
   categories?: CategoryType[], // Accept categories as a prop
 }
-export function CategoriesSection(): any ({
-  showTitle = true
+  showTitle = true;
   className
-  style
+  style)
   categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
   const { t } = useTranslation()
   const defaultCategories = getDefaultCategories(t)
-  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
+  // Use fetchedCategories if provided, otherwise fallback to defaultCategories;
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories && fetchedCategories.map(cat => ({
         id: cat && cat.id,
-        title: cat && cat.name, // Map name to title
-        description: cat && cat.description || "No description available.",
-        icon: getIcon(cat && cat.iconName), // Get icon component
-        link: cat && cat.link || `/category/${cat && cat.id}`, // Construct link if not provided
-        // Assign a default color or implement logic to assign colors
-        color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}))
+        title: cat && cat.name, // Map name to title;
+  description: cat && cat.description || "No description available.",)
+  icon: getIcon(cat && cat.iconName), // Get icon component;
+  link: cat && cat.link || `/category/${cat && cat.id}`, // Construct link if not provided
+        // Assign a default color or implement logic to assign colors;
+  color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories && defaultCategories.map(cat => ({
-        ...cat
-        title: cat && cat.name,
-        icon: getIcon(cat && cat.iconName)})),
+        ...cat;
+  title: cat && cat.name,)
+  icon: getIcon(cat && cat.iconName)})),
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -374,40 +371,39 @@ export function CategoriesSection(): any ({
   )
   switch (iconName) {
 }
-const getSpecialServices = (t: any) => [ {
+const getSpecialServices = (t: any) => [ {,
   title: t ('categories.it onsite services')
 link: "/it-onsite-services"
 }]
 interface CategoriesSectionProps {
-  showTitle?: boolean
-className?: string
-style?: React.CSSProperties
-categories?: CategoryType[], //Accept categories as a prop
-}export function CategoriesSection ({
-  showTitle = true
-className
-style
-categories: fetchedCategories, //Rename prop for clarity
+  showTitle?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  categories?: CategoryType[], //Accept categories as a prop
+  showTitle = true;
+  className
+style)
+  categories: fetchedCategories, //Rename prop for clarity
 }: CategoriesSectionProps) {
   const {
   t
 }= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
-
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map(cat => ({
+)
   t 
 }= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
-  id: cat.id;"
-title: cat.name,  //Map name to title description: cat.description |"No description available."
-icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map(cat => ({
+  id: cat.id;",
+  title: cat.name,  //Map name to title description: cat.description |"No description available.",)
+  icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
   cat.id "
 }`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color |"from-gray-500 to-gray-600"
-}) ) : defaultCategories.map (cat => ({
-  ...cat
-title: cat.name
-icon: getIcon (cat.iconName)
+}) ) : defaultCategories.map(cat => ({
+  ...cat;
+  title: cat.name,)
+  icon: getIcon (cat.iconName)
 }) )
 //If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
 }> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
@@ -463,26 +459,25 @@ icon: getIcon (cat.iconName)
 export /**
  * CategoriesSection - Function description
  */
-function CategoriesSection() {
   const { t } = use_translation ()
   const default_categories = getDefaultCategories (t)
-  // Use fetched_categories if provided, otherwise fallback to default_categories
+  // Use fetched_categories if provided, otherwise fallback to default_categories;
   const display_categories = fetched_categories && fetched_categories.length > 0
-    ? fetched_categories.map (cat => ({
+    ? fetched_categories.map(cat => ({
         id: cat.id,
-        title: cat.name, // Map name to title
-        description: cat.description || "No description available.",
-        icon: get_icon (cat.icon_name), // Get icon component
-        link: cat.link || `/category/${cat.id}`, // Construct link if not provided
-        // Assign a default color or implement logic to assign colors
-        color: default_categories.find (dc => dc.id === cat.id)?.color || "from - gray - 500 to - gray - 600"}))
-    : default_categories.map (cat => ({
-        ...cat
-        title: cat.name,
-        icon: get_icon (cat.icon_name)})),
+        title: cat.name, // Map name to title;
+  description: cat.description || "No description available.",)
+  icon: get_icon (cat.icon_name), // Get icon component;
+  link: cat.link || `/category/${cat.id}`, // Construct link if not provided
+        // Assign a default color or implement logic to assign colors;
+  color: default_categories.find (dc => dc.id === cat.id)?.color || "from - gray - 500 to - gray - 600"}))
+    : default_categories.map(cat => ({
+        ...cat;
+  title: cat.name,)
+  icon: get_icon (cat.icon_name)})),
   // If fetched_categories is an empty array, and we want to show nothing:
-  // Check condition
-if ( {) {
+  // Check condition;
+  if ( {) {
   $2
 
 }
@@ -543,36 +538,35 @@ if ( {) {
           </Link></$1></$1></$1>)
   switch (icon_name) {
 }
-const getSpecialServices = (t: any) =>: any [ {
+const getSpecialServices = (t: any) =>: any [ {,
   title: t ('categories.it onsite services')
 link: "/it - onsite - services"
 }]
 interface CategoriesSectionProps {
-  show_title?: boolean
-class_name?: string
-style?: React.CSSProperties
-categories?: CategoryType[], //Accept categories as a prop
+  show_title?: boolean;
+  class_name?: string;
+  style?: React.CSSProperties;
+  categories?: CategoryType[], //Accept categories as a prop
 }export /**
  * CategoriesSection - Function description
  */
-function CategoriesSection() {
   const {
   t
 }= use_translation ()
 const default_categories = getDefaultCategories (t)
-//Use fetched_categories if provided, otherwise fallback to default_categories const display_categories = fetched_categories && fetched_categories.length > 0 ? fetched_categories.map (cat => ({
-  id: cat.id;"
-title: cat.name,  //Map name to title description: cat.description || "No description available."
-icon: get_icon (cat.icon_name), //Get icon component link: cat.link || `/category/$ {
+//Use fetched_categories if provided, otherwise fallback to default_categories const display_categories = fetched_categories && fetched_categories.length > 0 ? fetched_categories.map(cat => ({
+  id: cat.id;",
+  title: cat.name,  //Map name to title description: cat.description || "No description available.",)
+  icon: get_icon (cat.icon_name), //Get icon component link: cat.link || `/category/$ {
   cat.id "
 }`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: default_categories.find (dc => dc.id === cat.id) ?.color || "from - gray - 500 to - gray - 600"
-}) ) : default_categories.map (cat => ({
-  ...cat
-title: cat.name
-icon: get_icon (cat.icon_name)
+}) ) : default_categories.map(cat => ({
+  ...cat;
+  title: cat.name,)
+  icon: get_icon (cat.icon_name)
 }) )
-//If fetched_categories is an empty array, and we want to show nothing: // Check condition
-if ( {) {
+//If fetched_categories is an empty array, and we want to show nothing: // Check condition;
+  if ( {) {
   $2
 }
 }> <div className="container mx - auto px - 4" > <h2 className="text - 3xl font - semibold text - white mb - 4" > {'
@@ -591,3 +585,16 @@ if ( {) {
 }</Link> </div> </div> </section>)
 }'"}
 }
+
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>

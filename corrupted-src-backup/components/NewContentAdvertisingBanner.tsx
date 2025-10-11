@@ -38,7 +38,7 @@ gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
     {;,
 id: 1,;
-tit, l, e: 'AI, 20, 2
+tit, l, e: 'AI, 20, 2;
   7: Operational, Trust, Blueprint',';
 catego, r, y: 'AI, Strateg, y',';
 readTi, m, e: '8, mi, n',';
@@ -49,7 +49,7 @@ gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
 ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
     {;,
 id: 2,;
-tit, l, e: 'Edge, 20, 2
+tit, l, e: 'Edge, 20, 2;
   6: Private, Feature, Flags',';
 catego, r, y: 'Architectu, r, e',';
 readTi, m, e: '7, mi, n',';
@@ -109,7 +109,7 @@ ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, 
     }
     {;,
 id: 1,;
-tit, l, e: 'AI, 20, 2
+tit, l, e: 'AI, 20, 2;
   7: Operational, Trust, Blueprint',';
 catego, r, y: 'AI, Strateg, y',';
 readTi, m, e: '8, mi, n',';
@@ -121,7 +121,7 @@ ic, o, n: <Star, className="w-6 h-6" />,"</Star>li</Star>, n, k: '/bl, o, g/ai-2
     }
     {;,
 id: 2,;
-tit, l, e: 'Edge, 20, 2
+tit, l, e: 'Edge, 20, 2;
   6: Private, Feature, Flags',';
 catego, r, y: 'Architectu, r, e',';
 readTi, m, e: '7, mi, n',';
@@ -169,15 +169,15 @@ Revolutionary, New, Content H, u, b;)
             { achievemen, t, s.m, a, p((achieve), m, e, n, t, ind, e, x) = > (
               <div, ke, y={in, d, e, x}, classNa, m, e = "te, x, t-cent, e, r">
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">;
-return (;
+return(;
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 4, s' }} />
-          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">;
-Revolutionary, New, Content H, u, b
+          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">;)
+  Revolutionary, New, Content H, u, b
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             { achievemen, t, s.m, a, p((achieve), m, e, n, t, ind, e, x) = > (
               <div, ke, y={in, d, e, x}, classNa, m, e = "te, x, t-cent, e, r">
@@ -217,7 +217,7 @@ classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600,
                   <Link, classNam, e="w-5 h-5" />
   </input>
 }}
-  return (";
+  return(";
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
@@ -253,8 +253,8 @@ sty, l, e={{ animationDel}}, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">;
 LIMITED, TIME, OFFER;"
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
-                <, hre, f="/subscri, b, e""$2 />;
-classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
+                <, hre, f="/subscri, b, e""$2 />;)
+  classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"
                   <Link, classNam, e="w-5 h-5" /></Link>"

@@ -35,11 +35,11 @@
   e: 'Desktop'} percentag,
   e: 55 }, {/* TODO: Fix JSX expression */}
   e: 'Mobile'} percentag,
-  e: 35 }, {/* TODO: Fix JSX expression */}
+  e: 35 }, {/* TODO: Fix JSX expression */})
   e: 'Tablet'} percentag)
   e: 10 } ]) realTimeUser,
   s: 23 })} catch (error) {/* TODO: Fix JSX expression */}
-  data: '} error)} finally { setIsLoading(false)} }, [selectedTimeRange]); useEffect(() => { fetchAnalyticsData()}, [fetchAnalyticsData]); if (isLoading) { return ( <div className="text-left"> <div className="text-left"> <div></div> <p className="text-left">Loading analytics...</p> </div> </div> )} return (<div className="text-left"> <div className="text-left"> {/* Header */} <motion.div initial={/* TODO: Fix JSX expression */}
+  data: '} error)} finally { setIsLoading(false)} }, [selectedTimeRange]); useEffect(() => { fetchAnalyticsData()}, [fetchAnalyticsData]); if (isLoading) { return ( <div className="text-left"> <div className="text-left"> <div></div> <p className="text-left">Loading analytics...</p> </div> </div> )} return(<div className="text-left"> <div className="text-left"> {/* Header */} <motion.div initial={/* TODO: Fix JSX expression */})
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}")
   y: 1} y: 0 }} className="text-left"> <h1 className="text-left"> Enhanced Analytics Dashboard </h1> <div className="text-left"> <select value={selectedTimeRange} onChange={e => setSelectedTimeRange(e.target.value)} className="text-left"> <option value="24h">Last 24 Hours</option> <option value="7d">Last 7 Days</option> <option value="30d">Last 30 Days</option> <option value="90d">Last 90 Days</option> </select> <span className="text-left">Data updated in real-time< </div> </motion.div> {/* Key Metrics */} <motion.div initial={/* TODO: Fix JSX expression */}
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}

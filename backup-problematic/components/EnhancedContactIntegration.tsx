@@ -8,10 +8,8 @@ const EnhancedContactIntegration = React.memo(function EnhancedContactIntegratio
       <h3 className="text-lg font-semibold text-blue-800">EnhancedContactIntegration</h3>)
       <p className="text-blue-600">This component is under development.</p>)
     </div>)
-  return (
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
-      <h3 className="text-lg font-semibold text-blue-800">EnhancedContactIntegration
-const EnhancedContactIntegration = React.memo(function EnhancedContactIntegration({/* TODO: Fix JSX expression */})
+  return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className="text-lg font-semibold text-blue-800">EnhancedContactIntegration)
 }: EnhancedContactIntegrationProps) {/* TODO: Fix JSX expression */}
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
       <h3 className="text-lg font-semibold text-blue-800">EnhancedContactIntegration</h3>"
@@ -20,3 +18,5 @@ const EnhancedContactIntegration = React.memo(function EnhancedContactIntegratio
 })
 export default EnhancedContactIntegration
 "`</div></div></p></h3>
+</p>
+</div>

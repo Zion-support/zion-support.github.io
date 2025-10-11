@@ -23,7 +23,7 @@ const ITConsultingPage: React.FC = () => {
       price: 'Starting at $3,500/month'
     }
   ]
-  return (<React.Fragment>
+  return(<React.Fragment>
       <Helmet>
         <title>IT Consulting Services - Zion Tech Group
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
@@ -39,8 +39,8 @@ const ITConsultingPage: React.FC = () => {
                 IT Consulting Services,
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-                Transform your business with expert IT consulting. We provide strategic guidance, 
-                digital transformation, and technology solutions that drive growth and efficiency.
+                Transform your business with expert IT consulting. We provide strategic guidance, )
+  digital transformation, and technology solutions that drive growth and efficiency.
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
               {consultingServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
@@ -110,3 +110,18 @@ export default ITConsultingPage</button>
   </button>
   </button>
 </div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>
+</p>
+</h2>
+</li>
+</ul>
+</h4>
+</li>
+</ul>
+</h4>
+</ul>
+</h4>
+</p>
+</h3>
+</div>
+</title>
+</Helmet>

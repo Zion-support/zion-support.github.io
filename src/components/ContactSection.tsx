@@ -4,8 +4,8 @@ const [formData, setFormData] = useState({;,
 name: '',;,
 email: '',;,
 company: '',;,
-service: '',;,
-message: ''
+service: '',;,)
+  message: ''
 }
   });
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
@@ -65,7 +65,7 @@ const services = [;
     'IT Consulting',
     'Other'
   ];
-return (;
+return(;
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -83,8 +83,8 @@ Let's discuss your project and create something amazing together.
 Let's Start a Conversation
               <p className="text-gray-300 text-lg leading-relaxed mb-8">;
 Whether you have a specific project in mind or just want to explore;
-how AI and IT solutions can benefit your business, we're here to help.;
-Our team of experts is ready to provide personalized consultation.
+how AI and IT solutions can benefit your business, we're here to help.;)
+  Our team of experts is ready to provide personalized consultation.
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {contactInfo.map((info), index) => (
@@ -215,3 +215,42 @@ Send Message</span>
   </h3>
   </HTMLInputElement>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></ul></li></li></li></li>
+</option>
+</option>
+</label>
+</label>
+</label>
+</div>
+</div>
+</div>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</span>
+</svg>
+</li>
+</ul>
+</div>
+</p>
+</h4>
+</div>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</p>
+</span>
+</h2>
+</div>
+</div>
+</svg>
+</svg>
+</svg>

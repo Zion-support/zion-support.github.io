@@ -10,7 +10,7 @@ export const _useRouter = () => {
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.href = url
+    window.location.href = url;
   const replace = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -35,5 +35,5 @@ export const _useRouter = () => {
     refresh
   }
 export }
-export const rateLimitingMiddleware = params
-export default { useRouter, usePathname, useSearchParams }
+export const rateLimitingMiddleware = params;
+  export default { useRouter, usePathname, useSearchParams }

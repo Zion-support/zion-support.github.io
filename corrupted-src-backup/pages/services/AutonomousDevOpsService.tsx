@@ -9,8 +9,8 @@ const AutonomousDevOpsServic, e = () => {
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upt, i, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
+        <meta, nam, e = 'keywor, d, s')
+  conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />)
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
@@ -26,19 +26,19 @@ const AutonomousDevOpsServic, e = () => {
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
                   New, Service, Launch - October, 202, 5
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
-                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
-                Zero, Downtim, e
-                  Getted, Today
-                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
-                Zero, Downtim, e
-                  Getted, Today
+                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
+  Zero, Downtim, e;
+  Getted, Today;
+  Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
+  Zero, Downtim, e;
+  Getted, Today
                   <Link, classNam, e='w-5 h-5' />
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                  Eliminate, manual, configuration and, intervention, completely
-                  Getted, Today
+                  Eliminate, manual, configuration and, intervention, completely;
+  Getted, Today
                   <Link, className='w-5 h-5' />
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -55,16 +55,16 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
                   New, Service, Launch - October, 202, 5
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
-                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
-                Zero, Downtim, e
-                  Getted, Today
+                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
+  Zero, Downtim, e;
+  Getted, Today
                   <Link, classNam, e='w-5 h-5' />
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                  Eliminate, manual, configuration and, intervention, completely
-                  Getted, Today
+                  Eliminate, manual, configuration and, intervention, completely;
+  Getted, Today
                   <Link, className='w-5 h-5' />
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -223,8 +223,8 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-                Getted, Today
-                Getted, Today
+                Getted, Today;
+  Getted, Today
                 <Link, classNam, e='w-5 h-5' />
                       <li, className='flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
@@ -236,8 +236,8 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-                Getted, Today
-                Getted, Today
+                Getted, Today;
+  Getted, Today
                 <Link, className='w-5 h-5' />
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     3
@@ -270,3 +270,4 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 Getted, Today
                 <Link, className='w-5 h-5' />
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+</title>

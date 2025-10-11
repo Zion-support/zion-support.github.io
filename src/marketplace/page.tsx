@@ -127,8 +127,8 @@ default:;
 return [];
 }
   }
-  const filteredItems = getCurrentItems().filter(item =>;;
-item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredItems = getCurrentItems().filter(item =>;;)
+  item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 const stats = [;;,
@@ -158,7 +158,7 @@ description:       ,;,
 icon$5: Award,;,
 title: 'Quality Guarantee',;,
 description: '100% satisfaction guarantee on all purchases';
-return (;
+return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -169,8 +169,8 @@ return (;
 Zion Tech Marketplace,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-Discover, compare, and purchase AI and IT solutions from verified vendors.;
-Find the perfect tools, talent, and equipment for your business needs.
+Discover, compare, and purchase AI and IT solutions from verified vendors.;)
+  Find the perfect tools, talent, and equipment for your business needs.
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat), index) => (
@@ -447,3 +447,24 @@ export default MarketplacePage,
   </div>
   </div>
 </div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></h2></h3></h3></h4></h4></h4></ul></li>
+</p>
+</h3>
+</h4>
+</span>
+</span>
+</span>
+</h4>
+</span>
+</span>
+</li>
+</ul>
+</h4>
+</p>
+</h3>
+</h2>
+</span>
+</div>
+</p>
+</div>
+</div>
+</div>

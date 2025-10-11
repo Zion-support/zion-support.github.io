@@ -19,8 +19,8 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">
-            <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
-              Ultimate, Enterprise, AI
+            <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">)
+  Ultimate, Enterprise, AI
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
           </h2>)
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">)

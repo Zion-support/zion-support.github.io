@@ -156,8 +156,7 @@ valuevalue: '100%',
         'ISO 14001 certification achieved',
         'Enhanced brand reputation'
       icon: Building,
-  return (
-    <React.Fragment>
+  return(<React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -167,8 +166,8 @@ valuevalue: '100%',
               Green IT Solutions,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure into a sustainable, environmentally friendly system 
-              that reduces costs while protecting our planet.
+              Transform your IT infrastructure into a sustainable, environmentally friendly system )
+  that reduces costs while protecting our planet.
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
                 <Leaf className="w-5 h-5 mr-2" />
@@ -278,16 +277,16 @@ valuevalue: '100%',
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey towards sustainable IT operations. Get a free environmental 
-              assessment and discover how much you can save while protecting the planet.
+              Start your journey towards sustainable IT operations. Get a free environmental;
+  assessment and discover how much you can save while protecting the planet.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                Get Free Assessment
-                href="tel:+13024640950"
+                Get Free Assessment;
+  href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
@@ -295,8 +294,8 @@ valuevalue: '100%',
     </React.Fragment>
   ),
 }
-export default GreenITPage
-import { Link } from 'react-router-dom'
+export default GreenITPage;
+  import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const GreenITPage: React.FC = () => {
@@ -552,8 +551,8 @@ const tabs = [
 // Green IT Solutions,
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Transform your IT infrastructure into a sustainable, environmentally friendly system
-              that reduces costs while protecting our planet.
+// Transform your IT infrastructure into a sustainable, environmentally friendly system;
+  that reduces costs while protecting our planet.
           </p>"
             <div className="flex flex-wrap justify-center gap-4"></div>"
               <div className="flex items-center text-green-400"></div>"
@@ -684,14 +683,14 @@ Benefits of Green IT;"
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Start your journey towards sustainable IT operations. Get a free environmental
-              assessment and discover how much you can save while protecting the planet.
+// Start your journey towards sustainable IT operations. Get a free environmental;
+  assessment and discover how much you can save while protecting the planet.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
+  href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                (302) 464-0950;
+  href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
@@ -730,3 +729,24 @@ export default GreenItPage</div>
   </div>
   </div>
 </div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>
+</p>
+</li>
+</ul>
+</h2>
+</span>
+</button>
+</span>
+</h2>
+</h4>
+</h4>
+</h4>
+</li>
+</ul>
+</li>
+</ul>
+</h4>
+</h2>
+</span>
+</span>
+</span>
+</span>

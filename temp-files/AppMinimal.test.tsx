@@ -8,7 +8,7 @@ describe('App Minimal', () => {
     render(<MockAppMinimal />)
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()
     render(<App />)
-    // Just check that the component renders without throwing an error
-    expect(true).toBe(true)
+    // Just check that the component renders without throwing an error;
+  expect(true).toBe(true)
   })
 })

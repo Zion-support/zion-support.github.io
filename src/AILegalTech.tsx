@@ -41,7 +41,7 @@ import {
   CheckSquare,
   FileCheck,
   Clock as ClockIcon,
-  DollarSign
+  DollarSign;
   Brain, 
   Shield, 
   Clock, 
@@ -154,7 +154,6 @@ const AILegalTech = () => {
   Heart,
   Home
 } from 'lucide-react'
-export default function AILegalTech() {
   const services = [
     {
       title: 'AI-Powered Contract Analysis',
@@ -254,8 +253,8 @@ export default function AILegalTech() {
     {
       icon: Brain,
       title: "Risk Assessment",
-      description: "Machine learning models that predict legal risks and compliance issues before they arise."
-      description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."
+      description: "Machine learning models that predict legal risks and compliance issues before they arise.",
+  description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."
     },
     {
       icon: FileText,
@@ -339,7 +338,6 @@ export default function AILegalTech() {
   Home,
   Lightbulb
 } from 'lucide-react'
-export default function AILegalTech() {
   const features = [
     {
       title: "AI Contract Analysis",
@@ -428,8 +426,7 @@ export default function AILegalTech() {
     "Enhance compliance monitoring and reporting",
     "Improve client service and response times"
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+  return(<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
     "Reduce legal research time by 70%",
     "Improve contract review accuracy by 90%",
@@ -622,8 +619,8 @@ export default function AILegalTech() {
         "Custom training & onboarding",
         "24/7 phone support"
       ],
-      popular: false
-      price: "$1,599/month",
+      popular: false,
+  price: "$1,599/month",
       description: "For large law firms and corporate legal departments",
       features: [
         "Unlimited documents",
@@ -698,8 +695,8 @@ export default function AILegalTech() {
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your legal practice with AI-powered tools that automate research, analyze documents, 
-              and provide intelligent insights. Work smarter, not harder, with cutting-edge legal technology.
+              Revolutionize your legal practice with AI-powered tools that automate research, analyze documents, )
+  and provide intelligent insights. Work smarter, not harder, with cutting-edge legal technology.
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
@@ -748,8 +745,8 @@ export default function AILegalTech() {
             </div>
           </div>
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900">
-      <SEO 
-        title="AI Legal Tech Platform - Zion Tech Group" 
+      <SEO;
+  title="AI Legal Tech Platform - Zion Tech Group" 
         description="Revolutionize your legal practice with AI-powered tools. Faster research, automated analysis, and intelligent compliance monitoring."
         keywords="AI legal tech, legal automation, contract analysis, legal research, compliance monitoring, legal software"
         canonical="https://ziontechgroup.com/services/ai-legal-tech"
@@ -781,8 +778,8 @@ export default function AILegalTech() {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Revolutionize your legal practice with AI-powered tools that automate research, 
-            analyze contracts, and ensure compliance. Work smarter, not harder, with 
-            intelligent legal technology.
+            analyze contracts, and ensure compliance. Work smarter, not harder, with;
+  intelligent legal technology.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -848,8 +845,8 @@ export default function AILegalTech() {
       </section>
 
       {/* Features Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -859,15 +856,15 @@ export default function AILegalTech() {
               AI-Powered Legal Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive AI legal platform combines advanced machine learning with legal expertise 
-              to revolutionize how legal professionals work.
+              Our comprehensive AI legal platform combines advanced machine learning with legal expertise;
+  to revolutionize how legal professionals work.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
+              <motion.div;
+  key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -885,8 +882,8 @@ export default function AILegalTech() {
               Powerful AI Features for Modern Legal Practice
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology platform combines cutting-edge artificial intelligence 
-              with proven legal expertise to deliver exceptional results.
+              Our AI legal technology platform combines cutting-edge artificial intelligence;
+  with proven legal expertise to deliver exceptional results.
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -906,8 +903,8 @@ export default function AILegalTech() {
               AI-Powered Features That Revolutionize Legal Practice
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology platform combines cutting-edge artificial intelligence with deep legal expertise 
-              to deliver exceptional results for legal professionals.
+              Our AI legal technology platform combines cutting-edge artificial intelligence with deep legal expertise;
+  to deliver exceptional results for legal professionals.
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -1000,8 +997,8 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-amber-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-amber-400" />
@@ -1030,8 +1027,8 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon
-              return (
+              const Icon = useCase.icon;
+  return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -1085,8 +1082,8 @@ export default function AILegalTech() {
       {/* Practice Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1102,8 +1099,8 @@ export default function AILegalTech() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {practiceAreas.map((area, index) => (
-              <motion.div
-                key={area}
+              <motion.div;
+  key={area}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1311,8 +1308,8 @@ export default function AILegalTech() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1349,8 +1346,8 @@ export default function AILegalTech() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             {services.map((service, index) => {
-              const Icon = service.icon
-              return (
+              const Icon = service.icon;
+  return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -1398,8 +1395,8 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {legalTechFeatures.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -1438,8 +1435,8 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => {
-              const Icon = industry.icon
-              return (
+              const Icon = industry.icon;
+  return (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="w-10 h-10 text-white" />
@@ -1465,8 +1462,8 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon
-              return (
+              const Icon = benefit.icon;
+  return (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="w-10 h-10 text-white" />
@@ -1486,8 +1483,7 @@ export default function AILegalTech() {
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Legal Practice?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of legal professionals who have revolutionized their practice with AI-powered solutions.
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+  return(<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -1524,8 +1520,8 @@ export default function AILegalTech() {
             Ready to Transform Your Legal Practice?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of legal professionals who have already revolutionized their practice 
-            with AI-powered legal technology.
+            Join thousands of legal professionals who have already revolutionized their practice;
+  with AI-powered legal technology.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25">
@@ -1548,8 +1544,8 @@ export default function AILegalTech() {
             <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
-            <button className="px-8 py-4 border border-amber-400/50 text-amber-400 font-semibold rounded-lg hover:bg-amber-400/20 transition-all duration-300">
-              Schedule Demo
+            <button className="px-8 py-4 border border-amber-400/50 text-amber-400 font-semibold rounded-lg hover:bg-amber-400/20 transition-all duration-300">)
+  Schedule Demo
             </button>
           </div>
         </div>
@@ -1605,8 +1601,8 @@ export default function AILegalTech() {
     </div>
   )
 }
-export default AILegalTech
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+export default AILegalTech;
+  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
             </Link>
@@ -1636,8 +1632,8 @@ export default AILegalTech
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
@@ -1746,8 +1742,8 @@ export default AILegalTech
               Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of law firms already using our AI-powered legal technology platform 
-              to enhance efficiency, accuracy, and client service.
+              Join hundreds of law firms already using our AI-powered legal technology platform;
+  to enhance efficiency, accuracy, and client service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
@@ -1774,3 +1770,20 @@ export default AILegalTech
 export default AILegalTech
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>
+</section>
+</section>
+</section>
+</section>
+</li>
+</section>
+</section>
+</section>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</section>
+</SEO>
+</section>

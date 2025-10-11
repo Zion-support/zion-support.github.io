@@ -47,10 +47,9 @@ const AIMusicCompositionPage: React.FC = () => {
       popular: false
     }
   ]
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
+  return(<React.Fragment>
+      <SEOOptimizer;
+  title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
         keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}
         canonicalUrl="https://ziontechgroup.com/ai-music-composition"
@@ -80,8 +79,8 @@ const AIMusicCompositionPage: React.FC = () => {
                   Listen to Samples
           {/* Features Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Music Generation Features
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">)
+  AI Music Generation Features
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -166,3 +165,34 @@ export default AIMusicCompositionPage</a>
   </div>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h2></h3></h3></h3></ul></li></main></section></section></section></section></section>
+</span>
+</section>
+</li>
+</ul>
+</span>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>

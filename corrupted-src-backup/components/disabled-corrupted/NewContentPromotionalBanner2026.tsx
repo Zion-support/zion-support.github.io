@@ -46,8 +46,8 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, Content, Just Releas, e, d</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">)
+  Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
         </div>)
         {/* Content, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)

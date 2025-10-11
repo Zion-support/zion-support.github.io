@@ -41,8 +41,8 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
                 lab, e, l: 'Neural, Accura, c, y',
                 ic, o, n: '🧠',
                 col, o, r: 'te, x, t-purp, l, e-40, 0',
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            The, Innovation, Revolution
+          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>)
+  The, Innovation, Revolution
               {/* TODO: Fix JSX expression */}
               },
               {/* TODO: Fix JSX expression */}
@@ -77,8 +77,8 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'>
           <div, classNam, e='te, x, t-center, m, b-12'>
             <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
-              Revolutionary, Success, Stories
-                company: 'NeuroTech, Glo, b, a, l',
+              Revolutionary, Success, Stories;
+  company: 'NeuroTech, Glo, b, a, l',
               {/* TODO: Fix JSX expression */}
               },
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>

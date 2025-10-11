@@ -1,7 +1,7 @@
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   const, showcaseConten, t = [
     {
-      i
+      i;
   d: 1,
       tit, l, e: "Enterprise, AI, Transformation Playbook, 202, 6","
       descripti, o, n: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategie, s","
@@ -9,8 +9,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Enterprise, Strateg, y","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "60, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "📊","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "📊","
       impa, c, t: "$10, 0, M+ Savin, g, s","
       tit, l, e: "Enterprise, AI, Transformation Playbook, 202, 6","
       descripti, o, n: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategie, s","
@@ -18,11 +18,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Enterprise, Strateg, y","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "60, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "📊","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "📊","
       impa, c, t: "$10, 0, M+ Savin, g, s","
-      featur, e, d: tr, u, e
-      sta, t, s: { savi, n, g
+      featur, e, d: tr, u, e;
+  sta, t, s: { savi, n, g;
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"
     }
     {
@@ -33,8 +33,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Securi, t, y & Complian, c, e","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "55, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🔒","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🔒","
       impa, c, t: "99.99% Securi, t, y","
       tit, l, e: "AI, Securit, y & Compliance, Masterclas, s","
       descripti, o, n: "Milita, r, y-grade, security, protocols, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems","
@@ -42,11 +42,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Securi, t, y & Complian, c, e","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "55, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🔒","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🔒","
       impa, c, t: "99.99% Securi, t, y","
-      featur, e, d: tr, u, e
-      sta, t, s: { secur, i, t
+      featur, e, d: tr, u, e;
+  sta, t, s: { secur, i, t;
   y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"
     }
     {
@@ -57,8 +57,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Quantum, Computin, g","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "70, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "⚛️","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "⚛️","
       impa, c, t: "1000 x, Performanc, e","
       tit, l, e: "Quant, u, m-Neural, Computing, Implementation","
       descripti, o, n: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000 x, performance, improvements","
@@ -66,11 +66,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Quantum, Computin, g","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "70, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "⚛️","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "⚛️","
       impa, c, t: "1000x, Performanc, e","
-      featur, e, d: tr, u, e
-      sta, t, s: { performa, n, c
+      featur, e, d: tr, u, e;
+  sta, t, s: { performa, n, c;
   e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"
     }
     {
@@ -81,8 +81,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Operatio, n, s","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "48, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🤖","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🤖","
       impa, c, t: "98% Automati, o, n","
       tit, l, e: "Autonomous, Operations, Framework","
       descripti, o, n: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilities","
@@ -90,11 +90,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Operatio, n, s","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "48, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🤖","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🤖","
       impa, c, t: "98% Automati, o, n","
-      featur, e, d: fal, s, e
-      sta, t, s: { automat, i, o
+      featur, e, d: fal, s, e;
+  sta, t, s: { automat, i, o;
   n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"
     }
     {
@@ -105,8 +105,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Edge, Computin, g","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "42, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "📡","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "📡","
       impa, c, t: "10,0, 0, 0+ Nod, e, s","
       tit, l, e: "Edge, AI, Deployment at, Enterprise, Scale","
       descripti, o, n: "Distributed, AI, processing across, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy","
@@ -114,11 +114,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Edge, Computin, g","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "42, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "📡","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "📡","
       impa, c, t: "10,0, 0, 0+ Nod, e, s","
-      featur, e, d: fal, s, e
-      sta, t, s: { no, d, e
+      featur, e, d: fal, s, e;
+  sta, t, s: { no, d, e;
   s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"
     }
     {
@@ -129,8 +129,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Advanced, A, I","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "65, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🧠","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🧠","
       impa, c, t: "Me, t, a-Thinki, n, g","
       tit, l, e: "Me, t, a-Cognitive, AI, Development Gui, d, e","
       descripti, o, n: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabilitie, s","
@@ -138,11 +138,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       catego, r, y: "Advanced, A, I","
       da, t, e: "20, 2, 6-01-20","
       readTi, m, e: "65, mi, n","
-      trendi, n, g: tr, u, e
-      ic, o, n: "🧠","
+      trendi, n, g: tr, u, e;
+  ic, o, n: "🧠","
       impa, c, t: "Me, t, a-Thinki, n, g","
-      featur, e, d: fal, s, e
-      sta, t, s: { reason, i, n
+      featur, e, d: fal, s, e;
+  sta, t, s: { reason, i, n;
   g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"
     }
   ]
@@ -158,8 +158,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">"</div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'
-const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>')
+  const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"
     }
     {/* TODO: Fix JSX expression */}"
@@ -178,7 +178,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"
     }
   ]
-  return ("
+  return("
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>"
@@ -197,7 +197,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-20">"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
               transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             >
@@ -210,7 +210,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
               transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             ></moti>"
@@ -306,7 +306,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";"
               <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>"
         {/* Showcase, Gri, d */}
-        <, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x$2 />
+        <, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x$2 />)
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">")
         <, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;)$2 />
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";)

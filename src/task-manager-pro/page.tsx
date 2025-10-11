@@ -92,8 +92,7 @@ $4}
       company: 'Consulting Firm',
       role: 'Operations Director',
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
@@ -108,14 +107,14 @@ $4}
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
-            Get intelligent prioritization, automated workflows, and team collaboration 
-            tools that help you achieve more in less time.
+            Get intelligent prioritization, automated workflows, and team collaboration;
+  tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              <Phone className="w-5 h-5 mr-2" />)
+  Call: (302) 464-0950
   
             <$2 />
               href="/contact"
@@ -210,8 +209,7 @@ $4}
 import { Link } from 'react-router-dom'
 const TaskManagerProPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -228,8 +226,8 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
+import Footer from '../components/Footer')
+  const PagePage: React.FC = () => {
   return (
           <div>Coming Soon
   )
@@ -250,8 +248,8 @@ const PagePage: React.FC = () => {
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
-            Get intelligent prioritization, automated workflows, and team collaboration
-            tools that help you achieve more in less time.
+            Get intelligent prioritization, automated workflows, and team collaboration;
+  tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
@@ -396,3 +394,6 @@ export default TaskManagerProPage</div>
   </section>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></h3></h3></h3></section></section>
+</p>
+</p>
+</p>

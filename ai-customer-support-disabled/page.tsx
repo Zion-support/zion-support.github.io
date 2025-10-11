@@ -7,26 +7,26 @@ import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, Ch
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: MessageCircle
-      title: '24/7 AI Chat Support',
+      icon: MessageCircle,
+  title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
     {
-      icon: Users
-      title: 'Smart Ticket Routing',
+      icon: Users,
+  title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
-      icon: Clock
-      title: 'Predictive Analytics',
+      icon: Clock,
+  title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
     },
     {
-      icon: Shield
-      title: 'Knowledge Base Integration',
+      icon: Shield,
+  title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
 const,
@@ -58,8 +58,8 @@ const,
   l: 'Languages Supported' }
   ]
   return(<React.Fragment>
-      <SEOOptimizer
-        title="AI Customer Support Solutions - Zion Tech Group"
+      <SEOOptimizer;
+  title="AI Customer Support Solutions - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
         canonicalUrl="https: //ziontechgroup.com/ai-customer-support",
@@ -75,8 +75,8 @@ const,
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">)
+  AI Customer Support Solutions
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">)
                 Transform your customer service with intelligent AI that never sleeps;)
               </p>)
@@ -88,7 +88,7 @@ const,
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <$2 />
                   href="tel:+13024640950"
-  return (<React.Fragment>
+  return(<React.Fragment>
       <SEOOptimizer>
         title="AI Customer Support Solutions - Zion Tech Group""
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
@@ -116,8 +116,8 @@ const,
   sm:flex-row gap-4 justify-center items-center mb-16">
                 <a></a>"
                   href="te,"
-  l:+13024640950""
-                  className="cyber-button flex items-center space-x-2">"
+  l:+13024640950"")
+  className="cyber-button flex items-center space-x-2">"
                   <Phone className="w-5 h-5" /></Phone>)
                   <span>Call (302) 464-0950
                 <$2 />
@@ -160,8 +160,7 @@ const AICustomerSupportPage2: React.FC = () => {
       <main className="pt-24 pb-16 px-4">)
         <div className="max-w-7xl mx-auto">),
           {/* Hero Section */}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -169,8 +168,8 @@ const AICustomerSupportPage2: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support</$1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,)
+  Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
               smart ticket routing, and predictive analytics.
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
@@ -274,3 +273,54 @@ const AICustomerSupportPage2: React.FC = () => {
   )
 }
 export default AICustomerSupportPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h2></h2></h3></h3></ul></ul></li></li></main></main></main></main></main></section></section></section></section>
+</p>
+</h1>
+</span>
+</div>
+</p>
+</h2>
+</div>
+</h2>
+</div>
+</section>
+</p>
+</div>
+</div>
+</h2>
+</div>
+</h2>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</h2>
+</section>
+</div>
+</p>
+</h1>
+</div>
+</main>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</span>
+</span>
+</main>
+</SEOOptimizer>
+</div>
+</div>
+</p>
+</h1>
+</div>
+</main>
+</div>
+</main>
+</div>
+</SEOOptimizer>

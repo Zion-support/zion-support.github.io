@@ -43,9 +43,9 @@ const AdvancedPerformanceMonitor: React.FC,
     ttfb: null,
     memory: null,
   })
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    if (typeof PerformanceObserver === 'undefined') return
-    const,
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+  if (typeof PerformanceObserver === 'undefined') return;
+  const,
   observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
@@ -57,7 +57,7 @@ const AdvancedPerformanceMonitor: React.FC,
       try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   O: Add content,}
 })
           const entries = list.getEntries()
@@ -80,11 +80,11 @@ const AdvancedPerformanceMonitor: React.FC,
       try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   O: Add content,}
 })
           const entries = list.getEntries()
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
+          _entries.forEach(entry => {/* TODO: Fix JSX expression */})
   O: Add content,}
 })
             if ()
@@ -93,12 +93,12 @@ const AdvancedPerformanceMonitor: React.FC,
 //               'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              const fidEntry = entry as PerformanceEventTiming
-              setMetrics(prev => ({/* TODO: Fix JSX expression */}
+              const fidEntry = entry as PerformanceEventTiming;
+  setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //                 ...prev,
-                fi,
+                fi,)
   d: _fidEntry.processingStart - _fidEntry.startTime,)
               }))
             }
@@ -117,11 +117,11 @@ const AdvancedPerformanceMonitor: React.FC,
   O: Add content,}
 }
       try {const clsObserver = new PerformanceObserver(list => {}
-  // TOD,
+  // TOD,)
   O: Add content,
 })
           const entries = list.getEntries()
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
+          _entries.forEach(entry => {/* TODO: Fix JSX expression */})
   O: Add content,}
 })
             if ()
@@ -130,12 +130,12 @@ const AdvancedPerformanceMonitor: React.FC,
 //               'value' in entry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              const clsEntry = entry as LayoutShift
-              if (!_clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
+              const clsEntry = entry as LayoutShift;
+  if (!_clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-                _clsValue += _clsEntry.value
-                setMetrics(prev => ({/* TODO: Fix JSX expression */})
+                _clsValue += _clsEntry.value;
+  setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: _clsValue }))
               }
             }
@@ -154,20 +154,20 @@ const AdvancedPerformanceMonitor: React.FC,
   O: Add content,}
 }
       const navigationEntries = performance.getEntriesByType?.('navigation') || []
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming
-      const ttfb = _navigationEntry
+      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+  const ttfb = _navigationEntry
 //         ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null
-      // Measure Memory Usage
-const memory =
+      // Measure Memory Usage;
+  const memory =
         (performance as Performance & {/* TODO: Fix JSX expression */})
   e: number } })
-          .memory?.usedJSHeapSize || null
-      setMetrics(prev => ({/* TODO: Fix JSX expression */}
+          .memory?.usedJSHeapSize || null;
+  setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //         ...prev,
-        fc,
+        fc,)
   p: _fcp,
 //         ttfb,
 //         memory;)
@@ -176,14 +176,14 @@ const memory =
   O: Add content,}
 }
       }
-    // Cleanup observers
-    return () => {/* TODO: Fix JSX expression */}
+    // Cleanup observers;
+  return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       observers.forEach(observer => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        try {/* TODO: Fix JSX expression */}
+        try {/* TODO: Fix JSX expression */})
   O: Add content,}
 })
           observer.disconnect()
@@ -197,8 +197,8 @@ const memory =
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    const resources = performance.getEntriesByType('resource')
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+  const resources = performance.getEntriesByType('resource')
     const slowResources = _resources.filter()
       (resourc)
   e: PerformanceResourceTiming) => resource.duration > 1000),
@@ -211,7 +211,7 @@ const memory =
   e: r.name}
       //   duratio,
   n: r.duration,
-      //   siz,
+      //   siz,)
   e: r.transferSize,)
       // })))
     }
@@ -220,19 +220,19 @@ const memory =
   O: Add content,}
 }
     if (typeof window === 'undefined') return
-    // Use web-vitals library if available
-    try {/* TODO: Fix JSX expression */}
+    // Use web-vitals library if available;
+  try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //       import('web-vitals')
         .then(webVitals => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
+})
+  const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
           if (onCLS) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            onCLS((metri,
+            onCLS((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -242,7 +242,7 @@ const memory =
           if (onFCP) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            onFCP((metri,
+            onFCP((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -252,7 +252,7 @@ const memory =
           if (onLCP) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            onLCP((metri,
+            onLCP((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -262,7 +262,7 @@ const memory =
           if (onTTFB) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-            onTTFB((metri,
+            onTTFB((metri,)
   c: {/* TODO: Fix JSX expression */})
   e: number }) =>
               setMetrics(prev => ({/* TODO: Fix JSX expression */})
@@ -284,10 +284,10 @@ const memory =
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!enableRealTimeMonitoring) return
-    const cleanup = measureWebVitals()
-// Monitor performance every 5 seconds
-    const interval = setInterval(() => {/* TODO: Fix JSX expression */}
+    if (!enableRealTimeMonitoring) return;
+  const cleanup = measureWebVitals()
+// Monitor performance every 5 seconds;
+  const interval = setInterval(() => {/* TODO: Fix JSX expression */}
     }, 5000)
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -311,8 +311,8 @@ const memory =
       onMetricsUpdate(metrics)
     }
   }, [metrics, onMetricsUpdate])
-  // Performance recommendations
-const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
+  // Performance recommendations;
+  const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const,
@@ -400,3 +400,12 @@ export default AdvancedPerformanceMonitor;`
   </PerformanceMetrics>
   </PerformanceMonitorProps>
 </div></div></div></div></div></div></div></div></h3></h4></ul>
+</ul>
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</div>

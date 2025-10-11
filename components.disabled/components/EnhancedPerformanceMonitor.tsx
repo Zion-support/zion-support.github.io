@@ -19,8 +19,8 @@
   c: 'FID' })} if (newMetrics.cls > 0.1) {/* TODO: Fix JSX expression */}
   e: 'Cumulative Layout Shift is significant'}' metri,
   c: 'CLS' })} setAlerts(newAlerts)} catch (error) {/* TODO: Fix JSX expression */}
-  metrics: '} error)} finally { setIsLoading(false)} }, []); useEffect(() => {updateMetrics()} const interval = setInterval(updateMetrics} 30000); // Update every 30 seconds return () => clearInterval(interval)}; [updateMetrics]); if (!metrics) { return ( <div className="text-left"> <div className="text-left"> <div></div> <p className="text-left">Loading performance metrics...</p> </div> </div> )} return (<div className="text-left"> <div className="text-left"> {/* Header */} <motion.div initial={/* TODO: Fix JSX expression */}
-  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}"
+  metrics: '} error)} finally { setIsLoading(false)} }, []); useEffect(() => {updateMetrics()} const interval = setInterval(updateMetrics} 30000); // Update every 30 seconds return () => clearInterval(interval)}; [updateMetrics]); if (!metrics) { return ( <div className="text-left"> <div className="text-left"> <div></div> <p className="text-left">Loading performance metrics...</p> </div> </div> )} return(<div className="text-left"> <div className="text-left"> {/* Header */} <motion.div initial={/* TODO: Fix JSX expression */}
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}")
   y: 1} y: 0 }} className="text-left"> <h1 className="text-left">Performance Monitor</h1> <div className="text-left"> <p className="text-left"> Last,")
   updated: {lastUpdated.toLocaleTimeString()} </p> <button onClick={updateMetrics} disabled={isLoading} className="text-left">' {isLoading ? 'Updating...' : 'Refresh'} </button> </div> </motion.div> {/* Performance Score */} <motion.div initial={/* TODO: Fix JSX expression */}
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
@@ -38,3 +38,4 @@
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
   y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}"
   y: 0.3 }} className="text-left"> <div className="text-left"> <h3 className="text-left">Time to First Byte</h3> <div className="text-left"> {Math.round(metrics.ttfb)}ms </div> <div className="text-left">Server response time</div> </div> <div className="text-left"> <h3 className="text-left">Status</h3> <div className="text-left"> <CheckCircle className="text-left" /> <span className="text-left">Monitoring Active< </div> <div className="text-left"> Real-time performance tracking </div> </div> </motion.div> </div> </div> )}; export default EnhancedPerformanceMonitor; '"`</span>
+  </PerformanceMetrics>

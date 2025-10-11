@@ -1,7 +1,7 @@
 export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
     }
     {
-      tit, l, e: "Nor, t, h‑Engineering, Metric
+      tit, l, e: "Nor, t, h‑Engineering, Metric;
   s: Fewer, KPI, s, Better, Outcome, s"
       catego, r, y: "Leadersh, i, p"
       readTi, m, e: "5, min, read"
@@ -25,8 +25,8 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               <BookOpen, classNam, e="w-5 h-5" />
               Explore, All, Articles
               <Link, classNam, e="w-5 h-5" />
-              <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies
+              <Zap, classNam, e="w-5 h-5" />)
+  View, Case, Studies
         </d, i, v>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
@@ -44,7 +44,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
         <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20">
           <div, classNam, e="te, x, t-cent, e, r">
             <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+
-  ]; retu, r, n (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
+  ]; retu, r, n(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>"
         <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" /></div>"
@@ -53,8 +53,8 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               <BookOpen, classNam, e="w-5 h-5" />
               Explore, All, Articles;"
               <Link, classNam, e="w-5 h-5" /></Link>"
-              <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies
+              <Zap, classNam, e="w-5 h-5" />)
+  View, Case, Studies
         {/* Featured, Content, Car, d, s */}"
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
             {/* TODO: Fix JSX expression */}"

@@ -28,8 +28,8 @@
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                 Starting, a, t $, 7,9, 9, 9/mon, t, h
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Re, a, l-Time, Cognitive, Automation Platfo, r, m
-              Re, a, l-Time, Cognitive, Automation Platfo, r, m
+              Re, a, l-Time, Cognitive, Automation Platfo, r, m;
+  Re, a, l-Time, Cognitive, Automation Platfo, r, m
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Re, a, l-Time, Cognitive, Automation Platfo, r, m
@@ -191,3 +191,5 @@
                   Schedule, Free, Assessment
                   <Zap, className='w-5 h-5' /></Zap>`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></a></a></p></p></h1></h1></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></article></article>
+</title>
+</title>

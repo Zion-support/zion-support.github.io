@@ -41,8 +41,8 @@ errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
 this.setState({;
 error},;
-errorInfo,;,
-errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+errorInfo,;,)
+  errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     })
     // Log error to console in development;
 if (process.env.NODE_ENV === 'development') {;
@@ -73,8 +73,8 @@ await fetch('/api/error-report', {;,
 method: 'POST',;,
 headers: {
           'Content-Type': 'application/json',
-        },;,
-body: JSON.stringify(errorReport),
+        },;,)
+  body: JSON.stringify(errorReport),
       })
     } catch (reportError) {;
 console.error('Failed to report error:', reportError)
@@ -85,8 +85,8 @@ this.setState({;,
 }
 hasError: false},;,
 error: null,;,
-errorInfo: null,;,
-errorId: null
+errorInfo: null,;,)
+  errorId: null
     })
   }
   private handleReload = () => {;
@@ -100,7 +100,7 @@ if (this.state.hasError) {;
 if (this.props.fallback) {;
 return this.props.fallback;
   }
-      return (;
+      return(;
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
@@ -110,8 +110,8 @@ return this.props.fallback;
   </path>
               <div className="ml-3">
                 <h3 className="text-lg font-medium text-gray-900">Something went wrong
-                <p className="text-sm text-gray-500">;
-We're sorry, but something unexpected happened.
+                <p className="text-sm text-gray-500">;)
+  We're sorry, but something unexpected happened.
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:
@@ -142,3 +142,14 @@ Error ID: {this.state.errorId}
   }
 }
 export default AdvancedErrorBoundary</div></div></div></div></div></div></div></p></p></p></p></h3></h4>
+</p>
+</h4>
+</p>
+</h3>
+</div>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</ErrorBoundaryState>

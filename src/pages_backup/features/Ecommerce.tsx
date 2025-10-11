@@ -45,7 +45,6 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-export default function Ecommerce() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -54,8 +53,7 @@ export default function Ecommerce() {
     "url": "https://app.ziontechgroup.com/features/e-commerce"
 
   }
-  return (
-    <>
+  return(<>
             <li>
               Reach new customers around the world via our global platform.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
@@ -64,8 +62,8 @@ export default function Ecommerce() {
             <div>
               <p className='font - semibold'>How do I list a new product?</p>
               <p className='text - zion - slate - light'>
-                Sign in and click "Publish Product" from your dashboard to add
-                pricing, images and details.</$1></$1>
+                Sign in and click "Publish Product" from your dashboard to add;
+  pricing, images and details.</$1></$1>
             <div>
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
@@ -77,11 +75,11 @@ export default function Ecommerce() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
 
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -92,8 +90,8 @@ export default function Ecommerce() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
             />
@@ -120,8 +118,8 @@ export default function Ecommerce() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -132,8 +130,8 @@ export default function Ecommerce() {
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
+            <img;
+  src="https://placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
             />
@@ -174,7 +172,6 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-export default function Ecommerce() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -182,18 +179,17 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   }
-  return (
-    <>
-      <SEO
-        title="E-commerce Platform"
+  return(<>
+      <SEO;
+  title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <script;
+  type="application/ld+json")
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -202,10 +198,25 @@ export default function Ecommerce() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.</$1>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
 
 
               <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>
+              </img>
+              </div>
+              </p>
+              </div>
+              </main>
+              </SEO>
+              </img>
+              </Button>
+              </div>
+              </img>
+              </div>
+              </main>
+              </div>
+              </div>
+              </div>

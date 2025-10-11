@@ -67,8 +67,7 @@ $4}
         'Unlimited users',
         'White-label options',
         'SLA guarantee'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -79,8 +78,8 @@ $4}
   
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
-              href="tel:+13024640950"
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
+              href="tel:+13024640950")
+  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
               📞 Call: (302) 464-0950
   
             <$2 />
@@ -138,8 +137,7 @@ $4}
 import { Link } from 'react-router-dom'
 const SmartAnalyticsPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -156,10 +154,9 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import Footer from '../components/Footer')
+  const PagePage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -183,7 +180,7 @@ const PagePage: React.FC = () => {
   e: 'Professional',
       pric,
   e: '$799',
-      descriptio,
+      descriptio,)
   n: 'Advanced analytics for growing businesses',
                 {plan.popular && ()}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
@@ -219,8 +216,8 @@ const PagePage: React.FC = () => {
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              Get Free Demo
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo,
+              Get Free Demo;
+  className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo,
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -271,3 +268,10 @@ export default SmartAnalyticsPage</a>
   </div>
   </div>
 </div></span></span></span></span></p></p></p></h3></h3></ul></ul></li></main></section>
+</ul>
+</main>
+</ul>
+</span>
+</p>
+</section>
+</p>

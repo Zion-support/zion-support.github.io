@@ -21,3 +21,6 @@ const,
 }
 export default SEO
 "
+</title>
+</SEOProps>
+</SEOProps>

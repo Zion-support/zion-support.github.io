@@ -38,8 +38,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOB, E, R , 2, 20, 2, 5
             <Zap, classNam, e = 'w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-            Ne, x, t-Generation, Enterprise, AI
-            Ne, x, t-Generation, Enterprise, AI
+            Ne, x, t-Generation, Enterprise, AI;
+  Ne, x, t-Generation, Enterprise, AI
             <, b, r />{' '}
             <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t'>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
@@ -63,8 +63,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                     <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r'>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           {/* TODO: Fix JSX expression */}
-              <, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
-                className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
+              <, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />)
+  className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               ></Link>`
                 <div, className='flex, item, s-start, ga, p-4, m, b-6' > <, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}$2 />
                   >
@@ -104,8 +104,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                       <span, className='leadi, n, g-relax, e, d'>{highlig, h, t}
                   ))}
                 <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
-                  Read, Full, Guide
-                  Read, Full, Guide
+                  Read, Full, Guide;
+  Read, Full, Guide
                   <Link, className='w-5 h-5' />
                 <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
                   Read, Full, Guide

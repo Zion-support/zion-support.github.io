@@ -5,20 +5,20 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
- onMetricsUpdate
- enableRealTimeMonitoring = true}) => {
+ onMetricsUpdate;
+  enableRealTimeMonitoring = true}) => {
  const [metrics, setMetrics] = useState<PerformanceMetrics>({
- fcp: null
- lcp: null
- fid: null
- cls: null
- ttfb: null
- memory: null
+ fcp: null,
+  lcp: null;
+  fid: null,
+  cls: null;
+  ttfb: null,
+  memory: null
  })
  const measureWebVitals = useCallback(() => {
- if (typeof window === 'undefined' || !('performance' in window)) return
- if (typeof PerformanceObserver === 'undefined') return
- const observers: PerformanceObserver[] = []
+ if (typeof window === 'undefined' || !('performance' in window)) return;
+  if (typeof PerformanceObserver === 'undefined') return;
+  const observers: PerformanceObserver[] = []
  // Measure First Contentful Paint (FCP)
  const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
  const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
@@ -56,8 +56,8 @@ const,
  'processingStart' in entry &&)
  'startTime' in entry;)
  ) {
- const _fidEntry = entry as PerformanceEventTiming
- setMetrics(prev => ({)
+ const _fidEntry = entry as PerformanceEventTiming;
+  setMetrics(prev => ({)
  ...prev)
  fid: fidEntry.processingStart - fidEntry.startTime),
  if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
@@ -77,8 +77,8 @@ const,
  // Measure Cumulative Layout Shift (CLS)
  if ('PerformanceObserver' in window) {
  try {
- let _clsValue = 0
- const clsObserver = new PerformanceObserver(list => {)
+ let _clsValue = 0;
+  const clsObserver = new PerformanceObserver(list => {)
  const _entries = list.getEntries()
  entries.forEach(entry => {)
  if ()
@@ -86,10 +86,10 @@ const,
  'hadRecentInput' in entry &&)
  'value' in entry;)
  ) {
- const _clsEntry = entry as LayoutShift
- if (!clsEntry.hadRecentInput) {
- clsValue += clsEntry.value
- setMetrics(prev => ({ ...prev, cls: clsValue }))
+ const _clsEntry = entry as LayoutShift;
+  if (!clsEntry.hadRecentInput) {
+ clsValue += clsEntry.value;
+  setMetrics(prev => ({ ...prev, cls: clsValue }))
  if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   s: clsValue }))
  }
@@ -108,15 +108,15 @@ const,
  // Measure Time to First Byte (TTFB)
  try {
  const _navigationEntries = performance.getEntriesByType?.('navigation') || []
- const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming
- const ttfb = navigationEntry
+ const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+  const ttfb = navigationEntry
  ? navigationEntry.responseStart - navigationEntry.requestStart
  : null
- // Measure Memory Usage
- const memory =
+ // Measure Memory Usage;
+  const memory =
  (performance as Performance & { memory?: { usedJSHeapSize: number } })
- .memory?.usedJSHeapSize || null
- setMetrics(prev => ({)
+ .memory?.usedJSHeapSize || null;
+  setMetrics(prev => ({)
  ...prev)
  fcp)
  ttfb)
@@ -126,8 +126,8 @@ const,
  // eslint-disable-next-line no-console
  // console.warn('Performance measurement failed:', error);origin/
  }
- // Cleanup observers
- return () => {
+ // Cleanup observers;
+  return () => {
  observers.forEach(observer => {)
  try {)
  observer.disconnect()
@@ -136,40 +136,40 @@ const,
  // console.warn('Error disconnecting observer:', error);origin/
  try {/* TODO: Fix JSX expression */}
   e: number } })
- .memory?.usedJSHeapSize || null
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ .memory?.usedJSHeapSize || null;
+  setMetrics(prev => ({/* TODO: Fix JSX expression */})
  }))
  } catch (error) {/* TODO: Fix JSX expression */}
  }
- // Cleanup observers
- return () => {/* TODO: Fix JSX expression */}
+ // Cleanup observers;
+  return () => {/* TODO: Fix JSX expression */}
  } catch (error) {/* TODO: Fix JSX expression */}
  }
  })
  }
  }, [])
  const measureResourceTiming = useCallback(() => {
- if (typeof window === 'undefined' || !('performance' in window)) return
- const _resources = performance.getEntriesByType('resource')
+ if (typeof window === 'undefined' || !('performance' in window)) return;
+  const _resources = performance.getEntriesByType('resource')
  const slowResources = resources.filter(
  (resource: PerformanceResourceTiming) => resource.duration > 1000
  )
  if (slowResources.length > 0) {
  // eslint-disable-next-line no-console
  // console.warn('Slow resources detected:')
- slowResources.map((r: PerformanceResourceTiming) => ({
- name: r.name
- duration: r.duration
- size: r.transferSize
- const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
+ slowResources.map((r: PerformanceResourceTiming) => ({,
+  name: r.name;
+  duration: r.duration,
+  size: r.transferSize;
+  const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
  }))
  )
  }
  }, [])
  const measureCoreWebVitals = useCallback(() => {
  if (typeof window === 'undefined') return
- // Use web-vitals library if available
- try {
+ // Use web-vitals library if available;
+  try {
  import('web-vitals')
  .then(webVitals => {)
  const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
@@ -178,8 +178,8 @@ const,
  onCLS((metric: { value: number }) =>
  setMetrics(prev => ({ ...prev, cls: metric.value }))
  const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
- const { onCLS, onFCP, onLCP, onTTFB } = webVitals
- if (onCLS) {/* TODO: Fix JSX expression */}
+ const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+  if (onCLS) {/* TODO: Fix JSX expression */}
   e: number }) =>
  setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: metric.value }))
@@ -212,12 +212,12 @@ const,
  }
  }, [])
  useEffect(() => {
- if (!enableRealTimeMonitoring) return
- const _cleanup = measureWebVitals()
+ if (!enableRealTimeMonitoring) return;
+  const _cleanup = measureWebVitals()
  measureResourceTiming()
  measureCoreWebVitals()
- // Monitor performance every 5 seconds
- const interval = setInterval(() => {
+ // Monitor performance every 5 seconds;
+  const interval = setInterval(() => {
  measureResourceTiming()
  .catch(() => {/* TODO: Fix JSX expression */}
  })
@@ -236,8 +236,8 @@ const,
  useEffect(() => {/* TODO: Fix JSX expression */}
  }
  }, [metrics, onMetricsUpdate])
- // Performance recommendations
- const getPerformanceRecommendations = useCallback(() => {
+ // Performance recommendations;
+  const getPerformanceRecommendations = useCallback(() => {
  const recommendations: string[] = []
  if (metrics.fcp && metrics.fcp > 1800) {
  recommendations.push()
@@ -288,8 +288,8 @@ const,
  TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
  <div>
  Memory:{' '}
- {metrics.memory
- if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+ {metrics.memory;
+  if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
  <div>LC,`
   P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
@@ -322,3 +322,24 @@ const,
 }
 export default AdvancedPerformanceMonitor
 `</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></h3></ul></li>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</PerformanceMonitorProps>
+</PerformanceMetrics>
+</PerformanceMonitorProps>

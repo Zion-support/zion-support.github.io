@@ -39,28 +39,28 @@ function TalentDashboardContent() {
     onboardingStatus && onboardingStatus.profileCompleted &&
     onboardingStatus && onboardingStatus.skillsAdded &&
     onboardingStatus && onboardingStatus.availabilitySet &&
-    onboardingStatus && onboardingStatus.matchReceived
-import { useState, useEffect } from 'react'
+    onboardingStatus && onboardingStatus.matchReceived;
+  import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
 import { SEO } from '@/components/SEO'
 import {
-  BriefcaseIcon
+  BriefcaseIcon;
   UserIcon
-  MessageSquare
+  MessageSquare;
   Star
-  PlusCircle
+  PlusCircle;
   FileText
-  Inbox
+  Inbox;
   Video
 } from 'lucide-react'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
 import { useAuth } from '@/hooks/useAuth'
-  Card
+  Card;
   CardContent
-  CardDescription
+  CardDescription;
   CardHeader
   CardTitle
 } from '@/components/ui/card'
@@ -78,8 +78,8 @@ import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingIntervie
 
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState("job-matches")
-  const onboardingStatus = null
-import { useState, useEffect } from "react",
+  const onboardingStatus = null;
+  import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import Link from "next/link",
@@ -97,7 +97,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { MyApplications } from "@/components/jobs/MyApplications",
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
   const onboardingStatus = useOnboardingStatus(),
@@ -112,10 +111,9 @@ function TalentDashboardContent() {
 
 
 
-  return (
-    <>
-      <SEO 
-        title="Talent Dashboard | Zion AI Marketplace" 
+  return(<>
+      <SEO;
+  title="Talent Dashboard | Zion AI Marketplace" 
         description="Your personalized talent dashboard with job matches and professional opportunities." 
       />
       <main className="container mx-auto px-4 py-8">
@@ -152,10 +150,10 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-                        <img
-                          src={user.avatarUrl}
-                          alt={user.displayName |'User'}
-                          loading='lazy'
+                        <img;
+  src={user.avatarUrl}
+                          alt={user.displayName |'User'})
+  loading='lazy'
                         />
 
                       ) : (
@@ -250,7 +248,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { MyApplications } from "@/components/jobs/MyApplications",
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
   const onboardingStatus = useOnboardingStatus(),
@@ -258,11 +255,10 @@ function TalentDashboardContent() {
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived
-  return (
-    <>
-      <SEO
-        title="Talent Dashboard | Zion AI Marketplace"
+    onboardingStatus.matchReceived;
+  return(<>
+      <SEO;
+  title="Talent Dashboard | Zion AI Marketplace"
         description="Your personalized talent dashboard with job matches and professional opportunities."
       />
       <main className="container mx-auto px-4 py-8">
@@ -273,8 +269,8 @@ function TalentDashboardContent() {
           <div className="flex gap-4">
             <Button variant="outline" asChild>
               <Link href="/settings/account">
-                <UserIcon className="h-4 w-4 mr-2" />
-                Profile Settings</$1></$1>
+                <UserIcon className="h-4 w-4 mr-2" />)
+  Profile Settings</$1></$1>
             <Button asChild>
               <Link href="/dashboard/talent/applications">
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker</$1></$1></$1></$1>
@@ -332,7 +328,6 @@ import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInte
 /**
  * TalentDashboardContent - Function description
  */
-function TalentDashboardContent() {
   const { user } = use_auth ()
   const [active_tab, setActiveTab] = useState ('job - matches')
   const onboarding_status = useOnboardingStatus ()
@@ -340,11 +335,10 @@ function TalentDashboardContent() {
     onboarding_status.profile_completed &&
     onboarding_status.skills_added &&
     onboarding_status.availability_set &&
-    onboarding_status.match_received
-  return (
-    <>
-      <SEO
-        title='Talent Dashboard | Zion AI Marketplace'
+    onboarding_status.match_received;
+  return(<>
+      <SEO;
+  title='Talent Dashboard | Zion AI Marketplace'
         description='Your personalized talent dashboard with job matches and professional opportunities.'
       />
       <main className='container mx - auto px - 4 py - 8'>
@@ -371,10 +365,10 @@ function TalentDashboardContent() {
                   <div className='flex items - center gap - 3'>
                     <Avatar className='h - 12 w - 12 border'>
                       {user?.avatar_url ? (
-                        <img
-                          src={user.avatar_url}
-                          alt={user.display_name || 'User'}
-                          loading='lazy'
+                        <img;
+  src={user.avatar_url}
+                          alt={user.display_name || 'User'})
+  loading='lazy'
                         />) : (
                         <div className='flex h - full w - full items - center justify - center bg - muted text - lg font - medium uppercase'>
                           {user?.display_name?.char_at (0) || 'U'}
@@ -535,8 +529,8 @@ function TalentDashboardContent() {
                 <div className='mt-4 flex justify-center'>
                   <Button variant='outline' asChild>
                     <Link href='/dashboard/talent/applications'>
-                      <Inbox className='h-4 w-4 mr-2' /> View Full Application
-                      Tracker</$1></$1></$1></$1>
+                      <Inbox className='h-4 w-4 mr-2' /> View Full Application;
+  Tracker</$1></$1></$1></$1>
               <TabsContent value='saved' className='mt-0'>
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
@@ -549,3 +543,78 @@ function TalentDashboardContent() {
       <TalentDashboardContent /></$1>
   )
 }</$1></div></div></div></div></div></div></div></div></Link></p></main>
+</Button>
+</p>
+</CardContent>
+</Card>
+</TabsContent>
+</Button>
+</TabsContent>
+</TabsContent>
+</TabsList>
+</Tabs>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</CardContent>
+</CardHeader>
+</Card>
+</div>
+</p>
+</CardContent>
+</Card>
+</TabsContent>
+</TabsContent>
+</TabsList>
+</Tabs>
+</Button>
+</div>
+</div>
+</div>
+</CardContent>
+</div>
+</img>
+</div>
+</div>
+</CardHeader>
+</Card>
+</div>
+</div>
+</Link>
+</Button>
+</Link>
+</Button>
+</div>
+</p>
+</div>
+</div>
+</SEO>
+</div>
+</div>
+</div>
+</CardHeader>
+</Card>
+</div>
+</div>
+</Link>
+</Button>
+</Link>
+</Button>
+</div>
+</div>
+</div>
+</main>
+</SEO>
+</Card>
+</Link>
+</Button>
+</div>
+</img>
+</div>
+</div>
+</div>
+</main>
+</SEO>

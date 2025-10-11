@@ -6,8 +6,8 @@ export default function BlogPost(): React.JSX.Element {
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
         <Helmet>
           <title>Edge 2025 Oct 01 Consentless Feature Flags V4 - Zion Tech Group
-          <meta
-            name="description"
+          <meta;
+  name="description"
             content="Edge 2025 Oct 01 Consentless Feature Flags V4 - Latest insights from Zion Tech Group"
           />
         <div className="max-w-4xl mx-auto px-4 py-20">
@@ -36,12 +36,12 @@ export default function BlogPost(): React.JSX.Element {
 ,
               <h2>Main Content</h2>,
               <p>,
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
+  incididunt ut labore et dolore magna aliqua.
               <h2>Conclusion
               <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip)
+  ex ea commodo consequat.
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
               <div>)
@@ -65,7 +65,6 @@ export default function BlogPost(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Edge 2025 Oct 01 Consentless Feature Flags V4')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
@@ -103,3 +102,12 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
     </React.Fragment>)
 }
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></p></p></p></h1></h1></h2></h2></h3>
+</p>
+</h2>
+</p>
+</p>
+</h1>
+</h1>
+</meta>
+</title>
+</Helmet>

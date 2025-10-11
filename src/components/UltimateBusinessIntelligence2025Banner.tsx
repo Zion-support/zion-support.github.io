@@ -12,8 +12,8 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-      metrics: {
-        efficiency: '300%',
+      metrics: {,
+  efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
         adoption:       ,
@@ -49,8 +49,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   const handleClose = () => {
     setIsVisible(false)
   }
-  if (!isVisible) return null;return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+  if (!isVisible) return null;return(<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
@@ -92,12 +91,12 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  className="w-8 h-8 text-white"
+                <svg;
+  className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  viewBox="0 0 24 24")
+  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
@@ -264,3 +263,10 @@ export default UltimateBusinessIntelligence2025Banner;"
   </div>
   </div>
 </div></div></div></div></div></span></span></span></span></a></p></h1>
+</span>
+</span>
+</span>
+</svg>
+</p>
+</h1>
+</div>

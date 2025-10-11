@@ -7,21 +7,21 @@ import React from 'react'
 export interface SEOProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  title?: string
-  description?: string
+  title?: string;
+  description?: string;
   keywords?: string[]
-  image?: string
-  url?: string
+  image?: string;
+  url?: string;
   type?: 'website' | 'article' | 'product' | 'profile'
-  author?: string
-  publishDate?: string
-  modifiedDate?: string
-  canonical?: string
-  noIndex?: boolean
+  author?: string;
+  publishDate?: string;
+  modifiedDate?: string;
+  canonical?: string;
+  noIndex?: boolean;
   structuredData?: Record
           <string>
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
-  locale?: string
+  locale?: string;
   alternateLocales?: {/* TODO: Fix JSX expression */}
   l: string }[]
 }
@@ -91,8 +91,8 @@ export const,
 //     type,
 //     twitterCard,
 //     locale}
-  // Generate structured data
-const generateStructuredData = () => {/* TODO: Fix JSX expression */}
+  // Generate structured data;
+  const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (structuredData) {/* TODO: Fix JSX expression */}
@@ -142,3 +142,5 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 }
 export default SEO;`
   </SEOProps>
+
+</string>

@@ -15,8 +15,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
         <meta, nam, e = 'description'
           conte, n, t='Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n'
+        <meta, nam, e = 'keywor, d, s')
+  conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n'
         />)
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n')
@@ -208,18 +208,18 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               Transform, Your, Enterprise with, Cognitive, AI
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
-              Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid
-              deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
-                Schedule, Assessmen, t
-                Schedule, Assessmen, t
+              Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid;
+  deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
+                Schedule, Assessmen, t;
+  Schedule, Assessmen, t
                 <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Assessmen, t
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               Transform, Your, Enterprise with, Cognitive, AI
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
-              Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid
-              deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
+              Zion, Tech, Group's, Cognitive, Computing Platform, enables, rapid;
+  deployment, of, human-like, AI, intelligence. Achieve, 9, 8.5%+ decision, accuracy, and $1.2B+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t
                 <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Assessmen, t
@@ -245,8 +245,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                   <span, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-3, 0, 0'>
                     CASE, STUD, Y
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
-                  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
-                  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
+                  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation;
+  Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
                 <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
                   Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n
                 <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
@@ -260,3 +260,4 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                   Fortune, 20, Teleco,
   m: $4.7B, Cognitive, Transformation;)
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></li></li></li></li></li></li></li></li></li></li></nav></nav>
+</title>

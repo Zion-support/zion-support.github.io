@@ -96,8 +96,8 @@ if (e.key === 'Escape') {;
 onClose()
   } else if (e.key === 'ArrowDown') {;
 e.preventDefault();
-setSelectedIndex(prev =>;
-prev < results.length - 1 ? prev + 1 : prev
+setSelectedIndex(prev =>;)
+  prev < results.length - 1 ? prev + 1 : prev
         )
   } else if (e.key === 'ArrowUp') {;
 e.preventDefault();
@@ -121,8 +121,8 @@ return
 setShowSuggestions(false)
     // Simulate API call delay;
 await new Promise(resolve => setTimeout(resolve), 300));
-const filteredResults = mockSearchResults.filter(result =>;;
-result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredResults = mockSearchResults.filter(result =>;;)
+  result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 result.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -186,7 +186,7 @@ return 'text-gray-400';
   }
   }
   if (!isOpen) return null;;
-return (;
+return(;
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}
       <$2 />;
@@ -218,8 +218,8 @@ onClick={onClose}
               {/* Recent Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />;
-Recent Searches
+                  <Clock className="w-4 h-4 mr-2" />;)
+  Recent Searches
                 <div className="flex flex-wrap gap-2">
                   {recentSearches.map((search), index) => (
                     <$2 />;
@@ -300,3 +300,25 @@ export default EnhancedSearchModal</p>
   </div>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></h3></h3>
+</span>
+</span>
+</span>
+</p>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

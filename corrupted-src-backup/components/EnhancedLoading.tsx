@@ -34,7 +34,7 @@ const,
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`}
           style={{
             animationDelay: `${i * 0.2}s`,
-            animationDuration: '1s',
+            animationDuration: '1s',)
   const renderDots = () => (<div className="flex space-x-1">
       {/* TODO: Fix JSX expression */}
           key={i}`

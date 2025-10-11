@@ -8,19 +8,19 @@ import, Reac, t, { me, m, o } fr, o, m "rea, c, t";'
  * @description, Hig, h-performance, promotional, banner with, accessibility, features
  */
 const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
-  return(<secti, o, n
+  return(<secti, o, n;
   classNa, m, e="relative, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, overflo, w-hidd, e, n"
       ar, i, a-lab, e, l="Cognitive, Mesh, Platform Launch, Announcemen, t"
     >
       {/* Animated, background, elements - purely, decorativ, e */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>"
-        <d, i, v
+        <d, i, v;
   classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
           sty, l, e={{ animationDel, a, y: '2s' }}
         ></d, i, v>
-        <d, i, v
-const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
+        <d, i, v)
+  const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements - purely, decorativ, e */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">";"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>"
@@ -45,7 +45,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           <d, i, v
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-8">"
-          <d, i, v
+          <d, i, v;
   classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, p, x-6, p, y-3, rounde, d-full, m, b-6, animat, e-fa, d, e-in"
             ro, l, e="stat, u, s"
         {/* Header, Sectio, n */}"
@@ -208,9 +208,9 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">""
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">"
           {/* Blog, Post, Card */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
-            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
+            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="Read, technical, article about, Cognitive, Mesh Orchestrati, o, n"
           >
@@ -236,10 +236,10 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
                 <p, className="te, x, t-xs, tex, t-whi, t, e/60">Blog, Pos, t</p>"
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
-              Cognitive, Mesh, Orchestratio
+              Cognitive, Mesh, Orchestratio;
   n: The, Future, of Distributed, A, I
             <p, className="te, x, t-sm, tex, t-whi, t, e/80, m, b-4">"
-              Discover, how, distributed intelligen, c, e, autonomous, coordinatio, n, and, adaptive, learning
+              Discover, how, distributed intelligen, c, e, autonomous, coordinatio, n, and, adaptive, learning;
   achieve, 1, 0-100x, performance, improvements.
             <span, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, fon, t-semibo, l, d">"
               <sp, a, n>Read, Articl, e
@@ -250,7 +250,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               Cognitive, Mesh, Orchestratio,
   n: The, Future, of Distributed, A, I</$1>"
             <p, className="te, x, t-sm, tex, t-whi, t, e/80, m, b-4">"
-              Discover, how, distributed intelligen, c, e, autonomous, coordinatio, n, and, adaptive, learning
+              Discover, how, distributed intelligen, c, e, autonomous, coordinatio, n, and, adaptive, learning;
   achieve, 1, 0-100x, performance, improvements.
             </p>"
             <span, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, fon, t-semibo, l, d">"
@@ -258,9 +258,9 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>""
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />"
           {/* Case, Study, Card */}
-          <Li, n, k
+          <Li, n, k;
   to="/ca, s, e-studi, e, s"
-            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
+            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="View, case, study abo, u, t $12, billion, FinTech transformati, o, n"
           >
@@ -286,10 +286,10 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
                 <p, className="te, x, t-xs, tex, t-whi, t, e/60">Case, Stud, y</p>"
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-gre, e, n-200, transitio, n-colo, r, s">"
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-gre, e, n-200, transitio, n-colo, r, s">"
-              Global, FinTe, c
+              Global, FinTe, c;
   h: $12, Billion, Value Creation, in, 18 Mont, h, s
             <p, className="te, x, t-sm, tex, t-whi, t, e/80, m, b-4">"
-              How, a, Fortune 100, financial, services company, achieved, 99.7% fraud, detection, accuracy
+              How, a, Fortune 100, financial, services company, achieved, 99.7% fraud, detection, accuracy;
   a, n, d $2.8B, annual, savings.
             <span, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, fon, t-semibo, l, d">"
               <sp, a, n>View, Case, Study
@@ -300,7 +300,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               Global, FinTe, c,
   h: $12, Billion, Value Creation, in, 18 Mont, h, s</$1>"
             <p, className="te, x, t-sm, tex, t-whi, t, e/80, m, b-4">"
-              How, a, Fortune 100, financial, services company, achieved, 99.7% fraud, detection, accuracy
+              How, a, Fortune 100, financial, services company, achieved, 99.7% fraud, detection, accuracy;
   a, n, d $2.8B, annual, savings.
             </p>"
             <span, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, fon, t-semibo, l, d">"
@@ -308,9 +308,9 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>""
               <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />"
           {/* Services, Car, d */}
-          <Li, n, k
+          <Li, n, k;
   to="/servic, e, s"
-            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove
+            classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, grou, p"
             ar, i, a-lab, e, l="Explore, Cognitive, Mesh Platform, services, and prici, n, g"
           >
@@ -360,9 +360,9 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, transform, hove
+              classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, hove, r: bg-gr, a, y-100, tex, t-purp, l, e-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, transform, hove;
   r:sca, l, e-1, 0, 5"
         {/* Call, to, Action */}"
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action"></div>"
@@ -381,7 +381,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />"
               Schedule, Free, Consultation;"
               <Link, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-transparent, hove, r: bg-whi, t, e/10, tex, t-white, borde, r-2, borde, r-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-3, 0, 0"
             <Li, n, k;"

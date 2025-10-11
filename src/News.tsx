@@ -198,17 +198,17 @@ const categories = [;
     "Industry Insights",
     "Company News",
     "Product Updates"
-  ];
-const featuredArticle = newsArticles.find(article => article.featured);;
-return (;
+  ];)
+  const featuredArticle = newsArticles.find(article => article.featured);;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
 }
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">;
-const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;;
-const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear);;
+const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;;)
+  const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear);;
 const matchesSearch = searchQuery === '' ||;;
 article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -217,7 +217,7 @@ return matchesCategory && matchesYear && matchesSearch;
   });
 const featuredNews = filteredNews.filter(article => article.featured);;
 const regularNews = filteredNews.filter(article => !article.featured);;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -245,8 +245,8 @@ Play,;
 ImageIcon,;
 Video,;
 FileText
-} from 'lucide-react';
-const News = () => {;;
+} from 'lucide-react';)
+  const News = () => {;;
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedCategory, setSelectedCategory] = useState('all');
 const [sortBy, setSortBy] = useState('latest');
@@ -289,7 +289,6 @@ views: "12.8k",;,
 type: "announcement",;
 import React from 'react';;
 import { Link; } from 'react-router-dom';
-export default function News() {;
 const featuredNews = [;
     {;,
 }
@@ -303,7 +302,6 @@ image: '🚀',;
 import React from 'react';;
 import { SEO; } from '@/components/SEO';
 import { Link; } from 'react-router-dom';
-export default function News() {;
 const newsItems = [;
     {;,
 }
@@ -488,8 +486,8 @@ externalLink: null,;,
 isPressRelease: false
     }
   ];
-const filteredNews = newsItems.filter(item => {;;
-const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const filteredNews = newsItems.filter(item => {;;)
+  const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;;
@@ -502,8 +500,8 @@ const formatDate = (dateString: string) => {;;
 const date = new Date(dateString);;
 return date.toLocaleDateString('en-US';, {;,
 year: 'numeric',;,
-month: 'long',;,
-day: 'numeric' 
+month: 'long',;,)
+  day: 'numeric' 
 }
     })
   }
@@ -754,7 +752,7 @@ const categories = [;
     'Case Study',
     'Awards'
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -771,8 +769,8 @@ Subscribe to Newsletter
             </button>
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">;
 RSS Feed
-            </button>;
-return (;
+            </button>;)
+  return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -1168,7 +1166,7 @@ image: '/images/news/cybersecurity-certification.jpg'
     }
   ];
 const categories = ['All';, 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security'];
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="News & Updates - Zion Tech Group";
@@ -1184,8 +1182,8 @@ canonical="https://ziontechgroup.com/news"
 News & Updates
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-Stay informed about the latest developments, product launches, partnerships,;
-and innovations from Zion Tech Group as we continue to shape the future of technology.
+Stay informed about the latest developments, product launches, partnerships,;)
+  and innovations from Zion Tech Group as we continue to shape the future of technology.
           </p>
         </div>
 
@@ -1203,8 +1201,8 @@ and innovations from Zion Tech Group as we continue to shape the future of techn
                     <span className="text-gray-400 text-sm">
                       {new Date(item.date).toLocaleDateString('en-US', {;,
 year: 'numeric',;,
-month: 'long',;,
-day: 'numeric' 
+month: 'long',;,)
+  day: 'numeric' 
                       })}
                     </span>
                   </div>
@@ -1251,8 +1249,8 @@ Read Full Article
                     <span className="text-gray-400 text-xs">
                       {new Date(item.date).toLocaleDateString('en-US', {;,
 year: 'numeric',;,
-month: 'short',;,
-day: 'numeric' 
+month: 'short',;,)
+  day: 'numeric' 
                       })}
                     </span>
                   </div>
@@ -1422,3 +1420,16 @@ Download Press Kit
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></section></section></section>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>

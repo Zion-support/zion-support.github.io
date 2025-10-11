@@ -62,7 +62,7 @@ icon: (
 features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
     }
   ];
-return (;
+return(;
     <section id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -70,8 +70,8 @@ return (;
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="holographic-text">Our Services
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-Comprehensive technology solutions designed to accelerate your business growth;
-and digital transformation journey.
+Comprehensive technology solutions designed to accelerate your business growth;)
+  and digital transformation journey.
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service), index) => (
@@ -134,3 +134,22 @@ Call Now
   </a>
   </a>
 </div></div></div></div></span></p></p></p></p></p></p></p></p></p></p></h2></h3></h3></ul></li>
+</h3>
+</svg>
+</svg>
+</li>
+</ul>
+</p>
+</h3>
+</div>
+</p>
+</span>
+</h2>
+</div>
+</div>
+</svg>
+</svg>
+</svg>
+</svg>
+</svg>
+</svg>

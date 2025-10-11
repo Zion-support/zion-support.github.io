@@ -74,7 +74,7 @@ const technologies = [;
     'Machine Learning'
   ];
 ;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI 3D Generation - Advanced 3D Content Creation | Zion Tech Group</title>
@@ -107,8 +107,8 @@ Get Started
               <a;
 href="/demo";
 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
-              >;
-View Demo
+              >;)
+  View Demo
               </a>
             </div>
           </section>

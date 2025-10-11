@@ -11,7 +11,7 @@ const [timeframe, setTimeframe] = useState(12);
 const calculateROI = () => {;;
 return Math.max(0;, roi)
 }
-  }return (;
+  }return(;
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>;
@@ -20,8 +20,8 @@ AI ROI Calculator
           <div className='grid md:grid-cols-2 gap-8'>
             <div className='space-y-6'>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>;
-Current Annual Cost ($)
+                <label className='block text-sm font-medium text-gray-700 mb-2'>;)
+  Current Annual Cost ($)
                 <input;
 type='number';
 value={currentCost}
@@ -61,3 +61,20 @@ value={timeframe}
 Expected return on investment over {timeframe;} months
   );
 export default InteractiveAIROICalculator</div></div></div></div></div></div></div></div></div></p></h2></h3></section>
+</p>
+</div>
+</h3>
+</div>
+</option>
+</option>
+</option>
+</option>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</section>

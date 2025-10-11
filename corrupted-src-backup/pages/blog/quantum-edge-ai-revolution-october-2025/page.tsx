@@ -14,7 +14,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
           <, className="te, x, t-4xl, m, d: te, x, t-5x, l, l$2 />
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-            Quantum, Edge, AI Revolut, i, o
+            Quantum, Edge, AI Revolut, i, o;
   n: Re, a, l-Time, Intelligence, at the, Speed, of Lig, h, t
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, leadin, g-relax, e, d">"
             Discover, how, quantum-accelerated, AI, deployed at, the, edge is, transforming, enterprise operations, with, sub-millisecond, latenc, y, 99.99% accura, c, y, and, complete, data priva, c, y.
@@ -43,11 +43,11 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
           <section, className="mb-12">
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">The, Quantum, Edge AI, Architectur, e
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-              Our, quantum, edge AI, platform, combines three, revolutionary, technologie
+              Our, quantum, edge AI, platform, combines three, revolutionary, technologie;
   s: </p>,
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
-              Our, quantum, edge AI, platform, combines three, revolutionary, technologie
+              Our, quantum, edge AI, platform, combines three, revolutionary, technologie;
   s:
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
@@ -70,8 +70,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">"
                   Deploy, sophisticated, AI models, directly, on edge, device, s—from, IoT, sensors to, manufacturing, equipment—with, zero, cloud dependen, c, y. Our, model, compression and, optimization, techniques enable, quantu, m-accelerated, models, to run, on, resource-constrained, devices, while maintaining, full, accuracy.
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>"
-export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>")
         {/* Head, e, r */}
         <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6">";"
@@ -508,3 +507,15 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
 }
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></article></header></header></footer></footer></footer>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>

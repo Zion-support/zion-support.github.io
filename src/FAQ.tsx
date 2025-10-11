@@ -181,14 +181,14 @@ answer: "We combine cutting-edge AI technology with deep industry expertise, off
     }
   ];
 const toggleItem = (id: number) => {;;
-setOpenItems(prev =>;
-prev.includes(id) 
+setOpenItems(prev =>;)
+  prev.includes(id) 
         ? prev.filter(item => item !== id)
         : [...prev, id]
     )
 }
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <SEO;
 title="FAQ - Zion Tech Group";
@@ -203,8 +203,8 @@ canonical="https://ziontechgroup.com/faq"
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">;
 Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-Find answers to common questions about our services, processes, and how we can help transform your business
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">;)
+  Find answers to common questions about our services, processes, and how we can help transform your business
           </p>
         </div>
       </section>
@@ -378,7 +378,6 @@ category: "Support"
   }
 ];
 const categories = ["General";, "Marketplace", "Services", "Talent", "Pricing", "Payments", "Projects", "Enterprise", "Security", "Support", "Mobile"];
-export default function FAQ() {;
 const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 const [selectedCategory, setSelectedCategory] = useState<string>("All");
 const toggleItem = (index: number) => {;;
@@ -414,7 +413,6 @@ import { GradientHeading; } from "@/components/GradientHeading";
 import { Accordion;, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card;, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search;, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-react";
-export default function FAQ() {;
 const faqData = [;
     {;,
 }
@@ -566,7 +564,7 @@ question: "How do I get paid as a talent?",;,
 answer: "Once your work is approved by the client, funds are released from escrow to your Zion wallet. You can then withdraw to your bank account or use the funds for other services on the platform."
     }
   ];
-return (;
+return(;
     <>
       <SEO;
 title="FAQ - Frequently Asked Questions | Zion Tech Group";
@@ -591,8 +589,8 @@ Find answers to the most common questions about Zion Tech Group and our marketpl
           {/* Category Filter */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-3">
-              <$2 />;
-onClick={() => setSelectedCategory("All")}
+              <$2 />;)
+  onClick={() => setSelectedCategory("All")}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${};
 selectedCategory === "All"
                     ? "bg-zion-purple text-white"
@@ -690,7 +688,7 @@ question: "How can I stay updated with Zion news?",;,
 answer: "Subscribe to our newsletter, follow us on social media, or check our blog regularly for updates on new features, success stories, and industry insights."
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-zion-blue-dark">
       <SEO;
 title="FAQ - Zion Tech Group";
@@ -705,8 +703,8 @@ canonical="https://ziontechgroup.com/faq"
             <h1 className="text-4xl font-bold text-white mb-4">;
 Frequently Asked Questions
             </h1>
-            <p className="text-xl text-zion-slate-light">;
-Everything you need to know about Zion Tech Group
+            <p className="text-xl text-zion-slate-light">;)
+  Everything you need to know about Zion Tech Group
             </p>
           </div>
 
@@ -733,7 +731,7 @@ Find answers to the most common questions about Zion's AI and technology marketp
               ))}
             </Accordion>
           </div>;
-return (;
+return(;
     <>
       <SEO;
 title="Frequently Asked Questions | Zion Tech Group";
@@ -747,8 +745,8 @@ canonical="https://ziontechgroup.com/faq"
           {/* Header */}
           <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;)
+  Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
             </p>
           </div>
 
@@ -867,8 +865,7 @@ import React from 'react';;
 import { SEO; } from "@/components/SEO";
 import { FaqSection; } from "@/components/FaqSection";
 import { Footer; } from "@/components/Footer";
-export default function FAQ() {;
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Frequently Asked Questions - Zion Tech Group";
@@ -882,8 +879,8 @@ canonical="https://ziontechgroup.com/faq"
           <h1 className="text-4xl font-bold text-white mb-4">;
 Frequently Asked Questions
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
-Find answers to the most common questions about Zion Tech Group's marketplace, services, and platform.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;)
+  Find answers to the most common questions about Zion Tech Group's marketplace, services, and platform.
           </p>
         </div>
 
@@ -981,3 +978,19 @@ Visit Our Blog
   )
 }
 </div></div></div></p></p></p></main></main></section>
+</p>
+</AccordionTrigger>
+</Accordion>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</main>
+</string>
+</number>
+</main>

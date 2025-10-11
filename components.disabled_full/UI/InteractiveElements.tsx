@@ -181,7 +181,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   AnimatedCard: React.FC<AnimatedCardProps> = ({/* TODO: Fix JSX expression */}"
   n: 'React.ReactNode'} className?: string}; delay?: number} ; className?: string; delay?: number; direction?: "up" " | "down" " | "left" " | "right" "} ; export const,")
   AnimatedCard: React.FC<AnimatedCardProps> = ({") className = ")} delay = 0}" direction = "up"}) => {; const ref = useRef<HTMLDivElement | null>(null)}}} const isInView = useInView(ref {/* TODO: Fix JSX expression */}")
-  n: "}; "-100px" });} const controls = useAnimation();} direction?: "up" | "down" | "left" | "right"} ; " direction = "up" const ref = useRef<HTMLDivElement>(null);} const isInView = useInView(ref {/* TODO: Fix JSX expression */}
+  n: "}; "-100px" });} const controls = useAnimation();} direction?: "up" | "down" | "left" | "right"} ; " direction = "up" const ref = useRef<HTMLDivElement>(null);} const isInView = useInView(ref {/* TODO: Fix JSX expression */})
   e: 'true'}margi,")
   n: "-100px" })} ; " children,className = "; delay = 0; interface InteractiveCardProps {} onClick?: () => void} ; const,"
   InteractiveCard: React.FC<InteractiveCardProps> = ({) onClick)} const ref = useRef(null)," const isInView = useInView(ref {/* TODO: Fix JSX expression */})
@@ -279,9 +279,9 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   FadeIn: React.FC<FadeInProps> = ({/* TODO: Fix JSX expression */}"
   FadeIn: React.FC<FadeInProps> = ({} duration = 0.6}"} const isInView = useInView(ref {/* TODO: Fix JSX expression */})
   e: 'tru')e}margi,"
-  n: "-50px"})" const isInView = useInView(ref {/* TODO: Fix JSX expression */}
+  n: "-50px"})" const isInView = useInView(ref {/* TODO: Fix JSX expression */})
   e: 'true'}margi,")
-  n: "-50px" })" const isInView = useInView(ref {/* TODO: Fix JSX expression */}
+  n: "-50px" })" const isInView = useInView(ref {/* TODO: Fix JSX expression */})
   e: 'true'}margi,")
   n: "-50px" });} " controls.start("visible")}"},[isInView,controls]);} hidde,
   n: {/* TODO: Fix JSX expression */}"
@@ -425,3 +425,43 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   focus:ring-offset-2"> } ${checked ? "bg-blue-600" : "bg-gray-200"}" ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}" onClick="{()" => !disabled && onChange(!checked)}" disabled="{disabled}" </button><motion.span,"; className=inline-block" h-4 w-4 transform rounded-full bg-white shadow-lg`}" animate="{{" x: 'checked ? 20 : 4' }}" transition="{/* TODO: Fix JSX expression */}
   s: '500'}dampin,
   g: '30' }} ; ></div> export {; InteractiveCard; AnimatedCounter} ProgressBar}; ToggleSwitch))))))))))))))))))))))'"`</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></a></a></a></a></a></a></a></a></a></a></a>
+  </FloatingActionButtonProps>
+  </FloatingActionButtonProps>
+  </FloatingActionButtonProps>
+  </any>
+  </InteractiveStatsProps>
+  </TooltipProps>
+  </ProgressBarProps>
+  </AnimatedCounterProps>
+  </FadeInProps>
+  </FadeInProps>
+  </LoadingSpinnerProps>
+  </LoadingSpinnerProps>
+  </LoadingSpinnerProps>
+  </HoverEffectProps>
+  </HoverEffectProps>
+  </HTMLDivElement>
+  </InteractiveCardProps>
+  </HTMLDivElement>
+  </AnimatedCardProps>
+  </AnimatedCardProps>
+  </span>
+  </span>
+  </span>
+  </FloatingActionButtonProps>
+  </any>
+  </AnimatedCardProps>
+  </InteractiveButtonProps>
+  </FloatingActionButtonProps>
+  </FloatingActionButtonProps>
+  </InteractiveStatsProps>
+  </AnimatedCounterProps>
+  </FadeInProps>
+  </LoadingSpinnerProps>
+  </HoverEffectProps>
+  </HoverEffectProps>
+  </HTMLDivElement>
+  </AnimatedCardProps>
+  </span>
+  </FloatingActionButtonProps>
+  </InteractiveButtonProps>

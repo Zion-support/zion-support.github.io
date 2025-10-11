@@ -92,8 +92,7 @@ $4}
       company: 'Consulting Firm',
       role: 'Operations Director',
       content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
@@ -108,14 +107,14 @@ $4}
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
-            and intelligent financial insights. Save time, reduce errors, and gain complete control 
-            over your business finances.
+            and intelligent financial insights. Save time, reduce errors, and gain complete control;
+  over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              <Phone className="w-5 h-5 mr-2" />)
+  Call: (302) 464-0950
   
             <$2 />
               href="/contact"
@@ -206,12 +205,11 @@ $4}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using AI Expense Tracker to streamline financial 
-import { Link } from 'react-router-dom'
+            Join thousands of businesses using AI Expense Tracker to streamline financial;
+  import { Link } from 'react-router-dom'
 const ExpenseTrackerPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -228,8 +226,8 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
+import Footer from '../components/Footer')
+  const PagePage: React.FC = () => {
   return (
           <div>Coming Soon
   )
@@ -250,8 +248,8 @@ const PagePage: React.FC = () => {
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Transform your expense management with AI-powered receipt scanning, automated categorization,
-            and intelligent financial insights. Save time, reduce errors, and gain complete control
-            over your business finances.
+            and intelligent financial insights. Save time, reduce errors, and gain complete control;
+  over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
@@ -366,8 +364,8 @@ Most Popular
   md: text-4xl font-bold text-white mb-6"></h2>
             Ready to Master Your Expenses?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-            Join thousands of businesses using AI Expense Tracker to streamline financial
-            management and gain better control over their spending.
+            Join thousands of businesses using AI Expense Tracker to streamline financial;
+  management and gain better control over their spending.
   ),
 }
 export default ExpenseTrackerPage</div>
@@ -396,3 +394,4 @@ export default ExpenseTrackerPage</div>
   </section>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h3></h3></h3></section></section>
+</p>

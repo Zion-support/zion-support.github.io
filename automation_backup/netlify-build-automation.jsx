@@ -7,7 +7,7 @@
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,

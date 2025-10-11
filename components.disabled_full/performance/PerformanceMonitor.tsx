@@ -45,7 +45,7 @@
   3: "fid,",metric_,"
   4: "cls,"," metric_,"
   5: "ttfb}"},valu,
-  e: Math.round(metrics.fc)
+  e: Math.round(metrics.fc),
   p: || 0),non_interactio,"
   n: 'tru',e})}" i,"
   f: (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
@@ -67,7 +67,7 @@
   e: Math.round(metrics.fcp || 0); non_interactio,
   n: 'true'});} metric_,"
   5: "ttfb"}," non_interactio,"
-  n: 'true'}) (window as any).gtag("event,web_vitals" {/* TODO: Fix JSX expression */}"
+  n: 'true'}) (window as any).gtag("event,web_vitals" {/* TODO: Fix JSX expression */}")
   4: "cls"}metric_,")
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
@@ -80,3 +80,5 @@
   y: JSON.stringify({) ur} l: 'window.location.href')timestam,"
   p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'
 "
+</T>
+</T>

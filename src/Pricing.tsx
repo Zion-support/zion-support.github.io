@@ -201,7 +201,6 @@ import { Button; } from '@/components/ui/Button';
 import { Card;, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge; } from '@/components/ui/Badge';
 import { Check;, Star, Zap, Shield, Users, Globe, Clock, MessageSquare } from 'lucide-react';
-export default function Pricing() {;
 const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 const plans = [;
@@ -314,7 +313,7 @@ return Math.round(((monthlyTotal - annualTotal) / monthlyTotal) * 100);
     }
     return 0;
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -416,16 +415,16 @@ answer: 'Yes, you can cancel your subscription at any time. There are no long-te
 question: 'What happens to my data if I cancel?',;,
 answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.'
     }
-  ];
-const handlePlanSelect = (planId: string) => {;;
+  ];)
+  const handlePlanSelect = (planId: string) => {;;
 setSelectedPlan(planId)
 }
   }
   const formatPrice = (price: number) => {;;
 return new Intl.NumberFormat('en-US';, {;,
 style: 'currency',;,
-currency: 'USD',;,
-minimumFractionDigits: 0
+currency: 'USD',;,)
+  minimumFractionDigits: 0
 }
     }).format(price)
   }
@@ -486,7 +485,7 @@ const currentPrice = plan.price[billingCycle];;
 const originalPrice = billingCycle === 'annual' ? plan.price.monthly * 12 : plan.price.monthly;;
 }
 const savings = billingCycle === 'annual' ? getAnnualSavings(plan.price.monthly;}, plan.price.annual) : 0;
-return (;
+return(;
               <$2 />;
 key={plan.id}
                 className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${};
@@ -496,8 +495,8 @@ plan.popular
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full">;
-Most Popular
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full">;)
+  Most Popular
                     </span>
                   </div>
                 )}
@@ -624,7 +623,7 @@ features: ['Energy Audits', 'Sustainable Hardware', 'Carbon Footprint Tracking']
     }
   ];
 const savings = billingCycle === 'yearly' ? 20 : 0;;
-return (;
+return(;
     <>
       <SEO;
 title="Pricing - Zion Tech Group";
@@ -652,8 +651,8 @@ Choose the perfect plan for your business. All plans include our core features w
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-12">
               <div className="bg-gray-100 rounded-lg p-1">
-                <$2 />;
-onClick={() => setBillingCycle('monthly')}
+                <$2 />;)
+  onClick={() => setBillingCycle('monthly')}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${};
 billingCycle === 'monthly'
                       ? 'bg-white text-zion-blue shadow-sm'
@@ -763,7 +762,7 @@ period: '/hour',;,
 description: 'Tailored software development'
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -781,8 +780,8 @@ with flexible options to scale as you grow.
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}}`}>;
 Monthly
             </span>
-            <$2 />;
-onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
+            <$2 />;)
+  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
               className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${};
 billingCycle === 'annual' ? 'bg-blue-600' : 'bg-gray-600'}`}
             >
@@ -1142,3 +1141,11 @@ Schedule Demo
   )
 }
 export default Pricing</$1></div></div></div></div></div></span></p></main></section></section></section>
+</section>
+</div>
+</div>
+</section>
+</main>
+</section>
+</string>
+</string>

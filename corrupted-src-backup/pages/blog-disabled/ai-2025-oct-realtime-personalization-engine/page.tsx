@@ -124,8 +124,8 @@ Revenue Impact</$1>"
                   <DollarSign className=" />">
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Target className="h-8 w-8 text-rose-400" />;
-Revenue Impact
+                <Target className="h-8 w-8 text-rose-400" />;)
+  Revenue Impact
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
@@ -329,7 +329,6 @@ className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg 
 Start Your Personalization Journey",
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />);
-export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
   </div>
@@ -397,3 +396,79 @@ export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JS
   </span>
   </Target>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section>
+</h2>
+</h2>
+</h2>
+</h2>
+</h3>
+</h3>
+</p>
+</h3>
+</div>
+</h2>
+</p>
+</h3>
+</div>
+</h2>
+</h3>
+</h3>
+</div>
+</h2>
+</h3>
+</div>
+</h2>
+</h3>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</ul>
+</p>
+</h3>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</section>
+</p>
+</p>
+</p>
+</section>
+</p>
+</p>
+</section>
+</p>
+</section>
+</ul>
+</div>
+</ul>
+</div>
+</h2>
+</div>
+</ul>
+</h2>
+</div>
+</li>
+</ul>
+</li>
+</li>
+</li>
+</ul>
+</li>
+</li>
+</li>
+</ul>
+</div>
+</meta>
+</meta>
+</title>
+</div>
+</title>

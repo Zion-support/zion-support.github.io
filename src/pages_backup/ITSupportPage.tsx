@@ -9,10 +9,10 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 
 
     {
-      name: 'Lisa Wong'
-      role: 'Operations Manager'
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."
-      avatar: '/placeholder.svg'
+      name: 'Lisa Wong',
+  role: 'Operations Manager'
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
+  avatar: '/placeholder.svg'
     }
     {
 
@@ -24,7 +24,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 
 
 
-export default function ITSupportPage() {
   const benefits = [
     {
       title: "24/7 Assistance",
@@ -77,7 +76,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react'
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
@@ -88,8 +86,8 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 
 
 
-    <ServiceLandingTemplate
-      title="IT Support Services"
+    <ServiceLandingTemplate;
+  title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
@@ -119,7 +117,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
   const benefits = [
     {
       title: '24/7 Assistance',
@@ -154,11 +151,12 @@ export default function ITSupportPage() {
       avatar: '/placeholder && placeholder.svg',
     },
   ]
-    return (
-
-    <ServiceLandingTemplate
-      title="IT Support Services"
+    return(<ServiceLandingTemplate;
+  title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support")
+  description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 
+
+</ServiceLandingTemplate>
+</ServiceLandingTemplate>

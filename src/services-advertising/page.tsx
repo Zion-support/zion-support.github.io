@@ -14,11 +14,9 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
           < href="/" className="inline-flex items-center text-blue-600,"$2 />
   hover: text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Home
-import React from 'react',
-export default function ServicesAdvertisingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+// Back to Home;
+  import React from 'react',
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
@@ -48,8 +46,8 @@ AI-Powered Advertising Solutions,"
           </p>"
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto"></p>
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
-//               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
-              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
+//               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
+  methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -84,8 +82,8 @@ Our AI-powered advertising delivers measurable business impact,"
               <div className="text-gray-600">Campaign Optimization
       {/* Services Section */}"
       <section id="services" className="py-16 bg-gray-50">
-AI Advertising Solutions
-              Comprehensive AI-powered advertising services for maximum impact;"
+AI Advertising Solutions;
+  Comprehensive AI-powered advertising services for maximum impact;"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
@@ -107,60 +105,60 @@ Advanced machine learning algorithms that identify and target your ideal custome
   Price: $2,000-5,000/month | Our,
   Price: $1,200/month;"
 <div className="text-green-600 text-4xl mb-4">📊</div>"
-              <h3 className="text-xl font-semibold mb-3">Campaign Optimization
-                Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
+              <h3 className="text-xl font-semibold mb-3">Campaign Optimization;
+  Continuous AI-driven optimization that maximizes performance and minimizes costs across all channels.
                 <li>• A/B testing automation
                 <li>• Budget allocation
                 <li>• Performance monitoring
                 <li>• Bid optimization
-                <li>• Landing page optimization
-                Market,
+                <li>• Landing page optimization;
+  Market,
   Price: $3,000-7,000/month | Our,
   Price: $1,800/month;"
               <div className="text-purple-600 text-4xl mb-4">🤖</div>"
-              <h3 className="text-xl font-semibold mb-3">Creative Generation
-                AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
+              <h3 className="text-xl font-semibold mb-3">Creative Generation;
+  AI-generated ad creatives that adapt to audience preferences and platform requirements in real-time.
                 <li>• Dynamic creative optimization
                 <li>• Personalization at scale
                 <li>• Multi-platform adaptation
                 <li>• Video ad generation
-                <li>• Brand consistency maintenance
-                Market,
+                <li>• Brand consistency maintenance;
+  Market,
   Price: $2,500-6,000/month | Our,
   Price: $1,500/month;"
               <div className="text-orange-600 text-4xl mb-4">📱</div>"
-              <h3 className="text-xl font-semibold mb-3">Social Media Advertising
-                Comprehensive social media advertising management across all major platforms with AI optimization.
+              <h3 className="text-xl font-semibold mb-3">Social Media Advertising;
+  Comprehensive social media advertising management across all major platforms with AI optimization.
                 <li>• Facebook & Instagram ads
                 <li>• LinkedIn advertising
                 <li>• TikTok & Snapchat ads
                 <li>• Twitter advertising
                 <li>• Cross-platform analytics</li>"
               <div className="text-red-600 text-4xl mb-4">🔍</div>"
-              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing
-                AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
+              <h3 className="text-xl font-semibold mb-3">Search Engine Marketing;
+  AI-powered Google Ads and Bing advertising with intelligent keyword optimization and bid management.
                 <li>• Google Ads management
                 <li>• Bing advertising
                 <li>• Keyword research & optimization
                 <li>• Ad copy generation
-                <li>• Performance tracking
-                Market,
+                <li>• Performance tracking;
+  Market,
   Price: $1,500-4,000/month | Our,
   Price: $900/month,"
               <div className="text-indigo-600 text-4xl mb-4">📈</div>"
-              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting
-                Advanced analytics and reporting with AI insights and automated performance recommendations.
+              <h3 className="text-xl font-semibold mb-3">Analytics & Reporting;
+  Advanced analytics and reporting with AI insights and automated performance recommendations.
                 <li>• Real-time dashboards
                 <li>• AI-powered insights
                 <li>• Automated reporting
                 <li>• ROI optimization
-                <li>• Competitive analysis
-                Market,
+                <li>• Competitive analysis;
+  Market,
   Price: $1,000-3,000/month | Our,
   Price: $600/month,
       {/* Pricing Section */}
-Transparent Pricing
-              Choose the plan that fits your advertising needs;"
+Transparent Pricing;
+  Choose the plan that fits your advertising needs;"
           < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8"></div>"
             < className="bg-white border-2 border-gray-200 rounded-lg p-8,"$2 />
@@ -203,8 +201,8 @@ Transparent Pricing
                   <span>Dedicated account manager
                   <span>24/7 support
                   <span>Custom integrations
-                  <span>White-label options
-                Contact Sales
+                  <span>White-label options;
+  Contact Sales
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -212,9 +210,9 @@ Transparent Pricing
 Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100">
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
-              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              View Success Stories
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
+  href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200")
+  View Success Stories
   ),
 }
 export default ServicesAdvertisingPage</p>
@@ -229,3 +227,43 @@ export default ServicesAdvertisingPage</p>
   </Link>
   </div>
 </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</h3>
+</li>
+</li>
+</li>
+</li>
+</li>
+</h3>
+</li>
+</li>
+</li>
+</li>
+</li>
+</p>
+</section>

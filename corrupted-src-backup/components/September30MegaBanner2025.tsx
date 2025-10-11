@@ -29,12 +29,12 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return(<moti, o, n.d, i, v
-  return (<moti, o, n.d, i, v
+  return(<moti, o, n.d, i, v;
+  return (<moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 40 }}
       anima, t, e={{ opaci, t, y: 1, y: 0 }}
-      transiti, o, n={{ durati, o, n: 0.8 }}
-      classNa, m, e="relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-5, 0, 0/30"
+      transiti, o, n={{ durati, o, n: 0.8 }})
+  classNa, m, e="relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-5, 0, 0/30"
     >
       {/* Animated, Background, Effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">"
@@ -69,7 +69,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",
         {/* Header, Sectio, n */}"
         <div, className="text-center mb-12">"
-          <moti, o, n.d, i, v
+          <moti, o, n.d, i, v;
   initi, a, l={{ sca, l, e: 0.9, opaci, t, y: 0 }}
             anima, t, e={{ sca, l, e: 1, opaci, t, y: 1 }}
             transiti, o, n={{ del, a, y: 0.3, durati, o, n: 0.6 }}"
@@ -315,7 +315,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
           <Li, n, k
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-5, justif, y-cent, e, r">"
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-5, justif, y-cent, e, r">"
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
             classNa, m, e="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xl, hove, r:shad, o, w-3xl, transitio, n-all, duratio, n-300, hov, e
         {/* CTA, Button, s */}"
@@ -332,7 +332,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m" />"
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>"
             <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />"
-          <Li, n, k
+          <Li, n, k;
   to="/conta, c, t"
             classNa, m, e="group, borde, r-3, borde, r-white, hove, r: bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hov, e
           <Li, n, k;"

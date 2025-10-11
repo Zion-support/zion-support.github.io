@@ -6,9 +6,8 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
       <div, classNam, e='container, m, x-auto, p, x-6'>
         <div, classNam, e='te, x, t-center, m, b-12'>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
-    <section, classNam, e = 'py-20, b, g-whi, t, e'>
+            Latest, Article, s & Resear, c, h)
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
       <div, classNam, e='container, m, x-auto, p, x-6'>
         <div, classNam, e='te, x, t-center, m, b-12'>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
@@ -19,10 +18,10 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
                   {artic, l, e.t, i, t, l, e}
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e
-                    Read, Mor, e
-                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles;)
+                    Read, Mor, e;
+  Read, Mor, e
+                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />)
+  View, All, Articles;)
             <Link, classNam, e='w-6 h-6' />)
 }})
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}

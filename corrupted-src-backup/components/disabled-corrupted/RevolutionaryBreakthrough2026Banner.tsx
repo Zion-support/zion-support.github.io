@@ -54,8 +54,8 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           <h2, className='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
           <h2, className='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
             Revolutionary, AI, Breakthroughs
-          <p, className='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
-            Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
+          <p, className='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>)
+  Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
           {/* Key, Stat, s */}
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>)
             {[)

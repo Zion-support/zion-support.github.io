@@ -140,7 +140,7 @@ import { toast; } from '@/hooks/use-toast'
 const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {;
 }
 const { formatPrice } = useCurrency(),;
-return (;
+return(;
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
@@ -150,8 +150,8 @@ return (;
           <div className="flex items-center gap-2 mt-2">
             <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>
             {product && product.aiScore && product && product.aiScore > 80 && (
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
-AI {product && product.aiScore}
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;)
+  AI {product && product.aiScore}
               </Badge>
             )}
           </div></$1>
@@ -232,7 +232,7 @@ import { toast; } from '@/hooks / use - toast'
 const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) =>: any void, onAddToCart: () => void }) => {;
 }
 const { format_price } = use_currency ();
-return (;
+return(;
   <Card className="h - full hover:shadow - lg transition - shadow">
     <CardHeader className="pb - 3">
       <div className="flex items - start justify - between">
@@ -242,8 +242,8 @@ return (;
           <div className="flex items - center gap - 2 mt - 2">
             <Badge variant="secondary" className="text - xs">{product.brand}</Badge>
             {product.ai_score && product.ai_score > 80 && (
-              <Badge variant="default" className="text - xs bg - gradient - to - r from - blue - 600 to - purple - 600">;
-AI {product.ai_score}
+              <Badge variant="default" className="text - xs bg - gradient - to - r from - blue - 600 to - purple - 600">;)
+  AI {product.ai_score}
               </Badge>)}
           </div></$1>
         <div className="text - right">
@@ -300,7 +300,6 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number }) => (
   </div>
 ),
 // Main component;
-function MarketplacePageContent() {;
 const router = useRouter();,;
 }
 const { t } = useTranslation(),;
@@ -424,7 +423,6 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number },) => (
   </div>
 ),
 // Main component;
-function MarketplacePageContent() {;
 const router = useRouter();,;
 }
 const { t } = useTranslation(),;
@@ -482,11 +480,11 @@ total: processedDataset && processedDataset.length
 logErrorToProduction('Error in fetchProducts:', { data: error }),;
 throw new Error('Failed to load marketplace data. Please try again.')
     }
-    return (;
+    return(;
       <>
         <NextSeo;
-title="Marketplace - Zion Tech Marketplace Solutions & Services";
-description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+title="Marketplace - Zion Tech Marketplace Solutions & Services";)
+  description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
   }, [sortBy, filterCategory, showRecommended]),;
 const {;,
 items: products,;
@@ -531,12 +529,12 @@ return () => window.removeEventListener('scroll';, handleScroll)
   }, []),
   // Loading state;
 if (loading && products.length === 0) {;
-return (;
+return(;
       <>
         <NextSeo;
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
-description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
-openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png'}}] }}
+description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";)
+  openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png'}}] }}
         />
       <div className="container py-8">
         <motion.div initial={{ opacity: 0}}, y: 20 }} animate={{ opacity: 1}}, y: 0 }} className="text-center mb-8">
@@ -552,12 +550,12 @@ openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png'}}] }}
   }
   // Error state;
 if (error && products.length === 0) {;
-return (;
+return(;
       <>
         <NextSeo;
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
-description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
-openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png'}}] }}
+description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";)
+  openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png'}}] }}
         />
       <div className="container py-8">
         <motion && motion.div initial={{ opacity: 0}}, y: 20 }} animate={{ opacity: 1}}, y: 0 }} className="text-center mb-8">
@@ -573,7 +571,7 @@ openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png'
 
   // Error state;
 if (error && products && products.length === 0) {;
-return (;
+return(;
       <>
 
         <NextSeo;
@@ -588,8 +586,8 @@ openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png'
           <p className="text-muted-foreground max-w-md mx-auto">{error}</p>
           <div className="flex gap-2 justify-center">
             <Button onClick={refresh} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />;
-Try Again</$1>
+              <RefreshCw className="h-4 w-4 mr-2" />;)
+  Try Again</$1>
             <Button onClick={(,) => window && window.location.reload()}>
     <CardContent className="pt - 0">
       <div className="flex items - center gap - 4 mb - 3">
@@ -619,7 +617,6 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number }, ) =>: any (
 /**
  * MarketplacePageContent - Function description
  */;
-function MarketplacePageContent() {;
 const router = use_router ();,;
 }
 const { t } = use_translation (),;
@@ -731,12 +728,12 @@ return () => window.removeEventListener ('scroll';, handle_scroll)
 if ( {) {};
 $2
 }
-    return (;
+    return(;
       <>
         <NextSeo;
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
-description="Visit our Zion Tech Marketplace to browse top - rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
-open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
+description="Visit our Zion Tech Marketplace to browse top - rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";)
+  open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
         />
       <div className="container py - 8">
         <motion.div initial={{ opacity: 0}}, coordinate_y: 20 }} animate={{ opacity: 1}}, coordinate_y: 0 }} className="text - center mb - 8">
@@ -752,7 +749,7 @@ open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
 if ( {) {};
 $2
 }
-    return (;
+    return(;
       <>
         <NextSeo;
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
@@ -766,8 +763,8 @@ open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
           <p className="text - muted - foreground max - w-md mx - auto">{error}</p>
           <div className="flex gap - 2 justify - center">
             <Button on_click={refresh} variant="outline">
-              <RefreshCw className="h - 4 w - 4 mr - 2" />;
-Try Again</$1>
+              <RefreshCw className="h - 4 w - 4 mr - 2" />;)
+  Try Again</$1>
             <Button on_click={(, ) => window.location.reload ()}>;
 Refresh Page</$1></$1></$1></$1>
       <motion.div initial={{ opacity: 0}}, y: 20 }} animate={{ opacity: 1}}, y: 0 }} transition={{ delay: 0.3}}}>;
@@ -859,12 +856,12 @@ sessionStorage && sessionStorage.setItem(`product:${item && item.id}`, JSON && J
                   router && router.push(`/marketplace/listing/${item && item.id}`)
       </>)
   }
-  return (;
+  return(;
     <>
       <NextSeo;
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
-description="Visit our Zion Tech Marketplace to browse top - rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
-open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
+description="Visit our Zion Tech Marketplace to browse top - rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";)
+  open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png'}}] }}
       />
     <div className="container py - 8">
       <motion.div className="text - center mb - 8" initial={{ opacity: 0}}, coordinate_y: -20 }} animate={{ opacity: 1}}, coordinate_y: 0 }}>
@@ -920,8 +917,8 @@ toast({;,
 title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
 action: {;,
-label: 'View Cart',;,
-onClick: (,) => router && router.push('/cart')}})
+label: 'View Cart',;,)
+  onClick: (,) => router && router.push('/cart')}})
                 }}
               /></$1>
           ))}
@@ -1019,12 +1016,12 @@ return <MarketplacePageContent />;
 }
 ;
 dispatch (add_item ({ id: item.id), title: item.title, price: item.price ?? 0 })),;
-toast ({;,
+toast({;,
 title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
 action: {;,
-label: 'View Cart',;,
-on_click: (, ) => router.push ('/cart')}})
+label: 'View Cart',;,)
+  on_click: (, ) => router.push ('/cart')}})
                 }}
               /></$1>))}
         </AnimatePresence></$1>
@@ -1065,14 +1062,52 @@ initial={{ opacity: 0}}, scale: 0 }}
 export default /**
  * MarketplacePage - Function description
  */;
-function MarketplacePage() {;
 return <MarketplacePageContent />;
 }
 }
 
-// Main export export default function MarketplacePage() {;
 return <MarketplacePageContent />;
 }
 }
 }
 </$1></div></div></div>
+</Button>
+</motion>
+</Button>
+</motion>
+</Button>
+</motion>
+</motion>
+</motion>
+</motion>
+</Button>
+</Button>
+</Button>
+</div>
+</div>
+</div>
+</CardContent>
+</Button>
+</Button>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</AppDispatch>
+</Button>
+</AppDispatch>
+</AppDispatch>
+</div>
+</CardHeader>
+</div>
+</div>
+</div>
+</Card>
+</CardHeader>
+</Card>
+</select>
+</select>
+</div>
+</CardContent>
+</Card>

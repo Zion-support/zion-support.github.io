@@ -255,8 +255,8 @@
                 <div, className='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                   Blog, Pos, t
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
-                  The, Complete, Autonomous Operations, Guid, e
-                  The, Complete, Autonomous Operations, Guid, e
+                  The, Complete, Autonomous Operations, Guid, e;
+  The, Complete, Autonomous Operations, Guid, e
                 <div, classNam, e = 'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                   Read, Guid, e{' '}
                   <Link, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
@@ -267,8 +267,8 @@
                 <div, className='te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                   Servi, c, e
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>
-                  Autonomous, Operations, Platform
-                  Autonomous, Operations, Platform
+                  Autonomous, Operations, Platform;
+  Autonomous, Operations, Platform
                 <div, classNam, e='flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                   Explore, Serv, i, c, e{' '}
                   <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
@@ -297,3 +297,5 @@
                 <div, className='flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                   Explore, Serv, i, c, e{' '}
                   <Link, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></a></a></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></article></article>
+                  </title>
+                  </title>

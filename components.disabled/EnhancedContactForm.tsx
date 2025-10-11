@@ -17,7 +17,7 @@ y: {/* TODO: Fix JSX expression */}
   t: new Promise(resolve => setTimeout(resolve)} 2000)); i,;,
 f: (onSubmit) { onSubmit(formData)} setIsSubmitted(true); setCurrentStep(1); // Rese,;,
 t: form after successful submission, setTimeout(: unknow,;,
-n: {/* TODO: Fix JSX expression */}
+n: {/* TODO: Fix JSX expression */})
   e:  ,''} messag);,
 e:, // console.error() Form submission,;,
 error:  } error)} finall,;,

@@ -45,7 +45,6 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-export default function InstantMessaging() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -54,11 +53,10 @@ export default function InstantMessaging() {
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
 
   }
-  return (
-    <>
+  return(<>
             <li>
-              Chat rooms scoped to each order or project for focused
-              discussions.</$1>
+              Chat rooms scoped to each order or project for focused;
+  discussions.</$1>
             <li > Share files and links directly within the conversation.</li></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
@@ -66,13 +64,13 @@ export default function InstantMessaging() {
             <div>
               <p className='font - semibold'>Is chat history saved?</p>
               <p className='text - zion - slate - light'>
-                Yes, messages are stored securely so you can review past
-                discussions.</$1></$1>
+                Yes, messages are stored securely so you can review past;
+  discussions.</$1></$1>
             <div>
               <p className='font - semibold'>Can I disable notifications?</p>
               <p className='text - zion - slate - light'>
-                You can mute rooms or disable notifications in your account
-                settings.</$1></$1></$1>
+                You can mute rooms or disable notifications in your account;
+  settings.</$1></$1></$1>
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
@@ -83,11 +81,11 @@ export default function InstantMessaging() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
 
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -98,8 +96,8 @@ export default function InstantMessaging() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
             />
@@ -126,8 +124,8 @@ export default function InstantMessaging() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -138,8 +136,8 @@ export default function InstantMessaging() {
             Communicate with partners and support staff instantly from any device.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
+            <img;
+  src="https://placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
             />
@@ -180,7 +178,6 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-export default function InstantMessaging() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -188,18 +185,17 @@ export default function InstantMessaging() {
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
   }
-  return (
-    <>
-      <SEO
-        title="Instant Messaging"
+  return(<>
+      <SEO;
+  title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <script;
+  type="application/ld+json")
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -208,10 +204,24 @@ export default function InstantMessaging() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.</$1>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img;
+  src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
 
 
             </Button></$1></$1></$1></$1></div></main>
+            </img>
+            </div>
+            </p>
+            </div>
+            </main>
+            </SEO>
+            </img>
+            </div>
+            </img>
+            </div>
+            </main>
+            </div>
+            </div>
+            </div>

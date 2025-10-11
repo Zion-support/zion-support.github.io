@@ -42,12 +42,12 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             Infrastructure, Excellenc, e
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
             Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
-            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
-            enterprises, processing, billions of, events, daily.
+            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from;
+  enterprises, processing, billions of, events, daily.
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
-          { newArticl, e, s.m, a, p(artic, l, e = > {
-            const Ico, n = artic, l, e.ic, o, n; return (
+          { newArticl, e, s.m, a, p(artic, l, e = > {)
+  const Ico, n = artic, l, e.ic, o, n; return (
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
           {/* TODO: Fix JSX expression */}
               <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'$2 />

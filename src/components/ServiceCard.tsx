@@ -9,10 +9,10 @@ const,
   }
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   }
-  return (<article></article>
+  return(<article></article>
       className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
-      role="article")
+  sm:p-6 energy-pulse group relative"")
+  role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
     >
       {/* TODO: Fix JSX expression */}
@@ -87,3 +87,6 @@ const,
 })
 ServiceCard.displayName = 'ServiceCard'
 export default ServiceCard;"`</div></a></a></ul></article>
+</a>
+</ul>
+</ServiceCardProps>

@@ -11,7 +11,6 @@ const [isChatOpen, setIsChatOpen] = useState(false);
 const { user } = useAuth();
 const { formatPrice } = useCurrency();
 import { useCurrency; } from '@/hooks/useCurrency';
-export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
 
@@ -37,7 +36,6 @@ import { PaymentButton; } from "@/components/transactions/PaymentButton",;
 import { ProfileContact; } from "@/components/profile/ProfileContact",;
 import { Dialog;, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { useCurrency; } from '@/hooks/useCurrency',;
-export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
 const router = useRouter();,;
@@ -57,7 +55,7 @@ if (!listing) {
   // Find the listing from our shared data source - now also checking equipment listings;
 const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);;
 if (!listing) {;
-return (;
+return(;
       <div className="min-h-screen bg-zion-blue py-12 px-4">
 
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -73,8 +71,8 @@ return (;
         </div>
 
   }
-;
-const handleContact = () => {;;
+;)
+  const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
 }
@@ -108,7 +106,7 @@ setIsContactDialogOpen(true);      setIsChatOpen(true)
 setIsContactDialogOpen(true)
     }
   }
-  return (;
+  return(;
     <>
       <div className='min-h-screen bg-zion-blue py-12 px-4'>
         <div className='container mx-auto'>
@@ -123,8 +121,8 @@ listing.images[selectedImageIndex] |;
 listing.images[0] |
                         '/placeholder.svg'}
                       alt={listing.title}
-                      className='object-cover';
-fallbackSrc='/placeholder.svg'                    />
+                      className='object-cover';)
+  fallbackSrc='/placeholder.svg'                    />
       );
 import { useState; } from "react",;
 import { useAuth; } from "@/hooks/useAuth",;
@@ -143,7 +141,6 @@ import { PaymentButton; } from "@/components/transactions/PaymentButton",;
 import { ProfileContact; } from "@/components/profile/ProfileContact",;
 import { Dialog;, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 import { useCurrency; } from '@/hooks/useCurrency',;
-export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
 const router = useRouter();,;
@@ -177,7 +174,7 @@ setIsChatOpen(true)
 setIsContactDialogOpen(true)
     }
   },;
-return (;
+return(;
 
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -191,8 +188,8 @@ return (;
                     <ImageWithRetry;
 src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
-                      className="object-cover";
-fallbackSrc="/placeholder.svg"
+                      className="object-cover";)
+  fallbackSrc="/placeholder.svg"
                     />
 
                   ) : (
@@ -216,8 +213,8 @@ fallbackSrc="/placeholder.svg"
 key={index}
                         onClick={() => setSelectedImageIndex(index)}
 ;
-className={cn(;
-index === selectedImageIndex
+className={cn(;)
+  index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
 index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
@@ -228,10 +225,8 @@ index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
 key={index,}
                         onClick={(,) => setSelectedImageIndex(index),}
 ;
-className={cn(
-
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
-index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";)
+  index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         ),}
                       >
                         <ImageWithRetry;
@@ -291,9 +286,8 @@ Enterprise Security</$1>
                         <p className='text-sm text-zion-slate-light'>;
 Built-in data protection and encryption;
 on_click={() => setSelectedImageIndex (index)}
-                        className={cn (
-                          'w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',;
-index === selectedImageIndex
+                        className={cn('w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',;)
+  index === selectedImageIndex
                             ? 'border - zion - purple'
                             : 'border - transparent'                        )}                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2";
 index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
@@ -302,9 +296,8 @@ index === selectedImageIndex ? "border - zion - purple" : "border - transparent"
                       <;$2 />;
 key={index,}
                         on_click={(, ) => setSelectedImageIndex (index),}
-                        class_name={cn (
-                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",;
-index === selectedImageIndex ? "border - zion - purple" : "border - transparent"),}
+                        class_name={cn("w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",;)
+  index === selectedImageIndex ? "border - zion - purple" : "border - transparent"),}
                       >
                         <ImageWithRetry;
 src={image,}
@@ -502,8 +495,8 @@ Featured
                       {[...Array(5)].map((_)}, i) => (
                         <Star;
 key={i}
-                          className={cn(;
-i < Math.floor(listing.rating!)
+                          className={cn(;)
+  i < Math.floor(listing.rating!)
 
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
@@ -520,10 +513,8 @@ i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-s
                       {[...Array(5)].map((_), i,) => (
                         <Star;
 key={i,}
-                          className={cn(
-
-                            "h-5 w-5",;
-i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          className={cn("h-5 w-5",;)
+  i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 
                           ),}
                         />
@@ -610,8 +601,8 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
 onPaymentInitiated={() => {};
 toast({;,
 }
-title: "Payment Processing"},;,
-description: "Redirecting to secure checkout..."
+title: "Payment Processing"},;,)
+  description: "Redirecting to secure checkout..."
                         })
 
 
@@ -634,8 +625,8 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
 onPaymentInitiated={(,) => {;
 toast({;,
 }
-title: 'Payment Processing'},;,
-description: 'Redirecting to secure checkout...',
+title: 'Payment Processing'},;,)
+  description: 'Redirecting to secure checkout...',
                         })
                       }}
                     />
@@ -662,8 +653,8 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
 onPaymentInitiated={() => {};
 toast({;,
 }
-title: "Payment Processing"},;,
-description: "Redirecting to secure checkout..."
+title: "Payment Processing"},;,)
+  description: "Redirecting to secure checkout..."
                         })
 
                 <div className="space-y-3 mb-8">
@@ -683,12 +674,12 @@ onPaymentInitiated={(,) => {;
 toast({;,
 title: 'Payment Processing';,
 description: 'Redirecting to secure checkout...';
-}
-onPaymentInitiated={(},) => {;
+})
+  onPaymentInitiated={(},) => {;
 toast({;,
 }
-title: 'Payment Processing'},;,
-description: 'Redirecting to secure checkout...',
+title: 'Payment Processing'},;,)
+  description: 'Redirecting to secure checkout...',
                         })
                       }}
                     />
@@ -838,9 +829,8 @@ Featured</$1>)}
                       {[...Array (5)].map ((_), i) => (
                         <Star;
 key={i}
-                          className={cn (
-                            'h - 5 w - 5',;
-i < Math.floor (listing.rating!)
+                          className={cn('h - 5 w - 5',;)
+  i < Math.floor (listing.rating!)
                               ? 'text - zion - cyan fill - zion - cyan'
                               : 'text - zion - slate - light'                          )}
                         />))}
@@ -854,9 +844,8 @@ i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "te
                       {[...Array (5)].map ((_), i, ) => (
                         <Star;
 key={i,}
-                          class_name={cn (
-                            "h - 5 w - 5",;
-i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"),}
+                          class_name={cn("h - 5 w - 5",;)
+  i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"),}
                         />))}
                     </div>
                     <span className='text - sm text - zion - slate - light'>
@@ -1027,10 +1016,10 @@ amount={listing.price,}
                       button_text="Buy Now";
 className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
 onPaymentInitiated={(, ) => {;
-toast ({;,
+toast({;,
 }
-title: 'Payment Processing'},;,
-description: 'Redirecting to secure checkout...',
+title: 'Payment Processing'},;,)
+  description: 'Redirecting to secure checkout...',
                         })
                       }}
                     />) : (
@@ -1145,3 +1134,113 @@ profileName={listing && listing.author.name}
 }
 
 </$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>
+</DialogHeader>
+</DialogContent>
+</Dialog>
+</DialogHeader>
+</DialogContent>
+</Dialog>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</DialogContent>
+</Dialog>
+</Badge>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Badge>
+</div>
+</div>
+</div>
+</div>
+</Badge>
+</div>
+</div>
+</Badge>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

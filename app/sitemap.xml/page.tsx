@@ -3,8 +3,7 @@ import React from 'react';
 import {  Helmet  } from 'react-helmet-async';
 
 const SitemapXMLPage: React.FC = () => {
-  return (
-    <&gt;
+  return(<&gt;
       <Helmet&gt;
         <title&gt;Sitemap | Zion Tech Group</title&gt;
         <meta name="description" content="Complete sitemap of all pages and services available on Zion Tech Group website." /&gt;
@@ -27,8 +26,8 @@ const SitemapXMLPage: React.FC = () => {
               <p className="text-gray-300 mb-4"&gt;</p&gt;
                 This page provides a comprehensive sitemap of all available pages and services.
               </p&gt;
-              <p className="text-sm text-gray-400"&gt;</p&gt;
-                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;
+              <p className="text-sm text-gray-400"&gt;</p&gt;)
+  For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;
               </p&gt;
             </div&gt;
           </div&gt;
@@ -39,3 +38,5 @@ const SitemapXMLPage: React.FC = () => {
 };
 
 export default SitemapXMLPage;
+</meta>
+</meta>

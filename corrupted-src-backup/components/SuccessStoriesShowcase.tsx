@@ -1,7 +1,7 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
     {
-      comp, a, n
+      comp, a, n;
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
       ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Growt, h"
@@ -26,8 +26,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
-      company: "FinanceFirst Bank"
-      industry: "Financial Services"
+      company: "FinanceFirst Bank",
+  industry: "Financial Services"
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
@@ -97,3 +97,11 @@ key={index}
             View All Success Stories;"
             <Link className="w-6 h-6" />
 }}}}"`</div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></p></p></h3>
+</span>
+</span>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>

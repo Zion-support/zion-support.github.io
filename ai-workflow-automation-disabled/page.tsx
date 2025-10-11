@@ -7,26 +7,26 @@ import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phon
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap
-      title: 'Intelligent Process Automation',
+      icon: Zap,
+  title: 'Intelligent Process Automation',
       description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
       benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
     },
     {
-      icon: Settings
-      title: 'Workflow Designer',
+      icon: Settings,
+  title: 'Workflow Designer',
       description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
       benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
     },
     {
-      icon: Clock
-      title: 'Real-time Monitoring',
+      icon: Clock,
+  title: 'Real-time Monitoring',
       description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
       benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
     },
     {
-      icon: Users
-      title: 'Team Collaboration',
+      icon: Users,
+  title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
 const,
@@ -80,11 +80,11 @@ const,
     }
   ]
   return(<React.Fragment>
-      <SEOOptimizer
-        title="AI Workflow Automation Platform - Zion Tech Group"
+      <SEOOptimizer;
+  title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
-        keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
-        canonicalUrl="https: //ziontechgroup.com/ai-workflow-automation"
+        keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']})
+  canonicalUrl="https: //ziontechgroup.com/ai-workflow-automation"
       />)
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
         <Navigation />)
@@ -93,8 +93,8 @@ const,
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-                AI Workflow Automation Platform
-        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
+                AI Workflow Automation Platform;
+  canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -123,7 +123,7 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return (<React.Fragment>
+  return(<React.Fragment>
       <SEOOptimizer>
         title="AI Workflow Automation Platform - Zion Tech Group""
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
@@ -151,8 +151,8 @@ const,
   sm:flex-row gap-4 justify-center items-center mb-16">
                 <a></a>"
                   href="te,"
-  l:+13024640950""
-                  className="cyber-button flex items-center space-x-2">"
+  l:+13024640950"")
+  className="cyber-button flex items-center space-x-2">"
                   <Phone className="w-5 h-5" /></Phone>)
                   <span>Call (302) 464-0950
                 <$2 />
@@ -190,7 +190,7 @@ const,
   )
 }
 const AIWorkflowAutomationPage = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
@@ -308,3 +308,49 @@ const AIWorkflowAutomationPage = () => {
       </div>,
     </div>)
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></main></main></main></section></section></section></section></section></section>
+</p>
+</p>
+</span>
+</div>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</div>
+</p>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</span>
+</span>
+</main>
+</SEOOptimizer>
+</div>
+</div>
+</div>
+</main>
+</div>
+</h1>
+</div>
+</section>
+</main>
+</div>
+</SEOOptimizer>

@@ -4,8 +4,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const Pagetsx: React.FC = () => {
   const _features = [],
-  return (
-    {icon: Users,
+  return({icon: Users,
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
@@ -41,8 +40,8 @@ const Pagetsx: React.FC = () => {
                 Get Started</a>"
               < href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-500,"
-  hover:text-white transition-colors">
-                View Demo
+  hover:text-white transition-colors">)
+  View Demo
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -74,3 +73,8 @@ const Pagetsx: React.FC = () => {
 }
 export default Pagetsx;"
 export default GdprPage</div></div></div></p></h2></h3></ul></main></section>
+</ul>
+</h3>
+</div>
+</main>
+</Helmet>

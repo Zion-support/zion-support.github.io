@@ -39,8 +39,7 @@ const HomePage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main>
@@ -59,8 +58,8 @@ const HomePage: React.FC = () => {
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Learn More
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">)
+  Learn More
                 </button>
               </div>
             </div>

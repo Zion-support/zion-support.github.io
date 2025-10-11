@@ -20,8 +20,8 @@ const October2025DocumentAutomationBanne, r = () => {
           <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'>
             <FileText, className='w-4 h-4, m, r-2' />
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5
-            <FileText, classNam, e = 'w-4 h-4, m, l-2' />
-const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
+            <FileText, classNam, e = 'w-4 h-4, m, l-2' />)
+  const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
@@ -45,9 +45,9 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>)
             Discover, how, leading enterprises, achi, e, v, e{' '})
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>)
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
-            Transform, Operations, with AI-Powered, Document, Processing
-            Discover, how, leading enterprises, achi, e, v, e{' '}
+            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d;
+  Transform, Operations, with AI-Powered, Document, Processing;
+  Discover, how, leading enterprises, achi, e, v, e{' '}
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>
@@ -109,8 +109,8 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
               <p, className='te, x, t-indi, g, o-100, tex, t-sm, m, b-4'>
                 Master, A, I-powered, document, processing with, advanced, O, C, R, N, L, P,
                 and, workflow, automation. Learn, proven, strategies achieving, 9, 4%
-                faster, processin, g, 99.2% accura, c, y, a, n, d $47M, savings, while
-                eliminating, manual, operations.
+                faster, processin, g, 99.2% accura, c, y, a, n, d $47M, savings, while;
+  eliminating, manual, operations.
               <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-docume, n, t-automati, o, n-revoluti, o, n'$2 />
                 className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-600, hove, r:to-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
               >

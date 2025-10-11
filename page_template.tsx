@@ -4,12 +4,12 @@ import Navigation from '../app/components/Navigation'
 import Footer from '../app/components/Footer'
 import SEOOptimizer from '../app/components/SEOOptimizer'
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react'
-const PageTemplate: React.FC<{
-    title: string
-  description: string
+const PageTemplate: React.FC<{,
+  title: string;
+  description: string,
   icon: React.ComponentType<any></any>features</any>: string[]
-  benefits: string[]
-  price: string
+  benefits: string[],
+  price: string;
   category: string,
   keywords: string[]
   }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
@@ -18,13 +18,12 @@ const PageTemplate: React.FC<{
         title={`${title} - Zion Tech Group`})
         description={description})
         keywords={keywords})
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer
-        title={`${title} - Zion Tech Group`}
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer;
+  title={`${title} - Zion Tech Group`}
         description={description}
-        keywords={keywords}
-        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
+        keywords={keywords})
+  canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -160,8 +159,8 @@ const PageTemplate: React.FC<{
               <p className="text-gray-300 mb-4">Our headquarters location
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709
-                364 E Main St STE 1008</p><br />
+                Middletown DE 19709;
+  364 E Main St STE 1008</p><br />
                 Middletown DE 19709,
   
             </div>
@@ -179,3 +178,38 @@ export default PageTemplate</h2>
   </h2>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></h1></h2></h2></h3></h3></h3></h3></h3></h3>
+</p>
+</h3>
+</p>
+</h3>
+</a>
+</p>
+</h3>
+</p>
+</p>
+</h3>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</h2>
+</h2>
+</p>
+</h1>
+</div>
+</div>
+</div>
+</div>

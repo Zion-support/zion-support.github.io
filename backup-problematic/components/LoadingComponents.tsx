@@ -22,15 +22,14 @@ export const,
       ></div>)
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>})
     </div>)
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
+  return(<div className={`flex items-center justify-center ${className}`}>
       <$2 />
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       >
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
   return (<div className={`flex items-center justify-center ${className}`}>
-      <div></div>`
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
+      <div></div>`)
+  className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       >
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
     </div>)
@@ -38,3 +37,5 @@ export const,
 }
 export default LoadingSpinner
 "`
+</LoadingSpinnerProps>
+</LoadingSpinnerProps>

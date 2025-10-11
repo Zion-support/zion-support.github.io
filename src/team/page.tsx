@@ -88,16 +88,15 @@ const TeamPage: React.FC = () => {
       icon: Shield
     }
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Meet Our <span className="text-cyan-400">Team
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+  The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,3 +200,37 @@ export default TeamPage</Link>
   </p>
   </h2>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h3></h3></h4></section></section></section></section>
+</h3>
+</div>
+</p>
+</div>
+</section>
+</div>
+</span>
+</div>
+</h4>
+</div>
+</p>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</p>
+</span>
+</h1>
+</div>
+</section>
+</div>

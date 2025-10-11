@@ -26,8 +26,7 @@ const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -44,8 +43,8 @@ const,
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation
           </Link>
-            <$2 />
-              href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+            <$2 />)
+  href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
 // (302) 464-0950,
           </a>
@@ -98,3 +97,6 @@ export default ServicePage</p>
   </h1>
   </ServicePageProps>
 </p></h2></h3></ul>
+</h2>
+</h3>
+</ul>

@@ -45,7 +45,6 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-export default function SearchFeature() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -54,8 +53,7 @@ export default function SearchFeature() {
     "url": "https://app.ziontechgroup.com/features/search"
 
   }
-  return (
-    <>
+  return(<>
             <li>
               Sort by rating, price, or recency to surface the best options.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
@@ -65,13 +63,13 @@ export default function SearchFeature() {
               <p className='font - semibold'>
                 Can I search in multiple languages?</$1>
               <p className='text - zion - slate - light'>
-                Yes, the search engine supports queries in all interface
-                languages.</$1></$1>
+                Yes, the search engine supports queries in all interface;
+  languages.</$1></$1>
             <div>
               <p className='font - semibold'>How are results ranked?</p>
               <p className='text - zion - slate - light'>
-                A combination of relevance scoring and community ratings
-                determines the order.</$1></$1></$1>
+                A combination of relevance scoring and community ratings;
+  determines the order.</$1></$1></$1>
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
@@ -82,11 +80,11 @@ export default function SearchFeature() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
 
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -97,8 +95,8 @@ export default function SearchFeature() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https: //placehold && placehold.co/800x400"
+            <img;
+  src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
             />
@@ -125,8 +123,8 @@ export default function SearchFeature() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -137,8 +135,8 @@ export default function SearchFeature() {
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
+            <img;
+  src="https: //placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
             />
@@ -179,7 +177,6 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-export default function SearchFeature() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -187,18 +184,17 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
-  return (
-    <>
-      <SEO
-        title="Advanced Search"
+  return(<>
+      <SEO;
+  title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <script;
+  type="application/ld+json")
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -207,10 +203,25 @@ export default function SearchFeature() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.</$1>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold && placehold.co/800x400"
+            <img;
+  src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
 
 
               <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>
+              </img>
+              </div>
+              </p>
+              </div>
+              </main>
+              </SEO>
+              </img>
+              </Button>
+              </div>
+              </img>
+              </div>
+              </main>
+              </div>
+              </div>
+              </div>

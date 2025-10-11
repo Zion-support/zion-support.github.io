@@ -38,8 +38,8 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               <ul, className='spa, c, e-y-3, tex, t-lg'>
                 <li, className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'>✓
-                  <sp, a, n>
-                    Predictive, anomaly, detection 15-30, min, before failu, r, e
+                  <sp, a, n>)
+  Predictive, anomaly, detection 15-30, min, before failu, r, e
                 <li, className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓
                   <sp, a, n>Mul</n>, t, i-agent, coordination, for complex, issue, s
@@ -56,6 +56,5 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
         </div>)
       </div>)
     </d, i, v > )
-export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
  }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></h3></h4></ul></li></li></li></li></li>

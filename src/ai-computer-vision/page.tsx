@@ -6,8 +6,7 @@ import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings }
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react'
 const AIComputerVisionPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -70,10 +69,9 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Email support',
 //         'Standard API'
 //       ],
-      popular: false,
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      popular: false,)
+  const PagePage: React.FC = () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -104,7 +102,7 @@ Transform your business with cutting-edge computer vision technology. From objec
 // Core Capabilities,
           </h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8">
             {features.map((feature, index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />
@@ -183,8 +181,8 @@ Most Popular
 Ready to See the Future?"
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
-                Start Your Vision Journey
-                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                Start Your Vision Journey;
+  href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
                 Request Demo
       </main>
@@ -194,3 +192,7 @@ Ready to See the Future?"
 }
 export default PagePage</p>
 </p></p></p></h3></h4></ul></ul>
+</ul>
+</h4>
+</ul>
+</p>

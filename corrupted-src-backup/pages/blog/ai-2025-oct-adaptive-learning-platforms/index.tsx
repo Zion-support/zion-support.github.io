@@ -17,8 +17,8 @@ const AdaptiveLearningPlatform, s = () => {
           <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='w-4 h-4, m, r-2' />
-const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
+            <ArrowLeft, className='w-4 h-4, m, r-2' />)
+  const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
@@ -75,18 +75,18 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                     1. Intelligent, Assessmen, t & Profili, n, g
                   <div, classNam, e = 'bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30'>
-                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for
-                    practical, skill, evaluation, psychometric, analysis, for
-                    1. Intelligent, Assessmen, t & Profili, n, g
+                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for;
+  practical, skill, evaluation, psychometric, analysis, for;
+  1. Intelligent, Assessmen, t & Profili, n, g
                   <div, classNam, e = 'bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30'>
-                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for
-                    practical, skill, evaluation, psychometric, analysis, for
+                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for;
+  practical, skill, evaluation, psychometric, analysis, for
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                     1. Intelligent, Assessmen, t & Profili, n, g
                   <div, classNam, e = 'bg-bl, u, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-bl, u, e-5, 0, 0/30'>
-                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for
-                    practical, skill, evaluation, psychometric, analysis, for
-                    learning, style, detection.
+                    <strong, className='te, x, t-bl, u, e-4, 0, 0'>Technolo, g, y: </stro, n, g> G, P, T-4, for, natural language, assessme, n, t, s, computer, vision, for;
+  practical, skill, evaluation, psychometric, analysis, for;
+  learning, style, detection.
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/30'>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
@@ -122,8 +122,8 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     3. AI-Powered, Content, Generation
                   <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'>
                     <strong, className='te, x, t-purp, l, e-4, 0, 0'>Innovati, o, n: </st, r, o, n, g>{' '}
-                    G, P, T-4, generates, role-specific, case, studies, DA, L, L-E, 3, creates
-                    custom, visual, s, and, voice, AI provides, personalized, tutoring.
+                    G, P, T-4, generates, role-specific, case, studies, DA, L, L-E, 3, creates;
+  custom, visual, s, and, voice, AI provides, personalized, tutoring.
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'>
                     <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
@@ -135,8 +135,8 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     4. Predictive, Analytic, s & Interventi, o, n
                   <div, classNam, e = 'bg-gre, e, n-9, 0, 0/20, rounde, d-l, g, p-4, border, border-gre, e, n-5, 0, 0/30'>
                     <strong, className='te, x, t-gre, e, n-4, 0, 0'>Impa, c, t: </stro, n, g> 92%
-                    course, completion, rate vs. 23% industry, average, through
-                    predictive, interventio, n.
+                    course, completion, rate vs. 23% industry, average, through;
+  predictive, interventio, n.
                     <div, classNam, e='flex, item, s-center, ga, p-2'>
                       <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
                     <div, classNam, e='flex, item, s-center, ga, p-2'>
@@ -254,3 +254,6 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                   Request, Dem, o
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></a></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></article></article>
+</li>
+</li>
+</title>

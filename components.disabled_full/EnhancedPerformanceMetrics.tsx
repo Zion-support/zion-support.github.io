@@ -12,7 +12,6 @@
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
   t: string} ur,
-  l: string} export default function handler(re)
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
@@ -24,7 +23,6 @@
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
   t: string} ur,
-  l: string} export default function handler(re)
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
@@ -36,7 +34,6 @@
   e: 'Internal server error' })} }' import type {NextApiRequest}NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   p: string} userAgen,
   t: string} ur,
-  l: string} export default function handler(re)
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}

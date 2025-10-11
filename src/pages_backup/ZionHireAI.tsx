@@ -47,7 +47,7 @@ export default function ZionHireAI() {;
 }
 const { isWhitelabel}, brandName, primaryColor } = useWhitelabel();
 const { isAuthenticated } = useAuth();
-return (;
+return(;
 
     <>
       <SEO;
@@ -80,12 +80,11 @@ import { use_auth; } from '@/hooks / use_auth';
 import Link from 'next / link';;
 export default /**
  * ZionHireAI - Function description
- */;
-function ZionHireAI() {;
+ */;)
 }
 const { is_whitelabel}, brand_name, primary_color } = use_whitelabel ();
 const { is_authenticated } = use_auth ();
-return (;
+return(;
     <>
       <SEO;
 title='Zion Hire AI - White - labeled AI Recruiting Assistant';
@@ -98,8 +97,8 @@ description='Empower your company with AI - powered recruiting tools. Streamline
 className='relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24';
 style={;
 primary_color
-              ? {;,
-backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
+              ? {;,)
+  backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
           }>
@@ -139,7 +138,6 @@ import { Button; } from "@/components/ui/button";
 import { ArrowRight;, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react';
 import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
-export default function ZionHireAI() {;
 }
 const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
@@ -152,11 +150,10 @@ import { Button; } from "@/components/ui/button",;
 import { ArrowRight;, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react';
 import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
-export default function ZionHireAI() {;
 }
 const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
-return (;
+return(;
     <>
       <SEO;
 title="Zion Hire AI - White-labeled AI Recruiting Assistant";
@@ -170,8 +167,8 @@ description="Empower your company with AI-powered recruiting tools. Streamline h
 className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24';
 style={;
 primaryColor
-              ? {;,
-backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
+              ? {;,)
+  backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
           }
@@ -609,11 +606,10 @@ import { Button; } from "@/components/ui/button",;
 import { ArrowRight;, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react';
 import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
-export default function ZionHireAI() {;
 }
 const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
-return (;
+return(;
     <>
       <SEO;
 title="Zion Hire AI - White-labeled AI Recruiting Assistant";
@@ -623,8 +619,8 @@ description="Empower your company with AI-powered recruiting tools. Streamline h
       <main className="flex-1">
         {/* Hero Section */}
         <;$2 />;
-className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
-style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";)
+  style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
@@ -1031,3 +1027,170 @@ Schedule a Demo</$1></$1></$1></$1></$1>
 }
 
 </div></div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>
+</Link>
+</p>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</div>
+</p>
+</div>
+</div>
+</p>
+</section>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</li>
+</li>
+</li>
+</ul>
+</CardContent>
+</CardDescription>
+</CardHeader>
+</Card>
+</div>
+</p>
+</div>
+</div>
+</section>
+</Link>
+</div>
+</p>
+</div>
+</div>
+</div>
+</main>
+</p>
+</div>
+</section>
+</ul>
+</CardContent>
+</Card>
+</Card>
+</li>
+</Card>
+</Card>
+</CardHeader>
+</Card>
+</li>
+</CardHeader>
+</Card>
+</Card>
+</Card>
+</li>
+</div>
+</p>
+</div>
+</div>
+</div>
+</main>
+</main>

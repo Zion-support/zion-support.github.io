@@ -4,8 +4,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Star } from 'lucide-react'
 const ProductivityPage: React.FC = () => {
-  return (
-    <div>
+  return(<div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -15,8 +14,8 @@ const ProductivityPage: React.FC = () => {
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">)
+  This page is under development. Please check back soon for updates.
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -86,3 +85,8 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
 </div>),
 }
 export default ProductivityPage</div></span></p></p></p></p></h1></h2></h3></h5></main></section></section>
+</p>
+</h2>
+</h5>
+</span>
+</h1>

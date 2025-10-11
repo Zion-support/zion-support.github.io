@@ -94,7 +94,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
           {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (
             <Li, n, k
           {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (
-            <Li, n, k
+            <Li, n, k;
   k, e, y={ind, e, x}
               to={it, e, m.li, n, k}
               classNa, m, e="group, relative, bg-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
@@ -165,7 +165,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
             <div, className="flex, fle, x-wrap, ga, p-4">"
               <Li, n, k
             <div, className="flex, fle, x-wrap, ga, p-4">"
-              <Li, n, k
+              <Li, n, k;
   to="/conta, c, t"
                 classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hov, e
         {/* Bottom, CT, A */}"
@@ -181,7 +181,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
   r:shad, o, w-purp, l, e-5, 0, 0/50"
               >
                 Schedule, Free, Consultation
-              <Li, n, k
+              <Li, n, k;
   to="/servic, e, s"
                 classNa, m, e="px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r: bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
               <Li, n, k;"

@@ -34,12 +34,12 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </div>
           </div>
 
-                  <Link 
-                    to={service.url}
+                  <Link;
+  to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                <Link 
-                  to="/ai-services"
+                <Link;
+  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -48,16 +48,16 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </ul>
           </div>
 
-                  <Link 
-                    to={service.url}
+                  <Link;
+  to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                <Link 
-                  to="/it-services"
+                <Link;
+  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
-                <Link
-                to="/micro-saas"
+                <Link;
+  to="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
               >
                 View All Solutions
@@ -81,12 +81,12 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
         </div>
 
-                  <Link 
-                    to={link.url}
+                  <Link;
+  to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                  <Link 
-                    to={link.url}
+                  <Link;
+  to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
@@ -116,3 +116,5 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
 Footer.displayName = 'Footer';
 export default Footer;
+
+</Link>

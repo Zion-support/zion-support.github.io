@@ -35,8 +35,8 @@ errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
 this.setState({;
-error},;
-errorInfo
+error},;)
+  errorInfo
     })
     // Log error to console in development;
 if (process.env['NODE_ENV'] === 'development') {}
@@ -61,10 +61,10 @@ this.resetErrorBoundary()
   }
       }
     }
-    if (;
+    if(;
 hasError &&;
-resetOnPropsChange &&;
-prevProps.children !== this.props.children
+resetOnPropsChange &&;)
+  prevProps.children !== this.props.children
     ) {;
 this.resetErrorBoundary()
   }
@@ -91,8 +91,8 @@ gtag('event', 'exception', {;,
 description: error.message,;,
 fatal: false,;,
 custom_map: {;,
-error_id: this.state.errorId,;,
-component_stack: errorInfo.componentStack
+error_id: this.state.errorId,;,)
+  component_stack: errorInfo.componentStack
         }
       })
     }
@@ -107,8 +107,8 @@ this.setState({;,
 }
 hasError: false},;,
 error: null,;,
-errorInfo: null,;,
-errorId:       ,;
+errorInfo: null,;,)
+  errorId:       ,;
 $4})
     }, 100)
   }
@@ -121,12 +121,12 @@ if (this.state.hasError) {;
 if (this.props.fallback) {;
 return this.props.fallback;
   }
-      return (;
+      return(;
         <ErrorFallback;
 error={this.state.error}
           errorInfo={this.state.errorInfo}
-          errorId={this.state.errorId}
-          onRetry={this.handleRetry}
+          errorId={this.state.errorId})
+  onRetry={this.handleRetry}
         />
       )
     }
@@ -235,3 +235,31 @@ ID: {errorId}
 //   )
 );
 ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1></a>
+</p>
+</p>
+</button>
+</button>
+</pre>
+</strong>
+</pre>
+</strong>
+</div>
+</strong>
+</div>
+</div>
+</div>
+</summary>
+</details>
+</div>
+</div>
+</summary>
+</details>
+</p>
+</h1>
+</div>
+</div>
+</div>
+</div>
+</ErrorFallbackProps>
+</State>
+</string>

@@ -1,51 +1,51 @@
 export, interface, FeaturedItem {
-    tit, l, e: stri, n, g
-catego, r, y: stri, n, g
-l, i, n
-  k: stri, n, g
-metri, c, s?: stri, n, g
+    tit, l, e: stri, n, g;
+  catego, r, y: stri, n, g;
+  l, i, n;
+  k: stri, n, g;
+  metri, c, s?: stri, n, g
   }
 export, interface, UnifiedPromotionalBannerProps {
     varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a'
-tit, l, e: stri, n, g
-descripti, o, n: stri, n, g
-ctaTe, x, t: stri, n, g
-ctaL, i, n
-  k: stri, n, g
-the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n'
+tit, l, e: stri, n, g;
+  descripti, o, n: stri, n, g;
+  ctaTe, x, t: stri, n, g;
+  ctaL, i, n;
+  k: stri, n, g;
+  the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n'
 featuredIte, m, s?: FeaturedIt, e, m[]
-showCou, n, t?: numb, e, r
-classNa, m, e?: stri, n, g
-ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e'
-animat, e, d?: boole, a, n
-bad, g, e?: stri, n, g
-da, t, e?: stri, n, g
+showCou, n, t?: numb, e, r;
+  classNa, m, e?: stri, n, g;
+  ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e'
+animat, e, d?: boole, a, n;
+  bad, g, e?: stri, n, g;
+  da, t, e?: stri, n, g
   }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
     varia, n, t = 'defau, l, t'
-  tit, l, e
-  descripti, o, n
-  ctaTe, x, t
-  ctaLi, n, k
+  tit, l, e;
+  descripti, o, n;
+  ctaTe, x, t;
+  ctaLi, n, k;
   the, m, e = 'gradie, n, t'
   featuredIte, m, s = []
-  showCou, n, t = 3
+  showCou, n, t = 3;
   classNa, m, e = ''
   ic, o, n = 'sparkl, e, s'
-  animat, e, d = tr, u, e
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
+  animat, e, d = tr, u, e;
+  const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t','
-  tit, l, e
-  descripti, o, n
-  ctaTe, x, t
-  ctaLi, n, k
+  tit, l, e;
+  descripti, o, n;
+  ctaTe, x, t;
+  ctaLi, n, k;
   the, m, e = 'gradie, n, t','
   featuredIte, m, s = []
-  showCou, n, t = 3
+  showCou, n, t = 3;
   classNa, m, e = '','
   ic, o, n = 'sparkl, e, s','
-  animat, e, d = tr, u, e
-  bad, g, e
+  animat, e, d = tr, u, e;
+  bad, g, e;
   da, t, e
   }) => {
   // Theme configurations const themeClass e s = {
@@ -87,11 +87,11 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
 export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
 }
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
-}
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+})
+  const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
-  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
+  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
@@ -110,8 +110,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
           {description}
         {/* Featured, Item, s */}
         {   visibleIte, m, s.leng, t, h   > 0  && (
-          <, classNam, e = {`grid, ga, p-4, m, b-6 ${$2 />
-              varia, n, t === 'me, g, a'
+          <, classNam, e = {`grid, ga, p-4, m, b-6 ${$2 />)
+  varia, n, t === 'me, g, a'
                 ? 'md: gr, i, d-co, l, s-3'
                 : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m'
                    ? 'md:gr, i, d-co, l, s-2'

@@ -20,8 +20,7 @@ stroke="currentColor"
             >
               <ath$2 />;
 strokeLinecap="round";
-strokeLinejoin="round";
-function ErrorFallback({ error}, resetError }: ErrorFallbackProps) {/* TODO: Fix JSX expression */}
+strokeLinejoin="round";)
                 strokeWidth={2}
                 d="M12 9 v2 m0 4 h.01 m-6.938 4 h13?.856 c1.54 0 2.502-1.667 1.732-2?.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77?.833.192 2.5 1.732 2.5 z"
               />
@@ -101,8 +100,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 r: Error): AppErrorBoundaryState {/* TODO: Fix JSX expression */}
   r: true, error }
   }
-  componentDidCatch(erro,;,
-r: Error, errorInf);,
+  componentDidCatch(erro,;,)
+  r: Error, errorInf);,
 o: ErrorInfo) {/* TODO: Fix JSX expression */}
     }
     // Here you could send error to monitoring service
@@ -117,3 +116,16 @@ o: ErrorInfo) {/* TODO: Fix JSX expression */}
   }
 }
 "</div></div></div></div></div></div></div></div></div></button></p></p></p></p></h3></h3></a>
+</button>
+</button>
+</pre>
+</h3>
+</pre>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

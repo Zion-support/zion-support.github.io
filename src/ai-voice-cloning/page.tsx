@@ -47,10 +47,9 @@ const AIVoiceCloningPage: React.FC = () => {
       popular: false
     }
   ]
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
+  return(<React.Fragment>
+      <SEOOptimizer;
+  title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
         keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}
         canonicalUrl="https://ziontechgroup.com/ai-voice-cloning"
@@ -80,8 +79,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Play className="w-5 h-5" />
-                  Listen to Samples,
+                  <Play className="w-5 h-5" />)
+  Listen to Samples,
   
               </div>
             </div>
@@ -178,3 +177,23 @@ export default AIVoiceCloningPage</a>
   </div>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
+</li>
+</ul>
+</span>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</section>
+</div>

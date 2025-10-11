@@ -69,8 +69,7 @@ $4}
         'Custom analytics',
         '24/7 support',
         'White-label options'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -82,8 +81,8 @@ $4}
               AI Social Media Manager,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate your social media presence with AI that creates, schedules, and optimizes 
-              content across all platforms to maximize engagement and grow your audience.
+              Automate your social media presence with AI that creates, schedules, and optimizes;
+  content across all platforms to maximize engagement and grow your audience.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
@@ -96,8 +95,8 @@ $4}
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">All Platforms, One Solution
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all your social media accounts from a single, intelligent dashboard
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">)
+  Manage all your social media accounts from a single, intelligent dashboard
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
@@ -108,8 +107,8 @@ $4}
             ))}
       {/* Features Section */}
       <section className="py-16 px-4">
-              Powerful AI Features
-              Leverage cutting-edge AI technology to streamline your social media management
+              Powerful AI Features;
+  Leverage cutting-edge AI technology to streamline your social media management
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
@@ -120,8 +119,8 @@ $4}
                 <p className="text-gray-300">
                   {feature.description}
       {/* Benefits Section */}
-              Proven Results
-              Join thousands of brands who have transformed their social media presence
+              Proven Results;
+  Join thousands of brands who have transformed their social media presence
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {benefits.map((benefit, index) => (
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -135,8 +134,8 @@ $4}
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
               Get Started Now
       {/* Pricing Section */}
-              Simple, Transparent Pricing
-              Choose the plan that fits your social media needs
+              Simple, Transparent Pricing;
+  Choose the plan that fits your social media needs
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${$2 />
@@ -168,8 +167,8 @@ $4}
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
-              Contact Sales
+            Join thousands of brands already using AI Social Media Manager to grow their presence;
+  Contact Sales
   ),
 }
 'use client'
@@ -211,3 +210,11 @@ export default AISocialMediaManagerPage</p>
   </section>
   </div>
 </span></span></span></p></p></h3></h3></ul></li>
+</li>
+</ul>
+</span>
+</p>
+</h3>
+</h3>
+</span>
+</p>

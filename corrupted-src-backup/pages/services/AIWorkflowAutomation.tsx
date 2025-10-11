@@ -256,8 +256,8 @@ return(<React.Fragment>
         <me, t, a;
 na, m, e="descripti, o, n";
 content="Revolutionary, AI, workflow automation, that, reduces costs, by, 75%, increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s. Enterpri, s, e-grade, security, and 24/7, operation, s." /><meta name="keywor, d, s" content="AI, workflow, automation, business, process, automation, intelligent, automatio, n, workflow, optimizatio, n, enterprise, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-workfl, o, w-automati, o, n/>
-  </link>";
-const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+  </link>";)
+  const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -298,7 +298,7 @@ const, caseStudie, s = [
     {/* TODO: Fix JSX expression */}
     }
   ];
-return (<React.Fragment>;
+return(<React.Fragment>;
       <Helmet>
         <title>AI, Workflow, Automation - Zion, Tech, Group | Transform, Your, Business Process, e, s
         <me, t, a;";
@@ -470,8 +470,8 @@ d: gr, i, d-co, l, s-3, ga, p-8">""
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Enterpri, s, e-grade, reliability, with guaranteed, SL, A</p>"
         {/* Featur, e, s */}
         <section, className="py-20">
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,)
+  g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
@@ -503,8 +503,8 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
 const, Ico, n = featu, r, e.ic, o, n;
 }
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">;
-return (;
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">;)
+  return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">
                       <Icon, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
@@ -521,8 +521,8 @@ return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, sha
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, m, b-4">"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8"></div>"
+            <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,)
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
 return (;
@@ -881,3 +881,7 @@ View, Case, Studies;"
 export default AIWorkflowAutomation
 }}}}"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</title>
+</Helmet>
+</title>
+</Helmet>

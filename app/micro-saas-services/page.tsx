@@ -42,8 +42,7 @@ const MicroSaasServicesPage: React.FC = () => {
     'Expert support'
   ];
 
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -82,8 +81,8 @@ const MicroSaasServicesPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced technology that drives results
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">)
+  Advanced technology that drives results
               </p>
             </div>
 

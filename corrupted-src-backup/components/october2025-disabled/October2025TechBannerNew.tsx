@@ -50,8 +50,8 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
         </div>"
         <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-purp, l, e-200, tex, t-center, m, b-10, ma, x-w-3xl, m, x-au, t, o">
-          Explore, the, latest breakthrough, technologies, transforming industries, worldwid, e. 
-          Our, expert, team shares, cuttin, g-edge, insights, you can, implement, today.
+          Explore, the, latest breakthrough, technologies, transforming industries, worldwid, e. )
+  Our, expert, team shares, cuttin, g-edge, insights, you can, implement, today.
         </p>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)

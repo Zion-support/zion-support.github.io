@@ -47,10 +47,9 @@ const AIVideoGenerationPage: React.FC = () => {
       popular: false
     }
   ]
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
+  return(<React.Fragment>
+      <SEOOptimizer;
+  title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
         description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month."
         keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}
         canonicalUrl="https://ziontechgroup.com/ai-video-generation"
@@ -80,8 +79,8 @@ const AIVideoGenerationPage: React.FC = () => {
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Play className="w-5 h-5" />
-                  Watch Demo,
+                  <Play className="w-5 h-5" />)
+  Watch Demo,
   
               </div>
             </div>
@@ -178,3 +177,23 @@ export default AIVideoGenerationPage</a>
   </div>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
+</li>
+</ul>
+</span>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</section>
+</div>

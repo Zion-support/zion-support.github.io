@@ -16,7 +16,7 @@ const benefits = [;
     'Expert support'
   ];
 ;
-return (;
+return(;
     <>
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
@@ -36,8 +36,8 @@ const benefits = [;
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
-return (;
+  ];)
+  return (;
     <>
       <Helmet>
         <title>Landing Page Builder - Zion Tech Group</title>
@@ -100,3 +100,5 @@ Learn More
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
   </div>
+
+</section>

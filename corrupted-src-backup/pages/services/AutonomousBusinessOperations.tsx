@@ -9,8 +9,8 @@ const AutonomousBusinessOperation, s = () => {
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
         />
-        <meta, nam, e='keywor, d, s'
-          conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
+        <meta, nam, e='keywor, d, s')
+  conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
         />)
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-busine s s-operatio n s')
@@ -172,8 +172,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               <div, className='bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-4, 0, 0/30'>
                 <TrendingUp, className='w-8 h-8, tex, t-purp, l, e-3, 0, 0' />
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                AI, Decision, Engine
-                AI, Decision, Engine
+                AI, Decision, Engine;
+  AI, Decision, Engine
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -239,8 +239,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               <div, className='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
                 <Shield, className='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                Enterprise, Securit, y
-                Enterprise, Securit, y
+                Enterprise, Securit, y;
+  Enterprise, Securit, y
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                 <Shield, className='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
@@ -254,24 +254,24 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               <div, className='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'>
                 <Users, className='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                Expert, Implementation, Team
-                Expert, Implementation, Team
+                Expert, Implementation, Team;
+  Expert, Implementation, Team
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-oran, g, e-400, m, t-1, fle, x-shri, n, k-0' />
             <div, className='bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hove, r: bord, e, r-cy, a, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, className='bg-cy, a, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-cy, a, n-4, 0, 0/30'>
                 <Clock, className='w-8 h-8, tex, t-cy, a, n-3, 0, 0' />
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                Re, a, l-Time, Observabilit, y
-                Re, a, l-Time, Observabilit, y
+                Re, a, l-Time, Observabilit, y;
+  Re, a, l-Time, Observabilit, y
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-cy, a, n-400, m, t-1, fle, x-shri, n, k-0' />
             <div, className='bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-indi, g, o-4, 0, 0/50, hove, r: bord, e, r-indi, g, o-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, className='bg-indi, g, o-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-indi, g, o-4, 0, 0/30'>
                 <DollarSign, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                ROI, Guarante, e
-                ROI, Guarante, e
+                ROI, Guarante, e;
+  ROI, Guarante, e
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -312,8 +312,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
-              Read, Complete, Case Stu, d, y
-              Read, Complete, Case Stu, d, y
+              Read, Complete, Case Stu, d, y;
+  Read, Complete, Case Stu, d, y
               <Link, className='w-5 h-5' />
         {/* Fina, l, C, T, A */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
@@ -400,3 +400,4 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 Schedule, Free, Consultation
                 <Link, classNam, e='w-5 h-5' />
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</title>

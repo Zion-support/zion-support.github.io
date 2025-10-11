@@ -1,7 +1,7 @@
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, advertisingFeature, s = [
     {
-      i, c, o
+      i, c, o;
   n: "🚀","
       tit, l, e: "Revolutionary, AI, Technologies","
       descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
@@ -19,7 +19,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, advertisingFeature, s = [
     {
-      i, c, o
+      i, c, o;
   n: "🚀","
       tit, l, e: "Revolutionary, AI, Technologies","
       descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
@@ -75,7 +75,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-20">"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             >
@@ -88,7 +88,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
             ></moti>"
@@ -147,7 +147,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" />";"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
         {/* Features, Gri, d */}
-        <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
+        <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />)
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)$2 />
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)

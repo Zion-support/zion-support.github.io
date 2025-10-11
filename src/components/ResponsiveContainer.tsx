@@ -4,15 +4,15 @@ interface ResponsiveContainerProps {
   }
 }
   childre,
-  n: React.ReactNode
+  n: React.ReactNode;
   className?: string,
   breakpoints?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    sm?: string
-    md?: string
-    lg?: string
-    xl?: string
+    sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string
     '2xl'?: string
   }
   fallback?: React.ReactNode
@@ -46,8 +46,8 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!isClient) return
-    if (isLargeDesktop) {/* TODO: Fix JSX expression */}
+    if (!isClient) return;
+  if (isLargeDesktop) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       setScreenSize('2xl')
@@ -74,8 +74,8 @@ const,
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const baseClasses = className
-    const responsiveClasses = breakpoints[screenSize] || ''
+    const baseClasses = className;
+  const responsiveClasses = breakpoints[screenSize] || ''
     return `${baseClasses} ${responsiveClasses}`.trim()
   }
   return (
@@ -84,8 +84,8 @@ const,
     </div>)
   )
 }
-// Hook for responsive values
-export const useResponsiveValue = {}
+// Hook for responsive values;
+  export const useResponsiveValue = {}
           <T,>(value,
   s: {
     // sm?: T
@@ -128,8 +128,8 @@ export const useResponsiveValue = {}
   }
   return values.default || values.lg || values.md || values.sm || ({} as T)
 }
-// Hook for responsive breakpoints
-export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
+// Hook for responsive breakpoints;
+  export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})

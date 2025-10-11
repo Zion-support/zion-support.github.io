@@ -45,7 +45,6 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
-export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -54,15 +53,14 @@ export default function TalentMarketplace() {
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
   }
-  return (
-    <>
-                Create a free account and send a message or job invite directly
-                from their profile.</$1></$1>
+  return(<React.Fragment>
+                Create a free account and send a message or job invite directly;
+  from their profile.</React.Fragment>$1></$1>
             <div>
               <p className='font - semibold'>Are payments protected?</p>
               <p className='text - zion - slate - light'>
-                Yes, funds are held in escrow until you approve completed
-                milestones.</$1></$1></$1>
+                Yes, funds are held in escrow until you approve completed;
+  milestones.</$1></$1></$1>
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
@@ -73,11 +71,11 @@ export default function TalentMarketplace() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
 
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+)
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -88,8 +86,8 @@ export default function TalentMarketplace() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https: //placehold && placehold.co/800x400"
+            <img;
+  src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
             />
@@ -116,8 +114,8 @@ export default function TalentMarketplace() {
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -128,8 +126,8 @@ export default function TalentMarketplace() {
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
+            <img;
+  src="https: //placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
             />
@@ -170,7 +168,6 @@ import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
-export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -178,18 +175,17 @@ export default function TalentMarketplace() {
     "description": "Hire vetted AI and tech professionals from around the world on Zion."
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
   }
-  return (
-    <>
-      <SEO
-        title="Talent Marketplace"
+  return(<>
+      <SEO;
+  title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <script;
+  type="application/ld+json")
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -198,10 +194,23 @@ export default function TalentMarketplace() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.</$1>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold && placehold.co/800x400"
+            <img;
+  src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
 
 
               <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>
+              </img>
+              </div>
+              </p>
+              </div>
+              </main>
+              </SEO>
+              </img>
+              </Button>
+              </div>
+              </img>
+              </div>
+              </main>
+              </div>

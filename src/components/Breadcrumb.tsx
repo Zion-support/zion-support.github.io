@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronRight, Home } from 'lucide-react'
 interface BreadcrumbItem {
-    name: string
+    name: string,
   href: string,
   current?: boolean
   }
@@ -17,8 +17,8 @@ const Breadcrumb: React.FC = () => {
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`
       const isLast = index === pathSegments.length - 1
-      // Convert segment to readable name
-      const name = segment
+      // Convert segment to readable name;
+  const name = segment
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
@@ -32,7 +32,7 @@ const Breadcrumb: React.FC = () => {
     return breadcrumbs
   }
   const breadcrumbs = generateBreadcrumbs()
-  // Don't show breadcrumb on home page
+  // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
     return null
   }
@@ -73,8 +73,8 @@ const Breadcrumb: React.FC = () => {
                 )}
             ))}
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
+      <script;
+  type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
   )
@@ -82,3 +82,8 @@ const Breadcrumb: React.FC = () => {
 export default Breadcrumb</ol>
   </nav>
 </div></div></span></ol></li></nav>
+</span>
+</li>
+</ol>
+</div>
+</nav>

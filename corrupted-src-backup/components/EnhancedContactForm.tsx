@@ -10,7 +10,6 @@ onSubmit={e =>
       className="grid gap-4 max-w-xl mx-auto">
       <input;
 aria-label="Name";
-export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
       onSubmit={e => e.preventDefault()}
       className="grid gap-4 max-w-xl mx-auto">
       <input></input>";
@@ -45,3 +44,4 @@ Send
   )
 }
 "</button></button>
+</button>

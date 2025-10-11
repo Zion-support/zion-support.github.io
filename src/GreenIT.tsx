@@ -5,7 +5,7 @@ import { Button; } from "@/components/ui/button";
 import { Leaf;, Server, Cloud } from "lucide-react";
 import { Link; } from "react-router-dom";
 export default function GreenIT() {;
-return (;
+return(;
     <>
       <SEO;
 title="Green IT Solutions | Zion Tech Group";
@@ -261,8 +261,8 @@ import { motion; } from 'framer-motion';
 import { Leaf;, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine } from 'lucide-react';
 import { Header; } from "@/components/Header";
 import { Footer; } from "@/components/Footer";
-import { SEO; } from '@/components/SEO';
-const GreenIT = () => {;;
+import { SEO; } from '@/components/SEO';)
+  const GreenIT = () => {;;
 const greenSolutions = [;
     {;,
 }
@@ -450,7 +450,6 @@ Server,;
 Monitor,;
 Smartphone
 } from "lucide-react";
-export default function GreenIT() {;
 const greenSolutions = [;
     {;,
 }
@@ -563,7 +562,7 @@ label: "Cost Savings",;,
 description: "Average annual savings for enterprise clients"
     }
   ];
-return (;
+return(;
     
       <SEO;
 title="Green IT Solutions - Sustainable Technology";
@@ -612,8 +611,8 @@ className="object-cover w-full h-full"
 
             {/* Green Solutions */}
             <div className="mb-20">
-              <h2 className="text-3xl font-semibold text-white text-center mb-12">;
-Our Green IT Solutions
+              <h2 className="text-3xl font-semibold text-white text-center mb-12">;)
+  Our Green IT Solutions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {greenSolutions.map((solution), index) => (
@@ -808,3 +807,5 @@ Download Green IT Guide
     
   )
 }</div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>
+</img>
+</main>

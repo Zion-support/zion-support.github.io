@@ -49,7 +49,6 @@ const teamMembers = [;
 import React from 'react';;
 import { SEO; } from '@/components/SEO';
 import { Link; } from 'react-router-dom';
-export default function Team() {;
 const leadership = [;
     {;,
 }
@@ -290,13 +289,13 @@ image: '/images/team/elena-petrova.jpg',;,
 linkedin: 'https://linkedin.com/in/elena-petrova'
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO;
 title="Our Team - Zion Tech Group";
 description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology.";
-tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
-        url="https://ziontechgroup.com/team"
+tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]})
+  url="https://ziontechgroup.com/team"
       />
 
       {/* Hero Section */}
@@ -449,11 +448,11 @@ innovative solutions that drive business success.
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {departments.map((dept), index) => {;
 const Icon = dept.icon;;
-return (;
+return(;
               <$2 />;
 }
-key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+key={index})
+  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -785,13 +784,13 @@ achievements: [
   ];
 const filteredTeam = teamMembers.filter(member => {;;
 const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;;
-const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;;
-return matchesDepartment && matchesLocation;
+const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;;)
+  return matchesDepartment && matchesLocation;
 }
   });
 const featuredMembers = filteredTeam.filter(member => member.featured);;
 const regularMembers = filteredTeam.filter(member => !member.featured);;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -800,8 +799,8 @@ return (;
 Meet Our Team
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-We are a diverse team of innovators, engineers, and visionaries dedicated to transforming;
-businesses through cutting-edge technology solutions.
+We are a diverse team of innovators, engineers, and visionaries dedicated to transforming;)
+  businesses through cutting-edge technology solutions.
           </p>
         </div>
       </section>
@@ -1001,3 +1000,18 @@ Contact Us
   )
 }
 export default Team</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>

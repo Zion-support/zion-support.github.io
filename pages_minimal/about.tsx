@@ -27,8 +27,8 @@ export default function about() {
                 ENTERPRISE
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete
-              content.
+              This page is currently under development. Please check back soon for the complete)
+  content.
             </p>)
           </div>)
         </div>)
@@ -36,9 +36,8 @@ export default function about() {
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
   }}
-export default function about() {/* TODO: Fix JSX expression */}
 }
-  return (<div className="min-h-screen bg-gray-50"></div>"
+  return(<div className="min-h-screen bg-gray-50"></div>"
       <div className="max-w-4xl mx-auto px-4 py-8"></div>"
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
           <div className="text-center mb-8"></div>"
@@ -54,9 +53,16 @@ export default function about() {/* TODO: Fix JSX expression */}
           </div>"
           <div className="prose max-w-none"></div>"
             <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete
-              content.
+              This page is currently under development. Please check back soon for the complete)
+  content.
     </div>)
   )
 }
 "</div></div></div></div></div></span></span></span></span></span></span></p></p></h1>
+</p>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>

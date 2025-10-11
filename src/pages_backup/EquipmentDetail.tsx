@@ -127,8 +127,8 @@ features: item && item.tags || [];';,
 warranty: '1 Year Manufacturer Warranty';';,
 returnPolicy: '30-day return policy'; 
 // Convert ProductListing to EquipmentDetails format;
-function convertProductListingToEquipmentDetails(): any (;,
-item: ProductListing
+function convertProductListingToEquipmentDetails(): any(;,)
+  item: ProductListing
 ): EquipmentDetails {;
 return {;;,
 id: item && item.id},;,
@@ -163,7 +163,6 @@ return acc;
     },
     {} as { [key: string]: EquipmentDetails }
   );
-export default function EquipmentDetail() {;
 const router = useRouter();;
 }
 const { id } = router && router.query as { id?: string }
@@ -177,7 +176,6 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState<string | null>(null);
 const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
 useEffect((),) => {;
-async function loadEquipment() {;
 if (!id) {;
 setLoading(false);
 setError('No equipment ID provided');
@@ -210,8 +208,8 @@ if (storedData && storedData.name) {
 equipmentData = storedData
               } else {
                 // It's a ProductListing, convert it;
-equipmentData = convertProductListingToEquipmentDetails(;
-storedData as ProductListing
+equipmentData = convertProductListingToEquipmentDetails(;)
+  storedData as ProductListing
                 )
               }
               setEquipment(equipmentData);
@@ -221,16 +219,16 @@ return
 
 
                 // It's a ProductListing, convert it;
-equipment_data = convertProductListingToEquipmentDetails (;
-stored_data as ProductListing)
+equipment_data = convertProductListingToEquipmentDetails(;)
+  stored_data as ProductListing)
               }
               set_equipment (equipment_data);
 set_loading (false);
 return
             ;}
           } catch (storage_error) {;
-logErrorToProduction ('Error reading from session_storage:', {;,
-data: storage_error,
+logErrorToProduction('Error reading from session_storage:', {;,)
+  data: storage_error,
             })
           }
         }
@@ -309,7 +307,6 @@ returnPolicy?: string
 }
 
 // Convert ProductListing to EquipmentDetails format;
-function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
 return {;;,
 id: item.id},;,
 name: item.title,;,
@@ -341,7 +338,6 @@ acc[item.id] = convertProductListingToEquipmentDetails(item),;
 return acc;
 }
   }, {} as { [key: string]: EquipmentDetails }),;
-export default function EquipmentDetail() {;
 const router = useRouter();,;
 }
 const { id } = router.query as { id?: string },;
@@ -355,7 +351,6 @@ const [loading, setLoading] = useState(true),;
 const [error, setError] = useState<string | null>(null),;
 const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
 useEffect(() => {;
-async function loadEquipment() {;
 if (!id) {;
 }
 }
@@ -388,16 +383,16 @@ if (storedData.name) {
 equipmentData = storedData
               } else {
                 // It's a ProductListing, convert it;
-equipment_data = convertProductListingToEquipmentDetails (;
-stored_data as ProductListing)
+equipment_data = convertProductListingToEquipmentDetails(;)
+  stored_data as ProductListing)
               }
               set_equipment (equipment_data);
 set_loading (false);
 return
             ;}
           } catch (storage_error) {;
-logErrorToProduction ('Error reading from session_storage:', {;,
-data: storage_error,
+logErrorToProduction('Error reading from session_storage:', {;,)
+  data: storage_error,
             })
           }
         }
@@ -418,8 +413,8 @@ if (!equipment |!isAuthenticated) {;
 toast({;,
 }
 title: 'Authentication Required'},;,
-description: 'Please log in to add items to cart',;,
-variant: 'destructive',
+description: 'Please log in to add items to cart',;,)
+  variant: 'destructive',
 
 
       });
@@ -429,13 +424,13 @@ return
 setIsAdding(true),;
 quantity}}),;
 toast({;,
-title: "Added to Cart",;,
-description: `${equipment.name} has been added to your cart.`})
+title: "Added to Cart",;,)
+  description: `${equipment.name} has been added to your cart.`})
     } catch (error) {;
 toast({;,
 title: "Error"},;,
-description: "Failed to add item to cart. Please try again.",;,
-variant: "destructive"})
+description: "Failed to add item to cart. Please try again.",;,)
+  variant: "destructive"})
     } finally {;
 setIsAdding(false)
     }
@@ -471,21 +466,21 @@ if ( {) {};
 $2
 }
 ;
-return (;
+return(;
       <>
         <NextSeo title='Loading Equipment...' />
         <div className='min - h-screen bg - zion - blue py - 12 px - 4'>
           <div className='container mx - auto'>
             <div className='text - center py - 20'>
               <div className='animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - cyan mx - auto mb - 4'></div>
-              <p className='text - zion - slate - light'>;
-Loading equipment details...</$1></$1></$1></$1>
+              <p className='text - zion - slate - light'>;)
+  Loading equipment details...</$1></$1></$1></$1>
       </>)
   }
 
           } catch (storageError) {;
-logErrorToProduction('Error reading from sessionStorage:', {;,
-data: storageError,
+logErrorToProduction('Error reading from sessionStorage:', {;,)
+  data: storageError,
             })
           }
         }
@@ -507,8 +502,8 @@ if (!equipment || !isAuthenticated) {;
 toast({;,
 }
 title: 'Authentication Required'},;,
-description: 'Please log in to add items to cart',;,
-variant: 'destructive',
+description: 'Please log in to add items to cart',;,)
+  variant: 'destructive',
       });
 return
     ;}
@@ -520,19 +515,19 @@ type: 'ADD_ITEM'},;,
 payload: {;,
 id: equipment && equipment.id,;,
 name: equipment && equipment.name,;,
-price: equipment && equipment.price,;
-quantity,
+price: equipment && equipment.price,;)
+  quantity,
         },
       });
 toast({;,
-title: 'Added to Cart',;,
-description: `${equipment && equipment.name} has been added to your cart.`,
+title: 'Added to Cart',;,)
+  description: `${equipment && equipment.name} has been added to your cart.`,
       })
     } catch (error) {;
 toast({;,
 title: 'Error'},;,
-description: 'Failed to add item to cart. Please try again.',;,
-variant: 'destructive',
+description: 'Failed to add item to cart. Please try again.',;,)
+  variant: 'destructive',
       })
     } finally {;
 setIsAdding(false)
@@ -541,22 +536,22 @@ setIsAdding(false)
   const inCart = items && items.some(item => item && item.id === equipment?.id);
   // Loading state;
 if (loading) {;
-return (;
+return(;
       <>
         <NextSeo title='Loading Equipment...' />
         <div className='min-h-screen bg-zion-blue py-12 px-4'>
           <div className='container mx-auto'>
             <div className='text-center py-20'>
               <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
-              <p className='text-zion-slate-light'>;
-Loading equipment details...</$1></$1></$1></$1>
+              <p className='text-zion-slate-light'>;)
+  Loading equipment details...</$1></$1></$1></$1>
       </>
     )
   }
 
   // Error state;
 if (error || !equipment) {;
-return (;
+return(;
       <>
         <NextSeo;
 title="Equipment Not Found";
@@ -582,8 +577,8 @@ initial={{ opacity: 0}}, y: 20 }}
                     "We couldn't load the equipment details. Please try again."}
               </p>
               <div className='space-x-4'>
-                <Button;
-onClick={() => router && router.back()}
+                <Button;)
+  onClick={() => router && router.back()}
                   variant='outline';
 className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >
                   <ArrowLeft className='h-4 w-4 mr-2' />;
@@ -640,20 +635,20 @@ Browse Equipment
       </>
     )
   }
-  return (;
+  return(;
     <>
       <NextSeo;
 title={`${equipment && equipment.name}} - Zion Marketplace`}
         description={equipment && equipment.description,}
-        openGraph={{};
-loadEquipment()}, [id]),;
+        openGraph={{};)
+  loadEquipment()}, [id]),;
 const handleAddToCart = async () => {;;
 if (!equipment || !isAuthenticated) {;
 toast({;,
 }
 title: "Authentication Required"},;,
-description: "Please log in to add items to cart",;,
-variant: "destructive"}),;
+description: "Please log in to add items to cart",;,)
+  variant: "destructive"}),;
 return
     ;}
 ;
@@ -664,16 +659,16 @@ type: 'ADD_ITEM'},;,
 payload: {;,
 id: equipment.id,;,
 name: equipment.name,;,
-price: equipment.price,;
-quantity}}),;
+price: equipment.price,;)
+  quantity}}),;
 toast({;,
-title: "Added to Cart",;,
-description: `${equipment.name} has been added to your cart.`})
+title: "Added to Cart",;,)
+  description: `${equipment.name} has been added to your cart.`})
     } catch (error) {;
 toast({;,
 title: "Error"},;,
-description: "Failed to add item to cart. Please try again.",;,
-variant: "destructive"})
+description: "Failed to add item to cart. Please try again.",;,)
+  variant: "destructive"})
     } finally {;
 setIsAdding(false)
     }
@@ -695,7 +690,7 @@ return (;
 
   // Error state;
 if (error || !equipment) {;
-return (;
+return(;
       <>
         <NextSeo;
 title="Equipment Not Found";
@@ -719,8 +714,8 @@ initial={{ opacity: 0}}, y: 20 }}
                 }
               </p>
               <div className="space-x-4">
-                <Button;
-onClick={() => router.back()}
+                <Button;)
+  onClick={() => router.back()}
                   variant="outline";
 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
                 >
@@ -735,7 +730,7 @@ Browse Equipment</$1></$1></$1></$1></$1>
     )
   }
 ;
-return (;
+return(;
     <>
       <NextSeo;
 title={`${equipment.name}} - Zion Marketplace`}
@@ -754,8 +749,8 @@ images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.i
 className='flex mb-8';
 initial={{ opacity: 0}}, y: -20 }}
             animate={{ opacity: 1}}, y: 0 }}>
-            <$2 />;
-onClick={() => router.push('/equipment')}
+            <$2 />;)
+  onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
           <motion.nav;
 className="flex mb-8";
@@ -887,3 +882,33 @@ equipment.returnPolicy
 }
 
 }
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Badge>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</EquipmentDetails>
+</string>
+</EquipmentDetails>
+</string>
+</EquipmentDetails>
+</string>

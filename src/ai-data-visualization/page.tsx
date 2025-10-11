@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet>
+  return(<div><Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
@@ -142,7 +142,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             </p>"
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
-              < href="te,"$2 />
+              < href="te,"$2 />)
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
   l: (302) 464-0950,
@@ -161,3 +161,30 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
   ),
 }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</p>
+</p>
+</p>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</title>

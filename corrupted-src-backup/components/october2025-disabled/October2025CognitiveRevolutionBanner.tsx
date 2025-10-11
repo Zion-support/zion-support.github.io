@@ -65,8 +65,8 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                   JUST, PUBLISHED, TODA,
   Y:
                 </sp, a, n>{' '}
-                Discover, how, Fortune 500, companies, are deploying, cognitive, AI
-                systems, that, understand, reas, o, n, and, learn, like huma, n, s —
+                Discover, how, Fortune 500, companies, are deploying, cognitive, AI;
+  systems, that, understand, reas, o, n, and, learn, like huma, n, s —
                 achievi, n, g{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                   98.7% decision, accurac, y

@@ -118,8 +118,8 @@ Transformational Impact</$1>"
                   <Globe className=" />">
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Package className="h-8 w-8 text-blue-400" />;
-Transformational Impact
+                <Package className="h-8 w-8 text-blue-400" />;)
+  Transformational Impact
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
@@ -346,7 +346,6 @@ className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-
 Schedule Your Supply Chain AI Assessment",
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
   </div>
@@ -432,3 +431,77 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix 
   </span>
   </Package>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section>
+</h2>
+</h2>
+</p>
+</h2>
+</h3>
+</h3>
+</h3>
+</li>
+</li>
+</li>
+</h3>
+</h3>
+</li>
+</li>
+</li>
+</li>
+</li>
+</h3>
+</h3>
+</section>
+</h3>
+</section>
+</h3>
+</div>
+</section>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</h2>
+</div>
+</li>
+</li>
+</li>
+</h2>
+</div>
+</li>
+</li>
+</li>
+</li>
+</h2>
+</div>
+</li>
+</ul>
+</li>
+</li>
+</li>
+</li>
+</ul>
+</li>
+</li>
+</li>
+</li>
+</ul>
+</div>
+</meta>
+</meta>
+</title>
+</div>
+</title>

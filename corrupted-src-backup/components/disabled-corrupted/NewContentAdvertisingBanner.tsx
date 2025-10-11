@@ -72,8 +72,8 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             Revolutionary, New, Content H, u, b</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
-            Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
+            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. )
+  Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
           </p>)
           {/* Achievement, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)

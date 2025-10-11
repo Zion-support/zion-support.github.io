@@ -1,6 +1,5 @@
 export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {
-  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">"
-export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">")
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -10,16 +9,15 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
   g:px-8, p, y-8">"
         {/* Header, Sectio, n */}
-        <moti, o, n.d, i, v
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">"
+        <moti, o, n.d, i, v;
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">"
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>"
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-8">"
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-8">"
         {/* Header, Sectio, n */}
         <moti, o, n.d, i, v
@@ -29,7 +27,7 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, p, y-8">"
         {/* Header, Sectio, n */}
-        <moti, o, n.d, i, v
+        <moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
           anima, t, e={{ opaci, t, y: 1, y: 0 }}
           transiti, o, n={{ durati, o, n: 0.6 }}"
@@ -112,12 +110,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
           {/* Federated, A, I */}
           <moti, o, n.d, i, v
           {/* Federated, A, I */}
-          <moti, o, n.d, i, v
+          <moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.1 }}
           >
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n"
               classNa, m, e="block, grou, p"
             >
@@ -205,12 +203,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Synthetic, Dat, a */}
-          <moti, o, n.d, i, v
+          <moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.2 }}
           >
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h"
               classNa, m, e="block, grou, p"
             >
@@ -295,12 +293,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* AI, Governanc, e */}
-          <moti, o, n.d, i, v
+          <moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
             anima, t, e={{ opaci, t, y: 1, y: 0 }}
             transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.3 }}
           >
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h"
               classNa, m, e="block, grou, p"
             >
@@ -385,13 +383,13 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
         {/* Call, to, Action */}
-        <moti, o, n.d, i, v
+        <moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 20 }}
           anima, t, e={{ opaci, t, y: 1, y: 0 }}
           transiti, o, n={{ durati, o, n: 0.6, del, a, y: 0.4 }}"
           classNa, m, e="te, x, t-cent, e, r"
         >
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove
         >
@@ -403,8 +401,8 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>"
             <Link, className="w-5 h-5  /></Link>"
             <Link, className="w-5 h-5" />"</$1>"
-          <p, className="mt-4, tex, t-bl, u, e-200, tex, t-sm">"
-            Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-first, A, I, synthetic, dat, a, and, enterprise, governance
+          <p, className="mt-4, tex, t-bl, u, e-200, tex, t-sm">")
+  Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-first, A, I, synthetic, dat, a, and, enterprise, governance
   )
 }
 "

@@ -23,11 +23,10 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />"
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8">"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y</$1>)
+            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">")
+  Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y</$1>)
             <, className="te, x, t-l, g, m;)$2 />
   d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";)
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
           {/* Head, e, r */}
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>"
@@ -98,8 +97,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <p, className="te, x, t-gr, a, y-300, m, b-4">
                 Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
               <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
-                80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
+                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y;
+  80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
               <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">"
                 <span, className="bg-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-cy, a, n-300, tex, t-xs, fon, t-medi, u, m">S, u, b-10ms, Latenc, y</sp, a, n>"
                 <span, className="bg-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-bl, u, e-300, tex, t-xs, fon, t-medi, u, m">5G, Network, s</sp, a, n>"
@@ -107,8 +106,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <p, className="te, x, t-gr, a, y-300, m, b-4">
                 Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y;"
               <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
-                80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
+                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y;
+  80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
               </p>"
               <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";"
                 <span, className="bg-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-cy, a, n-300, tex, t-xs, fon, t-medi, u, m">S, u, b-10ms, Latenc, y</sp, a, n>";"
@@ -120,7 +119,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 <li>✓ Healthcare, Io, T & remote, patient, monitoring
                 <li>✓ Smart, citie, s & public, safety, analytics
                 <li>✓ 80% bandwidth, cost, reduction
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5"
                 classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
               <Li, n, k;"
@@ -159,7 +158,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                   <p, className="te, x, t-purp, l, e-300, tex, t-sm">Protect, Against, Q-Day, with, PQC</p>"
               </d, i, v>"
               <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Implement, NIS, T-approved, pos, t-quantum, cryptography, to secure, your, enterprise against, quantu, m
+                Implement, NIS, T-approved, pos, t-quantum, cryptography, to secure, your, enterprise against, quantu, m;
   computing, threat, s. Complete, 1, 8-month, migration, roadmap to, achieve, 100% quantum, resistanc, e.
               <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">"
                 <span, className="bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-purp, l, e-300, tex, t-xs, fon, t-medi, u, m">NIST, PQ, C</sp, a, n>"
@@ -175,7 +174,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 <li>✓ Hybrid, classica, l + PQC, implementatio, n
                 <li>✓ Protect, harves, t-n, o, w-decry, p, t-later, attack, s
                 <li>✓ 18-month, migration, roadmap includ, e, d
-              <Li, n, k
+              <Li, n, k;
   to="/bl, o, g/quant, u, m-sa, f, e-cryptograp, h, y-implementati, o, n-20, 2, 5"
                 classNa, m, e="bg-purp, l, e-500, hove, r: bg-purp, l, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
               <Li, n, k;"
@@ -210,7 +209,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <Li, n, k
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
           {/* Key, Metrics, Section */}"
@@ -242,7 +241,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <Sparkles, className="w-5 h-5  /></Sparkles>"
               <Sparkles, className="w-5 h-5" />"
               Explore, All, Guides
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
             <Li, n, k;"
@@ -257,3 +256,11 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
 }
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></ul></ul></li></li></li></li></li></li></li></li></section></section>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>

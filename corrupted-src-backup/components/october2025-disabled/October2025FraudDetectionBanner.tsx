@@ -17,8 +17,8 @@ const October2025FraudDetectionBanne, r = () => {
             <span, className="te, x, t-r, e, d-300, fon, t-semibold, tex, t-sm">🚨 BREAKI, N, G: OCTO, B, E, R , 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLV, E, D
             <Shield, classNam, e = "w-5 h-5, tex, t-r, e, d-4, 0, 0" />
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">
-            AI-Powered, Rea, l-Time, Fraud, Detection
-            AI-Powered, Rea, l-Time, Fraud, Detection
+            AI-Powered, Rea, l-Time, Fraud, Detection;
+  AI-Powered, Rea, l-Time, Fraud, Detection
             <br /> <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-purp, l, e-400, t, o-bl, u, e-4, 0, 0">
               $847B, in, Assets Protect, e, d | 99.7% Accura, c, y | S, u, b-50ms, Detectio, n
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
@@ -71,8 +71,8 @@ const October2025FraudDetectionBanne, r = () => {
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
               <d, i, v>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e
-                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
-const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
+                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">)
+  const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"

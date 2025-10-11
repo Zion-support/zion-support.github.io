@@ -5,7 +5,7 @@ import Footer from '../components/Footer';;
 import { TrendingUp;, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
 const AISalesForecastingPage: React.FC = () => {;
 const features = [];,;
-return (;
+return(;
     {// TODO: Add content
 }
   }
@@ -67,8 +67,8 @@ md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Sales Forecasting Features,
           </h2>"
           < className="grid grid-cols-1,$2 />;,
-md:grid-cols-2,";,
-lg:grid-cols-4 gap-8"></div>)
+md:grid-cols-2,";,)
+  lg:grid-cols-4 gap-8"></div>)
             {features.map((feature), index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />;,
 hover:scale-105 transition-all duration-300"></div>"

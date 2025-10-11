@@ -25,9 +25,9 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     technologie,
   s: string[],,
     contactInf,
-  o: string
-    link?: string
-    popular?: boolean,
+  o: string;
+  link?: string;
+  popular?: boolean,
   }
 }
 const MicroSAASCard: React.FC,
@@ -108,3 +108,9 @@ export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>
 </span></span></span></span></span></ul></ul>
+</ul>
+</ul>
+</span>
+</span>
+</span>
+</span>

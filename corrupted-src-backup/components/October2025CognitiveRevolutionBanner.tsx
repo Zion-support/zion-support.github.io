@@ -12,7 +12,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-6">"
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
           {/* Left, sid, e - Badge, and, Title */}
@@ -27,7 +27,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-6">"
       {/* Conte, n, t */}</div>
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-6">"</div>
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">"
           {/* Left, sid, e - Badge, and, Title */}</div>
@@ -98,7 +98,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">
                 <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}
@@ -112,12 +112,12 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. 
                 Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation;"
               <h2, className="te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t">"
-                🧠 Cognitive, Computing, Revolutio
+                🧠 Cognitive, Computing, Revolutio;
   n: Hum, a, n-Like, AI, Intelligence
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">"
                 <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">"
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}'
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}'
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}'
@@ -129,13 +129,13 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}';"
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}';"
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. "
-                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation
-                and, rea, l-world, telecom, success story, with, transformational resul, t, s!
+                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation;
+  and, rea, l-world, telecom, success story, with, transformational resul, t, s!
               {/* Featured, content, links */}
               <div, className="flex, fle, x-wrap, ga, p-3, tex, t-sm">"
                 <Li, n, k
               <div, className="flex, fle, x-wrap, ga, p-3, tex, t-sm">"
-                <Li, n, k
+                <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-multiage, n, t-enterpri, s, e-orchestrati, o, n-revoluti, o, n"
               {/* Featured, content, links */}"
               <div, className="flex, fle, x-wrap, ga, p-3, tex, t-sm">"
@@ -152,7 +152,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
                   <span, className="fo, n, t-semibo, l, d">Mul, t, i-Agent, Orchestratio, n (97.8% Automati, o, n, $847M, Valu, e)</sp, a, n>";"
                   <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>"
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>"
-                <Li, n, k
+                <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n"
                   classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
                 <Li, n, k;"
@@ -169,7 +169,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
                   <span, className="fo, n, t-semibo, l, d">Cognitive, AI, Transformation (98.5% Accura, c, y, $1.2B, Valu, e)</sp, a, n>";"
                   <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>"
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>"
-                <Li, n, k
+                <Li, n, k;
   to="/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n"
                   classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
                 <Li, n, k;"
@@ -187,7 +187,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
           <div, className="fl, e, x-shri, n, k-0">"
             <Li, n, k
           <div, className="fl, e, x-shri, n, k-0">"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
           {/* Right, sid, e - CTA, Butto, n */}"

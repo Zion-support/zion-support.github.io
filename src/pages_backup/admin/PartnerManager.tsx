@@ -132,7 +132,6 @@ commission_rate?: number
 export default /**
  * PartnerManager - Function description
  */;
-function PartnerManager() {;
 const [partners, set_partners] = useState < PartnerProfile[]>([]);
 const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
 const [is_loading, setIsLoading] = useState (true);
@@ -166,8 +165,8 @@ filtered = filtered.filter(p => p.status === status)
 logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),;
 toast({;,
 title: "Error",;,
-description: "Failed to load partner data",;,
-variant: "destructive"})
+description: "Failed to load partner data",;,)
+  variant: "destructive"})
     } finally {;
 setIsLoading(false)
     }
@@ -183,8 +182,8 @@ filtered = filtered.filter(p => p.status === status)
     // Filter by search query;
 if (query) {;
 const lowerQuery = query.toLowerCase();,;
-filtered = filtered.filter(p =>;
-p.name.toLowerCase().includes(lowerQuery) ||;
+filtered = filtered.filter(p =>;)
+  p.name.toLowerCase().includes(lowerQuery) ||;
 p.niche.toLowerCase().includes(lowerQuery) ||;
 p.bio?.toLowerCase().includes(lowerQuery) ||;
 p.website?.toLowerCase().includes(lowerQuery)
@@ -221,15 +220,15 @@ try {
 setPartners(partners.map(p =>);
 p.id === partnerId ? { ...p, status } : p
       )),;
-filterPartners(;
-partners.map(p => p.id === partnerId ? { ...p, status } : p),;
+filterPartners(;)
+  partners.map(p => p.id === partnerId ? { ...p, status } : p),;
 activeTab,;
 searchQuery
       ),;
 toast({;,
 title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;,
-description: `The partner has been ${status}.`,;,
-variant: status === 'approved' ? "default" : "destructive"}),
+description: `The partner has been ${status}.`,;,)
+  variant: status === 'approved' ? "default" : "destructive"}),
       
       // Close the dialog if open;
 if (isDetailsOpen && selectedPartner?.id === partnerId) {;
@@ -239,8 +238,8 @@ setIsDetailsOpen(false)
 logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),;
 toast({;,
 title: "Error",;,
-description: "Failed to update partner status",;,
-variant: "destructive"})
+description: "Failed to update partner status",;,)
+  variant: "destructive"})
     }
   },;
 const handleSaveSettings = async () => {;;
@@ -251,22 +250,22 @@ setPartners(partners.map(p =>);
 }
 p.id === selectedPartner.id ? { ...p}, commission_rate: commissionRate } : p
       )),;
-filterPartners(;
-partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
+filterPartners(;)
+  partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
 activeTab,;
 searchQuery
       ),;
 toast({;,
 title: "Settings Updated",;,
-description: "Partner settings have been updated successfully.",;,
-variant: "default"}),;
+description: "Partner settings have been updated successfully.",;,)
+  variant: "default"}),;
 setIsSettingsOpen(false)
     } catch (error) {;
 logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),;
 toast({;,
 title: "Error",;,
-description: "Failed to update partner settings",;,
-variant: "destructive"});
+description: "Failed to update partner settings",;,)
+  variant: "destructive"});
 setFilteredPartners(filtered)
   },;
 const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {;;
@@ -297,15 +296,15 @@ try {
 setPartners(partners.map(p =>);
 p.id === partnerId ? { ...p, status } : p
       )),;
-filterPartners(;
-partners.map(p => p.id === partnerId ? { ...p, status } : p),;
+filterPartners(;)
+  partners.map(p => p.id === partnerId ? { ...p, status } : p),;
 activeTab,;
 searchQuery
       ),;
 toast({;,
 title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;,
-description: `The partner has been ${status}.`,;,
-variant: status === 'approved' ? "default" : "destructive"}),
+description: `The partner has been ${status}.`,;,)
+  variant: status === 'approved' ? "default" : "destructive"}),
       // Close the dialog if open;
 if (isDetailsOpen && selectedPartner?.id === partnerId) {;
 setIsDetailsOpen(false)
@@ -314,8 +313,8 @@ setIsDetailsOpen(false)
 logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),;
 toast({;,
 title: "Error",;,
-description: "Failed to update partner status",;,
-variant: "destructive"})
+description: "Failed to update partner status",;,)
+  variant: "destructive"})
     }
   },;
 const handleSaveSettings = async () => {;;
@@ -326,22 +325,22 @@ setPartners(partners.map(p =>);
 }
 p.id === selectedPartner.id ? { ...p}, commission_rate: commissionRate } : p
       )),;
-filterPartners(;
-partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
+filterPartners(;)
+  partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
 activeTab,;
 searchQuery
       ),;
 toast({;,
 title: "Settings Updated",;,
-description: "Partner settings have been updated successfully.",;,
-variant: "default"}),;
+description: "Partner settings have been updated successfully.",;,)
+  variant: "default"}),;
 setIsSettingsOpen(false)
     } catch (error) {;
 logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),;
 toast({;,
 title: "Error",;,
-description: "Failed to update partner settings",;,
-variant: "destructive"})
+description: "Failed to update partner settings",;,)
+  variant: "destructive"})
     }
   },;
 const getAudienceSizeLabel = (size: string) => {;;
@@ -370,12 +369,12 @@ return <Badge variant="outline">{status;}</Badge>
   },;
 const getFraudFlagBadge = (flags: number = 0) => {;;
 if (flags === 0) return null;,;
-return (;
+return(;
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
 }
-  },;
-const getStatusBadge = (status: string) => {;;
+  },;)
+  const getStatusBadge = (status: string) => {;;
 switch (status) {;
 case 'pending':;
 }
@@ -398,7 +397,7 @@ return (;
       </Badge>
     )
   },;
-return (;
+return(;
     <div className="container max-w-7xl py-10">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
@@ -411,8 +410,8 @@ return (;
           <div className="grid gap-4 md:grid-cols-3">
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">;
-Pending Applications</$1>
+                <CardTitle className="text-sm font-medium text-zion-slate-light">;)
+  Pending Applications</$1>
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'pending').length}
                 </div></$1>
@@ -684,8 +683,8 @@ isLoading,;
 onViewDetails,;
 onUpdateStatus,;
 onOpenSettings;
-getStatusBadge;
-getFraudFlagBadge
+getStatusBadge;)
+  getFraudFlagBadge
 }: PartnerTableProps) {;
 if (isLoading) {;
 return (;
@@ -695,13 +694,13 @@ return (;
   }
 ;
 if (partners.length === 0) {;
-return (;
+return(;
       <div className="py-8">
         <EmptyState;
 icon={<Users className="h-8 w-8" />}
           title="No Partners Found";
-description="There are no partner applications to display.";
-className="border-none bg-transparent text-center"
+description="There are no partner applications to display.";)
+  className="border-none bg-transparent text-center"
         />
       </div>
     )
@@ -779,3 +778,35 @@ View</$1></$1></$1></$1>
       </TableBody></$1>
   )
 }
+
+</TableCell>
+</TableRow>
+</TableRow>
+</TableHeader>
+</Table>
+</div>
+</Dialog>
+</div>
+</Dialog>
+</TabsContent>
+</Tabs>
+</CardContent>
+</Card>
+</CardTitle>
+</CardHeader>
+</CardContent>
+</CardTitle>
+</CardHeader>
+</Card>
+</CardContent>
+</CardHeader>
+</Card>
+</div>
+</div>
+</div>
+</HTMLInputElement>
+</HTMLInputElement>
+</string>
+</PartnerProfile>
+</PartnerProfile>
+</string>

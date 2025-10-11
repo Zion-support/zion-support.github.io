@@ -106,8 +106,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Content, Showcas, e</$1>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12">
-            Master, the, most advanced, AI, technologies with, our, comprehensive 2026, content, library. 
-            From, quantu, m-neural, computing, to autonomous, operation, s - everything, you, need to, lead, the AI, revolutio, n.
+            Master, the, most advanced, AI, technologies with, our, comprehensive 2026, content, library. )
+  From, quantu, m-neural, computing, to autonomous, operation, s - everything, you, need to, lead, the AI, revolutio, n.
           </p>"
           <div, className="flex, item, s-center, justif, y-center, ga, p-12, tex, t-center, fle, x-wr, a, p"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"

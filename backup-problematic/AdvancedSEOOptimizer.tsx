@@ -2,47 +2,47 @@
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOData {
- title: string
- description: string
- keywords: string[]
- canonicalUrl: string
- ogTitle?: string
- ogDescription?: string
- ogImage?: string
- ogType?: string
- twitterCard?: string
- twitterTitle?: string
- twitterDescription?: string;,
- twitterImage?: string
- structuredData?: Record<string, unknown></$1>robots</string>?: string
- author?: string
- publishedTime?: string
- modifiedTime?: string
- section?: string
- tags?: string[]
+ title: string,
+  description: string;
+  keywords: string[],
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;,
+ twitterImage?: string;
+  structuredData?: Record<string, unknown></$1>robots</string>?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[]
 interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
- seoData
- enableStructuredData = true,
+ seoData;
+  enableStructuredData = true,
  enableOpenGraph = true,
  enableTwitterCards = true,
  enableSchemaMarkup = true}) => {
  const _structuredDataRef = useRef<HTMLScriptElement | null>(null)</$1>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
- if (!enableStructuredData || !seoData.structuredData) return null
- const baseStructuredData = {
+ if (!enableStructuredData || !seoData.structuredData) return null;
+  const baseStructuredData = {
  '@context': 'https: //schema.org',
  '@type': 'Organization',
- name: 'Zion Tech Group'
- url: 'https://ziontechgroup.com'
- logo: 'https://ziontechgroup.com/logo.png'
- description: seoData.description
- address: {
+ name: 'Zion Tech Group',
+  url: 'https: //ziontechgroup.com',
+  logo: 'https: //ziontechgroup.com/logo.png',
+  description: seoData.description;
+  address: {
  '@type': 'PostalAddress'
- streetAddress: '364 E Main St STE 1008'
- addressLocality: 'Middletown'
+ streetAddress: '364 E Main St STE 1008',
+  addressLocality: 'Middletown'
  addressRegion: 'DE',
  postalCode: '19709',
  addressCountry: 'US'},
@@ -74,29 +74,29 @@ const,
  return baseStructuredData
  }, [seoData, enableStructuredData])
  const generateBreadcrumbStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null
- return {
+ if (!enableSchemaMarkup) return null;
+  return {
  '@context': 'https: //schema.org',
  '@type': 'BreadcrumbList',
  itemListElement: [
  {
  '@type': 'ListItem'
- position: 1
- name: 'Home',
+ position: 1,
+  name: 'Home',
  item: 'https://ziontechgroup.com'},
  {
  '@type': 'ListItem',
- position: 2
- name: seoData.title
- item: seoData.canonicalUrl
- const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+ position: 2,
+  name: seoData.title;
+  item: seoData.canonicalUrl;
+  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
  }]}
  }, [seoData, enableSchemaMarkup])
  const generateFAQStructuredData = useCallback(() => {
- if (!enableSchemaMarkup) return null
- const faqData = {
+ if (!enableSchemaMarkup) return null;
+  const faqData = {
  '@context': 'https: //schema.org',
  '@type': 'FAQPage',
  mainEntity: [
@@ -130,10 +130,10 @@ const,
  const _breadcrumbData = generateBreadcrumbStructuredData()
  const _faqData = generateFAQStructuredData()
  useEffect(() => {
- // Update page title and meta description for better SEO
- if (typeof document !== 'undefined') {
- document.title = seoData.title
- let _metaDescription = document.querySelector('meta[name="description"]')
+ // Update page title and meta description for better SEO;
+  if (typeof document !== 'undefined') {
+ document.title = seoData.title;
+  let _metaDescription = document.querySelector('meta[name="description"]')
  if (!metaDescription) {
  metaDescription = document.createElement('meta')
  metaDescription.setAttribute('name', 'description')
@@ -141,8 +141,8 @@ const,
  useEffect(() => {/* TODO: Fix JSX expression */}
  }
  metaDescription.setAttribute('content', seoData.description)
- // Update canonical URL
- let _canonicalLink = document.querySelector('link[rel="canonical"]')
+ // Update canonical URL;
+  let _canonicalLink = document.querySelector('link[rel="canonical"]')
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
  canonicalLink.setAttribute('href', seoData.canonicalUrl)
@@ -189,8 +189,8 @@ const,
  // script.textContent = JSON.stringify(data)
  // document.head.appendChild(script)
  // }
- // Add new structured data
- const _script = document.createElement('script')
+ // Add new structured data;
+  const _script = document.createElement('script')
  script.type = 'application/ld+json'
  script.textContent = JSON.stringify(data)
  script.id = 'structured-data'
@@ -211,8 +211,8 @@ const,
  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
- const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
- if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {)
  event_category: 'Performance'),
  event_label: 'Page Load'),
@@ -340,3 +340,7 @@ const,
  )
 }
 export default AdvancedSEOOptimizer;"</li></li></li></li></li></li></li></li></li></li></li></li>
+</Helmet>
+</Helmet>
+</AdvancedSEOOptimizerProps>
+</AdvancedSEOOptimizerProps>

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 // import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility
-export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
+// Metadata removed for Vite compatibility;
+  export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return (<div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="mb-6">< href="/blog" className="text-indigo-600,"$2 />
+  return(<div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="mb-6">< href="/blog" className="text-indigo-600,"$2 />
   hover: text-indigo-700 flex items-center mb-4"><ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
               Back to Blog,"
             </Link></div><div className="text-center mb-8"><span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4"></span>
@@ -28,15 +28,15 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
   Orchestrator:</strong> Automated workflow management</li><li>• <strong>Learning,
   System:</strong> Continuous improvement and adaptation</li><li>• <strong>Monitoring,"
   Hub:</strong> Real-time system health and performance</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2><p className="text-gray-700 mb-6">
-              The path to autonomous operations requires a systematic approach across multiple business,
+              The path to autonomous operations requires a systematic approach across multiple business,)
   functions:"
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Phase,")
   1: Foundation (Months 1-6)</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Deploy AI decision engines for core business processes</li><li>• Implement automated workflow orchestration</li><li>• Establish real-time monitoring and alerting</li><li>• Train AI models on historical business data</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2><p className="text-gray-700 mb-6">
               Autonomous business processes deliver measurable value across multiple,
   dimensions: "
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Operational Benefits</h3><ul className="list-disc list-inside text-gray-700 mb-6 space-y-2"><li>• <strong>$100M+ annual savings</strong> from reduced manual operations</li><li>• <strong>99.9% uptime</strong> through autonomous system management</li><li>• <strong>90% faster</strong> decision making and response times</li><li>• <strong>Zero human errors</strong> in automated processes</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Autonomous Journey</h2><p className="text-gray-700 mb-6"></p>
-              Ready to achieve autonomous operations? Our autonomous business process solutions
-              can transform your operations and deliver breakthrough efficiency gains."
+              Ready to achieve autonomous operations? Our autonomous business process solutions;
+  can transform your operations and deliver breakthrough efficiency gains."
             </p><div className="bg-blue-50 p-6 rounded-lg text-center"><h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Autonomous Transformation</h3><p className="text-gray-700 mb-4"></p>
                 Join leading enterprises achieving autonomous operations with AI-powered business processes,"
               </p><div className="space-x-4"><a></a>"

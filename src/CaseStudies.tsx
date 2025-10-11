@@ -364,7 +364,6 @@ TrendingUp,;
 Users,;
 Globe
 } from 'lucide-react';
-export default function CaseStudies() {;
 const caseStudies = [;
     {;,
 }
@@ -794,7 +793,6 @@ ArrowRight,;
 Star,;
 CheckCircle
 } from 'lucide-react';
-export default function CaseStudies() {;
 const caseStudies = [;
     {;,
 }
@@ -1005,7 +1003,6 @@ teamSize: "25 network engineers";
 import React from 'react';;
 import { motion; } from 'framer-motion';
 import { CheckCircle;, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
-export default function CaseStudies() {;
 const caseStudies = [;
     {;,
 }
@@ -1587,7 +1584,6 @@ Star,;
 CheckCircle,;
 BarChart3
 } from 'lucide-react';
-export default function CaseStudies() {;
 const caseStudies = [;
     {;,
 }
@@ -1839,7 +1835,7 @@ const [selectedCategory, setSelectedCategory] = React.useState("All");
 const filteredCaseStudies = selectedCategory === "All"; 
     ? caseStudies 
     : caseStudies.filter(study => study.category === selectedCategory);
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
 ;
@@ -1984,8 +1980,7 @@ CheckCircle,;
 ArrowRight,;
 Star,;
 Award
-} from 'lucide-react';
-export default function CaseStudies() {;
+} from 'lucide-react';)
 const caseStudies = [;
     {;,
 }
@@ -2085,7 +2080,7 @@ icon: Shield,;,
 color: "from-indigo-500 to-blue-500"
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
@@ -2200,8 +2195,8 @@ delivering measurable results and sustainable growth.
 import React from 'react';;
 import React;, { useState } from 'react';
 import { Link; } from 'react-router-dom';
-import { ArrowRight;, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react';
-const CaseStudies = () => {;;
+import { ArrowRight;, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react';)
+  const CaseStudies = () => {;;
 const caseStudies = [;
     {;,
 }
@@ -2328,7 +2323,7 @@ const categories = [;
     { name: "Infrastructure", count: caseStudies.filter(cs => cs.category === "Infrastructure").length, icon: Wifi },
     { name: "AI Content", count: caseStudies.filter(cs => cs.category === "AI Content").length, icon: Lightbulb }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -2369,8 +2364,8 @@ initial={{ opacity: 0}}, y: 20 }}
 Success Stories
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-Discover how Zion Tech Group has transformed businesses across industries with cutting-edge AI,;
-quantum technology, and innovative solutions that drive real results.
+Discover how Zion Tech Group has transformed businesses across industries with cutting-edge AI,;)
+  quantum technology, and innovative solutions that drive real results.
             </p>
           </motion.div>
         </div>
@@ -2597,7 +2592,7 @@ const technologies = [;
     'Automation',
     'Blockchain'
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -2605,8 +2600,8 @@ return (;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">;
 Case Studies
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-Discover how organizations across industries are transforming their businesses with Zion Tech Group solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;)
+  Discover how organizations across industries are transforming their businesses with Zion Tech Group solutions.
           </p>
           
           {/* Filters */}
@@ -3652,7 +3647,7 @@ className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-
       </div>
     </div>
   ];
-return (;
+return(;
     <>
       <SEO;
 title="Case Studies | Success Stories - Zion Tech Group";
@@ -3697,8 +3692,8 @@ initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
                 transition={{ delay: 0.4}}}
                 className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
-              >;
-Discover how we've helped businesses across industries achieve remarkable results through innovative technology solutions and strategic digital transformation.
+              >;)
+  Discover how we've helped businesses across industries achieve remarkable results through innovative technology solutions and strategic digital transformation.
               </motion.p>
             </div>
           </div>
@@ -3710,15 +3705,15 @@ Discover how we've helped businesses across industries achieve remarkable result
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric), index) => {;
 const Icon = metric.icon;;
-return (;
+return(;
                   <motion.div;
 }
 key={metric.label}
                     initial={{ y: 20}}, opacity: 0 }}
                     whileInView={{ y: 0}}, opacity: 1 }}
                     transition={{ delay: index * 0.1}}, duration: 0.8 }}
-                    viewport={{ once: true}}}
-                    className="text-center"
+                    viewport={{ once: true}}})
+  className="text-center"
                   >
                     <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
                       <Icon className="w-6 h-6 text-white" />
@@ -3753,15 +3748,15 @@ Real results from real clients across diverse industries
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study), index) => {;
 const Icon = study.icon;;
-return (;
+return(;
                   <motion.div;
 }
 key={study.id}
                     initial={{ y: 20}}, opacity: 0 }}
                     whileInView={{ y: 0}}, opacity: 1 }}
                     transition={{ delay: index * 0.1}}, duration: 0.8 }}
-                    viewport={{ once: true}}}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+                    viewport={{ once: true}}})
+  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
                   >
                     <div className="flex items-center mb-6">
                       <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${study.color}} mr-4`}>
@@ -4035,7 +4030,7 @@ const stats = [;
     { icon: Award, value: "50+", label: "Industry Awards", description: "Recognition for excellence" },
     { icon: Globe, value: "25+", label: "Countries", description: "Global project delivery" }
   ];
-return (;
+return(;
     <>
       <SEOHead;
 customData={{};,
@@ -4069,8 +4064,8 @@ Start Your Project
                 <$2 />;
 to="/services";
 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >;
-Explore Services
+                >;)
+  Explore Services
                 </Link>
               </div>
             </div>
@@ -4232,7 +4227,6 @@ Join hundreds of companies that have transformed their business with our AI-powe
 import React from 'react';;
 import { SEO; } from '@/components/SEO';
 import { Link; } from 'react-router-dom';
-export default function CaseStudies() {;
 const caseStudies = [;
     {;,
 }
@@ -4328,7 +4322,7 @@ image: '/images/case-studies/energy-grid.jpg'
     }
   ];
 const industries = ['All';, 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities'];
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Case Studies - Zion Tech Group";
@@ -4345,8 +4339,8 @@ Case Studies
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
 Discover how our innovative AI, quantum computing, and autonomous solutions;
-are transforming businesses across industries. Real results, measurable impact,;
-and proven success stories.
+are transforming businesses across industries. Real results, measurable impact,;)
+  and proven success stories.
           </p>
         </div>
 
@@ -4483,7 +4477,7 @@ category: 'EdTech'
     }
   ];
 const categories = ['All';, 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech'];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -4500,8 +4494,8 @@ Success Stories
 Case Studies
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-Discover how organizations across industries are transforming their operations;
-with our cutting-edge AI and technology solutions.
+Discover how organizations across industries are transforming their operations;)
+  with our cutting-edge AI and technology solutions.
             </p>
           </div>
         </div>
@@ -4768,3 +4762,51 @@ Explore Our Services
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</section>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>

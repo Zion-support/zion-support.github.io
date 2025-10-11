@@ -29,8 +29,8 @@ const October2025AutonomousInfrastructureBanner = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
-const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
+            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. )
+  const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
   y: '1s' }}>
         < className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}$2 />
   y: '2s' }}>
@@ -537,3 +537,11 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
 export default October2025 AutonomousInfrastructureBanner</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
   </strong>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></Link></Link></Link></p></p></p></h3></h3></h3></h3></h3></h3></h3>
+</h3>
+</h3>
+</h3>
+</h3>
+</h3>
+</h3>
+</p>
+</h3>

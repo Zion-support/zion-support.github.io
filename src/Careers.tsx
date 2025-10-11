@@ -93,7 +93,6 @@ Code,;
 Settings,;
 Eye
 } from 'lucide-react';
-export default function Careers() {;
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedDepartment, setSelectedDepartment] = useState('all');
 const [selectedLocation, setSelectedLocation] = useState('all');
@@ -142,7 +141,6 @@ Globe,;
 Heart,;
 Zap
 } from 'lucide-react';
-export default function Careers() {;
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedDepartment, setSelectedDepartment] = useState('all');
 const [selectedLocation, setSelectedLocation] = useState('all');
@@ -263,7 +261,6 @@ ExternalLink,;
 Filter,;
 Search
 } from 'lucide-react';
-export default function Careers() {;
 const [searchTerm, setSearchTerm] = useState('');
 const [selectedDepartment, setSelectedDepartment] = useState('All');
 const [selectedLocation, setSelectedLocation] = useState('All');
@@ -765,7 +762,6 @@ icon: BookOpen,;,
 color: "from-purple-500 to-pink-500";
 import React from 'react';;
 import { Link; } from 'react-router-dom';
-export default function Careers() {;
 const openPositions = [;
     {;,
 }
@@ -895,8 +891,8 @@ const filteredPositions = openPositions.filter(position => {;;
 const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;;
 const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation;;
 const matchesType = selectedType === 'all' || position.type === selectedType;;
-const matchesSearch = searchQuery === '' ||;;
-position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const matchesSearch = searchQuery === '' ||;;)
+  position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 position.description.toLowerCase().includes(searchQuery.toLowerCase());
 return matchesDepartment && matchesLocation && matchesType && matchesSearch;
 }
@@ -905,8 +901,8 @@ const featuredPositions = filteredPositions.filter(position => position.featured
 const regularPositions = filteredPositions.filter(position => !position.featured);;
 const filteredJobs = jobOpenings.filter(job => {;;
 const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;;
-const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;;
-return matchesDepartment && matchesLocation;
+const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;;)
+  return matchesDepartment && matchesLocation;
 }
   })
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
@@ -937,7 +933,7 @@ Help us build solutions that transform businesses and shape the future of techno
                 <span className="text-white">Competitive Benefits</span>
               </div>
             </div>;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -965,8 +961,8 @@ Help us build solutions that will shape the future of business and technology.
               <input;
 type="text";
 placeholder="Search for jobs, departments, or skills...";
-value={searchQuery}
-                onChange={(e) =>
+value={searchQuery})
+  onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
@@ -1226,8 +1222,8 @@ benefits: [
     }
   ];
 const filteredJobs = jobListings.filter(job => {;;
-const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;;
-const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;;)
+  const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 job.department.toLowerCase().includes(searchTerm.toLowerCase());
 return matchesDepartment && matchesSearch;
@@ -1499,8 +1495,8 @@ featured: false,;,
 postedDate: "2025-01-03"
     }
   ];
-const filteredJobs = jobOpenings.filter(job => {;;
-const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const filteredJobs = jobOpenings.filter(job => {;;)
+  const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 job.department.toLowerCase().includes(searchTerm.toLowerCase());
 const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;;
@@ -1514,8 +1510,8 @@ const formatDate = (dateString: string) => {;;
 const date = new Date(dateString);;
 return date.toLocaleDateString('en-US';, {;,
 year: 'numeric',;,
-month: 'long',;,
-day: 'numeric' 
+month: 'long',;,)
+  day: 'numeric' 
 }
     })
   }
@@ -1714,7 +1710,7 @@ description: "Comprehensive health, dental, and vision coverage",;,
 icon: Shield
     }
   ];
-return (;
+return(;
     <>
       <SEO;
 title="Careers at Zion - Join Our Team";
@@ -1794,8 +1790,8 @@ Submit Application
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 Our Values
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-The principles that guide everything we do
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;)
+  The principles that guide everything we do
             </p>
           </div>
 
@@ -2211,7 +2207,7 @@ Find your next opportunity to make a difference
     "Ethical AI development and deployment",
     "Collaboration and teamwork excellence"
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -2254,8 +2250,8 @@ Learn About Culture
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 Our Values & Culture
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-We're building more than technology - we're building a culture of innovation, collaboration, and growth
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;)
+  We're building more than technology - we're building a culture of innovation, collaboration, and growth
             </p>
           </div>
           
@@ -2397,7 +2393,7 @@ title: "Growth",;,
 description: "Continuous learning and personal development"
     }
   ];
-return (;
+return(;
     <>
       <SEO;
 title="Careers at Zion Tech Group - Join Our Team";
@@ -2489,8 +2485,8 @@ We're not just another tech company. We're a team of innovators, problem-solvers
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
               initial="initial";
-whileInView="animate";
-viewport={{ once: true}}}
+whileInView="animate";)
+  viewport={{ once: true}}}
             >
               {values.map((value), index) => (
                 <motion.div;
@@ -2935,11 +2931,11 @@ Apply Now
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value), index) => {;
 const Icon = value.icon;;
-return (;
+return(;
                 <$2 />;
 }
-key={index}
-                  className="text-center"
+key={index})
+  className="text-center"
                 >
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white" />
@@ -2959,7 +2955,7 @@ key={index}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit), index) => {;
 const Icon = benefit.icon;;
-return (;
+return(;
               <$2 />;
 }
 key={index}
@@ -2977,8 +2973,8 @@ key={index}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Application Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
-Our hiring process is designed to be transparent, efficient, and focused on finding;
-the right fit for both you and our team.
+Our hiring process is designed to be transparent, efficient, and focused on finding;)
+  the right fit for both you and our team.
             </p>
           </div>
 
@@ -3211,3 +3207,40 @@ Learn More About Us
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>
+</section>
+</section>
+</li>
+</ul>
+</section>
+</section>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</img>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</string>
+</string>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</string>
+</string>

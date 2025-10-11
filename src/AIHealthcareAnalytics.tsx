@@ -17,8 +17,8 @@ import {
   Award,
   TrendingUp,
   Stethoscope,
-  Database
-import { Link } from 'react-router-dom'
+  Database;
+  import { Link } from 'react-router-dom'
 import { 
   Heart, 
   Brain, 
@@ -93,8 +93,8 @@ const AIHealthcareAnalytics: React.FC = () => {
     {
       icon: BarChart3,
       title: "Population Health Analytics",
-      description: "Comprehensive analysis of population health trends and patterns"
-      description: "Continuous monitoring of patient vital signs and health metrics with instant alerts for critical changes.",
+      description: "Comprehensive analysis of population health trends and patterns",
+  description: "Continuous monitoring of patient vital signs and health metrics with instant alerts for critical changes.",
       benefits: ["24/7 monitoring", "Early warning systems", "Real-time alerts"]
     },
     {
@@ -112,8 +112,8 @@ const AIHealthcareAnalytics: React.FC = () => {
     {
       icon: Shield,
       title: "HIPAA Compliant Security",
-      description: "Enterprise-grade security with full HIPAA compliance"
-      title: "AI-Powered Patient Analytics",
+      description: "Enterprise-grade security with full HIPAA compliance",
+  title: "AI-Powered Patient Analytics",
       description: "Advanced machine learning algorithms that analyze patient data for predictive insights."
     },
     {
@@ -139,8 +139,8 @@ const AIHealthcareAnalytics: React.FC = () => {
     {
       icon: Clock,
       title: "Treatment Optimization",
-      description: "AI-powered recommendations for personalized treatment plans and medication management."
-      description: "Intelligent systems that provide evidence-based recommendations to healthcare providers for better patient care.",
+      description: "AI-powered recommendations for personalized treatment plans and medication management.",
+  description: "Intelligent systems that provide evidence-based recommendations to healthcare providers for better patient care.",
       benefits: ["Evidence-based guidance", "Clinical pathways", "Best practice recommendations"]
     }
   ]
@@ -329,8 +329,8 @@ const AIHealthcareAnalytics: React.FC = () => {
     {
       step: "06",
       title: "Performance Analytics",
-      description: "Comprehensive reporting and performance insights"
-      title: "Hospitals",
+      description: "Comprehensive reporting and performance insights",
+  title: "Hospitals",
       description: "Comprehensive healthcare analytics for large medical centers and hospital systems.",
       icon: Building,
       features: ["Patient flow optimization", "Resource management", "Quality improvement", "Cost reduction"]
@@ -416,8 +416,7 @@ const AIHealthcareAnalytics: React.FC = () => {
       ]
     }
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+  return(<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -536,8 +535,8 @@ const AIHealthcareAnalytics: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               The AI-Powered Healthcare Journey
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From data collection to treatment optimization, our AI streamlines every aspect of healthcare delivery.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">)
+  From data collection to treatment optimization, our AI streamlines every aspect of healthcare delivery.
             </p>
           </div>
           
@@ -571,8 +570,8 @@ const AIHealthcareAnalytics: React.FC = () => {
               AI-Powered Features That Transform Healthcare
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI healthcare analytics platform combines cutting-edge artificial intelligence with deep medical expertise 
-              to deliver exceptional results for healthcare providers and patients.
+              Our AI healthcare analytics platform combines cutting-edge artificial intelligence with deep medical expertise;
+  to deliver exceptional results for healthcare providers and patients.
             </p>
           </div>
           
@@ -667,8 +666,8 @@ const AIHealthcareAnalytics: React.FC = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
+              const Icon = feature.icon;
+  return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
@@ -837,8 +836,8 @@ const AIHealthcareAnalytics: React.FC = () => {
               Ready to Transform Healthcare?
             </h2>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of healthcare organizations already using our AI-powered analytics platform 
-              to improve patient outcomes and operational efficiency.
+              Join hundreds of healthcare organizations already using our AI-powered analytics platform;
+  to improve patient outcomes and operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
@@ -892,13 +891,12 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Surgery",
     "Mental Health"
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+  return(<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -929,8 +927,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -940,15 +938,15 @@ const AIHealthcareAnalytics: React.FC = () => {
               AI-Powered Healthcare Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive AI healthcare analytics platform combines advanced machine learning with 
-              medical expertise to revolutionize patient care and healthcare operations.
+              Our comprehensive AI healthcare analytics platform combines advanced machine learning with )
+  medical expertise to revolutionize patient care and healthcare operations.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
+              <motion.div;
+  key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -969,8 +967,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -985,8 +983,8 @@ const AIHealthcareAnalytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+            <motion.div;
+  initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1002,8 +1000,8 @@ const AIHealthcareAnalytics: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
+            <motion.div;
+  initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1025,8 +1023,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       {/* Specialties Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1036,15 +1034,15 @@ const AIHealthcareAnalytics: React.FC = () => {
               Medical Specialties
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI healthcare analytics solutions are designed to support various medical specialties 
-              and clinical areas.
+              Our AI healthcare analytics solutions are designed to support various medical specialties;
+  and clinical areas.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((specialty, index) => (
-              <motion.div
-                key={specialty}
+              <motion.div;
+  key={specialty}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1062,8 +1060,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div;
+  initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1131,3 +1129,7 @@ export default AIHealthcareAnalytics</$1>
 }
 }
 </div></div></div></div></div></div></span></p></p></p></section></section>
+</p>
+</div>
+</section>
+</section>

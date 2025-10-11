@@ -1,11 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 interface PerformanceOptimizerProps {
-    enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
-  enableResourceHints?: boolean
+    enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableResourceHints?: boolean;
   enableServiceWorker?: boolean
   }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -21,8 +21,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     lazyLoaded: 0,
     preloaded: 0,
     codeSplit: false,
-    resourceHints: 0,
-    serviceWorker: false
+    resourceHints: 0,)
+  serviceWorker: false
   })
   useEffect(() => {
     if (enableImageOptimization) {
@@ -46,21 +46,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker])
   const optimizeImages = () => {
     const images = document.querySelectorAll('img')
-    let optimized = 0
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
+    let optimized = 0;
+  images.forEach((img) => {
+      // Add loading="lazy" for images below the fold;
+  if (img.getBoundingClientRect().top > window.innerHeight) {
         img.setAttribute('loading', 'lazy')
         optimized++
   }
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async')
-      // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {
+      // Add decoding="async" for better performance;
+  img.setAttribute('decoding', 'async')
+      // Add fetchpriority="high" for above-the-fold images;
+  if (img.getBoundingClientRect().top <= window.innerHeight) {
     img.setAttribute('fetchpriority', 'high')
   }
-      // Add proper alt text if missing
-      if (!img.getAttribute('alt')) {
+      // Add proper alt text if missing;
+  if (!img.getAttribute('alt')) {
     img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
   }
     })
@@ -71,10 +71,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.removeAttribute('data-src')
+            const img = entry.target as HTMLImageElement;
+  if (img.dataset.src) {
+              img.src = img.dataset.src;
+  img.removeAttribute('data-src')
               observer.unobserve(img)
   }
           }
@@ -104,9 +104,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     criticalResources.forEach((resource) => {
     const link = document.createElement('link')
       link.rel = 'preload'
-      link.href = resource.href
-      link.as = resource.as
-      if (resource.type) {
+      link.href = resource.href;
+  link.as = resource.as;
+  if (resource.type) {
         link.type = resource.type
   }
       document.head.appendChild(link)
@@ -114,8 +114,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))
   }
   const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))
+    // This would be handled by Next.js dynamic imports;
+  setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))
   }
   const addResourceHints = () => {
     const hints = [
@@ -128,9 +128,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     ]
     hints.forEach((hint) => {
     const link = document.createElement('link')
-      link.rel = hint.rel
-      link.href = hint.href
-      if (hint.crossorigin) {
+      link.rel = hint.rel;
+  link.href = hint.href;
+  if (hint.crossorigin) {
         link.crossOrigin = hint.crossorigin
   }
       document.head.appendChild(link)
@@ -147,17 +147,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
     }
   }
-  // Performance monitoring
+  // Performance monitoring;
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
+            // Track LCP;
+  if (typeof window !== 'undefined' && 'gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
+                name: 'LCP',)
+  value: Math.round(entry.startTime),
                 event_category: 'Performance'
               })
             }

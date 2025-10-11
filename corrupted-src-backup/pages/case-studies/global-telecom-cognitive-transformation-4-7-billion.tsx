@@ -16,8 +16,8 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
         <meta, nam, e = 'description'
           conte, n, t='How, a, Fortune 20, telecommunications, provider achiev, e, d $4.7 B, in, value through, cognitive, computing transformati, o, n. 98.7% satisfac, t, i, o, n, 99.96% reliabili, t, y, 3,6, 0, 2% R, O, I.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='cognitive, computing, case st, u, d, y, telecom, transformatio, n, AI, success, story, enterprise, cognitive, AI, telecommunications, A, I'
+        <meta, nam, e = 'keywor, d, s')
+  conte, n, t='cognitive, computing, case st, u, d, y, telecom, transformatio, n, AI, success, story, enterprise, cognitive, AI, telecommunications, A, I'
         />)
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/ca s e-studi e s/glob a l-telec o m-cogniti v e-transformati o n-4-7-billi o n')
@@ -236,16 +236,16 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                           <span, className='fo, n, t-bo, l, d'>Total, Saving, s:
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'>
-                            $2.5, 4, B
-                    Get, Similar, Results
+                            $2.5, 4, B;
+  Get, Similar, Results
                     <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
                   <Award, classNam, e='w-6 h-6, tex, t-whi, t, e' />
           <div, classNam, e='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                    Get, Similar, Results
-                    Get, Similar, Results
+                    Get, Similar, Results;
+  Get, Similar, Results
                     <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'>
@@ -254,10 +254,10 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               Ready, to, Transform Your, Enterpris, e?
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
-              Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive
-              computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
-                Schedule, Consultatio, n
-                Schedule, Consultatio, n
+              Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive;
+  computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
+                Schedule, Consultatio, n;
+  Schedule, Consultatio, n
                 <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Consultatio, n
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
@@ -277,11 +277,12 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               Ready, to, Transform Your, Enterpris, e?
             <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
-              Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive
-              computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
+              Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive;
+  computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
                 Schedule, Consultatio, n
                 <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Consultatio, n
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
 })
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></footer></footer></footer></footer></nav></nav>
+</title>

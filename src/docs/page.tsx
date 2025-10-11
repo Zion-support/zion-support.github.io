@@ -152,8 +152,8 @@ const filteredDocs = selectedCategory === 'all';
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
 const searchResults = searchQuery; 
-    ? documentation.filter(doc =>;
-doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    ? documentation.filter(doc =>;)
+  doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -167,7 +167,7 @@ case 'Advanced': return 'text-red-400 bg-red-500/20';},;,
 default: return 'text-gray-400 bg-gray-500/20';
   }
   }
-  return (;
+  return(;
     <React.Fragment>
       <SEOOptimizer;
 title="Documentation - Zion Tech Group";
@@ -197,8 +197,8 @@ integrate and optimize our AI services for your business.
                 <input;
 type="text";
 placeholder="Search documentation...";
-value={searchQuery}
-                  onChange={(e) =>
+value={searchQuery})
+  onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
@@ -302,3 +302,28 @@ export default DocsPage</Link>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></h3></h3></li></section></section></section></section></section>
+</span>
+</p>
+</h3>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</section>
+</div>
+</div>
+</section>
+</p>
+</p>
+</section>
+</div>

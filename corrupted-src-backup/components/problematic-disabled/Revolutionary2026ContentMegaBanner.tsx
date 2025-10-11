@@ -119,8 +119,8 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
               <Shield, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security
             <div, className="flex, item, s-center, ga, p-2">
-              <Rocket, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />
-const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
+              <Rocket, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" />)
+  const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
@@ -132,7 +132,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+  ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -159,8 +159,8 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, 2026, Content</$1>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
-            Me, t, a-cogniti, v, e , A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
+            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. )
+  Me, t, a-cogniti, v, e , A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>"
           <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"

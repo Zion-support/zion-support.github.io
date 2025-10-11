@@ -72,7 +72,7 @@ support: 'Business Hours',;,
 response: '4 hours'
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
@@ -101,8 +101,8 @@ Please read these terms carefully before using our services. By using our servic
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
                 <strong>Last Updated:</strong> {lastUpdated}
-              <p className="text-sm text-gray-400 mt-2">;
-These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
+              <p className="text-sm text-gray-400 mt-2">;)
+  These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
       {/* Key Terms */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -251,3 +251,92 @@ Contact Us
   </a>
   </h1>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>
+</span>
+</span>
+</span>
+</p>
+</h2>
+</div>
+</div>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</th>
+</th>
+</th>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</span>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</p>
+</div>
+</div>
+</div>
+</section>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</div>
+</p>
+</div>
+</div>
+</section>

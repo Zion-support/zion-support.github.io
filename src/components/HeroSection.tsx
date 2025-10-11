@@ -1,5 +1,5 @@
 export default function HeroSection() {;
-return (;
+return(;
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
 }
       {/* Background Effects */}
@@ -53,8 +53,8 @@ Explore Services
   
             <$2 />;
 href="#contact";
-className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">;
-Get Started,
+className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">;)
+  Get Started,
   
           </div>
           {/* Stats */}
@@ -86,3 +86,35 @@ export default HeroSection;"`
   </span>
   </span>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</h3>
+</svg>
+</div>
+</div>
+</p>
+</h3>
+</svg>
+</div>
+</div>
+</p>
+</h3>
+</svg>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>

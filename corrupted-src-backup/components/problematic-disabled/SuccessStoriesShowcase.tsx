@@ -49,8 +49,8 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
         <div, className="te, x, t-center, m, b-16">
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
             Success, Storie, s
-          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions</$1>)
+          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">)
+  See, how, leading companies, are, transforming their, operations, with our, AI, solutions</$1>)
         </div>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
@@ -70,13 +70,13 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
      },
     {/* TODO: Fix JSX expression */}
      }
-  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
+  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
             Success, Storie, s</$1>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
+          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">)
+  See, how, leading companies, are, transforming their, operations, with our, AI, solutions
         </div>"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           {/* TODO: Fix JSX expression */}"

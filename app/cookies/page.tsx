@@ -32,8 +32,7 @@ const CookiesPage: React.FC = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="pt-20">
@@ -43,8 +42,8 @@ const CookiesPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Cookie Policy
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Learn about how we use cookies and similar technologies to improve your experience on our website.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+  Learn about how we use cookies and similar technologies to improve your experience on our website.
             </p>
           </div>
         </section>
@@ -127,14 +126,14 @@ const CookiesPage: React.FC = () => {
               If you have any questions about our use of cookies, please contact us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <a;
+  href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Contact Us
               </a>
-              <a
-                href="mailto:privacy@ziontechgroup.com"
+              <a;
+  href="mailto:privacy@ziontechgroup.com"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 privacy@ziontechgroup.com

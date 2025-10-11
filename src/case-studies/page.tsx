@@ -10,8 +10,8 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'E-commerce',
       challenge: 'Low conversion rates and high customer acquisition costs',
       solution: 'AI-powered personalization and dynamic pricing optimization',
-      results: {
-        roi: '340%',
+      results: {,
+  roi: '340%',
         conversion: '+85%',
         costReduction: '-65%',
         revenue: '+$2.3M'
@@ -26,8 +26,8 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
       challenge: 'Manual processes causing delays and errors in loan processing',
       solution: 'AI-powered document processing and risk assessment automation',
-      results: {
-        roi: '280%',
+      results: {,
+  roi: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
         costSavings: '$1.8M'
@@ -42,8 +42,8 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       challenge: 'Fragmented patient data and inefficient treatment planning',
       solution: 'AI-powered data integration and predictive analytics for treatment optimization',
-      results: {
-        roi: '420%',
+      results: {,
+  roi: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
         costSavings: '$3.2M'
@@ -58,8 +58,8 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Manufacturing',
       challenge: 'Production inefficiencies and quality control issues',
       solution: 'AI-powered predictive maintenance and quality control automation',
-      results: {
-        roi: '310%',
+      results: {,
+  roi: '310%',
         efficiency: '+75%',
         defects: '-90%',
         downtime: '-85%'
@@ -68,8 +68,7 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
   ]
-  return (
-    <React.Fragment>
+  return(<React.Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
@@ -94,8 +93,8 @@ const CaseStudiesPage: React.FC = () => {
                 Real results from real companies using our AI solutions,
   
               <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-                Discover how leading companies across industries have transformed their operations 
-                and achieved remarkable ROI with our cutting-edge AI technology.
+                Discover how leading companies across industries have transformed their operations )
+  and achieved remarkable ROI with our cutting-edge AI technology.
         {/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,3 +195,53 @@ export default CaseStudiesPage</Link>
   </h1>
   </Link>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></h3></h4></h4></h4></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h4>
+</div>
+</h4>
+</div>
+</p>
+</h4>
+</div>
+</p>
+</p>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</p>
+</p>
+</div>
+</div>
+</section>
+</div>
+</title>
+</Helmet>

@@ -11,8 +11,7 @@ import {
 } from 'lucide-react'
 
 const Footer: React.FC = () => {
-  return (
-    <footer className="bg-slate-900 text-white">
+  return(<footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -23,8 +22,8 @@ const Footer: React.FC = () => {
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
+            <p className="text-gray-300 mb-6 max-w-md">)
+  Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">

@@ -39,8 +39,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             The, Innovation, Revolution
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
-            Witness, the, most revolutionary, technological, breakthroughs of, our, time. These, innovations, are reshaping, reality, itself and, creating, unprecedented opportunities, for, human advanceme, n, t.
+          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>)
+  Witness, the, most revolutionary, technological, breakthroughs of, our, time. These, innovations, are reshaping, reality, itself and, creating, unprecedented opportunities, for, human advanceme, n, t.
           {/* Innovation, St, a, t, s */}
           <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>
             {/* TODO: Fix JSX expression */}
@@ -125,8 +125,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
               Revolutionary, Success, Stories
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>
-              See, how, our innovations, are, transforming industries, and, creating
-              unprecedented, valu, e.
+              See, how, our innovations, are, transforming industries, and, creating;
+  unprecedented, valu, e.
           <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-8'>
             { [
               {

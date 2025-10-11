@@ -20,8 +20,8 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 4, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
       transiti, o, n = {/* TODO: Fix JSX expression */}
-  n: , 0., 8 }}"
-      classNa, m, e = "relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-5, 0, 0/30"
+  n: , 0., 8 }}")
+  classNa, m, e = "relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-5, 0, 0/30"
     >
       {/* Animated, Background, Effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">

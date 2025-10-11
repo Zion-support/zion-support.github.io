@@ -1,5 +1,4 @@
-  return (
-    <>
+  return(<>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -27,8 +26,8 @@
               <p className="text-xl text-gray-300 mb-8">
                 This page is under development. Please check back soon for updates.
               </p>
-              <button className="cyber-button">
-                Learn More
+              <button className="cyber-button">)
+  Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>

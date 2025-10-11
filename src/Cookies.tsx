@@ -2,7 +2,7 @@ import { SEO; } from '@/components/SEO';
 import { Helmet; } from 'react-helmet-async';
 import { Link; } from 'react-router-dom';
 export default function Cookies() {;
-return (;
+return(;
     <>
       <SEO;
 title="Cookie Policy - Zion Tech Group";
@@ -95,8 +95,8 @@ experience more convenient and relevant.
 When you visit our website, we may use cookies to understand how you interact with our content,;
 remember your preferences, and provide you with a better user experience.
                   </p>
-                  <p>;
-Cookies can be either "session cookies" (which are deleted when you close your browser) or 
+                  <p>;)
+  Cookies can be either "session cookies" (which are deleted when you close your browser) or 
                     "persistent cookies" (which remain on your device for a set period of time).
                   </p>
                 </div>
@@ -359,8 +359,7 @@ import { Cookie;, Shield, Settings, Eye, Database, Globe } from 'lucide-react';
 import { Link; } from 'react-router-dom';
 import { motion; } from 'framer-motion';
 import { Shield;, Lock, Eye, CheckCircle } from 'lucide-react';
-export default function Cookies() {;
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-4xl mx-auto px-4 py-12">
 }
@@ -435,7 +434,6 @@ How We Use Cookies
             <div className="space-y-4 text-gray-300">
               <p>We use cookies for several purposes:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
                 <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
                 <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
                 <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
@@ -495,7 +493,6 @@ Specific Cookies We Use
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/5 rounded-lg p-4 border border-cyan-500/30">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Essential Cookies</h3>
-                  <p className="text-sm">These cookies are necessary for the website to function and cannot be switched off.</p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4 border border-cyan-500/30">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Analytics Cookies</h3>
@@ -568,8 +565,8 @@ You have control over how cookies are used on our website
 className="grid grid-cols-1 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
               initial="initial";
-whileInView="animate";
-viewport={{ once: true}}}
+whileInView="animate";)
+  viewport={{ once: true}}}
             >
               {cookieManagement.map((item), index) => (
                 <motion.div;
@@ -625,8 +622,7 @@ periodically for any changes.
 import React from 'react';;
 import { SEO; } from '@/components/SEO';
 import { Link; } from 'react-router-dom';
-export default function Cookies() {;
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Cookie Policy - Zion Tech Group";
@@ -655,8 +651,8 @@ Last updated: January 15, 2025
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">What Are Cookies?</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-            <p className="text-gray-300 leading-relaxed mb-6">;
-Cookies are small text files that are stored on your device (computer, tablet, or mobile);
+            <p className="text-gray-300 leading-relaxed mb-6">;)
+  Cookies are small text files that are stored on your device (computer, tablet, or mobile);
 when you visit our website. They help us remember your preferences, analyze how you use;
 our site, and provide you with a better, more personalized experience.
             </p>
@@ -680,7 +676,6 @@ but they may contain information about your device and how you interact with our
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Essential Cookies</h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-4">;
-These cookies are necessary for the website to function properly. They enable basic;
 functions like page navigation, access to secure areas, and form submissions.
               </p>
               <ul className="text-gray-300 text-sm space-y-1">
@@ -914,13 +909,11 @@ import { SEO; } from '@/components/SEO';
 import { Card;, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield;, CircleDot, Settings, Eye, Lock } from 'lucide-react';
 import { Link; } from 'react-router-dom';
-export default function Cookies() {;
 const cookieTypes = [;
     {;,
 }
 title: 'Essential Cookies'},;,
 icon: Shield,;,
-description: 'These cookies are necessary for the website to function properly.',;,
 examples: ['Authentication cookies', 'Security cookies', 'Session management'],;,
 necessary: true
     },
@@ -978,7 +971,7 @@ duration: '1 year',;,
 type: 'Functional'
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Cookie Policy | Zion Tech Group";
@@ -998,8 +991,8 @@ canonical="https://ziontechgroup.com/cookies"
 This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies;
 to recognize you when you visit our website and how we use them to improve your experience.
           </p>
-          <p className="text-zion-slate-light mt-4">;
-Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          <p className="text-zion-slate-light mt-4">;)
+  Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
         </div>
 
@@ -1029,7 +1022,7 @@ store about you may be linked to the information stored in and obtained from coo
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cookieTypes.map((type) => {};
 const IconComponent = type.icon;;
-return (;
+return(;
 }
                 <Card key={type.title} className="border-zion-blue-light">
                   <CardHeader>
@@ -1037,8 +1030,8 @@ return (;
                       <IconComponent className="h-6 w-6 text-zion-cyan" />
                       <CardTitle className="text-white text-lg">{type.title}</CardTitle>
                       {type.necessary && (
-                        <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">;
-Necessary
+                        <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">;)
+  Necessary
                         </span>
                       )}
                     </div>
@@ -1188,3 +1181,8 @@ You can also read our full <Link to="/privacy" className="text-zion-cyan hover:u
   )
 }
 export default Cookies</$1></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></section>
+</div>
+</div>
+</div>
+</div>
+</section>

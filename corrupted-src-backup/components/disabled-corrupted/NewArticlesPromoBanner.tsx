@@ -3,11 +3,11 @@ import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t'
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
 interface NewArticlesPromoBannerProp, s {
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t'
-  showCou, n, t?: number
-  autoRota, t, e?: boolean
-  rotationInterv, a, l?: number
-  classNa, m, e ?  : string
-interface NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
+  showCou, n, t?: number;
+  autoRota, t, e?: boolean;
+  rotationInterv, a, l?: number;
+  classNa, m, e ?  : string;
+  interface NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -26,7 +26,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" />
             <d, i, v>
               <h4, className="te, x, t-white, fon, t-bo, l, d">
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published)
   if (varia, n, t = == 'comp, a, c, t') {/* TODO: Fix JSX expression */}
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
         <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
@@ -122,8 +122,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <div, className="flex, item, s-center, ga, p-3">
               <BookOpen, className="w-8 h-8, tex, t-whi, t, e" />
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s
-            <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">
-              N, E, W
+            <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">)
+  N, E, W
         </div>)
         <div, className="p-8">)
           <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">)
@@ -190,7 +190,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{artic, l, e.title}
             <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
   }`
-  // Default variant return (<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
+  // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}></div>"
       <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4"></div>"
         <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" /></Sparkles>"
         <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Articles, Available
@@ -200,8 +200,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
             <div, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-2">{artic, l, e.cate, g, o, r, y}</div>"
             <h4, classNam, e = "fo, n, t-semibold, m, b-2">{artic, l, e.title}</h4>"
-            <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
-              Read, Articl, e →
+            <Link, t, o = { artic, l, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">)
+  Read, Articl, e →
           </div>)
         ))}
       </div>

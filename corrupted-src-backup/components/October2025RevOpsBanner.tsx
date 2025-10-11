@@ -15,8 +15,8 @@ const, October2025RevOpsBanne, r = () => {
         {/* Breaking, News, Badge */}
         <div, className="flex, justif, y-center, m, b-4">
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">
-            <Sparkles, className="w-4 h-4, m, r-2  />
-            JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5
+            <Sparkles, className="w-4 h-4, m, r-2  />)
+  JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5
             <Sparkles, className="w-4 h-4, m, l-2  />
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">"
       {/* Animated, background, elements */}
@@ -29,7 +29,7 @@ const, October2025RevOpsBanne, r = () => {
       <div, className="absolute, inse, t-0, opacit, y-10">"</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />'</d, i, v>
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-8">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">"</div>
@@ -230,13 +230,13 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 <Sparkles, className="w-4 h-4, m, r-2" />"
                 NEW, COMPREHENSIVE, GUIDE</$1>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">"
-                Autonomous, RevOps, Revolution: Complete, Implementation, Guide
-                Autonomous, RevOps, Revolutio,
+                Autonomous, RevOps, Revolution: Complete, Implementation, Guide;
+  Autonomous, RevOps, Revolutio,
   n: Complete, Implementation, Guide</$1>"
               <p, className="te, x, t-emera, l, d-100, tex, t-sm, m, b-4">"
-                Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management
-                and, automated, deal accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
-              <Li, n, k
+                Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management;
+  and, automated, deal accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
+              <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revoluti, o, n"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
               <Li, n, k;"
@@ -273,14 +273,14 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 <Sparkles, className="w-4 h-4, m, r-2" />"
                 NEW, CASE, STUDY</$1>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">"
-                Fortune, 500, Saa
-  S: $127M, Revenue, Gain in, 12, Months
-                Fortune, 500, Saa,
+                Fortune, 500, Saa;
+  S: $127M, Revenue, Gain in, 12, Months;
+  Fortune, 500, Saa,
   S: $127M, Revenue, Gain in, 12, Months</$1>"
               <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4">"
-                Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue
-                89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.
-              <Li, n, k
+                Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue;
+  89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.
+              <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
               <Li, n, k;"
@@ -425,14 +425,14 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             Ready, to, Transform Your, Revenue, Operations?
           </h3>"
           <p, className="te, x, t-emera, l, d-100, m, b-6, ma, x-w-2xl, m, x-au, t, o">"
-            Schedule, a, Revenue Operations, Assessment, with Zion, Tech, Group and, discover, how autonomous, A, I
+            Schedule, a, Revenue Operations, Assessment, with Zion, Tech, Group and, discover, how autonomous, A, I;
   can, deliver, 127% ROI, for, your organizati, o, n
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <Li, n, k
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-emera, l, d-600, fon, t-bold, rounde, d-lg, hove, r: bg-emera, l, d-50, transitio, n-all, shado, w-xl, hov, e</$1>"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -445,7 +445,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               Schedule, Assessmen, t;"
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""

@@ -69,18 +69,18 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
         <, className="te, x, t-3xl, s, m: te, x, t-4x, l, l$2 />
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          Ultimate, AI, Innovation Su, i, t
+          Ultimate, AI, Innovation Su, i, t;
   e: <br />,
         <, className="te, x, t-3xl, s, m: te, x, t-4x, l, l$2 />
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          Ultimate, AI, Innovation Su, i, t
+          Ultimate, AI, Innovation Su, i, t;
   e:</h2> <br />
           $94, 5, M+ Combined, Value, Creation
         {/* Subtit, l, e */}
         <p, className="te, x, t-center, tex, t-lg, s, m: te, x, t-xl, tex, t-bl, u, e-100, m, b-10, ma, x-w-4xl, m, x-au, t, o">"
         <p, className="te, x, t-center, tex, t-lg, s, m: te, x, t-xl, tex, t-bl, u, e-100, m, b-10, ma, x-w-4xl, m, x-au, t, o">"
-          💎 Deploy, 5, game-changing, AI, technologies transforming, enterprises, worldwid
+          💎 Deploy, 5, game-changing, AI, technologies transforming, enterprises, worldwid;
   e: Agentic, Mesh, Networks, Quant, u, m-AI, Optimizatio, n, Cognitive, Digital, Twins, Neuromorphic, Edge, AI, and, Autonomous, Security Orchestrati, o, n — delivering, unprecedented, performance, efficien, c, y, and, competitive, advantage!
         {/* Feature, Gri, d */}
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
@@ -94,9 +94,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
         <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">"
           {/* Featur, e, 1 */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-agent, i, c-me, s, h-networ, k, s-20, 2, 5-o, c, t"
-            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-400, hove, r:shad, o, w-lg, hov, e
+            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-400, hove, r:shad, o, w-lg, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
@@ -149,8 +149,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">"
               Explore, Technolog, y</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
-              Explore, Technolog, y</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
+  Explore, Technolog, y</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
             </d, i, v>"
             <, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e,"$2 />
   r: g, a, p-2, transitio, n-a, l, l">""
@@ -159,9 +159,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 2 */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/quant, u, m-ai-optimizati, o, n-breakthrou, g, h-20, 2, 5-o, c, t"
-            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-lg, hov, e
+            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-lg, hov, e;
   r:shad, o, w-bl, u, e-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
@@ -199,8 +199,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
               Discover, Innovatio, n</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
-              Discover, Innovatio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
+  Discover, Innovatio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">""
               Discover, Innovatio, n <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
@@ -208,9 +208,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 3 */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/cogniti, v, e-digit, a, l-twi, n, s-20, 2, 5-o, c, t"
-            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-400, hove, r:shad, o, w-lg, hov, e
+            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-400, hove, r:shad, o, w-lg, hov, e;
   r:shad, o, w-indi, g, o-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
@@ -245,8 +245,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">"
               Learn, Mor, e</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
-              Learn, Mor, e</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
+  Learn, Mor, e</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
             </d, i, v>"
             <, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e,"$2 />
   r: g, a, p-2, transitio, n-a, l, l">""
@@ -255,9 +255,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 4 */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/neuromorph, i, c-ed, g, e-ai-20, 2, 5-o, c, t"
-            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-te, a, l-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-cy, a, n-400, hove, r:shad, o, w-lg, hov, e
+            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-te, a, l-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-cy, a, n-400, hove, r:shad, o, w-lg, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
@@ -295,8 +295,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
               Read, Guid, e</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
-              Read, Guid, e</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
+  Read, Guid, e</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">""
               Read, Guid, e <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
@@ -304,9 +304,9 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 5 */}
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/autonomo, u, s-securi, t, y-orchestrati, o, n-20, 2, 5-o, c, t"
-            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-lg, hov, e
+            classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-lg, hov, e;
   r:shad, o, w-r, e, d-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0"
           >
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
@@ -341,8 +341,8 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">"
               View, Solutio, n</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
-              View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
-              View, Solutio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
+              View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
+  View, Solutio, n</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* CTA, Car, d */}
           <, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hov, e$2 />
@@ -388,7 +388,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
                   Explore, All, Breakthroughs</$1>"
                 <p, className="te, x, t-bl, u, e-200, tex, t-sm">"
                   View, complete, guides, case, studie, s, implementation, roadmap, s, and, ROI, calculators for, all, 5 revolutionary, technologie, s
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
             <Li, n, k;"

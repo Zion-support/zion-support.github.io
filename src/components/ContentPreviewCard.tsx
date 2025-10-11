@@ -18,7 +18,7 @@ interface ContentPreviewCardProps {
     pat,
   h: string,,
     imag,
-  e: string
+  e: string;
   featured?: boolean,
   stats?: {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -157,3 +157,9 @@ const,
 export default ContentPreviewCard;"`
   </ContentPreviewCardProps>
 </span></span></span></span></span></span></p></p></p></p></p>
+</span>
+</span>
+</p>
+</span>
+</span>
+</span>

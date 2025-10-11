@@ -78,20 +78,19 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  return (
-            </p>
+  return(</p>
             
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-12">
               <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                 Monthly
               </span>
-              <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+              <button)
+  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
-                <span
-                  className={`${
+                <span;
+  className={`${
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                   } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
                 />
@@ -189,3 +188,5 @@ const PricingPage: React.FC = () => {
   )
 }
 
+
+</span>

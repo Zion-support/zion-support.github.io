@@ -180,7 +180,7 @@ const,
   n: 'Scale resources up or down based on demand automatically.',
       percentag,
   e: 'Unlimited'
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}"
       <div className="relative overflow-hidden"></div>"
         <div className="cyber-grid"></div>"
@@ -258,7 +258,7 @@ const,
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
-                < key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"$2 />
+                < key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"$2 />)
   hover:bg-white/20 transition-all duration-300"></div>"
                   <div className="flex items-center mb-4"></div>"
                     <feature.icon className="w-8 h-8 text-blue-400 mr-3" /></feature>"
@@ -396,3 +396,7 @@ const,
 export default CloudMigrationPage
 "`
 </div></div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>
+</button>
+</h2>
+</ul>
+</li>

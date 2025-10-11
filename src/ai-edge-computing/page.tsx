@@ -5,8 +5,7 @@ import Footer from '../components/Footer'
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react'
 const AIEdgeComputingPage: React.FC = () => {
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
   ico,
@@ -52,8 +51,8 @@ const AIEdgeComputingPage: React.FC = () => {
             <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+//               Get Started;
+  href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Cpu className="w-5 h-5" />
               +1 302 464 0950
         </section>"
@@ -62,7 +61,7 @@ const AIEdgeComputingPage: React.FC = () => {
   md:text-4xl font-bold text-white mb-12 text-center neon-text">
 // Edge AI Features</h2>"
           < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />
@@ -87,3 +86,4 @@ const AIEdgeComputingPage: React.FC = () => {
   )
 }
 export default PagePage</$1></p>
+</p>

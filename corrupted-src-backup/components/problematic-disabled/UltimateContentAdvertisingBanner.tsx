@@ -86,8 +86,8 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Advertising, Hu, b</$1>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12">
-            Discover, the, most advanced, AI, content library, availabl, e. From, quantu, m-neural, computing, to autonomous, operation, s - 
-            everything, you, need to, lead, the AI, revolution, is right, her, e.
+            Discover, the, most advanced, AI, content library, availabl, e. From, quantu, m-neural, computing, to autonomous, operation, s - )
+  everything, you, need to, lead, the AI, revolution, is right, her, e.
           {/* Urgency, Ban, n, e, r */}"
           <div, classNam, e = "inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"

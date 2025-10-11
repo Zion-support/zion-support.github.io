@@ -9,8 +9,8 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>")
+  const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -39,8 +39,8 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             <sp, a, n>🚀 JUST, PUBLISHE, D - OCTOBER, 2025, PREMIUM CONTE, N, T 🚀</sp, a, n>"
             <Sparkles, className="w-4 h-4" />"</$1>"
           <h2, className="te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-            Revolutionary, AI, Platforms
-            Revolutionary, AI, Platforms;"
+            Revolutionary, AI, Platforms;
+  Revolutionary, AI, Platforms;"
             <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">"
               Transform, Your, Enterprise Tod, a, y
           </h2>"
@@ -55,7 +55,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-          {/* Ca, r, d
+          {/* Ca, r, d;
   1: Autonomous, DevOp, s */}
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="flex, item, s-center, ga, p-3, m, b-6">"
@@ -67,7 +67,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-          {/* Ca, r, d 
+          {/* Ca, r, d;
   1: Autonomous, DevOp, s */}
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="flex, item, s-center, ga, p-3, m, b-6">"
@@ -127,7 +127,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="flex, item, s-start, ga, p-2">"
                 <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />"
                 <span, className="te, x, t-white, tex, t-sm"></span><strong, className="te, x, t-cy, a, n-3, 0, 0">87% cost, saving, s</stro, n, g> in, operation, s</sp, a, n>"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-autonomo, u, s-devo, p, s-platfo, r, m-20, 2, 5-octob, e, r"
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e</$1>"
             <div, className="spa, c, e-y-3, m, b-6"></div>"
@@ -231,7 +231,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="flex, item, s-start, ga, p-2">"
                 <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />"
                 <span, className="te, x, t-white, tex, t-sm"></span><strong, className="te, x, t-purp, l, e-3, 0, 0">94% fast, e, r</stro, n, g> threat, respons, e</sp, a, n>"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/quant, u, m-sa, f, e-ai-securi, t, y-framewo, r, k-20, 2, 5-octob, e, r"
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e</$1>"
             <div, className="spa, c, e-y-3, m, b-6"></div>"
@@ -335,7 +335,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
               <div, className="flex, item, s-start, ga, p-2">"
                 <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />"
                 <span, className="te, x, t-white, tex, t-sm"></span><strong, className="te, x, t-gre, e, n-3, 0, 0">95%+</stro, n, g> prediction, accurac, y</sp, a, n>"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/re, a, l-ti, m, e-cogniti, v, e-busine, s, s-intelligen, c, e-20, 2, 5-octob, e, r"
               classNa, m, e="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, hove, r: te, x, t-white, fon, t-semibold, grou, p-ho, v, e</$1>"
             <div, className="spa, c, e-y-3, m, b-6"></div>"
@@ -386,7 +386,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">"
             <Li, n, k
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e</$1>"
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">"
@@ -397,7 +397,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             ></Li>"
               Schedule, Free, Consultation <Link, className="w-5 h-5  /></Link>"
               Schedule, Free, Consultation <Link, className="w-5 h-5" />"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, hov, e
             <Li, n, k;"

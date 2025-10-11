@@ -76,8 +76,8 @@ opti, o, n.enabl, e, d
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'}
           >
             <div, className='flex, item, s-start, spac, e-x-3'>
-              <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={`h-5 w-5 ${};
-opti}, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'
+              <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={`h-5 w-5 ${};)
+  opti}, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
         {/* TODO: Fix JSX expression */}
           <, ke, y={opti, o, n.k, e, y}, classNa, m, e={/* TODO: Fix JSX expression */}$2 />

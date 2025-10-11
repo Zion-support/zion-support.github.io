@@ -14,7 +14,6 @@ return(<React.Fragment>
       </Head>)
       <Component {...pageProps} />)
     </React.Fragment>);
-export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
       <Component {...pageProps} />
   )
 }

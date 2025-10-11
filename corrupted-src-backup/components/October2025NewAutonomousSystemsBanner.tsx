@@ -15,7 +15,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
       {/* Floating, particles, effect */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,)
   g:px-8, p, y-8">"
         {/* Header, with, badge */}
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
@@ -35,7 +35,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
       {/* Floating, particles, effect */}</div>
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"</div>
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />"</div>
-      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
   g:px-8, p, y-8">"
         {/* Header, with, badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">"</div>
@@ -51,14 +51,14 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
           <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg">
         <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-center, m, b-4, leadin, g-tig, h, t">"
           <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg">"
-            🔥 REVOLUTION, A, R
+            🔥 REVOLUTION, A, R;
   Y: 2, Gam, e-Changing, Autonomous, Systems!
         {/* S, u, b-headli, n, e */}
         <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">"
           ⚡ Just, Release, d:</p> <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — "
         <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">"
-          ⚡ Just, Releas, e
-const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX expression */}
+          ⚡ Just, Releas, e;
+  const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]/>""
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  />
@@ -103,7 +103,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
         <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">"
           ⚡ Just, Releas, e,"
   d: <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — "
-          ⚡ Just, Releas, e
+          ⚡ Just, Releas, e;
   d:</p> <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — "
           Intelligent, Enterprise, Mesh + AI-Powered, Predictive, Maintenance
         {/* Featured, content, cards */}"
@@ -138,7 +138,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                     <div, className="w-2 h-2, b, g-yell, o, w-400, rounde, d-full, animat, e-pul, s, e  />
                     <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">99.9, 9, 7% Availability, Achieve, d
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
-          {/* Ca, r, d
+          {/* Ca, r, d;
   1: Enterprise, Mes, h */}
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2 xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p"></div>"
             <div, className="flex, item, s-start, ga, p-4"></div>"
@@ -147,7 +147,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                   <Zap, className="w-8 h-8, tex, t-whi, t, e" />"
               <div, className="fl, e, x-1">"
                 <, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e$2 />
-          {/* Ca, r, d 
+          {/* Ca, r, d;
   1: Enterprise, Mes, h */}
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">"
             <div, className="flex, item, s-start, ga, p-4">"
@@ -230,7 +230,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                 <div, className="flex, fle, x-wrap, ga, p-2">"
                   <Li, n, k
                 <div, className="flex, fle, x-wrap, ga, p-2">"
-                  <Li, n, k
+                  <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-me, s, h"
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e</$1>"
                 <div, className="flex, fle, x-wrap, ga, p-2">"
@@ -242,7 +242,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                     Read, Blog, Post;"
                     <Link, className="w-4 h-4  /></Link>"
                     <Link, className="w-4 h-4" />"
-                  <Li, n, k
+                  <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s"
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e
                   <Li, n, k;"
@@ -356,12 +356,12 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                     <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">30-Day, Advance, Warning</sp, a, n>"
                 </d, i, v>"
                 <p, className="te, x, t-bl, u, e-200, tex, t-sm, m, b-4">"
-                  Eliminate, unplanned, equipment downtime, with, multi-modal, sensor, fusion, deep, learning, failure
+                  Eliminate, unplanned, equipment downtime, with, multi-modal, sensor, fusion, deep, learning, failure;
   predicti, o, n, and, prescriptive, maintenance recommendatio, n, s. Transform, reactive, maintenance into, proactive, asset manageme, n, t.
                 <div, className="flex, fle, x-wrap, ga, p-2">"
                   <Li, n, k
                 <div, className="flex, fle, x-wrap, ga, p-2">"
-                  <Li, n, k
+                  <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintenan, c, e"
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e</$1>"
                 <div, className="flex, fle, x-wrap, ga, p-2">"
@@ -373,7 +373,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                     Read, Blog, Post;"
                     <Link, className="w-4 h-4  /></Link>"
                     <Link, className="w-4 h-4" />"
-                  <Li, n, k
+                  <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s"
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e
                   <Li, n, k;"
@@ -388,7 +388,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
         <div, className="te, x, t-cent, e, r">"
           <Li, n, k
         <div, className="te, x, t-cent, e, r">"
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, vi, a-oran, g, e-500, t, o-r, e, d-500, hove, r: fr, o, m-yell, o, w-400, hove, r:v, i, a-oran, g, e-400, hove, r:to-r, e, d-400, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-black, tex, t-lg, shado, w-2xl, shado, w-oran, g, e-5, 0, 0/50, hove, r:shad, o, w-oran, g, e-4, 0, 0/70, transform, hove
         {/* Bottom, CT, A */}"

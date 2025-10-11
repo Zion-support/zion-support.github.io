@@ -18,8 +18,8 @@ keywords = "AI solutions, IT services, micro SaaS, quantum computing, blockchain
 canonical,;
 ogImage = "/og-image.jpg",;
 ogType = "website",;
-twitterCard = "summary_large_image",;
-structuredData,
+twitterCard = "summary_large_image",;)
+  structuredData,
 }: SEOHeadProps) {;
 const fullTitle = title.includes("Zion Tech Group") ? title : `${title;} | Zion Tech Group`;
 const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');;
@@ -71,7 +71,7 @@ const defaultStructuredData={"@context": "https://schema.org";,
     }
   }
   const finalStructuredData = structuredData || defaultStructuredData;;
-return (;
+return(;
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -138,8 +138,8 @@ return (;
       {/* Structured Data */}
       <script;
 type="application/ld+json";
-dangerouslySetInnerHTML={{};,
-__html: JSON.stringify(finalStructuredData)},
+dangerouslySetInnerHTML={{};,)
+  __html: JSON.stringify(finalStructuredData)},
         }}
       />
       

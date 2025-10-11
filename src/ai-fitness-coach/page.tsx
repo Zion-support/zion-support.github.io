@@ -47,10 +47,9 @@ const AIFitnessCoachPage: React.FC = () => {
       popular: false
     }
   ]
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
+  return(<React.Fragment>
+      <SEOOptimizer;
+  title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
         keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
         canonicalUrl="https://ziontechgroup.com/ai-fitness-coach"
@@ -80,8 +79,8 @@ const AIFitnessCoachPage: React.FC = () => {
                 <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Play className="w-5 h-5" />
-                  Watch Demo,
+                  <Play className="w-5 h-5" />)
+  Watch Demo,
   
               </div>
             </div>
@@ -178,3 +177,23 @@ export default AIFitnessCoachPage</a>
   </div>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
+</li>
+</ul>
+</span>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</section>
+</div>

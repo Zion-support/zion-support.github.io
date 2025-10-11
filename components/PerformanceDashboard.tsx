@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from 'react'
 interface PerformanceMetrics {
-    loadTime: number
-  renderTime: number
+    loadTime: number,
+  renderTime: number;
   memoryUsage: number,
   fps: number
   }
@@ -12,20 +12,20 @@ const PerformanceDashboard: React.FC = () => {
   useEffect(() => {
     const updateMetrics = const updateMetrics = const updateMetrics = () => {
       const navigation = performance.getEntriesByType()
-      )[0] as PerformanceNavigationTiming
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0
-      setMetrics()
+      )[0] as PerformanceNavigationTiming;
+  const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+  const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+  const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+  setMetrics()
       }))
     }
-    //Update metrics on load
-    updateMetrics()
-    //Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000)
+    //Update metrics on load;
+  updateMetrics()
+    //Update metrics periodically;
+  const interval = setInterval(updateMetrics, 1000)
     return () => clearInterval(interval)
   }, [])
-  //Only show in development
+  //Only show in development;
   if (process.env['NODE_ENV'] !== 'development') {
     return null
   }

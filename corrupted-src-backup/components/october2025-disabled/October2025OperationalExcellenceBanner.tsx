@@ -18,8 +18,8 @@ const October2025OperationalExcellenceBanne, r = () => {
         <div, className='te, x, t-center, m, b-8'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm'>
             <Sparkles, className='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
-            <span, className='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>
-const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
+            <span, className='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>)
+  const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'>
@@ -40,13 +40,13 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             Discover, breakthrough, AI innovations, delivering, unprecedented;)
             efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>)
               {' '})
-            Discover, breakthrough, AI innovations, delivering, unprecedented
-            efficien, c, y:</p> <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
+            Discover, breakthrough, AI innovations, delivering, unprecedented;
+  efficien, c, y:</p> <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
           <h2, className='te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t'>
             Transform, Operations, with AI-Powered, Intelligenc, e
           <p, className='te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Discover, breakthrough, AI innovations, delivering, unprecedented
-            efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
+            Discover, breakthrough, AI innovations, delivering, unprecedented;
+  efficien, c, y: <span, className='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
               {' '}
               Predictive, Maintenanc, e (99.6% Accura, c, y)
             ,

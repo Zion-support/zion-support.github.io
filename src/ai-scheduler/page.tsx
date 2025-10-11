@@ -92,8 +92,7 @@ $4}
       company: 'Digital Agency',
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
@@ -107,15 +106,15 @@ $4}
             Intelligent Meeting & Event Scheduling,
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
-            the best meeting times, coordinate complex team schedules, and optimize your calendar 
-            for maximum productivity.
+            Never miss another meeting with our AI-powered scheduling assistant. Automatically find;
+  the best meeting times, coordinate complex team schedules, and optimize your calendar;
+  for maximum productivity.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              <Phone className="w-5 h-5 mr-2" />)
+  Call: (302) 464-0950
   
             <$2 />
               href="/contact"
@@ -206,12 +205,12 @@ $4}
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
-            and maximize productivity.
+            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches;
+  and maximize productivity.
   ),
 }
-export default AISchedulerPage
-import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react'
+export default AISchedulerPage;
+  import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react'
 export default AISchedulerPage</p>
   </h2>
   </section>
@@ -241,3 +240,28 @@ export default AISchedulerPage</p>
   </section>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></h3></h3></h3></section>
+</span>
+</span>
+</h3>
+</p>
+</h3>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</p>
+</p>
+</div>
+</section>
+</div>

@@ -164,7 +164,7 @@ textLight: 'text-gray-600'
         }
     }
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
@@ -172,20 +172,20 @@ textLight: 'text-gray-600'
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
 Simple <span className="text-cyan-400">Pricing
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;)
+  Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan), index) => {;
 const colors = getColorClasses(plan.color);;
-return (;
+return(;
                 <$2 />;
 }
 key={index}
-                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${};
-plan.popular ? colors.border : 'border-gray-200'} overflow-hidden`}
+                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${};)
+  plan.popular ? colors.border : 'border-gray-200'} overflow-hidden`}
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg}} text-white text-center py-2 text-sm font-semibold`}>Most Popular
@@ -299,3 +299,45 @@ export default PricingPage</Link>
   </h2>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></li></section></section></section></section>
+</h3>
+</p>
+</section>
+</span>
+</span>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</section>
+</span>
+</li>
+</ul>
+</h4>
+</div>
+</span>
+</li>
+</ul>
+</h4>
+</div>
+</span>
+</span>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</p>
+</span>
+</h1>
+</div>
+</section>
+</div>

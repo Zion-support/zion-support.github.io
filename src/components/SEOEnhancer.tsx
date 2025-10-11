@@ -160,3 +160,8 @@ export default SEOEnhancer
 "
   </SEOEnhancerProps>
 </li></li></li></li>
+
+</script>
+</title>
+</Helmet>
+</SEOEnhancerProps>

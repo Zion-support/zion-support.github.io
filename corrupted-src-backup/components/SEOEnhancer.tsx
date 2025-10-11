@@ -21,8 +21,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   structuredData,
   children}) => {
   useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
+    // Add structured data to the page;
+  if (structuredData) {
       const _script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
@@ -35,16 +35,16 @@ const,
       }
     }
   }, [structuredData])
-  // Default structured data for organization
+  // Default structured data for organization;
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description
-    url: canonicalUrl || window.location.origin,
+    description: description,
+  url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
-    contactPoint: {,
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'],
+  contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
@@ -58,7 +58,7 @@ const,
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     }}
-  //   const finalStructuredData = structuredData || defaultStructuredData
+  //   const finalStructuredData = structuredData || defaultStructuredData;
   return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
@@ -182,3 +182,7 @@ export default SEOEnhancer
   </SEOEnhancerProps>
   </SEOEnhancerProps>
 </li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</script>
+</title>
+</Helmet>
+</Helmet>

@@ -2,7 +2,7 @@
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  loading?: () => React.ReactElement
+  loading?: () => React.ReactElement;
   ssr?: boolean
 }
 export function dynamic
@@ -18,3 +18,5 @@ export function dynamic
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} />
   )
 }
+</unknown>
+</T>

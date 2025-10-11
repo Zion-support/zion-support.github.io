@@ -131,12 +131,12 @@ const filteredFaqs = selectedCategory === 'all';
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
 const searchResults = searchQuery; 
-    ? faqs.filter(faq =>;
-faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    ? faqs.filter(faq =>;)
+  faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
-return (;
+return(;
     <React.Fragment>
       <SEOOptimizer;
 title="Support Center - Zion Tech Group";
@@ -166,8 +166,8 @@ and connect with our expert support team.
                 <input;
 type="text";
 placeholder="Search for help...";
-value={searchQuery}
-                  onChange={(e) =>
+value={searchQuery})
+  onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
@@ -266,3 +266,28 @@ export default SupportPage</a>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></h3></h3></h3></section></section></section></section></section></section>
+</h3>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
+</p>
+</p>
+</section>
+</div>

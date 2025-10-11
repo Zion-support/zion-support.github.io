@@ -47,8 +47,8 @@ const EnhancedPerformanceMonitor: React.FC,
     cls: null,
     ttfb: null})
   const [isVisible, setIsVisible] = useState(false)
-// Web Vitals measurement
-    if (typeof window === 'undefined' || !('performance' in window)) return
+// Web Vitals measurement;
+  if (typeof window === 'undefined' || !('performance' in window)) return
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -100,8 +100,8 @@ const EnhancedPerformanceMonitor: React.FC,
         if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          clsValue += (entry as any).value
-          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+          clsValue += (entry as any).value;
+  setMetrics(prev => ({/* TODO: Fix JSX expression */})
   s: clsValue }))
         }
       }
@@ -109,15 +109,15 @@ const EnhancedPerformanceMonitor: React.FC,
     clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })
     // Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-    if (navigationEntry) {/* TODO: Fix JSX expression */}
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  if (navigationEntry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
   b: navigationEntry.responseStart - navigationEntry.requestStart }))
     }
-    // First Meaningful Paint (FMP) - approximation
-const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+    // First Meaningful Paint (FMP) - approximation;
+  const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -133,12 +133,12 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     })
     fmpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] })
-    // Total Blocking Time (TBT) - approximation
-const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+    // Total Blocking Time (TBT) - approximation;
+  const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      let totalBlockingTime = 0
-      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+      let totalBlockingTime = 0;
+  for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         if (entry.entryType === 'longtask') {/* TODO: Fix JSX expression */}
@@ -152,8 +152,8 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     })
     tbtObserver.observe({/* TODO: Fix JSX expression */})
   s: ['longtask'] })
-    // Speed Index (SI) - approximation using LCP
-const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+    // Speed Index (SI) - approximation using LCP;
+  const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -181,12 +181,12 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
       siObserver.disconnect()
     }
   }, [])
-  // Resource timing analysis
-const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
+  // Resource timing analysis;
+  const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    const resources = performance.getEntriesByType('resource')
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+  const resources = performance.getEntriesByType('resource')
     const resourceMetrics = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -202,19 +202,19 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   e: any) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      resourceMetrics.totalSize += resource.transferSize || 0
-      if (resource.duration > 1000) resourceMetrics.slowResources++
+      resourceMetrics.totalSize += resource.transferSize || 0;
+  if (resource.duration > 1000) resourceMetrics.slowResources++
       if (resource.transferSize === 0) resourceMetrics.cachedResources++
     })
     return resourceMetrics
   }, [])
-  // Memory usage monitoring
-const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
+  // Memory usage monitoring;
+  const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('memory' in performance)) return null
-    const memory = (performance as any).memory
-    return {/* TODO: Fix JSX expression */}
+    if (typeof window === 'undefined' || !('memory' in performance)) return null;
+  const memory = (performance as any).memory;
+  return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   usedJSHeapSiz,
@@ -224,13 +224,13 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
       jsHeapSizeLimi,
   t: memory.jsHeapSizeLimit}
   }, [])
-  // Network information
-const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
+  // Network information;
+  const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('connection' in navigator)) return null
-    const connection = (navigator as any).connection
-    return {/* TODO: Fix JSX expression */}
+    if (typeof window === 'undefined' || !('connection' in navigator)) return null;
+  const connection = (navigator as any).connection;
+  return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   effectiveTyp,
@@ -242,8 +242,8 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
       saveDat,
   a: connection.saveData}
   }, [])
-  // Performance score calculation
-const calculatePerformanceScore = useCallback((metric)
+  // Performance score calculation;
+  const calculatePerformanceScore = useCallback((metric)
   s: PerformanceMetrics) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -252,40 +252,40 @@ const calculatePerformanceScore = useCallback((metric)
     if (metrics.fcp !== null) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (metrics.fcp > 3000) score -= 30
-      else if (metrics.fcp > 1800) score -= 20
-      else if (metrics.fcp > 1000) score -= 10
+      if (metrics.fcp > 3000) score -= 30;
+  else if (metrics.fcp > 1800) score -= 20;
+  else if (metrics.fcp > 1000) score -= 10
     }
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (metrics.lcp > 4000) score -= 30
-      else if (metrics.lcp > 2500) score -= 20
-      else if (metrics.lcp > 1500) score -= 10
+      if (metrics.lcp > 4000) score -= 30;
+  else if (metrics.lcp > 2500) score -= 20;
+  else if (metrics.lcp > 1500) score -= 10
     }
     // FID scoring (0-100)
     if (metrics.fid !== null) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (metrics.fid > 300) score -= 20
-      else if (metrics.fid > 100) score -= 10
+      if (metrics.fid > 300) score -= 20;
+  else if (metrics.fid > 100) score -= 10
     }
     // CLS scoring (0-100)
     if (metrics.cls !== null) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (metrics.cls > 0.25) score -= 20
-      else if (metrics.cls > 0.1) score -= 10
+      if (metrics.cls > 0.25) score -= 20;
+  else if (metrics.cls > 0.1) score -= 10
     }
     return Math.max(0, score)
   }, [])
-  // Report metrics
-const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
+  // Report metrics;
+  const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!enableReporting) return
-    const performanceScore = calculatePerformanceScore(metrics)
+    if (!enableReporting) return;
+  const performanceScore = calculatePerformanceScore(metrics)
     const resourceMetrics = analyzeResourceTiming()
     const memoryUsage = getMemoryUsage()
     const networkInfo = getNetworkInfo()
@@ -322,16 +322,16 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 }
   fcp: metrics.fcp,
           lcp: metrics.lcp,
-          fid: metrics.fid,
-          cls: metrics.cls}})
+          fid: metrics.fid,)
+  cls: metrics.cls}})
     })
     try {/* TODO: Fix JSX expression */}
   s: ['paint'] })
       return () => observer.disconnect()
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-    // Callback for custom handling
-    onMetricsUpdate?.(metrics)
+    // Callback for custom handling;
+  onMetricsUpdate?.(metrics)
 // console.log('Performance)
   Report:', report)
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate])
@@ -339,10 +339,10 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const cleanup = measureWebVitals()
-// Report metrics periodically
-    const interval = setInterval(reportMetrics, reportInterval)
-    // Report metrics on page unload
-    const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
+// Report metrics periodically;
+  const interval = setInterval(reportMetrics, reportInterval)
+    // Report metrics on page unload;
+  const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
     }
     window.addEventListener('beforeunload', handleBeforeUnload)
     return () => {/* TODO: Fix JSX expression */}
@@ -353,7 +353,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       window.removeEventListener('beforeunload', handleBeforeUnload)
     }
   }, [measureWebVitals, reportMetrics, reportInterval])
-  // Toggle visibility for debugging
+  // Toggle visibility for debugging;
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -369,7 +369,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
   }, [])
-  if (!isVisible) return null
+  if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics)
   return (<div>Coming Soon</div>)
   )
@@ -429,3 +429,18 @@ export default EnhancedPerformanceMonitor;"
   </PerformanceMetrics>
   </PerformanceMonitorProps>
 </div></div></span></span></span></span></span></span></span></span></span></span></span></span></button></h3>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</div>
+</button>
+</h3>

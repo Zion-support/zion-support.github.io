@@ -3,7 +3,7 @@ import React from 'react'
 import { Loader2 } from 'lucide-react'
 interface LoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg'
-  text?: string
+  text?: string;
   className?: string
   }
 const sizeClasses = {
@@ -30,3 +30,5 @@ export default LoadingSpinner</LoadingSpinnerProps>
   )
 }
 export default LoadingSpinner</div></p>
+
+</p>

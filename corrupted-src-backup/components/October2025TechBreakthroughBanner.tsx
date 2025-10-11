@@ -294,7 +294,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm">";"
                 <Award, className="w-4 h-4, tex, t-cy, a, n-4, 0, 0" />"
                 <sp, a, n>845x, RO, I • 10-Year, Futur, e-Proofi, n, g
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-quant, u, m-sa, f, e-cryptograp, h, y-enterpri, s, e-syste, m, s"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p-ho, v, e
             <Li, n, k;"
@@ -400,7 +400,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm">";"
                 <Award, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />"
                 <sp, a, n>2,8, 3, 6% R, O, I • 24/7, Monitorin, g
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-ri, s, k-manageme, n, t-platfo, r, m-revoluti, o, n"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p-ho, v, e
             <Li, n, k;"
@@ -506,7 +506,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm">";"
                 <Award, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />"
                 <sp, a, n>5,5, 7, 5% R, O, I • 94% Failure, Predictio, n
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-ne, x, t-g, e, n-digit, a, l-twi, n, s-enterpri, s, e-transformati, o, n"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, grou, p-ho, v, e
             <Li, n, k;"
@@ -690,7 +690,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">"
         <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, hov, e
         {/* Call, to, Action */}"
@@ -709,7 +709,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
               <Sparkles, className="w-6 h-6" />"
               Read, All, 3 Breakthrough, Article, s;"
               <Link, className="w-6 h-6" />"
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/60, hov, e
             <Li, n, k;"

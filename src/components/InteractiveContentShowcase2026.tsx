@@ -6,3 +6,4 @@ const,
       {/* Component content */}
   )
 }
+</InteractiveContentShowcase2026Props>

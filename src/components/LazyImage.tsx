@@ -6,8 +6,8 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   sr,
   c: string,,
     al,
-  t: string
-  className?: string
+  t: string;
+  className?: string;
   children?: React.ReactNode,
 }
 const,
@@ -34,8 +34,8 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (priority) return
-    const observer = new IntersectionObserver()
+    if (priority) return;
+  const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -88,8 +88,8 @@ const,
       ) : (<React.Fragment><img>
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
-              'w-full h-full object-cover transition-opacity duration-300',
-              isLoaded ? 'opacity-100' : 'opacity-0')
+              'w-full h-full object-cover transition-opacity duration-300',)
+  isLoaded ? 'opacity-100' : 'opacity-0')
             )}
             onLoad={handleLoad}
             onError={handleError}
@@ -106,3 +106,5 @@ const,
 export default LazyImage;"
   </LazyImageProps>
 </div>
+</img>
+</img>

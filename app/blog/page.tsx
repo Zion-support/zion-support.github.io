@@ -74,11 +74,11 @@ const BlogPage: React.FC = () => {
     }
   ]
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredPosts = blogPosts.filter(post => {)
+  const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+  return matchesSearch && matchesCategory
   })
 
   const featuredPost = blogPosts.find(post => post.featured)
@@ -106,3 +106,5 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
 
+
+</Helmet>

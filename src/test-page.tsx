@@ -5,8 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const testPagetsx: React.FC = () => {
   const _features = [],
-  return (
-    {icon: Users,
+  return({icon: Users,
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
@@ -43,8 +42,8 @@ const testPagetsx: React.FC = () => {
               </a>"
               < href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-500,"
-  hover: text-white transition-colors"></a>
-                View Demo,
+  hover: text-white transition-colors"></a>)
+  View Demo,
               </a>
             </div>
           </div>
@@ -84,3 +83,7 @@ const testPagetsx: React.FC = () => {
   ),
 }
 export default testPagetsx</$1></p></h1></h2></h3></ul>
+</ul>
+</h3>
+</h1>
+</Helmet>

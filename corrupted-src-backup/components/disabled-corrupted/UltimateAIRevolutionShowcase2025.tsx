@@ -46,8 +46,8 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
         Revolutionary, AI, Breakthroughs
-      <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
-        Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.)
+      <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">)
+  Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.)
       </p>)
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">)
         { revolutionaryFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
@@ -71,7 +71,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; return (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>"
+  ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>"
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>"
         <span, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">🚀 ULTIMATE, AI, REVOLUTION SHOWCASE, 202, 5</sp, a, n>"
@@ -84,7 +84,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
       </p>"
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
         {/* TODO: Fix JSX expression */}
-          <, ke, y = { in, d, e, x  }, className={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
+          <, ke, y = { in, d, e, x  }, className={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />)
   r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-, x, l`}></div>"
             <div, classNam, e = "te, x, t-4xl, m, b-3">{featu, r, e.ic, o, n}</div>"
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3">{featu, r, e.title}</h3>"

@@ -8,8 +8,8 @@ import React;, { useState } from 'react';
 const LoginPage: React.FC = () => {;
 const [formData, setFormData] = useState({;,
 email: '',;,
-password: '',;,
-rememberMe: false
+password: '',;,)
+  rememberMe: false
 }
   });
 const [showPassword, setShowPassword] = useState(false);
@@ -49,7 +49,7 @@ title: 'Mobile Ready',;,
 description:     ,;
 $4}
   ];
-return (;
+return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -71,8 +71,8 @@ name="email";
 value={formData.email}
                       onChange={handleInputChange}
                       required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your email"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";)
+  placeholder="Enter your email"
                     />
   </input>
                   </div>
@@ -86,8 +86,8 @@ placeholder="Enter your email"
 l: '',;
 passwor,;,
 d: '',;
-rememberM,;,
-e: false,)
+rememberM,;,)
+  e: false,)
   });
 const [showPassword, setShowPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
@@ -407,3 +407,19 @@ export default LoginPage</a>
   </HTMLInputElement>
   </HTMLInputElement>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>
+</h3>
+</p>
+</p>
+</h2>
+</span>
+</h2>
+</span>
+</label>
+</label>
+</label>
+</p>
+</h1>
+</label>
+</form>
+</p>
+</h1>

@@ -219,12 +219,12 @@ const filteredCategories = selectedCategory === 'all';
     ? serviceCategories 
     : serviceCategories.filter(cat => cat.id === selectedCategory);
 const filteredServices = filteredCategories.flatMap(cat =>;;
-cat.services.filter(service =>;
-service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+cat.services.filter(service =>;)
+  service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -290,8 +290,8 @@ initial={{ opacity: 0}}, y: 20 }}
             transition={{ duration: 0.8}}, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            <$2 />;
-onClick={() => handleCategorySelect('all')}
+            <$2 />;)
+  onClick={() => handleCategorySelect('all')}
               className={`px-6 py-3 rounded-full font-medium transition-all ${};
 selectedCategory === 'all'
                   ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
@@ -654,14 +654,14 @@ key={idx}
         >
           {filteredServices.map((service), index) => {;
 const IconComponent = service.icon;;
-return (;
+return(;
               <motion.div;
 }
 key={service.id}
                 initial={{ opacity: 0}}, y: 20 }}
                 animate={{ opacity: 1}}, y: 0 }}
-                transition={{ duration: 0.6}}, delay: 0.4 + index * 0.1 }}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
+                transition={{ duration: 0.6}}, delay: 0.4 + index * 0.1 }})
+  className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-8 h-8" />
@@ -861,8 +861,8 @@ useEffect(() => {;
 setIsVisible(true)
 }
   }, []);
-const filteredServices = services.filter(service => {;;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+const filteredServices = services.filter(service => {;;)
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;;
@@ -880,7 +880,7 @@ const colors={'AI/ML': 'from-purple-500 to-pink-500';},
     }
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   }
-  return (;
+  return(;
     <div className="min-h-screen relative">
       <SEO;
 title="Comprehensive Technology Services - Zion Tech Group";
@@ -919,8 +919,8 @@ From AI to cybersecurity, we deliver the expertise you need to succeed.
                 <input;
 type="text";
 placeholder="Search services...";
-value={searchTerm}
-                  onChange={(e) =>
+value={searchTerm})
+  onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
                 />
@@ -1323,7 +1323,6 @@ Users,;
 Clock,;
 Award
 } from 'lucide-react';
-export default function Services() {;
 const services = [;
     {;,
 }
@@ -1645,7 +1644,7 @@ description: 'Smooth deployment followed by ongoing support and maintenance.',;,
 icon: Cloud
     }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
@@ -1659,8 +1658,8 @@ initial={{ opacity: 0}}, y: 30 }}
 Our Services
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">;
-Comprehensive technology solutions designed to transform your business and drive innovation.;
-From AI and cloud infrastructure to cybersecurity and digital transformation.
+Comprehensive technology solutions designed to transform your business and drive innovation.;)
+  From AI and cloud infrastructure to cybersecurity and digital transformation.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -1986,14 +1985,14 @@ View Complete Services Portfolio →
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat), index) => {;
 const IconComponent = stat.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={stat.label}
                   initial={{ opacity: 0}}, y: 20 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="text-center"
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2027,14 +2026,14 @@ Comprehensive solutions designed to drive innovation and transform your business
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service), index) => {;
 const IconComponent = service.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={service.title}
                   initial={{ opacity: 0}}, y: 20 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color}} rounded-xl flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2126,14 +2125,14 @@ Experience the benefits of professional technology services
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
-return (;
+return(;
                 <motion.div;
 }
 key={benefit.title}
                   initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1}}, x: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="flex items-start gap-6"
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }})
+  className="flex items-start gap-6"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2585,3 +2584,8 @@ View Case Studies
 }
 }
 </div></div></div></div></div></div></div></p></p></p></p></section></section></section></section></section>
+</section>
+</section>
+</section>
+</section>
+</section>

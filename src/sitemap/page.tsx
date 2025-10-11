@@ -65,10 +65,9 @@ const SitemapPage: React.FC = () => {
     { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides' },
     { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction' }
   ]
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Sitemap - Zion Tech Group"
+  return(<React.Fragment>
+      <SEOOptimizer;
+  title="Sitemap - Zion Tech Group"
         description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
         keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}
         canonicalUrl="https://ziontechgroup.com/sitemap"
@@ -85,8 +84,8 @@ const SitemapPage: React.FC = () => {
               Navigate through all our pages and services,
   
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-              Find everything you need on our website. From AI services to IT solutions, 
-              case studies to technical resources - everything is organized for easy navigation.
+              Find everything you need on our website. From AI services to IT solutions, )
+  case studies to technical resources - everything is organized for easy navigation.
           {/* Main Pages */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Main Pages
@@ -218,3 +217,34 @@ export default SitemapPage</Link>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section>
+</h3>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</div>
+</section>
+</p>
+</p>
+</section>
+</div>

@@ -18,8 +18,8 @@ const October2025LatestBreakthroughBanne, r = () => {
               NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
             Latest, AI, Infrastructure Breakthroug, h, s
-          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
-            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s
+          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">)
+  Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s
         </div>)
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
@@ -32,8 +32,8 @@ const October2025LatestBreakthroughBanne, r = () => {
                     <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
                   <div, className="fl, e, x-1">
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.category}
-                    <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
-const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}"
+                    <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">)
+  const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }"
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -91,8 +91,8 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                       <sp, a, n>{highlig, h, t}
                   ))}
                 <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-                  Read, Full, Article
-                  Read, Full, Article
+                  Read, Full, Article;
+  Read, Full, Article
                   <Link, className="w-4 h-4" />
                 </ul>"
                 <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">

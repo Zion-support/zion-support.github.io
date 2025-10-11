@@ -3,10 +3,10 @@ interface SkeletonProps {
     // TODO: Add content
   }
 }
-  className?: string
-  width?: string | number
-  height?: string | number
-  rounded?: boolean
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean;
   animated?: boolean
 }
 const,
@@ -94,3 +94,5 @@ export const,
     ))}
 )
 export default Skeleton</div></div></div>
+</Skeleton>
+</SkeletonProps>

@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 interface SidebarNavigationProps {
-  isOpen: boolean
+  isOpen: boolean,
   onClose: () => void
 }
 
@@ -27,7 +27,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
       
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
+  className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -44,7 +44,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         <nav className="p-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => {
-              const Icon = item.icon
+              const Icon = item.icon;
               return (
                 <li key={item.name}>
                   <Link
@@ -66,3 +66,5 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
 }
 
 export default SidebarNavigation
+</div>
+</SidebarNavigationProps>

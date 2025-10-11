@@ -6,8 +6,8 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {,
     { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
     { ic, o, n: Shi, e, l, d, title: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
     { ic, o, n: Cp, u, title: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
+  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }})
+  const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
   e: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     {/* TODO: Fix JSX expression */}"
   e: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
@@ -17,7 +17,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
   e: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
     {/* TODO: Fix JSX expression */}"
   e: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
-  ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+  ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
       transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 8 }}"
@@ -53,8 +53,8 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
           >
             The, Future, of AI, is, Here
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }})
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }})
+  transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }})
             classNa, m, e = "te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o")
           >)
             Discover, groundbreaking, AI technologies, that, are revolutionizing, enterprise, operation, s)

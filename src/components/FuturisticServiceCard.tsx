@@ -24,8 +24,8 @@ const,
     }
   }
   const currentColor = colorClasses[color]
-  return (<div></div>
-      className={/* TODO: Fix JSX expression */}
+  return(<div></div>)
+  className={/* TODO: Fix JSX expression */}
       }`})
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -100,3 +100,7 @@ const,
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>
 </div></button></p></ul>
+</ArrowRight>
+</button>
+</ul>
+</p>

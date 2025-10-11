@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -16,8 +15,8 @@ import Footer from '../components/Footer'
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <$2 />
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
-// >,
- Cal)
+// >,)
+  Cal)
   l: (302) 464-0950
             <$2 />
               href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
@@ -144,3 +143,29 @@ import Footer from '../components/Footer'
   ),
 }
 export default PagePage</$1></a></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</p>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</li>
+</a>
+</li>
+</li>
+</li>
+</li>
+</li>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>
+</p>

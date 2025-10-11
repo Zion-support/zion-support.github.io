@@ -152,8 +152,8 @@ const [searchQuery, setSearchQuery] = useState('');
 const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 const toggleCategory = (category: string) => {;;
-setExpandedCategories(prev =>;
-prev.includes(category) 
+setExpandedCategories(prev =>;)
+  prev.includes(category) 
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
@@ -170,7 +170,6 @@ Globe,;
 Shield,;
 Zap
 } from 'lucide-react';
-export default function HelpCenter() {;
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedCategory, setSelectedCategory] = useState('all');
 const [expandedFaqs, setExpandedFaqs] = useState<Set<string>>(new Set());
@@ -261,8 +260,8 @@ const popularArticles = [;
     'Account security best practices'
   ];
 const toggleCategory = (categoryId: string) => {;;
-setExpandedCategories(prev =>;
-prev.includes(categoryId) 
+setExpandedCategories(prev =>;)
+  prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
     )
@@ -481,8 +480,8 @@ const supportChannels = [;
     { title: 'Cloud Migration Best Practices', path: '/help/cloud-migration', category: 'Technical Support' },
     { title: 'Setting Up Micro SAAS Solutions', path: '/help/micro-saas-setup', category: 'Getting Started' }
   ];
-const filteredFAQs = faqs.filter(faq =>;;
-faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredFAQs = faqs.filter(faq =>;;)
+  faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
 Search,;
@@ -940,7 +939,6 @@ Brain,;
 Cpu,;
 Network
 } from 'lucide-react';
-export default function HelpCenter() {;
 const [searchQuery, setSearchQuery] = useState('');
 const [activeCategory, setActiveCategory] = useState<string | null>(null);
 const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -1096,8 +1094,8 @@ category: "Industries"
     }
   ];
 const filteredFAQs = searchQuery; 
-    ? faqs.filter(faq =>;
-faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    ? faqs.filter(faq =>;)
+  faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.category.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -1220,8 +1218,8 @@ const filteredFaqs = activeCategory;
     ? faqs.filter(faq => faq.category === activeCategory)
     : faqs;
 const searchResults = searchQuery; 
-    ? faqs.filter(faq =>;
-faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    ? faqs.filter(faq =>;)
+  faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : [];
@@ -1414,8 +1412,8 @@ category: 'security',;,
 tags: ['Data Privacy', 'Compliance', 'Encryption']
     }
   ];
-const filteredHelp = helpCategories.filter(item =>;;
-item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredHelp = helpCategories.filter(item =>;;)
+  item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
   );
@@ -1432,10 +1430,10 @@ newExpanded.add(faqId)
   const filteredCategories = selectedCategory === 'all'; 
     ? categories 
     : categories.filter(cat => cat.id === selectedCategory);
-const filteredArticles = popularArticles.filter(article =>;;
-selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
+const filteredArticles = popularArticles.filter(article =>;;)
+  selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
   );
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1444,8 +1442,8 @@ return (;
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">;
 Help Center
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;
-Find answers to your questions, learn how to use our platform, and get the support you need.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;)
+  Find answers to your questions, learn how to use our platform, and get the support you need.
 
 
       <div className="relative overflow-hidden">
@@ -1522,10 +1520,10 @@ action: "Browse Docs",;,
 color: "from-orange-500 to-red-500"
     }
   ];
-const filteredFaqs = faqs.filter(faq =>;;
-activeCategory === 'all' || faq.category === activeCategory
-  ).filter(faq =>;
-faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredFaqs = faqs.filter(faq =>;;)
+  activeCategory === 'all' || faq.category === activeCategory
+  ).filter(faq =>;)
+  faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
   );
@@ -1533,7 +1531,7 @@ const toggleFaq = (id: number) => {;;
 setExpandedFaq(expandedFaq === id ? null : id)
 }
   }
-  return (;
+  return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1562,8 +1560,8 @@ Find answers to common questions, explore tutorials, and get the support you nee
             </p>
             {/* Search Bar */}
                   placeholder="Search for help articles, guides, and tutorials...";
-value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+value={searchQuery})
+  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20";
 placeholder="Search for help articles, tutorials, or solutions...";
 value={searchQuery}
@@ -1607,14 +1605,14 @@ action: 'Browse Docs',;,
 color: 'from-orange-500 to-red-600'
     }
   ];
-const filteredCategories = categories.filter(category =>;;
-category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-category.articles.some(article =>;
-article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+const filteredCategories = categories.filter(category =>;;)
+  category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+category.articles.some(article =>;)
+  article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
@@ -1627,14 +1625,14 @@ Find answers to your questions, learn how to use our services, and get the suppo
           </p>
           
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-12">;
-const filteredCategories = Object.entries(helpCategories).filter(([key);, category]) =>;
+          <div className="max-w-2xl mx-auto mb-12">;)
+  const filteredCategories = Object.entries(helpCategories).filter(([key);, category]) =>;
 category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-category.articles.some(article =>;
-article.title.toLowerCase().includes(searchQuery.toLowerCase())
+category.articles.some(article =>;)
+  article.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-return (;
+return(;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
@@ -1661,8 +1659,7 @@ FileText,;
 Video,;
 Download,;
 Users
-} from 'lucide-react';
-export default function HelpCenter() {;
+} from 'lucide-react';)
 const faqCategories = [;
     {;,
 }
@@ -1858,10 +1855,10 @@ faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
   );
-return (;;
+return(;;
 placeholder="Search for help articles...";
-value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+value={searchQuery})
+  onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg";
 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent";
 import React from 'react';;
@@ -1872,7 +1869,6 @@ import { Accordion;, AccordionContent, AccordionItem, AccordionTrigger } from '@
 import { Button; } from '@/components/ui/button';
 import { Search;, MessageCircle, BookOpen, Video, FileText, Users } from 'lucide-react';
 import { Link; } from 'react-router-dom';
-export default function HelpCenter() {;
 const faqs = [;
     {;,
 }
@@ -1934,7 +1930,7 @@ bgColor: "bg-zion-orange/10",;,
 href: "/help/ai-tools"
     }
   ];
-return (;
+return(;
     <>
       <SEO;
 title="Help Center | Zion Tech Group";
@@ -1995,8 +1991,8 @@ Get the help you need with our comprehensive support resources, documentation, a
                   <input;
 type="text";
 placeholder="Search for help articles, FAQs, or topics...";
-value={searchQuery}
-                    onChange={(e) =>
+value={searchQuery})
+  onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                   />
@@ -2117,7 +2113,7 @@ selectedCategory === category.id
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCategories.map((category) => {};
 const Icon = category.icon;;
-return (;
+return(;
               <$2 />;
 }
 key={category.id}
@@ -2132,8 +2128,8 @@ key={category.id}
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{category.articleCount} articles</span>
-                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">;
-Browse Articles
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">;)
+  Browse Articles
                     <ArrowRight className="w-4 h-4 ml-1 inline" />
                   </button>
                 </div>
@@ -2242,7 +2238,7 @@ Multiple ways to get help when you need it
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel), index) => {;
 const Icon = channel.icon;;
-return (;
+return(;
                 <$2 />;
 }
 key={index}
@@ -2264,8 +2260,8 @@ key={index}
                     </div>
                   </div>
                   
-                  <button className="w-full mt-4 py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200">;
-Get Help
+                  <button className="w-full mt-4 py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200">;)
+  Get Help
                   </button>
                 </div>
               )
@@ -2602,11 +2598,11 @@ return (;
           {helpCategories.map((category) => {};
 const Icon = category.icon;;
 const isExpanded = expandedCategory === category.id;;
-return (;
+return(;
 }
               <div key={category.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
-                <$2 />;
-onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
+                <$2 />;)
+  onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
                   <div className="flex items-center justify-between">
@@ -2768,11 +2764,11 @@ of support articles and resources.
               {categories.map((category) => {};
 const Icon = category.icon;;
 const isActive = activeCategory === category.id;;
-return (;
+return(;
                   <$2 />;
 }
-key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
+key={category.id})
+  onClick={() => setActiveCategory(category.id)}
                     className={`group p-6 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 ${};
 isActive
                         ? 'bg-blue-500/20 border border-blue-500/50'
@@ -2902,11 +2898,11 @@ Our expert team is here to help you succeed. Get in touch for personalized assis
         <div className="max-w-4xl mx-auto space-y-4">
           {filteredFAQs.map((faq) => {};
 const isExpanded = expandedFAQ === faq.id;;
-return (;
+return(;
 }
               <div key={faq.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
-                <$2 />;
-onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
+                <$2 />;)
+  onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
                   <div className="flex items-center justify-between">
@@ -2945,12 +2941,12 @@ onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {resources.map((resource), index) => {;
 const Icon = resource.icon;;
-return (;
+return(;
               <$2 />;
 }
 key={index}
-                to={resource.link}
-                className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group"
+                to={resource.link})
+  className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
@@ -3176,7 +3172,6 @@ className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan
 Explore Services;
 import React from 'react';;
 import { Link; } from 'react-router-dom';
-export default function HelpCenter() {;
 const helpCategories = [;
     {;,
 }
@@ -3203,7 +3198,6 @@ import { Card;, CardContent, CardDescription, CardHeader, CardTitle } from '@/co
 import { Accordion;, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Search;, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
 import { Link; } from 'react-router-dom';
-export default function HelpCenter() {;
 const faqCategories = [;
     {;,
 }
@@ -3565,7 +3559,7 @@ Our support team is here to help you with any questions or issues you may have.
 export default HelpCenter
 // CreditCard icon component since it's not in lucide-react;
 function CreditCard(props: React.SVGProps<SVGSVGElement>) {;
-return (;
+return(;
     <svg
 }
       {...props}
@@ -3576,8 +3570,8 @@ viewBox="0 0 24 24";
 fill="none";
 stroke="currentColor";
 strokeWidth="2";
-strokeLinecap="round";
-strokeLinejoin="round"
+strokeLinecap="round";)
+  strokeLinejoin="round"
     >
       <rect width="20" height="14" x="2" y="5" rx="2" />
       <line x1="2" x2="22" y1="10" y2="10" />
@@ -3591,7 +3585,7 @@ strokeLinejoin="round"
     { title: 'Community Forum', href: '/community', icon: Users, description: 'Connect with other users' },
     { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
   ];
-return (;
+return(;
     <div className="min-h-screen bg-background">
       <SEO;
 title="Help Center | Zion Tech Group";
@@ -3615,8 +3609,8 @@ Find answers to common questions and get the support you need to make the most o
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
             <input;
 type="text";
-placeholder="Search for help articles, FAQs, or topics...";
-className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+placeholder="Search for help articles, FAQs, or topics...";)
+  className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
             />
   </input>
           </div>
@@ -3716,3 +3710,52 @@ Response time: Usually within 24 hours
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</SVGSVGElement>
+</section>
+</section>
+</section>
+</Icon>
+</section>
+</section>
+</section>
+</section>
+</div>
+</section>
+</div>
+</div>
+</section>
+</section>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</number>
+</string>
+</number>
+</string>
+</number>
+</string>
+</number>
+</string>
+</string>

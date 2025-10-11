@@ -55,8 +55,7 @@ $4},
       price:     ,
 $4}
   ]
-  return (
-    <React.Fragment>
+  return(<React.Fragment>
       <Helmet>
         <title>Developer Tools - Zion Tech Group
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
@@ -69,8 +68,8 @@ $4}
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
   
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
+  AI-powered development tools that accelerate your coding workflow and improve productivity,
   
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -398,3 +397,22 @@ $4}
 export default DeveloperToolsPage</a>
   </a>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>
+</h2>
+</ul>
+</ul>
+</h4>
+</ul>
+</p>
+</h2>
+</ul>
+</h4>
+</p>
+</h2>
+</span>
+</span>
+</span>
+</title>
+</span>
+</span>
+</title>
+</Helmet>

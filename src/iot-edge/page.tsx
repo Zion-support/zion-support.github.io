@@ -208,8 +208,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
         {/* Services by Category */}
         {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50">
-                  {category} Solutions
-                  Specialized {category.toLowerCase()} services for connected and intelligent systems;"
+                  {category} Solutions;
+  Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
@@ -258,8 +258,8 @@ Save up to 40% vs market rates;"
   hover: bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
-                Our IoT & Edge Capabilities
-                Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
+                Our IoT & Edge Capabilities;
+  Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>"
@@ -307,3 +307,4 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
 }
 export default IotEdgePage</div>
 </p></h4>
+</h4>

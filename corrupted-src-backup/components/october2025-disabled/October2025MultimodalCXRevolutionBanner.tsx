@@ -7,8 +7,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />)
+  const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
@@ -31,12 +31,12 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e'>
             <Sparkles, className='w-5 h-5, tex, t-cy, a, n-4, 0, 0' />
             <span, className='te, x, t-cy, a, n-300, fon, t-semibold, tex, t-sm'>
-              🚀 JUST, LAUNCHE, D: OCTO, B, E, R , 1, 20, 2, 5 — MULTIMODAL, AI, CUSTOMER
-              EXPERIENCE, REVOLUTIO, N
+              🚀 JUST, LAUNCHE, D: OCTO, B, E, R , 1, 20, 2, 5 — MULTIMODAL, AI, CUSTOMER;
+  EXPERIENCE, REVOLUTIO, N
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-4, 0, 0' />
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t'>
-            Multimodal, AI, Customer Experience, Platfor, m
-            Multimodal, AI, Customer Experience, Platfor, m
+            Multimodal, AI, Customer Experience, Platfor, m;
+  Multimodal, AI, Customer Experience, Platfor, m
             <, b, r />{' '}
             <span, classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0'>
               $340M, Value, Created | 2, 8, 7% R, O, I | 94% Customer, Satisfactio, n
@@ -52,8 +52,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
             Revolutionary, platform, integrating{' '}
             <strong, className='te, x, t-whi, t, e'>
               Visi, o, n + Voi, c, e + Te, x, t + Emotion, A, I</$1>{' '}
-            to, deliver, exceptional personalized, experiences, at sca, l, e. Achieve, 8, 5% automat, i, o, n, 87% fir, s, t-contact, resolutio, n, and, transform, customer
-            satisfacti, o, n.{' '}
+            to, deliver, exceptional personalized, experiences, at sca, l, e. Achieve, 8, 5% automat, i, o, n, 87% fir, s, t-contact, resolutio, n, and, transform, customer;
+  satisfacti, o, n.{' '}
             <strong, classNam, e = 'te, x, t-cy, a, n-4, 0, 0'>Fortune, 100, proven</stro, n, g>with</g>, 127 M, customers global, l, y.
         {/* Key, Metrics, Grid */}
         <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'>
@@ -105,8 +105,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
                   Vision, AI, Intelligence
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                   Product, recognition, across 8.7M, S, K, U, s, visual, issue, diagnosis,
-                  AR-guided, troubleshootin, g — 92% resolution, without, human
-                  agen, t, s
+                  AR-guided, troubleshootin, g — 92% resolution, without, human;
+  agen, t, s
             <div, classNam, e = 'flex, item, s-start, ga, p-4'>
               <div, className='fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r'>
                 <MessageCircle, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
@@ -301,8 +301,8 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
             <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
               🎁 FREE, Customer, Experience Assessme, n, t — No, Obligatio, n
             <div, className='te, x, t-gr, a, y-300, ma, x-w-2, x, l'>
-              Analyze, your, current CX, performan, c, e, identify, opportunities, for
-              improveme, n, t, and, receive, custom ROI, projection, s — completely, free, and confidenti, a, l
+              Analyze, your, current CX, performan, c, e, identify, opportunities, for;
+  improveme, n, t, and, receive, custom ROI, projection, s — completely, free, and confidenti, a, l
             <, t, o = '/conta, c, t'$2 />
               className='inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50'
             >

@@ -10,8 +10,8 @@ interface DashboardData {/* TODO: Fix JSX expression */}
     responseTime: number
   }
   security: {,
-    threatsBlocked: number
-    vulnerabilities: number,
+    threatsBlocked: number,
+  vulnerabilities: number,
   performanc,
   e: {/* TODO: Fix JSX expression */}
   }

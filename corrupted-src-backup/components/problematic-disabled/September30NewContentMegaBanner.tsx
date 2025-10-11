@@ -41,8 +41,8 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
             🚀 5, Revolutionary, AI Breakthroug, h, s</$1>"
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o">
-            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
-            Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution
+            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • )
+  Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
@@ -81,8 +81,8 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
-              Explore, No, w
-              Explore, No, w
+              Explore, No, w;
+  Explore, No, w
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
         {/* Stats, Ban, n, e, r */}
         <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8">

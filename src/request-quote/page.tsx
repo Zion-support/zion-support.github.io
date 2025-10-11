@@ -15,8 +15,8 @@ serviceType: '',;,
 projectSize: '',;,
 timeline: '',;,
 budget: '',;,
-description: '',;,
-requirements:   ,;
+description: '',;,)
+  requirements:   ,;
 }
 $4});
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -116,7 +116,7 @@ description:     ,;
 $4}
   ];
 if (isSubmitted) {;
-return (;
+return(;
       <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,8 +154,8 @@ Contact Us
                 <$2 />;
 href="/";
 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" />;
-Back to Home,
+                  <ArrowRight className="w-4 h-4 mr-2" />;)
+  Back to Home,
   
               </div>
             </div>
@@ -165,7 +165,7 @@ Back to Home,
       </React.Fragment>
     )
   }
-  return (;
+  return(;
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -251,8 +251,8 @@ Service Type *
 name="serviceType";
 value={formData.serviceType}
                       onChange={handleInputChange}
-                      required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                      required;)
+  className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                       <option value="">Select a service type
                       {serviceTypes.map((type), index) => (
                         <option key={index} value={type}>{type}
@@ -397,8 +397,8 @@ budge,;,
 t: '',;
 descriptio,;,
 n: '',;
-requirement,;,
-s: '')
+requirement,;,)
+  s: '')
   });
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [isSubmitted, setIsSubmitted] = useState(false);
@@ -827,3 +827,39 @@ export default RequestQuotePage</textarea>
   </a>
   </HTMLInputElement>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>
+</p>
+</p>
+</option>
+</option>
+</option>
+</option>
+</label>
+</option>
+</option>
+</option>
+</option>
+</form>
+</h2>
+</p>
+</span>
+</span>
+</p>
+</p>
+</p>
+</option>
+</option>
+</option>
+</option>
+</label>
+</option>
+</label>
+</option>
+</label>
+</label>
+</label>
+</label>
+</label>
+</h2>
+</p>
+</span>
+</p>

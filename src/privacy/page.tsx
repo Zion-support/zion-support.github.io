@@ -69,8 +69,7 @@ export default function PrivacyPage() {
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -106,13 +105,13 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">Introduction
             <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-gray-300 mb-6">)
+  Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
+                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit;
+  our website or use our services.
               <p className="text-gray-300 mb-6">
-                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
-                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
-                our website or use our services.
-              <p className="text-gray-300 mb-6">
-                By using our website or services, you agree to the collection and use of information in accordance with 
-                this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
+                By using our website or services, you agree to the collection and use of information in accordance with;
+  this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -217,3 +216,83 @@ export default function PrivacyPage() {
   </a>
   </h1>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section>
+</span>
+</span>
+</span>
+</p>
+</h2>
+</div>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</span>
+</div>
+</div>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</li>
+</ul>
+</h4>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</p>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</p>
+</p>
+</div>
+</div>
+</div>
+</section>
+</span>
+</div>
+</span>
+</div>
+</span>
+</div>
+</div>
+</p>
+</div>
+</div>
+</section>

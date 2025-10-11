@@ -101,7 +101,7 @@ servic, e, s: [
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
-  } return (<Helm;, e, t></Helm>
+  } return(<Helm;, e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} /></meta>
@@ -121,8 +121,8 @@ g: u, r, l' conte, n, t={canonica, l, U, r, l} />
 g: ty, p, e' conte, n, t={ty, p, e} />
       <meta, propert, y = 'o,;,
 g: site_na, m, e' conte, n, t='Zion, Tech, Group' />
-      <meta, propert, y='o,;,
-g:loca, l, e' conte, n, t='en_, U, S' />
+      <meta, propert, y='o,;,)
+  g:loca, l, e' conte, n, t='en_, U, S' />
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
       <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
