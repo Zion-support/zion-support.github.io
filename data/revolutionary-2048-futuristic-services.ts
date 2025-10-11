@@ -1,5 +1,5 @@
 export const revolutionary2048FuturisticServices = [
-  // Quantum Consciousness Transfer Platform 2048;
+  // Quantum Consciousness Transfer Platform 2048
     id: 'quantum-consciousness-transfer-2048',
     name: 'Quantum Consciousness Transfer Platform 2048',
     tagline: 'Revolutionary quantum consciousness transfer and digital immortality platform',
@@ -79,7 +79,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-consciousness-transfer-2048'},
-  // Multi-Dimensional Reality Fabrication Platform 2048;
+  // Multi-Dimensional Reality Fabrication Platform 2048
     id: 'multi-dimensional-reality-fabrication-2048',
     name: 'Multi-Dimensional Reality Fabrication Platform 2048',
     tagline: 'Revolutionary multi-dimensional reality creation and manipulation platform',
@@ -177,7 +177,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/multi-dimensional-reality-fabrication-2048'},
-  // Quantum Time Manipulation Platform 2048;
+  // Quantum Time Manipulation Platform 2048
     id: 'quantum-time-manipulation-2048',
     name: 'Quantum Time Manipulation Platform 2048',
     tagline: 'Revolutionary quantum time manipulation and temporal engineering platform',
@@ -275,7 +275,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-time-manipulation-2048'},
-  // Quantum Gravity Manipulation Platform 2048;
+  // Quantum Gravity Manipulation Platform 2048
     id: 'quantum-gravity-manipulation-2048',
     name: 'Quantum Gravity Manipulation Platform 2048',
     tagline: 'Revolutionary quantum gravity manipulation and anti-gravity technology platform',
@@ -373,7 +373,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-gravity-manipulation-2048'},
-  // Quantum Matter Transmutation Platform 2048;
+  // Quantum Matter Transmutation Platform 2048
     id: 'quantum-matter-transmutation-2048',
     name: 'Quantum Matter Transmutation Platform 2048',
     tagline: 'Revolutionary quantum matter transmutation and material engineering platform',
@@ -471,7 +471,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-matter-transmutation-2048'},
-  // Quantum Energy Manipulation Platform 2048;
+  // Quantum Energy Manipulation Platform 2048
     id: 'quantum-energy-manipulation-2048',
     name: 'Quantum Energy Manipulation Platform 2048',
     tagline: 'Revolutionary quantum energy manipulation and energy engineering platform',
@@ -569,7 +569,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-energy-manipulation-2048'},
-  // Quantum Space Manipulation Platform 2048;
+  // Quantum Space Manipulation Platform 2048
     id: 'quantum-space-manipulation-2048',
     name: 'Quantum Space Manipulation Platform 2048',
     tagline: 'Revolutionary quantum space manipulation and spatial engineering platform',
@@ -667,7 +667,7 @@ export const revolutionary2048FuturisticServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-space-manipulation-2048'},
-  // Quantum Information Manipulation Platform 2048;
+  // Quantum Information Manipulation Platform 2048
     id: 'quantum-information-manipulation-2048',
     name: 'Quantum Information Manipulation Platform 2048',
     tagline: 'Revolutionary quantum information manipulation and data engineering platform',
@@ -783,7 +783,7 @@ export const revolutionary2048FuturisticServices = [
     slu,
   g: '/quantum-information-manipulation-2048'
   }
-];
+]
 export const revolutionary2048FuturisticServices = [ // Quantum Consciousness Transfer Platform 2048,
   id: 'quantum-consciousness-transfer-2048',' nam,
   e: 'Quantum Consciousness Transfer Platform 2048',' taglin,

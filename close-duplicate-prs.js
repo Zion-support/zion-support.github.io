@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
-//Function to close duplicate PRs;
+#!/usr/bin/env node
+//Function to close duplicate PRs
 async function closeDuplicatePRs() {
   try {
-//     //Get all open PRs;
+//     //Get all open PRs
     const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
     )
 //     const duplicatePRs = prs.filter(pr =>)
@@ -32,14 +32,13 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
             bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
             })}
-        );
-
+        )
         if (closeResponse.ok) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }
 
-        // Add a small delay to avoid rate limiting;
-        await new Promise(resolve => setTimeout(resolve, 100));
+        // Add a small delay to avoid rate limiting
+        await new Promise(resolve => setTimeout(resolve, 100))
       } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -48,5 +47,5 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
 //     }
 }
 
-// closeDuplicatePRs().catch(console.error);
+// closeDuplicatePRs().catch(console.error)
 `

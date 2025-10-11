@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 }
   ]
 const benefits = [
@@ -15,38 +22,62 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-
     'Proven track record of success'
-  ]
-</div>
+  ]</div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="py-20 px-4">
+<<<<<<< HEAD
+      {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our Page?,
+            <h2>Why Choose Our Page?,</h2>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description</p>}</p>
               </div>
+=======
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+              Why Choose Our Page?,
+            </h2>
+            <p></p>
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+>>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
-};
-
-export default PagePage;
+};]
+export default PagePage</$1></p></h3>

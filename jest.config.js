@@ -14,6 +14,10 @@ export default {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
@@ -21,6 +25,10 @@ export default {
         '@babel/preset-typescript'
       ]
     }]
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -44,4 +52,4 @@ export default {
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ]
-};
+}

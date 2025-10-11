@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss';
-
+import type { Config } from 'tailwindcss'
 const config: Config = {,
   content: [,
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -50,4 +49,4 @@ const config: Config = {,
           '100%': { transform: 'translateY(0)', opacity: '1' }}}}},
   plugins: []}
 
-export default config;
+export default config

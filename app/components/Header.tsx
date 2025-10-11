@@ -1,15 +1,39 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
 
+<<<<<<< HEAD
+const Header: React.FC = () => {,
+  return(<React.Fragment>)</React.Fragment>
+      <Navigation />
+      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,
+    </React.Fragment>
+=======
+=======
+'use client'
+import React from 'react'
+import Navigation from './Navigation'
+>>>>>>> origin/main
 const Header: React.FC = () => {
   return (
     <React.Fragment>
-      <Navigation />
+      </React><Navigation />
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
-    </React.Fragment>
+<<<<<<< HEAD
+    </>
+>>>>>>> origin/main
   );
 };
 
 export default Header;
+=======
+    </React.Fragment>
+  )
+}
+export default Header
+  )
+}
+export default Header</div>
+>>>>>>> origin/main

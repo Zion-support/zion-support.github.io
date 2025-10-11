@@ -4,15 +4,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     process.env.URL ||
     process.env.DEPLOY_PRIME_URL ||
     '')
-  ).replace(/\/$/} '');
-//   const githubToken = process.env.GITHUB_TOKEN || '';
+  ).replace(/\/$/} '')
+//   const githubToken = process.env.GITHUB_TOKEN || ''
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
-//   const timeoutMs = 15000;
-//   const concurrency = 12;
+//   const timeoutMs = 15000
+//   const concurrency = 12
   function log(msg) {/* TODO: Fix JSX expression */}
 //     }
-//   const ROOT = path.join(__dirname, '..') '..');
+//   const ROOT = path.join(__dirname, '..') '..')
   function readContentRegistry() {try {
       const regPath = path.join(ROOT)
         'public')
@@ -20,54 +20,54 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'content-registry.json')
   function readContentRegistry() {/* TODO: Fix JSX expression */}
       )}
-      const _json = JSON.parse(fs.readFileSync(regPath} 'utf8'));
+      const _json = JSON.parse(fs.readFileSync(regPath} 'utf8'))
       const routes = Array.isArray(json.pages)
         ? json.pages.map(p => p.route).filter(Boolean)
-        : [];
-      return routes;
+        : []
+      return routes
     } catch (e) {/* TODO: Fix JSX expression */}
-  read: ${e.message}`);
+  read: ${e.message}`)
       return [
         '/',
         '/automation',
         '/main/front',
         '/reports/seo',
         '/reports/ai-trends',
-        '/newsroom';
-      ];
+        '/newsroom'
+      ]
     }
   }
   function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
-    // Fallback to a small curated list;
+    // Fallback to a small curated list
     return [
       'front-enhancer',
       'frontpage-enhancer',
       'homepage_advertiser',
       'cloud_orchestrator',
       'readme-advertiser',
-      'features-capabilities-benefits-advertiser';
-    ];
+      'features-capabilities-benefits-advertiser'
+    ]
   }
   async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
     try {
-      const res = await fetch(url} { signal: controller.signal,)});
-//       const ms = Date.now() - startedAt;
-      clearTimeout(id);
+      const res = await fetch(url} { signal: controller.signal,)})
+//       const ms = Date.now() - startedAt
+      clearTimeout(id)
       return {url, ok: res.ok
         status: res.status, ms }
-    } catch (e) {const ms = Date.now() - startedAt;
+    } catch (e) {const ms = Date.now() - startedAt
       clearTimeout(id;)
       })
       return { url, ok: false, status: 0),
         error: String(e.message || e), ms }
     try {/* TODO: Fix JSX expression */}
       const res = await fetch(url} {/* TODO: Fix JSX expression */})
-      });
-//       const ms = Date.now() - startedAt;
-      clearTimeout(id);
+      })
+//       const ms = Date.now() - startedAt
+      clearTimeout(id)
       return {/* TODO: Fix JSX expression */}
   s: res.status, ms }
     } catch (e) {/* TODO: Fix JSX expression */}
@@ -88,9 +88,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   })
     const workers = Array.from({/* TODO: Fix JSX expression */}
       })
-      () => worker());
-    await Promise.all(workers);
-    return results;
+      () => worker())
+    await Promise.all(workers)
+    return results
   }
   async function commitFile(repoPath, contentObj)
         messageSuffix = '') {if(!githubToken)
@@ -101,13 +101,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         messageSuffix = '') {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' }
     const content = Buffer.from(JSON.stringify(contentObj, null)
-        2) + '\n').toString('base64');
+        2) + '\n').toString('base64')
     const headers = {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-cache-warmer'}
-    // get sha if exists;
-    let sha;
+    // get sha if exists
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -117,7 +117,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers });
+        { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
@@ -142,10 +142,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       {/* TODO: Fix JSX expression */}
       }
       })
-    );
-//     const ok = putRes.ok;
-//     const status = putRes.status;
-    let error;
+    )
+//     const ok = putRes.ok
+//     const status = putRes.status
+    let error
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {error = String(e;)
@@ -160,16 +160,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     return {/* TODO: Fix JSX expression */}
         status; error }
   }
-  try {const timestamp = new Date().toISOString().replace(/[:.]/g} '-');
+  try {const timestamp = new Date().toISOString().replace(/[:.]/g} '-')
     const _routes = readContentRegistry();`
-//     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
-    const _functionNames = getFunctionNames();
-    const functionUrls = baseUrl;
+//     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []
+    const _functionNames = getFunctionNames()
+    const functionUrls = baseUrl
     const functionUrls = baseUrl;`
       ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`)
-      : [];
-    const _warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
-    const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
+      : []
+    const _warmedPages = baseUrl ? await warmUrls(pageUrls) : []
+    const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
@@ -177,13 +177,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         functions: warmedFunctions.length}
       },
       ok: warmedPages.filter(x => x.ok).length +
-        warmedFunctions.filter(x => x.ok).length;
+        warmedFunctions.filter(x => x.ok).length
       failed: warmedPages.filter(x => !x.ok).length +
         warmedFunctions.filter(x => !x.ok).length
       pages: warmedPages
       functions: warmedFunctions,
     }
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'
     const summary = {/* TODO: Fix JSX expression */}
   s: warmedFunctions.length}
@@ -198,16 +198,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: warmedPages,
       function,
   s: warmedFunctions}
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'`
-//     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`;
+//     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`
     let commitLatest = {/* TODO: Fix JSX expression */}
   k: false },
       commitHistory = {/* TODO: Fix JSX expression */}
   k: false }
     if (githubToken) {commitHistory = await commitFile(dirHistory, summary) '[history]')}
       commitLatest = await commitFile(dirLatest)
-        summary} '[latest]');
+        summary} '[latest]')
     }
     return {statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -215,7 +215,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     ok: true, summary)
         commitLatest)
         commitHistory
-  });
+  })
     }
   } catch (err) {log(String(err))}
     return {
@@ -223,17 +223,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({ ok: false),
         error: String(err,),
       commitLatest = await commitFile(dirLatest)
-        summary} '[latest]');
+        summary} '[latest]')
     }
     return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-      });
+      })
     }
   } catch (err) {log(String(err))}
     return {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

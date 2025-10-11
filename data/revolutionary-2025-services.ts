@@ -1,13 +1,36 @@
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+import { ServiceVariant } from '../types/service-variants'
+export interface Revolutionary2025Service {
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: unknown
     mobile: string
     email: string,
@@ -17,6 +40,25 @@ export interface Revolutionary2025Service {,
   d: string,
   nam,
   e: string,
+
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string
+    email: string
+export interface Revolutionary2025Service {;,
+    address: string}
+  i,
+  d: string
+  nam,
+  e: string
   taglin,
   e: string,
   pric,
@@ -67,7 +109,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
 }
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -92,18 +134,18 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -154,7 +196,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -162,15 +204,18 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "revolutionary-ai-platform"
+    id: "revolutionary-ai-platform",
+]
+    id: "revolutionary-ai-platform"
     name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities",
     price: "$199/month",
@@ -244,7 +289,7 @@ id: "revolutionary-ai-platform"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

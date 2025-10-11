@@ -1,37 +1,37 @@
 export type EmergingTechService2027 =
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  pricing: unknown;
-    monthly: number;
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  pricing: unknown
+    monthly: number
     yearly: number
     custom: string
     currency: string,
     pricingModel: string}
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
-  technicalSpecs: unknown;
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  technologies: string[]
+  integrations: string[]
+  support: string[]
+  link: string
+  badge: string
+  icon: string
+  image: string
+  innovationLevel: string
+  marketSize: string
+  competitors: string[]
+  technicalSpecs: unknown
     performance: string
     scalability: string
     security: string,
     compliance: string[]}
-  roi: string;
-  estimatedDelivery: string;
-  contactInfo: unknown;
+  roi: string
+  estimatedDelivery: string
+  contactInfo: unknown
     phone: string
     email: string
     website: string,
@@ -217,7 +217,7 @@ export const,
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Space-Based Quantum Computing;
+  // Space-Based Quantum Computing
     id: "space-based-quantum-computing",
     title: "Space-Based Quantum Computing",
     description: "Revolutionary space-based quantum computing platform leveraging zero-gravity environment for enhanced quantum coherence and computational power, enabling breakthrough scientific discoveries and space exploration.",
@@ -363,7 +363,7 @@ export const,
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Biocomputing Platform;
+  // Biocomputing Platform
     id: "biocomputing-platform",
     title: "Biocomputing Platform",
     description: "Revolutionary DNA and cellular computing platform that leverages biological processes for massive parallel processing, energy efficiency, and novel computational paradigms beyond traditional silicon-based systems.",
@@ -509,7 +509,7 @@ export const,
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Neuromorphic Computing Platform;
+  // Neuromorphic Computing Platform
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.",
@@ -655,7 +655,7 @@ export const,
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
-  // Fusion Energy Computing Platform;
+  // Fusion Energy Computing Platform
     id: "fusion-energy-computing-platform",
     title: "Fusion Energy Computing Platform",
     description: "Revolutionary fusion energy computing platform that combines fusion power generation with advanced computing infrastructure, providing clean, unlimited energy for high-performance computing and data centers.",
@@ -842,7 +842,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export type EmergingTechService2027 = i,
   d: string, titl,
   e: string, descriptio,

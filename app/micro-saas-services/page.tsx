@@ -1,14 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
+export interface MicroSaasService {id: string,}
+=======
+// Real Micro SAAS Services for Zion Tech Group
+// Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
     id: string,
+>>>>>>> origin/main
   title: string,
   description: string,
   shortDescription: string,
   icon: string,
   price: string,
+<<<<<<< HEAD
   originalPrice?: string;
+  features: string[],
+=======
+  originalPrice?: string
   features: string[]
+>>>>>>> origin/main
   benefits: string[],
   link: string,
   popular: boolean,
@@ -17,33 +29,28 @@ export interface MicroSaasService {
   users: string,
   freeTrial: string,
   marketPrice: string,
-  capabilities: string[]
-  useCases: string[]
+  capabilities: string[],
+  useCases: string[],
   integrations: string[],
   apiAvailable: boolean,
   mobileApp: boolean,
   whiteLabel: boolean,
   support: string,
   setupTime: string,
-  technicalSpecs: {
-    languages: string[]
-    frameworks: string[]
+  technicalSpecs: {,
+    languages: string[],
+    frameworks: string[],
     databases: string[],
-    cloudProviders: string[]
-  }
-  }
-  pricing: {
+    cloudProviders: string[],}}
+  pricing: {,
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[]
-  }
-  }
+    features: string[],}}
 }
-export const microSaasServices: MicroSaasService[] = [
+export const microSaasServices: MicroSaasService[] = [,
   // AI-Powered Productivity Tools,
-  {
-    ,
+  {,
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
@@ -81,7 +88,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '15,000+',;
+    users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
     capabilities: [,
@@ -111,7 +118,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations';
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -122,17 +129,27 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Go'],
       frameworks: ['React', 'Node.js', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']},
+    pricing: {,
+    monthly: 99,
+      yearly: 990,
+      enterprise: 299,
+      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']}},
+  {id: 'ai-task-manager-pro',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean'],
   },
     pricing: {
     monthly: 99,
       yearly: 990,
       enterprise: 299,
-      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
+      features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations'],
   }
     },
   {
     id: 'ai-task-manager-pro',
+>>>>>>> origin/main
     title: 'AI Task Manager Pro',
     description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',
     shortDescription: 'Smart task management with AI prioritization and productivity optimization.',
@@ -170,7 +187,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Productivity',
 
     rating: 4.8,
-    users: '25,000+',;
+    users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
     capabilities: [,
@@ -199,7 +216,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
-      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier';
+      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -210,19 +227,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['JavaScript', 'TypeScript', 'Python'],
       frameworks: ['React Native', 'Node.js', 'Express', 'TensorFlow Lite'],
       databases: ['SQLite', 'PostgreSQL', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Firebase']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Firebase']},
+    pricing: {,
+    monthly: 49,
+      yearly: 490,
+      enterprise: 149,
+      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']}},
+
+  // AI Content & Marketing Tools;
+  {id: 'ai-content-writer-pro',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Firebase'],
   },
     pricing: {
     monthly: 49,
       yearly: 490,
       enterprise: 149,
-      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
+      features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access'],
   }
     },
 
-  // AI Content & Marketing Tools;
+  // AI Content & Marketing Tools
   {
     id: 'ai-content-writer-pro',
+>>>>>>> origin/main
     title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more. Uses GPT-4 and custom models trained on your brand voice.',
     shortDescription: 'AI-powered content creation with brand voice training and SEO optimization.',
@@ -259,7 +288,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Content & Marketing',
     rating: 4.7,
-    users: '40,000+',;
+    users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
     capabilities: [,
@@ -288,7 +317,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
-      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs';
+      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -299,17 +328,27 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'Next.js', 'OpenAI API', 'Hugging Face'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure']},
+    pricing: {,
+    monthly: 79,
+      yearly: 790,
+      enterprise: 199,
+      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']}},
+  {id: 'ai-social-media-manager',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure'],
   },
     pricing: {
     monthly: 79,
       yearly: 790,
       enterprise: 199,
-      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
+      features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support'],
   }
     },
   {
     id: 'ai-social-media-manager',
+>>>>>>> origin/main
     title: 'AI Social Media Manager',
     description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',
     shortDescription: 'AI-powered social media management with automated content creation and optimization.',
@@ -347,7 +386,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Content & Marketing',
 
     rating: 4.6,
-    users: '30,000+',;
+    users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
     capabilities: [,
@@ -377,7 +416,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
-      'HubSpot', 'Salesforce', 'Zapier';
+      'HubSpot', 'Salesforce', 'Zapier'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -388,19 +427,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure']},
+    pricing: {,
+    monthly: 89,
+      yearly: 890,
+      enterprise: 249,
+      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']}},
+
+  // AI Business & Finance Tools;
+  {id: 'ai-crm-intelligence',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure'],
   },
     pricing: {
     monthly: 89,
       yearly: 890,
       enterprise: 249,
-      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
+      features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access'],
   }
     },
 
-  // AI Business & Finance Tools;
+  // AI Business & Finance Tools
   {
     id: 'ai-crm-intelligence',
+>>>>>>> origin/main
     title: 'AI CRM Intelligence',
     description: 'Next-generation CRM powered by AI that predicts customer behavior, automates sales processes, and provides intelligent insights. Features lead scoring, automated follow-ups, and predictive analytics.',
     shortDescription: 'AI-powered CRM with predictive analytics and automated sales processes.',
@@ -437,7 +488,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Business & Finance',
     rating: 4.8,
-    users: '20,000+',;
+    users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
     capabilities: [,
@@ -467,7 +518,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
-      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams';
+      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -478,17 +529,27 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'Spring Boot', 'TensorFlow'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']},
+    pricing: {,
+    monthly: 129,
+      yearly: 1290,
+      enterprise: 399,
+      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']}},
+  {id: 'ai-financial-analyzer',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce'],
   },
     pricing: {
     monthly: 129,
       yearly: 1290,
       enterprise: 399,
-      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
+      features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support'],
   }
     },
   {
     id: 'ai-financial-analyzer',
+>>>>>>> origin/main
     title: 'AI Financial Analyzer',
     description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',
     shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.',
@@ -526,7 +587,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Business & Finance',
 
     rating: 4.9,
-    users: '12,000+',;
+    users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
     capabilities: [,
@@ -556,7 +617,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
-      'Excel', 'Google Sheets', 'Tableau', 'Power BI';
+      'Excel', 'Google Sheets', 'Tableau', 'Power BI'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -567,19 +628,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'R', 'Julia', 'JavaScript'],
       frameworks: ['TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-learn'],
       databases: ['PostgreSQL', 'InfluxDB', 'TimescaleDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']},
+    pricing: {,
+    monthly: 199,
+      yearly: 1990,
+      enterprise: 599,
+      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']}},
+
+  // AI Customer Service Tools;
+  {id: 'ai-customer-support-bot',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud'],
   },
     pricing: {
     monthly: 199,
       yearly: 1990,
       enterprise: 599,
-      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
+      features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support'],
   }
     },
 
-  // AI Customer Service Tools;
+  // AI Customer Service Tools
   {
     id: 'ai-customer-support-bot',
+>>>>>>> origin/main
     title: 'AI Customer Support Bot',
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
     shortDescription: 'AI-powered customer support chatbot with natural language understanding and sentiment analysis.',
@@ -594,7 +667,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Knowledge base integration and learning',
       'Omnichannel support (web, mobile, social)',
       'Advanced analytics and reporting',
-      'Custom branding and white-label options';
+      'Custom branding and white-label options'
     ],
     benefits: [,
       '70% reduction in support costs',
@@ -612,7 +685,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Customer Service',
     rating: 4.7,
-    users: '35,000+',;
+    users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
     capabilities: [,
@@ -642,7 +715,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs';
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -653,19 +726,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript'],
       frameworks: ['FastAPI', 'React', 'OpenAI GPT', 'Hugging Face', 'Rasa'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']},
+    pricing: {,
+    monthly: 59,
+      yearly: 590,
+      enterprise: 199,
+      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']}},
+
+  // AI Development Tools;
+  {id: 'ai-code-review-assistant',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow'],
   },
     pricing: {
     monthly: 59,
       yearly: 590,
       enterprise: 199,
-      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
+      features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access'],
   }
     },
 
-  // AI Development Tools;
+  // AI Development Tools
   {
     id: 'ai-code-review-assistant',
+>>>>>>> origin/main
     title: 'AI Code Review Assistant',
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
     shortDescription: 'AI-powered code review with automated bug detection and improvement suggestions.',
@@ -702,7 +787,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Development',
     rating: 4.8,
-    users: '18,000+',;
+    users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
     capabilities: [,
@@ -732,7 +817,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
-      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana';
+      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
     ],
     apiAvailable: true,
     mobileApp: false,
@@ -743,19 +828,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C#', 'Go'],
       frameworks: ['TensorFlow', 'PyTorch', 'SonarQube', 'ESLint', 'Prettier'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']},
+    pricing: {,
+    monthly: 79,
+      yearly: 790,
+      enterprise: 249,
+      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']}},
+
+  // AI Healthcare Tools;
+  {id: 'ai-healthcare-assistant',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions'],
   },
     pricing: {
     monthly: 79,
       yearly: 790,
       enterprise: 249,
-      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
+      features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access'],
   }
     },
 
-  // AI Healthcare Tools;
+  // AI Healthcare Tools
   {
     id: 'ai-healthcare-assistant',
+>>>>>>> origin/main
     title: 'AI Healthcare Assistant',
     description: 'Comprehensive AI-powered healthcare platform that provides symptom analysis, medication reminders, health monitoring, and telemedicine capabilities. HIPAA compliant with advanced privacy protection.',
     shortDescription: 'AI-powered healthcare platform with symptom analysis and telemedicine capabilities.',
@@ -792,7 +889,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Healthcare',
     rating: 4.9,
-    users: '8,000+',;
+    users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
     capabilities: [,
@@ -822,7 +919,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
-      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio';
+      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -833,19 +930,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['FastAPI', 'React Native', 'TensorFlow', 'PyTorch', 'OpenCV'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Encrypted storage'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']},
+    pricing: {,
+    monthly: 149,
+      yearly: 1490,
+      enterprise: 499,
+      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']}},
+
+  // AI E-commerce Tools;
+  {id: 'ai-ecommerce-optimizer',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting'],
   },
     pricing: {
     monthly: 149,
       yearly: 1490,
       enterprise: 499,
-      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
+      features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support'],
   }
     },
 
-  // AI E-commerce Tools;
+  // AI E-commerce Tools
   {
     id: 'ai-ecommerce-optimizer',
+>>>>>>> origin/main
     title: 'AI E-commerce Optimizer',
     description: 'Advanced AI platform for e-commerce optimization that provides personalized product recommendations, dynamic pricing, inventory management, and customer behavior analysis to maximize sales and revenue.',
     shortDescription: 'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing.',
@@ -882,7 +991,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'E-commerce',
     rating: 4.7,
-    users: '22,000+',;
+    users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
     capabilities: [,
@@ -912,7 +1021,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
-      'Google Shopping', 'PayPal', 'Stripe', 'Square';
+      'Google Shopping', 'PayPal', 'Stripe', 'Square'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -923,19 +1032,31 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']},
+    pricing: {,
+    monthly: 119,
+      yearly: 1190,
+      enterprise: 399,
+      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']}},
+
+  // AI Education Tools;
+  {id: 'ai-education-platform',
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus'],
   },
     pricing: {
     monthly: 119,
       yearly: 1190,
       enterprise: 399,
-      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
+      features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support'],
   }
     },
 
-  // AI Education Tools;
+  // AI Education Tools
   {
     id: 'ai-education-platform',
+>>>>>>> origin/main
     title: 'AI Education Platform',
     description: 'Comprehensive AI-powered educational platform that provides personalized learning experiences, automated assessment, intelligent tutoring, and adaptive curriculum based on individual learning patterns.',
     shortDescription: 'AI-powered educational platform with personalized learning and intelligent tutoring.',
@@ -972,7 +1093,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Education',
     rating: 4.8,
-    users: '28,000+',;
+    users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
     capabilities: [,
@@ -1002,7 +1123,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
-      'Google Drive', 'OneDrive', 'Dropbox', 'Box';
+      'Google Drive', 'OneDrive', 'Dropbox', 'Box'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -1013,18 +1134,27 @@ export const microSaasServices: MicroSaasService[] = [
       languages: ['Python', 'JavaScript', 'TypeScript', 'Java'],
       frameworks: ['Django', 'React', 'FastAPI', 'TensorFlow', 'PyTorch'],
       databases: ['PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']
+<<<<<<< HEAD
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']},
+    pricing: {,
+    monthly: 89,
+      yearly: 890,
+      enterprise: 299,
+      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']}}
+=======
+      cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting'],
   },
     pricing: {
     monthly: 89,
       yearly: 890,
       enterprise: 299,
-      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
+      features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard'],
   }
     }
+>>>>>>> origin/main
   }
-]
-// Service categories for filtering and organization;
+  ]
+// Service categories for filtering and organization
 export const serviceCategories = [
   'All',
   'Productivity',
@@ -1040,36 +1170,74 @@ export const serviceCategories = [
   'AI & ML',
 
   'Analytics',
+<<<<<<< HEAD
 
+<<<<<<< HEAD
   'Automation'
 ]
 // Pricing tiers for comparison;
+export const pricingTiers = {starter: {,
+=======
+  'Automation';
+];
+// Pricing tiers for comparison;];];
+=======
+  'Automation'
+]
+// Pricing tiers for comparison;]
+>>>>>>> origin/main
 export const pricingTiers = {
     starter: {,
+>>>>>>> origin/main
     name: 'Starter',
     price: '$29-99/month',
-    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']
+<<<<<<< HEAD
+    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']},
+  professional: {,
+    ,
+    name: 'Professional',
+    price: '$99-299/month',
+    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']},
+  enterprise: {,
+    ,
+    name: 'Enterprise',
+    price: '$299-999/month',
+    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']}}
+}
+// Contact information;
+export const contactInfo = {phone: '+1 302 464 0950',
+=======
+    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics'],
   },
   professional: {
     ,
     name: 'Professional',
     price: '$99-299/month',
-    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']
+    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access'],
   },
   enterprise: {
     ,
     name: 'Enterprise',
     price: '$299-999/month',
-    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
+    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'],
   }
   }
 }
-// Contact information;
+// Contact information
 export const contactInfo = {
     phone: '+1 302 464 0950',
+>>>>>>> origin/main
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
+<<<<<<< HEAD
+  hours: '24/7 Support Available',}timezone: 'EST (Eastern Standard Time)',}
+=======
   hours: '24/7 Support Available',
   }
+<<<<<<< HEAD
   timezone: 'EST (Eastern Standard Time)'}
+>>>>>>> origin/main
+=======
+  timezone: 'EST (Eastern Standard Time)'}
+>>>>>>> origin/main

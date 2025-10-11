@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -73,7 +73,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       popular: false
     }
-  ];
+  ]
   const addOns = [
     {
       name: 'Additional AI Models',
@@ -99,7 +99,7 @@ const PricingPage: React.FC = () => {
       price: '$5,000',
       period: '/day'
     }
-  ];
+  ]
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
@@ -125,7 +125,7 @@ const PricingPage: React.FC = () => {
       question: 'Can I cancel anytime?',
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
-  ];
+  ]
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
@@ -169,68 +169,53 @@ const PricingPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Simple <span className="text-cyan-400">Pricing</span>
-          </h1>
+            Simple <span className="text-cyan-400">Pricing
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
-          </p>
-        </div>
-      </section>
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
-              const colors = getColorClasses(plan.color);
+              const colors = getColorClasses(plan.color)
               return (
-                <div
+                <$2 />
                   key={index}
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
                 >
                   {plan.popular && (
-                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular;
-  </
+                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>Most Popular
                   )}
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <div className="text-center mb-8">
                       <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>
                         <plan.icon className={`w-8 h-8 ${colors.textLight}`} />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                      <p className="text-gray-600 mb-4">{plan.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}
+                      <p className="text-gray-600 mb-4">{plan.description}
                       <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                        <span className="text-gray-600 ml-1">{plan.period}</span>
-                      </div>
-                    </div>
+                        <span className="text-4xl font-bold text-gray-900">{plan.price}
+                        <span className="text-gray-600 ml-1">{plan.period}
                     <div className="mb-8">
-                      <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4">What's included:
                       <ul className="space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
                             <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-600">{feature}</span>
-                          </li>
+                            <span className="text-gray-600">{feature}
                         ))}
-                      </ul>
-                    </div>
                     {plan.limitations.length > 0 && (
                       <div className="mb-8">
-                        <h4 className="font-semibold text-gray-900 mb-4">Limitations:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-4">Limitations:
                         <ul className="space-y-3">
                           {plan.limitations.map((limitation, limitationIndex) => (
                             <li key={limitationIndex} className="flex items-start">
                               <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-600">{limitation}</span>
-                            </li>
+                              <span className="text-gray-600">{limitation}
                           ))}
-                        </ul>
-                      </div>
                     )}
-                    <Link
+                    <$2 />
                       to="/contact"
                       className={`w-full ${
                         plan.popular
@@ -239,80 +224,63 @@ const PricingPage: React.FC = () => {
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
                       {plan.cta}
-                    </Link>
-                  </div>
-                </div>
-              );
+              )
             })}
-          </div>
-        </div>
-      </section>
       {/* Add-ons */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Add-on Services
-  </
+  
             <p className="text-xl text-gray-600">
               Enhance your plan with additional services and features,
-  </
+  
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}</h3>
-                <p className="text-gray-600 mb-4 text-sm">{addOn.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}
+                <p className="text-gray-600 mb-4 text-sm">{addOn.description}
                 <div className="flex items-baseline justify-between">
-                  <span className="text-2xl font-bold text-cyan-600">{addOn.price}</span>
-                  <span className="text-gray-600 text-sm">{addOn.period}</span>
-                </div>
-              </div>
+                  <span className="text-2xl font-bold text-cyan-600">{addOn.price}
+                  <span className="text-gray-600 text-sm">{addOn.period}
             ))}
-          </div>
-        </div>
-      </section>
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
-  </
+  
             <p className="text-xl text-gray-600">
               Everything you need to know about our pricing and plans,
-  </
+  
           </div>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}
+                <p className="text-gray-600">{faq.answer}
             ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
-          </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             Choose your plan and start transforming your business with AI and IT solutions today.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Start Free Trial
-  </
-            <Link
+  
+            <$2 />
               to="/demo"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Schedule Demo
-  </
+  
           </div>
         </div>
       </section>
@@ -320,11 +288,11 @@ const PricingPage: React.FC = () => {
     </div>
   ),
 }
-export default PricingPage;
-  </Link>
+export default PricingPage</Link>
   </Link>
   </p>
   </h2>
   </p>
   </h2>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></li></section></section></section></section>

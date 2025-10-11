@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Environment Configuration Manager;
- * Provides type-safe access to environment variables with validation;
+ * Environment Configuration Manager
+ * Provides type-safe access to environment variables with validation
  */
 
 export interface EnvConfig {
@@ -34,8 +34,8 @@ class EnvironmentConfig {
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = this.loadConfig();
-    this.isInitialized = true;
+    this.config = this.loadConfig()
+    this.isInitialized = true
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
@@ -66,26 +66,26 @@ class EnvironmentConfig {
     }
   }
   /**
-   * Get the entire configuration object;
+   * Get the entire configuration object
    */
-  public getConfig(): Readonly;
+  public getConfig(): Readonly
           <EnvConfig> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return Object.freeze({ ...this.config });
+    return Object.freeze({ ...this.config })
   }
   /**
-   * Get a specific configuration value;
+   * Get a specific configuration value
    */
-  public get;
+  public get
           <K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return this.config[key];
+    return this.config[key]
   }
   /**
-   * Check if running in production;
+   * Check if running in production
    */
 
   public isProduction(): boolean {
@@ -93,10 +93,10 @@ class EnvironmentConfig {
   }
 
 }
-    return this.config.nodeEnv === 'production';
+    return this.config.nodeEnv === 'production'
   }
   /**
-   * Check if running in development;
+   * Check if running in development
    */
 
   public isDevelopment(): boolean {
@@ -104,10 +104,10 @@ class EnvironmentConfig {
   }
 
 }
-    return this.config.nodeEnv === 'development';
+    return this.config.nodeEnv === 'development'
   }
   /**
-   * Check if running in test mode;
+   * Check if running in test mode
    */
 
   public isTest(): boolean {
@@ -115,10 +115,10 @@ class EnvironmentConfig {
   }
 
 }
-    return this.config.nodeEnv === 'test';
+    return this.config.nodeEnv === 'test'
   }
   /**
-   * Validate required environment variables;
+   * Validate required environment variables
    */
 
   public validate(requiredVars: (keyof EnvConfig)[]): {
@@ -141,7 +141,7 @@ class EnvironmentConfig {
       if (!this.config[varName]) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        missing.push(varName);
+        missing.push(varName)
       }
     }
     return {/* TODO: Fix JSX expression */}
@@ -149,13 +149,13 @@ class EnvironmentConfig {
 }
   vali,
   d: missing.length === 0,
-//       missing;
+//       missing
     }
   }
   /**
-   * Get API headers with authentication;
+   * Get API headers with authentication
    */
-  public getApiHeaders(): Record;
+  public getApiHeaders(): Record
           <string, string> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -169,16 +169,16 @@ class EnvironmentConfig {
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   }`
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
-    return headers;
+    return headers
   }
   /**
-   * Log configuration in development mode;
+   * Log configuration in development mode
    */
 
   public logConfig(): void {
@@ -189,7 +189,7 @@ class EnvironmentConfig {
     if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      console.group(' Environment Configuration');
+      console.group(' Environment Configuration')
       console.table({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -203,16 +203,15 @@ class EnvironmentConfig {
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
 
-        'GA Tracking ID Set': !!this.config.gaTrackingId;
-
-      });
-      console.groupEnd();
+        'GA Tracking ID Set': !!this.config.gaTrackingId
+      })
+      console.groupEnd()
     }
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions;
+// Export convenient helper functions
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()

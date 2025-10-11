@@ -1,47 +1,47 @@
 export type ZionEmergingTechService2029 =
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  aiTechnology: string[];
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  aiTechnology: string[]
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
+  contactInfo: unknown
+    mobile: string
     email: string
     address: string
     website: string,
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  pricing: unknown;
-    starter: number;
-    professional: number;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  pricing: unknown
+    starter: number
+    professional: number
     enterprise: number
     currency: string
     period: string,
@@ -206,20 +206,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready space technology platform with real satellite integrations and AI-powered optimization.'
     launchDate: '2024-01-01'
-    customers: 34;
-    rating: 4.9;
-    reviews: 23;
-    pricing: unknown;
+    customers: 34
+    rating: 4.9
+    reviews: 23
+    pricing: unknown
       starter: 5999
       professional: 14999
       enterprise: 39999,
       currency: 'USD',
       period: 'month'}
   },
-  // 2. Biotechnology & Synthetic Biology Platform;
+  // 2. Biotechnology & Synthetic Biology Platform
     id: 'biotechnology-synthetic-biology',
     name: 'Biotechnology & Synthetic Biology Platform',
     tagline: 'Design and engineer life with AI-powered synthetic biology',
@@ -363,20 +363,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready biotechnology platform with real laboratory integrations and AI-powered design.'
     launchDate: '2024-02-01'
-    customers: 67;
-    rating: 4.8;
-    reviews: 89;
-    pricing: unknown;
+    customers: 67
+    rating: 4.8
+    reviews: 89
+    pricing: unknown
       starter: 3999
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
       period: 'month'}
   },
-  // 3. Renewable Energy & Smart Grid Optimization;
+  // 3. Renewable Energy & Smart Grid Optimization
     id: 'renewable-energy-smart-grid',
     name: 'Renewable Energy & Smart Grid Optimization Platform',
     tagline: 'AI-powered renewable energy optimization and smart grid management',
@@ -520,20 +520,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready renewable energy platform with real grid integrations and AI-powered optimization.'
     launchDate: '2024-01-15'
-    customers: 123;
-    rating: 4.8;
-    reviews: 234;
-    pricing: unknown;
+    customers: 123
+    rating: 4.8
+    reviews: 234
+    pricing: unknown
       starter: 2999
       professional: 7499
       enterprise: 18999,
       currency: 'USD',
       period: 'month'}
   },
-  // 4. Advanced Robotics & Automation Platform;
+  // 4. Advanced Robotics & Automation Platform
     id: 'advanced-robotics-automation',
     name: 'Advanced Robotics & Automation Platform',
     tagline: 'Next-generation robotics with AI-powered autonomy and learning',
@@ -677,20 +677,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready robotics platform with real robot integrations and AI-powered automation.'
     launchDate: '2024-02-15'
-    customers: 89;
-    rating: 4.9;
-    reviews: 156;
-    pricing: unknown;
+    customers: 89
+    rating: 4.9
+    reviews: 156
+    pricing: unknown
       starter: 4999
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
       period: 'month'}
   },
-  // 5. Quantum Internet & Secure Communications;
+  // 5. Quantum Internet & Secure Communications
     id: 'quantum-internet-secure-communications',
     name: 'Quantum Internet & Secure Communications Platform',
     tagline: 'Unhackable quantum communications for the future internet',
@@ -834,20 +834,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready quantum internet platform with real quantum hardware and network integrations.'
     launchDate: '2024-03-01'
-    customers: 23;
-    rating: 4.9;
-    reviews: 34;
-    pricing: unknown;
+    customers: 23
+    rating: 4.9
+    reviews: 34
+    pricing: unknown
       starter: 6999
       professional: 17999
       enterprise: 44999,
       currency: 'USD',
       period: 'month'}
   },
-  // 6. Advanced Materials & Nanotechnology Platform;
+  // 6. Advanced Materials & Nanotechnology Platform
     id: 'advanced-materials-nanotechnology',
     name: 'Advanced Materials & Nanotechnology Platform',
     tagline: 'Design revolutionary materials with AI and nanotechnology',
@@ -991,20 +991,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready materials platform with real laboratory integrations and AI-powered design.'
     launchDate: '2024-01-15'
-    customers: 78;
-    rating: 4.8;
-    reviews: 123;
-    pricing: unknown;
+    customers: 78
+    rating: 4.8
+    reviews: 123
+    pricing: unknown
       starter: 3499
       professional: 8999
       enterprise: 21999,
       currency: 'USD',
       period: 'month'}
   },
-  // 7. Autonomous Transportation & Mobility Platform;
+  // 7. Autonomous Transportation & Mobility Platform
     id: 'autonomous-transportation-mobility',
     name: 'Autonomous Transportation & Mobility Platform',
     tagline: 'Revolutionary autonomous transportation and smart mobility solutions',
@@ -1148,20 +1148,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready autonomous transportation platform with real vehicle integrations and AI-powered optimization.'
     launchDate: '2024-02-01'
-    customers: 156;
-    rating: 4.8;
-    reviews: 234;
-    pricing: unknown;
+    customers: 156
+    rating: 4.8
+    reviews: 234
+    pricing: unknown
       starter: 4499
       professional: 11999
       enterprise: 28999,
       currency: 'USD',
       period: 'month'}
   },
-  // 8. Digital Twin & Simulation Platform;
+  // 8. Digital Twin & Simulation Platform
     id: 'digital-twin-simulation',
     name: 'Digital Twin & Simulation Platform',
     tagline: 'Create virtual replicas of physical systems with AI-powered simulation',
@@ -1305,20 +1305,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready digital twin platform with real IoT integrations and AI-powered simulation.'
     launchDate: '2024-01-01'
-    customers: 189;
-    rating: 4.9;
-    reviews: 267;
-    pricing: unknown;
+    customers: 189
+    rating: 4.9
+    reviews: 267
+    pricing: unknown
       starter: 2799
       professional: 6999
       enterprise: 17999,
       currency: 'USD',
       period: 'month'}
   },
-  // 9. Edge Computing & IoT Platform;
+  // 9. Edge Computing & IoT Platform
     id: 'edge-computing-iot-platform',
     name: 'Edge Computing & IoT Platform',
     tagline: 'Intelligent edge computing for real-time IoT processing and analytics',
@@ -1462,20 +1462,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready edge computing platform with real IoT integrations and AI-powered processing.'
     launchDate: '2024-02-15'
-    customers: 234;
-    rating: 4.8;
-    reviews: 345;
-    pricing: unknown;
+    customers: 234
+    rating: 4.8
+    reviews: 345
+    pricing: unknown
       starter: 1999
       professional: 4999
       enterprise: 12999,
       currency: 'USD',
       period: 'month'}
   },
-  // 10. Metaverse & Virtual Reality Platform;
+  // 10. Metaverse & Virtual Reality Platform
     id: 'metaverse-virtual-reality',
     name: 'Metaverse & Virtual Reality Platform',
     tagline: 'Build immersive virtual worlds and metaverse experiences',
@@ -1619,20 +1619,20 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Production-ready metaverse platform with real VR/AR integrations and AI-powered content generation.'
     launchDate: '2024-03-01'
-    customers: 123;
-    rating: 4.8;
-    reviews: 189;
-    pricing: unknown;
+    customers: 123
+    rating: 4.8
+    reviews: 189
+    pricing: unknown
       starter: 3299
       professional: 8299
       enterprise: 20999,
       currency: 'USD',
       period: 'month'}
   }
-];
+]
 export const getServicesByCategory = (category: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),,
     popula,
@@ -1714,17 +1714,17 @@ export const getServicesByCategory = (category: string) =>
   d: 'month'
     }
   }
-];
+]
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),
 }
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular);
+  return zionEmergingTechServices2029.filter(service => service.popular)
 }
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})
 }
 export const getServicesByTechnology = (technology: string) =>,
   return zionEmergingTechServices2029.filter(service =>),
@@ -1735,7 +1735,7 @@ export const getServicesByPriceRange = (minPric)
   return zionEmergingTechServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
+  })
 }
 export const getServicesByTechnology = (technolog)
   y: string) =>

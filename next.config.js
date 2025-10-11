@@ -1,10 +1,8 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
-import crypto from 'crypto';
-
+import withBundleAnalyzer from '@next/bundle-analyzer'
+import crypto from 'crypto'
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
-
+})
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -35,7 +33,7 @@ const nextConfig = {
         new webpack.DefinePlugin({
           'self': 'undefined',
         })
-      );
+      )
     }
 
     // Optimize bundle size
@@ -61,8 +59,8 @@ const nextConfig = {
               )
   },
             name(module) {
-    const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
+    const _hash = crypto.createHash('sha1')
+              _hash.update(module.identifier())
               return _hash.digest('hex').substring(0, 8)
   },
             priority: 30,
@@ -97,9 +95,8 @@ const nextConfig = {
     }
 
     // Tree shaking
-    config.optimization.usedExports = true;
-
-    return config;
+    config.optimization.usedExports = true
+    return config
   },
 
   async headers() {
@@ -155,7 +152,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
 
   async redirects() {
@@ -165,7 +162,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
+    ]
   },
 
   experimental: {
@@ -192,4 +189,4 @@ const nextConfig = {
   },
 }
 
-export default bundleAnalyzer(nextConfig);
+export default bundleAnalyzer(nextConfig)

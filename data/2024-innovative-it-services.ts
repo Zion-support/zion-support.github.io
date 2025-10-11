@@ -1,38 +1,38 @@
-export interface InnovativeITService2024 {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  rating: number;
-  customers: number;
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+export interface InnovativeITService2024 {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  rating: number
+  customers: number
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: unknown
     mobile: string
     email: string,
     address: string}
     website: string}
 }
-  realImplementation: boolean;
+  realImplementation: boolean
   implementationDetails: string
   launchDate: string
   reviews: number,
@@ -190,7 +190,7 @@ export const,
   g: 4.8,
     review,
   s: 520}
-];
+]
 export interface InnovativeITService2024,
   id: string, nam,
   e: string, taglin,

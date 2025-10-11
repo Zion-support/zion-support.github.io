@@ -1,42 +1,42 @@
-// Expanded Services Pricing Guide 2027 - Zion Tech Group;
-// Comprehensive pricing information for all expanded innovative services;
+// Expanded Services Pricing Guide 2027 - Zion Tech Group
+// Comprehensive pricing information for all expanded innovative services
 export type ExpandedServicePricing =
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  subcategory: string;
-  pricingTiers: starter: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+  serviceId: string
+  serviceName: string
+  category: string
+  subcategory: string
+  pricingTiers: starter: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    professional: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    professional: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    enterprise: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    enterprise: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    custom: unknown;
-      priceRange: string;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    custom: unknown
+      priceRange: string
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
@@ -46,7 +46,7 @@ export type ExpandedServicePricing =
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging',
     priceAdvantage: string,
     valueProposition: string}
-  roiAnalysis: unknown;
+  roiAnalysis: unknown
     paybackPeriod: string
     annualROI: string
     costSavings: string[],
@@ -58,12 +58,12 @@ export type ExpandedServicePricing =
     integrationComplexity: 'low' | 'medium' | 'high',
     supportIncluded: string,
     customizationOptions: string[]}
-  contactInfo: unknown;
+  contactInfo: unknown
     phone: string
     email: string
     website: string,
     address: string}}
-// 1. CYBERSECURITY SERVICES PRICING;
+// 1. CYBERSECURITY SERVICES PRICING
 export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-threat-hunter'
     serviceName: 'Quantum Threat Hunter'
@@ -199,7 +199,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
   e: string,
     addres,
   s: string}}
-// 1. CYBERSECURITY SERVICES PRICING;
+// 1. CYBERSECURITY SERVICES PRICING
 export const,
   cybersecurityPricing: ExpandedServicePricing[] = [,
     serviceI,
@@ -699,8 +699,8 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// 2. DATA ANALYTICS SERVICES PRICING;
+]
+// 2. DATA ANALYTICS SERVICES PRICING
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     serviceId: 'predictive-insights-engine'
     serviceName: 'Predictive Insights Engine'
@@ -950,8 +950,8 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// 3. CLOUD & DEVOPS SERVICES PRICING;
+]
+// 3. CLOUD & DEVOPS SERVICES PRICING
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     serviceId: 'multi-cloud-orchestrator'
     serviceName: 'Multi-Cloud Orchestrator'
@@ -1201,8 +1201,8 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// 4. IOT & EDGE COMPUTING SERVICES PRICING;
+]
+// 4. IOT & EDGE COMPUTING SERVICES PRICING
 export const iotEdgePricing: ExpandedServicePricing[] = [
     serviceId: 'industrial-iot-intelligence'
     serviceName: 'Industrial IoT Intelligence Platform'
@@ -1452,8 +1452,8 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
+]
+// 5. FINANCIAL TECHNOLOGY SERVICES PRICING
 export const finTechPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-financial-modeling'
     serviceName: 'Quantum Financial Modeling Platform'
@@ -1703,8 +1703,8 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
+]
+// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
 export const healthcarePricing: ExpandedServicePricing[] = [
     serviceId: 'ai-diagnostic-assistant'
     serviceName: 'AI Diagnostic Assistant'
@@ -1954,17 +1954,17 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
-// Export all pricing data;
+]
+// Export all pricing data
 export const ALL_EXPANDED_SERVICES_PRICING = [
   ...cybersecurityPricing,
   ...dataAnalyticsPricing,
   ...cloudDevOpsPricing,
   ...iotEdgePricing,
   ...finTechPricing,
-  ...healthcarePricing;
-];
-// Helper functions;
+  ...healthcarePricing
+]
+// Helper functions
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>,
 export const getPricingByServiceId = (serviceI)
   d: string): ExpandedServicePricing | undefined =>,

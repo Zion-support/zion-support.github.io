@@ -1,7 +1,7 @@
 
 
-'use client';
-// Enhanced Error Handler;
+'use client'
+// Enhanced Error Handler
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -16,8 +16,8 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //     super(message)
-    this.statusCode = statusCode;
-    this.isOperational = isOperational;
+    this.statusCode = statusCode
+    this.isOperational = isOperational
     this.timestamp = new Date().toISOString()
 //     Error.captureStackTrace(this, this.constructor)
   }
@@ -27,14 +27,14 @@ export const _errorHandler = (error: AppError | Error) => {
     // TODO: Add content
   }
 }
-  const isDevelopment = process.env.NODE_ENV === 'development';
+  const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500,
 
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -61,7 +61,7 @@ export const asyncHandler = (f,
     if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      next(error);
+      next(error)
     }
   }
   )

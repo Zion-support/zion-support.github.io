@@ -1,16 +1,16 @@
-'use client';
-import React, { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
-const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional;
+'use client'
+import React, { lazy } from 'react'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
+// Fallback component
+const EmptyComponent = () => null
+// Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() =>;
+  import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
 //   )
-);
+)
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     // TODO: Add content
@@ -30,13 +30,12 @@ export default function OptimizedHomePage() {
   }
 }
   return (
-          <div>Coming Soon</div>
+          <div>Coming Soon
   )
           <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
         <div />
-      </AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
@@ -57,7 +56,7 @@ export default function OptimizedHomePage() {
 //                 autonomous systems, and digital transformation services.
           </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
 // >
 //                   Get Your Free AI Assessment
@@ -73,3 +72,4 @@ View Success Stories
 }
   </div>
   </div>
+</div></div>

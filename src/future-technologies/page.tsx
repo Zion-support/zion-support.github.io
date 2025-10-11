@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Settings } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Settings } from 'lucide-react'
 const FutureTechnologiesPage: React.FC = () => {
     const features = [],
   return (
@@ -16,7 +16,7 @@ const FutureTechnologiesPage: React.FC = () => {
       descriptio,
   n: 'Cutting-edge technologies and future innovations',
       benefit,
-  s: ['AI advancement', 'Quantum computing', 'Blockchain'];
+  s: ['AI advancement', 'Quantum computing', 'Blockchain']
     },
       ico,
   n: Target,
@@ -35,7 +35,7 @@ const FutureTechnologiesPage: React.FC = () => {
       benefit,
   s: ['System integration', 'Migration support', 'Compatibility']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -51,7 +51,7 @@ const FutureTechnologiesPage: React.FC = () => {
 // Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing,
             we help you prepare for and adopt the technologies of tomorrow.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
@@ -62,34 +62,33 @@ const FutureTechnologiesPage: React.FC = () => {
           </div>
         </section>"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Future Tech Solutions,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
-          <div key={index} className="cyber-card p-6,"
+          < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
+                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>"
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
-                <ul className="space-y-2"></ul>
+                <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
                   ))}
                 </ul>
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default FutureTechnologiesPage;
+export default FutureTechnologiesPage

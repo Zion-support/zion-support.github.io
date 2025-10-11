@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
@@ -6,18 +6,18 @@
 interface ApiCacheConfig {
     'use client'
 /**
- * API Caching Utility;
- * Provides caching, deduplication, and retry logic for API calls;
+ * API Caching Utility
+ * Provides caching, deduplication, and retry logic for API calls
  */
 
 interface ApiCacheConfig {// TODO: Add content
   }
 
 }
-  ttl?: number;
-  maxRetries?: number;
-  retryDelay?: number;
-  deduplicate?: boolean;
+  ttl?: number
+  maxRetries?: number
+  retryDelay?: number
+  deduplicate?: boolean
 }
 interface PendingRequest<T> {
     promise: Promise<T>
@@ -28,14 +28,14 @@ interface PendingRequest<T> {
  */
 export class ApiCache {
   private cache: CacheManager<unknown>
-  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
+  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private config: Required<ApiCacheConfig>
   constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
       storage:     ,
-$4});
+$4})
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
@@ -44,7 +44,7 @@ $4});
     }
     // Auto-cleanup every 5 minutes
     setInterval(() => {
-interface PendingRequest;
+interface PendingRequest
           <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -56,7 +56,7 @@ interface PendingRequest;
   p: number,
 }
 /**
- * API Cache Manager with request deduplication;
+ * API Cache Manager with request deduplication
  */
 
 export class ApiCache {
@@ -68,7 +68,7 @@ export class ApiCache {
   cache: CacheManager,
           <unknown>
   private,
-  pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
+  pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private,
   config: Required<ApiCacheConfig>
   constructor(_confi)
@@ -84,7 +84,7 @@ export class ApiCache {
   L: config.ttl || 5 * 60 * 1000, // 5 minutes,
   storag,
   e: 'memory')
-    });
+    })
     this.config = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -97,13 +97,13 @@ export class ApiCache {
       deduplicat,
   e: config.deduplicate ?? true,
     }
-    // Auto-cleanup every 5 minutes;
+    // Auto-cleanup every 5 minutes
     setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.cache.cleanup();
-      this.cleanupPendingRequests();
-    }, 5 * 60 * 1000);
+      this.cache.cleanup()
+      this.cleanupPendingRequests()
+    }, 5 * 60 * 1000)
   }
   /**
    * Fetch with caching and deduplication
@@ -120,7 +120,7 @@ export class ApiCache {
   }
     // Check if there's a pending request
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
-    const pending = this.pendingRequests.get(cacheKey);
+    const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
         // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise<T>
@@ -132,63 +132,62 @@ export class ApiCache {
       options,
       mergedConfig.maxRetries,
       mergedConfig.retryDelay
-    );
+    )
     // Store pending request
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
         timestamp: Date.now()
-      });
+      })
     }
     try {
-    const data = await requestPromise;
+    const data = await requestPromise
       // Cache successful response
-      this.cache.set(cacheKey, data, mergedConfig.ttl);
+      this.cache.set(cacheKey, data, mergedConfig.ttl)
       return data
   } finally {
       // Clean up pending request
-   * Fetch with caching and deduplication;
+   * Fetch with caching and deduplication
    */
-//   async fetch;
+//   async fetch
           <T>()
     ur,
   l: string,
     option,
   s: RequestInit = {},
-    cacheConfig?: Partial;
-
+    cacheConfig?: Partial
           <ApiCacheConfig>
   ): Promise<T> {
 
     const mergedConfig = { ...this.config, ...cacheConfig }
-    // Check cache first;
+    // Check cache first
     if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return this.cache.get(cacheKey) as T;
+      return this.cache.get(cacheKey) as T
     }
-    // Check if there's a pending request;
+    // Check if there's a pending request
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      const pending = this.pendingRequests.get(cacheKey);
-      if (pending && Date.now() - pending.timestamp;
+      const pending = this.pendingRequests.get(cacheKey)
+      if (pending && Date.now() - pending.timestamp
           < 30000) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        // Reuse pending request if less than 30 seconds old;
-        return pending.promise as Promise;
+        // Reuse pending request if less than 30 seconds old
+        return pending.promise as Promise
           <T>
       }
     }
-    // Create new request with retry logic;
-const requestPromise = this.fetchWithRetry;
+    // Create new request with retry logic
+const requestPromise = this.fetchWithRetry
           <T>()
 // url,
 //       options,
 //       mergedConfig.maxRetries,
-//       mergedConfig.retryDelay);
-    // Store pending request;
+//       mergedConfig.retryDelay)
+    // Store pending request
     if (mergedConfig.deduplicate) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -206,15 +205,15 @@ const requestPromise = this.fetchWithRetry;
   }
 
 }
-      const data = await requestPromise;
-      // Cache successful response;
-      this.cache.set(cacheKey, data, mergedConfig.ttl);
-      return data;
+      const data = await requestPromise
+      // Cache successful response
+      this.cache.set(cacheKey, data, mergedConfig.ttl)
+      return data
     } finally {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Clean up pending request;
-      this.pendingRequests.delete(cacheKey);
+      // Clean up pending request
+      this.pendingRequests.delete(cacheKey)
     }
   }
   /**
@@ -228,7 +227,7 @@ const requestPromise = this.fetchWithRetry;
     attempt = 1
   ): Promise<T> {
     try {
-      const response = await fetch(url, options);
+      const response = await fetch(url, options)
       if (!response.ok) {
         // Retry on 5xx errors and 429 (rate limit)
         if (
@@ -244,24 +243,24 @@ const requestPromise = this.fetchWithRetry;
             attempt + 1
           )
   }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
-      const data = await response.json();
-      return data as T;
+      const data = await response.json()
+      return data as T
     } catch (error) {
       // Retry on network errors
       if (attempt < maxRetries) {
-        await this.delay(retryDelay * attempt);
+        await this.delay(retryDelay * attempt)
         return this.fetchWithRetry<T>(
           url,
           options,
           maxRetries,
           retryDelay,
           attempt + 1
-        );
-   * Fetch with retry logic;
+        )
+   * Fetch with retry logic
    */
-//   private async fetchWithRetry;
+//   private async fetchWithRetry
           <T>()
     ur,
   l: string,
@@ -271,28 +270,28 @@ const requestPromise = this.fetchWithRetry;
   s: number,
     retryDela,
   y: number,
-    attempt = 1): Promise;
+    attempt = 1): Promise
           <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      const response = await fetch(url, options);
+      const response = await fetch(url, options)
       if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         // Retry on 5xx errors and 429 (rate limit)
         if ()
           (response.status >= 500 || response.status === 429) &&
-//           attempt;
+//           attempt
           < maxRetries) {
     // TODO: Add content
   }
 
 }
-          await this.delay(retryDelay * attempt); // Exponential backoff;
-          return this.fetchWithRetry;
+          await this.delay(retryDelay * attempt); // Exponential backoff
+          return this.fetchWithRetry
           <T>()
 // url,
 //             options,
@@ -302,18 +301,18 @@ const requestPromise = this.fetchWithRetry;
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
-      const data = await response.json();
-      return data as T;
+      const data = await response.json()
+      return data as T
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Retry on network errors;
+      // Retry on network errors
       if (attempt;)
           < maxRetries) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        await this.delay(retryDelay * attempt);
-        return this.fetchWithRetry;
+        await this.delay(retryDelay * attempt)
+        return this.fetchWithRetry
           <T>()
 // url,
 //           options,
@@ -321,7 +320,7 @@ const requestPromise = this.fetchWithRetry;
 //           retryDelay,
 //           attempt + 1)
       }
-      throw error;
+      throw error
     }
   }
   /**
@@ -334,17 +333,17 @@ const requestPromise = this.fetchWithRetry;
    * Clear entire cache
    */
   clear(): void {
-    * Invalidate cache entries matching a pattern;
+    * Invalidate cache entries matching a pattern
    */
 
   invalidate(pattern: string | RegExp): number {// TODO: Add content
   }
 
 }
-    return this.cache.invalidate(pattern);
+    return this.cache.invalidate(pattern)
   }
   /**
-   * Clear entire cache;
+   * Clear entire cache
    */
 
   clear(): void {
@@ -352,8 +351,8 @@ const requestPromise = this.fetchWithRetry;
   }
 
 }
-    this.cache.clear();
-    this.pendingRequests.clear();
+    this.cache.clear()
+    this.pendingRequests.clear()
   }
   /**
    * Get cache statistics
@@ -384,7 +383,7 @@ const requestPromise = this.fetchWithRetry;
   private getCacheKey(url: string, options: RequestInit): string {
     const method = options.method || 'GET'
     const body = options.body ? JSON.stringify(options.body) : '',
-    return `${method}:${url}:${body}`;
+    return `${method}:${url}:${body}`
   }
   /**
    * Delay helper
@@ -396,11 +395,11 @@ const requestPromise = this.fetchWithRetry;
    * Clean up old pending requests
    */
   private cleanupPendingRequests(): void {
-    const now = Date.now();
+    const now = Date.now()
     const timeout = 60000; // 1 minute
     for (const [key, pending] of this.pendingRequests.entries()) {
       if (now - pending.timestamp > timeout) {
-   * Get cache statistics;
+   * Get cache statistics
    */
 
   getStats() {// TODO: Add content
@@ -416,16 +415,15 @@ const requestPromise = this.fetchWithRetry;
     }
   }
   /**
-   * Prefetch data;
+   * Prefetch data
    */
-//   async prefetch;
+//   async prefetch
           <T>()
     ur,
   l: string,
     option,
   s: RequestInit = {},
-    cacheConfig?: Partial;
-
+    cacheConfig?: Partial
           <ApiCacheConfig>
   ): Promise<void> {
     // TODO: Add content
@@ -435,16 +433,16 @@ const requestPromise = this.fetchWithRetry;
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      await this.fetch;
-          <T>(url, options, cacheConfig);
+      await this.fetch
+          <T>(url, options, cacheConfig)
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Silent fail for prefetch;
+      // Silent fail for prefetch
       }
   }
   /**
-   * Generate cache key from URL and options;
+   * Generate cache key from URL and options
    */
 
   private getCacheKey(url: string, options: RequestInit): string {
@@ -452,12 +450,12 @@ const requestPromise = this.fetchWithRetry;
   }
 
 }
-    const method = options.method || 'GET';
+    const method = options.method || 'GET'
     const body = options.body ? JSON.stringify(options.body) : '';`
-    return `${method}:${url}:${body}`;
+    return `${method}:${url}:${body}`
   }
   /**
-   * Delay helper;
+   * Delay helper
    */
 
   private delay(ms: number): Promise,
@@ -466,10 +464,10 @@ const requestPromise = this.fetchWithRetry;
   }
 
 }
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms))
   }
   /**
-   * Clean up old pending requests;
+   * Clean up old pending requests
    */
 
   private cleanupPendingRequests(): void {
@@ -477,15 +475,15 @@ const requestPromise = this.fetchWithRetry;
   }
 
 }
-    const now = Date.now();
-    const timeout = 60000; // 1 minute;
+    const now = Date.now()
+    const timeout = 60000; // 1 minute
     for (const [key, pending] of this.pendingRequests.entries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (now - pending.timestamp > timeout) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        this.pendingRequests.delete(key);
+        this.pendingRequests.delete(key)
       }
     }
   }
@@ -498,7 +496,7 @@ export const defaultApiCache = new ApiCache({
   maxRetries: 3,
   retryDelay: 1000,
   deduplicate: true
-});
+})
 /**
  * Cached fetch helper
  */
@@ -513,7 +511,7 @@ export async function cachedFetch<T>(
  * Create a cached API client
  */
 export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
-  const cache = new ApiCache();
+  const cache = new ApiCache()
   return {
     get: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
@@ -550,8 +548,8 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   }
 }
-export default ApiCache;
- * Default API cache instance;
+export default ApiCache
+ * Default API cache instance
  */
 
 export const defaultApiCache = new ApiCache({
@@ -567,28 +565,27 @@ export const defaultApiCache = new ApiCache({
   y: 1000,
   deduplicat,
   e: true,)
-});
+})
 /**
- * Cached fetch helper;
+ * Cached fetch helper
  */
-export async function cachedFetch;
+export async function cachedFetch
           <T>()
   ur,
   l: string,
   options?: RequestInit,
-  cacheConfig?: Partial;
-
+  cacheConfig?: Partial
           <ApiCacheConfig>
 ): Promise<T> {
     // TODO: Add content
   }
 
 }
-  return defaultApiCache.fetch;
-          <T>(url, options, cacheConfig);
+  return defaultApiCache.fetch
+          <T>(url, options, cacheConfig)
 }
 /**
- * Create a cached API client;
+ * Create a cached API client
  */
 
 export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
@@ -596,7 +593,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   }
 
 }
-  const cache = new ApiCache();
+  const cache = new ApiCache()
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

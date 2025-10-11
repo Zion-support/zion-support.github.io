@@ -1,41 +1,77 @@
 
 export interface EnterpriseITService2029V2 {
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
+  id: string
+  name: string
+  description: string
+  category: string[]
+  price: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketSize: string
+  competitors: string[]
+  technology: string[]
+  integration: string[]
+  support: string[]
+  compliance: string[]
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  whiteLabel: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
   contact: unknown
     mobile: string
     email: string,
+  id: string
+  name: string
+  description: string
+  category: string[]
+  price: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketSize: string
+  competitors: string[]
+  technology: string[]
+  integration: string[]
+  support: string[]
+  compliance: string[]
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  whiteLabel: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
+  contact: unknown
+    mobile: string
+    email: string
     website: string}
     address: string}
   }
@@ -640,7 +676,7 @@ export const,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
-    ];
+    ]
     benefit,
   s: [
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
@@ -914,9 +950,9 @@ export const,
   t: 'Cloud-native, hybrid options'
     }
   }
-];
+]
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
-    ];
+    ]
     market_size: '$28.9B by 2029'
     competitors: ['ServiceNowBMCMicro FocusIvanti']
     technology: ['AI / MLAutomationMonitoringITSM']
@@ -942,7 +978,7 @@ export const,
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
-];
+]
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
     security: 'Enterprise security, access controls',
     backup: 'Automated backup, disaster recovery',
@@ -1008,7 +1044,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
     ap,
   i: 'Operations management APIs', mobil,
   e: 'Mobile operations apps',
@@ -1045,7 +1081,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string} addres,
   s: string} } export const,

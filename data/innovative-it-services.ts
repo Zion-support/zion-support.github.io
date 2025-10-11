@@ -1,30 +1,30 @@
 
-export interface InnovativeITService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
+export interface InnovativeITService {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
   contact_info: unknown
     mobile: string
     email: string,
@@ -1005,9 +1005,9 @@ export const,
   s: 1250}
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
-];
+]
 }
-];
+]
 realImplementation: true,
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -1201,7 +1201,7 @@ realImplementation: true,
     contactInfo: marketPosition: unknown,
       'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.'
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate'
-    trialDays: 21;
+    trialDays: 21
     setupTime: '4 hours'
     category: 'IT & Blockchain'
     realService: true
@@ -1267,7 +1267,7 @@ realImplementation: true,
     contactInfo: marketPosition: unknown,
       'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.'
     targetAudience: 'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '1 hour'
     category: 'IT & DevOps'
     realService: true
@@ -1404,46 +1404,60 @@ realImplementation: true,
   g: 4.7,
     review,
   s: 1250}
-];
+]
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
 }
-export const innovativeITServices: InnovativeITService[] = [;
+export const innovativeITServices: InnovativeITService[] = [
   {
-    id: 'zero-trust-security-platform';
+    id: 'zero-trust-security-platform'
     name: 'Zero Trust Security Platform'
     tagline: 'Next-generation cybersecurity with zero trust architecture'
     price: '$599',
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+}
+
+export const innovativeITServices: InnovativeITService[] = [
+  {
+    id: 'zero-trust-security-platform'
+    name: 'Zero Trust Security Platform'
+    tagline: 'Next-generation cybersecurity with zero trust architecture'
+    price: '$599'
     period: '/month',,
-  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.';
+  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.'
     features: [
-      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management';
+      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'
       'Compliance reportingReal-time monitoring'
-    ];
-    popular: true;
-    icon: '';
+    ]
+    popular: true
+    icon: ''
     color: 'from-red-500 to-pink-600'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/zero-trust-security-platform',
-    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.';
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure';
-    trialDays: 30;
-    setupTime: '2 hours';
-    category: 'IT & Cybersecurity';
-    realService: true;
-    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'];
-    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'];
-    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'];
-    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.';
+    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.'
+    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure'
+    trialDays: 30
+    setupTime: '2 hours'
+    category: 'IT & Cybersecurity'
+    realService: true
+    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS']
+    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk']
+    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection']
+    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.'
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk']
     marketSize: '$45 B cybersecurity market'
     growthRate: '110% annual growth',
@@ -1499,8 +1513,12 @@ export const,
   g: 4.7,
     review,
   s: 1250}
-];
   }
+]
+  }
+]
+  }
+
 export interface InnovativeITService,
   id: string, nam,
   e: string, taglin,
@@ -1812,7 +1830,7 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} export interface InnovativeITService { } ]; ; } ]; realImplementatio,
+  s: 1250} export interface InnovativeITService { } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'' launchDat,
   e: '2024-01-01' customer,
