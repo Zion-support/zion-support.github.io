@@ -8,10 +8,13 @@ import ServicesPage from './app/services/page'
 import ContactPage from './app/contact/page'
 import AIServicesPage from './app/ai-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
-import AIServicesPage from './app/ai-services/page'
 import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
-import ContactPage from './app/contact/page'
+import CloudServicesPage from './app/cloud-services/page'
+import CybersecurityPage from './app/cybersecurity/page'
+import DataAnalyticsPage from './app/data-analytics/page'
+import CustomDevelopmentPage from './app/custom-development/page'
+import MobileDevelopmentPage from './app/mobile-development/page'
 
 function App() {
   return (
@@ -25,10 +28,13 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/it-services" element={<ITServicesPage />} />
           <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/cloud-services" element={<CloudServicesPage />} />
+          <Route path="/cybersecurity" element={<CybersecurityPage />} />
+          <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+          <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+          <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
         </Routes>
         <Footer />
       </div>
