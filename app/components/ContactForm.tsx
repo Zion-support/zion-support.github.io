@@ -30,7 +30,6 @@ const ContactForm: React.FC = () => {
     message: ''
   })
 
-=======
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -40,7 +39,6 @@ const ContactForm: React.FC = () => {
     }))
   }
 
-=======
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
