@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'
@@ -56,109 +56,106 @@ export default function SearchFeature() {
   }
   return (
     <>
-            <li>
+            <li></li>
               Sort by rating, price, or recency to surface the best options.</$1></$1>
-          <h2 className='text - 2xl font - bold mb - 4'>
+          <h2 className='text - 2xl font - bold mb - 4'></h2>
             Frequently Asked Questions</$1>
-          <div className='space - y-4 mb - 12'>
-            <div>
-              <p className='font - semibold'>
+          <div className='space - y-4 mb - 12'></div>
+            <div></div>
+              <p className='font - semibold'></p>
                 Can I search in multiple languages?</$1>
-              <p className='text - zion - slate - light'>
-                Yes, the search engine supports queries in all interface
+              <p className='text - zion - slate - light'></p>
+                Yes, the search engine supports queries in all interface;
                 languages.</$1></$1>
-            <div>
+            <div></div>
               <p className='font - semibold'>How are results ranked?</p>
-              <p className='text - zion - slate - light'>
-                A combination of relevance scoring and community ratings
+              <p className='text - zion - slate - light'></p>
+                A combination of relevance scoring and community ratings;
                 determines the order.</$1></$1></$1>
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
-
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      <script></script>
         type="application/ld+json"
-
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <Header /></Header>
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
-            <img
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"></div>
+            <img></img>
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results">
               className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light"></ul>
             <li>Find the right expert or product without endless scrolling.</li>
             <li>Save favorite searches and get notified of new matches.</li>
             <li>Sort by rating, price, or recency to surface the best options.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div className="space-y-4 mb-12"></div>
+            <div></div>
               <p className="font-semibold">Can I search in multiple languages?</p>
               <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>
             </div>
-            <div>
+            <div></div>
               <p className="font-semibold">How are results ranked?</p>
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
 
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+          <div className='text-center'></div>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
               <Link href='/search'>Try Search</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      <script></script>
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <Header /></Header>
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"></div>
+            <img></img>
               src="https: //placehold.co/800x400"
               alt="Screenshot of search results">
               className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light"></ul>
             <li>Find the right expert or product without endless scrolling.</li>
             <li>Save favorite searches and get notified of new matches.</li>
             <li>Sort by rating, price, or recency to surface the best options.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div className="space-y-4 mb-12"></div>
+            <div></div>
               <p className="font-semibold">Can I search in multiple languages?</p>
               <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>
             </div>
-            <div>
+            <div></div>
               <p className="font-semibold">How are results ranked?</p>
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+          <div className="text-center"></div>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/search">Try Search</Link>
             </Button>
           </div>
@@ -185,32 +182,26 @@ export default function SearchFeature() {
   }
   return (
     <>
-      <SEO
+      <SEO></SEO>
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      <script></script>
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <Header /></Header>
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"></div>
+            <img></img>
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
-<<<<<<< HEAD
-
-=======
->
->
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>

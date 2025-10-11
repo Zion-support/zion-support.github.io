@@ -2,7 +2,7 @@ import React from 'react'
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
-  title
+  title;
   description,
   ctaText,
   ctaUrl,
@@ -23,24 +23,18 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       }}
     >
       {imageUrl && (
-        <div className="banner-image">
-          <img
+        <div className="banner-image"></div>
+          <img></img>
       {imageUrl && (>
-        <div className="banner-image">
-          <img
+        <div className="banner-image"></div>
+          <img></img>
             src={imageUrl}
             alt={title}
             style={{
               width: '200px',
               height: 'auto')}
               borderRadius: '0.25rem')}
-<<<<<<< HEAD
-const,
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */});
-=======
-const,>
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+
 }) => {/* TODO: Fix JSX expression */}
       }}
     >
@@ -51,7 +45,7 @@ const,>
             }}
           />
       )}
-      <div className="banner-content" style={{ flex: 1 }}>
+      <div className="banner-content" style={{ flex: 1 }}></div>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
         <$2 />
@@ -77,7 +71,7 @@ const,>
   e: '1.5rem' }}>{title}
         < style={/* TODO: Fix JSX expression */}$2 />
   y: 0.9 }}>{description}
-        <a>
+        <a></a>
           href={ctaUrl}
           style={/* TODO: Fix JSX expression */}
           }}
@@ -92,7 +86,7 @@ const,>
     </div>
   )
 }
-export default AdvertisingBanner
+export default AdvertisingBanner;
 "
   </AdvertisingBannerProps>
   </AdvertisingBannerProps>

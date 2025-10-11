@@ -7,7 +7,7 @@ const ItProjectManagementPage: React.FC = () => {const features = [
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     {icon: BarChart,
-      title: 'Feature 2', 
+      title: 'Feature 2',
       description: 'Description for feature 2.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     {icon: TrendingUp,
@@ -32,54 +32,50 @@ const ItProjectManagementPage: React.FC = () => {const features = [
   ]
   return (
     <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigation>
             </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
           </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
         </section>
 
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 This page is under development. Please check back soon for updates.
               </p>
                 </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
               ))}
             </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
           </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
         </section>
 
         {/* Benefits Section */}
                 </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
               ))}
             </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
           </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
         </section>
 
@@ -87,11 +83,11 @@ const ItProjectManagementPage: React.FC = () => {const features = [
               </button>
             </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
           </div>
 
-      <Footer />
+      <Footer /></Footer>
     </>
         </section>
   );

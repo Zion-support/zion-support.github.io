@@ -4,10 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
 const AnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -117,71 +114,55 @@ const AnalyticsDashboardPage: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
+    <div className="min-h-screen bg-gray-50"></div>
+      <Helmet></Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />      </Helmet>
 
-      <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}>        <section className="pt-20 pb-16 px-4">
-=======
-        <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <div className="container mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
               AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Analytics Dashboard</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Transform your data into actionable insights with our AI-powered analytics dashboard. Monitor, analyze, and optimize your business performance in real-time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+                Start Free Trial;
+                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                View Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"></button>
+                View Demo;
               </button>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Features
+        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+                Powerful Features;
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make data-driven decisions
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Everything you need to make data-driven decisions;
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => {
                 const Icon = feature.icon;
   return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
-                    <div className="text-purple-400 mb-4">
-                      <Icon className="w-8 h-8" />
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"></div>
+                    <div className="text-purple-400 mb-4"></div>
+                      <Icon className="w-8 h-8" /></Icon>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul>
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={idx} className="flex items-center text-sm text-gray-300"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {benefit}
                         </li>
                       ))}
@@ -194,68 +175,50 @@ const AnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-slate-800/50"></section>
+          <div className="container mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive analytics solutions for your business
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Comprehensive analytics solutions for your business;
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-      <Footer />
+      <Footer /></Footer>
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <div key={index} className="flex items-center space-x-3"></div>
+                  <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" /></CheckCircle>
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
-<<<<<<< HEAD
 
-      <Footer />
-    </>              ))}
-=======
-      
-      <Footer />
-    </>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="container mx-auto text-center"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Start analyzing your data with our AI-powered analytics dashboard today.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"></button>
 Start Free Trial>
-<<<<<<< HEAD
-                <ArrowRight className="ml-2 h-5 w-5">              </button>
-=======
-                <ArrowRight className="ml-2 h-5 w-5">
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Contact Sales
+
+              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"></button>
+                Contact Sales;
               </button>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Footer>
     </div>
   )
 }
 
-export default AnalyticsDashboardPage
+export default AnalyticsDashboardPage;
