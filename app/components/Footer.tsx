@@ -17,6 +17,17 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ];
 
+  const serviceLinks = [
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Micro SaaS', url: '/micro-saas' },
+    { name: 'Cloud Solutions', url: '/it-services?category=Cloud' },
+    { name: 'Cybersecurity', url: '/it-services?category=Security' },
+    { name: 'Quantum Computing', url: '/ai-services?category=Quantum Computing' },
+    { name: '5G Implementation', url: '/it-services?category=5G Technology' },
+    { name: 'Blockchain Solutions', url: '/it-services?category=Blockchain' }
+  ];
+
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -32,7 +43,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
-    { name: 'Edge Computing', url: '/edge-computing' },
+    { name: 'Edge Computing', url: '/it-services?category=Edge Computing' },
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
   ];
@@ -44,7 +55,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
@@ -87,6 +98,22 @@ const Footer: React.FC = memo(() => {
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
               </div>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
+            <ul className="space-y-2">
+              {serviceLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

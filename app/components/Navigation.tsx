@@ -98,9 +98,90 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-4">
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Brain className="w-4 h-4 mr-2" />
+                        AI Services
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          All AI Services
+                        </Link>
+                        <Link to="/ai-services?category=Customer Service" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          AI Chatbots & Support
+                        </Link>
+                        <Link to="/ai-services?category=Analytics" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          AI Analytics
+                        </Link>
+                        <Link to="/ai-services?category=Quantum Computing" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Quantum Computing
+                        </Link>
+                        <Link to="/ai-services?category=Autonomous Systems" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Autonomous Systems
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Cloud className="w-4 h-4 mr-2" />
+                        IT Services
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          All IT Services
+                        </Link>
+                        <Link to="/it-services?category=Cloud" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Cloud Solutions
+                        </Link>
+                        <Link to="/it-services?category=Security" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Cybersecurity
+                        </Link>
+                        <Link to="/it-services?category=5G Technology" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          5G Implementation
+                        </Link>
+                        <Link to="/it-services?category=Blockchain" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Blockchain & Web3
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <BarChart className="w-4 h-4 mr-2" />
+                        Micro SaaS
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          All Micro SaaS
+                        </Link>
+                        <Link to="/micro-saas?category=Analytics" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Analytics Pro
+                        </Link>
+                        <Link to="/micro-saas?category=Customer Service" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Chat AI
+                        </Link>
+                        <Link to="/micro-saas?category=Finance" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Invoice Genius
+                        </Link>
+                        <Link to="/micro-saas?category=Marketing" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Lead Magnet
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
