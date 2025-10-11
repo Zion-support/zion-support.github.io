@@ -1,16 +1,28 @@
 'use client';
 import React from 'react';
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits." />
-        <meta name="keywords" content="relevant, keywords, for, seo" />
-      </Helmet>
-            </div>
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+export default function DataCenterPage() {
+  return (
+    <>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Data Center
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Reliable data center solutions for your infrastructure.
+            </p>
           </div>
-        </section>
+        </div>
+      </main>
 
       <Footer />
     </>
   );
-};
+}
 

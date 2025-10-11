@@ -1,49 +1,55 @@
 
+'use client';
+import React, { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState(0);
 
   const demos = [
     {
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              See It in
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Action
-              </span>
-            </h1>
-                Schedule Live Demo
-              </button>
-            </div>
-          </div>
-        </section>
+      title: "AI Solutions Demo",
+      description: "Experience our AI-powered solutions in action"
+    },
+    {
+      title: "Data Analytics Demo", 
+      description: "See how our analytics tools transform your data"
+    },
+    {
+      title: "Security Demo",
+      description: "Witness our cybersecurity solutions in action"
+    }
+  ];
 
+  return (
+    <>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Live Demos
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              See our solutions in action
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              {demos.map((demo, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">{demo.title}</h3>
+                  <p className="text-gray-300 mb-4">{demo.description}</p>
+                  <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                    Watch Demo
+                  </button>
                 </div>
               ))}
             </div>
           </div>
-        </section>
-
-          </div>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to See More?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </main>
       
       <Footer />
     </>

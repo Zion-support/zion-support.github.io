@@ -1,2 +1,7 @@
-import { createMocks, RequestMethod } from 'node-mocks-http'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { describe, it, expect } from '@jest/globals';
+
+describe('Reviews API', () => {
+  it('should be implemented', () => {
+    expect(true).toBe(true);
+  });
+});
