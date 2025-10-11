@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const EnhancedErrorBoundary: React.FC = () => {
   const features = [
