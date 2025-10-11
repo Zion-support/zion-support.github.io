@@ -45,7 +45,7 @@ fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScrip
 // try {
     // This would run accessibility tests in a real scenario
 //     } catch (error) {
-// // 3. Create accessibility improvements;`
+// // 3. Create accessibility improvements`
 // // const accessibilityScript = `import { execSync } from 'child_process'
 // // Check for accessibility issues
 // try {/* TODO: Fix JSX expression */}
@@ -60,7 +60,7 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 // try {
     // This would run SEO tests in a real scenario
 //     } catch (error) {
-// // 4. Create SEO improvements;`
+// // 4. Create SEO improvements`
 // // const seoScript = `import { execSync } from 'child_process'
 // // Check for SEO issues
 // try {/* TODO: Fix JSX expression */}
@@ -70,7 +70,7 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 // `
 fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript)
 // // 5. Create comprehensive test suite
-// // 5. Create comprehensive test suite;`
+// // 5. Create comprehensive test suite`
 // // const testSuite = `import { describe, it, expect } from '@jest/globals'
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     })
@@ -87,7 +87,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     })
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
     })
-});`
+})`
 `
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite)
 // // 6. Create monitoring script
@@ -98,7 +98,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite)
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
-// // 6. Create monitoring script;`
+// // 6. Create monitoring script`
 // // const monitoringScript = `import { execSync } from 'child_process'
 // // Monitor performance
 // try {/* TODO: Fix JSX expression */}
@@ -109,7 +109,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite)
 // `
 fs.writeFileSync('/workspace/scripts/monitor.js', monitoringScript)
 // // 7. Update README with improvements
-// // 7. Update README with improvements;`
+// // 7. Update README with improvements`
 // const readmeContent = `# Zion Tech Group - Advanced AI and IT Solutions Website
 ## Recent Improvements
 ### Performance Optimizations
@@ -133,7 +133,7 @@ fs.writeFileSync('/workspace/scripts/monitor.js', monitoringScript)
 - ✅ Error tracking
 - ✅ Code quality checks
 ## Quick Start
-## Quick Start;`
+## Quick Start`
 \`\`\`bash
 # Install dependencies
 pnpm install
@@ -155,18 +155,18 @@ pnpm perf: audit
 - \`pnpm optimize:all\` - Run all optimizations
 - \`pnpm perf:audit\` - Run performance audit,
 pnpm,
-  perf: audit;`
+  perf: audit`
 \`\`\`
 
-## Available Scripts;`
-- \`pnpm dev\` - Start development server;`
-- \`pnpm build\` - Build for production;`
-- \`pnpm test\` - Run tests;`
+## Available Scripts`
+- \`pnpm dev\` - Start development server`
+- \`pnpm build\` - Build for production`
+- \`pnpm test\` - Run tests`
 - \`pnpm lint\` - Run linting,`
 - \`pnpm,`
   optimize: all\` - Run all optimizations,`
 - \`pnpm,`
-  perf: audit\` - Run performance audit;`
+  perf: audit\` - Run performance audit`
 `,
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent)

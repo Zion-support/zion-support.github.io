@@ -1,22 +1,21 @@
 import, React, from 'rea, c, t'
 impo, r, t {Li, n, k} fr, o, m 'rea, c, t-rout, e, r-d, o, m'
 impo, r, t {newArticles20, 2, 5} fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
-const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
+const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6) retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
       </section>
 <div, classNam, e='container, m, x-auto, p, x-6'>
         </div>
 <div, classNam, e='te, x, t-center, m, b-12'>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h;
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
-    </div>
+            Latest, Article, s  & Resear, c, h;
+  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6) retu, r, n(</div>
 <section, classNam, e = 'py-20, b, g-whi, t, e'>
       </section>
 <div, classNam, e='container, m, x-auto, p, x-6'>
         </div>
 <div, classNam, e='te, x, t-center, m, b-12'>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h;
+            Latest, Article, s  & Resear, c, h;
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (
@@ -25,10 +24,10 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {const, latestArticle, s =
                   {artic, l, e.t, i, t, l, e}
                   </div>
 <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e;
-                    Read, Mor, e;
-                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles;)
+                    Read, Mor, e
+                    Read, Mor, e
+                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+            View, All, Articles)
             <Link, classNam, e='w-6 h-6' />)
 }})
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
@@ -37,9 +36,9 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                   {artic, l, e.t, i, t, l, e}
                   </div>
 <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e;
-                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles;
+                    Read, Mor, e
+                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
+            View, All, Articles
             <Link, classNam, e='w-6 h-6' />
 }}
 </div>

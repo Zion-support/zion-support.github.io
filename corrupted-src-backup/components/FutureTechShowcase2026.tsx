@@ -1,6 +1,6 @@
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle, s = [
     {
-      i;
+      i
   d: 1,
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing','
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6','
@@ -8,7 +8,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Quantum, AI, Revolution','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Atom, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
@@ -20,7 +20,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Autonomous, Evolutio, n','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '22, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Brain, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
@@ -32,7 +32,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Predictive, Intelligenc, e','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '15, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Target, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'PREDICTI, V, E','
@@ -44,7 +44,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Immersive, Technolog, y','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '12, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Rocket, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'IMMERSI, V, E','
@@ -56,7 +56,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Quantum, Securit, y','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '14, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Shield, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'QUANT, U, M-SECU, R, E','
@@ -68,7 +68,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {const, futureTechArticle,
       catego, r, y: 'Me, t, a-Cognitive, A, I','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '20, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Bot, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'ME, T, A-COGNITI, V, E','
@@ -90,7 +90,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Quantum, AI, Revolution','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Atom, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
@@ -103,7 +103,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Autonomous, Evolutio, n','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '22, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Brain, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
@@ -115,7 +115,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Predictive, Intelligenc, e','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '15, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Target, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'PREDICTI, V, E','
@@ -127,7 +127,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Immersive, Technolog, y','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '12, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Rocket, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'IMMERSI, V, E','
@@ -139,7 +139,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Quantum, Securit, y','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '14, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Shield, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'QUANT, U, M-SECU, R, E','
@@ -151,7 +151,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       catego, r, y: 'Me, t, a-Cognitive, A, I','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '20, mi, n','
-      trendi, n, g: tr, u, e;
+      trendi, n, g: tr, u, e
       ic, o, n: <Bot, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'ME, T, A-COGNITI, V, E','

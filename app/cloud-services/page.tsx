@@ -1,117 +1,20 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
+'use client'
+import React from 'react'
 
-const PagePage: React.FC = () => {return (
+const PagePage: React.FC = () => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Page solutions for your business.
+          </p>
         </div>
-<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          </section>
-<div className="max-w-7xl mx-auto">
-</div>
-<div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
-              </p>
-
-</div>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-</div>
-        <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-      </div><Helmet>
-        </Helmet><title>Cloud Services - Zion Tech Group  | Cloud Solutions  & Migration</title>
-        <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
-        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
-        <meta property="og: title" content="Cloud Services - Zion Tech Group" />,
-        <meta property="og: description" content="Expert cloud solutions and migration services" />,
-        <meta property="og: type" content="website" />,
-        <meta name="twitter: card" content="summary_large_image" />,
-        <meta name="twitter: title" content="Cloud Services - Zion Tech Group" />,
-        <meta name="twitter: description" content="Expert cloud solutions and migration services" />,
-      </Helmet>
-
-              </span>
-              <br />
-              <span className="text-white"></span></span>Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your business with our comprehensive cloud services.</p>
-              From migration to management, we provide end-to-end cloud solutions.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300"></button>,</button>
-                Learn More
-              </button>
-</div>
-</div>
-        </section>
-
-{/* Content Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
-          </section>
-<div className="max-w-7xl mx-auto">
-</div>
-<div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
-</div>
-        </section>
-</div>
-</div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-))}
-            </div>
-</div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          </section>
-<div className="max-w-4xl mx-auto text-center">
-            </div>
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              </div>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover: bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-</div>
-</div>
-        </section>
-      </main>
-
-<Footer />
-    </>
+      </div>
+    </div>
   )
 }
 

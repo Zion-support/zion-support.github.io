@@ -22,7 +22,7 @@ const ${componentName}: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -36,7 +36,7 @@ const ${componentName}: React.FC = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -56,17 +56,16 @@ const ${componentName}: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default ${componentName};`;
+export default ${componentName}`
 
-  return basicTemplate;
+  return basicTemplate
 }
 
 // Function to check if file is corrupted
-function isFileCorrupted(content) {
-  // Check for common corruption patterns
+function isFileCorrupted(content) {// Check for common corruption patterns
   const corruptionPatterns = [
     /<div><\/div>/g,
     /<section><\/section>/g,
@@ -90,8 +89,7 @@ function isFileCorrupted(content) {
     /Unterminated regular expression/g
   ];
   
-  return corruptionPatterns.some(pattern => pattern.test(content));
-}
+  return corruptionPatterns.some(pattern => pattern.test(content))}
 
 // Function to find all corrupted TSX files
 function findCorruptedFiles() {
@@ -99,33 +97,27 @@ function findCorruptedFiles() {
     const result = execSync('find app -name "*.tsx" -type f', { 
       encoding: 'utf8',
       stdio: 'pipe'
-    });
-    const files = result.trim().split('\n').filter(line => line.length > 0);
+    })
+    const files = result.trim().split('\n').filter(line => line.length > 0)
     
     const corruptedFiles = [];
     
-    for (const filePath of files) {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
+    for (const filePath of files) {try {
+        const content = fs.readFileSync(filePath, 'utf8')
         if (isFileCorrupted(content)) {
-          corruptedFiles.push(filePath);
-        }
-      } catch (error) {
-        // If we can't read the file, consider it corrupted
-        corruptedFiles.push(filePath);
-      }
+          corruptedFiles.push(filePath)}
+      } catch (error) {// If we can't read the file, consider it corrupted
+        corruptedFiles.push(filePath)}
     }
     
-    return corruptedFiles;
-  } catch (error) {
-    console.error('Error finding corrupted files:', error.message);
-    return [];
-  }
+    return corruptedFiles
+  } catch (error) {console.error('Error finding corrupted files: ', error.message)
+    return []}
 }
 
 // Function to fix all corrupted files
 function fixAllCorruptedFiles() {
-  const corruptedFiles = findCorruptedFiles();
+  const corruptedFiles = findCorruptedFiles()
   console.log(`Found ${corruptedFiles.length} corrupted files`);
   
   let fixedCount = 0;
@@ -133,8 +125,8 @@ function fixAllCorruptedFiles() {
   
   for (const filePath of corruptedFiles) {
     try {
-      console.log(`Fixing: ${filePath}`);
-      const newContent = rewriteCorruptedFile(filePath);
+      console.log(`Fixing: ${filePath}`)
+      const newContent = rewriteCorruptedFile(filePath)
       fs.writeFileSync(filePath, newContent, 'utf8');
       fixedCount++;
       console.log(`  ✓ Fixed`);
@@ -145,7 +137,7 @@ function fixAllCorruptedFiles() {
   }
   
   console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors: ${errorCount} files`);
+  console.log(`Errors: ${errorCount} files`)
 }
 
 // Run the fix

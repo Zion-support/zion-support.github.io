@@ -2,7 +2,7 @@ import React from 'react'
 interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
-  banner;
+  banner
   className = ''}) => {const variantStyles = {
     success: 'bg-gradient-to-r from-green-600 to-emerald-600',
     warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',

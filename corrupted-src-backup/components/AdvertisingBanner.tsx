@@ -2,7 +2,7 @@ import React from 'react'
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
-  title;
+  title
   description,
   ctaText,
   ctaUrl,
@@ -62,7 +62,7 @@ const,
             transition: 'background-color 0.2s'}
           }}
           onMouseOver={e => {}
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'}
           }}
           onMouseOut={e => {}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
@@ -87,7 +87,7 @@ const,
 </div>
 )
 }
-export default AdvertisingBanner;
+export default AdvertisingBanner
 "
   </AdvertisingBannerProps>
   </AdvertisingBannerProps>

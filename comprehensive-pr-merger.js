@@ -92,7 +92,7 @@ const mergeStrategy = {/* TODO: Fix JSX expression */}
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })
-    //Try initial merge;`
+    //Try initial merge`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       {/* TODO: Fix JSX expression */}
   o: 'inherit' })
@@ -157,7 +157,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //                 } catch (fileError) {
           for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-                });"`
+                })"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })
 //                 } catch (fileError) {/* TODO: Fix JSX expression */}

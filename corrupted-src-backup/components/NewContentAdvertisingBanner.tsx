@@ -1,16 +1,16 @@
 import React from "react"
-interface, FeaturedConten, t {id: numb, e, r;
-tit, l, e: stri, n, g;
-catego, r, y: stri, n, g;
-readTi, m, e: stri, n, g;
-rati, n, g: numb, e, r;
-reade, r, s: stri, n, g;
-bad, g, e: stri, n, g;
-gradie, n, t: stri, n, g;
-ic, o, n: Rea, c, t.ReactNo, d, e;
+interface, FeaturedConten, t {id: numb, e, r
+tit, l, e: stri, n, g
+catego, r, y: stri, n, g
+readTi, m, e: stri, n, g
+rati, n, g: numb, e, r
+reade, r, s: stri, n, g
+bad, g, e: stri, n, g
+gradie, n, t: stri, n, g
+ic, o, n: Rea, c, t.ReactNo, d, e
 l, i, n;
-  k: stri, n, g;}
-const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, featuredConte, n;
+  k: stri, n, g}
+const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, featuredConte, n
   t: FeaturedConte, n, t[] = [
     {
       id: 0,
@@ -32,7 +32,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, featuredConte
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
     {id: 1,
-      tit, l, e: 'AI, 20, 2;
+      tit, l, e: 'AI, 20, 2
   7: Operational, Trust, Blueprint','
       catego, r, y: 'AI, Strateg, y','
       readTi, m, e: '8, mi, n','
@@ -42,7 +42,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, featuredConte
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
     {id: 2,
-      tit, l, e: 'Edge, 20, 2;
+      tit, l, e: 'Edge, 20, 2
   6: Private, Feature, Flags','
       catego, r, y: 'Architectu, r, e','
       readTi, m, e: '7, mi, n','
@@ -84,7 +84,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       rati, n, g: 5.0,
       reade, r, s: '2, 5, K+','
       bad, g, e: 'N, E, W','
-      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',';"
+      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0','"
       ic, o, n: <Sparkles, className="w-6 h-6" />,"
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s'
     }
@@ -98,7 +98,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'}
     {id: 1,
-      tit, l, e: 'AI, 20, 2;
+      tit, l, e: 'AI, 20, 2
   7: Operational, Trust, Blueprint','
       catego, r, y: 'AI, Strateg, y','
       readTi, m, e: '8, mi, n','
@@ -108,7 +108,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       ic, o, n: <Star, className="w-6 h-6" />,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'}
     {id: 2,
-      tit, l, e: 'Edge, 20, 2;
+      tit, l, e: 'Edge, 20, 2
   6: Private, Feature, Flags','
       catego, r, y: 'Architectu, r, e','
       readTi, m, e: '7, mi, n','
@@ -137,9 +137,9 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     }
   ]
   const, achievement, s = ["
-    {val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" />},";"
-    {val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" />},";"
-    {val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" />},";"
+    {val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" />},""
+    {val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" />},""
+    {val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" />},""
     {val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" />}"
   ]
   return (
@@ -154,7 +154,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </div>
 <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)
-            Revolutionary, New, Content H, u, b;)
+            Revolutionary, New, Content H, u, b)
           </div>
 <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             {achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
@@ -175,7 +175,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </div>
 <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
-            Revolutionary, New, Content H, u, b;
+            Revolutionary, New, Content H, u, b
           </div>
 <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             {achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
@@ -202,7 +202,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                   </div>
 <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
                     <Users, classNam, e="w-4 h-4" />
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s;
+                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s
                   <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
         </div>
 <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16">
@@ -212,10 +212,10 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
 <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                LIMITED, TIME, OFFER;
+                LIMITED, TIME, OFFER
               </div>
-<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                LIMITED, TIME, OFFER;
+<div, classNam, e="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">
+                LIMITED, TIME, OFFER
               </div>
 <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
                 <, hre, f="/subscri, b, e"$2 />
@@ -238,7 +238,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>"
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} /></div>"
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
-            Revolutionary, New, Content H, u, b;"
+            Revolutionary, New, Content H, u, b"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             {/* TODO: Fix JSX expression */}"
               </div>
@@ -266,7 +266,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>"
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                LIMITED, TIME, OFFER;"
+                LIMITED, TIME, OFFER"
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <, hre, f="/subscri, b, e""$2 />
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"

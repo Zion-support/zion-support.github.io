@@ -45,7 +45,7 @@ try {/* TODO: Fix JSX expression */}
 
 // //Step 3: Process branches in batches to avoid conflicts
 // const BATCH_SIZE = 50
-for (let i = 0; i < allBranches.length, i += BATCH_SIZE) {
+for (let i = 0 i < allBranches.length, i += BATCH_SIZE) {
     ,
   batches.push(allBranches.slice(i, i + BATCH_SIZE))
   }
@@ -71,7 +71,7 @@ function resolveConflictsAndMerge(branchName) {,
 // //Step,
   3: Process branches in batches to avoid conflicts
 // const BATCH_SIZE = 50
-for (let i = 0; i < allBranches.length, i += BATCH_SIZE) {/* TODO: Fix JSX expression */}
+for (let i = 0 i < allBranches.length, i += BATCH_SIZE) {/* TODO: Fix JSX expression */}
 }
 
 // //Step,
@@ -90,7 +90,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     //Check if branch is already merged
     try {/* TODO: Fix JSX expression */}`
       const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */})
-      }).trim();`
+      }).trim()`
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
       }).trim()
       if (mergeBase === branchCommit) {/* TODO: Fix JSX expression */}
@@ -113,7 +113,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     } catch (e) {/* TODO: Fix JSX expression */}
     }
 
-    //Try initial merge;`
+    //Try initial merge`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
       {/* TODO: Fix JSX expression */}
   o: 'pipe' })
@@ -171,7 +171,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //             } catch (fileError) {
       for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
             execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"`
+  o: 'pipe' })"`
             execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' })
 //             } catch (fileError) {/* TODO: Fix JSX expression */}
@@ -182,7 +182,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       //Complete the merge
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
         stdio: 'pipe'),
-      //Complete the merge;"`
+      //Complete the merge"`
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
       })
 //       return {/* TODO: Fix JSX expression */}
@@ -226,7 +226,7 @@ const results = {
 const results = {/* TODO: Fix JSX expression */}
     }}}
 
-for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
+for (let i = 0 i < batches.length i++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   )
   const batchResults = {

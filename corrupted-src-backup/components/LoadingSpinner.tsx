@@ -6,7 +6,7 @@ const,
   }
   return (
 <div className={`flex items-center justify-center ${className}`}>)
-      <;)$2 />
+      <)$2 />
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`})
       />)
     </div>
@@ -26,7 +26,7 @@ const,
 )
   )
 }
-export default LoadingSpinner;
+export default LoadingSpinner
 `
   </LoadingSpinnerProps>
 </div>

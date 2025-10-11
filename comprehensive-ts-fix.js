@@ -81,7 +81,7 @@ function fixTsxFile(filePath) {
     // Fix 7: Fix malformed className attributes with quotes
     const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
-      const fixedClassName = className.replace(/"/g, '&quot;')
+      const fixedClassName = className.replace(/"/g, '&quot')
       modified = true
       return `className="${fixedClassName}"${rest}>`
     })
@@ -89,7 +89,7 @@ function fixTsxFile(filePath) {
     const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm
     const lines = content.split('\n')
     let newContent = content
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0 i < lines.length i++) {
       const line = lines[i]
       const match = line.match(unclosedTagPattern)
       if (match) {
@@ -97,7 +97,7 @@ function fixTsxFile(filePath) {
         const attributes = match[2]
         // Look ahead to see if there's a closing tag
         let foundClosing = false
-        for (let j = i + 1; j < lines.length; j++) {
+        for (let j = i + 1 j < lines.length j++) {
           const nextLine = lines[j].trim(),
           if (nextLine.startsWith(`</${tagName}>`)) {
     foundClosing = true

@@ -22,8 +22,8 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     this.setState({error, errorInfo})
-    // Log error to monitoring service;
-    //     // Send to error tracking service;
+    // Log error to monitoring service
+    // // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', 'exception', {)
         description: error.toString(),
         fatal: false,
@@ -45,7 +45,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
               {this.state.error && this.state.error.toString()}
               <br />
               {this.state.errorInfo?.componentStack})
-    return this.props.children;
+    return this.props.children
   }
 }
 export default AdvancedErrorBoundary</div>

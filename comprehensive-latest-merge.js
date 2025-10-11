@@ -57,7 +57,7 @@ function resolveConflictsAndMerge(branchName) {
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })
-    //Try initial merge;`
+    //Try initial merge`
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, {/* TODO: Fix JSX expression */})
     })
     return {/* TODO: Fix JSX expression */}
@@ -113,7 +113,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
                 execSync(`git add "${file}"`, { stdio: 'inherit' })
           for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
                 execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-                });"`
+                })"`
                 execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })
               } catch () {}}
@@ -122,7 +122,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           //Complete the merge
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
             stdio: 'inherit'),
-          //Complete the merge;"`
+          //Complete the merge"`
           execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
           })
           return {/* TODO: Fix JSX expression */}
@@ -158,10 +158,10 @@ const results = {/* TODO: Fix JSX expression */}
 
 //Process branches in batches to avoid overwhelming the system
 // const batchSize = 5
-for (let i = 0; i < branches.length; i += batchSize) {/* TODO: Fix JSX expression */}
+for (let i = 0 i < branches.length i += batchSize) {/* TODO: Fix JSX expression */}
 }
 
-for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fix JSX expression */}`
+for (let batchIndex = 0 batchIndex < batches.length batchIndex++) {/* TODO: Fix JSX expression */}`
     `\n🔄 Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} branches)...`
   )
   for (const branch of batch) {/* TODO: Fix JSX expression */}

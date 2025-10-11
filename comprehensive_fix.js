@@ -6,8 +6,8 @@ if (fs.existsSync(appMinimalTestPath)) {
   // Fix jest imports
   content = content.replace(/import \{ describe, it, expect \} from 'jest';/)
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
-    /import \{ describe, it, expect \} from 'jest';/,
-    `import { describe, it, expect } from '@jest/globals';`
+    /import \{ describe, it, expect \} from 'jest'/,
+    `import { describe, it, expect } from '@jest/globals'`
   )
   fs.writeFileSync(appMinimalTestPath, content)
   //     }
@@ -34,8 +34,7 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
-    // Fix authors format to match Author type
-    content = content.replace(/authors: \['Zion Tech Group'\]/g),
+    // Fix authors format to match Author type content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' }]")
@@ -78,7 +77,7 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
   seoData?: unknown
   enableOpenGraph?: boolean
   enableTwitterCards?: boolean
-  enableSchemaMarkup?: boolean;`
+  enableSchemaMarkup?: boolean`
 }`
   )
   fs.writeFileSync(seoOptimizerPath, content)
@@ -93,7 +92,7 @@ if (fs.existsSync(analyticsTrackerPath)) {
   // Add proper imports and declarations at the top
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '')
-  // Add proper imports and declarations at the top;`
+  // Add proper imports and declarations at the top`
   content = `
 declare global {/* TODO: Fix JSX expression */}
   }
@@ -108,14 +107,14 @@ ${content}`
 if (fs.existsSync(systemMonitorPath)) {
 
   // Add proper React imports
-  content = content.replace(/import React from 'react';/)
+  content = content.replace(/import React from 'react'/)
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
-    `import React, { useState, useEffect } from 'react';`
+    `import React, { useState, useEffect } from 'react'`
   )
   // Remove the performanceEnhancer import and usage
-  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g)
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer'\s*/g)
     ''
-  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer'\s*/g,
     '')
   )
   // Replace performanceEnhancer calls with direct performance API calls
@@ -135,7 +134,7 @@ if (fs.existsSync(performancePath)) {
     gtag: (...args: unknown[]) => void,
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '')
-  // Add proper declaration at the top;`
+  // Add proper declaration at the top`
   content = `declare global {/* TODO: Fix JSX expression */}
   }
 }

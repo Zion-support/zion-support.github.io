@@ -1,4 +1,4 @@
-import, Reac, t, {useSta, t, e, useEffe, c, t} fr, o, m "rea, c, t";"
+import, Reac, t, {useSta, t, e, useEffe, c, t} fr, o, m "rea, c, t""
 import, Reac, t, {useSta, t, e, useEffe, c, t} fr, o, m "rea, c, t";'
 interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
@@ -34,7 +34,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}
                     Re, a, d <Link, classNam, e="w-4 h-4" />
-              View, All, Articles;
+              View, All, Articles
               <Link, classNam, e="w-5 h-5" />
   if (varia, n, t = == 'featu, r, e, d') {retu, r, n(</div>
 <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
@@ -61,7 +61,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
             </div>
 <div, classNam, e="flex, item, s-center, ga, p-3">
               <BookOpen, classNam, e="w-8 h-8, tex, t-whi, t, e" />
-              <h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s;
+              <h2, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s
         </div>
 <div, classNam, e="p-8">
           </div>
@@ -97,7 +97,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" /></TrendingUp>"
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>"
                     Re, a, d <Link, classNam, e="w-4 h-4" />
-              View, All, Articles;"
+              View, All, Articles"
               <Link, classNam, e="w-5 h-5" /></Link>)
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"

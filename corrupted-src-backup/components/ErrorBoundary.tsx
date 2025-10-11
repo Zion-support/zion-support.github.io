@@ -16,9 +16,9 @@ class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-//     // Report error to analytics/monitoring service;
+// // Report error to analytics/monitoring service
     this.reportError(error, errorInfo)
-    // Call custom error handler if provided;
+    // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)}
   }
@@ -59,10 +59,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
           </div>
 <div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong;
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
-:src/components/ErrorBoundary.tsx;
+:src/components/ErrorBoundary.tsx
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
                 Error ID: {this.state.errorId})
@@ -77,7 +77,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <RefreshCw className="w-4 h-4" />
                 Try Again,
               </button>,
-              <;$2 />
+              <$2 />
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
@@ -126,7 +126,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
         </div>
 )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>
+export default ErrorBoundary"`</div></button></button></button></button></p></p></h1>

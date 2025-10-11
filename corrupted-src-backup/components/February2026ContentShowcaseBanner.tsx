@@ -79,7 +79,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
 <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
           <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now;
+            The, Future, of AI, is, Now
               </div>
 <div, ke, y = {in, d, e, x}, classNa, m, e = "te, x, t-cent, e, r">)
                 </div>
@@ -100,7 +100,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
 <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} />
           <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now;
+            The, Future, of AI, is, Now
               </div>
 <div, ke, y = {in, d, e, x}, classNa, m, e = "te, x, t-cent, e, r">
                 </div>
@@ -124,7 +124,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
                   </div>
 <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
                     <Users, classNam, e="w-4 h-4" />
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s;
+                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s
                   <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
         </div>
 <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16">
@@ -134,10 +134,10 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
 <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                EXCLUSIVE, FEBRUARY, OFFER;
+                EXCLUSIVE, FEBRUARY, OFFER
               </div>
-<div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                EXCLUSIVE, FEBRUARY, OFFER;
+<div, classNam, e="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">
+                EXCLUSIVE, FEBRUARY, OFFER
               </div>
 <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
                 <, hre, f="/subscri, b, e"$2 />
@@ -164,7 +164,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s'}} /></div>"
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s'}} /></div>"
           <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now;"
+            The, Future, of AI, is, Now"
               <div, ke, y = {in, d, e, x}, classNa, m, e = "te, x, t-cent, e, r">
                 </div>
 <div, classNam, e = {`${achieveme, n, t.co, l, o, r}, mb-2, flex, justify-cent, e, r`}></div>"
@@ -190,7 +190,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>"
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                EXCLUSIVE, FEBRUARY, OFFER;"
+                EXCLUSIVE, FEBRUARY, OFFER"
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <, hre, f="/subscri, b, e""$2 />
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"

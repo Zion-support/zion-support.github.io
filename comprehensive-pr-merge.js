@@ -161,7 +161,7 @@ const results = {/* TODO: Fix JSX expression */}
 // //Process in batches of 20 to avoid overwhelming the system
 // const batchSize = 20
 // const totalBatches = Math.ceil(recentBranches.length / batchSize)
-for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`
+for (let batch = 0 batch < totalBatches batch++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   )
   for (const branch of batchBranches) {

@@ -4,9 +4,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
             <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
+              Revolutionary, AI, Services Now, Availabl, e
               Revolutionary, AI, Services Now, Availabl, e;
-              Revolutionary, AI, Services Now, Availabl, e;
-          <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (
               <, ke, y = { servi, c, e., i, d}, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}
@@ -18,7 +18,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
 <div, ke, y = { id, x}, classNa, m, e = "flex, item, s-start, ga, p-2">
                       <Zap, classNam, e="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}
-                    Learn, Mor, e;
+                    Learn, Mor, e
                     <Link, classNam, e="w-4 h-4" />
               View, All, Services;
               <Link, classNam, e="w-6 h-6" />
@@ -39,7 +39,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
         </div>
 <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">
           <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
-          <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available;
+          <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available
         </div>
 <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
           {servic, e, s.m, a, p((serv, i, c, e) = > (
@@ -83,9 +83,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
 <div, ke, y = {id, x}, classNa, m, e = "flex, item, s-start, ga, p-2"></div>"
                       <Zap, classNam, e="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" /></Zap>"
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}
-                    Learn, Mor, e;"
+                    Learn, Mor, e"
                     <Link, classNam, e="w-4 h-4" />
-              View, All, Services;"
+              View, All, Services"
               <Link, classNam, e="w-6 h-6" /></Link>)
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"

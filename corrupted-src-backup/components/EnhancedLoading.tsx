@@ -20,7 +20,7 @@ const,
   const renderDots = () => (
     <div className="flex space-x-1">
       {[0, 1, 2].map(i => ()
-        <;)$2 />
+        <)$2 />
           key={i})
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`})
           style={{})
@@ -75,7 +75,7 @@ const,
     </div>
 )
 }
-export default EnhancedLoading;
+export default EnhancedLoading
 "`
   </LoadingProps>
   </LoadingProps>

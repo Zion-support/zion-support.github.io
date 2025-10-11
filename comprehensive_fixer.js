@@ -64,7 +64,7 @@ const fixes = [
     replacement: '$1() { $2 }, $3'},
   //Fix class property syntax
   {
-    pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /(\w+)\s*=\s*([^]+)\s*(\w+)/g
     replacement: '$1 = $2, $3'},
   //Fix import statements
   {
@@ -79,7 +79,7 @@ const fixes = [
     replacement: 'interface $1 { $2 } $3'},
   //Fix type definitions
   {
-    pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /type\s+(\w+)\s*=\s*([^]+)\s*(\w+)/g
     replacement: 'type $1 = $2, $3'},
   //Fix React component syntax
   {
@@ -124,11 +124,11 @@ const fixes = [
   //Fix useState hooks
   {
     pattern: /const\s*\[\s*(\w+),\s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
-    replacement: 'const [$1, $2] = useState($3); $4'},
+    replacement: 'const [$1, $2] = useState($3) $4'},
   //Fix useEffect hooks
   {
     pattern: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
-    replacement: 'useEffect(() => { $1 }, [$2]); $3'},
+    replacement: 'useEffect(() => { $1 }, [$2]) $3'},
   //Fix useCallback hooks
   {
     pattern:
@@ -262,19 +262,19 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   n: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'useEffect(() => { $1 }, [$2]); $3'},
+  t: 'useEffect(() => { $1 }, [$2]) $3'},
   //Fix useCallback hooks
   {/* TODO: Fix JSX expression */}
       /const\s+(\w+)\s*=\s*useCallback\s*\(\s*\([^)]*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = useCallback(() => { $2 }, [$3]); $4'},
+  t: 'const $1 = useCallback(() => { $2 }, [$3]) $4'},
   //Fix useMemo hooks
   {
     pattern:
   {/* TODO: Fix JSX expression */}
       /const\s+(\w+)\s*=\s*useMemo\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = useMemo(() => { $2 }, [$3]); $4'}]
+  t: 'const $1 = useMemo(() => { $2 }, [$3]) $4'}]
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
