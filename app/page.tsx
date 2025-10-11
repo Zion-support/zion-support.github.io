@@ -1,97 +1,89 @@
-'use client';
+
 import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
 
-const HomePage: React.FC = () => {
+const AppPage: React.FC = () => {
   const features = [
     {
-      icon: Wifi,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      title: 'App',
+      description: 'Advanced app solutions powered by artificial intelligence.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
-  const stats = [
-    {number: '500+', label: 'Projects Completed'},
-    {number: '100+', label: 'Happy Clients'},
-    {number: '99.9%', label: 'Uptime Guarantee'},
-    {number: '24/7', label: 'Support Available'}
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="Professional app services and solutions." />
+        <meta name="keywords" content="app, services, solutions, technology" />
+      </Helmet>
+      
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <main className="pt-20 px-4 py-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Advanced AI and IT Solutions for Modern Businesses
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              App
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional app services to help your business succeed and grow.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our app services.
               </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
       
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default HomePage;
+export default AppPage;

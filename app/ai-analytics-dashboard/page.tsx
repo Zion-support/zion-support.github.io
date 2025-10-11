@@ -1,12 +1,16 @@
-'use client';
+
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const AiAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
-      title: 'AI Analytics Dashboard',
-      description: 'Advanced analytics and insights powered by artificial intelligence.',
-      benefits: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization']
+      title: 'Ai Analytics Dashboard',
+      description: 'Advanced ai analytics dashboard solutions powered by artificial intelligence.',
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
       title: 'Advanced Technology',
@@ -19,16 +23,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 
-const AiAnalyticsDashboardPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -39,28 +34,14 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Ai Analytics Dashboard</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              Ai Analytics Dashboard
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional ai analytics dashboard services to help your business succeed and grow.
             </p>
           </div>
           
@@ -85,7 +66,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
+                Contact us today to learn more about our ai analytics dashboard services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -99,6 +80,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 };

@@ -1,11 +1,10 @@
-'use client';
+
 import React from 'react';
-import {Helmet} from 'react-helmet-async';
 import { Wifi, BarChart, Brain, Target, Zap, Shield, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default function FiveGImplementationPage() {
+const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: <Wifi className="w-8 h-8" />,
@@ -45,9 +44,9 @@ export default function FiveGImplementationPage() {
     }
   ];
 
-const FiveGImplementationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -60,92 +59,29 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Expert Solutions</h3>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-gray-300 mb-4">
-                Professional 5g implementation services delivered by experienced professionals.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Quality Assurance
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Fast Delivery
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  24/7 Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Custom Solutions
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Advanced Technology</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge tools and technologies to deliver superior results.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Latest Tools
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Modern Methods
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Scalable Solutions
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Future-Ready
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-purple-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Proven Results</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Track record of successful projects and satisfied clients.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  High Success Rate
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Client Satisfaction
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Ongoing Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Continuous Improvement
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
+
+export default FiveGImplementationPage;
