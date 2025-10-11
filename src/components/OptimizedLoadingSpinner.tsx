@@ -46,18 +46,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }),
       []
     );
-    const baseClasses = useMemo(
-      () => `inline-block ${sizeClasses[size]} ${colorClasses[color]}`,
-      [size, color, sizeClasses, colorClasses]
-    );
+    // const baseClasses = useMemo(
+    //   () => `inline-block ${sizeClasses[size]} ${colorClasses[color]}`,
+    //   [size, color, sizeClasses, colorClasses]
+    // );
 
-    const fullScreenClasses = useMemo(
-      () => 'fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90',
-      []
-    );
+    // const fullScreenClasses = useMemo(
+    //   () => 'fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90',
+    //   []
+    // );
 
     const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
       switch (variant) {
         case 'dots':
           return (
@@ -122,8 +121,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
     const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
+      const baseClasses = 'flex items-center justify-center';
+      const fullScreenClasses = fullScreen ? 'min-h-screen' : '';
       return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (

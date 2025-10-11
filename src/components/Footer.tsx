@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const microSaasServices = [
@@ -48,20 +48,20 @@ const Footer: React.FC = () => {
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ];
 
-  const specializedServices = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
-    { name: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-grade solutions' },
-    { name: 'Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
-    { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
-  ];
+  // const specializedServices = [
+  //   { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
+  //   { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
+  //   { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
+  //   { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
+  //   { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
+  //   { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
+  //   { name: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-grade solutions' },
+  //   { name: 'Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics' },
+  //   { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
+  //   { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
+  //   { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
+  //   { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
+  // ];
 
   const additionalServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },

@@ -101,6 +101,7 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
+      console.error('Failed to initialize performance monitoring:', error);
       return () => {};
     }
   }, [reportMetric]);

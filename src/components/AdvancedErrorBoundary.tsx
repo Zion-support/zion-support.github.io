@@ -3,7 +3,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 // Simple logger implementation
 const logger = {
-  error: (message: string, context?: any) => {
+  error: (message: string, context?: unknown) => {
     if (process.env.NODE_ENV === 'development') {
       console.error(message, context);
     }
