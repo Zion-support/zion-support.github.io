@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -77,75 +77,92 @@ const MicroSaasServicesPage: React.FC = () => {
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights, symptom tracking, and wellness recommendations.',
+      title: 'AI Health Coach',
+      description: 'Personal AI health coach for fitness, nutrition, and wellness with personalized plans and monitoring.',
       features: [
-        'Symptom tracking',
-        'AI health insights',
-        'Medication reminders',
-        'Wellness recommendations',
-        'Doctor appointment scheduling',
-        'Health data export'
+        'Personalized workout plans',
+        'Nutrition tracking',
+        'Health goal setting',
+        'Wearable device integration',
+        'Sleep analysis',
+        'Mental health support'
       ],
-      pricing: '$18/month',
-      popular: false,
-      link: '/ai-health-tracker',
+      pricing: '$49/month',
+      popular: true,
+      link: '/ai-health-coach',
       category: 'Health'
     },
     {
       icon: <Globe className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time zone handling.',
+      title: 'AI Language Tutor',
+      description: 'Revolutionary AI-powered language learning with personalized tutoring and real-time feedback.',
       features: [
-        'AI meeting scheduling',
-        'Time zone optimization',
-        'Meeting insights',
-        'Team coordination',
-        'Integration with major calendars',
-        'Smart notifications'
+        'Personalized learning paths',
+        'Real-time pronunciation feedback',
+        'Conversational practice',
+        '25+ languages available',
+        'Voice recognition',
+        'Progress tracking'
       ],
-      pricing: '$22/month',
+      pricing: '$39/month',
       popular: true,
-      link: '/ai-smart-calendar',
-      category: 'Productivity'
+      link: '/ai-language-tutor',
+      category: 'Education'
     },
     {
       icon: <Clock className="w-12 h-12 text-indigo-500" />,
-      title: 'AI Time Tracker',
-      description: 'Advanced time tracking with AI-powered project analysis and productivity optimization.',
+      title: 'AI Social Media Manager',
+      description: 'AI-powered social media management with content generation, scheduling, and analytics.',
       features: [
-        'Automatic time tracking',
-        'Project analysis',
-        'Productivity insights',
-        'Team time reports',
-        'Client billing integration',
-        'Mobile time tracking'
+        'AI content generation',
+        'Optimal posting times',
+        'Hashtag optimization',
+        'Engagement analytics',
+        'Multi-platform support',
+        'Automated responses'
       ],
-      pricing: '$16/month',
-      popular: false,
-      link: '/ai-time-tracker',
-      category: 'Productivity'
+      pricing: '$79/month',
+      popular: true,
+      link: '/ai-social-media-manager',
+      category: 'Marketing'
     },
     {
       icon: <DollarSign className="w-12 h-12 text-emerald-500" />,
-      title: 'AI Budget Planner',
-      description: 'Smart budget planning with AI-powered financial forecasting and spending optimization.',
+      title: 'AI Crypto Trading Assistant',
+      description: 'Advanced AI-powered cryptocurrency trading with automated strategies and risk management.',
       features: [
-        'AI financial forecasting',
-        'Spending optimization',
-        'Goal tracking',
-        'Investment insights',
-        'Bill reminders',
-        'Financial reports'
+        'AI market analysis',
+        'Automated trading strategies',
+        'Risk management',
+        'Real-time alerts',
+        'Multi-exchange support',
+        'Portfolio optimization'
       ],
-      pricing: '$20/month',
+      pricing: '$149/month',
       popular: false,
-      link: '/ai-budget-planner',
+      link: '/ai-crypto-trading-assistant',
       category: 'Finance'
+    },
+    {
+      icon: <Home className="w-12 h-12 text-cyan-500" />,
+      title: 'AI Real Estate Analyzer',
+      description: 'AI-powered real estate analysis for property valuation, investment analysis, and market predictions.',
+      features: [
+        'Property valuation',
+        'Investment analysis',
+        'Market predictions',
+        'Rental yield calculations',
+        'Risk assessment',
+        'Portfolio optimization'
+      ],
+      pricing: '$99/month',
+      popular: false,
+      link: '/ai-real-estate-analyzer',
+      category: 'Real Estate'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Finance', 'Security', 'Business', 'Health'];
+  const categories = ['All', 'Productivity', 'Finance', 'Security', 'Business', 'Health', 'Education', 'Marketing', 'Real Estate'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredServices = selectedCategory === 'All' 

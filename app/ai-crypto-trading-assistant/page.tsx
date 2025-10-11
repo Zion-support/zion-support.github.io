@@ -1,64 +1,91 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Share2, TrendingUp, Users, BarChart3, Calendar, Zap, Target, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, TrendingUp, DollarSign, Shield, BarChart3, Zap, Target, Globe, Cpu } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AICryptoTradingAssistantPage: React.FC = () => {
   const features = [
-    'AI-powered content generation for all platforms',
-    'Optimal posting time recommendations',
-    'Hashtag research and optimization',
-    'Engagement rate analytics and insights',
-    'Multi-platform scheduling (Instagram, Twitter, LinkedIn, Facebook)',
-    'Brand voice consistency across platforms',
-    'Competitor analysis and benchmarking',
-    'Automated response to comments and messages',
-    'Visual content creation with AI',
-    'Performance tracking and ROI analysis'
+    'AI-powered market analysis and predictions',
+    'Real-time price monitoring and alerts',
+    'Automated trading strategies based on ML models',
+    'Portfolio optimization and risk management',
+    'Technical indicator analysis and signals',
+    'News sentiment analysis for crypto markets',
+    'Multi-exchange trading support',
+    'Custom trading bot creation',
+    'Performance tracking and analytics',
+    '24/7 market monitoring and alerts'
+  ];
+
+  const tradingStrategies = [
+    {
+      name: 'DCA (Dollar Cost Averaging)',
+      description: 'Automated regular investments to reduce market volatility impact',
+      roi: '15-25%',
+      risk: 'Low'
+    },
+    {
+      name: 'Momentum Trading',
+      description: 'AI identifies and capitalizes on price momentum patterns',
+      roi: '30-50%',
+      risk: 'Medium'
+    },
+    {
+      name: 'Arbitrage Trading',
+      description: 'Exploits price differences across multiple exchanges',
+      roi: '20-40%',
+      risk: 'Low'
+    },
+    {
+      name: 'Grid Trading',
+      description: 'Automated buy/sell orders at predetermined price levels',
+      roi: '25-45%',
+      risk: 'Medium'
+    }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$29',
+      price: '$49',
       period: '/month',
       features: [
-        '3 social media accounts',
-        '50 posts per month',
-        'Basic analytics',
-        'AI content generation',
-        'Email support'
+        'Basic AI analysis',
+        '5 trading pairs',
+        'Email alerts',
+        'Basic portfolio tracking',
+        'Community support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$149',
       period: '/month',
       features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced analytics',
-        'AI content generation',
-        'Hashtag optimization',
-        'Competitor analysis',
-        'Priority support'
+        'Advanced AI analysis',
+        'Unlimited trading pairs',
+        'Real-time alerts',
+        'Advanced portfolio tracking',
+        'Custom trading strategies',
+        'Priority support',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$399',
       period: '/month',
       features: [
-        'Unlimited social media accounts',
-        'Unlimited posts',
-        'Advanced analytics & reporting',
-        'AI content generation',
-        'Team collaboration tools',
-        'Custom integrations',
+        'Premium AI analysis',
+        'Unlimited trading pairs',
+        'Real-time alerts',
+        'Advanced portfolio tracking',
+        'Custom trading strategies',
+        'White-label solution',
         'Dedicated account manager',
         '24/7 phone support'
       ],
@@ -67,18 +94,18 @@ const AISocialMediaManagerPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Posts Generated Daily' },
-    { number: '95%', label: 'Engagement Increase' },
-    { number: '50+', label: 'Supported Platforms' },
+    { number: '85%', label: 'Success Rate' },
+    { number: '$2.5M+', label: 'Assets Under Management' },
+    { number: '50+', label: 'Supported Exchanges' },
     { number: '24/7', label: 'AI Monitoring' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management tool that automates content creation, scheduling, and analytics. Boost your social media presence with intelligent automation." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, AI marketing" />
+        <title>AI Crypto Trading Assistant - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered cryptocurrency trading assistant with automated strategies, real-time analysis, and intelligent risk management. Maximize your crypto profits with AI." />
+        <meta name="keywords" content="AI crypto trading, cryptocurrency bot, automated trading, crypto analysis, trading assistant, blockchain AI" />
       </Helmet>
       
       <Navigation />
@@ -87,20 +114,20 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mb-6">
-              <Share2 className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full mb-6">
+              <TrendingUp className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager
+              AI Crypto Trading Assistant
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your social media presence with AI-powered content creation, intelligent scheduling, 
-              and advanced analytics. Let artificial intelligence handle your social media strategy while you focus on growing your business.
+              Maximize your cryptocurrency profits with our advanced AI trading assistant. 
+              Automated strategies, real-time analysis, and intelligent risk management powered by machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -126,7 +153,7 @@ const AISocialMediaManagerPage: React.FC = () => {
 
           {/* Features Section */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Powerful AI Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Advanced AI Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -134,6 +161,31 @@ const AISocialMediaManagerPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{feature}</span>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Trading Strategies */}
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">AI Trading Strategies</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {tradingStrategies.map((strategy, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-white">{strategy.name}</h3>
+                    <div className="flex gap-2">
+                      <span className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                        ROI: {strategy.roi}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                        strategy.risk === 'Low' ? 'bg-blue-600/20 text-blue-400' : 'bg-yellow-600/20 text-yellow-400'
+                      }`}>
+                        Risk: {strategy.risk}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-gray-300">{strategy.description}</p>
                 </div>
               ))}
             </div>
@@ -147,29 +199,29 @@ const AISocialMediaManagerPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">1. Set Your Goals</h3>
-                <p className="text-gray-300">Define your brand voice, target audience, and content objectives. Our AI learns your preferences and style.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">1. Set Your Strategy</h3>
+                <p className="text-gray-300">Choose from pre-built AI strategies or create custom ones based on your risk tolerance and investment goals.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Cpu className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">2. AI Creates Content</h3>
-                <p className="text-gray-300">Our AI generates engaging posts, captions, and visual content tailored to each platform and your audience.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">2. AI Analyzes Markets</h3>
+                <p className="text-gray-300">Our AI continuously analyzes market data, news sentiment, and technical indicators to identify trading opportunities.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-8 h-8 text-white" />
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">3. Optimize & Analyze</h3>
-                <p className="text-gray-300">Track performance, analyze engagement, and continuously optimize your content strategy for maximum impact.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">3. Execute & Monitor</h3>
+                <p className="text-gray-300">AI automatically executes trades and monitors your portfolio, adjusting strategies based on market conditions.</p>
               </div>
             </div>
           </div>
 
           {/* Pricing Section */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Simple Pricing Plans</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
@@ -197,7 +249,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                     className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular 
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700' 
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-gradient-to-r from-yellow-500 to-orange-600 text-white hover:from-yellow-600 hover:to-orange-700'
                     }`}
                   >
                     Get Started
@@ -209,50 +261,50 @@ const AISocialMediaManagerPage: React.FC = () => {
 
           {/* Benefits Section */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Our AI Social Media Manager?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Our AI Trading Assistant?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Increased Engagement</h3>
-                <p className="text-gray-300">AI-optimized content increases engagement rates by up to 95% compared to manual posting.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Higher Returns</h3>
+                <p className="text-gray-300">AI-optimized strategies achieve 15-50% higher returns compared to manual trading.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-green-400" />
+                  <Shield className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Time Saving</h3>
-                <p className="text-gray-300">Save 10+ hours per week on social media management with intelligent automation.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Risk Management</h3>
+                <p className="text-gray-300">Advanced risk management algorithms protect your investments from major losses.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BarChart3 className="w-8 h-8 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Data-Driven Insights</h3>
-                <p className="text-gray-300">Advanced analytics help you understand what content resonates with your audience.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">24/7 Monitoring</h3>
+                <p className="text-gray-300">Never miss a trading opportunity with round-the-clock AI market monitoring.</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-pink-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Multi-Platform</h3>
-                <p className="text-gray-300">Manage all your social media accounts from one unified dashboard.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Multi-Exchange</h3>
+                <p className="text-gray-300">Trade across 50+ exchanges with unified portfolio management and arbitrage opportunities.</p>
               </div>
             </div>
           </div>
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Social Media?</h2>
+            <div className="bg-gradient-to-r from-yellow-600 to-orange-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Maximize Your Crypto Profits?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses using AI to dominate social media. Start your free trial today!
+                Join thousands of traders using AI to achieve consistent profits in the volatile crypto market.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-yellow-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Free Trial
                 </Link>
@@ -273,4 +325,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AICryptoTradingAssistantPage;
