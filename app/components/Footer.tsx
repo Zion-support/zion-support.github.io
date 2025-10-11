@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Code, Smartphone } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Code, Smartphone, Cloud, Wifi, Cpu } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [
@@ -33,20 +33,12 @@ export default function Footer() {
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-<<<<<<< HEAD
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
-  ];
-
-  const legal = [
-=======
     { name: 'Contact', path: '/contact' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Careers', path: '/careers' },
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
+    { name: 'Careers', path: '/careers' }
+  ]
+
+  const legal = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
   ]
