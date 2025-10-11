@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />
@@ -15,7 +14,6 @@
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions.
             </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -70,5 +68,3 @@
 }
 
 export default CaseStudiesPage
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

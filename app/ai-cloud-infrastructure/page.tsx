@@ -1,6 +1,5 @@
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {
->>>>>>> main
   const features = [
     {
       icon: Brain,
@@ -54,7 +53,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
->>>>>>> main
                 </div>
               ))}
             </div>
@@ -103,7 +101,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 
 export default AiCloudInfrastructurePage;
->>>>>>> main
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'

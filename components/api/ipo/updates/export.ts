@@ -51,7 +51,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "")
   doc && doc.end()
   doc && doc.end()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { readJsonFile } from '../../../../utils/api/storage'
 import { requireSuperadminApi } from '../../../../utils/api/auth'

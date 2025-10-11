@@ -340,8 +340,6 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
@@ -350,9 +348,7 @@ const HomePage: React.FC = () => {
             >
               View All Services
             </a>
-          </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
-        </section>
+          </div>        </section>
 
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>

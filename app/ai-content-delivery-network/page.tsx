@@ -182,7 +182,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
 };
 
 export default AiContentDeliveryNetworkPage;
->>>>>>> main
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

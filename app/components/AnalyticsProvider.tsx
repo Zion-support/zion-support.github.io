@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
 
@@ -14,12 +13,10 @@ interface AnalyticsContextType {
     trackEvent: (eventName: string, parameters?: Record<string, any>) => void
   trackPageView: (pageName: string, pagePath: string) => void
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
 const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
 export const useAnalytics = () => {
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
     if (typeof window === 'undefined') return;
 
@@ -46,7 +43,6 @@ export const useAnalytics = () => {
       // })
     }
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       // Custom analytics tracking
       if (enableDebug) {
@@ -104,6 +100,3 @@ export default undefined
 }
 
 export default AnalyticsProvider
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

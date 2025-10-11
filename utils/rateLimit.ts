@@ -25,7 +25,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   current.count++
   rateLimitMap.set (key, current)
   return true
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next'
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const MAX_REQUESTS = 30; // per IP per endpoint per window

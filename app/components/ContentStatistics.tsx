@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const ContentStatistics: React.FC = () => {,
   const [counters, setCounters] = useState({)
@@ -6,16 +5,13 @@ const ContentStatistics: React.FC = () => {,
     projects: 0,
     satisfaction: 0,
   });
->>>>>>> main
 
   };
     years: 10
   };
->>>>>>> main
 
     years: 10
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const statistics = [
     {icon: Users,
       value: counters.clients,
@@ -69,7 +65,6 @@ const ContentStatistics: React.FC = () => {,
     }
   ];
 
->>>>>>> main
           }
           return prev;
         });
@@ -188,7 +183,6 @@ const ContentStatistics: React.FC = () => {,
           </div>
         ))}
       </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       {/* Achievements Section */}
       <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
@@ -280,5 +274,3 @@ const ContentStatistics: React.FC = () => {,
   );
 };
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

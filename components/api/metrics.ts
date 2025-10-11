@@ -39,8 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return `${d.getMonth() + 1}/${d.getDate()}`
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const d = new Date(now)
     d && d.setDate(d && d.getDate() - (13 - i))
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { Cloud, Zap, Shield, Globe, Users, Award, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
->>>>>>> main
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
@@ -49,7 +47,6 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-teal-500 to-cyan-600'
     }
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -213,7 +210,6 @@ const DynamicContentShowcase: React.FC = () => {
             <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">
               Schedule Demo
             </button>
->>>>>>> main
           </div>
         ))}
       </div>
@@ -226,5 +222,3 @@ const DynamicContentShowcase: React.FC = () => {
         </button>
       </div>
     </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

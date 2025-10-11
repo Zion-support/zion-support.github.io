@@ -1,6 +1,5 @@
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiClimateSolutionsProPage: React.FC = () => {
->>>>>>> main
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -15,7 +14,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const AiClimateSolutionsProPage: React.FC = () => {
   const features = [
     {
->>>>>>> main
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {

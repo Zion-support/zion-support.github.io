@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -20,7 +19,6 @@ interface JobPosition {
 
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -29,7 +27,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart, Zap } from 
 
 const CareersPage: React.FC = () => {
   const jobOpenings = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     {
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
@@ -40,7 +37,6 @@ const CareersPage: React.FC = () => {
     {
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       requirements: [
         'Master\'s degree in Computer Science or related field',
         '5+ years experience in AI/ML development',
@@ -63,14 +59,12 @@ const CareersPage: React.FC = () => {
       title: 'Cloud Solutions Architect',
       department: 'IT Services',
       location: 'Remote / Delaware',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       type: 'Full-time',
       experience: '7+ years',
         'Flexible work arrangements',
         'Professional development budget',
         'Unlimited PTO'
       ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
       title: 'Cybersecurity Specialist',
@@ -91,7 +85,6 @@ const CareersPage: React.FC = () => {
             </h1>
               Be part of a team that's shaping the future of AI and IT solutions. 
               We're looking for passionate professionals to join our mission.
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button">
@@ -200,7 +193,6 @@ const CareersPage: React.FC = () => {
               <div key={index} className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 <span>{benefit}</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               </div>
             </div>
           </div>
@@ -208,9 +200,6 @@ const CareersPage: React.FC = () => {
 
             </div>
           </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         </div>
       </section>
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

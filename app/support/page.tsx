@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const SupportPage: React.FC = () => {
 
@@ -25,7 +24,6 @@ const SupportPage: React.FC = () => {
       icon: Phone,
       title: 'Phone Support',
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   const faqs = [
     {
@@ -53,7 +51,6 @@ const SupportPage: React.FC = () => {
       contact: '+1 302 464 0950',
       availability: '24/7',
       responseTime: 'Immediate'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
       icon: Mail,
@@ -62,7 +59,6 @@ const SupportPage: React.FC = () => {
       contact: 'kleber@ziontechgroup.com',
       availability: '24/7',
       responseTime: 'Within 2 hours'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
       icon: MessageCircle,
@@ -71,7 +67,6 @@ const SupportPage: React.FC = () => {
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
       link: '/knowledge-base'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     }
   ]
 
@@ -94,7 +89,6 @@ const SupportPage: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
@@ -106,7 +100,6 @@ const SupportPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
             </div>
 
@@ -128,12 +121,9 @@ const SupportPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

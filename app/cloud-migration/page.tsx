@@ -177,7 +177,6 @@
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Seamlessly migrate your infrastructure to the cloud with zero downtime. 
               Reduce costs by 50% and improve performance by 300%.
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -206,7 +205,6 @@
                 <div className="text-gray-300">
                   {stat.label}
                 </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
               </div>
             ))}
           </div>
@@ -224,7 +222,6 @@
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -257,4 +254,3 @@
             ))}
 
 export default CloudMigrationPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
