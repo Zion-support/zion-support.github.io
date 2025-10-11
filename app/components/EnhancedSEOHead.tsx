@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Head from 'next/head'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
   title?: string;
@@ -100,20 +100,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
           {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-interface SEOHeadProps {
     </Helmet>
   );
 };
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
-}
 
-
-export default SEOHead
+export default EnhancedSEOHead;

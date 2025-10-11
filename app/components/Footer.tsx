@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight, Shield, BarChart, Database, Globe, Smartphone, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Target, TrendingUp, CheckCircle, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
 const Footer: React.FC = () => {
 =======
@@ -46,36 +52,29 @@ const Footer: React.FC = memo(() => {
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-635f
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900/90 backdrop-blur-sm border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a to="#" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
-                </svg>
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-6 h-6" />
               </a>
-              <a to="#" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                <span className="sr-only">Twitter</span>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-6 h-6" />
               </a>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
@@ -230,10 +229,21 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
 >>>>>>> cursor/website-audit-and-update-with-deployment-635f
+=======
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><a href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</a></li>
+              <li><a href="/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</a></li>
+              <li><a href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</a></li>
+              <li><a href="/digital-transformation" className="text-gray-300 hover:text-white transition-colors">Digital Transformation</a></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
             </ul>
           </div>
 
           {/* Contact */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Contact</h3>
             <div className="space-y-3">
@@ -284,11 +294,43 @@ const Footer: React.FC = memo(() => {
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Cookie Policy
               </Link>
+=======
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3" />
+                kleber@ziontechgroup.com
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3" />
+                +1-302-464-0950
+              </li>
+              <li className="flex items-start text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 mt-1" />
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+              <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+              <a href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
@@ -301,3 +343,9 @@ Footer.displayName = 'Footer';
 
 export default Footer;
 >>>>>>> cursor/website-audit-and-update-with-deployment-635f
+=======
+  )
+}
+
+export default Footer
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8

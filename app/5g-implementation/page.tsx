@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, BarChart, CheckCircle } from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Wifi, BarChart, CheckCircle, Zap, Shield, Globe } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
@@ -8,14 +15,35 @@ const FiveGImplementationPage: React.FC = () => {
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
+      benefits: ['Ultra-low latency', 'High-speed connectivity', 'Massive device support']
     },
     {
       icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Predictive analytics']
+    },
+    {
+      icon: Zap,
+      title: 'Edge Computing',
+      description: 'Deploy edge computing solutions to reduce latency and improve response times.',
+      benefits: ['Reduced latency', 'Local processing', 'Improved reliability']
+    },
+    {
+      icon: Shield,
+      title: 'Security Implementation',
+      description: 'Comprehensive security measures for 5G networks and connected devices.',
+      benefits: ['End-to-end encryption', 'Network slicing', 'Threat detection']
+    },
+    {
+      icon: Globe,
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and smart city infrastructure.',
+      benefits: ['Device management', 'Data collection', 'Automated responses']
     }
-  ];
+  ]
 
+<<<<<<< HEAD
   const pricing = [
     {
       name: 'Basic',
@@ -40,6 +68,8 @@ const FiveGImplementationPage: React.FC = () => {
     },
   ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
   return (
     <>
       <Helmet>
@@ -48,9 +78,15 @@ const FiveGImplementationPage: React.FC = () => {
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -72,9 +108,15 @@ const FiveGImplementationPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
                 Advanced 5G Features
               </h2>
               <p className="text-xl text-gray-300">
@@ -89,6 +131,19 @@ const FiveGImplementationPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>
+<<<<<<< HEAD
+=======
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-sm text-gray-400 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
                 </div>
               ))}
             </div>
@@ -97,8 +152,13 @@ const FiveGImplementationPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
               Ready to Implement 5G?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -114,6 +174,7 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Pricing Section */}
         <section className="py-20 px-4">
@@ -191,9 +252,15 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
       </div>
     </>
-  );
-};
+  )
+}
 
+<<<<<<< HEAD
 export default FiveGImplementationPage;
+=======
+export default FiveGImplementationPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-aca8
