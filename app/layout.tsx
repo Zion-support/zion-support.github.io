@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -222,11 +219,9 @@ export const metadata: Metadata = {
   },
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 export default function RootLayout({
   children,
 }: {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
@@ -234,32 +229,23 @@ import Footer from './components/Footer';
 import './globals.css';
 
 interface RootLayoutProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
   children: React.ReactNode;
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#1e293b" />
       </head>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <body className={inter.className}>
         {children}
       </body>
     </html>
   );
-<<<<<<< HEAD
-
-=======
       <head>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
@@ -281,8 +267,5 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 };
 
 export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
 }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

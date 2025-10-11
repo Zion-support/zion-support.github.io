@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 import React from 'react'
@@ -13,7 +11,6 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight, Clock, Users, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -51,9 +48,6 @@ const PagePage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-<<<<<<< HEAD
-
-=======
     'Improve compliance and audit trails',
     'Enable 24/7 automated operations'
   ]
@@ -82,7 +76,6 @@ const PagePage: React.FC = () => {
   ]
 
 const PagePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
   return (
     <>
       <Helmet>
@@ -190,9 +183,6 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default PagePage;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -411,4 +401,3 @@ export default PagePage;
 export default AiWorkflowAutomationPage;
 export default AiWorkflowAutomationPage
 export default AiWorkflowAutomationPage
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -384,4 +382,3 @@ export default ContentStatistics;
 }
 
 export default ContentStatistics
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

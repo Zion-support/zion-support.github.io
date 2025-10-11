@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 const UseintersectionobserverPage: React.FC = () => {
   const features = [
@@ -44,7 +42,6 @@ const UseintersectionobserverPage: React.FC = () => {
               </button>
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>

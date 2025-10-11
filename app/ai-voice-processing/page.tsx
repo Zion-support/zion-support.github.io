@@ -149,8 +149,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default AiVoiceProcessingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

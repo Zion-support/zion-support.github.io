@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import {  Cloud, Zap, Shield, ChevronLeft, ChevronRight  } from 'lucide-react';
 import React from 'react';
@@ -363,4 +361,3 @@ export default ContentCarousel;
 }
 
 export default ContentCarousel
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

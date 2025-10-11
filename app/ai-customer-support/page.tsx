@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 import { Brain, MessageCircle, Zap, Shield, BarChart, Clock, Star, ArrowRight, CheckCircle, TrendingUp, PieChart, Target } from 'lucide-react';
@@ -114,7 +112,6 @@ return (
   }
                         </ul><li>
                           </li><CheckCircle>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -125,8 +122,6 @@ const PagePage: React.FC = () => {
       benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-<<<<<<< HEAD
-=======
       icon: MessageCircle,
       title: 'Multi-Channel Support',
       description: 'Seamless integration across all customer touchpoints',
@@ -145,18 +140,14 @@ const PagePage: React.FC = () => {
       details: ['GDPR Compliant', 'SOC 2 Type II', 'End-to-end Encryption', 'Data Privacy']
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-<<<<<<< HEAD
-=======
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that understand customer intent and provide intelligent responses.',
       benefits: ['Natural language processing', 'Context awareness', 'Learning capabilities', 'Personalized responses']
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     },
     {
       icon: TrendingUp,
@@ -181,8 +172,6 @@ const PagePage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
-<<<<<<< HEAD
-=======
   const stats = [
     {
       icon: <Clock className="h-8 w-8 text-cyan-400" />,
@@ -207,7 +196,6 @@ const PagePage: React.FC = () => {
   ];
 
 const PagePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
   return (
     <>
       <Helmet>
@@ -228,17 +216,6 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support - Zion Tech Group | Intelligent Support Solutions</title>
@@ -366,13 +343,10 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 Schedule Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -407,7 +381,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -431,8 +404,6 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
@@ -486,7 +457,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                 </div>
               ))}
             </div>
@@ -508,8 +478,6 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-<<<<<<< HEAD
-=======
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
@@ -524,7 +492,6 @@ const PagePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) =&gt; ()
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               ))}
             </div>
           </div>
@@ -532,10 +499,7 @@ const PagePage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -547,11 +511,7 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-<<<<<<< HEAD
-                Learn More
-=======
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </button>
             </div>
           </div>
@@ -562,10 +522,6 @@ const PagePage: React.FC = () => {
     </>
   );
 };
-<<<<<<< HEAD
-
-export default PagePage;
-=======
         <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
             </div><div className="text-center mb-16"></div></div>
@@ -610,4 +566,3 @@ export default PagePage;
 
 export default AiCustomerSupportPage;
 export default AiCustomerSupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

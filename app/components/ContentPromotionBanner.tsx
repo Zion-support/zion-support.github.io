@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react'
 
@@ -59,7 +57,6 @@ const ContentPromotionBanner: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       </div>
     </div>
   )

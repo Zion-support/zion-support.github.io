@@ -1,19 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
-=======
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
-=======
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -22,381 +10,261 @@ const FiveGImplementationPage: React.FC = () => {
     {
       icon: Wifi,
       title: 'Ultra-Low Latency',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Achieve sub-millisecond latency for real-time applications and critical operations.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Critical operations support', 'Edge computing ready']
-=======
-      description: 'Achieve sub-millisecond latency for real-time applications and critical communications.',
-      benefits: ['Real-time gaming', 'Autonomous vehicles', 'Industrial automation', 'Remote surgery']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
-      description: 'Achieve sub-millisecond latency for real-time applications and critical communications.',
-      benefits: ['< 1ms latency', 'Real-time processing', 'Critical communications', 'IoT applications']
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
     },
     {
       icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
-<<<<<<< HEAD
       benefits: ['Up to 10 Gbps speeds', 'Massive data transfer', '4K/8K streaming', 'Cloud integration']
-=======
-      benefits: ['4K/8K streaming', 'Cloud computing', 'AR/VR applications', 'IoT connectivity']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     },
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Optimization',
-<<<<<<< HEAD
-      description: 'Intelligent network management with AI-driven performance optimization.',
-      benefits: ['Smart routing', 'Predictive maintenance', 'Load balancing', 'Performance analytics']
-=======
-      description: 'Intelligent network management with AI-driven optimization and predictive maintenance.',
-      benefits: ['Smart routing', 'Predictive analytics', 'Automated optimization', 'Performance monitoring']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-    },
-    {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced security protocols and encryption for secure 5G communications.',
-<<<<<<< HEAD
-      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Threat detection']
+      description: 'Leverage artificial intelligence for intelligent network management and optimization.',
+      benefits: ['Smart routing', 'Predictive maintenance', 'Auto-scaling', 'Performance analytics']
     },
     {
       icon: Target,
       title: 'Precision Coverage',
-      description: 'Targeted coverage with beamforming technology for optimal signal strength.',
-      benefits: ['Beamforming technology', 'Precision targeting', 'Signal optimization', 'Coverage mapping']
+      description: 'Deliver targeted coverage with beamforming and advanced antenna technology.',
+      benefits: ['Beamforming technology', 'Precise targeting', 'Reduced interference', 'Enhanced coverage']
     },
     {
       icon: TrendingUp,
       title: 'Scalable Infrastructure',
-      description: 'Future-proof infrastructure that scales with your business growth.',
-      benefits: ['Modular design', 'Easy scaling', 'Future compatibility', 'Cost efficiency']
-=======
-      benefits: ['End-to-end encryption', 'Network slicing', 'Identity management', 'Threat detection']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your 5G network performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+      description: 'Build future-ready networks that can scale with your business needs.',
+      benefits: ['Modular design', 'Easy expansion', 'Cost-effective scaling', 'Future-proof architecture']
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Leverage artificial intelligence for smart network management.',
-      benefits: ['Smart routing', 'Predictive maintenance', 'Automated optimization', 'Intelligent analytics']
-    },
-    {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced security protocols for 5G network protection.',
-      benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
+      icon: FileText,
+      title: 'Comprehensive Documentation',
+      description: 'Complete implementation guides and technical documentation for seamless deployment.',
+      benefits: ['Step-by-step guides', 'API documentation', 'Best practices', 'Troubleshooting guides']
     }
-  ];
-
-  const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Reduce latency by up to 90% compared to 4G',
-    'Increase data speeds by 100x with 5G technology',
-    'Support up to 1 million devices per square kilometer',
-    'Enable real-time IoT applications and smart cities',
-    'Improve energy efficiency by 90%',
-    'Seamless integration with existing infrastructure'
   ];
 
   const implementationSteps = [
     {
       step: '01',
       title: 'Network Assessment',
-      description: 'Comprehensive analysis of your current infrastructure and requirements.'
+      description: 'Comprehensive analysis of your current infrastructure and requirements.',
+      details: ['Site survey', 'Capacity planning', 'Coverage analysis', 'Performance baseline']
     },
     {
       step: '02',
-      title: 'Design & Planning',
-      description: 'Custom 5G network design tailored to your specific needs and goals.'
+      title: 'Infrastructure Design',
+      description: 'Custom 5G network architecture tailored to your specific needs.',
+      details: ['Network topology', 'Equipment selection', 'Coverage mapping', 'Security design']
     },
     {
       step: '03',
-      title: 'Infrastructure Setup',
-      description: 'Installation and configuration of 5G base stations and core network.'
+      title: 'Equipment Installation',
+      description: 'Professional installation and configuration of 5G equipment.',
+      details: ['Hardware installation', 'Software configuration', 'Testing and validation', 'Documentation']
     },
     {
       step: '04',
-      title: 'Testing & Optimization',
-      description: 'Rigorous testing and performance optimization for optimal results.'
+      title: 'Network Optimization',
+      description: 'Fine-tuning and optimization for maximum performance and efficiency.',
+      details: ['Performance tuning', 'Coverage optimization', 'Interference mitigation', 'Quality assurance']
     },
     {
       step: '05',
-      title: 'Deployment & Launch',
-      description: 'Full deployment with monitoring and ongoing support services.'
-    }
-=======
-    'Up to 100x faster than 4G networks',
-    'Support for 1 million devices per square kilometer',
-    '99.999% network reliability and availability',
-    'Reduced energy consumption by 90%',
-    'Seamless integration with existing infrastructure',
-    'Future-proof technology for next-generation applications'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
-    'Increase network efficiency by up to 80%',
-    'Reduce operational costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-<<<<<<< HEAD
-    'Seamless integration with existing systems'
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
-=======
-    'Enhanced security and compliance'
-  ];
-
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
+      title: 'Testing & Validation',
+      description: 'Comprehensive testing to ensure all systems meet performance requirements.',
+      details: ['Load testing', 'Coverage testing', 'Performance validation', 'User acceptance testing']
     },
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do.'
+      step: '06',
+      title: 'Go-Live & Support',
+      description: 'Launch your 5G network with ongoing support and maintenance.',
+      details: ['Network activation', 'User training', '24/7 monitoring', 'Ongoing support']
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Lightning Fast Speeds',
+      description: 'Experience speeds up to 100x faster than 4G networks'
     },
     {
       icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security.'
+      title: 'Enhanced Security',
+      description: 'Advanced encryption and security protocols for maximum protection'
+    },
+    {
+      icon: PieChart,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive monitoring and analytics for optimal performance'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <Helmet>
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
-        <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />
+        <title>5G Implementation Services | Zion Tech Group</title>
+        <meta name="description" content="Professional 5G network implementation services with ultra-low latency, high-speed connectivity, and AI-powered optimization. Transform your business with cutting-edge 5G technology." />
+        <meta name="keywords" content="5G implementation, 5G network, ultra-low latency, high-speed connectivity, AI optimization, network infrastructure" />
       </Helmet>
+      
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                5G Implementation
+              </span>
+              <br />
+              <span className="text-gray-700">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge 5G technology. Our expert team delivers 
+              ultra-low latency, high-speed connectivity, and AI-powered optimization for 
+              next-generation applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started Today
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Demo
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300">
+                Learn More
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features
-              </h2>
-              <p className="text-xl text-gray-300">
-                Cutting-edge 5G technology for the next generation of connectivity
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
-                    <div className="text-blue-400 mb-4">
-                      <Icon className="h-8 w-8" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-<<<<<<< HEAD
-                  )}
-                </div>
-              ))}
-=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our 5G Implementation?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver comprehensive 5G solutions that combine cutting-edge technology 
+              with proven implementation expertise.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="flex items-center mb-4">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg mr-4">
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
-                );
-              })}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 bg-black/20">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-        <section className="py-20 px-4 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
-                Why Choose Our 5G Implementation?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the power of next-generation connectivity
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-<<<<<<< HEAD
-                <div key={index} className="flex items-center p-6 bg-white/5 backdrop-blur-sm rounded-xl">
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-4" />
-                  <span className="text-white text-lg">{benefit}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                 </div>
-              ))}
-            </div>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Implementation Process */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Implementation Process
-              </h2>
-              <p className="text-xl text-gray-300">
-                A systematic approach to successful 5G deployment
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {implementationSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+      {/* Implementation Process */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Implementation Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A systematic approach to delivering world-class 5G networks that exceed expectations.
+            </p>
+          </div>
+          
+          <div className="space-y-12">
+            {implementationSteps.map((step, index) => (
+              <div key={index} className="flex flex-col lg:flex-row items-center">
+                <div className="lg:w-1/3 mb-8 lg:mb-0">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm">{step.description}</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
-=======
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The principles that guide everything we do
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon
-                return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
-                    <p className="text-gray-300">{value.description}</p>
+                <div className="lg:w-2/3 lg:pl-12">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {step.details.map((detail, detailIndex) => (
+                      <div key={detailIndex} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                        <span className="text-gray-700">{detail}</span>
+                      </div>
+                    ))}
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our 5G implementation services today and experience the future of connectivity.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the transformative power of 5G technology with our comprehensive solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-<<<<<<< HEAD
-                Start Implementation
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Sales
-=======
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
-              </button>
-            </div>
           </div>
-        </section>
-      </div>
-      
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Network?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join the 5G revolution with our expert implementation services. 
+            Get started today and experience the future of connectivity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+              Start Your Project
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+              Contact Our Experts
+            </button>
+          </div>
+        </div>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default FiveGImplementationPage;
-=======
-export default FiveGImplementationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
-export default FiveGImplementationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
-=======
-export default FiveGImplementationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

@@ -1,51 +1,22 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target, Eye, Camera, Image } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, Eye, Target, CheckCircle, ArrowRight, Zap, Shield, Camera, Image } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence technology to transform your business operations.',
-      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-=======
       title: 'AI-Powered Intelligence',
       description: 'Machine learning models that continuously improve accuracy.',
       benefits: ['Deep learning', 'Neural networks', 'Continuous learning', 'Adaptive algorithms']
@@ -63,7 +34,6 @@ const PagePage: React.FC = () => {
       title: 'Analytics Dashboard',
       description: 'Real-time analytics and insights from visual data.',
       benefits: ['Real-time metrics', 'Data visualization', 'Performance tracking', 'Custom reports']
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     }
   ];
 
@@ -78,16 +48,6 @@ const PagePage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
-        <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
-      </Helmet>
-      <Navigation />
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -99,17 +59,6 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-=======
 <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900"></div></div>
         {/* Hero Section */}
@@ -131,19 +80,10 @@ const PagePage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
-=======
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -253,7 +193,6 @@ const PagePage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Advanced AI technology for visual intelligence</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -263,8 +202,6 @@ const PagePage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-=======
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
@@ -287,7 +224,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -303,13 +239,6 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -345,7 +274,6 @@ const PagePage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Computer Vision?</h2>
               <p className="text-xl text-gray-300">Transform your visual processing with intelligent automation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -361,8 +289,6 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -385,7 +311,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -403,21 +328,13 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-      
-=======
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default PagePage;
 export default AiComputerVisionPage;
 export default AiComputerVisionPage;
@@ -456,4 +373,3 @@ export default AiComputerVisionPage
 };
 
 export default AiComputerVisionPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

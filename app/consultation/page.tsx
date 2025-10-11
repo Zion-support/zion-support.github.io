@@ -4,11 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-  const features = [
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -111,7 +106,6 @@ const ConsultationPage: React.FC = () => {
   ];
 
   const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -149,21 +143,13 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -171,18 +157,11 @@ const ConsultationPage: React.FC = () => {
       <Navigation />
       
       <main className="pt-20">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
-=======
                 Page
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -200,7 +179,6 @@ const ConsultationPage: React.FC = () => {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get personalized advice from our AI and IT experts. Schedule a consultation to discuss your business needs and discover the best solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -248,13 +226,8 @@ const ConsultationPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-=======
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Consultation?</h2>
               <p className="text-xl text-gray-300">Get personalized advice from industry experts</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -269,21 +242,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-=======
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -295,7 +253,6 @@ const ConsultationPage: React.FC = () => {
                 This page is under development. Please check back soon for updates.
               </p>
               <button className="cyber-button">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                 Learn More
               </button>
             </div>
@@ -303,8 +260,6 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
       
-<<<<<<< HEAD
-=======
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -645,16 +600,11 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default PagePage;
 export default ConsultationPage;
 export default ConsultationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
