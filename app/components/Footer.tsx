@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -147,6 +148,6 @@ import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
       </div>
     </footer>
   );
-});
+};
 
 export default Footer

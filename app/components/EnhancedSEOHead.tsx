@@ -54,6 +54,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       
       {/* Structured Data */}
       <script
@@ -66,16 +74,78 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "description": description,
             "url": "https://ziontechgroup.com",
             "logo": "https://ziontechgroup.com/logo.png",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-555-123-4567",
-              "contactType": "customer service",
-              "email": "info@ziontechgroup.com"
+            "foundingDate": "2020",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "San Francisco",
+              "addressRegion": "CA",
+              "addressCountry": "US"
             },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-123-4567",
+                "contactType": "customer service",
+                "email": "info@ziontechgroup.com",
+                "availableLanguage": "English"
+              },
+              {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-123-4567",
+                "contactType": "sales",
+                "email": "sales@ziontechgroup.com",
+                "availableLanguage": "English"
+              }
+            ],
             "sameAs": [
               "https://linkedin.com/company/ziontechgroup",
-              "https://twitter.com/ziontechgroup"
-            ]
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ],
+            "service": [
+              {
+                "@type": "Service",
+                "name": "AI Solutions",
+                "description": "Advanced artificial intelligence solutions for business automation and optimization"
+              },
+              {
+                "@type": "Service",
+                "name": "Cloud Infrastructure",
+                "description": "Scalable and secure cloud solutions for modern businesses"
+              },
+              {
+                "@type": "Service",
+                "name": "Cybersecurity",
+                "description": "Comprehensive security solutions to protect your digital assets"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI & IT Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Infrastructure"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity"
+                  }
+                }
+              ]
+            }
           })
         }}
       />
