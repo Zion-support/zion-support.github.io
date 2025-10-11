@@ -1,11 +1,11 @@
-import React from 'react';;
+import React from 'react';
 import { Helmet;  } from "react-helmet-async";
-import Navigation from '../components/Navigation';;
-import Footer from '../components/Footer';;
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 ;
 const ITServicesPage: React.FC = () => {;
 const services = [;
-    {;,
+    {
 }
 id: 1},;,
 title: 'Cloud Infrastructure',;,
@@ -13,7 +13,6 @@ description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,
     },
     {
-    ;,
     id: 2,
     ;,
 title: 'Cybersecurity',;,
@@ -36,7 +35,7 @@ const categories = [;
 const filteredServices = services.filter(service =>;;
 selectedCategory === 'all' || service.category === selectedCategory
   );
-return (;
+return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />

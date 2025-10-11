@@ -16,7 +16,7 @@ const benefits = [;
     'Expert support'
   ];
 ;
-return (;
+return (
     <>
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
@@ -37,7 +37,7 @@ const benefits = [;
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-return (;
+return (
     <>
       <Helmet>
         <title>Seo Optimizer - Zion Tech Group</title>

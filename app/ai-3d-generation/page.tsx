@@ -52,8 +52,7 @@ const AI3DGenerationPage: React.FC = () => {
   const useCases = [
     {
     title: 'Game Development',
-    description: 'Rapidly generate 3D assets,
-    characters, and environments for games.',
+    description: 'Rapidly generate 3D assets, characters, and environments for games.',
       icon: Target,
       benefits: ['Character creation', 'Environment design', 'Asset generation', 'Animation ready']
   },
