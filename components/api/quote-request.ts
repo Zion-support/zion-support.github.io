@@ -1,211 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from "next"
-import {  createClient   } from "@supabase/supabase-js"
-import OpenAI from "openai"
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey =
-  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase =
-  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
-const openaiApiKey = process && process.env.OPENAI_API_KEY
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey =
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import {  createClient   } from '@supabase/supabase-js'
-import OpenAI from 'openai'
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
-const openaiApiKey = process.env.OPENAI_API_KEY
-  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase =
-  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST")
-    return res.status(405).json({ message: "Method not allowed" })
-  export default async function handler(
-    req: NextApiRequest
-    res: NextApiResponse
-  ) {
-    if (req && req.method !== "POST")
-      return res && res.status(405).json({ message: "Method not allowed" })
-    const { service, description, timeline, budgetRange, email } =
-      req && req.body || {}
-    if (!service || !description || !email) {
-      return res && res.status(400).json({ message: "Missing required fields" })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    try {
-      let aiSummary: string | null = null
-      let aiTags: string[] = []
-      if (openai) {
-        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || "N/A"}\nTimeline: ${timeline?.start || "N/A"} to ${timeline?.end || "N/A"}\nDescription: ${description}`
-        const resp = await openai && openai.responses.create({
-          model: "gpt-4 && 4.1-mini",
-          input: prompt,
-        })
-        aiSummary = text.split("\n")[0] |text
-        const tagsLine = (
-          text && text.split("\n").find((l) => l && l.toLowerCase().includes("tags")) || ""
-        )
-          .replace(/tags?:/i, "")
-          .trim()
-        aiTags = tagsLine
-          ? tagsLine
-              .split(",")
-              .map((t) => t && t.trim())
-              .filter(Boolean)
-          : []
-      }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-import type { NextApiRequest, NextApiResponse  } from './next'
-import {  create_client    } from '@supabase / supabase - js'
-import OpenAI from './openai'
-const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabase_key =
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase =
-  supabase_url && supabase_key ? create_client (supabase_url, supabase_key) : null
-const openaiApiKey = process.env.OPENAI_API_KEY
-const openai = openaiApiKey ? new OpenAI ({ api_key: openaiApiKey }) : null
-const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabase_key =
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const supabase =
-  supabase_url && supabase_key ? create_client (supabase_url, supabase_key) : null
-const openaiApiKey = process.env.OPENAI_API_KEY
-const openai = openaiApiKey ? new OpenAI ({ api_key: openaiApiKey }) : null
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ message: "Method not allowed" })) {
-  $2
-}
-  export default async /**
- * handler - Function description
- */
-function handler() {
-    if (
-      return res.status (405).json ({ message: "Method not allowed" })) {
-  $2
-}
-    const { service, description, timeline, budget_range, email } =
-      req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ message: "Missing required fields" })
-    }
-    try {
-      let ai_summary: string | null = null
-      let ai_tags: string[] = []
-      // Check condition
-if ( {) {
-  $2
-}
-        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3 - 5 tags.\n\n_service: ${service}\n_email: ${email}\n_budget: ${budget_range || "N / A"}\n_timeline: ${timeline?.start || "N / A"} to ${timeline?.end || "N / A"}\n_description: ${description}`
-        const resp = await openai.responses.create ({
-          model: "gpt - 4.1 - mini",
-          input: prompt,
-        })
-        ai_summary = text.split ("\n")[0] || text
-        const tags_line = (
-          text.split ("\n").find ((l) => l.toLowerCase ().includes ("tags")) || "")
-          .replace (/tags?:/i, "")
-          .trim ()
-        ai_tags = tags_line
-          ? tags_line
-              .split (", ")
-              .map ((t) => t.trim ())
-              .filter (Boolean)
-          : []
-      }
-      let saved: any = null
-      // Check condition
-if ( {) {
-  $2
-}
-        const { data, error } = await supabase
-          .from ("quote_requests")
-          .insert ({
-            service,
-            description,
-            timeline_start: timeline?.start || null,
-            timeline_end: timeline?.end || null,
-            budget_range: budget_range || null,
-            email,
-            ai_summary: ai_summary,
-            ai_tags: ai_tags,
-            status: "new",
-          })
-          .select ("*")
-          .single ()
-        // Check condition
-if (throw error) {
-  $2
-}
-        saved = data
-      }
-      return res
-        .status (200)
-        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id })
-    } catch (e: any) {
-      console.error ("quote - request error", e)
-      return res.status (500).json ({ message: "Server error" })
-    }
-    return res.status (500).json ({ message: "Server error" })
-  }
-}
-const openaiApiKey = process.env.OPENAI_API_KEY
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' })
-  const { service, description, timeline, budgetRange, email } = req.body || {}
-  if (!service || !description || !email) {
-    return res.status(400).json({ message: 'Missing required fields' })
-  }
-  try {
-    let aiSummary: string | null = null
-    let aiTags: string[] = []
-    if (openai) {
-      const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || 'N/A'}\nTimeline: ${timeline?.start || 'N/A'} to ${timeline?.end || 'N/A'}\nDescription: ${description}`
-      const resp = await openai.responses.create({
-        model: 'gpt-4.1-mini',
-        input: prompt,
-      })
-      const text = resp.output_text?.trim() || ''
-      aiSummary = text.split('\n')[0] || text
-      const tagsLine = (text.split('\n').find((l) => l.toLowerCase().includes('tags')) || '').replace(/tags?:/i, '').trim()
-      aiTags = tagsLine ? tagsLine.split(',').map((t) => t.trim()).filter(Boolean) : []
-    }
-    let saved: any = null
-    if (supabase) {
-      const { data, error } = await supabase.from('quote_requests').insert({
-        service,
-        description,
-        timeline_start: timeline?.start || null,
-        timeline_end: timeline?.end || null,
-        budget_range: budgetRange || null,
-        email,
-        ai_summary: aiSummary,
-        ai_tags: aiTags,
-        status: 'new',
-      }).select('*').single()
-      if (error) throw error
-      saved = data
-    }
-    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
-  } catch (e: any) {
-    console.error('quote-request error', e)
-    return res.status(500).json({ message: 'Server error' })
-  }
-}
+
+export default PagePage

@@ -1,237 +1,106 @@
-'use client';
-interface OptimizedErrorBoundaryProps {;,
-children: ReactNode;
-fallback?: ReactNode,;
-onError?: (error: Error, errorInfo: ErrorInfo) => void;
-resetOnPropsChange?: boolean,;
-resetKeys?: Array<string | number>
-  }
-interface State {;,
-hasError: boolean;,
-error: Error | null;,
-errorInfo: ErrorInfo | null,;,
-errorId: string
-  }
-class OptimizedErrorBoundary extends Component;
-OptimizedErrorBoundaryProps,;
-State
-> {;
-private resetTimeoutId: number | null = null;
-constructor(props: OptimizedErrorBoundaryProps) {;
-super(props)},;
-this.state={;,
-hasError: false,;,
-error: null,;,
-errorInfo: null,;,
-errorId:     ,;
-$4}
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {;
-return {;;,
-hasError: true},;
-error,;,
-errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-this.setState({;
-error},;
-errorInfo
-    })
-    // Log error to console in development;
-if (process.env['NODE_ENV'] === 'development') {}
-    // Call custom error handler if provided;
-if (this.props.onError) {;
-this.props.onError(error, errorInfo)
-  }
-    // Send error to monitoring service in production;
-if (process.env['NODE_ENV'] === 'production') {;
-this.reportError(error, errorInfo)
-  }
-  }
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
-const { resetKeys}, resetOnPropsChange } = this.props;
-const { hasError } = this.state;
-if (hasError && prevProps.resetKeys !== resetKeys) {;
-if (resetKeys && prevProps.resetKeys) {
-          (key}, index) => key !== prevProps.resetKeys?.[index]
-        );
-if (hasResetKeyChanged) {;
-this.resetErrorBoundary()
-  }
-      }
-    }
-    if (;
-hasError &&;
-resetOnPropsChange &&;
-prevProps.children !== this.props.children
-    ) {;
-this.resetErrorBoundary()
-  }
-  }
-  componentWillUnmount() {;
-if (this.resetTimeoutId) {;
-clearTimeout(this.resetTimeoutId)
-  }
-  }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to error monitoring service;
-if (typeof window !== 'undefined' && 'gtag' in window) {;
-const gtag = (;;
-window as unknown as {;,
-gtag: (;,
-}
-command: string},;,
-action: string,;,
-parameters: Record<string, unknown>
-          ) => void
-  }
-      ).gtag;
-gtag('event', 'exception', {;,
-description: error.message,;,
-fatal: false,;,
-custom_map: {;,
-error_id: this.state.errorId,;,
-component_stack: errorInfo.componentStack
-        }
-      })
-    }
-  }
-  private resetErrorBoundary = () => {;
-if (this.resetTimeoutId) {;
-clearTimeout(this.resetTimeoutId)
-}
-  }
-    this.resetTimeoutId = window.setTimeout(() => {;
-this.setState({;,
-}
-hasError: false},;,
-error: null,;,
-errorInfo: null,;,
-errorId:       ,;
-$4})
-    }, 100)
-  }
-  private handleRetry = () => {;
-this.resetErrorBoundary()
-}
-  }
-  render() {;
-if (this.state.hasError) {;
-if (this.props.fallback) {;
-return this.props.fallback;
-  }
-      return (;
-        <ErrorFallback;
-error={this.state.error}
-          errorInfo={this.state.errorInfo}
-          errorId={this.state.errorId}
-          onRetry={this.handleRetry}
-        />
-      )
-    }
-    return this.props.children;
-  }
-}
-interface ErrorFallbackProps {;,
-error: Error | null;,
-errorInfo: ErrorInfo | null;,
-errorId: string,;,
-onRetry: () => void
-  }
-const ErrorFallback = memo<ErrorFallbackProps>(;
-  ({ error, errorInfo, errorId, onRetry }) => (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
-        <div className='mb-4'>
-          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
-            <svg;
-className='w-6 h-6 text-red-600';
-fill='none';
-stroke='currentColor';
-viewBox='0 0 24 24'
-            >
-              <ath$2 />;
-strokeLinecap='round';
-strokeLinejoin='round';
-strokeWidth={2}
-                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
-              />
-        <h1 className='text-xl font-semibold text-gray-900 mb-2'>;
-Something went wrong
-        <p className='text-gray-600 mb-4'>;
-We&apos;re sorry, but something unexpected happened. Please try again.
-        {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>;
-Error Details (Development)
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
-                <strong>Error:</strong> {error.message}
-        {process.env['NODE_ENV'] === 'development' && error && ()}
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500,;,
-hover:text-gray-700'>
-// Error Details (Development)
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
-                <strong>Erro,;,
-r:</strong> {error.message}
-              <div className='mb-2'>
-                <strong>Stac,;,
-k:
-                <pre className='whitespace-pre-wrap'>
-  </pre>{error.stack}
-              {errorInfo && (
-                <div>
-                  <strong>Component Stack:
-                  <pre className='whitespace-pre-wrap'>
-              {errorInfo && ()}
-          <div>
-                  <strong>Component,;,
-Stack:
-                  <pre className='whitespace-pre-wrap'>
-                    {errorInfo.componentStack}
-              )}
-        )}
-        < className='flex flex-col,$2 />;,
-sm:flex-row gap-2 justify-center'>
-          <button>;
-onClick={onRetry}
-            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-          >;
-Try Again;
-className='px-4 py-2 bg-blue-600 text-white rounded-md,;,
-hover:bg-blue-700,;,
-focus:outline-none,;,
-focus:ring-2,;,
-focus:ring-blue-500,;,
-focus:ring-offset-2 transition-colors'
-// >
-//             Try Again
-          <button>;
-onClick={() => window.location.reload()}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
-          >;
-Reload Page
-        {errorId && (
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}
-        )}
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-);
-ErrorFallback.displayName = 'ErrorFallback';
-className='px-4 py-2 bg-gray-600 text-white rounded-md,;,
-hover:bg-gray-700,;,
-focus:outline-none,;,
-focus:ring-2,;,
-focus:ring-gray-500,;,
-focus:ring-offset-2 transition-colors'
-// >
-//             Reload Page
-        {errorId && ()}
-          <p className='mt-4 text-xs text-gray-400'>Error,;,
-ID: {errorId}
-        )}
-//   )
-);
-ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1></a>
+}
+
+export default PagePage

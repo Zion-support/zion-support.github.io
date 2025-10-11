@@ -1,173 +1,106 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4"
-import { corsHeaders } from "../_shared/cors.ts"
-interface AnalyzeRequest {
-  content: string
-  contentType: string
-  flagId?: string
-}
-interface AnalysisResult {
-  classification: string
-  explanation: string
-  success: boolean
-}
-// Initialize environment and clients
-const initializeServices = () => {
-  const supabaseUrl = Deno.env.get("SUPABASE_URL")
-  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
-  const openaiApiKey = Deno.env.get("OPENAI_API_KEY")
-  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
-    throw new Error("Missing required environment variables")
-  }
-  return {
-    supabase: createClient(supabaseUrl, supabaseServiceKey),
-    openaiApiKey
-  }
-}
-// Validate request content
-const validateRequest = (data: unknown): AnalyzeRequest => {
-  if (!data || typeof data !== 'object') {
-    throw new Error("Invalid request body")
-  }
-  const request = data as AnalyzeRequest
-  if (!request.content) {
-    throw new Error("No content provided for analysis")
-  }
-  if (!request.contentType) {
-    throw new Error("No content type provided")
-  }
-  return request
-}
-// Create prompt for OpenAI
-const createAnalysisPrompt = (contentType: string, content: string): string => {
-  return `
-    You are an AI fraud detection assistant for the Zion AI Marketplace.
-    Analyze this ${contentType} for signs of fraud, spam, phishing, or abuse.
-    Content to analyze:
-    """
-    ${content}
-    """
-    Respond with one of these classifications: SAFE / SUSPICIOUS / DANGEROUS
-    followed by a brief explanation (max 1-2 sentences) of your reasoning.
-    Format your response exactly like: "CLASSIFICATION: explanation"
-  `
-}
-// Call OpenAI API for content analysis
-const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
-  try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${openaiApiKey}`},
-        "Authorization": `Bearer ${openaiApiKey}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [
-          { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
-          { role: "user", content: prompt }
-        ],
-        temperature: 0.3,
-        max_tokens: 150
-      })
-    })
-    const data = await response.json()
-    if (!response.ok) {
-      console.error("OpenAI API error:", data.error)
-      throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Analyze-content-fraudPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const analysisText = data.choices[0]?.message?.content || ""
-    console.log("OpenAI analysis result:", analysisText)
-    // Parse the result
-    let classification = "SAFE"
-    let explanation = "No issues detected."
-    if (analysisText.includes("SUSPICIOUS")) {
-      classification = "SUSPICIOUS"
-    } else if (analysisText.includes("DANGEROUS")) {
-      classification = "DANGEROUS"
-    }
-    // Extract explanation
-    if (analysisText.includes(":")) {
-      explanation = analysisText.split(":")[1].trim()
-    }
-    return { classification, explanation }
-  } catch (error) {
-    console.error("Error calling OpenAI:", error)
-    throw error
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Analyze Content Fraud - Zion Tech Group</title>
+        <meta name="description" content="Learn about our analyze content fraud solutions and how they can transform your business." />
+        <meta name="keywords" content="analyze-content-fraud, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Update flag in database if flagId was provided
-const updateFraudFlag = async (
-  supabase: ReturnType<typeof createClient>,
-  flagId: string,
-  classification: string, 
-  explanation: string
-): Promise<void> => {
-  if (!flagId) return
-  const { error } = await supabase
-    .from("fraud_flags")
-    .update({
-      gpt_classification: classification.toLowerCase(),
-      gpt_explanation: explanation,
-      updated_at: new Date().toISOString()
-    })
-    .eq("id", flagId)
-  if (error) {
-    console.error("Error updating fraud flag:", error)
-    throw new Error(`Error updating fraud flag: ${error.message}`)
-  }
-  console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
-}
-// Main request handler
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    console.log("Received content analysis request")
-    // Initialize services
-    const { supabase, openaiApiKey } = initializeServices()
-    // Parse and validate request
-    const requestData = await req.json().catch(err => {
-      console.error("Error parsing request JSON:", err)
-      throw new Error("Invalid JSON in request body")
-    })
-    const { content, contentType, flagId } = validateRequest(requestData)
-    console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`)
-    // Create prompt and analyze with OpenAI
-    const prompt = createAnalysisPrompt(contentType, content)
-    const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey)
-    // Update flag if flagId was provided
-    if (flagId) {
-      await updateFraudFlag(supabase, flagId, classification, explanation)
-    }
-    // Return the analysis result
-    const result: AnalysisResult = {
-      classification: classification.toLowerCase(),
-      explanation,
-      success: true}
-      success: true,
-    }
-    console.log("Analysis completed successfully:", result)
-    return new Response(JSON.stringify(result), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    })
-  } catch (error) {
-    console.error("Error analyzing content:", error)
-    // Determine appropriate status code based on error
-    const statusCode = error.message?.includes("Invalid") ? 400 : 500
-    return new Response(
-      JSON.stringify({ 
-        error: error.message || "An unexpected error occurred",
-        success: false}),
-        success: false,
-      }),
-      { 
-        status: statusCode, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  }
-})
+
+export default PagePage

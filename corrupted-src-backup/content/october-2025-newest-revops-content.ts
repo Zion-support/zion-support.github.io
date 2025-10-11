@@ -1,101 +1,106 @@
-export interface RevOpsContent {
-  id: string
-  title: string
-  description: string
-  category: string
-  date: string
-  readTime: string
-  tags: string[]
-  featured: boolean
-  content?: string
-  author?: string
-  valueProposition?: string
-  highlights: string[],
-  metrics: {,
-    [key: string]: string,
-export interface RevOpsContent {/* TODO: Fix JSX expression */}
-  }
-  icon?: string
-  gradient?: string
-  breaking?: boolean
-  cta?: {/* TODO: Fix JSX expression */}
-  }
-}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export const octoberNewestRevOpsContent: RevOpsContent[] = [
-  {
-    id: 'ai-revops-automation-2025'
-    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity'
-    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.'
-    category: 'RevOps'
-    date: '2025-10-01'
-    readTime: '16 min',
-    icon: '💰',
-    gradient: 'from-emerald-600 to-teal-600',
-    featured: true
-    breaking: true,
-    tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
-    highlights: [,
-      '127% ROI within first year',
-      '89% forecast accuracy (vs 52% traditional)',
-      '3.2 x pipeline velocity improvement',
-      '$127 M incremental revenue (Fortune 500 case study)',
-      '85% reduction in manual RevOps tasks',
-      '4.7 x faster response times'],
-    metrics: {
-      roi: '127%',
-      forecastAccuracy: '89%',
-      pipelineVelocity: '3.2 x',
-      revenue: '$127 M',
-      efficiency: '85%'},
-    cta: {,
-      text: 'Read the Complete RevOps Guide',
-      link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
-  {
-    id: 'autonomous-revenue-operations-2025'
-    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems'
-    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.'
-    category: 'RevOps',
-    date: '2025-10-02',
-    readTime: '18 min read',
-    tags: [,
-      'RevOps',
-      'Autonomous',
-      'Self-Healing',
-      '2025',
-      'Case Study',
-      'SaaS',
-      'Revenue Operations',
-      'Enterprise AI'],
-    featured: true
-    breaking: true,
-    highlights: [,
-      '$127M incremental annual revenue',
-      '89% forecast accuracy (from 49%)',
-      '42% increase in win rates',
-      '3.2 x pipeline velocity improvement',
-      '12-month transformation timeline',
-      '704% three-year ROI'],
-    metrics: {
-      revenue: '$127 M',
-      accuracy: '89%',
-      winRate: '+42%',
-      velocity: '3.2 x',
-      roi: '704%',
-export const,
-  octoberNewestRevOpsContent: RevOpsContent[] = [
-  {/* TODO: Fix JSX expression */}
+const ContentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    ct,
-  a: {/* TODO: Fix JSX expression */}
-    }},
-  {/* TODO: Fix JSX expression */}
-    }}]
-export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Content - Zion Tech Group</title>
+        <meta name="description" content="Learn about our content solutions and how they can transform your business." />
+        <meta name="keywords" content="content, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
-}
-
-export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
-}
+export default PagePage

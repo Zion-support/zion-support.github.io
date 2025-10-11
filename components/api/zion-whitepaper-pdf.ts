@@ -1,193 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import PDFDocument from 'pdfkit'
-import { 
-  getWhitepaperSections
-  OPERATOR_PROMPT
-  getWhitepaperSections,
-  OPERATOR_PROMPT,
-  } from '../../utils/whitepaper/zionWhitepaper';import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils/whitepaper/zionWhitepaper'
-function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc && doc.addPage(),
-  doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
-  doc && doc.moveDown()
-  doc && doc.fontSize(11).fillColor('#222222').text(content, {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,
- } from '../../utils / whitepaper / zion_whitepaper';import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils / whitepaper / zion_whitepaper'
-/**
- * write_section - Function description
- */
-function write_section() {
-  doc.add_page (),
-  doc.font_size (20).fill_color ('#111111').text (title, { underline: true })
-  doc.move_down ()
-  doc.font_size (11).fill_color ('#222222').text (content, {
-    width: 480,
-  })
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full'
-  const edition =
-    editionParam === 'investor' |editionParam === 'developer'
-      ? editionParam
-      : 'full'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const editionParam = (req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
-  const editionParam = (req.query.edition as string) |'full'
-  const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full'
-  res.setHeader('Content-Typeapplication/pdf')
-  res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)
-import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils/whitepaper/zionWhitepaper'
-function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage()
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
-  doc.moveDown()
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480,
-    align: 'left',
-  })
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const editionParam = (req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
-  res.setHeader('Content-Type', 'application/pdf')
-  res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`
-  doc.info.Author = 'Zion Protocol'
-  doc.pipe(res)
-  res && res.setHeader('Content-Type', 'application/pdf')
-  res && res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full'
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
-  res && res.setHeader('Content-Typeapplication/pdf')
-  res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
-  doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`
-  doc && doc.info.Author = 'Zion Protocol'
-  doc && doc.pipe(res)
-  // Cover page
-  doc.addPage()
-  doc
-    .fontSize(26)
-    .fillColor('#000000')
-    .text('Zion Protocol Whitepaper', { align: 'left' })
-  doc && doc.moveDown()
-  doc
-    .fontSize(14)
-    .fillColor('#444444')
-    .text(`Edition: ${edition && edition.toUpperCase()}`)
-  doc && doc.moveDown()
-  doc
-    .fontSize(10)
-    .fillColor('#666666')
-    .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5)
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown()
-  doc.pipe(res)
-  // Cover page
-  doc.addPage()
-  doc.fontSize(26).fillColor('#000000').text('Zion Protocol Whitepaper', { align: 'left' })
-  doc.moveDown()
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`)
-  doc.moveDown()
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):')
-  doc.moveDown(0.5)
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd))
-  // End
-  doc.addPage()
-  doc
-    .fontSize(10)
-    .fillColor('#444444')
-    .text(
-      '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
-    )
-  doc.end()
-  const sections = getWhitepaperSections(edition as any)
-  sections.forEach((s) => writeSection(doc, s.title, s.contentMd))
-  // End
-  doc.addPage()
-  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')
-  doc.end()
-}
-  doc.end()
 }
 
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const edition_param = (req.query.edition as string) || 'full'
-  const edition =
-    edition_param === 'investor' || edition_param === 'developer'
-      ? edition_param
-      : 'full'
-  res.set_header ('Content - Type', 'application / pdf')
-  res.set_header (
-    'Content - Disposition',
-    `attachment; filename="zion - protocol-${edition}.pdf"`)
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const edition_param = (req.query.edition as string) || 'full'
-  const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full'
-  res.set_header ('Content - Typeapplication / pdf')
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`)
-  const doc = new (PDFDocument as any)({ autoFirstPage: false })
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`
-  doc.info.Author = 'Zion Protocol'
-  doc.pipe (res)
-  // Cover page
-  doc.add_page ()
-  doc
-    .font_size (26)
-    .fill_color ('#000000')
-    .text ('Zion Protocol Whitepaper', { align: 'left' })
-  doc.move_down ()
-  doc
-    .font_size (14)
-    .fill_color ('#444444')
-    .text (`Edition: ${edition.toUpperCase ()}`)
-  doc.move_down ()
-  doc
-    .font_size (10)
-    .fill_color ('#666666')
-    .text ('Operator Prompt (for maintenance):');  doc.move_down (0.5)
-  doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections (edition as any)
-  sections.for_each (string => write_section (doc, s.title, s.content_md));  doc.move_down ()
-  doc.font_size (14).fill_color ('#444444').text (`Edition: ${edition.toUpperCase ()}`)
-  doc.move_down ()
-  doc.font_size (10).fill_color ('#666666').text ('Operator Prompt (for maintenance):')
-  doc.move_down (0.5)
-  doc.font_size (9).fill_color ('#666666').text (OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections (edition as any)
-  sections.for_each (string => write_section (doc, s.title, s.content_md))
-  // End
-  doc.add_page ()
-  doc
-    .font_size (10)
-    .fill_color ('#444444')
-    .text (
-      ' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')
-  doc.end ()
-  // End
-  doc.add_page ()
-  doc.font_size (10).fill_color ('#444444').text (' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')
-  doc.end ()
-}
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd))
-  doc.moveDown(0.5)
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
-  const sections = getWhitepaperSections(edition as any)
-  doc.end()
-}
+export default PagePage

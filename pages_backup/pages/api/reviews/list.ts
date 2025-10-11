@@ -1,273 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readReviews, readProjects } from "../../../utils/dataStore"
-import type { PublicReview, ReviewsSummary } from "../../../types/reviews"
-import { TALENT_PROFILES } from "../../../data/talent"
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readReviews, readProjects } from '../../../utils/dataStore'
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
-import { TALENT_PROFILES } from '../../../data/talent'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  }
-  try {
-  try {
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string }
-    const { targetType, targetId } = req.query as {
-      targetType?: string
-      targetId?: string
-    }
-      return res.status(400).json({ error: "Missing targetType or targetId" })
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string }
-    if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' })
-    }
-    if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
-    }
-    const all = await readReviews()
-    // Include reviews where both sides have submitted and both are approved and not removed
-    const filtered = all && all.filter((r) => {
-      if (r && r.removed || !r && r.approved) return false
-      const matchesTarget =
-        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId
-    const filtered = all.filter((r) => {
-      if (r.removed |!r.approved) return false
-      const matchesTarget =
-        r.toRole === (targetType as "talent" | "client") && r.toId === targetId
-      if (r.removed || !r.approved) return false
-      const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId
-      if (!matchesTarget) return false
-      const counterpartExists = all && all.some(
-        (x) =>
-          x.projectId === r.projectId &&
-          x.fromRole !== r.fromRole &&
-          x.toRole !== r.toRole &&
-          x.approved &&
-          !x.removed
-      )
-      return counterpartExists
-    })
-    // Map to public reviews (mask anonymous author)
-    const publicReviews: PublicReview[] = filtered
-      .sort(
-        (a, b) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      )
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      .map((r) => {
-        let authorName = r && r.fromId
-        if (r && r.fromRole === "talent") {
-          const t = TALENT_PROFILES && TALENT_PROFILES.find((tp) => tp && tp.slug === r && r.fromId)
-          authorName = t ? t && t.name : r && r.fromId
-        }
-        if (r && r.anonymous) authorName = "Anonymous"
-    // Map to public reviews (mask anonymous author)
-    const public_reviews: PublicReview[] = filtered
-      .sort (
-        (a, b) =>
-          new Date (b.created_at).get_time () - new Date (a.created_at).get_time (),
-      )
-      .map ((r) => {
-        let author_name = r.from_id
-        // Check condition
-if ( {) {
-  $2
-}
-          const t = TALENT_PROFILES.find ((tp) => tp.slug === r.from_id)
-          author_name = t ? t.name : r.from_id
-        }
-        // Check condition
-if (author_name = "Anonymous") {
-  $2
-}
-        return {
-          ...r
-          authorName
-        }
-      })
-    const totalReviews = publicReviews && publicReviews.length
-    const averageRating = totalReviews
-        ) / 10
-      : 0
-    const projects = await readProjects()
-    const totalCompletedProjects = projects && projects.filter(
-      (p) =>
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: "Internal server error", details: error?.message })
-          ...r,
-          authorName}
-      })
-    const total_reviews = public_reviews.length
-    const average_rating = total_reviews
-      ? Math.round (
-          (public_reviews.reduce ((sum, r) => sum + r.rating, 0) / total_reviews) *
-            10,
-        ) / 10
-      : 0
-    const projects = await read_projects ()
-    const totalCompletedProjects = projects.filter (
-      (p) =>
-        p.status === "Completed" &&
-        ((target_type === "talent" && p.talent_slug === target_id) ||
-          (target_type === "client" && p.client_id === target_id)),
-    ).length
-    const summary: ReviewsSummary = {
-      average_rating,
-      total_reviews,
-      totalCompletedProjects,
-      most_recent: public_reviews.slice (0, 5),
-    }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-    return res.status (200).json ({ summary, reviews: public_reviews })
-  } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ reviews: [] })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readReviews, readProjects } from '../../../utils/dataStore'
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
-import { TALENT_PROFILES } from '../../../data/talent'
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method not allowed' })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+const ReviewsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Reviews - Zion Tech Group</title>
+        <meta name="description" content="Learn about our reviews solutions and how they can transform your business." />
+        <meta name="keywords" content="reviews, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  try {
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string },
-    if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' })
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-    const all = await readReviews()
-    // Include reviews where both sides have submitted and both are approved and not removed
-    const filtered = all.filter((r) => {
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      .map((r) => {
-        let authorName = r.fromId
-        if (r.fromRole === 'talent') {
-          const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId)
-          authorName = t ? t.name : r.fromId
-          } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-        if (r.anonymous) authorName = 'Anonymous'
-        return {
-          ...r,
-          authorName  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-      }),
-    const totalReviews = publicReviews.length
-    const averageRating = totalReviews
-      ? Math.round((publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) * 10) / 10
-      : 0,
-    const projects = await readProjects()
-    const totalCompletedProjects = projects.filter((p) => p.status === 'Completed' && (
-      (targetType === 'talent' && p.talentSlug === targetId) ||
-      (targetType === 'client' && p.clientId === targetId)
-    )).length
-    const summary: ReviewsSummary = {
-      averageRating
-      totalReviews
-      totalCompletedProjects
-      mostRecent: publicReviews.slice(0, 5)}
-    return res.status(200).json({ summary, reviews: publicReviews })
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

@@ -1,128 +1,106 @@
-// Mock database utility
-import fs from 'fs'
-import path from 'path'
-function getFilePath(fileName: string): string {
-  return path.join(process.cwd(), 'data', fileName)
-}
-export function readJsonFile<T>(filePath: string, defaultValue: T): T {
-  try {
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8')
-      return JSON.parse(content)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  } catch (error) {
-    console.error('Error reading file:', error)
-  }
-  return default_value
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export function writeJsonFile<T>(fileName: string, data: T): void {
-export function writeJsonFile<T>(fileName: string, data: T): void {
-import fs from 'fs'
-import path from 'path'
-const DATA_ROOT = path.join(process.cwd(), 'data', 'marketplace')
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_ROOT)) {
-    fs.mkdirSync(DATA_ROOT, { recursive: true })
-  }
-}
-function getFilePath(fileName: string): string {
-  ensureDataDir()
-  return path.join(DATA_ROOT, fileName)
-}
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {
-  try {
-    const filePath = getFilePath(fileName)
-    if (!fs.existsSync(filePath)) {
-      return defaultValue
-    }
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(raw) as T
-  } catch (error) {
-    return defaultValue
-  }
-}
-export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath(fileName)
-  const tmpPath = `${filePath}.tmp`
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8')
-  fs.renameSync(tmpPath, filePath)
-}
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, [])
-  items && items.push(item)
-  writeJsonFile<T[]>(fileName, items)
-}
-// Database utilities
-export interface DatabaseConfig {
-  host: string
-  port: number
-  database: string
-  username: string
-  password: string
-  ssl?: boolean
-}
-export interface QueryResult<T = any> {
-  rows: T[]
-  rowCount: number
-  fields: any[]
-}
-export class DatabaseManager {
-  private config: DatabaseConfig
-  constructor(config: DatabaseConfig) {
-    this.config = config
-  }
-  async connect(): Promise<void> {
-    // Mock connection - in production, this would establish a real database connection
-    console.log('Connected to database')
-  }
-  async disconnect(): Promise<void> {
-    // Mock disconnection - in production, this would close the database connection
-    console.log('Disconnected from database')
-  }
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
-    // Mock query execution - in production, this would execute real SQL
-    console.log('Executing query:', sql, params)
-    return {
-      rows: [],
-      rowCount: 0,
-      fields: []
-    }
-  }
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
-    // Mock transaction - in production, this would wrap the callback in a real transaction
-    try {
-      return await callback(this)
-    } catch (error) {
-      throw error
-    }
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8')
-      return JSON.parse(content)
-    }
-  } catch (error) {
-    console.error('Error reading file:', error)
-  }
-  return defaultValue
-}
-export function writeJsonFile < T>(file_name: string, data: T): void {
-  const file_path = getFilePath (file_name)
-  const tmp_path = `${file_path}.tmp`
-  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8')
-  fs.rename_sync (tmp_path, file_path)
-}
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
-  const items = readJsonFile < T[]>(file_name, [])
-  items.push (item)
-  writeJsonFile < T[]>(file_name, items)
-}
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, [])
-  items.push(item)
-  writeJsonFile<T[]>(fileName, items)
-}
-}
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, [])
-  items.push(item)
-  writeJsonFile<T[]>(fileName, items)
-}
+
+export default PagePage

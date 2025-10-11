@@ -1,193 +1,106 @@
-  }
-  }
-export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
-  const base: MediaAsset[] = [
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
     {
-      path: '',
-      filename: 'legal / terms - of - use.md',
-      type: 'text',
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
-    },
-  ]
-  const web3Extras: MediaAsset[] = [
-    {
-      path: '',
-      filename: 'legal / privacy - policy.md',
-      type: 'text',
-      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
-      path: '',
-      filename: 'legal / jurisdictional - disclosures.md',
-      type: 'text',
-      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-  ]
-  const web3Extras: MediaAsset[] = [
     {
-      path: '',
-  ]
-export function buildPressRelease(
-  type: PressReleaseType
-  type: PressReleaseType,
-  params: {
-    companyName: string
-    date: string
-    raiseAmount?: string
-    tokenName?: string
-    anchors?: string[]
-  }
-): string {
-  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`
-  const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`
-  if (type === 'seed-round') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`
-  }
-  if (type === 'token-sale') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`
-  }
-  return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`
-export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) =>
-    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days)
-  const fmt = (d: Date) => d.toISOString().substring(0, 10)
-  return [
-    { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
-    { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
-    {
-      label: 'Week 3: Token Airdrop Snapshot'
-      date: fmt(addDays(startDate, 14))
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ]
-function titleCase(s: string) {
-  return s.replace(
-    /\w\S*/g
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-  );}
-function titleCase(s: string) {
-  return s.replace(
-    /\w\S*/g
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-  );}
-function titleCase(s: string) {
-  return s.replace(
-    /\w\S*/g
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-function titleCase(s: string) {
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-}
-    return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`
-  }
-  return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\n_about ${params.company_name}:\n${boilerplate}`
-export /**
- * build_timeline - Function description
- */
-function build_timeline() {
-  const add_days = (d: Date, days: number) =>: any
-    new Date (d.getFullYear (), d.get_month (), d.get_date () + days)
-  const fmt = (d: Date) =>: any d.toISOString ().substring (0, 10)
-  return [
-    { label: 'Week 1: Closed Beta Invite', date: fmt (add_days (start_date, 0)) },
-    { label: 'Week 2: ZionGPT Core Reveal', date: fmt (add_days (start_date, 7)) },
-    {
-      label: 'Week 3: Token Airdrop Snapshot',
-      date: fmt (add_days (start_date, 14)),
-    },
-    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) },
-  ]
-/**
- * title_case - Function description
- */
-function title_case() {
-  return s.replace (
-    /\w\S*/g,
-    w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
-export type MediaBundle = 'general' | 'web3' | 'institutional'
-export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale'
-export type MediaAsset = {
-  path: string; // public-relative path for fetch
-  filename: string; // name inside zip
-  type: 'binary' | 'text'
-  content?: string; // used when type === 'text'
-}
-export function getDefaultAssets(bundle: MediaBundle): MediaAsset[] {
-  const common: MediaAsset[] = [
-    { path: '/brand/logos/zion-logo.svg', filename: 'logos/zion-logo.svg', type: 'binary' },
-  ]
-  const social: MediaAsset[] = [
-    { path: '', filename: 'social/linkedin-banner.txt', type: 'text', content: 'LinkedIn banner: 1584x396. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },
-    { path: '', filename: 'social/twitter-banner.txt', type: 'text', content: 'Twitter/X banner: 1500x500. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },
-  ]
-  const generalLegal = buildLegalDocs('general')
-  const web3Legal = buildLegalDocs('web3')
-  const institutionalLegal = buildLegalDocs('institutional')
-  const legalByBundle: Record<MediaBundle, MediaAsset[]> = {
-    general: generalLegal,
-    web3: web3Legal,
-    institutional: institutionalLegal,
-  }
-  const brandGuidelines: MediaAsset = { path: '', filename: 'brand/brand-guidelines.md', type: 'text', content: buildBrandGuidelines() }
-  const colors: MediaAsset = { path: '', filename: 'brand/colors-typography.json', type: 'text', content: JSON.stringify(buildColorsAndTypography(), null, 2) }
-  return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]]
-}
-export function buildBrandGuidelines(): string {
-  return `# Zion Brand Guidelines\n\n## Logo\n- Primary: Zion logomark (svg)\n- Clear space: 24px around\n\n## Colors\n- Primary: Zion Blue #0A84FF\n- Secondary: Deep Space #0B1220\n- Accent: Neon Lime #C3F53C\n\n## Typography\n- Headings: Inter, 700\n- Body: Inter, 400\n\n## Voice\n- Confident, precise, forward-looking\n`
-}
-export function buildColorsAndTypography() {
-  return {
-    colors: {
-      primary: '#0A84FF',
-      secondary: '#0B1220',
-      accent: '#C3F53C',
-      neutral: '#9CA3AF'
-    },
-    typography: {
-      heading: { family: 'Inter', weight: 700 },
-      body: { family: 'Inter', weight: 400 }
-    }
-  }
-}
-export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
-  const base: MediaAsset[] = [
-    { path: '', filename: 'legal/terms-of-use.md', type: 'text', content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.` },
-    { path: '', filename: 'legal/privacy-policy.md', type: 'text', content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.` },
-    { path: '', filename: 'legal/jurisdictional-disclosures.md', type: 'text', content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.` },
-  ]
-  const web3Extras: MediaAsset[] = [
-    { path: '', filename: 'legal/token-sale-notice.md', type: 'text', content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.` },
-    { path: '', filename: 'legal/dao-disclaimer.md', type: 'text', content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.` },
-  ]
-  if (kind === 'web3') return [...base, ...web3Extras]
-  return base
-}
-export function buildPressRelease(type: PressReleaseType, params: {
-  companyName: string
-  date: string
-  raiseAmount?: string
-  tokenName?: string
-  anchors?: string[]
-}): string {
-  const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`
-  const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`
-  if (type === 'seed-round') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params.companyName}:\n${boilerplate}`
-  }
-  if (type === 'token-sale') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`
-  }
-  return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`
-}
-export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + days)
-  const fmt = (d: Date) => d.toISOString().substring(0, 10)
-  return [
-    { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) },
-    { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) },
-    { label: 'Week 3: Token Airdrop Snapshot', date: fmt(addDays(startDate, 14)) },
-    { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) },
-  ]
-}
-function titleCase(s: string) {
-  return s.replace(/\w\S*/g, (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-}
+
+export default PagePage

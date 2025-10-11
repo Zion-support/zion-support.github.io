@@ -1,354 +1,106 @@
-}
-export interface ValidationResult {/* TODO: Fix JSX expression */}
-}
-export interface FieldValidation {/* TODO: Fix JSX expression */}
-}
-/**
- * Common validation rules
- */
-export const validationRules = {}
-  /**
-   * Validate required field
-   */
-    validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
-    message}
-  /**;
-   * Validate email format;
-   */;
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,
-    ,
-    validate: (value: string) => {,
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,}email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,}validate: (value: string) => {,}const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(value);},
-    message;
-    message;);
-  }),
-  /**;
-   * Validate minimum length;
-   */;
-    message;)
-  }),
-  /**
-   * Validate minimum length
-   */
-    validate: (value: string) => value.length >= min}
-    message: message || `Must be at least ${min} characters
-  minLengt,
-  e: message || `Must be at least ${min} characters`)
-  }),
-  /**
-   * Validate maximum length
-   */
-    validate: (value: string) => value.length <= max,`}
-    message: message || `Must be no more than ${max} characters
-  maxLengt,
-  /**;
-   * Validate phone number (US format);
-   */;
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,
-    ,}phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,}validate: (value: string) => {,}const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));
-  /**
-   * Validate phone number (US format)
-   */
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule</string><string> => ({
-    ,
-  }
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule</string><string> => ({}
-    validate: (value: string) => {}
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-      return phoneRegex.test(value.replace(/\s/g, ''))
-  phoneU,
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    message
-  }),
-   * Validate URL format;
-   */;
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,
-  /**
-   * Validate URL format
-   */
-    ,
-    validate: (value: string) => {,
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
-    validate: (value: string) => {}
-      try {}
-        new URL(value)
-        return true;}
-      } catch {}}return false;}
-      },
-    message;
-  ur,
-    message;);
-  }),
-  /**;
-   * Validate number range;
-   */;
-    validate: (value: number) => value >= min && value <= max,`}
-    message: message || `Must be between ${min} and ${max}
-  numberRang,
-  e: ()
-  n: number, ma)
-  /**;
-   * Validate pattern match;
-   */;
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({}validate: (value: string) => regex.test(value),
-    message}
-  patter,
-  n: (rege),
-  /**;
-   * Validate custom condition;
-   */;
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
-    ,
-    validate: validator,}custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,}validate: validator,
-  /**
-   * Validate pattern match
-   */
-  }),
-  /**
-   * Validate custom condition
-   */
-    validate: validator,
-    message}
-  custo,
-  /**;
-   * Validate password strength;
-   */;
-  strongPassword: (,
-    message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character';
-  ): ValidationRule<string> => ({validate: (value: string) => {,
-      const hasUpperCase = /[A-Z]/.test(value),}const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}validate: (value: string) => {,}const hasUpperCase = /[A-Z]/.test(value);
-      const hasLowerCase = /[a-z]/.test(value);
-      const hasNumber = /[0-9]/.test(value);}
-    validate: (value: string) => {}
-      const hasUpperCase = /[A-Z]/.test(value)
-      const hasLowerCase = /[a-z]/.test(value)
-      const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string><>{
-    ]/.test(value)
-  strongPasswor,
-      const hasMinLength = value.length &gt;= 8;
-      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;},
-    message;
-  }),
-  /**;
-   * Validate matching fields (e.g., password confirmation);
-  /**
-   * Validate matching fields (e.g., password confirmation)
-   */}</></>
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
-    ,
-  }
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule</string><string> => ({}
-    validate: (value: string) => value === otherFieldValue,`}
-    message: `Must match ${fieldName}
-  matche,
-  s: ()
-  e: string, fieldNam)
-  e: string): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */}`
-  e: `Must match ${fieldName}`)
-  }),
-  /**;
-   * Validate file size;
-   */;
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({validate: (file: File) => {,
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;}fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}validate: (file: File) => {,}const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
-      return file.size <= maxSizeInBytes;},
-  fileSiz,
-  e: (maxSizeInM),
-  }),
-  /**
-   * Validate file type
-   */
-  fileType: (allowedTypes: string[], message?: string): ValidationRule</File><File> => ({}
-    validate: (file: File) => allowedTypes.includes(file.type),`}
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}
-  fileTyp,
-  e: (allowedType),
-    ,
-  const errors: string[] = [],
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
-    validate: (value: string) => value === otherFieldValue,`}
-    message: `Must match ${fieldName}
-  matche,
-  s: (otherFieldValu,
-  e: string, fieldNam)
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`
-  e: `Must match ${fieldName}`)
-  }),
-  /**
-   * Validate file size
-   */
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
-    validate: (file: File) => {,
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
-    validate: (file: File) => {}
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024
-      return file.size <= maxSizeInBytes;}
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-  fileSiz,
-  e: (maxSizeInM)
-  B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */}
-    },
-    messag,`
-  e: message || `File size must not exceed ${maxSizeInMB}MB`)
-  }),
-  /**
-   * Validate file type
-   */
-  fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
-    validate: (file: File) => allowedTypes.includes(file.type),`}
-  fileTyp,
-  e: (allowedType)
-  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`
-  of: ${allowedTypes.join(', ')}`
-  })
-}
-/**
- * Validate a single field with multiple rules
- */
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,
-  const errors: string[] = [],
-  for (const rule of rules) {,
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-    }
-  }
-  return {}}valid: errors.length === 0,
-    errors}
-  }
-export function validateField</T><T>(valu,
-  e: T, rule)
-  s: ValidationRule</T><T>[]): ValidationResult {/* TODO: Fix JSX expression */}
-export function validateField<T>(valu,
-  }
-  return {/* TODO: Fix JSX expression */,}}}
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-/**
- * Validate entire form
- */
-  validationSchema: Record</T><keyof>
-): Record</keyof><keyof T, ValidationResult> {}
-  const results = {} as Record</keyof><keyof>
-  for (const fieldName in validationSchema) {}
-    const value = formData[fieldName]
-    const rules = validationSchema[fieldName]
-    results[fieldName] = validateField(value, rules);}
-}
-/**
- * Check if form is valid
- */
-): boolean {/* TODO: Fix JSX expression */}
-}
-/**
- * Get all form errors
- */
-export function getFormErrors<T extends Record<string, unknown>>(
-  for (const fieldName in validationResults) {}
-    const result = validationResults[fieldName]
-    if (!result.valid) {}
-      errors[fieldName] = result.errors;}
-}
-/**
- * Sanitize input string
- */
-export function sanitizeInput(input: string): string {
-    ,
-  return input
-    .trim(),
-    .replace(/[</keyof><>{]/g, '') // Remove potential HTML tags
-  }
-export function sanitizeInput(input: string): string {}
-  return input
-    results[fieldName] = validateField(value, rules);}
-export function validateForm<T extends Record<string, unknown>>(formDat,
-  a: T,
-  validationSchem,
-  s: Record<keyof T, ValidationResult></keyof>);
-): boolean {/* TODO: Fix JSX expression */,}}}
-/**;
- * Get all form errors;
- */;
-export function getFormErrors<T extends Record<string, unknown>>(;
-}
-/**
- * Check if form is valid
- */
-): Record<keyof T, string[]> {}
-  const errors = {} as Record<keyof T, string[]>
-  for (const fieldName in validationResults) {}
-    const result = validationResults[fieldName]
-    if (!result.valid) {}
-      errors[fieldName] = result.errors;}
-export function getFormErrors<T extends Record<string, unknown>>(validationResult,
-  s: Record<keyof T, ValidationResult></keyof>);
-): Record<keyof T, string[]> {/* TODO: Fix JSX expression */,}const errors = {}as Record<keyof>
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */,}}
-  s: Record<keyof T, ValidationResult></keyof>)
-): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
-  const errors = {} as Record<keyof T, string[]>
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
-    }
-  }
-  return errors
-}
-    .trim(),
-    .replace(/[<>{]/g, '') // Remove potential HTML tags;}
-export function sanitizeInput(input: string): string {}
-  return input
-    .trim()}</>
-    .replace(/[<>{]/g, '') // Remove potential HTML tags;}
-    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
-export function sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */,}}}
-/**;
- * Debounce function for form validation;
- */}</>
-export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
-  func: T,
-  wait: number,
-): (...args: Parameters<T>) => void {,}
-export function sanitizeInput(inpu)
-  t: string): string {/* TODO: Fix JSX expression */}
-}
-/**
- * Debounce function for form validation
- */}</></>
-export function debounce<T extends (...args: Parameters<T>) => ReturnType</T><T>>(,
-  func: T,
-  wait: number,
-): (...args: Parameters</T><T>) => void {
-    let timeout: NodeJS.Timeout | null = null,
-  return function executedFunction(...args: Parameters</T><T>) {,
-    const later = useCallback((...args) => {,
-      timeout = null
-  func: T,
-      func(...args);}
-    }
-    if (timeout) {}clearTimeout(timeout);}
-    }
-    timeout = setTimeout(later, wait)
-  }
-}
-export function debounce</T><T extends (...arg)
-  s: Parameters<T>) => ReturnType</T><T>>(fun,
-  c: T,
-): (...arg),
-    }
-    timeout = setTimeout(later, wait)
-  }
-}
-"`</T>
-export function debounce<T extends (...arg)
-  s: Parameters<T>) => ReturnType<T>>(fun,
-  c: T,
-  wai,
-  t: number;)
-): (...arg)
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-  }
-}
-"`
+
+export default PagePage

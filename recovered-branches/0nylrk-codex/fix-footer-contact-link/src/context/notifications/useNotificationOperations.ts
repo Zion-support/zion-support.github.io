@@ -1,95 +1,106 @@
-import { useState, useCallback } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Notification, FilterType, NotificationContextType } from './types'
-export const useNotificationOperations = (userId?: string): NotificationContextType => {
-  const [notifications, setNotifications] = useState<Notification[]>([])
-  const [loading, setLoading] = useState(false)
-  const [filter, setFilter] = useState<FilterType>('all')
-  const fetchNotifications = useCallback(async () => {
-    if (!userId) return
-    setLoading(true)
-    try {
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('*')
-        .eq('user_id', userId)
-        .order('created_at', { ascending: false })
-      if (error) throw error
-      setNotifications(data || [])
-    } catch (err) {
-      console.error('Error fetching notifications:', err)
-    } finally {
-      setLoading(false)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const NotificationsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }, [userId])
-  const markAsRead = useCallback(async (id: string) => {
-    if (!userId) return
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('id', id)
-        .eq('user_id', userId)
-      if (error) throw error
-      await fetchNotifications()
-    } catch (err) {
-      console.error('Error marking notification as read:', err)
-    }
-  }, [userId, fetchNotifications])
-  const markAllAsRead = useCallback(async () => {
-    if (!userId) return
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('user_id', userId)
-        .eq('read', false)
-      if (error) throw error
-      await fetchNotifications()
-    } catch (err) {
-      console.error('Error marking all notifications as read:', err)
-    }
-  }, [userId, fetchNotifications])
-  const dismissNotification = useCallback(async (id: string) => {
-    if (!userId) return
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .delete()
-        .eq('id', id)
-        .eq('user_id', userId)
-      if (error) throw error
-      await fetchNotifications()
-    } catch (err) {
-      console.error('Error dismissing notification:', err)
-    }
-  }, [userId, fetchNotifications])
-  const filteredNotifications = notifications.filter(notification => {
-    switch (filter) {
-      case 'unread':
-        return !notification.read
-      case 'messages':
-        return notification.type === 'message'
-      case 'onboarding':
-        return notification.type === 'onboarding'
-      case 'system':
-        return notification.type === 'system'
-      default:
-        return true
-    }
-  })
-  const unreadCount = notifications.filter(n => !n.read).length
-  return {
-    notifications,
-    filteredNotifications,
-    unreadCount,
-    loading,
-    filter,
-    markAsRead,
-    markAllAsRead,
-    dismissNotification,
-    setFilter,
-    fetchNotifications}
-    fetchNotifications,
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Notifications - Zion Tech Group</title>
+        <meta name="description" content="Learn about our notifications solutions and how they can transform your business." />
+        <meta name="keywords" content="notifications, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

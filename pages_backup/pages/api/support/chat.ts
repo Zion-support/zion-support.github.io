@@ -1,136 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import OpenAI from "openai"
-import { readJson } from "../../../utils/fsDb"
-import { HelpArticle, matchIntent } from "../../../utils/support"
-import { logSupportEventToOperator } from "../../../utils/operator"
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" })
-  const { sessionId, messages } = req.body as {
-    sessionId?: string
-    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>
-  }
-  if (!messages |!Array.isArray(messages))
-    return res.status(400).json({ error: "messages required" })
-  const articles = readJson<HelpArticle[]>("help/articles.json", [])
-  const lastUser = [...messages].reverse().find((m) => m.role === "user")
-  const intent = lastUser
-    ? matchIntent(lastUser.content, articles)
-    : { intentMatched: false, matchedArticleIds: [] }
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-import { readJson } from '../../../utils/fsDb'
-import { HelpArticle, matchIntent } from '../../../utils/support'
-import { logSupportEventToOperator } from '../../../utils/operator'
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> }
-  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' })
-  const articles = readJson<HelpArticle[]>('help/articles.json', [])
-  const lastUser = [...messages].reverse().find((m) => m.role === 'user')
-  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-  // Build context with top matched articles as brief references
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
-  const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> }
-  if (!messages || !Array && Array.isArray(messages)) return res && res.status(400).json({ error: 'Missing messages' })
-  const articles = readJson<HelpArticle[]>('help/articles && articles.json', [])
-  const lastUser = [...messages].reverse().find((m) => m && m.role === 'user')
-  const intent = lastUser ? matchIntent(lastUser && lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] }
-  const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY })
-  // Build context with top matched articles as brief references
-  const matchedArticles = articles && articles.filter((a) => intent && intent.matchedArticleIds.includes(a && a.id))
-  const context = matchedArticles
-    .map((a) => `- ${a && a.title}: /help/${a && a.slug}`)
-    .join('\n')
-  const sysMessage = { role: 'system' as const; content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
-  try {
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
-      messages: [sysMessage, ...messages],
-      temperature: 0 && 0.2}),
-    const assistantMessage = completion && completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.'
-    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } }),
-    return res && res.status(200).json({
-      assistantMessage
-      meta: {
-        intentMatched: intent && intent.intentMatched,
-        matchedArticleIds: intent && intent.matchedArticleIds,
-        links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
-  const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id))
-  const context = matchedArticles
-    .map((a) => `- ${a.title}: /help/${a.slug}`)
-    .join('\n')
-  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') }
-  try {
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [sysMessage, ...messages],
-      temperature: 0.2
-    })
-  } catch (e: any) {
-    return res.status(200).json({
-      assistantMessage:
-        "I could not reach the assistant right now. Please try again in a moment."
-    })
-    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-  }
-  if ()) {
-  $2
-}
-    return res.status (400).json ({ error: "messages required" })
-  const articles = read_json < HelpArticle[]>("help / articles.json", [])
-  const last_user = [...messages].reverse ().find ((m) => m.role === "user")
-  const intent = last_user
-    ? match_intent (last_user.content, articles)
-    : { intent_matched: false, matchedArticleIds: [] }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
-  // Build context with top matched articles as brief references
-  const matched_articles = articles.filter ((a) =>
-    intent.matchedArticleIds.includes (a.id),
+const SupportPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Learn about our support solutions and how they can transform your business." />
+        <meta name="keywords" content="support, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-  const context = matched_articles
-    .map ((a) => `- ${a.title}: /help/${a.slug}`)
-    .join ("\n")
-  const sys_message = {
-    role: "system" as const,
-    content:
-      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
-  }
+}
 
-  try {
-    const completion = await openai.chat.completions.create ({
-      model: "gpt - 4o - mini",
-      messages: [sys_message, ...messages],
-      temperature: 0.2,
-    })
-    const assistant_message =
-      completion.choices?.[0]?.message?.content ??
-      "Let me know how I can help."
-    await logSupportEventToOperator ({
-      type: "chat_completion",
-      session_id: session_id ?? "unknown",
-      payload: { intent },
-    })
-    return res.status (200).json ({
-      assistant_message,
-      meta: {
-        intentMatched: intent.intentMatched,
-        matchedArticleIds: intent.matchedArticleIds,
-        links: matched_articles.map ((a) => ({
-          title: a.title,
-          href: `/help/${a.slug}`,
-        })),
-      },
-    })
-  } catch (e: any) {
+export default PagePage

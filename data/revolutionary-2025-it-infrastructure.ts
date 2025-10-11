@@ -1,107 +1,106 @@
-export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'
-    path: '/services/revolutionary-cloud-infrastructure-2025',
-    description: 'Next-generation cloud infrastructure and management',
-    icon: 'Cloud',
-    category: 'IT Infrastructure',
-    features: [,
-      'Multi-cloud management',
-      'Automated scaling',
-      'Advanced security',
-      'Performance optimization'
-    ],
-    pricing: unknown,
-      starter: '$299/month',
-      professional: '$599/month'}
-      enterprise: 'Custom'}
-  },
-    name: 'Revolutionary DevOps Automation 2025'
-    path: '/services/revolutionary-devops-automation-2025',
-    description: 'Intelligent DevOps and CI/CD automation',
-    icon: 'Code',
-    category: 'DevOps',
-    features: [,
-export const revolutionaryITInfrastructure2025Services = [{/* TODO: Fix JSX expression */}
-  l: '$599/month'}
-      enterpris,
-  e: 'Custom'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  },
-    nam,
-  e: 'Revolutionary DevOps Automation 2025',
-    pat,
-  h: '/services/revolutionary-devops-automation-2025',
-    descriptio,
-  n: 'Intelligent DevOps and CI/CD automation',
-    ico,
-  n: 'Code',
-    categor,
-  y: 'DevOps',
-    feature,
-  s: [,
-      'Automated deployment',
-      'Intelligent testing',
-      'Performance monitoring',
-      'Security scanning'
-    ],
-    pricing: unknown,
-      starter: '$399/month',
-      professional: '$799/month',
-      enterprise: 'Custom',
-    pricin,
-  g: unknown,
-      starte,
-  r: '$399/month',
-      professiona,
-  l: '$799/month',
-      enterpris,
-  e: 'Custom'
-    }
-  }
-]
-export const revolutionaryITCategories2025 = [
-  'Cloud Infrastructure',
-  'DevOps Automation',
-  'Security & Compliance',
-  'Performance Optimization'
-]
-export const revolutionaryITStats2025 =
-  totalServices: 2
-  categories: 4
-  averageRating: 4.8
-  activeUsers: 1800,
-export const revolutionaryITStats2025 = {}
-  totalService,
-  s: 2,
-  categorie,
-  s: 4,
-  averageRatin,
-  g: 4.8,
-  activeUser,
-  s: 1800}
-export const revolutionaryITInfrastructure2025Services = [ nam,
-  e: 'Revolutionary Cloud Infrastructure 2025',' pat,
-  h: '/services/revolutionary-cloud-infrastructure-2025',' descriptio,
-  n: 'Next-generation cloud infrastructure and management',' ico,
-  n: 'Cloud',' categor,
-  y: 'IT Infrastructure', feature,
-  s: [' 'Multi-cloud management',' 'Automated scaling',' 'Advanced security',' 'Performance optimization' ], pricin,
-  g: ' starte,
-  r: '$299/month',' professiona,
-  l: '$599/month',' enterpris,
-  e: 'Custom' } }, ' nam,
-  e: 'Revolutionary DevOps Automation 2025',' pat,
-  h: '/services/revolutionary-devops-automation-2025',' descriptio,
-  n: 'Intelligent DevOps and CI/CD automation',' ico,
-  n: 'Code',' categor,
-  y: 'DevOps', feature,
-  s: [' 'Automated deployment',' 'Intelligent testing',' 'Performance monitoring',' 'Security scanning' ], pricin,
-  g: ' starte,
-  r: '$399/month',' professiona,
-  l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalService,
-  s: 2, categorie,
-  s: 4, averageRatin,
-  g: 4.8, activeUser,
-  s: 1800 }'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export const revolutionaryITInfrastructure2025Services = [ name: 'Revolutionary Cloud Infrastructure 2025',' path: '/services/revolutionary-cloud-infrastructure-2025',' description: 'Next-generation cloud infrastructure and management',' icon: 'Cloud',' category: 'IT Infrastructure', features: [' 'Multi-cloud management',' 'Automated scaling',' 'Advanced security',' 'Performance optimization' ], pricing: ' starter: '$299/month',' professional: '$599/month',' enterprise: 'Custom' } }, ' name: 'Revolutionary DevOps Automation 2025',' path: '/services/revolutionary-devops-automation-2025',' description: 'Intelligent DevOps and CI/CD automation',' icon: 'Code',' category: 'DevOps', features: [' 'Automated deployment',' 'Intelligent testing',' 'Performance monitoring',' 'Security scanning' ], pricing: ' starter: '$399/month',' professional: '$799/month',' enterprise: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalServices: 2, categories: 4, averageRating: 4.8, activeUsers: 1800 };'
+
+export default PagePage

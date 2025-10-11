@@ -1,209 +1,106 @@
-import { useState, useEffect } from "react"
-import { toast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals"
-export function useReferrals() {
-  const { user } = useAuth()
-  const [referralCode, setReferralCode] = useState<ReferralCode | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [referrals, setReferrals] = useState<Referral[]>([])
-  const [rewards, setRewards] = useState<ReferralReward[]>([])
-  const [stats, setStats] = useState<ReferralStats>({
-    totalReferrals: 0,
-    pendingReferrals: 0,
-    completedReferrals: 0,
-    totalRewards: 0})
-    totalRewards: 0,
-  })
-  useEffect(() => {
-    if (user) {
-      fetchReferralCode()
-      fetchReferralStats()
-      fetchReferrals()
-      fetchRewards()
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }, [user])
-  const fetchReferralCode = async () => {
-    try {
-      setIsLoading(true)
-      const { data, error } = await supabase
-        .from('referral_codes')
-        .select('*')
-        .eq('user_id', user?.id)
-        .single()
-      if (error) {
-        console.error("Error fetching referral code:", error)
-        return
-      }
-      setReferralCode(data)
-    } catch (error) {
-      console.error("Error in fetchReferralCode:", error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  const fetchReferrals = async () => {
-    try {
-      if (!user) return
-      const { data, error } = await supabase
-        .from('referrals')
-        .select('*')
-        .eq('referrer_id', user.id)
-        .order('created_at', { ascending: false })
-      if (error) throw error
-      setReferrals(data || [])
-    } catch (error) {
-      console.error("Error fetching referrals:", error)
-    }
-  }
-  const fetchRewards = async () => {
-    try {
-      if (!user) return
-      const { data, error } = await supabase
-        .from('referral_rewards')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-      if (error) throw error
-      setRewards(data || [])
-    } catch (error) {
-      console.error("Error fetching rewards:", error)
-    }
-  }
-  const fetchReferralStats = async () => {
-    try {
-      if (!user) return
-      // Get total referrals
-      const { data: referrals, error: refError } = await supabase
-        .from('referrals')
-        .select('id, status')
-        .eq('referrer_id', user.id)
-      if (refError) throw refError
-      // Get rewards
-      const { data: rewards, error: rewardsError } = await supabase
-        .from('referral_rewards')
-        .select('amount')
-        .eq('user_id', user.id)
-      if (rewardsError) throw rewardsError
-      // Calculate stats
-      const totalReferrals = referrals ? referrals.length : 0
-      const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0
-      const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0
-      const totalRewards = rewards ? rewards.reduce((sum, item) => {
-        return sum + (item.amount || 0)
-      }, 0) : 0
-      setStats({
-        totalReferrals,
-        pendingReferrals,
-        completedReferrals,
-        totalRewards
-      })
-    } catch (error) {
-      console.error("Error fetching referral stats:", error)
-    }
-  }
-  const generateReferralCode = async () => {
-    try {
-      if (!user) {
-        toast({
-          title: "Authentication required",
-          description: "You need to be logged in to generate a referral code",
-          variant: "destructive"})
-          variant: "destructive",
-        })
-        return
-      }
-      const { data, error } = await supabase.rpc('generate_referral_code', {
-        user_id: user.id
-      })
-      if (error) throw error
-      toast({
-        title: "Success!",
-        description: "Your referral code has been generated",
-        variant: "success"})
-        variant: "success",
-      })
-      // Refresh the code
-      fetchReferralCode()
-      return data
-    } catch (error: any) {
-      console.error("Error generating referral code:", error)
-      toast({
-        title: "Error generating code",
-        description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-    }
-  }
-  // Get the referral link for the current user
-  const getReferralLink = () => {
-    if (!referralCode) return ""
-    const baseUrl = window.location.origin
-    return `${baseUrl}/?ref=${referralCode.code}`
-  }
-  // Copy the referral link to clipboard
-  const copyReferralLink = () => {
-    const link = getReferralLink()
-    if (link) {
-      navigator.clipboard.writeText(link)
-      toast({
-        title: "Copied!",
-        description: "Referral link copied to clipboard",
-        variant: "success"})
-        variant: "success",
-      })
-    } else {
-      toast({
-        title: "Cannot copy link",
-        description: "Please generate a referral code first",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-    }
-  }
-  // Share on social media platforms
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
-    const link = getReferralLink()
-    const text = "Join Zion AI marketplace for AI talent and opportunities!"
-    if (!link) {
-      toast({
-        title: "Cannot share",
-        description: "Please generate a referral code first",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-      return
-    }
-    let shareUrl = ''
-    switch (platform) {
-      case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`
-        break
-      case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`
-        break
-      case 'linkedin':
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
-        break
-    }
-    if (shareUrl) {
-      window.open(shareUrl, '_blank')
-    }
-  }
-  return {
-    referralCode,
-    isLoading,
-    stats,
-    referrals, // Added this property
-    rewards,   // Added this property
-    generateReferralCode,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia,
-    fetchReferralStats,
-    fetchReferrals, // Added this method for refreshing referrals
-    fetchRewards,   // Added this method for refreshing rewards
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Learn about our hooks solutions and how they can transform your business." />
+        <meta name="keywords" content="hooks, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

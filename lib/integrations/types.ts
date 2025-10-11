@@ -1,401 +1,106 @@
-export type IntegrationCategory = 'crm' | 'ats'
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export type IntegrationProviderId =
-  | 'salesforce'
-  | 'hubspot'
-  | 'zoho'
-  | 'pipedrive'
-  | 'greenhouse'
-  | 'lever'
-export type IntegrationCategory = 'crm' | 'ats'
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export type IntegrationCategory = 'crm' | 'ats'
-export type IntegrationProviderId =
-  | 'salesforce'
-  | 'hubspot'
-  | 'zoho'
-  | 'pipedrive'
-  | 'greenhouse'
-  | 'lever'
-  | 'workable'
-  | 'bamboohr'
-  | 'workable'
-  | 'bamboohr'
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string
-  id: IntegrationProviderId, name: string,
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[]
-  icon?: string
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string,
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[]
-  icon?: string
-}
-export interface SyncRules {
-  // CRM rules
-  autoCreateContacts?: boolean
-  pushNotesMode?: 'auto' | 'manual'
-  // ATS rules
-  autoSyncApplicants?: boolean
-  autoUploadResumes?: boolean
-export interface ProviderConnection {
-export interface ProviderConnection {
-  providerId: IntegrationProviderId
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string
-  | 'workable'
-  | 'bamboohr'
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId
-  name: string
-  category: IntegrationCategory
-  description?: string
-  oauthScopes?: string[]
-  icon?: string
-}
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface SyncRules {
-  // CRM rules
-  autoCreateContacts?: boolean
-  pushNotesMode?: 'auto' | 'manual'
-  // ATS rules
-  autoSyncApplicants?: boolean
-  autoUploadResumes?: boolean
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const IntegrationsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Integrations - Zion Tech Group</title>
+        <meta name="description" content="Learn about our integrations solutions and how they can transform your business." />
+        <meta name="keywords" content="integrations, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface IntegrationProviderMeta {
-    id: string
-  name: string
-  category: 'crm' | 'ats' | 'hr',
-  description: string
-  }
-}
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface ProviderConnection {
-  id: string
-  providerId: IntegrationProviderId
-  accessToken: string
-  refreshToken?: string
-  expiresAt?: number,
-  config?: Record<string></string>
-}
-  category: 'crm' | 'ats' | 'hr'
-  description: string
-  logoUrl?: string
-  websiteUrl?: string
-  apiDocsUrl?: string,
-  id: string
-  providerId: IntegrationProviderId
-  accessToken: string
-  refreshToken?: string
-  expiresAt?: number
-  config?: Record<string, any>
-}
-  category: 'crm' | 'ats' | 'hr'
-  description: string
-  logoUrl?: string
-  websiteUrl?: string
-  apiDocsUrl?: string
-}
-export interface ProviderConnection {
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
-  accessToken?: string
-  refreshToken?: string
-  expiresAt?: number
-  lastSyncAt?: number
-export interface SyncLogEntry {
-  lastError?: string | null
-export interface SyncLogEntry {
-  id: string
-  timestamp: number
-  provider_id: IntegrationProviderId
-  level: 'info' | 'warn' | 'error'
-  action: string
-  details?: Record<string, any>
-export interface ManualOverride {
-  job_id: string
-  disableCrmSync?: boolean
-  disableAtsSync?: boolean
-export interface ZapierEvent {
-export interface ManualOverride {
-  jobId: string
-  disableCrmSync?: boolean
-  disableAtsSync?: boolean
-export interface ZapierEvent {
-  id: string
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched'
-  timestamp: number
-  payload: Record < string, any>
-export interface IntegrationsState {
-export interface ManualOverride {
-  jobId: string
-  disableCrmSync?: boolean
-  disableAtsSync?: boolean
-export interface ZapierEvent {
-  lastError?: string | null
-}
-export interface SyncLogEntry {
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
-}
-
-  status: SyncStatus
-  lastSync?: number
-}
-
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number
-  updatedAt: number
-  status: SyncStatus
-  lastSync?: number
-  config?: Record<string, any>
-  expiresAt?: number
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number
-  updatedAt: number
-  expiresAt?: number
-  status: SyncStatus
-  lastSync?: number,
-  config?: Record<string></string>
-}
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number
-  expiresAt?: number,
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
-  accessToken?: string
-  refreshToken?: string
-  expiresAt?: number
-  lastSyncAt?: number
-  createdAt: number
-  updatedAt: number
-  config?: Record<string, any>
-  expiresAt?: number
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number
-  updatedAt: number
-  expiresAt?: number
-  status: SyncStatus
-  lastSync?: number
-  config?: Record<string, any>
-}
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number
-  expiresAt?: number
-}
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-}
-
-  status: SyncStatus
-  lastSync?: number
-  createdAt: number,
-}
-
-}
-
-  lastSync?: Date
-  config: Record<string></string>createdAt</string>: Date
-  updatedAt: Date,
-}
-
-export interface SyncLogEntry {
-    id: string
-  connectionId: string
-  action: string,
-  details?: Record<string, any>
-  }
-
-  details?: Record<string></string>
-}
-}
-
-export interface ManualOverride {
-    jobId: string
-  disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-  }
-}
-
-export interface ZapierEvent {
-    id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number,
-export interface IntegrationProviderMeta {,
-  timestamp: number
-  status: 'success' | 'error' | 'warning',
-  message: string
-  }
-
-export interface ManualOverride {/* TODO: Fix JSX expression */}
-  id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number
-export interface IntegrationProviderMeta {,
-  timestamp: number
-  status: 'success' | 'error' | 'warning'
-  message: string
-}
-
-export interface IntegrationOverride {
-    id: string
-  connectionId: string
-  field: string
-  value: unknown
-  reason: string
-  createdAt: Date,
-  updatedAt: Date
-  }
-
-export interface IntegrationEvent {/* TODO: Fix JSX expression */}
-}
-
-export interface ZapierEvent {
-    id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number,
-  payload: Record<string, any>
-  }
-
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[],
-  lastError?: string | null
-  }
-
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-  }
-  payload: Record<string></string>
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
-  lastError?: string | null
-}
-}
-}
-}
-}
-  payload: Record<string, any>
-  id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number
-  payload: Record<string, any>
-}
-export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-}
-export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
-  timestamp: number,
-  payload: Record<string, any>
-}
-export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-}
-}
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId
-  name: string
-  category: 'crm' | 'ats'
-  description: string
-  payload: Record<string, any>
-}
-export interface IntegrationsState {
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
-}
-}
-
-export interface ProviderConnection {
-    id: string
-  providerId: IntegrationProviderId
-  accessToken: string
-  refreshToken?: string
-  expiresAt?: number
-  status: SyncStatus
-  lastSync?: number,
-  createdAt: number
-  }
-
-export interface IntegrationProviderMeta {
-    id: IntegrationProviderId
-  name: string
-  category: 'crm' | 'ats' | 'hr',
-  description: string
-  }
-  logoUrl?: string
-  websiteUrl?: string
-  apiDocsUrl?: string
-}
-  payload: Record<string></string>
-}
-}
-
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[],
-  lastError?: string | null
-  }
-  id: IntegrationProviderId
-  name: string
-  category: 'crm' | 'ats' | 'hr'
-  description: string
-}
-  logoUrl?: string
-  websiteUrl?: string
-  apiDocsUrl?: string
-}
-  payload: Record<string, any>
-}
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
-  lastError?: string | null;}
-}
-}
-  overrides: IntegrationOverride[]
-  events: IntegrationEvent[]
-}
-}
-  overrides: IntegrationOverride[]
-  events: IntegrationEvent[],
-}
+export default PagePage

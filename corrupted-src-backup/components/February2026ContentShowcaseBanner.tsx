@@ -1,185 +1,106 @@
-const, February2026ContentShowcaseBanne, r = () => {
-  const, featuredConten, t = [
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
     {
-      id: 1,
-      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6','
-      catego, r, y: 'AI, Architectur, e','
-      readTi, m, e: '12, mi, n','
-      rati, n, g: 5.0,
-      reade, r, s: '18, 0, K+','
-      bad, g, e: 'BREAKTHROU, G, H','
-      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
     {
-      id: 2,
-      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
-      catego, r, y: 'Edge, Computin, g','
-      readTi, m, e: '15, mi, n','
-      rati, n, g: 4.9,
-      reade, r, s: '15, 6, K+','
-      bad, g, e: 'FEATUR, E, D','
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
-      ic, o, n: <Zap, className="w-6 h-6/>,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
     {
-      id: 3,
-      tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
-      catego, r, y: 'AI, Psycholog, y','
-      readTi, m, e: '18, mi, n','
-      rati, n, g: 5.0,
-      reade, r, s: '20, 3, K+','
-      bad, g, e: 'REVOLUTIONA, R, Y','
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
-      ic, o, n: <Sparkles, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
-const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
-    {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
-    {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
-      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6','
-      catego, r, y: 'AI, Architectur, e','
-      readTi, m, e: '12, mi, n','
-      rati, n, g: 5.0,
-      reade, r, s: '18, 0, K+','
-      bad, g, e: 'BREAKTHROU, G, H','
-      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-      ic, o, n: <Brain, className="w-6 h-6" />,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g'
-    }
-    {
-      id: 2,
-      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
-      catego, r, y: 'Edge, Computin, g','
-      readTi, m, e: '15, mi, n','
-      rati, n, g: 4.9,
-      reade, r, s: '15, 6, K+','
-      bad, g, e: 'FEATUR, E, D','
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
-      ic, o, n: <Zap, className="w-6 h-6" />,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times'
-    }
-    {
-      id: 3,
-      tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
-      catego, r, y: 'AI, Psycholog, y','
-      readTi, m, e: '18, mi, n','
-      rati, n, g: 5.0,
-      reade, r, s: '20, 3, K+','
-      bad, g, e: 'REVOLUTIONA, R, Y','
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
-      ic, o, n: <Sparkles, className="w-6 h-6" />,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g'
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
   ]
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-          <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r">)
-                <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>)
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (
+
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-          <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r">
-                <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
-              <div, classNam, e = "relativ, e, p-8">
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}
-                  <span, classNam, e="flex, item, s-center, ga, p-1">
-                    <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-                <div, classNam, e="mb-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
-                    <Users, classNam, e="w-4 h-4" />
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s
-                  <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
-              <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                EXCLUSIVE, FEBRUARY, OFFER
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                EXCLUSIVE, FEBRUARY, OFFER
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                <, hre, f="/subscri, b, e"$2 />
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                >
-                  <Sparkles, classNam, e="w-5 h-5" />
-                  <Link, classNam, e="w-5 h-5" />
-              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-                <input, typ, e="ema, i, l"
-                    placehold, e, r="Enter, your, email"
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-  ]
-  return ("
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}"
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>"
-          <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now;"
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r">
-                <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>"
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          {/* TODO: Fix JSX expression */}"
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"`$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}`
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
-              <div, classNam, e = "relativ, e, p-8"></div>"
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}"
-                  <span, classNam, e="flex, item, s-center, ga, p-1"></span>"
-                    <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
-                <div, classNam, e="mb-6"></div>"
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0"></div>"
-                    <Users, classNam, e="w-4 h-4" /></Users>"
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>"
-                  <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" /></Link>"
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16"></div>"
-          <div, classNam, e="te, x, t-cent, e, r"></div>"
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>"
-              <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
-              <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                EXCLUSIVE, FEBRUARY, OFFER;"
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
-                <, hre, f="/subscri, b, e""$2 />
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
-                  <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"
-                  <Link, classNam, e="w-5 h-5" /></Link>"
-              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
-                <input, typ, e="ema, i, l""
-                    placehold, e, r="Enter, your, email""
-                    classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
-                  /></input>"
-                <button, classNam, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
-                  <sp, a, n>Subscri, b, e</sp, a, n>"
-                  <Link, classNam, e="w-5 h-5" />
-}")`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></button></Link></Link></Link></h2></h2></h2></h3></h3>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

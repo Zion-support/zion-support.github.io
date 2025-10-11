@@ -1,74 +1,106 @@
-import { useState, useCallback } from 'react'
-import { checkSignupPatterns } from '@/services/fraud/signupCheck'
-import { supabase } from '@/integrations/supabase/client'
-import { toast } from '@/hooks/use-toast'
-export function useFraudPreventionSignup() {
-  const [isCheckingFraud, setIsCheckingFraud] = useState(false)
-  // Get the user's IP address (in a real app, you'd do this server-side)
-  const getIP = async (): Promise<string | undefined> => {
-    try {
-      const response = await fetch('https://api.ipify.org?format=json')
-      const data = await response.json()
-      return data.ip
-    } catch (error) {
-      console.error('Error getting IP:', error)
-      return undefined
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  // Check if the signup attempt might be fraudulent
-  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
-    setIsCheckingFraud(true)
-    try {
-      const ipAddress = await getIP()
-      // Check for suspicious patterns
-      const fraudCheck = await checkSignupPatterns(email, ipAddress)
-      if (fraudCheck.isSuspicious) {
-        console.log('Suspicious signup detected:', fraudCheck.reasons)
-        // Create a fraud flag for admin review
-        const { error } = await supabase.from('fraud_flags').insert({
-          user_email: email,
-          content_type: 'signup',
-          content_id: email, // Using email as content ID for signup attempts
-          content_excerpt: `Signup attempt for ${email}`,
-          severity: 'suspicious',
-          reason: fraudCheck.reasons.join('; '),
-          ip_address: ipAddress,
-          timestamp: new Date().toISOString(),
-          status: 'pending'
-        })
-        if (error) {
-          console.error('Error creating fraud flag:', error)
-        }
-        // Depending on how strict we want to be, we could block the signup
-        // If the check is very suspicious, block the signup
-        if (fraudCheck.reasons.some(r => 
-          r.includes('Multiple accounts') || 
-          r.includes('suspicious email domain')
-        )) {
-          toast({
-            title: "Signup blocked",
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-            variant: "destructive"})
-            variant: "destructive",
-          })
-          return false
-        }
-        // Otherwise, allow but flag for review
-        return true
-      }
-      // No suspicious patterns found
-      return true
-    } catch (error) {
-      console.error('Error in fraud check:', error)
-      // On error, allow the signup but log the error
-      return true
-    } finally {
-      setIsCheckingFraud(false)
-    }
-  }, [])
-  return {
-    isCheckingFraud,
-    checkFraudBeforeSignup}
-    checkFraudBeforeSignup,
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Learn about our hooks solutions and how they can transform your business." />
+        <meta name="keywords" content="hooks, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

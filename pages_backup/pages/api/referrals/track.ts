@@ -1,132 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getServerSupabase } from "../../../utils/supabase/server"
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") return res.status($1).json({ $2 })
-  const { code, event, url, referrer } = req.body |{}
-  if (!code |!event) return res.status($1).json({ $2 })
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-      "placeholder-key"
-  try {
-    if (usingPlaceholder) {
-      return res && res.status(200).json({ saved: false, mock: true })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ReferralsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const supabase = getServerSupabase()
-    const { error } = await supabase && supabase.from("referral_events").insert({
-      partner_code: String(code).toLowerCase(),
-      event: String(event),
-      url: url || null,
-      referrer: referrer || null,
-      user_agent: req && req.headers["user-agent"] || null,
-      ip_address:
-        (req.headers["x-forwarded-for"] as string) |
-        req.socket.remoteAddress |
-        null
-    })
-    if (error) return res && res.status(500).json({ error: "Database error" })
-    return res && res.status(200).json({ saved: true })
-  } catch (e: any) {
-    return res.status(200).json({ saved: false, error: e?.message })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { code, event, url, referrer } = req.body || {}
-  if (!code || !event) return res.status(400).json({ error: 'Missing code or event' })
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key'
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ saved: false, mock: true })
-    }
-    const supabase = getServerSupabase()
-    const { error } = await supabase.from('referral_events').insert({
-      partner_code: String(code).toLowerCase(), event: String(event),
-      url: url || null, referrer: referrer || null,
-      user_agent: req.headers['user-agent'] || null,
-      ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null})
-    if (error) return res.status(500).json({ error: error.message })
-    return res.status(200).json({ saved: true })
-  } catch (e: any) {
-    return res.status(200).json({ saved: false, error: e?.message })
-  }
-}
-    return res.status(200).json({ saved: false, error: e?.message })
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getServerSupabase } from '../../../utils/supabase/server'
-export default async function handler(req, res) {
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (200).json ({ saved: false, mock: true })
-    }
-    const supabase = getServerSupabase ()
-    const { error } = await supabase.from ("referral_events").insert ({
-      partner_code: String (code).toLowerCase (),
-      event: String (event),
-      url: url || null,
-      referrer: referrer || null,
-      user_agent: req.headers["user - agent"] || null,
-      ip_address:
-        (req.headers["x - forwarded - for"] as string) ||
-        req.socket.remote_address ||
-        null,
-    })
-    if (return res.status (500).json ({ error: "Database error" })) {
-  $2
-}
-    return res.status (200).json ({ saved: true })
-  } catch (e: any) {
-    return res.status (200).json ({ saved: false, error: e?.message })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Referrals - Zion Tech Group</title>
+        <meta name="description" content="Learn about our referrals solutions and how they can transform your business." />
+        <meta name="keywords" content="referrals, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-    const supabase = getServerSupabase()
-    const { error } = await supabase.from('referral_events').insert({
-      partner_code: String(code).toLowerCase()
-      event: String(event)
-      url: url || null
-      referrer: referrer || null
-      user_agent: req.headers['user-agent'] || null,
-      ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null})
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    return res.status(200).json({ saved: false, error: e?.message })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

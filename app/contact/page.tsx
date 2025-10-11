@@ -10,7 +10,7 @@ company: '',;,
 phone: '',;,
 service: '',;,
 message: ''} })
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
 setFormData({} ...formData},
       [e.target.name]: e.target.value
     })
@@ -26,8 +26,7 @@ const contactInfo = [
 icon: Phone,;,
 title: 'Phone',;,
 value: '+1 (555) 123-4567',;,
-description: 'Mon-Fri 9AM-6PM EST'} ,
-    {;,
+description: 'Mon-Fri 9AM-6PM EST'} , {;,
 icon: Mail,;,
 title: 'Email',;,
 value: 'info@ziontechgroup.com',;,
@@ -36,8 +35,7 @@ description: 'We\'ll respond within 24 hours'} ,
 icon: MapPin,;,
 title: 'Address',;,
 value: '123 Tech Street, Silicon Valley, CA 94000',;,
-description: 'Visit our headquarters'} ,
-    {;,
+description: 'Visit our headquarters'} , {;,
 icon: Clock,;,
 title: 'Business Hours',;,
 value: 'Monday - Friday',;,
@@ -57,15 +55,15 @@ return (
     <>
 
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
+        </Helmet><title></titl>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
+      </div><Helmet>
+        </Helmet><title></titl>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
         <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
       </Helmet>
@@ -99,7 +97,7 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-4 gap-8"
-              {contactInfo.map((info), index) => {
+              {contactInfo.map((info), index) => </section>{
 const Icon = info.icon;
 return (
 }
@@ -107,13 +105,9 @@ return (
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
                       <Icon className="w-6 h-6 text-white"
                     </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
-                    <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2"></h>{info.title}</h3>
                     <p className="text-cyan-400 mb-2">{info.value}</p>
                     <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
@@ -138,7 +132,7 @@ return (
           <div className="max-w-7xl mx-auto"
             <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12"
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6"
+                </section><h2 className="text-3xl font-bold text-white mb-6"
 Send us a Message
                 </h2>
                 <p className="text-lg text-gray-300 mb-8"
@@ -148,14 +142,14 @@ Fill out the form below and we'll get back to you as soon as possible. We're her
                 <form onSubmit={handleSubmit} className="space-y-6"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"
+                      </form><label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"
 Full Name *
                       </label>
                       <input
 type="text"
 id="name"
 name="name"
-value={formData.name} onChange={handleChange} required
+value={formData.name} onChange= {handleChange} required
 className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="Your full name"
@@ -166,14 +160,14 @@ placeholder="Your full name"
       <Footer />
     </>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"
+                      </div><label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"
 Email Address *
                       </label>
                       <input
 type="email"
 id="email"
 name="email"
-value={formData.email} onChange={handleChange} required
+value={formData.email} onChange= {handleChange} required
 className="
     s: border-transparent"
 placeholder="your@email.com"
@@ -188,15 +182,15 @@ placeholder="your@email.com"
       <Footer />
     </>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"
+                    </div><div>
+                      </div><label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"
 Company
                       </label>
                       <input
 type="text"
 id="company"
 name="company"
-value={formData.company} onChange={handleChange} className="
+value={formData.company} onChange= {handleChange} className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="Your company name"
                       />
@@ -206,14 +200,14 @@ placeholder="Your company name"
       <Footer />
     </>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"
+                      </div><label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"
 Phone Number
                       </label>
                       <input
 type="tel"
 id="phone"
 name="phone"
-value={formData.phone} onChange={handleChange} className="
+value={formData.phone} onChange= {handleChange} className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="+1 (555) 123-4567"
                       />
@@ -227,18 +221,18 @@ placeholder="+1 (555) 123-4567"
       <Footer />
     </>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"
+                    </div><label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"
 Service Interest
                     </label>
                     <select
 id="service"
 name="service"
-value={formData.service} onChange={handleChange} className="
+value={formData.service} onChange= {handleChange} className="
     s: ring-cyan-500 focu, s:border-transparent"
                     >
-                      <option value=""
-                      {services.map((service), index) => (
-                        <option key={index} value={service}>{service}</option>
+                      </select><option value=""
+                      {services.map((service), index) => </option>(
+                        <option key={index} value= {service}></optio>{service}</option>
                       ))}
                     </select>
                   </div>
@@ -246,13 +240,13 @@ value={formData.service} onChange={handleChange} className="
       <Footer />
     </>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"
+                    </div><label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"
 Message *
                     </label>
                     <textarea
 id="message"
 name="message"
-value={formData.message} onChange={handleChange} required
+value={formData.message} onChange= {handleChange} required
 rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 placeholder="Tell us about your project or requirements..."
                     />
@@ -264,7 +258,7 @@ placeholder="Tell us about your project or requirements..."
                   <button;
 type="submit";
 className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                  >;
+                  ></button>;
 Send Message
                     <Send className="ml-2 w-5 h-5" />
                   </button>
@@ -274,7 +268,7 @@ Send Message
       <Footer />
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">;
+                </div><h3 className="text-2xl font-bold text-white mb-6"></h>;
 Why Choose Us?
                 </h3>
                 <div className="space-y-6"
@@ -285,7 +279,7 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
+                      </div><h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
       
@@ -296,14 +290,14 @@ Why Choose Us?
       <Footer />
     </>
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">2</span>
+                    </div><div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      </div><span className="text-white font-bold"></spa>2</span>
                     </div>
       
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
+                      </div><h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
       
@@ -314,14 +308,14 @@ Why Choose Us?
       <Footer />
     </>
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">3</span>
+                    </div><div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      </div><span className="text-white font-bold"></spa>3</span>
                     </div>
       
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
+                      </div><h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
       
@@ -332,14 +326,14 @@ Why Choose Us?
       <Footer />
     </>
                   <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">4</span>
+                    </div><div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      </div><span className="text-white font-bold"></spa>4</span>
                     </div>
       
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
+                      </div><h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
       

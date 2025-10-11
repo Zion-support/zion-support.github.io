@@ -1,142 +1,106 @@
-export type WatchlistMatch = {
-export type WatchlistMatch = {
-export type WatchlistMatch = {
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia'
-  name: string
-  score: number; // 0-1 match confidence
-  referenceId?: string
-  detailsUrl?: string
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export type AmlCheckResult = {
-}
-export type AmlCheckResult = {
-  status: 'clear' | 'match' | 'review' | 'unknown'
-  matches: WatchlistMatch[]
-  checked_at: string; // ISO
-  provider: 'mock' | 'remote'
-}
-export interface AmlProvider {
-}
-export interface AmlProvider {
-  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>
-  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>
-}
-class MockAmlProvider implements AmlProvider {
-    const name = params && params.fullLegalName.toLowerCase()
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    }
-    return { status: 'clear' }
-  }
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params && params.businessName.toLowerCase()
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-    }
-    return { status: 'clear' }
-  }
-}
-// Singleton instance
-export const amlManager = new AmlManager()
-// Utility functions
-export function createAmlCheck(
-  userId: string,
-  checkType: AmlCheck['checkType']
-): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'> {
-  return {
-    userId,
-    checkType,
-    status: 'pending',
-    result: 'clear',
-    confidence: 0,
-    details: {}
-  }
-}
-export function generateAmlCheckId(): string {
-  return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-}
-export function isAmlCheckExpired(check: AmlCheck): boolean {
-  return new Date(check.expiresAt) < new Date()
-}
-export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
-  const colors = {
-    low: 'green',
-    medium: 'yellow',
-    high: 'orange',
-    critical: 'red'
-  }
-  return colors[riskLevel]
-}
-  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.fullLegalName.toLowerCase ()
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    }
-    return { status: 'clear' }
-  }
-  async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.business_name.toLowerCase ()
-    if (|| name.includes ('demo')) {) {
-  $2
-}
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-    }
-    return { status: 'clear' }
-  }
-}
-export function getAmlProvider(): AmlProvider {
-  return new MockAmlProvider()
-}
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ()
-}
-}
-export type AmlCheckResult = {
-  status: 'clear' | 'match' | 'review' | 'unknown'
-  matches: WatchlistMatch[]
-  checkedAt: string; // ISO
-  provider: 'mock' | 'remote'
-}
-export interface AmlProvider {
-  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>
-  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>
-}
-class MockAmlProvider implements AmlProvider {
-  async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {
-    const lowered = fullLegalName.toLowerCase()
-    const isPep = lowered.includes('minister') || lowered.includes('president')
-    const isOfac = lowered.includes('sanction')
-    const matches: WatchlistMatch[] = []
-    if (isPep) matches.push({ list: 'PEP', name: fullLegalName, score: 0.9 })
-    if (isOfac) matches.push({ list: 'OFAC', name: fullLegalName, score: 0.95 })
-    return {
-      status: matches.length ? 'review' : 'clear',
-      matches,
-      checkedAt: new Date().toISOString(),
-      provider: 'mock',
-    }
-  }
-  async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {
-    const lowered = businessName.toLowerCase()
-    const isSanction = lowered.includes('banned')
-    return {
-      status: isSanction ? 'review' : 'clear',
-      matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],
-      checkedAt: new Date().toISOString(),
-      provider: 'mock',
-    }
-  }
-}
-let provider: AmlProvider = new MockAmlProvider()
-export function setAmlProvider(custom: AmlProvider) {
-  provider = custom
-}
-export function getAmlProvider(): AmlProvider {
-  return provider
-}
+export default PagePage

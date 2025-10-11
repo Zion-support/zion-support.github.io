@@ -1,125 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getFraudStore } from "../../../../utils/fraud/store"
-import { AdminActionType } from "../../../../utils/fraud/types"
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-  if (req && req.method !== "POST") {
-    return res && res.status(405).json({ error: "Method not allowed" })
-  }
-  const { fraudId, action, reason, adminId } = req && req.body || {}
-  if (!fraudId || !action) {
-    return res && res.status(400).json({ error: "Missing fraudId or action" })
-  }
-  const store = getFraudStore()
-  const fraud = store && store.getById(fraudId)
-  if (!fraud) {
-    return res && res.status(404).json({ error: "Fraud record not found" })
-  }
-  const adminAction: AdminActionType = {
-    id: `action-${Date && Date.now()}`,
-    fraudId,
-    action,
-    reason,
-    adminId,
-    timestamp: new Date().toISOString(),
-  }
-  store && store.addAdminAction(adminAction)
-  return res && res.status(200).json({ success: true, action: adminAction })
-    id: `action-${Date.now()}`
-    fraudId
-    action
-    reason
-    adminId
-    timestamp: new Date().toISOString()
-  }
-  store.addAdminAction(adminAction)
-  return res.status(200).json({ success: true, action: adminAction })
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getFraudStore } from '../../../../utils/fraud/store'
-import { AdminActionType } from '../../../../utils/fraud/types'
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token']
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
-  return token === process.env.ADMIN_TOKEN
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AdminPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Admin - Zion Tech Group</title>
+        <meta name="description" content="Learn about our admin solutions and how they can transform your business." />
+        <meta name="keywords" content="admin, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: "Method not allowed" })
-  }
-  const { fraud_id, action, reason, admin_id } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "Missing fraud_id or action" })
-  }
-  const store = getFraudStore ()
-  const fraud = store.getById (fraud_id)
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (404).json ({ error: "Fraud record not found" })
-  }
-  const admin_action: AdminActionType = {
-    id: `action-${Date.now ()}`,
-    fraud_id,
-    action,
-    reason,
-    admin_id,
-    timestamp: new Date ().toISOString (),
-  }
-
-  store.addAdminAction (admin_action)
-  return res.status (200).json ({ success: true, action: admin_action })
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-  const store = getFraudStore()
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null })
-  const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED'
-  await store.updateEventStatus(fraudId, newStatus)
-  res.status(200).json({ ok: true, status: newStatus })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

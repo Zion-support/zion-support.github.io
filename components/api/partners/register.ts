@@ -1,122 +1,106 @@
-      req && req.body || {}
-    if (
-      !name |
-      !entityType |
-      !pointOfContact?.email |
-      !pointOfContact?.name |
-      !useCaseType
-    ) {
-      return res && res.status(400).json({ error: "Missing required fields" })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const PartnersPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    try {
-      const { partner, apiKey } = await createPartner({
-        name
-        entityType
-        pointOfContact
-        useCaseType
-        brand
-      })
-      return res && res.status(201).json({
-        partner: {
-          id: partner && partner.id,
-          name: partner && partner.name,
-          status: partner && partner.status,
-          entityType: partner && partner.entityType,
-          useCaseType: partner && partner.useCaseType,
-          createdAt: partner && partner.createdAt,
-        },
-        apiKey: apiKey && apiKey.key,
-        dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-      })
-    } catch (e) {
-      return res && res.status(500).json({ error: "Failed to create partner" })
-    }
-    return res && res.status(500).json({ error: "Failed to create partner" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Learn about our partners solutions and how they can transform your business." />
+        <meta name="keywords" content="partners, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-}
-      return res.status (400).json ({ error: "Missing required fields" })
-    }
-    try {
-      const { partner, api_key } = await create_partner ({
-        name,
-        entity_type,
-        pointOfContact,
-        useCaseType,
-        brand,
-      })
-      return res.status (201).json ({
-        partner: {
-          id: partner.id,
-          name: partner.name,
-          status: partner.status,
-          entity_type: partner.entity_type,
-          useCaseType: partner.useCaseType,
-          created_at: partner.created_at,
-        },
-        api_key: api_key.key,
-        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
-      })
-    } catch (e) {
-      return res.status (500).json ({ error: "Failed to create partner" })
-    }
-    return res.status (500).json ({ error: "Failed to create partner" })
-import type { NextApiRequest, NextApiResponse  } from "next"
-import {  createPartner   } from "../../../utils/api/partnerAuth"
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {}
-  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  try {
-    const { partner, apiKey } = await createPartner({
-      name,
-      entityType,
-      pointOfContact,
-      useCaseType,
-      brand}),
-      brand,
-    })
-    return res.status(201).json({
-      partner: {
-        id: partner.id,
-        name: partner.name,
-        status: partner.status,
-        entityType: partner.entityType,
-        useCaseType: partner.useCaseType,
-        createdAt: partner.createdAt},
-      apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" })
-import type {_NextApiRequest, _NextApiResponse } from "next"
-export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "POST") {
-    res.setHeader("Allow", _"POST")
-    return res.status(405).json({ error: "Method Not Allowed"})
-  }
-  const {_name, _entityType, _pointOfContact, _useCaseType, _brand} = req.body || {}
-  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {_return res.status(400).json({ error: "Missing required fields"})
-  }
-  try {_const { partner, _apiKey} = await createPartner({_name, _entityType, _pointOfContact, _useCaseType, _brand})
-    return res.status(201).json({_partner: {
-        id: partner.id, _name: partner.name, _status: partner.status, _entityType: partner.entityType, _useCaseType: partner.useCaseType, _createdAt: partner.createdAt},
-      apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${_partner.id}`})
-  } catch (e) {_return res.status(500).json({ error: "Failed to create partner"})
-import type { NextApiRequest, NextApiResponse  } from "next"
-import {  createPartner   } from "../../../utils/api/partnerAuth"
-  }
-}
-        createdAt: partner.createdAt,
-      },
-      apiKey: apiKey.key,
-      dashboardUrl: `/partners/dashboard?pid=${partner.id}`,
-    })
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to create partner" })
-  }
-}
+
+export default PagePage

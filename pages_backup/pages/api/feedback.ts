@@ -1,375 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import {
-  saveFeedbackFallback
-  FeedbackRecord
-} from "../../utils/feedback/store"
-function ok(res: NextApiResponse, data: any) {
-  return res && res.status(200).json({ ok: true, ...data })
-}
-function bad(res: NextApiResponse, msg: string, code = 400) {
-  return res && res.status(code).json({ ok: false, error: msg })
-}
-async function tryWriteToFirestore(doc: FeedbackRecord) {
-  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-    process && process.env as Record<string, string | undefined>
-  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
-    return false
-  try {
-    const admin = require("firebase-admin")
-    if (admin && admin.apps.length === 0) {
-      admin && admin.initializeApp({
-        credential: admin && admin.credential.cert({
-          projectId: FIREBASE_PROJECT_ID,
-          clientEmail: FIREBASE_CLIENT_EMAIL,
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-      })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const db = admin.firestore ()
-    await db.collection ("interaction_feedback").doc (doc.id).set (doc)
-    return true
-  } catch (e) {
-    return false
-  }
-}
-  if (req && req.method !== "POST") return bad(res, "Method not allowed", 405)
-  const { rating, comment, kind, context } = req && req.body || {}
-  const r = Number(rating)
-  if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5")
-  const k: FeedbackRecord["kind"] =
-    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general"
-  const user = {
-    id: (req && req.headers["x-demo-user-id"] as string) || undefined,
-    role: (req && req.headers["x-demo-user-role"] as string) || undefined,
-    talentSlug: (req && req.headers["x-demo-talent-slug"] as string) || undefined,
-  }
-  const doc: FeedbackRecord = {
-    id: uuidv4()
-    createdAtIso: new Date().toISOString()
-    user
-    rating: r
-    comment: comment |undefined
-    kind: k
-    context: context |undefined
-  }
-  const wrote = await tryWriteToFirestore(doc)
-  if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc && doc.id })
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-function ok(res: NextApiResponse, data: any) {
-  return res.status(200).json({
-    ok: true,
-    ...data
-  })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const { rating, comment, kind, context } = req.body || {}
-  const r = Number (rating)
-  if (return bad (res, "rating must be 1 - 5")) {
-  $2
-}
-  }
+  ]
 
-  const wrote = await tryWriteToFirestore (doc)
-  if (saveFeedbackFallback (doc)) {
-  $2
-}
-  return ok (res, { id: doc.id })
-}
-function bad(res: NextApiResponse, msg: string, code = 400) {
-  return res.status(code).json({
-    ok: false,
-    error: msg
-  })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-export default async function handler(req, res) {
-  try {
-  const doc = {
-    id: 'feedback-id',
-    createdAtIso: new Date().toISOString(),
-    user: 'user',
-    rating: 5,
-    comment: 'feedback comment',
-    kind: 'general',
-    context: 'api'
-  }
-  return ok(res, {
-    id: doc.id
-  })
-import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid",
-import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store",
-function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-async function tryWriteToFirestore(req, res) {
-  try {
-  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>,
-  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
-  try {
-    const admin = require("firebase-admin"),
-    if (admin.apps.length === 0) {
-      admin.initializeApp({
-        credential: admin.credential.cert({
-          projectId: FIREBASE_PROJECT_ID,
-          clientEmail: FIREBASE_CLIENT_EMAIL,
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-        }),
-      })
-    }
-    const db = admin.firestore()
-    await db.collection("interaction_feedback").doc(doc.id).set(doc)
-    return true
-  } catch (e) {
-    return false
-  }
-}
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    const db = admin.firestore(),
-    await db.collection("interaction_feedback").doc(doc.id).set(doc),
-    return true
-  } catch (e) {
-    return false
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return bad(res, "Method not allowed", 405),
-  const { rating, comment, kind, context } = req.body || {},
-  const r = Number(rating),
-  if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5"),
-  const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general",
-  const user = {
-    id: (req.headers["x-demo-user-id"] as string) || undefined,
-    role: (req.headers["x-demo-user-role"] as string) || undefined,
-    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined},
-  const doc: FeedbackRecord = {
-    id: uuidv4(),
-    createdAtIso: new Date().toISOString(),
-    user,
-    rating: r,
-    comment: comment || undefined,
-    kind: k,
-    context: context || undefined},
-  const wrote = await tryWriteToFirestore(doc),
-  if (!wrote) saveFeedbackFallback(doc),
-  return ok(res, { id: doc.id })
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store"
-function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-async function tryWriteToFirestore(doc: FeedbackRecord) {
-  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
-  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
-  try {
-    const admin = require("firebase-admin")
-    if (admin.apps.length === 0) {
-      admin.initializeApp({
-        credential: admin.credential.cert({
-          projectId: FIREBASE_PROJECT_ID
-          clientEmail: FIREBASE_CLIENT_EMAIL
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    const db = admin.firestore()
-    await db.collection("interaction_feedback").doc(doc.id).set(doc)
-    return true
-  } catch (error) {
-    return false
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return bad(res, "Method not allowed", 405)
-  const { rating, comment, kind, context } = req.body || {}
-  const r = Number(rating)
-  if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5")
-  const k: FeedbackRecord["kind"] =
-    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general"
-  const doc: FeedbackRecord = {
-    id: uuidv4(),
-    createdAtIso: new Date().toISOString(),
-    user,
-    rating: r,
-    comment: comment || undefined,
-    kind: k,
-    context: context || undefined,
-  }
-const wrote = await tryWriteToFirestore(doc)
-  if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc.id })
-}
-  const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general"
-  const user = {
-    id: (req.headers["x-demo-user-id"] as string) || undefined
-    role: (req.headers["x-demo-user-role"] as string) || undefined
-    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined}
-  const doc: FeedbackRecord = {
-    id: uuidv4()
-    createdAtIso: new Date().toISOString()
-    user
-    rating: r,
-    comment: comment || undefined,
-    kind: k,
-    context: context || undefined},
-  const wrote = await tryWriteToFirestore(doc)
-  if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc.id })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

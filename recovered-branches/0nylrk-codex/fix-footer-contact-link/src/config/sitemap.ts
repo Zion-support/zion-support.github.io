@@ -1,380 +1,106 @@
-// Define the types for our sitemap structure
-export type SitemapItem = {
-  path: string
-  label: string
-  description?: string
-  priority?: number
-  changeFreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  lastmod?: string
-  requiredAuth?: boolean
-  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>
-  children?: SitemapItem[]
-}
-// Current date for lastmod
-const currentDate = '2025-05-15'
-// Public Pages - Accessible to all users
-export const publicPages: SitemapItem[] = [
-  {
-    path: '/',
-    label: 'Home',
-    description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
-    priority: 1.0,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/about',
-    label: 'About Us',
-    description: 'Learn about the Zion AI Marketplace mission and team',
-    priority: 0.8,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/contact',
-    label: 'Contact',
-    description: 'Get in touch with the Zion team',
-    priority: 0.8, 
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/talent',
-    label: 'Talent Directory',
-    description: 'Browse skilled AI and tech professionals',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/marketplace',
-    label: 'Marketplace',
-    description: 'Explore AI services, products and equipment',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/services',
-    label: 'Services',
-    description: 'Find professional tech and AI services',
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/equipment',
-    label: 'Equipment',
-    description: 'Specialized hardware and tech equipment',
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/categories',
-    label: 'Categories',
-    description: 'Browse service and talent categories',
-    priority: 0.7,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/blog',
-    label: 'Blog',
-    description: 'Articles and insights about AI and tech',
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/faq',
-    label: 'FAQ',
-    description: 'Frequently asked questions about Zion',
-    priority: 0.7,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/terms',
-    label: 'Terms of Service',
-    description: 'Terms and conditions for using Zion',
-    priority: 0.5,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/privacy',
-    label: 'Privacy Policy',
-    description: 'How we handle your data',
-    priority: 0.5,
-    changeFreq: 'monthly',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Authentication Pages
-export const authPages: SitemapItem[] = [
-  {
-    path: '/login',
-    label: 'Login',
-    description: 'Sign in to your account',
-    priority: 0.6,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/signup',
-    label: 'Sign Up',
-    description: 'Create a new account',
-    priority: 0.6,
-    changeFreq: 'monthly',
-    lastmod: currentDate,
-    children: [
-      {
-        path: '/signup/talent',
-        label: 'Talent Registration',
-        description: 'Sign up as a talent or creator',
-        priority: 0.6,
-        changeFreq: 'monthly',
-        lastmod: currentDate},
-        lastmod: currentDate,
-      },
-      {
-        path: '/signup/client',
-        label: 'Client Registration',
-        description: 'Sign up as an employer or buyer',
-        priority: 0.6,
-        changeFreq: 'monthly',
-        lastmod: currentDate}
-        lastmod: currentDate,
-      }
-    ]
-  },
-  {
-    path: '/forgot-password',
-    label: 'Forgot Password',
-    description: 'Reset your password',
-    priority: 0.5,
-    changeFreq: 'monthly',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Talent/Creator Routes - Requires authentication and appropriate role
-export const talentRoutes: SitemapItem[] = [
-  {
-    path: '/talent-dashboard',
-    label: 'Talent Dashboard',
-    description: 'Overview for talent users',
-    requiredAuth: true,
-    requiredRoles: ['jobSeeker', 'creator'],
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/talent-onboarding',
-    label: 'Talent Onboarding',
-    description: 'Complete your talent profile',
-    requiredAuth: true,
-    requiredRoles: ['jobSeeker', 'creator'],
-    priority: 0.8,
-    changeFreq: 'monthly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/portfolio',
-    label: 'Portfolio',
-    description: 'Manage your portfolio and resume',
-    requiredAuth: true,
-    requiredRoles: ['jobSeeker', 'creator'],
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/create-profile',
-    label: 'Create Profile',
-    description: 'Set up your talent profile',
-    requiredAuth: true,
-    requiredRoles: ['jobSeeker', 'creator'],
-    priority: 0.7,
-    changeFreq: 'monthly',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Client/Employer Routes - Requires authentication and appropriate role
-export const clientRoutes: SitemapItem[] = [
-  {
-    path: '/client-dashboard',
-    label: 'Client Dashboard',
-    description: 'Overview for client users',
-    requiredAuth: true,
-    requiredRoles: ['employer', 'buyer'],
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/post-job',
-    label: 'Post a Job',
-    description: 'Create a new job listing',
-    requiredAuth: true,
-    requiredRoles: ['employer', 'buyer'],
-    priority: 0.8,
-    changeFreq: 'weekly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/hiring-tracker',
-    label: 'Hiring Pipeline',
-    description: 'Track your hiring process',
-    requiredAuth: true,
-    requiredRoles: ['employer', 'buyer'],
-    priority: 0.7,
-    changeFreq: 'daily',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Shared Routes - Authenticated Users
-export const sharedRoutes: SitemapItem[] = [
-  {
-    path: '/messages',
-    label: 'Messages',
-    description: 'Your inbox and conversations',
-    requiredAuth: true,
-    priority: 0.9,
-    changeFreq: 'hourly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/notifications',
-    label: 'Notifications',
-    description: 'Your alerts and updates',
-    requiredAuth: true,
-    priority: 0.8,
-    changeFreq: 'hourly',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/project/:projectId/room',
-    label: 'Project Room',
-    description: 'Real-time meetings for collaboration',
-    requiredAuth: true,
-    priority: 0.6,
-    changeFreq: 'never',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/dashboard/disputes',
-    label: 'Disputes',
-    description: 'Manage and view disputes',
-    requiredAuth: true,
-    priority: 0.7,
-    changeFreq: 'daily',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Admin Routes
-export const adminRoutes: SitemapItem[] = [
-  {
-    path: '/analytics',
-    label: 'Analytics',
-    description: 'System analytics and metrics',
-    requiredAuth: true,
-    requiredRoles: ['admin'],
-    priority: 0.9,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/admin/reviews',
-    label: 'Reviews Moderation',
-    description: 'Moderate user reviews',
-    requiredAuth: true,
-    requiredRoles: ['admin'],
-    priority: 0.7,
-    changeFreq: 'daily',
-    lastmod: currentDate},
-    lastmod: currentDate,
-  },
-  {
-    path: '/admin/disputes',
-    label: 'Dispute Management',
-    description: 'Manage user disputes',
-    requiredAuth: true,
-    requiredRoles: ['admin'],
-    priority: 0.8,
-    changeFreq: 'daily',
-    lastmod: currentDate}]
-    lastmod: currentDate,
-  },
-]
-// Dynamic Path Patterns
-export const dynamicPaths = {
-  talentProfile: '/talent/:id',
-  projectDetails: '/project/:projectId',
-  projectMilestones: '/project/:projectId/milestones',
-  projectRoom: '/project/:projectId/room',
-  jobDetails: '/job/:id',
-  categoryDetails: '/categories/:slug',
-  disputeDetails: '/dashboard/disputes/:disputeId'}
-  disputeDetails: '/dashboard/disputes/:disputeId',
-}
-// The complete sitemap
-export const completeSitemap: SitemapItem[] = [
-  ...publicPages,
-  ...authPages,
-  ...talentRoutes,
-  ...clientRoutes,
-  ...sharedRoutes,
-  ...adminRoutes]
-  ...adminRoutes,
-]
-// Helper function to get appropriate routes based on user role
-export const getAccessibleRoutes = (
-  isAuthenticated: boolean, 
-  userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
-) => {
-  // Public routes accessible to everyone
-  let accessibleRoutes = [...publicPages, ...authPages]
-  // Add authenticated-only routes
-  if (isAuthenticated) {
-    accessibleRoutes = [...accessibleRoutes, ...sharedRoutes]
-    // Add role-specific routes
-    if (userType === 'creator' || userType === 'jobSeeker') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ConfigPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    if (userType === 'employer' || userType === 'buyer') {
-      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
-    }
-    if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
-    }
-  }
-  return accessibleRoutes
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Config - Zion Tech Group</title>
+        <meta name="description" content="Learn about our config solutions and how they can transform your business." />
+        <meta name="keywords" content="config, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

@@ -1,11 +1,106 @@
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')' const coursesPath = path.join(process.cwd(), 'datalearncourses.json') function readJson(p: string) {' return JSON.parse(fs.readFileSync(p} 'utf-8')) } function writeJson(p: string) dat,
-  a: unknown) {fs.writeFileSync(p, JSON.stringify(data) null} 2)) } export default function handler(re)
-  q: NextApiRequest) re,
-  s: NextApiResponse) {' if (req.method !== 'POST') {' res.setHeader('AllowPOST')' return res.status(405).end('Method Not Allowed') }' const {userId = 'demo-user'; courseId} enableBoost } = req.body |{}' if (!courseId) return res.status(400).json({/* TODO: Fix JSX expression */})
-  r: 'courseId required' }) try {const users = readJson(usersPath); const courses = readJson(coursesPath)} const course = courses.find((c: unknown) => c.id === courseId)}' if (!course) return res.status(404).json({/* TODO: Fix JSX expression */})
-  r: 'Course not found' }); const user = users[userId] || {/* TODO: Fix JSX expression */}
-  h: false} progres,
-  s: {} }; if (!user.certifications.includes(courseId)) user.certifications.push(courseId); if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);' if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost; // Mark progress complete user.progress[courseId] = {/* TODO: Fix JSX expression */}
-  t: 100} completedLesson,
-  s: (course.lessons || []).map((l: unknown) => l.id) }; users[userId] = user; writeJson(usersPath) users); return res.status(200).json({/* TODO: Fix JSX expression */})
-  k: true} user }) '
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const LearnPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Learn - Zion Tech Group</title>
+        <meta name="description" content="Learn about our learn solutions and how they can transform your business." />
+        <meta name="keywords" content="learn, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

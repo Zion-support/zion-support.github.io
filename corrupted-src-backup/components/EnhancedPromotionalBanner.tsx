@@ -1,47 +1,106 @@
+'use client'
 import React from 'react'
-interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
-  banner
-  className = ''}) => {
-  const variantStyles = {
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
-    error: 'bg-gradient-to-r from-red-600 to-pink-600',
-    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0',
-    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-60, 0',
-    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-60, 0',
-    err, o, r: 'bg-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-pi, n, k-60, 0'} retu, r, n(<, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}$2 />
-    >
-      <div, classNam, e = 'container, m, x-auto, p, x-6'>
-        <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'>
-          <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'>)
-            {  bann, e, r.ic, o, n  && ()
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)
-  } retu, r, n (
-    <, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}$2 />
-    ></div>
-      <div, classNam, e = 'container, m, x-auto, p, x-6'></div>
-        <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'></div>
-          <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'>
-            {  bann, e, r.ic, o, n  && (
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }
-const,
-  EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  } retu, r, n (<, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}$2 />
-    ></div>
-      <div, classNam, e = 'container, m, x-auto, p, x-6'></div>
-        <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'></div>
-          <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'></div>
-            {/* TODO: Fix JSX expression */}
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)
-            )}
-            <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-              <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}
-              <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}
-            {bann, e, r.cta, T, e, x, t}
-            <Link, classNam, e = 'w-4 h-4' />
-            {banner.ctaText}
-}`</div></div></div></div></div></div></div></div></div></div></span></span></span></Link></p></h3>
+
+export default PagePage

@@ -1,19 +1,106 @@
-// import React {Component;} ErrorInfo; ReactNode } from 'react' interface Props {children: ReactNode} fallback?: ReactNode, onError?: (error: Error} errorInfo: ErrorInfo) => void} interface State {hasError: boolean} error: Error | null} errorInfo: ErrorInfo | null} export class ErrorBoundary extends Component<Props, State> { public state: State={hasError: false}}; constructor(props: Props) {super(props), this.state={hasError: false, error: null} errorInfo: null }} public componentDidCatch(error: Error) errorInfo: ErrorInfo) {' // console.error('ErrorBoundary caught an error:', error) errorInfo)} // Log error to monitoring service' if (typeof window !== 'undefined' && window.gtag) {' window.gtag('event)exception' { description: error.message}} fatal: false })} } render() { if (this.state.hasError) { return (this.props.fallback || ( <div className="text-left"></div> <div className="text-left"></div> <div className="text-left"></div> <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2)};} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-  </path> </svg> </div> <div className="text-left"></div> <h3 className="text-left"> Something went wrong </h3> <p className="text-left">' We're sorry) but something unexpected happened. Please try refreshing the page. </p> <div className="text-left"></div> <button onClick={() => window.location.reload()} className="text-left"> Refresh Page </button> </div> </div> </div> </div> ) )} return this.props.children;} } '
-// import React {Component;} ErrorInfo; ReactNode } from 'react' interface Props {/* TODO: Fix JSX expression */}
-  n: ReactNode} fallback?: ReactNode, onError?: (erro,;,
-r: Error} errorInf);,
-o: ErrorInfo) => void} interface State {/* TODO: Fix JSX expression */}
-  r: boolean} erro,;,
-r: Error | null} errorInf,;,
-o: ErrorInfo | null} export class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false }; constructor(prop);,
-s: Props) {/* TODO: Fix JSX expression */}
-  r: null} errorInf,;,
-o: null }} public componentDidCatch(erro);,
-r: Error) errorInf,;,
-o: ErrorInfo) {/* TODO: Fix JSX expression */}
-  error:', error) errorInfo)} // Log error to monitoring service' if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
-  n: error.message} fata,;,
-l: false })} } render() { if (this.state.hasError) { return (this.props.fallback || ( <div className="text-left"> <div className="text-left"> <div className="text-left"> <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2)};} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /> </svg> </div> <div className="text-left"> <h3 className="text-left"> Something went wrong </h3> <p className="text-left">' We're sorry) but something unexpected happened. Please try refreshing the page. </p> <div className="text-left"> <button onClick={() => window.location.reload()} className="text-left"> Refresh Page </button> </div> </div> </div> </div> ) )} return this.props.children;} } '"
-</p></p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

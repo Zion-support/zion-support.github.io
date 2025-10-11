@@ -1,206 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
- import type { NextApiRequest, NextApiResponse  } from 'next'
-interface EmailValidationResult {
-  email: string
-  is_valid: boolean
-import type { NextApiRequest, NextApiResponse  } from 'next'
-interface EmailValidationResult {
-  email: string
-  isValid: boolean
-  score: number
-  suggestions: string[]
-  details: {
-    hasValidFormat: boolean
-    hasValidDomain: boolean
-    hasValidMX: boolean
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<EmailValidationResult | { error: string }>
-) {
-  }
-  try {
-    const { email } = req && req.body
-    if (!email || typeof email !== 'string') {
-      return res && res.status(400).json({ error: 'Email is required' })
-    }
-    // Basic email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const hasValidFormat = emailRegex && emailRegex.test(email)
-    // Extract domain
-    const domain = email && email.split('@')[1]
-    const hasValidDomain = domain && domain.length > 0
-    // Check for common disposable email providers
-    const disposableDomains = [
-      'tempmail && tempmail.org',
-      'guerrillamail && guerrillamail.com',
-      'mailinator && mailinator.com',
-      '10minutemail && 10minutemail.com',
-      'temp-mail && mail.org',
-      'sharklasers && sharklasers.com',
-      'getairmail && getairmail.com',
-      'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
-    ]
-    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d))
-    // Check for role-based emails
-    const roleBasedPatterns = [
-    // Check for free email providers
-    const freeProviders = [
-      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
-    ]
-    const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider)
-    isDisposable: boolean
-    isRoleBased: boolean
-    isFreeProvider: boolean
-  }
-}
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<EmailValidationResult | { error: string }>
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  try {
-    const { email } = req.body
-    if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' })
-    }
-    // Basic email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const hasValidFormat = emailRegex.test(email)
-    // Extract domain
-    const domain = email.split('@')[1]
-    const hasValidDomain = domain && domain.length > 0
-    // Check for common disposable email providers
-    const disposableDomains = [
-      'tempmail.org', 'guerrillamail.com', 'mailinator.com', '10minutemail.com',
-      'temp-mail.org', 'sharklasers.com', 'getairmail.com', 'mailnesia.com'
-    ]
-    const isDisposable = disposableDomains.some(d => domain?.includes(d))
-    // Check for role-based emails
-    const roleBasedPatterns = [
-      'admin@', 'info@', 'support@', 'contact@', 'sales@', 'help@',
-      'noreply@', 'no-reply@', 'donotreply@', 'do-not-reply@'
-    ]
-    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern))
-    // Check for free email providers
-    const freeProviders = [
-      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com',
-      'icloud.com', 'protonmail.com', 'mail.com', 'yandex.com'
-    ]
-    const isFreeProvider = freeProviders.some(provider => domain === provider)
-    // Calculate score (0-100)
-    let score = 100
-    if (!hasValidFormat) score -= 50
-    if (!hasValidDomain) score -= 20
-    if (isDisposable) score -= 30
-    if (isRoleBased) score -= 15
-    if (isFreeProvider) score -= 10
-    // Generate suggestions
-    const suggestions: string[] = []
-    if (!hasValidFormat) {
-    }
-    const result: EmailValidationResult = {
-      email,
-      details: {
-        isDisposable,
-        isRoleBased,
-        isFreeProvider,
-      },
-    }
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Email validation error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
-  }      email
-      isValid: score >= 70
-      score: Math && Math.max(0, score)
-      suggestions.push('Check email format (should be user@domain.com)')
-    }
-    if (isDisposable) {
-      suggestions.push('Consider using a permanent email address')
-    }
-    if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues')
-    }
-    if (score < 50) {
-      suggestions.push('This email may not be suitable for business use')
-    }
-const result: EmailValidationResult = {
-      email
-      isValid: score >= 70,
-      score: Math.max(0, score)
-        hasValidFormat,
-        hasValidDomain,
-        hasValidMX: true, // Simplified for demo
-        is_disposable,
-        isRoleBased,
-        isFreeProvider,
-      },
-    }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-    res.status (200).json (result)
-  } catch (error) {
-    console.error ('Email validation error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
-  }      email
-      is_valid: score >= 70
-      score: Math.max (0, score)
-      suggestions
-      details: {
-        hasValidFormat
-        hasValidDomain
-        hasValidMX: true, // Simplified for demo
-        is_disposable
-        isRoleBased
-        isFreeProvider}
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Email validation error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
-  }
-}
-    }
+  ]
 
-    res.status (200).json (result)
-  } catch (error) {
-    console.error ('Email validation error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
-    res.status(500).json({ error: 'Internal server error' })
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    // Generate suggestions
-    const suggestions: string[] = []
-    if (!hasValidFormat) {
-      suggestions.push('Check email format (should be user@domain.com)')
-    }
-    if (isDisposable) {
-      suggestions.push('Consider using a permanent email address')
-    }
-    if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues')
-    }
-    if (score < 50) {
-      suggestions.push('This email may not be suitable for business use')
-    }
-    const result: EmailValidationResult = {
-      email,
-      isValid: score >= 70,
-      score: Math.max(0, score),
-      suggestions,
-      details: {
-        hasValidFormat,
-        hasValidDomain,
-        hasValidMX: true, // Simplified for demo
-        isDisposable,
-        isRoleBased,
-        isFreeProvider,
-      }
-    }
-    res.status(200).json(result)
-  } catch (error) {
-    console.error('Email validation error:', error)
-    res.status(500).json({ error: 'Internal server error' })
-  }
-}
+
+export default PagePage

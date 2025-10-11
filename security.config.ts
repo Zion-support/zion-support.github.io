@@ -1,109 +1,106 @@
-/**
- * Security Configuration
- * Comprehensive security settings and best practices
- */
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export const securityConfig = {
-  // Content Security Policy
-  csp: {,
-    directives: {,
-      'default-src': ["'self'"],
-      'script-src': [,
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        'https: //www.googletagmanager.com'],
-      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],
-      'font-src': ["'self'", 'https: //fonts.gstatic.com'],
-      'connect-src': ["'self'", 'https: //www.google-analytics.com'],
-      'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
-      'form-action': ["'self'"]},
-    reportOnly: false,
-  },
-
-  // Security Headers
-  headers: {,
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},
-
-  // Input validation
-  validation: {
-    ,
-    maxInputLength: 10000,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
-    maxFileSize: 10 * 1024 * 1024, // 10MB
-  },
-
-  // Rate limiting
-  rateLimit: {
-    ,
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    maxRequests: 100
-    skipSuccessfulRequests: false,
-    skipFailedRequests: false
-  },
-
-  // CORS configuration
-  cors: {
-    ,
-    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-    maxAge: 86400, // 24 hours
-  },
-
-  // Authentication
-  auth: {
-    ,
-    sessionTimeout: 3600000, // 1 hour
-    maxLoginAttempts: 5,
-    lockoutDuration: 900000, // 15 minutes
-    passwordMinLength: 12
-    requireSpecialChars: true
-    requireNumbers: true,
-    requireUppercase: true
-  },
-
-  // Data sanitization
-  sanitization: {
-    stripHtml: true
-    encodeSpecialChars: true
-    trimWhitespace: true
-    removeNullBytes: true,
-export const securityConfig = {/* TODO: Fix JSX expression */}
+const WorkspacePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    reportOnl,
-  y: false},
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-  // Security Headers,
-  headers: {/* TODO: Fix JSX expression */}
-  },
+  return (
+    <>
+      <Helmet>
+        <title>Workspace - Zion Tech Group</title>
+        <meta name="description" content="Learn about our workspace solutions and how they can transform your business." />
+        <meta name="keywords" content="workspace, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  // Input validation,
-  validation: {/* TODO: Fix JSX expression */}
-  },
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-  // Rate limiting,
-  rateLimit: {/* TODO: Fix JSX expression */}
-  },
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
 
-  // CORS configuration,
-  cors: {/* TODO: Fix JSX expression */}
-  },
-
-  // Authentication,
-  auth: {/* TODO: Fix JSX expression */}
-  },
-
-  // Data sanitization,
-  sanitization: {/* TODO: Fix JSX expression */}
-  }}
-
-export default securityConfig
+export default PagePage

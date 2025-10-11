@@ -1,13 +1,106 @@
-// import React; { useEffect } from 'react'' import Head from 'next/head' const,
-  SecurityEnhancer: React.FC = () => {/* TODO: Fix JSX expression */}
-  https://analytics.google.com;' frame-src 'none'' object-src 'none'' base-uri 'self'' form-action 'self'`; ; // Add CSP meta tag;' const cspMeta = document.createElement('meta');' cspMeta.httpEquiv = 'Content-Security-Policy' cspMeta.content = csp} document.head.appendChild(cspMeta), // Security headers const securityHeaders = {' 'X-Content-Type-Options': 'nosniff,X-Frame-Options': 'DENY,X-XSS-Protection': '1 mode=block,Referrer-Policy': 'strict-origin-when-cross-origin,Permissions-Policy': 'camera=(), microphone=()} geolocation=()' }; // Add security headers via meta tags; Object.entries(securityHeaders).forEach(([name) value]) => {;' const meta = document.createElement('meta'); meta.httpEquiv = name; meta.content = value} document.head.appendChild(meta)}); // Detect and prevent XSS attempts; const detectXSS = () => {;' const scripts = document.querySelectorAll('script'); scripts.forEach(script => {} if (script['src'] && !script['src'].startsWith(window.location.origin) &&' !script['src'].includes('googletagmanager.com') &&' !script['src'].includes('google-analytics.com')) {' script.remove()} })}; // Monitor for suspicious activity; const monitorSuspiciousActivity = () => {; // Detect iframe injection attempts;' const iframes = document.querySelectorAll('iframe'); iframes.forEach(iframe => {} if (!iframe['src'].startsWith(window.location.origin) &&' !iframe['src'].includes('youtube.com') &&' !iframe['src'].includes('vimeo.com')) {' iframe.remove()} }); // Detect suspicious form submissions;' const forms = document.querySelectorAll('form'); forms.forEach(form => {/* TODO: Fix JSX expression */})
-  t: /i; /on\\w+\\s*=/i, /eval\\(/i; /expression\\(/i]) for (const [key) value] of formData.entries()) {;' if (typeof value === 'string') {; suspiciousPatterns.forEach(pattern => {) if (pattern.test(value)) {}' e.preventDefault();' alert('Suspicious content detected. Please check your input.'); return} })} } })})}; // Initialize security monitoring; detectXSS(); monitorSuspiciousActivity(); // Set up periodic security checks; const securityInterval = setInterval(() => {; detectXSS()} monitorSuspiciousActivity()}, 30000) // Check every 30 seconds; return () => {; clearInterval(securityInterval)}}, []); return (; <Head> {/* Security Headers */}' <meta httpEquiv='X-Content-Type-Options' content='nosniff' />' <meta httpEquiv='X-Frame-Options' content='DENY' />' <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />)' <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />' <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' /> {/* Content Security Policy */} <meta' httpEquiv='Content-Security-Policy'' content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s: //www.googletagmanager.com,
-  https://www.google-analytics.com style-src 'self' 'unsafe-inline' http,
-  s://fonts.googleapis.com font-src 'self' http,
-  s://fonts.gstatic.com img-src 'self' dat,
-  a: http,
-  s: blo,
-  b: connect-src 'self' http,
-  s://www.google-analytics.com,
-  https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self''; />, {/* Additional Security Meta Tags */}' <meta name='robots' content='index, follow, noarchive, nosnippet' />' <meta name='googlebot' content='index, follow, noarchive, nosnippet' /> {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}' <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' /></$1> )}; export default SecurityEnhancer;'`
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

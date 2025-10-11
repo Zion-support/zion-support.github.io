@@ -1,126 +1,106 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-export interface WhitelabelTenant {
-  id: string
-  brand_name: string
-  subdomain: string
-  custom_domain: string | null
-  primary_color: string
-  logo_url: string | null
-  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
-  landing_page_copy: {
-    headline: string
-    subtitle: string
-    cta: string
-  }
-  is_active: boolean
-  created_at: string
-  updated_at: string
-  account_manager_id: string | null
-  dns_verified: boolean
-  email_template_override: Record<string, any> | null
-}
-export function useWhitelabelTenant(externalSubdomain?: string) {
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-    const loadTenant = async () => {
-      setIsLoading(true)
-      setError(null)
-      // If running in the browser, bail out early when offline
-      if (typeof navigator !== 'undefined' && !navigator.onLine) {
-        setError('No internet connection')
-        setTenant(null)
-        setIsLoading(false)
-        return
-      }
-      try {
-        // Get the current hostname, fallback to localhost if not available
-        const hostname = window.location.hostname || 'localhost'
-        const functionName = 'tenant-detector'
-        // Build the query parameters
-        const params = externalSubdomain 
-          ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
-          : `?host=${encodeURIComponent(hostname)}`
-        const { data, error: functionError } = await supabase.functions.invoke(
-          `${functionName}${params}`,
-          {
-            headers: {
-              'Content-Type': 'application/json'}}
-              'Content-Type': 'application/json',
-            },
-          }
-        )
-        if (functionError) {
-          console.error('Edge Function error:', functionError)
-          setError('Failed to load tenant configuration. Please try again later.')
-          setTenant(null)
-          return
-        }
-        if (!data) {
-          console.warn('No tenant data received')
-          setTenant(null)
-          return
-        }
-        if (data.tenant) {
-          setTenant(data.tenant)
-        } else {
-          setTenant(null)
-        }
-      } catch (err: any) {
-        console.error('Error loading tenant:', err)
-        let message = err.message || 'An unexpected error occurred while loading tenant configuration'
-        if (
-          message.includes('Failed to send a request to the Edge Function') ||
-          message.includes('Failed to connect to Supabase') ||
-          message.includes('No internet connection')
-        ) {
-          message = 'Unable to reach the server. Please check your internet connection and try again.'
-        }
-        setError(message)
-        setTenant(null)
-      } finally {
-        setIsLoading(false)
-      }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    loadTenant()
-  }, [externalSubdomain])
-  return { tenant, isLoading, error }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Learn about our hooks solutions and how they can transform your business." />
+        <meta name="keywords" content="hooks, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Hook to check if current user is a tenant admin
-export function useTenantAdminStatus(tenantId?: string) {
-  const [isAdmin, setIsAdmin] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect(() => {
-    const checkAdminStatus = async () => {
-      if (!tenantId) {
-        setIsAdmin(false)
-        setIsLoading(false)
-        return
-      }
-      try {
-        const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
-        if (sessionError || !sessionData.session) {
-          setIsAdmin(false)
-          return
-        }
-        const userId = sessionData.session.user.id
-        const { data, error } = await supabase
-          .from('tenant_administrators')
-          .select('*')
-          .eq('tenant_id', tenantId)
-          .eq('user_id', userId)
-          .single()
-        setIsAdmin(!!data && !error)
-      } catch (err) {
-        console.error('Error checking tenant admin status:', err)
-        setIsAdmin(false)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    checkAdminStatus()
-  }, [tenantId])
-  return { isAdmin, isLoading }
-}
+
+export default PagePage

@@ -1,133 +1,106 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  } catch (error) {
-    console && console.error('Error reading file:', error)
-// Mock file system database utility
-export function read_json < T>(file_path: string, default_value: T): T {
-  try {
-    const fs = require('fs'),
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8')
-      return JSON.parse(content)
-    }
-  } catch (error) {
-  await writeAllDisputes(all)
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
-export function writeJson<T>(filePath: string, data: T): void {
-  try {
-    const fs = require('fs')
-    const path = require('path')
-    const dir = path.dirname(filePath)
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true })
-    }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
-  return dir
-  } catch (error) {
-  } catch (error) {
-    const dir = path && path.dirname(filePath),
-    if (!fs && fs.existsSync(dir)) {
-      fs && fs.mkdirSync(dir, { recursive: true })
-    }
-    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console && console.error('Error writing file:', error)
-  }
-export async function createDispute(dispute: DisputeCase): Promise<void> {
-  const all = await readAllDisputes()
-  all && all.push(dispute)
-import fs from 'fs'
-import path from 'path'
-import { promisify } from 'util'
-import crypto from 'crypto'
-import { DisputeCase } from '../types/disputes'
-const mkdir = promisify(fs.mkdir)
-const readFile = promisify(fs.readFile)
-const writeFile = promisify(fs.writeFile)
-const ROOT = path.join(process.cwd(), 'data')
-const DISPUTES_FILE = path.join(ROOT, 'disputes.json')
-const UPLOADS_ROOT = path.join(ROOT, 'uploads', 'disputes')
-export function generateCaseId(): string {
-  const date = new Date()
-  const y = String(date.getFullYear())
-  const m = String(date.getMonth() + 1).padStart(2, '0')
-  const d = String(date.getDate()).padStart(2, '0')
-  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase()
-  return `DSP-${y}${m}${d}-${suffix}`
-}
-async function ensureBaseFiles() {
-  try {
-    await mkdir(ROOT, { recursive: true })
-  } catch {}
-  try {
-    await mkdir(UPLOADS_ROOT, { recursive: true })
-  } catch {}
-  try {
-    await readFile(DISPUTES_FILE, 'utf8')
-  } catch {
-    await writeFile(DISPUTES_FILE, JSON.stringify({ disputes: [] }, null, 2), 'utf8')
-  }
-}
-export async function readAllDisputes(): Promise<DisputeCase[]> {
-  await ensureBaseFiles()
-  const raw = await readFile(DISPUTES_FILE, 'utf8')
-  const data = JSON.parse(raw) as { disputes: DisputeCase[] }
-  return data.disputes || []
-}
-export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
-  await ensureBaseFiles()
-  const data = { disputes }
-  await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8')
-}
-export async function getDisputeById(id: string): Promise<DisputeCase | undefined> {
-  const all = await readAllDisputes()
-  return all.find(d => d.id === id)
-}
-export async function upsertDispute(updated: DisputeCase): Promise<void> {
-  const all = await readAllDisputes()
-  const idx = all.findIndex(d => d.id === updated.id)
-  if (idx >= 0) {
-    all[idx] = updated
-  } else {
-    all.push(updated)
-  }
-  await writeAllDisputes(all)
-}
-export async function createDispute(dispute: DisputeCase): Promise<void> {
-  const all = await readAllDisputes()
-  all.push(dispute)
-  await writeAllDisputes(all)
-}
-export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId)
-}
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
-  return dir
-}
-}
-export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId)
-}
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId)
-  await mkdir(dir, { recursive: true })
-  return dir
-}
-}
-}
+export default PagePage

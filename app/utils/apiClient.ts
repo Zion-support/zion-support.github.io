@@ -1,341 +1,106 @@
- */
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-import {  apiCache   } from './apiCache';
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-interface RequestConfig {
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string&gt;;
-  body?: any;
-  cache?: boolean;
-  cacheTTL?: number;
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-}
-interface APIResponse<T = any> {}data: T,
-  status: number,
-  statusText: string,
-}
-      ...defaultHeaders;
-      ...defaultHeaders
-    }
-  }
-private async makeRequest</string><T>(
-    endpoint: string,
-  ): Promise<APIResponse<T>> {}
-    const {}
-      method = 'GET',
-      headers = {},
-      body,
-      cache = false,
-      cacheTTL;
-    } = config;
-const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = apiCache.generateKey(url, body);
-// Check cache for GET requests;
-    if (method === 'GET' && cache) {// Check cache for GET requests;}if (method === 'GET' && cache) {}const cachedData = apiCache.get(cacheKey);
-      if (cachedData) {}return cachedData;
-      }
-    }
-try {const response = await fetch(url, {);}
-        method);
-      cacheTTL
-    } = config
-const url = `${this.baseURL}${endpoint}`
-    const cacheKey = apiCache.generateKey(url, body)
-// Check cache for GET requests
-    if (method === 'GET' && cache) {
-    // Check cache for GET requests
-  }
-    if (method === 'GET' && cache) {}
-      const cachedData = apiCache.get(cacheKey)
-      if (cachedData) {}
-      }
-    }
-try {
-    const response = await fetch(url, {)
-        method)
-        headers: {,
-      const data = await response.json()
-const apiResponse: APIResponse<T> = {,
-    data;
-        status: response.status,
-        statusText: response.statusText;,}headers: Object.fromEntries(response.headers.entries()),}
-// Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {}
-    try {}
-      const response = await fetch(url, {)}
-        method,
-        headers: {}
-          ...this.defaultHeaders,
-          ...headers
-        },
-        body: body ? JSON.stringify(body) : undefined
-      const data = await response.json(),
-const apiResponse: APIResponse</T><T> = {}
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      }
-        method,
-        headers: {}
-          ...this.defaultHeaders,
-          ...headers
-        },
-        body: body ? JSON.stringify(body) : undefined
-      const apiResponse: APIResponse<T> = {}
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
-}
-export interface ApiResponse</RequestInit><T = unknown> {/* TODO: Fix JSX expression */}
-}
-export class ApiError extends Error {/* TODO: Fix JSX expression */}
-  }
-}
-class ApiClient {/* TODO: Fix JSX expression */}
-  s: config.cacheOptions,
-    }
-  }
-  /**
-   * GET request
-   */
-  }
-  /**
-   * POST request
-   */
-  }
-  /**
-   * PUT request
-   */
-  }
-  /**
-   * DELETE request
-   */
-  }
-  /**
-   * PATCH request
-   */
-  }
-  /**
-   * Main request method with retry logic
-   */
-      headers = {},
-      cacheOption,
-  private,
-  abortControllers: Map<string, AbortController> = new Map()
-  constructor(confi)
-  g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
-      },
-      cacheOption,
-  s: config.cacheOptions
-    }
-  }
-  /**
-   * GET request
-   */
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
-  }
-  /**
-   * POST request
-   */
-  async post<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
-  }
-  /**
-   * PUT request
-   */
-  async put<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
-  }
-  /**
-   * DELETE request
-   */
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
-  }
-  /**
-   * PATCH request
-   */
-  async patch<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
-  }
-  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
-      headers = {},
-      cacheOption,
-  s: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
-      }
-    }
-    // Create abort controller for timeout;
-    const controller = new AbortController();
-    this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
-    }, timeout)
-    let,
-  lastError: Error | null = null
-    let attempt = let attempt = let attempt = 0,
-    while (attempt < retries) {/* TODO: Fix JSX expression */},
-          signa,
-  l: controller.signal,
-        })
-        clearTimeout(timeoutId);
-        this.abortControllers.delete(cacheKey);
-            await response.text();
-          );
-        clearTimeout(timeoutId)
-        this.abortControllers.delete(cacheKey)
-        if (!response.ok) {/* TODO: Fix JSX expression */}`
-            `HTTP ${response.status}: ${response.statusText}`,
-            response.status,
-            await response.text()
-        }
-        const contentType = response.headers.get('content-type')
-        let,
-  data: T,
-        }
-        return {/* TODO: Fix JSX expression */,}}}
-      } catch (error) {/* TODO: Fix JSX expression */,}`;
-            logCritical(`API request failed after ${retries)}attempts`, error as Error, {/* TODO: Fix JSX expression */,})
-        if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
-        } else {/* TODO: Fix JSX expression */}
-        }
-        // Cache successful GET requests
-        if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
-        }
-        return {/* TODO: Fix JSX expression */}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */})
-            })
-          } else {/* TODO: Fix JSX expression */}
-            })
-          } else {/* TODO: Fix JSX expression */,}}})
-          }
-        }
-      }
-    }
-    clearTimeout(timeoutId)
-    this.abortControllers.delete(cacheKey)
-    throw lastError || new Error('Request failed')
-  }
-   * Cancel a pending request;
-   */;
-  l: string, metho);
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */,}}`;
-    const cacheKey = `${method}:${url}`;
-    const controller = this.abortControllers.get(cacheKey);
-    if (controller) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Cancel all pending requests
-   */
-  cancelAll(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Update default config
-   */
-  setConfig(confi)
-  g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
-        ...(config.headers || {})
-      }
-  }
-  /**
-   * Set authorization header
-   */
-  setAuthToken(toke)
-  n: string): void {/* TODO: Fix JSX expression */}`
-  }
-  /**
-   * Remove authorization header
-   */
-  removeAuthToken(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Delay helper
-   */
-  private delay(m)
-  }
-  /**
-   * Health check
-   */
-  async healthCheck(endpoin)
-    ,
-    this.baseURL = baseURL;}}
-// Set default headers;
-  setDefaultHeaders(headers: Record<string, string>): void {}}this.defaultHeaders = {...this.defaultHeaders, ...headers}}
-// Clear cache;
-  clearCache(): void {// Set base URL;}}setBaseURL(baseURL: string): void {,}}this.baseURL = baseURL;
-  }
-// Create singleton instance;
-export const apiClient = new APIClient();
-export default APIClient;
-// Create default instance;
-// Export both the class and default instance;
-// Set default headers
-  setDefaultHeaders(headers: Record</T><string, string>): void {}
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers }
-  }
-// Clear cache
-  clearCache(): void {
-    // Set base URL
-  }
-  setBaseURL(baseURL: string): void {}
-    this.baseURL = baseURL
-  }
-// Set default headers
-  setDefaultHeaders(headers: Record</string><string, string>): void {}
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers }
-  }
-// Clear cache
-  clearCache(): void {}
-    apiCache.clear()
-  }
-}
-// Create singleton instance
-export const apiClient = new APIClient()
-export default APIClient
-// Create default instance
-const apiClient = new ApiClient()
-  })
-})
-// Export both the class and default instance
-export { apiClient }
-export default ApiClient
-`</string>
-
-// Create singleton instance
-export const apiClient = new APIClient()
-export default APIClient
-// Create default instance
-const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
-  })
-})
-// Export both the class and default instance
-export { apiClient }
-export default ApiClient
-`
+export default PagePage

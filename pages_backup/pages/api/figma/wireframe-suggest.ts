@@ -1,180 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-  }
-  const { screenName, role } = req.body |{}
-  if (!screenName) {res.status(400).json({ error: 'screenName is required' })
-    return
-  }
-  try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`
-    const completion = await openai.chat.completions.create({model: 'gpt-4o-mini'
-      messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
-        { role: 'user', content: prompt }]
-      temperature: 0.4
-      max_tokens: 400})
-    const suggestion = completion.choices?.[0]?.message?.content |'No suggestion generated.'
-    res.status(200).json({ suggestion })
-  } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
-    res.status(500).json({ error: message })
-  try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-})
-export default async function handler(req, res) {
-  try {
-  if (req.method !== 'POST') {
-    res.status(405).json({
-      error: 'Method not allowed'
-    })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const { screenName, role } = req.body || {}
-  if (!screenName) {
-    res.status(400).json({
-      error: 'screenName is required'
-    })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [{
-        role: 'system',
-        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
-      }, {
-        role: 'user',
-        content: prompt
-      }],
-      temperature: 0.4,
-      max_tokens: 400
-    })
-    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'
-    res.status(200).json({
-      suggestion
-    })
-  } catch (e: unknown) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
-    res.status(500).json({
-      error: message
-    })
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const { screenName, role } = req.body || {  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  if (!screenName) {
-    res.status(400).json({ error: 'screenName is required' })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const FigmaPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Figma - Zion Tech Group</title>
+        <meta name="description" content="Learn about our figma solutions and how they can transform your business." />
+        <meta name="keywords" content="figma, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
-        { role: 'user', content: prompt }]
-      temperature: 0.4
-      max_tokens: 400})
-    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'
-    res.status(200).json({ suggestion })
-  } catch (e: any) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
-    res.status(500).json({ error: message })
-  } catch (error) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.'
-    res.status(500).json({ error: message })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

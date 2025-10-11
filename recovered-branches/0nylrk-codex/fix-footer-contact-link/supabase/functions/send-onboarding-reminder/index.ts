@@ -1,152 +1,106 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
-import { Resend } from "npm:resend@1.0.0"
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type"}
-    "authorization, x-client-info, apikey, content-type",
-}
-interface ReminderPayload {
-  user_id: string
-  missing_milestone: string
-  role: string
-}
-serve(async (req: Request) => {
-  // Handle CORS
-  if (req.method === "OPTIONS") {
-    return new Response(null, {
-      status: 204,
-      headers: corsHeaders})
-      headers: corsHeaders,
-    })
-  }
-  try {
-    const supabase = createClient(
-      supabaseUrl,
-      supabaseServiceKey
-    )
-    const payload = await req.json() as ReminderPayload
-    const { user_id, missing_milestone, role } = payload
-    if (!user_id || !missing_milestone || !role) {
-      return new Response(
-        JSON.stringify({ error: "Missing required fields" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Send-onboarding-reminderPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // Get user data
-    const { data: userData, error: userError } = await supabase
-      .from("profiles")
-      .select("email, display_name")
-      .eq("id", user_id)
-      .single()
-    if (userError || !userData) {
-      return new Response(
-        JSON.stringify({ error: "User not found", details: userError }),
-        {
-          status: 404,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
-    }
-    // Create message based on role and missing milestone
-    const milestoneMessages = {
-      talent: {
-        profile_completed: "complete your profile to get discovered by clients",
-        skills_added: "add your skills to get better job matches",
-        availability_set: "set your availability to help clients know when you can work"},
-      client: {
-        job_posted: "post your first job to start finding talent",
-        match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}}
-        availability_set: "set your availability to help clients know when you can work",
-      },
-      client: {
-        job_posted: "post your first job to start finding talent",
-        match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process",
-      },
-    }
-    const name = userData.display_name || "there"
-    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-    ] || "complete your next step"
-    // Send email
-    const { data: emailData, error: emailError } = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>",
-      to: userData.email,
-      subject: "Complete your next step on Zion AI Marketplace",
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2>Hi ${name},</h2>
-          <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
-          <p>Your next step is to <strong>${action}</strong>.</p>
-          <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
-          <div style="margin: 30px 0;">
-            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">
-              Continue my setup
-            </a>
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Send Onboarding Reminder - Zion Tech Group</title>
+        <meta name="description" content="Learn about our send onboarding reminder solutions and how they can transform your business." />
+        <meta name="keywords" content="send-onboarding-reminder, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
-          <p>The Zion AI Marketplace Team</p>
-        </div>
-      `})
-      `,
-    })
-    if (emailError) {
-      return new Response(
-        JSON.stringify({ error: "Failed to send email", details: emailError }),
-        {
-          status: 500,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
-    }
-    // Create notification in database
-    const { data: notification, error: notificationError } = await supabase.rpc(
-      "create_notification",
-      {
-        _user_id: user_id,
-        _title: "Complete your next step",
-        _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
-        _type: "onboarding"}
-        _type: "onboarding",
-      }
-    )
-    if (notificationError) {
-      console.error("Failed to create notification:", notificationError)
-    }
-    return new Response(
-      JSON.stringify({
-        message: "Reminder sent successfully",
-        notification_id: notification}),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-        notification_id: notification,
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
-  } catch (error) {
-    console.error(error)
-    return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
-  }
-})
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

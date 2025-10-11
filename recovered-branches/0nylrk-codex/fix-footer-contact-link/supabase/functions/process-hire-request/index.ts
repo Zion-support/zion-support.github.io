@@ -1,200 +1,106 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Process-hire-requestPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Process Hire Request - Zion Tech Group</title>
+        <meta name="description" content="Learn about our process hire request solutions and how they can transform your business." />
+        <meta name="keywords" content="process-hire-request, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-interface HireRequest {
-  talent: {
-    id: string
-    full_name: string
-    professional_title: string
-    email?: string
-  }
-  requester: {
-    name: string
-    email: string
-    id?: string
-  }
-  project: {
-    overview: string
-    timeline: string
-    budgetMin: number
-    budgetMax: number
-  }
-}
-interface EnhancedContent {
-  summary: string
-  projectType: string
-}
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const supabase = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-    )
-    const requestData: HireRequest = await req.json()
-    const { talent, requester, project } = requestData
-    // Format budget for display
-    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`
-    // 1. Optional: Enhance content with AI
-    let enhancedContent: EnhancedContent | null = null
-    const openAiKey = Deno.env.get("OPENAI_API_KEY")
-    if (openAiKey) {
-      try {
-        const configuration = new Configuration({
-          apiKey: openAiKey})
-          apiKey: openAiKey,
-        })
-        const openai = new OpenAIApi(configuration)
-        const prompt = `
-          Project Overview: "${project.overview}"
-          Please provide:
-          1. A brief summary of this project (max 100 characters)
-          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
-          Format your response as JSON:
-          {
-            "summary": "Brief summary here",
-            "projectType": "Project type here"
-          }
-        `
-        const completion = await openai.createCompletion({
-          model: "gpt-3.5-turbo-instruct",
-          prompt,
-          max_tokens: 150,
-          temperature: 0.3})
-          temperature: 0.3,
-        })
-        const responseText = completion.data.choices[0]?.text || ""
-        try {
-          // Extract JSON from the response
-          const jsonMatch = responseText.match(/\{[\s\S]*\}/)
-          if (jsonMatch) {
-            enhancedContent = JSON.parse(jsonMatch[0])
-            console.log("Enhanced content generated:", enhancedContent)
-          }
-        } catch (jsonError) {
-          console.error("Error parsing AI response:", jsonError)
-          // Continue without enhanced content
-        }
-      } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError)
-        // Continue without enhanced content
-      }
-    }
-    // 2. Store the request in the database
-    const { data: requestRecord, error: requestError } = await supabase
-      .from('hire_requests')
-      .insert([
-        {
-          talent_id: talent.id,
-          requester_id: requester.id || null, // May be null if user is not authenticated
-          requester_name: requester.name,
-          requester_email: requester.email,
-          project_overview: project.overview,
-          project_summary: enhancedContent?.summary || null,
-          project_type: enhancedContent?.projectType || null,
-          timeline: project.timeline,
-          budget_min: project.budgetMin,
-          budget_max: project.budgetMax,
-          budget_display: budgetDisplay,
-          status: 'new',
-          expiry_date: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
-        }
-      ])
-      .select()
-    if (requestError) {
-      throw new Error(`Error storing hire request: ${requestError.message}`)
-    }
-    // 3. Create notification for the admin
-    // Fetch admin users
-    const { data: adminUsers, error: adminError } = await supabase
-      .from('profiles')
-      .select('id')
-      .eq('user_type', 'admin')
-      .limit(1)
-    if (adminError) {
-      console.error("Error fetching admin users:", adminError)
-    }
-    let adminId: string | undefined = undefined
-    // Create notification for admin (if any found)
-    if (adminUsers && adminUsers.length > 0) {
-      adminId = adminUsers[0].id
-      const adminNotificationContent = {
-        title: `New hiring request for ${talent.full_name}`,
-        message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: "hire_request",
-        related_id: requestRecord[0].id
-      }
-      const { error: notificationError } = await supabase
-        .rpc('create_notification', {
-          _user_id: adminId,
-          _title: adminNotificationContent.title,
-          _message: adminNotificationContent.message,
-          _type: adminNotificationContent.type,
-          _related_id: adminNotificationContent.related_id
-        })
-      if (notificationError) {
-        console.error("Error creating admin notification:", notificationError)
-      }
-    }
-    // 4. Send email notification to talent
-    if (talent.email) {
-      // In a real implementation, this would call your email sending function
-      const emailResponse = await supabase.functions.invoke('send-email', {
-        body: {
-          to: talent.email,
-          subject: `New Project Request from ${requester.name}`,
-          html: `
-            <h1>You've Received a New Project Request</h1>
-            <p>Hello ${talent.full_name},</p>
-            <p>You have received a new project request from ${requester.name} (${requester.email}).</p>
-            <h2>Project Details</h2>
-            <p><strong>Budget:</strong> ${budgetDisplay}</p>
-            <p><strong>Timeline:</strong> ${project.timeline}</p>
-            <p><strong>Overview:</strong></p>
-            <p>${project.overview}</p>
-            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
-            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
-            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
-            <p>Best regards,<br>The Zion AI Marketplace Team</p>
-          `}})
-          `,
-        },
-      })
-      console.log("Email sending result:", emailResponse)
-    }
-    return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: "Hire request processed successfully",
-        request_id: requestRecord[0].id
-      }),
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200}
-        status: 200,
-      }
-    )
-  } catch (error) {
-    console.error("Error processing hire request:", error.message)
-    return new Response(
-      JSON.stringify({ 
-        success: false, 
-        message: "Failed to process hire request",
-        error: error.message 
-      }),
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 500}
-        status: 500,
-      }
-    )
-  }
-})
+
+export default PagePage

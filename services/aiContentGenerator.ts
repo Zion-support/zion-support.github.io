@@ -1,563 +1,106 @@
-export interface ContentGenerationRequest {
-export interface ContentGenerationRequest {
-export interface ContentGenerationRequest {
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description'
-  topic: string
-  tone: 'professional' | 'casual' | 'friendly' | 'formal'
-  length: 'short' | 'medium' | 'long'
-  keywords?: string[],
-  target_audience?: string
-}
-  content: string
-  word_count: number
-  seo_score: number
-  readability_score: number
-  suggestions: string[]
-  metadata: {
-    title: string
-    description: string,
-    tags: string[]
-  }
-}
-  keywords?: string[]
-  targetAudience?: string
-}
-export interface ContentGenerationResponse {
-  content: string
-  wordCount: number
-  seoScore: number
-  readabilityScore: number
-  suggestions: string[]
-  metadata: {
-    title: string
-    description: string
-    tags: string[]
-  }
-}
-export interface ContentTemplate {
-  id: string
-  name: string
-  description: string
-  type: string
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-  price: number
-}
-export class AIContentGeneratorService {
-export class AIContentGeneratorService {
-  private apiKey: string
-  }
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(request)})
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',
-  topic: string,
-  tone: 'professional' | 'casual' | 'friendly' | 'formal',
-  length: 'short' | 'medium' | 'long',
-  keywords?: string[],
-  targetAudience?: string
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export interface ContentGenerationResponse {
-  content: string,
-  wordCount: number,
-  seoScore: number,
-  readabilityScore: number,
-  suggestions: string[],
-  metadata: {
-    title: string,
-    description: string,
-    tags: string[]
-  }
-}
-
-export interface ContentTemplate {
-  id: string,
-  name: string,
-  description: string,
-  type: string,
-  preview: string,
-  price: number
-}
-
-export class AIContentGeneratorService {
-  private apiKey: string,
-  private baseUrl: string,
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey,
-    this.baseUrl = baseUrl
-  }
-
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)}),
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
-      }
-      return await response.json()
-      const response = await fetch(`${this && this.baseUrl}/content/generate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`
-          'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
-      if (!response && response.ok) {
-        throw new Error(`Content generation failed: ${response && response.statusText}`)
-      }
-      return await response && response.json()
-    } catch (error) {
-      // Fallback to mock data for demo purposes
-      return this && this.generateMockContent(request)
-    }
-  }
-  preview: string,
-  price: number
-}
-export class AIContentGeneratorService {
-  private api_key: string
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
-    this.api_key = api_key,
-    this.base_url = base_url
-  }
-  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch (`${this.base_url}/content / generate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`
-          'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Content generation failed: ${response.status_text}`)
-      }
-      return await response.json ()
-    } catch (error) {
-      // Fallback to mock data for demo purposes
-      return this.generateMockContent (request)
-    }
-  }
-  async get_templates (): Promise < ContentTemplate[]> {
-    return [
-      {
-        id: 'blog - post - starter'
-        name: 'Blog Post Starter'
-        description: 'Professional blog post template with SEO optimization'
-        type: 'blog - post'
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
-      }
-      {
-        id: 'social - media - campaign'
-        name: 'Social Media Campaign'
-        description: 'Complete social media content strategy and posts'
-        type: 'social - media'
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
-      }
-      {
-        id: 'email - sequence'
-        name: 'Email Sequence'
-        description: 'Convert prospects with persuasive email sequences'
-        type: 'email'
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
-      }
-      {
-        id: 'landing - page - copy'
-        name: 'Landing Page Copy'
-        description: 'High-converting landing page content'
-        type: 'landing-page'
-        preview: 'Turn visitors into customers with compelling copy...'
-        price: 59
-
-  async getTemplates(): Promise<ContentTemplate[]> {
-    return [
-      {
-        id: 'blog-post-starter',
-        name: 'Blog Post Starter',
-        description: 'Professional blog post template with SEO optimization',
-        type: 'blog-post',
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
-      },
-      {
-        id: 'social-media-campaign',
-        name: 'Social Media Campaign',
-        description: 'Complete social media content strategy and posts',
-        type: 'social-media',
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
-      },
-      {
-        id: 'email-sequence',
-        name: 'Email Sequence',
-        description: 'Convert prospects with persuasive email sequences',
-        type: 'email',
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
-      },
-      {
-        id: 'landing-page-copy',
-        name: 'Landing Page Copy',
-        description: 'High-converting landing page content',
-        type: 'landing-page',
-        preview: 'Turn visitors into customers with compelling copy...',
-        price: 59
-      }
-    ]
-  }
-  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
-    const mockContent = `# ${request.topic}
-  preview: string
-  price: number
-}
-export class AIContentGeneratorService {
-  private apiKey: string
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-  }
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
-    try {
-      // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      })
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
-      }
-      return await response.json()
-    } catch (error) {
-      // Fallback to mock data for demo purposes
-      return this.generateMockContent(request)
-    }
-  }
-  async getTemplates(): Promise<ContentTemplate[]> {
-    return [
-      {
-        id: 'blog-post-starter',
-        name: 'Blog Post Starter',
-        description: 'Professional blog post template with SEO optimization',
-        type: 'blog-post',
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
-      },
-      {
-        id: 'social-media-campaign',
-        name: 'Social Media Campaign',
-        description: 'Complete social media content strategy and posts',
-        type: 'social-media',
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49
-      },
-      {
-        id: 'email-sequence',
-        name: 'Email Sequence',
-        description: 'Convert prospects with persuasive email sequences',
-        type: 'email',
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39
-      },
-      {
-        id: 'landing-page-copy',
-        name: 'Landing Page Copy',
-        description: 'High-converting landing page content',
-        type: 'landing-page',
-        preview: 'Turn visitors into customers with compelling copy...',
-        price: 59
-      }
-    ]
-  }
-  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
-    const mockContent = `# ${request.topic}
-This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
-## Key Points
-- Point 1: ${request.topic} is essential for modern businesses
-- Point 2: Implementing ${request.topic} can improve efficiency
-- Point 3: Best practices for ${request.topic} implementation
-## Conclusion
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`
-    const mockContent = `# ${request && request.topic}
-## Conclusion
-${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`
-    return {
-      content: mockContent
-      wordCount: mockContent && mockContent.split(' ').length
-      seoScore: 85
-      readabilityScore: 78
-      suggestions: [
-        'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
-      ]
-      metadata: {
-        title: `${request && request.topic} - Complete Guide`
-        description: `Learn everything about ${request && request.topic} and how to implement it effectively.`
-        tags: [request && request.topic, request && request.type, 'guidetutorial']
-      }
-    }
-  }
-  async analyzeContent(content: string): Promise<{
-    seoScore: number
-    readabilityScore: number
-    suggestions: string[]
-    keywordDensity: Record<string, number>
-  }> {
-    // Mock content analysis
-    return {
-      content: mock_content
-      word_count: mock_content.split (' ').length
-      seo_score: 85
-      readability_score: 78
-      suggestions: [
-        'Add more specific examples_include relevant statistics_optimize for target keywords'
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`
-        tags: [request.topic, request.type, 'guidetutorial']
-      }
-    }
-  }
-  async analyze_content (content: string): Promise<{
-    seo_score: number
-    readability_score: number
-    suggestions: string[],
-    keyword_density: Record < string, number>
-  }> {
-    // Mock content analysis
-    return {
-      seoScore: Math && Math.floor(Math && Math.random() * 30) + 70
-      readabilityScore: Math && Math.floor(Math && Math.random() * 30) + 70
-      suggestions: [
-        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
-      ]
-      keywordDensity: {
-        'content': 2.1
-        'seo': 1.8
-        'marketing': 1.5
-
-This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
-## Key Points
-- Point 1: ${request.topic} is essential for modern businesses
-- Point 2: Implementing ${request.topic} can improve efficiency
-- Point 3: Best practices for ${request.topic} implementation
-## Conclusion
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`
-    return {
-      content: mock_content
-      word_count: mock_content.split (' ').length
-      seo_score: 85
-      readability_score: 78
-      suggestions: [
-        'Add more specific examples_include relevant statistics_optimize for target keywords'
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`
-        tags: [request.topic, request.type, 'guidetutorial']
-      }
-    }
-  }
-  async analyze_content (content: string): Promise<{
-    seo_score: number
-    readability_score: number
-    suggestions: string[],
-    keyword_density: Record < string, number>
-  }> {
-    // Mock content analysis
-        'content': 2 && 2.1
-        'seo': 1 && 1.8,
-        'marketing': 1 && 1.5
-      seo_score: Math.floor (Math.random () * 30) + 70
-      readability_score: Math.floor (Math.random () * 30) + 70
-      suggestions: [
-        'Add more headings for better structure_include internal links to related content_optimize meta description'
-      ]
-      keyword_density: {
-        'content': 2.1
-        'seo': 1.8,
-        'marketing': 1.5
-    return {
-      seoScore: Math.floor(Math.random() * 30) + 70,
-      readabilityScore: Math.floor(Math.random() * 30) + 70,
-      suggestions: [
-        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
-      ],
-      keywordDensity: {
-        'content': 2.1,
-        'seo': 1.8,
-        'marketing': 1.5
-      }
-    }
-  }
-}
-// Pricing tiers for the AI Content Generator
-export const AI_CONTENT_PRICING = {
-  starter: {
-    name: 'Starter'
-    price: 29
-    period: '/month',
-    features: [
-      '100 content generations per month_basic templatesSEO analysis_email support_standard quality'
-    ]
-  }
-  professional: {
-    name: 'Professional'
-    price: 99
-    period: '/month',
-    features: [
-      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access'
-    ]
-  }
-  enterprise: {
-    name: 'Enterprise'
-    price: 299
-    period: '/month'
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
-  }
-}
-
-// Pricing tiers for the AI Content Generator
-export const AI_CONTENT_PRICING = {
-  starter: {
-    name: 'Starter',
-    price: 29,
-    period: '/month',
-    features: [
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee'
-    ]
-  },
-  professional: {
-    name: 'Professional',
-    price: 99,
-    period: '/month',
-    features: [
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
-    ]
-  },
-  enterprise: {
-    name: 'Enterprise',
-    price: 299,
-    period: '/month',
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
-  }
-}
-## Key Points
-- Point 1: ${request.topic} is essential for modern businesses
-- Point 2: Implementing ${request.topic} can improve efficiency
-- Point 3: Best practices for ${request.topic} implementation
-## Conclusion
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`
-    return {
-      content: mockContent,
-      wordCount: mockContent.split(' ').length,
-      seoScore: 85,
-      readabilityScore: 78,
-      suggestions: [
-        'Add more specific examples',
-        'Include relevant statistics',
-        'Optimize for target keywords'
-      ],
-      metadata: {
-        title: `${request.topic} - Complete Guide`,
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`,
-        tags: [request.topic, request.type, 'guide', 'tutorial']
-      }
-    }
-  }
-  async analyzeContent(content: string): Promise<{
-    seoScore: number
-    readabilityScore: number
-    suggestions: string[]
-    keywordDensity: Record<string, number>
-  }> {
-    // Mock content analysis
-    return {
-      seoScore: Math.floor(Math.random() * 30) + 70,
-      readabilityScore: Math.floor(Math.random() * 30) + 70,
-      suggestions: [
-        'Add more headings for better structure',
-        'Include internal links to related content',
-        'Optimize meta description'
-      ],
-      keywordDensity: {
-        'content': 2.1,
-        'seo': 1.8,
-        'marketing': 1.5
-      }
-    }
-  }
-}
-// Pricing tiers for the AI Content Generator
-export const AI_CONTENT_PRICING = {
-  starter: {
-    name: 'Starter',
-    price: 29,
-    period: '/month',
-    features: [
-      '100 content generations per month',
-      'Basic templates',
-      'SEO analysis',
-      'Email support',
-      'Standard quality'
-    ]
-  },
-  professional: {
-    name: 'Professional',
-    price: 99,
-    period: '/month',
-    features: [
-      '500 content generations per month',
-      'Premium templates',
-      'Advanced SEO analysis',
-      'Priority support',
-      'High quality output',
-      'Custom branding',
-      'API access'
-    ]
-  },
-  enterprise: {
-    name: 'Enterprise',
-    price: 299,
-    period: '/month',
-    features: [
-      'Unlimited content generations',
-      'Custom templates',
-      'Advanced analytics',
-      'Dedicated support',
-      'Highest quality',
-      'White-label options',
-      'Custom integrations',
-      'SLA guarantee'
-    ]
-  }
-}
+export default PagePage

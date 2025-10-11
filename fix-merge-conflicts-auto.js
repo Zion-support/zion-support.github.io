@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import {fileURLToPath} from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,28 +14,19 @@ function resolveMergeConflicts(content) {
   let inConflict = false;
   let conflictType = null; // 'head', 'separator', 'other'
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+  for (let i = 0; i < lines.length; i++) {const line = lines[i];
     
     if (line.startsWith('<<<<<<< HEAD')) {
       inConflict = true;
       conflictType = 'head';
-      continue; // Skip the conflict marker
-    } else if (line.startsWith('=======')) {
+      continue; // Skip the conflict marker} else if (line.startsWith('=======')) {
       conflictType = 'separator';
       continue; // Skip the separator
-    } else if (line.startsWith('>>>>>>>')) {
-      inConflict = false;
+    } else if (line.startsWith('>>>>>>>')) {inConflict = false;
       conflictType = null;
-      continue; // Skip the end marker
-    }
-    
-    if (inConflict) {
+      continue; // Skip the end marker} if (inConflict) {
       // Only keep lines from HEAD section
-      if (conflictType === 'head') {
-        resolvedLines.push(line);
-      }
-      // Skip lines from other branches (conflictType === 'separator' or 'other')
+      if (conflictType === 'head') {resolvedLines.push(line);} // Skip lines from other branches (conflictType === 'separator' or 'other')
     } else {
       resolvedLines.push(line);
     }
@@ -45,20 +36,18 @@ function resolveMergeConflicts(content) {
 }
 
 // Function to process a single file
-function processFile(filePath) {
-  try {
+function processFile(filePath) {try {
     const content = fs.readFileSync(filePath, 'utf8');
     
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Processing: ${filePath}`);
+      console.log(`Processing: ${filePath} `);
       const resolvedContent = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`✓ Resolved conflicts in: ${filePath}`);
+      console.log(`✓ Resolved conflicts in: $ {filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (error) {console.error(`Error processing ${filePath} :`, error.message);
     return false;
   }
 }
@@ -67,22 +56,17 @@ function processFile(filePath) {
 function findFilesWithConflicts(dir) {
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  function traverse(currentDir) {const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
+        traverse(fullPath);} else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+        try {const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (error) {
+            files.push(fullPath);} } catch (error) {
           // Skip files that can't be read
         }
       }
@@ -103,16 +87,14 @@ let processedCount = 0;
 let errorCount = 0;
 
 for (const filePath of filesWithConflicts) {
-  if (processFile(filePath)) {
-    processedCount++;
-  } else {
+  if (processFile(filePath)) {processedCount++;} else {
     errorCount++;
   }
 }
 
 console.log(`\n📊 Summary:`);
 console.log(`✓ Successfully processed: ${processedCount} files`);
-console.log(`✗ Errors: ${errorCount} files`);
+console.log(`✗ Errors: $ {errorCount} files`);
 
 if (processedCount > 0) {
   console.log('\n🎉 Merge conflicts resolved! You can now run your build and lint commands.');

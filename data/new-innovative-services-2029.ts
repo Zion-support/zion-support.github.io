@@ -1,174 +1,106 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
-  {
-    id: 'ai-customer-success-platform',
-    name: 'AI Customer Success Platform',
-    tagline: 'Predict churn, increase NRR, automate success workflows',
-    price: '$299',
-    period: '/month',
-    description: 'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.',
-    features: [
-      'Health scores with leading/lagging indicators',
-      'Churn prediction and expansion likelihood',
-      'Playbooks and success workflows',
-      '360° customer view with product analytics',
-      'CRM and ticketing integrations',
-      'Slack and email signals with alerts',
-      'Cohort analysis and NPS tracking'
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-emerald-500 to-teal-600',
-    textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/ai-customer-success-platform',
-    marketPosition: 'Comparable to Gainsight ($500+) and Totango ($400+) with AI-first automation and lower TCO.',
-    targetAudience: 'B2B SaaS, Customer Success teams, RevOps',
-    trialDays: 14,
-    setupTime: '1-2 days',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Node.js', 'PostgreSQL', 'OpenAI', 'React', 'Airbyte/Fivetran connectors'],
-    integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Slack'],
-    useCases: ['Churn reduction', 'NRR growth', 'Lifecycle automation', 'CSAT/NPS insights'],
-    roi: '10-20% churn reduction, 5-12% NRR lift in 90 days',
-    competitors: ['Gainsight', 'Totango', 'Planhat'],
-    marketSize: '$3B+ CS platforms',
-    growthRate: '25% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Multi-tenant app with role-based access, connectors, and rules engine',
-    launchDate: '2025-11-01',
-    customers: 85,
-    rating: 4.8,
-    reviews: 52
-  },
-  {
-    id: 'ai-sales-intelligence-platform',
-    name: 'AI Sales Intelligence Platform',
-    tagline: 'Automate prospecting, ICP matches, and sequence copy generation',
-    price: '$149',
-    period: '/month',
-    description: 'Prospect enrichment, lead scoring, AI-written outreach with A/B testing, and pipeline analytics.',
-    features: [
-      'Company/person enrichment and signals',
-      'ICP and buying committee detection',
-      'AI sequences with tone and persona',
-      'Intent and risk scoring',
-      'Multichannel orchestration (email/LinkedIn)'
-    ],
-    popular: true,
-    icon: '🧭',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
-    marketPosition: 'Alternatives to Apollo.io and Outreach with AI-first scoring and copy.',
-    targetAudience: 'BDR/AE teams and RevOps',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['TypeScript', 'Pinecone', 'OpenAI', 'PostgreSQL'],
-    integrations: ['Salesforce', 'HubSpot', 'Gmail/Microsoft 365'],
-    useCases: ['Pipeline generation', 'Outbound personalization', 'Lead scoring'],
-    roi: '30-60% lift in reply rates and 2-4x pipeline increase',
-    competitors: ['Apollo.io', 'ZoomInfo', 'Outreach'],
-    marketSize: '$20B+ sales tech',
-    growthRate: '18% CAGR',
-    variant: 'quantum-cyberpunk',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Prospecting engine with vector search and scoring models',
-    launchDate: '2025-10-01',
-    customers: 140,
-    rating: 4.7,
-    reviews: 88
-  },
-  {
-    id: 'ai-financial-planning-platform',
-    name: 'AI Financial Planning Platform',
-    tagline: 'Driver-based planning with scenario and Monte Carlo simulations',
-    price: '$199',
-    period: '/month',
-    description: 'FP&A with live ERP connectors, assumptions library, and what-if simulations.',
-    features: [
-      'Driver-based models',
-      'Scenario planning and stress tests',
-      'Rolling forecast and variances',
-      'Excel/Sheets bi-directional sync',
-      'ERP/CRM connectors'
-    ],
-    popular: true,
-    icon: '💹',
-    color: 'from-violet-500 to-purple-600',
-    textColor: 'text-violet-300',
-    link: 'https://ziontechgroup.com/ai-financial-planning-platform',
-    marketPosition: 'Competes with Anaplan ($30k+/yr) and Pigment ($15k+/yr) with SMB pricing.',
-    targetAudience: 'Finance and RevOps',
-    trialDays: 14,
-    setupTime: '2-5 days',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Python', 'DuckDB', 'React', 'dbt'],
-    integrations: ['NetSuite', 'QuickBooks', 'HubSpot', 'Snowflake'],
-    useCases: ['Budgeting and planning', 'Forecasting', 'Board reporting'],
-    roi: '50-80% time saved on planning cycles',
-    competitors: ['Anaplan', 'Pigment', 'Cube'],
-    marketSize: '$6B planning software',
-    growthRate: '15% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Planner with simulations and version control',
-    launchDate: '2025-09-01',
-    customers: 60,
-    rating: 4.7,
-    reviews: 41
-  },
-  {
-    id: 'ai-hr-analytics-platform',
-    name: 'AI HR Analytics Platform',
-    tagline: 'Predict attrition, optimize hiring, and monitor DEI metrics',
-    price: '$99',
-    period: '/month',
-    description: 'HR analytics with attrition risk, skill gap analysis, and recruiting pipeline metrics.',
-    features: [
-      'Attrition risk scoring',
-      'Workforce planning and skills mapping',
-      'DEI dashboards',
-      'ATS and HRIS connectors'
-    ],
-    popular: false,
-    icon: '👥',
-    color: 'from-pink-500 to-rose-600',
-    textColor: 'text-pink-300',
-    link: 'https://ziontechgroup.com/ai-hr-analytics-platform',
-    marketPosition: 'Alternatives to Visier and ChartHop with lower pricing and AI features.',
-    targetAudience: 'People Analytics and HR',
-    trialDays: 14,
-    setupTime: '3-5 days',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Node.js', 'DuckDB', 'React'],
-    integrations: ['Greenhouse', 'Lever', 'Workday', 'BambooHR'],
-    useCases: ['Retention', 'Hiring', 'Diversity'],
-    roi: '5-10% attrition reduction; 20% faster hiring',
-    competitors: ['Visier', 'ChartHop', 'Eightfold'],
-    marketSize: '$7B HR analytics',
-    growthRate: '14% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Connectors and scoring models with dashboards',
-    launchDate: '2025-08-01',
-    customers: 35,
-    rating: 4.6,
-    reviews: 28
-  }
-]
+
+export default PagePage

@@ -1,85 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-    const r = await fetch(
-      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
-      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`
-    )
-    const metrics = await r && r.json()
-    const jobs24 =
-      metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0
-    const voters =
-      metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value |
-      0
-    const wallets =
-      metrics?.token?.find((m: any) => m.key === 'active_wallets')?.value |0
-    const tx =
-      metrics?.token?.find((m: any) => m.key === 'tx_volume_daily')?.value |0
-    const instances =
-      metrics?.multiverse?.find((m: any) => m && m.key === 'active_instances')
-        ?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
-      `DAO engagement at ${voters}% voter participation with active delegates`
-      `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`
-      `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
-      `Treasury stable and contributors earning consistently across regions`
-    ]
-  } catch (e) {
-    res && res.status(200).json({ summary: [], error: 'Failed to compute summary' })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export default async /**
- * handler - Function description
- */
-function handler() {
-    const r = await fetch (
-      `${req.headers['x - forwarded - proto'] || 'http'}://${req.headers.host}/api / metrics`)
-    const metrics = await r.json ()
-    const jobs24 =
-      metrics?.marketplace?.find ((m: any) => m.key === 'jobs_24h')?.value || 0
-    const voters =
-      metrics?.dao?.find ((m: any) => m.key === 'voter_participation')?.value ||
-      0
-    const wallets =
-      metrics?.token?.find ((m: any) => m.key === 'active_wallets')?.value || 0
-    const tx =
-      metrics?.token?.find ((m: any) => m.key === 'tx_volume_daily')?.value || 0
-    const instances =
-      metrics?.multiverse?.find ((m: any) => m.key === 'active_instances')
-        ?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
-      `DAO engagement at ${voters}% voter participation with active delegates`,
-      `Token momentum: ${wallets} active wallets; daily volume around ${Number (tx).toLocaleString ()}`,
-      `Multiverse scale: ${instances} active sub - instances with cross - instance flows`,
-      `Treasury stable and contributors earning consistently across regions`,
-    ]
-    res.status (200).json ({ summary, timestamp: new Date ().toISOString () })
-  } catch (e) {
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary' })
-  }
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`)
-    const metrics = await r.json()
-    const jobs24 = metrics?.marketplace?.find((m: any) => m.key === 'jobs_24h')?.value || 0
-    const voters = metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value || 0
-    const wallets = metrics?.token?.find((m: any) => m.key === 'active_wallets')?.value || 0
-    const tx = metrics?.token?.find((m: any) => m.key === 'tx_volume_daily')?.value || 0
-    const instances = metrics?.multiverse?.find((m: any) => m.key === 'active_instances')?.value || 0
-    const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
-      `DAO engagement at ${voters}% voter participation with active delegates`,
-      `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`,
-      `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
-      `Treasury stable and contributors earning consistently across regions`,
-    ]
-    res.status(200).json({ summary, timestamp: new Date().toISOString() })
-  } catch (e) {
-    res.status(200).json({ summary: [], error: 'Failed to compute summary' })
-  }
-}
+
+export default PagePage

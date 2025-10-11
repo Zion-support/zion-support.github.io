@@ -1,247 +1,106 @@
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid"
-export interface Branding {logoUrl?: string
-  primaryColor?: string
-  secondaryColor?: string
-  subdomain?: string
-}
-export interface DeployModules {marketplace: boolean
-export interface Branding {
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid"
-export interface Branding {
-  logoUrl?: string
-  primaryColor?: string
-  secondaryColor?: string
-  subdomain?: string
-  logoUrl?: string,
-  primaryColor?: string,
-  secondaryColor?: string,
-  subdomain?: string
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const TypesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Types - Zion Tech Group</title>
+        <meta name="description" content="Learn about our types solutions and how they can transform your business." />
+        <meta name="keywords" content="types, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export interface DeployModules {
-  marketplace: boolean
-}
-export interface DeployModules {
-  marketplace: boolean
-  gpt: boolean
-  academy: boolean
-  token: boolean
-  dao: boolean
-  nationBuilder: boolean
-  launchKit: boolean
-  bookBuilder: boolean
-  roadmapWhitepaper: boolean
-  apiDocsWiki: boolean
-  zionBrain: boolean
-  // Bonus
-  // Bonus
-  globalMap?: boolean
-  franchiseOnboarding?: boolean
-  referralAmbassadors?: boolean
-  grantPortal?: boolean
-  trailer?: boolean
-  bookStore?: boolean
-}
-export interface DeployInput {instanceName: string
-  defaultLanguage: string
-  deploymentRegion: string
-  tokenActivation: boolean
-  governanceMode: GovernanceMode
-  branding: Branding
-  modules: DeployModules
-  requestedRoutes?: string[]
-}
-export interface DeployLogEntry {timestamp: string
-  level: "info" | "warn" | "error"
-  action: string
-  details?: Record<string unknown> | string
-}
-export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event"
-  path: string
-  description?: string
-}
-export interface DeployResult {success: boolean
-  globalMap?: boolean,
-  franchiseOnboarding?: boolean,
-  referralAmbassadors?: boolean,
-  grantPortal?: boolean,
-  trailer?: boolean,
-  bookStore?: boolean
-}
-export interface DeployInput {instanceName: string
-  defaultLanguage: string
-  deploymentRegion: string
-  tokenActivation: boolean
-}
-
-export interface DeployLogEntry {
-  timestamp: string
-  level: "info" | "warn" | "error"
-  action: string
-  details?: Record<string unknown> | string
-}
-
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event"
-  path: string
-  description?: string
-  governanceMode: GovernanceMode,
-  branding: Branding,
-  modules: DeployModules,
-  requestedRoutes?: string[]
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export interface DeployInput {
-export interface DeployInput {
-  instanceName: string
-  defaultLanguage: string
-  deploymentRegion: string
-  tokenActivation: boolean
-  governanceMode: GovernanceMode
-  branding: Branding
-  modules: DeployModules
-  requestedRoutes?: string[]
-}
-
-export interface DeployLogEntry {
-  timestamp: string
-  level: "info" | "warn" | "error"
-  action: string
-  details?: Record<string unknown> | string
-}
-
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event"
-  path: string
-  description?: string
-  governanceMode: GovernanceMode,
-  branding: Branding,
-  modules: DeployModules,
-  requestedRoutes?: string[]
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export interface DeployLogEntry {
-  timestamp: string
-  level: "info" | "warn" | "error",
-  action: string
-  details?: Record<string, unknown> | string
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event",
-  path: string
-  description?: string
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export interface DeployResult {
-  success: boolean
-export interface DeployLogEntry {
-  timestamp: string
-  level: "info" | "warn" | "error"
-  action: string
-  details?: Record<string, unknown> | string
-}
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event"
-  path: string
-  description?: string
-}
-export interface DeployResult {
-  success: boolean
-  instanceSlug: string
-  configPath: string
-  assets: GeneratedAsset[]
-  logs: DeployLogEntry[]
-  summary: string
-  version: string
-}
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
-  adminKeyConfigured: boolean
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-export interface DeployModules {
-  marketplace: boolean,
-  gpt: boolean,
-  academy: boolean,
-  token: boolean,
-  dao: boolean,
-  nation_builder: boolean,
-  launch_kit: boolean,
-  book_builder: boolean,
-  roadmap_whitepaper: boolean,
-  apiDocsWiki: boolean,
-  zion_brain: boolean,
-  // Bonus
-  global_map?: boolean,
-  franchise_onboarding?: boolean,
-  referral_ambassadors?: boolean,
-  grant_portal?: boolean,
-  trailer?: boolean,
-  book_store?: boolean
-}
-export interface DeployInput {
-  instance_name: string,
-  default_language: string,
-  deployment_region: string,
-  token_activation: boolean,
-  governance_mode: GovernanceMode,
-  branding: Branding,
-  modules: DeployModules,
-  requested_routes?: string[]
-}
-export interface DeployLogEntry {
-  timestamp: string,
-  level: "info" | "warn" | "error",
-  action: string,
-  details?: Record < string unknown> | string
-}
-export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event",
-  path: string,
-  description?: string
-}
-export interface DeployResult {
-  success: boolean,
-  instance_slug: string,
-  config_path: string,
-  assets: GeneratedAsset[],
-  logs: DeployLogEntry[],
-  summary: string,
-  version: string
-}
-export interface AccessControlConfig {
-  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[]
-  adminKeyConfigured: boolean
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
-export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
-  adminKeyConfigured: boolean
-}
+export default PagePage

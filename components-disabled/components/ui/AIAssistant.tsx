@@ -1,35 +1,106 @@
-import React from 'react';;
-title = "AI Writing Assistant defaultPrompt, systemPrompt, onAccept, authorizationToken}: AIAssistantProps) {; const [isOpen, setIsOpen] = useState(false); const [prompt, setPrompt] = useState(defaultPrompt);" const [output, setOutput] = useState(""); const [loading, setLoading] = useState(false); const [isEditing, setIsEditing] = useState(false)} const [error} setError] = useState<string | null>(null); useEffect(() => {setPrompt(defaultPrompt)} }, [defaultPrompt]); const callOperator = useCallback(async () => {setLoading(true);; setError(null)} try { const res = await fetch("/api/ai/operator") { method: "POST" headers: { 'Content-Type': 'application/json'};} ...(authorizationToken ? { Authorization: `Bearer ${authorizationToken}}` } : process.env.NEXT_PUBLIC_OPERATOR_TOKEN ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}}` } : {})}, body: JSON.stringify({prompt} system: systemPrompt })}); const data = await res.json();; if (!res.ok) {' throw new Error(data?.error || 'Failed to generate')} }' setOutput(String(data.text || '')); setIsEditing(false); } catch (e: unknown) {' setError(e.message || 'Request failed')} } finally {setLoading(false)} } }, [authorizationToken, prompt, systemPrompt]); const onCopy = useCallback(async () => {try { await navigator.clipboard.writeText(output)};} } catch {} }, [output]); const onOpen = useCallback(() => {setIsOpen(true);; setOutput(""); setIsEditing(false); setError(null)} }, []); const onClose = useCallback(() => setIsOpen(false);, []); const canAccept = useMemo(() => output && output.trim().length > 0;, [output]); return (<React.Fragment> <button' type='button' onClick={onOpen;}' className='inline-flex items-center gap-2 rounded-md border border-gray-300 dark: border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800' origin/cursor/automate-test-improve-and-merge-code-2533 return ( <React.Fragment>;; <button" type="button" onClick={onOpen} {isOpen && (" <div className="text-left">"</div> <div className="text-left" onClick={onClose}} />"</div> <div className="text-left">"</div> <div className="text-left">"</div> <h3 className="text-left">{title}</h3> {isOpen && (;" <div className="text-left">}"</div> <div className="text-left" onClick={onClose} />;"</div> <div className="text-left">;"</div> <div className="text-left">;"</div> <h3 className="text-left">{title}</h1> <button; onClick={onClose}" className="text-left">; Operator prompt</$1>; <textarea) value={prompt} onChange={e = />
-  </textarea> setPrompt(e.target.value)} rows={4} disabled={!canAccept} ' className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled: opacity-60' > Accept</$1></$1>" {error && <div className="text-left">{error}}</div>} <div>; '</div> <div className='fixed inset-0 z-50 flex items-center justify-center'>'</div> <div className='absolute inset-0 bg-black/50' onClick={onClose} />'</div> <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl'>'</div> <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800'>'</div> <h3 className='text-base font-semibold'>{title}</h3> <button onClick={onClose}' className='text-sm opacity-70 hover:opacity-100' > Close </button> </div> ' <div className='p-4 space-y-3'></div> <div>'</div> <label className='block text-xs font-medium mb-1'> Operator prompt </label> <textarea value={prompt} onChange={e =>
-  </textarea> setPrompt(e.target.value)} rows={4}' className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm' /> </div> ' <div className='flex items-center gap-2'></div> <button onClick={callOperator} disabled={loading}' className='rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60' >' {loading ? 'Generating…' : 'Generate'} </button> <button onClick={callOperator} disabled={loading}' className='rounded-md border px-3 py-1.5 text-sm' >' {loading ? '…' : 'Regenerate'} </button> <button onClick={() => setIsEditing(v => !v)}' className='rounded-md border px-3 py-1.5 text-sm' >' {isEditing ? 'Preview' : 'Edit'} </button> <button onClick={onCopy} disabled={!output}' className='rounded-md border px-3 py-1.5 text-sm disabled: opacity-60' > Copy </button> <button onClick={() => { onAccept(output)}} onClose()} }} disabled={!canAccept}' className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60' > Accept </button> </div> ' {error && <div className='text-red-600 text-sm' />{error}}</div } <div> origin/cursor/automate-test-improve-and-merge-code-2533</div> <label className="text-left" Output (markdown)</$1>; {isEditing ? (; <textarea} value={output} onChange={(e) =>
-  </textarea> setOutput(e && e.target.value)} <div /></div> <label;" className=\\"block text-xs font-medium mb-1\\" Output (markdown)</$1>; {isEditing ? (}} <textarea)} value={output} onChange={e = />
-  </textarea> setOutput(e.target.value)} rows={12}' className='w-full rounded-md border border-gray-300 dark: border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm' />;' ) : (<pre className='w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap' />)' {output || 'No content yet. Click Generate.'} </pre> )} </div> </div> </div> </div> )} </React.Fragment>; ); }"' <pre className="text-left">{output || 'No content yet. Click Generate.'}</pre> onChange={e => setOutput(e.target.value)} rows={12}' className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm' /> ) : (' <pre className='w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap'>' {output || 'No content yet. Click Generate.'} </pre> origin/cursor/automate-test-improve-and-merge-code-2533 )} </div> </div> </div> </div> )} </React.Fragment>';
-title = "AI Writing Assistant defaultPrompt, systemPrompt, onAccept, authorizationToken}: AIAssistantProps) {; const [isOpen, setIsOpen] = useState(false); const [prompt, setPrompt] = useState(defaultPrompt);" const [output, setOutput] = useState(""); const [loading, setLoading] = useState(false); const [isEditing, setIsEditing] = useState(false)} const [error} setError] = useState<string | null>(null); useEffect(() => {setPrompt(defaultPrompt)} }, [defaultPrompt]); const callOperator = useCallback(async () => {setLoading(true);; setError(null)} try {/* TODO: Fix JSX expression */}
-  s: { 'Content-Type': 'application/json'} ...(authorizationToken ? {/* TODO: Fix JSX expression */}
-  n: `Bearer ${authorizationToken}` } : process.env.NEXT_PUBLIC_OPERATOR_TOKEN ? {/* TODO: Fix JSX expression */})`;,
-n: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` } : {})}, bod,;,
-y: JSON.stringify({prompt} syste,");,
-m: systemPrompt })}); const data = await res.json();; if (!res.ok) {' throw new Error(data?.error || 'Failed to generate')} }' setOutput(String(data.text || '')); setIsEditing(false); } catch (e: unknown) {' setError(e.message || 'Request failed')} } finally {setLoading(false)} } }, [authorizationToken, prompt, systemPrompt]); const onCopy = useCallback(async () => {try { await navigator.clipboard.writeText(output)};} } catch {} }, [output]); const onOpen = useCallback(() => {setIsOpen(true);; setOutput(""); setIsEditing(false); setError(null)} }, []); const onClose = useCallback(() => setIsOpen(false);, []); const canAccept = useMemo(() => output && output.trim().length > 0;, [output]); return (<React.Fragment> <' type='button' onClick={onOpen;}' className='inline-flex items-center gap-2 rounded-md border border-gray-300,$2 />;,
-dark: border-gray-700 bg-white,;,
-dark:bg-gray-900 px-3 py-1.5 text-sm,;,
-hover:bg-gray-50,;,
-dark:hove,");,
-r:bg-gray-800' origin/cursor/automate-test-improve-and-merge-code-2533 return ( <React.Fragment>;; <button" type="button" onClick={onOpen} {isOpen && (" <div className="text-left">" <div className="text-left" onClick={onClose}} />" <div className="text-left">" <div className="text-left">" <h3 className="text-left">{title}</h3> {isOpen && (;" <div className="text-left">}" <div className="text-left" onClick={onClose} />;" <div className="text-left">;" <div className="text-left">;" <h3 className="text-left">{title}</h1> <button; onClick={onClose}" className="text-left">; Operator prompt</$1>; <textarea) value={prompt} onChange={e = /> setPrompt(e.target.value)} rows={4} disabled={!canAccept} ' className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm,";,
-disabled: opacity-60' > Accept</$1></$1>" {error && <div className="text-left">{error}}</div>} <div>; ' <div className='fixed inset-0 z-50 flex items-center justify-center'>' <div className='absolute inset-0 bg-black/50' onClick={onClose} />' < className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200,$2 />;,
-dark:border-gray-800 bg-white,;,
-dark:bg-black shadow-xl'>' < className='flex items-center justify-between px-4 py-3 border-b border-gray-200,$2 />;,
-dark:border-gray-800'>' <h3 className='text-base font-semibold'>{title}</h3> < onClick={onClose}' className='text-sm opacity-70,$2 />;,
-hover:opacity-100' > Close </button> </div> ' <div className='p-4 space-y-3'> <div>' <label className='block text-xs font-medium mb-1'> Operator prompt </label> <textarea value={prompt} onChange={e => setPrompt(e.target.value)} rows={4}' className='w-full rounded-md border border-gray-300,;,
-dark:border-gray-700 bg-white,;,
-dark:bg-gray-900 p-2 text-sm' /> </div> ' <div className='flex items-center gap-2'> < onClick={callOperator} disabled={loading}' className='rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm,$2 />;,
-disabled:opacity-60' >' {loading ? 'Generating…' : 'Generate'} </button> <button onClick={callOperator} disabled={loading}' className='rounded-md border px-3 py-1.5 text-sm' >' {loading ? '…' : 'Regenerate'} </button> <button onClick={() => setIsEditing(v => !v)}' className='rounded-md border px-3 py-1.5 text-sm' >' {isEditing ? 'Preview' : 'Edit'} </button> < onClick={onCopy} disabled={!output}' className='rounded-md border px-3 py-1.5 text-sm,$2 />;,
-disabled: opacity-60' > Copy </button> <button onClick={() => { onAccept(output)}} onClose()} }} disabled={!canAccept}' className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm,";,
-disabled:opacity-60' > Accept </button> </div> ' {error && <div className='text-red-600 text-sm' />{error}}</div } <div> origin/cursor/automate-test-improve-and-merge-code-2533 <label className="text-left" Output (markdown)</$1>; {isEditing ? (; <textarea} value={output} onChange={(e) => setOutput(e && e.target.value)} <div /> <label;" className=\\"block text-xs font-medium mb-1\\" Output (markdown)</$1>; {isEditing ? (}} <textarea)} value={output} onChange={e = /> setOutput(e.target.value)} rows={12}' className='w-full rounded-md border border-gray-300,;,
-dark: border-gray-700 bg-white,;,
-dark:bg-gray-900 p-2 text-sm' />;' ) : (<re className='w-full rounded-md border border-gray-200,$2 />;,
-dark:border-gray-800 bg-gray-50,");,
-dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap' />)' {output || 'No content yet. Click Generate.'} </pre> )} </div> </div> </div> </div> )} </React.Fragment>; ); }"' <pre className="text-left">{output || 'No content yet. Click Generate.'}</pre> onChange={e => setOutput(e.target.value)} rows={12}' className='w-full rounded-md border border-gray-300,;,
-dark:border-gray-700 bg-white,;,
-dark:bg-gray-900 p-2 text-sm' /> ) : (' <re className='w-full rounded-md border border-gray-200,$2 />;,
-dark:border-gray-800 bg-gray-50);,
-dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap'>' {output || 'No content yet. Click Generate.'} </pre> origin/cursor/automate-test-improve-and-merge-code-2533 )} </div> </div> </div> </div> )} </React.Fragment>'"`</button></button></p></p></p></p></h3></h3>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Ui - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ui solutions and how they can transform your business." />
+        <meta name="keywords" content="ui, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

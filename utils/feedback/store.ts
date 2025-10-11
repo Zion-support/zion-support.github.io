@@ -1,85 +1,106 @@
-  id: string
-  type: string
-  message: string
-  rating: number
-  metadata: Record<string, any>
-  createdAt: string
-  ip: string
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const FeedbackPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Feedback - Zion Tech Group</title>
+        <meta name="description" content="Learn about our feedback solutions and how they can transform your business." />
+        <meta name="keywords" content="feedback, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-const feedbackData: FeedbackRecord[] = []
-const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime')
-const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json')
-function ensureDataFile(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })
-  if (!fs && fs.existsSync(DB_PATH))
-    fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8')
-export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
-  ensureDataFile()
-  const raw = fs && fs.readFileSync(DB_PATH, 'utf-8')
-  const data = JSON && JSON.parse(raw || '{}')
-  const items: FeedbackRecord[] = Array && Array.isArray(data && data.items) ? data && data.items : []
-  items && items.push(rec)
-  fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8')
-  return rec
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
-  feedbackData.push(feedback)
-  console.log('Feedback saved:', feedback.id)
-}
-export function writeAll(rows: any[]): void {
-  console.log('Writing feedback rows:', rows.length)
-  // Implementation would write to database or file
-}
-export function getAllFeedback(): FeedbackRecord[] {
-  return [...feedbackData]
-  metadata: Record < string, any>
-  created_at: string
-  ip: string
-}
-const feedbackData: FeedbackRecord[] = []
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
-  feedbackData.push(feedback)
-  console.log('Feedback saved:', feedback.id)
-}
-export function writeAll(rows: any[]): void {
-  console.log('Writing feedback rows:', rows.length)
-  // Implementation would write to database or file
-}
-export function getAllFeedback(): FeedbackRecord[] {
-  return [...feedbackData]
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
-  feedbackData.push(feedback)
-  console.log('Feedback saved:', feedback.id)
-}
-export function writeAll(rows: any[]): void {
-  console.log('Writing feedback rows:', rows.length)
-  // Implementation would write to database or file
-}
-export function getAllFeedback(): FeedbackRecord[] {
-  return [...feedbackData]
-}
-import fs from "fs"
-import path from "path"
-export type FeedbackRecord = {
-  id: string
-  createdAtIso: string
-  user: { id?: string; role?: string; talentSlug?: string }
-  rating: number
-  comment?: string
-  kind: "general" | "bug" | "feature"
-  context?: { actionType?: string; metadata?: any }
-}
-const DATA_DIR = path.join(process.cwd(), "data", "runtime")
-const DB_PATH = path.join(DATA_DIR, "feedback.json")
-function ensureDataFile(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8")
-}
-export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
-  ensureDataFile()
-  const raw = fs.readFileSync(DB_PATH, "utf-8")
-  const data = JSON.parse(raw || "{}")
-  const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : []
-  items.push(rec)
-  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8")
-  return rec
-}
+
+export default PagePage

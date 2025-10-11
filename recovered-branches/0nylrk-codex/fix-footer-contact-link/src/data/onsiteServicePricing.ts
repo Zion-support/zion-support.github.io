@@ -1,237 +1,106 @@
-export interface CountryPricing {
-  country: string
-  pricePerIncident: number
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export const onsiteServicePricing: CountryPricing[] = [
-  { country: "Afghanistan", pricePerIncident: 131.04 },
-  { country: "Albania", pricePerIncident: 110.41 },
-  { country: "Algeria", pricePerIncident: 92.26 },
-  { country: "American Samoa", pricePerIncident: 193.60 },
-  { country: "Andorra", pricePerIncident: 122.51 },
-  { country: "Angola", pricePerIncident: 81.68 },
-  { country: "Anguilla", pricePerIncident: 160.33 },
-  { country: "Antigua & Barbuda", pricePerIncident: 154.28 },
-  { country: "Argentina", pricePerIncident: 125.54 },
-  { country: "Armenia", pricePerIncident: 92.26 },
-  { country: "Aruba", pricePerIncident: 134.61 },
-  { country: "Australia", pricePerIncident: 170.92 },
-  { country: "Austria", pricePerIncident: 163.35 },
-  { country: "Azerbaijan", pricePerIncident: 101.34 },
-  { country: "Bahamas", pricePerIncident: 155.79 },
-  { country: "Bahrain", pricePerIncident: 140.66 },
-  { country: "Bangladesh", pricePerIncident: 92.26 },
-  { country: "Barbados", pricePerIncident: 139.15 },
-  { country: "Belarus", pricePerIncident: 92.26 },
-  { country: "Belgium", pricePerIncident: 154.28 },
-  { country: "Belize", pricePerIncident: 140.66 },
-  { country: "Benin", pricePerIncident: 157.30 },
-  { country: "Bermuda", pricePerIncident: 133.10 },
-  { country: "Bhutan", pricePerIncident: 93.78 },
-  { country: "Bolivia", pricePerIncident: 108.90 },
-  { country: "Bosnia & Herzegovina", pricePerIncident: 84.70 },
-  { country: "Botswana", pricePerIncident: 81.68 },
-  { country: "Brazil", pricePerIncident: 87.73 },
-  { country: "British Virgin Islands", pricePerIncident: 158.82 },
-  { country: "Brunei", pricePerIncident: 107.39 },
-  { country: "Bulgaria", pricePerIncident: 108.90 },
-  { country: "Burkina Faso", pricePerIncident: 96.80 },
-  { country: "Burundi", pricePerIncident: 102.85 },
-  { country: "Cambodia", pricePerIncident: 137.64 },
-  { country: "Cameroon", pricePerIncident: 69.58 },
-  { country: "Canada", pricePerIncident: 152.76 },
-  { country: "Cape Verde", pricePerIncident: 104.36 },
-  { country: "Cayman Islands", pricePerIncident: 154.28 },
-  { country: "Central African Republic", pricePerIncident: 124.03 },
-  { country: "Chad", pricePerIncident: 78.65 },
-  { country: "Chile", pricePerIncident: 108.90 },
-  { country: "China", pricePerIncident: 140.66 },
-  { country: "Colombia", pricePerIncident: 77.14 },
-  { country: "Comoros", pricePerIncident: 108.90 },
-  { country: "Congo", pricePerIncident: 66.55 },
-  { country: "Cook Islands", pricePerIncident: 155.79 },
-  { country: "Costa Rica", pricePerIncident: 108.90 },
-  { country: "Coted'Ivoire", pricePerIncident: 72.60 },
-  { country: "Croatia", pricePerIncident: 122.51 },
-  { country: "Cuba", pricePerIncident: 111.93 },
-  { country: "Cyprus", pricePerIncident: 172.43 },
-  { country: "Czech Republic", pricePerIncident: 114.95 },
-  { country: "Denmark", pricePerIncident: 208.73 },
-  { country: "Djibouti", pricePerIncident: 193.60 },
-  { country: "Dominica", pricePerIncident: 124.03 },
-  { country: "Dominican Republic", pricePerIncident: 133.10 },
-  { country: "East Timor", pricePerIncident: 178.48 },
-  { country: "Ecuador", pricePerIncident: 114.95 },
-  { country: "Egypt", pricePerIncident: 102.85 },
-  { country: "El Salvador", pricePerIncident: 111.93 },
-  { country: "Equatorial Guinea", pricePerIncident: 148.23 },
-  { country: "Eritrea", pricePerIncident: 89.24 },
-  { country: "Estonia", pricePerIncident: 157.30 },
-  { country: "Ethiopia", pricePerIncident: 69.58 },
-  { country: "Faroe Islands", pricePerIncident: 208.73 },
-  { country: "Fiji", pricePerIncident: 107.39 },
-  { country: "Finland", pricePerIncident: 205.70 },
-  { country: "France", pricePerIncident: 155.79 },
-  { country: "French Guiana", pricePerIncident: 176.97 },
-  { country: "French Polynesia", pricePerIncident: 193.60 },
-  { country: "Gabon", pricePerIncident: 81.68 },
-  { country: "Gambia", pricePerIncident: 78.65 },
-  { country: "Gaza Strip", pricePerIncident: 232.93 },
-  { country: "Georgia", pricePerIncident: 92.26 },
-  { country: "Germany", pricePerIncident: 155.79 },
-  { country: "Ghana", pricePerIncident: 62.01 },
-  { country: "Gibraltar", pricePerIncident: 157.30 },
-  { country: "Greece", pricePerIncident: 119.49 },
-  { country: "Greenland", pricePerIncident: 205.70 },
-  { country: "Grenada", pricePerIncident: 157.30 },
-  { country: "Guadeloupe", pricePerIncident: 145.20 },
-  { country: "Guam", pricePerIncident: 190.58 },
-  { country: "Guatemala", pricePerIncident: 111.93 },
-  { country: "Guernsey", pricePerIncident: 119.49 },
-  { country: "Guinea", pricePerIncident: 175.45 },
-  { country: "Guinea-Bissau", pricePerIncident: 178.48 },
-  { country: "Guyana", pricePerIncident: 173.94 },
-  { country: "Haiti", pricePerIncident: 107.39 },
-  { country: "Honduras", pricePerIncident: 114.95 },
-  { country: "Hong Kong", pricePerIncident: 195.12 },
-  { country: "Hungary", pricePerIncident: 101.34 },
-  { country: "Iceland", pricePerIncident: 192.09 },
-  { country: "India", pricePerIncident: 54.45 },
-  { country: "Indonesia", pricePerIncident: 52.94 },
-  { country: "Iran", pricePerIncident: 248.05 },
-  { country: "Iraq", pricePerIncident: 143.69 },
-  { country: "Ireland", pricePerIncident: 199.65 },
-  { country: "Isle of Man", pricePerIncident: 117.98 },
-  { country: "Israel", pricePerIncident: 169.40 },
-  { country: "Italy", pricePerIncident: 110.41 },
-  { country: "Jamaica", pricePerIncident: 114.95 },
-  { country: "Japan", pricePerIncident: 290.40 },
-  { country: "Jersey", pricePerIncident: 179.99 },
-  { country: "Jordan", pricePerIncident: 148.23 },
-  { country: "Kazakhstan", pricePerIncident: 102.85 },
-  { country: "Kenya", pricePerIncident: 81.68 },
-  { country: "Kiribati", pricePerIncident: 160.33 },
-  { country: "Kosovo", pricePerIncident: 89.24 },
-  { country: "Kuwait", pricePerIncident: 148.23 },
-  { country: "Kyrgyzstan", pricePerIncident: 114.95 },
-  { country: "Laos", pricePerIncident: 108.90 },
-  { country: "Latvia", pricePerIncident: 114.95 },
-  { country: "Lebanon", pricePerIncident: 148.23 },
-  { country: "Lesotho", pricePerIncident: 71.09 },
-  { country: "Liberia", pricePerIncident: 176.97 },
-  { country: "Libya", pricePerIncident: 89.24 },
-  { country: "Liechtenstein", pricePerIncident: 176.97 },
-  { country: "Lithuania", pricePerIncident: 113.44 },
-  { country: "Luxembourg", pricePerIncident: 172.43 },
-  { country: "Macau", pricePerIncident: 175.45 },
-  { country: "Macedonia", pricePerIncident: 107.39 },
-  { country: "Madagascar", pricePerIncident: 96.80 },
-  { country: "Malawi", pricePerIncident: 69.58 },
-  { country: "Malaysia", pricePerIncident: 66.55 },
-  { country: "Maldives", pricePerIncident: 78.65 },
-  { country: "Mali", pricePerIncident: 122.51 },
-  { country: "Malta", pricePerIncident: 124.03 },
-  { country: "Marshall Islands", pricePerIncident: 148.23 },
-  { country: "Martinique", pricePerIncident: 154.28 },
-  { country: "Mauritania", pricePerIncident: 95.29 },
-  { country: "Mauritius", pricePerIncident: 78.65 },
-  { country: "Mayotte", pricePerIncident: 184.53 },
-  { country: "Mexico", pricePerIncident: 92.26 },
-  { country: "Micronesia", pricePerIncident: 154.28 },
-  { country: "Moldova", pricePerIncident: 89.24 },
-  { country: "Monaco", pricePerIncident: 263.18 },
-  { country: "Mongolia", pricePerIncident: 84.70 },
-  { country: "Montenegro", pricePerIncident: 124.03 },
-  { country: "Montserrat", pricePerIncident: 137.64 },
-  { country: "Morocco", pricePerIncident: 78.65 },
-  { country: "Mozambique", pricePerIncident: 66.55 },
-  { country: "Myanmar", pricePerIncident: 214.78 },
-  { country: "Namibia", pricePerIncident: 63.53 },
-  { country: "Nauru", pricePerIncident: 124.03 },
-  { country: "Nepal", pricePerIncident: 104.36 },
-  { country: "Netherlands", pricePerIncident: 199.65 },
-  { country: "Netherlands Antilles", pricePerIncident: 146.71 },
-  { country: "New Caledonia", pricePerIncident: 195.12 },
-  { country: "New Zealand", pricePerIncident: 178.48 },
-  { country: "Nicaragua", pricePerIncident: 108.90 },
-  { country: "Niger", pricePerIncident: 57.48 },
-  { country: "Nigeria", pricePerIncident: 62.01 },
-  { country: "North Korea", pricePerIncident: 320.66 },
-  { country: "North Mariana Islands", pricePerIncident: 154.28 },
-  { country: "Northern Ireland", pricePerIncident: 152.76 },
-  { country: "Norway", pricePerIncident: 228.39 },
-  { country: "Oman", pricePerIncident: 77.14 },
-  { country: "Pakistan", pricePerIncident: 78.65 },
-  { country: "Palau", pricePerIncident: 102.85 },
-  { country: "Palestine", pricePerIncident: 276.79 },
-  { country: "Panama", pricePerIncident: 114.95 },
-  { country: "Papua New Guinea", pricePerIncident: 104.36 },
-  { country: "Paraguay", pricePerIncident: 107.39 },
-  { country: "Peru", pricePerIncident: 108.90 },
-  { country: "Philippines", pricePerIncident: 54.45 },
-  { country: "Poland", pricePerIncident: 122.51 },
-  { country: "Portugal", pricePerIncident: 124.03 },
-  { country: "Puerto Rico", pricePerIncident: 143.69 },
-  { country: "Qatar", pricePerIncident: 193.60 },
-  { country: "Reunion", pricePerIncident: 155.79 },
-  { country: "Romania", pricePerIncident: 107.39 },
-  { country: "Russia", pricePerIncident: 151.25 },
-  { country: "Rwanda", pricePerIncident: 51.43 },
-  { country: "Saint Helena", pricePerIncident: 154.28 },
-  { country: "Saint Kitts & Nevis", pricePerIncident: 157.30 },
-  { country: "Saint Lucia", pricePerIncident: 152.76 },
-  { country: "Saint Vincent and the Grenadines", pricePerIncident: 124.03 },
-  { country: "Samoa", pricePerIncident: 155.79 },
-  { country: "San Marino", pricePerIncident: 148.23 },
-  { country: "Sao Tome & Principe", pricePerIncident: 133.10 },
-  { country: "Saudi Arabia", pricePerIncident: 131.59 },
-  { country: "Senegal", pricePerIncident: 54.45 },
-  { country: "Serbia", pricePerIncident: 124.03 },
-  { country: "Seychelles", pricePerIncident: 57.48 },
-  { country: "Sierra Leone", pricePerIncident: 58.99 },
-  { country: "Singapore", pricePerIncident: 130.08 },
-  { country: "Slovakia", pricePerIncident: 124.03 },
-  { country: "Slovenia", pricePerIncident: 140.66 },
-  { country: "Solomon Islands", pricePerIncident: 179.99 },
-  { country: "Somalia", pricePerIncident: 299.48 },
-  { country: "South Africa", pricePerIncident: 57.48 },
-  { country: "South Korea", pricePerIncident: 139.15 },
-  { country: "Spain", pricePerIncident: 140.66 },
-  { country: "Sri Lanka", pricePerIncident: 89.24 },
-  { country: "St Pierre & Miquelon", pricePerIncident: 139.15 },
-  { country: "Sudan", pricePerIncident: 297.97 },
-  { country: "Suriname", pricePerIncident: 87.73 },
-  { country: "Swaziland", pricePerIncident: 63.53 },
-  { country: "Sweden", pricePerIncident: 254.10 },
-  { country: "Switzerland", pricePerIncident: 131.59 },
-  { country: "Syria", pricePerIncident: 288.89 },
-  { country: "Taiwan", pricePerIncident: 77.14 },
-  { country: "Tajikistan", pricePerIncident: 95.29 },
-  { country: "Tanzania", pricePerIncident: 57.48 },
-  { country: "Tasmania", pricePerIncident: 232.44 },
-  { country: "Thailand", pricePerIncident: 54.45 },
-  { country: "Togo", pricePerIncident: 108.90 },
-  { country: "Tonga", pricePerIncident: 102.85 },
-  { country: "Trinidad & Tobago", pricePerIncident: 108.90 },
-  { country: "Tunisia", pricePerIncident: 57.48 },
-  { country: "Turkey", pricePerIncident: 104.36 },
-  { country: "Turkmenistan", pricePerIncident: 92.26 },
-  { country: "Turks & Caicos Islands", pricePerIncident: 145.20 },
-  { country: "Tuvalu", pricePerIncident: 140.66 },
-  { country: "Uganda", pricePerIncident: 62.01 },
-  { country: "Ukraine", pricePerIncident: 114.95 },
-  { country: "United Arab Emirates", pricePerIncident: 175.45 },
-  { country: "United Kingdom", pricePerIncident: 117.98 },
-  { country: "United States", pricePerIncident: 149.74 },
-  { country: "Uruguay", pricePerIncident: 96.80 },
-  { country: "Uzbekistan", pricePerIncident: 148.23 },
-  { country: "Vanuatu", pricePerIncident: 198.14 },
-  { country: "Venezuela", pricePerIncident: 81.68 },
-  { country: "Vietnam", pricePerIncident: 92.26 },
-  { country: "Virgin Islands", pricePerIncident: 155.79 },
-  { country: "Wallis and Futuna", pricePerIncident: 195.12 },
-  { country: "West Bank", pricePerIncident: 334.27 },
-  { country: "Western Sahara", pricePerIncident: 142.18 },
-  { country: "Yemen", pricePerIncident: 320.66 },
-  { country: "Zambia", pricePerIncident: 62.01 },
-  { country: "Zimbabwe", pricePerIncident: 60.50 }
-]
+
+export default PagePage

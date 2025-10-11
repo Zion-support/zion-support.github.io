@@ -1,74 +1,106 @@
-import type { Config } from 'tailwindcss'
-const config: Config = {
-    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
-    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
-    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
-  theme: {
-    extend: {
-      colors: {
-        'zion - blue': '#3b82f6zion - purple': '#8b5cf6zion - green': '#10b981zion - orange': '#f59e0bzion - red': '#ef4444zion - teal': '#14b8a6zion - cyan': '#06b6d4zion - indigo': '#6366f1zion - emerald': '#059669zion - pink': '#ec4899'},
-      animation: {
-        'fade - in': 'fade_in 0.6s ease - outslide - up': 'slide_up 0.8s ease - outbounce - slow': 'bounce 2s infinitepulse - slow': 'pulse 3s infinite'},
-      keyframes: {
-        fade_in: {
-          '0%': { opacity: '0', transform: 'translate_y (20px)' },
-          '100%': { opacity: '1', transform: 'translate_y (0)' }},
-        slide_up: {
-          '0%': { opacity: '0', transform: 'translate_y (40px)' },
-          '100%': { opacity: '1', transform: 'translate_y (0)' }}},
-      backdrop_blur: {
-        xs: '2px'},
-      background_image: {
-        'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
-  plugins: []}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export default config
-import type { Config } from 'tailwindcss'
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'zion-blue': '#3b82f6',
-        'zion-purple': '#8b5cf6',
-        'zion-green': '#10b981',
-        'zion-orange': '#f59e0b',
-        'zion-red': '#ef4444',
-        'zion-teal': '#14b8a6',
-        'zion-cyan': '#06b6d4',
-        'zion-indigo': '#6366f1',
-        'zion-emerald': '#059669',
-        'zion-pink': '#ec4899',
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out',
-        'slide-up': 'slideUp 0.8s ease-out',
-        'bounce-slow': 'bounce 2s infinite',
-        'pulse-slow': 'pulse 3s infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(40px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-      },
-      backdropBlur: {
-        xs: '2px',
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+const Zion-osPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-  },
-  plugins: [],
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Zion Os - Zion Tech Group</title>
+        <meta name="description" content="Learn about our zion os solutions and how they can transform your business." />
+        <meta name="keywords" content="zion-os, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export default config
+
+export default PagePage

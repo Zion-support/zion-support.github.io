@@ -1,21 +1,18 @@
 'use client';
 
-
 const ItInfrastructureDesignPage: React.FC = () => {const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} , {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {icon: PieChart,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} , {icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights.',
       benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
@@ -35,10 +32,6 @@ const ItInfrastructureDesignPage: React.FC = () => {const features = [
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
             </div>
       
       <Footer />

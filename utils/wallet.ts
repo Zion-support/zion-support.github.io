@@ -1,129 +1,106 @@
-export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {
-    throw new Error('MetaMask is not installed')
-  }
-  try {
-    const accounts = await window && window.ethereum.request({
-export async function connectMetaMask (): Promise < string[]> {
-  // Check condition
-if ( {) {
-  $2
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    throw new Error ('MetaMask is not installed')
-  }
-  try {
-    const accounts = await window.ethereum.request ({
-      method: 'eth_requestAccounts',
-    })
-    return accounts
-  } catch (error) {
-    throw new Error ('Failed to connect to MetaMask')
-  }
-}
-export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {
-    return []
-  }
-  try {
-    const accounts = await window && window.ethereum.request({
-export async function get_accounts (): Promise < string[]> {
-  // Check condition
-if ( {) {
-  $2
-}
-    return []
-  }
-  try {
-    const accounts = await window.ethereum.request ({
-      method: 'eth_accounts',
-    })
-    return accounts
-  } catch (error) {
-    return []
-  }
-}
-export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {
-    throw new Error('MetaMask is not installed')
-  }
-  try {
-    const balance = await window && window.ethereum.request({
-export async function get_balance (address: string): Promise < string> {
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ('MetaMask is not installed')
-  }
-  try {
-    const balance = await window.ethereum.request ({
-      method: 'eth_getBalance',
-      params: [address, 'latest'],
-    })
-    return balance
-  } catch (error) {
-    throw new Error ('Failed to get balance')
-  }
-}
-export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {
-    throw new Error('MetaMask is not installed')
-  }
-  try {
-    const signature = await window && window.ethereum.request({
-export async function sign_message (message: string, address: string): Promise < string> {
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ('MetaMask is not installed')
-  }
-  try {
-    const signature = await window.ethereum.request ({
-      method: 'personal_sign',
-      params: [message, address],
-    })
-    return signature
-  } catch (error) {
-    throw new Error ('Failed to sign message')
-  }
-}
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise < any>
-      on: (event: string, callback: (accounts: string[]) => void) => void
-  }
-}
-export type WalletProvider = any
-export function getEthereumProvider(): WalletProvider | null {
-  if (typeof window === 'undefined') return null
-  // @ts-ignore
-  const { ethereum } = window
-  return ethereum ?? null
-}
-export async function connectMetaMask(): Promise<string[] | null> {
-  const provider = getEthereumProvider()
-  if (!provider) return null
-  try {
-    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' })
-    return accounts
-  } catch (e) {
-    return null
-  }
-}
-export async function getAccounts(): Promise<string[] | null> {
-  const provider = getEthereumProvider()
-  if (!provider) return null
-  try {
-    const accounts: string[] = await provider.request({ method: 'eth_accounts' })
-    return accounts
-  } catch (e) {
-    return null
-  }
-}
+
+export default PagePage

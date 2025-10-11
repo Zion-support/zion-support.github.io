@@ -1,65 +1,106 @@
-// Jest.setup utility
-export const Jest.setup = () => {
-  // Implementation here
-  return null
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Backup-problematic-filesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Backup Problematic Files - Zion Tech Group</title>
+        <meta name="description" content="Learn about our backup problematic files solutions and how they can transform your business." />
+        <meta name="keywords" content="backup-problematic-files, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Mock global objects that might not be available in test environment
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest && jest.fn(), // deprecated
-    removeListener: jest && jest.fn(), // deprecated
-    addEventListener: jest && jest.fn(),
-    removeEventListener: jest && jest.fn(),
-    dispatchEvent: jest && jest.fn(),
-// Jest setup file for testing environment
-import '@testing - library / jest - dom'
-// Mock global objects that might not be available in test environment
-global.ResizeObserver = jest.fn ().mock_implementation (() => ({
-  observe: jest.fn (),
-  unobserve: jest.fn (),
-  disconnect: jest.fn (), }));}))
-// Mock window.match_media
-Object.define_property (window, 'match_media', {
-  writable: true,
-  value: jest.fn ().mock_implementation (query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    add_listener: jest.fn (), // deprecated
-    remove_listener: jest.fn (), // deprecated
-    addEventListener: jest.fn (),
-    removeEventListener: jest.fn (),
-    dispatch_event: jest.fn (),
-  })),
-})
-global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
-  observe: jest && jest.fn(),
-  unobserve: jest && jest.fn(),
-  disconnect: jest && jest.fn(),
-}))
-const originalConsoleError = console && console.error
-const originalConsoleWarn = console && console.warn
-beforeAll(() => {
-  console && console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
-      return
-    }
-    originalConsoleError && originalConsoleError.call(console, ...args)
-  }
-  console && console.warn = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
-      return
-    }
-    originalConsoleWarn && originalConsoleWarn.call(console, ...args)
-  }
-})
-afterAll(() => {
-  console && console.error = originalConsoleError
-  console && console.warn = originalConsoleWarn
+
+export default PagePage

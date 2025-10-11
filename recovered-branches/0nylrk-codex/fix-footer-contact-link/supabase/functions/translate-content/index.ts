@@ -1,99 +1,106 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Translate-contentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Translate Content - Zion Tech Group</title>
+        <meta name="description" content="Learn about our translate content solutions and how they can transform your business." />
+        <meta name="keywords" content="translate-content, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    // Extract request data
-    const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json()
-    if (!content || content.trim() === "") {
-      throw new Error("Content is required")
-    }
-    if (!OPENAI_API_KEY) {
-      throw new Error("OpenAI API key is not configured")
-    }
-    // Prepare system prompt based on content type
-    let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format."
-    if (contentType === "job") {
-      systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
-    } else if (contentType === "profile") {
-      systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
-    }
-    // Create translations for each target language
-    const translations = {}
-    for (const targetLang of targetLanguages) {
-      if (targetLang === sourceLanguage) {
-        translations[targetLang] = content
-        continue
-      }
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${OPENAI_API_KEY}`,
-          "Content-Type": "application/json"},
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "gpt-4o-mini",
-          messages: [
-            {
-              role: "system",
-              content: systemPrompt},
-              content: systemPrompt,
-            },
-            {
-              role: "user",
-              content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
-              ${content}
-              Only provide the translated text, no explanations or additional comments.`}],
-          temperature: 0.3})})
-              Only provide the translated text, no explanations or additional comments.`,
-            },
-          ],
-          temperature: 0.3,
-        }),
-      })
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-      }
-      const data = await response.json()
-      translations[targetLang] = data.choices[0].message.content.trim()
-    }
-    return new Response(
-      JSON.stringify({
-        translations}),
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-        translations,
-      }),
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
-  } catch (error) {
-    console.error("Error in translate-content function:", error)
-    return new Response(
-      JSON.stringify({
-        error: error.message}),
-      {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-        error: error.message,
-      }),
-      {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
-  }
-})
+
+export default PagePage

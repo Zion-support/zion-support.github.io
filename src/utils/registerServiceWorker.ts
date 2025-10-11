@@ -1,376 +1,106 @@
-/**
- * Service Worker Registration Utility
- */
-export interface ServiceWorkerConfig {
-    onSuccess?: (registration: ServiceWorkerRegistration) => void
-  onUpdate?: (registration: ServiceWorkerRegistration) => void,
-  onError?: (error: Error) => void
-  }
-/**
- * Register service worker with lifecycle callbacks
- */
-export async function registerServiceWorker(
-  _config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {
-    // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return
-  }
-  // Only register in production or if explicitly enabled
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-/**
- * Service Worker Registration Utility
- */
-
-export interface ServiceWorkerConfig {
-    // TODO: Add content
-  }
-}
-  onSuccess?: (registration: ServiceWorkerRegistration) => void
-  onUpdate?: (registration: ServiceWorkerRegistration) => void
-  onError?: (error: Error) => void,
-
-}
-/**
- * Register service worker with lifecycle callbacks
- */
-export async function registerServiceWorker()
-
-  _config: ServiceWorkerConfig = {}
-
-): Promise
-          <ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return
-  }
-// Only register in production or if explicitly enabled
-    window.location.hostname === 'localhost' ||
-      window.location.hostname === '[::1]' ||
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  )
-  // Use isLocalhost for conditional logic if needed
-  if (isLocalhost) {}
-  try {
-    // Wait for page to load
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {} else {
-    window.addEventListener('load', () => resolve())
-  }
-    })
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope:     ,
-$4})
-    // Handle updates
-    registration.addEventListener('updatefound', () => {
-    const installingWorker = registration.installing
-      if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {
-        if (installingWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            // New update available
-            if (config.onUpdate) {
-              config.onUpdate(registration)
-  }
-          } else {
-            // Content cached for offline use
-            if (config.onSuccess) {
-  // Use isLocalhost for conditional logic if needed
-  if (isLocalhost) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Wait for page to load
-    await new Promise
-          <void>((resolve) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        window.addEventListener('load', () => resolve())
-      }
-    })
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  scop,
-  e: '/')
-    })
-    // Handle updates
-    registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const installingWorker = registration.installing
-      if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        if (installingWorker.state === 'installed') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            // New update available
-            if (config.onUpdate) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              config.onUpdate(registration)
-            }
-          } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            // Content cached for offline use
-            if (config.onSuccess) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              config.onSuccess(registration)
-            }
-          }
-        }
-      })
-    })
-    return registration
-  } catch (error) {
-    // // console.error('[SW] Registration failed:', error)
-    if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX expression */}
-  failed:', error);}
-    if (config.onError && error instanceof Error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      config.onError(error)
-    }
-  }
-}
-/**
- * Unregister service worker
- */
-export async function unregisterServiceWorker(): Promise<boolean> {
-    if (!('serviceWorker' in navigator)) {
-    return false
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready
-    const result = await registration.unregister()
-    return result
-  } catch (error) {
-    // // console.error('[SW] Unregistration failed:', error)
- * Unregister service worker
- */
-export async function unregisterServiceWorker(): Promise
-          <boolean> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return false
-  }
-  try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const registration = await navigator.serviceWorker.ready
-    const result = await registration.unregister()
-    return result
-  } catch (error) {/* TODO: Fix JSX expression */}
-  failed:', error);}
-    return false
-  }
-}
-/**
- * Check for service worker updates
- */
-export async function checkForUpdates(): Promise<void> {
-    if (!('serviceWorker' in navigator)) {
-    return
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready
-    await registration.update()
-  } catch (error) {
-    // // console.error('[SW] Update check failed:', error)
-  }
-}
-/**
- * Skip waiting and activate new service worker
- */
-export function skipWaiting(): void {
-    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-    return
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })
-}
-/**
- * Clear all caches
- */
-export function clearCaches(): void {
-    if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
-    return
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })
-  }
-/**
- * Get service worker registration status
- */
-export async function getServiceWorkerStatus(): Promise<{
-    supported: boolean
-  registered: boolean,
-  active: boolean
-  }> {
-  if (!('serviceWorker' in navigator)) {
-    return {
-      supported: false,
-      registered: false,
-      active: false
-    }
-  }
-  try {
-    const registration = await navigator.serviceWorker.getRegistration()
-    return {
-      supported: true,
-      registered: !!registration,
-      active: !!registration?.active
-    }
-  } catch {
-    return {
-      supported: true,
-      registered: false,
-      active: false
-    }
-  }
-}
- * Check for service worker updates
- */
-export async function checkForUpdates(): Promise
-          <void> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return
-  }
-  try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const registration = await navigator.serviceWorker.ready
-    await registration.update()
-    } catch (error) {
-    // // console.error('[SW] Update check failed:', error)
-  }
+  ]
 
-  }
-}
-/**
- * Skip waiting and activate new service worker
- */
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-export function skipWaiting(): void {
-    // TODO: Add content
-  }
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-}
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return
-  }
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
-  }
-    return
-  }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */}
-  n: 'skipWaiting' })
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
 }
-/**
- * Clear all caches
- */
 
-export function clearCaches(): void {
-    // TODO: Add content
-  }
-
-}
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return
-  }
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
-  }
-    return
-  }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */}
-  n: 'clearCache' })
-  )
-  }
-/**
- * Get service worker registration status
- */
-export async function getServiceWorkerStatus(): Promise
-          <{/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  supporte,
-  d: boolean,,
-    registere,
-  d: boolean,,
-    activ,
-  e: boolean,
-}> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  supporte,
-  d: false,
-      registere,
-  d: false,
-      activ,
-  e: false,
-    }
-  }
-  try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const registration = await navigator.serviceWorker.getRegistration()
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  supporte,
-  d: true,
-      registere,
-  d: !!registration,
-      activ,
-  e: !!registration?.active,
-    }
-  } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  supporte,
-  d: true,
-      registere,
-  d: false,
-      activ,
-  e: false,
-    }
-  }
-}
-
+export default PagePage

@@ -1,33 +1,106 @@
-import React from 'react';
-// import: React {useState, useRef} useEffect } from, react';' import: {motion} AnimatePresence } from;' 'framer-motion''; import: {Send, AlertCircle, Mail, Phone, MessageSquare, Building, Globe, Clock} Shield} from;' 'lucide-react''; interface: ContactFormData {firstName: string; lastName: string; email: string; phone: string; company: string; website: string; service: string; budget: string; timeline: string, firstName:,' '';' lastName:  ,''; email:,' '';' phone:  ,''; company:,' '';' website:  ,''; service:,' '';' budget:  ,''; timeline:, const [isValidating, setIsValidating] = useState<typeof false>(false) const formRef = useRef<HTMLFormElement>(null) const firstInputRef = useRef<HTMLInputElement>(null);; const: totalSteps = 3} // Focus: first input on mount} useEffect(: unknown: { if (firstInputRef.current) { firstInputRef.current.focus()}} e.preventDefault(); setIsValidating(true); const: isValid = validateForm(); setIsValidating(false); if: (!isValid) {// Scroll to first error} return} setIsSubmitting(true); try: {// Simulate API call, await: new Promise(resolve => setTimeout(resolve)} 2000)); if: (onSubmit) { onSubmit(formData)} setIsSubmitted(true); setCurrentStep(1); // Reset: form after successful submission, setTimeout(: unknown: {setFormData({ firstName:)}},' '';' lastName:  ,''; email:,' '';' company:  ,''; phone:,' '';' service:  ,''; budget:,' '')' timeline:  ,''} message:, // console.error() Form submission error:  } error)} finally: { setIsSubmitting(false)} } return} } if: (currentStep < totalSteps) { setCurrentStep(currentStep + 1)} } if (currentStep > 1) {setCurrentStep(currentStep - 1})} }, {errors.lastName} </p> )} </div> {errors.email} </p> )} </div> value={formData.company} onChange={e: unknown: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {services.map(service: unknown( <option: key={servic)}}e} value={service}> {service} </option> ))</$1> {budget} </option> ))</$1> </div> {timeline} </option> ))</$1> </div> </div> return <label key={method.value;} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value}} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600 hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={formData.preferredContact: === method.value}' onChange={(e handleInputChange('preferredContact)}'' '} e.target.value)}'' className='sr-only'/>
-  </input>'' <Icon: className='w-5 h-5 mr-3 text-cyan-400' />'' <span: className='text-sm font-medium'>{method.label}</span><' </label> )})} </div> </div> </motion.div> </label> <textarea value={formData.message} onChange={(e handleInputChange() message}' '} e.target.value)}' rows={6}, {errors.message} </p>
-  </textarea> )}' <p: className='mt-2 text-sm text-gray-400'>' {formData.message.length}/1000: characters </p> </a> . * < </label> </p> )} </div> </motion.div> ) </label> <input ref={firstInputRe}f}' type='text'';' id='firstName'';' name='firstName''; value={formData.firstName}, {errors.firstName} </p>
-  </input> )} </div> {errors.lastName} </p> )} </div> </div> {errors.phone} </p> )} </div> </select> </div> </div> </motion.div> {errors.website} </p> )} </div> </div> </select> </div> </div> </motion.div> )}, {currentStep === 3 && {errors.message}} </p> )} </div> </div> </div> </div> </motion.div> )} </AnimatePresence> {/* Navigation Buttons */} </React.Fragment> )} </button> )} </div> </form> </div> )} export { EnhancedContactForm } export default EnhancedContactForm}'
-// impor,;,
-t: React {useState, useRef} useEffect } from, react';' impor,;,
-t: {motion} AnimatePresence } from;' 'framer-motion''; impor,;,
-t: {Send, AlertCircle, Mail, Phone, MessageSquare, Building, Globe, Clock} Shield} from;' 'lucide-react''; interfac,;,
-e: ContactFormData {/* TODO: Fix JSX expression */}
-  t: totalSteps = 3} // Focu,;,
-s: first input on mount} useEffect(: unknow);,
-n: { if (firstInputRef.current) { firstInputRef.current.focus()}} e.preventDefault(); setIsValidating(true); cons,;,
-t: isValid = validateForm(); setIsValidating(false); i,;,
-f: (!isValid) {// Scroll to first error} return} setIsSubmitting(true); tr,;,
-y: {/* TODO: Fix JSX expression */}
-  t: new Promise(resolve => setTimeout(resolve)} 2000)); i,;,
-f: (onSubmit) { onSubmit(formData)} setIsSubmitted(true); setCurrentStep(1); // Rese,;,
-t: form after successful submission, setTimeout(: unknow,;,
-n: {/* TODO: Fix JSX expression */}
-  e:  ,''} messag);,
-e:, // console.error() Form submission,;,
-error:  } error)} finall,;,
-y: { setIsSubmitting(false)} } return} } i,;,
-f: (currentStep < totalSteps) { setCurrentStep(currentStep + 1)} } if (currentStep > 1) {setCurrentStep(currentStep - 1})} }, {errors.lastName} </p> )} </div> {errors.email} </p> )} </div> value={formData.company} onChange={/* TODO: Fix JSX expression */}
-  n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}
-  n: key={servic}e} value={service}> {service} </option> ))</$1> {budget} </option> ))</$1> </div> {timeline} </option> ))</$1> </div> </div> return <label key={method.value;} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value}} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600,`;,
-hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}
-  t: === method.value}' onChange={(e handleInputChange('preferredContact)}'' '} e.target.value)}'' className='sr-only'/>
-  </input>'' <Ico,;,
-n: className='w-5 h-5 mr-3 text-cyan-400' />'' <spa,;,
-n: className='text-sm font-medium'>{method.label}<' </label> )})} </div> </div> </motion.div> </label> <textarea value={formData.message} onChange={(e handleInputChange() message}' '} e.target.value)}' rows={6}, {errors.message} </p> )}' <p: className='mt-2 text-sm text-gray-400'>' {formData.message.length}/100,
-  0: characters </p> </a> . * < </label> </p> )} </div> </motion.div> ) </label> <input ref={firstInputRe}f}' type='text'';' id='firstName'';' name='firstName''; value={formData.firstName}, {errors.firstName} </p> )} </div> {errors.lastName} </p> )} </div> </div> {errors.phone} </p> )} </div> </select> </div> </div> </motion.div> {errors.website} </p> )} </div> </div> </select> </div> </div> </motion.div> )}, {currentStep === 3 && {errors.message}} </p> )} </div> </div> </div> </div> </motion.div> )} </AnimatePresence> {/* Navigation Buttons */} </React.Fragment> )} </button> )} </div> </form> </div> )} export { EnhancedContactForm } export default EnhancedContactForm}'`
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Components.disabledPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components.disabled - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components.disabled solutions and how they can transform your business." />
+        <meta name="keywords" content="components.disabled, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

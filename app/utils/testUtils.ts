@@ -1,490 +1,106 @@
-}
-/**;
- * Wait for a condition to be true;
- */;
-export const waitFor = async(;)
-  condition: () => boolean,
-  timeout = 5000,
-  interval = 100;
-): Promise<void> => {}
-  const startTime = Date.now()
-  while (!condition()) {}
-    if (Date.now() - startTime > timeout) {}
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
-    }
-    await wait(interval)
-  }
-}
-/**
- * Mock fetch for testing
- */
-export const mockFetch = (
-  response: unknown,
-  status = 200,
-        ok: status >= 200 && status < 300,
-        status,
-        headers: new Headers(headers),
-}
-/**
- * Mock local storage
- */
-export class MockStorage implements Storage {}
-  private store: Map<string, string> = new Map()
-  get length(): number {}
-    return this.store.size;}
-  }
-  clear(): void {}}this.store.clear();}
-  }
-  getItem(key: string): string | null {,}
-    ,}return this.store.get(key) || null;}
-  }
-  key(index: number): string | null {,}
-    ,
-    const keys = Array.from(this.store.keys()),}return keys[index] || null;}
-  }
-  removeItem(key: string): void {,}
-    ,}this.store.delete(key);}
-  }
-  setItem(key: string, value: string): void {,}
-    ,}getItem(key: string): string | null {,}}return this.store.get(key) || null;}
-  }
-  key(index: number): string | null {,}}const keys = Array.from(this.store.keys());
-    return keys[index] || null;}
-  }
-  removeItem(key: string): void {,}}this.store.delete(key);}
-  }
-  getItem(key: string): string | null {}
-    return this.store.get(key) || null;}
-  }
-  key(index: number): string | null {}
-    const keys = Array.from(this.store.keys())
-    return keys[index] || null;}
-  }
-  removeItem(key: string): void {}
-    this.store.delete(key);}
-  }
-  setItem(key: string, value: string): void {}
-    this.store.set(key, value);}
-  }
-}
-/**
- * Create a mock localStorage for testing
- */
-export const createMockStorage = (): MockStorage => {}
-  return new MockStorage();}
-}
-/**
- * Mock window object
- */
-      value: {),
-        ...global.window),
-  }
-export const mockWindow = (overrides: Partial</Window><Window> = {}): void => {}
-/**
- * Create a mock localStorage for testing
- */
-export const createMockStorage = (): MockStorage => {}
-  return new MockStorage();}
-}
-/**
- * Mock window object
- */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {)
-      value: {)
-        ...overrides}
-      })
-      writable: true,
-    })
- * Wait for a condition to be true;
- */;
-export const waitFor = async (conditio);
-  n: () => boolean,
-  timeout = 5000,
-  interval = 100;
-): Promise<void> => {/* TODO: Fix JSX expression */,}throw new Error(`Timeout waiting for condition after ${timeout)}ms`);
-export const wait = (m)
-  s: number): Promise</Window><void> => {/* TODO: Fix JSX expression */}
-}
-/**
- * Wait for a condition to be true
- */
-export const waitFor = async (conditio)
-  n: () => boolean,
-  timeout = 5000,
-    }
-    await wait(interval)
-  }
-}
-/**
- * Mock fetch for testing
- */
-export const mockFetch = (respons,
-  e: unknown,
-  status = 200,
-  header,
-): void => {/* TODO: Fix JSX expression */}
-  h: typeof fetch }).fetch = jest.fn(() =>
-      Promise.resolve({/* TODO: Fix JSX expression */})
-      } as Response)
-/**
- * Mock local storage
- */
-/**
- * Mock fetch for testing
- */
-export const mockFetch = (respons,
-  e: unknown,
-  status = 200,
-  header,
-  s: Record<string, string> = {})
-  y: string, valu);
-  e: string): void {/* TODO: Fix JSX expression */,}}}
-}
-/**;
- * Create a mock localStorage for testing;
- */;
-export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */,}}
-/**;
- * Mock window object;
- */;
-export const mockWindow = (override);
-  }
-}
-/**
- * Create a mock localStorage for testing
- */
-export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */}
-}
-/**
- * Mock window object
- */
-export const mockWindow = (override)
-  s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
-      },
-      writabl,
-  e: true,
-    })
-  }
-}
-export const createMockPerformance = (): Performance => {}
-  const entries: PerformanceEntry[] = []
-  return {
-    mark: (name: string) => {,
-      entries.push({),
-        name),
-        entryType: 'mark'),
-  }
-  return {}
-    now: () => Date.now(),
-    mark: (name: string) => {}
-        name,
-        entryType: 'mark',
-        startTime: Date.now(),
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    measure: (name: string, startMark?: string, endMark?: string) => {
-    entries.push({)
-        name)
-        entryType: 'measure'),
-  }
-    measure: (name: string, startMark?: string, endMark?: string) => {}
-        name,
-        entryType: 'measure',
-        startTime: Date.now(),
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
-    clearMarks: () => {,
-    ,}entries.length = 0;},
-    clearMeasures: () => {,
-    ,
-    clearResourceTimings: () => {},
-    setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => true,
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now(),
-    },
-    measur,
-  e: (nam)
-  e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
-  N: () => ({})
-    },
-    getEntriesByNam,
-  e: (nam)
-  e: string) => entries.filter(e => e.name === name),
-    getEntriesByTyp,
-  e: (typ)
-  e: string) => entries.filter(e => e.entryType === type),
-    getEntrie,
-  s: () => entries,
-    clearResourceTiming,
-  s: () => {},
-    setResourceTimingBufferSiz,
-  e: () => {},
-    toJSO,
-  N: () => ({}),
-    addEventListene,
-  r: () => {},
-    removeEventListene,
-  r: () => {},
-    dispatchEven,
-  t: () => true,
-    onresourcetimingbufferful,
-  l: null,
-    timeOrigi,
-}
-export const generateTestData = {
-    string: (length = 10): string => {,
-    return Math.random(),
-      .toString(36),
-  }
-export const generateTestData = {}
-  string: (length = 10): string => {}
-    return Math.random()
-      .toString(36)
-  email: (): string => {`}
-    return `test${generateTestData.string(5)}@example.com`
-  },
-  url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
-  },
-  y: <T>(generato),
-  r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */,}return Array.from({length)}, generator);
-  }
-}
-/**;
- * Deep clone an object;
- */;
-export const deepClone = <T>(obj: T): T => {,
-    ,}export const deepClone = <T>(obj: T): T => {,}return JSON.parse(JSON.stringify(obj));}
-}
-/**;
- * Compare objects for equality;
- */;
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
-}
-/**
- * Generate random test data
- */
-export const generateTestData = {
-  string: (length = 10): string => {,
-    return Math.random(),
-      .toString(36),;}
-export const generateTestData = {}
-  string: (length = 10): string => {}
-    return Math.random()
-      .toString(36)
-      .substring(2, length + 2);}
-  },
-  number: (min = 0, max = 100): number => {}
-    return Math.floor(Math.random() * (max - min + 1)) + min;}
-  },
-  boolean: (): boolean => {,;}
-  boolean: (): boolean => {}
-    return Math.random() > 0.5;}
-  },
-  email: (): string => {`}
-    return `test${generateTestData.string(5)}@example.com`
-  },
-  url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
-  },
-  date: (): Date => {,;}
-  date: (): Date => {}
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);}
-  },
-  array: <T>(generator: () => T, length = 5): T[] => {}
-    return Array.from({ length }, generator)
-export const generateTestData = {/* TODO: Fix JSX expression */}
-  },
-  numbe,
-  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */}
-  },
-  boolea,
-  n: (): boolean => {/* TODO: Fix JSX expression */}
-  },
-  emai,
-  l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5)}@example.com`
-  },
-  ur,
-  l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`
-  },
-  dat,
-  e: (): Date => {/* TODO: Fix JSX expression */}
-  },
-  arra,
-  y: <T>(generato)
-  r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
-    return Array.from({ length }, generator)
-  }
-}
-/**
- * Deep clone an object
- */
-export const deepClone = </T><T>(obj: T): T => {
-    ,
-  }
-export const deepClone = </T><T>(obj: T): T => {}
-  return JSON.parse(JSON.stringify(obj));}
-}
-/**
- * Compare objects for equality
- */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-    ,
-  }
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
-  return JSON.stringify(obj1) === JSON.stringify(obj2);}
-}
-/**
- * Spy on console methods
- */
-export class ConsoleSpy {
-    private originalConsole: Console,
-  private logs: string[] = [],
-  private errors: string[] = [],
-  private warnings: string[] = [],
-  constructor() {}this.originalConsole = {...console}this.mock();
-  }
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-      this.errors.push(args.map(String).join(' '));}
-    }
-  private mock(): void {}}this.logs.push(args.map(String).join(' '));}
-    }
-      this.errors.push(args.map(String).join(' '));}
-    }
-      this.warnings.push(args.map(String).join(' '));}
-    }
-  }
-  getLogs(): string[] {}return [...this.logs]}
-  }
-  getErrors(): string[] {}return [...this.errors]}
-  }
-  getWarnings(): string[] {}return [...this.warnings]}
-  }
-  restore(): void {}}restore(): void {}}}
-  clear(): void {}}this.logs = []
-    this.errors = []
-    this.warnings = []}
- * Compare objects for equality;
- */;
-export const deepEqual = (obj,
- * Spy on console methods;
- */;
-export class ConsoleSpy {/* TODO: Fix JSX expression */,}}this.originalConsole = {...console}this.mock();
-export const deepClone = </T><T>(ob)
-  j: T): T => {/* TODO: Fix JSX expression */}
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-/**
- * Compare objects for equality
- */
-export const deepEqual = ()
-  1: unknown, obj)
-  2: unknown): boolean => {/* TODO: Fix JSX expression */}
-}
-/**
- * Spy on console methods
- */
-export class ConsoleSpy {/* TODO: Fix JSX expression */}
-  }
-  private mock(): void {/* TODO: Fix JSX expression */,}}}
-  s: unknown[]) => {/* TODO: Fix JSX expression */,}}
-  s: unknown[]) => {/* TODO: Fix JSX expression */,}}
-  }
-  getLogs(): string[] {/* TODO: Fix JSX expression */,}}
-  getErrors(): string[] {/* TODO: Fix JSX expression */,}}
-  getWarnings(): string[] {/* TODO: Fix JSX expression */,}}
-  restore(): void {/* TODO: Fix JSX expression */,}}}
-  clear(): void {/* TODO: Fix JSX expression */,}}}
-}
-    let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,
-    try {,
-  }
-      return await fn();}
-    } catch (error) {
-      if (i < maxRetries - 1) {
-  initialDelay = 1000;}): Promise<T> => {}let lastError: Error;,
-  for (let i = 0; i < maxRetries, i++) {}try {}}return await fn();}
-    } catch (error) {}lastError = error as Error;
-      if (i < maxRetries - 1) {}await wait(initialDelay * Math.pow(2, i));}
-  initialDelay = 1000;
-): Promise<T> => {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
-    lastError = error as Error
-      if (i < maxRetries - 1) {
-  initialDelay = 1000
-  }
-): Promise<T> => {}
-  let lastError: Error
-  for (let i = 0; i < maxRetries, i++) {}
-export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
-  })
-  return { promise, resolve, reject }
-}
-/**
- * Retry a function with exponential backoff
- */
-export const retryWithBackoff = async <T>(f)
-  n: () => Promise<T>,
-  maxRetries = 3,
-  initialDelay = 1000
-): Promise<T> => {
-  let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,
-    try {,;}
-      return await fn();}
-    } catch (error) {
-      lastError = error as Error
-      if (i < maxRetries - 1) {
-  initialDelay = 1000;}
-): Promise<T> => {}
-  let lastError: Error
-  for (let i = 0; i < maxRetries; i++) {}
-    try {}
-      return await fn();}
-    } catch (error) {}
-      lastError = error as Error
-      if (i < maxRetries - 1) {}
-        await wait(initialDelay * Math.pow(2, i));}
-    }
-  }
-  throw lastError as any
-}
- * Measure execution time of a function;
- */;
-export const measureExecutionTime = async <T>(;
-  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt;,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
-  const result = await fn();
-/**
- * Measure execution time of a function
- */
-): Promise<{ result: T; duration: number }> => {}
-  const start = performance.now()
-  const result = await fn()
-  const duration = performance.now() - start;}
-  return { result, duration }
-}
-export default {}
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime}
-}
-export const measureExecutionTime = async <T>(f)
-`
+
+export default PagePage

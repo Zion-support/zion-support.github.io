@@ -1,199 +1,106 @@
-/**
- * Environment Configuration
- * Centralizes all environment variables with validation and type safety
- */
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-interface EnvConfig {
-    // App Configuration
-  NODE_ENV: 'development' | 'production' | 'test'
-  APP_URL: string
-  APP_NAME: string
-  // Analytics
-  GOOGLE_ANALYTICS_ID?: string
-  // API Configuration
-  API_BASE_URL: string
-  API_TIMEOUT: number
-  // Feature Flags
-  ENABLE_ANALYTICS: boolean
-  ENABLE_ERROR_TRACKING: boolean
-  ENABLE_PERFORMANCE_MONITORING: boolean
-  // Logging
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
-  // Build Configuration
-  BUILD_ID?: string,
-  VERSION?: string
-  }
+const LibPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-class EnvironmentConfig {
-  private static instance: EnvironmentConfig
-  private config: EnvConfig,
+  return (
+    <>
+      <Helmet>
+        <title>Lib - Zion Tech Group</title>
+        <meta name="description" content="Learn about our lib solutions and how they can transform your business." />
+        <meta name="keywords" content="lib, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  private constructor() {,
-    this.config = this.loadConfig()
-    this.validate()
-interface EnvConfig {/* TODO: Fix JSX expression */}
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
-  }
-
-  public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
-    }
-    return EnvironmentConfig.instance
-  }
-
-  private getEnvVar(key: string, defaultValue?: string): string {
-    if (typeof process !== 'undefined' && process.env) {
-      // Check both regular and NEXT_PUBLIC_ prefixed versions
-  private getEnvVar(ke)
-  y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || ''
-    }
-    return defaultValue || ''
-  }
-
-  private getBooleanEnvVar(ke,
-  y: string, defaultValu)
-  e: boolean = false): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  private getNumberEnvVar(key: string, defaultValue: number): number {
-    ,
-    const _value = this.getEnvVar(key)
-    //     const parsed = parseInt(value, 10)
-    return isNaN(parsed) ? defaultValue : parsed
-  }
-
-  private loadConfig(): EnvConfig {
-    return {
-      // App Configuration
-      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
-      APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
-      APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
-
-      // Analytics
-      GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
-      // API Configuration
-      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com'),
-      API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
-
-      // Feature Flags
-      ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS', true),
-      ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING', true),
-      ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
-
-      // Logging
-      LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
-
-      // Build Configuration
-      BUILD_ID: this.getEnvVar('BUILD_ID'),
-      VERSION: this.getEnvVar('VERSION', '1.0.0')}
-  }
-
-  private validate(): void {
-    const errors: string[] = [],
-,
-    // Validate NODE_ENV
-    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
-      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)
-    }
-
-    // Validate URLs
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`)
-  private getNumberEnvVar(ke,
-  y: string, defaultValu)
-  e: number): number {/* TODO: Fix JSX expression */}
-  }
-
-  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    }
-  }
-
-  private validate(): void {/* TODO: Fix JSX expression */}`
-  NODE_ENV: ${this.config.NODE_ENV}`)
-    }
-
-    // Validate URLs
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
-  APP_URL: ${this.config.APP_URL}`)
-    }
-
-    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
-  API_BASE_URL: ${this.config.API_BASE_URL}`)
-    }
-
-    // Validate timeout
-    if (this.config.API_TIMEOUT < 0) {
-      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)
-    }
-
-    if (errors.length > 0) {
-      //       // In production, we might want to throw, but in development just warn
-      if (this.config.NODE_ENV === 'production') {
-        throw new Error(`Environment validation failed: ${errors.join(', ')}`)
-    if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
-  positive: ${this.config.API_TIMEOUT}`)
-    }
-
-    if (errors.length > 0) {/* TODO: Fix JSX expression */}`
-  failed: ${errors.join(', ')}`)
-      }
-    }
-  }
-
-  private isValidUrl(url: string): boolean {
-    ,
-    try {,
-      new URL(url)
-      return true
-  } catch {
-      return false
-  private isValidUrl(ur)
-  l: string): boolean {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-
-  public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return { ...this.config }
-  }
-
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  // Convenience getters
-  public getAppUrl(): string {
-    return this.config.APP_URL
-  public getAppUrl(): string {/* TODO: Fix JSX expression */}
-  }
-
-  public getApiBaseUrl(): string {/* TODO: Fix JSX expression */}
-  }
-
-  public getGoogleAnalyticsId(): string | undefined {/* TODO: Fix JSX expression */}
-  }
-
-  public isAnalyticsEnabled(): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  public isErrorTrackingEnabled(): boolean {/* TODO: Fix JSX expression */}
-  }
-
-  public isPerformanceMonitoringEnabled(): boolean {/* TODO: Fix JSX expression */}
-  }
-}
-
-// Export singleton instance
-export const env = EnvironmentConfig.getInstance()
-// Export typed config
-export type { EnvConfig }
-
-export default env
-`
+export default PagePage

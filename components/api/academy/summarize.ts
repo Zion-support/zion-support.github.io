@@ -1,111 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import OpenAI from 'openai'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
-  const { moduleTitle, moduleContent } = req && req.body || {}
-  const apiKey = process && process.env.OPENAI_API_KEY
-  const fallback = () =>
-    res && res.status(200).json({
-      summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
-    })
-  const fallback = () => res && res.status(200).json({
-    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`})
-  const fallback = () => res.status(200).json({
-    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`})
-  if (!apiKey) return fallback()
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { moduleTitle, moduleContent } = req.body || {}
-  const apiKey = process.env.OPENAI_API_KEY
-  const fallback = () => res.status(200).json({
-    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
-  })
-  if (!apiKey) return fallback()
-  try {
-    const client = new OpenAI({ apiKey })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AcademyPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Academy - Zion Tech Group</title>
+        <meta name="description" content="Learn about our academy solutions and how they can transform your business." />
+        <meta name="keywords" content="academy, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-  const { module_title, module_content } = req.body || {}
-  const api_key = process.env.OPENAI_API_KEY
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { module_title, module_content } = req.body || {}
-  const api_key = process.env.OPENAI_API_KEY
-  const fallback = () =>: any
-    res.status (200).json ({
-      summary: `Summary for ${module_title}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC / AML and publish your whitepaper / governance docs.`,
-    })
-  const fallback = () =>: any res.status (200).json ({
-    summary: `Summary for ${module_title}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC / AML and publish your whitepaper / governance docs.`})
-  if (return fallback ()) {
-  $2
-}
-  try {
-    const client = new OpenAI ({ api_key })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4 - 6 bullet points.\n\n_title: ${module_title}\n_content:\n${module_content}`
-    const completion = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini',
-      messages: [
-        {
-          role: 'system'
-          content: 'You are a concise, practical course assistant.'
-        }
-        { role: 'user', content: prompt }
-      ]
-      temperature: 0.3
-    })
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status (200).json ({ summary: text.trim () })
-  } catch (err) {
-    return fallback ()
-  }
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    const completion = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-  } catch (err) {
-    return fallback()
-}
-    const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a concise, practical course assistant.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.3,
-    })
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status(200).json({ summary: text.trim() })
-  } catch (err) {
-    return fallback()
-  }
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status (200).json ({ summary: text.trim () })
-  } catch (err) {
-    return fallback ()
-}
-  try {
-    const client = new OpenAI({ apiKey })
-    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
-    const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a concise, practical course assistant.' },
-        { role: 'user', content: prompt }],
-      temperature: 0.3}),
-}
-  }
-  }
-}
+
+export default PagePage

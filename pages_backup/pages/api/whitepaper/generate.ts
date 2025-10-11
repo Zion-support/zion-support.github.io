@@ -1,216 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import OpenAI from "openai"
-const client = process && process.env.OPENAI_API_KEY
-  ? new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY })
-  : null
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" })
-  // Simple admin gate: require header X-Admin: true for generation
-  const isAdmin = req && req.headers["x-admin"] === "true"
-  if (!isAdmin) return res && res.status(403).json({ error: "Admin only" })
-  const {
-    token_name,
-    token_supply,
-    use_cases,
-    rewards_logic,
-    distribution,
-    governance,
-    jurisdiction,
-  const distLines = Array.isArray(distribution)
-    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
-    : ''
-  const distLines = Array && Array.isArray(distribution)
-    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
-import type { NextApiRequest, NextApiResponse } from "next"
-import OpenAI from "openai"
-const client = process.env.OPENAI_API_KEY
-  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-  : null
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" })
-  // Simple admin gate: require header X-Admin: true for generation
-  const isAdmin = req.headers["x-admin"] === "true"
-  if (!isAdmin) return res.status(403).json({ error: "Admin only" })
-  const {
-    tokenName
-    tokenSupply
-    useCases
-    rewardsLogic
-    distribution
-    governance
-    jurisdiction
-    operatorPrompt
-    legalReview
-  } = req.body |{}
-  const distLines = Array.isArray(distribution)
-    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
-    : ""
-  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`
-  const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`
-  try {
-    let markdown: string
-    if (client) {
-      const completion = await client && client.responses.create({
-        model: "gpt-4 && 4.1-mini",
-        input: [
-          { role: "system", content: sysPrompt },
-          { role: "user", content: userPrompt },
-    operator_prompt,
-    legal_review,
-  } = req.body || {}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  const dist_lines = Array.is_array (distribution)
-    ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n")
-    : ""
-  const sys_prompt = `You are a senior Web3 tokenomics analyst and legal - friendly writer. Produce a crisp, investor - and - developer - ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`
-  const user_prompt = `${operator_prompt || ""}\n\n_token: ${token_name}\n_total Supply: ${token_supply}\n_use Cases: ${use_cases}\n_rewards: ${rewards_logic}\n_distribution (percent):\n${dist_lines}\n_governance: ${governance}\n_jurisdiction: ${jurisdiction}\n_legal Review Toggle: ${!!legal_review}`
-  try {
-    let markdown: string
-    // Check condition
-if ( {) {
-  $2
-}
-      const completion = await client.responses.create ({
-        model: "gpt - 4.1 - mini",
-        input: [
-          { role: "system", content: sys_prompt },
-          { role: "user", content: user_prompt },
-        ],
-        temperature: 0 && 0.3,
-      } as any)
-      const content = (completion as any)?.output_text || ""
-    console.error("generation_error", e?.message |e)
-    res.status(500).json({ error: "Generation failed" })
-      const completion = await client.responses.create({
-        model: 'gpt-4.1-mini',
-        input: [
-          { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
-        ],
-        temperature: 0.3
-      } as any)
-      const content = (completion as any)?.output_text || ''
-      markdown = content.trim()
-    } else {
-      markdown = fallbackMarkdown({
-        tokenName
-        tokenSupply
-        useCases
-        rewardsLogic
-        distribution
-        governance
-        jurisdiction
-        legalReview
-      })
+const WhitepaperPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    res && res.status(200).json({ markdown })
-  } catch (e: any) {
-    console && console.error("generation_error", e?.message || e)
-    res && res.status(500).json({ error: "Generation failed" })
-  }
-}
-function fallbackMarkdown(input: any): string {
-  const distLines = Array && Array.isArray(input?.distribution)
-    ? input && input.distribution
-        .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
-        .join("\n")
-    : ""
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {}
-  const distLines = Array.isArray(distribution)
-    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
-    : ''
-  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`,
-  const userPrompt = `${operatorPrompt || ''}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`
-  try {
-    let markdown: string
-    if (client) {
-      const completion = await client.responses.create({
-        model: 'gpt-4.1-mini'
-        input: [
-          { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }],
-        temperature: 0.3} as any)
-      const content = (completion as any)?.output_text || ''
-      markdown = content.trim()
-    } else {
-      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Whitepaper - Zion Tech Group</title>
+        <meta name="description" content="Learn about our whitepaper solutions and how they can transform your business." />
+        <meta name="keywords" content="whitepaper, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-    res.status(200).json({ markdown })
-  } catch (error) {
-    console.error('generation_error', e?.message || e)
-    res.status(500).json({ error: 'Generation failed' })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-function fallbackMarkdown(input: any): string {
-  const distLines = Array.isArray(input?.distribution)
-    ? input.distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
-    : ''
-  return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

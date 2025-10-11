@@ -1,220 +1,106 @@
-
 'use client'
-/**
- * Environment Configuration Manager
- * Provides type-safe access to environment variables with validation
- */
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export interface EnvConfig {
-    // TODO: Add content
-  }
-}
-  nodeEnv: 'development' | 'production' | 'test',,
-    apiUrl: string
-
-  apiKey?: string,,
-    enableAnalytic,
-  s: boolean,,
-    enableLoggin,
-  g: boolean,,
-    logLeve,
-  l: 'debug' | 'info' | 'warn' | 'error'
-  sentryDsn?: string
-  gaTrackingId?: string,
-}
-
-class EnvironmentConfig {
-    // TODO: Add content
-  }
-
-}
-  private,
-  config: EnvConfig
-  private isInitialized = false,
-  constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.config = this.loadConfig()
-    this.isInitialized = true
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults
-  }
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       nodeEnv,
-      apiUr,
-  l:
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
-  p://localhos,
-  t:3000/api',
-      apiKe,
-  y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
-      enableAnalytic,
-  s:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
-      enableLoggin,
-  g: nodeEnv !== 'test',
-      logLeve,
-  l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
-
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
-
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  /**
-   * Get the entire configuration object
-   */
-  public getConfig(): Readonly
-          <EnvConfig> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return Object.freeze({ ...this.config })
-  }
-  /**
-   * Get a specific configuration value
-   */
-  public get
-          <K extends keyof EnvConfig>(ke)
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return this.config[key]
-  }
-  /**
-   * Check if running in production
-   */
+  ]
 
-  public isProduction(): boolean {
-    // TODO: Add content
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-}
-    return this.config.nodeEnv === 'production'
-  }
-  /**
-   * Check if running in development
-   */
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-  public isDevelopment(): boolean {
-    // TODO: Add content
-  }
-
-}
-    return this.config.nodeEnv === 'development'
-  }
-  /**
-   * Check if running in test mode
-   */
-
-  public isTest(): boolean {
-    // TODO: Add content
-  }
-
-}
-    return this.config.nodeEnv === 'test'
-  }
-  /**
-   * Validate required environment variables
-   */
-
-  public validate(requiredVars: (keyof EnvConfig)[]): {
-    // TODO: Add content
-  }
-
-}
-  vali,
-  d: boolean,,
-    missin,
-  g: string[],
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  missing: string[] = [],
-    for (const varName of requiredVars) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (!this.config[varName]) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        missing.push(varName)
-      }
-    }
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  vali,
-  d: missing.length === 0,
-//       missing
-    }
-  }
-  /**
-   * Get API headers with authentication
-   */
-  public getApiHeaders(): Record
-          <string, string> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  headers: Record,
-          <string, string> = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      'Content-Type': 'application/json'
-    }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-    }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-  }`
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-    }
-    return headers
-  }
-  /**
-   * Log configuration in development mode
-   */
-
-  public logConfig(): void {
-    // TODO: Add content
-  }
-
-}
-    if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      console.group(' Environment Configuration')
-      console.table({/* TODO: Fix JSX expression */}
-  O: Add content,}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  Environment: this.config.nodeEnv,
-
-        'API URL': this.config.apiUrl,
-        'Analytics Enabled': this.config.enableAnalytics,
-        'Logging Enabled': this.config.enableLogging,
-        'Log Level': this.config.logLevel,
-        'API Key Set': !!this.config.apiKey,
-        'Sentry DSN Set': !!this.config.sentryDsn,
-
-        'GA Tracking ID Set': !!this.config.gaTrackingId
-      })
-      console.groupEnd()
-    }
-  }
-}
-// Export singleton instance
-export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
-export const getApiHeaders = () => envConfig.getApiHeaders()`
-
+export default PagePage

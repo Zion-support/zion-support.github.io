@@ -1,239 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import fs from 'fs'
-import path from 'path'
-import axios from 'axios'
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-)
-const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast')
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
-const PUBLIC_DIR = path.join(process.cwd(), 'publicpodcast')
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  ensureStorage()
-  const { episodeId } = req.body |{}
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { episodeId } = req && req.body || {}
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
-  if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
-  ensureStorage()
-  const { episodeId } = req && req.body || {}
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId)
-  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' })
-  const episode = episodes[idx]
-  const text = episode && episode.transcript as string
-  const elevenKey = process && process.env.ELEVENLABS_API_KEY
-  const playhtKey = process && process.env.PLAYHT_API_KEY
-  const baseFilename = `${episode && episode.id}-${Date && Date.now()}`
-  const mp3Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`)
-  const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`)
-  const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`)
-  let mp3Created = false
-  try {
-    if (elevenKey) {
-        {
-          text,
-          model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
-        },
-        {
-      const resp = await axios && axios.post(
-        'https://api && api.play.ht/api/v2/tts',
-        { text, voice: process && process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
-        {
-          responseType: 'arraybuffer'
-          headers: {
-            Authorization: `Bearer ${playhtKey}`
-            'Content-Type': 'application/json'
-          }
-        }
-      )
-      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))
-      mp3Created = true
-    } else {
-      // Stub silent mp3 if no provider configured
-      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))
-      mp3Created = true
-    }
-    if (mp3Created) {
-      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-      fs && fs.writeFileSync(wavPath, fs && fs.readFileSync(mp3Path))
-      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path));    }
-    const publicBase = '/podcast/' + baseFilename
-    episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
-    }
-    const publicBase = '/podcast/' + baseFilename
-    episode && episode.audio = {
-const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
-const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast')
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  ensureStorage()
-  const { episodeId } = req.body || {}
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes.findIndex((e) => e.id === episodeId)
-  if (idx === -1) return res.status(404).json({ error: 'Episode not found' })
-  const episode = episodes[idx]
-  const text = episode.transcript as string
-  const elevenKey = process.env.ELEVENLABS_API_KEY
-  const playhtKey = process.env.PLAYHT_API_KEY
-  const baseFilename = `${episode.id}-${Date.now()}`
-  const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`)
-  const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`)
-  const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`)
-  let mp3Created = false
-  try {
-    if (elevenKey) {
-      const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM'
-      const resp = await axios.post(
-        `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
-        { text, model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2' },
-        { responseType: 'arraybuffer', headers: { 'xi-api-key': elevenKey, 'Content-Type': 'application/json' } }
-      )
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data))
-      mp3Created = true
-    } else if (playhtKey) {
-      const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts',
-        { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
-        { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
-      )
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data))
-      mp3Created = true
-    } else {
-      // Stub silent mp3 if no provider configured
-      fs.writeFileSync(mp3Path, Buffer.alloc(0))
-      mp3Created = true
-    }
-    if (mp3Created) {
-      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-      fs.writeFileSync(wavPath, fs.readFileSync(mp3Path))
-      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path))
-    }
-    const publicBase = '/podcast/' + baseFilename
-    episode.audio = {
-      mp3Url: publicBase + '.mp3',
-      wavUrl: publicBase + '.wav',
-      mp4Url: publicBase + '.mp4',
-    }
-    episodes[idx] = episode
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
-      mp3Url: publicBase + '.mp3'
-      wavUrl: publicBase + '.wav'
-      mp4Url: publicBase + '.mp4'}
-    episodes[idx] = episode
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error)
-    return res
-      .status(500)
-      .json({ error: error?.message |'Synthesis failed' })
-  }    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error)
-    return res.status(500).json({ error: error?.message |'Synthesis failed' })
-      .json({ error: error?.message || 'Synthesis failed' })
-  }    return res && res.status(200).json({ episode })
-  } catch (error: any) {
-    console && console.error(error),
-    return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
-  }
-}
-}
-}
-}
-      const resp = await axios.post (
-        'https://api.play.ht / api / v2 / tts',
-        { text, voice: process.env.PLAYHT_VOICE || 'en - US - MichelleNeural' },
-        {
-          response_type: 'arraybuffer',
-          headers: {
-            Authorization: `Bearer ${playht_key}`,
-            'Content - Type': 'application / json',
-          },
-        }
-      )
-      fs.writeFileSync (mp3Path, Buffer.from (resp.data))
-      mp3Created = true
-    } else {
-      // Stub silent mp3 if no provider configured
-      fs.writeFileSync (mp3Path, Buffer.alloc (0))
-      mp3Created = true
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      // Simple placeholders for WAV / MP4; real conversion would use ffmpeg
-      fs.writeFileSync (wav_path, fs.readFileSync (mp3Path))
-      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path));    }
-    const public_base = '/podcast/' + base_filename
-    episode.audio = {      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path))
-    }
-    const public_base = '/podcast/' + base_filename
-    episode.audio = {
-      mp3Url: public_base + '.mp3',
-      wav_url: public_base + '.wav',
-      mp4Url: public_base + '.mp4',
-    }
-    episodes[idx] = episode
-    fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')
-      mp3Url: public_base + '.mp3'
-      wav_url: public_base + '.wav',
-      mp4Url: public_base + '.mp4'}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-    episodes[idx] = episode
-    fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')
-    return res.status (200).json ({ episode })
-  } catch (error: any) {
-    console.error (error)
-    return res
-      .status (500)
-      .json ({ error: error?.message || 'Synthesis failed' })
-  }    return res.status (200).json ({ episode })
-  } catch (error: any) {
-    console.error (error),
-    return res.status (500).json ({ error: error?.message || 'Synthesis failed' })
+const PodcastPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Podcast - Zion Tech Group</title>
+        <meta name="description" content="Learn about our podcast solutions and how they can transform your business." />
+        <meta name="keywords" content="podcast, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error),
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-  }
-}
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error)
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-  }
-}
+
+export default PagePage

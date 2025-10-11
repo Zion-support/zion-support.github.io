@@ -9,16 +9,14 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} , {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
     {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} ,
-    {icon: Shield,
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} , {icon: Shield,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
       benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
@@ -33,15 +31,15 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
+        </Helmet><title></titl>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
+      </div><Helmet>
+        </Helmet><title></titl>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
         <meta name="keywords" content="relevant, keywords, for, seo"
       </Helmet />
@@ -93,23 +91,20 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              </div>{features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                   <div className="flex items-center mb-4"
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4"></h>{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2"
-                      {feature.benefits.map((benefit, idx) => (
+                      {feature.benefits.map((benefit, idx) => </ul>(
                         <li key={idx} className="flex items-center text-sm text-gray-400"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2"
                           {benefit}
@@ -148,16 +143,12 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              </div>{benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
                   <div className="flex items-center"
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                   <p className="text-lg text-white font-medium">{benefit}</p>
@@ -178,20 +169,20 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                </h>Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+                </div><button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  </butto>Contact Us
                 </button>
                 <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
+                  </butto>Learn More
                 </button>
               </div>
       

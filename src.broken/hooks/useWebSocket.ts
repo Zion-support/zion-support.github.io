@@ -1,80 +1,106 @@
-import { useState, useEffect, useRef, useCallback } from react'
-export function useWebSocket(options: unknown)  {
-  const [isConnected, setIsConnected] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const wsRef: unknown = useRef<WebSocket | null>(null)
-  const reconnectAttemptsRef: unknown = useRef(0)
-  const reconnectTimeoutRef: unknown = useRef<NodeJS.Timeout | null>(null)
-  const connect: unknown = useCallback(() => {
-    try {
-      const ws: unknown = new WebSocket(options.url)
-      wsRef.current = ws
-      ws.onopen = () => {
-        setIsConnected(true)
-        setError(null)
-        reconnectAttemptsRef.current = 0
-        options.onOpen?.()
-      }
-      ws.onmessage = (event) => {
-        try {
-          const data: unknown = JSON.parse(event.data)
-          options.onMessage?.(data)
-        } catch {
-          options.onMessage?.(event.data)
-        }
-      }
-      ws.onclose = () => {
-        setIsConnected(false)
-        options.onClose?.()
-        if (reconnectAttemptsRef.current < (options.maxReconnectAttempts || 5)) {
-          reconnectAttemptsRef.current++
-          reconnectTimeoutRef.current = setTimeout(
-            connect,
-            options.reconnectInterval || 3000,
-          )
-        }
-      }
-      ws.onerror = (event) => {
-        setError('WebSocket error occurred')
-        options.onError?.(event)
-      }
-    } catch (err) {
-      setError('Failed to create WebSocket connection')
-    }
-  }, [options])
-  const disconnect: unknown = useCallback(() => {
-    if (reconnectTimeoutRef.current) {
-      clearTimeout(reconnectTimeoutRef.current)
-      reconnectTimeoutRef.current = null
-    }
-    if (wsRef.current) {
-      wsRef.current.close()
-      wsRef.current = null
-    }
-    setIsConnected(false)
-    reconnectAttemptsRef.current = options.maxReconnectAttempts || 5
-  }, [options.maxReconnectAttempts])
-  const sendMessage: unknown = useCallback(
-    (data: unknown) => {
-      if (wsRef.current && isConnected) {
-        wsRef.current.send(
-          typeof data === string' ? data : JSON.stringify(data),
-        )
-      }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    [isConnected],
-  )
-  useEffect(() => {
-    connect()
-    return () => {
-      disconnect()
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }, [connect, disconnect])
-  return {
-    isConnected,
-    error,
-    sendMessage,
-    disconnect,
-    connect
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Learn about our hooks solutions and how they can transform your business." />
+        <meta name="keywords" content="hooks, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

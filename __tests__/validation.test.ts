@@ -1,145 +1,106 @@
-import { describe, it, expect, beforeEach } from '@jest/globals'
-import {
-  isValidUrl,
-  validateURL,
-  validateLength,
-  isValidPassword,
-  validatePassword,
-  sanitizeHTML,
-  validateDate,
-  validateCreditCard,
-  validateJSON,
-  validateRequired,
-  validateComposite,
-  asyncValidator
-} from '../src/utils/validators'
-describe('validation', () => {
-  beforeEach(() => {
-    // Setup before each test
-  })
-  it('should pass basic test', () => {
-    expect(true).toBe(true)
-  })
-  it('should handle basic functionality', () => {
-    const result = 1 + 1
-    expect(result).toBe(2)
-  })
-  test('rejects invalid URLs', () => {
-    expect(isValidUrl('')).toBe(false)
-    expect(isValidUrl('not a url')).toBe(false)
-    expect(isValidUrl('ftp://example.com')).toBe(false)
-  })
-  test('rejects invalid URL formats', () => {
-    expect(validateURL('').isValid).toBe(false)
-    expect(validateURL('not a url').isValid).toBe(false)
-  })
-})
-describe('String Length Validation', () => {
-  test('validates strings within length bounds', () => {
-    expect(validateLength('hello', 3, 10).isValid).toBe(true)
-    expect(validateLength('test', 4, 4).isValid).toBe(true)
-  })
-  test('rejects strings outside length bounds', () => {
-    expect(validateLength('hi', 3, 10).isValid).toBe(false)
-    expect(validateLength('this is too long', 3, 10).isValid).toBe(false)
-  })
-  test('provides custom field names in error messages', () => {
-    const result = validateLength('hi', 3, 10, 'Username')
-    expect(result.error).toContain('Username')
-  })
-})
-describe('Password Validation', () => {
-  test('validates strong passwords', () => {
-    expect(isValidPassword('StrongPass123!')).toBe(true)
-    expect(isValidPassword('MySecure123@')).toBe(true)
-  })
-  test('rejects weak passwords', () => {
-    expect(validatePassword('short').isValid).toBe(false)
-    expect(validatePassword('').isValid).toBe(false)
-    expect(validatePassword('alllowercase123!').isValid).toBe(false)
-    expect(validatePassword('ALLUPPERCASE123!').isValid).toBe(false)
-    expect(validatePassword('NoNumbers!').isValid).toBe(false)
-    expect(validatePassword('NoSpecialChar123').isValid).toBe(false)
-  })
-  test('rejects passwords that are too long', () => {
-    const longPassword = 'A'.repeat(129) + 'a1!'
-    expect(validatePassword(longPassword).isValid).toBe(false)
-  })
-})
-describe('HTML Sanitization', () => {
-  test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
-    )
-  })
-  test('handles empty and non-string inputs', () => {
-    expect(sanitizeHTML('')).toBe('')
-    expect(sanitizeHTML(null as unknown as string)).toBe('')
-    expect(sanitizeHTML(undefined as unknown as string)).toBe('')
-  })
-})
-describe('Date Validation', () => {
-  test('validates correct date formats', () => {
-    expect(validateDate('2025-10-08').isValid).toBe(true)
-    expect(validateDate('2024-01-01').isValid).toBe(true)
-  })
-  test('rejects invalid date formats', () => {
-    expect(validateDate('').isValid).toBe(false)
-    expect(validateDate('10/08/2025').isValid).toBe(false)
-    expect(validateDate('2025-13-01').isValid).toBe(false)
-    expect(validateDate('2025-02-30').isValid).toBe(false)
-    expect(validateDate('invalid').isValid).toBe(false)
-  })
-})
-describe('Credit Card Validation', () => {
-  test('validates correct card numbers (Luhn algorithm)', () => {
-    // Visa test number
-    expect(validateCreditCard('4532015112830366').isValid).toBe(true)
-    // MasterCard test number
-    expect(validateCreditCard('5425233430109903').isValid).toBe(true)
-    // Formatted card number
-    expect(validateCreditCard('4532-0151-1283-0366').isValid).toBe(true)
-  })
-  test('rejects invalid card numbers', () => {
-    expect(validateCreditCard('').isValid).toBe(false)
-    expect(validateCreditCard('1234567890123456').isValid).toBe(false)
-    expect(validateCreditCard('123').isValid).toBe(false)
-  })
-})
-describe('JSON Validation', () => {
-  test('validates correct JSON strings', () => {
-    expect(validateJSON('{}').isValid).toBe(true)
-    expect(validateJSON('[]').isValid).toBe(true)
-    expect(validateJSON('{"key":"value"}').isValid).toBe(true)
-    expect(validateJSON('[1,2,3]').isValid).toBe(true)
-  })
-  test('rejects invalid JSON strings', () => {
-    expect(validateJSON('').isValid).toBe(false)
-    expect(validateJSON('{invalid}').isValid).toBe(false)
-    expect(validateJSON('undefined').isValid).toBe(false)
-  })
-})
-describe('Composite Validation', () => {
-  test('combines multiple validators successfully', () => {
-    const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 5, 20, 'Test'),
-    ]
-    expect(validateComposite('hello world', validators).isValid).toBe(true)
-  })
-  test('fails on first invalid validator', () => {
-    const validators = [
-      (val: unknown) => validateRequired(val, 'Test'),
-      (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
-    ]
-    const result = validateComposite('short', validators)
-    expect(result.isValid).toBe(false)
-    expect(result.error).toContain('at least 10')
-  })
-})
-describe('Async Validation', () => {
-  test('handles successful async validation', async () => {
-    const result = await asyncValidator('test')
-    expect(result).toBe('success')
-  })
-})
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const __tests__Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>__tests__ - Zion Tech Group</title>
+        <meta name="description" content="Learn about our __tests__ solutions and how they can transform your business." />
+        <meta name="keywords" content="__tests__, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

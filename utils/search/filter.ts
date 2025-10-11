@@ -1,182 +1,106 @@
-import type { ParsedFilters } from './parser',
-import { TALENT_PROFILES } from '../../data/talent',
-import type { TalentProfile } from '../../data/talent',
-export type AccessLevel = 'public' | 'member' | 'admin',
-export type SearchResult = {
-  type: 'talent' | 'job' | 'project',
-  id: string,
-  slug?: string,
-  title: string,
-  subtitle?: string,
-  location?: string,
-  tags: string[],
-  hourlyRateUsd?: number,
-  availability?: 'full-time' | 'part-time' | 'contract',
-  verified?: boolean,
-  visibility?: AccessLevel,
-  description?: string,
-  relevance: number
-},
-function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
-  if (!keywords.length) return 0,
-  const lower = text.toLowerCase(),
-  let score = 0,
-  for (const k of keywords) {
-    if (lower.includes(k.toLowerCase())) score += 1 * weight,
-  }
-  return score,
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SearchPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Search - Zion Tech Group</title>
+        <meta name="description" content="Learn about our search solutions and how they can transform your business." />
+        <meta name="keywords" content="search, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = new Set(skills.map((s) => s.toLowerCase())),
-  let score = 0,
-  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
-  return score
-}
-function budgetScore(candidate?: number, min?: number, max?: number): number {
-  if (!candidate) return 0,
-  let score = 0,
-  if (max && candidate <= max) score += 1.5,
-  if (min && candidate >= min) score += 0.5,
-  return score,
-}
-function availabilityMatches(candidate?: string, requested?: string): boolean {
-  if (!requested) return true,
-  if (!candidate) return false,
-  return candidate.toLowerCase() === requested.toLowerCase(),
-}
-function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
-  const level = visibility || 'public',
-  const order: AccessLevel[] = ['publicmember', 'admin'],
-  return order.indexOf(access) >= order.indexOf(level),
-}
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
-  const talent: SearchResult[] = TALENT_PROFILES
-    .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
-      if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
-      return true,
-    })
-    .filter((p) => {
-      if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
-        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
-      }
-      return true,
-    })
-    .map<SearchResult>((p) => {
-      const skillScore = computeSkillOverlap(p.skills, filters.skills),
-      const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),
-      const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd),
-      const relevance = skillScore + textScore + priceScore,
-import type { ParsedFilters } from './parser'
-import { TALENT_PROFILES } from '../../data/talent'
-import type { TalentProfile } from '../../data/talent'
-export type AccessLevel = 'public' | 'member' | 'admin'
-export type SearchResult = {
-  type: 'talent' | 'job' | 'project'
-  id: string
-  slug?: string
-  title: string
-  subtitle?: string
-  location?: string
-  tags: string[]
-  hourlyRateUsd?: number
-  availability?: 'full-time' | 'part-time' | 'contract'
-  verified?: boolean
-  visibility?: AccessLevel
-  description?: string
-  relevance: number
-}
-function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
-  if (!keywords.length) return 0
-  const lower = text.toLowerCase()
-  let score = 0
-  for (const k of keywords) {
-    if (lower.includes(k.toLowerCase())) score += 1 * weight
-  }
-  return score
-}
-function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = new Set(skills.map((s) => s.toLowerCase()))
-  let score = 0
-  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2
-  return score
-}
-function budgetScore(candidate?: number, min?: number, max?: number): number {
-  if (!candidate) return 0
-  let score = 0
-  if (max && candidate <= max) score += 1.5
-  if (min && candidate >= min) score += 0.5
-  return score
-}
-function availabilityMatches(candidate?: string, requested?: string): boolean {
-  if (!requested) return true
-  if (!candidate) return false
-  return candidate.toLowerCase() === requested.toLowerCase()
-}
-function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
-  const level = visibility || 'public'
-  const order: AccessLevel[] = ['public', 'member', 'admin']
-  return order.indexOf(access) >= order.indexOf(level)
-}
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {
-  const talent: SearchResult[] = TALENT_PROFILES
-    .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
-      if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase())
-      return true
-    })
-    .filter((p) => {
-      if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false
-        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
-      }
-      return true
-    })
-    .map<SearchResult>((p) => {
-      const skillScore = computeSkillOverlap(p.skills, filters.skills)
-      const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8)
-      const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd)
-      const relevance = skillScore + textScore + priceScore
-      return {
-        type: 'talent',
-        id: p.slug,
-        slug: p.slug,
-        title: p.name,
-        subtitle: p.title,
-        location: p.location,
-        tags: p.skills,
-        hourlyRateUsd: p.hourlyRateUsd,
-        availability: p.availability,
-        verified: true,
-        visibility: 'public',
-        description: p.bio,
-        relevance},
-    })
-    .filter((r) => passesRls(r.visibility, access))
-    .sort((a, b) => b.relevance - a.relevance),
-  const jobs: SearchResult[] = [],
-  const projects: SearchResult[] = [],
-  const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance),
-  return { all, talent, jobs, projects },
-        relevance,
-      }
-    })
-    .filter((r) => passesRls(r.visibility, access))
-    .sort((a, b) => b.relevance - a.relevance)
-  const jobs: SearchResult[] = []
-  const projects: SearchResult[] = []
-  const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance)
-  return { all, talent, jobs, projects }
-}
-export function suggestDidYouMean(query: string): string | null {
-  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
-  const q = query.toLowerCase(),
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM',
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
-  return null,
-  const q = query.toLowerCase()
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM'
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr'
-  return null
-}
+
+export default PagePage

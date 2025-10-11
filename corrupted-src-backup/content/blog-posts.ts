@@ -1,138 +1,106 @@
-export interface BlogPost {
-    slug: string
-  title: string
-  description: string
-  content: string
-  author: string
-  date: string
-  category: string
-  tags: string[]
-  featured: boolean
-  readTime: string,
-  image?: string
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export const blogPosts: BlogPost[] = [,
-  {,
-    slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
-    title: 'Operational AI Scorecards v2: Gate Risk, Ship Faster',
-    description:
-      'KPI-linked SLIs, online canaries, and rollback-first ops that raise velocity while reducing incidents.',
-    content: `
-# Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.
+const ContentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-## What You'll Implement
-- KPI-linked SLIs that predict outcomes
-- Online canaries as deploy gates
-- Budget-aware routing with safe fallbacks
-- One-click rollback with blast-radius checks
-## Results,
-- Fewer regressions, faster iteration, clearer ownership
-    `,
-    author: 'Zion Tech Group Reliability Lab',
-    date: '2025-10-04',
-    category: 'AI Reliability',
-    tags: ['Scorecards', 'SLIs', 'Canaries', 'Rollback'],
-    featured: true,
-    readTime: '7 min read',
-    image: '/images/operational-ai-scorecards-v2.jpg'},
-  {
-    slug: 'ai-2025-oct-04-enterprise-rag-quality-budgets',
-    title: 'Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend',
-    description:
-      'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
-    content: `
-# Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
+  return (
+    <>
+      <Helmet>
+        <title>Content - Zion Tech Group</title>
+        <meta name="description" content="Learn about our content solutions and how they can transform your business." />
+        <meta name="keywords" content="content, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-## Core Patterns
-- Domain schemas and strict source governance
-- Freshness windows per intent
-- Retrieval budgets with quality tiers
-- Semantic caches for cost optimization,
-    `
-    author: 'Zion Tech Group Knowledge Systems',
-    date: '2025-10-04',
-    category: 'RAG Engineering',
-    tags: ['RAG', 'Quality', 'Budgets', 'Caching'],
-    featured: true,
-    readTime: '8 min read',
-    image: '/images/enterprise-rag-quality-budgets.jpg'},
-  {
-    slug: 'ai-2025-oct-04-enterprise-agents-in-production',
-    title: 'Enterprise Agents in Production: Budgets, Approvals, and Rollback',
-    description:
-      'Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.',
-    content: `,
-# Enterprise Agents in Production: Budgets, Approvals, and Rollback
-This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-## Ship Safely
-- Signed tools with scopes and quotas
-- Budget-aware action routing with KPI-linked SLIs
-- Canary routes and one-click rollback hooks
-## Outcomes
-- Incident rate stable as automation expands
-- Faster delivery without runaway spend
-- Clear accountability via weekly scorecards
-    `,
-    author: 'Zion Tech Group AI Operations',
-    date: '2025-10-04',
-    category: 'AI Operations',
-    tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
-    featured: true,
-    readTime: '8 min read',
-    image: '/images/governed-agentic-automation.jpg'},
-  {
-    slug: 'genai-cost-optimization-v6-2025-10-03',
-    title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
-    description:
-      'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
-    content: `# GenAI Cost Optimization v6,
-Control GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
-    author: 'Zion Tech Group Platform Team',
-    date: '2025-10-03',
-    category: 'GenAI Engineering',
-    tags: ['Cost', 'Caching', 'Distillation', 'Routing', 'SLO'],
-    featured: true,
-    readTime: '9 min read',
-    image: '/images/genai-cost-optimization-v6.jpg'},
-  {
-    slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
-    title: 'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
-    description:
-      'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
-    content: `,
-# Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts
-Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
-
-## What You'll Ship
-- Policy tests in CI that gate risky changes
-- KPI-linked scorecards across reliability, latency, and cost
-- Budget-aware routing and circuit breakers
-- Canary playbooks with instant rollback hooks
-## Outcomes
-- 8–12x deployment velocity with lower change-failure rate
-- 30–70% GenAI cost reduction via quality tiers and caches
-    `,
-    author: 'Zion Tech Group AI Governance',
-    date: '2025-10-01',
-    category: 'AI Governance',
-    tags: ['Governance', 'Scorecards', 'Guardrails', 'Rollouts'],
-    featured: true,
-    readTime: '10 min read',
-    image: '/images/enterprise-ai-governance-2025.jpg',
-export interface BlogPost {/* TODO: Fix JSX expression */}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export const,
-  blogPosts: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  },
-  {/* TODO: Fix JSX expression */}
-  }]
+export default PagePage

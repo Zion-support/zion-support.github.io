@@ -1,223 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readJsonFile, writeJsonFile } from "../../../utils/db"
-import type { Job } from "../../../utils/types"
-import { rateLimit } from "../../../utils/rateLimit"
-import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth"
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return
-  const { id } = req && req.query
-  const jobs = readJsonFile<Job[]>(FILE, [])
-  if (idx === -1) {
-    res.status(404).json({ error: "Job not found" })
-    return
-  }
-  if (req.method === "GET") {
-    res.status(200).json({ job: jobs[idx] })
-    return
-  }
-  if (req && req.method === "GET") {
-    res && res.status(200).json({ job: jobs[idx] })
-    return
-  }
-  if (req && req.method === "PATCH") {
-    const userEmail = getRequestUserEmail(req)
-    const job = jobs[idx]
-    const isOwner = userEmail && userEmail === job && job.clientEmail
-    if (!isOwner && !isAdminEmail(userEmail)) {
-      return
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const JobsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const {
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    res.status(200).json({ job: { id: req.query.id } })
-  } else if (req.method === 'PATCH') {
-    res.status(200).json({ message: 'Job updated' })
-  } else {
-    res.setHeader('Allow', ['GET', 'PATCH'])
-    res.status(405).end('Method Not Allowed')
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../utils/db'
-import type { Job } from '../../../utils/types'
-import { rateLimit } from '../../../utils/rateLimit'
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth'
-const FILE = 'jobs.json'
-export default function handler(req, res) {
-  try {
-  if (!rateLimit(req, res)) return,
-  const { id } = req.query
-  const jobs = readJsonFile<Job[]>(FILE, []),
-  const idx = jobs.findIndex((j) => j.id === id)
-  if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Jobs - Zion Tech Group</title>
+        <meta name="description" content="Learn about our jobs solutions and how they can transform your business." />
+        <meta name="keywords" content="jobs, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  if (req.method === 'GET') {
-    res.status(200).json({ job: jobs[idx] })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-  if (req.method === 'GET') {
-    const userEmail = getRequestUserEmail(req)
-    const job = jobs[idx]
-    const isOwner = userEmail && userEmail === job.clientEmail
-    if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' })
-      return
-    }
-    const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {}
-    if (typeof title === 'string') job.title = title
-    if (typeof description === 'string') job.description = description
-    if (typeof category === 'string') job.category = category
-    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String)
-    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined
-    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined
-    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined
-    if (typeof status === 'string') job.status = status as Job['status']
-    } = req.body || {}
-    // Check condition
-if (job.title = title) {
-  $2
-}
-    // Check condition
-if (job.description = description) {
-  $2
-}
-    // Check condition
-if (job.category = category) {
-  $2
-}
-    if ()) {
-  $2
-}
-      job.required_skills = required_skills.map (String)
-    // Check condition
-if (
-      job.budgetMinUsd = budgetMinUsd ?? undefined) {
-  $2
-}
-    // Check condition
-if (
-      job.budgetMaxUsd = budgetMaxUsd ?? undefined) {
-  $2
-}
-    // Check condition
-if (
-      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined) {
-  $2
-}
-    // Check condition
-if (job.status = status as Job["status"]) {
-  $2
-}
-    job.updatedAtIso = new Date ().toISOString ()
-    jobs[idx] = job
-    writeJsonFile < Job[]>(FILE, jobs)
-    res.status (200).json ({ job })
-    return
-  }
-  res.set_header ("Allow", "GET, PATCH")
-  res.status (405).end ("Method Not Allowed")
-}
-    job.updatedAtIso = new Date().toISOString()
-    jobs[idx] = job,
-    writeJsonFile<Job[]>(FILE, jobs),
-    res.status(200).json({ job })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-  res.setHeader('AllowGET, PATCH')
-  res.status(405).end('Method Not Allowed')
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    const {
-      title,
-      description,
-      category,
-      requiredSkills,
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-      status,
-    } = req.body || {}
-    if (typeof title === "string") job.title = title
-    if (typeof description === "string") job.description = description
-    if (typeof category === "string") job.category = category
-    if (Array.isArray(requiredSkills))
-      job.requiredSkills = requiredSkills.map(String)
-    if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
-      job.budgetMinUsd = budgetMinUsd ?? undefined
-    if (typeof budgetMaxUsd === "number" || budgetMaxUsd === null)
-      job.budgetMaxUsd = budgetMaxUsd ?? undefined
-    if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
-      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined
-    if (typeof status === "string") job.status = status as Job["status"]
-    res.status(200).json({ job })
-    return
-  }
-res.setHeader("Allow", "GET, PATCH")
-  res.status(405).end("Method Not Allowed")
-}
-}
+export default PagePage

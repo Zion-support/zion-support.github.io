@@ -1,127 +1,106 @@
-import type { TalentProfile } from '@/utils/types/talent'
-export const TALENT_PROFILES: TalentProfile[] = [
-  {
-    slug: 'ava-chen',
-    name: 'Ava Chen',
-    title: 'Senior LLM Engineer',
-    category: 'AI/ML',
-    location: 'Toronto, CA',
-    timezone: 'America/Toronto',
-    region: 'North America',
-    skills: ['LLM Ops', 'RAG', 'OpenAI', 'LangChain', 'Vector DBs', 'TypeScript'],
-    summary:
-      'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
-    bio:
-      'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
-    hourlyRateUsd: 140,
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=1',
-    portfolio: [
-      { title: 'RAG Platform Template', url: 'https://example.com/rag' },
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
-    verified: true,
-    rating: 4.9,
-    reviewsCount: 28,
-    createdAt: new Date().toISOString()},
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' },
-    ],
-    verified: true,
-    rating: 4.9,
-    reviewsCount: 28,
-    createdAt: new Date().toISOString(),
-  },
-  {
-    slug: 'marco-silva',
-    name: 'Marco Silva',
-    title: 'Cloud Solutions Architect',
-    category: 'DevOps/Cloud',
-    location: 'Lisbon, PT',
-    timezone: 'Europe/Lisbon',
-    region: 'Europe',
-    skills: ['AWS', 'Kubernetes', 'Terraform', 'Serverless', 'Networking'],
-    summary:
-      'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
-    bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',
-    hourlyRateUsd: 120,
-    availability: 'Part-time',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=2',
-    portfolio: [
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
-    verified: true,
-    rating: 4.8,
-    reviewsCount: 19,
-    createdAt: new Date().toISOString()},
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' },
-    ],
-    verified: true,
-    rating: 4.8,
-    reviewsCount: 19,
-    createdAt: new Date().toISOString(),
-  },
-  {
-    slug: 'nina-patel',
-    name: 'Nina Patel',
-    title: 'Data Scientist • GenAI',
-    category: 'AI/ML',
-    location: 'Austin, US',
-    timezone: 'America/Chicago',
-    region: 'North America',
-    skills: ['Python', 'PyTorch', 'NLP', 'Evaluation', 'Prompting', 'Dashboards'],
-    summary:
-      'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
-    bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
-    hourlyRateUsd: 110,
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=3',
-    portfolio: [{ title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' }],
-    verified: false,
-    rating: 4.7,
-    reviewsCount: 12,
-    createdAt: new Date().toISOString()},
-    createdAt: new Date().toISOString(),
-  },
-  {
-    slug: 'kenji-yamada',
-    name: 'Kenji Yamada',
-    title: 'Full‑Stack AI Engineer',
-    category: 'Engineering',
-    location: 'Tokyo, JP',
-    timezone: 'Asia/Tokyo',
-    region: 'Asia',
-    skills: ['Next.js', 'TypeScript', 'Rust', 'PostgreSQL', 'OpenAI', 'Vercel'],
-    summary:
-      'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
-    bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',
-    hourlyRateUsd: 95,
-    availability: 'Booked',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=4',
-    portfolio: [{ title: 'AI SaaS Starter', url: 'https://example.com/saas' }],
-    verified: true,
-    rating: 4.6,
-    reviewsCount: 34,
-    createdAt: new Date().toISOString()},
-    createdAt: new Date().toISOString(),
-  },
-  {
-    slug: 'lena-mueller',
-    name: 'Lena Müller',
-    title: 'Security Engineer',
-    category: 'Security',
-    location: 'Berlin, DE',
-    timezone: 'Europe/Berlin',
-    region: 'Europe',
-    skills: ['Threat Modeling', 'AppSec', 'SAST/DAST', 'Zero Trust', 'IAM'],
-    summary:
-      'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
-    bio: 'Hardens platforms with practical, developer‑friendly security programs.',
-    hourlyRateUsd: 130,
-    availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=5',
-    portfolio: [{ title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' }],
-    verified: false,
-    rating: 4.5,
-    reviewsCount: 9,
-    createdAt: new Date().toISOString()}]
-    createdAt: new Date().toISOString(),
-  },
-]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

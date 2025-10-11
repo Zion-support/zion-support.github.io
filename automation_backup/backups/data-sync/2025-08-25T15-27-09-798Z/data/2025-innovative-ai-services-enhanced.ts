@@ -1,378 +1,106 @@
-realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number, mobil,
-  e:, +1: 302 464 0950'';' emai,
-  l: 'kleber@ziontechgroup.co,m'; addres,
-  s:, taglin,
-  e:,' Develo,
-  p: emotionally intelligent AI with consciousness capabilities''; pric,
-  e: $,1,299], popula,
-  r: tru,e, ico,
-  n:,' 🧠'';' colo,
-  r: 'from-purple-60,
-  0: to-pink-60,0'; textColo,
-  r:, marketPositio,
-  n:, First-of-its-kin,
-  d: AI consciousness platform. Our,
-  advantage: Revolutionar,
-  y: approach to emotional intelligence and consciousness in AI systems,., targetAudienc,
-  e:  ,' 'A,
-  I: researcher,s, Robotics companies, Healthcare AI developers, Educational institutions, Research labs''; trialDay,
-  s: 3,0, setupTim,
-  e:,' 2-3: weeks'';' categor,
-  y: 'A,
-  I: Consciousness & Emotional Intelligenc,e'; realServic,
-  e: tru,e, technology[' Python, TensorFlow, PyTorch, Neuroscienc,
-  e: algorithms, Emotional AI, Consciousness frameworks']'; integrations[' 'OpenAI, Anthropic, Googl,
-  e: AI, Microsoft Azure, AWS AI services']'; useCases[' 'Healthcar,
-  e: AI development, Educational AI systems, Customer service AI, Therapeutic AI applications, Research and development']';' ro,
-  i: 'Organization,
-  s: report 500% improvement in AI emotional intelligence and 300% increase in user satisfaction,.'; competitors[' N,
-  o: direct competitors - first mover advantage']';' marketSiz,
-  e: '$15.5,
-  B: emotional AI marke,t'; growthRat,
-  e:,' 45% annua,
-  l: growth''; contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Advance,
-  d: AI consciousness platform with emotional intelligence training and consciousness development frameworks.'';' launchDat,
-  e: '2024-12-0,1'; customer,
-  s: 1,2, ratin,
-  g: 4.,9, review,
-  s: 2,0}, // A,
-  I: Quantum Neural Network{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Hybri,
-  d: AI-Quantum computing platform with advanced algorithms and real-time quantum processing capabilities.'';' launchDat,
-  e: '2024-11-1,5'; customer,
-  s:  ,8, ratin,
-  g: 4.,9, review,
-  s:  ,5}, // A,
-  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Autonomou,
-  s: AI research platform with self-directed research capabilities and independent insight discovery.'';' launchDat,
-  e: '2024-10-2,0'; customer,
-  s: 1,8, ratin,
-  g: 4.,8, review,
-  s: 1,2}, // A,
-  I: Emotional Intelligence Training{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' A,
-  I: emotional intelligence training platform with comprehensive emotional understanding and empathy development capabilities.'';' launchDat,
-  e: '2024-09-1,5'; customer,
-  s: 2,5, ratin,
-  g: 4.,7, review,
-  s: 1,6}, // A,
-  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: predictive maintenance platform with machine learning algorithms for equipment failure prediction and maintenance optimization.'';' launchDat,
-  e: '2024-08-2,0'; customer,
-  s: 4,2, ratin,
-  g: 4.,8, review,
-  s: 2,8}, // A,
-  I: Content Personalization Engine{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: content personalization platform with machine learning algorithms for dynamic content adaptation and user experience optimization.'';' launchDat,
-  e: '2024-07-2,5'; customer,
-  s: 6,7, ratin,
-  g: 4.,7, review,
-  s: 4,1}, // A,
-  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Autonomou,
-  s: AI ecosystem management platform with intelligent coordination and optimization capabilities for multiple AI systems.'';' launchDat,
-  e: '2024-06-3,0'; customer,
-  s: 1,5, ratin,
-  g: 4.,9, review,
-  s:  ,9}, // A,
-  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' A,
-  I: ethics and governance platform with comprehensive ethical frameworks and compliance monitoring capabilities.'';' launchDat,
-  e: '2024-05-1,5'; customer,
-  s: 2,8, ratin,
-  g: 4.,8, review,
-  s: 1,8}, // A,
-  I: Creativity Studio{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: creativity platform with advanced content generation and design automation capabilities.'';' launchDat,
-  e: '2024-04-2,0'; customer,
-  s: 8,9, ratin,
-  g: 4.,7, review,
-  s: 5,2}, // A,
-  I: Education Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: education platform with personalized learning algorithms, adaptive content, and comprehensive analytics.'';' launchDat,
-  e: '2024-08-2,0'; customer,
-  s: 23,4, ratin,
-  g: 4.,7, review,
-  s: 16,7}, // A,
-  I: Healthcare Diagnostics Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' HIPAA-complian,
-  t: AI diagnostic platform with advanced computer vision, real-time processing, and clinical decision support.'';' launchDat,
-  e: '2024-07-1,5'; customer,
-  s: 6,7, ratin,
-  g: 4.,9, review,
-  s: 4,5}, // A,
-  I: Financial Intelligence Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: financial intelligence platform with advanced algorithms, real-time data processing, and comprehensive financial analysis tools.'';' launchDat,
-  e: '2024-06-2,0'; customer,
-  s: 8,9, ratin,
-  g: 4.,8, review,
-  s: 6,7}, // A,
-  I: Sustainability Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: sustainability platform with environmental impact analysis, resource optimization, and comprehensive sustainability management tools.'';' launchDat,
-  e: '2024-05-2,5'; customer,
-  s: 7,8, ratin,
-  g: 4.,7, review,
-  s: 5,2}, // A,
-  I: Emotional Intelligence Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' A,
-  I: emotional intelligence platform with emotion recognition, empathy modeling, and comprehensive human-AI interaction tools.'';' launchDat,
-  e: '2024-04-3,0'; customer,
-  s: 5,6, ratin,
-  g: 4.,8, review,
-  s: 3,8}, // AI-Powere,
-  d: Predictive Analytics Engine{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: predictive analytics platform with advanced machine learning algorithms and real-time processing capabilities.'';' launchDat,
-  e: '2024-12-0,1'; customer,
-  s: 3,1, ratin,
-  g: 4.,8, review,
-  s: 2,6}, // AI-Powere,
-  d: Computer Vision Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: computer vision platform with custom training capabilities and edge deployment options.'';' launchDat,
-  e: '2024-11-1,5'; customer,
-  s: 4,2, ratin,
-  g: 4.,7, review,
-  s: 3,3}, // AI-Powere,
-  d: Natural Language Processing Suite{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: NLP platform with advanced language models and custom training capabilities.'';' launchDat,
-  e: '2024-10-1,5'; customer,
-  s: 3,8, ratin,
-  g: 4.,6, review,
-  s: 2,9}, // AI-Powere,
-  d: Recommendation Engine{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: recommendation engine with advanced algorithms and real-time personalization capabilities.'';' launchDat,
-  e: '2024-09-1,5'; customer,
-  s: 4,5, ratin,
-  g: 4.,8, review,
-  s: 3,7}, // AI-Powere,
-  d: Fraud Detection System{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: fraud detection system with advanced machine learning algorithms and real-time monitoring.'';' launchDat,
-  e: '2024-08-1,5'; customer,
-  s: 2,8, ratin,
-  g: 4.,9, review,
-  s: 2,4}, // AI-Powere,
-  d: Supply Chain Optimization{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: supply chain optimization platform with advanced algorithms and real-time monitoring capabilities.'';' launchDat,
-  e: '2024-07-1,5'; customer,
-  s: 3,5, ratin,
-  g: 4.,7, review,
-  s: 2,8}, // AI-Powere,
-  d: Energy Management System{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: energy management system with advanced optimization algorithms and real-time monitoring.'';' launchDat,
-  e: '2024-06-1,5'; customer,
-  s: 2,2, ratin,
-  g: 4.,8, review,
-  s: 1,9}, // AI-Powere,
-  d: Quality Control System{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: quality control system with advanced computer vision and machine learning capabilities.'';' launchDat,
-  e: '2024-05-1,5'; customer,
-  s: 3,8, ratin,
-  g: 4.,7, review,
-  s: 3,1}, // AI-Powere,
-  d: Customer Segmentation Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' AI-powere,
-  d: customer segmentation platform with advanced machine learning algorithms and comprehensive analytics.'';' launchDat,
-  e: '2024-04-1,5'; customer,
-  s: 5,2, ratin,
-  g: 4.,6, review,
-  s: 4,1}, // A,
-  I: Quantum Neural Network Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Cloud-nativ,
-  e: platform with quantum simulators and real quantum hardware access through partnerships.'';' launchDat,
-  e: '2024-12-0,1'; customer,
-  s: 1,2, ratin,
-  g: 4.,9, review,
-  s:  ,8}, // A,
-  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Advance,
-  d: autonomous AI research platform with breakthrough discovery algorithms and self-improving capabilities.'';' launchDat,
-  e: '2025-01-1,5'; customer,
-  s: 1,2, ratin,
-  g: 5.,0, review,
-  s:  ,8}, // A,
-  I: Emotional Intelligence Training Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Comprehensiv,
-  e: emotional intelligence training platform with AI-powered coaching, real-time feedback, and personalized learning paths.'';' launchDat,
-  e: '2025-02-0,1'; customer,
-  s: 3,4, ratin,
-  g: 4.,8, review,
-  s: 2,2}, // A,
-  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Enterprise-grad,
-  e: predictive maintenance platform with AI-powered analytics, IoT integration, and comprehensive maintenance optimization.'';' launchDat,
-  e: '2025-02-1,5'; customer,
-  s: 5,6, ratin,
-  g: 4.,9, review,
-  s: 3,8}, // A,
-  I: Content Personalization Engine{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Comprehensiv,
-  e: content personalization platform with AI-powered optimization, real-time analytics, and seamless marketing tool integration.'';' launchDat,
-  e: '2025-03-0,1'; customer,
-  s: 7,8, ratin,
-  g: 4.,7, review,
-  s: 4,5}, // A,
-  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Enterprise-grad,
-  e: autonomous AI ecosystem management platform with advanced coordination algorithms and comprehensive business system integration.'';' launchDat,
-  e: '2025-03-1,5'; customer,
-  s: 1,8, ratin,
-  g: 5.,0, review,
-  s: 1,2}, // A,
-  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Comprehensiv,
-  e: AI ethics and governance platform with advanced monitoring tools, compliance frameworks, and seamless AI development integration.'';' launchDat,
-  e: '2025-04-0,1'; customer,
-  s: 4,2, ratin,
-  g: 4.,8, review,
-  s: 2,9}, // A,
-  I: Creativity Studio{/* TODO: Fix JSX expression */}
-  4: E Main St STE 1008 Middletown DE 1970,9'} websit,
-  e:, http,
-  s: //ziontechgroup.co}m}, realImplementatio,
-  n: tru,e, implementationDetail,
-  s:,' Comprehensiv,
-  e: AI creativity platform with advanced generation tools, creative collaboration features, and seamless creative tool integration.'';' launchDat,
-  e: '2025-04-1,5'; customer,
-  s: 9,5, ratin,
-  g: 4.,7, review,
-  s: 58]}} '
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

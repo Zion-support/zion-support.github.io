@@ -1,248 +1,106 @@
-
 'use client'
-/**
- * Comprehensive Error Logging System
- * Provides structured error logging with different severity levels
- */
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export enum ErrorSeverity {
-    // TODO: Add content
-  }
-
-}
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical'
-}
-
-export interface ErrorLogEntry {
-    // TODO: Add content
-  }
-
-}
-  timestam,
-  p: string,,
-    severit,
-  y: ErrorSeverity,,
-    messag,
-  e: string
-  error?: Error
-  context?: Record
-          <string>
-  userAgent?: string
-  url?: string
-  stackTrace?: string,
-}
-class ErrorLogger {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  logs: ErrorLogEntry[] = []
-  private maxLogs = 1000
-  /**
-   * Log an error with context,
-   */
-//   log(),
-    messag,
-  e: string,
-    _severit,
-  y: ErrorSeverity = ErrorSeverity.MEDIUM,
-    error?: Error,
-    context?: Record
-          <string, unknown>
-  ): void {
-    // TODO: Add content
-  }
-
-}
-    const,
-  entry: ErrorLogEntry = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  timestamp: new Date().toISOString(),
-
-//       severity,
-//       message,
-//       error,
-//       context,
-
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack,
-
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // Add to internal log
-    this.logs.push(entry)
-    if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.logs.shift()
-    }
-    // Console logging in development
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.logToConsole(entry)
-    }
-    // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendToExternalService(entry)
-    }
-  }
-  /**
-   * Log to console with appropriate styling
-   */
+  ]
 
-  private logToConsole(entry: ErrorLogEntry): void {
-    // TODO: Add content
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-}
-    const,
-  styles: Record,
-          <ErrorSeverity, string> = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444, font-weight: bold'
-
-    }
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity])
-    if (entry.error) {/* TODO: Fix JSX expression */}
-  r:', entry.error);}
-    }
-    if (entry.context) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (entry.stackTrace) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    console.groupEnd()
-  }
-  /**
-   * Send error to external logging service
-   */
-
-  private async sendToExternalService(entry: ErrorLogEntry): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // In production, you would send to a service like Sentry, LogRocket, etc.
-      if (!endpoint) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        return
-      }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          'Content-Type': 'application/json'
-        },
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//           ...entry,
-          erro,
-  r: entry.error,
-            ? {/* TODO: Fix JSX expression */}
-  O: Add content,}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  message: entry.error.message,
-                name: entry.error.name,
-                stack: entry.error.stack,
-              }
-            : undefined
-        })
-      })
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Silently fail to avoid infinite loop
-      // // console.error('Failed to send error to external service:', error)
-    }
-  }
-  /**
-   * Get recent logs
-   */
-
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {
-    // TODO: Add content
-  }
-
-}
-    return this.logs.slice(-count)
-  }
-  /**
-   * Get logs by severity
-   */
-
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    // TODO: Add content
-  }
-
-}
-    return this.logs.filter(log => log.severity === severity)
-  }
-  /**
-   * Clear all logs
-   */
-
-  clearLogs(): void {
-    // TODO: Add content
-  }
-
-}
-    this.logs = []
-  }
-  /**
-   * Export logs as JSON
-   */
-
-  exportLogs(): string {
-    // TODO: Add content
-  }
-
-}
-    return JSON.stringify(this.logs, null, 2)
-  }
-}
-// Singleton instance
-const errorLogger = new ErrorLogger()
-// Convenience functions
-export const logError = (message: string, error?: Error, context?: Record;)
-
-          <string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (messag)
-  e: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (messag)
-  e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (messag)
-  e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export default errorLogger;`
-
+export default PagePage

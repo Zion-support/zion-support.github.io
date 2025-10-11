@@ -1,144 +1,106 @@
-// Performance monitoring utilities
-export interface PerformanceMetrics {
-  fcp: number
-  lcp: number
-  fid: number
-  cls: number
-  ttfb: number
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  }
-
-  private isInitialized = false
-  private observers: PerformanceObserver[] = []
-
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.init()
-    }
-  }
-
-  init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return;
-    this.isInitialized = true;
-    this.setupWebVitals();
-    this.setupCustomMetrics();
-  }
-
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
-        if (fcpEntry) {
-          this.metrics.fcp = fcpEntry.startTime
-          this.reportMetric('FCP', this.metrics.fcp)
-        }
-      });
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe FCP:', error)
-    }
-
-    // Largest Contentful Paint
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        if (lastEntry) {
-          this.metrics.lcp = lastEntry.startTime
-          this.reportMetric('LCP', this.metrics.lcp)
-        }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
-  }
-
-  private setupCustomMetrics(): void {
-    // First Input Delay
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          const fidEntry = entry as PerformanceEventTiming
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-          this.reportMetric('FID', this.metrics.fid)
-        })
-      })
-      observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
-
-    // Cumulative Layout Shift
-    this.setupCLSObserver()
-  }
-
-  private setupCLSObserver(): void {
-    try {
-      let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value
-            this.metrics.cls = clsValue
-            this.reportMetric('CLS', this.metrics.cls)
-          }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(clsObserver)
-    } catch (error) {
-      console.warn('Failed to observe CLS:', error);
-    }
-  }
-
-  private reportMetric(name: string, value: number): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value)
-    }
-  }
-
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
-  }
-
-  destroy(): void {
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-  }
-}
-
-// Global performance monitoring
-let performanceMonitor: PerformanceMonitor | null = null
-
-export const measureWebVitals = (): void => {
-  if (typeof window === 'undefined') return
-  
-  if (!performanceMonitor) {
-    performanceMonitor = new PerformanceMonitor()
-  }
-}
-
-export const getPerformanceMetrics = (): PerformanceMetrics | null => {
-  return performanceMonitor?.getMetrics() || null
-}
-
-export const cleanupPerformanceMonitoring = (): void => {
-  performanceMonitor?.destroy()
-  performanceMonitor = null
-}
+export default PagePage

@@ -1,118 +1,106 @@
-import { serve } from 'https://deno.land/std@0.208.0/http/server.ts'
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7'
-interface TenantInfo {
-  id: string
-  brand_name: string
-  subdomain: string
-  custom_domain: string | null
-  primary_color: string
-  logo_url: string | null
-  theme_preset: string
-}
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
-  'Access-Control-Max-Age': '86400'}
-  'Access-Control-Max-Age': '86400',
-}
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get('SUPABASE_URL')
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
-if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error('Required environment variables are not set')
-}
-const supabase = createClient(supabaseUrl, supabaseServiceKey)
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 204,
-      headers: corsHeaders})
-      headers: corsHeaders,
-    })
-  }
-  try {
-    const url = new URL(req.url)
-    const hostnameParam = url.searchParams.get('host')
-    const subdomainParam = url.searchParams.get('subdomain')
-    // Get hostname from parameters or headers
-    const forwardedHost = req.headers.get('x-forwarded-host')
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost.split(',')[0].trim().split(':')[0] : null) ||
-      url.hostname
-    if (!hostname && !subdomainParam) {
-      throw new Error('No hostname or subdomain provided')
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Tenant-detectorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // Extract tenant info
-    let tenantInfo: TenantInfo | null = null
-    if (subdomainParam) {
-      // Direct subdomain lookup
-      const { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-        .eq('subdomain', subdomainParam)
-        .eq('is_active', true)
-        .single()
-      if (error) {
-        console.error('Database error:', error)
-        throw new Error(`Database error: ${error.message}`)
-      }
-      tenantInfo = data as TenantInfo
-    } else {
-      // Try matching custom domain first
-      let { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-        .eq('custom_domain', hostname)
-        .eq('is_active', true)
-        .single()
-      // If no match on custom domain, try subdomain
-      if (!data && !error) {
-        const subdomain = hostname.split('.')[0]
-        if (subdomain && !['www', 'app', 'local', 'localhost'].includes(subdomain)) {
-          const subdomainResult = await supabase
-            .from('whitelabel_tenants')
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-            .eq('subdomain', subdomain)
-            .eq('is_active', true)
-            .single()
-          if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo
-          }
-        }
-      } else if (data) {
-        tenantInfo = data as TenantInfo
-      }
-    }
-    return new Response(
-      JSON.stringify({
-        tenant: tenantInfo,
-        status: 'success'
-      }),
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders}},
-          ...corsHeaders,
-        },
-      },
-    )
-  } catch (error) {
-    console.error('Tenant detector error:', error)
-    return new Response(
-      JSON.stringify({ 
-        error: error.message || 'Internal server error',
-        status: 'error'
-      }),
-      {
-        status: 500,
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders}},
-          ...corsHeaders,
-        },
-      },
-    )
-  }
-})
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Tenant Detector - Zion Tech Group</title>
+        <meta name="description" content="Learn about our tenant detector solutions and how they can transform your business." />
+        <meta name="keywords" content="tenant-detector, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

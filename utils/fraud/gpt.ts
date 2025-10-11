@@ -1,124 +1,106 @@
-import { GptClassification, MonitoredSource } from './types'
-export async function classifyWithGPT(
-  text: string
-  source: MonitoredSource
-): Promise<GptClassification> {
-  const apiKey = process && process.env.OPENAI_API_KEY
-  if (!apiKey) {
-    const lower = text && text.toLowerCase()
-    const looksDanger =
-      /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test(
-        lower
-      )
-    return {
-      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS'
-      reason: looksDanger
-        ? 'Heuristic fallback matched high-risk terms'
-        : 'Heuristic fallback matched suspicious language'
-      confidence: looksDanger ? 0.7 : 0.5
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const FraudPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  const { OpenAI } = await import('openai')
-  const client = new OpenAI({ apiKey })
-  const systemPrompt =
-    'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
-  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
-  const completion = await client.chat.completions.create({
-    model: process.env.FRAUD_GPT_MODEL |'gpt-4o-mini'
-    messages: [
-      { role: 'system', content: systemPrompt }
-      { role: 'user', content: userPrompt }
-    ]
-    temperature: 0
-    response_format: { type: 'json_object' as const }
-  })
-  const content = completion.choices[0]?.message?.content ?? '{}'
-  const content = completion && completion.choices[0]?.message?.content ?? '{}'
-  try {
-    const parsed = JSON.parse (content)
-    const label = (parsed.label as string)?.toUpperCase?.()
-    // Check condition
-if ( {) {
-  $2
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Fraud - Zion Tech Group</title>
+        <meta name="description" content="Learn about our fraud solutions and how they can transform your business." />
+        <meta name="keywords" content="fraud, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-      return {
-        label: 'SUSPICIOUS',
-        reason: 'Unrecognized label from GPT',
-    return {
-      label,
-      reason: parsed && parsed.reason || 'No reason provided',
-      confidence,
-    } as GptClassification
-  } catch {
-    return {
-      label: 'SUSPICIOUS'
-      reason: 'Invalid JSON from GPT'
-      confidence: 0.5
-    }
-  }export interface GptResult {
-      label: 'SUSPICIOUS',
-      reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
-    }
-  }export interface GptResult {
-  label: string
-  confidence: number
-  reasoning: string
-}
-  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud')
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-  }
-  label: string
-  confidence: number
-  reasoning: string
-}
-  // Mock implementation - in production, this would call OpenAI API
-  const suspicious = data.description && data.description.toLowerCase().includes('fraud')
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE'
-    confidence: suspicious ? 0.9 : 0.1
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-  }
-}
-}
-import { GptClassification, MonitoredSource } from './types'
-export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {
-  const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) {
-    const lower = text.toLowerCase()
-    const looksDanger = /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test(lower)
-    return {
-      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS',
-      reason: looksDanger ? 'Heuristic fallback matched high-risk terms' : 'Heuristic fallback matched suspicious language',
-      confidence: looksDanger ? 0.7 : 0.5,
-    }
-  }
-  const { OpenAI } = await import('openai')
-  const client = new OpenAI({ apiKey })
-  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
-  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
-  const completion = await client.chat.completions.create({
-    model: process.env.FRAUD_GPT_MODEL || 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt },
-    ],
-    temperature: 0,
-    response_format: { type: 'json_object' as const },
-  })
-  const content = completion.choices[0]?.message?.content ?? '{}'
-  try {
-    const parsed = JSON.parse(content)
-    const label = (parsed.label as string)?.toUpperCase?.()
-    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
-      return { label: 'SUSPICIOUS', reason: 'Unrecognized label from GPT', confidence: 0.5 }
-    }
-    const confidence = typeof parsed.confidence === 'number' ? Math.max(0, Math.min(1, parsed.confidence)) : 0.6
-    return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
-  } catch {
-    return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
-  }
-}
+
+export default PagePage

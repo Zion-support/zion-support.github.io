@@ -1,423 +1,106 @@
-
 'use client'
-/**
- * Enhanced Analytics Utility
- * Provides comprehensive analytics tracking with event batching and offline support
- */
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export interface AnalyticsEvent {
-    // TODO: Add content
-  }
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-}
-  categor,
-  y: string,,
-    actio,
-  n: string
-  label?: string
-  value?: number
-  metadata?: Record,
-          <string>
-}
-export interface UserProperties {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  userId?: string
-  sessionId?: string
-  userType?: string
-  [ke,
-  y: string]: unknown,
-}
-class EnhancedAnalytics {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  queue: AnalyticsEvent[] = [],
-  private,
-  _userProperties: UserProperties = {}
-  private,
-  sessionId: string
-  private isInitialized = false
-  private batchSize = 10
-  private flushInterval = 30000; // 30 seconds,
-  private,
-  offlineQueue: AnalyticsEvent[] = [],
-  constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.sessionId = this.generateSessionId()
-    this.setupOfflineHandling()
-    this.setupPeriodicFlush()
-  }
-  private generateSessionId(): string {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
-  }
-  private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      window.addEventListener('online', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.flushOfflineQueue()
-      })
-      window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.flush()
-      })
-    }
-  }
-  private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      setInterval(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.flush()
-      }, this.flushInterval)
-    }
-  }
-  public initialize(config?: { userId?: string; userType?: string }): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.isInitialized) return
-    this.isInitialized = true
-    this.userProperties = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ...this.userProperties,
-      sessionI,
-  d: this.sessionId,
-//       ...config
-    }
-    // Track initialization
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'System',
-      actio,
-  n: 'Analytics Initialized',
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-      }
-    }
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-  }
-
-  public setUserProperties(properties: UserProperties): void {
-    // TODO: Add content
-  }
-
-}
-    this.userProperties = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ...this.userProperties,
-//       ...properties
-    }
-  }
-  public trackEvent(even)
-  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  enrichedEvent: AnalyticsEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ...event,
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         ...event.metadata,
-        sessionI,
-  d: this.sessionId,
-        timestam,
-  p: new Date().toISOString(),
-        ur,
-  l: typeof window !== 'undefined' ? window.location.href : ''
-      }
-    }
-    // Add to queue
-    this.queue.push(enrichedEvent)
-    // Send to gtag if available
-    this.sendToGtag(enrichedEvent)
-    // Check if we should flush
-    if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.flush()
-    }
-  }
-  private sendToGtag(even)
-  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if ()
-      typeof window !== 'undefined' &&
-//       ()
-        window as {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          gtag?: (comman,
-  d: string, actio,
-  n: string, parameter,
-  s: Record,)
-          <string, unknown>) => void
-        }
-// ).gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ()
-        window as unknown as {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  gta,
-  g: (comman,
-  d: string, actio,
-  n: string, parameter,
-  s: Record,)
-          <string, unknown>) => void
-        }
-      ).gtag('event', event.action, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  event_categor,
-  y: event.category,
-        event_labe,
-  l: event.label,
-        valu,
-  e: event.value,
-//         ...event.metadata;)
-      })
-    }
-  }
-  public trackPageView(pagePat)
-  h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'Navigation',
-      actio,
-  n: 'Page View',
-      labe,
-  l: pagePath,
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
 }
 
-  pageTitle: pageTitle || document.title,
-        referrer: document.referrer,
-
-      }
-    })
-  )
-  }
-
-  public trackUserInteraction(action: string, label?: string, value?: number): void {
-    // TODO: Add content
-  }
-
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'User Interaction',
-//       action,
-//       label,
-//       value;)
-    })
-  }
-  public trackError(erro,
-  r: Error, context?: Record;)
-          <string, unknown>): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'Error',
-      actio,
-  n: 'Error Occurred',
-      labe,
-  l: error.message,
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  stack: error.stack,
-
-//         ...context
-      }
-    })
-  )
-  }
-
-  public trackPerformance(metric: string, value: number, rating?: string): void {
-    // TODO: Add content
-  }
-
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'Performance',
-      actio,
-  n: metric,
-      valu)
-  e: Math.round(value),
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         rating
-      }
-    }
-  )
-  }
-
-  public trackConversion(conversionType: string, value?: number): void {
-    // TODO: Add content
-  }
-
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: 'Conversion',
-      actio,
-  n: conversionType,
-//       value,
-      metadat,
-  a: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  conversionId: `conv-${Date.now()}`
-
-      }
-    }
-  )
-  }
-//   public trackCustomEvent()
-    categor,
-  y: string,
-    actio,
-  n: string,
-    label?: string,
-    value?: number,
-    metadata?: Record
-          <string, unknown>
-  ): void {
-    // TODO: Add content
-  }
-
-}
-    this.trackEvent({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       category,
-//       action,
-//       label,
-//       value,
-
-//       metadata
-    })
-  }
-  private flush(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.queue.length === 0) return
-    // Check if online
-    if (typeof navigator !== 'undefined' && !navigator.onLine) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.offlineQueue.push(...this.queue)
-      this.queue = []
-      return
-    }
-    // In a real implementation, send to analytics backend
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    // Clear queue
-    this.queue = []
-  }
-  private flushOfflineQueue(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.offlineQueue.length === 0) return
-    // Merge offline queue into main queue
-    this.queue.push(...this.offlineQueue)
-    this.offlineQueue = []
-    // Flush
-    this.flush()
-  }
-  public getQueueSize(): number {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return this.queue.length
-  }
-  public getSessionId(): string {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return this.sessionId
-  }
-  public getUserProperties(): UserProperties {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return { ...this.userProperties }
-  }
-  public getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  queueSiz,
-  e: number,,
-    offlineQueueSiz,
-  e: number,,
-    sessionI,
-  d: string,,
-    userPropertie,
-  s: UserProperties,
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  queueSize: this.queue.length,
-      offlineQueueSize: this.offlineQueue.length,
-      sessionId: this.sessionId,
-      userProperties: this.getUserProperties()
-
-    }
-  }
-}
-// Export singleton instance
-export default analytics
+export default PagePage

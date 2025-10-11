@@ -1,250 +1,106 @@
-    )
-  }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SyncPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Sync - Zion Tech Group</title>
+        <meta name="description" content="Learn about our sync solutions and how they can transform your business." />
+        <meta name="keywords" content="sync, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-  config: {
-    instanceId: 'default-instance'
-    peers: []
-    scope: 'global'
-    optIn: false
-    paused: false
-  }
-  lastSyncedAt: new Date().toISOString()
-}
-let state: SyncState = { ...defaultState }
-export function readState(): SyncState {
-  return { ...state }
-}
-export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates }
-}
-}
-}
-  const entity_id = getEntityId (event)
-  const current_version = state.latestVersionByEntityId[entity_id] || 0
-  const is_newer = event.version > current_version
-  // Check condition
-if ( {) {
-  $2
-}
-    state.proposalMerkleById[entity_id] = event.merkle_root
-  }
-  if (isNewer) {
-    state && state.latestVersionByEntityId[entityId] = event && event.version
-  }
-  state.events.push(event)
-  state.seenEventIds[event.eventId] = true
-  state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0)
-import fs from "fs"
-import path from "path"
-import { MultiverseState, InstanceConfig, SyncEvent } from "./types"
-const DATA_DIR = path.join(process.cwd(), "data", "multiverse")
-const STATE_PATH = path.join(DATA_DIR, "state.json")
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-}
-function defaultConfig(): InstanceConfig {
-  const instanceId = process.env.ZION_INSTANCE_ID || "zion-local"
-  return {
-    instanceId,
-    optIn: false,
-    paused: false,
-    scope: "full",
-    peers: [],
-    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0),
-  }
-}
-function defaultState(): MultiverseState {
-  return {
-    config: defaultConfig(),
-    lastSyncedAt: 0,
-    seenEventIds: {},
-    latestVersionByEntityId: {},
-    proposalMerkleById: {},
-    events: [],
-  }
-}
-export function readState(): MultiverseState {
-  ensureDataDir()
-  if (!fs.existsSync(STATE_PATH)) {
-    const initial = defaultState()
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2))
-    return initial
-  }
-  const raw = fs.readFileSync(STATE_PATH, "utf8")
-  try {
-    const parsed = JSON.parse(raw) as MultiverseState
-    // Backfill missing fields on upgrade
-    parsed.config.secretConfigured = Boolean(
-      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
-    )
-    parsed.seenEventIds = parsed.seenEventIds || {}
-    parsed.latestVersionByEntityId = parsed.latestVersionByEntityId || {}
-    parsed.proposalMerkleById = parsed.proposalMerkleById || {}
-    parsed.events = parsed.events || []
-    return parsed
-  } catch {
-    const initial = defaultState()
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2))
-    return initial
-  }
-}
-export function writeState(state: MultiverseState): void {
-  ensureDataDir()
-  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2))
-}
-export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {
-  if (state.seenEventIds[event.eventId]) return state
-  const entityId = getEntityId(event)
-  const currentVersion = state.latestVersionByEntityId[entityId] || 0
-  const isNewer = event.version > currentVersion
-  if (event.type === "proposal" && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot
-  }
-  if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version
-  }
-  state.events.push(event)
-  state.seenEventIds[event.eventId] = true
-  state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0)
-  return state
-}
-export function getEntityId(event: SyncEvent): string {
-  switch (event && event.type) {
-    case 'proposal':
-      return (event && event.payload as any).proposalId
-    case 'token_transfer':
-      return (event && event.payload as any).txId
-    case 'talent_mobility':
-      return (
-        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
-      )
-    case 'dao_endorsement':
-      return (event && event.payload as any).resolutionId
-    case 'leaderboard_entry':
-      return (
-        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
-      )
-    default:
-      return (event.payload as any).id |event.eventId
-  switch (event.type) {
-    case "proposal":
-      return (event.payload as any).proposalId
-    case "token_transfer":
-      return (event.payload as any).txId
-    case "talent_mobility":
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate
-    case "dao_endorsement":
-      return (event.payload as any).resolutionId
-    case "leaderboard_entry":
-      return (event.payload as any).subjectId + ":" + (event.payload as any).period
-    default:
-      return (event.payload as any).id || event.eventId
-  }
-}
-export function filterEventsByScope(
-  events: SyncEvent[]
-  scope: InstanceConfig['scope']
-): SyncEvent[] {
-  if (scope === 'full') return events
-  if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' |e.type === 'dao_endorsement'
-    )
-  }
-  if (scope === 'marketplace') {
-    return events && events.filter(
-      e =>
-        e.type === 'token_transfer' |
-        e.type === 'talent_mobility' |
-        e.type === 'leaderboard_entry'
-    )
-  }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-}
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-}
-  lastSyncedAt: new Date().toISOString()
-const default_state: SyncState = {
-  config: {
-    instance_id: 'default - instance',
-    peers: [],
-    scope: 'global',
-    opt_in: false,
-    paused: false
-  },
-  lastSyncedAt: new Date ().toISOString ()
-}
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    state.latestVersionByEntityId[entity_id] = event.version
-  }
-  state.events.push (event)
-  state.seenEventIds[event.event_id] = true
-  state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0)
-  return state
-export function getEntityId (event: SyncEvent): string {
-  switch (event.type) {
-    case 'proposal':
-      return (event.payload as any).proposal_id
-    case 'token_transfer':
-      return (event.payload as any).tx_id
-    case 'talent_mobility':
-      return (
-        (event.payload as any).person_id + ':' + (event.payload as any).start_date)
-    case 'dao_endorsement':
-      return (event.payload as any).resolution_id
-    case 'leaderboard_entry':
-      return (
-        (event.payload as any).subject_id + ':' + (event.payload as any).period)
-    default:
-      return (event.payload as any).id || event.event_id
-  }
-export function filterEventsByScope (
-  events: SyncEvent[],
-  scope: InstanceConfig['scope']): SyncEvent[] {
-  // Check condition
-if (return events) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    return events.filter (
-      e => e.type === 'proposal' || e.type === 'dao_endorsement')
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return events.filter (
-      e =>
-        e.type === 'token_transfer' ||
-        e.type === 'talent_mobility' ||
-        e.type === 'leaderboard_entry')
-  }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-}
-}
-}
-}
-  events: SyncEvent[],
-  scope: InstanceConfig["scope"]
-): SyncEvent[] {
-  if (scope === "full") return events
-  if (scope === "dao") {
-    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")
-  }
-  if (scope === "marketplace") {
-    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
-  }
-  return events
-}
+
+export default PagePage

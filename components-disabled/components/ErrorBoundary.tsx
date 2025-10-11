@@ -1,23 +1,106 @@
-// use client';' import React, {Component} ErrorInfo; ReactNode } from 'react' interface Props { // TODO: Implement } children: ReactNode; fallback?: ReactNode, onError?: (error: Error) errorInfo: ErrorInfo) => void; interface State {// TODO: Implement hasError: boolean; error?: Error} errorInfo?: ErrorInfo, class ErrorBoundary extends Component<Props} State> {<div className="text-left">" </div>" <div className="text-left">"</div> <div className="text-left">"</div> <div className="text-left">"</div> <span className="text-left">⚠️</span><" <h1 className="text-left">Something went wrong</h1>"" <p className="text-left">" </p> <div className="text-left">" </div> <button}"' onClick={() => typeof window !== 'undefined' && window.location.reload()} </button> <button; onClick={() => this.setState({ hasError: false })} <details className="text-left">" </details>" <summary className="text-left">" </summary> </summary>" <pre className="text-left">" </pre> </details> class ErrorBoundary extends Component<Props, State> {; " <div className="text-left">;"</div> <div className="text-left">;"</div> <div className="text-left">;"</div> <AlertTriangle className="text-left" />}"' <details style={{ margin_top: '20px'} text_align: 'left' }}>; <summary > Error Details (Development)</summary>; <pre style={{' background_color: '#f5f5f5',' padding: '10px',' border_radius: '4px',' overflow: 'auto'}' font_size: '12px' }}></$1></$1>)} </div>); class ErrorBoundary extends Component < Props, State> {constructor (props: Props) { super (props)} this.state = { has_error: false } static getDerivedStateFromError (error: Error): State {// TODO: Implement return { has_error: true} error } componentDidCatch (error: Error) error_info: ErrorInfo) {' console.error ('ErrorBoundary caught an error:') error; error_info)} this.set_state ({ error} error_info }); handle_retry = () => {this.set_state ({ has_error: false) error: undefined} error_info: undefined }); render () {// Check condition; if ( {) { $2; // Check condition; return this.props.fallback; return (<div className="text-left">;"</div> <div className="text-left">;"</div> <div className="text-left">;"</div> <AlertTriangle className="text-left" />;" </div>" <h1 className="text-left">;" </h1> </h1>" <p className="text-left">;" </p>;" <details className="text-left">;" <summary className="text-left">;" </summary>;" <pre className="text-left">;" </details>;" <div className="text-left">}" onClick={this && this.handleRetry}" className="text-left">;" </button>" <RefreshCw className="text-left" />;" <span>Try Again</span><</$1>; <button)) onClick={() => window && window.location.reload()} <details className="text-left">;" <summary className="text-left">;" <pre className="text-left">;" </details>)}" <div className="text-left">;" on_click={this.handle_retry}" className="text-left">;"</div> <RefreshCw className="text-left" />;" <span > Try Again</span><; on_click={() => window.location.reload ()} </div>'
-// use client';' import React, {Component} ErrorInfo; ReactNode } from 'react' interface Props {/* TODO: Fix JSX expression */}
-  O: Implement } childre,
-  n: ReactNode; fallback?: ReactNode, onError?: (erro)
-  r: Error) errorInf,
-  o: ErrorInfo) => void; interface State {/* TODO: Fix JSX expression */}
-  hasError: boolean; error?: Error} errorInfo?: ErrorInfo, class ErrorBoundary extends Component<Props} State> {<div className="text-left">" </div>" <div className="text-left">" <div className="text-left">" <div className="text-left">" <span className="text-left">⚠️<" <h1 className="text-left">Something went wrong</h1>"" <p className="text-left">" </p> <div className="text-left">" </div> <button}"' onClick={() => typeof window !== 'undefined' && window.location.reload()} </button> <; onClick={/* TODO: Fix JSX expression */}"$2 />
-  r: false })} <details className="text-left">" </details>" <summary className="text-left">" </summary> </summary>" <pre className="text-left">" </pre> </details> class ErrorBoundary extends Component<Props, State> {; " <div className="text-left">;" <div className="text-left">;" <div className="text-left">;" <AlertTriangle className="text-left" />}"' <details style={/* TODO: Fix JSX expression */}
-  p: '20px'} text_alig,
-  n: 'left' }}>; <summary > Error Details (Development)</summary>; <re style={/* TODO: Fix JSX expression */}$2 />
-  w: 'auto'}' font_siz,
-  e: '12px' }}></$1></$1>)} </div>); class ErrorBoundary extends Component < Props, State> {/* TODO: Fix JSX expression */}
-  s: Props) { super (props)} this.state = {/* TODO: Fix JSX expression */}
-  r: false } static getDerivedStateFromError (erro)
-  r: Error): State {/* TODO: Fix JSX expression */}
-  r: true} error } componentDidCatch (erro)
-  r: Error) error_inf,
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
-  error:') error; error_info)} this.set_state ({ error} error_info }); handle_retry = () => {/* TODO: Fix JSX expression */}
-  r: undefined} error_inf,"
-  o: undefined }); render () {// Check condition; if ( {) { $2; // Check condition; return this.props.fallback; return (<div className="text-left">;" <div className="text-left">;" <div className="text-left">;" <AlertTriangle className="text-left" />;" </div>" <h1 className="text-left">;" </h1> </h1>" <p className="text-left">;" </p>;" <details className="text-left">;" <summary className="text-left">;" </summary>;" <pre className="text-left">;" </details>;" <div className="text-left">}" onClick={this && this.handleRetry}" className="text-left">;" </button>" <RefreshCw className="text-left" />;" <span>Try Again<</$1>; <button)) onClick={() => window && window.location.reload()} <details className="text-left">;" <summary className="text-left">;" <pre className="text-left">;" </details>)}" <div className="text-left">;" on_click={this.handle_retry}" className="text-left">;" <RefreshCw className="text-left" />;" <span > Try Again<; on_click={() => window.location.reload ()} </div>'
-"
-</div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

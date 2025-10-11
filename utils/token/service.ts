@@ -1,198 +1,106 @@
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  }
-export interface TokenTransaction {
-  id: string
-  userId: string
-  amount: number
-  type: 'issue' | 'redeem' | 'transfer'
-  reason: string
-  timestamp: number
-}
-  id: string
-  user_id: string
-  amount: number
-  type: 'issue' | 'redeem' | 'transfer'
-  reason: string
-  timestamp: number
-}
-// Mock data storage - replace with actual database
-let transactions: TokenTransaction[] = []
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
-  }
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now()
-  }
-  transactions.push(transaction)
-  return transaction
-}
-export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount: -amount, // Negative for redemption
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ()
-  }
+const TokenPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-  transactions.push (transaction)
-  return transaction
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ()
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Token - Zion Tech Group</title>
+        <meta name="description" content="Learn about our token solutions and how they can transform your business." />
+        <meta name="keywords" content="token, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  transactions.push (transaction)
-  return transaction
-  transactions.push(transaction)
-  return transaction
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export function getConfig() {
-  return {
-    enabled: true,
-    rate: 1 && 1.0,
-    maxPerDay: 1000
-  }
-}
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {
-  const current = getConfig()
-  // Update the configuration
-  Object.assign(current, partial)
-}
-export function set_config (
-  partial: Partial < ReturnType < typeof get_config>>): void {
-  const current = get_config ()
-  // Update the configuration
-  Object.assign (current, partial)
-}
-import { randomUUID } from "crypto"
-import { tokenStore } from "./storage"
-import { TokenTransaction, WalletSummary } from "./types"
-export function getWalletSummary(userId: string): WalletSummary {
-  const wallet = tokenStore.getWallet(userId)
-  const transactions = tokenStore.getTransactions(userId)
-  const config = tokenStore.getConfig()
-  return { wallet, transactions, config }
-}
-export function earnTokens(
-  userId: string,
-  amount: number,
-  reason: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  if (amount <= 0) throw new Error("Amount must be positive")
-  const wallet = tokenStore.getWallet(userId)
-  const newBalance = wallet.balance + amount
-  tokenStore.setWalletBalance(userId, newBalance)
-  const tx: TokenTransaction = {
-    id: randomUUID(),
-    userId,
-    type: "earn",
-    amount,
-    reason,
-    metadata,
-    createdAt: new Date().toISOString(),
-  }
-  tokenStore.addTransaction(tx)
-  return tx
-}
-export function burnTokens(
-  userId: string,
-  amount: number,
-  reason: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  if (amount <= 0) throw new Error("Amount must be positive")
-  const wallet = tokenStore.getWallet(userId)
-  if (wallet.balance < amount) throw new Error("Insufficient balance")
-  const newBalance = wallet.balance - amount
-  tokenStore.setWalletBalance(userId, newBalance)
-  const tx: TokenTransaction = {
-    id: randomUUID(),
-    userId,
-    type: "burn",
-    amount,
-    reason,
-    metadata,
-    createdAt: new Date().toISOString(),
-  }
-  tokenStore.addTransaction(tx)
-  return tx
-}
-export function issueTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = earnTokens(userId, amount, reason)
-  tx.type = "issue"
-  return tx
-}
-export function revokeTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = burnTokens(userId, amount, reason)
-  tx.type = "revoke"
-  return tx
-}
-export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
-  const { earnRules } = tokenStore.getConfig()
-  const amount = earnRules[action]
-  if (!amount) throw new Error("Unknown action")
-  return earnTokens(userId, amount, action, metadata)
-}
-export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
-  const { burnRules } = tokenStore.getConfig()
-  const amount = burnRules[feature]
-  if (!amount) throw new Error("Unknown feature")
-  return burnTokens(userId, amount, feature, metadata)
-}
-export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction; usd: number } {
-  const { usdPerToken } = tokenStore.getConfig()
-  const tx = burnTokens(userId, amount, "redeem_credits")
-  tx.type = "redeem"
-  const usd = parseFloat((amount * usdPerToken).toFixed(2))
-  return { tx, usd }
-}
-export function getAllTransactions() {
-  return tokenStore.getTransactions()
-}
-export function getConfig() {
-  return tokenStore.getConfig()
-}
-export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
-  const current = tokenStore.getConfig()
-  tokenStore.setConfig({ ...current, ...partial })
-}
+
+export default PagePage

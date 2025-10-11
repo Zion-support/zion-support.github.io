@@ -1,318 +1,106 @@
-impo, r, t {/* TODO: Fix JSX expression */}
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function HyperPersonalizedCustomerExperience20, 2, 5() {;
-return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-    <React.Fragment>
-      <Helm, e, t>
-        <title>;
-Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%;
-Satisfacti, o, n, 12.4x, Engagemen, t, $3.2B+ Reven, u, e | Zion, Tech, Group
-        <meta, nam, e = 'description';
-conte, n, t='Deploy, A, I-powered, hype, r-personalization, that, understands each, customer, individually. Achieve, 9, 7.8% satisfaction, scor, e, s, increase, engagement, by 12.4 x, reduce, churn, by 89%, and, driv, e $3.2 B+ in, incremental, revenue through, truly, personalized experienc, e, s.'
-        />
-        <meta, nam, e = 'keywor, d, s';
-conte, n, t='AI, personalizati, o, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n'
-        />
-        <nk, re, l = 'canonic, a, l'$2 />;
-hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-hyp e r-personaliz e d-custom e r-experien c e',
-        />,
-    <div>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Ai-2025-oct-hyper-personalized-customer-experiencePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
       <Helmet>
-        <title>Hyper-Personalized AI Customer Experience Platform 2025 — 97.8% Satisfaction, 12.4x Engagement, $3.2B+ Revenue | Zion Tech Group
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-        <meta name="description;
-content="Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences." /><meta name="keywords;,
-content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization" /><link rel="canonical", href=" " />
-  </link>;
-content=" />
-        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />
-  </link>,
-        <meta name="description",;,
-content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences.", /><meta name: "keywords,;,
-content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>
-  </link>",;,
-content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization
-        />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />
-  </link>,
-      </Helmet>,
-,
-      <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-pi, n, k-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
-        <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
-          <, t, o='/bl, o, g'$2 />;
-className='inli, n, e-flex, item, s-center, tex, t-pi, n, k-400, hove, r:te, x, t-pi, n, k-300, m, b-8, transitio, n-colo, r, s'
-          >
-            <ArrowLeft, className='mr-2 h-4 w-4' />;
-Back, to, Blog
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>;
-Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
-Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine
-                <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <Users, classNam, e='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>89% Churn, Reductio, n:</stro, n, g> Predictive, intervention, retains customers, before, they lea, v, e
-              <span, className='te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-ro, s, e-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>;
-Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine;
-Hyp, e, r-Personalized, AI, Customer Experien, c, e: T, h, e $3.2B, Revenue, Engine
-                <li, className='flex, item, s-start, ga, p-3'>
-                  <Users, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>89% Churn, Reductio, n:</stro, n, g> Predictive, intervention, retains customers, before, they lea, v, e
-              <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>;
-The, cost, of poor, customer, experience is, staggerin, g: $1.6, trillion, lost annually, to, customer chu, r, n. Traditional, personalizatio, n—basic, segmentation, and rul, e, s—achieves, only, 31%;
-relevan, c, e. True, hype, r-personalization, powered, by AI, treats, every;
-customer, as, a segment, of, o, n, e, understanding, contex, t,;
-preferenc, e, s, sentime, n, t, and, intent, in re, a, l-time, to, deliver;
-experiences, that, delight.
-            <section, classNam, e = 'mb-12'>
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0'>;
-The, Hype, r-Personalization, Platform, Architecture
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
-                  1. Unified, Customer, Intelligence
-                <p, className='te, x, t-gr, a, y-300, m, b-4'></p>AI</p>, fuses, data from every, touchpoint—we, b, mobi, l, e, call, cente, r,;
-in-sto, r, e, ema, i, l, soci, a, l—into, unified, customer profiles, that, capture complete, behavioral, history, preferenc, e, s, sentime, n, t,;
-and, contex, t. Re, a, l-time, identity, resolution links, anonymous, and;
-known, session, s, providing, a, holistic view, of, each custom, e, r's, journe, y.
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
-                  3. Re, a, l-Time, Experience, Orchestration
-                <p, className='te, x, t-gr, a, y-300, m, b-4'></p>AI</p>, agents, dynamically compose, personalized, experiences across, all, channels based, on, predicted customer, inte, n, t, conte, x, t, and, goal, s. Every, elemen, t—conte, n, t, offe, r, s, messagi, n, g, layo, u, t,;
-produc, t, s—adapts, in, milliseconds to, optimize, for engageme, n, t,;
-satisfacti, o, n, and, business, outcomes.
-            <section, className='mb-12'>
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0'>;
-Enterprise, Success, Stories
-          <div>
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">;
-Enterprise, Success, Stories
-          <div>
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Heart className="h-8 w-8 text-pink-400 ,>;
-Customer Experience Impact</$1>"
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
-                  <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
-                  <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>)
-                </li>)
-                <li className="flex items-start gap-3">)
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">),
-                  <span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>)
-                <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0 ">
-                  <span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>)
-                <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"
-              </h2>",
-              <ul className="space-y-4 text-lg">,
-                <li className="flex items-start gap-3">,
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-                  <Sparkles className=" />,
-                  <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
-                  <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">
-                  <span></span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,
-                <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0 ">
-                  <span></span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,
-                <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"
-              </h2>"
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-                  <Sparkles className=" />
-                  <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
-                </li>"
-                <li className="flex items-start gap-3">
-                  <TrendingUp className=" />
-                  <span></span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,"
-                </li>"
-                <li className="flex items-start gap-3">
-                  <DollarSign className=" />
-                  <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
-                  <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
-                </li>"
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>"
-                  <span></span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,"
-                </li>"
-                <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>"
-                  <span></span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,"
-                </li>"
-                <li className="flex items-start gap-3">
-                  <Users className=" />">
-          <div>
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Heart className="h-8 w-8 text-pink-400" />;
-Customer Experience Impact
-              <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, className='bg-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/20, t, o-ro, s, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-pi, n, k-5, 0, 0/30'>
-                  <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>;
-Leadin, g, E-Commerce, Platfor, m
-                  <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
-                    <li>
-                      • $4.7B, annual, revenue increase, from personalization
-            <section, className='mb-12'>
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-pi, n, k-3, 0, 0'>;
-Implementation, Roadma, p
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>;
-Phas, e, 1: Foundati, o, n (Month, s, 1-, 2)
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-                  <li>;
-Data, integration, across customer, touchpoints, and syste, m, s
-                  <li>;
-Unified, customer, profile development, and, quality validati, o, n
-                  <li>;
-Baseline, metrics, measurement across, key, experience;
-dimensio, n, s
-                  <li>;
-Use, case, prioritization based, on, impact and, feasibilit, y
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">The Hyper-Personalization Platform Architecture</h2>"
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">2. Predictive Intent Modeling
-                <p className="text-gray-300 mb-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration
-                <p className="text-gray-300 mb-4">,";
-AI agents dynamically compose personalized experiences across all channels based on predicted customer intent
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration
-                <p className="text-gray-300 mb-4">,";
-AI agents dynamically compose personalized experiences across all channels based on predicted customer intent
-              <div>;
-AI agents dynamically compose personalized experiences across all channels based on predicted customer intent
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">3. Real-Time Experience Orchestration
-                <p className="text-gray-300 mb-4">,";
-AI agents dynamically compose personalized experiences across all channels based on predicted customer intent
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">4. Conversational AI Integration
-                <p className="text-gray-300 mb-4">
-                  <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform
-                  <ul className="space-y-3 text-gray-300">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">Enterprise Success Stories</h2>"
-              <div>
-                  <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform
-                  <ul className="space-y-3 text-gray-300">
-                    <li >• $4.7B annual revenue increase from personalization
-                    <li >• 18.3x improvement in customer engagement metrics
-                    <li >• 94% reduction in customer acquisition costs
-                    <li >• 98.2% customer satisfaction score maintained
-                    <li >• 91% decrease in churn across all customer segments
-                <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 1: Foundation (Months 1-2)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">Implementation Roadmap
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 1: Foundation (Months 1-2)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">Implementation Roadmap
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 2: Pilot (Months 3-4)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 2: Pilot (Months 3-4)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 3: Scale (Months 5-12)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">Phase 3: Scale (Months 5-12)
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div>
-              <h2 className="text-3xl font-bold mb-4 text-pink-300">Ready to Transform Your Customer Experience?
-              <p className="text-gray-300 mb-6">
-            <div className="bg-gradient-to-r from-pink-500/20 to-rose-500/20 border border-pink-500/30 rounded-xl p-8 mt-12">
-              <h2 className="text-3xl font-bold mb-4 text-pink-300">Ready to Transform Your Customer Experience?
-              <p className="text-gray-300 mb-6">";
-Discover how Zion Tech Group can deploy hyper-personalized AI customer experience platforms that deliver,;
-measurable results. Our proven methodology ensures rapid implementation and transformational outcomes.
-              </p>to</p>="/contact";
-className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg">";
-Schedule Your CX Transformation Assessment"
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
-                <ArrowLeft className=" />">
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" /></ArrowLeft>className</ArrowLeft>="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
-              >";
-Schedule Your CX Transformation Assessment"
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
+        <title>Ai 2025 Oct Hyper Personalized Customer Experience - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ai 2025 oct hyper personalized customer experience solutions and how they can transform your business." />
+        <meta name="keywords" content="ai-2025-oct-hyper-personalized-customer-experience, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>  </div>
-</article>
-</article>
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'></div>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>;
-Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-                  <li>;
-Deploy, personalization, AI for, highes, t-impact, customer, segments
-                  <li>;
-Implement, rea, l-time, decisioning, for key, journey, touchpoints
-                  <li>;
-Validate, business, impact through, controlled, experiments
-                  <li>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>;
-Phas, e, 2: Pil, o, t (Month, s, 3-, 4)
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-                  <li>;
-Deploy, personalization, AI for, highes, t-impact, customer, segments
-                  <li>;
-Implement, rea, l-time, decisioning, for key, journey, touchpoints
-                  <li>;
-Validate, business, impact through, controlled, experiments
-                  <li>;
-Refine, models, based on, performance, and customer, feedbac, k
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-pi, n, k-5, 0, 0/20'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-ro, s, e-3, 0, 0'>;
-Phas, e, 3: Sca, l, e (Month, s, 5-1, 2)
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-              <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>;
-The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.;
-With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.;
-Schedule, Your, CX Transformation, Assessmen, t;
-Schedule, Your, CX Transformation, Assessmen, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
-              <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>;
-The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.;
-With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.;
-Schedule, Your, CX Transformation, Assessmen, t;
-Schedule, Your, CX Transformation, Assessmen, t
-                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />;
-Schedule, Your, CX Transformation, Assessmen, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
-              <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>;
-The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.;
-With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.;
-Schedule, Your, CX Transformation, Assessmen, t
-                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></article>
+
+export default PagePage

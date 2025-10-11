@@ -1,126 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { ensureAdminFromApi } from '../../../../utils/auth',
-type EventRow = {
-  name: string,
-  page?: string,
-  userType?: string,
-  properties?: Record<string, any>,
-  at: string
-},
-      } catch {}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AnalyticsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    return rows
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-import { ensureAdminFromApi } from '../../../../utils/auth'
-    }
-    return rows
-  } catch {
-    return []
-  }
-}
-function featureFromPath(page?: string): string {
-if (!page) return 'other'
-  const p = page.toLowerCase()
-  if (p.includes('/services') |p.includes('ai')) return 'AI services'
-  if (p.includes('talent') |p.includes('job')) return 'job board'
-  if (p.includes('rental')) return 'rentals'
-  return 'other'
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
-  const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string }
-  const rows = parseLines(start, end).filter((r) => !userType |userType === 'all' |(r.userType |'guest') === userType)
-  const byFeature: Record<string, number> = {}
-  const byEvent: Record<string, number> = {}
-  const byDay: Record<string, number> = {}
-  for (const r of rows) {
-    const f = featureFromPath(r.page)
-    byFeature[f] = (byFeature[f] |0) + 1
-    byEvent[r.name] = (byEvent[r.name] |0) + 1
-    const day = r.at.slice(0, 10)
-    byDay[day] = (byDay[day] |0) + 1
-  }
-  const pagesMostUsed = Object.entries(byFeature)
-    .map(([label, value]) => ({ label, value }))
-.sort((a, b) => b.value - a.value)
-  const events = Object.entries(byEvent)
-    .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value)
-  const days = Object.keys(byDay).sort()
-  const line = days.map((d) => ({ date: d, value: byDay[d] }))
-  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
-  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
-  res.status(200).json({ pagesMostUsed, events, line, funnel })
-}
-    .sort((a, b) => b.value - a.value),
-function featureFromPath (page?: string): string {
-// Check condition
-if (return 'other', ) {
-  $2
-}
-  const p = page.toLowerCase (),
-  if (|| p.includes ('ai')) return 'AI services', ) {
-  $2
-}
-  if (|| p.includes ('job')) return 'job board', ) {
-  $2
-}
-  if () return 'rentals', ) {
-  $2
-}
-  return 'other'
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { allowed } = await ensureAdminFromApi (req),
-  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
-  $2
-}
-  const { start, end, user_type } = req.query as { start?: string, end?: string, user_type?: string },
-  const rows = parse_lines (start, end).filter ((r) => !user_type || user_type === 'all' || (r.user_type || 'guest') === user_type),
-  const by_feature: Record < string, number> = {},
-  const by_event: Record < string, number> = {},
-  const by_day: Record < string, number> = {},
-  for (const r of rows) {
-    const function = featureFromPath (r.page),
-    by_feature[f] = (by_feature[f] || 0) + 1,
-    by_event[r.name] = (by_event[r.name] || 0) + 1,
-    const day = r.at.slice (0, 10),
-    by_day[day] = (by_day[day] || 0) + 1
-  }
-  const pagesMostUsed = Object.entries (by_feature)
-    .map (([label, value]) => ({ label, value }))
-.sort ((a, b) => b.value - a.value),
-  const events = Object.entries (by_event)
-    .map (([label, value]) => ({ label, value }))
-    .sort ((a, b) => b.value - a.value),
-  const days = Object.keys (by_day).sort (),
-  const line = days.map ((d) => ({ date: d, value: by_day[d] })),
-  const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
-  const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
-  res.status (200).json ({ pagesMostUsed, events, line, funnel })
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Analytics - Zion Tech Group</title>
+        <meta name="description" content="Learn about our analytics solutions and how they can transform your business." />
+        <meta name="keywords" content="analytics, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    await ensureAdminFromApi(req)
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', 'GET')
-      return res.status(405).end('Method Not Allowed')
-    }
-    const { start, end } = req.query
-    const events = parseLines(start as string, end as string)
-    res.json({ events })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

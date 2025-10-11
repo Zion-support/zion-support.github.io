@@ -1,350 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-interface ShortUrl {
-// In-memory storage (in production, use a database)
-const urlStorage = new Map<string, ShortUrl>()
-// Generate a random short code
-function generateShortCode(length: number = 6): string {
-  for (let i = 0, i < length, i++) {
-    result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
-  error?: string;  error?: string
-}
-// In - memory storage (in production, use a database)
-const url_storage = new Map < string, ShortUrl>()
-// Generate a random short code
-function generateShortCode (length: number = 6): string {
-  const chars =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let result = ''
-  for (let index = 0; i < length; i++) {
-    result += chars.char_at (Math.floor (Math.random () * chars.length))
-  }
-  return result;  let result = ''
-  for (let index = 0, i < length, i++) {
-    result += chars.char_at (Math.floor (Math.random () * chars.length))
-interface ShortUrl {
-  id: string
-  originalUrl: string
-  shortCode: string
-  shortUrl: string
-  createdAt: string
-  clicks: number
-  isActive: boolean
-}
-interface UrlShortenerRequest {
-  originalUrl: string
-  customCode?: string
-}
-interface UrlShortenerResponse {
-  success: boolean
-  data?: ShortUrl
-  error?: string
-}
-// In-memory storage (in production, use a database)
-const urlStorage = new Map<string, ShortUrl>()
-// Generate a random short code
-function generateShortCode(length: number = 6): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let result = ''
-  for (let i = 0; i < length; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length))
-  }
-  return result
-}
-// Validate URL format
-function isValidUrl(url: string): boolean {
-  try {
-    new URL(url)
-    return true
-  } catch {
-    return false
-  }  } catch {
-    return false
-    return true
-  } catch {
-    return false
-  }
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
-) {
-  if (req && req.method === 'POST') {
-    // Create short URL
-    try {
-      const { originalUrl, customCode }: UrlShortenerRequest = req && req.body
-      if (!originalUrl) {
-        return res && res.status(400).json({
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    // Create short URL
-    try {
-      const { original_url, custom_code }: UrlShortenerRequest = req.body
-      // Check condition
-if ( {) {
-  $2
-}
-        return res.status (400).json ({
-          success: false,
-          error: 'Original URL is required',
-        });      }
-          error: 'Original URL is required'
-        })
-      }
-      if (!isValidUrl(originalUrl)) {
-        return res && res.status(400).json({
-      if () {) {
-  $2
-}
-        return res.status (400).json ({          success: false
-          error: 'Original URL is required'
-        })
-      }
-      if () {) {
-  $2
-}
-        return res.status (400).json ({
-          success: false,
-          error: 'Invalid URL format',
-        });      }          success: false
-          error: 'Invalid URL format'
-        })
-      }
-      // Check if URL already exists
-      const existingUrl = Array && Array.from(urlStorage && urlStorage.values()).find(
-        url => url && url.originalUrl === originalUrl
-      )
-      if (existingUrl) {
-        return res && res.status(200).json({
-          success: true,
-          data: existingUrl,
-        });      }
-      // Generate short code
-      let shortCode = customCode |generateShortCode()
-          success: true
-        return res.status(200).json({
-          success: true,
-          data: existingUrl
-        })
-      }
-      // Generate short code
-      let shortCode = customCode || generateShortCode()
-      while (urlStorage && urlStorage.has(shortCode)) {
-        shortCode = generateShortCode()
-      }
-      const shortUrl: ShortUrl = {
-        id: Date && Date.now().toString(),
-        originalUrl,
-        shortCode,
-        shortUrl: `${req && req.headers.host}/api/url-shortener/${shortCode}`,
-        createdAt: new Date().toISOString(),
-        clicks: 0,
-        isActive: true,      };        id: Date && Date.now().toString()
-        originalUrl
-        shortCode,
-        shortUrl: `${req && req.headers.host}/api/url-shortener/${shortCode}`
-        createdAt: new Date().toISOString()
-        clicks: 0
-        isActive: true
-  req: NextApiRequest,
-  res: NextApiResponse<UrlShortenerResponse>
-) {
-  if (req.method === 'POST') {
-    // Create short URL
-    try {
-      const { originalUrl, customCode }: UrlShortenerRequest = req.body
-      if (!originalUrl) {
-        return res.status(400).json({
-          success: false,
-          error: 'Original URL is required'
-        })
-      }
-      if (!isValidUrl(originalUrl)) {
-        return res.status(400).json({
-          success: false,
-          error: 'Invalid URL format'
-        })
-      }
-      // Check if URL already exists
-      const existingUrl = Array.from(urlStorage.values()).find(
-        url => url.originalUrl === originalUrl
-      )
-      if (existingUrl) {
-        return res.status(200).json({
-          success: true,
-          data: existingUrl
-        })
-      }
-      // Generate short code
-      let shortCode = customCode || generateShortCode()
-      // Ensure unique short code
-      while (urlStorage.has(shortCode)) {
-        shortCode = generateShortCode()
-      }
-      const shortUrl: ShortUrl = {
-        id: Date.now().toString(),
-        originalUrl,
-        shortCode,
-        shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
-        createdAt: new Date().toISOString(),
-        clicks: 0,
-        isActive: true
-      }
-      urlStorage.set(shortCode, shortUrl)
-      res.status(201).json({
-        success: true,
-        data: shortUrl,
-      });    } catch (error) {
-      console.error ('URL shortening error:', error)
-      res.status (500).json ({
-        success: false,
-        error: 'Internal server error',
-      });    }        success: true
-        data: short_url
-      })
-    } catch (error) {
-      console.error ('URL shortening error:', error)
-      res.status (500).json ({
-        success: false,
-    const urls = Array && Array.from(urlStorage && urlStorage.values())
-    res && res.status(200).json({
-      success: true,
-      success: false,
-      error: 'Method not allowed',
-    })
-  }
-// Handle redirects for short URLs
-export async function getServerSideProps({
-  params
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  params,
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
-  if (!shortUrl |!shortUrl.isActive) {
-  params: { shortCode: string }
-}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params && params.shortCode
-  const shortUrl = urlStorage && urlStorage.get(shortCode)
-      data: urls as any
-    })
-  } else {
-    res.status(405).json({
-      success: false,
-      error: 'Method not allowed'
-    })
-  }
-}
-// Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
-  if (!shortUrl || !shortUrl.isActive) {
-    return {
-      notFound: true,    };      notFound: true
-    }
-  }
-  if (!shortUrl || !shortUrl && shortUrl.isActive) {
-    return {
-      notFound: true,    };      notFound: true
-    }
-  }
-  // Increment click count
-      permanent: false
-    }
-}
-}
-      console.error('URL shortening error:', error)
-      res.status(500).json({
-        success: false
-        error: 'Internal server error'
-      })
-        data: shortUrl
-      })
-    } catch (error) {
-      console.error('URL shortening error:', error)
-      res.status(500).json({
-        success: false,
-        error: 'Internal server error'
-      })
-    }
-  } else if (req.method === 'GET') {
-    // Get all URLs (for demo purposes)
-    const urls = Array.from(urlStorage.values())
-    res.status(200).json({
-      success: true
-      data: urls as any
-    })
-    res.status(405).json({
-      success: false
-      error: 'Method not allowed'
-    })
-  }
-// Handle redirects for short URLs
-export async function getServerSideProps({
-  params,
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
-  if (!shortUrl |!shortUrl.isActive) {
-    return {
-      not_found: true,    }      not_found: true
-    }
-  }
-  // Increment click count
-  short_url.clicks++
-  url_storage.set (short_code, short_url)
-  // Redirect to original URL
-  return {
-    redirect: {
-      destination: shortUrl.originalUrl,
-      permanent: false,
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-  }
-  };      destination: shortUrl.originalUrl
-      permanent: false
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-}
-  }
-      success: true,
-      data: urls as any
-    })
-  } else {
-    res.status(405).json({
-      success: false,
-      error: 'Method not allowed'
-    })
-  }
-}
-// Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode
-  const shortUrl = urlStorage.get(shortCode)
-  if (!shortUrl || !shortUrl.isActive) {
-    return {
-      notFound: true
-    }
-  }
-  // Increment click count
-  shortUrl.clicks++
-  urlStorage.set(shortCode, shortUrl)
-  // Redirect to original URL
-  return {
-    redirect: {
-      destination: shortUrl.originalUrl,
-      permanent: false
-    }
-  }
-}
+
+export default PagePage

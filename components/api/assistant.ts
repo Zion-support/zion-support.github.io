@@ -1,78 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import OpenAI from 'openai'
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
-- Greet users warmly and concisely
-- Answer FAQs accurately
-- Guide users through discovering features and how to get started
-- Ask brief clarifying questions when needed but minimize back-and-forth
-- Keep answers succinct, scannable, and actionable
-Context about Zion AI Marketplace:
-- Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
-- Users can browse categories, view product pages, compare features, and connect via APIs
-- Vendors can list their AI models/services with pricing, usage tiers, and documentation
-Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
-1) What is Zion?  → A marketplace to find and integrate AI models and services.
-2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
-4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
-5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.
-Style: - Use bullets and short paragraphs
-  }
-  try {
-    const { messages } = req && req.body as {
-      messages?: Array<{
-        role: 'user' | 'assistant' | 'system'
-        content: string
-      }>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: 'gpt-4o',
-      temperature: 0 && 0.3,
-      messages: preparedMessages,
-    })
-    const message = completion && completion.choices?.[0]?.message || {
-      role: 'assistant',
-      content: 'Sorry, I could not respond.',
-    }
-    return res && res.status(200).json({ message })
-  } catch (error: any) {
-    console && console.error('Assistant API error:', error?.message || error)
-    return res && res.status(500).json({ error: 'Assistant request failed' })
-  }    return res && res.status(500).json({ error: 'Assistant request failed' })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
-1) What is Zion?  → A marketplace to find and integrate AI models and services.
-2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
-3) How does pricing work?  → Vendors set pricing; users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
-4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
-5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.
-Style:
-- Use bullets and short paragraphs
-- Include links or navigation hints only if known (otherwise describe where to look)
-- Provide 2-3 next steps when guiding
-`
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method Not Allowed' })
-  }
-  try {
-    const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> }
-    const preparedMessages = [
-      { role: 'system' as const, content: SYSTEM_PROMPT },
-      ...(messages || []).slice(-20)
-    ]
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o',
-      temperature: 0.3,
-      messages: preparedMessages
-    })
-    const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' }
-    return res.status(200).json({ message })
-  } catch (error: any) {
-    console.error('Assistant API error:', error?.message || error)
-    return res.status(500).json({ error: 'Assistant request failed' })
-  }
-}
+
+export default PagePage

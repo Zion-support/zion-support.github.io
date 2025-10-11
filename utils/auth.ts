@@ -1,190 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-export function parseUserFromRequest (req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic
-  const auth_header = req.headers.authorization
-  // Check condition
-if ( {) {
-  $2
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
-  }
-  // Simple mock for admin users
-  if () {) {
-  $2
-}
-    return { id: 'admin - 1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { id: 'user - 1', email: 'user@zion.os', role: 'user' }
-}
-export function ensure_admin (user: User): void {
-  // Check condition
-if ( {) {
-  $2
-}
-    const error = new Error ('Forbidden')
-    (error as any).status_code = 403
-    throw error
-  }
-}
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-  try {
-    const user = parseUserFromRequest (req)
-    ensure_admin (user)
-import type { NextApiRequest, NextApiResponse } from 'next'
-export function parseUserFromRequest(req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic
-  const authHeader = req.headers.authorization
-  if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' }
-}
-export function parseUserFromRequest(req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic
-  const authHeader = req.headers.authorization
-  if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' }
-}
-export function ensureAdmin(user: User): void {
-  if (user.role !== 'admin') {
-    const error = new Error('Forbidden')
-    (error as any).statusCode = 403
-    throw error
-  }
-}
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-  try {
-    const user = parseUserFromRequest(req)
-    ensureAdmin(user)
-    return { allowed: true }
-  } catch {
-    return { allowed: false }
-  }
-}
-// Additional auth utilities for login
-export interface DemoUser {
-// Additional auth utilities for login
-export interface DemoUser {
-  id: string
-  name: string
-  role: 'admin' | 'user' | 'guest'
-  email: string
-}
-const demoUsers: DemoUser[] = []
-export function ensureDemoUsers(): void {
-  if (demoUsers.length === 0) {
-    demoUsers.push(
-      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-    )
-  }
-}
-export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
-  return {
-    id: `user-${Date.now()}`
-    name
-    role
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
-  }
-}
-export function upsertUser(user: DemoUser): void {
-    id: `user-${Date.now()}`,
-    name,
-    role,
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
-  }
-}
-export function upsertUser(user: DemoUser): void {
-  const index = demoUsers.findIndex(u => u.id === user.id)
-  if (index >= 0) {
-    demoUsers[index] = user
-  } else {
-    demoUsers.push(user)
-  }
-}
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
-  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`)
-}
-export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
-  const cookieHeader = req.headers.cookie |''
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
-  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`)
-}
-export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
-  const cookieHeader = req.headers.cookie || ''
-  const match = cookieHeader.match(/user=([^;]+)/)
-  if (!match) return null
-const demo_users: DemoUser[] = []
-export function ensureDemoUsers (): void {
-  // Check condition
-if ( {) {
-  $2
-}
-    demo_users.push (
-      { id: 'admin - 1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
-      { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-    )
-  }
-}
-export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
-  return {
-    id: `user-${Date.now ()}`,
-    name,
-    role,
-    email: `${name.toLowerCase ().replace (/\s+/g, '.')}@zion.os`
-  }
-}
-export function upsert_user (user: DemoUser): void {
-  const index = demo_users.find_index (u => u.id === user.id)
-  // Check condition
-if ( {) {
-  $2
-}
-    demo_users[index] = user
-  } else {
-    demo_users.push (user)
-  }
-}
-export function setUserCookie (res: NextApiResponse, user: DemoUser): void {
-  res.set_header ('Set - Cookie', `user=${JSON.stringify (user)} Path=/; HttpOnly`)
-}
-export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
-  const cookie_header = req.headers.cookie || ''
-  const match = cookie_header.match (/user=([^;]+)/)
-  // Check condition
-if (return null) {
-  $2
-}
-  try {
-    return JSON.parse (decodeURIComponent (match[1]))
-  } catch {
-    return null
-  }
-}
-  }
-}
-  }
-}
-import type { NextApiRequest } from 'next'
-export function getRequestUserEmail(req: NextApiRequest): string | null {
-  const emailHeader = req.headers['x-user-email']
-  if (Array.isArray(emailHeader)) return emailHeader[0] || null
-  return (emailHeader as string) || null
-}
-export function isAdminEmail(email: string | null | undefined): boolean {
-  if (!email) return false
-  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
-  return admins.includes(email.toLowerCase())
-}
+
+export default PagePage

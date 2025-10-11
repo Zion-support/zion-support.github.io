@@ -1,115 +1,106 @@
-const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI','
-      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y','
-      impa, c, t: '5, 0, 0% cognitive, enhancemen, t','
-      ic, o, n: '🧠','
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
   ]
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
+
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  return (<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-        <, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
-         />
-        <, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
-         />
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            The, Innovation, Revolution
-              {
-                val, u, e: '99., 9, 8%',
-                lab, e, l: 'Neural, Accura, c, y',
-                ic, o, n: '🧠',
-                col, o, r: 'te, x, t-purp, l, e-40, 0',
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            The, Innovation, Revolution
-              {/* TODO: Fix JSX expression */}
-              },
-              {/* TODO: Fix JSX expression */}
-              },
-              {/* TODO: Fix JSX expression */}
-              },
-              {)
-                val, u, e: '50, 0%')
-                lab, e, l: 'Enhancem, e, n, t')
-                ic, o, n: '📈'),
-                col, o, r: 'te, x, t-emera, l, d-40, 0')
-              })
-              {
-                val, u, e: '50, 0%',
-                lab, e, l: 'Enhancem, e, n, t',
-                ic, o, n: '📈',
-                col, o, r: 'te, x, t-emera, l, d-40, 0'},
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          { innovatio, n, s.m, a, p((innova, t, i, o, n, ind, e, x) = > (
-            <, ke, y = { in, d, e, x  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}
-              <, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${innovati, o, n.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}$2 />
-               />
-              <div, classNam, e = 'relativ, e, p-8'>
-                <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'>
-                  {innovati, o, n.t, i, t, l, e}
-                <div, classNam, e='te, x, t-center, m, b-6' ></div> <, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}$2 />
-                  >
-                    ", Impa, c, t: {innovati, o, n.imp, a, c, t}
-                  <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'>
-          <div, classNam, e='te, x, t-center, m, b-12'>
-            <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
-              Revolutionary, Success, Stories
-                company: 'NeuroTech, Glo, b, a, l',
-              {/* TODO: Fix JSX expression */}
-              },
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          {/* TODO: Fix JSX expression */}
-            <, ke, y = { in, d, e, x  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}`
-              <, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${innovati, o, n.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}$2 />
-               />
-              <div, classNam, e = 'relativ, e, p-8'>
-                <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'>
-                  {innovati, o, n.t, i, t, l, e}`
-                <div, classNam, e='te, x, t-center, m, b-6' > <, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}$2 />
-                  ></div>"
-                    ", Impa, c, t: {innovati, o, n.imp, a, c, t}
-                  <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'>
-          <div, classNam, e='te, x, t-center, m, b-12'>
-            <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
-              Revolutionary, Success, Stories,
-  company: 'NeuroTech, Glo, b, a, l',
-                achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
-                reven, u, e: '$2.1B, Revenue, Growt, h',
-                ic, o, n:</h3> <Brain, classNam, e = 'w-8 , h-, 8' / > },
-              {/* TODO: Fix JSX expression */}
-               },
-              {/* TODO: Fix JSX expression */}
-               },
-              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-                <, hre, f='/innovatio, n, s'$2 />
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
-                >
-                  <Rocket, classNam, e='w-5 h-5' />
-                  <Link, classNam, e='w-5 h-5' /></Link>")`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></h2></h2></h3></h3></h3>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

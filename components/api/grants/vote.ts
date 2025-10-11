@@ -1,241 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import fs from 'fs'
-import path from 'path'
-import { v4, as, uuidv4  } from 'uuid'
-function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
-}
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`)
-}
-  if (!fs && fs.existsSync(p)) return null
-  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
-function readGrant(id: string): GrantApplication | null {
-  ensureDir()
-  const p = grantPath(id)
-function writeGrant(record: GrantApplication) {
-  ensureDir()
-  fs && fs.writeFileSync(
-    grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
-    'utf8'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const GrantsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Grants - Zion Tech Group</title>
+        <meta name="description" content="Learn about our grants solutions and how they can transform your business." />
+        <meta name="keywords" content="grants, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import type { GrantApplication, VotePayload  } from '../../../types / grants'
-const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
-/**
- * ensure_dir - Function description
- */
-function ensure_dir() {
-  if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
-  $2
 }
-/**
- * grant_path - Function description
- */
-function grant_path() {
-  return path.join (GRANTS_DIR, `${id}.json`);/**
- * ensure_dir - Function description
- */
-function ensure_dir() {
-  if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
-  $2
-}
-}
-/**
- * grant_path - Function description
- */
-function grant_path() {
-  return path.join (GRANTS_DIR, `${id}.json`)
-}
-function read_grant (id: string): GrantApplication | null {
-  ensure_dir ()
-  const p = grant_path (id)
-  if () return null) {
-  $2
-}
-  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
-/**
- * write_grant - Function description
- */
-function write_grant() {
-  ensure_dir ()
-  fs.writeFileSync (
-    grant_path (record.id),
-    JSON.stringify (record, null, 2),
-    'utf8')
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'POST')
-    res.status (405).end ('Method Not Allowed')
-    return;  }
-  const payload = req && req.body as VotePayload
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res && res.status(400).json({ error: 'Missing fields' })
-    return
-function writeGrant(record: GrantApplication) {
-  ensureDir()
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('AllowPOST')
-    res && res.status(405).end('Method Not Allowed')
-    return
-  }
-  const payload = req && req.body as VotePayload
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res && res.status(400).json({ error: 'Missing fields' })
-    return
-  }
-  const g = readGrant(payload && payload.grantId)
-  if (!g) return res && res.status(404).json({ error: 'Grant not found' })
-  const vote = {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
-    res.status(405).end('Method Not Allowed')
-    return
-  }
-  const payload = req.body as VotePayload
-    res.status(400).json({ error: 'Missing fields' })
-    return
-  }
-  const g = readGrant(payload.grantId)
-  if (!g) return res.status(404).json({ error: 'Grant not found' })
-  const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
-  g.votes = [...(g.votes |[]), vote]
-  g.updatedAt = new Date().toISOString()
-  writeGrant(g)
-  res.status(200).json({ record: g })
-}
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res.status(400).json({ error: 'Missing fields' })
-    id: uuidv4(),
-    voter: payload && payload.voter,
-    choice: payload && payload.choice,
-    createdAt: new Date().toISOString(),
-  }
-  g && g.votes = [...(g && g.votes || []), vote]
-  g && g.updatedAt = new Date().toISOString()
-  writeGrant(g)
-  res && res.status(200).json({ record: g });  }
-  const g = readGrant(payload && payload.grantId)
-  if (!g) return res && res.status(404).json({ error: 'Grant not found' })
-  const vote = { id: uuidv4(), voter: payload && payload.voter, choice: payload && payload.choice, createdAt: new Date().toISOString() }
-  g && g.votes = [...(g && g.votes || []), vote]
-  g && g.updatedAt = new Date().toISOString()
-  writeGrant(g)
-  res && res.status(200).json({ record: g })
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (400).json ({ error: 'Missing fields' })
-    return
-/**
- * write_grant - Function description
- */
-function write_grant() {
-  ensure_dir ()
-  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8')
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('AllowPOST')
-    res.status (405).end ('Method Not Allowed')
-    return
-  }
-  const payload = req.body as VotePayload
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (400).json ({ error: 'Missing fields' })
-    return
-  }
-  const g = read_grant (payload.grant_id)
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
-}
-  const vote = {
-    id: uuidv4 (),
-    voter: payload.voter,
-    choice: payload.choice,
-    created_at: new Date ().toISOString (),
-  }
-  g.votes = [...(g.votes || []), vote]
-  g.updated_at = new Date ().toISOString ()
-  write_grant (g)
-  res.status (200).json ({ record: g });  }
-  const g = read_grant (payload.grant_id)
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
-}
-  const vote = { id: uuidv4 (), voter: payload.voter, choice: payload.choice, created_at: new Date ().toISOString () }
-  g.votes = [...(g.votes || []), vote]
-  g.updated_at = new Date ().toISOString ()
-  write_grant (g)
-  res.status (200).json ({ record: g })
-}
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res.status(400).json({ error: 'Missing fields' })
-}
-}
-}
-}
-}
-    res.status(400).json({ error: 'Missing fields' })
-import {  v4 as uuidv4   } from 'uuid'
-import type { GrantApplication, VotePayload  } from '../../../types/grants'
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
-}
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
-}
-function readGrant(id: string): GrantApplication | null {
-  ensureDir()
-  const p = grantPath(id)
-  if (!fs.existsSync(p)) return null
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
-}
-function writeGrant(record: GrantApplication) {
-  ensureDir()
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST')
-    res.status(405).end('Method Not Allowed')
-    return
-  }
-  const payload = req.body as VotePayload
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res.status(400).json({ error: 'Missing fields' })
-    return
-  }
-  const g = readGrant(payload.grantId)
-  if (!g) return res.status(404).json({ error: 'Grant not found' })
-  const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
-  g.votes = [...(g.votes || []), vote]
-  g.updatedAt = new Date().toISOString()
-  writeGrant(g)
-  res.status(200).json({ record: g })
-}
+
+export default PagePage

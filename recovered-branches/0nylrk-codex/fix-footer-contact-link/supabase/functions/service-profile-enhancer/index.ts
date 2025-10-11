@@ -1,146 +1,106 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts"
-interface ServiceProfileData {
-  name: string
-  title: string
-  bio: string
-  services?: string[]
-  location: string
-}
-serve(async (req) => {
-  try {
-    // CORS headers
-    const headers = {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-      "Content-Type": "application/json"}
-      "Content-Type": "application/json",
-    }
-    // Handle CORS preflight request
-    if (req.method === "OPTIONS") {
-      return new Response(null, { headers, status: 204 })
-    }
-    const reqData = await req.json()
-    const providerData = reqData.providerData as ServiceProfileData
-    // Validate input
-    if (!providerData || !providerData.bio) {
-      return new Response(
-        JSON.stringify({
-          error: "Missing required service provider data"}),
-          error: "Missing required service provider data",
-        }),
-        { headers, status: 400 }
-      )
-    }
-    // Get OpenAI API key from environment
-    const apiKey = Deno.env.get("OPENAI_API_KEY")
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({
-          error: "OpenAI API key not configured"}),
-          error: "OpenAI API key not configured",
-        }),
-        { headers, status: 500 }
-      )
-    }
-    const prompt = `
-    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
-    1. A concise yet compelling professional summary (max 250 words)
-    2. A list of 5-10 specific services they could offer based on their description
-    Service Provider Name: ${providerData.name}
-    Business/Service Title: ${providerData.title}
-    Location: ${providerData.location}
-    Current Bio: ${providerData.bio}
-    ${providerData.services && providerData.services.length > 0 
-      ? `Current Services: ${providerData.services.join(", ")}`
-      : "No services listed yet."}
-    Focus on highlighting their unique value proposition, expertise, and professionalism.
-    Only respond with JSON in this exact format:
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Service-profile-enhancerPage: React.FC = () => {
+  const features = [
     {
-      "summary": "Professional summary goes here...",
-      "services": ["Service 1", "Service 2", "Service 3", ...]
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    `
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "gpt-4",
-        messages: [
-          {
-            role: "system",
-            content: "You are an expert at creating professional service descriptions for marketplaces."},
-          {
-            role: "user",
-            content: prompt}],
-        temperature: 0.7,
-        max_tokens: 800})})
-            content: "You are an expert at creating professional service descriptions for marketplaces.",
-          },
-          {
-            role: "user",
-            content: prompt,
-          },
-        ],
-        temperature: 0.7,
-        max_tokens: 800,
-      }),
-    })
-    const responseData = await response.json()
-    if (!response.ok) {
-      console.error("OpenAI API error:", responseData)
-      return new Response(
-        JSON.stringify({
-          error: "Failed to generate enhanced profile content",
-          details: responseData}),
-          details: responseData,
-        }),
-        { headers, status: 500 }
-      )
-    }
-    try {
-      const content = responseData.choices[0].message.content
-      const parsedContent = JSON.parse(content)
-      return new Response(
-        JSON.stringify({
-          summary: parsedContent.summary,
-          services: parsedContent.services}),
-          services: parsedContent.services,
-        }),
-        { headers, status: 200 }
-      )
-    } catch (error) {
-      console.error("Error parsing AI response:", error)
-      return new Response(
-        JSON.stringify({
-          error: "Failed to parse AI response",
-          raw: responseData.choices[0]?.message?.content}),
-          raw: responseData.choices[0]?.message?.content,
-        }),
-        { headers, status: 500 }
-      )
-    }
-  } catch (error) {
-    console.error("Function error:", error)
-    return new Response(
-      JSON.stringify({
-        error: "Internal server error"}),
-      { 
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"}, 
-        error: "Internal server error",
-      }),
-      { 
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        }, 
-        status: 500 
-      }
-    )
-  }
-})
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Service Profile Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Learn about our service profile enhancer solutions and how they can transform your business." />
+        <meta name="keywords" content="service-profile-enhancer, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

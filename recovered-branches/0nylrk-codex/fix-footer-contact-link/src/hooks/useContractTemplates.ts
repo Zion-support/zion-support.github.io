@@ -1,239 +1,106 @@
-import { useState } from "react"
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
-import { supabase } from "@/integrations/supabase/client"
-import { useToast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { ContractTemplate } from "@/types/contracts"
-import { ContractFormValues } from "@/components/contracts/components/ContractForm"
-export function useContractTemplates() {
-  const { user, isAuthenticated } = useAuth()
-  const queryClient = useQueryClient()
-  const { toast } = useToast()
-  const [isLoading, setIsLoading] = useState(false)
-  // Fetch templates for the current user
-  const { 
-    data: templates = [], 
-    isLoading: isLoadingTemplates,
-    error: templatesError 
-  } = useQuery({
-    queryKey: ['contractTemplates', user?.id],
-    queryFn: async () => {
-      if (!isAuthenticated || !user) {
-        return []
-      }
-      const { data, error } = await supabase
-        .from('contract_templates')
-        .select('*')
-        .order('is_default', { ascending: false })
-        .order('created_at', { ascending: false })
-      if (error) {
-        throw error
-      }
-      return data as ContractTemplate[]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    enabled: isAuthenticated && !!user
-  })
-  // Create a new template
-  const createTemplate = useMutation({
-    mutationFn: async ({ 
-      title, 
-      templateData, 
-      isDefault = false 
-    }: {
-      title: string
-      templateData: ContractFormValues
-      isDefault?: boolean
-    }) => {
-      if (!user) throw new Error("User not authenticated")
-      setIsLoading(true)
-      try {
-        // If this is set as default, unset any existing default
-        if (isDefault) {
-          await supabase
-            .from('contract_templates')
-            .update({ is_default: false })
-            .eq('user_id', user.id)
-            .eq('is_default', true)
-        }
-        // Insert the new template
-        const { data, error } = await supabase
-          .from('contract_templates')
-          .insert({
-            user_id: user.id,
-            title: title,
-            template_data: templateData,
-            is_default: isDefault
-          })
-          .select()
-          .single()
-        if (error) throw error
-        return data as ContractTemplate
-      } finally {
-        setIsLoading(false)
-      }
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
-      toast({
-        title: "Template saved",
-        description: "Contract template has been successfully saved."})
-        description: "Contract template has been successfully saved.",
-      })
-    },
-    onError: (error: Error) => {
-      console.error("Error saving template:", error)
-      toast({
-        title: "Failed to save template",
-        description: "There was an error saving your contract template.",
-        variant: "destructive"})
-        variant: "destructive",
-      })
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  })
-  // Update an existing template
-  const updateTemplate = useMutation({
-    mutationFn: async ({
-      templateId,
-      title,
-      templateData,
-      isDefault = false
-    }: {
-      templateId: string
-      title: string
-      templateData: ContractFormValues
-      isDefault?: boolean
-    }) => {
-      if (!user) throw new Error("User not authenticated")
-      setIsLoading(true)
-      try {
-        // If this is set as default, unset any existing default
-        if (isDefault) {
-          await supabase
-            .from('contract_templates')
-            .update({ is_default: false })
-            .eq('user_id', user.id)
-            .eq('is_default', true)
-            .neq('id', templateId)
-        }
-        // Update the template
-        const { data, error } = await supabase
-          .from('contract_templates')
-          .update({
-            title: title,
-            template_data: templateData,
-            is_default: isDefault,
-            updated_at: new Date().toISOString()
-          })
-          .eq('id', templateId)
-          .eq('user_id', user.id)
-          .select()
-          .single()
-        if (error) throw error
-        return data as ContractTemplate
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
-      toast({
-        title: "Template updated",
-        description: "Contract template has been successfully updated."})
-        description: "Contract template has been successfully updated.",
-      })
-    },
-    onError: (error: Error) => {
-      console.error("Error updating template:", error)
-      toast({
-        title: "Failed to update template",
-        description: "There was an error updating your contract template.",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-    }
-  })
-  // Delete a template
-  const deleteTemplate = useMutation({
-    mutationFn: async (templateId: string) => {
-      if (!user) throw new Error("User not authenticated")
-      setIsLoading(true)
-      try {
-        const { error } = await supabase
-          .from('contract_templates')
-          .delete()
-          .eq('id', templateId)
-          .eq('user_id', user.id)
-        if (error) throw error
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
-      toast({
-        title: "Template deleted",
-        description: "Contract template has been successfully deleted."})
-        description: "Contract template has been successfully deleted.",
-      })
-    },
-    onError: (error: Error) => {
-      console.error("Error deleting template:", error)
-      toast({
-        title: "Failed to delete template",
-        description: "There was an error deleting your contract template.",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-    }
-  })
-  // Set a template as default
-  const setDefaultTemplate = useMutation({
-    mutationFn: async (templateId: string) => {
-      if (!user) throw new Error("User not authenticated")
-      setIsLoading(true)
-      try {
-        // First unset any existing default
-        await supabase
-          .from('contract_templates')
-          .update({ is_default: false })
-          .eq('user_id', user.id)
-          .eq('is_default', true)
-        // Then set the new default
-        const { error } = await supabase
-          .from('contract_templates')
-          .update({ is_default: true })
-          .eq('id', templateId)
-          .eq('user_id', user.id)
-        if (error) throw error
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
-      toast({
-        title: "Default template set",
-        description: "Default contract template has been updated."})
-        description: "Default contract template has been updated.",
-      })
-    },
-    onError: (error: Error) => {
-      console.error("Error setting default template:", error)
-      toast({
-        title: "Failed to set default template",
-        description: "There was an error setting your default contract template.",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-    }
-  })
-  return {
-    templates,
-    isLoading: isLoading || isLoadingTemplates,
-    error: templatesError,
-    createTemplate,
-    updateTemplate,
-    deleteTemplate,
-    setDefaultTemplate
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Learn about our hooks solutions and how they can transform your business." />
+        <meta name="keywords" content="hooks, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

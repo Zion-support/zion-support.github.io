@@ -1,147 +1,106 @@
+'use client'
 import React from 'react'
-const SeoOptimizerPage: React.FC = () => {const features = [
-    {} 'Advanced AI technology integration'},
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Seo-optimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
   ]
 
-return (
+  return (
     <>
-
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
-      </Helmet />
-
-    'Cost-effective pricing plans',
-          </div&gt
-        </div&gt
-              </div&gt
-    'Proven track record of success'
-  ]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-return (
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Seo Optimizer - Zion Tech Group</title>
-        <meta name="description" content="AI-powered seo optimizer solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, seo, optimizer, automation, artificial intelligence, business solutions" />
+        <meta name="description" content="Learn about our seo optimizer solutions and how they can transform your business." />
+        <meta name="keywords" content="seo-optimizer, solutions, technology, business" />
       </Helmet>
       
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
-          <div className="relative max-w-7xl mx-auto text-center"
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6"
-Seo Optimizer
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-AI-powered seo optimizer solution for intelligent automation and optimization
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-Get Started
-              </button>
-              <button className="
-    ,
-    r: bg-cyan-400 hove, r:text-white transition-all duration-300"
-Learn More
-              </button>
-            </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-                  <p className="text-gray-300 mb-4"
-                  {feature.benefits && (
-                    <ul className="space-y-2"
-                      {feature.benefits.map((benefit
-    </>
-  );, idx) => (
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-      
-      <Footer />
-    </>
-              ))}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
             </div>
-      
-      <Footer />
-    </>
-          </div>
-      
-      <Footer />
-    </>
-        </section>
-
-        {/* Benefits Section */}
-                </div>
-      
-      <Footer />
-    </>
-              ))}
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-  </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
       
       <Footer />
     </>
+  )
+}
+
+export default PagePage

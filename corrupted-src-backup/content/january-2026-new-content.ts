@@ -1,104 +1,106 @@
-// January 2026 - New Revolutionary Content
-// Brand new cutting-edge AI breakthroughs and enterprise solutions
-export const january2026NewContent = {
-  featuredArticles: [
-    {
-      id: 'ai-2026-january-autonomous-enterprise-mesh'
-      title: '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence'
-      description: 'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention'
-      link: '/blog/ai-2026-january-autonomous-enterprise-mesh'
-      type: 'article'
-      featured: true,
-      publishDate: '2026-01-15',
-      category: 'Enterprise AI',
-      tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
-      readTime: '12 min',
-      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
-    {
-      id: 'ai-2026-january-quantum-edge-computing'
-      title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution'
-      description: 'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing'
-      link: '/blog/ai-2026-january-quantum-edge-computing'
-      type: 'article'
-      featured: true,
-      publishDate: '2026-01-15',
-      category: 'Quantum Computing',
-      tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
-      readTime: '15 min',
-      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},
-    {
-      id: 'ai-2026-january-synthetic-consciousness',
-      title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
-      description:,
-        'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value',
-      link: '/blog/ai-2026-january-synthetic-consciousness'
-      type: 'article'
-      featured: true,
-      publishDate: '2026-01-15',
-      category: 'Artificial Consciousness',
-      tags: ['consciousness', 'synthetic', 'awareness', 'emotion', '2026'],
-      readTime: '18 min',
-      excerpt:,
-        'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.'}],
-  featuredServices: [
-    {
-      id: 'ai-2026-autonomous-enterprise-solutions'
-      title: 'Autonomous Enterprise Solutions 2026'
-      description: 'Self-organizing AI systems for complete business automation with 99.7% efficiency'
-      link: '/services/ai-2026-autonomous-enterprise-solutions'
-      type: 'service'
-      featured: true,
-      category: 'Enterprise AI'
-      pricing: 'Custom',
-      features: [,
-        'Self-healing infrastructure',
-        'Intelligent orchestration',
-        'Zero human intervention',
-        '99.7% efficiency']},
-    {
-      id: 'ai-2026-quantum-edge-platform'
-      title: 'Quantum Edge Computing Platform 2026'
-      description: 'Sub-millisecond processing with quantum-edge convergence for real-time applications'
-      link: '/services/ai-2026-quantum-edge-platform'
-      type: 'service'
-      featured: true,
-      category: 'Quantum Computing'
-      pricing: 'Starting at $50K/month',
-      features: [,
-        'Sub-millisecond latency',
-        '200-250 x speed improvement',
-        'Quantum processing',
-        'Edge optimization']}],
-  caseStudies: [
-    {
-      id: 'fortune-100-autonomous-transformation'
-      title: 'Fortune 100 Autonomous Business Transformation'
-      description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation'
-      link: '/case-studies/fortune-100-autonomous-transformation'
-      type: 'case-study'
-      featured: true,
-      industry: 'Enterprise',
-      results: [,
-        '95% automation rate',
-        '$2.8 B value creation',
-        '99.7% efficiency',
-        'Zero human error'],
-      duration: '6 months',
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    }],
-  featuredService,
-  s: [
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-    }],
-  caseStudie,
-  s: [
-    {/* TODO: Fix JSX expression */}
-    }]}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export default january2026 NewContent
+const ContentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Content - Zion Tech Group</title>
+        <meta name="description" content="Learn about our content solutions and how they can transform your business." />
+        <meta name="keywords" content="content, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

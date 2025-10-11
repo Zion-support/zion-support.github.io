@@ -1,259 +1,106 @@
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
-  return(<section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">"
-      <div, className="container, m, x-auto, p, x-6">"
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
   return (
-    <section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">"
-      <div, className="container, m, x-auto, p, x-6">"
-        <div, className="m, a, x-w-7xl, m, x-au, t, o">"
-          {/* Head, e, r */}
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
-              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
-          {/* Main, Conten, t */}
-          <div, className="te, x, t-center, m, b-8">
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y
-            <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">"
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />"
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
-              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />"
-          {/* Main, Conten, t */}
-          <div, className="te, x, t-center, m, b-8">"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y</$1>)
-            <, className="te, x, t-l, g, m;)$2 />
-  d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";)
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-          {/* Head, e, r */}
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>"
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
-              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides</$1>"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
-          {/* Main, Conten, t */}"
-          <div, className="te, x, t-center, m, b-8"></div>"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y</$1>"
-            <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">""
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
-              🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides</$1>"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />"
-          {/* Main, Conten, t */}"
-          <div, className="te, x, t-center, m, b-8">";"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-              Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y</$1>"
-            <, className="te, x, t-l, g, m,"$2 />
-  d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">"
-              ⚡ Master, ultr, a-low, latency, AI at, the, edge with, 5G, networks (s, u, b-10ms, respons, e, 80% bandwidth, saving, s) 
-              and, protect, your enterprise, from, quantum threats, with, NIST-approved, pos, t-quantum, cryptograph, y (P, Q, C). 
-              Build, the, future-proof, infrastructure, your organization, needs, today!
-          {/* Feature, Card, s */}"
-          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
-            {/* Edge, A, I + 5G, Car, d */}
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">
-                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  />
-          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
-            {/* Edge, A, I + 5G, Car, d */}
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">"
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">"
-            {/* Edge, A, I + 5G, Car, d */}
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">
-                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  />
-          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
-            {/* Edge, A, I + 5G, Car, d */}
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">"
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">"
-            {/* Edge, A, I + 5G, Car, d */}"
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,"$2 />
-  r:shad, o, w-2, x, l">""
-              <div, className="flex, item, s-center, ga, p-4, m, b-4"></div>"
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg"></div>"
-                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0  /></Zap>"
-          <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
-            {/* Edge, A, I + 5G, Car, d */}"
-            <, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,"$2 />
-  r:shad, o, w-2, x, l">";"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">";"
-                <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
-                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />"
-                <d, i, v></d>"
-                  <h3, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0">AI, at, the Edge, with, 5G</h3>";"
-                  <p, className="te, x, t-cy, a, n-300, tex, t-sm">Ult, r, a-Low, Latency, Real-Time, Intelligenc, e</p>"
-              <p, className="te, x, t-gr, a, y-300, m, b-4">
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
-              <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
-                80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
-              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">"
-                <span, className="bg-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-cy, a, n-300, tex, t-xs, fon, t-medi, u, m">S, u, b-10ms, Latenc, y</sp, a, n>"
-                <span, className="bg-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-bl, u, e-300, tex, t-xs, fon, t-medi, u, m">5G, Network, s</sp, a, n>"
-                <span, className="bg-indi, g, o-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-indi, g, o-300, tex, t-xs, fon, t-medi, u, m">Edge, A, I</sp, a, n>"</$1>"
-              <p, className="te, x, t-gr, a, y-300, m, b-4">
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y;"
-              <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Deploy, intelligent, edge computing, systems, with 5G, networks, achieving s, u, b-10ms, latenc, y
-                80% bandwidth, reductio, n, and, 9, 9.9, 9, 9% availability, for, mission-critical, operation, s.
-              </p>"
-              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";"
-                <span, className="bg-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-cy, a, n-300, tex, t-xs, fon, t-medi, u, m">S, u, b-10ms, Latenc, y</sp, a, n>";"
-                <span, className="bg-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-bl, u, e-300, tex, t-xs, fon, t-medi, u, m">5G, Network, s</sp, a, n>";"
-                <span, className="bg-indi, g, o-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-indi, g, o-300, tex, t-xs, fon, t-medi, u, m">Edge, A, I</sp, a, n>";"
-                <span, className="bg-viol, e, t-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-viol, e, t-300, tex, t-xs, fon, t-medi, u, m">IoT, Intelligenc, e</sp, a, n>"</$1>"
-              <ul, className="spa, c, e-y-2, tex, t-gr, a, y-300, tex, t-sm, m, b-6">"
-                <li>✓ Autonomous, vehicle, s & smart, manufacturin, g
-                <li>✓ Healthcare, Io, T & remote, patient, monitoring
-                <li>✓ Smart, citie, s & public, safety, analytics
-                <li>✓ 80% bandwidth, cost, reduction
-              <Li, n, k
-  to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5"
-                classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
-              <Li, n, k;"
-  to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5""
-                classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-              >
-                Read, Edge, AI Gui, d, e;"
-                <Link, className="w-4 h-4  /></Link>"
-                <Link, className="w-4 h-4" />"
-            {/* Quant, u, m-Safe, Cryptography, Card */}
-            <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">
-                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">
-            <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e$2 />
-  r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">
-                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l">"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">"
-                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">"
-            {/* Quant, u, m-Safe, Cryptography, Card */}"
-            <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e,"$2 />
-  r:shad, o, w-2, x, l">""
-              <div, className="flex, item, s-center, ga, p-4, m, b-4"></div>"
-                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg"></div>"
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  /></Shield>"
-            <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l">";"
-              <div, className="flex, item, s-center, ga, p-4, m, b-4">";"
-                <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />"
-                <d, i, v></d>"
-                  <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Quant, u, m-Safe, Cryptograph, y</h3>";"
-                  <p, className="te, x, t-purp, l, e-300, tex, t-sm">Protect, Against, Q-Day, with, PQC</p>"
-              </d, i, v>"
-              <p, className="te, x, t-gr, a, y-300, m, b-4">"
-                Implement, NIS, T-approved, pos, t-quantum, cryptography, to secure, your, enterprise against, quantu, m
-  computing, threat, s. Complete, 1, 8-month, migration, roadmap to, achieve, 100% quantum, resistanc, e.
-              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">"
-                <span, className="bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-purp, l, e-300, tex, t-xs, fon, t-medi, u, m">NIST, PQ, C</sp, a, n>"
-                <span, className="bg-pi, n, k-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-pi, n, k-300, tex, t-xs, fon, t-medi, u, m">CRYSTA, L, S-Kyb, e, r</sp, a, n>"
-                <span, className="bg-ro, s, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-ro, s, e-300, tex, t-xs, fon, t-medi, u, m">Quantum, Securit, y</sp, a, n>"</$1>"
-              <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";"
-                <span, className="bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-purp, l, e-300, tex, t-xs, fon, t-medi, u, m">NIST, PQ, C</sp, a, n>";"
-                <span, className="bg-pi, n, k-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-pi, n, k-300, tex, t-xs, fon, t-medi, u, m">CRYSTA, L, S-Kyb, e, r</sp, a, n>";"
-                <span, className="bg-ro, s, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-ro, s, e-300, tex, t-xs, fon, t-medi, u, m">Quantum, Securit, y</sp, a, n>";"
-                <span, className="bg-fuchs, i, a-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, tex, t-fuchs, i, a-300, tex, t-xs, fon, t-medi, u, m">Zero, Trus, t</sp, a, n>"</$1>"
-              <ul, className="spa, c, e-y-2, tex, t-gr, a, y-300, tex, t-sm, m, b-6">"
-                <li>✓ NI, S, T-approved, algorithm, s (FIPS, 20, 3-2, 0, 5)
-                <li>✓ Hybrid, classica, l + PQC, implementatio, n
-                <li>✓ Protect, harves, t-n, o, w-decry, p, t-later, attack, s
-                <li>✓ 18-month, migration, roadmap includ, e, d
-              <Li, n, k
-  to="/bl, o, g/quant, u, m-sa, f, e-cryptograp, h, y-implementati, o, n-20, 2, 5"
-                classNa, m, e="bg-purp, l, e-500, hove, r: bg-purp, l, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e
-              <Li, n, k;"
-  to="/bl, o, g/quant, u, m-sa, f, e-cryptograp, h, y-implementati, o, n-20, 2, 5""
-                classNa, m, e="bg-purp, l, e-500, hove, r: bg-purp, l, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-              >
-                Read, Quantum, Security Gui, d, e;"
-                <Link, className="w-4 h-4  /></Link>"
-                <Link, className="w-4 h-4" />"
-          {/* Key, Metrics, Section */}
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
-            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r">
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s
-              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
-            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r">"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s</d, i, v>"
-              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency</d, i, v>"
-            <div, className="bg-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-bl, u, e-5, 0, 0/30, tex, t-cent, e, r">"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-1">80%</d, i, v>"
-              <div, className="te, x, t-bl, u, e-300, tex, t-sm">Bandwidth, Saving, s</d, i, v>"
-            <div, className="bg-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r">"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">20, 3, 0</d, i, v>"
-              <div, className="te, x, t-purp, l, e-300, tex, t-sm">E, s, t. Q-Day, Arriva, l</d, i, v>"
-            <div, className="bg-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-pi, n, k-5, 0, 0/30, tex, t-cent, e, r">"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-1">1, 0, 0%</d, i, v>"
-              <div, className="te, x, t-pi, n, k-300, tex, t-sm">Quantum, Resistanc, e</d, i, v>"
-          {/* CTA, Button, s */}
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
-  to="/bl, o, g"
-              classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
-          {/* Key, Metrics, Section */}"
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">""
-            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r"></div>"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s</d, i, v>"
-              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency</d, i, v>"
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">";"
-            <div, className="bg-cy, a, n-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r">";"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">&lt;10, m, s</d, i, v>";"
-              <div, className="te, x, t-cy, a, n-300, tex, t-sm">Edge, AI, Latency</d, i, v>"</$1>"
-            <div, className="bg-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-bl, u, e-5, 0, 0/30, tex, t-cent, e, r">";"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-1">80%</d, i, v>";"
-              <div, className="te, x, t-bl, u, e-300, tex, t-sm">Bandwidth, Saving, s</d, i, v>"</$1>"
-            <div, className="bg-purp, l, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r">";"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">20, 3, 0</d, i, v>";"
-              <div, className="te, x, t-purp, l, e-300, tex, t-sm">E, s, t. Q-Day, Arriva, l</d, i, v>"</$1>"
-            <div, className="bg-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-pi, n, k-5, 0, 0/30, tex, t-cent, e, r">";"
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-1">1, 0, 0%</d, i, v>";"
-              <div, className="te, x, t-pi, n, k-300, tex, t-sm">Quantum, Resistanc, e</d, i, v>"
-          {/* CTA, Button, s */}"
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
-          <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k;"
-  to="/bl, o, g""
-              classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
-            ></Li>"
-              <Sparkles, className="w-5 h-5  /></Sparkles>"
-              <Sparkles, className="w-5 h-5" />"
-              Explore, All, Guides
-            <Li, n, k
-  to="/conta, c, t"
-              classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e
-            <Li, n, k;"
-  to="/conta, c, t""
-              classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
-            ></Li>"
-              <Link, className="w-5 h-5  /></Link>"
-              <Link, className="w-5 h-5" />"
-              Get, Expert, Consultation
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
 }
-"
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></ul></ul></li></li></li></li></li></li></li></li></section></section>
+
+export default PagePage

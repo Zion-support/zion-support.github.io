@@ -1,176 +1,106 @@
-export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant'
-export interface RouterResult {
-  intent: ZionChain
-  confidence: number
-  notes?: string
-}
-export interface ReflexMetrics {
-  signupsLastHour?: number
-  disputeFlagsLastHour?: number
-  zionVelocity?: number; // tokens/min
-  baselineSignups?: number
-  baselineDisputeFlags?: number
-  baselineVelocity?: number
-}
-export interface ReflexTrigger {
-  action: 'launchRewardPopup' | 'escalateSupport' | 'notifyAdmin'
-  reason: string
-  severity: 'low' | 'medium' | 'high'
-}
-export interface LogEntry {
-  id: string
-  timestamp: string
-  module: 'router' | 'reflex' | 'optimizer' | 'admin'
-  type: ZionChain | 'metrics' | 'optimize' | 'deploy' | 'suspend' | 'audit' | 'stuck'
-  status: 'ok' | 'laggy' | 'error' | 'stuck'
-  latencyMs?: number
-  payload?: Record<string, unknown>
-}
-import fs from 'fs'
-import path from 'path'
-import { randomUUID } from 'uuid'
-const dataDir = path.resolve(process.cwd(), 'data', 'zion-brain')
-const logsPath = path.join(dataDir, 'logs.json')
-const statePath = path.join(dataDir, 'state.json')
-function ensureDataFiles(): void {
-  try {
-    if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
-    if (!fs.existsSync(logsPath)) fs.writeFileSync(logsPath, JSON.stringify({ entries: [] }, null, 2))
-    if (!fs.existsSync(statePath)) fs.writeFileSync(statePath, JSON.stringify({ metrics: {} }, null, 2))
-  } catch {
-    // In serverless environments, filesystem may be read-only; ignore errors gracefully
-  }
-}
-export function detectIntent(text: string): RouterResult {
-  const lower = (text || '').toLowerCase()
-  const rules: Array<{ chain: ZionChain; keywords: string[] }> = [
-    { chain: 'resumeBuilder', keywords: ['resume', 'cv', 'curriculum', 'job'] },
-    { chain: 'daoExplainer', keywords: ['dao', 'governance token', 'proposal', 'treasury'] },
-    { chain: 'tokenomicsSimulator', keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'] },
-    { chain: 'governanceSummarizer', keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'] },
-    { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] }]
-    { chain: 'nationAssistant', keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'] },
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
   ]
-  for (const rule of rules) {
-    if (rule.keywords.some((k) => lower.includes(k))) {
-      return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' }
-    }
-  }
-  // Fallback simple heuristic
-  return { intent: 'nationAssistant', confidence: 0.5, notes: 'Default fallback' }
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<{ routed: boolean; message: string }> {
-  // Placeholder for real chain invocations
-  return { routed: true, message: `Routed to ${intent}` }
-}
-export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
-  const baselineSignups = metrics.baselineSignups ?? 20
-  const baselineDisputes = metrics.baselineDisputeFlags ?? 2
-  const baselineVelocity = metrics.baselineVelocity ?? 100; // tokens/min
-  const triggers: ReflexTrigger[] = []
-  if ((metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
-    triggers.push({ action: 'launchRewardPopup', reason: 'Surge in signups detected', severity: 'medium' })
-  }
-  if ((metrics.disputeFlagsLastHour ?? 0) > baselineDisputes * 2) {
-    triggers.push({ action: 'escalateSupport', reason: 'Spike in dispute flags', severity: 'high' })
-  }
-  if ((metrics.zionVelocity ?? baselineVelocity) < baselineVelocity * 0.6) {
-    triggers.push({ action: 'notifyAdmin', reason: 'Drop in ZION$ velocity', severity: 'high' })
-  }
-  return triggers
-}
-export async function optimizePrompt(original: string, userIntent?: string): Promise<{ optimized: string; suggestions: string[] }> {
-  const apiKey = process.env.OPENAI_API_KEY
-  const targetInstruction = 'Review this prompt and rewrite it to be 30% faster and more specific to user intent.'
-  // Heuristic fast path if no API key
-  if (!apiKey) {
-    const tightened = heuristicTighten(original, userIntent)
-    return {
-      optimized: tightened,
-      suggestions: [
-        'Removed vague qualifiers and redundant phrases',
-        'Added explicit constraints and output format',
-        userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor']}
-        userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor',
-      ],
-    }
-  }
-  try {
-    const { OpenAI } = await import('openai')
-    const openai = new OpenAI({ apiKey })
-    const system = 'You optimize prompts for speed and specificity. Prefer precise constraints, avoid open-ended wording. Reduce token count while improving clarity. Return only the rewritten prompt.'
-    const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize:\n${original}`
-    const resp = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user }],
-      temperature: 0.2,
-      max_tokens: 400})
-        { role: 'user', content: user },
-      ],
-      temperature: 0.2,
-      max_tokens: 400,
-    })
-    const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighten(original, userIntent)
-    return { optimized, suggestions: ['Used OpenAI optimization for speed and specificity'] }
-  } catch {
-    const tightened = heuristicTighten(original, userIntent)
-    return { optimized: tightened, suggestions: ['OpenAI not available at runtime; applied heuristic tightening'] }
-  }
-}
-function heuristicTighten(text: string, userIntent?: string): string {
-  const trimmed = (text || '').replace(/\s+/g, ' ').trim()
-  const withoutFillers = trimmed
-    .replace(/please\s+/gi, '')
-    .replace(/could you\s+/gi, '')
-    .replace(/basically\s+/gi, '')
-    .replace(/kind of\s+/gi, '')
-    .replace(/sort of\s+/gi, '')
-    .replace(/very\s+/gi, '')
-    .replace(/really\s+/gi, '')
-  const withConstraints = `${withoutFillers}\n\nConstraints: respond in under 6 bullets; include only actionable steps; max 120 words; avoid repetition.${userIntent ? ` Intent: ${userIntent}.` : ''}`
-  return withConstraints
-}
-export function readLogs(): { entries: LogEntry[] } {
-  ensureDataFiles()
-  try {
-    const raw = fs.readFileSync(logsPath, 'utf8')
-    return JSON.parse(raw)
-  } catch {
-    return { entries: [] }
-  }
-}
-export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
-  ensureDataFiles()
-  try {
-    const current = readLogs()
-    const enriched: LogEntry = {
-      id: randomUUID(),
-      timestamp: new Date().toISOString(),
-      ...entry}
-      ...entry,
-    }
-    current.entries.push(enriched)
-    fs.writeFileSync(logsPath, JSON.stringify(current, null, 2))
-  } catch {
-    // ignore
-  }
-}
-export function readState<T = unknown>(): T {
-  ensureDataFiles()
-  try {
-    const raw = fs.readFileSync(statePath, 'utf8')
-    return JSON.parse(raw) as T
-  } catch {
-    return {} as unknown as T
-  }
-}
-export function writeState<T = unknown>(state: T): void {
-  ensureDataFiles()
-  try {
-    fs.writeFileSync(statePath, JSON.stringify(state, null, 2))
-  } catch {
-    // ignore
-  }
-}
+
+export default PagePage

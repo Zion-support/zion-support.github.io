@@ -1,572 +1,106 @@
-
 'use client'
-/**
- * Data Transformation Utilities
- * Provides utilities for transforming and formatting data
- */
-/**
- * Deep clone an object
- */
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export function deepClone<T>(obj: T): T {
-    // TODO: Add content
-  }
-
-}
-  if (obj === null || typeof obj !== 'object') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return obj
-  }
-  if (obj instanceof Date) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return new Date(obj.getTime()) as unknown as T
-  }
-  if (obj instanceof Array) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return obj.map(item => deepClone(item)) as unknown as T
-  }
-  if (obj instanceof Object) {for (const key in obj) {}
-  // TOD,
-  O: Add content,
-}
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        clonedObj[key] = deepClone(obj[key])
-      }
-    }
-    return clonedObj
-  }
-  return obj
-}
-/**
- * Deep merge two objects
- */
-export function deepMerge
-          <T extends Record<string, unknown>>(targe,
-  t: T, sourc)
-  e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const output = { ...target }
-  for (const key in source) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(source, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const sourceValue = source[key]
-      const targetValue = output[key]
-      if ()
-//         sourceValue &&
-        typeof sourceValue === 'object' &&
-//         !Array.isArray(sourceValue) &&
-//         targetValue &&
-        typeof targetValue === 'object' &&
-//         !Array.isArray(targetValue)
-
-      ) {
-    // TODO: Add content
-  }
-
-}
-        output[key] = deepMerge()
-//           targetValue as Record
-          <string, unknown>,
-// sourceValue as Record
-          <string, unknown>
-
-        ) as T[Extract<keyof T, string>]
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        output[key] = sourceValue as T[Extract
-          <keyof T, string>]
-      }
-    }
-  }
-  return output
-}
-/**
- * Flatten a nested object
- */
-export function flattenObject()
-  ob,
-  j: Record,
-          <string, unknown>,
-  prefix = '',
-  separator = '.'
-
-): Record<string, unknown> {
-    // TODO: Add content
-  }
-
-}
-  const,
-  flattened: Record,
-          <string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const value = obj[key]
-      const newKey = prefix ? `${prefix}${separator}${key}` : key
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         Object.assign()
-//           flattened,
-//           flattenObject(value as Record;)
-          <string, unknown>, newKey, separator)
-        )
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        flattened[newKey] = value
-      }
-    }
-  }
-  return flattened
-}
-/**
- * Unflatten a flattened object
- */
-export function unflattenObject()
-  ob,
-  j: Record,
-          <string, unknown>,
-  separator = '.'
-
-): Record<string, unknown> {
-    // TODO: Add content
-  }
-
-}
-  const,
-  result: Record,
-          <string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const keys = key.split(separator)
-      for (let i = 0; i;)
-          < keys.length; i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const k = keys[i]
-        if (i === keys.length - 1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          current[k] = obj[key]
-        } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          current[k] = current[k] || {}
-          current = current[k] as Record
-          <string>
-        }
-      }
-    }
-  }
-  return result
-}
-/**
- * Pick specific keys from an object
- */
-export function pick<T extends Record<string, unknown>, K extends keyof T>()
-
-  obj: T,
-  keys: K[]
-
-): Pick,
-          <T, K> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const result = {} as Pick
-          <T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-    if (key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      result[key] = obj[key]
-    }
-  }
-  )
-  return result
-}
-/**
- * Omit specific keys from an object
- */
-export function omit
-          <T extends Record<string, unknown>, K extends keyof T>()
-
-  obj: T,
-  keys: K[]
-
-): Omit,
-          <T, K> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    delete result[key];)
-  })
-  return result as Omit
-          <T>
-}
-/**
- * Group array items by a key
- */
-export function groupBy<T>()
-
-  array: T[],
-  key: keyof T | ((item: T) => string | number)
-
-): Record,
-          <string, T[]> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return array.reduce()
-    (result, item) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key])
-      (result[groupKey] = result[groupKey] || []).push(item)
-      return result
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    {} as Record
-          <string, T[]>
-  )
-}
-/**
- * Get unique items from an array
- */
-
-export function unique<T>(array: T[], key?: keyof T): T[] {
-    // TODO: Add content
-  }
-
-}
-  if (!key) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return Array.from(new Set(array))
-  }
-  const seen = new Set()
-  return array.filter(item => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const value = item[key];)
-    if (seen.has(value)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return false
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    seen.add(value)
-    return true
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
 }
-/**
- * Sort array by multiple keys
- */
-export function sortBy
-          <T>()
 
-  array: T[],
-  keys: Array,
-          <keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
-): T[] {
-    // TODO: Add content
-  }
-
-}
-  return [...array].sort((a, b) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    for (let i = 0; i;)
-          < keys.length; i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const key = keys[i]
-      const order = orders[i] || 'asc'
-      const aVal = typeof key === 'function' ? key(a) : a[key]
-      const bVal = typeof key === 'function' ? key(b) : b[key]
-      // Handle comparison with type safety
-      if (aVal == null || bVal == null) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        if (aVal == null && bVal == null) continue
-        return aVal == null ? 1 : -1
-      }
-      // Convert to comparable values
-const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-//           ? aVal
-          : String(aVal)
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-//           ? bVal
-          : String(bVal)
-      if (aComp;)
-          < bComp) return order === 'asc' ? -1 : 1
-      if (aComp > bComp) return order === 'asc' ? 1 : -1
-    }
-    return 0
-  }
-  )
-}
-/**
- * Chunk array into smaller arrays
- */
-
-export function chunk<T>(array: T[], size: number): T[][] {
-    // TODO: Add content
-  }
-
-}
-  const,
-  chunks: T[][] = []
-  for (let i = 0; i;)
-          < array.length, i += size) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    chunks.push(array.slice(i, i + size))
-  }
-    chunks.push(array.slice(i, i + size))
-  }
-  return chunks
-}
-/**
- * Zip multiple arrays together
- */
-export function zip
-          <T>(...array)
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const length = Math.max(...arrays.map(arr => arr.length))
-  const,
-  result: T[][] = []
-  for (let i = 0; i;)
-          < length, i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    result.push(arrays.map(arr => arr[i]))
-  }
-    result.push(arrays.map(arr => arr[i]))
-  }
-  return result
-}
-/**
- * Format bytes to human readable string
- */
-
-export function formatBytes(bytes: number, decimals = 2): string {
-    // TODO: Add content
-  }
-
-}
-  if (bytes === 0) return '0 Bytes'
-  const k = 1024
-  const dm = decimals
-          < 0 ? 0 : decimals
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB']
-  const i = Math.floor(Math.log(bytes) / Math.log(k));`
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-}
-/**
- * Format number with separators
- */
-
-export function formatNumber(num: number, locale = 'en-US'): string {
-    // TODO: Add content
-  }
-
-}
-  return new Intl.NumberFormat(locale).format(num)
-}
-/**
- * Format currency
- */
-
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
-    // TODO: Add content
-  }
-
-}
-  return new Intl.NumberFormat(locale, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  styl,
-  e: 'currency',
-//     currency;)
-  }).format(amount)
-}
-/**
- * Format date
- */
-export function formatDate()
-  dat,
-  e: Date | string | number,
-  option,
-  s: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US'
-
-): string {
-    // TODO: Add content
-  }
-
-}
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  return new Intl.DateTimeFormat(locale, options).format(d)
-}
-/**
- * Format relative time
- */
-
-export function formatRelativeTime(date: Date | string | number): string {
-    // TODO: Add content
-  }
-
-}
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  const now = new Date()
-  const diff = now.getTime() - d.getTime()
-  const seconds = Math.floor(diff / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  const days = Math.floor(hours / 24)
-  const weeks = Math.floor(days / 7)
-  const months = Math.floor(days / 30)
-  const years = Math.floor(days / 365)
-  if (seconds;)
-          < 60) return 'just now';`
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`
-}
-/**
- * Truncate string
- */
-
-export function truncate(str: string, length: number, suffix = '...'): string {
-    // TODO: Add content
-  }
-
-}
-  if (str.length;)
-          <= length) return str
-  return str.substring(0, length - suffix.length) + suffix
-}
-/**
- * Capitalize first letter
- */
-
-export function capitalize(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
-}
-/**
- * Convert to title case
- */
-
-export function titleCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str
-//     .toLowerCase()
-//     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-}
-/**
- * Convert to kebab case
- */
-
-export function kebabCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str
-//     .replace(/([a-z])([A-Z])/g, '$1-$2')
-//     .replace(/[\s_]+/g, '-')
-    .toLowerCase()
-}
-/**
- * Convert to camel case
- */
-
-export function camelCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
-}
-/**
- * Convert to snake case
- */
-
-export function snakeCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str
-//     .replace(/([a-z])([A-Z])/g, '$1_$2')
-//     .replace(/[\s-]+/g, '_')
-    .toLowerCase()
-}
-
-export default {
-    // TODO: Add content
-  }
-
-}
-//   deepClone,
-//   deepMerge,
-//   flattenObject,
-//   unflattenObject,
-//   pick,
-//   omit,
-//   groupBy,
-//   unique,
-//   sortBy,
-//   chunk,
-//   zip,
-//   formatBytes,
-//   formatNumber,
-//   formatCurrency,
-//   formatDate,
-//   formatRelativeTime,
-//   truncate,
-//   capitalize,
-//   titleCase,
-//   kebabCase,
-//   camelCase,
-//   snakeCase
-}
-
+export default PagePage

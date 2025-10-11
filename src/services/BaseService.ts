@@ -1,313 +1,106 @@
-
 'use client'
-/**
- * Base Service Class
- * Provides common functionality for all service classes
- */
-import logger from '../utils/logger'
-import axios from 'axios'
-// Create axios instance with default config
-const apiClient = axios.create({
-    // TODO: Add content
-  }
-}
-  timeout: 30000,
-  headers: {
-    // TODO: Add content
-  }
-}
-    'Content-Type': 'application/json'}})
-export interface ServiceOptions {
-    // TODO: Add content
-  }
-}
-  baseUrl?: string
-  timeout?: number
-  retries?: number
-  cache?: boolean
-  cacheDuration?: number
-}
-export interface CacheEntry
-          <T> {
-    // TODO: Add content
-  }
-}
-  data: T,,
-    timestamp: number,
-export class BaseService {
-    // TODO: Add content
-  }
-}
-  protected baseUrl: string
-  protected options: ServiceOptions
-  private cache: Map,
-          <string, CacheEntry<unknown>> = new Map()
-constructor(baseUrl: string, options: ServiceOptions = {}) {
-    this.baseUrl = baseUrl
-  }
-    this.options = {
-    retries: 3,
-    cache: false,
-      cacheDuration: 300000, // 5 minutes
-//       ...options
-  }
-   * Check if cached data is still valid
-  protected isCacheValid(key: string): boolean {
-    const entry = this.cache.get(key)
-  }
-    const __entry = this.cache.get(key)
-    if (!entry) return false
-    const age = Date.now() - entry.timestamp
-    return age
-          < (this.options.cacheDuration || 300000)
-   * Get data from cache
-  protected getFromCache<T>(key: string): T | null {
-    // TODO: Add content
-  }
-}
-  }
-  /**
-   * Check if cached data is still valid
-   */
-  protected isCacheValid(key: string): boolean {
-    const entry = this.cache.get(key)
-    if (!entry) return false
-    const age = Date.now() - entry.timestamp,
-    return age < (this.options.cacheDuration || 300000)
-  }
-  /**
-   * Get data from cache
-   */
-  protected getFromCache<T>(key: string): T | null {
-    if (!this.options.cache) return null,
-    if (this.isCacheValid(key)) {// TODO: Add content
-  }
-}
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' })
-      return this.cache.get(key)?.data as T
-    this.cache.delete(key)
-    return null
-   * Set data in cache
-  protected setInCache
-          <T>(key: string, data: T): void {
-    // TODO: Add content
-  }
-  }
-  /**
-   * Set data in cache
-   */
-  protected setInCache<T>(key: string, data: T): void {
-    if (!this.options.cache) return,
-    this.cache.set(key, {
-      data,
-      timestamp: Date.now()
-    })
-  }
-  /**
-   * Clear cache for a specific key or all cache
-   */
-  protected clearCache(key?: string): void {
-    if (key) {
-      this.cache.delete(key)
-  } else {
-    this.cache.clear()
-  }
-  }
-  /**
-   * Make a GET request
-   */
-  protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const cacheKey = `GET:${endpoint}`
-    if (useCache) {
-    const cached = this.getFromCache<T>(cacheKey)
-      if (cached) return cached
-  }
-    try {
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
-        timeout: this.options.timeout,
-        retries: this.options.retries
-      })
-      if (useCache) {
-    this.setInCache(cacheKey, response.data)
-  }
-      return response.data
-    } catch (error) {
-      logger.error('GET request failed', error as Error, {
-        component: 'BaseService',
-        endpoint
-      })
-      throw error
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  /**
-   * Make a POST request
-   */
-  protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
-      logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
-        timeout: this.options.timeout,
-        retries: this.options.retries
-      })
-      return response.data
-    } catch (error) {
-      logger.error('POST request failed', error as Error, {
-        component: 'BaseService',
-        endpoint
-      })
-      throw error
-    }
-  }
-  /**
-   * Make a PUT request
-   */
-  protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
-      logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
-        timeout: this.options.timeout,
-        retries: this.options.retries
-      })
-      return response.data
-    } catch (error) {
-      logger.error('PUT request failed', error as Error, {
-        component: 'BaseService',
-        endpoint
-      })
-      throw error
-    }
-  }
-  /**
-   * Make a PATCH request
-   */
-  protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
-      logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
-        timeout: this.options.timeout,
-        retries: this.options.retries
-      })
-      return response.data
-    } catch (error) {
-      logger.error('PATCH request failed', error as Error, {
-        component: 'BaseService',
-        endpoint
-      })
-      throw error
-    }
-  }
-  /**
-   * Make a DELETE request
-   */
-  protected async delete<T>(endpoint: string): Promise<T> {
-    try {
-      logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
-        timeout: this.options.timeout,
-        retries: this.options.retries
-      })
-      return response.data
-    } catch (error) {
-      logger.error('DELETE request failed', error as Error, {
-        component: 'BaseService',
-        endpoint
-      })
-      throw error
-    }
-  }
-  /**
-   * Handle service error
-   */
-  protected handleError(error: Error, context?: Record<string, unknown>): never {
-    logger.error('Service error', error, {
-      component: this.constructor.name,
-      ...context
-    })
-    throw error
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    if (!this.options.cache) return
-    this.cache.set(key, {
-    // TODO: Add content
-  }
-}
-//       data,
-      timestamp: Date.now()
-   * Clear cache for a specific key or all cache,
-  protected clearCache(key?: string): void {
-    // TODO: Add content
-  }
-}
-    if (key) {} else {
-    // TODO: Add content
-  }
-}
-      this.cache.clear()
-   * Make a GET request
-  protected async get
-          <T>(endpoint: string, useCache = true): Promise<T> {
-    // TODO: Add content
-  }
-}
-    const cacheKey = `GET:${endpoint}`
-    if (useCache) {
-    // TODO: Add content
-  }
-}
-      const cached = this.getFromCache
-          <T>(cacheKey)
-      if (cached) return cached
-    try {
-    // TODO: Add content
-  }
-}
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.get
-          <T>(`${this.baseUrl}${endpoint}`, {
-    // TODO: Add content
-  }
-}
-  timeout: this.options.timeout,
-        retries: this.options.retries,
-        this.setInCache(cacheKey, response.data)
-      return response.data
-    } catch (error) {
-    // TODO: Add content
-  }
-}
-      logger.error('GET request failed', error as Error, {
-    // TODO: Add content
-  }
-}
-  component: 'BaseService',
-endpoint
-      throw error
-   * Make a POST request
-  protected async post
-          <T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {logger.error('POST request failed', error as Error, {}
-   * Make a PUT request
-  protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {logger.error('PUT request failed', error as Error, {}
-   * Make a PATCH request
-  protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {logger.error('PATCH request failed', error as Error, {}
-   * Make a DELETE request
-  protected async delete<T>(endpoint: string): Promise<T> {
-logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })
-      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {logger.error('DELETE request failed', error as Error, {}
-   * Handle service error
-  protected handleError(error: Error, context?: Record<string, unknown>): never {
-    // TODO: Add content
-  }
-}
-    logger.error('Service error', error, {
-    // TODO: Add content
-  }
-}
-  component: this.constructor.name,
-...context
+
+export default PagePage

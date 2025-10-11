@@ -1,59 +1,106 @@
-import OpenAI from 'openai'
-export type SupportedProvider = 'openai' | 'deepl' | 'none'
-const provider: SupportedProvider = (process.env.TRANSLATION_PROVIDER as SupportedProvider) || (process.env.OPENAI_API_KEY ? 'openai' : process.env.DEEPL_API_KEY ? 'deepl' : 'none')
-let openai: OpenAI | null = null
-if (provider === 'openai') {
-  openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-}
-async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string> {
-  if (!openai) throw new Error('OpenAI not configured')
-  const system = 'You translate text. Respond with only the translated content without extra commentary.'
-  const user = `Translate to ${to}.${from ? ` Source language is ${from}.` : ''}\n\n${text}`
-  const completion = await openai.chat.completions.create({
-    model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: system },
-      { role: 'user', content: user }],
-    temperature: 0.2})
-      { role: 'user', content: user },
-    ],
-    temperature: 0.2,
-  })
-  return (completion.choices?.[0]?.message?.content || '').trim()
-}
-async function translateWithDeepL(text: string, to: string, from?: string): Promise<string> {
-  const key = process.env.DEEPL_API_KEY
-  if (!key) throw new Error('DeepL not configured')
-  const params = new URLSearchParams()
-  params.append('text', text)
-  params.append('target_lang', to.toUpperCase())
-  if (from) params.append('source_lang', from.toUpperCase())
-  const res = await fetch('https://api-free.deepl.com/v2/translate', {
-    method: 'POST',
-    headers: {
-      'Authorization': `DeepL-Auth-Key ${key}`,
-      'Content-Type': 'application/x-www-form-urlencoded'},
-    body: params.toString()})
-      'Content-Type': 'application/x-www-form-urlencoded',
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    body: params.toString(),
-  })
-  const data = await res.json()
-  if (!res.ok) throw new Error(data?.message || 'DeepL error')
-  return data?.translations?.[0]?.text || ''
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export async function translateText(text: string, to: string, from?: string): Promise<string> {
-  if (!text) return text
-  try {
-    if (provider === 'openai') return await translateWithOpenAI(text, to, from)
-    if (provider === 'deepl') return await translateWithDeepL(text, to, from)
-    return text
-  } catch {
-    return text
-  }
-}
-export function detectLanguageSimple(text: string): string {
-  // Very simple heuristic; in production use a language detection library or model
-  // Default to 'en'
-  return 'en'
-}
+
+export default PagePage

@@ -1,129 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-function isRateLimited(ip: string): boolean {
-  const now = Date.now(),
-  const bucket = ipToRequests[ip] || { timestamps: [] },
-  // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-// In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15
-const ipToRequests: Record<string, { timestamps: number[] }> = {}
-function isRateLimited(ip: string): boolean {
-  const now = Date.now()
-  const bucket = ipToRequests[ip] || { timestamps: [] }
-  // Drop old timestamps
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
-  if (!limited) {
-    bucket.timestamps.push(now)
-  }
-  ipToRequests[ip] = bucket
-  return limited
-  ipToRequests[ip] = bucket,
-  return limited
-  ipToRequests[ip] = bucket
-  return limited
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-  }
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-// In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15
-const ipToRequests: Record<string, { timestamps: number[] }> = {}
-function isRateLimited(ip: string): boolean {
-  const now = Date.now()
-  const bucket = ipToRequests[ip] |{ timestamps: [] }
-  // Drop old timestamps
-  if (!limited) {
-    bucket.timestamps.push(now)
-  }
-  ipToRequests[ip] = bucket
-  return limited
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-  }
-  // Auth via Bearer token
-    return res.status(401).json({ error: 'Unauthorized' })
-  }
-  // Rate limit
-const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
-  if (isRateLimited(ip)) {
-    return res.status(429).json({ error: 'Too Many Requests' })
-  }
-  try {
-const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
-    if (!prompt |typeof prompt !== 'string') {
-      return res.status(400).json({ error: 'Missing prompt' })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-const sys = system |'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini'
-      temperature: typeof temperature === 'number' ? temperature : 0.7
-      messages: [
-        { role: 'system', content: sys }
-        { role: 'user', content: prompt }
-      ]
-})
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status(200).json({ text })
-  } catch (err: any) {
+  ]
 
-    console.error('Operator error', err),
-    return res.status(500).json({ error: 'Internal Server Error' })
-  }
-}
-    console.error('Operator error', err)
-    return res.status(500).json({ error: 'Internal Server Error' })
-  }
-}
-  ipToRequests[ip] = bucket
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
+  return (
+    <>
+      <Helmet>
+        <title>Ai - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ai solutions and how they can transform your business." />
+        <meta name="keywords" content="ai, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  // Auth via Bearer token
-  const authHeader = req.headers.authorization || ''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
-  if (!token || token !== process.env.OPERATOR_API_TOKEN) {
-    return res.status(401).json({ error: 'Unauthorized' })
-}
-
-  // Rate limit
-  const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() || req.socket.remoteAddress || 'unknown'
-  if (isRateLimited(ip)) {
-    return res.status(429).json({ error: 'Too Many Requests' })
-}
-
-  try {
-    const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
-    if (!prompt || typeof prompt !== 'string') {
-      return res.status(400).json({ error: 'Missing prompt' })
-}
-
-    const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      temperature: typeof temperature === 'number' ? temperature : 0.7,
-      messages: [
-        { role: 'system', content: sys },
-        { role: 'user', content: prompt }
-      ]
-    })
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status(200).json({ text })
-}
-}
-}
+export default PagePage

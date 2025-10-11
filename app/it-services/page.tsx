@@ -1,137 +1,106 @@
-import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const ITServicesPage: React.FC = () => {const services = [
-    {;,} id: 1,
-    };,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
-icon: Cloud,,
+const It-servicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    {;,
-id: 2,;,
-title: 'Cybersecurity',;,
-description: 'Comprehensive security solutions to protect your digital assets.',;,
-icon: Shield,;,
-features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
-price: 'From $1,000/month'} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
-const categories = [
-    {id: 'all', name: 'All Services'} ,
-    {id: 'cloud', name: 'Cloud Services'} ,
-    {id: 'development', name: 'Web Development'} ,
-    {id: 'security', name: 'Cybersecurity'} ,
-    {id: 'database', name: 'Database'} ,
-    {id: 'devops', name: 'DevOps'} ]
-const filteredServices = services.filter(service =>;
-selectedCategory === 'all' || service.category === selectedCategory
-  )
-return (
+  ]
+
+  return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>It Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our it services solutions and how they can transform your business." />
+        <meta name="keywords" content="it-services, solutions, technology, business" />
       </Helmet>
+      
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 l, g:px-8">
-            </div>
-      
-      <Footer />
-    </>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
-              )
-    </>
-  )
-            </div>
-      
-      <Footer />
-    </>
-          </div>
-      
-      <Footer />
-    </>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-Our IT Services>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
               </p>
             </div>
-      
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  </button>
-                </div>
-      
-      <Footer />
-    </>
-              ))}
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center"
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-Ready to Optimize Your IT Infrastructure?>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
               </button>
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
-      </div>
+      </main>
       
       <Footer />
     </>
-      <Footer />
-    </>
-  );
-};
+  )
+}
 
+export default PagePage

@@ -1,135 +1,106 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-async function submitByEmail(to: string;)
-  subject: string)
-  text: string)
-  attachments: unknown[] = []
-) {
-  //   const host = process.env.EMAIL_HOST
-  //   const port = Number(process.env.EMAIL_PORT || 587)
-  //   const user = process.env.EMAIL_USER
-  //   const pass = process.env.EMAIL_PASS
-  //   const from = process.env.EMAIL_FROM || user
-,
-  if (!host || !user || !pass) {,
-    throw new Error('Email not configured')
-  }
+const ProposalsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-  const transporter = nodemailer.createTransporter({)
-    host)
-    port)
-    secure: port === 465),
-    auth: { user, pass })
-  })
-  await transporter.sendMail({)
-    from)
-    to)
-    subject)
-    text)
-    attachments)
-  })
+  return (
+    <>
+      <Helmet>
+        <title>Proposals - Zion Tech Group</title>
+        <meta name="description" content="Learn about our proposals solutions and how they can transform your business." />
+        <meta name="keywords" content="proposals, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' })
-async function submitByEmail(t,
-  o: string,
-  subjec,
-  t: string,
-  tex,
-  t: string,
-  attachment,
-  s: unknown[] = [])
-) {/* TODO: Fix JSX expression */}
-  }
-
-  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
-  h: { user, pass })
-  })
-  await transporter.sendMail({/* TODO: Fix JSX expression */})
-  })
-}
-
-export default async function handler(re,
-  q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' })
-  }
-
-  try {/* TODO: Fix JSX expression */}
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {}
-    if (!id) {/* TODO: Fix JSX expression */}
-  r: 'Proposal ID required' })
-    }
-
-    const _meta = getProposal(id)
-    if (!meta) {/* TODO: Fix JSX expression */}
-  r: 'Proposal not found' })
-    }
-
-    // Email submission
-    if (channels.includes('email')) {
-      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org'
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
-    if (channels.includes('email')) {/* TODO: Fix JSX expression */}
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
-      const text = `Please find the proposal attached.
-
-Titl,
-  e: ${meta.title}
-Targe,
-  t: ${meta.targetInstitution}
-Typ,
-  e: ${meta.type}
-Regio,
-  n: ${meta.regionalScope}
-Budget/Resolutio,
-  n: ${meta.budgetOrResolution}
-
-DAO Governance: See document.,
-,
-Delegate Note: ${delegateNote || 'N/A'}`
-DAO,
-  Governance: See document.
-
-Delegate,`
-  Note: ${delegateNote || 'N/A'}`
-      await submitByEmail(to, subject, text)
-    }
-
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined
-    try {,
-      const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')
-      ensRecordHash = `0 x${hash}`
-      updateArtifacts(id, { ensRecordHash })
-    } catch {
-      // ignore
-    }
-
-    const updated = updateProposalMeta(id, m => ({)
-      ...m)
-      status: 'Submitted')}))
-    return res.status(200).json({ meta: updated })
-  } catch (error: unknown) {,
-    return res.status(500).json({ error: error?.message || 'Submission failed' })
-    // ENS record hash (defaul)
-  t: compute and store hash only)
-    let,
-  ensRecordHash: string | undefined
-    try {/* TODO: Fix JSX expression */}`
-      ensRecordHash = `0x${hash}`
-      updateArtifacts(id, { ensRecordHash })
-    } catch {/* TODO: Fix JSX expression */}
-    }
-
-    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
-    }))
-    return res.status(200).json({/* TODO: Fix JSX expression */})
-  a: updated })
-  } catch (erro)
-  r: unknown) {/* TODO: Fix JSX expression */}
-  r: error?.message || 'Submission failed' })
-  }
-}
-`
+export default PagePage

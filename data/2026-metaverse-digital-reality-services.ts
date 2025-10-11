@@ -1,108 +1,106 @@
-export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
-    path: '/services/metaverse-development-platform-2026',
-    description: 'Complete metaverse development and deployment solution',
-    icon: 'Globe',
-    category: 'Metaverse & VR',
-    features: [,
-      '3 D world building tools',
-      'Avatar customization',
-      'Virtual commerce integration',
-      'Multi-platform deployment'
-    ],
-    pricing: unknown,
-      starter: '$399/month',
-      professional: '$799/month'}
-      enterprise: 'Custom'}
-  },
-    name: 'Digital Reality Solutions 2026'
-    path: '/services/digital-reality-solutions-2026',
-    description: 'Advanced AR/VR and mixed reality services',
-    icon: 'Eye',
-    category: 'Digital Reality',
-    features: [,
-export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression */}
-  l: '$799/month'}
-      enterpris,
-  e: 'Custom'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  },
-    nam,
-  e: 'Digital Reality Solutions 2026',
-    pat,
-  h: '/services/digital-reality-solutions-2026',
-    descriptio,
-  n: 'Advanced AR/VR and mixed reality services',
-    ico,
-  n: 'Eye',
-    categor,
-  y: 'Digital Reality',
-    feature,
-  s: [,
-      'AR application development',
-      'VR experience design',
-      'Mixed reality integration',
-      'Spatial computing solutions'
-    ],
-    pricing: unknown,
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: 'Custom',
-    pricin,
-  g: unknown,
-      starte,
-  r: '$299/month',
-      professiona,
-  l: '$599/month',
-      enterpris,
-  e: 'Custom'
-    }
-  }
-]
-]
-export const metaverseDigitalCategories2026 = [
-  'Metaverse Development',
-  'Virtual Reality',
-  'Augmented Reality',
-  'Digital Twins'
-]
-export const metaverseDigitalStats2026 =
-  totalServices: 2
-  categories: 4
-  averageRating: 4.7
-  activeUsers: 1200,
-export const metaverseDigitalStats2026 = {}
-  totalService,
-  s: 2,
-  categorie,
-  s: 4,
-  averageRatin,
-  g: 4.7,
-  activeUser,
-  s: 1200}
-export const metaverseDigitalRealityServices2026 = [ nam,
-  e: 'Metaverse Development Platform 2026',' pat,
-  h: '/services/metaverse-development-platform-2026',' descriptio,
-  n: 'Complete metaverse development and deployment solution',' ico,
-  n: 'Globe',' categor,
-  y: 'Metaverse & VR', feature,
-  s: [' '3D world building tools',' 'Avatar customization',' 'Virtual commerce integration',' 'Multi-platform deployment' ], pricin,
-  g: ' starte,
-  r: '$399/month',' professiona,
-  l: '$799/month',' enterpris,
-  e: 'Custom' } }, ' nam,
-  e: 'Digital Reality Solutions 2026',' pat,
-  h: '/services/digital-reality-solutions-2026',' descriptio,
-  n: 'Advanced AR/VR and mixed reality services',' ico,
-  n: 'Eye',' categor,
-  y: 'Digital Reality', feature,
-  s: [' 'AR application development',' 'VR experience design',' 'Mixed reality integration',' 'Spatial computing solutions' ], pricin,
-  g: ' starte,
-  r: '$299/month',' professiona,
-  l: '$599/month',' enterpris,
-  e: 'Custom' } } ]; export const metaverseDigitalCategories2026 = [' 'Metaverse Development',' 'Virtual Reality',' 'Augmented Reality',' 'Digital Twins' ]; export const metaverseDigitalStats2026 = totalService,
-  s: 2, categorie,
-  s: 4, averageRatin,
-  g: 4.7, activeUser,
-  s: 1200 }'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export const metaverseDigitalRealityServices2026 = [ name: 'Metaverse Development Platform 2026',' path: '/services/metaverse-development-platform-2026',' description: 'Complete metaverse development and deployment solution',' icon: 'Globe',' category: 'Metaverse & VR', features: [' '3D world building tools',' 'Avatar customization',' 'Virtual commerce integration',' 'Multi-platform deployment' ], pricing: ' starter: '$399/month',' professional: '$799/month',' enterprise: 'Custom' } }, ' name: 'Digital Reality Solutions 2026',' path: '/services/digital-reality-solutions-2026',' description: 'Advanced AR/VR and mixed reality services',' icon: 'Eye',' category: 'Digital Reality', features: [' 'AR application development',' 'VR experience design',' 'Mixed reality integration',' 'Spatial computing solutions' ], pricing: ' starter: '$299/month',' professional: '$599/month',' enterprise: 'Custom' } } ]; export const metaverseDigitalCategories2026 = [' 'Metaverse Development',' 'Virtual Reality',' 'Augmented Reality',' 'Digital Twins' ]; export const metaverseDigitalStats2026 = totalServices: 2, categories: 4, averageRating: 4.7, activeUsers: 1200 };'
+
+export default PagePage

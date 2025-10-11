@@ -1,249 +1,106 @@
-// API endpoint for performance metrics collection
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { PerformanceReport } from '@/utils/performance-monitor',
-interface PerformanceData {
-  timestamp: string,
-  url: string,
-  userAgent: string,
-  fcp: number,
-  lcp: number,
-  fid: number,
-  cls: number,
-  ttfb: number,
-  sessionId: string
-}
-interface ErrorData {
-  timestamp: string,
-  url: string,
-  userAgent: string,
-  error: string,
-  stack?: string,
-  sessionId: string
-import type { NextApiRequest, NextApiResponse } from 'next'
-import type { PerformanceReport } from '@/utils/performance-monitor'
-interface PerformanceData {
-  timestamp: string
-  url: string
-  userAgent: string
-  fcp: number
-  lcp: number
-  fid: number
-  cls: number
-  ttfb: number
-  sessionId: string
-}
-interface ErrorData {
-  timestamp: string
-  url: string
-  userAgent: string
-  error: string
-  stack?: string
-  sessionId: string
-}
-// In-memory storage for demo purposes
-// In production, use a proper database
-let performanceMetrics: PerformanceData[] = [],
-let errorLogs: ErrorData[] = [],
-let performanceMetrics: PerformanceData[] = []
-let errorLogs: ErrorData[] = []
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> {
-  if (req.method === 'POST') {
-    try {
-      const performanceReport = req['body'],
-      // Validate the report structure
-      if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
-        res.status(400).json({ error: 'Invalid performance report format' }),
-        return,
-      }
-      // Log performance metrics (in production, you would store these in a database)
-      // Removed // // // console.log('🔧 Performance Report:', { ... }),
-      // Log critical performance issues
-      const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor'),
-      if (poorMetrics.length > 0) {
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
-          `${m.name}: ${m.value}ms`
-        )),
-      const performanceReport = req['body']
-      // Validate the report structure
-      if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
-        res.status(400).json({ error: 'Invalid performance report format' })
-        return
-      }
-      // Log performance metrics (in production, you would store these in a database)
-      // Removed console.log('🔧 Performance Report:', { ... })
-      // Log critical performance issues
-      const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor')
-      if (poorMetrics.length > 0) {
-        console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
-          `${m.name}: ${m.value}ms`
-        ))
-      }
-      // In production, you would:
-      // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
-      // 2. Send to analytics service (e.g., Google Analytics, DataDog)
-      // 3. Trigger alerts for critical performance issues
-      // 4. Aggregate metrics for performance dashboards
-      // Example: Send to external analytics service
-      if (process.env['NODE_ENV'] === 'production' && process.env['ANALYTICS_ENDPOINT']) {
-        try {
-          await fetch(process.env['ANALYTICS_ENDPOINT'], {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
-            },
-            body: JSON.stringify({
-              type: 'performance',
-              data: performanceReport,
-              timestamp: Date.now()
-            })
-          }),
-        } catch (error) {
-          console.error('Error sending to analytics:', error),
-        }
-      }
-      res.status(200).json({ success: true, message: 'Performance data recorded' }),
-    } catch (error) {
-      console.error('Error processing request:', error),
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      }),
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  } catch (error) {
-    console.error('Error processing request:', error),
-    res.status(500).json({ 
-      success: false, 
-      message: 'Internal server error' 
-    }),
-    return,
-          })
-        } catch (error) {
-          console.error('Error sending to analytics:', error)
-        }
-      }
-      res.status(200).json({ success: true, message: 'Performance data recorded' })
-    } catch (error) {
-      console.error('Error processing request:', error)
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      })
-    }
-  } catch (error) {
-    console.error('Error processing request:', error)
-    res.status(500).json({ 
-      success: false, 
-      message: 'Internal server error' 
-    })
-    return
-  }
-  if (req.method === 'GET') {
-    try {
-      const { type, limit = 100 } = req.query,
-      const { type, limit = 100 } = req.query
-      if (type === 'performance') {
-        const limitedMetrics = performanceMetrics
-          .slice(-Number(limit))
-          .map(metric => ({
-            ...metric,
-            timestamp: new Date(metric.timestamp).toLocaleString()
-          })),
-          }))
-        res.status(200).json({
-          success: true,
-          data: limitedMetrics,
-          total: performanceMetrics.length,
-          average: calculateAverages(performanceMetrics)
-        }),
-        })
-      } else if (type === 'error') {
-        const limitedErrors = errorLogs
-          .slice(-Number(limit))
-          .map(error => ({
-            ...error,
-            timestamp: new Date(error.timestamp).toLocaleString()
-          })),
-          }))
-        res.status(200).json({
-          success: true,
-          data: limitedErrors,
-          total: errorLogs.length
-        }),
-        })
-      } else if (type === 'summary') {
-        res.status(200).json({
-          success: true,
-          summary: {
-            performance: {
-              total: performanceMetrics.length,
-              average: calculateAverages(performanceMetrics),
-              recent: performanceMetrics.slice(-10).length
-            },
-            errors: {
-              total: errorLogs.length,
-              recent: errorLogs.slice(-10).length
-            }
-          }
-        }),
-        })
-      } else {
-        res.status(400).json({ 
-          success: false, 
-          message: 'Invalid type parameter' 
-        }),
-      }
-    } catch (error) {
-      console.error('Error retrieving data:', error),
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      }),
-    }
-  } else {
-    res.setHeader('Allow', ['POSTGET']),
-    res.status(405).json({ 
-      success: false, 
-      message: `Method ${req.method} Not Allowed` 
-    }),
-        })
-      }
-    } catch (error) {
-      console.error('Error retrieving data:', error)
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      })
-    }
-  } else {
-    res.setHeader('Allow', ['POST', 'GET'])
-    res.status(405).json({ 
-      success: false, 
-      message: `Method ${req.method} Not Allowed` 
-    })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-function calculateAverages(metrics: PerformanceData[]) {
-  if (metrics.length === 0) return null,
-  if (metrics.length === 0) return null
-  const sums = metrics.reduce((acc, metric) => ({
-    fcp: acc.fcp + metric.fcp,
-    lcp: acc.lcp + metric.lcp,
-    fid: acc.fid + metric.fid,
-    cls: acc.cls + metric.cls,
-    ttfb: acc.ttfb + metric.ttfb
-  }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 }),
-  }), { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0 })
-  return {
-    fcp: Math.round(sums.fcp / metrics.length),
-    lcp: Math.round(sums.lcp / metrics.length),
-    fid: Math.round(sums.fid / metrics.length),
-    cls: Math.round((sums.cls / metrics.length) * 1000) / 1000,
-    ttfb: Math.round(sums.ttfb / metrics.length)
-  },
-  }
-}
+
+export default PagePage

@@ -1,106 +1,106 @@
-  timestamp: number,
-  userAgent: string,
-  url: string,}}
-class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
-  private observer: PerformanceObserver | null = null,
-  constructor() {if (typeof window !== 'undefined') {
-      this.initializeMonitoring()}}
-  }
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid)}})
-        })
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,
-        fidObserver.observe({ entryTypes: ['first-input'] })
-        // Cumulative Layout Shift
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver()
-    const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
-    // Keep HEAD version;
-              this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue)}}
-          })
-        })
-    const entries = list.getEntries();
-          entries.forEach(entry => {)
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)}})
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver()
-    const entries = list.getEntries()
-          entries.forEach()
-            this.reportMetric('fcp', entry.startTime)
-  }
-          })
-        })
-        fcpObserver.observe({entryTypes: ['paint'] ,)})
-      } catch (error) {// Keep HEAD version;}}
-  }
-  private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}
-      try {const longTaskObserver = new PerformanceObserver((list) => {}
-          for (const entry of list.getEntries()) {
-    // Keep HEAD version;}})
-        longTaskObserver.observe({entryTypes: ['longtask'] ,)})
-      } catch (error) {// Long task API might not be available;}}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-          const entries = list.getEntries();
-    // Keep HEAD version;}})
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-    // Keep HEAD version
-  }
-          })
-        })
-        resourceObserver.observe({entryTypes: ['resource'] ,)})
-      } catch (_error) {// Keep HEAD version;}}
-  }
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href;,}})
-    })
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError()
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-      })
-    })
-  }
-  private reportMetric(name: string, value: number): void {,}
-    // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return;}}
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    // Keep HEAD version;
-    // Send to analytics (if configured);
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {)
-    if (thresholds) {
-    const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-    // Keep HEAD version
-    // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag()
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals',}})
-    }
-  }
-  public logError(error: ErrorReport): void {,}
-    this.errors.push(error)
-    // Keep only last 50 errors,
-    if (this.errors.length > 50) {
-      if (navigation) {
-    // Keep HEAD version;}}
-    }
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Singleton instance
-const monitoring = new MonitoringService()
-export default monitoring
+
+export default PagePage

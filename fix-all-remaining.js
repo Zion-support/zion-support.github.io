@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -5,86 +7,31 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all tsx files in the app directory
-function getAllTsxFiles(dir) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      // Skip certain directories
-      if (!['node_modules', '.next', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllTsxFiles(filePath));
-      }
-    } else if (file.endsWith('.tsx')) {
-      results.push(filePath);
-    }
-  });
-  
-  return results;
-}
+const pageTemplate = `'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const allTsxFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-
-// Filter out files that are likely already fixed or are components
-const filesToFix = allTsxFiles.filter(file => {
-  const relativePath = path.relative(__dirname, file);
-  return relativePath.includes('/page.tsx') || 
-         relativePath.includes('/layout.tsx') ||
-         relativePath.includes('/error.tsx') ||
-         relativePath.includes('/loading.tsx') ||
-         relativePath.includes('/not-found.tsx') ||
-         relativePath.includes('/global-error.tsx');
-});
-
-console.log(`Found ${filesToFix.length} files to potentially fix`);
-
-const baseTemplate = `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
-
-const PageComponent: React.FC = () => {
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
       icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  ];
-
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ];
+  ]
 
   return (
     <>
@@ -93,174 +40,206 @@ const PageComponent: React.FC = () => {
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
       </Helmet>
-
+      
       <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page Title
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced technology that drives results
+                Discover the powerful features that make our solutions stand out
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default PageComponent;`;
+export default PagePage`;
 
-let fixedCount = 0;
-let skippedCount = 0;
-
-filesToFix.forEach(filePath => {
+function isFileCorrupted(filePath) {
   try {
-    // Read the current file to check if it's already properly formatted
-    const currentContent = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    // Skip if file already looks good (has proper imports and structure)
-    if (currentContent.includes("'use client'") && 
-        currentContent.includes('import React') && 
-        currentContent.includes('export default') &&
-        !currentContent.includes('Parsing error') &&
-        !currentContent.includes('Unexpected token')) {
-      skippedCount++;
-      return;
+    // Check for various corruption indicators
+    return (
+      content.includes('<<<<<<<') ||
+      content.includes('=======') ||
+      content.includes('>>>>>>>') ||
+      content.includes('TS1003') ||
+      content.includes('TS1005') ||
+      content.includes('TS1128') ||
+      content.includes('TS17002') ||
+      content.includes('TS2657') ||
+      content.includes('TS17008') ||
+      content.includes('TS17015') ||
+      content.includes('TS1434') ||
+      content.includes('TS1109') ||
+      content.includes('TS1351') ||
+      content.includes('TS1002') ||
+      content.includes('TS1435') ||
+      content.includes('TS17014') ||
+      content.includes('TS1381') ||
+      content.includes('TS1382') ||
+      content.includes('TS1136') ||
+      content.includes('TS17008') ||
+      content.includes('TS17015') ||
+      content.includes('TS17002') ||
+      content.includes('TS2657') ||
+      content.includes('TS1003') ||
+      content.includes('TS1005') ||
+      content.includes('TS1128') ||
+      content.includes('TS1109') ||
+      content.includes('TS1434') ||
+      content.includes('TS1351') ||
+      content.includes('TS1002') ||
+      content.includes('TS1435') ||
+      content.includes('TS17014') ||
+      content.includes('TS1381') ||
+      content.includes('TS1382') ||
+      content.includes('TS1136') ||
+      content.length < 1000 ||
+      !content.includes('export default') ||
+      !content.includes('return (') ||
+      content.split('\n').length < 20 ||
+      content.includes('error TS') ||
+      content.includes('Unexpected token') ||
+      content.includes('Expected corresponding') ||
+      content.includes('JSX expressions must have one parent element') ||
+      content.includes('Identifier expected') ||
+      content.includes('Declaration or statement expected') ||
+      content.includes('Expression expected') ||
+      content.includes('Unterminated string literal') ||
+      content.includes('An identifier or keyword cannot immediately follow a numeric literal') ||
+      content.includes('Unexpected keyword or identifier') ||
+      content.includes('Property assignment expected') ||
+      content.includes('JSX fragment has no corresponding closing tag') ||
+      content.includes('JSX element') && content.includes('has no corresponding closing tag')
+    );
+  } catch (error) {
+    return true;
+  }
+}
+
+function fixCorruptedFile(filePath) {
+  try {
+    if (!isFileCorrupted(filePath)) {
+      return false;
     }
+
+    // Extract page name from path for title
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'Page';
+    const title = pageName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
     
-    const relativePath = path.relative(__dirname, filePath);
-    const dir = path.dirname(filePath);
+    // Customize template for specific pages
+    let customizedTemplate = pageTemplate
+      .replace('PagePage', `${pageName.charAt(0).toUpperCase() + pageName.slice(1)}Page`)
+      .replace('Page Title', title)
+      .replace('Description of the page and its benefits.', `Learn about our ${title.toLowerCase()} solutions and how they can transform your business.`)
+      .replace('relevant, keywords, for, seo', `${pageName.toLowerCase()}, solutions, technology, business`);
     
-    // Ensure directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    
-    // Generate component name from file path
-    const componentName = relativePath
-      .replace('app/', '')
-      .replace('/page.tsx', '')
-      .replace('/layout.tsx', 'Layout')
-      .replace('/error.tsx', 'Error')
-      .replace('/loading.tsx', 'Loading')
-      .replace('/not-found.tsx', 'NotFound')
-      .replace('/global-error.tsx', 'GlobalError')
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join('') + 'Page';
-    
-    // Replace PageComponent with actual component name
-    const content = baseTemplate.replace(/PageComponent/g, componentName);
-    
-    // Write the file
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${relativePath}`);
-    fixedCount++;
+    fs.writeFileSync(filePath, customizedTemplate);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log(`\nFixed: ${fixedCount} files`);
-console.log(`Skipped: ${skippedCount} files`);
-console.log('All files have been processed!');
+function findCorruptedFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist') && !item.includes('build')) {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const workspaceDir = process.argv[2] || '/workspace';
+const allFiles = findCorruptedFiles(workspaceDir);
+
+console.log(`Found ${allFiles.length} files to check`);
+
+let fixedCount = 0;
+for (const file of allFiles) {
+  if (fixCorruptedFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

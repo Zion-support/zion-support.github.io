@@ -1,127 +1,106 @@
-export interface ModerationFlag {
-export interface ModerationFlag {
-  id: string
-  contentId: string
-  contentType: string
-  reason: string
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned'
-  reportedBy: string
-  createdAt: string
-  updatedAt: string
-  adminNotes?: string
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
-  return flags.find (flag => flag.id === id) || null
-}
-export async function readAllFlags (): Promise < ModerationFlag[]> {
-  return [...flags]
-}
-export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
-  const flag: ModerationFlag = {
-  flag && flag.status = status
-  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes
-  flag && flag.updatedAt = new Date().toISOString()
-  await upsertFlag(flag)
-  return flag
-}
-// Mock data storage - replace with actual database
-let flags: ModerationFlag[] = []
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) || null
-}
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  return [...flags]
-}
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
-  const flag: ModerationFlag = {
-    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    contentId: data.contentId || '',
-    contentType: data.contentType || 'post',
-    reason: data.reason || '',
-    userEmail: data.userEmail || '',
-    status: 'pending',
-    createdAt: new Date().toISOString(),
-    ...data
-  }
-  flags.push(flag)
-  return flag
-}
-export async function updateFlagStatus(
-  id: string, 
-  status: ModerationFlag['status'], 
-  adminNotes?: string
-): Promise<FlaggedContent | undefined> {
-  const flag = await getFlagById(id)
-  if (!flag) return undefined
-import fs from 'fs'
-import path from 'path'
-import { promisify } from 'util'
-import crypto from 'crypto'
-import { FlaggedContent, ModerationStatus, AiScores } from '../types/moderation'
-const mkdir = promisify(fs.mkdir)
-const readFile = promisify(fs.readFile)
-const writeFile = promisify(fs.writeFile)
-const ROOT = path.join(process.cwd(), 'data')
-const MODERATION_FILE = path.join(ROOT, 'moderation.json')
-async function ensureBaseFiles() {
-  await mkdir(ROOT, { recursive: true })
-  try {
-    await readFile(MODERATION_FILE, 'utf8')
-  } catch {
-    await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8')
-  }
-}
-export async function readAllFlags(): Promise<FlaggedContent[]> {
-  await ensureBaseFiles()
-  const raw = await readFile(MODERATION_FILE, 'utf8')
-  const data = JSON.parse(raw) as { flags: FlaggedContent[] }
-  return data.flags || []
-}
-export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {
-  await ensureBaseFiles()
-  await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8')
-}
-export function generateFlagId(): string {
-  return `FLG-${crypto.randomBytes(4).toString('hex').toUpperCase()}`
-}
-export function generateAiScores(seed?: string): AiScores {
-  const buf = crypto.createHash('sha256').update(seed || String(Date.now())).digest()
-  const v = (i: number) => Number((buf[i] / 255).toFixed(2))
-  return { toxicity: v(0), nsfw: v(1), scam: v(2) }
-}
-export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {
-  const all = await readAllFlags()
-  return all.find(f => f.id === id)
-}
-export async function upsertFlag(flag: FlaggedContent): Promise<void> {
-  const all = await readAllFlags()
-  const idx = all.findIndex(f => f.id === flag.id)
-  if (idx >= 0) all[idx] = flag; else all.push(flag)
-  await writeAllFlags(all)
-}
-export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus; aiScores?: AiScores }): Promise<FlaggedContent> {
-  const now = new Date().toISOString()
-  const flag: FlaggedContent = {
-    id: generateFlagId(),
-    createdAt: now,
-    updatedAt: now,
-    status: init.status || 'pending',
-    aiScores: init.aiScores || generateAiScores(init.contentId + init.userId),
-    ...init,
-  }
-  const all = await readAllFlags()
-  all.push(flag)
-  await writeAllFlags(all)
-  return flag
-}
-export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {
-  const flag = await getFlagById(id)
-  if (!flag) return undefined
-  flag.status = status
-  flag.adminNotes = adminNotes || flag.adminNotes
-  flag.updatedAt = new Date().toISOString()
-  await upsertFlag(flag)
-  return flag
-}
-}
+export default PagePage

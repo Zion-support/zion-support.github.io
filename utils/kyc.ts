@@ -1,243 +1,106 @@
-export type KycRole = 'client' | 'talent' | 'enterprise'
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info'
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown'
-export interface KycDocumentMeta {
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address'
-  url: string
-  uploaded_at: string
-  status: 'pending' | 'approved' | 'rejected'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export interface KycProfile {
-export interface KycProfile {
-export interface KycProfile {
-  user_id: string
-  userId: string
-  role: KycRole
-  fullLegalName?: string
-  business_name?: string
-  businessRegistrationNumber?: string
-  country?: string
-  dateOfBirth?: string
-  documents: KycDocumentMeta[]
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected'
-  aml_status: 'unknown' | 'clear' | 'match' | 'review'
-  flags?: string[]
-  risk_score?: number
-  created_at: string
-  lastUpdatedAt: string
-  audit_trail: Array<{
-    at: string
-    by: string
-    action: string
-    details?: any
-  }>
-// KYC (Know Your Customer) utilities
-export interface KycProfile {
-  userId: string
-  role: 'client' | 'talent' | 'both'
-  fullLegalName: string
-  businessName?: string
-  businessRegistrationNumber?: string
-  documents: KycDocument[]
-  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired'
-  submittedAt?: string
-  reviewedAt?: string
-  expiresAt?: string
-  reviewerId?: string
-  rejectionReason?: string
-  notes?: string
-}
-export function getRequiredDocuments (role: KycRole): string[] {
-  // Check condition
-if ( {) {
-  $2
-}
-    return ['government_id', 'proof_of_address']
-  } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership']
-  }
-}
-    return ['bank_statement', 'utility_bill']
-  } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate']
-  }
-}
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = []
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-  }
-  if (!profile && profile.country) {
-    missing && missing.push('country')
-  }
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth')
-  }
-  return { ok: missing && missing.length === 0, missing }
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber')
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = []
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name')
-  }
-  if (!profile && profile.country) {
-    missing && missing.push('country')
-  }
-  if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth')
-  }
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber')
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth')
-  }
-  return { ok: missing && missing.length === 0, missing }
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber')
-  }
-  return {
-    ok: missing && missing.length === 0,
-    missing
-  }
-}
-export interface KycProfile {
-  userId: string
-  role: KycRole
-  fullLegalName?: string
-  businessName?: string
-  businessRegistrationNumber?: string
-  country?: string
-  dateOfBirth?: string
-  documents: KycDocumentMeta[]
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected'
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review'
-  flags?: string[]
-  riskScore?: number
-  createdAt: string
-  lastUpdatedAt: string
-  auditTrail: Array<{
-    at: string
-    by: string
-    action: string
-    details?: any
-  }>
-}
-export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = []
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('name')
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('country')
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('dateOfBirth')
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('businessRegistrationNumber')
-  }
-  return {
-    ok: missing.length === 0,
-    missing
-  }
-}
-export type KycRole = 'client' | 'talent' | 'enterprise'
-export type KycStatus =
-  | 'not_started'
-  | 'in_progress'
-  | 'submitted'
-  | 'approved'
-  | 'rejected'
-  | 'needs_more_info'
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown'
-export interface KycDocumentMeta {
-  id: string
-  kind:
-    | 'government_id_front'
-    | 'government_id_back'
-    | 'selfie'
-    | 'business_registration'
-    | 'tax_certificate'
-    | 'proof_of_address'
-    | 'academic_certificate'
-  filename: string
-  url?: string
-  checksumSha256?: string
-  uploadedAt: string; // ISO
-}
-export interface KycProfile {
-  userId: string
-  role: KycRole
-  fullLegalName?: string
-  dateOfBirth?: string; // ISO
-  country?: string
-  businessName?: string
-  businessRegistrationNumber?: string
-  documents: KycDocumentMeta[]
-  status: KycStatus
-  amlStatus: AmlStatus
-  riskScore?: number; // 0-100
-  flags?: string[]; // e.g., ["mismatch","duplicate_ip"]
-  lastUpdatedAt: string; // ISO
-  createdAt: string; // ISO
-  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>
-}
-export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
-  if (role === 'client') {
-    return ['government_id_front', 'government_id_back', 'selfie']
-  }
-  if (role === 'enterprise') {
-    return ['government_id_front', 'government_id_back', 'selfie', 'business_registration', 'tax_certificate']
-  }
-  return ['government_id_front', 'government_id_back']; // talent
-}
-export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
-  if (role === 'talent') {
-    return ['academic_certificate']
-  }
-  return ['proof_of_address']
-}
-export function canShowVerifiedBadge(profile?: KycProfile): boolean {
-  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match'
-}
-export function getBadgeLabels(profile?: KycProfile): string[] {
-  if (!profile) return []
-  const labels: string[] = []
-  if (profile.status === 'approved') labels.push('Verified Identity')
-  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push('Business Verified')
-  return labels
-}
-export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boolean; missing: string[] } {
-  const missing: string[] = []
-  if (!profile.userId) missing.push('userId')
-  if (!profile.role) missing.push('role')
-  const required = profile.role ? getRequiredDocuments(profile.role) : []
-  const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind))
-  for (const req of required) {
-    if (!uploadedKinds.has(req)) missing.push(`document:${req}`)
-  }
-  if (profile.role === 'client' || profile.role === 'enterprise') {
-    if (!profile.fullLegalName) missing.push('fullLegalName')
-  }
-  if (profile.role === 'enterprise') {
-    if (!profile.businessName) missing.push('businessName')
-    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')
-  }
-  return { ok: missing.length === 0, missing }
-}
+
+export default PagePage

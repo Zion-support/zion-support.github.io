@@ -1,244 +1,106 @@
-export enum ErrorSeverity {/* TODO: Fix JSX expression */}
-}
-export enum ErrorCategory {
-    Network = 'network',
-  Validation = 'validation',
-  Authorization = 'authorization',
-  Runtime = 'runtime',
-  Configuration = 'configuration',
-  ExternalService = 'external_service'
-}
-export interface ErrorMetadata {
-    category: ErrorCategory,
-  severity: ErrorSeverity,
-  tags?: string[]
-  timestamp: number,
-  userAgent?: string;,
-}
-export interface TrackedError {
-    id: string,
-  message: string,
-  metadata: ErrorMetadata,
-  occurrences: number,
-  firstSeen: number,
-          lineno: event.lineno,
-          colno: event.colno;,}}
-      })
-    })
-    // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {}this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason,)}`), {category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High;,}context: {reason: event.reason ,}})
-    })
-  }
-trackError(error: Error),
-    metadata: Partial<ErrorMetadata> & {category: ErrorCategory, severity: ErrorSeverity ,}): string {const errorId = this.generateErrorId(error.message);}
-    const now = Date.now();
-    const trackedError: TrackedError = {,
-      id: errorId,
-      message: error.message;,
-      metadata: {,
-        category: metadata.category;,
-        severity: metadata.severity;,
-        userId: metadata.userId;,
-        sessionId: metadata.sessionId;,
-        context: metadata.context;,
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {}
-      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-        context: { reason: event.reason }
-      })
-    })
-  }
-        tags: metadata.tags,
-        timestamp: now,
-        stackTrace: error.stack;,
-        userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined;,},
-      occurrences: 1,
-      firstSeen: now,
-      lastSeen: now,
-    }
-      if (this.errors.size > this.maxStoredErrors) {
-        const oldestError = Array.from(this.errors.values())
-          .sort((a, b) =&gt; a.firstSeen - b.firstSeen)[0]
-        this.errors.delete(oldestError.id)}}
-    }
-    this.notifyListeners(trackedError)
-    // Report to external service (in production)
-    if (process.env.NODE_ENV === 'production') {
-        logger.error('Failed to report error to external service', { error: err.message })
-      })
-export enum ErrorCategory {/* TODO: Fix JSX expression */}
-}
-export interface ErrorMetadata {/* TODO: Fix JSX expression */}
-}
-export interface TrackedError {/* TODO: Fix JSX expression */}
-}
-class ErrorTrackingService {/* TODO: Fix JSX expression */}
-  }
-  static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Set up global error handlers
-   */
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-        }
-  }
-  /**
-   * Track an error with metadata
-   */
-  trackError(erro,
-  r: Error,
-    metadat,
-  trackError(erro,
-  r: Error,
-    metadat,
-  a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
-  y: ErrorSeverity })
-  ): string {/* TODO: Fix JSX expression */}
-    }
-    const existingError = this.errors.get(errorId);
-    if (existingError) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-      this.errors.set(errorId, trackedError);
-      // Notify listeners;
-      this.notifyListeners(trackedError);
-      // Maintain max stored errors;
-      if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
-      }
-    }
-    // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
-  }
-private generateErrorId(message: string): string {,}
-    ,
-  }
-    let hash = 0;
-    for (let i = 0; i < str.length, i++) {
-      const char = str.charCodeAt(i),
-      hash = ((hash << 5) - hash) + char;
-  }
-addListener(listener: (error: TrackedError) => void): void {,}
-    ,}this.errorListeners.push(listener)}
-removeListener(listener: (error: TrackedError) => void): void {,}
-    ,}this.errorListeners = this.errorListeners.filter(l => l !== listener)}
-private notifyListeners(error: TrackedError): void {,}
-    ,
-  r: (erro),
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Remove an error listener;
-   */;
-  r: (erro),
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Notify all listeners of a new error;
-   */;
-  private notifyListeners(erro);
-  r: TrackedError): void {/* TODO: Fix JSX expression */,}}} catch (listenerError) {/* TODO: Fix JSX expression */,}}
-    this.errorListeners.forEach(listener => {)
-      try {)
-  }
-        listener(error)} catch (listenerError) {}
-        logger.error('Error in error listener', { error: listenerError.message })
-  /**
-   * Generate a unique error ID based on the message
-   */
-  private generateErrorId(messag)
-  e: string): string {/* TODO: Fix JSX expression */}
-    }`
-  }
-  /**
-   * Add an error listener
-   */
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Remove an error listener
-   */
-  r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Notify all listeners of a new error
-   */
-  private notifyListeners(erro)
-  r: TrackedError): void {/* TODO: Fix JSX expression */}
-      } catch (listenerError) {/* TODO: Fix JSX expression */}
-      }
-    })
-  }
-private async reportToExternalService(errorId: string): Promise<void> {,
-    ,
-  }
-    // Initialize counters;
-    Object.values(ErrorCategory).forEach(category => {)
-    );
-      byCategory[category] = 0;)}})
-    Object.values(ErrorSeverity).forEach(severity => {)
-    );
-      bySeverity[severity] = 0;)}})
-    // Count errors;
-    errors.forEach(error => {)
-    );
-      byCategory[error.metadata.category]++);
-      bySeverity[error.metadata.severity]++)
-  }
-    })
-    return {
-    total: errors.length,
-      byCategory,
-      bySeverity
-  }
-    }
-  }
-}
-  s: { 'Content-Type': 'application/json' },
-          bod,
-  y: JSON.stringify(error),
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  private async reportToExternalService(errorId: string): Promise<void> {,
-    // In a real implementation, this would send to an external service
-    // like Sentry, LogRocket, or a custom error reporting service;}
-    logger.info('Error reported to external service', { errorId })
-  }
-
-  getErrors(): TrackedError[] {
-  }
-
-  getErrorStats(): {
-    total: number,
-    byCategory: Record<ErrorCategory, number>
-    return {
-      total: errors.length
-      byCategory,
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-// Export singleton instance
-export const errorTracking = ErrorTrackingService.getInstance()
-  /**
-   * Report critical errors to external service
-   */
-  private async reportToExternalService(errorI)
-  d: string): Promise<void> {/* TODO: Fix JSX expression */}
-  s: { 'Content-Type': 'application/json' },
-          bod,
-  y: JSON.stringify(error)
-  }
-    }
-  }
-}
-export const errorTracking = ErrorTrackingService.getInstance();
-export default ErrorTrackingService;
-// Export convenience functions for easier testing and usage;
-export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listene,
-  r: (erro)
-  r: TrackedError) => void) =>
-  errorTracking.addListener(listener)
-export const removeErrorListener = (listene,
-  r: (erro)
-  r: TrackedError) => void) =>
-  errorTracking.removeListener(listener)
-`
+export default PagePage

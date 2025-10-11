@@ -1,286 +1,106 @@
-impo, r, t {/* TODO: Fix JSX expression */}
-} fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-const AIMLOpsAutomatio, n = () => { 
-  return(<React.Fragment>
-      <Helm, e, t>
-        <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group
-        <meta, nam, e = 'description'
-          conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
-        />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='ML, O, p, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines'
-        />
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'>
-          <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' />
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'>
-            <div, className='te, x, t-cent, e, r'>
-              <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6'>
-                AI, MLOps, Automation
-              <p, className='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
-                De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-                  Gette, d
-                De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-                  Gette, d
-                  <Link, classNam, e='ml-2 h-5 w-5' />
-              <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'>
-          <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' />
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'>
-            <div, className='te, x, t-cent, e, r'>
-              <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6'>
-                AI, MLOps, Automation
-              <p, className='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
-                De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-                  Gette, d
-                  <Link, classNam, e='ml-2 h-5 w-5' />
-              <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                  Cost, Reductio, n
-        {/* Features, Sect, i, o, n */}
-        <section, i, d = 'featur, e, s' classNa, m, e='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g: px-8'>,
-            <div, classNam, e='te, x, t-center, m, b-16'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-4'>
-                Comprehensive, MLOps, Platform
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Instant, rollback, on failu, r, e
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Automated, retraining, triggers
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Compliance, audit, trails
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Traini, n, g-serving, consistenc, y
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Zero, downtime, scaling
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Reproducibili, t, y
-                  Gette, d
-                  <Link, className='ml-2 h-5 w-5' />
-        {/* Key, Metr, i, c, s */}
-        <section, classNam, e = 'py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g: px-8'>,
-            <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r'>
-              <div, className='p-6'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r'>
-              <div, className='p-6'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
-                  99.9%
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-        <section, i, d = 'featur, e, s' classNa, m, e='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-4'>
-                Comprehensive, MLOps, Platform
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Instant, rollback, on failu, r, e
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Automated, retraining, triggers
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Compliance, audit, trails
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Traini, n, g-serving, consistenc, y
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Zero, downtime, scaling
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Reproducibili, t, y
-                  Gette, d
-                  <Link, className='ml-2 h-5 w-5' />
-        {/* Key, Metr, i, c, s */}
-        <section, classNam, e = 'py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r'>
-              <div, className='p-6'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
-                  99.9%
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                  Uptime, SL, A
-              <div, className='p-6'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>85%
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                  Faster, Deployment, s
-              <div, className='p-6'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
-                  $2.4M
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
-                  $2.4M
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                  Avg, Annual, Savings
-              <div, className='p-6'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                <div, className='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                  Cost, Reductio, n
-        {/* Features, Sect, i, o, n */}
-        <section, i, d = 'featur, e, s' className='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g: px-8'>,
-            <div, className='te, x, t-center, m, b-16'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='te, x, t-center, m, b-16'>
-              <h2, className='te, x, t-4xl, fon, t-bold, m, b-4'>
-                Comprehensive, MLOps, Platform
-              <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Instant, rollback, on failu, r, e
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Automated, retraining, triggers
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Compliance, audit, trails
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Traini, n, g-serving, consistenc, y
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Zero, downtime, scaling
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-        <section, i, d = 'featur, e, s' className='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='te, x, t-center, m, b-16'>
-              <h2, className='te, x, t-4xl, fon, t-bold, m, b-4'>
-                Comprehensive, MLOps, Platform
-              <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Instant, rollback, on failu, r, e
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Automated, retraining, triggers
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Compliance, audit, trails
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Traini, n, g-serving, consistenc, y
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Zero, downtime, scaling
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Reproducibili, t, y
-        {/* Use, Ca, s, e, s */}
-        <section, classNam, e = 'py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g: px-8'>,
-            <div, className='te, x, t-center, m, b-16'>
-              <h2, className='te, x, t-4xl, fon, t-bold, m, b-4'>Proven, Use, Cases
-              <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                Re, a, l-world, results, from enterprise, deployment, s
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='te, x, t-center, m, b-16'>
-              <h2, className='te, x, t-4xl, fon, t-bold, m, b-4'>Proven, Use, Cases
-              <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                Re, a, l-world, results, from enterprise, deployment, s
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
-          <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g: px-8'>,
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-          <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-                <Link, classNam, e='ml-2 h-5 w-5' />
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />)
-        {/* CTA, Sect, i, o, n */})
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>)
-          <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g: px-8'>),
-            <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
-          <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
-            <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-                <Link, className='ml-2 h-5 w-5' />
-        <section, classNam, e = 'py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, className='te, x, t-center, m, b-16'>
-              <h2, className='te, x, t-4xl, fon, t-bold, m, b-4'>Proven, Use, Cases
-              <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                Re, a, l-world, results, from enterprise, deployment, s
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
-          <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-                <Link, classNam, e='ml-2 h-5 w-5' />
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                  <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
-          <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
-            <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>
-                Schedule, Consultatio, n
-                <Link, className='ml-2 h-5 w-5' />
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

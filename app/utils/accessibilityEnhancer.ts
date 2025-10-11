@@ -1,162 +1,106 @@
-const AccessibilityEnhancerPage: React.FC = () => {
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => {)
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();})
-    
-    // Close any open menus;
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {)
-      const trigger = document.querySelector(`[aria-controls="${menu.id)}"]`) as HTMLElement;
-      trigger?.click();
+  ]
 
-  private handleEscapeKey(event: KeyboardEvent): void {
-    // Close any open modals or dropdowns;
-  const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]')
-    modals.forEach()
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
-      closeButton?.click()
-    })
-    
-    // Close any open menus;
-  const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
-    menus.forEach()
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
-      trigger?.click()
-    })
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  /**
-   * Handle arrow key navigation;
-   */
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-  /**
-   * Handle menu navigation with arrow keys;
-   */
-    const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
-    const currentIndex = menuItems.indexOf(activeElement)
-    if (currentIndex === -1) return
-    let nextIndex = currentIndex
-    switch (event.key) {
-      case 'ArrowDown':
-        nextIndex = (currentIndex + 1) % menuItems.length
-        break
-      case 'ArrowUp':
-        nextIndex = currentIndex &gt; 0 ? currentIndex - 1 : menuItems.length - 1
-        break
-      case 'ArrowRight':
-        nextIndex = (currentIndex + 1) % menuItems.length
-        break
-      case 'ArrowLeft':
-  }
-
-  /**
-   * Setup skip links;
-   */
-
-  /**
-   * Setup ARIA labels;
-   */
-        }
-      }
-    })
-  }
-
-  /**
-   * Setup color contrast improvements;
-   */
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        document.body.classList.add('high-contrast')
-      } else {
-        document.body.classList.remove('high-contrast')
-      }
-    }
-    
-    mediaQuery.addEventListener('change', handleContrastChange)
-    handleContrastChange(mediaQuery)
-  }
-
-  /**
-   * Setup screen reader support;
-   */
-    }
-  }
-
-  /**
-   * Announce messages to screen readers;
-   */
-
-  /**
-   * Update focusable elements (call when DOM changes)
-   */
-   */
-  public getFocusableElements(): HTMLElement[] {return [...this.focusableElements]}/**
-   * Focus first focusable element;
-   */
-    this.focusableElements = []
-    this.skipLinks = []
-  }
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message)
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-// Create global instance
-export const accessibilityEnhancer = new AccessibilityEnhancer()
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message)
-}
-export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements()
-}
-export const focusFirstElement = () => {
-  accessibilityEnhancer.focusFirst()
-}
-export const focusLastElement = () => {
-  accessibilityEnhancer.focusLast()
-}
-
-export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements();
-}
-
-export const focusFirstElement = () => {
-  accessibilityEnhancer.focusFirst();
-}
-
-export const focusLastElement = () => {
-  accessibilityEnhancer.focusLast();
-}
-export default AccessibilityEnhancerPage;
+export default PagePage

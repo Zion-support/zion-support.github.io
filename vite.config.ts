@@ -1,116 +1,106 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content')
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const WorkspacePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    target: 'es2020',
-    cssTarget: 'chrome80',
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react'
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router'
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui'
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts'
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics'
-            }
-            return 'vendor-misc'
-          }
-          // App chunks
-          if (id.includes('/app/ai-')) {
-            return 'ai-services'
-          }
-          if (id.includes('/app/it-')) {
-            return 'it-services'
-          }
-          if (id.includes('/app/components/')) {
-            return 'components'
-          }
-          return 'app'
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop()
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`
-          }
-          return `assets/[name]-[hash].${ext}`
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-  },
-  server: {
-    port: 3000,
-    host: true
-  },
-  preview: {
-    port: 4173,
-    host: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
-  },
-  css: {
-    devSourcemap: true
-  }
-})
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Workspace - Zion Tech Group</title>
+        <meta name="description" content="Learn about our workspace solutions and how they can transform your business." />
+        <meta name="keywords" content="workspace, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

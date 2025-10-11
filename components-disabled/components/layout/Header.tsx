@@ -1,4 +1,106 @@
+'use client'
 import React from 'react'
-{/* Mobile Menu Button */} <div className="text-left" lg":hidden">"</div> <button, onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-left" hover":text-blue-600 transition-colors duration-200"" </svg> </button> </div> </div> </header> ) }, const Header = () => {} const [isMenuOpen, setIsMenuOpen] = useState(false); const [isServicesOpen, setIsServicesOpen] = useState(false); const [isSolutionsOpen, setIsSolutionsOpen] = useState(false); const router = useRouter(); const navigation = [; {} "name": 'Services','' "href": '/services',' "hasDropdown": true, "children": [' {"name": 'AI Services', "href": '/ai-services'} "icon": Brain },'' {"name": 'IT Services', "href": '/it-services'} "icon": Server },'' {"name": 'Micro SaaS', "href": '/micro-saas'} "icon": Zap },'' {"name": 'Security', "href": '/security'} "icon": Shield },'' {"name": 'Cloud Solutions', "href": '/cloud-solutions'} "icon": Cloud },'' {"name": 'Database Solutions', "href": '/database-solutions'} "icon": Database }' ] }, {}' "name": 'Solutions','' "href": '/solutions',' "hasDropdown": true, "children": [' {"name": 'Enterprise Solutions', "href": '/enterprise-solutions'} "icon": Building2 },'' {"name": 'Startup Solutions', "href": '/startup-solutions'} "icon": Rocket },'' {"name": 'Digital Transformation', "href": '/solutions/digital-transformation'} "icon": Workflow },'' {"name": 'Cloud Migration', "href": '/solutions/cloud-migration'} "icon": Cloud },'' {"name": 'AI Implementation', "href": '/solutions/ai-implementation'} "icon": Brain },'' {"name": 'Cybersecurity', "href": '/solutions/cybersecurity'} "icon": Shield }' ] }, {}' "name": 'Industries','' "href": '/industries',' "hasDropdown": true, "children": [' {"name": 'Healthcare', "href": '/industries/healthcare'} "icon": Heart },'' {"name": 'Finance', "href": '/industries/finance'} "icon": DollarSign },'' {"name": 'Manufacturing', "href": '/industries/manufacturing'} "icon": Factory },'' {"name": 'Retail', "href": '/industries/retail'} "icon": ShoppingCart },'' {"name": 'Education', "href": '/industries/education'} "icon": BookOpen },'' {"name": 'Government', "href": '/industries/government'} "icon": Building }' ] },' {"name": 'About'} "href": '/about' },'' {"name": 'Contact'} "href": '/contact' }' ]; const isActive = ("href": string) => router.pathname === href; return (; <header className="text-left">" {/* Top Contact Bar */} <div className="text-left">"</div> <div className="text-left" sm":px-6 "lg":px-8">"</div> <div className="text-left">"</div> <div className="text-left">"</div> <div className="text-left">"</div> <Phone className="text-left" />" <span>+1 (555) 123-4567</span>< </div> <div className="text-left">"</div> <Mail className="text-left" />" <span>info@ziontechgroup.com</span>< </div> </div> <div className="text-left" md":flex items-center space-x-4">"</div> <span>Trusted by 500+ companies</span>< <div className="text-left">"</div> <Star className="text-left" />" <span>4.9/5 Rating</span>< </div> </div> </div> </div> </div> {/* Main Navigation */} <nav className="text-left" sm":px-6 "lg":px-8">" <div className="text-left">" {/* Logo */}</div> <div className="text-left">"</div> <Link href="/" className="text-left">" <div className="text-left">"</div> <span className="text-left">Z</span><" </div> <span className="text-left">Zion Tech Group</span><" </Link> </div> {/* Desktop Navigation */} <div className="text-left" lg":flex items-center space-x-8">" {navigation.map((item) => (</div> <div key={item.name} className="text-left">" {item.hasDropdown ? (</div> <div } className="text-left" hover":text-blue-600 cursor-pointer transition-colors duration-200"" onMouseEnter={() => {}' if (item.name === 'Services') setIsServicesOpen(true);'' if (item.name === 'Solutions') setIsSolutionsOpen(true);' } onMouseLeave={() => {}' if (item.name === 'Services') setIsServicesOpen(false);'' if (item.name === 'Solutions') setIsSolutionsOpen(false);' } ></div> <span className="text-left">{item.name}</span><" <ChevronDown className="text-left" />" </div> ) : (<Link) href={item.href} className={`font-medium transition-colors duration-200 ${` }' isActive(item.href) ? 'text-blue-600' : 'text-gray-700 "hover":text-blue-600'' }`}` > {item.name} </Link> )} {/* Services Dropdown */}' {item.name === 'Services' && (' <AnimatePresence> {isServicesOpen && ( <motion.div } initial={"opacity": 0} "y": 10 } animate={"opacity": 1} "y": 0 } exit={"opacity": 0} "y": 10 } className="text-left" " onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} > <div className="text-left">" {item.children?.map((child) => (</div> <Link } key={child.name} href={child.href} className="text-left" hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200"" > <child.icon className="text-left" />" <span className="text-left">{child.name}</span><" </Link> ))} </div> </motion.div> )} </AnimatePresence> )} {/* Solutions Dropdown */}' {item.name === 'Solutions' && (' <AnimatePresence> {isSolutionsOpen && ( <motion.div } initial={"opacity": 0} "y": 10 } animate={"opacity": 1} "y": 0 } exit={"opacity": 0} "y": 10 } className="text-left" " onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} > <div className="text-left">" {item.children?.map((child) => (</div> <Link } key={child.name} href={child.href} className="text-left" hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200"" > <child.icon className="text-left" />" <span className="text-left">{child.name}</span><" </Link> ))} </div> </motion.div> )} </AnimatePresence> )} </div> ))} </div> {/* CTA Button */} <div className="text-left" lg":flex items-center space-x-4">"</div> <Link, href="/contact"" className="text-left" hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl"" > Get Started <Link className="text-left" />" </Link> </div> {/* Mobile Menu Button */} <div className="text-left" lg":hidden">"</div> <button, onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-left" hover":text-blue-600 transition-colors duration-200"" > {isMenuOpen ? <X className="text-left" /> : <Menu className="text-left" />}" </button> </div> </div> {/* Mobile Menu */} {/* Mobile Navigation */} {/* Mobile Menu */} <AnimatePresence> {isMenuOpen && ( <motion.div } initial={"opacity": 0} "height": 0 }' animate={"opacity": 1} "height": 'auto' }' exit={"opacity": 0} "height": 0 } className="text-left" lg":hidden border-t border-gray-200"" > '
-{/* Mobile Menu Button */} <div className="text-left" lg":hidden">" <button, onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-left" hover":text-blue-600 transition-colors duration-200"" </svg> </button> </div> </div> </header> ) }, const Header = () => {} const [isMenuOpen, setIsMenuOpen] = useState(false); const [isServicesOpen, setIsServicesOpen] = useState(false); const [isSolutionsOpen, setIsSolutionsOpen] = useState(false); const router = useRouter(); const navigation = [; {} "name": 'Services','' "href": '/services',' "hasDropdown": true, "children": [' {"name": 'AI Services', "href": '/ai-services'} "icon": Brain },'' {"name": 'IT Services', "href": '/it-services'} "icon": Server },'' {"name": 'Micro SaaS', "href": '/micro-saas'} "icon": Zap },'' {"name": 'Security', "href": '/security'} "icon": Shield },'' {"name": 'Cloud Solutions', "href": '/cloud-solutions'} "icon": Cloud },'' {"name": 'Database Solutions', "href": '/database-solutions'} "icon": Database }' ] }, {}' "name": 'Solutions','' "href": '/solutions',' "hasDropdown": true, "children": [' {"name": 'Enterprise Solutions', "href": '/enterprise-solutions'} "icon": Building2 },'' {"name": 'Startup Solutions', "href": '/startup-solutions'} "icon": Rocket },'' {"name": 'Digital Transformation', "href": '/solutions/digital-transformation'} "icon": Workflow },'' {"name": 'Cloud Migration', "href": '/solutions/cloud-migration'} "icon": Cloud },'' {"name": 'AI Implementation', "href": '/solutions/ai-implementation'} "icon": Brain },'' {"name": 'Cybersecurity', "href": '/solutions/cybersecurity'} "icon": Shield }' ] }, {}' "name": 'Industries','' "href": '/industries',' "hasDropdown": true, "children": [' {"name": 'Healthcare', "href": '/industries/healthcare'} "icon": Heart },'' {"name": 'Finance', "href": '/industries/finance'} "icon": DollarSign },'' {"name": 'Manufacturing', "href": '/industries/manufacturing'} "icon": Factory },'' {"name": 'Retail', "href": '/industries/retail'} "icon": ShoppingCart },'' {"name": 'Education', "href": '/industries/education'} "icon": BookOpen },'' {"name": 'Government', "href": '/industries/government'} "icon": Building }' ] },' {"name": 'About'} "href": '/about' },'' {"name": 'Contact'} "href": '/contact' }' ]; const isActive = ("href": string) => router.pathname === href; return (; <header className="text-left">" {/* Top Contact Bar */} <div className="text-left">" <div className="text-left" sm":px-6 "lg":px-8">" <div className="text-left">" <div className="text-left">" <div className="text-left">" <Phone className="text-left" />" <span>+1 (555) 123-4567< </div> <div className="text-left">" <Mail className="text-left" />" <span>info@ziontechgroup.com< </div> </div> <div className="text-left" md":flex items-center space-x-4">" <span>Trusted by 500+ companies< <div className="text-left">" <Star className="text-left" />" <span>4.9/5 Rating< </div> </div> </div> </div> </div> {/* Main Navigation */} <nav className="text-left" sm":px-6 "lg":px-8">" <div className="text-left">" {/* Logo */} <div className="text-left">" <Link href="/" className="text-left">" <div className="text-left">" <span className="text-left">Z<" </div> <span className="text-left">Zion Tech Group<" </Link> </div> {/* Desktop Navigation */} <div className="text-left" lg":flex items-center space-x-8">" {navigation.map((item) => ( <div key={item.name} className="text-left">" {item.hasDropdown ? ( <div } className="text-left" hover":text-blue-600 cursor-pointer transition-colors duration-200"" onMouseEnter={() => {}' if (item.name === 'Services') setIsServicesOpen(true);'' if (item.name === 'Solutions') setIsSolutionsOpen(true);' } onMouseLeave={() => {}' if (item.name === 'Services') setIsServicesOpen(false);'' if (item.name === 'Solutions') setIsSolutionsOpen(false);' } > <span className="text-left">{item.name}<" <ChevronDown className="text-left" />" </div> ) : (<Link) href={item.href} className={`font-medium transition-colors duration-200 ${` }' isActive(item.href) ? 'text-blue-600' : 'text-gray-700 "hover":text-blue-600'' }`}` > {item.name} </Link> )} {/* Services Dropdown */}' {item.name === 'Services' && (' <AnimatePresence> {isServicesOpen && ( <motion.div } initial={"opacity": 0} "y": 10 } animate={"opacity": 1} "y": 0 } exit={"opacity": 0} "y": 10 } className="text-left" " onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} > <div className="text-left">" {item.children?.map((child) => ( <Link } key={child.name} href={child.href} className="text-left" hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200"" > <child.icon className="text-left" />" <span className="text-left">{child.name}<" </Link> ))} </div> </motion.div> )} </AnimatePresence> )} {/* Solutions Dropdown */}' {item.name === 'Solutions' && (' <AnimatePresence> {isSolutionsOpen && ( <motion.div } initial={"opacity": 0} "y": 10 } animate={"opacity": 1} "y": 0 } exit={"opacity": 0} "y": 10 } className="text-left" " onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} > <div className="text-left">" {item.children?.map((child) => ( <Link } key={child.name} href={child.href} className="text-left" hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200"" > <child.icon className="text-left" />" <span className="text-left">{child.name}<" </Link> ))} </div> </motion.div> )} </AnimatePresence> )} </div> ))} </div> {/* CTA Button */} <div className="text-left" lg":flex items-center space-x-4">" <Link, href="/contact"" className="text-left" hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl"" > Get Started <Link className="text-left" />" </Link> </div> {/* Mobile Menu Button */} <div className="text-left" lg":hidden">" <button, onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-left" hover":text-blue-600 transition-colors duration-200"" > {isMenuOpen ? <X className="text-left" /> : <Menu className="text-left" />}" </button> </div> </div> {/* Mobile Menu */} {/* Mobile Navigation */} {/* Mobile Menu */} <AnimatePresence> {isMenuOpen && (<motion.div } initial={"opacity": 0} "height": 0 }' animate={"opacity": 1} "height": 'auto' }' exit={"opacity": 0} "height": 0 } className="text-left" lg":hidden border-t border-gray-200"" > '")`
-</span></span></span></span></span></span></span></span></span></Link></Link></nav></nav>
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const LayoutPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Layout - Zion Tech Group</title>
+        <meta name="description" content="Learn about our layout solutions and how they can transform your business." />
+        <meta name="keywords" content="layout, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

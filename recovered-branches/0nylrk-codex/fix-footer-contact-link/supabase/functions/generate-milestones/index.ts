@@ -1,96 +1,106 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Generate-milestonesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Generate Milestones - Zion Tech Group</title>
+        <meta name="description" content="Learn about our generate milestones solutions and how they can transform your business." />
+        <meta name="keywords" content="generate-milestones, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY')
-    if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set')
-    }
-    // Parse request body
-    const { scope, startDate, endDate, projectType } = await req.json()
-    // Create prompt for OpenAI
-    const prompt = `
-    You are an expert project manager who specializes in breaking down projects into clear milestones.
-    Based on the following project details:
-    - Project Scope: "${scope}"
-    - Project Timeline: ${startDate} to ${endDate}
-    - Project Type: ${projectType}
-    Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project.
-    Include realistic due dates, estimated hours of effort, and clear deliverable descriptions.
-    Each milestone should have:
-    1. Title: A concise title
-    2. Description: A clear description of deliverables
-    3. Due Date: A specific date within the project timeline
-    4. Estimated Hours: Reasonable effort estimate
-    Format the response as a valid JSON array of milestone objects with these fields:
-    "title", "description", "dueDate", "estimatedHours"
-    Ensure your response is ONLY the JSON array with no additional text.
-    `
-    // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`},
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [
-          {
-            role: 'system',
-            content: 'You are a project management expert that breaks work into appropriate milestones.'},
-          {
-            role: 'user',
-            content: prompt}],
-        temperature: 0.7})})
-            content: 'You are a project management expert that breaks work into appropriate milestones.',
-          },
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-        temperature: 0.7,
-      }),
-    })
-    const data = await response.json()
-    if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate milestones')
-    }
-    // Parse the AI-generated content to ensure it's valid JSON
-    try {
-      const content = data.choices[0].message.content.trim()
-      // Try to parse the response as JSON
-      const milestones = JSON.parse(content)
-      return new Response(JSON.stringify({ milestones }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      })
-    } catch (parseError) {
-      // If parsing fails, try to extract JSON from the text
-      console.error('Failed to parse AI response as JSON:', parseError)
-      throw new Error('Failed to parse AI response')
-    }
-  } catch (error) {
-    console.error('Error generating milestones:', error)
-    return new Response(
-      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
-    )
-  }
-})
+
+export default PagePage

@@ -1,100 +1,106 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Resume } from '@/types/resume'
-import { useAuth } from '@/hooks/useAuth'
-export function useFetchResume() {
-  const { user } = useAuth()
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [resume, setResume] = useState<Resume | null>(null)
-  const fetchResume = async (resumeId?: string) => {
-    if (!user) {
-      setError('You must be logged in to access resumes')
-      return null
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ResumePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    setIsLoading(true)
-    setError(null)
-    try {
-      // If resumeId is provided, fetch that specific resume
-      // Otherwise, fetch the user's active resume or most recent resume
-      let resumeQuery = supabase.from('talent_resumes').select('*')
-      if (resumeId) {
-        resumeQuery = resumeQuery.eq('id', resumeId)
-      } else {
-        resumeQuery = resumeQuery
-          .eq('user_id', user.id)
-          .order('is_active', { ascending: false })
-          .order('created_at', { ascending: false })
-          .limit(1)
-      }
-      const { data: resumeData, error: resumeError } = await resumeQuery.single()
-      if (resumeError) {
-        if (resumeError.code === 'PGRST116') {
-          // No resume found, this is not a critical error for a new user
-          setResume(null)
-          setIsLoading(false)
-          return null
-        }
-        throw resumeError
-      }
-      // Fetch work experience
-      const { data: workData, error: workError } = await supabase
-        .from('work_history')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
-      if (workError) throw workError
-      // Fetch education
-      const { data: educationData, error: educationError } = await supabase
-        .from('education')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
-      if (educationError) throw educationError
-      // Fetch skills
-      const { data: skillsData, error: skillsError } = await supabase
-        .from('resume_skills')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-      if (skillsError) throw skillsError
-      // Fetch certifications
-      const { data: certData, error: certError } = await supabase
-        .from('certifications')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-      if (certError) throw certError
-      const fullResume: Resume = {
-        id: resumeData.id,
-        user_id: resumeData.user_id,
-        basic_info: {
-          id: resumeData.id,
-          title: resumeData.title,
-          headline: resumeData.headline,
-          summary: resumeData.summary
-        },
-        work_experience: workData || [],
-        education: educationData || [],
-        skills: skillsData || [],
-        certifications: certData || [],
-        is_active: resumeData.is_active
-      }
-      setResume(fullResume)
-      return fullResume
-    } catch (e: any) {
-      console.error('Error fetching resume:', e)
-      setError(e.message)
-      return null
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  return {
-    isLoading,
-    error,
-    resume,
-    fetchResume}
-    fetchResume,
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Resume - Zion Tech Group</title>
+        <meta name="description" content="Learn about our resume solutions and how they can transform your business." />
+        <meta name="keywords" content="resume, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

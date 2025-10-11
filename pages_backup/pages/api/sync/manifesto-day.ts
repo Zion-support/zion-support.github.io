@@ -1,162 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
-import { signPayload } from "../../../utils/sync/signature"
-import axios from "axios"
-import { v4 as uuidv4 } from "uuid"
-import { nextVersionFor } from "../../../utils/sync/versioning"
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  if (!state.config.optIn |state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-  const { milestoneId, title, timestamp } = req && req.body as {
-    milestoneId: string
-    title: string
-    timestamp?: number
-  }
-  if (!milestoneId |!title)
-    return res.status(400).json({ error: "milestoneId, title required" })
-  const version = nextVersionFor(state, milestoneId)
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Manifesto day processed' })
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
-import { nextVersionFor } from "../../../utils/sync/versioning",
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
-  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
-  const version = nextVersionFor(state, milestoneId),
-  const event = {
-    eventId: uuidv4()
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: {
-      id: milestoneId
-      subjectId: milestoneId
-      score: 0
-      category: `milestone:${title}`
-      period: undefined
-      rank: undefined
-    }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: timestamp |Date.now()
-  const version = nextVersionFor(state, milestoneId)
-  const event = {
-      id: milestoneId,
-      subjectId: milestoneId,
-  }
-  const { milestone_id, title, timestamp } = req.body as {
-    milestone_id: string
-    title: string
-    timestamp?: number
-  }
-  if (
-    return res.status (400).json ({ error: "milestone_id, title required" })) {
-  $2
-}
-  const version = nextVersionFor (state, milestone_id)
-  const event = {
-    event_id: uuidv4 (),
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: {
-      id: milestone_id,
-      subject_id: milestone_id,
-      score: 0,
-      category: `milestone:${title}`,
-      period: undefined,
-      rank: undefined,
-    },
-    eventId: uuidv4(),
-    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: timestamp || Date.now()
-  }
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: timestamp || Date.now()},
-  upsertEvent(state, event),
-  writeState(state),
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
-  await Promise.all(
-    state.config.peers
-      .filter((p) => !p.paused)
-  await Promise && Promise.all(
-    state && state.config.peers
-      .filter((p) => !p && p.paused)
-      .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {}
-      })
-  )
-  return res
-    .status(200)
-    .json({ status: "created", version, eventId: event.eventId })
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  upsert_event (state, event)
-  write_state (state)
-  const body = { ...event, propagate: false }
-  const headers: Record < string, string> = {}
-  const sig = sign_payload (body)
-  // Check condition
-if (headers["x - zion - signature"] = sig) {
-  $2
-}
-  await Promise.all (
-    state.config.peers
-      .filter ((p) => !p.paused)
-      .map (async (peer) => {
-        const url = new URL ("/api / sync / publish", peer.base_url).to_string ()
-        try {
-          await axios.post (url, body, { headers, timeout: 5000 })
-        } catch {}
-      }),
+const SyncPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Sync - Zion Tech Group</title>
+        <meta name="description" content="Learn about our sync solutions and how they can transform your business." />
+        <meta name="keywords" content="sync, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-  return res
-    .status (200)
-    .json ({ status: "created", version, event_id: event.event_id })
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+
+export default PagePage

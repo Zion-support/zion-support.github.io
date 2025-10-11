@@ -1,102 +1,106 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Profile-summary-generatorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Profile Summary Generator - Zion Tech Group</title>
+        <meta name="description" content="Learn about our profile summary generator solutions and how they can transform your business." />
+        <meta name="keywords" content="profile-summary-generator, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { bio, skills, title, name } = await req.json()
-    if (!bio || bio.length < 20) {
-      return new Response(
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-    // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'},
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [
-          {
-            role: 'system',
-            content: `You are a professional AI assistant that helps optimize talent profiles. 
-            Your task is to create a compelling summary for the talent based on their information
-            and suggest additional skills that would complement their profile.`
-          },
-          {
-            role: 'user',
-            content: `Create a professional profile summary (150-200 words) for a talent with the following information:
-            Name: ${name}
-            Title: ${title}
-            Bio: ${bio}
-            Skills: ${skills.join(', ')}
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
-            Return the result as a JSON object with these keys: 
-            {
-              "summary": "The professional summary text",
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
-            }`
-          }
-        ],
-        temperature: 0.7})})
-        temperature: 0.7,
-      }),
-    })
-    const openAIData = await openAIResponse.json()
-    if (!openAIData.choices || openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    const responseContent = openAIData.choices[0].message.content
-    // Parse the JSON response
-    let parsedResponse
-    try {
-      // Find the JSON object in the response
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/)
-      if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0])
-      } else {
-        throw new Error("Could not extract JSON from response")
-      }
-    } catch (e) {
-      console.error("Error parsing OpenAI response:", e)
-      // Fallback parsing approach if the standard parsing fails
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/)
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s)
-      if (summaryMatch && skillsMatch) {
-        const summary = summaryMatch[1]
-        const skillsString = skillsMatch[1]
-        const suggestedSkills = skillsString.split(',').map(s => 
-          s.trim().replace(/"/g, '')
-        ).filter(Boolean)
-        parsedResponse = { summary, suggestedSkills }
-      } else {
-        throw new Error("Failed to parse the generated content")
-      }
-    }
-    return new Response(
-      JSON.stringify(parsedResponse),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-  } catch (error) {
-    console.error("Error in profile-summary-generator function:", error)
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-  }
-})
+
+export default PagePage

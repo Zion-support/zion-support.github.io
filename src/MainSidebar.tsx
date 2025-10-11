@@ -1,167 +1,106 @@
-import React from 'react';;
-import { Link;, useLocation } from 'react-router-dom';
-import { cn; } from '@/lib/utils';
-import {;;
-Home,;
-Briefcase,;
-Users,;
-Settings,;
-BarChart3,;
-FileText,;
-MessageSquare,;
-HelpCircle,;
-Code,;
-Smartphone,;
-Globe,;
-Building,;
-Mail,;
-Phone,;
-MapPin
-} from 'lucide-react';
-interface MainSidebarProps {;,
-isOpen: boolean;,
-onClose: () => void
-}
-;
-export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {;
-const location = useLocation();;
-const navigationItems = [;
-    {;,
-title: 'Main'},;,
-items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
-      ]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SrcPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    {;,
-title: 'Marketplace',;,
-items: [
-        { name: 'Products', href: '/marketplace', icon: Briefcase },
-        { name: 'Services', href: '/services', icon: Settings },
-        { name: 'Equipment', href: '/equipment', icon: BarChart3 },
-        { name: 'Categories', href: '/categories', icon: Globe },
-        { name: 'Green IT', href: '/green-it', icon: Globe },
-      ]
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-    {;,
-title: 'Talent & Community',;,
-items: [
-        { name: 'Find Talent', href: '/talent', icon: Users },
-        { name: 'Community', href: '/community', icon: Users },
-        { name: 'AI Hiring', href: '/zion-hire-ai', icon: Smartphone },
-        { name: 'Partners', href: '/partners', icon: Building },
-      ]
-    },
-    {;,
-title: 'Resources',;,
-items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Developer Portal', href: '/developers', icon: Code },
-        { name: 'API Docs', href: '/api-docs', icon: Code },
-        { name: 'Mobile App', href: '/mobile', icon: Smartphone },
-      ]
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  ];
-const contactInfo = [;
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, text: 'San Francisco, CA', href: '#location' },
-  ];
-return (;
+  ]
+
+  return (
     <>
-      {/* Overlay */}
-      {isOpen && (
-        <$2 />;
-className="fixed inset-0 bg-black/50 z-40 lg:hidden";
-onClick={onClose}
-        />
-      )}
+      <Helmet>
+        <title>Src - Zion Tech Group</title>
+        <meta name="description" content="Learn about our src solutions and how they can transform your business." />
+        <meta name="keywords" content="src, solutions, technology, business" />
+      </Helmet>
       
-      {/* Sidebar */}
-      < className={cn($2 />
-        "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",;
-isOpen ? "translate-x-0" : "-translate-x-full"
-      )}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-zion-blue-light">
-            <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
-ZION
-              </span>
-            </div>
-            <$2 />;
-onClick={onClose}
-              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-  </path>
-              </svg>
-            </button>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
+        </section>
 
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigationItems.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-                  {section.title}
-                </h3>
-                <ul className="space-y-1">
-                  {section.items.map((item) => {};
-const IconComponent = item.icon;;
-const isActive = location.pathname === item.href;;
-return (;
-}
-                      <li key={item.name}>
-                        <$2 />;
-to={item.href}
-                          onClick={onClose}
-                          className={cn(
-                            "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",;
-isActive
-                              ? "bg-zion-purple/20 text-zion-cyan"
-                              : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
-                          )}
-                        >
-                          <IconComponent className="w-4 h-4 mr-3" />
-                          {item.name}
-                        </Link>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            ))}
-          </nav>
-
-          {/* Contact Info */}
-          <div className="p-4 border-t border-zion-blue-light">
-            <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">;
-Contact Info
-            </h3>
-            <div className="space-y-2">
-              {contactInfo.map((contact) => {};
-const IconComponent = contact.icon;;
-return (;
-                  <$2 />;
-}
-key={contact.text}
-                    href={contact.href}
-                    className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    <IconComponent className="w-3 h-3 mr-2" />
-                    {contact.text}
-                  </a>
-                )
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
               })}
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
     </>
   )
-}</p>
+}
+
+export default PagePage

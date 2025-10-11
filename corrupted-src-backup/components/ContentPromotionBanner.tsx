@@ -1,70 +1,106 @@
-export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-    }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
     {
-      tit, l, e: "Nor, t, h‑Engineering, Metric
-  s: Fewer, KPI, s, Better, Outcome, s"
-      catego, r, y: "Leadersh, i, p"
-      readTi, m, e: "5, min, read"
-      isN, e, w: tr, u, e
-    {/* TODO: Fix JSX expression */}
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    {/* TODO: Fix JSX expression */}
-    }]; retu, r, n(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
-      {/* Background, Patt, e, r, n */}
-      <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" />
-            <h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-              Latest, from, Zion Insigh, t, s
-  ]; retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
-      {/* Background, Patt, e, r, n */}
-      <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" />
-            <h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-              Latest, from, Zion Insigh, t, s
-              <BookOpen, classNam, e="w-5 h-5" />
-              Explore, All, Articles
-              <Link, classNam, e="w-5 h-5" />
-              <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies
-        </d, i, v>)
-        {/* Featured, Content, Car, d, s */})
-        <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
-              <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3">
-        {/* Featured, Content, Car, d, s */}
-        <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
-              <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3">
-                <span, classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
-                  {it, e, m.cate, g, o, r, y}
-                <Link, classNam, e="w-4 h-4, tex, t-whi, t, e/70" />
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+
-  ]; retu, r, n (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
-      {/* Background, Patt, e, r, n */}"
-      <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>"
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" /></div>"
-            <h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-              Latest, from, Zion Insigh, t, s;"
-              <BookOpen, classNam, e="w-5 h-5" />
-              Explore, All, Articles;"
-              <Link, classNam, e="w-5 h-5" /></Link>"
-              <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies
-        {/* Featured, Content, Car, d, s */}"
-        <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
-            {/* TODO: Fix JSX expression */}"
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>"
-              <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3"></div>"
-                <span, classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
-                  {it, e, m.cate, g, o, r, y}"
-                <Link, classNam, e="w-4 h-4, tex, t-whi, t, e/70" /></Link>"
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>"
-          <div, classNam, e="te, x, t-cent, e, r"></div>"
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>"
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d
-}}")</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></h2></h2></h2>
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

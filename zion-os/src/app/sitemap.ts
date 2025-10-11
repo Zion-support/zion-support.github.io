@@ -1,277 +1,106 @@
-import { MetadataRoute } from 'next'
-export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com'
-  const routes = [
-    ''
-    '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech'
-    '/case-studies/news/events/webinars/white-papers/docs/contact/privacy'
-    '/terms/cookies/accessibility/multiverse/launch/admin/instances/admin/os-deploy']
-  const aiServices = [
-    '/ai-autonomous-business-manager/ai-autonomous-business-operations/ai-autonomous-business-platform/ai-autonomous-business-process-automation/ai-autonomous-code-review/ai-autonomous-creative-director/ai-autonomous-data/ai-autonomous-decision-engine'
-    '/ai-autonomous-decision-platform/ai-autonomous-devops/ai-autonomous-ecosystem-manager/ai-autonomous-ecosystem/ai-autonomous-education-professor/ai-autonomous-healthcare-physician/ai-autonomous-learning-system/ai-autonomous-legal-counsel'
-    '/ai-autonomous-logistics/ai-autonomous-manufacturing/ai-autonomous-research-assistant/ai-autonomous-research/ai-autonomous-robotics/ai-autonomous-scientific-researcher/ai-autonomous-security/ai-autonomous-systems-platform'
-    '/ai-autonomous-testing/ai-autonomous-vehicle-platform/ai-autonomous-vehicle/ai-autonomous-vehicles-platform/ai-autonomous-vehicles/ai-autonomous-venture-capitalist/ai-biomedical-research/ai-biotech-drug-discovery'
-    '/ai-blockchain-analytics/ai-blockchain-governance/ai-brain-computer-interface/ai-brain-interface/ai-brand-personality-generator/ai-business-intelligence-elite-2026/ai-business-intelligence-pro/ai-business-intelligence-suite-2029'
-    '/ai-business-intelligence-suite/ai-business-intelligence/ai-climate-prediction-engine/ai-climate-prediction-platform/ai-climate-prediction/ai-code-generation-enterprise/ai-code-review-copilot/ai-code-review'
-    '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation'
-    '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation'
-    '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant'
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub'
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https: //ziontechgroup.com'
-  const routes = [
-    '',
-    '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech',
-    '/case-studies/news/events/webinars/white-papers/docs/contact/privacy',
-    '/terms/cookies/accessibility/multiverse/launch/admin/instances/admin/os-deploy']
-  const aiServices = [
-    '/ai-autonomous-business-manager/ai-autonomous-business-operations/ai-autonomous-business-platform/ai-autonomous-business-process-automation/ai-autonomous-code-review/ai-autonomous-creative-director/ai-autonomous-data/ai-autonomous-decision-engine',
-    '/ai-autonomous-decision-platform/ai-autonomous-devops/ai-autonomous-ecosystem-manager/ai-autonomous-ecosystem/ai-autonomous-education-professor/ai-autonomous-healthcare-physician/ai-autonomous-learning-system/ai-autonomous-legal-counsel',
-    '/ai-autonomous-logistics/ai-autonomous-manufacturing/ai-autonomous-research-assistant/ai-autonomous-research/ai-autonomous-robotics/ai-autonomous-scientific-researcher/ai-autonomous-security/ai-autonomous-systems-platform',
-    '/ai-autonomous-testing/ai-autonomous-vehicle-platform/ai-autonomous-vehicle/ai-autonomous-vehicles-platform/ai-autonomous-vehicles/ai-autonomous-venture-capitalist/ai-biomedical-research/ai-biotech-drug-discovery',
-    '/ai-blockchain-analytics/ai-blockchain-governance/ai-brain-computer-interface/ai-brain-interface/ai-brand-personality-generator/ai-business-intelligence-elite-2026/ai-business-intelligence-pro/ai-business-intelligence-suite-2029',
-    '/ai-business-intelligence-suite/ai-business-intelligence/ai-climate-prediction-engine/ai-climate-prediction-platform/ai-climate-prediction/ai-code-generation-enterprise/ai-code-review-copilot/ai-code-review',
-    '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation',
-    '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',
-    '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',
-    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner']
-  const quantumServices = [
-    '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026']
-  const networkServices = [
-    '/5g-enterprise-network/5g-enterprise-solutions/5g-network-optimization']
-  const complianceServices = [
-    '/soc2-compliance-automation']
-  const allRoutes = [
-    ...routes
-    ...aiServices
-    ...quantumServices
-    ...networkServices
-    ...complianceServices]
-  return allRoutes.map((route) => ({
-    url: `${baseUrl}${route}`
-    ...routes,
-    ...aiServices,
-    ...quantumServices,
-    ...networkServices,
-    ...complianceServices]
-  return allRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date()
-    changeFrequency: 'weekly'
-export default function sitemap (): MetadataRoute.Sitemap {
-  const base_url = 'https: //ziontechgroup.com'
-  const routes = [
-    '',
-    '/about / services / ai - services / quantum - services / cybersecurity / enterprise - it / research - development / space - tech',
-    '/case - studies / news / events / webinars / white - papers / docs / contact / privacy',
-    '/terms / cookies / accessibility / multiverse / launch / admin / instances / admin / os - deploy']
-  const ai_services = [
-    '/ai - autonomous - business - manager / ai - autonomous - business - operations / ai - autonomous - business - platform / ai - autonomous - business - process - automation / ai - autonomous - code - review / ai - autonomous - creative - director / ai - autonomous - data / ai - autonomous - decision - engine',
-    '/ai - autonomous - decision - platform / ai - autonomous - devops / ai - autonomous - ecosystem - manager / ai - autonomous - ecosystem / ai - autonomous - education - professor / ai - autonomous - healthcare - physician / ai - autonomous - learning - system / ai - autonomous - legal - counsel',
-    '/ai - autonomous - logistics / ai - autonomous - manufacturing / ai - autonomous - research - assistant / ai - autonomous - research / ai - autonomous - robotics / ai - autonomous - scientific - researcher / ai - autonomous - security / ai - autonomous - systems - platform',
-    '/ai - autonomous - testing / ai - autonomous - vehicle - platform / ai - autonomous - vehicle / ai - autonomous - vehicles - platform / ai - autonomous - vehicles / ai - autonomous - venture - capitalist / ai - biomedical - research / ai - biotech - drug - discovery',
-    '/ai - blockchain - analytics / ai - blockchain - governance / ai - brain - computer - interface / ai - brain - interface / ai - brand - personality - generator / ai - business - intelligence - elite - 2026 / ai - business - intelligence - pro / ai - business - intelligence - suite - 2029',
-    '/ai - business - intelligence - suite / ai - business - intelligence / ai - climate - prediction - engine / ai - climate - prediction - platform / ai - climate - prediction / ai - code - generation - enterprise / ai - code - review - copilot / ai - code - review',
-    '/ai - compliance - automation / ai - computer - vision - platform / ai - consciousness - evolution - 2025 / ai - consciousness - evolution - 2029 / ai - consciousness - evolution - platform / ai - consciousness - evolution / ai - consciousness - simulation - platform / ai - consciousness - simulation',
-    '/ai - consciousness - simulator / ai - content - creation - revolution / ai - content - creation / ai - content - factory / ai - content - generation - automation - 2033 / ai - content - generation - pro - 2029 / ai - content - generator / ai - content - marketing - automation',
-    '/ai - content - personalization - engine / ai - creativity - studio / ai - market - research / ai - powered - enterprise - security / ai - powered - it - asset - management / ai - automation - services / advanced - ai - automation - services / ai - assistant',
-    '/ai - agents / ai - agent - orchestrator / ai - analytics - copilot / ai - ad - creative - generator / agentic - rag - helpdesk / agentic - rag / agentic - sales - outreach / affiliate - attribution - hub',
-    '/advanced - research - automation / advanced - cybersecurity - suite / advanced - it - infrastructure - services / accessibility - auditor / accessibility - scanner']
-  const quantum_services = [
-    '/quantum - neural - network - platform / quantum - cloud - infrastructure / quantum - financial - trading / quantum - network - optimization / quantum - private - network - solutions / quantum - private - network - solutions - 2026']
-  const network_services = [
-    '/5g - enterprise - network / 5g - enterprise - solutions / 5g - network - optimization']
-  const compliance_services = [
-    '/soc2 - compliance - automation']
-  const all_routes = [
-    ...routes,
-    ...ai_services,
-    ...quantum_services,
-    ...network_services,
-    ...compliance_services]
-  return all_routes.map ((route) => ({
-    url: `${base_url}${route}`,
-    last_modified: new Date ()
-    change_frequency: 'weekly'
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https: //ziontechgroup.com'
-  const routes = [
-    '',
-    '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech',
-    '/case-studies/news/events/webinars/white-papers/docs/contact/privacy',
-    '/terms/cookies/accessibility/multiverse/launch/admin/instances/admin/os-deploy']
-  const aiServices = [
-    '/ai-autonomous-business-manager/ai-autonomous-business-operations/ai-autonomous-business-platform/ai-autonomous-business-process-automation/ai-autonomous-code-review/ai-autonomous-creative-director/ai-autonomous-data/ai-autonomous-decision-engine',
-    '/ai-autonomous-decision-platform/ai-autonomous-devops/ai-autonomous-ecosystem-manager/ai-autonomous-ecosystem/ai-autonomous-education-professor/ai-autonomous-healthcare-physician/ai-autonomous-learning-system/ai-autonomous-legal-counsel',
-    '/ai-autonomous-logistics/ai-autonomous-manufacturing/ai-autonomous-research-assistant/ai-autonomous-research/ai-autonomous-robotics/ai-autonomous-scientific-researcher/ai-autonomous-security/ai-autonomous-systems-platform',
-    '/ai-autonomous-testing/ai-autonomous-vehicle-platform/ai-autonomous-vehicle/ai-autonomous-vehicles-platform/ai-autonomous-vehicles/ai-autonomous-venture-capitalist/ai-biomedical-research/ai-biotech-drug-discovery',
-    '/ai-blockchain-analytics/ai-blockchain-governance/ai-brain-computer-interface/ai-brain-interface/ai-brand-personality-generator/ai-business-intelligence-elite-2026/ai-business-intelligence-pro/ai-business-intelligence-suite-2029',
-    '/ai-business-intelligence-suite/ai-business-intelligence/ai-climate-prediction-engine/ai-climate-prediction-platform/ai-climate-prediction/ai-code-generation-enterprise/ai-code-review-copilot/ai-code-review',
-    '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation',
-    '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',
-    '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',
-    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner']
-  const quantumServices = [
-    '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026']
-  const networkServices = [
-    '/5g-enterprise-network/5g-enterprise-solutions/5g-network-optimization']
-  const complianceServices = [
-    '/soc2-compliance-automation']
-  const allRoutes = [
-    ...routes,
-    ...aiServices,
-    ...quantumServices,
-    ...networkServices,
-    ...complianceServices]
-  return allRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date()
-    changeFrequency: 'weekly'
-    priority: route === '' ? 1 : 0.8}))
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AppPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="Learn about our app solutions and how they can transform your business." />
+        <meta name="keywords" content="app, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-import { MetadataRoute } from 'next'
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  const routes = [
-    '',
-    '/about',
-    '/services',
-    '/ai-services',
-    '/quantum-services',
-    '/cybersecurity',
-    '/enterprise-it',
-    '/research-development',
-    '/space-tech',
-    '/case-studies',
-    '/news',
-    '/events',
-    '/webinars',
-    '/white-papers',
-    '/docs',
-    '/contact',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/accessibility',
-    '/multiverse/launch',
-    '/admin/instances',
-    '/admin/os-deploy',
-  ]
-  const aiServices = [
-    '/ai-autonomous-business-manager',
-    '/ai-autonomous-business-operations',
-    '/ai-autonomous-business-platform',
-    '/ai-autonomous-business-process-automation',
-    '/ai-autonomous-code-review',
-    '/ai-autonomous-creative-director',
-    '/ai-autonomous-data',
-    '/ai-autonomous-decision-engine',
-    '/ai-autonomous-decision-platform',
-    '/ai-autonomous-devops',
-    '/ai-autonomous-ecosystem-manager',
-    '/ai-autonomous-ecosystem',
-    '/ai-autonomous-education-professor',
-    '/ai-autonomous-healthcare-physician',
-    '/ai-autonomous-learning-system',
-    '/ai-autonomous-legal-counsel',
-    '/ai-autonomous-logistics',
-    '/ai-autonomous-manufacturing',
-    '/ai-autonomous-research-assistant',
-    '/ai-autonomous-research',
-    '/ai-autonomous-robotics',
-    '/ai-autonomous-scientific-researcher',
-    '/ai-autonomous-security',
-    '/ai-autonomous-systems-platform',
-    '/ai-autonomous-testing',
-    '/ai-autonomous-vehicle-platform',
-    '/ai-autonomous-vehicle',
-    '/ai-autonomous-vehicles-platform',
-    '/ai-autonomous-vehicles',
-    '/ai-autonomous-venture-capitalist',
-    '/ai-biomedical-research',
-    '/ai-biotech-drug-discovery',
-    '/ai-blockchain-analytics',
-    '/ai-blockchain-governance',
-    '/ai-brain-computer-interface',
-    '/ai-brain-interface',
-    '/ai-brand-personality-generator',
-    '/ai-business-intelligence-elite-2026',
-    '/ai-business-intelligence-pro',
-    '/ai-business-intelligence-suite-2029',
-    '/ai-business-intelligence-suite',
-    '/ai-business-intelligence',
-    '/ai-climate-prediction-engine',
-    '/ai-climate-prediction-platform',
-    '/ai-climate-prediction',
-    '/ai-code-generation-enterprise',
-    '/ai-code-review-copilot',
-    '/ai-code-review',
-    '/ai-compliance-automation',
-    '/ai-computer-vision-platform',
-    '/ai-consciousness-evolution-2025',
-    '/ai-consciousness-evolution-2029',
-    '/ai-consciousness-evolution-platform',
-    '/ai-consciousness-evolution',
-    '/ai-consciousness-simulation-platform',
-    '/ai-consciousness-simulation',
-    '/ai-consciousness-simulator',
-    '/ai-content-creation-revolution',
-    '/ai-content-creation',
-    '/ai-content-factory',
-    '/ai-content-generation-automation-2033',
-    '/ai-content-generation-pro-2029',
-    '/ai-content-generator',
-    '/ai-content-marketing-automation',
-    '/ai-content-personalization-engine',
-    '/ai-creativity-studio',
-    '/ai-market-research',
-    '/ai-powered-enterprise-security',
-    '/ai-powered-it-asset-management',
-    '/ai-automation-services',
-    '/advanced-ai-automation-services',
-    '/ai-assistant',
-    '/ai-agents',
-    '/ai-agent-orchestrator',
-    '/ai-analytics-copilot',
-    '/ai-ad-creative-generator',
-    '/agentic-rag-helpdesk',
-    '/agentic-rag',
-    '/agentic-sales-outreach',
-    '/affiliate-attribution-hub',
-    '/advanced-research-automation',
-    '/advanced-cybersecurity-suite',
-    '/advanced-it-infrastructure-services',
-    '/accessibility-auditor',
-    '/accessibility-scanner',
-  ]
-  const quantumServices = [
-    '/quantum-neural-network-platform',
-    '/quantum-cloud-infrastructure',
-    '/quantum-financial-trading',
-    '/quantum-network-optimization',
-    '/quantum-private-network-solutions',
-    '/quantum-private-network-solutions-2026',
-  ]
-  const networkServices = [
-    '/5g-enterprise-network',
-    '/5g-enterprise-solutions',
-    '/5g-network-optimization',
-  ]
-  const complianceServices = [
-    '/soc2-compliance-automation',
-  ]
-  const allRoutes = [
-    ...routes,
-    ...aiServices,
-    ...quantumServices,
-    ...networkServices,
-    ...complianceServices,
-  ]
-  return allRoutes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.8,
-  }))
-}
+
+export default PagePage

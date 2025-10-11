@@ -1,164 +1,106 @@
-import { UserProfile, UserDetails } from '@/types/auth'
-import { supabase } from '@/integrations/supabase/client'
-import { Conversation, ConversationContextData } from '@/types/messaging'
-import { toast } from '@/hooks/use-toast'
-// Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null
-/**
- * Hook to handle conversation operations
- */
-export function useConversations(
-  user: UserWithProfile,
-  setConversations: (conversations: Conversation[]) => void,
-  setUnreadCount: (count: number) => void,
-  setIsLoading: (loading: boolean) => void
-) {
-  /**
-   * Fetch conversations for the current user
-   */
-  const fetchConversations = async () => {
-    if (!user) return
-    setIsLoading(true)
-    try {
-      // Fetch conversations from the database
-      const { data, error } = await supabase
-        .from('conversations')
-        .select('*')
-        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`)
-      if (error) throw error
-      // Format conversations
-      const formattedConversations: Conversation[] = data.map(conv => {
-        const isUserOne = conv.user_one_id === user.id
-        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id
-        return {
-          id: conv.id,
-          user_id: otherUserId,
-          other_user: {
-            id: otherUserId,
-            name: isUserOne ? conv.user_two_name : conv.user_one_name,
-            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
-            user_type: isUserOne ? conv.user_two_type : conv.user_one_type
-          },
-          name: isUserOne ? conv.user_two_name : conv.user_one_name,
-          avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
-          last_message: conv.last_message ? {
-            content: conv.last_message,
-            created_at: conv.last_message_time
-          } : undefined,
-          updated_at: conv.updated_at || conv.created_at,
-          unread_count: conv.unread_count || 0,
-          context_type: conv.context_type,
-          context_id: conv.context_id,
-          context_data: conv.context_data
-        }
-      })
-      setConversations(formattedConversations)
-      // Calculate total unread count
-      const totalUnread = formattedConversations.reduce(
-        (total, conv) => total + (conv.unread_count || 0), 
-        0
-      )
-      setUnreadCount(totalUnread)
-    } catch (error) {
-      console.error('Error fetching conversations:', error)
-    } finally {
-      setIsLoading(false)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const MessagingPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  /**
-   * Create a new conversation and send initial message
-   */
-  const createConversation = async (
-    recipientId: string, 
-    initialMessage: string,
-    contextType: 'job' | 'talent' | 'general' = 'general',
-    contextId?: string,
-    contextData?: ConversationContextData
-  ) => {
-    if (!user || !initialMessage.trim()) return
-    try {
-      // Check if conversation already exists
-      const { data: existingConversations, error: fetchError } = await supabase
-        .from('conversations')
-        .select('id')
-        .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`)
-      if (fetchError) throw fetchError
-      let conversationId
-      if (existingConversations && existingConversations.length > 0) {
-        // Use existing conversation
-        conversationId = existingConversations[0].id
-        // Update context if provided
-        if (contextType || contextId || contextData) {
-          await supabase
-            .from('conversations')
-            .update({
-              context_type: contextType,
-              context_id: contextId,
-              context_data: contextData,
-              updated_at: new Date().toISOString()
-            })
-            .eq('id', conversationId)
-        }
-      } else {
-        // Get recipient information
-        const { data: recipientData, error: recipientError } = await supabase
-          .from('profiles')
-          .select('display_name, avatar_url, user_type')
-          .eq('id', recipientId)
-          .single()
-        if (recipientError) throw recipientError
-        // Create a new conversation
-        const { data: newConversation, error: createError } = await supabase
-          .from('conversations')
-          .insert({
-            user_one_id: user.id,
-            user_one_name: user.displayName || user.email,
-            user_one_avatar: user.avatarUrl || ('avatar_url' in user ? user.avatar_url : undefined),
-            user_one_type: user.userType,
-            user_two_id: recipientId,
-            user_two_name: recipientData?.display_name || 'User',
-            user_two_avatar: recipientData?.avatar_url,
-            user_two_type: recipientData?.user_type,
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString(),
-            last_message: initialMessage,
-            last_message_time: new Date().toISOString(),
-            context_type: contextType,
-            context_id: contextId,
-            context_data: contextData
-          })
-          .select('id')
-          .single()
-        if (createError) throw createError
-        conversationId = newConversation.id
-      }
-      // Send the initial message
-      await supabase
-        .from('messages')
-        .insert({
-          conversation_id: conversationId,
-          sender_id: user.id,
-          recipient_id: recipientId,
-          content: initialMessage,
-          created_at: new Date().toISOString(),
-          read: false
-        })
-      // Update conversations list
-      await fetchConversations()
-      // Return the conversation ID
-      return conversationId
-    } catch (error) {
-      console.error('Error creating conversation:', error)
-      toast({
-        title: "Failed to create conversation",
-        description: "Please try again later",
-        variant: "destructive"
-      })
-    }
-  }
-  return {
-    fetchConversations,
-    createConversation}
-    createConversation,
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Messaging - Zion Tech Group</title>
+        <meta name="description" content="Learn about our messaging solutions and how they can transform your business." />
+        <meta name="keywords" content="messaging, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

@@ -1,149 +1,106 @@
-import React, { memo } from 'react'
-import { Link } from 'react-router-dom'
-/**
- * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
- * Promotes the new Cognitive Mesh content including blog case study and services
- * 
- * @component
- * @description High-performance promotional banner with accessibility features
- */
-const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
-  return(<,$2 />
-      className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
-      aria-label="Cognitive Mesh Platform Launch Announcement",
-     > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
-        <$2 />
-const,
-  October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
-     > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
-        <div></div>"
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
-        >
-        <$2 />
-        <div></div>"
-          className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '4s' }}
-        >
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <$2 />
-        {/* Header Section */}
-        <div className="text-center mb-8">
-          <$2 />
-            className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
-            role="status"
-            aria-label="New product launch announcement"
-          >
-             aria-hidden="true" <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025
-             aria-hidden="true"</div> <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025
-             aria-hidden="true"
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
-            Cognitive Mesh Orchestration Platform
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">
-            The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
-          </p>
-)
-          <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">)
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)
-              <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),
-"
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        {/* Header Section */}"
-        <div className="text-center mb-8">
-          <div></div>"
-            className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in""
-            role="status""
-            aria-label="New product launch announcement"
-          >"
-             aria-hidden="true" <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025</$1>"
-             aria-hidden="true"
-"
-          < className="text-4xl,"$2 />
-  md: text-5xl font-bold text-white mb-4 animate-slide-up"></h1>
-            Cognitive Mesh Orchestration Platform,
-          </h1>
-          "
-          < className="text-xl,"$2 />
-  md: text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p>
-            The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
-          </p>
-"
-          <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics"></ul>"
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg"></li>"
-              <Network className="w-5 h-5 text-green-300" aria-hidden="true" /></Network>"
-              <span className="text-white font-semibold">3,500+ AI Agents
-            </li>"
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg"></li>"
-              <Activity className="w-5 h-5 text-blue-300" aria-hidden="true" /></Activity>"
-              <span className="text-white font-semibold">99.99% Uptime
-            </li>"
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg"></li>"
-              <Zap className="w-5 h-5 text-yellow-300" aria-hidden="true" /></Zap>"
-              <span className="text-white font-semibold">Sub-3ms Latency
-        {/* Call to Action */}
-        <div  className="text-center" role="region" aria-label="Call to action">
-          <div  className="inline-flex flex-col sm: flex-row gap-4">
-            <$2 />
-        <div  className="text-center" role="region" aria-label="Call to action">
-          <div  className="inline-flex flex-col sm:flex-row gap-4">
-            <$2 />
-              to="/contact"
-               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105"
-              aria-label="Schedule a free consultation about Cognitive Mesh Platform"
-            >
-              Schedule Free Consultation
-            </Link>
-            <$2 />
-              to="/blog"
-               className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
-              aria-label="Learn more about Cognitive Mesh technology"
-            >
-              <Network  className="w-5 h-5" aria-hidden="true" />
-              Learn More,
-            </Link>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const October2025-disabledPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>October2025 Disabled - Zion Tech Group</title>
+        <meta name="description" content="Learn about our october2025 disabled solutions and how they can transform your business." />
+        <meta name="keywords" content="october2025-disabled, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
-          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
-            ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
-        {/* Call to Action */}"
-        <div  className="text-center" role="region" aria-label="Call to action"></div>"
-          <  className="inline-flex flex-col,"$2 />
-  sm:flex-row gap-4">
-            <Link></Link>"
-              to="/contact""
-               className="inline-flex items-center justify-center gap-2 bg-white,
-  hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
-  hover:shadow-2xl transform,"
-  hover: scale-105""
-              aria-label="Schedule a free consultation about Cognitive Mesh Platform"
-            >
-              Schedule Free Consultation,
-            </Link>
-            <Link></Link>"
-              to="/blog""
-               className="inline-flex items-center justify-center gap-2 bg-transparent,"
-  hover: bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300""
-              aria-label="Learn more about Cognitive Mesh technology"
-            >"
-              <Network  className="w-5 h-5" aria-hidden="true" /></Network>
-              Learn More,
-            </Link>
-          </div>"
-          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
-            ✨ <strong>Limited Time,
-  Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
-            Free 2-week assessment included. No commitment required.
-        </div>,
-    </section>)
-})
-"</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></h1></ul>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

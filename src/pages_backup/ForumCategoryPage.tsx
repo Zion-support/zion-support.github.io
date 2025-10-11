@@ -1,305 +1,106 @@
-"feedback": {
-    id: "feedback"
-    name: "Feedback & Feature Requests"
-    description: "Share your feedback and suggest new features."
-    adminOnly: false
-    icon: "FileText"
-  }
-  },
-
-
-
-
-
-  "announcements": {
-    id: "announcements"
-    name: "Announcements"
-    description: "Official announcements from the Zion team."
-    adminOnly: true
-    icon: "Megaphone"
-
-import { log_info } from '@/utils / production_logger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-// Mock category data
-const categories_info: Record < string, ForumCategoryInfo> = {
-  "getting - hired": {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform."
-    admin_only: false,
-    icon: "Briefcase"
-  }
-}
-const icon_map = {
-  "Briefcase": Briefcase
-  "MessageSquare": MessageSquare
-  "Code": Code
-  "FileText": FileText
-  "Megaphone": Megaphone
-}
-function CategoryContent({
-  categoryId
-  category
-  IconComponent
-},
-
-const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
-  "Megaphone": Megaphone
-},
-
-function CategoryContent({
-  categoryId,
-  category,
-  IconComponent,
-
-
-
-  user}: {
-  categoryId: string
-  category: ForumCategoryInfo
-  IconComponent: React.ComponentType<any>
-  user: any
-}) {
-
-
-
-  const [searchQuery, setSearchQuery] = useState(""),
-  const { featuredPosts, recentPosts } = useCommunity(),
-
-  // Filter posts by category from context data
-  const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
-
-
-
-
-
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) => 
-    // Remove duplicates by id
-    index === self.findIndex(p => p.id === post.id)
-
-
-
-
-  // Apply search filter
-  const filteredPosts = searchQuery
-    ? categoryPosts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-
-    : categoryPosts
-  const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
-  const { isFollowed, follow, unfollow } = useFollowedCategories()
-  const { toast } = useToast()
-  const handleFollow = () => {
-    if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
-
-    : categoryPosts,
-
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
-  const { isFollowed, follow, unfollow } = useFollowedCategories(),
-  const { toast } = useToast(),
-
-
-
-
-
-
-
-
-  const handleFollow = () => {
-    if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' })
-      return
-
-
-
+'use client'
 import React from 'react'
-import { logInfo } from '@/utils/productionLogger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger'
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { Suspense } from "react",
-import { Button } from "@/components/ui/button",
-import CreatePostButton from "@/components/community/CreatePostButton",
-import { Input } from "@/components/ui/input",
-import { SEO } from "@/components/SEO",
-import PostCard from "@/components/community/PostCard",
-import { PostListSkeleton } from "@/components/community/PostCardSkeleton",
-import { ForumCategoryInfo, ForumPost } from "@/types/community",
-import { usePostsByCategory } from "@/hooks/usePostsByCategory",
-import NotFound from "./NotFound",
-import { useAuth } from "@/hooks/useAuth",
-import { useCommunity } from "@/context",
-import { useToast } from "@/hooks/use-toast",
-import { useFollowedCategories } from "@/hooks/useFollowedCategories",
-import { logInfo } from '@/utils/productionLogger',
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-// Mock category data
-const categoriesInfo: Record<string ForumCategoryInfo> = {
-  "getting-hired": {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-    adminOnly: false,
-    icon: "Briefcase"
-  },
-  "project-help": {
-    id: "project-help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    adminOnly: false,
-    icon: "MessageSquare"
-  },
-  "ai-tools": {
-    id: "ai-tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
-    adminOnly: false,
-    icon: "Code"
-  },
-  "feedback": {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    adminOnly: false,
-    icon: "FileText"
-  },
-  "announcements": {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    adminOnly: true,
-    icon: "Megaphone"
-  }
-},
-const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
-  "Megaphone": Megaphone
-},
-function CategoryContent({
-  categoryId,
-  category,
-  IconComponent,
-  user}: {
-  categoryId: string,
-  category: ForumCategoryInfo,
-  IconComponent: React.ComponentType<any>,
-  user: any
-}) {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const { featuredPosts, recentPosts } = useCommunity(),
-  // Filter posts by category from context data
-  const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
-    ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) =>
-    // Remove duplicates by id
-    index === self.findIndex(p => p.id === post.id)
-  ),
-  // Apply search filter
-  const filteredPosts = searchQuery
-    ? categoryPosts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-    : categoryPosts,
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
-  const { isFollowed, follow, unfollow } = useFollowedCategories(),
-  const { toast } = useToast(),
-  const handleFollow = () => {
-    if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
-      return
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Pages_backupPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
   return (
-    <div className="container py-8">
-      <div className="flex items-center gap-3 mb-6">
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
-          Forum</$1>
-        <span className="text-muted-foreground">/</span>
-        <span className="font-medium">{category.name}</span></$1>
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
-        <div className="flex items-center gap-4">
-          <div className="p-3 bg-zion-purple/10 rounded-full">
-            <IconComponent className="h-8 w-8 text-zion-purple" /></$1>
-          <div>
-            <h1 className="text-3xl font-bold">{category.name}</h1>
-            <p className="text-muted-foreground mt-1">{category.description}</p></$1></$1>
-        <div className="flex items-center gap-2">
-          {canCreatePost && <CreatePostButton categoryId={categoryId} />}
-          <Button
-            variant={isFollowed(categoryId) ? 'outline' : 'default'}
-            onClick={handleFollow}
-          >
-            {isFollowed(categoryId) ? 'Following' : 'Follow'}
-          </Button>
-        </div>
-      </div>
+    <>
+      <Helmet>
+        <title>Pages_backup - Zion Tech Group</title>
+        <meta name="description" content="Learn about our pages_backup solutions and how they can transform your business." />
+        <meta name="keywords" content="pages_backup, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-/**
- * CategoryContent - Function description
- */
-function CategoryContent() {
-  const [search_query, setSearchQuery] = useState ("")
-  const { featured_posts, recent_posts } = use_community ()
-  // Filter posts by category from context data
-  const category_posts = [
-    ...featured_posts.filter (post => post.category_id === category_id)
-    ...recent_posts.filter (post => post.category_id === category_id)
-  ].filter ((post, index, self, ) =>
-    // Remove duplicates by id
-    index === self.find_index (p => p.id === post.id))
-  // Apply search filter
-  const filtered_posts = search_query
-    ? category_posts.filter (post =>
-        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||
-        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||
-        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())))
-    : category_posts
-  const canCreatePost = user && (!category.admin_only || user.user_type === 'admin' || user.role === 'admin')
-  const { is_followed, follow, unfollow } = useFollowedCategories ()
-  const { toast } = use_toast ()
-  const handle_follow = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
-      return
-    }
-    if () {) {
-  $2
-}
-      unfollow (category_id)
-    } else {
-      follow (category_id)
-    }
-  }
-  log_info ('CategoryContent - category_id:', { data: category_id }),
-  log_info ('CategoryContent - category_posts:', { data: category_posts }),
-  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
-  const category = category_id ? categories_info[category_id] : null
-  const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null
-}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
 }
 
-</$1></a></a>
+export default PagePage

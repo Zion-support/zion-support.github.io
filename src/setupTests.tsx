@@ -1,141 +1,106 @@
-import React from 'react'
 'use client'
-/**
- * Jest setup file for testing environment
- */
-/* eslint-disable no-console */
-import '@testing-library/jest-dom'
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error
-// eslint-disable-next-line no-console
-const __originalConsoleError = console.error
-console.error = (...args) => {
-    // TODO: Add content
-  }
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SrcPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Src - Zion Tech Group</title>
+        <meta name="description" content="Learn about our src solutions and how they can transform your business." />
+        <meta name="keywords" content="src, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Suppress jsdom navigation warnings
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-    const message = args[0]?.toString?.() || args[0]?.message || ''
-  if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {// TODO: Add content
-  }
-}
-    return
-  }
-  originalConsoleError(...args)
-}
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-    // TODO: Add content
-  }
-}
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    // TODO: Add content
-  }
-}
-  matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated,
-  removeListener: jest.fn(), // deprecated,
-  addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
-})
-// Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
-// Mock localStorage
-const localStorageMock = {
-    // TODO: Add content
-  }
-}
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn()
-Object.defineProperty(window, 'localStorage', {
-    // TODO: Add content
-  }
-}
-  value: localStorageMock
-// Mock sessionStorage,
-const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content,
-}
-  value: sessionStorageMock
-// Mock fetch
-global.fetch = jest.fn()
-// Mock console methods for cleaner test output
-// Mock console methods for cleaner test output
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn
-// eslint-disable-next-line no-console
-const originalConsoleInfo = console.info,
-console.warn = (...args) => {
-    // TODO: Add content
-  }
-}
-// eslint-disable-next-line no-console
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || ''
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content,
-}
-    return; // Suppress JSDOM navigation warnings
-// Mock window.location
-delete (window as unknown as Record
-          <string, unknown>).location
-(window as unknown as Record<string, unknown>).location = {
-    // TODO: Add content
-  }
-}
-// eslint-disable-next-line no-console
-console.info = (...args) => {
-    const message = args[0]?.toString?.() || ''
-  if (message.includes('ReactDOM.render is no longer supported')) {
-    return
-  }
-  originalConsoleInfo(...args)
-}
-// Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
-  constructor(public callback: PerformanceObserverCallback) {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return []
-  }
-}
-// Suppress JSDOM navigation warnings
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError(...args)
-}
-// Mock window.location
-delete (window as unknown as Record<string, unknown>).location
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
-  reload: jest.fn(),
-  assign: jest.fn(),
-  replace: jest.fn()
+
+export default PagePage

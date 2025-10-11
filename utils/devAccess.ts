@@ -1,129 +1,106 @@
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-// Note: This is a Vite project, not Next.js
-// Using generic request/response types instead of Next.js types
-type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>
-  [key: string]: any
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-type ApiResponse = {
-  status: (code: number) => ApiResponse
-  json: (data: any) => void
-  [key: string]: any
-}
-export type DevRole = 'admin' | 'maintainer' | 'contributor'
-export interface DevIdentity {
-export interface DevIdentity {
-  isAuthenticated: boolean
-  roles: DevRole[]
-  user_id?: string
-}
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), '.git')
-    if (!fs.existsSync(gitDir)) return { connected: false }
-    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    })
-      .toString()
-      .trim()
-export function getGitStatus (): { connected: boolean; branch?: string } {
-  try {
-    const git_dir = path.join (process.cwd (), '.git')
-    if () return { connected: false }) {
-  $2
-}
-    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    })
-      .to_string ()
-      .trim ()
-    return { connected: true, branch }
-  } catch {
-    return { connected: false }
-  }
-}
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-  // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token']
-  const adminToken = process && process.env.ADMIN_TOKEN
-  if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-  }
-  return { isAuthenticated: false, roles: [] }
-}
-  if (token && adminToken && token === adminToken) {
-  }
-  return { isAuthenticated: false, roles: [] }
-}
-export function requireRoles(
-  req: ApiRequest,
-  res: ApiResponse,
-  allowed: DevRole[]
-): DevIdentity | undefined {
-  const identity = getDevIdentity(req)
-  if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' })
-    return undefined
-  }
-  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r))
-  if (!hasRole) {
-    res.status(403).json({ error: 'Forbidden' })
-    return undefined
-  }
-  return identity
-}
-    return undefined
-  }
-  return identity
-}
-import fs from "fs"
-import path from "path"
-import { execSync } from "child_process"
-import type { NextApiRequest, NextApiResponse } from "next"
-export type DevRole = "admin" | "maintainer" | "contributor"
-export interface DevIdentity {
-  isAuthenticated: boolean
-  roles: DevRole[]
-  userId?: string
-}
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), ".git")
-    if (!fs.existsSync(gitDir)) return { connected: false }
-    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] })
-      .toString()
-      .trim()
-    return { connected: true, branch }
-  } catch {
-    return { connected: false }
-  }
-}
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-  // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req.headers["x-dev-token"] || req.headers["x-admin-token"]
-  const adminToken = process.env.ADMIN_TOKEN
-  if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ["admin"], userId: "admin" }
-  }
-  return { isAuthenticated: false, roles: [] }
-}
-export function requireRoles(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  allowed: DevRole[]
-): DevIdentity | undefined {
-  const identity = getDevIdentity(req)
-  if (!identity.isAuthenticated) {
-    res.status(401).json({ error: "Unauthorized" })
-    return undefined
-  }
-  const hasRole = identity.roles.some((r) => allowed.includes(r))
-  if (!hasRole) {
-    res.status(403).json({ error: "Forbidden" })
-    return undefined
-  }
-  return identity
-}
+
+export default PagePage

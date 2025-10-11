@@ -1,136 +1,106 @@
-  if (req.method !== "POST") return res.status(405).end()
-  const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
-  if (!responseId |!rating |!["up", "down"].includes(rating)) {
-    return res.status(400).json({ error: "Missing responseId or rating" })
-  }
-  const entry = {
-  if (req && req.method !== "POST") return res && res.status(405).end()
-  const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {}
-  if (!responseId || !rating || !["up", "down"].includes(rating)) {
-    return res && res.status(400).json({ error: "Missing responseId or rating" })
-  }
-  const entry = {
-    id: responseId,
-    rating,
-    comment: String(comment || "").slice(0, 2000),
-    pagePath: String(pagePath || ""),
-    aiModel: String(aiModel || ""),
-    userAgent: req && req.headers["user-agent"] || "",
-    ts: Date && Date.now(),
-  }
-  const rows = readAll()
-  rows && rows.push(entry)
-  writeAll(rows)
-  return res && res.status(200).json({ ok: true })
-}
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Feedback submitted' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const DATA_DIR = path.join(process.cwd(), 'data'),
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json')
-function readAll(): any[] {
-  try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-    if (!fs.existsSync(FEEDBACK_FILE)) fs.writeFileSync(FEEDBACK_FILE, '[]utf8')
-    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')
-    return JSON.parse(raw || '[]')
-  } catch {
-    return []
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const FeedbackPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Feedback - Zion Tech Group</title>
+        <meta name="description" content="Learn about our feedback solutions and how they can transform your business." />
+        <meta name="keywords" content="feedback, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-function writeAll(rows: any[]) {
-  fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(rows, null, 2))
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-export default function handler(req, res) {
-  try {
-  if (req.method !== 'POST') return res.status(405).end(),
-  const { responseId, rating, comment, pagePath, aiModel } = req.body || {}
-  if (!responseId || !rating || !['updown'].includes(rating)) {
-    return res.status(400).json({ error: 'Missing responseId or rating' })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const entry = {
-    id: responseId
-    rating
-    comment: String(comment || '').slice(0, 2000)
-    pagePath: String(pagePath || '')
-    aiModel: String(aiModel || '')
-    userAgent: req.headers['user-agent'] || '',
-    ts: Date.now()},
-  const rows = readAll()
-  rows.push(entry)
-  writeAll(rows)
-  return res.status(200).json({ ok: true })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-  const entry = {
-    id: response_id,
-    rating,
-    comment: String (comment || "").slice (0, 2000),
-    page_path: String (page_path || ""),
-    ai_model: String (ai_model || ""),
-    user_agent: req.headers["user - agent"] || "",
-    ts: Date.now (),
-  }
-  const rows = read_all ()
-  rows.push (entry)
-  write_all (rows)
-  return res.status (200).json ({ ok: true })
-}
+export default PagePage

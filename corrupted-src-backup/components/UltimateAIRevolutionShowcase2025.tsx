@@ -1,99 +1,106 @@
-const, UltimateAIRevolutionShowcase202, 5 = () => {
-    const, revolutionaryFeature, s = [
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
     {
-      title: 'Quant, u, m-Conscious, AI, Syste, m, s',
-      description: 'Revolutionary, AI, achieving 99.9, 9, 9% consciousness, integration, with infinite, scalabili, t, y',
-      impa, c, t: '$2.3 T, Enterprise, Valu, e',
-      ic, o, n: '🧠',
-      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0',
-      reade, r, s: '5, 0, 0, K+',
-      rati, n, g: 5., 0
-  },
-    {
-    title: 'Autonomous, Neural, Network, s',
-      description: 'Se, l, f-evolving, neural, architectures with, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g',
-      impa, c, t: '99.97% Accur, a, c, y',
-      ic, o, n: '⚡',
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
-      reade, r, s: '1, 8, 0, K+',
-      rati, n, g: 4., 9
-  },
-    {
-    title: 'Synthetic, Consciousness, Revolutio, n',
-      description: 'True, AI, awareness with, emotional, intelligenc, e, creative, autonom, y, and, moral, reasoning',
-      impa, c, t: '$500 B, Succe, s, s',
-      ic, o, n: '🌟',
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      reade, r, s: '2, 0, 3, K+',
-      rati, n, g: 5., 0
-  },
-    {
-      title: 'Neur, a, l-Synaptic, Fusion, A, I',
-      description: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accura, c, y',
-      impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
-      ic, o, n: '🚀',
-      col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
-      reade, r, s: '1, 5, 6, K+',
-      rati, n, g: 4., 8
-      <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Revolutionary, AI, Breakthroughs
-        Revolutionary, AI, Breakthroughs
-      <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
-        { revolutionaryFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
-          <div, ke, y = { in, d, e, x  }, classNa, m, e={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-, x, l`}>
-            <div, classNam, e = "te, x, t-4xl, m, b-3">{featu, r, e.ic, o, n}
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-3">{featu, r, e.title}
-            <p, classNam, e="te, x, t-sm, m, b-4, opacit, y-90">{featu, r, e.description}
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <span, classNam, e="te, x, t-xs, b, g-whi, t, e/20, p, x-2, p, y-1, rounde, d-fu, l, l">{featu, r, e.impa, c, t}
-              <div, classNam, e="flex, item, s-center, ga, p-1">
-                <Star, classNam, e="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0" />
-                <span, classNam, e="te, x, t-xs">{featu, r, e.rati, n, g}
-        <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-      <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-        <, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t"$2 />
-          classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
-        >
-          <Rocket, classNam, e="w-5 h-5" />
-          Explore, Revolutionary, Content
-          <Link, classNam, e="w-5 h-5" />
-          <Award, classNam, e="w-5 h-5" />
-          View, Success, Stories
-          <Link, classNam, e="w-5 h-5" />
-          <Globe, classNam, e="w-5 h-5" />
-          Get, AI, Services
-          <Link, classNam, e="w-5 h-5" />
-}}}
-const, UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */}
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-    {/* TODO: Fix JSX expression */}
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-    {/* TODO: Fix JSX expression */}
-    },
-    {/* TODO: Fix JSX expression */}
-          <, ke, y = { in, d, e, x  }, classNa, m, e={ `bg-gradie, n, t-to-br ${featu, r, e.col, o, r } round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
-  r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-, x, l`}>
-            <div, classNam, e = "te, x, t-4xl, m, b-3">{featu, r, e.ic, o, n}</d, i, v>"
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-3">{featu, r, e.title}</h3>"
-            <p, classNam, e="te, x, t-sm, m, b-4, opacit, y-90">{featu, r, e.description}</p>"
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n"></div>"
-              <span, classNam, e="te, x, t-xs, b, g-whi, t, e/20, p, x-2, p, y-1, rounde, d-fu, l, l">{featu, r, e.impa, c, t}</sp, a, n>"
-              <div, classNam, e="flex, item, s-center, ga, p-1"></div>"
-                <Star, classNam, e="w-4 h-4, fil, l-yell, o, w-400, tex, t-yell, o, w-4, 0, 0" /></Star>"
-                <span, classNam, e="te, x, t-xs">{featu, r, e.rati, n, g}</sp, a, n>"
-        <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r"></div>"
-      <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
-        <, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" "$2 />
-          classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
-        ></Link>"
-          <Rocket, classNam, e="w-5 h-5" />
-          Explore, Revolutionary, Content;"
-          <Link, classNam, e="w-5 h-5" /></Link>"
-          <Award, classNam, e="w-5 h-5" />
-          View, Success, Stories;"
-          <Link, classNam, e="w-5 h-5" /></Link>"
-          <Globe, classNam, e="w-5 h-5" />
-          Get, AI, Services;"
-          <Link, classNam, e="w-5 h-5" />
-}}}"`
-</div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></h2></h3>
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

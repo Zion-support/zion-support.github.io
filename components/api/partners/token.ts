@@ -1,123 +1,106 @@
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method Not Allowed' })
-  }
-  const { apiKey, ttlSeconds } = req.body |{}
-  if (!apiKey) {
-    return res.status(400).json({ error: 'apiKey required' })
-  }
-  const match = await findPartnerByApiKey(apiKey)
-  if (!match) {
-    return res.status(401).json({ error: 'Invalid API key' });  }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const PartnersPage: React.FC = () => {
+  const features = [
     {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST")
-    return res && res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { apiKey, ttlSeconds } = req && req.body || {}
-  if (!apiKey) {
-    return res && res.status(400).json({ error: "apiKey required" })
-  }
-  const match = await findPartnerByApiKey(apiKey)
-  if (!match) {
-  }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
     {
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("Allow", "POST")
-    return res.status (405).json ({ error: "Method Not Allowed" })
-  }
-  const { api_key, ttl_seconds } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "api_key required" })
-  }
-  const match = await findPartnerByApiKey (api_key)
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: "Invalid API key" })
-  }
-  const { partner, api_key: key } = match
-  const token = sign_jwt (
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
     {
-      sub: partner && partner.id,
-      apiKeyId: key && key.id,
-      name: partner && partner.name,
-      entityType: partner && partner.entityType,
-      useCaseType: partner && partner.useCaseType,
-    } as any,
-    typeof ttlSeconds === 'number'
-      ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
-      : 3600
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Learn about our partners solutions and how they can transform your business." />
+        <meta name="keywords" content="partners, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-  return res
-    .status(200)
-      sub: partner.id, apiKeyId: key.id,
-      name: partner.name, entityType: partner.entityType,
-      useCaseType: partner.useCaseType} as any
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
-  )
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
-    .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id
-      apiKeyId: key && key.id
-      name: partner && partner.name
-      entityType: partner && partner.entityType,
-      useCaseType: partner && partner.useCaseType} as any
-    typeof ttlSeconds === "number" ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds)) : 3600
-  )
-  return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
-}
-}
-  }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
-    {
-import type { NextApiRequest, NextApiResponse  } from "next"
-import {  findPartnerByApiKey, signJwt   } from "../../../utils/api/partnerAuth"
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { apiKey, ttlSeconds } = req.body || {}
-  if (!apiKey) {
-    return res.status(400).json({ error: "apiKey required" })
-  }
-  const match = await findPartnerByApiKey(apiKey)
-  if (!match) {
-    return res.status(401).json({ error: "Invalid API key" })
-  }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
-    {
-      sub: partner.id,
-      apiKeyId: key.id,
-      name: partner.name,
-      entityType: partner.entityType,
-      useCaseType: partner.useCaseType,
-    } as any,
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
-  )
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
-}
+
+export default PagePage

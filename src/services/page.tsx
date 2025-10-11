@@ -1,129 +1,106 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const ServicesPage: React.FC = () => {
-  const aiServicesData = aiServices.map(service => ({
-    icon: Brain,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
-    popular: service.pricing.starter.price < 3000,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
 
-  const itServicesData = itServices.map(service => ({
-    icon: Database,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
-    popular: service.pricing.starter.price < 2000,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
-
-  const microSaasServicesData = microSaasServices.map(service => ({
-    icon: BarChart3,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `$${service.pricing.starter.price}/month`,
-    popular: service.pricing.starter.price < 200,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
-
-  ];
-
-  ];
-
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
             </p>
-              </a>
-              <Link
-                to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Consultation
-              </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-              AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business
-            </p>
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
                   </div>
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
             </p>
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
 
-              Micro SAAS Solutions
-            </h2>
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-              We deliver exceptional results with proven expertise and cutting-edge technology
-            </p>
-          </div>
-        </div>
-      </section>
-
-              </a>
-              <Link
-              </Link>
-  );
-};
-
-export default ServicesPage;
-
-
+export default PagePage

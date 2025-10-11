@@ -1,64 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-    const { item, translated } = applyTranslations(base, lang)
-    return res && res.status(200).json({ item, translated })
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message })
-  }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'GET') {
-    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed')
-  }
-  const { slug, lang } = req && req.query as { slug: string, lang?: string }
-  try {
-    if (hasSupabase) {
-      const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()
-      if (error) throw error
-      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)
-      return res && res.status(200).json({ item, translated })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const TalentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    const base = LOCAL.find((t) => t.slug === slug) |null
-    if (!base) return res.status(404).json({ error: 'Not found' })
-    const { item, translated } = applyTranslations(base, lang)
-    return res.status(200).json({ item, translated })
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message })
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Talent - Zion Tech Group</title>
+        <meta name="description" content="Learn about our talent solutions and how they can transform your business." />
+        <meta name="keywords" content="talent, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-}
-}
-}
-}
-}
-import {  supabase as supabaseClient   } from '@/utils/supabase/client'
-import {  TALENT_PROFILES as LOCAL   } from '@/data/talent'
-import type { TalentProfile  } from '@/utils/types/talent'
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-function applyTranslations(item: TalentProfile, lang?: string) {
-  if (!lang || !item.translations) return { item, translated: false }
-  const t = item.translations
-  const translated: Partial<TalentProfile> = {}
-  if (t.title?.[lang]) translated.title = t.title[lang]
-  if (t.summary?.[lang]) translated.summary = t.summary[lang]
-  if (t.bio?.[lang]) translated.bio = t.bio[lang]
-  if (t.category?.[lang]) translated.category = t.category[lang]
-  return { item: { ...item, ...translated }, translated: Object.keys(translated).length > 0 }
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')
-  }
-  const { slug, lang } = req.query as { slug: string; lang?: string }
-  try {
-    if (hasSupabase) {
-      const { data, error } = await supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()
-      if (error) throw error
-      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)
-      return res.status(200).json({ item, translated })
-    }
-    const base = LOCAL.find((t) => t.slug === slug) || null
-    if (!base) return res.status(404).json({ error: 'Not found' })
-    const { item, translated } = applyTranslations(base, lang)
-    return res.status(200).json({ item, translated })
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message })
-  }
-}
+
+export default PagePage

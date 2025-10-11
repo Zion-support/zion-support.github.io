@@ -1,15 +1,106 @@
-return ( <motion.div initial={opacity: 0;} y: 4 } animate={opacity: 1} y: 0 } className="text-left"> origin/cursor/automate-test-improve-and-merge-code-2533 <input value={value} onChange={e =>
-  </input> setValue(e && e.target.value)} placeholder={placeholder} } interface InteractiveSearchProps {; placeholder?: string; export default /**; * InteractiveSearch - Function description; */ >; ✕} </button>)} </motion.div>); }' interface InteractiveSearchProps {} placeholder?: string; on_search?: (query: string) => void, class_name?: string} export default /**; * InteractiveSearch - Function description; */ function InteractiveSearch() {} export default /**; * InteractiveSearch - Function description; */ function InteractiveSearch() {} ; const handle_submit = (e: React.FormEvent) =>: unknown {;, e.prevent_default ()," const form_data = new FormData (e.target as HTMLFormElement);, "" const query = form_data.get ("search") as string;} on_search?.(query)}" return ("" <form on_submit = "{handle_submit;}" className="text-left">"" <div className="text-left">""</div> <inputtype="text" name="search" placeholder="{placeholder}" <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-  </inputtype>
-  </path></$1></$1></$1> </form>) ); }); } " className="text-left" /> {value && (' <button'' onClick={() => setValue('')}}" className="text-left" />' {_value && (_<button'' onClick={() => setValue('')}} className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover: text-gray-700 dark:hover:text-gray-300&quot, > ✕ </button> )} </motion.div> </motion.div> )</$1></$1></$1> </form>); }); }); } className="text-left" /> {value && ( <button' onClick={() => setValue('')}} {value && (} <button)}' onClick={() = /> setValue('')}' className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300' > ✕ </button> } </motion.div> ); origin/cursor/automate-test-improve-and-merge-code-2533 }';
-return (<motion.div initial={/* TODO: Fix JSX expression */;}
-  y: 0} y: 4 } animate={/* TODO: Fix JSX expression */});,
-y: 1} y: 0 } className="text-left"> origin/cursor/automate-test-improve-and-merge-code-2533 <input value={value} onChange={e => setValue(e && e.target.value)} placeholder={placeholder} } interface InteractiveSearchProps {; placeholder?: string; export default /**; * InteractiveSearch - Function description; */ >; ✕} </button>)} </motion.div>); }' interface InteractiveSearchProps {} placeholder?: string; on_search?: (quer,");,
-y: string) => void, class_name?: string} export default /**; * InteractiveSearch - Function description; */ function InteractiveSearch() {} export default /**; * InteractiveSearch - Function description; */ function InteractiveSearch() {} ; const handle_submit = (e: React.FormEvent) =>: unknown {;, e.prevent_default ()," const form_data = new FormData (e.target as HTMLFormElement);, "" const query = form_data.get ("search") as string;} on_search?.(query)}" return ("" <form on_submit = "{handle_submit;}" className="text-left">"" <div className="text-left">"" <inputtype="text" name="search" placeholder="{placeholder}" <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></$1></$1></$1> </form>) ); }); } " className="text-left" /> {value && (' <button'' onClick={() => setValue('')}}" className="text-left" />' {_value && (_<button'' onClick={() => setValue('')}} className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500,;,
-hover: text-gray-700,;,
-dark:hove,";,
-r:text-gray-300&quot, > ✕ </button> )} </motion.div> </motion.div> )</$1></$1></$1> </form>); }); }); } className="text-left" /> {value && ( <button' onClick={() => setValue('')}} {value && (} <button)}' onClick={() = /> setValue('')}' className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500,;,
-hover:text-gray-700,;,
-dark:hove,;,
-r:text-gray-300' > ✕ </button> } </motion.div> ); origin/cursor/automate-test-improve-and-merge-code-2533 }'"
-</div></button></button></p></p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Ui - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ui solutions and how they can transform your business." />
+        <meta name="keywords" content="ui, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

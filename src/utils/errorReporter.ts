@@ -1,520 +1,106 @@
 'use client'
-/**
- * Enhanced Error Reporting Utility
- * Provides comprehensive error tracking, logging, and reporting capabilities
- */
-export interface ErrorReport {
-    message: string
-  stack?: string
-  componentStack?: string
-  timestamp: string
-  userAgent: string
-  url: string
-  severity: 'low' | 'medium' | 'high' | 'critical',
-  context?: Record<string, unknown>
-  }
-export interface ErrorReporterConfig {
-    enableConsoleLogging: boolean
-  enableRemoteLogging: boolean
-  remoteEndpoint?: string
-  maxErrorsInMemory: number,
-  captureContext: boolean
-  }
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true
-}
-/**
- * ErrorReporter class for comprehensive error handling
- */
-export class ErrorReporter {
-  private static instance: ErrorReporter
-  private config: ErrorReporterConfig
-  private errorQueue: ErrorReport[] = [],
-  private errorCount: Map<string, number> = new Map()
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {
-    this.config = { ...defaultConfig, ...config }
-  }
-  /**
-   * Get singleton instance
-   */
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
-    if (!ErrorReporter.instance) {
-
 import React from 'react'
-'use client'
-/**
- * Enhanced Error Reporting Utility
- * Provides comprehensive error tracking, logging, and reporting capabilities
- */
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export interface ErrorReport {// TODO: Add content
-  }
-
-}
-  messag,
-  e: string
-  stack?: string
-  componentStack?: string,,
-
-    timestamp: string,,
-    userAgent: string,,
-    url: string,,
-    severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record,
-          <string>
-}
-export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  enableConsoleLogging: boolean,,
-    enableRemoteLogging: boolean
-
-  remoteEndpoint?: string,,
-    maxErrorsInMemor,
-  y: number,,
-    captureContex,
-  t: boolean,
-}
-
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true,
-
-}
-/**
- * ErrorReporter class for comprehensive error handling
- */
-
-export class ErrorReporter {
-    // TODO: Add content
-  }
-
-}
-  private static,
-  instance: ErrorReporter,
-  private,
-  config: ErrorReporterConfig,
-  private,
-  errorQueue: ErrorReport[] = [],
-  private,
-  errorCount: Map,
-          <string, number> = new Map()
-  private constructor(confi)
-  g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.config = { ...defaultConfig, ...config }
-  }
-  /**
-   * Get singleton instance
-   */
-
-  static getInstance(config?: Partial
-          <ErrorReporterConfig>): ErrorReporter {
-    // TODO: Add content
-  }
-
-}
-    if (!ErrorReporter.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      ErrorReporter.instance = new ErrorReporter(config)
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    return ErrorReporter.instance
-  }
-  /**
-   * Report an error with full context
-   */
-  reportError(
-    error: Error,
-    severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
-  ): void {
-    const errorReport: ErrorReport = {
-      message: error.message,
-   * Report an error with full context
-   */
-//   reportError()
-    erro,
-  r: Error,
-    severit,
-  y: ErrorReport['severity'] = 'medium',
-    context?: Record
-          <string, unknown>
-  ): void {// TODO: Add content
-  }
+  ]
 
-}
-    const,
-  errorReport: ErrorReport = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-  message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity,
-      context: this.config.captureContext ? context : undefined
-    }
-    // Track error frequency
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
-    // Add to queue (with size limit)
-    this.errorQueue.push(errorReport)
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {
-    this.errorQueue.shift()
-  }
-    // Console logging
-    if (this.config.enableConsoleLogging) {
-    this.logToConsole(errorReport)
-  }
-    // Remote logging
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-    //       severity,
-      context: this.config.captureContext ? context : undefined
-  }
-    // Track error frequency
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
-    // Add to queue (with size limit)
-    this.errorQueue.push(errorReport)
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.errorQueue.shift()
-    }
-    // Console logging
-    if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.logToConsole(errorReport)
-    }
-    // Remote logging
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendToRemote(errorReport)
-    }
-  }
-  /**
-   * Log error to console with formatting
-   */
-  private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity),
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style)
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') {}
-    }
-    if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') {}
-    }
-    console.groupEnd()
-  }
-  /**
-   * Get console styling based on severity
-   */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {
-      low: 'color: #2196F3, font-weight: bold',
-      medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',
-      critical:     ,
-$4}
-    return styles[severity]
-  }
-  /**
-   * Send error to remote logging service
-   */
-  private async sendToRemote(report: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return,
-    try {
-      await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(report)
-      })
-    } catch (error) {
-    // Silently fail to avoid infinite loop
-      if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error)
-   * Log error to console with formatting
-   */
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-  private logToConsole(report: ErrorReport): void {// TODO: Add content
-  }
-
-}
-    const style = this.getConsoleStyle(report.severity)
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style)
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (report.stack) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    if (report.context) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    console.groupEnd()
-  }
-  /**
-   * Get console styling based on severity
-   */
-
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    // TODO: Add content
-  }
-
-}
-    const styles = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  low: 'color: #2196F3, font-weight: bold',
-      medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold, font-size: 14px'
-
-    }
-    return styles[severity]
-  }
-  /**
-   * Send error to remote logging service
-   */
-
-  private async sendToRemote(report: ErrorReport): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    if (!this.config.remoteEndpoint) return
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      await fetch(this.config.remoteEndpoint, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          'Content-Type': 'application/json'
-        },
-        bod)
-  y: JSON.stringify(report)
-      })
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Silently fail to avoid infinite loop
-      if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-        logger.warn('Failed to send error to remote endpoint:', error)
-      }
-    }
-  }
-  /**
-   * Get all errors in queue
-   */
-  getErrorQueue(): ErrorReport[] {
-    return [...this.errorQueue]
-  }
-  /**
-   * Get error statistics
-   */
-  getErrorStats(): {
-    totalErrors: number
-    uniqueErrors: number,
-    errorsByType: Record<string, number>
-  } {
-    return {
-      totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
-    }
-  }
-  /**
-   * Clear error queue
-   */
-  clearQueue(): void {
-    * Get all errors in queue
-   */
-
-  getErrorQueue(): ErrorReport[] {// TODO: Add content
-  }
-
-}
-    return [...this.errorQueue]
-  }
-  /**
-   * Get error statistics
-   */
-
-  getErrorStats(): {
-    // TODO: Add content
-  }
-
-}
-  totalError,
-  s: number,,
-    uniqueError,
-  s: number,,
-    errorsByTyp,
-  e: Record,
-          <string>
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
-
-    }
-  }
-  /**
-   * Clear error queue
-   */
-
-  clearQueue(): void {
-    // TODO: Add content
-  }
-
-}
-    this.errorQueue = []
-    this.errorCount.clear()
-  }
-  /**
-   * Export errors as JSON
-   */
-  exportErrors(): string {
-    return JSON.stringify(
-      {
-        timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue
-      },
-      null,
-      2
-    )
-  }
-}
-/**
- * Convenience function to report errors
- */
-export const reportError = (
-  error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
-): void => {
-    ErrorReporter.getInstance().reportError(error, severity, context)
-  }
-/**
- * React error boundary helper
- */
-export const captureComponentError = (
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string
-): void => {
-  const report = ErrorReporter.getInstance(),
-  report.reportError(error, 'high', {
-    componentName,
-    componentStack: errorInfo.componentStack
-  })
-}
-export default ErrorReporter
-   * Export errors as JSON
-   */
-
-  exportErrors(): string {
-    // TODO: Add content
-  }
-
-}
-    return JSON.stringify()
-      {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue,
-
-      },
-//       null,
-//       2)
-  }
-}
-/**
- * Convenience function to report errors
- */
-export const reportError = ()
-  erro,
-  r: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record
-          <string, unknown>
-): void => {
-    // TODO: Add content
-  }
-
-}
-/**
- * React error boundary helper
- */
-export const captureComponentError = ()
-
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string): void => {
-    // TODO: Add content
-  }
-
-}
-  const report = ErrorReporter.getInstance()
-  report.reportError(error, 'high', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     componentName,
-    componentStac,
-  k: errorInfo.componentStack,)
-  })
-}
-export default ErrorReporter
+export default PagePage

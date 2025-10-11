@@ -1,362 +1,106 @@
-// Mock source map utility
-export function getSourceMapWithExistence() {
-  return {
-function buildZionSourceMap(): SourceNode[] {
-  return [
-    {
-      id: 'src',
-      name: 'src',
-      type: 'directory',
-      path: 'src',
-      exists: false,
-      children: [
-        {
-          id: 'components',
-          name: 'components',
-          type: 'directory',
-          path: 'src/components',
-          exists: false
-        },
-        {
-          id: 'pages',
-          name: 'pages',
-          type: 'directory',
-          path: 'src/pages',
-          exists: false
-        },
-        {
-          id: 'utils',
-          name: 'utils',
-          type: 'directory',
-          path: 'src/utils',
-          exists: false
-        }
-      ]
-    }
-  ]
-}
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path)
-  return {
-    ...node,
-    exists,
-    children: node.children?.map(markExistenceRecursive)
-  }
-}
-    connected: false,
-    branch: 'main'
-  }
-}
-export function getSourceMapWithExistence(): SourceNode[] {
-import fs from "fs"
-import path from "path"
-export type SourceNodeType = "folder" | "file"
-export interface SourceNode {
-  name: string
-  path: string; // repo-relative path starting with '/'
-  type: SourceNodeType
-  children?: SourceNode[]
-  exists?: boolean
-}
-export interface SourceMapStatus {
-  gitConnected: boolean
-  gitBranch?: string
-}
-export interface SourceMapResponse {
-  nodes: SourceNode[]
-  status: SourceMapStatus
-}
-const ROOT = process.cwd()
-function withPath(base: string, segment: string): string {
-  if (base === "/") return `/${segment}`
-  return `${base}/${segment}`
-}
-function folder(name: string, basePath: string, children: string[] = []): SourceNode {
-  const fullPath = withPath(basePath, name)
-  return {
-    name,
-    path: fullPath,
-    type: "folder",
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" })),
-  }
-}
-export function buildZionSourceMap(): SourceNode[] {
-  const map: SourceNode[] = [
-    // 1. /core
-    {
-      name: "core",
-      path: "/core",
-      type: "folder",
-      children: [
-        { name: "auth", path: "/core/auth", type: "folder" },
-        { name: "user", path: "/core/user", type: "folder" },
-        { name: "marketplace", path: "/core/marketplace", type: "folder" },
-        { name: "payments", path: "/core/payments", type: "folder" },
-        { name: "messaging", path: "/core/messaging", type: "folder" },
-        { name: "analytics", path: "/core/analytics", type: "folder" },
-        { name: "roles", path: "/core/roles", type: "folder" },
-        { name: "talent", path: "/core/talent", type: "folder" },
-        { name: "client", path: "/core/client", type: "folder" },
-      ],
-    },
-    // 2. /ai
-    {
-      name: "ai",
-      path: "/ai",
-      type: "folder",
-      children: [
-        { name: "gpt", path: "/ai/gpt", type: "folder" },
-        { name: "resume-generator", path: "/ai/resume-generator", type: "folder" },
-        { name: "proposal-writer", path: "/ai/proposal-writer", type: "folder" },
-        { name: "contract-writer", path: "/ai/contract-writer", type: "folder" },
-        { name: "assistant", path: "/ai/assistant", type: "folder" },
-        { name: "prompts", path: "/ai/prompts", type: "folder" },
-      ],
-    },
-    // 3. /dao
-    {
-      name: "dao",
-      path: "/dao",
-      type: "folder",
-      children: [
-        { name: "proposals", path: "/dao/proposals", type: "folder" },
-        { name: "voting", path: "/dao/voting", type: "folder" },
-        { name: "quorum", path: "/dao/quorum", type: "folder" },
-        { name: "staking", path: "/dao/staking", type: "folder" },
-        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" },
-      ],
-    },
-    // 4. /token
-    {
-      name: "token",
-      path: "/token",
-      type: "folder",
-      children: [
-        { name: "rewards", path: "/token/rewards", type: "folder" },
-        { name: "pricing-engine", path: "/token/pricing-engine", type: "folder" },
-        { name: "escrow", path: "/token/escrow", type: "folder" },
-        { name: "payout-engine", path: "/token/payout-engine", type: "folder" },
-        { name: "wallet", path: "/token/wallet", type: "folder" },
-      ],
-    },
-    // 5. /academy
-    {
-      name: "academy",
-      path: "/academy",
-      type: "folder",
-      children: [
-        { name: "courses", path: "/academy/courses", type: "folder" },
-        { name: "certifications", path: "/academy/certifications", type: "folder" },
-        { name: "quiz", path: "/academy/quiz", type: "folder" },
-        { name: "video", path: "/academy/video", type: "folder" },
-        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" },
-      ],
-    },
-    // 6. /governance
-    {
-      name: "governance",
-      path: "/governance",
-      type: "folder",
-      children: [
-        { name: "manifesto", path: "/governance/manifesto", type: "folder" },
-        { name: "constitution", path: "/governance/constitution", type: "folder" },
-        { name: "roadmap", path: "/governance/roadmap", type: "folder" },
-        { name: "changelog", path: "/governance/changelog", type: "folder" },
-      ],
-    },
-    // 7. /deployments
-    {
-      name: "deployments",
-      path: "/deployments",
-      type: "folder",
-      children: [
-        { name: "multiverse", path: "/deployments/multiverse", type: "folder" },
-        { name: "subdomains", path: "/deployments/subdomains", type: "folder" },
-        { name: "config-templates", path: "/deployments/config-templates", type: "folder" },
-        { name: "environments", path: "/deployments/environments", type: "folder" },
-      ],
-    },
-    // 8. /api
-    {
-      name: "api",
-      path: "/api",
-      type: "folder",
-      children: [
-        { name: "docs", path: "/api/docs", type: "folder" },
-        { name: "partners", path: "/api/partners", type: "folder" },
-        { name: "integrations", path: "/api/integrations", type: "folder" },
-        { name: "webhooks", path: "/api/webhooks", type: "folder" },
-      ],
-    },
-  ]
-  return map
-}
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const absolutePath = path.join(ROOT, node.path)
-  const exists = fs.existsSync(absolutePath)
-  const withExists: SourceNode = {
-    ...node,
-    exists,
-  }
-  if (node.children && node.children.length > 0) {
-    withExists.children = node.children.map(markExistenceRecursive)
-  }
-  return withExists
-}
-export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap()
-  return nodes.map(markExistenceRecursive)
-}
-export interface DeployTemplateResult {
-  createdPaths: string[]
-  skippedPaths: string[]
-export function ensureDirectory(dirPath: string): void {
-  if (!fs && fs.existsSync(dirPath)) {
-    fs && fs.mkdirSync(dirPath, { recursive: true })
-  }
-}
-export function deployBasicTemplateForPath(
-  repoRelativePath: string
-): DeployTemplateResult {
-  const absoluteDir = path.join(ROOT, repoRelativePath)
-  const createdPaths: string[] = []
-  const skippedPaths: string[] = []
-  ensureDirectory(absoluteDir)
-  const keepFile = path && path.join(absoluteDir, '.keep')
-  if (!fs && fs.existsSync(keepFile)) {
-    fs && fs.writeFileSync(keepFile, '')
-    createdPaths && createdPaths.push(keepFile)
-  } else {
-    skippedPaths && skippedPaths.push(keepFile)
-  }
-  const readmeFile = path && path.join(absoluteDir, 'README && README.md')
-  if (!fs && fs.existsSync(readmeFile)) {
-    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`
-    fs && fs.writeFileSync(readmeFile, readme)
-    createdPaths && createdPaths.push(readmeFile)
-  } else {
-    skippedPaths && skippedPaths.push(readmeFile)
-  }
-  return { createdPaths, skippedPaths }
-  return { createdPaths, skippedPaths }
-}
-  return { createdPaths, skippedPaths }
-export interface SourcePosition {
-  line: number
-  column: number
-  source?: string
-  name?: string
-}
-export class SourceMapManager {
-  private sourceMaps: Map<string, SourceMapInfo> = new Map()
-  addSourceMap(filePath: string, sourceMap: SourceMapInfo): void {
-    this.sourceMaps.set(filePath, sourceMap)
-  }
-  getSourceMap(filePath: string): SourceMapInfo | undefined {
-    return this.sourceMaps.get(filePath)
-  }
-  findOriginalPosition(filePath: string, line: number, column: number): SourcePosition | null {
-    const sourceMap = this.getSourceMap(filePath)
-    if (!sourceMap) return null
-    // This is a simplified implementation
-    // In a real implementation, you would parse the mappings and find the original position
-    return {
-      line,
-      column,
-      source: sourceMap.sources[0],
-      name: sourceMap.names[0]
-    }
-  }
-  findGeneratedPosition(originalFile: string, line: number, column: number): SourcePosition | null {
-    // This is a simplified implementation
-    // In a real implementation, you would parse the mappings and find the generated position
-    for (const [filePath, sourceMap] of this.sourceMaps) {
-      if (sourceMap.sources.includes(originalFile)) {
-        return {
-          line,
-          column,
-          source: filePath
-        }
-      }
-    }
-    return null
-  }
-  getAllSourceMaps(): Map<string, SourceMapInfo> {
-    return new Map(this.sourceMaps)
-  }
-  clearSourceMaps(): void {
-    this.sourceMaps.clear()
-  }
-}
-// Singleton instance
-export const sourceMapManager = new SourceMapManager()
-// Utility functions
-export function parseSourceMap(sourceMapJson: string): SourceMapInfo | null {
-  try {
-    return JSON.parse(sourceMapJson) as SourceMapInfo
-  } catch (error) {
-    console.error('Failed to parse source map:', error)
-    return null
-  }
-}
-export function generateSourceMap(
-  sources: string[],
-  names: string[],
-  mappings: string,
-  file?: string
-): SourceMapInfo {
-  return {
-    version: 3,
-    sources,
-    names,
-    mappings,
-    file
-  }
-}
-  created_paths: string[]
-  skipped_paths: string[]
-export function ensure_directory (dir_path: string): void {
-  if () {) {
-  $2
-}
-}
-}
-    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`
-    fs.writeFileSync (readme_file, readme)
-    created_paths.push (readme_file)
-  } else {
-    skipped_paths.push (readme_file)
-  }
-  return { created_paths, skipped_paths }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export interface DeployTemplateResult {
-  createdPaths: string[]
-  skippedPaths: string[]
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export function ensureDirectory(dirPath: string): void {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true })
-  }
-}
-export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {
-  const absoluteDir = path.join(ROOT, repoRelativePath)
-  const createdPaths: string[] = []
-  const skippedPaths: string[] = []
-  ensureDirectory(absoluteDir)
-  const keepFile = path.join(absoluteDir, ".keep")
-  if (!fs.existsSync(keepFile)) {
-    fs.writeFileSync(keepFile, "")
-    createdPaths.push(keepFile)
-  } else {
-    skippedPaths.push(keepFile)
-  }
-  const readmeFile = path.join(absoluteDir, "README.md")
-  if (!fs.existsSync(readmeFile)) {
-    const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`
-    fs.writeFileSync(readmeFile, readme)
-    createdPaths.push(readmeFile)
-  } else {
-    skippedPaths.push(readmeFile)
-  }
-  return { createdPaths, skippedPaths }
-}
+
+export default PagePage

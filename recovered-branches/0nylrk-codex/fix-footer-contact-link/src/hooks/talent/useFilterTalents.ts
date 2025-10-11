@@ -1,127 +1,106 @@
-import { useState, useMemo } from 'react'
-import { TalentProfile } from '@/types/talent'
-export function useFilterTalents(talents: TalentProfile[]) {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([])
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([])
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([])
-  const [priceRange, setPriceRange] = useState<[number, number]>([50, 200])
-  const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15])
-  const [sortOption, setSortOption] = useState<string>('relevance')
-  const toggleSkill = (skill: string) => {
-    setSelectedSkills(prev => 
-      prev.includes(skill) 
-        ? prev.filter(s => s !== skill)
-        : [...prev, skill]
-    )
-  }
-  const toggleAvailability = (availability: string) => {
-    setSelectedAvailability(prev => 
-      prev.includes(availability) 
-        ? prev.filter(a => a !== availability)
-        : [...prev, availability]
-    )
-  }
-  const toggleRegion = (region: string) => {
-    setSelectedRegions(prev => 
-      prev.includes(region) 
-        ? prev.filter(r => r !== region)
-        : [...prev, region]
-    )
-  }
-  const clearFilters = () => {
-    setSearchTerm('')
-    setSelectedSkills([])
-    setSelectedAvailability([])
-    setSelectedRegions([])
-    setPriceRange([50, 200])
-    setExperienceRange([0, 15])
-    setSortOption('relevance')
-  }
-  // Filter and sort talents
-  const filteredTalents = useMemo(() => {
-    let result = [...talents]
-    // Filter by search term
-    if (searchTerm) {
-      const lowerSearch = searchTerm.toLowerCase()
-      result = result.filter(talent => 
-        talent.full_name.toLowerCase().includes(lowerSearch) ||
-        talent.professional_title.toLowerCase().includes(lowerSearch) ||
-        talent.bio?.toLowerCase().includes(lowerSearch) ||
-        talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
-      )
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const TalentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // Filter by selected skills
-    if (selectedSkills.length > 0) {
-      result = result.filter(talent => 
-        selectedSkills.every(skill => 
-          talent.skills?.some(talentSkill => 
-            talentSkill.toLowerCase().includes(skill.toLowerCase())
-          )
-        )
-      )
-    }
-    // Filter by availability
-    if (selectedAvailability.length > 0) {
-      result = result.filter(talent => 
-        selectedAvailability.includes(talent.availability_type || '')
-      )
-    }
-    // Filter by location/region
-    if (selectedRegions.length > 0) {
-      result = result.filter(talent => 
-        selectedRegions.some(region => 
-          talent.location?.includes(region)
-        )
-      )
-    }
-    // Filter by price range
-    result = result.filter(talent => {
-      const hourlyRate = talent.hourly_rate || 0
-      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
-    })
-    // Filter by experience range
-    result = result.filter(talent => {
-      const years = talent.years_experience || 0
-      return years >= experienceRange[0] && years <= experienceRange[1]
-    })
-    // Sort talents
-    switch (sortOption) {
-      case 'price-low':
-        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0))
-        break
-      case 'price-high':
-        result.sort((a, b) => (b.hourly_rate || 0) - (a.hourly_rate || 0))
-        break
-      case 'rating':
-        result.sort((a, b) => (b.average_rating || 0) - (a.average_rating || 0))
-        break
-      case 'experience':
-        result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0))
-        break
-      default:
-        // Default sorting by relevance (no specific order)
-        break
-    }
-    return result
-  }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption])
-  return {
-    filteredTalents,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters}
-    clearFilters,
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Talent - Zion Tech Group</title>
+        <meta name="description" content="Learn about our talent solutions and how they can transform your business." />
+        <meta name="keywords" content="talent, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

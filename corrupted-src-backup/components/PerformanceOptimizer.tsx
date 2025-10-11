@@ -1,60 +1,106 @@
-import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t"
-impo, r, t {/* TODO: Fix JSX expression */}"
-} fr, o, m "w, e, b-vita, l, s"
-interface, PerformanceMetric, s {
-    c, l, s: numb, e, r | nu, l, l
-f, i, d: numb, e, r | nu, l, l
-f, c, p: numb, e, r | nu, l, l
-l, c, p: numb, e, r | nu, l, l
-tt, f, b: numb, e, r | nu, l, l
-sc, o, r
-  e: numb, e, r
-  }
-const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
-    isVisib, l, e
-  onClo, s, e
-  }) => {
-  con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
-    imageOptimizati, o, n: tr, u, e
-    codeSplitti, n, g: tr, u, e
-    lazyLoadi, n, g: tr, u, e
-    cachi, n, g: tr, u, e;)
-    compressi, o, n: tr, u, e;)
-    c, d, n: fal, s, e;)
-interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
-}
-const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  })
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>([])
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-  const, runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
-      }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
-     }
-    if() {/* TODO: Fix JSX expression */}
-      }, if (optimizatio, n, s.cachi, n, g) {/* TODO: Fix JSX expression */}
-     }
-    if() {/* TODO: Fix JSX expression */}
-      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t)
-  }, [optimizatio, n, s])
-      k, e, y: 'c, d, n' as, con, s, t,
-      lab, e, l: 'CDN, Integrati, o, n',
-      descriptio,
-  n: 'Use, Content, Delivery Network, for, global performa, n, c, e',
-      ic, o, n: W, i, f, i,
-      enabl, e, d: optimizatio, n, s.cd, n}]; retu, r, n(<div, classNam, e = 'spa, c, e-y-6'>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-  ]; retu, r, n (
-    <div, classNam, e = 'spa, c, e-y-6'>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-        <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-          Performance, Optimize, r</$1>)
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
-          <X, classNam, e='h-6 w-6' />)
-  ]; retu, r, n (<div, classNam, e = 'spa, c, e-y-6'>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-        <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-          Performance, Optimize, r
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>
-          <X, classNam, e='h-6 w-6' /></X>")
-</div></div></div></div></div></div></button></button></h2></h2>
+}
+
+export default PagePage

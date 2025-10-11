@@ -1,284 +1,106 @@
-import type { BookProject } from '../book/bookTypes',
-export function buildPrintableHtml(project: BookProject): string {
-  const { meta, chapters, visuals } = project,
-  const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
-    .join('\n'),
-import type { BookProject } from '../book/bookTypes'
-  const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
-    .join('\n')
-  const chapterHtml = chapters
-    .map(
-      (c) => `
-      <section class="chapter">
-        <h2>${escape_html (c.title)}</h2>
-        <div class="content">${paragraphize (c.content)}</div></$1>
-    `)
-    .join('\n\n'),
-  const visualsHtml = [
-    ...visuals.timelineImages,
-    ...visuals.daoVoteCharts,
-    ...visuals.uiScreens]
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
-    .join('\n'),
-    .join('\n\n')
-  const visualsHtml = [
-    ...visuals.timelineImages
-    ...visuals.daoVoteCharts
-    ...visuals.uiScreens]
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
-    .join('\n')
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ''
-    .join ('\n\n'),
-  const visuals_html = [
-    ...visuals.timeline_images,
-    ...visuals.daoVoteCharts,
-    ...visuals.ui_screens]
-    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
-    .join ('\n'),
-  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : ''
-  return `<!doctype html>
-<html>
-<head>
-<meta charset="utf - 8" />
-<title>${escape_html (meta.title)}</title>
-<style>
-  @page { margin: 1in }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
-  .cover h1 { font-size: 40px, margin: 0 }
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
-  .cover .by { margin-top: 24px, color: #666 }
-  .barcode { margin-top: 24px, height: 64px }
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal }
-  .chapter { break-before: page }
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0 }
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
-  .visual { break-inside: avoid, margin: 12px 0 }
-  .visual img { max-width: 100%, height: auto }
-</style></$1>
-<body>
-  <section class="cover">
-    <div>${escapeHtml(meta.publisher |'')}</div>
-    <h1>${escapeHtml(meta.title)}</h1>
-    <h3>${escapeHtml(meta.subtitle |'')}</h3>
-    <div class="by">By ${escapeHtml(meta.author)}</div>
-    ${barcode}
-  </section>
-  ${quotesHtml}
-  ${chapterHtml}
-  ${visualsHtml}
-</body></$1>`
-}
-function paragraphize(text: string): string {if (!text) return ''
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
-function escapeHtml(s: string): string {return s
-function escapeHtml(s: string): string {
-  return s
-  @page { margin: 1in   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .cover h1 { font-size: 40px, margin: 0   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .cover .by { margin-top: 24px, color: #666   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .barcode { margin-top: 24px, height: 64px   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .chapter { break-before: page   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  .visual img { max-width: 100%, height: auto   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-</style></$1>
-<body>
-  <section class="cover">
-    <div>${escapeHtml(meta.publisher |'')}</div>
-    <h1>${escapeHtml(meta.title)}</h1>
-    <h3>${escapeHtml(meta.subtitle |'')}</h3>
-    <div class="by">By ${escapeHtml(meta.author)}</div>
-    ${barcode}
-  </section>
-  ${quotesHtml}
-  ${chapterHtml}
-  ${visualsHtml}
-</body></$1>`
-}
-function paragraphize(text: string): string {if (!text) return ''
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
-  </section>
-  ${quotesHtml  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  ${chapterHtml  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  ${visualsHtml  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-</body></$1>`
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ExportPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Export - Zion Tech Group</title>
+        <meta name="description" content="Learn about our export solutions and how they can transform your business." />
+        <meta name="keywords" content="export, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-function paragraphize(text: string): string {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '<')
-    .replace(/>/g, '>')
-    .replace(/"/g, '"')
-    .replace(/'/g, '&#039,')
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
-import type { BookProject } from '../book/bookTypes'
-export function buildPrintableHtml(project: BookProject): string {
-  const { meta, chapters, visuals } = project
-  const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
-    .join('\n')
-  const chapterHtml = chapters
-    .map(
-      (c) => `
-      <section class="chapter">
-        <h2>${escapeHtml(c.title)}</h2>
-        <div class="content">${paragraphize(c.content)}</div>
-      </section>
-    `,
-    )
-    .join('\n\n')
-  const visualsHtml = [
-    ...visuals.timelineImages,
-    ...visuals.daoVoteCharts,
-    ...visuals.uiScreens,
-  ]
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
-    .join('\n')
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : ''
-  return `<!doctype html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>${escapeHtml(meta.title)}</title>
-<style>
-  @page { margin: 1in; }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; color: #111; }
-  .cover { break-after: page; display: flex; flex-direction: column; justify-content: center; height: 90vh; }
-  .cover h1 { font-size: 40px; margin: 0; }
-  .cover h3 { font-size: 20px; margin: 8px 0 0 0; color: #444; }
-  .cover .by { margin-top: 24px; color: #666; }
-  .barcode { margin-top: 24px; height: 64px; }
-  .quote { border-left: 4px solid #222; padding-left: 12px; margin: 16px 0; color: #333; }
-  .quote cite { display:block; margin-top:6px; color:#666; font-style: normal; }
-  .chapter { break-before: page; }
-  .chapter h2 { font-size: 28px; margin: 0 0 12px 0; }
-  .content p { line-height: 1.6; margin: 0 0 12px 0; white-space: pre-wrap; }
-  .visual { break-inside: avoid; margin: 12px 0; }
-  .visual img { max-width: 100%; height: auto; }
-</style>
-</head>
-<body>
-  <section class="cover">
-    <div>${escapeHtml(meta.publisher || '')}</div>
-    <h1>${escapeHtml(meta.title)}</h1>
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>
-    <div class="by">By ${escapeHtml(meta.author)}</div>
-    ${barcode}
-  </section>
-  ${quotesHtml}
-  ${chapterHtml}
-  ${visualsHtml}
-</body>
-</html>`
-}
-function paragraphize(text: string): string {
-  if (!text) return ''
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
-}
+export default PagePage

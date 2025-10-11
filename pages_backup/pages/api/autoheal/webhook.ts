@@ -1,119 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { Octokit } from '@octokit/rest',
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { Octokit } from '@octokit/rest'
-    } catch (e) {
-      // ignore if missing
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AutohealPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e)
-    return res.status(500).json({ error: 'Failed to process webhook' })
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method not allowed' })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Autoheal - Zion Tech Group</title>
+        <meta name="description" content="Learn about our autoheal solutions and how they can transform your business." />
+        <meta name="keywords" content="autoheal, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  try {
-    const { app, severity, message, stack, metadata } = req.body || {},
-    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
-Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
-`,
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
-    // trigger workflow dispatch
-    try {
-      await octokit.actions.createWorkflowDispatch({
-        owner,
-        repo,
-        workflow_id: 'autoheal.yml',
-        ref: 'dev',
-inputs: { issue_number: String(issue.data.number) }} as any)
-    } catch (e) {
-      // ignore if missing
-    }
-return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e),
-    return res.status(500).json({ error: 'Failed to process webhook' })
-  }
-}
-    const { app, severity, message, stack, metadata } = req.body || {}
-    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
-    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined })
-    const [owner, repo] = REPO.split('/')
-    const body = `Auto-healing alert
-App: ${app  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-Severity: ${severity  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-Message: ${message  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-Stack:\n\n${stack || 'n/a'  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
-Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-`,
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] })
-    // trigger workflow dispatch
-    try {
-      await octokit.actions.createWorkflowDispatch({
-        owner,
-        repo,
-        workflow_id: 'autoheal.yml',
-        ref: 'dev'
-        inputs: { issue_number: String(issue.data.number) }} as any)
-    } catch (error) {
-    } catch (e) {
-    } catch (e) {
-      // ignore if missing
-    }
-  }
-}
-
-    return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (error) {
-    console.error(e)
-    return res.status(500).json({ error: 'Failed to process webhook' })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
+export default PagePage

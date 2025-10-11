@@ -1,108 +1,106 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Resend } from "npm:resend@2.0.0"
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || ""
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    // Use service role key for admin privileges
-    const supabase = createClient(supabaseUrl, supabaseServiceKey)
-    // Get upcoming interviews in the next hour
-    const now = new Date()
-    const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000)
-    const { data: interviews, error } = await supabase
-      .from('interviews')
-      .select(`
-        *,
-        clients:client_id(*),
-        talents:talent_id(*)
-      `)
-      .eq('status', 'confirmed')
-      .gte('scheduled_date', now.toISOString())
-      .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
-      .is('reminder_sent', null)
-    if (error) throw error
-    console.log(`Found ${interviews?.length || 0} interviews to send reminders for`)
-    const results = []
-    if (interviews && interviews.length > 0) {
-      for (const interview of interviews) {
-        // Send email to client
-        const clientEmail = interview.clients?.email
-        const talentName = interview.talents?.display_name || interview.talents?.full_name || "Talent"
-        const interviewDate = new Date(interview.scheduled_date)
-        if (clientEmail) {
-          try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
-              to: [clientEmail],
-              subject: `Your interview with ${talentName} is starting soon!`,
-              html: `
-                <h1>Interview Reminder</h1>
-                <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
-                <p>Please be ready on time!</p>
-              `})
-              `,
-            })
-            results.push(`Reminder sent to client: ${clientEmail}`)
-          } catch (emailError) {
-            console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
-          }
-        }
-        // Send email to talent
-        const talentEmail = interview.talents?.email
-        const clientName = interview.clients?.display_name || "Client"
-        if (talentEmail) {
-          try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
-              to: [talentEmail],
-              subject: `Your interview with ${clientName} is starting soon!`,
-              html: `
-                <h1>Interview Reminder</h1>
-                <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
-                <p>Please be ready on time!</p>
-              `})
-              `,
-            })
-            results.push(`Reminder sent to talent: ${talentEmail}`)
-          } catch (emailError) {
-            console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-          }
-        }
-        // Mark the interview as reminder sent
-        await supabase
-          .from('interviews')
-          .update({ reminder_sent: new Date().toISOString() })
-          .eq('id', interview.id)
-      }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Send-interview-reminderPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    return new Response(JSON.stringify({ success: true, results }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
-      status: 200,
-    })
-  } catch (error) {
-    console.error("Error in send-interview-reminder function:", error)
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
-      status: 500,
-    })
-  }
-})
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Send Interview Reminder - Zion Tech Group</title>
+        <meta name="description" content="Learn about our send interview reminder solutions and how they can transform your business." />
+        <meta name="keywords" content="send-interview-reminder, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

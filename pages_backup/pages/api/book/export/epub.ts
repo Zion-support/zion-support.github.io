@@ -1,203 +1,106 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import { randomUUID } from "crypto"
-import { promises as fs } from "fs"
-import { Epub } from "epub-gen"
-export const config = {
-  api: {
-    bodyParser: {
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;")
-}
-function chapterToHtml(text: string): string {
-  if (!text) return ""
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join("\n")
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method !== "POST") {
-    res && res.status(405).json({ error: "Method not allowed" })
-    return
-  }
-  const { project } = req && req.body as { project: any }
-  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
-    res && res.status(400).json({ error: "Invalid payload" })
-    return
-  }
-  const tmpPath = `/tmp/${randomUUID()}.epub`
-  const options = {
-    )
-    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" })
-  } finally {
-    try {
-      await fs && fs.unlink(tmpPath)
-    } catch {}
-  }
-}
-    title: project.meta.title, author: project.meta.author,
-    publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))}
-    res.status(200).send(buf)
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { randomUUID } from 'crypto'
-import { promises as fs } from 'fs'
-const Epub = require('epub-gen')
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb'}}}
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ExportPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Export - Zion Tech Group</title>
+        <meta name="description" content="Learn about our export solutions and how they can transform your business." />
+        <meta name="keywords" content="export, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-  const { project } = req.body as { project: any }
-  if (!project?.meta || !Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: 'Invalid payload' })
-    return
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  const tmpPath = `/tmp/${randomUUID()}.epub`,
-  const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
-  try {
-    await new Epub(options, tmpPath).promise,
-    const buf = await fs.readFile(tmpPath),
-    res.setHeader('Content-Typeapplication/epub+zip'),
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
-    res.status(200).send(buf)
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message |"Failed to build EPUB" })
-  } finally {
-    try {
-      await fs.unlink(tmpPath)
-    } catch {}
-  }
-}
-
-  const tmpPath = `/tmp/${randomUUID()}.epub`
-  const options = {
-    title: project.meta.title
-    author: project.meta.author
-    publisher: project.meta.publisher || 'Zion'
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
-  try {
-    await new Epub(options, tmpPath).promise
-    const buf = await fs.readFile(tmpPath)
-    res.setHeader('Content-Typeapplication/epub+zip')
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"')
-    res.status(200).send(buf)
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build EPUB' })
-  } finally {
-    try { await fs.unlink(tmpPath) } catch {}
-  }
-}
-function chapterToHtml(text: string): string {
-  if (!text) return ''
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
-    .replace(/>/g, '&gt,')
-    .replace(/"/g, '&quot,')
-    .replace(/'/g, '&#039,')
-}
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;")
-}
-
-function escape_html (string: string): string {
-  return s
-    .replace (/&/g, "&amp;")
-    .replace (/</g, "&lt;")
-    .replace (/>/g, "&gt;")
-    .replace (/"/g, "&quot;")
-    .replace (/'/g, "&#039;")
-}
-function chapterToHtml (text: string): string {
-  // Check condition
-if (return "") {
-  $2
-}
-  return text
-    .split (/\n\n+/)
-    .map ((p) => `<p>${escape_html (p)}</p>`)
-    .join ("\n")
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (405).json ({ error: "Method not allowed" })
-    return
-  }
-  const { project } = req.body as { project: any }
-  if () {) {
-  $2
-}
-    res.status (400).json ({ error: "Invalid payload" })
-    return
-  }
-  const tmp_path = `/tmp/${randomUUID ()}.epub`
-  const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || "Zion",
-    content: project.chapters.map ((ch: any) => ({
-      title: ch.title,
-      data: chapterToHtml (ch.content),
-    })),
-  }
-
-  try {
-    await new Epub (options, tmp_path).promise
-    const buf = await fs.read_file (tmp_path)
-    res.set_header ("Content - Type", "application / epub + zip")
-    res.set_header (
-      "Content - Disposition",
-      'attachment; filename="zion - os - book.epub"',
-    )
-    res.status(200).send(buf)
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message || "Failed to build EPUB" })
-  } finally {
-    try {
-      await fs.unlink (tmp_path)
-    } catch {}
-  }
+export default PagePage

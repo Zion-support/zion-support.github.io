@@ -1,856 +1,106 @@
 'use client'
-/**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
- */
 import React from 'react'
-import { logger } from './logger'
-import { performanceMonitor } from './performanceMonitor'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-// Core Web Vitals thresholds
-const coreWebVitals = {
-  lcp: { good: 2500, needsImprovement: 4000 },
-  fid: { good: 100, needsImprovement: 300 },
-  cls: { good: 0.1, needsImprovement: 0.25 },
-  fcp: { good: 1800, needsImprovement: 3000 },
-  ttfb: { good: 800, needsImprovement: 1800 }
-}
-export interface HealthStatus {
-    status: 'healthy' | 'degraded' | 'unhealthy'
-  timestamp: number
-  uptime: number,
-  checks: HealthCheck[]
-  }
-export interface HealthCheck {
-    name: string
-  status: 'pass' | 'warn' | 'fail'
-  message?: string,
-  details?: Record<string>
-  duration?: number
-  }
-export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
-class HealthCheckService {
-  private checks: Map<string, HealthCheckFunction> = new Map()
-  private startTime: number = Date.now()
-  private lastCheckTime: number = 0
-  private cachedStatus?: HealthStatus
-  private cacheTimeout: number = 5000, // 5 seconds
-  constructor() {
-    this.registerDefaultChecks()
-  }
-  /**
-   * Register default health checks
-   */
-  private registerDefaultChecks(): void {
-    // Memory usage check
-    this.register('memory', this.checkMemory.bind(this))
-    // Performance check
-    this.register('performance', this.checkPerformance.bind(this))
-    // Browser API availability check
-    if (typeof window !== 'undefined') {
-      this.register('browser-apis', this.checkBrowserAPIs.bind(this))
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // Local storage check
-    if (typeof window !== 'undefined') {
-      this.register('storage', this.checkStorage.bind(this))
-    }
-  }
-  /**
-   * Register a custom health check
-   */
-  register(name: string, checkFn: HealthCheckFunction): void {
-    this.checks.set(name, checkFn)
-  }
-  /**
-   * Unregister a health check
-   */
-  unregister(name: string): void {
-    this.checks.delete(name)
-  }
-  /**
-   * Run all health checks
-   */
-  async runChecks(): Promise<HealthStatus> {
-    const now = Date.now()
-    // Return cached status if still valid
-    if (
-      this.cachedStatus &&
-      now - this.lastCheckTime < this.cacheTimeout
-    ) {
-      return this.cachedStatus
-    }
-    const checks: HealthCheck[] = []
-    // Run all checks
-    for (const [name, checkFn] of this.checks.entries()) {
-      try {
-        const startTime = performance.now()
-        const check = await checkFn()
-        const duration = performance.now() - startTime
-        checks.push({
-          ...check,
-          name,
-          duration
-        })
-      } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error)
-        checks.push({
-          name,
-          status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error'
-        })
-      }
-    }
-    // Determine overall status
-    const hasFailures = checks.some((c) => c.status === 'fail')
-    const hasWarnings = checks.some((c) => c.status === 'warn')
-    let status: 'healthy' | 'degraded' | 'unhealthy'
-    if (hasFailures) {
-      status = 'unhealthy'
-    } else if (hasWarnings) {
-      status = 'degraded'
-    } else {
-      status = 'healthy'
-    }
-    const healthStatus: HealthStatus = {
-      status,
-      timestamp: now,
-      uptime: now - this.startTime,
-      checks
-    }
-    // Cache the result
-    this.cachedStatus = healthStatus
-    this.lastCheckTime = now
-    // Log unhealthy status
-    if (status === 'unhealthy') {
-      logger.error('Application health check failed', { healthStatus })
-    } else if (status === 'degraded') {
-      logger.warn('Application health degraded', { healthStatus })
-    }
-    return healthStatus
+  ]
 
-'use client'
-/**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
- */
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
 
-export interface HealthStatus {
-    // TODO: Add content
-  }
-}
-  status: 'healthy' | 'degraded' | 'unhealthy',,
-    timestamp: number,,
-    uptime: number,,
-    checks: HealthCheck[]
-}
-export interface HealthCheck {
-    // TODO: Add content
-  }
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-}
-  nam,
-  e: string,,
-    statu,
-  s: 'pass' | 'warn' | 'fail'
-  message?: string
-  details?: Record
-          <string>
-  duration?: number,
-}
-export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
-class HealthCheckService {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  checks: Map,
-          <string, HealthCheckFunction> = new Map()
-  private,
-  startTime: number = Date.now()
-  private,
-  lastCheckTime: number = 0
-  private cachedStatus?: HealthStatus,
-  private,
-  cacheTimeout: number = 5000; // 5 seconds,
-constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     this.registerDefaultChecks()
-  }
-  /**
-   * Register default health checks
-   */
-
-  private registerDefaultChecks(): void {
-    // TODO: Add content
-  }
-
-}
-    // Memory usage check
-//     this.register('memory', this.checkMemory.bind(this))
-    // Performance check
-//     this.register('performance', this.checkPerformance.bind(this))
-    // Browser API availability check
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
-    }
-    // Local storage check
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       this.register('storage', this.checkStorage.bind(this))
-    }
-  }
-  /**
-   * Register a custom health check
-   */
-
-  register(name: string, checkFn: HealthCheckFunction): void {
-    // TODO: Add content
-  }
-
-}
-//     this.checks.set(name, checkFn)
-  }
-  /**
-   * Unregister a health check
-   */
-
-  unregister(name: string): void {
-    // TODO: Add content
-  }
-
-}
-//     this.checks.delete(name)
-  }
-  /**
-   * Run all health checks
-   */
-  async runChecks(): Promise
-          <HealthStatus> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const now = Date.now()
-    // Return cached status if still valid
-    if ()
-//       this.cachedStatus &&
-//       now - this.lastCheckTime
-          < this.cacheTimeout) {
-    // TODO: Add content
-  }
-
-}
-      return this.cachedStatus
-    }
-    const,
-  checks: HealthCheck[] = []
-    // Run all checks,
-    for (const [name, checkFn] of this.checks.entries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const startTime = performance.now()
-        const check = await checkFn()
-        const duration = performance.now() - startTime
-        checks.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//           ...check,
-//           name,
-//           duration;)
-        })
-      } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        logger.error(`Health check "${name}" failed`, error as Error)
-        checks.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//           name,
-          statu,
-  s: 'fail',
-          messag,
-  e: error instanceof Error ? error.message : 'Unknown error'
-        })
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-      }
-    }
-    // Determine overall status
-const hasFailures = checks.some((c) => c.status === 'fail')
-    const hasWarnings = checks.some((c) => c.status === 'warn')
-
-    let status: 'healthy' | 'degraded' | 'unhealthy'
-    if (hasFailures) {
-    // TODO: Add content
-  }
-
-}
-      status = 'unhealthy'
-    } else if (hasWarnings) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      status = 'degraded'
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      status = 'healthy'
-    }
-    const,
-  healthStatus: HealthStatus = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       status,
-      timestam,
-  p: now,
-      uptim,
-  e: now - this.startTime,
-//       checks
-    }
-    // Cache the result
-    this.cachedStatus = healthStatus
-    this.lastCheckTime = now
-    // Log unhealthy status
-    if (status === 'unhealthy') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      logger.error('Application health check failed', { healthStatus })
-    } else if (status === 'degraded') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      logger.warn('Application health degraded', { healthStatus })
-    }
-    return healthStatus
-  }
-  /**
-   * Get current health status (may return cached)
-   */
-  async getStatus(): Promise<HealthStatus> {
-    return this.runChecks()
-  }
-  /**
-   * Check memory usage
-   */
-  private checkMemory(): HealthCheck {
-    if (typeof performance === 'undefined' || !('memory' in performance)) {
-      return {
-        name: 'memory',
-        status: 'pass',
-        message:       ,
-$4}
-    }
-    try {
-      const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-      let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Memory usage: ${usedPercent.toFixed(1)}%`
-      if (usedPercent > 90) {
-        status = 'fail'
-        message = `Critical memory usage: ${usedPercent.toFixed(1)}%`
-      } else if (usedPercent > 75) {
-        status = 'warn'
-        message = `High memory usage: ${usedPercent.toFixed(1)}%`
-      }
-      return {
-        name: 'memory',
-        status,
-        message,
-        details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
-          usedPercent
-        }
-      }
-    } catch (error) {
-      return {
-        name: 'memory',
-        status: 'warn',
-        message:       ,
-$4}
-    }
-  }
-  /**
-   * Check performance metrics
-   */
-  private checkPerformance(): HealthCheck {
-    try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
-      let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = 'Performance metrics available'
-      
-      // Check if any critical metrics are missing or poor
-      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
-      const missingMetrics: string[] = []
-      const poor: string[] = []
-      const needsImprovement: string[] = []
-      const good: string[] = []
-      const vitals = Object.keys(coreWebVitals)
-      
-      criticalMetrics.forEach(metric => {
-        const metrics = performanceMonitor.getMetrics()
-        const value = metrics[metric as keyof typeof metrics]
-        if (value === undefined) {
-          missingMetrics.push(metric)
-        } else {
-          const thresholds = coreWebVitals[metric as keyof typeof coreWebVitals]
-          if (value <= thresholds.good) {
-            good.push(metric)
-          } else if (value <= thresholds.needsImprovement) {
-            needsImprovement.push(metric)
-          } else {
-            poor.push(metric)
-          }
-        }
-      })
-      
-      if (missingMetrics.length > 2) {
-        status = 'warn'
-        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
-      }
-      
-      if (missingMetrics.length > 3) {
-        status = 'fail'
-        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
-      }
-      return {
-        name: 'performance',
-        status,
-        message,
-        details: {
-          vitals,
-          poor,
-          needsImprovement,
-          good
-        }
-      }
-    } catch (error) {
-      return {
-        name: 'performance',
-        status: 'warn',
-        message:       ,
-$4}
-    }
-  }
-  /**
-   * Check browser API availability
-   */
-  private checkBrowserAPIs(): HealthCheck {
-  async getStatus(): Promise
-          <HealthStatus> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return this.runChecks()
-  }
-  /**
-   * Check memory usage
-   */
-
-  private checkMemory(): HealthCheck {
-    // TODO: Add content
-  }
-
-}
-    if (typeof performance === 'undefined' || !('memory' in performance)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
 }
 
-  name: 'memory',
-        status: 'pass',
-        message: 'Memory API not available'
-      }
-    }
-    try {
-    // TODO: Add content
-  }
-
-}
-      const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-let,
-  status: 'pass' | 'warn' | 'fail' = 'pass'`
-      let message = `Memory,`
-  usage: ${usedPercent.toFixed(1)}%`
-      if (usedPercent > 90) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        status = 'fail'`
-        message = `Critical memory,`
-  usage: ${usedPercent.toFixed(1)}%`
-      } else if (usedPercent > 75) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        status = 'warn'`
-        message = `High memory,`
-  usage: ${usedPercent.toFixed(1)}%`
-      }
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  nam,
-  e: 'memory',
-//         status,
-//         message,
-        detail,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
-//           usedPercent
-        }
-      }
-    } catch (error) {
-    // TODO: Add content
-  }
-
-}
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'memory',
-        status: 'warn',
-        message: 'Could not check memory usage'
-
-      }
-    }
-  }
-  /**
-   * Check performance metrics
-   */
-
-  private checkPerformance(): HealthCheck {
-    // TODO: Add content
-  }
-
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const report = performanceMonitor.getReport()
-
-      const { poor, needsImprovement, good } = report.summary
-let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
-    // TODO: Add content
-  }
-
-}
-        status = 'warn'
-      }
-      if (poor > 2) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        status = 'fail'`
-        message = `Critical performance,`
-  issues: ${poor} poor metrics`
-      }
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  nam,
-  e: 'performance',
-//         status,
-//         message,
-        detail,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  metrics: report.metrics,
-          summary: report.summary,
-        }
-      }
-    } catch (error) {
-    // TODO: Add content
-  }
-
-}
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'performance',
-        status: 'warn',
-        message: 'Could not check performance'
-
-      }
-    }
-  }
-  /**
-   * Check browser API availability
-   */
-
-  private checkBrowserAPIs(): HealthCheck {
-    // TODO: Add content
-  }
-
-}
-    const requiredAPIs = [
-      'fetch',
-      'localStorage',
-      'sessionStorage',
-      'console',
-      'navigator'
-    ]
-    const missingAPIs: string[] = []
-    requiredAPIs.forEach((api) => {
-      if (typeof window !== 'undefined' && !(api in window)) {
-        missingAPIs.push(api)
-      }
-    })
-    if (missingAPIs.length > 0) {
-    return {
-        name: 'browser-apis']
-
-    const missingAPIs: string[] = []
-    requiredAPIs.forEach((api) => {// TODO: Add content
-  }
-
-}
-      if (typeof window !== 'undefined' && !(api in window)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         missingAPIs.push(api)
-      }
-    })
-    if (missingAPIs.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'browser-apis',
-        status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
-        details: { missingAPIs }
-      }
-    }
-    return {
-      name: 'browser-apis',
-      status: 'pass',
-      message:     ,
-$4}
-  }
-  /**
-   * Check storage availability
-   */
-  private checkStorage(): HealthCheck {
-    try {
-      const testKey = '_health_check_test'
-      const testValue = 'test'
-      // Test localStorage
-      localStorage.setItem(testKey, testValue)
-      const retrieved = localStorage.getItem(testKey)
-      localStorage.removeItem(testKey)
-      if (retrieved !== testValue) {
-        return {
-          name: 'storage',
-          status: 'fail',
-          message:         ,
-$4}
-      }
-      // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB
-      try {
-    localStorage.setItem('_size_test', testData)
-        localStorage.removeItem('_size_test')
-  } catch {
-        return {
-          name: 'storage',
-          status: 'warn',
-          message:         ,
-$4}
-      }
-      return {
-        name: 'storage',
-        status: 'pass',
-        message:       ,
-$4}
-    } catch {
-      return {
-        name: 'storage',
-        status: 'fail',
-        message:       ,
-$4}
-    }
-  }
-  /**
-   * Get application uptime
-   */
-  getUptime(): number {
-    return Date.now() - this.startTime
-  }
-  /**
-   * Get formatted uptime string
-   */
-  getFormattedUptime(): string {
-    return {// TODO: Add content
-  }
-}
-  name: 'browser-apis',
-      status: 'pass',
-      message: 'All required browser APIs available'
-
-    }
-  }
-  /**
-   * Check storage availability
-   */
-
-  private checkStorage(): HealthCheck {
-    // TODO: Add content
-  }
-
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const testKey = '_health_check_test'
-      const testValue = 'test'
-      // Test localStorage
-//       localStorage.setItem(testKey, testValue)
-      const retrieved = localStorage.getItem(testKey)
-//       localStorage.removeItem(testKey)
-
-      if (retrieved !== testValue) {
-    // TODO: Add content
-  }
-
-}
-        return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'storage',
-          status: 'fail',
-          message: 'LocalStorage not working correctly'
-
-        }
-      }
-      // Check available space (approximate)
-      const testData = 'x'.repeat(1024 * 1024); // 1MB
-      try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        localStorage.setItem('_size_test', testData)
-        localStorage.removeItem('_size_test')
-      } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'storage',
-          status: 'warn',
-          message: 'LocalStorage space limited'
-        }
-      }
-      return {
-    // TODO: Add content
-  }
-
-}
-  nam,
-  e: 'storage',
-        statu,
-  s: 'pass',
-        messag,
-  e: 'Storage working correctly'
-      }
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  name: 'storage',
-        status: 'fail',
-        message: 'LocalStorage not available'
-
-      }
-    }
-  }
-  /**
-   * Get application uptime
-   */
-
-  getUptime(): number {
-    // TODO: Add content
-  }
-
-}
-    return Date.now() - this.startTime
-  }
-  /**
-   * Get formatted uptime string
-   */
-
-  getFormattedUptime(): string {
-    // TODO: Add content
-  }
-
-}
-    const uptime = this.getUptime()
-    const seconds = Math.floor(uptime / 1000)
-    const minutes = Math.floor(seconds / 60)
-    const hours = Math.floor(minutes / 60)
-    const days = Math.floor(hours / 24)
-    if (days > 0) {
-      return `${days}d ${hours % 24}h ${minutes % 60}m`
-    } else if (hours > 0) {
-      return `${hours}h ${minutes % 60}m`
-    } else if (minutes > 0) {
-      return `${minutes}m ${seconds % 60}s`
-    } else {
-    if (days > 0) {// TODO: Add content
-  }
-}
-      return `${days}d ${hours % 24}h ${minutes % 60}m`
-    } else if (hours > 0) {
-    // TODO: Add content
-  }
-}
-      return `${hours}h ${minutes % 60}m`
-    } else if (minutes > 0) {
-    // TODO: Add content
-  }
-}
-      return `${minutes}m ${seconds % 60}s`
-    } else {
-    // TODO: Add content
-  }
-}
-
-      return `${seconds}s`
-    }
-  }
-  /**
-   * Clear cached status
-   */
-  clearCache(): void {
-    this.cachedStatus = undefined
-    this.lastCheckTime = 0
-  }
-}
-// Export singleton instance
-export const healthCheck = new HealthCheckService()
-// Export convenience functions
-export const runHealthChecks = () => healthCheck.runChecks()
-export const getHealthStatus = () => healthCheck.getStatus()
-export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>
-  healthCheck.register(name, checkFn)
-export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck
+export default PagePage

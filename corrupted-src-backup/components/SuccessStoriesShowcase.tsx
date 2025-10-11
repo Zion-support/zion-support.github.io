@@ -1,99 +1,106 @@
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
-  const, storie, s = [
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
     {
-      comp, a, n
-  y: "TechCorp, Internationa, l"
-      indust, r, y: "Technolo, g, y"
-      ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Growt, h"
-      descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
-      metri, c, s: [,
-        "98% prediction, accurac, y"
-        "60% cost, reductio, n"
-        "2 M, users, impacted"
-      ]
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
     {
-      compa, n, y: "Global, Manufacturing, Inc"
-      indust, r, y: "Manufacturi, n, g"
-      ic, o, n: <Target, className="w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n"
-      descripti, o, n: "AI, predictive, maintenance transformed, operation, s, eliminating, unplanned, downtime and, reducing, costs."
-      metri, c, s: [,
-        "$2M, annual, savings"
-        "40% lower, maintenance, costs"
-        "99.9% uptime, achieve, d"
-      ]
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
     {
-      company: "FinanceFirst Bank"
-      industry: "Financial Services"
-      icon: <Users className="w-8 h-8" />,
-      result: "99.95% Fraud Detection",
-      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
-      metrics: [,
-        "$5M fraud prevented",
-        "Sub-100ms detection",
-        "95% fewer false positives"
-      ],
-      color: "from-purple-500 to-pink-500",
-        </div>,
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
-          {stories.map((story, index) => (
-            <$2 />
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
-            >,
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-      color: "from-purple-500 to-pink-500"
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-          {stories.map((story, index) => (
-            <$2 />
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-                <div className="flex items-center gap-3 mb-4">
-                  {story.icon}
-                  <div>
-                    <h3 className="font-bold text-xl">{story.company}
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden,"
-  hover:scale-105 transition-all duration-300"
-            >
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
-                <div className="flex items-center gap-3 mb-4">
-                  {story.icon}
-                  <div></div>"
-                    <h3 className="font-bold text-xl">{story.company}</h3>"
-                    <p className="text-sm opacity-90">{story.industry}
-                </div>"
-                <div className="text-3xl font-bold">{story.result}
-              <div className="p-6">
-                <p className="text-gray-600 mb-6">{story.description}
-                <div className="space-y-2 mb-6">
-                  {story.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full">
-                      <span className="text-sm text-gray-700">{metric}
-                  Read Full Story
-                  <Link className="w-4 h-4" />
-            View All Success Stories
-            <Link className="w-6 h-6" />
-              </div>"
-              <div className="p-6"></div>"
-                <p className="text-gray-600 mb-6">{story.description}</p>"
-                <div className="space-y-2 mb-6">
-                  {/* TODO: Fix JSX expression */}"
-                    <div key={idx} className="flex items-center gap-2"></div>"
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>"
-                      <span className="text-sm text-gray-700">{metric}
-                  Read Full Story;"
-                  <Link className="w-4 h-4" />
-            View All Success Stories;"
-            <Link className="w-6 h-6" />
-}}}}"`</div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></p></p></h3>
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

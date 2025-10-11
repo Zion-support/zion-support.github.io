@@ -1,64 +1,106 @@
-import { format } from 'date-fns'
-/**
- * Formats a date for display in the referral system
- * @param date Date or string to format
- * @returns Formatted date string
- */
-export function formatDate(date: Date | string | undefined): string {
-  if (!date) return '-'
-  try {
-    if (typeof date === 'string') {
-      return format(new Date(date), 'MMM d, yyyy')
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    return format(date, 'MMM d, yyyy')
-  } catch (e) {
-    console.error('Error formatting date:', e)
-    return '-'
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-/**
- * Stores referral code in localStorage when detected in URL
- */
-export function checkUrlForReferralCode(): string | null {
-  if (typeof window === 'undefined') return null
-  const url = new URL(window.location.href)
-  const refCode = url.searchParams.get('ref')
-  if (refCode) {
-    localStorage.setItem('referral_code', refCode)
-    // Remove it from URL to keep it clean
-    url.searchParams.delete('ref')
-    window.history.replaceState({}, document.title, url.toString())
-    return refCode
-  }
-  return localStorage.getItem('referral_code')
-}
-/**
- * Track referral when a user signs up
- */
-export async function trackReferral(userId: string, email: string) {
-  try {
-    const refCode = localStorage.getItem('referral_code')
-    if (!refCode) return
-    // Call API to record the referral
-    const response = await fetch('/api/track-referral', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'},
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        refCode,
-        userId,
-        email,
-        ipAddress: '', // This will be captured by the server
-      })})
-      }),
-    })
-    if (response.ok) {
-      // Clear the stored referral code
-      localStorage.removeItem('referral_code')
-    }
-  } catch (error) {
-    console.error('Error tracking referral:', error)
-  }
-}
+
+export default PagePage

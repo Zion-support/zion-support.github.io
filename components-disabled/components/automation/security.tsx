@@ -1,15 +1,106 @@
-; } </pre> </div>)export default function SecurityAudit({ report }: Props) {}} </pre> </div>) export default function SecurityAudit({ report }: Props) {}</pre> </div>)export default function SecurityAudit(): unknown ({ report }: Props) {</pre> </div>)}</pre> </div>)export default function SecurityAudit() {return (<div className=\"space-y-4\" /></$1> <header className=\"space-y-1\" />} <h1 className=\"text-3xl font-bold\" />Security Audit</h1> <p className=\"text-gray-600 dark: text-gray-300\" />Automated vulnerability scan summary.</p>}} </header>)} {report.error && <div className=\"text-red-600\" />{report.error}</div>} {report.generatedAt && (<div className=\"text-sm text-gray-500\" />Generated at: {new Date(report.generatedAt).toLocaleString(}} }</div> )}</div>)} </pre> </div>) export default function SecurityAudit({ report }: Props) {}</$1> </div>) ; <div className="text-left">" </div>" <header className="text-left">" </header>" <h1 className="text-left">Security Audit</h1>"" <p className="text-left">Automated vulnerability scan summary.</p>" {report.error && <div className="text-left">{report.error}</div>}"" <div className="text-left">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>" </div>" <pre className="text-left">;" </pre> </pre></$1> </pre> </div>);" <div className="text-left">;"</div> <header className="text-left">;" <h1 className="text-left">Security Audit</h1>"" <p className="text-left">Automated vulnerability scan summary.</p>;" </header>;" {report.error && <div className="text-left">{report.error}</div>}"" <div className="text-left">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}"" <pre className="text-left">;" </div>)</$1> </div>) " <div className="text-left">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>"" <pre className="text-left">" </div> export default function SecurityAudit(): unknown ({ report }: Props) {;} export default function SecurityAudit({ report }: Props) {} }</$1> </div>) }</$1> </div>) export default function SecurityAudit({ report }: Props) { return ( <div className="text-left"></div> <header className="text-left"> <h1 className="text-left">Security Audit</h1> <p className="text-left">Automated vulnerability scan summary.</p> </header> {report.error && <div className="text-left">{report.error}</div>} {report.generatedAt && ( <div className="text-left">Generated at: {new Date(report.generatedAt).toLocaleString()}</div> )} </div> </div> ); } <pre className=\"whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark: border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto\" />, {JSON && JSON.stringify(report) null} 2)} </pre></$1> ); }); } } </pre> </div>); export default /** * SecurityAudit - Function description; */ function SecurityAudit() {return (interface AuditReport {generatedAt?: string; metadata?: unknown; vulnerabilities?: unknown; error?: string}} raw?: string;} } type Props = any) export default function SecurityAudit() {return (<div className=\"space-y-4\" /></$1> <header className=\"space-y-1\" />) <h1 className=\"text-3xl font-bold\" />Security Audit</h1> <p className=\"text-gray-600 dark: text-gray-300\" />Automated vulnerability scan summary.</p>} </header>}} </div>);} } } </pre> </div>) }</$1> </div>) }</$1> </div>) export default function SecurityAudit({ report }: Props) { return ( <div className=\"space-y-4\" /></div> <header className=\"space-y-1\" /> <h1 className=\"text-3xl font-bold\" />Security Audit</h1> <p className=\"text-gray-600 dark: text-gray-300\" />Automated vulnerability scan summary.</p>} </header>} {report.error && <div className=\"text-red-600\" />{report.error}</div>} {report.generatedAt && (<div className=\"text-sm text-gray-500\" />Generated at: {new Date(report.generatedAt).toLocaleString(}} }</div> )} <pre className=\"whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark: border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto\" />, {JSON.stringify(report) null} 2)} </pre></$1> </div> )} )})}); }); } }
-; } </pre> </div>)export default function SecurityAudit({ report }: Props) {}} </pre> </div>) export default function SecurityAudit({ report }: Props) {}</pre> </div>)export default function SecurityAudit(): unknown ({ report }: Props) {</pre> </div>)}</pre> </div>)export default function SecurityAudit() {return (<div className=\"space-y-4\" />; <header className=\"space-y-1\" />} <h1 className=\"text-3xl font-bold\" />Security Audit</h1> < className=\"text-gray-600,")$2 />
-  dark: text-gray-300\" />Automated vulnerability scan summary.</p>}} </header>)} {report.error && <div className=\"text-red-600\" />{report.error}</div>} {/* TODO: Fix JSX expression */}"
-  at: {new Date(report.generatedAt).toLocaleString(}} }</div> )}</div>)} </pre> </div>) export default function SecurityAudit({ report }: Props) {}</$1> </div>) ; <div className="text-left">" </div>" <header className="text-left">" </header>" <h1 className="text-left">Security Audit</h1>"" <p className="text-left">Automated vulnerability scan summary.</p>" {report.error && <div className="text-left">{report.error}</div>}"" <div className="text-left">Generated,"
-  at: {new Date(report.generatedAt).toLocaleString()}</div>" </div>" <pre className="text-left">;" </pre> </pre></$1> </pre> </div>);" <div className="text-left">;" <header className="text-left">;" <h1 className="text-left">Security Audit</h1>"" <p className="text-left">Automated vulnerability scan summary.</p>;" </header>;" {report.error && <div className="text-left">{report.error}</div>}"" <div className="text-left">Generated,"
-  at: {new Date (report.generated_at).toLocaleString ()}</div>)}"" <pre className="text-left">;" </div>)</$1> </div>) " <div className="text-left">Generated,"
-  at: {new Date(report.generatedAt).toLocaleString()}</div>"" <pre className="text-left">" </div> export default function SecurityAudit(): unknown ({ report }: Props) {;} export default function SecurityAudit({ report }: Props) {} }</$1> </div>) }</$1> </div>) export default function SecurityAudit({ report }: Props) { return (<div className="text-left"> <header className="text-left"> <h1 className="text-left">Security Audit</h1> <p className="text-left">Automated vulnerability scan summary.</p> </header> {report.error && <div className="text-left">{report.error}</div>} {/* TODO: Fix JSX expression */}")
-  at: {new Date(report.generatedAt).toLocaleString()}</div> )} </div> </div> ); } <re className=\"whitespace-pre-wrap text-xs p-4 rounded border border-gray-200,$2 />
-  dark: border-gray-800 bg-gray-50,"
-  dark:bg-gray-900/40 overflow-auto\" />, {JSON && JSON.stringify(report) null} 2)} </pre></$1> ); }); } } </pre> </div>); export default /** * SecurityAudit - Function description; */ function SecurityAudit() {return (interface AuditReport {generatedAt?: string; metadata?: unknown; vulnerabilities?: unknown; error?: string}} raw?: string;} } type Props = any) export default function SecurityAudit() {/* TODO: Fix JSX expression */}"
-  dark: text-gray-300\" />Automated vulnerability scan summary.</p>} </header>}} </div>);} } } </pre> </div>) }</$1> </div>) }</$1> </div>) export default function SecurityAudit({ report }: Props) {/* TODO: Fix JSX expression */}"
-  dark: text-gray-300\" />Automated vulnerability scan summary.</p>} </header>} {report.error && <div className=\"text-red-600\" />{report.error}</div>} {/* TODO: Fix JSX expression */}"
-  at: {new Date(report.generatedAt).toLocaleString(}} }</div> )} <re className=\"whitespace-pre-wrap text-xs p-4 rounded border border-gray-200,$2 />
-  dark: border-gray-800 bg-gray-50,"
-  dark:bg-gray-900/40 overflow-auto\" />, {JSON.stringify(report) null} 2)} </pre></$1> </div> )} )})}); }); } }"</p></p></p></p></p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AutomationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Automation - Zion Tech Group</title>
+        <meta name="description" content="Learn about our automation solutions and how they can transform your business." />
+        <meta name="keywords" content="automation, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

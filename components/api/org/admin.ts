@@ -1,220 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-  | { type: 'invite'; section: keyof OrgData; person: BasePerson }
-  | {
-      type: 'promote'
-      section: keyof OrgData
-      id: string
-      updates: Partial < BasePerson>
-    }
-  | { type: 'deactivate'; section: keyof OrgData; id: string }
-type AdminAction =
-  | { type: 'invite', section: keyof OrgData, person: BasePerson }
-  | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
-  | { type: 'deactivate', section: keyof OrgData, id: string }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  const key = req.headers['x-admin-key']
-  if (key !== ADMIN_KEY) {
-    return res && res.status(401).json({ error: 'Unauthorized' })
-  }
-  const action = req && req.body as AdminAction
-  const data = readOrgData()
-  if (action && action.type === 'invite') {
-    const section = action && action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    // prevent duplicates
-    if (arr && arr.some(p => p && p.id === action && action.person.id)) {      return res && res.status(400).json({ error: 'ID already exists' });    if (arr && arr.some((p) => p && p.id === action && action.person.id)) {
-      return res && res.status(400).json({ error: 'ID already exists' })
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || [],
-    // prevent duplicates
-    if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' })
+const OrgPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    arr && arr.push({ ...action && action.person, active: true })
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any
-    writeOrgData(data)
-  }
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
-    if (idx === -1) return res.status(404).json({ error: 'Not found' })
-    arr[idx] = { ...arr[idx], ...action.updates }
-  if (action && action.type === 'promote') {
-    const section = action && action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr && arr.findIndex(p => p && p.id === action && action.id);    if (idx === -1) return res && res.status(404).json({ error: 'Not found' });    const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)
-    if (idx === -1) return res && res.status(404).json({ error: 'Not found' })
-    arr[idx] = { ...arr[idx], ...action && action.updates }
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any
-    writeOrgData(data)
-  }
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
-    if (idx === -1) return res.status(404).json({ error: 'Not found' })
-    arr[idx] = { ...arr[idx], active: false }
-import {  readOrgData, writeOrgData   } from '../../../utils/org-data'
-import type { OrgData, BasePerson  } from '../../../types/org'
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key'
-type AdminAction =
-  | { type: 'invite'; section: keyof OrgData; person: BasePerson }
-  | { type: 'promote'; section: keyof OrgData; id: string; updates: Partial<BasePerson> }
-  | { type: 'deactivate'; section: keyof OrgData; id: string }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-  const key = req.headers['x-admin-key']
-  if (key !== ADMIN_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' })
-  }
-  const action = req.body as AdminAction
-  const data = readOrgData()
-  if (action.type === 'invite') {
-    const section = action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    // prevent duplicates
-    if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' })
-    }
-    arr.push({ ...action.person, active: true })
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any
-    writeOrgData(data)
-    return res.status(200).json({ ok: true })
-  }
-  }
-  }
-return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
-  }
-  return res.status(400).json({ error: 'Unknown action' })
-  if (action && action.type === 'deactivate') {
-    const section = action && action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr && arr.findIndex(p => p && p.id === action && action.id);    if (idx === -1) return res && res.status(404).json({ error: 'Not found' });    const idx = arr && arr.findIndex((p) => p && p.id === action && action.id)
-    if (idx === -1) return res && res.status(404).json({ error: 'Not found' })
-  }
-  if (action.type === 'promote') {
-    const section = action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.findIndex((p) => p.id === action.id)
-    if (idx === -1) return res.status(404).json({ error: 'Not found' })
-    arr[idx] = { ...arr[idx], ...action.updates }
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any
-    writeOrgData(data)
-    return res.status(200).json({ ok: true })
-  }
-  if (action.type === 'deactivate') {
-    const section = action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.findIndex((p) => p.id === action.id)
-    if (idx === -1) return res.status(404).json({ error: 'Not found' })
-    arr[idx] = { ...arr[idx], active: false }
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any
-    writeOrgData(data)
-  }
-  return res && res.status(400).json({ error: 'Unknown action' });    return res && res.status(200).json({ ok: true })
-  }
-  return res && res.status(400).json({ error: 'Unknown action' })
-}
-}
-    return res.status (405).json ({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key'
-type AdminAction =
-  | { type: 'invite', section: keyof OrgData, person: BasePerson }
-  | { type: 'promote', section: keyof OrgData, id: string, updates: Partial < BasePerson> }
-  | { type: 'deactivate', section: keyof OrgData, id: string }
+  ]
 
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+  return (
+    <>
+      <Helmet>
+        <title>Org - Zion Tech Group</title>
+        <meta name="description" content="Learn about our org solutions and how they can transform your business." />
+        <meta name="keywords" content="org, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    return res.status (405).json ({ error: 'Method not allowed' })
-  }
-  const key = req.headers['x - admin - key']
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Unauthorized' })
-  }
-  const action = req.body as AdminAction
-  const data = readOrgData ()
-  // Check condition
-if ( {) {
-  $2
-}
-    const section = action.section
-    // @ts - expect - error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    // prevent duplicates
-    if () {      return res.status (400).json ({ error: 'ID already exists' })) {
-  $2
-}    if (=> p.id === action.person.id)) {) {
-  $2
-}
-      return res.status (400).json ({ error: 'ID already exists' })
-    }
-    arr.push ({ ...action.person, active: true })
-    // @ts - expect - error write back dynamic section
-    data[section] = arr as any
-    writeOrgData (data)
-    return res.status (200).json ({ ok: true });  }    return res.status (200).json ({ ok: true })
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const section = action.section
-    // @ts - expect - error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.find_index (p => p.id === action.id);    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}    const idx = arr.find_index ((p) => p.id === action.id)
-    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-    arr[idx] = { ...arr[idx], ...action.updates }
-    // @ts - expect - error write back dynamic section
-    data[section] = arr as any
-    writeOrgData (data)
-    return res.status (200).json ({ ok: true });  }    return res.status (200).json ({ ok: true })
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const section = action.section
-    // @ts - expect - error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.find_index (p => p.id === action.id);    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}    const idx = arr.find_index ((p) => p.id === action.id)
-    if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-    arr[idx] = { ...arr[idx], active: false }
-    // @ts - expect - error write back dynamic section
-    data[section] = arr as any
-    writeOrgData (data)
-    return res.status (200).json ({ ok: true })
-  }
-return res.status (400).json ({ error: 'Unknown action' });    return res.status (200).json ({ ok: true })
-  }
-  return res.status (400).json ({ error: 'Unknown action' })
-}
-    return res.status(200).json({ ok: true })
-  }
-  return res.status(400).json({ error: 'Unknown action' })
-}
+
+export default PagePage

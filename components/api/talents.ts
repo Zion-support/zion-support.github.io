@@ -1,130 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import fs from 'fs - extra'
-import path from 'path'
-import { 
-  authenticateRequest,
-  enforceRateLimit,
-  recordRequest,
-  } from '../../utils/api/partnerAuth'
-import {  v4 as uuidv4   } from 'uuid'
-const TALENTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'talents'
-  'talents.json'
-    partnerId: auth.partner.id,
-    createdAt: now,
-createdAt: now,
-    createdAt: now,
-  }
-  records && records.push(record)
-  await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })
-  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
-  return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ApiPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api solutions and how they can transform your business." />
+        <meta name="keywords" content="api, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-import type { NextApiRequest, NextApiResponse  } from "next"
-import fs from "fs-extra"
-import path from "path"
-import {  authenticateRequest, enforceRateLimit, recordRequest   } from "../../utils/api/partnerAuth"
-import {  v4 as uuidv4   } from "uuid"
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now()
-  const auth = await authenticateRequest(req)
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429)
-    return res.status(429).json({ error: "Rate limit exceeded" })
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST")
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405)
-    return res.status(405).json({ error: "Method Not Allowed" })
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {}
-  if (!name || !email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)
-    return res.status(400).json({ error: "Missing required fields" })
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE))
-  const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : []
-  const now = new Date().toISOString()
-  const record = {
-    id: uuidv4(), name,
-    email
-    skills: skills || [], programTrack: programTrack || null,
-    certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id,
-    createdAt: now}
-  records.push(record)
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)
-  return res.status(201).json({ id: record.id })
-}
-    id: uuidv4 (),
-    name,
-    email,
-    skills: skills || [],
-    program_track: program_track || null,
-    certification_status: certification_status || 'pending',
-    partner_id: auth.partner.id,
-created_at: now,
-  }
-  records.push (record)
-  await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 })
-  await record_request (req, res, auth.partner, auth.api_key, started, 201)
-  return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id })
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now()
-  const auth = await authenticateRequest(req)
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429),
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST"),
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405),
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {},
-  if (!name || !email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {},
-  if (!name || !email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE)),
-  const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : []
-  const now = new Date().toISOString()
-  const record = {
-    id: uuidv4(),
-    name,
-    email,
-    skills: skills || [],
-    programTrack: programTrack || null,
-    certificationStatus: certificationStatus || "pending",
-    partnerId: auth.partner.id,
-    createdAt: now},
-  records.push(record),
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 }),
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201),
-  return res.status(201).json({ id: record.id })
-}
-    createdAt: now,
-  }
-  records.push(record)
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)
-  return res.status(201).json({ id: record.id })
-}
+
+export default PagePage

@@ -1,142 +1,106 @@
-// SecurityEnhancer utility
-// This file contains utility functions and configurations
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-interface SecurityConfig {
-    enableCSP: boolean
-  }
-  enableHTTPS: boolean
-  enableXSSProtection: boolean
-  enableCSRFProtection: boolean
-  enableContentSecurityPolicy: boolean,
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-class SecurityEnhancer {
-    private config: SecurityConfig
-  }
-  constructor(config?: SecurityConfig) {this.config = config || {}
-      enableCSP: true,
-      enableHTTPS: true,
-      enableXSSProtection: true,
-      enableCSRFProtection: true,
-      enableContentSecurityPolicy: true}
-    this.init()
-
-  private init(): void {
-    // Initialize security enhancements
-  }
-    this.setupSecurityHeaders()
-  }
-  private initializeSecurity(): void {
-    if (typeof window === 'undefined') return
-    this.setupContentSecurityPolicy()
-    this.setupXSSProtection()
-    this.setupCSRFProtection()
-    this.monitorSuspiciousActivity()
-    this.setupSecureHeaders()
-  }
-  private setupContentSecurityPolicy(): void {
-    if (!this.config.enableContentSecurityPolicy) return
-    const csp = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'"
-    ].join('; ')
-    const meta = document.createElement('meta')
-    meta.httpEquiv = 'Content-Security-Policy'
-    meta.content = csp
-    document.head.appendChild(meta)
-  }
-  private setupXSSProtection(): void {
-    if (!this.config.enableXSSProtection) return
-    const meta = document.createElement('meta')
-    meta.httpEquiv = 'X-XSS-Protection'
-    meta.content = '1; mode=block'
-    document.head.appendChild(meta)
-  }
-  private setupCSRFProtection(): void {
-    if (!this.config.enableCSRFProtection) return
-    // Generate CSRF token
-    const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token} Secure; SameSite=Strict; HttpOnly`
-    // Add token to all forms
-    this.addCSRFTokenToForms(token)
-  }
-  private generateCSRFToken(): string {
-    const array = new Uint8Array(32)
-    crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
-  }
-  private addCSRFTokenToForms(token: string): void {
-    const forms = document.querySelectorAll('form')
-    forms.forEach(form => {
-      const input = document.createElement('input')
-      input.type = 'hidden'
-      input.name = 'csrf-token'
-      input.value = token
-      form.appendChild(input)
-    })
-  }
-  private monitorSuspiciousActivity(): void {
-    // Monitor for suspicious patterns
-    this.monitorConsoleAccess()
-    this.monitorDOMManipulation()
-    this.monitorNetworkRequests()
-  }
-  private monitorConsoleAccess(): void {
-    const originalConsole = {
-      log: console.log.bind(console),
-      warn: console.warn.bind(console),
-      error: console.error.bind(console),
-      info: console.info.bind(console)
-    }
-    // Override console methods to detect debugging
-    Object.assign(console, originalConsole)
-  }
-  private monitorDOMManipulation(): void {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-              const element = node as Element
-              if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
-                this.metrics.securityViolations++
-                }
-            }
-          })
-        }
-      })
-    })
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-    this.eventListeners.push(() => observer.disconnect())
-  }
-  private monitorNetworkRequests(): void {
-    const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
-      // Check if request is to allowed origins
-      if (!this.isAllowedOrigin(url)) {
-        this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
-      }
-      return originalFetch(input, init)
-    }
-  }
-
-  public cleanup(): void {
-    // Cleanup security enhancements
-  }
-  }
-}
-
-export default SecurityEnhancer;"
-
+export default PagePage

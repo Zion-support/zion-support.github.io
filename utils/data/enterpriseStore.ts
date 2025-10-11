@@ -1,302 +1,106 @@
-const generateId = () => Math.random().toString(36).slice(2, 10)
-const seedCompany: CompanyRecord = {id: 'cmp_acme'
-  name: 'Acme Corporation'
-  slug: 'acme'
-  logoUrl: '/logo-acme.svg'
-  brandColor: '#4F46E5'
-  plan: {
-    tier: 'business'
-    seatsPurchased: 25
-    seatsUsed: 3
-    usageLimits: {
-      monthlyJobPosts: 50
-      budgetCapUsd: 10000}}
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }]
-  activity: [
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }]
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]}
-const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
-const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany }
-export const store = {getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] |null
-  }
-  getCompanyById(id: string) {return companiesById[id] |null
-  }
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {const id = `cmp_${generateId()}`
-    const slug = input.slug |`co-${generateId()}`
-    const record: CompanyRecord = {id
-      name: input.name |'New Company'
-      slug
-      logoUrl: input.logoUrl
-      brandColor: input.brandColor |'#111827'
-      plan: input.plan |{
-        tier: 'teams'
-        seatsPurchased: 10
-        seatsUsed: 0
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }}
-      members: []
-      activity: []
-      invoices: []}
-    companiesById[id] = record
-    companiesBySlug[slug] = record
-    return record
-  }
-  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {const company = companiesById[companyId]
-    if (!company) return null
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise'
-const generateId = () => Math.random().toString(36).slice(2, 10)
-const seedCompany: CompanyRecord = {
-  id: 'cmp_acme',
-  name: 'Acme Corporation',
-  slug: 'acme',
-  logoUrl: '/logo-acme.svg',
-  brandColor: '#4F46E5',
-  plan: {
-    tier: 'business',
-    seatsPurchased: 25,
-    seatsUsed: 3,
-    usageLimits: {
-      monthlyJobPosts: 50,
-      budgetCapUsd: 10000,
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const DataPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-  },
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' },
-  ],
-  activity: [
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } },
-  ],
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },
-  ],
-}
-const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
-const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
-export const store = {
-  getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] || null
-  },
-  getCompanyById(id: string) {
-    return companiesById[id] || null
-  },
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {
-    const id = `cmp_${generateId()}`
-    const slug = input.slug || `co-${generateId()}`
-    const record: CompanyRecord = {
-      id,
-      name: input.name || 'New Company',
-      slug,
-      logoUrl: input.logoUrl,
-      brandColor: input.brandColor || '#111827',
-      plan: input.plan || {
-        tier: 'teams',
-        seatsPurchased: 10,
-        seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 },
-      },
-      members: [],
-      activity: [],
-      invoices: [],
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    companiesById[id] = record
-    companiesBySlug[slug] = record
-    return record
-  },
-  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {
-    const company = companiesById[companyId]
-    if (!company) return null
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
-    company.members.push(member)
-    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' })
-    return member
-  }
-  removeMember(companyId: string, memberId: string): boolean {const company = companiesById[companyId]
-  },
-  removeMember(companyId: string, memberId: string): boolean {
-    const company = companiesById[companyId]
-    if (!company) return false
-    const before = company.members.length
-    company.members = company.members.filter(m => m.id !== memberId)
-    const changed = company.members.length !== before
-    if (changed) {
-    if (changed) {
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
-    }
-    return changed
-  }
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {const company = companiesById[companyId]
-  },
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
-    const company = companiesById[companyId]
-    if (!company) return false
-    const member = company.members.find(m => m.id === memberId)
-    if (!member) return false
-    member.role = role
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } })
-    return true
-  }
-  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {const company = companiesById[companyId]
-    if (!company) return false
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
-    return true
-  }
-  listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId]
-  slug: 'acme',
-  logoUrl: '/logo-acme.svg',
-  brandColor: '#4F46E5',
-  plan: {
-    tier: 'business',
-    seatsPurchased: 25,
-    seatsUsed: 3,
-    usageLimits: {
-      monthlyJobPosts: 50,
-      budgetCapUsd: 10000}},
-  members: [
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
-  activity: [
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
-  invoices: [
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},
-const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },
-const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },
-export const store = {
-  getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] || null
-  },
-  getCompanyById(id: string) {
-    return companiesById[id] || null
-  },
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {
-    const id = `cmp_${generateId()}`,
-    const slug = input.slug || `co-${generateId()}`,
-    const record: CompanyRecord = {
-      id,
-      name: input.name || 'New Company',
-      slug,
-      logoUrl: input.logoUrl,
-const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
-const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
-export const store = {
-  getCompanyBySlug(slug: string) {
-    return companiesBySlug[slug] || null
-  }
-  getCompanyById(id: string) {
-    return companiesById[id] || null
-  }
-  createCompany(input: Partial<CompanyRecord>): CompanyRecord {
-    const id = `cmp_${generateId()}`
-    const slug = input.slug || `co-${generateId()}`
-    const record: CompanyRecord = {
-      id
-      name: input.name || 'New Company'
-      slug
-      logoUrl: input.logoUrl
-      brandColor: input.brandColor || '#111827',
-      plan: input.plan || {
-        tier: 'teams',
-        seatsPurchased: 10,
-        seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }},
-      members: [],
-      activity: [],
-      invoices: []},
-    companiesById[id] = record,
-    companiesBySlug[slug] = record,
-    return record
-  },
-  addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {
-    const company = companiesById[companyId],
-    if (!company) return null,
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
-    company.members.push(member),
-    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-    const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
-    company.members.push(member)
-    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),
-    return member
-  },
-  removeMember(companyId: string, memberId: string): boolean {
-    const company = companiesById[companyId],
-    if (!company) return false,
-    const before = company.members.length,
-    company.members = company.members.filter(m => m.id !== memberId),
-    const changed = company.members.length !== before,
-    if (changed) {
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
-    }
-    return changed
-  },
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
-    const company = companiesById[companyId],
-    if (!company) return false,
-    const member = company.members.find(m => m.id === memberId),
-    if (!member) return false,
-    member.role = role,
-    const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data solutions and how they can transform your business." />
+        <meta name="keywords" content="data, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    return changed
-  },
-  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
-    const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    member.role = role
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),
-    return true
-  },
-  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
-    const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    const company = companiesById[companyId],
-    if (!company) return false,
-    const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),
-    return true
-  },
-  list_invoices (company_id: string): InvoiceRecord[] {
-    const company = companiesById[company_id]
-    return company ? company.invoices : []
-  }}
-  },
-  setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
-    const company = companiesById[companyId]
-    if (!company) return false
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
-    return true
-  },
-  listInvoices(companyId: string): InvoiceRecord[] {
-    const company = companiesById[companyId]
-    return company ? company.invoices : []
-  },
-}
+
+export default PagePage

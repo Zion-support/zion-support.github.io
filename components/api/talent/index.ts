@@ -1,347 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-const hasSupabase =
-  !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
-  .split(',')
-  .map(x => x && x.trim())
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method === 'GET') {
-    try {
-      if (hasSupabase) {
-        const { data, error } = await supabaseClient
-          .from('talent_profiles')
-          .select('*')
-          .order('created_at', { ascending: false })
-        if (error) throw error
-        return res && res.status(200).json({ items: data as TalentProfile[] })
-      }
-      return res && res.status(200).json({ items: LOCAL })
-    } catch (e: any) {
-      return res && res.status(500).json({ error: e && e.message })
-    }  }
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim())
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
-      return res && res.status(500).json({ error: e && e.message })
-    }
-  }
-  if (req && req.method === 'POST') {
-    try {
-        }
-      }
-      item && item.originalLanguage = originalLang
-      item && item.translations = translations
-      if (hasSupabase) {
-        const { error } = await supabaseClient.from('talent_profiles').insert({
-          id: item.id
-          slug: item.slug
-          name: item.name
-          title: item.title
-          category: item.category
-          location: item.location
-          timezone: item.timezone
-          region: item.region
-          skills: item.skills
-          summary: item.summary
-          bio: item.bio
-          hourly_rate_usd: item.hourlyRateUsd ?? null
-          request_quote: item.requestQuote ?? null
-          availability: item.availability
-          profile_image_url: item.profileImageUrl ?? null
-          video_url: item.videoUrl ?? null
-          portfolio: item.portfolio ?? null
-          verified: item.verified ?? null
-          rating: item.rating ?? null
-          reviews_count: item.reviewsCount ?? null
-          created_at: item.createdAt
-          original_language: item.originalLanguage
-          translations: item.translations as any
-        } as any)
-        if (error) throw error
-        return res && res.status(201).json({ slug: item && item.slug })
-      }
-      }
-      // Fallback: return the slug as if saved
-      return res && res.status(201).json({ slug: item && item.slug })
-    } catch (e: any) {
-      return res && res.status(500).json({ error: e && e.message })
-    }
-  }
-return res
-    .setHeader('Allow', 'GET, POST')
-    .status(405)
-    .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
-}
-        reviews_count: 0,
-        created_at: new Date ().toISOString (),
-import {  supabase as supabaseClient   } from '@/utils/supabase/client'
-import {  TALENT_PROFILES as LOCAL   } from '@/data/talent'
-import type { TalentProfile  } from '@/utils/types/talent'
-import {  v4 as uuid   } from 'uuid'
-import {  translateText, detectLanguageSimple   } from '@/utils/api/translate'
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split(',').map((x) => x.trim())
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {
-      if (hasSupabase) {
-        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false })
-        if (error) throw error
-        return res.status(200).json({ items: data as TalentProfile[] })
-      }
-      return res.status(200).json({ items: LOCAL })
-    } catch (e: any) {
-      return res.status(500).json({ error: e.message })
-    }
-  }
-  if (req.method === 'POST') {
-    try {
-      const payload = req.body as Partial<TalentProfile>
-      const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6)
-      const item: TalentProfile = {
-        ...payload,
-        id: uuid(),
-        slug,
-        verified: false,
-        rating: 0,
-        reviewsCount: 0,
-        createdAt: new Date().toISOString(),
-        summary: payload.summary || '',
-        skills: payload.skills || [],
-        name: payload.name || 'Unnamed',
-        title: payload.title || 'Professional',
-        location: payload.location || 'Remote',
-        availability: (payload.availability as any) || 'Open',
-      } as TalentProfile
-      // Auto - translate
-      const original_lang =
-        payload.original_language ||
-        detectLanguageSimple (
-          [item.title, item.summary, item.bio || ''].join ('\n'))
-      const translations: TalentProfile['translations'] = {}
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-        translations.summary = translations.summary || {}
-        translations.bio = translations.bio || {}
-        // Check condition
-if (
-          translations.title[lang] = await translate_text () {
-  $2
-}
-            item.title,
-            lang,
-            original_lang)
-        // Check condition
-if (
-          translations.summary[lang] = await translate_text () {
-  $2
-}
-            item.summary,
-            lang,
-            original_lang)
-        // Check condition
-if (
-          translations.bio[lang] = await translate_text () {
-  $2
-}
-            item.bio,
-            lang,
-            original_lang)
-        // Check condition
-if ( {) {
-  $2
-}
-          translations.category = translations.category || {}
-          translations.category[lang] = await translate_text (
-            item.category,
-            lang,
-            original_lang);        }          translations.category[lang] = await translate_text (item.category, lang, original_lang)
-        }
-      }
-      item.original_language = original_lang
-      item.translations = translations
-      // Check condition
-if ( {) {
-  $2
-}
-        const { error } = await supabase_client.from ('talent_profiles').insert ({
-      // Auto-translate
-      const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'))
-      const translations: TalentProfile['translations'] = {}
-      for (const lang of SUPPORTED_LANGS) {
-        if (!lang || lang === originalLang) continue
-        translations.title = translations.title || {}
-        translations.summary = translations.summary || {}
-        translations.bio = translations.bio || {}
-        if (item.title) translations.title[lang] = await translateText(item.title, lang, originalLang)
-        if (item.summary) translations.summary[lang] = await translateText(item.summary, lang, originalLang)
-        if (item.bio) translations.bio[lang] = await translateText(item.bio, lang, originalLang)
-        if (item.category) {
-          translations.category = translations.category || {}
-          translations.category[lang] = await translateText(item.category, lang, originalLang)
-        }
-      }
-      item.originalLanguage = originalLang
-      item.translations = translations
-      if (hasSupabase) {
-        const { error } = await supabaseClient.from('talent_profiles').insert({
-          id: item.id,
-          slug: item.slug,
-          name: item.name,
-          title: item.title,
-          category: item.category,
-          location: item.location,
-          timezone: item.timezone,
-          region: item.region,
-          skills: item.skills,
-          summary: item.summary,
-          bio: item.bio,
-          hourly_rate_usd: item.hourlyRateUsd ?? null,
-          request_quote: item.request_quote ?? null,
-          availability: item.availability,
-          profile_image_url: item.profileImageUrl ?? null,
-          video_url: item.video_url ?? null,
-          portfolio: item.portfolio ?? null,
-          verified: item.verified ?? null,
-          rating: item.rating ?? null,
-          reviews_count: item.reviews_count ?? null,
-          created_at: item.created_at,
-          original_language: item.original_language,
-          translations: item.translations as any,
-  if (req.method === 'POST') {
-    try {
-      const payload = req.body as Partial<TalentProfile>
-      const slug =
-        (payload.name |'talent')
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '-')
-          .replace(/(^-|-$)/g, '') +
-        '-' +
-        uuid().slice(0, 6)
-        ...payload
-        id: uuid()
-        slug
-        verified: false
-        rating: 0
-        reviewsCount: 0
-        createdAt: new Date().toISOString()
-        summary: payload.summary |''
-        skills: payload.skills |[]
-        name: payload.name |'Unnamed'
-        title: payload.title |'Professional'
-        location: payload.location |'Remote'
-        availability: (payload.availability as any) |'Open'
-      } as TalentProfile
-      // Auto-translate
-      const originalLang =
-        payload.originalLanguage |
-        detectLanguageSimple(
-          [item.title, item.summary, item.bio |''].join('\n')
-        )
-      const translations: TalentProfile['translations'] = {}
-        translations.summary = translations.summary |{}
-        translations.bio = translations.bio |{}
-        if (item.title)
-          translations.title[lang] = await translateText(
-            item.title
-            lang
-            originalLang
-          )
-        if (item.summary)
-          translations.summary[lang] = await translateText(
-            item.summary
-            lang
-            originalLang
-          )
-        if (item.bio)
-          translations.bio[lang] = await translateText(
-            item.bio
-            lang
-            originalLang
-          )
-        if (item.category) {
-          translations.category = translations.category |{}
-          translations.category[lang] = await translateText(
-            item.category
-            lang
-            originalLang
-          );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
-        }
-      }
-      item.originalLanguage = originalLang
-      item.translations = translations
-      if (hasSupabase) {
-        const { error } = await supabaseClient.from('talent_profiles').insert({
-          id: item.id
-          slug: item.slug
-          name: item.name
-          title: item.title
-          category: item.category
-          location: item.location
-          timezone: item.timezone
-          region: item.region
-          skills: item.skills
-          summary: item.summary
-          bio: item.bio
-          hourly_rate_usd: item.hourlyRateUsd ?? null
-          request_quote: item.requestQuote ?? null
-          availability: item.availability
-          profile_image_url: item.profileImageUrl ?? null
-          video_url: item.videoUrl ?? null
-          portfolio: item.portfolio ?? null
-          verified: item.verified ?? null
-          rating: item.rating ?? null
-          reviews_count: item.reviewsCount ?? null
-          created_at: item.createdAt
-          original_language: item.originalLanguage
-          translations: item.translations as any
-        } as any)
-        // Check condition
-if (throw error) {
-  $2
-}
-        return res.status (201).json ({ slug: item.slug })
-      }
-      // Fallback: return the slug as if saved
-      return res.status (201).json ({ slug: item.slug })
-    } catch (e: any) {
-      return res.status (500).json ({ error: e.message })
+const TalentPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-return res
-    .set_header ('Allow', 'GET, POST')
-    .status (405)
-    .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed')
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Talent - Zion Tech Group</title>
+        <meta name="description" content="Learn about our talent solutions and how they can transform your business." />
+        <meta name="keywords" content="talent, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
-}
-}
-          request_quote: item.requestQuote ?? null,
-          availability: item.availability,
-          profile_image_url: item.profileImageUrl ?? null,
-          video_url: item.videoUrl ?? null,
-          portfolio: item.portfolio ?? null,
-          verified: item.verified ?? null,
-          rating: item.rating ?? null,
-          reviews_count: item.reviewsCount ?? null,
-          created_at: item.createdAt,
-          // i18n
-          original_language: item.originalLanguage,
-          translations: item.translations as any,
-        } as any)
-        if (error) throw error
-        return res.status(201).json({ slug: item.slug })
-      }
-      // Fallback: return the slug as if saved
-      return res.status(201).json({ slug: item.slug })
-    } catch (e: any) {
-      return res.status(500).json({ error: e.message })
-    }
-  }
-  return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')
-}
+
+export default PagePage

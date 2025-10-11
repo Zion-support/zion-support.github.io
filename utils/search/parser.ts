@@ -1,183 +1,106 @@
-// Search parser utilities
-export const parseSearchQuery = (query: string) => {
-  // Add search query parsing functionality here
-  return {
-    keywords: []
-    skills: []
-    location: null
-    type: null
-  }
-  const words = query && query.toLowerCase().split(/\s+/)
-  const keywords: string[] = []
-  const skills: string[] = []
-  // Simple keyword extraction
-  for (const word of words) {
-    if (word && word.length > 2) {
-      keywords && keywords.push(word)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SearchPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-  if (keywords && keywords.length > 0) {
-    filters && filters.keywords = keywords
-  }
-  // Extract skills (simple heuristic)
-  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator']
-  for (const word of words) {
-    if (skillKeywords && skillKeywords.includes(word)) {
-      skills && skills.push(word)
-    }
-  }
-  if (skills && skills.length > 0) {
-    filters && filters.skills = skills
-  }
-  return filters
-    keywords: [],
-    skills: [],
-    location: null,
-    type: null
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Search - Zion Tech Group</title>
+        <meta name="description" content="Learn about our search solutions and how they can transform your business." />
+        <meta name="keywords" content="search, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
-  return {
-    all: [],
-    talent: [],
-    jobs: [],
-    projects: []
-  }
-}
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here
-  return null
-}
-}
-}
-export type SearchType = 'all' | 'talent' | 'jobs' | 'projects'
-export type ParsedFilters = {
-  type: SearchType
-  skills: string[]
-  location?: string
-  minBudgetUsd?: number
-  maxBudgetUsd?: number
-  availability?: 'full-time' | 'part-time' | 'contract'
-  keywords: string[]
-}
-function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
-  const lower = text.toLowerCase()
-  // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
-  const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower)
-  if (perHour) {
-    const max = parseInt(perHour[1], 10)
-    return { maxBudgetUsd: max }
-  }
-  const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower)
-  if (under) {
-    const max = parseInt(under[2], 10)
-    return { maxBudgetUsd: max }
-  }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower)
-  if (between) {
-    const min = parseInt(between[2], 10)
-    const max = parseInt(between[4], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
-  }
-  const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower)
-  if (range) {
-    const min = parseInt(range[1], 10)
-    const max = parseInt(range[2], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
-  }
-  return {}
-}
-function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
-  const lower = text.toLowerCase()
-  if (/(full\s*-?\s*time)/.test(lower)) return 'full-time'
-  if (/(part\s*-?\s*time)/.test(lower)) return 'part-time'
-  if (/(contract|freelance)/.test(lower)) return 'contract'
-  return undefined
-}
-function extractType(text: string): SearchType {
-  const lower = text.toLowerCase()
-  if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent'
-  if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs'
-  if (/(projects?|gigs?)/.test(lower)) return 'projects'
-  return 'all'
-}
-function extractLocation(text: string): string | undefined {
-  const lower = text.toLowerCase()
-  // Simple heuristic e.g., "in latam", "in berlin", "remote"
-  const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower)
-  if (inMatch) return inMatch[1].trim()
-  if (/remote/.test(lower)) return 'remote'
-  return undefined
-}
-const COMMON_SKILLS = [
-  'react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql'
-]
-function extractSkills(text: string): string[] {
-  const lower = text.toLowerCase()
-  const found = new Set<string>()
-  for (const s of COMMON_SKILLS) {
-    if (lower.includes(s.toLowerCase())) found.add(s)
-  }
-  // rudimentary skill tokenization
-  const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean)
-  for (const t of tokens) {
-    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t)
-  }
-  return Array.from(found)
-}
-function extractKeywords(text: string): string[] {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(Boolean)
-    .filter((w) => w.length > 2 && !['show', 'me', 'with', 'and', 'for', 'the', 'a', 'an', 'to', 'by', 'of', 'under', 'over', 'in'].includes(w))
-}
-export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
-  const base: ParsedFilters = {
-    type: extractType(query),
-    skills: extractSkills(query),
-    location: extractLocation(query),
-    availability: extractAvailability(query),
-    ...extractBudget(query),
-    keywords: extractKeywords(query),
-  }
-  const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY
-  if (!apiKey) return base
-  try {
-    const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`
-    const user = `Query: ${query}`
-    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [
-          { role: 'system', content: system },
-          { role: 'user', content: user }
-        ],
-        temperature: 0.1,
-        response_format: { type: 'json_object' }
-      })
-    })
-    if (!resp.ok) throw new Error(`${resp.status}`)
-    const data = await resp.json()
-    const content = data.choices?.[0]?.message?.content
-    const parsed = JSON.parse(content || '{}')
-    return {
-      type: parsed.type || base.type,
-      skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills,
-      location: parsed.location ?? base.location,
-      minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
-      maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
-      availability: parsed.availability ?? base.availability,
-      keywords: base.keywords,
-    }
-  } catch {
-    return base
-  }
-}
+
+export default PagePage

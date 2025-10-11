@@ -1,541 +1,106 @@
-  assertClient
-  assertTalentOrClientForOffer
-  getDemoUser
-} from "../../../utils/marketplace/auth"
-import {
-  getOfferById
-  listOffers
-  saveOffer
-  saveProject
-import { v4 as uuidv4 } from "uuid"
-import {
-  assertClient,
-  assertTalentOrClientForOffer,
-  getDemoUser,
-} from "../../../utils/marketplace/auth"
-import {
-  getOfferById,
-  listOffers,
-  saveOffer,
-  saveProject,
-} from "../../../utils/marketplace/store"
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth"
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store"
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types"
-import type { NextApiRequest, NextApiResponse } from './next'
-import { v4 as uuidv4  } from './uuid'
-import {
-  assert_client,
-  assertTalentOrClientForOffer,
-  getDemoUser,
-} from '../../../utils / marketplace / auth'
-import {
-  getOfferById,
-  list_offers,
-  save_offer,
-  save_project,
-} from '../../../utils / marketplace / store'
-import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types'
-/**
- * bad - Function description
- */
-function bad() {
-  return res.status (code).json ({ ok: false, error: message })
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      const user = getDemoUser (req)
-      // Check condition
-if ( {) {
-  $2
-}
-        const offers = list_offers ({ client_id: user.id })
-        return res.json ({ ok: true, offers })
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        const offers = list_offers ({ talent_slug: user.talent_slug })
-        return res.json ({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const MarketplacePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req)
-      const {
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms
-        agreementUrl
-      } = req.body |{}
-      if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
-        return bad(res, "Missing required fields")
-      }
-      const offer: Offer = {
-        id: uuidv4()
-        createdAtIso: new Date().toISOString()
-        clientId: client.id
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms: paymentTerms as PaymentTerms
-        agreementUrl
-        status: "SENT"
-      }
-      saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
-    }
-    if (req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body |{}
-      if (!id |!action) return bad(res, "Missing id or action")
-      const existing = getOfferById(id)
-      if (!existing) return bad(res, "Offer not found", 404)
-      const user = assertTalentOrClientForOffer(
-        req
-        existing
-        req.headers["x-demo-talent-slug"] as string
-      )
-      if (action === "accept") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can accept", 403)
-        existing.status = "CONFIRMED"
-        // Create a project upon acceptance
-        const project: Project = {
-          id: uuidv4()
-          title: `Project with ${existing.talentSlug}`
-          summary: existing.scopeSummary
-          clientId: existing.clientId
-          talentSlug: existing.talentSlug
-          startDateIso: existing.startDateIso
-          status: "ACTIVE"
-          timeline:
-            existing.paymentTerms.type === "milestone"
-              ? existing.paymentTerms.milestones |[]
-              : []
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4()
-                  name: "Agreement"
-                  url: existing.agreementUrl
-                  uploadedAtIso: new Date().toISOString()
-                }
-              ]
-            : []
-          notes: []
-        }
-        saveProject(project)
-        existing.projectId = project.id
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
-      }
-      if (action === "request_changes") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can request changes", 403)
-        existing.status = "CHANGES_REQUESTED"
-        existing.changeRequestNote = changeRequestNote |""
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
-      }
-      if (action === "decline") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can decline", 403)
-        existing.status = "DECLINED"
-        return res.json({ ok: true, offers })
-      }
-      if (user.role === "talent") {
-    if (req.method === "GET") {
-      const user = getDemoUser(req)
-      if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id })
-        return res.json({ ok: true, offers })
-      }
-      if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug })
-        return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
-    if (req && req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req)
-      const {
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms,
-        agreementUrl,
-      } = req && req.body || {}
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields")
-      }
-    if (req && req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req && req.body || {}
-      if (!id || !action) return bad(res, "Missing id or action")
-      const existing = getOfferById(id)
-      if (!existing) return bad(res, "Offer not found", 404)
-      const user = assertTalentOrClientForOffer(
-        req,
-        existing,
-        req && req.headers["x-demo-talent-slug"] as string,
-      )
-      if (action === "accept") {
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
-              ]
-            : []
-          notes: []
-        }
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403)
-      }
-      save_offer (offer)
-      return res.status (201).json ({ ok: true, offer })
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {}
-      if (return bad (res, "Missing id or action")) {
-  $2
-}
-      const existing = getOfferById (id)
-      if (return bad (res, "Offer not found", 404)) {
-  $2
-}
-      const user = assertTalentOrClientForOffer (
-        req,
-        existing,
-        req.headers["x - demo - talent - slug"] as string,
-      )
-      // Check condition
-if ( {) {
-  $2
-}
-        if (
-          return bad (res, "Only talent can accept", 403)) {
-  $2
-}
-        existing.status = "CONFIRMED"
-        // Create a project upon acceptance
-        const project: Project = {
-  }
-          id: uuidv4 (),
-          title: `Project with ${existing.talent_slug}`,
-          summary: existing.scope_summary,
-          client_id: existing.client_id,
-          talent_slug: existing.talent_slug,
-          startDateIso: existing.startDateIso,
-          status: "ACTIVE",
-          timeline:
-            existing.payment_terms.type === "milestone"
-              ? existing.payment_terms.milestones || []
-              : [],
-          documents: existing.agreement_url
-            ? [
-                {
-                  id: uuidv4 (),
-                  name: "Agreement",
-                  url: existing.agreement_url,
-                  uploadedAtIso: new Date ().toISOString (),
-                },
-              ]
-            : [],
-          notes: [],
-        }
-        save_project (project)
-        existing.project_id = project.id
-        save_offer (existing)
-        return res.json ({ ok: true, offer: existing, project })
-      }
-      // Check condition
-if ( {) {
-  $2
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method === "GET") {
-      const user = getDemoUser(req)
-      if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id })
-        return res.json({ ok: true, offers })
-      }
-      if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug })
-        return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req)
-      const {
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms
-        agreementUrl
-      } = req.body |{}
-      if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
-        return bad(res, "Missing required fields")
-      }
-      const offer: Offer = {
-        id: uuidv4()
-        createdAtIso: new Date().toISOString()
-        clientId: client.id
-        talentSlug
-        startDateIso
-        scopeSummary
-        paymentTerms: paymentTerms as PaymentTerms
-        agreementUrl
-        status: "SENT"
-      }
-      saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
-    }
-    if (req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body |{}
-      if (!id |!action) return bad(res, "Missing id or action")
-      const existing = getOfferById(id)
-      if (!existing) return bad(res, "Offer not found", 404)
-      const user = assertTalentOrClientForOffer(
-        req
-        existing
-        req.headers["x-demo-talent-slug"] as string
-      )
-      if (action === "accept") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can accept", 403)
-        existing.status = "CONFIRMED"
-        // Create a project upon acceptance
-        const project: Project = {
-          id: uuidv4()
-          title: `Project with ${existing.talentSlug}`
-          summary: existing.scopeSummary
-          clientId: existing.clientId
-          talentSlug: existing.talentSlug
-          startDateIso: existing.startDateIso
-          status: "ACTIVE"
-          timeline:
-            existing.paymentTerms.type === "milestone"
-              ? existing.paymentTerms.milestones |[]
-              : []
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4()
-                  name: "Agreement"
-                  url: existing.agreementUrl
-                  uploadedAtIso: new Date().toISOString()
-                }
-              ]
-            : []
-          notes: []
-        }
-        saveProject(project)
-        existing.projectId = project.id
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
-      }
-      if (action === "request_changes") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can request changes", 403)
-        existing.status = "CHANGES_REQUESTED"
-        existing.changeRequestNote = changeRequestNote |""
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
-      }
-      if (action === "decline") {
-        if (user.role !== "talent")
-          return bad(res, "Only talent can decline", 403)
-        existing.status = "DECLINED"
-      const offer: Offer = {
-        id: uuidv4(),
-        createdAtIso: new Date().toISOString(),
-        clientId: client.id,
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms: paymentTerms as PaymentTerms,
-        agreementUrl,
-      }
-      saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
-    }
-    if (req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {}
-      if (!id || !action) return bad(res, "Missing id or action")
-      const existing = getOfferById(id)
-      if (!existing) return bad(res, "Offer not found", 404)
-      const user = assertTalentOrClientForOffer(
-        req,
-        existing,
-        req && req.headers["x-demo-talent-slug"] as string,
-      )
-      if (action === "accept") {
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403)
-        existing.status = "CONFIRMED"
-        // Create a project upon acceptance
-        const project: Project = {
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
-          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
-            : [],
-        }
-        saveProject(project)
-        existing.projectId = project.id
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
-      }
-      if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403)
-        existing.status = "CHANGES_REQUESTED"
-        existing.changeRequestNote = changeRequestNote || ""
-        saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
-      }
-      return bad(res, "Unknown action")
-    }
-    return bad(res, "Method not allowed", 405)
-  } catch (e: any) {
-    const status = e?.statusCode |500
-    return res
-      .status(status)
-      .json({ ok: false, error: e?.message |"Server error" })
-      if (action === "decline") {
-      .json({ ok: false, error: e?.message || "Server error" })
-          notes: []},
-        saveProject(project),
-        existing.projectId = project.id,
-        saveOffer(existing),
-        return res.json({ ok: true, offer: existing, project })
-        } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-        if (
-          return bad (res, "Only talent can decline", 403)) {
-  $2
-}
-      if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
-        existing.status = "CHANGES_REQUESTED",
-        existing.changeRequestNote = changeRequestNote || "",
-        saveOffer(existing),
-        return res.json({ ok: true, offer: existing })
-        } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Marketplace - Zion Tech Group</title>
+        <meta name="description" content="Learn about our marketplace solutions and how they can transform your business." />
+        <meta name="keywords" content="marketplace, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
 
-      if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403)
-        existing.status = "DECLINED"
-        save_offer (existing)
-        return res.json ({ ok: true, offer: existing })
-      }
-      return bad (res, "Unknown action")
-    }
-    return bad (res, "Method not allowed", 405)
-  } catch (e: any) {
-    const status = e?.statusCode || 500
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
-  }
-}
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-      )
-      if (action === "accept") {
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
-          documents: existing.agreementUrl
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
-              ]
-            : []
-          notes: []
-        }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+export default PagePage

@@ -1,310 +1,106 @@
-// Measure page load time;
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}})
-// Measure Core Web Vitals;
-    this.measureCoreWebVitals();
-  }
-private measureCoreWebVitals(): void {// First Contentful Paint;}
-    this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime;}})
-// Largest Contentful Paint;
-    this.observeLCP();
-// First Input Delay;
-    this.observeFID();
-// Cumulative Layout Shift;
-    this.observeCLS();
-    if (typeof window === 'undefined' || !('performance' in window)) return
-// Measure page load time
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
-  }
-    })
-// Measure Core Web Vitals
-    this.measureCoreWebVitals()
-  }
-private measureCoreWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime
-  }
-    })
-// Largest Contentful Paint
-    this.observeLCP()
-// First Input Delay
-    this.observeFID()
-// Cumulative Layout Shift
-    this.observeCLS()
-  }
-private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {,}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
-try {const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {
-          if (entry.name === type) {
-            callback(entry)}}
-        }
-      })
-  }
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime;}})
-      observer.observe({entryTypes: ['largest-contentful-paint'] ,)})
-      this.observers.push(observer);
-    } catch (error) {console.warn('LCP observer not supported:', error)}}
-  }
-private observeFID(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
-try {const observer = new PerformanceObserver((list) => {}
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime
-  }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
-    } catch (error) {
-    console.warn('LCP observer not supported:', error)
-  }
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
-private observeFID(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}}
-      })
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;}}
-        }
-        this.metrics.cumulativeLayoutShift = clsValue
-      })
-    }
-return result
-  }) as T
-}
-export const debounce = </T><T extends (...args: any[]) => any>(,
-  func: T,
-    clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)}}) as T;
-    let timeout: NodeJS.Timeout
-return (
+  ]
+
+  return (
     <>
-      (...args: Parameters</T><T>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
     </>
-  ) => {
-    clearTimeout(timeout),
-    timeout = setTimeout(() =&gt; func(...args), wait)
-  }
-  }) as T
-}
-export const throttle = </T><T extends (...args: any[]) => any>(,
-  func: T,
-}
-export const lazyLoad = (callback: () => void): void => {,
-    if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback)}} else {setTimeout(callback, 1)}}}
-}
-    const img = new Image();
-    img.onload = () => resolve();
-    img.onerror = reject;
-    img.src = src;}})
-}
-    return Promise.all(srcs.map(preloadImage))
-  }
-}</void>
-  private observers: PerformanceObserver[] = []
-  constructor() {
-    this.initializeMetrics();}
-  }
-
-  private initializeMetrics(): void {
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    // Measure page load time
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}
-    })
-    // Measure Core Web Vitals
-    this.measureCoreWebVitals()
-  }
-
-  private measureCoreWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime;}
-    })
-    // Largest Contentful Paint
-    this.observeLCP()
-    // First Input Delay
-    this.observeFID()
-    // Cumulative Layout Shift
-    this.observeCLS()
-  }
-
-  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === type) {
-            callback(entry);}
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['paint'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);}
-    }
-  }
-
-  private observeLCP(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime;}
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('LCP observer not supported:', error);}
-    }
-  }
-
-  private observeFID(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}
-        }
-      })
-      observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('FID observer not supported:', error);}
-    }
-  }
-
-  private observeCLS(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-    try {
-      let clsValue = 0
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;}
-          }
-        }
-        this.metrics.cumulativeLayoutShift = clsValue
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn('CLS observer not supported:', error);}
-    }
-  }
-
-  public getMetrics(): PerformanceMetrics {;}
-    return { ...this.metrics }
-  }
-
-  public getLoadTime(): number {
-    return this.metrics.loadTime;}
-  }
-
-  public getFirstContentfulPaint(): number {
-    return this.metrics.firstContentfulPaint;}
-  }
-
-  public getLargestContentfulPaint(): number {
-    return this.metrics.largestContentfulPaint;}
-  }
-
-  public getFirstInputDelay(): number {
-    return this.metrics.firstInputDelay;}
-  }
-
-  public getCumulativeLayoutShift(): number {
-    return this.metrics.cumulativeLayoutShift;}
-  }
-
-  public isPerformanceGood(): boolean {
-    return (
-      this.metrics.firstContentfulPaint < 1800 &&
-      this.metrics.largestContentfulPaint < 2500 &&
-      this.metrics.firstInputDelay < 100 &&
-      this.metrics.cumulativeLayoutShift < 0.1
-    );}
-  }
-
-  public cleanup(): void {
-    this.observers.forEach(observer =&gt; observer.disconnect())
-    this.observers = []
-  }
+  )
 }
 
-export const performanceMonitor = new PerformanceMonitor()
-// Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(
-  fn: T,
-  name?: string
-): T => {
-  return ((...args: Parameters<T>) => {
-    const start = performance.now()
-    const result = fn(...args)
-    const end = performance.now()
-    if (name) {;}
-      console.log(`${name} took ${end - start} milliseconds`)
-    }
-
-    return result
-  }) as T
-}
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): T => {
-  let timeout: NodeJS.Timeout
-  return ((...args: Parameters<T>) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait);}
-  }) as T
-}
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): T => {
-  let inThrottle: boolean
-  return ((...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args)
-      inThrottle = true
-      setTimeout(() => inThrottle = false, limit);}
-    }
-  }) as T
-}
-export const lazyLoad = (callback: () => void): void => {
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback);}
-  } else {
-    setTimeout(callback, 1);}
-  }
-}
-export const preloadImage = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.onload = () => resolve()
-    img.onerror = reject
-    img.src = src;}
-  })
-}
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(srcs.map(preloadImage));}
-}
+export default PagePage

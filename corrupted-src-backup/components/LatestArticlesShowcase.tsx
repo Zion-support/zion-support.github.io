@@ -1,38 +1,106 @@
-import, React, from 'rea, c, t'
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
-const, LatestArticlesShowcas, e: Rea, c, t.FC = () => { 
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
-      <div, classNam, e='container, m, x-auto, p, x-6'>
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h
-  const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
-    <section, classNam, e = 'py-20, b, g-whi, t, e'>
-      <div, classNam, e='container, m, x-auto, p, x-6'>
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
-          {latestArticl, e, s.m, a, p(artic, l, e = > (
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
-                <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
-                  {artic, l, e.t, i, t, l, e}
-                  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e
-                    Read, Mor, e
-                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles;)
-            <Link, classNam, e='w-6 h-6' />)
-}})
-const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
-                <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
-                  {artic, l, e.t, i, t, l, e}
-                  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e
-                    <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            View, All, Articles
-            <Link, classNam, e='w-6 h-6' />
-}}
-</div></div></div></div></div></div></div></Link></Link></Link></Link></h2></h2></h3></h3></section></section>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Learn about our components solutions and how they can transform your business." />
+        <meta name="keywords" content="components, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

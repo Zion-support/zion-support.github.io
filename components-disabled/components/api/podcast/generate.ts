@@ -1,7 +1,106 @@
-// const {persona, invitee, topic} operatorPrompt } = req && req.body || {}; const id = uuidv4(); const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. 'Produce':;'' const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;' 1) 7-10 concise interview questions mixing visionary and technical angles,' 2) Time markers 'for': Intro, segment transitions, Closing CTA for Zion, 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest, 4) YouTube and Spotify descriptions, 5) A single-sentence Best Quote,' Return a strict JSON object with 'keys': title, questions (array), timeMarkers {intro, segments} closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;`' const episode = { return res && res.status(500).json({ 'error': 'Failed to generate structured content' });' * ensure_storage - Function description */ function ensure_storage() {} const dir = path.dirname (EPISODES_PATH);' if () fs.mkdir_sync (dir) { 'recursive': true })) { $2 } if ()) { $2 }' fs.writeFileSync (EPISODES_PATH, '[]') 'utf8');' ; const episode = {} id,' 'createdAt': new Date().toISOString(); persona, invitee topic,' 'title': generated.title,' 'questions': generated.questions |[]' 'timeMarkers': generated.timeMarkers |{}' 'intro': ''00':00''' 'segments': []' 'closing': ''14':30'' ' 'transcript': generated.transcript,' 'youtubeDescription': generated.youtubeDescription |'''' 'spotifyDescription': generated.spotifyDescription |'''' 'bestQuote': generated.bestQuote |'''' 'audio': {} try {} ' .json ({ 'error': 'Failed to generate structured content' }); '' const episode = { return res.status (500).json ({ 'error': 'Failed to generate structured content' });' const episode = {} id,' 'created_at': new Date ().toISOString (),' 'transcript': ''HOST': Welcome... 'GUEST': Thank you... (stub transcript) ... 'CTA': Join Zion.','' 'youtubeDescription': 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.','' 'spotifyDescription': 'A 15-minute interview on 'Zion': identity, incentives, governance, and real-world adoption.','' 'bestQuote': 'Talent networks become protocols when incentives, reputation, and opportunity align.'})' ' .json ({ "error": 'Failed to generate structured content' }); '' const episode = { return res.status (500).json ({ "error": 'Failed to generate structured content' });' } }' return res.status(500).json({ "error": 'Failed to generate structured content' });' } id, "createdAt": new Date().toISOString(), transcrip,
-  t: generated.transcript, youtube_descriptio,
-  n: generated.youtube_description || , spotify_descriptio,
-  n: generated.spotify_description || , best_quot,
-  e: generated.best_quote || , audi,
-  o: {}, return res.status (200).json ({ episode }); console.error (error);' return res.status (500).json ({/* TODO: Fix JSX expression */})
-  r: error?.message || 'Unknown error' }); } episodes.unshift (episode); try {} generated = JSON.parse(content); } catch { // Attempt to extract JSON block } const match = content.match(/\\{[\\s\\S]*\\}$/); if (match) generated = JSON.parse(match[0]); if (!generated || !generated.title || !generated.transcript) {}' return res.status(500).json({ 'error': 'Failed to generate structured content' });' const episode = {} id,' 'createdAt': new Date().toISOString(), const episode = {} const episode = {/* TODO: Fix JSX expression */}"`
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const PodcastPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Podcast - Zion Tech Group</title>
+        <meta name="description" content="Learn about our podcast solutions and how they can transform your business." />
+        <meta name="keywords" content="podcast, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

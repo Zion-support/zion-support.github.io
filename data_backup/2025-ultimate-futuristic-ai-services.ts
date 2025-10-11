@@ -1,91 +1,106 @@
-realImplementatio,
-  n: boolean, implementationDetail,
-  s: string, launchDat,
-  e: string, customer,
-  s: number, ratin,
-  g: number, taglin,
-  e:, Develo,
-  p: AI with true consciousness and emotional intelligence'', pric,
-  e: $,2,999,' perio,
-  d: '/mont,h'; descriptio,
-  n:  ,' 'Revolutionar,
-  y: platform for developing AI systems with genuine consciousnes,s, self-awareness, and emotional intelligence capabilities.''; features[' 'Consciousnes,
-  s: development framework'',' 'Emotiona,
-  l: intelligence training'',' 'Self-awarenes,
-  s: algorithms'',' 'Consciousnes,
-  s: testing tools'',' 'Ethica,
-  l: AI development'',' 'Consciousnes,
-  s: validation'',' 'Emotiona,
-  l: response systems'',' 'Self-reflectio,
-  n: capabilities'',' 'Consciousnes,
-  s: metrics'',' 'Ethic,
-  s: compliance monitoring''], popula,
-  r: tru,e, ico,
-  n:,' 🧠'';' colo,
-  r: 'from-purple-60,
-  0: to-pink-60,0'; textColo,
-  r:, marketPositio,
-  n:,' Firs,
-  t: AI consciousness development platform. No direct competitors - this is a breakthrough technology.'',' targetAudienc,
-  e: A,
-  I: research institution,s, Technology companies, Government agencies, Academic researchers, AI ethicists''; trialDay,
-  s:  ,7, setupTim,
-  e:,' 4-6: weeks'',' categor,
-  y: 'A,
-  I: Consciousnes,s'; realServic,
-  e: tru,e, technology[' Advance,
-  d: AI/ML, Neural Networks, Consciousness Algorithms, Emotional Intelligence, Ethics Frameworks']'; integrations[' 'A,
-  I: development platforms, Research tools, Ethics frameworks, Academic databases']'; useCases[' 'A,
-  I: consciousness research, Emotional AI development, Ethics research, Academic studies, Government AI development']';' ro,
-  i: 'Researc,
-  h: institutions report 1000% ROI through breakthrough discoveries and funding,.'; competitors[' N,
-  o: direct competitors - breakthrough technology']',' marketSiz,
-  e: 'Emergin,
-  g: market - estimated $5B potentia,l'; growthRat,
-  e:, implementationDetail,
-  s:,' A,
-  I: consciousness development platform with consciousness algorithms, emotional intelligence training, and ethics compliance monitoring.'';' launchDat,
-  e: '2024-12-0,1'; customer,
-  s:  ,3, ratin,
-  g: 5.,0, review,
-  s:  ,2}, // Autonomou,
-  s: AI Research Assistant{/* TODO: Fix JSX expression */}
-  e: '2024-11-0,1'} customer,
-  s: 1,2, ratin,
-  g: 4.,9, review,
-  s:  }7}, // A,
-  I: Emotional Intelligence Training{/* TODO: Fix JSX expression */}
-  e: '2024-10-0,1'} customer,
-  s: 2,8, ratin,
-  g: 4.,8, review,
-  s: 1}6}, // A,
-  I: Autonomous Business Operations{/* TODO: Fix JSX expression */}
-  e: '2024-09-0,1'} customer,
-  s: 1,5, ratin,
-  g: 4.,9, review,
-  s:  }9}, // A,
-  I: Predictive Healthcare Diagnostics{/* TODO: Fix JSX expression */}
-  e: '2024-08-0,1'} customer,
-  s: 4,2, ratin,
-  g: 4.,8, review,
-  s: 2}5}, // A,
-  I: Autonomous Code Generation{/* TODO: Fix JSX expression */}
-  e: '2024-07-0,1'} customer,
-  s: 6,7, ratin,
-  g: 4.,7, review,
-  s: 3}8}, // A,
-  I: Autonomous Marketing Platform{/* TODO: Fix JSX expression */}
-  e: '2024-06-0,1'} customer,
-  s: 8,9, ratin,
-  g: 4.,6, review,
-  s: 5}2}, // A,
-  I: Autonomous Sales Platform{/* TODO: Fix JSX expression */}
-  e: '2024-05-0,1'} customer,
-  s: 5,6, ratin,
-  g: 4.,8, review,
-  s: 3}1}, // A,
-  I: Autonomous Customer Service{/* TODO: Fix JSX expression */}
-  e: '2024-04-0,1'} customer,
-  s: 12,3, ratin,
-  g: 4.,7} review,
-  s: 67]}} '
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Data_backupPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Data_backup - Zion Tech Group</title>
+        <meta name="description" content="Learn about our data_backup solutions and how they can transform your business." />
+        <meta name="keywords" content="data_backup, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

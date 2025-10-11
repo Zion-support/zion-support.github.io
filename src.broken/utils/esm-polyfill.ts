@@ -1,70 +1,106 @@
-// ESM polyfill for Next.js
-export const __esModule = true
-export default {}
-/**
- * ESM Polyfill for Next.js 15 + React 19 build compatibility
- * Fixes "Module not found: ESM packages need to be imported" errors
- */
-// Force proper ESM resolution for problematic packages
-if (typeof window === 'undefined') {
-  // Server-side polyfill
-  try {
-    // Ensure lodash modules are properly resolved to lodash-es
-    const Module = eval('require')('module')
-    const originalResolveFilename = Module._resolveFilename
-    Module._resolveFilename = function (request: string, parent: any, isMain: boolean, options: any) {
-      // Map lodash imports to lodash-es
-      if (request.startsWith('lodash/')) {
-        const lodashModule = request.replace('lodash/', 'lodash-es/')
-        try {
-          return originalResolveFilename.call(this, lodashModule, parent, isMain, options)
-        } catch (e) {
-          // Fallback to original if lodash-es module doesn't exist
-          return originalResolveFilename.call(this, request, parent, isMain, options)
-        }
-      }
-      // Map lodash to lodash-es
-      if (request === 'lodash') {
-        try {
-          return originalResolveFilename.call(this, 'lodash-es', parent, isMain, options)
-        } catch (e) {
-          return originalResolveFilename.call(this, request, parent, isMain, options)
-        }
-      }
-      return originalResolveFilename.call(this, request, parent, isMain, options)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  } catch (error: unknown) {
-    // Ignore errors in serverless environments where Module might not be available
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage)
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-// Client-side compatibility fixes
-if (typeof window !== 'undefined') {
-  // Ensure proper module resolution for dynamic imports
-  const globalObj = window as any
-  const originalImport = globalObj.require
-  if (originalImport) {
-    globalObj.require = function(id: string) {
-      // Map lodash imports to lodash-es for client-side
-      if (id.startsWith('lodash/')) {
-        const esmModule = id.replace('lodash/', 'lodash-es/')
-        try {
-          return originalImport(esmModule)
-        } catch (e) {
-          return originalImport(id)
-        }
-      }
-      if (id === 'lodash') {
-        try {
-          return originalImport('lodash-es')
-        } catch (e) {
-          return originalImport(id)
-        }
-      }
-      return originalImport(id)
-    }
-  }
-}
-// Export empty object to satisfy module requirements
-export {}
+
+export default PagePage

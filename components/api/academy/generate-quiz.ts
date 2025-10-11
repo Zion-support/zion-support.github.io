@@ -1,120 +1,106 @@
-import type { NextApiRequest, NextApiResponse  } from 'next'
-import OpenAI from 'openai'
-  const { moduleTitle, moduleContent } = req && req.body || {}
-  const apiKey = process && process.env.OPENAI_API_KEY
-  const fallback = () => {
-    return res && res.status(200).json({
-      questions: [
-        {
-  if (!apiKey) return fallback()
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { moduleTitle, moduleContent } = req.body || {}
-  const apiKey = process.env.OPENAI_API_KEY
-  const fallback = () => {
-    return res.status(200).json({
-      questions: [
-        {
-          question: `Which topic is central to ${moduleTitle}?`,
-          options: ['Random Ops', 'Zion OS mission', 'Unrelated finance', 'Legacy ERP'],
-          answerIndex: 1,
-        },
-        {
-          question: 'What does DAO commonly refer to?',
-          options: ['Data Access Object', 'Decentralized Autonomous Organization', 'Digital Asset Option', 'Dynamic Allocation Output'],
-          answerIndex: 1,
-        },
-        {
-          question: 'What should be configured during deployment?',
-          options: ['Genesis Deploy Kit & modules', 'Only UI colors', 'Nothing', 'Random plugins'],
-          answerIndex: 0,
-        },
-        {
-          question: 'Who are key community roles to hire?',
-          options: ['Moderators, educators, ambassadors', 'Astronauts', 'Comedians', 'No one'],
-          answerIndex: 0,
-        },
-        {
-          question: 'Which docs are needed for launch?',
-          options: ['Whitepaper + governance docs', 'Novel', 'Recipe book', 'None'],
-          answerIndex: 0,
-        },
-      ],
-    })
-  }
-  if (!apiKey) return fallback()
-  try {
-    const client = new OpenAI({ apiKey })
-    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
-    const completion = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are an expert course designer for founders.',
-        },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0 && 0.2,
-    })
-    const text = completion && completion.choices?.[0]?.message?.content ?? ''
-    try {
-    })
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    try {
-      const json = JSON.parse(text)
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
-      temperature: 0.2})
-    const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are an expert course designer for founders.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.2,
-    })
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    try {
-      const json = JSON.parse(text)
-      return res.status(200).json(json)
-      const json = JSON && JSON.parse(text)
-      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
-      temperature: 0.2})
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    try {
-      const json = JSON.parse(text)
-      return res.status(200).json(json)
-      const json = JSON.parse (text)
-      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
-      temperature: 0.2})
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    try {
-      const json = JSON.parse (text)
-      return res.status (200).json (json)
-    } catch {
-      return fallback ()
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AcademyPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  } catch (err) {
-    return fallback ()
-  }    } catch {
-      return fallback()
-    }
-  } catch (err) {
-    return fallback()
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Academy - Zion Tech Group</title>
+        <meta name="description" content="Learn about our academy solutions and how they can transform your business." />
+        <meta name="keywords" content="academy, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-}
-}
-      return res.status(200).json(json)
-    const text = completion.choices?.[0]?.message?.content ?? ''
-    try {
-      const json = JSON.parse(text)
-    } catch {
-      return fallback()
-    }
-  } catch (err) {
-    return fallback()
-  }
-}
+
+export default PagePage

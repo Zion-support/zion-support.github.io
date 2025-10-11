@@ -1,124 +1,106 @@
-// Service categories for easy discovery
-export const SERVICE_CATEGORIES = {
-  UTILITIES: {
-    name: 'Utility Tools',
-    description: 'Essential tools for everyday tasks',
-    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator']
-  },
-  MEDIA: {
-    name: 'Media & Files',
-    description: 'File conversion and media processing tools',
-    services: ['fileConverter']
-  },
-  ANALYSIS: {
-    name: 'Analysis & Insights',
-    description: 'Text analysis and content insights',
-    services: ['textAnalysis']
-  }
-} as const
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-// Service metadata for the application
-export const SERVICES_METADATA = {
-  urlShortener: {
-    name: 'URL Shortener',
-    description: 'Create short, trackable URLs with analytics',
-    icon: '🔗',
-    category: 'UTILITIES',
-    features: [
-      'Custom short codes',
-      'Click tracking',
-      'Analytics dashboard',
-      'Expiration dates',
-      'QR code generation'
-    ],
-    pricing: 'Free',
-    apiEndpoint: '/api/url-shortener'
-  },
-  passwordGenerator: {
-    name: 'Password Generator',
-    description: 'Generate secure passwords with strength analysis',
-    icon: '🔐',
-    category: 'UTILITIES',
-    features: [
-      'Multiple generation modes',
-      'Strength analysis',
-      'Custom character sets',
-      'Password history',
-      'Security recommendations'
-    ],
-    pricing: 'Free',
-    apiEndpoint: '/api/password-generator'
-  },
-  qrCodeGenerator: {
-    name: 'QR Code Generator',
-    description: 'Create QR codes for various purposes',
-    icon: '📱',
-    category: 'UTILITIES',
-    features: [
-      'Multiple QR code types',
-      'Custom styling',
-      'Logo integration',
-      'Error correction',
-      'Template library'
-    ],
-    pricing: 'Free',
-    apiEndpoint: '/api/qr-code-generator'
-  },
-  fileConverter: {
-    name: 'File Converter',
-    description: 'Convert files between different formats',
-    icon: '🔄',
-    category: 'MEDIA',
-    features: [
-      'Multiple file formats',
-      'Batch conversion',
-      'Quality settings',
-      'Metadata preservation',
-      'Cloud processing'
-    ],
-    pricing: 'Free (Basic) / $9.99/month (Pro)',
-    apiEndpoint: '/api/file-converter'
-  },
-  textAnalysis: {
-    name: 'Text Analysis',
-    description: 'Analyze text for insights and optimization',
-    icon: '📊',
-    category: 'ANALYSIS',
-    features: [
-      'Readability metrics',
-      'Sentiment analysis',
-      'Keyword extraction',
-      'Entity recognition',
-      'Language detection'
-    ],
-    pricing: 'Free (Basic) / $19.99/month (Pro)',
-    apiEndpoint: '/api/text-analysis'
-  }
-} as const
-
-// Service availability and status
-export const getServiceStatus = () => {
-  return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  }
-}
-
-// Service usage statistics
-export const getServiceStats = () => {
-  return {
-    totalUsers: 15420,
-    totalRequests: 2847500,
-    averageResponseTime: 125,
-    services: {
-      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 },
-      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },
-      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
-      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
-      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
+const ServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
+
+export default PagePage

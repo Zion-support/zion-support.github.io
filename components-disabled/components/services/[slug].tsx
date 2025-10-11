@@ -1,17 +1,106 @@
-function getAllServices () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[];} additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) }return { // TODO: Implement; } paths: Array.from (slugs) .map ( (slug) => ({) params: { slug}}) }) ); fallback: false; export default function ServiceDetailPage ({service} }: {service: Service}) }) { return (<Layout> <Head> <title> {};}| Zion Tech Group</title> ) }| Zion Tech Group</title>) }/> </li>) ) }</ul> </div>) ) }</ul> </div> <div>) ) </div> }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"></div> <h3 className="text-left">Contact</h3> <div className="text-left"></div> <div className="text-left"></div><Phone className="text-left" /><a href={" </div>"}</a></div> <div className="text-left"></div><Mail className="text-left" /><a href={"}</a></div> <div className="text-left"></div><MapPin className="text-left" /><a href={"}</a></div> </div> </div> {" }<div className="text-left"></div> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {" service.marketPosition &&</div> <p className="text-left"></p><span className="text-left">Position:</span>< {" </p>} }</p>" service.roi && <p className="text-left"></p><span className="text-left">ROI:</span>< {" }<a href="/market-<pricing" className="text-left">
-  </pricing>See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {") function getAllServices(): unknown () : Service[] {};}; return enhancedRealMicroSaasServices .concat (extraServices as Service[]) additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]); } }return {;; paths: Array && Array.from (slugs) .map ( (slug) => ({) params: {}}; slug }) fallback: false ," import React from 'react'' import Head from 'next/head'' import Layout from '../../components/layout/Layout'' import { Check;, Mail, MapPin} Phone; ExternalLink } from 'lucide-react'' import { enhancedRealMicroSaasServices; } from '../../data/enhanced-real-micro-saas-services'' import { extraServices; } from '../../data/extra-services'' import { additionalEnhancedServices; } from '../../data/additional-real-services'' import { newlyAddedServices; } from '../../data/newly-added-services'' import { curatedMarketServices; } from '../../data/curated-market-services'' import { new2025Services; } from '../../data/new-2025-services'' import { marketValidatedServices; } from '../../data/market-validated-services'' import { moreRealServices2025; } from '../../data/more-real-services-2025'' import { verified2025Additions; } from '../../data/verified-2025-additions'' import { realServicesQ12025; } from '../../data/real-services-q1-2025'' import { newVerifiedServicesQ22025; } from '../../data/real-verified-services-q2-2025' type Service = typeof enhancedRealMicroSaasServices[number]; service.name; }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>"" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>" return (<Layout> <Head> <title> {;; }| Zion Tech Group</title> )) }/> </li>) ) ; }</ul> </div>) ) ; }</ul> </div> <div>) ) ; }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"></div> <h3 className="text-left">Contact</h3> <div className="text-left"></div> <div className="text-left"></div><Phone className="text-left" /><ahref={"}</a></div> <div className="text-left"></div><Mail className="text-left" /><ahref={"}</a></div> <div className="text-left"></div><MapPin className="text-left" /><ahref={"}</a></div> </div> </div> {;" }<div className="text-left"></div> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {;" service && service.marketPosition &&</div> <p className="text-left"></p><span className="text-left">Position:</span> < {}" }</p> ;" service && service.roi && <p className="text-left"></p><span className="text-left">ROI:</span> < {," }<a href="/market-<pricing" className="text-left">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {);;" service && service.name }" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a> ;"" }| Zion Tech Group</title>)) }/> </li>) ); }</ul> </div>) ); }</ul> </div> <div>) ); }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"></div> <h3 className="text-left">Contact</h3> <div className="text-left"></div> <div className="text-left"></div><Phone className="text-left" /><a href={"}</a></div> <div className="text-left"></div><Mail className="text-left" /><a href={"}</a></div> <div className="text-left"></div><MapPin className="text-left" /><a href={"}<div className="text-left"></div> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {" service.market_position &&</div> <p className="text-left"></p><span className="text-left">Position:</span>< {"} }</p>;" service.roi && <p className="text-left"></p><span className="text-left">ROI:</span>< {" }<a href="/market - <pricing" className="text-left">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {" service.name);}" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>)")"';
-function getAllServices () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[];} additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) }return {/* TODO: Fix JSX expression */;}
-  O: Implement } path,;,
-s: Array.from (slugs) .map ( (slug) => ({/* TODO: Fix JSX expression */});,
-s: { slug}) }) ); fallbac,;,
-k: false; export default function ServiceDetailPage ({service} }: {/* TODO: Fix JSX expression */});,
-e: Service}) }) { return (<Layout> <Head> <title> {};}| Zion Tech Group</title> ) }| Zion Tech Group</title>) }/> </li>) ) }</ul> </div>) ) }</ul> </div> <div>) ) </div> }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"> <h3 className="text-left">Contact</h3> <div className="text-left"> <div className="text-left"><Phone className="text-left" /><a href={" </div>"}</a></div> <div className="text-left"><Mail className="text-left" /><a href={"}</a></div> <div className="text-left"><MapPin className="text-left" /><a href={"}</a></div> </div> </div> {" }<div className="text-left"> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {/* TODO: Fix JSX expression */}";,
-n:< {" </p> }</p>" service.roi && <p className="text-left"><span className="text-left">RO,";,
-I:< {" }<a href="/market-<pricing" className="text-left">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {") function getAllServices(): unknown () : Service[] {};}; return enhancedRealMicroSaasServices .concat (extraServices as Service[]) additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]); } }return {/* TODO: Fix JSX expression */;}
-  s: {; slug }) fallbac,";,
-k: false ," import React from 'react'' import Head from 'next/head'' import Layout from '../../components/layout/Layout'' import { Check;, Mail, MapPin} Phone; ExternalLink } from 'lucide-react'' import { enhancedRealMicroSaasServices; } from '../../data/enhanced-real-micro-saas-services'' import { extraServices; } from '../../data/extra-services'' import { additionalEnhancedServices; } from '../../data/additional-real-services'' import { newlyAddedServices; } from '../../data/newly-added-services'' import { curatedMarketServices; } from '../../data/curated-market-services'' import { new2025Services; } from '../../data/new-2025-services'' import { marketValidatedServices; } from '../../data/market-validated-services'' import { moreRealServices2025; } from '../../data/more-real-services-2025'' import { verified2025Additions; } from '../../data/verified-2025-additions'' import { realServicesQ12025; } from '../../data/real-services-q1-2025'' import { newVerifiedServicesQ22025; } from '../../data/real-verified-services-q2-2025' type Service = typeof enhancedRealMicroSaasServices[number]; service.name; }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>"" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>" return (<Layout> <Head> <title> {;; }| Zion Tech Group</title> )) }/> </li>) ) ; }</ul> </div>) ) ; }</ul> </div> <div>) ) ; }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"> <h3 className="text-left">Contact</h3> <div className="text-left"> <div className="text-left"><Phone className="text-left" /><ahref={"}</a></div> <div className="text-left"><Mail className="text-left" /><ahref={"}</a></div> <div className="text-left"><MapPin className="text-left" /><ahref={"}</a></div> </div> </div> {;" }<div className="text-left"> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {/* TODO: Fix JSX expression */}";,
-n: < {}" }</p> ;" service && service.roi && <p className="text-left"><span className="text-left">RO,";,
-I: < {," }<a href="/market-<pricing" className="text-left">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {);;" service && service.name }" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a> ;"" }| Zion Tech Group</title>)) }/> </li>) ); }</ul> </div>) ); }</ul> </div> <div>) ); }</div> </div> </div> </div> </div> </div> </div> <div className="text-left"> <h3 className="text-left">Contact</h3> <div className="text-left"> <div className="text-left"><Phone className="text-left" /><a href={"}</a></div> <div className="text-left"><Mail className="text-left" /><a href={"}</a></div> <div className="text-left"><MapPin className="text-left" /><a href={"}<div className="text-left"> <h3 className="text-left">Market & ROI</h3> <div className="text-left"> {/* TODO: Fix JSX expression */}";,
-n:< {" }</p>;" service.roi && <p className="text-left"><span className="text-left">RO,";,
-I:< {" }<a href="/market - <pricing" className="text-left">See average market prices →</a> return (<EnhancedLayout> <Head> <title > Service Not Found - Zion Tech Solutions</title> </div> return (<EnhancedLayout> <Head> <title> {" service.name);}" }- Zion Tech Solutions</title> <Link href="/services"><a className="text-left">Back to Services</a>)")"'"
-</span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></a></a></p>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ServicesPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default PagePage

@@ -1,159 +1,106 @@
-// Note: This is a Vite project, not Next.js
-// Using a generic request type instead of NextApiRequest
-type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>
-  [key: string]: any
-}
-export interface Session {
-  userId: string
-  email: string
-  role: 'admin' | 'user' | 'guest'
-}
-export function getSessionFromReq(req: ApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
-  const authHeader = req.headers.authorization
-  if (!authHeader) {
-    return null
-  }
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
-}
-export function isInternalAgentRequest(req: ApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] || ''
-  const userAgentString = Array.isArray(userAgent) ? userAgent[0] : userAgent
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation']
-  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent))
-}
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true
-}
-// Admin authentication utilities
-import { NextApiRequest, NextApiResponse } from 'next'
-export interface AdminSession {
-  user: AdminUser
-  token: string
-  expiresAt: number
-}
-// Mock admin users - in production, this would come from a database
-const adminUsers: AdminUser[] = [
-  {
-    id: 'admin_1',
-    email: 'admin@ziontechgroup.com',
-    role: 'super_admin',
-    permissions: ['*'],
-    lastLogin: new Date()
-  },
-  {
-    id: 'admin_2',
-    email: 'moderator@ziontechgroup.com',
-    role: 'moderator',
-    permissions: ['content_moderation', 'user_management'],
-    lastLogin: new Date()
-  }
-]
-export function createAdminSession(user: AdminUser, token: string): AdminSession {
-  return {
-    user,
-    token,
-    expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  }
-}
-export function isAdminAuthenticated(session: AdminSession | null): boolean {
-  if (!session) return false
-  return Date.now() < session.expiresAt
-}
-export function hasAdminPermission(session: AdminSession | null, permission: string): boolean {
-  if (!session || !isAdminAuthenticated(session)) return false
-  return session.user.permissions.includes('*') || session.user.permissions.includes(permission)
-}
-export function isSuperAdmin(session: AdminSession | null): boolean {
-  if (!session || !isAdminAuthenticated(session)) return false
-  return session.user.role === 'super_admin'
-}
-export function isModerator(session: AdminSession | null): boolean {
-  if (!session || !isAdminAuthenticated(session)) return false
-  return ['admin', 'super_admin', 'moderator'].includes(session.user.role)
-}
-export function requireAdminAuth(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
-  return (req: NextApiRequest, res: NextApiResponse) => {
-    const session = req.session as AdminSession
-    if (!isAdminAuthenticated(session)) {
-      return res.status(401).json({ error: 'Admin authentication required' })
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    return handler(req, res, session)
-  }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Learn about our utils solutions and how they can transform your business." />
+        <meta name="keywords" content="utils, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
-  return (req: NextApiRequest, res: NextApiResponse) => {
-    const session = req.session as AdminSession
-    if (!isSuperAdmin(session)) {
-      return res.status(403).json({ error: 'Super admin access required' })
-    }
-    return handler(req, res, session)
-  }
-}
-export function requirePermission(permission: string) {
-  return (handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) => {
-    return (req: NextApiRequest, res: NextApiResponse) => {
-      const session = req.session as AdminSession
-      if (!hasAdminPermission(session, permission)) {
-        return res.status(403).json({ error: `Permission '${permission}' required` })
-      }
-      return handler(req, res, session)
-    }
-  }
-}
-export async function authenticateAdmin(email: string, password: string): Promise<AdminUser | null> {
-  // Mock authentication - in production, this would verify credentials against a database
-  const user = adminUsers.find(u => u.email === email)
-  if (user && password === 'admin123') { // Mock password
-    user.lastLogin = new Date()
-    return user
-  }
-  return null
-}
-export function getAdminUser(id: string): AdminUser | null {
-  return adminUsers.find(u => u.id === id) || null
-}
-export function getSessionFromReq (req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
-  const auth_header = req.headers.authorization
-  // Check condition
-if ( {) {
-  $2
-}
-    return null
-  }
-  // Simple mock for admin users
-  if () {) {
-  $2
-}
-    return { user_id: 'admin - 1', email: 'admin@zion.os', role: 'admin' }
-  }
-  return { user_id: 'user - 1', email: 'user@zion.os', role: 'user' }
-}
-export function isInternalAgentRequest (req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs
-  const user_agent = req.headers['user - agent'] || ''
-  const internal_agents = ['zion - bot', 'internal - agent', 'automation']
-  return internal_agents.some (agent => user_agent.toLowerCase ().includes (agent))
-}
-export const is_admin = () =>: any {
-  // Placeholder implementation
-  return true
-}
-}
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = () => {
-  // Placeholder implementation
-  return true
-}
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true
-}
+
+export default PagePage

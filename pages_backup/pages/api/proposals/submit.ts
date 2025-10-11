@@ -1,185 +1,106 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import nodemailer from "nodemailer"
-import crypto from "crypto"
-import {
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,
-} from "../../../utils/data/proposals"
-async function submitByEmail(
-  to: string
-  subject: string
-  text: string
-  attachments: any[] = []
-) {
-import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import nodemailer from 'nodemailer'
-import crypto from 'crypto'
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals'
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-  const host = process.env.EMAIL_HOST
-  const port = Number(process.env.EMAIL_PORT |587)
-  const user = process.env.EMAIL_USER
-  const pass = process.env.EMAIL_PASS
-  const from = process.env.EMAIL_FROM |user
-  if (!host |!user |!pass) throw new Error("Email not configured")
-  const from = process.env.EMAIL_FROM || user
-  if (!host || !user || !pass) throw new Error("Email not configured")
-  const transporter = nodemailer.createTransport({
-    host
-    port
-    secure: port === 465
-    auth: { user, pass }
-  })
-  if (!host || !user || !pass) throw new Error('Email not configured')
-  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } })
-  await transporter.sendMail({ from, to, subject, text, attachments })
-}
-  await transporter.sendMail({ from, to, subject, text, attachments })
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") return res.status($1).json({ $2 })
-  try {
-    const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
-    if (!id) return res.status($1).json({ $2 })
-    const meta = getProposal(id)
-    if (!meta) return res.status($1).json({ $2 })
-    // Email submission
-    if (channels.includes("email")) {
-      const to = emailTo |process.env.UN_GATEWAY_EMAIL |"example@un.org"
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A"}`
-      await submitByEmail(to, subject, text)
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ProposalsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined
-    try {
-      const hash = crypto
-        .createHash("sha256")
-        .update(JSON.stringify(meta))
-        .digest("hex")
-      ensRecordHash = `0x${hash}`
-      updateArtifacts(id, { ensRecordHash })
-    } catch {}
-    const updated = updateProposalMeta(id, (m) => ({
-      ...m
-      status: "Submitted"
-    }))
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message |"Submission failed" })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import nodemailer from 'nodemailer'
-import crypto from 'crypto'
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals'
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-  const host = process.env.EMAIL_HOST
-  const port = Number (process.env.EMAIL_PORT || 587)
-  const user = process.env.EMAIL_USER
-  const pass = process.env.EMAIL_PASS
-  const from = process.env.EMAIL_FROM || user
-  if (throw new Error ("Email not configured")) {
-  $2
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Proposals - Zion Tech Group</title>
+        <meta name="description" content="Learn about our proposals solutions and how they can transform your business." />
+        <meta name="keywords" content="proposals, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-  const transporter = nodemailer.create_transport ({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  })
-    const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {}
-    if (!id) return res && res.status($1).json({ $2 })
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2})
-      .json({ error: error?.message || "Submission failed" })
-export default async function handler(req, res) {
-  try {
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {}
-    if (!id) return res.status(400).json({ error: 'id is required' })
-    const meta = getProposal(id)
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' })
-    // Email submission
-    if (channels.includes('email')) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org'
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`
-      await submitByEmail(to, subject, text)
-    }
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined
-    try {
-      ensRecordHash = `0x${hash}`
-      update_artifacts (id, { ensRecordHash })
-    } catch {}
-    return res && res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message |"Submission failed" })
-  }
-}
-      const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')
-      ensRecordHash = `0x${hash}`
-      updateArtifacts(id, { ensRecordHash })
-    } catch {}
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }))
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Submission failed' })
-  }
-}
-    const updated = updateProposalMeta (id, (m) => ({
-      ...m,
-      status: "Submitted",
-    }))
-    return res.status (200).json ({ meta: updated })
-  } catch (error: any) {
-    return res
-      .status (500)
-      .json ({ error: error?.message || "Submission failed" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
-}
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
-}
+
+export default PagePage

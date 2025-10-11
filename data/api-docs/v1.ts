@@ -1,380 +1,106 @@
-  product: 'Zion OS',
-  versions: ['v1'],
-  default_version: 'v1',
-  lastUpdatedIso: new Date ().toISOString (),
-  sections: [,
-      id: 'auth',
-      title: 'Auth (JWT, OAuth) Wallet)',
-          ],
-          versions: ['v1'],
-        }
-      ]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const Api-docsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-      id: 'talent'
-      title: 'Talent Profiles'
-      endpoints: [,
-          id: 'talent-get'
-          title: 'Get Talent Profile'
-          description: 'Fetch a talent profile by ID.'
-          path: '/v1/talent/{talentId}'
-          method: 'GET'
-          visibility: 'public'
-          auth: ['jwt'],
-          params: { talentId: 'The UUID of the talent' }
-          responseBodySchema: {type: 'object'} properties: { id: { type: 'string' }, name: { type: 'string' }, skills: {type: 'array'} items: { type: 'string' } } } }
-          samples: [,
-            {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123"}"body":"Hello"}'` },
-            {language: 'javascript'} code: `await fetch('${baseUrl}/v1/messages', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }) body: JSON && JSON.stringify({to: 'USER123'} body: 'Hello' }) }).then(r => r && r.json())` },
-            {language: 'python'} code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123'}'body':'Hello'}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ]
-          versions: ['v1'],
-        }
-      ]
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-      id: 'jobs'
-      title: 'Job Listings'
-      endpoints: [
-          id: 'jobs-list'
-          title: 'List Jobs'
-          description: 'List job postings with optional filters.'
-          path: '/v1/jobs'
-          method: 'GET'
-          visibility: 'public'
-          auth: ['jwt'],
-          query: {q: 'Search text'} status: 'open|closed' }
-          responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } }
-          samples: [
-const baseUrl = 'https://api.zion.os'
-const baseUrl = 'https://api.zion.os'
-const v1: ApiDocsSpec =,
-  openapi: '3.0.0',
-  info: unknown,
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
-  },
-  servers: [{ url: baseUrl }],
-  paths: '/v1/nation/stats': unknown
-      get: unknown,
-        summary: 'Get Nation Stats',
-        responses: '200': unknown,
-            description: 'Success',
-            content: 'application/json': unknown,
-                schema: { type: 'object' }
-              }
-            }
-          }
-        }
-      ]
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
-            {language: 'curl'} code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            {language: 'javascript'} code: `await fetch('${baseUrl}/v1/wallet/balance') { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
-            {language: 'python', code: `import requests\nrequests }
-  ]}
-  }
-      id: 'jobs', title: 'Job Listings',
-      endpoints: [,
-          id: 'jobs-list', title: 'List Jobs',
-          description: 'List job postings with optional filters.', path: '/v1/jobs',
-          method: 'GET', visibility: 'public',
-          auth: ['jwt'],
-          query: unknown,
-       q: 'Search text', status: 'open|closed'
-    },
-    responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } },
-          samples: [,
-            {language: 'curl'} code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'` },
-            {language: 'javascript'} code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open') { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
-            {language: 'python'} code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer'}'status':'open'}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ]
-          versions: ['v1'],
-        }
-      ]
-    },
-      id: 'quotes', title: 'Quotes + Milestones',
-      endpoints: [,
-          id: 'quotes-create', title: 'Create Quote',
-          description: 'Create a quote with milestones.', path: '/v1/quotes',
-          method: 'POST', visibility: 'partner',
-          auth: ['jwt'],
-          requestBodySchema: {type: 'object'} properties: { jobId: { type: 'string' }, milestones: {type: 'array', items: { type: 'object'} properties: { title: { type: 'string' }, amount: { type: 'number' } } } } },           required: ['jobId', 'milestones']
-        },
-          responseBodySchema: {type: 'object'} properties: { id: { type: 'string' }, status: { type: 'string' } } },
-          samples: [,
-            {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design"}"amount":1000}]}'` },
-            {language: 'javascript'} code: `await fetch('${baseUrl}/v1/quotes', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }, body: JSON.stringify({jobId: 'JOB123') milestones: [{ title: 'Design'} amount: 1000 }] }) }).then(r => r.json())` },
-            {language: 'python'} code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design'}'amount':1000}]}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ]
-          versions: ['v1'],
-        }
-      ]
-    },
-      id: 'messages', title: 'Messages',
-      endpoints: [,
-          id: 'messages-send', title: 'Send Message',
-          description: 'Send a message between users.', path: '/v1/messages',
-          method: 'POST', visibility: 'public',
-          auth: ['jwt'],
-          requestBodySchema: {type: 'object'} properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body'] }
-        }
-      ],
-      responseBodySchema: {type: 'object'} properties: { id: { type: 'string' } } },
-      samples: [,
-        {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123"}"body":"Hello"}'` },
-        {language: 'javascript'} code: `await fetch('${baseUrl}/v1/messages', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }) body: JSON.stringify({to: 'USER123'} body: 'Hello' }) }).then(r => r.json())` },
-        {language: 'python'} code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123'}'body':'Hello'}) headers={'Authorization':'Bearer <token>'}).json()` }
-      ]
-      versions: ['v1'],
-    }
-  ],
-  sections: [,
-      id: 'wallet', title: 'ZION$ Wallet API',
-      endpoints: [,
-          id: 'wallet-balance', title: 'Get Balance',
-          description: 'Fetch wallet balance for the current user.', path: '/v1/wallet/balance',
-          method: 'GET', visibility: 'public',
-          auth: ['walletjwt'],
-          responseBodySchema: {type: 'object'} properties: { balance: { type: 'number' }, currency: { type: 'string' } } },
-          samples: [,
-            {language: 'curl'} code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            {language: 'javascript'} code: `await fetch('${baseUrl}/v1/wallet/balance') { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
-            {language: 'python'} code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance') headers={'Authorization':'Bearer <token>'}).json()` }
-          ]
-          versions: ['v1'],
-      description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
-      endpoints: [,
-          id: 'auth - login - jwt',
-          title: 'JWT Login',
-          description: 'Obtain a JWT by providing credentials.',
-          path: '/v1 / auth / login',
-          method: 'POST',
-          visibility: 'public',
-          auth: ['none'],
-          requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['email', 'password'] },
-          responseBodySchema: { type: 'object', properties: { token: { type: 'string' }, expiresIn: { type: 'number' } } },
-          samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` }],
-          errors: [
-            { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }],
-          versions: ['v1']},
-            { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.os','password':'***'})\nprint(resp.json())` },
-          ],
-          errors: [
-            { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' },
-          ],
-          versions: ['v1'],
-        },
-        {
-          id: 'oauth-token',
-          title: 'OAuth Token',
-          description: 'Exchange auth code for access token.',
-          path: '/v1 / oauth / token',
-          method: 'POST',
-          visibility: 'partner',
-          auth: ['none'],
-          requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } }, required: ['code', 'redirect_uri'] },
-          responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } },
-          samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'talent',
-      title: 'Talent Profiles'
-      endpoints: [,
-          id: 'talent - get',
-          title: 'Get Talent Profile',
-          description: 'Fetch a talent profile by ID.',
-          path: '/v1 / talent/{talent_id}',
-          method: 'GET',
-          visibility: 'public',
-          auth: ['jwt'],
-          params: { talentId: 'The UUID of the talent' },
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'jobs',
-      title: 'Job Listings'
-      endpoints: [,
-          id: 'jobs - list',
-          title: 'List Jobs',
-          description: 'List job postings with optional filters.',
-          path: '/v1 / jobs',
-          method: 'GET',
-          visibility: 'public',
-          auth: ['jwt'],
-          query: { q: 'Search text', status: 'open|closed' },
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'quotes',
-      title: 'Quotes + Milestones'
-      endpoints: [,
-          id: 'quotes - create',
-          title: 'Create Quote',
-          description: 'Create a quote with milestones.',
-          path: '/v1 / quotes',
-          method: 'POST',
-          visibility: 'partner',
-          auth: ['jwt'],
-          requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } }, required: ['jobId', 'milestones'] },
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, status: { type: 'string' } } },
-          samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'messages',
-      title: 'Messages'
-      endpoints: [,
-          id: 'messages - send',
-          title: 'Send Message',
-          description: 'Send a message between users.',
-          path: '/v1 / messages',
-          method: 'POST',
-          visibility: 'public',
-          auth: ['jwt'],
-          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body'] },
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } },
-          samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'wallet',
-      title: 'ZION$ Wallet API'
-      endpoints: [,
-          id: 'wallet - balance',
-          title: 'Get Balance',
-          description: 'Fetch wallet balance for the current user.',
-          path: '/v1 / wallet / balance',
-          method: 'GET',
-          visibility: 'public',
-          auth: ['wallet', 'jwt'],
-          responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'dao',
-      title: 'DAO & Proposals'
-      endpoints: [,
-          id: 'dao - proposals - list',
-          title: 'List Proposals',
-          description: 'List DAO proposals.',
-          path: '/v1 / dao / proposals',
-          method: 'GET',
-          visibility: 'public',
-          auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/dao/proposals' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/dao/proposals', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/dao/proposals', headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'voting',
-      title: 'Voting + Treasury logs'
-      endpoints: [,
-          id: 'treasury - logs',
-          title: 'Get Treasury Logs',
-          description: 'Fetch treasury transactions and snapshots.',
-          path: '/v1 / treasury / logs',
-          method: 'GET',
-          visibility: 'partner',
-          auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/treasury/logs' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/treasury/logs', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]},
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/treasury/logs', headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-    {
-      id: 'nation',
-      title: 'Nation Module'
-      endpoints: [,
-          id: 'nation - stats',
-          title: 'Nation Stats',
-          description: 'Aggregate stats across the Zion Nation module.',
-          path: '/v1 / nation / stats',
-          method: 'GET',
-          visibility: 'internal',
-          auth: ['jwt'],
-          responseBodySchema: { type: 'object', properties: { members: { type: 'number' }, proposals: { type: 'number' } } },
-          samples: [
-            { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]}]}
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` },
-          ],
-          versions: ['v1'],
-        },
-      ],
-    },
-  ],
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Api Docs - Zion Tech Group</title>
+        <meta name="description" content="Learn about our api docs solutions and how they can transform your business." />
+        <meta name="keywords" content="api-docs, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export default v1
+
+export default PagePage
