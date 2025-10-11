@@ -323,6 +323,7 @@ const ItServicesPage: React.FC = () => {
       icon: ShoppingCart
     },
     {
+<<<<<<< HEAD
       id: '5g-implementation',
       name: '5G Network Implementation',
       description: 'Complete 5G network design, deployment, and optimization for enterprise environments',
@@ -391,10 +392,25 @@ const ItServicesPage: React.FC = () => {
         'Blockchain security auditing',
         'Token economics design',
         'Decentralized app deployment'
+=======
+      id: 'blockchain-development',
+      name: 'Blockchain Development',
+      description: 'Custom blockchain solutions including smart contracts, DeFi protocols, and cryptocurrency platforms',
+      price: '$15,000/project',
+      marketPrice: '$30000-150000/project',
+      features: [
+        'Smart contract development',
+        'DeFi protocol creation',
+        'Cryptocurrency wallet development',
+        'NFT marketplace creation',
+        'Blockchain integration',
+        'Security auditing'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
       ],
       benefits: [
         'Decentralized solutions',
         'Enhanced security',
+<<<<<<< HEAD
         'Transparent operations',
         'Future-ready technology',
         'Innovation leadership'
@@ -564,6 +580,254 @@ const ItServicesPage: React.FC = () => {
       category: 'Metaverse',
       popular: true,
       icon: Globe
+=======
+        'Transparent transactions',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'iot-solutions',
+      name: 'IoT Solutions',
+      description: 'Internet of Things development and implementation for smart devices and connected systems',
+      price: '$8,000/project',
+      marketPrice: '$15000-80000/project',
+      features: [
+        'IoT device development',
+        'Sensor integration',
+        'Data collection and analysis',
+        'Real-time monitoring',
+        'Mobile app integration',
+        'Cloud connectivity'
+      ],
+      benefits: [
+        'Automated processes',
+        'Real-time insights',
+        'Improved efficiency',
+        'Cost reduction'
+      ],
+      category: 'IoT',
+      popular: false,
+      icon: Wifi
+    },
+    {
+      id: 'ai-integration',
+      name: 'AI Integration Services',
+      description: 'AI and machine learning integration into existing systems and applications',
+      price: '$5,000/project',
+      marketPrice: '$10000-50000/project',
+      features: [
+        'AI model integration',
+        'Machine learning pipelines',
+        'Data preprocessing',
+        'Model training and deployment',
+        'API development',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Enhanced functionality',
+        'Automated decision making',
+        'Improved accuracy',
+        'Competitive advantage'
+      ],
+      category: 'AI Integration',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics & BI',
+      description: 'Business intelligence and data analytics solutions for data-driven decision making',
+      price: '$3,000/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Data warehouse design',
+        'ETL pipeline development',
+        'Dashboard creation',
+        'Report automation',
+        'Predictive analytics',
+        'Data visualization'
+      ],
+      benefits: [
+        'Data-driven insights',
+        'Better decision making',
+        'Automated reporting',
+        'Competitive advantage'
+      ],
+      category: 'Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'cloud-native-development',
+      name: 'Cloud-Native Development',
+      description: 'Modern cloud-native application development using microservices and containerization',
+      price: '$12,000/project',
+      marketPrice: '$25000-100000/project',
+      features: [
+        'Microservices architecture',
+        'Container orchestration',
+        'Serverless development',
+        'API gateway implementation',
+        'Service mesh setup',
+        'Cloud-native monitoring'
+      ],
+      benefits: [
+        'Scalable architecture',
+        'Faster deployment',
+        'Better reliability',
+        'Cost optimization'
+      ],
+      category: 'Cloud Native',
+      popular: false,
+      icon: Cloud
+    },
+    {
+      id: 'legacy-modernization',
+      name: 'Legacy System Modernization',
+      description: 'Modernizing legacy systems and applications for better performance and maintainability',
+      price: '$20,000/project',
+      marketPrice: '$40000-200000/project',
+      features: [
+        'Legacy code analysis',
+        'System architecture redesign',
+        'Database migration',
+        'API modernization',
+        'User interface updates',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Improved performance',
+        'Better maintainability',
+        'Enhanced security',
+        'Future-proof technology'
+      ],
+      category: 'Modernization',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'quality-assurance',
+      name: 'Quality Assurance & Testing',
+      description: 'Comprehensive software testing and quality assurance services for all types of applications',
+      price: '$2,500/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Automated testing setup',
+        'Performance testing',
+        'Security testing',
+        'User acceptance testing',
+        'Load testing',
+        'Test automation'
+      ],
+      benefits: [
+        'Higher quality software',
+        'Reduced bugs',
+        'Better user experience',
+        'Faster delivery'
+      ],
+      category: 'QA & Testing',
+      popular: false,
+      icon: CheckCircle
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize business processes and operations',
+      price: '$50,000/project',
+      marketPrice: '$100000-500000/project',
+      features: [
+        'Process analysis and optimization',
+        'Technology roadmap development',
+        'Change management',
+        'Staff training',
+        'System integration',
+        'Performance monitoring'
+      ],
+      benefits: [
+        'Improved efficiency',
+        'Better customer experience',
+        'Cost reduction',
+        'Competitive advantage'
+      ],
+      category: 'Digital Transformation',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'compliance-solutions',
+      name: 'Compliance Solutions',
+      description: 'Regulatory compliance and governance solutions for various industries and standards',
+      price: '$4,000/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Compliance assessment',
+        'Policy development',
+        'Audit preparation',
+        'Risk management',
+        'Documentation management',
+        'Training programs'
+      ],
+      benefits: [
+        'Regulatory compliance',
+        'Reduced risk',
+        'Better governance',
+        'Audit readiness'
+      ],
+      category: 'Compliance',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'disaster-recovery',
+      name: 'Disaster Recovery Solutions',
+      description: 'Comprehensive disaster recovery and business continuity planning and implementation',
+      price: '$3,500/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        'Disaster recovery planning',
+        'Backup strategy implementation',
+        'Recovery testing',
+        'Business continuity planning',
+        'Data replication',
+        'Failover systems'
+      ],
+      benefits: [
+        'Business continuity',
+        'Data protection',
+        'Minimal downtime',
+        'Peace of mind'
+      ],
+      category: 'Disaster Recovery',
+      popular: false,
+      icon: Server
+    },
+    {
+      id: 'performance-optimization',
+      name: 'Performance Optimization',
+      description: 'Application and system performance optimization for better speed and efficiency',
+      price: '$2,000/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Performance analysis',
+        'Code optimization',
+        'Database tuning',
+        'Caching implementation',
+        'Load balancing',
+        'Monitoring setup'
+      ],
+      benefits: [
+        'Faster applications',
+        'Better user experience',
+        'Reduced costs',
+        'Improved scalability'
+      ],
+      category: 'Performance',
+      popular: false,
+      icon: Zap
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
     }
   ];
 
@@ -580,6 +844,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
     { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
     { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
+<<<<<<< HEAD
     { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
     { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
     { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
@@ -588,6 +853,19 @@ const ItServicesPage: React.FC = () => {
     { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
     { id: 'Digital Twin', name: 'Digital Twin', count: services.filter(s => s.category === 'Digital Twin').length },
     { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length }
+=======
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
+    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
+    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
+    { id: 'Cloud Native', name: 'Cloud Native', count: services.filter(s => s.category === 'Cloud Native').length },
+    { id: 'Modernization', name: 'Modernization', count: services.filter(s => s.category === 'Modernization').length },
+    { id: 'QA & Testing', name: 'QA & Testing', count: services.filter(s => s.category === 'QA & Testing').length },
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: services.filter(s => s.category === 'Digital Transformation').length },
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
+    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
+    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
   const filteredServices = services.filter(service => {

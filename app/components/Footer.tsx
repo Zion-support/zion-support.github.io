@@ -17,6 +17,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ];
 
+<<<<<<< HEAD
   const serviceLinks = [
     { name: 'AI Services', url: '/ai-services' },
     { name: 'IT Services', url: '/it-services' },
@@ -29,23 +30,54 @@ const Footer: React.FC = memo(() => {
   ];
 
   const resourcesLinks = [
+=======
+  const servicesLinks = [
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Micro SAAS', url: '/micro-saas' },
+    { name: 'All Services', url: '/services' },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
     { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Custom Solutions', url: '/custom-solutions' }
+  ];
+
+  const resourcesLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Tutorials', url: '/tutorials' },
+    { name: 'FAQ', url: '/faq' },
     { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Blog', url: '/blog' },
+    { name: 'Newsletter', url: '/newsletter' },
+    { name: 'Webinars', url: '/webinars' }
   ];
 
   const enterpriseLinks = [
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
+<<<<<<< HEAD
     { name: 'Edge Computing', url: '/it-services?category=Edge Computing' },
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
+=======
+    { name: 'Edge Computing', url: '/edge-computing' },
+    { name: 'Cloud Migration', url: '/cloud-migration' },
+    { name: 'Cybersecurity', url: '/cybersecurity' },
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'White Label', url: '/white-label' }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' },
+    { name: 'Security', url: '/security' },
+    { name: 'Sitemap', url: '/sitemap' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
   return (
@@ -123,7 +155,23 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
+            <ul className="space-y-2">
+              {servicesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
@@ -139,7 +187,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
@@ -155,7 +203,23 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Legal</h3>
+            <ul className="space-y-2">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 transform duration-300"
                   >
                     {link.name}
                   </Link>
