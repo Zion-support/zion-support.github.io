@@ -44,17 +44,6 @@ async function handler(req, res) {
       error: 'Failed to create payment intent',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
-    }
-    res.statusCode = 200
-    res.json({ paymentIntent })
-  } catch (err) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error("Error:", err)
-    }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))
   }
 }
 
