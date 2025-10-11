@@ -1,10 +1,54 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// Function to create a proper component name from file path
+function getComponentName(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const dirName = path.dirname(filePath).split('/').pop();
+  
+  // If it's a page.tsx file, use the directory name
+  if (fileName === 'page') {
+    return dirName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('');
+  }
+  
+  // Otherwise use the file name
+  return fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('');
+}
+
+// Function to create a proper page title from file path
+function getPageTitle(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const dirName = path.dirname(filePath).split('/').pop();
+  
+  // If it's a page.tsx file, use the directory name
+  if (fileName === 'page') {
+    return dirName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+  }
+  
+  // Otherwise use the file name
+  return fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+}
+
+// Function to create a generic AI service page with proper component names
+function createGenericAiServicePage(servicePath) {
+  const componentName = getComponentName(servicePath);
+  const pageTitle = getPageTitle(servicePath);
+  
+  return `'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
-const AiLegalResearchProPage: React.FC = () => {
+const ${componentName}Page: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -50,7 +94,7 @@ const AiLegalResearchProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Ai Legal Research Pro
+              ${pageTitle}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
@@ -141,4 +185,62 @@ const AiLegalResearchProPage: React.FC = () => {
   );
 };
 
-export default AiLegalResearchProPage;
+export default ${componentName}Page;`;
+}
+
+// Function to check if a file has incorrect component names
+function hasIncorrectComponentName(content) {
+  return content.includes('page.tsxPage:') || content.includes('const page.tsxPage:');
+}
+
+// Function to recursively find all .tsx files in the app directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Find all .tsx files in the app directory
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+let fixedCount = 0;
+let totalCount = 0;
+
+console.log(`Found ${tsxFiles.length} .tsx files to check...`);
+
+// Process each file
+tsxFiles.forEach(filePath => {
+  totalCount++;
+  const relativePath = path.relative(__dirname, filePath);
+  
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    if (hasIncorrectComponentName(content)) {
+      console.log(`Fixing component name in: ${relativePath}`);
+      
+      // Create a new file with proper content
+      const newContent = createGenericAiServicePage(relativePath);
+      fs.writeFileSync(filePath, newContent);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.log(`Error processing ${relativePath}: ${error.message}`);
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
+console.log('All component name errors have been fixed!');

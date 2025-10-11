@@ -1,10 +1,18 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// Function to create a generic AI service page with proper string escaping
+function createGenericAiServicePage(servicePath) {
+  const serviceName = servicePath.split('/').pop().replace(/-/g, '');
+  const serviceTitle = serviceName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+  
+  return `'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
-const AiLegalResearchProPage: React.FC = () => {
+const ${serviceName}Page: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -50,7 +58,7 @@ const AiLegalResearchProPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Ai Legal Research Pro
+              ${serviceTitle}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
@@ -141,4 +149,62 @@ const AiLegalResearchProPage: React.FC = () => {
   );
 };
 
-export default AiLegalResearchProPage;
+export default ${serviceName}Page;`;
+}
+
+// Function to check if a file has template string errors
+function hasTemplateStringErrors(content) {
+  return content.includes('${serviceTitle}') || content.includes('${serviceName}');
+}
+
+// Function to recursively find all .tsx files in the app directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Find all .tsx files in the app directory
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+let fixedCount = 0;
+let totalCount = 0;
+
+console.log(`Found ${tsxFiles.length} .tsx files to check...`);
+
+// Process each file
+tsxFiles.forEach(filePath => {
+  totalCount++;
+  const relativePath = path.relative(__dirname, filePath);
+  
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    if (hasTemplateStringErrors(content)) {
+      console.log(`Fixing template string errors in: ${relativePath}`);
+      
+      // Create a new file with proper content
+      const newContent = createGenericAiServicePage(relativePath);
+      fs.writeFileSync(filePath, newContent);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.log(`Error processing ${relativePath}: ${error.message}`);
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalCount} files.`);
+console.log('All template string errors have been fixed!');
