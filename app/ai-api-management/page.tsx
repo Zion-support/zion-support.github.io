@@ -1,69 +1,92 @@
-'use client'
-import { CheckCircle } from 'lucide-react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Shield, Zap, Target, BarChart, Brain, Cloud } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 export default function AiApiManagementPage() {
+  const features = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+      icon: Shield,
+      title: 'API Security',
+      description: 'Comprehensive security measures to protect your APIs from threats and unauthorized access.',
+      benefits: ['Authentication', 'Authorization', 'Rate Limiting', 'Encryption']
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Optimize API performance for maximum speed and reliability.',
+      benefits: ['Caching', 'Load Balancing', 'Response Optimization', 'Monitoring']
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      icon: Target,
+      title: 'API Design',
+      description: 'Well-designed APIs that are intuitive, scalable, and maintainable.',
+      benefits: ['RESTful Design', 'GraphQL Support', 'Documentation', 'Versioning']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Monitoring',
+      description: 'Comprehensive monitoring and analytics for your API ecosystem.',
+      benefits: ['Real-time Monitoring', 'Usage Analytics', 'Error Tracking', 'Performance Metrics']
+    },
+    {
+      icon: Brain,
+      title: 'AI Integration',
+      description: 'Seamlessly integrate AI capabilities into your API infrastructure.',
+      benefits: ['Machine Learning APIs', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Management',
+      description: 'Scalable cloud-based API management solutions.',
+      benefits: ['Auto-scaling', 'Global Distribution', 'Disaster Recovery', 'Cost Optimization']
     }
-  ]
+  ];
+
+  const stats = [
+    { number: '99.9%', label: 'API Uptime' },
+    { number: '50ms', label: 'Average Response Time' },
+    { number: '1000+', label: 'APIs Managed' },
+    { number: '24/7', label: 'Monitoring' }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Ai Api Management - Zion Tech Group</title>
-        <meta name="description" content="Professional ai api management services and solutions." />
+        <title>AI API Management - Zion Tech Group</title>
+        <meta name="description" content="Professional AI API management services and solutions for modern applications." />
         <meta name="keywords" content="ai api management, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
       
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Ai Api Management</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI API Management
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Comprehensive API management solutions powered by artificial intelligence.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -72,26 +95,66 @@ export default function AiApiManagementPage() {
             ))}
           </div>
           
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">
+              Why Choose Our API Management?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Enterprise-Grade Security</h3>
+                <p className="text-gray-300 mb-4">
+                  Protect your APIs with industry-leading security measures and compliance standards.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    OAuth 2.0 & JWT Authentication
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    Rate Limiting & Throttling
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    End-to-End Encryption
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Optimization</h3>
+                <p className="text-gray-300 mb-4">
+                  Leverage AI to automatically optimize your API performance and user experience.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    Intelligent Caching
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    Predictive Scaling
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    Anomaly Detection
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
-  )
+  );
 }
-
-export default AiApiManagementPage
