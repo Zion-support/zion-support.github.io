@@ -1,54 +1,22 @@
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
 const SeoOptimizerPage: React.FC = () => {
-  const features = [
-    {
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits." />
-        <meta name="keywords" content="relevant, keywords, for, seo" />
-      </Helmet>
-
-    'Cost-effective pricing plans',
-          </div&gt;
-        </div&gt;
-              </div&gt;
-    'Proven track record of success'
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
   return (
     <>
       <Helmet>
         <title>Seo Optimizer - Zion Tech Group</title>
-        <meta name="description" content="AI-powered seo optimizer solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, seo, optimizer, automation, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced Seo Optimizer solutions for modern businesses" />
+        <meta name="keywords" content="seo-optimizer, seo optimizer, business solutions, technology" />
       </Helmet>
+
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -58,7 +26,7 @@ const SeoOptimizerPage: React.FC = () => {
               Seo Optimizer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered seo optimizer solution for intelligent automation and optimization
+              Advanced Seo Optimizer solutions for modern businesses
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -71,33 +39,28 @@ const SeoOptimizerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
         </section>
+      </div>
 
-        {/* Benefits Section */}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      <Footer />
+    </>
+  );
+};
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+export default SeoOptimizerPage;

@@ -83,6 +83,33 @@ function kebabToTitle(str) {
   ).join(' ');
 }
 
+// Function to check if a file is corrupted
+function isCorrupted(content) {
+  const corruptionPatterns = [
+    'error TS',
+    'Declaration or statement expected',
+    'Expression expected',
+    'JSX expressions must have one parent element',
+    'Expected corresponding JSX closing tag',
+    'Expected corresponding closing tag',
+    'Unexpected token',
+    'Identifier expected',
+    'Parameter declaration expected',
+    'Property assignment expected',
+    'Type expected',
+    'Unexpected end of input',
+    'Unterminated regular expression literal',
+    'Missing closing tag',
+    'Expected corresponding JSX fragment',
+    'JSX element has no corresponding closing tag'
+  ];
+  
+  return corruptionPatterns.some(pattern => content.includes(pattern)) || 
+         content.length < 500 ||
+         !content.includes('export default') ||
+         !content.includes('React.FC');
+}
+
 // Get all page files
 const appDir = 'app';
 const pageFiles = [];
@@ -110,14 +137,7 @@ for (const filePath of pageFiles) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if the file is corrupted (has syntax errors)
-    if (content.includes('error TS') || 
-        content.includes('Declaration or statement expected') ||
-        content.includes('Expression expected') ||
-        content.includes('JSX expressions must have one parent element') ||
-        content.includes('Expected corresponding JSX closing tag') ||
-        content.length < 500) {
-      
+    if (isCorrupted(content)) {
       // Extract page name from path
       const pathParts = filePath.split('/');
       const pageName = pathParts[pathParts.length - 2]; // Get the directory name
