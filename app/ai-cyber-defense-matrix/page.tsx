@@ -1,33 +1,62 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Shield, Zap, Eye, Target, Brain, Globe } from 'lucide-react'
+
+const AICyberDefenseMatrixPage: React.FC = () => {
   const features = [
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'AI Threat Detection',
-      description: 'Advanced AI algorithms for real-time threat detection and automated response',
+      description: 'Advanced AI algorithms for real-time threat detection and automated response.',
+      benefits: ['Real-time detection', 'Automated response', 'Threat intelligence', 'Predictive analytics']
     },
     {
       icon: Zap,
       title: 'Zero-Trust Architecture',
-      description: 'Comprehensive zero-trust security framework with continuous verification',
-      benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation'],
+      description: 'Comprehensive zero-trust security framework with continuous verification.',
+      benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation', 'Least privilege']
     },
     {
       icon: Eye,
       title: 'Behavioral Analytics',
-      description: 'AI-powered behavioral analysis to detect anomalous activities and insider threats',
-      benefits: ['Anomaly detection', 'Insider threat prevention', 'User behavior analysis'],
+      description: 'AI-powered behavioral analysis to detect anomalous activities and insider threats.',
+      benefits: ['Anomaly detection', 'Insider threat prevention', 'User behavior analysis', 'Risk scoring']
     },
     {
       icon: Target,
       title: 'Automated Incident Response',
-      description: 'Intelligent incident response with automated containment and remediation',
-      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime'],
+      description: 'Intelligent incident response with automated containment and remediation.',
+      benefits: ['Automated containment', 'Rapid response', 'Minimal downtime', 'Forensic analysis']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent cybersecurity insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: Globe,
+      title: 'Global Threat Intelligence',
+      description: 'Comprehensive global threat intelligence with real-time updates and analysis.',
+      benefits: ['Global coverage', 'Real-time updates', 'Threat intelligence', 'Risk assessment']
     }
   ]
+
+  const benefits = [
+    'Detect 99.9% of cyber threats',
+    'Reduce response time by 90%',
+    'Prevent 95% of security breaches',
+    'Enable proactive security management'
+  ]
+
   const pricingPlans = [
-    {name: 'Essential',
+    {
+      name: 'Essential',
       price: '$499',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [,
+      features: [
         'Basic threat detection',
         'Email security',
         'Firewall management',
@@ -35,155 +64,198 @@
         'Basic reporting',
         'Standard monitoring'
       ],
-      popular: false;,},
-    {name: 'Professional',
+      popular: false
+    },
+    {
+      name: 'Professional',
       price: '$1,299',
       period: '/month',
-      description: 'Ideal for mid-size companies and enterprises',
-      features: [,
+      description: 'Ideal for medium-sized organizations',
+      features: [
         'Advanced threat detection',
         'Zero-trust architecture',
         'Behavioral analytics',
         'Priority support',
         'Advanced reporting',
-        'Real-time monitoring',
+        '24/7 monitoring',
         'Incident response',
-        'API integration'
+        'Compliance tools'
       ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$3,999',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$2,999',
       period: '/month',
-      description: 'For large organizations and critical infrastructure',
-      features: [,
-        'Full cyber defense suite',
-        'Custom security policies',
-        '24/7 dedicated support',
-        'White-label solutions',
+      description: 'Comprehensive solution for large organizations',
+      features: [
+        'Full AI cyber defense suite',
+        'Custom threat intelligence',
+        'Dedicated support',
+        'Custom reporting',
+        '24/7 monitoring',
+        'Incident response',
+        'Compliance tools',
         'On-premise deployment',
-        'Custom integrations',
-        'Advanced analytics',
-        'Compliance management',
-        'Training programs'
+        'White-label options'
       ],
-  const useCases = [
-    {title: 'Financial Services',
-      description: 'Advanced cyber defense for banks and financial institutions',
-      icon: DollarSign,
-      results: '99.9% security uptime',},
-    {title: 'Healthcare Protection',
-      description: 'HIPAA-compliant cyber defense for healthcare organizations',
-      icon: Shield,
-      results: 'Zero data breaches',},
-    {title: 'Government Security',
-      description: 'National-level cyber defense for government agencies',
-      icon: Globe,
-      results: 'Enhanced national security',},
-    {title: 'Critical Infrastructure',
-      description: 'Industrial cyber defense for power grids and utilities',
-      icon: Zap,
-        <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
-        </Helmet><title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
-        <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />
-        <meta property="og: title" content="AI Cyber Defense Matrix - Advanced Cybersecurity Platform" />,
-        <meta property="og:description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-cyber-defense-matrix" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-cyber-defense-matrix" />,
-      </Helmet>
+      popular: false
+    }
+  ]
 
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full px-6 py-3 mb-8 border border-red-500/30">
-                </div><Shield className="w-5 h-5 text-red-400" />
-                <span className="text-red-400 font-semibold">Cyber Defense</span>
-              </div>
-              
-                Revolutionary AI-powered cyber defense platform with 99.9% threat detection, 
-                zero-trust architecture, and automated incident response for enterprise security.
-              </p>
-              
-                  <span className="font-semibold">99.9% Detection</span>
-                </div>
-                <div className="flex items-center space-x-2 text-orange-400">
-                  </div><Zap className="w-5 h-5" />
-                  <span className="font-semibold">Zero-Trust</span>
-                </div>
-                <div className="flex items-center space-x-2 text-yellow-400">
-                  </div><Target className="w-5 h-5" />
-                  <span className="font-semibold">Auto Response</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
+  return (
+    <>
+      <Helmet>
+        <title>AI Cyber Defense Matrix - Zion Tech Group | Advanced Cybersecurity Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered cyber defense matrix that provides comprehensive cybersecurity protection with intelligent threat detection, automated response, and zero-trust architecture." />
+        <meta name="keywords" content="AI cyber defense, cybersecurity, threat detection, AI solutions, intelligent security, cyber protection" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Cyber Defense Matrix
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary AI-powered cyber defense matrix that provides comprehensive cybersecurity protection with intelligent threat detection, automated response, and zero-trust architecture.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
 
-                with advanced threat detection and automated response capabilities.
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Cyber Defense Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive cybersecurity capabilities powered by artificial intelligence
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-400/50 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300 text-sm">
+                          <div className="w-2 h-2 bg-red-400 rounded-full mr-3 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose AI Cyber Defense Matrix?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your cybersecurity with intelligent automation
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <div className="w-8 h-8 text-white">✓</div>
+                  </div>
+                  <p className="text-gray-300 text-lg font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Choose Your Plan
+              </h2>
+              <p className="text-xl text-gray-300">
+                Flexible pricing options for every organization
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border ${plan.popular ? 'border-red-400/50' : 'border-white/10'} transition-all duration-300 group`}>
+                  {plan.popular && (
+                    <div className="bg-red-500 text-white text-sm font-semibold px-3 py-1 rounded-full text-center mb-6">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}<span className="text-lg text-gray-300">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-red-400 rounded-full mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
                     ))}
                   </ul>
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700' 
+                      : 'border border-white text-white hover:bg-white hover:text-red-600'
+                  }`}>
+                    Get Started
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-                across various industries for mission-critical security protection.
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Ready to Secure Your Organization?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today to learn how our AI cyber defense matrix can protect your organization.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-red-400 font-semibold text-sm">{useCase.results</div>} </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                All plans include our advanced AI threat detection and response capabilities.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300">
+                  Get Started
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
+                  Contact Us
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -191,4 +263,5 @@
     </>
   )
 }
-export default AICyberDefenseMatrix
+
+export default AICyberDefenseMatrixPage
