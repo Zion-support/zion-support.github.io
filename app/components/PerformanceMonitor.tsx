@@ -1,10 +1,53 @@
+'use client'
+import React, { useEffect } from 'react'
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // Monitor Core Web Vitals
+    const measurePerformance = () => {
+      // Measure LCP (Largest Contentful Paint)
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+        console.log('LCP:', lastEntry.startTime)
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+
+      // Measure FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime)
+        })
+      })
+      fidObserver.observe({ entryTypes: ['first-input'] })
+
+      // Measure CLS (Cumulative Layout Shift)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0
+        list.getEntries().forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value
+          }
+        })
+        console.log('CLS:', clsValue)
+      })
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
+
+      return () => {
+        observer.disconnect()
+        fidObserver.disconnect()
+        clsObserver.disconnect()
       }
-    });
+    }
 
-    };
-  }, []);
+    const cleanup = measurePerformance()
+    return cleanup
+  }, [])
 
-  return null;
-};
+  return null
+}
 
 export default PerformanceMonitor
