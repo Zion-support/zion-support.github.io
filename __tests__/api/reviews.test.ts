@@ -1,37 +1,38 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { createMocks, RequestMethod } from 'node-mocks-http'
+import type { NextApiRequest, NextApiResponse } from 'next'
+import handler from '@/pages/api/reviews'
+import { describe, it, expect, vi } from 'vitest'
 
-// Mock Prisma Client
-const mockPrismaClient = {
-  productReview: {
-    create: vi.fn(),
-    findMany: vi.fn(),
-  },
-  user: {
-    findUnique: vi.fn(),
-  },
-};
+describe('/api/reviews', () => {
+  it('should return reviews for a product', async () => {
+    const { req, res } = createMocks({
+      method: 'GET' as RequestMethod,
+      query: { productId: '1' }
+    })
 
-vi.mock('@prisma/client', () => ({
-  PrismaClient: vi.fn(() => mockPrismaClient),
-}));
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    )
 
-// Mock Supabase
-const mockSupabase = {
-  auth: {
-    getUser: vi.fn(),
-  },
-};
+    expect(res._getStatusCode()).toBe(200)
+  })
 
-vi.mock('@/integrations/supabase/client', () => ({
-  supabase: mockSupabase,
-}));
+  it('should create a new review', async () => {
+    const { req, res } = createMocks({
+      method: 'POST' as RequestMethod,
+      body: {
+        productId: '1',
+        rating: 5,
+        comment: 'Great product!'
+      }
+    })
 
-describe('Reviews API', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    )
 
-  it('should be a placeholder test', () => {
-    expect(true).toBe(true);
-  });
-});
+    expect(res._getStatusCode()).toBe(201)
+  })
+})
