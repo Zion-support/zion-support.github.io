@@ -1,3 +1,4 @@
+'use client';
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -21,7 +22,6 @@
 };
 
 export default AnimatedCounter;
-'use client'
 import React from 'react'
 import React, { useState, useEffect } from 'react'
 interface AnimatedCounterProps {

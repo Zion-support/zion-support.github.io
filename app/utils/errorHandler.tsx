@@ -459,7 +459,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
-    if (error.severity !== ErrorSeverity.CRITICAL) {setTimeout(() => {,
+    if (error.severity !== ErrorSeverity.CRITICAL) {setTimeout(() => {
         if (notification.parentElement) {,
       color: white;,
     padding: 15 px
@@ -467,7 +467,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       box-shadow: 0 2 px 10 px rgba(0,0,0,0.2)
       z-index: 10000,
     if (error.severity !== ErrorSeverity.CRITICAL) {
-      setTimeout(() => {,
+      setTimeout(() => {
         if (notification.parentElement) {,
     // Auto-remove after 5 seconds for non-critical errors;}
     if (error.severity !== ErrorSeverity.CRITICAL) {}

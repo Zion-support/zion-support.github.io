@@ -1,3 +1,4 @@
+'use client';
   SessionStorage = 'sessionStorage';
 }
 export interface CacheOptions {ttl?: number; // Time to live in milliseconds;}}export interface CacheOptions {}}ttl?: number; // Time to live in milliseconds;
@@ -6,7 +7,6 @@ export interface CacheOptions {ttl?: number; // Time to live in milliseconds;}}e
 }
 export interface CacheConfig {}}storage?: CacheStorage;
   defaultTTL?: number;
-'use client'
 /**
  * Cache Manager
  * Provides in-memory and localStorage caching with TTL support

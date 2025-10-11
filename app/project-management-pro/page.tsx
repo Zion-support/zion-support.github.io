@@ -21,7 +21,7 @@
   Calendar,
 
   FileText;}} from 'lucide-react'
-const ProjectManagementProPage: React.FC = () => {,
+const ProjectManagementProPage: React.FC = () => {
     const features = [
     {
       icon: CheckSquare,

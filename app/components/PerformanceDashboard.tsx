@@ -125,7 +125,7 @@
           </h3><Activity className="w-5 h-5" />
           Performance Dashboard
   
-        <$2 />
+        <div />
           onClick={toggleMonitoring}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             isMonitoring

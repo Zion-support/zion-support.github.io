@@ -197,7 +197,7 @@
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
   
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><$2 />
+              </div><div />
                 href="tel:+13024640950"
                 ✉️ kleber@ziontechgroup.com,
   
@@ -228,7 +228,7 @@ export default BlockchainPage
   </div>
             <p className="text-xl mb-8 text-blue-100">Contact our blockchain experts for a free consultation and custom blockchain strategy development
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <$2 />
+              <div />
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950

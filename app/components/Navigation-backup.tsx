@@ -129,7 +129,7 @@
               <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            </div><$2 />
+            </div><div />
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             >

@@ -22,7 +22,7 @@
   Target,
 
   Eye;}} from 'lucide-react'
-const PenetrationTestingPage: React.FC = () => {,
+const PenetrationTestingPage: React.FC = () => {
     const features = [
     {
       icon: Search,

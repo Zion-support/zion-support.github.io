@@ -1,3 +1,4 @@
+'use client';
 import { Cloud, Zap, Shield, Globe, Users, Award, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
@@ -11,8 +12,7 @@ const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const features: Feature[] = [
-'use client'
-    {
+{
     },
     {
       id: 2,
@@ -174,7 +174,7 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {features.map((feature, index) => (
-          </div><$2 />
+          </div><div />
             key={feature.id}
             className={`bg-gradient-to-br ${feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
               index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'

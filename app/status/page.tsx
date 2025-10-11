@@ -218,7 +218,7 @@ const overallStatus = services.every(service => service.status === 'operational'
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' :;}
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-            <$2 />
+            <div />
               onClick={refreshStatus}
               disabled={isRefreshing}
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">

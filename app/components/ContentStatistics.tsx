@@ -1,5 +1,5 @@
 
-const ContentStatistics: React.FC = () => {,
+const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({)
     clients: 0,
     projects: 0,
@@ -173,7 +173,7 @@ const ContentStatistics: React.FC = () => {,
       {/* Statistics Grid */}
       </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {statistics.map((stat, index) => (
-          </div><$2 />
+          </div><div />
             key={index}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
           >

@@ -1,3 +1,4 @@
+'use client';
                   ))}
                 </ul>
                 <div className="text-center">
@@ -24,7 +25,6 @@ const ItServicesPage: React.FC = () => {
     </div>
   );
 };
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

@@ -1,3 +1,4 @@
+'use client';
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -74,7 +75,7 @@
           ))
         </div>
       </section>
-import {ArrowRight, CheckCircle}}from 'lucide-react';
+import {ArrowRight, CheckCircle} from 'lucide-react';
 interface ServiceCardProps {title: string;,}
   description: string;,
   features: string[],
@@ -102,7 +103,6 @@ interface ServiceCardProps {title: string;,}
           <div key={index}className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm">{feature</span>}</span>
-'use client'
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 interface ServiceCardProps {
@@ -156,7 +156,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
         </div>
       )}
       {onSelect && (
-        <$2 />
+        <div />
           onClick={onSelect}
           className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
           Get Started

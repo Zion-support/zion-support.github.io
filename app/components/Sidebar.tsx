@@ -1,3 +1,4 @@
+'use client';
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 useEffect(() => {
@@ -26,7 +27,7 @@ const toggleSection = (;
               <X>
 >>>>>>> main
             </button>
-'use client'</button>
+</button>
           </div>
 
           {/* Navigation */}

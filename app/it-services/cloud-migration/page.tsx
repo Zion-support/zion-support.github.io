@@ -1,3 +1,4 @@
+'use client';
 </button>
             </div>
           </div>
@@ -34,7 +35,6 @@
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
             {benefits.map((benefit, index) => (
               </div>
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'

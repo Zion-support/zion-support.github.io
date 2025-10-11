@@ -1,3 +1,4 @@
+'use client';
     {
       id: 1,
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
@@ -83,7 +84,6 @@
   );
 };
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

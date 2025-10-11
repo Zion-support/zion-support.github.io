@@ -1,3 +1,4 @@
+'use client';
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-analytics');
@@ -160,7 +161,6 @@ const DemoPage: React.FC = () => {
 };
 
 export default DemoPage;
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

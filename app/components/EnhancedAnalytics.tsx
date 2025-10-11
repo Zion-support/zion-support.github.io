@@ -1,3 +1,4 @@
+'use client';
 };
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -12,7 +13,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const identify = useCallback((userId: string, traits?: Record<string, any>) => {
     console.log('Analytics Identify:', userId, traits);
   }, []);
-'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 interface AnalyticsContextType {

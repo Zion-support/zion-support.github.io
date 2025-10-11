@@ -190,7 +190,7 @@ const services = [
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
-                <$2 />
+                <div />
                   type="submit"
                   disabled={isSubmitting}
                   and we'll get back to you as soon as possible.

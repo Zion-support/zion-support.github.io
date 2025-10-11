@@ -20,7 +20,7 @@
   Send,
 
   PieChart;}} from 'lucide-react'
-const EmailMarketingAutomationPage: React.FC = () => {,
+const EmailMarketingAutomationPage: React.FC = () => {
     const features = [
     {
       icon: Mail,

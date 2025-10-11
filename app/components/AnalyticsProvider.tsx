@@ -1,3 +1,4 @@
+'use client';
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
 
@@ -7,7 +8,6 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
 }
-'use client'
 import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
     trackEvent: (eventName: string, parameters?: Record<string, any>) => void

@@ -1,3 +1,4 @@
+'use client';
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 >>>>>>> main
 
@@ -15,12 +16,11 @@ interface Slide {
   }[];
 }
 
-const ContentCarousel: React.FC = () => {,
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
-'use client'
-      features: [
+features: [
         'Machine Learning',
         'Natural Language Processing',
         'Computer Vision',
@@ -76,7 +76,7 @@ const ContentCarousel: React.FC = () => {,
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       </div><div className="relative overflow-hidden rounded-2xl">
-        </div><$2 />
+        </div><div />
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >

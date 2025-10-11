@@ -1,3 +1,4 @@
+'use client';
   const features = [
     }
   ];];];
@@ -28,7 +29,6 @@
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

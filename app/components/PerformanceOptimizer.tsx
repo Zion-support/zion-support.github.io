@@ -1,3 +1,4 @@
+'use client';
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available;
@@ -54,7 +55,6 @@
                         <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span>{opt</span>}</span>
                       </li>
-'use client'
 import React, { useEffect, useCallback } from 'react'
 
                     ))}

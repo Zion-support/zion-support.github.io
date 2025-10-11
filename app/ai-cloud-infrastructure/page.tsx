@@ -1,3 +1,4 @@
+'use client';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {
 >>>>>>> main
@@ -104,7 +105,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
 
 export default AiCloudInfrastructurePage;
 >>>>>>> main
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'

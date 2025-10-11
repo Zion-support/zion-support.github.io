@@ -1,3 +1,4 @@
+'use client';
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -6,7 +7,6 @@
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
   return (

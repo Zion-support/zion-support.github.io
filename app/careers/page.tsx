@@ -1,3 +1,4 @@
+'use client';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -20,7 +21,6 @@ interface JobPosition {
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

@@ -22,7 +22,7 @@
   Server,
 
   Monitor;}} from 'lucide-react'
-const CloudInfrastructureManagerPage: React.FC = () => {,
+const CloudInfrastructureManagerPage: React.FC = () => {
     const features = [
     {
       icon: Cloud,

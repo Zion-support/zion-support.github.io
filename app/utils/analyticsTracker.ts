@@ -1,3 +1,4 @@
+'use client';
     const features = [
     {
       icon: Brain,
@@ -14,7 +15,6 @@
 const benefits = [
   ]
   const benefits = [
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'

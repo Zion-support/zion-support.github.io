@@ -1,5 +1,5 @@
+'use client';
 
-'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe

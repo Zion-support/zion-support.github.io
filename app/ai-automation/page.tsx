@@ -1,3 +1,4 @@
+'use client';
 import Footer from '../components/Footer';
     }
   ];
@@ -64,8 +65,8 @@ import Footer from '../components/Footer';
                     </li>
                   ))}
                 </ul>
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiAutomationPage: React.FC = () => {,
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
+const AiAutomationPage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -194,7 +195,6 @@ const benefits = [
                 </button>
                 <button>Learn More;</button>
                 </button>
-'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

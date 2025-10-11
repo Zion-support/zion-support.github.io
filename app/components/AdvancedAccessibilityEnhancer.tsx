@@ -159,30 +159,30 @@ export default AdvancedAccessibilityEnhancer;
   return (
     </AccessibilityEnhancerProps><div className="accessibility-enhanced">
       </div><div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
-        </div><$2 />
+        </div><div />
           onClick={toggleHighContrast}
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         <div className="font-size-controls">
-          </div><$2 />
+          </div><div />
             onClick={() => changeFontSize('small')}
-          <$2 />
+          <div />
             onClick={() =>changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
   
-          <$2 />
+          <div />
             onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
   
-          <$2 />
+          <div />
             onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"

@@ -196,9 +196,9 @@ export const createMockPerformance = (): Performance => {}
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
-    clearMarks: () => {,
+    clearMarks: () => {
     ,}entries.length = 0;},
-    clearMeasures: () => {,
+    clearMeasures: () => {
     ,
     clearResourceTimings: () => {},
     setResourceTimingBufferSize: () => {},

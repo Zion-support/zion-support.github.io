@@ -1,8 +1,8 @@
+'use client';
 
-const CommunityPage: React.FC = () => {,
+const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
@@ -276,7 +276,7 @@ const CommunityPage: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      <$2 />
+                      <div />
                         href="#"
                         className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center",
                       >
@@ -340,7 +340,7 @@ const CommunityPage: React.FC = () => {
               Start connecting, learning, and growing today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              </div><$2 />
+              </div><div />
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300",
               >

@@ -20,7 +20,7 @@
   Settings,
 
   Database;}} from 'lucide-react'
-const SecurityMonitoringPage: React.FC = () => {,
+const SecurityMonitoringPage: React.FC = () => {
     const features = [
     {
       icon: Eye,

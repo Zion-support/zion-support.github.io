@@ -21,7 +21,7 @@
   Workflow,
 
   Bot;}} from 'lucide-react'
-const ProcessAutomationPage: React.FC = () => {,
+const ProcessAutomationPage: React.FC = () => {
     const features = [
     {
       icon: Zap,

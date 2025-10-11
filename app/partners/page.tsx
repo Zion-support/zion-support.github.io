@@ -1,3 +1,4 @@
+'use client';
 
 interface Partner {
   name: string;
@@ -10,7 +11,6 @@ interface Partner {
 
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
-'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 const PartnersPage: React.FC = () => {
@@ -111,7 +111,7 @@ const PartnersPage: React.FC = () => {
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
-                </div><$2 />
+                </div><div />
                   key={category}
                   className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
                 >

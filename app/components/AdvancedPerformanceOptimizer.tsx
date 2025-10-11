@@ -1,6 +1,6 @@
+'use client';
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
-'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceOptimizerProps {
     children: React.ReactNode,

@@ -1,3 +1,4 @@
+'use client';
 
 const PagePage: React.FC = () => {
   const features = [
@@ -20,10 +21,9 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp}}from 'lucide-react';
-const BusinessIntelligencePage: React.FC = () => {,
-'use client'
+import {Helmet} from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp} from 'lucide-react';
+const BusinessIntelligencePage: React.FC = () => {
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'

@@ -604,13 +604,13 @@ const itServices = [
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"
                 )}
                 <div className="space-y-3">
-                  <$2 />
+                  <div />
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Get Free Consultation
-                  <$2 />
+                  <div />
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />

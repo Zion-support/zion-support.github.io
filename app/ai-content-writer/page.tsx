@@ -1,3 +1,4 @@
+'use client';
   const features = [
     {
       icon: Brain,
@@ -24,8 +25,7 @@
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
 
-const AIContentWriterPage: React.FC = () => {,
-'use client'
+const AIContentWriterPage: React.FC = () => {
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'

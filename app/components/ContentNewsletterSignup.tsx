@@ -125,7 +125,7 @@
   ],
   onSubscribe
 }) => {
-const ContentNewsletterSignup: React.FC = () => {,
+const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);

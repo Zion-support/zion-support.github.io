@@ -22,7 +22,7 @@
   Target,
 
   Monitor;}} from 'lucide-react'
-const SecurityMonitoringSuitePage: React.FC = () => {,
+const SecurityMonitoringSuitePage: React.FC = () => {
     const features = [
     {
       icon: Monitor,

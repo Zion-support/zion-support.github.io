@@ -1,3 +1,4 @@
+'use client';
   const categories = [
   ]
   const documentation = [
@@ -183,7 +184,7 @@
           <div className="cyber-card-enhanced p-8 mt-16">
             </div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              </div><$2 />
+              </div><div />
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
               >
@@ -232,7 +233,6 @@
   )
 }
 export default DocsPage
-'use client'
 import React, { useState } from 'react'
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -323,7 +323,7 @@ export default function DocsPage() {
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
                   {doc.title}
                 <p className="text-gray-300 text-sm mb-4">{doc.description}
-                <$2 />
+                <div />
                   href={doc.link}
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
@@ -345,7 +345,7 @@ export default function DocsPage() {
                     <p className="text-gray-300">{category.description}
                 <div className="space-y-4">
                   {category.docs.map((doc, docIndex) => (
-                    <$2 />
+                    <div />
                       key={docIndex}
                       href={doc.link}
                       className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
