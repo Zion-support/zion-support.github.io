@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react'
-const PagePage: React.FC = () => {
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ];
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
-
 export default function PagePage() {
   const features = [
     {
@@ -64,8 +49,6 @@ export default function PagePage() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-          
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -85,15 +68,5 @@ export default function PagePage() {
         </div>
       </main>
     </div>
-=======
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
 }

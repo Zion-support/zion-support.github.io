@@ -1,22 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-    
-benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']} ,
-    
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    
-benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
-
 export default function PagePage() {
   const features = [
     {
@@ -82,107 +66,8 @@ export default function PagePage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </main>
     </div>
-=======
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
-            </div>
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    <feature.icon className="h-8 w-8" />
-                  </div>
-
-      <Footer />
-    </>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0">
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-            </div>
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
-                    <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
-
-      <Footer />
-    </>
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>;
-Learn More
-              </button>
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
 }

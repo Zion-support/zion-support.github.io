@@ -1,24 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-=======
-import React from 'react'
-const LandingPageBuilderPage: React.FC = () => {
-    {} 'Advanced AI technology integration'},
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
-
 export default function PagePage() {
   const features = [
     {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -22,30 +21,6 @@ export default function PagePage() {
     }
   ];
 
-=======
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const PerformanceOptimizationPage: React.FC = () => {
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
-    
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} ,
-    
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">

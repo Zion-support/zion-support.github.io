@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -22,26 +21,6 @@ export default function PagePage() {
     }
   ];
 
-=======
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
@@ -54,8 +33,6 @@ const PagePage: React.FC = () => {
               Professional page services to help your business succeed and grow.
             </p>
           </div>
-<<<<<<< HEAD
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -92,15 +69,5 @@ const PagePage: React.FC = () => {
         </div>
       </main>
     </div>
-=======
-      
-      <Footer />
-    </>
-        </section>
-      </div>
-      
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
 }
