@@ -1,13 +1,11 @@
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import {Helmet} from 'react-helmet-async';
-import {ArrowRight} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import { CheckCircle } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const ItInfrastructureDesignPage: React.FC = () => {
-  const infrastructureFeatures = [
     {
       title: 'IT Infrastructure Design',
       description: 'Professional IT infrastructure design services and solutions.',
@@ -23,18 +21,10 @@ const ItInfrastructureDesignPage: React.FC = () => {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
-  ];
-
+  ]
   return (
     <>
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 
-const ItInfrastructureDesignPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -97,7 +87,6 @@ const ItInfrastructureDesignPage: React.FC = () => {
       <Footer />
     </>
     </div>
-  );
-};
-
-export default ItInfrastructureDesignPage;
+  )
+}
+export default ItInfrastructureDesignPage

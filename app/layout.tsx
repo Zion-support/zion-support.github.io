@@ -16,7 +16,6 @@ const LayoutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Layout
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional layout services delivered by experienced professionals.
@@ -25,9 +24,8 @@ const LayoutPage: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
-
+  )
+}
 export default function RootLayout({
   children,
 }: {
@@ -52,4 +50,4 @@ export default function RootLayout({
     </html>
   )
 }
-export default LayoutPage;
+export default LayoutPage

@@ -1,9 +1,10 @@
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
+'use client'
+import { CheckCircle } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+export default function AiApiManagementPage() {
     {
       title: 'Expert Solutions',
       description: 'Professional page services delivered by experienced professionals.',
@@ -19,18 +20,7 @@ export default function PagePage() {
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const AiApiManagementPage: React.FC = () => {
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -59,7 +49,6 @@ const AiApiManagementPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
@@ -102,7 +91,7 @@ const AiApiManagementPage: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default AiApiManagementPage;
+export default AiApiManagementPage

@@ -1,44 +1,6 @@
-'use client';
-import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
-
-const HomePage: React.FC = () => {
-  const features = [
-    {
-      icon: Wifi,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    }
-  ];
-
-  const stats = [
-    {number: '500+', label: 'Projects Completed'},
-    {number: '100+', label: 'Happy Clients'},
-    {number: '99.9%', label: 'Uptime Guarantee'},
-    {number: '24/7', label: 'Support Available'}
-  ];
-
+'use client'
+import React from 'react'
+import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react'
 const AppPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -46,7 +8,6 @@ const AppPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              App
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional app services delivered by experienced professionals.
@@ -141,7 +102,6 @@ const AppPage: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
-
-export default AppPage;
+  )
+}
+export default AppPage

@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -43,10 +42,7 @@ export default function FiveGImplementationPage() {
       description: 'Enterprise-grade security and compliance for 5G networks.',
       benefits: ['Advanced Security', 'Compliance Ready', 'Data Protection', 'Network Security']
     }
-  ];
-import { CheckCircle } from 'lucide-react';
-
-const FiveGImplementationPage: React.FC = () => {
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
@@ -150,5 +146,3 @@ const FiveGImplementationPage: React.FC = () => {
     </div>
   );
 };
-
-export default FiveGImplementationPage;
