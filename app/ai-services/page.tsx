@@ -1,9 +1,15 @@
-'use client';
-import React from 'react';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { 
+  Brain, MessageSquare, BarChart, Eye, Mic, Zap, Shield, Settings, Target, Box, Heart, TrendingUp, 
+  FileText, Cpu, Users, CheckCircle, ArrowRight, Star, Clock, Award, Rocket, Link, Server, 
+  MessageCircle, Heart as HeartIcon, TrendingUp as TrendingUpIcon, FileText as FileTextIcon,
+  Users as UsersIcon, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon
+} from 'lucide-react'
 
 const AiServicesPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
