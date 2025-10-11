@@ -5,11 +5,8 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
 import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
@@ -215,12 +212,12 @@ const HomePage: React.FC = () => {
           </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
-  </
+            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Our Services
+            </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations;
-  </
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -320,8 +317,8 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions;
-  </
+              Micro SAAS Solutions
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -560,8 +557,8 @@ const HomePage: React.FC = () => {
           {/* New AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services;
-  </
+              Advanced AI Services
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
@@ -646,8 +643,8 @@ const HomePage: React.FC = () => {
           {/* Emerging Technologies Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies;
-  </
+              Emerging Technologies
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
@@ -762,8 +759,8 @@ const HomePage: React.FC = () => {
           {/* Productivity Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools;
-  </
+              Productivity & Business Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
@@ -874,8 +871,8 @@ const HomePage: React.FC = () => {
           {/* Marketing & Sales Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools;
-  </
+              Marketing & Sales Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
@@ -934,8 +931,8 @@ const HomePage: React.FC = () => {
           {/* Developer Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools;
-  </
+              Developer Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
@@ -1076,8 +1073,8 @@ const HomePage: React.FC = () => {
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name;
-  </
+                      Full Name
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -1089,8 +1086,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address;
-  </
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -1102,8 +1099,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
-  </
+                      Phone Number
+                    </label>
                     <input
                       type="tel"
                       id="phone"
@@ -1114,8 +1111,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest;
-  </
+                      Service Interest
+                    </label>
                     <select
                       id="service"
                       name="service"
@@ -1130,8 +1127,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message;
-  </
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
@@ -1143,11 +1140,17 @@ const HomePage: React.FC = () => {
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4">
-                    Send Message;
-  </
+                    Send Message
+                  </button>
                 </form>
-<<<<<<< HEAD
-=======
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </React.Fragment>
+  );
+};
 
 const HomePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
