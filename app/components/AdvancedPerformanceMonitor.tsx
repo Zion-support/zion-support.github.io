@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -30,9 +29,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     memory: null,
   });
 
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+  const measureWebVitals = useCallback((): (() => void) | undefined => {
+    if (typeof window === 'undefined' || !('performance' in window)) return undefined;
+    if (typeof PerformanceObserver === 'undefined') return undefined;
 
     const observers: PerformanceObserver[] = [];
 
@@ -52,6 +51,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
+        console.warn('LCP observer failed:', error);
       }
     }
 
@@ -78,6 +78,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
+        console.warn('FID observer failed:', error);
       }
     }
 
@@ -93,7 +94,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as any;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -105,6 +106,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
+        console.warn('CLS observer failed:', error);
       }
     }
 
@@ -129,6 +131,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
+      console.warn('TTFB measurement failed:', error);
     }
 
     // Cleanup observers
@@ -138,12 +141,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           observer.disconnect();
         } catch (error) {
           // eslint-disable-next-line no-console
+          console.warn('Observer cleanup failed:', error);
         }
       });
     };
   }, []);
 
-  const measureResourceTiming = useCallback(() => {
+  const measureResourceTiming = useCallback((): void => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const resources = performance.getEntriesByType('resource');
@@ -152,8 +156,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-      // eslint-disable-next-line no-console
+      console.warn(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
@@ -164,41 +167,23 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, []);
 
-  const measureCoreWebVitals = useCallback(() => {
+  const measureCoreWebVitals = useCallback((): void => {
     if (typeof window === 'undefined') return;
 
     // Use web-vitals library if available
-    try {
-      import('web-vitals')
-        .then(webVitals => {
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
-          if (onCLS) {
-            onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
-          }
-          if (onFCP) {
-            onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
-          if (onLCP) {
-            onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
-          if (onTTFB) {
-            onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
-        })
-        .catch(() => {
-          // web-vitals not available, continue without it
+    if (typeof (window as any).gtag === 'function') {
+      // Google Analytics integration
+      const sendToAnalytics = (metric: any) => {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.value),
+          non_interaction: true,
         });
-    } catch {
-      // web-vitals not available, continue without it
+      };
+
+      // This would integrate with web-vitals library
+      // import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
     }
   }, []);
 
@@ -209,8 +194,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     measureResourceTiming();
     measureCoreWebVitals();
 
-    // Monitor performance every 5 seconds
+    // Update metrics every 5 seconds
     const interval = setInterval(() => {
+      measureWebVitals();
       measureResourceTiming();
     }, 5000);
 
@@ -218,12 +204,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (cleanup) cleanup();
       clearInterval(interval);
     };
-  }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
-  ]);
+  }, [enableRealTimeMonitoring, measureWebVitals, measureResourceTiming, measureCoreWebVitals]);
 
   useEffect(() => {
     if (onMetricsUpdate) {
@@ -231,81 +212,89 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, onMetricsUpdate]);
 
-  // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
+  const getPerformanceScore = (metric: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (metric === null) return 'unknown';
+    if (metric <= thresholds.good) return 'good';
+    if (metric <= thresholds.needsImprovement) return 'needs-improvement';
+    return 'poor';
+  };
 
-    if (metrics.fcp && metrics.fcp > 1800) {
-      recommendations.push(
-        'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
+  const getScoreColor = (score: string) => {
+    switch (score) {
+      case 'good':
+        return 'text-green-400';
+      case 'needs-improvement':
+        return 'text-yellow-400';
+      case 'poor':
+        return 'text-red-400';
+      default:
+        return 'text-gray-400';
     }
+  };
 
-    if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
-
-    if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
-
-    if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
-
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
-
-    return recommendations;
-  }, [metrics]);
-
-  const _recommendations = getPerformanceRecommendations();
-
-  if (process.env['NODE_ENV'] === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Metrics</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
           </div>
-          <div>
-            Memory:{' '}
-            {metrics.memory
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
+          <div className="text-sm text-gray-400">First Contentful Paint</div>
+          <div className={`text-xs ${getScoreColor(getPerformanceScore(metrics.fcp, { good: 1800, needsImprovement: 3000 }))}`}>
+            {getPerformanceScore(metrics.fcp, { good: 1800, needsImprovement: 3000 })}
           </div>
         </div>
-        {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations:
-            </h4>
-            <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
-              ))}
-            </ul>
+        
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </div>
-        )}
+          <div className="text-sm text-gray-400">Largest Contentful Paint</div>
+          <div className={`text-xs ${getScoreColor(getPerformanceScore(metrics.lcp, { good: 2500, needsImprovement: 4000 }))}`}>
+            {getPerformanceScore(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          </div>
+          <div className="text-sm text-gray-400">First Input Delay</div>
+          <div className={`text-xs ${getScoreColor(getPerformanceScore(metrics.fid, { good: 100, needsImprovement: 300 }))}`}>
+            {getPerformanceScore(metrics.fid, { good: 100, needsImprovement: 300 })}
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+          </div>
+          <div className="text-sm text-gray-400">Cumulative Layout Shift</div>
+          <div className={`text-xs ${getScoreColor(getPerformanceScore(metrics.cls, { good: 0.1, needsImprovement: 0.25 }))}`}>
+            {getPerformanceScore(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
+          </div>
+          <div className="text-sm text-gray-400">Time to First Byte</div>
+          <div className={`text-xs ${getScoreColor(getPerformanceScore(metrics.ttfb, { good: 800, needsImprovement: 1800 }))}`}>
+            {getPerformanceScore(metrics.ttfb, { good: 800, needsImprovement: 1800 })}
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <div className="text-2xl font-bold text-white">
+            {metrics.memory ? `${Math.round(metrics.memory / 1024 / 1024)}MB` : 'N/A'}
+          </div>
+          <div className="text-sm text-gray-400">Memory Usage</div>
+        </div>
       </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 };
 
 export default AdvancedPerformanceMonitor;
