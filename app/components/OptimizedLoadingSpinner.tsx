@@ -36,11 +36,9 @@ const renderSpinner = const renderSpinner = useMemo(() => {;
               ))}</div>
           );
 case 'pulse':;
-          return ()
-          );
+          return null;
 case 'skeleton':;
-          return ()
-          );
+          return null;
 case 'bars':;
           return ()
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
@@ -53,8 +51,7 @@ case 'bars':;
           );
 case 'spinner':;
         default:  
-          return ()
-          );
+          return null;
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;

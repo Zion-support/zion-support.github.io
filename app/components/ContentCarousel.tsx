@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-rea
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = const slides = const slides = [
+  const slides = [
     {
       id: 1,
       title: 'AI Solutions',

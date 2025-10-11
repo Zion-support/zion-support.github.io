@@ -106,7 +106,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       document.head.appendChild(fontPreload),
 
       // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
+      const criticalImages = [;
         '/images/hero-bg.jpg',;
         '/images/logo.png';
       ];

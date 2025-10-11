@@ -162,8 +162,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
     }
   }, [settings]);
 
-  return ()
-  );
+  return null;
 };
 
 export default EnhancedAccessibility;

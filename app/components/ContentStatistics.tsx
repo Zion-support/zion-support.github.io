@@ -13,7 +13,7 @@ const ContentStatistics: React.FC = () => {
     years: 10;
   };
 
-  const statistics = const statistics = const statistics = [
+  const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -43,7 +43,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-yellow-400';
     };
   ];
-  const achievements = const achievements = const achievements = [
+  const achievements = [
     {
       icon: Brain,
       title: 'AI Innovation',

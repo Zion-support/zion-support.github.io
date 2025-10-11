@@ -47,7 +47,7 @@ interface FormStatus {
     }
   }
 
-  const services = const services = const services = [
+  const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',

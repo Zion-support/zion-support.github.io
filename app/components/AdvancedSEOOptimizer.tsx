@@ -107,9 +107,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag()
       })
     }
-  }
-
-  const _trackPerformanceMetrics = () => {;
+  };
+const _trackPerformanceMetrics = () => {;
     if (typeof window !== 'undefined' && 'performance' in window) {;
       window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;

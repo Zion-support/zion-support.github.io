@@ -3,8 +3,7 @@ import React from 'react';
 import Navigation from './Navigation';
 
 const Header: React.FC = () => {
-  return ()
-  );
+  return null;
 };
 
 export default Header;

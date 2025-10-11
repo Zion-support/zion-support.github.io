@@ -164,7 +164,7 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain cyber-particles">
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
@@ -180,7 +180,8 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text glitch"
+                data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
@@ -194,24 +195,24 @@ const HomePage: React.FC = () => {
               </p>
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 border border-white/10">
-                  <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+                <div className="cyber-card hologram-card quantum-pulse">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-text">🚀</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text-purple">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 border border-white/10">
-                  <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+                <div className="cyber-card hologram-card quantum-pulse">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-text">⚡</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text-purple">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 border border-white/10">
-                  <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+                <div className="cyber-card hologram-card quantum-pulse">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-text">🔒</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text-purple">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 border border-white/10 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                  <div className="text-2xl sm:text-3xl mb-3">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+                <div className="cyber-card hologram-card quantum-pulse sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-text">🌐</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text-purple">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
@@ -219,19 +220,19 @@ const HomePage: React.FC = () => {
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
+                  className="cyber-button flex items-center justify-center w-full sm:w-auto"
                   aria-label="Call us at (302) 464-0950"
                 >
                   📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="cyber-button-secondary flex items-center justify-center w-full sm:w-auto">
                   📧 Email Us
                 </a>
                 <a 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  className="cyber-button flex items-center justify-center w-full sm:w-auto">
                   Get Free Consultation
                 </a>
               </div>
@@ -249,11 +250,11 @@ const HomePage: React.FC = () => {
 
           {/* Stats Section */}
           <section className="mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <div className="cyber-card hologram-card">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
-                  <div key={index}>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div key={index} className="quantum-pulse">
+                    <div className="text-4xl font-bold neon-text mb-2">{stat.number}</div>
                     <div className="text-gray-300">{stat.label}</div>
                   </div>
                 ))}
@@ -263,19 +264,19 @@ const HomePage: React.FC = () => {
 
           {/* Features Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12 neon-text-purple">
               Why Choose Zion Tech Group?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center"
+                  className="cyber-card hologram-card quantum-pulse text-center"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4 quantum-pulse`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 neon-text-pink">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -284,26 +285,26 @@ const HomePage: React.FC = () => {
 
           {/* Services Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-white mb-12 neon-text-purple">
               Our Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                  className="cyber-card hologram-card quantum-pulse"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4 quantum-pulse">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-white neon-text-pink">{service.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 neon-text" />
                         {feature}
                       </li>
                     ))}
@@ -315,7 +316,7 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               AI Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -323,9 +324,9 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                <div key={index} className="cyber-card hologram-card quantum-pulse">
+                  <service.icon className="w-12 h-12 text-blue-400 mb-4 neon-text" />
+                  <h3 className="text-xl font-semibold text-white mb-3 neon-text-purple">
                     {service.name}
                   </h3>
                   <p className="text-gray-300">
@@ -338,7 +339,7 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-pink">
               IT Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -346,9 +347,9 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-green-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                <div key={index} className="cyber-card hologram-card quantum-pulse">
+                  <service.icon className="w-12 h-12 text-green-400 mb-4 neon-text" />
+                  <h3 className="text-xl font-semibold text-white mb-3 neon-text-purple">
                     {service.name}
                   </h3>
                   <p className="text-gray-300">
@@ -361,27 +362,27 @@ const HomePage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="mb-16" aria-labelledby="cta-heading">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/10">
-              <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6">Get Free Consultation</h2>
+            <div className="cyber-card hologram-card quantum-pulse text-center">
+              <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+                  className="cyber-button flex items-center justify-center"
                   aria-label="Call us at (302) 464-0950"
                 >
                   📞 Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  className="cyber-button-secondary flex items-center justify-center">
                   📧 Email Us
                 </a>
                 <a 
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  className="cyber-button flex items-center justify-center">
                   Get Free Consultation
                 </a>
               </div>

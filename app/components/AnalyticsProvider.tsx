@@ -69,8 +69,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView,
   }
 
-  return ()
-  );
+  return null;
 }
 
 export default undefined;

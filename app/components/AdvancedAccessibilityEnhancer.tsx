@@ -27,8 +27,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
   }
-    }
-    const handleMouseDown = () => {
+    };
+const handleMouseDown = () => {
     document.body.classList.remove('keyboard-navigation');
   };
     document.addEventListener('keydown', handleKeyDown);

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ServiceWorkerRegistrationPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,7 +25,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
