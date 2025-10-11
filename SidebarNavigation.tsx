@@ -35,10 +35,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           <h2 className="text-xl font-bold text-white">Navigation</h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors">
-          <h2 className="text-white font-bold text-xl">Navigation</h2>
-          <button
-            onClick={onClose}
             className="text-gray-300 hover:text-cyan-400 transition-colors"
           >
             <X className="w-6 h-6" />

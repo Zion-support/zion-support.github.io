@@ -1,109 +1,97 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
-    // Check title length;
-    if (title.length >= 30 && title.length <= 60) {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
+interface SEOData {
+  title: string
+  description: string
+  canonicalUrl?: string
+  ogImage?: string
+  keywords?: string[]
+  structuredData?: object
+}
+
+interface AdvancedSEOOptimizerProps {
+  seoData: SEOData
+}
+
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ seoData }) => {
+  const {
+    title,
+    description,
+    canonicalUrl,
+    ogImage,
+    keywords = [],
+    structuredData
+  } = seoData
+
+  // Check title length
+  const isTitleOptimal = title.length >= 30 && title.length <= 60
+
+  // Default structured data
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": description,
+    "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
+    "logo": ogImage,
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
   }
 
-  const _trackPageView = (config: SEOData) => {,
+  const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-    }
-  }
-
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
-        }
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,
+        page_location: config.canonicalUrl
       })
     }
   }
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />}
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Structured Data */} <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())} </script>
-      </Helmet>
-        <div className="seo-debug" style={{
-    {process.env.NODE_ENV === 'development' && ()
-      {children}
-      {process.env.NODE_ENV === 'development' && (
-        < className="seo-debug" style={{$2 />
-          position: 'fixed',
-          top: '10px',
-          left: '10px',
-          background: 'rgba(0,0,0,0.8)',
-          color: 'white',
-          padding: '10px',
-          borderRadius: '5px',
-          fontSize: '12px',
-          zIndex: 1000,
-                {recommendations.map((rec, index) => (
-                  </ul><li key={index}>{rec}</li>
-          <div>SEO Score: {seoScore}/100
-          {recommendations.length > 0 && (
-            <div>
-              <div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
-                {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}
-                ))}
-          )}
-        </div>
 
-      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#1a1a2e" />
-      <meta name="msapplication-TileColor" content="#1a1a2e" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
+  React.useEffect(() => {
+    _trackPageView(seoData)
+    
+    // Track performance metrics
+    window.addEventListener('load', () => {
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'page_load_performance', {
+          event_category: 'Performance',
+          event_label: 'Page Load',
+          value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
+        })
+      }
+    })
+  }, [seoData])
 
-      {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />},
-    {/* Structured Data */}
-      <script type="application/ld+json" /></script>
-        {JSON.stringify(generateStructuredData())}
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+      <meta property="og:type" content="website" />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default AdvancedSEOOptimizer;
-    {children}
-  </>
   )
 }
-export default AdvancedSEOOptimizer</$1></ul></li></li></li>
+
+export default AdvancedSEOOptimizer

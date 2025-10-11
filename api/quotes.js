@@ -1,88 +1,62 @@
-export default async function handler(req, res) {
+export default function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    res.status(200).end()
+    return
+  }
+
+  // Only allow POST requests
   if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    res.status(405).json({ error: 'Method not allowed' })
     return
   }
 
   try {
-    const { name, email, phone, details, country, service } = req.body || {}
-    
-    if (!name || !email || !phone || !details) {
-      res.statusCode = 400
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ 
-        error: 'Name, email, phone, and details are required' 
-      }))
+    const {
+      name,
+      email,
+      phone,
+      details,
+      country,
+      service,
+      budget,
+      timeline,
+      company
+    } = req.body
+
+    // Validate required fields
+    if (!name || !email || !details) {
+      res.status(400).json({
+        error: 'Missing required fields',
+        required: ['name', 'email', 'details']
+      })
       return
     }
 
-    // Process quote submission logic here
-    const quoteData = {
-      id: Date.now().toString(),
-      name,
-      email,
-      phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      res.status(400).json({
+        error: 'Invalid email format'
+      })
+      return
     }
 
-    // Here you would typically save to a database
-    // For now, we'll just return a success response
-    console.log('Quote request received:', quoteData)
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Quote request submitted successfully',
-      quoteId: quoteData.id
-    }))
-
-  } catch (error) {
-    console.error('Error processing quote request:', error)
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      error: 'Internal server error',
-      message: 'Failed to process quote request'
-    }))
-    }
-
-    // Process quote submission logic here
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Send notification to your sales team
-    // 3. Send confirmation email to the customer
-    // 4. Integrate with your CRM
-
-    // For now, just return a success response
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Quote request received successfully',
-      quoteId: `QUOTE-${Date.now()}`
-    }));
-
-  } catch (error) {
-    console.error('Error processing quote request:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Internal server error' 
-    }));
     const quoteData = {
       name,
       email,
-      phone,
+      phone: phone || 'Not provided',
       details,
       country: country || 'Not specified',
       service: service || 'General inquiry',
+      budget: budget || 'Not specified',
+      timeline: timeline || 'Not specified',
+      company: company || 'Not provided',
       timestamp: new Date().toISOString(),
       status: 'pending'
     }
@@ -92,22 +66,21 @@ export default async function handler(req, res) {
       console.log('Quote request received:', quoteData)
     }
 
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
+    // In a real application, you would save this to a database
+    // For now, we'll just return a success response
+
+    res.status(200).json({
+      success: true,
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
       data: quoteData
-    }))
+    })
 
   } catch (error) {
     console.error('Quote submission error:', error)
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
+    res.status(500).json({
       error: 'Failed to submit quote request',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }))
+    })
   }
 }

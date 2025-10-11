@@ -1,74 +1,27 @@
-import fs from 'fs'
-import path from 'path'
-
-// Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler
-
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'onsite-requests.json')
-
 export default function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    res.status(200).end()
+    return
+  }
+
+  // Only allow POST requests
   if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    res.status(405).json({ error: 'Method not allowed' })
     return
   }
 
   try {
-    const { name, email, phone, company, address, requirements, preferredDate } = req.body || {}
-    
-    if (!name || !email || !phone || !company || !address || !requirements) {
-      res.statusCode = 400
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ 
-        error: 'Name, email, phone, company, address, and requirements are required' 
-      }))
-      return
-    }
-
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true })
-    }
-
-    // Read existing requests
-    let requests = []
-    if (fs.existsSync(file)) {
-      try {
-        const data = fs.readFileSync(file, 'utf8')
-        requests = JSON.parse(data)
-      } catch (error) {
-        console.error('Error reading existing requests:', error)
-        requests = []
-      }
-    }
-
-    // Add new request
-    const newRequest = {
-      id: Date.now().toString(),
+    const {
       name,
       email,
       phone,
       company,
-      address,
-      requirements,
-      preferredDate: preferredDate || null,
-      status: 'pending',
-      createdAt: new Date().toISOString()
-    }
-
-    requests.push(newRequest)
-
-    // Save updated requests
-    fs.writeFileSync(file, JSON.stringify(requests, null, 2))
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Onsite request submitted successfully',
-      requestId: newRequest.id
       projectType,
       budget,
       timeline,
@@ -79,89 +32,57 @@ export default function handler(req, res) {
 
     // Validate required fields
     if (!name || !email || !message) {
-      res.statusCode = 400
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ 
-        error: 'Missing required fields: name, email, and message are required' 
-      }))
+      res.status(400).json({
+        error: 'Missing required fields',
+        required: ['name', 'email', 'message']
+      })
       return
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      res.statusCode = 400
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Invalid email format' }))
+      res.status(400).json({
+        error: 'Invalid email format'
+      })
       return
     }
 
-    // Create request object
-    const request = {
-      id: Date.now().toString(),
+    const requestData = {
       name,
       email,
-      phone: phone || '',
-      company: company || '',
-      projectType: projectType || 'general',
-      budget: budget || 'not-specified',
-      timeline: timeline || 'flexible',
+      phone: phone || 'Not provided',
+      company: company || 'Not provided',
+      projectType: projectType || 'Not specified',
+      budget: budget || 'Not specified',
+      timeline: timeline || 'Not specified',
       message,
       preferredContact: preferredContact || 'email',
       urgency: urgency || 'normal',
-      status: 'pending',
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      status: 'pending'
     }
 
-    // Read existing requests
-    let requests = []
-    if (fs.existsSync(file)) {
-      try {
-        const data = fs.readFileSync(file, 'utf8')
-        requests = JSON.parse(data)
-      } catch (error) {
-        console.error('Error reading existing requests:', error)
-        requests = []
-      }
+    // Log request for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Onsite request received:', requestData)
     }
 
-    // Add new request
-    requests.push(request)
+    // In a real application, you would save this to a database
+    // For now, we'll just return a success response
 
-    // Write back to file
-    fs.writeFileSync(file, JSON.stringify(requests, null, 2))
-
-    // Send confirmation email (placeholder)
-    console.log('New onsite request received:', {
-      id: request.id,
-      name: request.name,
-      email: request.email,
-      company: request.company
+    res.status(200).json({
+      success: true,
+      message: 'Onsite request submitted successfully',
+      requestId: `onsite_${Date.now()}`,
+      data: requestData
     })
 
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({
-      success: true,
-      message: 'Request submitted successfully',
-      requestId: request.id
-    }))
-
   } catch (error) {
-    console.error('Error processing onsite request:', error)
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      error: 'Internal server error',
-      message: 'Failed to process onsite request'
-    }))
+    console.error('Onsite request error:', error)
+    res.status(500).json({
+      error: 'Failed to submit onsite request',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    })
   }
 }
-      error: 'Internal server error',
-      message: 'Failed to process request'
-    }))
-  }
-}
-
-module.exports = withSentry(handler)

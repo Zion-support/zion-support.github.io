@@ -248,19 +248,7 @@ const addLandmarkRoles = () => {
   if (footer) footer.setAttribute('role', 'contentinfo')
 }
 
-// 10. Screen reader announcements
-const announceToScreenReader = (message) => {
-  const announcement = document.createElement('div')
-  announcement.setAttribute('aria-live', 'assertive')
-  announcement.setAttribute('aria-atomic', 'true')
-  announcement.className = 'sr-only'
-  announcement.textContent = message
-  document.body.appendChild(announcement)
-  
-  setTimeout(() => {
-    document.body.removeChild(announcement)
-  }, 1000)
-}
+// 10. Screen reader announcements (already declared above)
 
 // Initialize accessibility features
 const initAccessibility = () => {

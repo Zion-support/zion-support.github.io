@@ -1,16 +1,15 @@
-import { expect, test, vi } from 'vitest'
-import handler from '@/pages/api/users/me'
+import { expect, test, jest } from '@jest/globals'
+import handler from '../../pages/api/users/me'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface MockApiResponse extends NextApiResponse {
-  status: vi.Mock<[number], MockApiResponse>
-  json: vi.Mock<[unknown], MockApiResponse>
-  setHeader: vi.Mock<[string, string | string[]], void>
-  end: vi.Mock<[(cb?: () => void) => void], void>
+  status: jest.Mock<[number], MockApiResponse>
+  json: jest.Mock<[unknown], MockApiResponse>
+  setHeader: jest.Mock<[string, string | string[]], void>
+  end: jest.Mock<[(cb?: () => void) => void], void>
 }
 
 function mockReq(method: string, body?: unknown): NextApiRequest {
-  return { method, body, headers: {}, query: {}, cookies: {} } as NextApiRequest
   return {
     method,
     body,
@@ -22,10 +21,10 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
 
 function mockRes(): MockApiResponse {
   const res: Partial<MockApiResponse> = {}
-  res.status = vi.fn().mockReturnValue(res as MockApiResponse)
-  res.json = vi.fn().mockReturnValue(res as MockApiResponse)
-  res.setHeader = vi.fn()
-  res.end = vi.fn()
+  res.status = jest.fn().mockReturnValue(res as MockApiResponse)
+  res.json = jest.fn().mockReturnValue(res as MockApiResponse)
+  res.setHeader = jest.fn()
+  res.end = jest.fn()
   return res as MockApiResponse
 }
 

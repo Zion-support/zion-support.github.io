@@ -148,7 +148,7 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-                <p className="text-white">123 Tech Street, Innovation City</p>
+            <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
             </div>
           </div>

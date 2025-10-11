@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals'
 
 // Store original process.env
 const ORIGINAL_ENV = process.env
@@ -17,7 +17,7 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
 
 describe('Environment Variable Validation', () => {
   beforeEach(() => {
-    vi.resetModules()
+    jest.resetModules()
   })
 
   afterEach(() => {
@@ -31,7 +31,7 @@ describe('Environment Variable Validation', () => {
       VITE_SUPABASE_ANON_KEY: 'valid_anon_key'
     })
 
-    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    const { checkEssentialEnvVars } = await import('../../app/utils/validateEnv')
     expect(() => checkEssentialEnvVars()).not.toThrow()
   })
 
@@ -42,7 +42,7 @@ describe('Environment Variable Validation', () => {
       VITE_SUPABASE_ANON_KEY: 'valid_anon_key'
     })
 
-    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    const { checkEssentialEnvVars } = await import('../../app/utils/validateEnv')
     expect(() => checkEssentialEnvVars()).toThrow()
   })
 
@@ -53,7 +53,7 @@ describe('Environment Variable Validation', () => {
       VITE_SUPABASE_ANON_KEY: 'valid_anon_key'
     })
 
-    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    const { checkEssentialEnvVars } = await import('../../app/utils/validateEnv')
     expect(() => checkEssentialEnvVars()).toThrow()
   })
 
@@ -64,7 +64,7 @@ describe('Environment Variable Validation', () => {
       VITE_SUPABASE_ANON_KEY: undefined
     })
 
-    const { checkEssentialEnvVars } = await import('@/utils/validateEnv')
+    const { checkEssentialEnvVars } = await import('../../app/utils/validateEnv')
     expect(() => checkEssentialEnvVars()).toThrow()
   })
 })
