@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     {
       id: 1,
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
@@ -219,3 +220,5 @@ const BlogPage: React.FC = () => {
 
       <Footer />
     </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

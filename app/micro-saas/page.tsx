@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -193,3 +194,11 @@ const MicroSaasPage: React.FC = () => {
         </div>
   );
 };
+=======
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

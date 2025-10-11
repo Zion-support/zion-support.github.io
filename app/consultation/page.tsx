@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
   const [formData, setFormData] = useState({
     name: '',
@@ -138,3 +139,5 @@
 
   );
 };
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

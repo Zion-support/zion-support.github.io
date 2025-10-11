@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -211,3 +212,5 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

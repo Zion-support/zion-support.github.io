@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, Globe, Users, Award, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
@@ -225,3 +226,5 @@ const DynamicContentShowcase: React.FC = () => {
         </button>
       </div>
     </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 >>>>>>> main
 
@@ -207,3 +208,5 @@ const ContentCarousel: React.FC = () => {,
   );
 };
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

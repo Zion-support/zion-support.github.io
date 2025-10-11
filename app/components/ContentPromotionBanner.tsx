@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 'use client'
 import React from 'react'
@@ -22,3 +23,5 @@ const ContentPromotionBanner: React.FC = () => {
 >>>>>>> main
       </div>
     </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

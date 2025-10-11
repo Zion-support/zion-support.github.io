@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface Partner {
   name: string;
@@ -322,3 +323,5 @@ const PartnersPage: React.FC = () => {
 };
 
 export default PartnersPage;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
 
@@ -104,3 +105,5 @@ export default undefined
 
 export default AnalyticsProvider
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const ContentStatistics: React.FC = () => {,
   const [counters, setCounters] = useState({)
@@ -279,3 +280,5 @@ const ContentStatistics: React.FC = () => {,
   );
 };
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

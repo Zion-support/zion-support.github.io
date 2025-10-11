@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const SupportPage: React.FC = () => {
 
@@ -134,3 +135,5 @@ const SupportPage: React.FC = () => {
 
       <Footer />
     </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
