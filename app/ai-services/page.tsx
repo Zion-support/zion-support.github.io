@@ -37,22 +37,58 @@ const AIServicesPage: React.FC = () => {
     {
       icon: Zap,
       title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.'
+      description: 'Strategic AI consulting to help you identify opportunities and plan your AI transformation journey.',
+      price: 'Starting at $2,500/month',
+      features: ['AI Strategy Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Roadmap']
     },
     {
       icon: Shield,
       title: 'AI Implementation',
-      description: 'End-to-end AI solution implementation with our expert team of AI engineers.'
+      description: 'End-to-end AI solution implementation with our expert team of AI engineers.',
+      price: 'Starting at $15,000/project',
+      features: ['Custom AI Models', 'API Integration', 'Data Pipeline Setup', 'Testing & Validation']
     },
     {
       icon: TrendingUp,
       title: 'AI Optimization',
-      description: 'Optimize your existing AI systems for better performance and efficiency.'
+      description: 'Optimize your existing AI systems for better performance and efficiency.',
+      price: 'Starting at $1,500/month',
+      features: ['Performance Tuning', 'Model Retraining', 'Cost Optimization', 'Monitoring Setup']
     },
     {
       icon: Target,
       title: 'AI Training',
-      description: 'Comprehensive training programs to upskill your team in AI technologies.'
+      description: 'Comprehensive training programs to upskill your team in AI technologies.',
+      price: 'Starting at $500/person',
+      features: ['Hands-on Workshops', 'Certification Programs', 'Custom Training', 'Ongoing Support']
+    },
+    {
+      icon: Brain,
+      title: 'Machine Learning Models',
+      description: 'Custom ML models tailored to your specific business needs and data.',
+      price: 'Starting at $8,000/model',
+      features: ['Predictive Analytics', 'Classification Models', 'Regression Analysis', 'Deep Learning']
+    },
+    {
+      icon: MessageSquare,
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysis, sentiment, and language understanding.',
+      price: 'Starting at $3,000/month',
+      features: ['Text Classification', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development']
+    },
+    {
+      icon: Eye,
+      title: 'Computer Vision',
+      description: 'Image and video analysis solutions using cutting-edge computer vision technology.',
+      price: 'Starting at $5,000/month',
+      features: ['Object Detection', 'Image Recognition', 'Video Analysis', 'Facial Recognition']
+    },
+    {
+      icon: BarChart,
+      title: 'AI Analytics Platform',
+      description: 'Comprehensive AI-powered analytics platform with real-time insights.',
+      price: 'Starting at $4,000/month',
+      features: ['Real-time Dashboards', 'Predictive Insights', 'Automated Reporting', 'Custom Metrics']
     }
   ];
 
@@ -169,12 +205,24 @@ const AIServicesPage: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 text-left">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Learn More
+                </button>
               </div>
             ))}
           </div>
@@ -213,12 +261,16 @@ const AIServicesPage: React.FC = () => {
               Let's discuss how our AI services can help you achieve your business goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started Today
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Consultation
-              </button>
+              <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
+                Call +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
+                Email Us
+              </a>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-gray-300 mb-2">Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className="text-gray-300">Or visit our website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </div>

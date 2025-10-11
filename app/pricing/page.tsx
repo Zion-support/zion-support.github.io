@@ -146,6 +146,47 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Service-Specific Pricing */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Service-Specific Pricing
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">AI Services</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li>AI Consulting: $2,500/month</li>
+                  <li>AI Implementation: $15,000/project</li>
+                  <li>Machine Learning Models: $8,000/model</li>
+                  <li>NLP Solutions: $3,000/month</li>
+                  <li>Computer Vision: $5,000/month</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li>Cloud Services: $2,000/month</li>
+                  <li>Cloud Migration: $5,000/project</li>
+                  <li>DevOps & CI/CD: $3,500/month</li>
+                  <li>Cybersecurity: $2,500/month</li>
+                  <li>IT Consulting: $200/hour</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Development</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li>Web Development: $8,000/project</li>
+                  <li>Mobile Development: $15,000/app</li>
+                  <li>API Development: $5,000/project</li>
+                  <li>System Integration: $4,500/project</li>
+                  <li>Process Automation: $2,800/month</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -175,6 +216,22 @@ const PricingPage: React.FC = () => {
                 </h3>
                 <p className="text-gray-300">
                   Yes, we provide custom AI and IT solutions tailored to your specific business requirements. Contact us for a consultation.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  What payment methods do you accept?
+                </h3>
+                <p className="text-gray-300">
+                  We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  Is there a free trial available?
+                </h3>
+                <p className="text-gray-300">
+                  Yes, we offer a 14-day free trial for our Starter and Professional plans. Enterprise solutions include a custom pilot program.
                 </p>
               </div>
             </div>

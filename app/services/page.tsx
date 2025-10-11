@@ -13,7 +13,10 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Settings,
+  Users,
+  Code
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -76,10 +79,64 @@ const ServicesPage: React.FC = () => {
       category: 'Database',
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $1,000/month'
+    },
+    {
+      id: 7,
+      title: 'DevOps & CI/CD',
+      description: 'Complete DevOps implementation with automated CI/CD pipelines.',
+      icon: Settings,
+      category: 'DevOps',
+      features: ['Pipeline Setup', 'Container Orchestration', 'Monitoring', 'Automated Deployments'],
+      price: 'Starting at $3,500/month'
+    },
+    {
+      id: 8,
+      title: 'Web Development',
+      description: 'Modern web applications and e-commerce solutions.',
+      icon: Globe,
+      category: 'Development',
+      features: ['Responsive Design', 'E-commerce Integration', 'API Development', 'Performance Optimization'],
+      price: 'Starting at $8,000/project'
+    },
+    {
+      id: 9,
+      title: 'Process Automation',
+      description: 'Workflow automation and business process optimization.',
+      icon: Zap,
+      category: 'Automation',
+      features: ['RPA Implementation', 'Workflow Design', 'Integration Services', 'Process Monitoring'],
+      price: 'Starting at $2,800/month'
+    },
+    {
+      id: 10,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and technology roadmap development.',
+      icon: Users,
+      category: 'Consulting',
+      features: ['Technology Assessment', 'Digital Transformation', 'IT Strategy', 'Vendor Selection'],
+      price: 'Starting at $200/hour'
+    },
+    {
+      id: 11,
+      title: 'API Development',
+      description: 'RESTful APIs and microservices architecture development.',
+      icon: Code,
+      category: 'Development',
+      features: ['API Design', 'Documentation', 'Testing', 'Security Implementation'],
+      price: 'Starting at $5,000/project'
+    },
+    {
+      id: 12,
+      title: 'System Integration',
+      description: 'Integration of disparate systems and applications.',
+      icon: Settings,
+      category: 'Integration',
+      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Error Handling'],
+      price: 'Starting at $4,500/project'
     }
   ];
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database', 'DevOps', 'Automation', 'Consulting', 'Integration'];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -187,12 +244,16 @@ const ServicesPage: React.FC = () => {
                 Contact our experts to discuss your requirements and get a customized solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Quote
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us
-                </button>
+                <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
+                  Call +1 302 464 0950
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
+                  Email Us
+                </a>
+              </div>
+              <div className="mt-6 text-center">
+                <p className="text-gray-300 mb-2">Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>
+                <p className="text-gray-300">Or visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
               </div>
             </div>
           </div>

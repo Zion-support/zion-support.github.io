@@ -120,10 +120,112 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 50 users',
       popular: true,
       category: 'AI'
+    },
+    {
+      id: '7',
+      icon: '📧',
+      title: 'Email Marketing Pro',
+      description: 'Advanced email marketing automation and campaign management',
+      features: [
+        'Drag-and-drop email builder',
+        'Automated drip campaigns',
+        'A/B testing tools',
+        'Advanced segmentation',
+        'Analytics and reporting'
+      ],
+      price: '$89/month',
+      users: 'Up to 100,000 contacts',
+      popular: true,
+      category: 'Marketing'
+    },
+    {
+      id: '8',
+      icon: '💰',
+      title: 'Invoice Generator',
+      description: 'Professional invoice creation and payment tracking',
+      features: [
+        'Custom invoice templates',
+        'Automated recurring billing',
+        'Payment tracking',
+        'Tax calculations',
+        'Client portal access'
+      ],
+      price: '$19/month',
+      users: 'Unlimited invoices',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '9',
+      icon: '📅',
+      title: 'Project Manager',
+      description: 'Comprehensive project management and team collaboration',
+      features: [
+        'Task management',
+        'Team collaboration',
+        'Time tracking',
+        'Gantt charts',
+        'Resource planning'
+      ],
+      price: '$39/month',
+      users: 'Up to 25 team members',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '10',
+      icon: '🔍',
+      title: 'SEO Analyzer',
+      description: 'Complete SEO analysis and optimization recommendations',
+      features: [
+        'Website audit',
+        'Keyword research',
+        'Competitor analysis',
+        'Ranking tracking',
+        'Technical SEO checks'
+      ],
+      price: '$49/month',
+      users: 'Up to 10 websites',
+      popular: false,
+      category: 'SEO'
+    },
+    {
+      id: '11',
+      icon: '📱',
+      title: 'Social Media Scheduler',
+      description: 'Automated social media posting and content management',
+      features: [
+        'Multi-platform posting',
+        'Content calendar',
+        'Analytics dashboard',
+        'Hashtag suggestions',
+        'Team collaboration'
+      ],
+      price: '$29/month',
+      users: 'Up to 5 social accounts',
+      popular: false,
+      category: 'Social Media'
+    },
+    {
+      id: '12',
+      icon: '📊',
+      title: 'Lead Tracker',
+      description: 'CRM and lead management system for sales teams',
+      features: [
+        'Lead capture forms',
+        'Pipeline management',
+        'Email automation',
+        'Sales analytics',
+        'Integration capabilities'
+      ],
+      price: '$69/month',
+      users: 'Up to 15 users',
+      popular: true,
+      category: 'CRM'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance', 'Productivity', 'SEO', 'Social Media', 'CRM'];
 
   const benefits = [
     'Quick setup and deployment',
@@ -310,18 +412,16 @@ const MicroSaasPage: React.FC = () => {
               Choose from our collection of micro SaaS solutions and start solving your business problems today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-              >
-                Get Started <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
-              >
-                View Pricing
-              </Link>
+              <a href="tel:+13024640950" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                Call +1 302 464 0950 <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+                Email Us
+              </a>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-blue-100 mb-2">Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className="text-blue-100">Or visit our website: <a href="https://ziontechgroup.com" className="text-white hover:text-blue-200">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </div>
