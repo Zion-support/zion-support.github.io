@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Phone, Mail, MessageCircle, FileText, Clock, CheckCircle } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Phone, Mail, MessageCircle, FileText, HelpCircle, Clock, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
 
 const SupportPage: React.FC = () => {
   const faqs = [
@@ -30,11 +22,7 @@ const SupportPage: React.FC = () => {
       question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
-<<<<<<< HEAD
-  ];
-=======
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
 
   const supportChannels = [
     {
@@ -57,10 +45,7 @@ const SupportPage: React.FC = () => {
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Chat with our support team in real-time',
-<<<<<<< HEAD
-=======
       contact: 'Available on website',
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
       availability: 'Business hours',
       responseTime: 'Immediate'
     },
@@ -68,83 +53,13 @@ const SupportPage: React.FC = () => {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
-<<<<<<< HEAD
-      link: '/knowledge-base',
-      availability: '24/7',
-      responseTime: 'Self-service'
-=======
       contact: 'Self-service',
       availability: '24/7',
       responseTime: 'Immediate'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Support Center
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get help when you need it. Our expert support team is here to assist you 24/7.
-            </p>
-          </div>
-        </section>
-
-        {/* Support Channels */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
-              <p className="text-xl text-gray-300">Choose the best way to reach us</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    <channel.icon className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4">{channel.description}</p>
-                  {channel.contact && (
-                    <p className="text-cyan-400 font-semibold mb-2">{channel.contact}</p>
-                  )}
-                  <div className="space-y-1 text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-2" />
-                      {channel.availability}
-                    </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="h-4 w-4 mr-2" />
-                      {channel.responseTime}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">Find answers to common questions</p>
-            </div>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Support - Zion Tech Group | Expert Technical Support</title>
@@ -190,22 +105,10 @@ const SupportPage: React.FC = () => {
                 <div className="text-sm text-gray-400">
                   <div>Available: {channel.availability}</div>
                   <div>Response: {channel.responseTime}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-<<<<<<< HEAD
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default SupportPage;
-=======
         </div>
       </section>
 
@@ -263,4 +166,3 @@ export default SupportPage;
 }
 
 export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6

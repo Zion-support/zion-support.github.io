@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Users, Award, Globe, Zap } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react'
 import { Users, Award, TrendingUp, Clock, Brain, Globe, Zap, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
-<<<<<<< HEAD
-    countries: 0,
-    years: 0
-  });
-
-=======
     satisfaction: 0,
     years: 0
   })
@@ -28,38 +16,18 @@ const ContentStatistics: React.FC = () => {
     years: 10
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
   const statistics = [
     {
       icon: Users,
       value: counters.clients,
       label: 'Happy Clients',
-<<<<<<< HEAD
-      suffix: '+'
-=======
       suffix: '+',
       color: 'text-cyan-400'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
     },
     {
       icon: Award,
       value: counters.projects,
       label: 'Projects Completed',
-<<<<<<< HEAD
-      suffix: '+'
-    },
-    {
-      icon: Globe,
-      value: counters.countries,
-      label: 'Countries Served',
-      suffix: '+'
-    },
-    {
-      icon: Zap,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+'
-=======
       suffix: '+',
       color: 'text-purple-400'
     },
@@ -94,44 +62,10 @@ const ContentStatistics: React.FC = () => {
       icon: Shield,
       title: 'Security Excellence',
       description: 'Enterprise-grade security with 100% compliance record'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
     }
   ]
 
   useEffect(() => {
-<<<<<<< HEAD
-    const targetValues = {
-      clients: 1000,
-      projects: 5000,
-      countries: 50,
-      years: 10
-    };
-
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    let currentStep = 0;
-    const timer = setInterval(() => {
-      currentStep++;
-      const progress = currentStep / steps;
-      
-      setCounters({
-        clients: Math.floor(targetValues.clients * progress),
-        projects: Math.floor(targetValues.projects * progress),
-        countries: Math.floor(targetValues.countries * progress),
-        years: Math.floor(targetValues.years * progress)
-      });
-
-      if (currentStep >= steps) {
-        clearInterval(timer);
-        setCounters(targetValues);
-      }
-    }, stepDuration);
-
-    return () => clearInterval(timer);
-  }, []);
-=======
     const duration = 2000 // 2 seconds
     const steps = 60
     const stepDuration = duration / steps
@@ -158,19 +92,13 @@ const ContentStatistics: React.FC = () => {
       timers.forEach(timer => clearInterval(timer))
     }
   }, [])
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
 
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm py-16 px-4">
       <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-300">
@@ -191,8 +119,6 @@ const ContentStatistics: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
         {/* Achievements Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
@@ -209,14 +135,9 @@ const ContentStatistics: React.FC = () => {
             ))}
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
       </div>
     </div>
   )
 }
 
-<<<<<<< HEAD
-export default ContentStatistics;
-=======
 export default ContentStatistics
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
