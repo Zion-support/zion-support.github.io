@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
 import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -18,17 +17,19 @@ const FiveGImplementationPage: React.FC = () => {
       icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
+      benefits: ['Up to 10 Gbps', 'Seamless streaming', 'Fast downloads', 'Real-time gaming']
     },
     {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your 5G network performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced security protocols and encryption for secure 5G communications.',
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your 5G network performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+      benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
     },
     {
       icon: Target,
@@ -139,11 +140,18 @@ const FiveGImplementationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our 5G Implementation?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -201,8 +209,19 @@ const FiveGImplementationPage: React.FC = () => {
               Get started with our 5G implementation services today and experience the future of connectivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-              </button>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Our Services
+              </a>
             </div>
           </div>
         </section>
@@ -213,5 +232,4 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default FiveGImplementationPage;
 export default FiveGImplementationPage;

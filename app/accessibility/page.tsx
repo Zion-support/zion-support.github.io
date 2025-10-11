@@ -1,19 +1,17 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Accessibility, Eye, Volume2, MousePointer, Keyboard, CheckCircle, ArrowRight } from 'lucide-react';
-import { Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import { Accessibility, Eye, Volume2, MousePointer, Keyboard, CheckCircle, ArrowRight, Ear, Hand, Brain, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'High contrast modes, scalable fonts, and screen reader compatibility for users with visual impairments.',
       benefits: ['High contrast themes', 'Font scaling', 'Screen reader support', 'Color blind friendly']
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'High contrast modes, scalable text, and screen reader compatibility.',
-      benefits: ['High contrast themes', 'Scalable fonts', 'Screen reader support', 'Color blind friendly']
     },
     {
       icon: Volume2,
@@ -32,10 +30,6 @@ import Footer from '../components/Footer';
       title: 'Cognitive Accessibility',
       description: 'Clear navigation, consistent layouts, and simplified interfaces for users with cognitive disabilities.',
       benefits: ['Clear navigation', 'Consistent layouts', 'Simplified interfaces', 'Progress indicators']
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Screen reader compatibility, high contrast modes, and scalable text options.',
-      benefits: ['Screen reader support', 'High contrast themes', 'Text scaling', 'Color blind friendly']
     },
     {
       icon: Ear,
@@ -57,26 +51,20 @@ import Footer from '../components/Footer';
     }
   ];
 
-  const benefits = [
-    'WCAG 2.1 AA compliance',
-    'Screen reader compatibility',
-    'Keyboard navigation support',
-    'Alternative text for all images'
-      description: 'Audio descriptions, captions, and alternative audio formats.',
-      benefits: ['Audio descriptions', 'Closed captions', 'Transcripts', 'Volume controls']
-    },
+  const additionalFeatures = [
     {
       icon: MousePointer,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation, voice control, and assistive technologies.',
       benefits: ['Keyboard navigation', 'Voice control', 'Large click targets', 'Customizable controls']
-    },
-    {
-      icon: Keyboard,
-      title: 'Cognitive Accessibility',
-      description: 'Clear navigation, consistent layouts, and simplified interfaces.',
-      benefits: ['Clear navigation', 'Consistent layouts', 'Simple language', 'Progress indicators']
     }
+  ];
+
+  const benefits = [
+    'WCAG 2.1 AA compliance',
+    'Screen reader compatibility',
+    'Keyboard navigation support',
+    'Alternative text for all images'
   ];
 
   const standards = [

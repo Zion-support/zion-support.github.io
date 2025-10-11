@@ -12,12 +12,7 @@ const AccessibilityPage: React.FC = () => {
       title: 'Visual Accessibility',
       description: 'High contrast modes, scalable fonts, and screen reader compatibility for users with visual impairments.',
       benefits: ['High contrast themes', 'Font scaling', 'Screen reader support', 'Color blind friendly']
-import { Accessibility, Eye, Volume2, MousePointer, Keyboard, CheckCircle, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AccessibilityPage: React.FC = () => {
-  const features = [
+    },
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -41,8 +36,6 @@ const AccessibilityPage: React.FC = () => {
       title: 'Cognitive Accessibility',
       description: 'Clear navigation, consistent layouts, and simplified interfaces for users with cognitive disabilities.',
       benefits: ['Clear navigation', 'Consistent layouts', 'Simplified interfaces', 'Progress indicators']
-      description: 'Audio descriptions, captions, and alternative audio formats.',
-      benefits: ['Audio descriptions', 'Closed captions', 'Transcripts', 'Volume controls']
     },
     {
       icon: MousePointer,
@@ -55,9 +48,8 @@ const AccessibilityPage: React.FC = () => {
       title: 'Cognitive Accessibility',
       description: 'Clear navigation, consistent layouts, and simplified interfaces.',
       benefits: ['Clear navigation', 'Consistent layouts', 'Simple language', 'Progress indicators']
-import { Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+    }
+  ]
 
 const AccessibilityPage: React.FC = () => {
   const features = [

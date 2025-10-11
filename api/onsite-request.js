@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 
-// Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler
 const dir = path.join(process.cwd(), 'data')
 const file = path.join(dir, 'onsite-requests.json')
 
@@ -24,7 +22,8 @@ export default function handler(req, res) {
       return
     }
 
-    const request = {
+    // Process the onsite request data
+    const requestData = {
       id: Date.now().toString(),
       name,
       email,
@@ -35,6 +34,10 @@ export default function handler(req, res) {
       serviceType: serviceType || 'General consultation',
       timestamp: new Date().toISOString()
     }
+    
+    // Here you would typically save the request data to a database
+    // For now, we'll just log it
+    console.log('Onsite request received:', requestData)
 
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 

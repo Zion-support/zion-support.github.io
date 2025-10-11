@@ -2,23 +2,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cube, Palette, Zap, Target, ArrowRight, CheckCircle, Brain, BarChart, TrendingUp, Eye } from 'lucide-react';
-import { Cube, Zap, Eye, Palette, ArrowRight, CheckCircle, Brain, Target } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AI3DGenerationPage: React.FC = () => {
   const features = [
     {
+      icon: Cube,
+      title: '3D Model Generation',
+      description: 'Create stunning 3D models from text descriptions using advanced AI algorithms.',
+      benefits: ['Text-to-3D conversion', 'High-quality models', 'Multiple formats', 'Custom styling']
     },
     {
       icon: Zap,
       title: 'Rapid Prototyping',
       description: 'Generate high-quality 3D prototypes in minutes instead of hours.',
       benefits: ['Fast iteration cycles', 'Multiple design options', 'Automated optimization', 'Quality validation']
-      icon: Cube,
-      title: '3D Model Generation',
-      description: 'Create stunning 3D models from text descriptions using advanced AI algorithms.',
-      benefits: ['Text-to-3D conversion', 'High-quality models', 'Multiple formats', 'Custom styling']
     },
     {
       icon: Palette,
@@ -33,13 +32,10 @@ const PagePage: React.FC = () => {
       benefits: ['Fast iteration', 'Design variations', 'Automated optimization', 'Quick feedback']
     },
     {
+      icon: Target,
       title: 'Precision Modeling',
       description: 'Achieve precise 3D models with AI-assisted modeling tools.',
       benefits: ['Exact measurements', 'Geometric accuracy', 'Professional quality', 'Industry standards']
-      icon: Cube,
-      title: '3D Model Generation',
-      description: 'AI-powered 3D model creation from text descriptions or 2D images.',
-      benefits: ['Text-to-3D conversion', 'Image-to-3D generation', 'Custom model creation', 'High-quality output']
     },
     {
       icon: Zap,
