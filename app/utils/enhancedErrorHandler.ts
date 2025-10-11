@@ -22,20 +22,20 @@ interface ErrorContext {}
   userId?: string;
   sessionId?: string;
   url: string,
-    userAgent: string;
-  timestamp: string
-  component?: string
+    userAgent: string;,
+      timestamp: string;
+  component?: string;
   action?: string,
   props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
 interface ErrorReport {}
-  id: string
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+  id: string;,
+      type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
   message: string,
   stack?: string;
   context: ErrorContext,
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category:;
+  severity: 'low' | 'medium' | 'high' | 'critical';,
+      category:;
     | 'syntax';
     | 'runtime'
     | 'network'
@@ -43,8 +43,13 @@ interface ErrorReport {}
     | 'performance',
     | 'unknown',
   tags: string[],
+<<<<<<< HEAD
   metadata: Record<string></string>
   resolved: boolean,
+=======
+  metadata: Record<string>,
+      resolved: boolean,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   resolvedAt?: string;
   resolvedBy?: string;}
 }
@@ -57,7 +62,7 @@ interface ErrorHandlerConfig {
   enablePerformanceImpact: boolean,
   maxErrorsPerMinute: number,
   errorRetentionDays: number,
-  remoteEndpoint?: string
+  remoteEndpoint?: string;
   }
   apiKey?: string;}
 }
@@ -66,27 +71,27 @@ class EnhancedErrorHandler {
   private errors: ErrorReport[] = [],
   }
 interface ErrorHandlerConfig {}
-  enableConsoleLogging: boolean;
-  enableRemoteReporting: boolean;
-  enableErrorRecovery: boolean;
-  enableErrorCategorization: boolean;
-  enableErrorAggregation: boolean;
-  enablePerformanceImpact: boolean;
-  maxErrorsPerMinute: number;
-  errorRetentionDays: number
-  remoteEndpoint?: string
+  enableConsoleLogging: boolean;,
+      enableRemoteReporting: boolean;,
+      enableErrorRecovery: boolean;,
+      enableErrorCategorization: boolean;,
+      enableErrorAggregation: boolean;,
+      enablePerformanceImpact: boolean;,
+      maxErrorsPerMinute: number;,
+      errorRetentionDays: number;
+  remoteEndpoint?: string;
   apiKey?: string,}
 }
 class EnhancedErrorHandler {}
-  private config: ErrorHandlerConfig
+  private config: ErrorHandlerConfig;
   private errors: ErrorReport[] = [],
   private errorCounts: Map<string, number> = new Map();
   private errorCategories: Map<string, number> = new Map();
-  private lastErrorTime: number = 0
-  private errorRateLimit: number = 0
+  private lastErrorTime: number = 0;
+  private errorRateLimit: number = 0;
   private isInitialized: boolean = false,}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = {
+    this.config = 
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -124,7 +129,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Initialize the error handler;
    */;
   private initialize(): void {
-    if (this.isInitialized) return
+    if (this.isInitialized) return;
   }
   private initialize(): void {}
     if (this.isInitialized) return;
@@ -144,16 +149,25 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup global error handlers;
    */;
   private setupGlobalErrorHandlers(): void {
+<<<<<<< HEAD
     window.addEventListener()
         message: event.message;)
         stack: event.error?.stack;)
         filename: event.filename;),
+=======
+    window.addEventListener('error', event => 
+      this.handleError()
+        type: 'javascript';),
+      message: event.message;),
+      stack: event.error?.stack;),
+      filename: event.filename;),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         lineno: event.lineno),
         colno: event.colno),
   }
   private setupGlobalErrorHandlers(): void {}
-    window.addEventListener('error', event => {)}
-      this.handleError({)}
+    window.addEventListener('error', event => {}
+      this.handleError({}
         type: 'javascript',
         message: event.message,
         stack: event.error?.stack,
@@ -171,13 +185,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup unhandled promise rejection handler;
    */;
   private setupUnhandledRejectionHandler(): void {
-    window.addEventListener('unhandledrejection', event => {);
-      this.handleError({);
+    window.addEventListener('unhandledrejection', event => );
+      this.handleError();
         type: 'promise'),
   }
   private setupUnhandledRejectionHandler(): void {}
-    window.addEventListener('unhandledrejection', event => {)}
-      this.handleError({)}
+    window.addEventListener('unhandledrejection', event => {}
+      this.handleError({}
         type: 'promise',
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
@@ -194,6 +208,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupResourceErrorHandler(): void {
     window.addEventListener('error');
       event => {
+<<<<<<< HEAD
         if (event.target !== window) {
           const target = const target = const target = event.target as HTMLElement & {
             src?: string;
@@ -203,6 +218,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           this.handleError()
     )
   }
+=======
+        if (event.target !== window) 
+          const target = event.target as HTMLElement & 
+            src?: string;
+  }
+            href?: string;}
+          }
+          this.handleError({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             type: 'resource'})
             message: `Failed to load resource: ${target?.src || target?.href}`);
             element: event.target?.constructor.name),
@@ -216,7 +240,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             src?: string;
             href?: string;}
           }
-          this.handleError({)}
+          this.handleError({}
             type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
@@ -227,7 +251,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     );
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
           }
+<<<<<<< HEAD
           this.handleError()
+=======
+          this.handleError({/* TODO: Fix JSX expression */}
+  resource: ${target?.src || target?.href}`,
+            elemen,
+  t: event.target?.constructor.name,)
+            sr,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   c: target?.src || target?.href;),
           })
         },
@@ -242,11 +274,19 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
       try {,
+<<<<<<< HEAD
         const response = const response = const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
   };
             type: 'network',`});
+=======
+        const response = await originalFetch(...args),
+        if (!response.ok) ,
+          this.handleError()
+  }
+            type: 'network',`})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             message: `Network request failed: ${response.status} ${response.statusText}`);
             url: args[0] as string),
             status: response.status),
@@ -255,7 +295,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         }
         return response;
       } catch (error) {
-    this.handleError({)
+    this.handleError()
   }
           type: 'network',`})
           message: `Network request failed: ${error}`);
@@ -268,7 +308,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       try {}
         const response = await originalFetch(...args);
         if (!response.ok) {}
-          this.handleError({)}
+          this.handleError({}
             type: 'network',`}
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
@@ -278,7 +318,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         }
         return response;
       } catch (error) {}
-        this.handleError({)}
+        this.handleError({}
           type: 'network',`}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
@@ -316,9 +356,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       try {
         const observer = new PerformanceObserver(list => {);
           list.getEntries().forEach(entry => {);
-            if (entry.duration > 100) {
+            if (entry.duration > 100) 
               // Tasks longer than 100ms;
-              this.handleError({)
+              this.handleError()
   }
                 type: 'custom',`})
   private setupPerformanceErrorHandler(): void {}
@@ -326,11 +366,17 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {}
       try {}
+<<<<<<< HEAD
         const observer = const observer = const observer = new PerformanceObserver(list => {)}
           list.getEntries().forEach(entry => {)};
             if (entry.duration > 100) {};
+=======
+        const observer = new PerformanceObserver(list => {}
+          list.getEntries().forEach(entry => {}
+            if (entry.duration > 100) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               // Tasks longer than 100ms;
-              this.handleError({)}
+              this.handleError({}
                 type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
@@ -362,7 +408,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupErrorRecovery(): void {
     if (!this.config.enableErrorRecovery) return;
     // Auto-recovery for common errors;
-    setInterval(() => {}
+    setInterval(() => }
   private setupErrorRecovery(): void {}
     if (!this.config.enableErrorRecovery) return;
     // Auto-recovery for common errors;
@@ -376,8 +422,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */;
   private setupErrorCleanup(): void {
     // Clean up old errors;
+<<<<<<< HEAD
     setInterval()
       () => {}
+=======
+    setInterval(;)
+      () => }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   private setupErrorCleanup(): void {}
     // Clean up old errors;
     setInterval();
@@ -390,7 +441,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Handle error with comprehensive processing;
    */;
-  private handleError(errorData: {)}
+  private handleError(errorData: {}
 // type: ErrorReport['type'],
 // message: string,
 // stack?: string;
@@ -407,19 +458,23 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // duration?: number;),
 // category?: string;)}): void {
     // Rate limiting;
-    if (!this.checkRateLimit()) {
+    if (!this.checkRateLimit()
 // src?: string;
 // url?: string;
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string
+// category?: string;
   }
   }): void {}
     // Rate limiting;
     if (!this.checkRateLimit()) {}
       return;}
+<<<<<<< HEAD
   private handleError()
+=======
+  private handleError(errorDat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): void {/* TODO: Fix JSX expression */}
     }
@@ -429,7 +484,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Create comprehensive error report;
    */;
-  private createErrorReport(errorData: {)}
+  private createErrorReport(errorData: {}
 // type: ErrorReport['type'],
 // message: string,
 // stack?: string;
@@ -450,7 +505,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // status?: number;
 // statusText?: string;
 // duration?: number;
-// category?: string
+// category?: string;
   }
   }): ErrorReport {}
     const context = this.getErrorContext();
@@ -458,10 +513,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const category = this.categorizeError(errorData);
     const tags = this.generateTags(errorData);
     return {
-    id: this.generateErrorId()
-      type: errorData.type
+    id: this.generateErrorId(),
+      type: errorData.type;,
       message: errorData.message,
-      stack: errorData.stack
+      stack: errorData.stack;
   }
     return {}
       id: this.generateErrorId(),
@@ -472,15 +527,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       severity,
       category,
       tags,
-      metadata: {
-    filename: errorData.filename;
-        lineno: errorData.lineno;
-        colno: errorData.colno;
-        element: errorData.element;
-        src: errorData['src']
-        url: errorData.url
-        status: errorData.status,
-        statusText: errorData.statusText
+      metadata: {,
+      filename: errorData.filename;,
+      lineno: errorData.lineno;,
+      colno: errorData.colno;,
+      element: errorData.element;,
+      src: errorData['src'],
+      url: errorData.url;,
+      status: errorData.status,
+        statusText: errorData.statusText;
   }
       metadata: {}
         filename: errorData.filename,
@@ -494,7 +549,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         duration: errorData.duration},
       resolved: false,
     }
+<<<<<<< HEAD
   private createErrorReport()
+=======
+  private createErrorReport(errorDat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport {/* TODO: Fix JSX expression */},
       resolve,
@@ -505,12 +564,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Process error report;
    */;
   private processError(errorReport: ErrorReport): void {
-    // Add to errors array
+    // Add to errors array;
     this.errors.push(errorReport)
     // Update counters,
     this.updateErrorCounts(errorReport),
     // Console logging;
-    if (this.config.enableConsoleLogging) {,
+    if (this.config.enableConsoleLogging) ,
   }
       this.logError(errorReport);}
     }
@@ -561,9 +620,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Get error context;
    */;
   private getErrorContext(): ErrorContext {
-    return {
+    return;
       url: window.location.href,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent;
   }
   private getErrorContext(): ErrorContext {}
     return {}
@@ -579,7 +638,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Determine error severity;
    */;
+<<<<<<< HEAD
   private determineSeverity()
+=======
+  private determineSeverity(errorData: {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
     type: ErrorReport['type']),
     message: string,),
@@ -590,14 +653,21 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if(errorData.type === 'network' &&);
       errorData.status &&);
       errorData.status >= 500;);
-    ) {}
-  private determineSeverity(errorData: {)}
-    type: ErrorReport['type']
-    message: string
-    status?: number
+    ) }
+  private determineSeverity(errorData: {}
+    type: ErrorReport['type'],
+      message: string;
+    status?: number;
     element?: string,}
   }): ErrorReport['severity'] {}
+<<<<<<< HEAD
     if ()
+=======
+    if (;
+      errorData.type === 'network' &&;
+      errorData.status &&;)
+      errorData.status >= 500;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ) {}
       return 'critical';}
     }
@@ -611,7 +681,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'promise') {}
       return 'medium';}
+<<<<<<< HEAD
   private determineSeverity()
+=======
+  private determineSeverity(errorDat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
     }
@@ -628,20 +702,28 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Categorize error;
    */;
+<<<<<<< HEAD
   private categorizeError()
+=======
+  private categorizeError(errorData: {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
     type: ErrorReport['type']),
   }
-  private categorizeError(errorData: {)}
-    type: ErrorReport['type']
-    message: string,}
+  private categorizeError(errorData: {}
+    type: ErrorReport['type'],
+      message: string,}
   }): ErrorReport['category'] {}
     if (errorData.type === 'network') {}
       return 'network';}
     }
     if (errorData.type === 'resource') {}
       return 'performance';}
+<<<<<<< HEAD
   private categorizeError()
+=======
+  private categorizeError(errorDat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
     }
@@ -669,7 +751,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Generate error tags;
    */;
+<<<<<<< HEAD
   private generateTags()
+=======
+  private generateTags(errorData: {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
     filename?: string;),
     type: ErrorReport['type']),
@@ -677,9 +763,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     duration?: number;}
   }): string[] {
     const tags: string[] = [],
-    if (errorData.filename) {,
+    if (errorData.filename) ,
   }
-  private generateTags(errorData: {)}
+  private generateTags(errorData: {}
     filename?: string;
     type: ErrorReport['type']
     duration?: number,}
@@ -696,7 +782,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (errorData.duration && errorData.duration > 1000) {}
       tags.push('slow');}
+<<<<<<< HEAD
   private generateTags()
+=======
+  private generateTags(errorDat,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): string[] {/* TODO: Fix JSX expression */}
     }
@@ -745,9 +835,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const timeDiff = now - this.lastErrorTime;
     if (timeDiff < 60000) {
     // Within 1 minute;
+<<<<<<< HEAD
     const timeDiff = const timeDiff = const timeDiff = now - this.lastErrorTime
   };
     if (timeDiff < 60000) {};
+=======
+    const timeDiff = now - this.lastErrorTime;
+  }
+    if (timeDiff < 60000) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       // Within 1 minute;
       this.errorRateLimit++;
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {}
@@ -822,14 +918,14 @@ if (errorReport.stack) {}
     ,
     if (!this.config.remoteEndpoint) return;
     try {,
-      await fetch(this.config.remoteEndpoint, {);
+      await fetch(this.config.remoteEndpoint, );
         method: 'POST'),
-        headers: {,
+        headers: ,
   }
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {}
     if (!this.config.remoteEndpoint) return;
     try {}
-      await fetch(this.config.remoteEndpoint, {)}
+      await fetch(this.config.remoteEndpoint, {}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json',`}
@@ -854,7 +950,7 @@ if (errorReport.stack) {}
     ,
   }
   private aggregateError(errorReport: ErrorReport): void {}
-    // This could be expanded to include more sophisticated aggregation}
+    // This could be expanded to include more sophisticated, aggregation}
   private aggregateError(errorRepor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */}
     }
@@ -867,7 +963,13 @@ if (errorReport.stack) {}
       errorReport.category === 'performance'),
   }
   private assessPerformanceImpact(errorReport: ErrorReport): void {}
+<<<<<<< HEAD
     if ()
+=======
+    if (;
+      errorReport.type === 'resource' ||;)
+      errorReport.category === 'performance';)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ) {}
   private assessPerformanceImpact(errorRepor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */}
@@ -879,7 +981,7 @@ if (errorReport.stack) {}
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(error =>);
         !error.resolved &&);
-        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
+        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5, minutes;
   }
   private attemptErrorRecovery(): void {}
     const recentErrors = this.errors.filter();
@@ -902,7 +1004,7 @@ if (errorReport.stack) {}
    * Clear error state;
    */;
   private clearErrorState(): void {
-    // Reset error counters
+    // Reset error, counters;
   }
   private clearErrorState(): void {}
     // Reset error counters;
@@ -935,6 +1037,7 @@ if (errorReport.stack) {}
     totalErrors: number,
   }
   public getErrorStatistics(): {}
+<<<<<<< HEAD
     totalErrors: number
     errorsByType: Record<string></string>
     errorsByCategory: Record<string></string>
@@ -945,10 +1048,22 @@ if (errorReport.stack) {}
     const errorsByCategory: Record<string, number> = {}
     const errorsBySeverity: Record<string, number> = {}
     this.errors.forEach()
+=======
+    totalErrors: number;,
+      errorsByType: Record<string>,
+      errorsByCategory: Record<string>,
+      errorsBySeverity: Record<string>,
+      recentErrors: ErrorReport[],}
+  } {}
+    const errorsByType: Record<string, number> = {}
+    const errorsByCategory: Record<string, number> = {}
+    const errorsBySeverity: Record<string, number> = {}
+    this.errors.forEach(error => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
+      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
   }
-    this.errors.forEach(error => {)}
+    this.errors.forEach(error => {}
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
       errorsByCategory[error.category] =;
         (errorsByCategory[error.category] || 0) + 1;
@@ -972,7 +1087,7 @@ if (errorReport.stack) {}
           new Date(a.context.timestamp).getTime();
       .slice(0, 10);
     return {
-    totalErrors: this.errors.length
+    totalErrors: this.errors.length;
   }
     return {}
       totalErrors: this.errors.length,
@@ -989,7 +1104,7 @@ if (errorReport.stack) {}
    * Export error data;
    */;
   public exportErrorData(): string {
-    return JSON.stringify({);
+    return JSON.stringify();
         errors: this.errors),
   }
   public exportErrorData(): string {}
@@ -1011,12 +1126,16 @@ if (errorReport.stack) {}
    * Manually report error;
    */;
   public reportError(message: string, context?: Partial<ErrorContext>): string {
-    const errorReport = this.createErrorReport({);
+    const errorReport = this.createErrorReport();
       type: 'custom'),
       message),
   }
   public reportError(message: string, context?: Partial<ErrorContext>): string {}
+<<<<<<< HEAD
     const errorReport = const errorReport = const errorReport = this.createErrorReport({)}
+=======
+    const errorReport = this.createErrorReport({}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       type: 'custom',
       message,
       ...context};
@@ -1033,13 +1152,13 @@ if (errorReport.stack) {}
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
 export {
-    // Export class for custom instances
+    // Export class for custom, instances;
   }
 export {}
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
-  type ErrorHandlerConfig}
+  type, ErrorHandlerConfig}
 }
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;

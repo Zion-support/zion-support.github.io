@@ -25,7 +25,13 @@ constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
       ...defaultHeaders;
     }
   }
+<<<<<<< HEAD
 private async makeRequest<T>()
+=======
+private async makeRequest<T>(;
+    endpoint: string,)
+    config: RequestConfig = {})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ): Promise<APIResponse<T>> {}
     const {}
       method = 'GET',
@@ -38,7 +44,7 @@ const url = `${this.baseURL}${endpoint}`;
     const cacheKey = apiCache.generateKey(url, body);
 // Check cache for GET requests;
     if (method === 'GET' && cache) {
-    // Check cache for GET requests
+    // Check cache for GET, requests;
   }
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
@@ -47,18 +53,19 @@ const url = `${this.baseURL}${endpoint}`;
       }
     }
 try {
-    const response = await fetch(url, {);
+    const response = await fetch(url, );
         method);
-        headers: {,
+        headers: ,
           ...this.defaultHeaders),
-          ...headers
+          ...headers;
   }
         })
         body: body ? JSON.stringify(body) : undefined;
       const data = const data = const data = await response.json()
 const apiResponse: APIResponse<T> = {
-    data
+    data;
         status: response.status,
+<<<<<<< HEAD
         statusText: response.statusText
   };
         headers: Object.fromEntries(response.headers.entries())};
@@ -66,13 +73,27 @@ const apiResponse: APIResponse<T> = {
       if (method === 'GET' && cache && response.ok) {}
     try {}
       const response = const response = const response = await fetch(url, {)}
+=======
+        statusText: response.statusText;
+  }
+        headers: Object.fromEntries(response.headers.entries())}
+// Cache successful GET requests;
+      if (method === 'GET' && cache && response.ok) {}
+    try {}
+      const response = await fetch(url, {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         method,
         headers: {};
           ...this.defaultHeaders,;
           ...headers;
         },
+<<<<<<< HEAD
         body: body ? JSON.stringify(body) : undefined
       const data = const data = const data = await response.json(),
+=======
+        body: body ? JSON.stringify(body) : undefined;
+      const data = await response.json(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 const apiResponse: APIResponse<T> = {}
         data,
         status: response.status,
@@ -110,7 +131,13 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * GET request;
    */;
+<<<<<<< HEAD
   async get<T = unknown>()
+=======
+  async get<T = unknown>(ur,
+  l: string,)
+    confi,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     })
@@ -118,7 +145,14 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * POST request;
    */;
+<<<<<<< HEAD
   async post<T = unknown>()
+=======
+  async post<T = unknown>(ur,
+  l: string,
+    data?: unknown,)
+    confi,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     })
@@ -126,7 +160,14 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * PUT request;
    */;
+<<<<<<< HEAD
   async put<T = unknown>()
+=======
+  async put<T = unknown>(ur,
+  l: string,
+    data?: unknown,)
+    confi,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     })
@@ -134,7 +175,13 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * DELETE request;
    */;
+<<<<<<< HEAD
   async delete<T = unknown>()
+=======
+  async delete<T = unknown>(ur,
+  l: string,)
+    confi,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     })
@@ -142,7 +189,14 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * PATCH request;
    */;
+<<<<<<< HEAD
   async patch<T = unknown>()
+=======
+  async patch<T = unknown>(ur,
+  l: string,
+    data?: unknown,)
+    confi,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     })
@@ -173,8 +227,13 @@ class ApiClient {/* TODO: Fix JSX expression */}
     const timeoutId = const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */};
     }, timeout);
     let,
+<<<<<<< HEAD
   lastError: Error | null = null
     let attempt = let attempt = let attempt = 0,
+=======
+  lastError: Error | null = null;
+    let attempt = 0,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     while (attempt < retries) {/* TODO: Fix JSX expression */},
           signa,
   l: controller.signal,;
@@ -220,7 +279,11 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**;
    * Cancel a pending request;
    */;
+<<<<<<< HEAD
   cancel()
+=======
+  cancel(ur,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   l: string, metho);
   d: string = 'GET'): void {/* TODO: Fix JSX expression */}`;
     const cacheKey = `${method}:${url}`;
@@ -290,7 +353,7 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
 // Set base URL;
   setBaseURL(baseURL: string): void {
     ,
-    this.baseURL = baseURL
+    this.baseURL = baseURL;
   }
   }
 // Set default headers;
@@ -299,7 +362,7 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
   }
 // Clear cache;
   clearCache(): void {
-    // Set base URL
+    // Set base, URL;
   }
   setBaseURL(baseURL: string): void {}
     this.baseURL = baseURL;
@@ -317,9 +380,15 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
 export const apiClient = new APIClient();
 export default APIClient;
 // Create default instance;
+<<<<<<< HEAD
 const apiClient = const apiClient = const apiClient = new ApiClient()
   });
 });
+=======
+const apiClient = new ApiClient({/* TODO: Fix JSX expression */})
+  })
+})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 // Export both the class and default instance;
 export { apiClient }
 export default ApiClient;

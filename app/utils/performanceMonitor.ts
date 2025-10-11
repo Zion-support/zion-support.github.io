@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   }
 }
 class PerformanceMonitor {
-    private metrics: PerformanceMetrics = {,
+    private metrics: PerformanceMetrics = ,
   }
 interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint;
@@ -53,8 +53,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       if ('PerformanceObserver' in window) {
         // First Contentful Paint;
         this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {}
+          entries.forEach((entry) => 
+            if (entry.name === 'first-contentful-paint') }
   private initializeObservers(): void {}
     try {}
       // Observe paint metrics;
@@ -66,43 +66,63 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
               this.recordMetric('FCP', entry.startTime);
             }
 // Largest Contentful Paint;
+<<<<<<< HEAD
         this.observeEntry()
+=======
+        this.observeEntry('largest-contentful-paint', entries => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
           const lastEntry = entries[entries.length - 1]);
-          if (lastEntry) {
+          if (lastEntry) 
             this.recordMetric('LCP');
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             )
   }
           }
 // First Input Delay;
+<<<<<<< HEAD
         this.observeEntry()
+=======
+        this.observeEntry('first-input', entries => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
           const firstInput = entries[0]);
-          if (firstInput && (firstInput as any).processingStart !== undefined) {
-        // Largest Contentful Paint
+          if (firstInput && (firstInput as any).processingStart !== undefined) 
+        // Largest Contentful, Paint;
   }
+<<<<<<< HEAD
         this.observeEntry('largest-contentful-paint', entries => {)}
           const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
           if (lastEntry) {};
+=======
+        this.observeEntry('largest-contentful-paint', entries => {}
+          const lastEntry = entries[entries.length - 1]
+          if (lastEntry) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             this.recordMetric();
               'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
 // First Input Delay;
+<<<<<<< HEAD
         this.observeEntry('first-input', entries => {)}
           const firstInput = const firstInput = const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {};
+=======
+        this.observeEntry('first-input', entries => {}
+          const firstInput = entries[0]
+          if (firstInput && (firstInput as any).processingStart !== undefined) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
 // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
     let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,
-            if (!(entry as any).hadRecentInput) {,
-        // Cumulative Layout Shift
+          entries.forEach((entry: PerformanceEntry) => ,
+            if (!(entry as any).hadRecentInput) ,
+        // Cumulative Layout, Shift;
   }
         this.observeEntry('layout-shift', (entries) => {}
           let clsValue = 0;
@@ -117,11 +137,19 @@ if (clsValue > 0) {}
           })
         })
         // Largest Contentful Paint;
+<<<<<<< HEAD
         this.observeEntry()
           })
         })
         // First Input Delay;
         this.observeEntry()
+=======
+        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */})
+          })
+        })
+        // First Input Delay;
+        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           })
         })
         // Cumulative Layout Shift;
@@ -137,9 +165,15 @@ if (clsValue > 0) {}
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,
+<<<<<<< HEAD
       const observer = const observer = const observer = new PerformanceObserver((list) => {,
         for (const entry of list.getEntries()) {,;
           if (entry.name === name) {,;
+=======
+      const observer = new PerformanceObserver((list) => {,
+        for (const entry of list.getEntries()) ,
+          if (entry.name === name) ,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             (this.metrics as any)[metricKey] = entry.startTime;,
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
@@ -190,7 +224,11 @@ observer.observe({ entryTypes: ['first-input'] })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
+<<<<<<< HEAD
   private observePaint()
+=======
+  private observePaint(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
           }
@@ -231,7 +269,7 @@ observer.observe({ entryTypes: ['layout-shift'] })
   }
   private setupCustomMetrics(): void {
     // Time to First Byte;
-    if (performance.timing) {
+    if (performance.timing) 
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb)
   }
@@ -286,7 +324,7 @@ observer.observe({ entryTypes: ['resource'] })
     }
     // Track large resources;
     if (size > 100000) {
-    // 100KB
+    // 100KB;
   }
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
@@ -304,9 +342,9 @@ observer.observe({ entryTypes: ['resource'] })
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'performance_metric', {);
+    (window as any).gtag('event', 'performance_metric', );
         metric_name: name),
-    // Track slow resources
+    // Track slow, resources;
   }
     if (duration > 1000) {}
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
@@ -326,7 +364,7 @@ observer.observe({ entryTypes: ['resource'] })
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'performance_metric', {)}
+      (window as any).gtag('event', 'performance_metric', {}
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance',
@@ -402,11 +440,19 @@ observer.observe({ entryTypes: ['resource'] })
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
+<<<<<<< HEAD
   addCustomMetric()
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
   }
   private logMetric()
+=======
+  addCustomMetric(nam,)
+  e: string, valu);
+  e: number): void {/* TODO: Fix JSX expression */}
+  }
+  private logMetric(nam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}`;
       }ms`);

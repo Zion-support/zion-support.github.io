@@ -25,7 +25,11 @@ export function deepClone<T>(ob);
 /**;
  * Deep merge two objects;
  */;
+<<<<<<< HEAD
 export function deepMerge<T extends Record<string, unknown>>()
+=======
+export function deepMerge<T extends Record<string, unknown>>(targe,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: T, sourc);
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   const output = const output = const output = { ...target }
@@ -39,7 +43,13 @@ export function deepMerge<T extends Record<string, unknown>>()
 /**;
  * Flatten a nested object;
  */;
+<<<<<<< HEAD
 export function flattenObject()
+=======
+export function flattenObject(ob,
+  j: Record<string, unknown>,)
+  prefix = '',)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown> = {}
@@ -55,7 +65,12 @@ export function flattenObject()
 /**;
  * Unflatten a flattened object;
  */;
+<<<<<<< HEAD
 export function unflattenObject()
+=======
+export function unflattenObject(ob,)
+  j: Record<string, unknown>,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   result: Record<string, unknown> = {}
@@ -72,6 +87,7 @@ export function unflattenObject()
 /**;
  * Pick specific keys from an object;
  */;
+<<<<<<< HEAD
 export function pick<T extends Record<string, unknown>, K extends keyof T>()
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
@@ -79,12 +95,29 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   keys.forEach()
     });
   });
+=======
+export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,
+  j: T,)
+  key,)
+  s: K[]),
+): Pick<T, K> {/* TODO: Fix JSX expression */}
+  const result = {} as Pick<T>
+  keys.forEach(key => {/* TODO: Fix JSX expression */})
+    })
+  })
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   return result;
 }
 /**;
  * Omit specific keys from an object;
  */;
+<<<<<<< HEAD
 export function omit<T extends Record<string, unknown>, K extends keyof T>()
+=======
+export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
+  j: T,)
+  key,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
   const result = const result = const result = { ...obj }
@@ -95,9 +128,17 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>()
 /**;
  * Group array items by a key;
  */;
+<<<<<<< HEAD
 export function groupBy<T>()
   y: keyof T | ((ite)
   m: T) => string | number),
+=======
+export function groupBy<T>(arra,
+  y: T[],)
+  ke,)
+  y: keyof T | ((ite),
+      m: T) => string | number),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Record<string, T[]> {/* TODO: Fix JSX expression */},
     {} as Record<string, T[]></string>
   );
@@ -109,7 +150,11 @@ export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
   }
   const seen = new Set();
+<<<<<<< HEAD
   return array.filter()
+=======
+  return array.filter(item => {/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     })
     seen.add(value);
     return true;
@@ -118,7 +163,13 @@ export function unique<T>(arra);
 /**;
  * Sort array by multiple keys;
  */;
+<<<<<<< HEAD
 export function sortBy<T>()
+=======
+export function sortBy<T>(arra,
+  y: T[],)
+  key,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: Array<keyof T | ((ite),
   m: T) => unknown)>,
   order,
@@ -143,7 +194,11 @@ export function sortBy<T>()
 /**;
  * Chunk array into smaller arrays;
  */;
+<<<<<<< HEAD
 export function chunk<T>()
+=======
+export function chunk<T>(arra,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: T[], siz);
   e: number): T[], [] {/* TODO: Fix JSX expression */}
   }
@@ -180,7 +235,14 @@ export function formatCurrency(amoun);
 /**;
  * Format date;
  */;
+<<<<<<< HEAD
 export function formatDate()
+=======
+export function formatDate(dat,
+  e: Date | string | number,
+  option,)
+  s: Intl.DateTimeFormatOptions = {},)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   locale = 'en-US');
 ): string {/* TODO: Fix JSX expression */}
 }
@@ -199,7 +261,11 @@ export function formatRelativeTime(dat);
 /**;
  * Truncate string;
  */;
+<<<<<<< HEAD
 export function truncate()
+=======
+export function truncate(st,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
 }

@@ -14,7 +14,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
  */;
 export function validateEmail(email: string): ValidationResult {
     ,
-  if (!email || email.length > 254) {,
+  if (!email || email.length > 254) ,
   }
     return { isValid: false, error: 'Email is too long' }
 export function validateEmail(emai);
@@ -35,14 +35,19 @@ return {
  */;
 export function validateURL(url: string): ValidationResult {
     ,
-  if (!url || url.trim() === '') {,
+  if (!url || url.trim() === '') ,
   }
     return { isValid: false, error: 'URL is required' }
   }
 try {
     const urlObj = new URL(url);
+<<<<<<< HEAD
     const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
     return {,;
+=======
+    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
+    return ,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)
@@ -59,27 +64,37 @@ try {/* TODO: Fix JSX expression */}
 /**;
  * String length validation;
  */;
-export function validateLength(value: string;);
-  min: number)
-  max: number)
-  fieldName: string = 'Field',
+export function validateLength(value: string;);,
+      min: number),
+      max: number),
+      fieldName: string = 'Field',
 ): ValidationResult {
-    if (value.length < min) {,
-    return {,
+    if (value.length < min) ,
+    return ,
       isValid: false,
   }
       error: `${fieldName} must be at least ${min} characters long`;
     }
   }
 if (value.<<<length>max</length></length>) {
-    return {
+    return;
       isValid: false,
   }
       error: `${fieldName} must be no more than ${max} characters long`;
     }
   }
 return { isValid: true }
+<<<<<<< HEAD
 export function validateLength()
+=======
+export function validateLength(valu,
+  e: string,
+  mi,
+  n: number,
+  ma,
+  x: number,)
+  fieldNam,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long`;
@@ -97,7 +112,7 @@ return {/* TODO: Fix JSX expression */}
  */;
 export function validatePassword(password: string): ValidationResult {
     ,
-  if (!password || password.length < 8) {,
+  if (!password || password.length < 8) ,
   }
     return { isValid: false, error: 'Password must be at least 8 characters long' }
   }
@@ -114,7 +129,7 @@ const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(password);
-if (!hasUpperCase) {}
+if (!hasUpperCase) }
     return { isValid: false, error: 'Password must contain at least one uppercase letter' }
   }
 if (!hasLowerCase) {}
@@ -147,18 +162,22 @@ return {/* TODO: Fix JSX expression */}
  */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
     ,
-  if (value === null || value === undefined) {,
+  if (value === null || value === undefined) ,
   }
-    return { isValid: false, error: `${fieldName} is required` }
+    return { isValid: false, error: `$fieldName} is required` }
   }
 if (typeof value === 'string' && value.trim() === '') {}
-    return { isValid: false, error: `${fieldName} is required` }
+    return { isValid: false, error: `$fieldName} is required` }
   }
 if (Array.isArray(value) && value.length === 0) {}
-    return { isValid: false, error: `${fieldName} is required` }
+    return { isValid: false, error: `$fieldName} is required` }
   }
 return { isValid: true }
+<<<<<<< HEAD
 export function validateRequired()
+=======
+export function validateRequired(valu,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
@@ -177,7 +196,7 @@ return {/* TODO: Fix JSX expression */}
  */;
 export function validateDate(dateString: string): ValidationResult {
     ,
-  if (!dateString || dateString.trim() === '') {,
+  if (!dateString || dateString.trim() === '') ,
   }
     return { isValid: false, error: 'Date is required' }
   }
@@ -216,7 +235,7 @@ return {/* TODO: Fix JSX expression */}
  */;
 export function validateCreditCard(cardNumber: string): ValidationResult {
     ,
-  if (!cardNumber || cardNumber.trim() === '') {,
+  if (!cardNumber || cardNumber.trim() === '') ,
   }
     return { isValid: false, error: 'Credit card number is required' }
 export function validateCreditCard(cardNumbe);
@@ -237,10 +256,10 @@ let sum = 0;
   let isEven = false;
 for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned[i], 10);
-    if (isEven) {
+    if (isEven) 
       digit *= 2;
-      if (digit > 9) {
-        digit -= 9
+      if (digit > 9) 
+        digit -= 9;
   }
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
       }
@@ -261,7 +280,7 @@ const isValid = sum % 10 === 0;
  */;
 export function validateJSON(jsonString: string): ValidationResult {
     ,
-  if (!jsonString || jsonString.trim() === '') {,
+  if (!jsonString || jsonString.trim() === '') ,
   }
     return { isValid: false, error: 'JSON string is required' }
   }
@@ -301,14 +320,24 @@ export function sanitizeHTML(htm)
 /**;
  * Composite validation;
  */;
-export function validateComposite(value: unknown)
-  validators: Array<(val: unknown) => ValidationResult>
+export function validateComposite(value: unknown),
+      validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
+<<<<<<< HEAD
     for (const validator of validators) {
     const result = const result = const result = validator(value),;
     if (!result.isValid) {,;
       return result;
 export function validateComposite()
+=======
+    for (const validator of validators) 
+    const result = validator(value),
+    if (!result.isValid) ,
+      return result;
+export function validateComposite(valu,
+  e: unknown,)
+  validator,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: Array<(va),
   l: unknown) => ValidationResult>
   }
@@ -321,19 +350,29 @@ export function validateComposite()
 /**;
  * Async validation;
  */;
+<<<<<<< HEAD
 export async function validateAsync()
   validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
+=======
+export async function validateAsync(;)
+  validator: (val: unknown) => Promise<ValidationResult>,
+      value: unknown,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Promise<ValidationResult> {
     ,
-  try {,
+  try ,
     return await validator(value)
   }
   } catch (error) {
-    return {
+    return;
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
+<<<<<<< HEAD
 export async function validateAsync()
+=======
+export async function validateAsync(validato,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,
@@ -351,7 +390,7 @@ export {
   isValidUrl,
   isRequired,
   isValidPassword,
-  sanitizeInput
+  sanitizeInput;
   }
 } from './validators';
 export {/* TODO: Fix JSX expression */}

@@ -1,21 +1,24 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Map, ArrowRight, Home, Users, Settings, Brain, Cloud, Code, FileText, Mail, Phone, Calendar, Shield, BarChart, Target, Globe, Database, Zap, Eye, Mic, Heart, DollarSign, Box, Cpu, Link, Server, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Package, Monitor, Search, Video, Headphones, Scale, Cookie } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Home, Users, Brain, Cloud, Shield, FileText, ArrowRight } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const lastUpdated = const lastUpdated = new Date().toISOString().split('T')[0];
   ;
   const pageCategories = const pageCategories = const pageCategories = [
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   const sitemapSections = [
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     {
       title: 'Main Pages',
       icon: Home,
+<<<<<<< HEAD
       pages: [
 <<<<<<< HEAD
         { name: 'Home', url: '/', description: 'Main landing page' },
@@ -33,131 +36,57 @@ const SitemapPage: React.FC = () => {
         { name: 'Blog', url: '/blog', description: 'Latest news, insights, and articles' },
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and client projects' },
         { name: 'Careers', url: '/careers', description: 'Job opportunities and company culture' }
+=======
+      links: [
+        { name: 'Home', url: '/' },
+        { name: 'About Us', url: '/about' },
+        { name: 'Services', url: '/services' },
+        { name: 'Contact', url: '/contact' },
+        { name: 'Blog', url: '/blog' },
+        { name: 'Careers', url: '/careers' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     },
     {
       title: 'AI Services',
       icon: Brain,
-      pages: [
-<<<<<<< HEAD
-        { name: 'AI Services Overview', url: '/ai-services', description: 'Complete AI services catalog' },
-        { name: 'AI Analytics', url: '/ai-analytics', description: 'AI-powered data analytics' },
-        { name: 'AI Automation', url: '/ai-automation', description: 'Process automation solutions' },
-        { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Build intelligent chatbots' },
-        { name: 'AI CRM', url: '/ai-crm', description: 'AI-powered customer relationship management' },
-        { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-driven security solutions' },
-        { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analytics' },
-        { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' },
-        { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }
-  ]
-=======
-        { name: 'AI Services Overview', url: '/ai-services', description: 'Comprehensive AI solutions and capabilities' },
-        { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time business intelligence platform' },
-        { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation platform' },
-        { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content creation tools' },
-        { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis and insights' },
-        { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image and video analysis solutions' },
-        { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition and synthesis' },
-        { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI and diagnostic tools' },
-        { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI solutions' },
-        { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI tools' }
+      links: [
+        { name: 'AI Solutions', url: '/ai-services' },
+        { name: 'AI Chatbots', url: '/ai-chatbot-builder' },
+        { name: 'AI Analytics', url: '/ai-analytics' },
+        { name: 'Computer Vision', url: '/ai-computer-vision' },
+        { name: 'Voice AI', url: '/ai-voice-solutions' },
+        { name: 'Document AI', url: '/ai-document-processing' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     },
     {
       title: 'IT Services',
       icon: Cloud,
-      pages: [
-        { name: 'IT Services Overview', url: '/it-services', description: 'Complete IT infrastructure solutions' },
-        { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, and GCP solutions' },
-        { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
-        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
-<<<<<<< HEAD
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }
-  ]
-    },
-    {
-      title: 'Micro SaaS',
-      icon: Zap,
-      pages: [
-        { name: 'Micro SaaS Overview', url: '/micro-saas', description: 'Complete Micro SaaS catalog' },
-        { name: 'AI Content Writer', url: '/ai-content-writer', description: 'Automated content creation' },
-        { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
-        { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Financial tracking solution' },
-        { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
-        { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }
-  ]
-    },
-    {
-      title: 'Emerging Technologies',
-      icon: Code,
-      pages: [
-        { name: '5G Implementation', url: '/5g-implementation', description: 'Next-generation connectivity' },
-        { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D content creation' },
-        { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Immersive work environments' },
-        { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating systems' },
-        { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Decentralized AI solutions' },
-        { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }
-  ]
-=======
-        { name: 'API Development', url: '/api-development', description: 'RESTful and GraphQL API services' },
-        { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automated deployment and operations' },
-        { name: 'Database Management', url: '/database-management', description: 'Database design and optimization' },
-        { name: 'IT Support', url: '/it-support', description: '24/7 technical support services' },
-        { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence solutions' },
-        { name: 'Custom Software', url: '/custom-software', description: 'Tailored software development' },
-        { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise network solutions' }
+      links: [
+        { name: 'Cloud Services', url: '/cloud-services' },
+        { name: 'Cybersecurity', url: '/cybersecurity' },
+        { name: 'Custom Development', url: '/custom-development' },
+        { name: 'DevOps', url: '/devops' },
+        { name: 'Data Analytics', url: '/data-analytics' },
+        { name: 'IT Consulting', url: '/it-consulting' }
       ]
-    },
-    {
-      title: 'Micro SaaS Tools',
-      icon: Code,
-      pages: [
-        { name: 'Micro SaaS Overview', url: '/micro-saas', description: 'Ready-to-use business tools' },
-        { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
-        { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support platform' },
-        { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-        { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup and recovery' },
-        { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-        { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
-        { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data integration platform' },
-        { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation platform' },
-        { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management AI' },
-        { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing AI' },
-        { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' }
-      ]
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     },
     {
       title: 'Resources',
       icon: FileText,
-      pages: [
-        { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
-        { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
-<<<<<<< HEAD
-        { name: 'Demo', url: '/demo', description: 'Request a demo' },
-        { name: 'Consultation', url: '/consultation', description: 'Free consultation' }
-  ]
-    },
-    {
-      title: 'Documentation',
-      icon: Code,
-      pages: [
-        { name: 'Documentation', url: '/docs', description: 'Complete documentation' },
-        { name: 'API Reference', url: '/api', description: 'API documentation' },
-        { name: 'Tutorials', url: '/tutorials', description: 'Learning resources' },
-        { name: 'Community', url: '/community', description: 'Developer community' }
-  ]
+      links: [
+        { name: 'Tutorials', url: '/tutorials' },
+        { name: 'Case Studies', url: '/case-studies' },
+        { name: 'Pricing', url: '/pricing' },
+        { name: 'Demo', url: '/demo' },
+        { name: 'Support', url: '/support' },
+        { name: 'Consultation', url: '/consultation' }
+      ]
     },
     {
       title: 'Legal',
       icon: Shield,
+<<<<<<< HEAD
       pages: [
         { name: 'Privacy Policy', url: '/privacy', description: 'Privacy policy and data protection' },
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
@@ -183,10 +112,18 @@ const SitemapPage: React.FC = () => {
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions of use' },
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage and management' },
         { name: 'Compliance', url: '/compliance', description: 'Regulatory compliance information' }
+=======
+      links: [
+        { name: 'Privacy Policy', url: '/privacy' },
+        { name: 'Terms of Service', url: '/terms' },
+        { name: 'Cookie Policy', url: '/cookies' },
+        { name: 'GDPR', url: '/gdpr' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       ]
     }
   ];
 
+<<<<<<< HEAD
   const quickLinks = const quickLinks = const quickLinks = [
     { name: 'Get Started', url: '/contact', icon: ArrowRight },
     { name: 'Free Consultation', url: '/consultation', icon: Calendar },
@@ -206,12 +143,68 @@ const SitemapPage: React.FC = () => {
             <div className="space-y-12" /></div>
               {sitemapSections.map((section, sectionIndex) => ()
                     {section.pages.map((page, pageIndex) => ()
-                    ))}
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Sitemap | Zion Tech Group - Website Navigation</title>
+        <meta name="description" content="Navigate our website easily with our comprehensive sitemap. Find all pages and services organized by category." />
+        <meta name="keywords" content="sitemap, website navigation, pages, services, AI solutions, IT services" />
+      </Helmet>
+
+      <Navigation />
+      
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Sitemap
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Find all our pages and services organized by category for easy navigation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sitemap Sections */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sitemapSections.map((section, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                  <div className="flex items-center mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      <section.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h2 className="text-xl font-semibold text-gray-900">
+                      {section.title}
+                    </h2>
                   </div>
+                  
+                  <ul className="space-y-3">
+                    {section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a
+                          href={link.url}
+                          className="flex items-center text-gray-600 hover:text-cyan-600 transition-colors duration-300"
+                        >
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          {link.name}
+                        </a>
+                      </li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
             {/* Search Box */}
             <div className="mt-16 text-center" /></div>
               <div className="bg-slate-800/50 rounded-lg p-8" /></div>
@@ -255,13 +248,55 @@ const SitemapPage: React.FC = () => {
                     Call: (302) 464-0950
                   </a>
                 </div>
+=======
+        {/* Search Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Use our search function to find specific pages or content on our website.
+            </p>
+            
+            <div className="max-w-md mx-auto">
+              <div className="flex">
+                <input
+                  type="text"
+                  placeholder="Search our website..."
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-r-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Search
+                </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Need Help Navigating?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Our team is here to help you find what you need. Contact us for assistance.
+            </p>
+            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+              Contact Us
+            </button>
+          </div>
+        </section>
       </main>
+<<<<<<< HEAD
       
       <Footer / /></Footer>
+=======
+
+      <Footer />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     </>
   );
 };

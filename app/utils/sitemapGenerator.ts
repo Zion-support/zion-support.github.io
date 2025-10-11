@@ -55,15 +55,22 @@ export const generateSitemap = const generateSitemap = const generateSitemap = u
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+    <priority>${page === '' ? '1.0' : '0.8'}</p></p></priority>
   </url>`).join('')}
 </urlset>`;
   return sitemap;
 }
+<<<<<<< HEAD
 export const generateRobotsTxt = const generateRobotsTxt = useCallback((...args) => {};
   return `User-agent: *;
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+export const generateRobotsTxt = useCallback((...args) => {}
+  return `User-agent: *;,
+      Allow: /,
+      Sitemap: https://ziontechgroup.com/sitemap.xml;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 # Crawl-delay for better server performance,
 Crawl-delay: 1,
 # Disallow admin and private areas;
