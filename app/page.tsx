@@ -49,13 +49,25 @@ export default function HomePage() {
       <Navigation />
       
       <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
+              <div className="inline-block mb-6">
+                <div className="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 backdrop-blur-lg">
+                  <span className="text-purple-300 font-semibold">🚀 Next-Gen Technology Solutions</span>
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">AI & IT Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -77,22 +89,24 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 animated-bg">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-fade-in-up">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 We deliver innovative technology solutions that drive growth and efficiency for businesses worldwide.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="futuristic-card p-8 hover-lift group animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-gray-900 ml-3">{feature.title}</h3>
+                    <div className="p-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl group-hover:animate-glow">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white ml-3 group-hover:text-gradient-purple-pink transition-all duration-300">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
                 </div>
               ))}
             </div>

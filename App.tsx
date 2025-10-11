@@ -13,6 +13,19 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
 
+// New AI Services
+import AIChatbotEnterprisePage from './app/ai-chatbot-enterprise/page'
+import AICybersecuritySuitePage from './app/ai-cybersecurity-suite/page'
+import AICloudInfrastructurePage from './app/ai-cloud-infrastructure/page'
+import AIContentGeneratorPage from './app/ai-content-generator/page'
+import AIAnalyticsDashboardPage from './app/ai-analytics-dashboard/page'
+
+// New IT Services
+import ITInfrastructureManagementPage from './app/it-infrastructure-management/page'
+
+// Import CSS
+import './app/globals.css'
+
 function App() {
   return (
     <Router>
@@ -29,6 +42,16 @@ function App() {
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          
+          {/* New AI Services Routes */}
+          <Route path="/ai-chatbot-enterprise" element={<AIChatbotEnterprisePage />} />
+          <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
+          <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+          <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+          <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+          
+          {/* New IT Services Routes */}
+          <Route path="/it-infrastructure-management" element={<ITInfrastructureManagementPage />} />
         </Routes>
         <Footer />
       </div>
