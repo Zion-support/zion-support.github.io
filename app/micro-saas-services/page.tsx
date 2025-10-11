@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -116,6 +117,8 @@ const MicroSAASServicesPage: React.FC = () => {
       content: 'The AI content writer helps me create engaging content faster than ever. Highly recommended!',
       rating: 5
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, DollarSign, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -175,13 +178,17 @@ const MicroSaasServicesPage: React.FC = () => {
       pricing: '$15/month',
       popular: false,
       link: '/micro-saas-services/ai-expense-tracker'
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Discover our collection of AI-powered micro SaaS tools designed to boost productivity and streamline business operations. Affordable, powerful, and easy to use." />
@@ -191,6 +198,11 @@ const MicroSaasServicesPage: React.FC = () => {
         <meta name="description" content="Powerful micro SAAS solutions for modern businesses. AI-powered tools for content creation, analytics, email management, and more." />
         <meta name="keywords" content="micro saas, ai tools, business software, content creation, analytics, email management" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+        <title>Micro SAAS Services - Zion Tech Group</title>
+        <meta name="description" content="Powerful micro SAAS solutions for modern businesses. AI-powered tools for content creation, analytics, email management, and more." />
+        <meta name="keywords" content="micro saas, ai tools, business software, content creation, analytics, email management" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
       </Helmet>
 
       {/* Hero Section */}
@@ -239,9 +251,13 @@ const MicroSaasServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Powerful, AI-driven micro software solutions designed to streamline your business operations and boost productivity.
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
             </p>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -290,6 +306,8 @@ const MicroSaasServicesPage: React.FC = () => {
                     <div className="text-lg font-semibold text-white">{tool.users}</div>
                   </div>
                 </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
 
                 <Link
                   to={tool.link}
@@ -346,13 +364,17 @@ const MicroSaasServicesPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -382,6 +404,8 @@ const MicroSaasServicesPage: React.FC = () => {
               </div>
             ))}
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -408,7 +432,10 @@ const MicroSaasServicesPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-4">Easy Integration</h3>
               <p className="text-gray-300">Seamlessly integrate with your existing tools and workflows in minutes.</p>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
           </div>
         </div>
       </section>
@@ -469,8 +496,8 @@ const MicroSaasServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default MicroSAASServicesPage;
-=======
 export default MicroSaasServicesPage;
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6

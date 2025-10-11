@@ -13,12 +13,15 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import CareersPage from './app/careers/page'
+import BlogPage from './app/blog/page'
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-900">
         <Navigation />
+<<<<<<< HEAD
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -32,6 +35,22 @@ function App() {
             <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
           </Routes>
         </main>
+=======
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/ai-services" element={<AIServicesPage />} />
+          <Route path="/it-services" element={<ITServicesPage />} />
+          <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
+          <Route path="/cloud-services" element={<CloudServicesPage />} />
+          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
         <Footer />
       </div>
     </Router>

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
@@ -31,6 +31,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
                   AI Services
@@ -56,12 +57,21 @@ export default function Footer() {
                   5G Implementation
                 </Link>
               </li>
+=======
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                   About Us
@@ -82,6 +92,24 @@ export default function Footer() {
                   Blog
                 </a>
               </li>
+=======
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/whitepapers" className="text-gray-400 hover:text-white transition-colors">Whitepapers</Link></li>
+              <li><Link to="/api-docs" className="text-gray-400 hover:text-white transition-colors">API Documentation</Link></li>
+              <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support Center</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+>>>>>>> cursor/website-audit-and-update-with-deployment-bee6
             </ul>
           </div>
 
