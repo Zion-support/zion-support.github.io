@@ -1,116 +1,124 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, BarChart3, TrendingUp, Users, Target, Zap, Shield, Globe, Database, Brain, Activity } from 'lucide-react'
+import { CheckCircle, ArrowRight, CheckSquare, Brain, Users, Clock, Target, Zap, Calendar, Bell, BarChart3, Shield } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { Link } from 'react-router-dom'
 
-const AnalyticsDashboardPage: React.FC = () => {
+const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable dashboards',
-      benefits: ['Live Data Updates', 'Custom Widgets', 'Drag & Drop Interface', 'Mobile Responsive']
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI-Powered Prioritization',
+      description: 'Let AI automatically prioritize your tasks based on deadlines, importance, and context',
+      benefits: ['Smart Prioritization', 'Deadline Management', 'Context Awareness', 'Auto-Scheduling']
     },
     {
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and predictions based on your data',
-      benefits: ['Predictive Analytics', 'Anomaly Detection', 'Smart Alerts', 'Trend Analysis']
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      title: 'Team Collaboration',
+      description: 'Seamlessly collaborate with your team with real-time updates and communication',
+      benefits: ['Real-time Updates', 'Team Chat', 'File Sharing', 'Comment System']
     },
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
       title: 'Goal Tracking',
-      description: 'Set and track business goals with automated progress monitoring',
-      benefits: ['KPI Tracking', 'Goal Setting', 'Progress Alerts', 'Performance Reports']
+      description: 'Set and track personal and team goals with progress monitoring and insights',
+      benefits: ['Goal Setting', 'Progress Tracking', 'Milestone Alerts', 'Performance Analytics']
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-400" />,
-      title: 'Data Integration',
-      description: 'Connect with 100+ data sources including Google Analytics, Salesforce, and more',
-      benefits: ['100+ Integrations', 'API Access', 'Custom Connectors', 'Data Sync']
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
+      title: 'Productivity Analytics',
+      description: 'Get detailed insights into your productivity patterns and team performance',
+      benefits: ['Time Tracking', 'Productivity Reports', 'Team Analytics', 'Performance Insights']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Personal',
+      price: '$19',
       period: '/month',
-      description: 'Perfect for small businesses getting started with analytics',
+      description: 'Perfect for individuals and freelancers',
       features: [
-        'Up to 5 dashboards',
-        '10 data sources',
-        'Basic AI insights',
-        'Email support',
-        'Standard reports'
+        'Unlimited personal tasks',
+        'AI prioritization',
+        'Basic analytics',
+        'Mobile app access',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$199',
+      name: 'Team',
+      price: '$49',
       period: '/month',
-      description: 'Ideal for growing businesses with advanced analytics needs',
+      description: 'Ideal for small teams and growing businesses',
       features: [
-        'Unlimited dashboards',
-        '50 data sources',
-        'Advanced AI insights',
+        'Up to 10 team members',
+        'Team collaboration tools',
+        'Advanced AI features',
         'Priority support',
-        'Custom reports',
-        'Team collaboration',
-        'API access'
+        'Custom integrations',
+        'Team analytics',
+        'Admin controls'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$499',
+      price: '$99',
       period: '/month',
-      description: 'For large organizations with complex data requirements',
+      description: 'For large organizations with advanced needs',
       features: [
-        'Unlimited everything',
-        'Unlimited data sources',
-        'Premium AI insights',
+        'Unlimited team members',
+        'Advanced AI automation',
+        'Custom workflows',
         'Dedicated support',
         'White-label solution',
-        'Custom integrations',
+        'Advanced security',
         'SLA guarantee'
       ],
       popular: false
     }
   ]
 
-  const integrations = [
-    { name: 'Google Analytics', logo: '📊' },
-    { name: 'Salesforce', logo: '☁️' },
-    { name: 'HubSpot', logo: '🎯' },
-    { name: 'Stripe', logo: '💳' },
-    { name: 'Shopify', logo: '🛒' },
-    { name: 'Facebook Ads', logo: '📱' },
-    { name: 'LinkedIn', logo: '💼' },
-    { name: 'Twitter', logo: '🐦' },
-    { name: 'Instagram', logo: '📸' },
-    { name: 'YouTube', logo: '📺' },
-    { name: 'Mailchimp', logo: '📧' },
-    { name: 'Zapier', logo: '⚡' }
+  const productivityStats = [
+    { label: 'Tasks Completed', value: '2.5M+', icon: <CheckSquare className="w-8 h-8 text-green-400" /> },
+    { label: 'Time Saved', value: '40%', icon: <Clock className="w-8 h-8 text-blue-400" /> },
+    { label: 'Team Members', value: '50K+', icon: <Users className="w-8 h-8 text-purple-400" /> },
+    { label: 'Productivity Boost', value: '+60%', icon: <Target className="w-8 h-8 text-orange-400" /> }
   ]
 
-  const metrics = [
-    { label: 'Revenue Growth', value: '+23%', trend: 'up' },
-    { label: 'Customer Acquisition', value: '+45%', trend: 'up' },
-    { label: 'Conversion Rate', value: '3.2%', trend: 'up' },
-    { label: 'Churn Rate', value: '2.1%', trend: 'down' }
+  const useCases = [
+    {
+      title: 'Project Management',
+      description: 'Manage complex projects with AI-powered task breakdown and scheduling',
+      icon: <Calendar className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: 'Team Coordination',
+      description: 'Keep your team aligned with shared goals and real-time updates',
+      icon: <Users className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: 'Personal Productivity',
+      description: 'Boost your personal productivity with smart task management',
+      icon: <Target className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'Goal Achievement',
+      description: 'Turn your goals into actionable tasks with progress tracking',
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />
+    }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Analytics Dashboard - Business Intelligence Tool | Zion Tech Group</title>
-        <meta name="description" content="Transform your business data into actionable insights with our AI-powered analytics dashboard. Real-time monitoring, predictive analytics, and intelligent recommendations. Starting at $99/month." />
-        <meta name="keywords" content="analytics dashboard, business intelligence, data visualization, AI insights, KPI tracking, real-time analytics" />
+        <title>AI Task Manager Pro - Intelligent Task Management | Zion Tech Group</title>
+        <meta name="description" content="Boost productivity with our AI-powered task management tool. Smart prioritization, team collaboration, and goal tracking. Starting at $19/month." />
+        <meta name="keywords" content="task manager, AI productivity, team collaboration, project management, goal tracking, productivity tools" />
       </Helmet>
       
       <Navigation />
@@ -121,10 +129,10 @@ const AnalyticsDashboardPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Analytics Dashboard</span>
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Task Manager Pro</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your business data into actionable insights with our AI-powered analytics platform. Monitor KPIs, track goals, and make data-driven decisions with confidence.
+                Transform your productivity with our AI-powered task management platform. Smart prioritization, seamless team collaboration, and intelligent goal tracking.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -143,12 +151,13 @@ const AnalyticsDashboardPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Sample Metrics */}
+            {/* Productivity Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-20">
-              {metrics.map((metric, index) => (
+              {productivityStats.map((stat, index) => (
                 <div key={index} className="text-center px-2 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
-                  <div className="text-gray-300 text-xs sm:text-sm">{metric.label}</div>
+                  <div className="flex justify-center mb-2">{stat.icon}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -159,9 +168,9 @@ const AnalyticsDashboardPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Task Management Features</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to understand your business performance and make informed decisions
+                Everything you need to stay organized, productive, and achieve your goals
               </p>
             </div>
             
@@ -185,21 +194,24 @@ const AnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Connect Your Data Sources</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Perfect For Every Use Case</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Integrate with 100+ popular business tools and platforms
+                Whether you're managing personal tasks or coordinating large teams
               </p>
             </div>
             
-            <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-4 mb-20">
-              {integrations.map((integration, index) => (
-                <div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-2xl mb-2">{integration.logo}</div>
-                  <div className="text-xs text-gray-300">{integration.name}</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="text-center group">
+                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -210,9 +222,9 @@ const AnalyticsDashboardPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Flexible Pricing</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Start with our free trial and scale as your business grows
+                Choose the plan that fits your productivity needs
               </p>
             </div>
             
@@ -272,9 +284,9 @@ const AnalyticsDashboardPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-12 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Unlock Your Data?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Boost Your Productivity?</h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Join thousands of businesses using AI-powered analytics to drive growth and success.
+                  Join thousands of users who have transformed their productivity with AI-powered task management.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -301,4 +313,4 @@ const AnalyticsDashboardPage: React.FC = () => {
   )
 }
 
-export default AnalyticsDashboardPage
+export default TaskManagerProPage
