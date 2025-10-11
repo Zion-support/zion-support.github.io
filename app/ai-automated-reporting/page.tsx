@@ -1,48 +1,49 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { FileText, BarChart, Clock, Zap, CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Target, Settings } from 'lucide-react';
 
-const LayoutPage: React.FC = () => {
+const AIAutomatedReportingPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      icon: FileText,
+      title: 'Intelligent Report Generation',
+      description: 'AI automatically generates comprehensive reports from your data with insights and visualizations'
+    },
+    {
+      icon: BarChart,
+      title: 'Dynamic Dashboards',
+      description: 'Real-time dashboards that update automatically with new data and insights'
+    },
+    {
+      icon: Clock,
+      title: 'Scheduled Automation',
+      description: 'Automated report delivery on your schedule with customizable formats and recipients'
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'Natural Language Queries',
+      description: 'Generate reports using natural language questions and get instant, accurate results'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'AI-powered report generation and data analysis',
+    'Automated scheduling and delivery of reports',
+    'Natural language query interface for easy report creation',
+    'Integration with popular data sources and business tools',
+    'Customizable templates and branding options',
+    'Real-time data processing and visualization',
+    'Advanced analytics and trend identification',
+    'Reduced manual effort and faster decision-making'
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Layout | Zion Tech Group</title>
-        <meta name="description" content="Advanced layout solutions powered by AI technology" />
-        <meta name="keywords" content="layout, AI, technology, solutions" />
+        <title>AI Automated Reporting | Zion Tech Group</title>
+        <meta name="description" content="Intelligent automated reporting solutions powered by AI for faster, more accurate business insights and decision-making" />
+        <meta name="keywords" content="automated reporting, AI reporting, business intelligence, data visualization, analytics" />
       </Helmet>
       
       {/* Hero Section */}
@@ -50,13 +51,11 @@ const LayoutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              <span>Layout</span>
-              <br />
-              <span className="text-white">Solutions</span>
+              AI Automated Reporting
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced layout solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+              Transform your data into actionable insights with AI-powered automated reporting. 
+              Generate comprehensive reports, dashboards, and analytics without manual effort.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -70,15 +69,16 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Layout?
+              Intelligent Reporting Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our layout solutions deliver unmatched performance, security, and scalability.
+              Our AI platform delivers comprehensive reporting with minimal manual intervention.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -94,6 +94,7 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -102,7 +103,7 @@ const LayoutPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our layout solutions for your business.
+              Streamline your reporting process with intelligent automation and AI insights.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -115,15 +116,16 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+              Ready to Automate Your Reporting?
             </h2>
             <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Contact our experts to discuss your layout needs and get a customized solution.
+              Contact our experts to discuss your automated reporting needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -142,5 +144,4 @@ const LayoutPage: React.FC = () => {
   );
 };
 
-export default LayoutPage;
-
+export default AIAutomatedReportingPage;

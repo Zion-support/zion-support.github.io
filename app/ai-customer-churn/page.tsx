@@ -1,48 +1,49 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { TrendingDown, Target, Users, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, BarChart } from 'lucide-react';
 
-const LayoutPage: React.FC = () => {
+const AICustomerChurnPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      icon: TrendingDown,
+      title: 'Predictive Churn Analysis',
+      description: 'AI models predict customer churn risk with high accuracy using behavioral patterns'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: Target,
+      title: 'Risk Scoring',
+      description: 'Individual customer churn risk scores with actionable insights and recommendations'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      icon: Users,
+      title: 'Segmentation Analysis',
+      description: 'Identify high-risk customer segments and develop targeted retention strategies'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      icon: AlertTriangle,
+      title: 'Early Warning System',
+      description: 'Real-time alerts and notifications when customers show churn indicators'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'AI-powered churn prediction with 90%+ accuracy',
+    'Real-time risk scoring and early warning alerts',
+    'Customer segmentation and behavioral analysis',
+    'Automated retention campaign recommendations',
+    'Integration with CRM and marketing platforms',
+    'Advanced analytics and churn trend insights',
+    'Customizable prediction models for your business',
+    'ROI tracking and retention campaign effectiveness'
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Layout | Zion Tech Group</title>
-        <meta name="description" content="Advanced layout solutions powered by AI technology" />
-        <meta name="keywords" content="layout, AI, technology, solutions" />
+        <title>AI Customer Churn Prediction | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered customer churn prediction and retention solutions to reduce customer loss and increase lifetime value" />
+        <meta name="keywords" content="customer churn, churn prediction, AI, retention, customer analytics" />
       </Helmet>
       
       {/* Hero Section */}
@@ -50,13 +51,11 @@ const LayoutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              <span>Layout</span>
-              <br />
-              <span className="text-white">Solutions</span>
+              AI Customer Churn Prediction
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced layout solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+              Predict and prevent customer churn with AI-powered analytics. Identify at-risk customers 
+              and implement targeted retention strategies to maximize customer lifetime value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -70,15 +69,16 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Layout?
+              Advanced Churn Prediction Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our layout solutions deliver unmatched performance, security, and scalability.
+              Our AI platform delivers accurate churn predictions with actionable insights.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -94,6 +94,7 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -102,7 +103,7 @@ const LayoutPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our layout solutions for your business.
+              Reduce customer churn and increase retention with intelligent predictions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -115,15 +116,16 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+              Ready to Predict and Prevent Churn?
             </h2>
             <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Contact our experts to discuss your layout needs and get a customized solution.
+              Contact our experts to discuss your churn prediction needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -142,5 +144,4 @@ const LayoutPage: React.FC = () => {
   );
 };
 
-export default LayoutPage;
-
+export default AICustomerChurnPage;
