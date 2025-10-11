@@ -1,451 +1,219 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BookOpen, Brain, Cloud, Shield, Code, Play, Clock, Users } from 'lucide-react';
+import { BookOpen, Brain, Cloud, Shield, Code, Play, Clock, Users, Zap } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
-<<<<<<< HEAD
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
-    { id: 'security', name: 'Security', icon: Shield },;
-    { id: 'integration', name: 'Integration', icon: Code };
-  ];
-  const tutorials = const tutorials = const tutorials = [
-=======
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'development', name: 'Development', icon: Code }
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'integration', name: 'Integration', icon: Code }
   ];
 
   const tutorials = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
-      id: 1,
-      title: 'Getting Started with AI Chatbots',
+      id: 'ai-chatbot-setup',
+      title: 'Setting Up Your First AI Chatbot',
+      description: 'Learn how to create and deploy an AI-powered chatbot for your business in under 30 minutes.',
       category: 'ai',
       duration: '15 min',
-<<<<<<< HEAD
-      rating: 4.8,
-      students: 1250,
-      thumbnail: '/api/placeholder/400/250',
-      tags: ['API', 'AI', 'Chat', 'Integration'],
-      content: {
-        overview: 'This tutorial covers the basics of integrating our AI chat API into your application.',
-        prerequisites: ['Basic programming knowledge', 'API key', 'HTTP client'],
-        steps: [
-          'Set up your development environment',
-          'Get your API key from the dashboard',
-          'Make your first API call',;
-          'Handle responses and errors',;
-          'Implement advanced features';
-        ];
-      }
-=======
       difficulty: 'Beginner',
-      description: 'Learn how to build and deploy your first AI chatbot using our platform.',
-      thumbnail: '/api/placeholder/400/225'
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+      views: 1250,
+      icon: Brain,
+      videoUrl: '#'
     },
     {
-      id: 2,
-      title: 'Cloud Migration Best Practices',
+      id: 'cloud-migration-guide',
+      title: 'Complete Cloud Migration Guide',
+      description: 'Step-by-step guide to migrating your infrastructure to the cloud with zero downtime.',
       category: 'it',
+      duration: '45 min',
+      difficulty: 'Intermediate',
+      views: 890,
+      icon: Cloud,
+      videoUrl: '#'
+    },
+    {
+      id: 'ai-analytics-dashboard',
+      title: 'Building AI Analytics Dashboard',
+      description: 'Create powerful data visualization dashboards with AI-powered insights and predictions.',
+      category: 'ai',
       duration: '30 min',
       difficulty: 'Intermediate',
-      description: 'A comprehensive guide to migrating your applications to the cloud.',
-      thumbnail: '/api/placeholder/400/225'
+      views: 2100,
+      icon: Brain,
+      videoUrl: '#'
     },
     {
-      id: 3,
-      title: 'Cybersecurity Fundamentals',
+      id: 'cybersecurity-basics',
+      title: 'Cybersecurity Best Practices',
+      description: 'Essential cybersecurity measures every business should implement to protect their data.',
       category: 'security',
-      duration: '45 min',
-      difficulty: 'Beginner',
-      description: 'Essential cybersecurity concepts and best practices for businesses.',
-      thumbnail: '/api/placeholder/400/225'
-    },
-    {
-      id: 4,
-      title: 'Building REST APIs with Node.js',
-      category: 'development',
-      duration: '60 min',
-      difficulty: 'Intermediate',
-      description: 'Step-by-step guide to creating robust REST APIs using Node.js.',
-      thumbnail: '/api/placeholder/400/225'
-    },
-    {
-      id: 5,
-      title: 'AI Data Analytics Dashboard',
-      category: 'ai',
       duration: '25 min',
-      difficulty: 'Advanced',
-      description: 'Create interactive dashboards with AI-powered analytics.',
-      thumbnail: '/api/placeholder/400/225'
+      difficulty: 'Beginner',
+      views: 1800,
+      icon: Shield,
+      videoUrl: '#'
     },
     {
-      id: 6,
-      title: 'DevOps CI/CD Pipeline Setup',
-      category: 'it',
-      duration: '40 min',
+      id: 'micro-saas-launch',
+      title: 'Launching Your Micro SaaS',
+      description: 'From idea to launch: Complete guide to building and launching a successful micro SaaS product.',
+      category: 'saas',
+      duration: '60 min',
       difficulty: 'Advanced',
-      description: 'Set up automated deployment pipelines for your applications.',
-      thumbnail: '/api/placeholder/400/225'
+      views: 3200,
+      icon: Zap,
+      videoUrl: '#'
+    },
+    {
+      id: 'api-integration-guide',
+      title: 'API Integration Masterclass',
+      description: 'Learn how to integrate third-party APIs and build robust, scalable integrations.',
+      category: 'integration',
+      duration: '40 min',
+      difficulty: 'Intermediate',
+      views: 1500,
+      icon: Code,
+      videoUrl: '#'
     }
   ];
-<<<<<<< HEAD
-  const filteredTutorials = const filteredTutorials = selectedCategory === 'all' ;
-    ? tutorials ;
-    : tutorials.filter(tutorial => tutorial.category === selectedCategory);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 
-  const filteredTutorials = selectedCategory === 'all' 
-    ? tutorials 
-    : tutorials.filter(tutorial => tutorial.category === selectedCategory);
+  const filteredTutorials = tutorials.filter(tutorial => {
+    return selectedCategory === 'all' || tutorial.category === selectedCategory;
+  });
 
-<<<<<<< HEAD
-  return() {featuredTutorials.map((tutorial) => ()
-                      {tutorial.tags.slice(0, 3).map((tag, index) => ()
-                      ))}
-                    </div>
-                    <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
-                      Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Category Filter */}
-          <section className="mb-12" /></section>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              {categories.map((category) => ()
-=======
   return (
     <>
       <Helmet>
-        <title>Tutorials | Zion Tech Group - Learning Resources</title>
-        <meta name="description" content="Learn from our comprehensive tutorials on AI, cloud computing, cybersecurity, and development. Step-by-step guides for all skill levels." />
-        <meta name="keywords" content="tutorials, learning, AI tutorials, cloud computing, cybersecurity, development, programming, guides" />
+        <title>Tutorials - Zion Tech Group | Learn AI & IT Solutions</title>
+        <meta name="description" content="Master AI and IT solutions with our comprehensive tutorials. Learn from beginner to advanced levels with step-by-step guides and video tutorials." />
+        <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, cloud migration, cybersecurity, micro saas, learning" />
+        <meta property="og:title" content="Tutorials - Zion Tech Group" />
+        <meta property="og:description" content="Learn AI and IT solutions with our comprehensive tutorials" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
-      <Navigation />
-      
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tutorials & Learning
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Master new skills with our comprehensive tutorials on AI, cloud computing, cybersecurity, and development.
-              </p>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Tutorials
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+              Learn AI & IT Solutions
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Master cutting-edge AI and IT solutions with our comprehensive tutorials. 
+              From beginner to advanced levels, learn at your own pace with step-by-step guides.
+            </p>
+          </section>
 
-        {/* Categories Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Browse by Category
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from our curated collection of tutorials organized by topic and skill level.
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {/* Category Filter */}
+          <section className="mb-12">
+            <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
                   key={category.id}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 ${
                     selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
-<<<<<<< HEAD
-                  <category.icon className="w-5 h-5" /></category>
+                  <category.icon className="w-5 h-5" />
                   <span>{category.name}</span>
-=======
-                  <category.icon className="w-5 h-5 mr-2" />
-                  {category.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </button>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-<<<<<<< HEAD
-          {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredTutorials.map((tutorial) => ()
-                      {tutorial.tags.map((tag, index) => ()
-                      ))}
-                    </div>
-                    <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
-                      Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
-=======
-        {/* Tutorials Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Tutorials Grid */}
+          <section className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
-                    <Play className="w-16 h-16 text-white" />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {tutorial.difficulty}
-                      </span>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {tutorial.duration}
+                <div
+                  key={tutorial.id}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                      <tutorial.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{tutorial.title}</h3>
+                      <div className="flex items-center space-x-4 mt-1">
+                        <span className="text-sm text-gray-400">{tutorial.duration}</span>
+                        <span className="text-sm text-gray-400">{tutorial.difficulty}</span>
+                        <span className="text-sm text-gray-400">{tutorial.views} views</span>
                       </div>
                     </div>
-                    
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {tutorial.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4">
-                      {tutorial.description}
-                    </p>
-                    
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{tutorial.description}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to={`/tutorials/${tutorial.id}`}
+                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
                       <Play className="w-4 h-4 mr-2" />
-                      Start Tutorial
-                    </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                      Watch Tutorial
+                    </Link>
+                    <span className="text-sm text-gray-400">
+                      <Clock className="w-4 h-4 inline mr-1" />
+                      {tutorial.duration}
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-          {/* Learning Paths */}
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Brain className="w-8 h-8 text-cyan-400 mr-3" / /></Brain>
-                  <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Master AI development from basics to advanced implementations.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    AI Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    API Integration
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced AI Features
-                  </li>
-                </ul>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Cloud className="w-8 h-8 text-green-400 mr-3" / /></Cloud>
-                  <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Learn cloud architecture and infrastructure management.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Cloud Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Security & Compliance
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced Architecture
-                  </li>
-                </ul>
-                <a href="#" className="text-green-400 hover:text-green-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Zap className="w-8 h-8 text-purple-400 mr-3" / /></Zap>
-                  <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Build and scale your own SaaS business from scratch.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    SaaS Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Business Models
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Scaling & Growth
-                  </li>
-                </ul>
-                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-=======
-        {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-600">Tutorials Available</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-600">Students Learning</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">4.9</div>
-                <div className="text-gray-600">Average Rating</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              </div>
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-          {/* Resources */}
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" / /></Code>
-                <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
-                  Ready-to-use code examples for all our services
-                </p>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
-                  Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Download className="w-12 h-12 text-green-400 mx-auto mb-4" / /></Download>
-                <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
-                  Official SDKs for popular programming languages
-                </p>
-                <a href="/api" className="text-green-400 hover:text-green-300 text-sm" /></a>
-                  View SDKs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" / /></Users>
-                <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
-                  Join our developer community for support and discussions
-                </p>
-                <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm" /></a>
-                  Join Community <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-6 text-center" /></div>
-                <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" / /></BookOpen>
-                <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-                <p className="text-gray-300 mb-4 text-sm" /></p>
-                  Comprehensive API and service documentation
-                </p>
-                <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm" /></a>
-                  View Docs <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-                </a>
-              </div>
-            </div>
           </section>
 
-          {/* CTA */}
-          <section className="mb-16" /></section>
-            <div className="cyber-card-enhanced p-8 text-center" /></div>
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-              <p className="text-gray-300 mb-6" /></p>
-                Join thousands of developers who are already building amazing applications with our services.
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Ready to Start Learning?
+              </h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join thousands of learners who are mastering AI and IT solutions with our tutorials. 
+                Start your learning journey today.
               </p>
-              <div className="flex flex-wrap justify-center gap-4" /></div>
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                  Get Started Free
-                </a>
-                <a href="/demo"
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
-                  Request Demo
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Started
+                  <Play className="w-4 h-4 ml-2" />
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Clock className="w-4 h-4 mr-2" />
+                  Call: (302) 464-0950
                 </a>
               </div>
             </div>
           </section>
-        </div>
-      </div>
-=======
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Start Learning?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join thousands of learners who are already mastering new skills with our tutorials.
-            </p>
-            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Browse All Tutorials
-            </button>
-          </div>
-        </section>
-      </main>
+        </main>
 
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+        <Footer />
+      </div>
     </>
   );
 };

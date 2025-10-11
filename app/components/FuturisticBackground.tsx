@@ -11,6 +11,8 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    let animationId: number;
+
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -19,7 +21,6 @@ const FuturisticBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
     // Quantum particles
     const particles: Array<{
       x: number;
@@ -29,57 +30,75 @@ const FuturisticBackground: React.FC = () => {
       size: number;
       opacity: number;
       color: string;
-    }> = []
+    }> = [];
 
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
     // Create particles
     for (let i = 0; i < 50; i++) {
-      particles.push()
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-        })
-      }
-    const animate = () => {;
-=======
-    // Simple animated background
-    const animate = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(6, 182, 212, 0.1)');
-      gradient.addColorStop(0.5, 'rgba(147, 51, 234, 0.1)');
-      gradient.addColorStop(1, 'rgba(236, 72, 153, 0.1)');
-      
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+        opacity: Math.random() * 0.5 + 0.1,
+        color: Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6'
+      });
+    }
 
-      requestAnimationFrame(animate);
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.fill();
+
+        // Draw connections
+        particles.forEach(otherParticle => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = particle.color + Math.floor((1 - distance / 100) * 50).toString(16).padStart(2, '0');
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+
+      animationId = requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationId);
     };
   }, []);
 
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: -1 }}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'transparent' }}
     />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 
