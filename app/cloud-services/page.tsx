@@ -1,40 +1,11 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import { ArrowRight, Cloud, Shield, Zap, Globe, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
 
 const CloudServicesPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-=======
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud infrastructure with zero downtime'
@@ -80,7 +51,6 @@ const CloudServicesPage: React.FC = () => {
         <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced cloud solutions for your business." />
         <meta name="keywords" content="cloud services, cloud migration, IaaS, PaaS, SaaS, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
       </Helmet>
       
       <Navigation />
@@ -89,12 +59,6 @@ const CloudServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-=======
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Cloud
               </span>
@@ -104,7 +68,6 @@ const CloudServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced cloud solutions. 
               Powered by cutting-edge technology and industry expertise.
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
             </p>
           </div>
           
@@ -142,11 +105,6 @@ const CloudServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </main>
-      
-      <Footer />
-=======
       </section>
 
       {/* Features Section */}
@@ -224,7 +182,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
     </div>
   );
 };

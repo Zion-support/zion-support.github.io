@@ -24,18 +24,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-=======
     <>
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
@@ -74,14 +62,13 @@ const PagePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              AI API Manager
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional AI API manager solutions to help your business succeed and grow.
             </p>
           </div>
           
@@ -118,18 +105,11 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
-      </main>
-      
-      <Footer />
-    </div>
-=======
         </section>
         <Footer />
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
   );
 };
 

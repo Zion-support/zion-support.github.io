@@ -1,10 +1,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap, Target, Lightbulb } from 'lucide-react';
 
@@ -21,7 +17,6 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
 
 const PagePage: React.FC = () => {
   const features = [
@@ -31,11 +26,6 @@ const PagePage: React.FC = () => {
       benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
     {
-<<<<<<< HEAD
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-=======
       id: '2',
       title: 'Cloud Architect',
       department: 'Cloud Services',
@@ -56,7 +46,6 @@ const PagePage: React.FC = () => {
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
       color: 'text-yellow-400'
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
     },
     {
       title: 'Proven Results',
@@ -115,15 +104,7 @@ const PagePage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-=======
-        </section>
+        </div>
 
         {/* Open Positions */}
         <section className="py-16 px-4">
@@ -202,7 +183,6 @@ const PagePage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -214,7 +194,7 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       
       <Footer />
