@@ -15,7 +15,7 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
+import { usePerformanceMonitoring } from './src/hooks/usePerformanceMonitoring';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
@@ -57,7 +57,7 @@ const CustomSoftwarePage = React.lazy(() => import('./app/custom-software/page')
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
+  usePerformanceMonitoring();
   return <React.Fragment>{children}</React.Fragment>;
 };
 
