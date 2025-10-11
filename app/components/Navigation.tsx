@@ -1,43 +1,45 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown } from 'lucide-react'
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Smartphone as Mobile, BarChart3, Lock, Wifi, Users, Settings, Calendar } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
 
-=======
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen)
-  }
-
-  const services = [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+  const aiServices = [
+    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Cpu className="w-4 h-4" /> }
   ]
 
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+  const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'DevOps & CI/CD', path: '/devops-cicd', icon: <Server className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Mobile className="w-4 h-4" /> },
+    { name: 'Blockchain Solutions', path: '/blockchain', icon: <Lock className="w-4 h-4" /> }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Lock className="w-4 h-4" /> },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar', icon: <Calendar className="w-4 h-4" /> }
+  ]
   return (
     <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +62,6 @@ export default function Navigation() {
                 About
               </Link>
               
-<<<<<<< HEAD
               {/* AI Services Dropdown */}
               <div className="relative">
                 <button
@@ -73,12 +74,12 @@ export default function Navigation() {
                 {activeDropdown === 'ai' && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All AI Services</Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Content Generator</Link>
-                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Chatbot Builder</Link>
-                    <Link to="/ai-analytics-dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Analytics Dashboard</Link>
-                    <Link to="/ai-email-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Email Assistant</Link>
-                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Voice Assistant</Link>
-                    <Link to="/ai-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Automation</Link>
+                    {aiServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
+                        {service.icon}
+                        <span className="ml-2">{service.name}</span>
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
@@ -95,12 +96,12 @@ export default function Navigation() {
                 {activeDropdown === 'it' && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All IT Services</Link>
-                    <Link to="/cloud-migration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Cloud Migration</Link>
-                    <Link to="/cybersecurity-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Cybersecurity</Link>
-                    <Link to="/devops-cicd" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">DevOps & CI/CD</Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Data Analytics</Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Mobile Development</Link>
-                    <Link to="/blockchain" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">Blockchain Solutions</Link>
+                    {itServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
+                        {service.icon}
+                        <span className="ml-2">{service.name}</span>
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
@@ -117,49 +118,18 @@ export default function Navigation() {
                 {activeDropdown === 'saas' && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
                     <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">All Micro SAAS</Link>
-                    <Link to="/ai-task-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Task Manager</Link>
-                    <Link to="/ai-expense-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Expense Tracker</Link>
-                    <Link to="/ai-password-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Password Manager</Link>
-                    <Link to="/ai-invoice-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Invoice Generator</Link>
-                    <Link to="/ai-health-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Health Tracker</Link>
-                    <Link to="/ai-smart-calendar" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">AI Smart Calendar</Link>
+                    {microSaasServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
+                        {service.icon}
+                        <span className="ml-2">{service.name}</span>
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
 
               <Link to="/5g-implementation" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 5G Solutions
-=======
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
-                    {services.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.path}
-                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {service.icon}
-                        <span className="ml-3 text-sm font-medium">{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-              <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                AI Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
               </Link>
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
@@ -188,16 +158,17 @@ export default function Navigation() {
               About
             </Link>
             
-<<<<<<< HEAD
             {/* AI Services Mobile */}
             <div className="px-3 py-2">
               <div className="text-white font-medium mb-2">AI Services</div>
               <div className="ml-4 space-y-1">
-                <Link to="/ai-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All AI Services</Link>
-                <Link to="/ai-content-generator" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Content Generator</Link>
-                <Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Chatbot Builder</Link>
-                <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Analytics Dashboard</Link>
-                <Link to="/ai-email-assistant" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Email Assistant</Link>
+                <Link to="/ai-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>All AI Services</Link>
+                {aiServices.map((service, index) => (
+                  <Link key={index} to={service.path} className="flex items-center text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    {service.icon}
+                    <span className="ml-2">{service.name}</span>
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -205,11 +176,13 @@ export default function Navigation() {
             <div className="px-3 py-2">
               <div className="text-white font-medium mb-2">IT Services</div>
               <div className="ml-4 space-y-1">
-                <Link to="/it-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All IT Services</Link>
-                <Link to="/cloud-migration" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Cloud Migration</Link>
-                <Link to="/cybersecurity-solutions" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Cybersecurity</Link>
-                <Link to="/devops-cicd" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">DevOps & CI/CD</Link>
-                <Link to="/data-analytics" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">Data Analytics</Link>
+                <Link to="/it-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>All IT Services</Link>
+                {itServices.map((service, index) => (
+                  <Link key={index} to={service.path} className="flex items-center text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    {service.icon}
+                    <span className="ml-2">{service.name}</span>
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -217,41 +190,20 @@ export default function Navigation() {
             <div className="px-3 py-2">
               <div className="text-white font-medium mb-2">Micro SAAS</div>
               <div className="ml-4 space-y-1">
-                <Link to="/micro-saas-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">All Micro SAAS</Link>
-                <Link to="/ai-task-manager" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Task Manager</Link>
-                <Link to="/ai-expense-tracker" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Expense Tracker</Link>
-                <Link to="/ai-password-manager" className="text-gray-300 hover:text-purple-300 block py-1 text-sm">AI Password Manager</Link>
-              </div>
-            </div>
-
-            <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              5G Solutions
-            </Link>
-            <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-=======
-            {/* Mobile Services Section */}
-            <div className="px-3 py-2">
-              <div className="text-white font-medium text-base mb-2">Services</div>
-              <div className="pl-4 space-y-1">
-                {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    to={service.path}
-                    className="flex items-center text-gray-300 hover:text-purple-300 block px-3 py-2 rounded-md text-sm transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
+                <Link to="/micro-saas-services" className="text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>All Micro SAAS</Link>
+                {microSaasServices.map((service, index) => (
+                  <Link key={index} to={service.path} className="flex items-center text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                     {service.icon}
-                    <span className="ml-3">{service.name}</span>
+                    <span className="ml-2">{service.name}</span>
                   </Link>
                 ))}
               </div>
             </div>
-            
-            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
-              AI Services
+
+            <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+              5G Solutions
             </Link>
             <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
               Contact
             </Link>
           </div>
