@@ -1,194 +1,78 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
-
-const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Preload critical resources
-'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/critical.css';
-      criticalCSS.as = 'style';
-      criticalCSS.onload = () => {
-        criticalCSS.rel = 'stylesheet';
-      };
-      document.head.appendChild(criticalCSS);
-
-                    ))}
-                  </ul>
-                ) : ()
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-}) => {
-    useEffect(() => {
     // Preload critical resources
-    if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontPreload.as = 'style';
-      fontPreload.onload = () => {
-        fontPreload.rel = 'stylesheet';
-      };
-      document.head.appendChild(fontPreload);
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize images
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" to images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-      }
-      
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
-    });
-  }, []);
-
-  useEffect(() => {
-    optimizeImages();
-  }, [optimizeImages]);
-
-  // Intersection Observer for animations
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements with animation classes
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const measurePerformance = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            FCP: performance.getEntriesByName('first-contentful-paint')[0]?.startTime,
-            LCP: performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,
-            FID: performance.getEntriesByType('first-input')[0]?.processingStart,
-            CLS: performance.getEntriesByType('layout-shift')[0]?.value,
-            TTFB: navigation.responseStart - navigation.requestStart,
-            DOMContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart,
-            LoadComplete: navigation.loadEventEnd - navigation.navigationStart
-          };
-
-          // Send metrics to analytics (replace with your analytics service)
-          console.log('Performance Metrics:', metrics);
-        }
-      };
-
-      // Measure performance after page load
-      window.addEventListener('load', measurePerformance);
-      
-      return () => window.removeEventListener('load', measurePerformance);
-    }
-  }, []);
-
-  return <>{children}</>
-};
-
-export default PerformanceOptimizer</PerformanceOptimizerProps>
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/hero-bg.jpg',
-        '/logo.png'
-      ]
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg',
+        '/images/logo.svg'
+      ];
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.as = 'image'
-        link.href = src
-        document.head.appendChild(link)
-      })
-    }
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
+      });
+    };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img')
+      const images = document.querySelectorAll('img[data-src]');
       images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy'
+        const src = img.getAttribute('data-src');
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
         }
-        if (!img.decoding) {
-          img.decoding = 'async'
-        }
-      })
-    }
+      });
+    };
 
-    // Add performance monitoring
-    const addPerformanceMonitoring = () => {
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-          if (perfData) {
-            console.log('Performance metrics:', {
-              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-              loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
-              totalTime: perfData.loadEventEnd - perfData.fetchStart
-            })
+    // Lazy load non-critical resources
+    const lazyLoadResources = () => {
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            const src = element.getAttribute('data-src');
+            if (src) {
+              if (element.tagName === 'IMG') {
+                (element as HTMLImageElement).src = src;
+              } else {
+                element.style.backgroundImage = `url(${src})`;
+              }
+              element.removeAttribute('data-src');
+              observer.unobserve(element);
+            }
           }
-        })
-      }
-    }
+        });
+      });
+
+      lazyElements.forEach(element => observer.observe(element));
+    };
 
     // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    addPerformanceMonitoring()
+    preloadCriticalResources();
+    optimizeImages();
+    lazyLoadResources();
 
-    // Re-optimize when DOM changes
-    const observer = new MutationObserver(() => {
-      optimizeImages()
-    })
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-
+    // Cleanup
     return () => {
-      observer.disconnect()
-    }
-  }, [])
+      // Remove any added preload links
+      const preloadLinks = document.querySelectorAll('link[rel="preload"]');
+      preloadLinks.forEach(link => link.remove());
+    };
+  }, []);
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;
