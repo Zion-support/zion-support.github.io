@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+// Type definitions for Next.js
+
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
@@ -43,8 +44,6 @@ declare module '*.tiff' {
   const content: string;
   export default content;
 }
-=======
-// Type definitions for Next.js
 
 declare global {
   namespace NodeJS {
@@ -67,4 +66,3 @@ declare module 'next' {
 }
 
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-9171

@@ -18,10 +18,16 @@ interface APIResponse<T = any> {
   headers: Record<string, string>;
 }
 
-interface APIError {
-  message: string;
+export class APIError extends Error {
   status?: number;
   code?: string;
+
+  constructor({ message, status, code }: { message: string; status?: number; code?: string }) {
+    super(message);
+    this.name = 'APIError';
+    this.status = status;
+    this.code = code;
+  }
 }
 
 export class APIClient {
@@ -209,4 +215,4 @@ export const createAPIClient = (baseURL: string, headers?: Record<string, string
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
 // Export types
-export type { RequestConfig, APIResponse, APIError };
+export type { RequestConfig, APIResponse };

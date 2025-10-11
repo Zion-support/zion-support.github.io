@@ -2,11 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
-=======
-import { Award, ExternalLink, CheckCircle, Users, Handshake, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9171
+import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp, Users, Star } from 'lucide-react';
 
 interface Partner {
   name: string;
