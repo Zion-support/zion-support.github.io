@@ -19,16 +19,24 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target,
+  DollarSign,
+  Heart,
+  Lock,
+  Package,
+  Monitor,
+  Wifi,
+  Code,
+  Calendar,
+  Mic,
+  CheckSquare
 } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     // AI Services
     {
       icon: Brain,
