@@ -205,64 +205,55 @@ const Navigation: React.FC = () => {
       isScrolled ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        </div><div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          </div><div className="flex-shrink-0">
-            </div><Link to="/" className="flex items-center space-x-3 group">
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                </div><Brain className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
-                </div><span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
+                <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
               </div>
             </Link>
           </div>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span>Zion Tech Group</span>
-          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            </div><Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative group">
-              </div><button
+              <button
                 onClick={toggleAiServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                </button><Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4" />
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
-                  </div><div className="mb-4">
-                    </div><h3 className="text-lg font-bold text-cyan-400 neon-text-enhanced">AI Services</h3>
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-cyan-400 neon-text-enhanced">AI Services</h3>
                     <p className="text-sm text-gray-400">Advanced artificial intelligence solutions</p>
                   </div>
                   <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
                     {aiServices.map((service) => (
-                      </div><Link
+                      <Link
                         key={service.name}
                         to={service.href}
                         className="flex items-center space-x-4 p-4 rounded-xl hover:bg-cyan-500/10 transition-all duration-300 group cyber-card-enhanced"
                         onClick={closeAllMenus}
                       >
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                          </div><service.icon className="w-5 h-5 text-white" />
+                          <service.icon className="w-5 h-5 text-white" />
                         </div>
                         <div className="flex-1">
-                          </div><div className="text-white font-semibold group-hover:text-cyan-300 transition-colors">{service.name}</div>
+                          <div className="text-white font-semibold group-hover:text-cyan-300 transition-colors">{service.name}</div>
                           <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto group-hover:translate-x-1 transition-all" />
@@ -270,13 +261,13 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    </div><Link
+                    <Link
                       to="/ai-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                       onClick={closeAllMenus}
                     >
                       View All AI Services
-                      </Link><ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>

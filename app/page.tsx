@@ -1,58 +1,19 @@
 'use client';
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone } from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone, Mail, MapPin } from 'lucide-react';
+
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+  <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 );
-
-// Content promotion banner component
-const ContentPromotionBanner = () => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
-    </div><p className="text-sm font-medium">
-      🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
-    </p>
-  </div>
-);
-
-// Accessibility enhancer component
-const AccessibilityEnhancer = ({ 
-  enableKeyboardNavigation, 
-  enableScreenReaderSupport, 
-  enableHighContrast, 
-  enableFocusManagement 
-}: {
-  enableKeyboardNavigation: boolean;
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-}) => {
-  useEffect(() => {
-    if (enableHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    }
-    if (enableFocusManagement) {
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    }
-  }, [enableHighContrast, enableFocusManagement]);
-
-  return null;
-};
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,6 +23,17 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
+  }, []);
+
+  // Analytics tracking for phone clicks
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      });
+    }
   }, []);
 
   const features = [
@@ -164,92 +136,15 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        </Helmet><title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, digital transformation, enterprise software, cloud computing, cybersecurity" />
       </Helmet>
 
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    setIsLoaded(true)
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100)
-    // Preload components
-    preloadComponents()
-    return () => clearTimeout(timer)
-  }, [])
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
-      gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      })
-    }
-  }, [])
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        }}
-      />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enablePreloading={true}
-        enableCodeSplitting={true}
-      />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-
-        <Navigation />
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
           <section className="text-center mb-16 relative">
             <div className="max-w-5xl mx-auto">
@@ -322,18 +217,19 @@ const HomePage: React.FC = () => {
                   <Clock className="w-4 h-4 text-purple-400 mr-1" />
                   <span>10+ Years Experience</span>
                 </div>
+              </div>
             </div>
           </section>
 
           {/* Stats Section */}
           <section className="mb-16">
-            </section><div className="
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                </div><div key={index} className="text-center">
-                  </div><div className="flex justify-center mb-2">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
-              </div>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -408,7 +304,7 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16">
-            </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               AI Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -416,8 +312,8 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  </div><service.icon className="w-12 h-12 text-blue-400 mb-4" />
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
                   </h3>
@@ -431,7 +327,7 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16">
-            </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               IT Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -439,8 +335,8 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  </div><service.icon className="w-12 h-12 text-green-400 mb-4" />
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+                  <service.icon className="w-12 h-12 text-green-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
                   </h3>
@@ -524,6 +420,7 @@ const HomePage: React.FC = () => {
                 </a>
                 <a 
                   href="tel:+13024640950" 
+                  onClick={handlePhoneClick}
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -535,10 +432,10 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-        </main>
+        </div>
+      </main>
 
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };
