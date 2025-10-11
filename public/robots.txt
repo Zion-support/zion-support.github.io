@@ -7,13 +7,33 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
+<<<<<<< HEAD
+# Disallow admin and private areas
+=======
 # Disallow admin areas
+>>>>>>> origin/main
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
+<<<<<<< HEAD
+Allow: /ai-services/
+Allow: /ai-solutions/
+Allow: /cloud-migration/
+Allow: /cybersecurity/
+Allow: /quantum-computing/
+Allow: /autonomous-systems/
+Allow: /blockchain/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /contact/
+Allow: /about/
+
+# Host
+Host: https://ziontechgroup.com
+=======
 Allow: /services
 Allow: /about
 Allow: /contact
@@ -46,4 +66,5 @@ Allow: /zion-*
 
 # Host
 Host: https://ziontechgroup.com
+>>>>>>> origin/main
 >>>>>>> origin/main

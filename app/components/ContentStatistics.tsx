@@ -60,6 +60,11 @@ const ContentStatistics: React.FC = () => {,
 =======
 =======
 'use client'
+<<<<<<< HEAD
+import React from 'react';
+
+const ContentStatistics: React.FC = React.memo((props) => {
+=======
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
@@ -294,6 +299,7 @@ const ContentStatistics: React.FC = () => {
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -548,6 +554,12 @@ const ContentStatistics: React.FC = () => {
 >>>>>>> origin/main
       </div>
     </div>
+<<<<<<< HEAD
+  );
+});
+
+export default ContentStatistics;
+=======
   )
 }
 export default ContentStatistics
@@ -837,4 +849,5 @@ export default ContentStatistics;
 export default ContentStatistics</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></a></a></p></p></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h4></h4>
 </a>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main

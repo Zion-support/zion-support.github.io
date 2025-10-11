@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+'use client'
+import React from 'react';
+
+const ContentNewsletterSignup: React.FC = React.memo((props) => {
+=======
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React from 'react';
@@ -61,6 +67,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     'Proven track record of success'
   ];
 
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -531,6 +538,12 @@ export default ContentNewsletterSignup;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  );
+});
+
+export default ContentNewsletterSignup;
+=======
   )
 }
 export default ContentNewsletterSignup
@@ -581,5 +594,6 @@ export default ContentNewsletterSignup
   )
 }
 export default ContentNewsletterSignup</div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></h2></h2></h2>
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main

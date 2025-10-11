@@ -71,6 +71,11 @@ const DynamicContentShowcase: React.FC = () => {
   const features: Feature[] = [
 =======
 'use client'
+<<<<<<< HEAD
+import React from 'react';
+
+const DynamicContentShowcase: React.FC = React.memo((props) => {
+=======
 import React, { useState, useEffect } from 'react'
 import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react'
 const DynamicContentShowcase: React.FC = () => {
@@ -286,6 +291,7 @@ const DynamicContentShowcase: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -968,6 +974,12 @@ export default DynamicContentShowcase;
         </button>
       </div>
     </div>
+<<<<<<< HEAD
+  );
+});
+
+export default DynamicContentShowcase;
+=======
   )
 }
 export default DynamicContentShowcase
@@ -1146,5 +1158,6 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length)
 }
 export default DynamicContentShowcase</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></button></button></button></button></a></a></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></h4></section></section></section></section></section>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main

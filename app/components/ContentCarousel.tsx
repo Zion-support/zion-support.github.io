@@ -57,6 +57,11 @@ const ContentCarousel: React.FC = () => {,
   const slides: Slide[] = [
 =======
 'use client'
+<<<<<<< HEAD
+import React from 'react';
+
+const ContentCarousel: React.FC = React.memo((props) => {
+=======
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react'
 const ContentCarousel: React.FC = () => {
@@ -272,6 +277,7 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 >>>>>>> origin/main
+>>>>>>> origin/main
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       </div><div className="relative overflow-hidden rounded-2xl">
@@ -419,6 +425,12 @@ const ContentCarousel: React.FC = () => {
 >>>>>>> main
       </div>
     </div>
+<<<<<<< HEAD
+  );
+});
+
+export default ContentCarousel;
+=======
   )
 }
 export default ContentCarousel
@@ -883,4 +895,5 @@ export default ContentCarousel;
 }
 export default ContentCarousel</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></button></button></a></p></p></p></h2></h2></h3></h4>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
