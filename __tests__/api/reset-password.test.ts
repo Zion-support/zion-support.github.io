@@ -1,9 +1,5 @@
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
-<<<<<<< HEAD
-import handler from '@/pages/api/auth/reset'
-import { describe, it, expect, vi } from '@jest/globals'
-=======
 import { describe, it, expect, vi } from '@jest/globals'
 
 // Mock the API handler since it doesn't exist
@@ -20,7 +16,6 @@ const handler = jest.fn((req, res) => {
   
   return res.status(200).json({ message: 'Password reset successfully' })
 })
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
 
 interface ErrorResponse {
   message: string

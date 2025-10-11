@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { describe, it, expect, beforeEach, afterEach, vi } from '@jest/globals'
-=======
 import { describe, it, expect, beforeEach, afterEach } from '@jest/globals'
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
 
 // Store original process.env
 const ORIGINAL_ENV = process.env
