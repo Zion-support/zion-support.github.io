@@ -1,55 +1,51 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to fix
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Split by conflict markers and take the newer version (after =======)
+    // Split by merge conflict markers
     const lines = content.split('\n');
-    const result = [];
+    const fixedLines = [];
     let inConflict = false;
-    let conflictStart = -1;
+    let conflictType = null;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim().startsWith('<<<<<<< HEAD')) {
+      if (line.startsWith('<<<<<<<')) {
         inConflict = true;
-        conflictStart = i;
+        conflictType = 'head';
         continue;
-      }
-      
-      if (line.trim().startsWith('=======')) {
-        continue; // Skip the separator
-      }
-      
-      if (line.trim().startsWith('>>>>>>> ')) {
+      } else if (line.startsWith('=======')) {
+        conflictType = 'separator';
+        continue;
+      } else if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        conflictStart = -1;
+        conflictType = null;
         continue;
       }
       
       if (!inConflict) {
-        result.push(line);
+        fixedLines.push(line);
+      } else if (conflictType === 'head') {
+        // Keep the HEAD version (before =======)
+        fixedLines.push(line);
       }
+      // Skip the other branch (after =======)
     }
     
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixedLines.join('\n'));
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -57,55 +53,28 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
+// Function to recursively find and fix all files with merge conflicts
+function fixAllMergeConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath);
+    if (stat.isDirectory()) {
+      fixedCount += fixAllMergeConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
       }
     }
   }
   
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
 // Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} files to check for merge conflicts`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-
-// Also fix some specific problematic files
-const specificFiles = [
-  'EnhancedFooter.tsx',
-  'EnhancedHeader.tsx', 
-  'SidebarNavigation.tsx'
-];
-
-for (const fileName of specificFiles) {
-  const filePath = path.join(__dirname, fileName);
-  if (fs.existsSync(filePath)) {
-    if (fixMergeConflicts(filePath)) {
-      console.log(`Fixed ${fileName}`);
-    }
-  }
-}
+console.log('Starting merge conflict resolution...');
+const fixedCount = fixAllMergeConflicts('/workspace');
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);
