@@ -2,6 +2,7 @@
 import React from 'react';
 
 const SkipLink: React.FC = () => {
+<<<<<<< HEAD
   return (
     <React.Fragment>
       <a
@@ -11,6 +12,9 @@ const SkipLink: React.FC = () => {
       Skip to main content
     </a>
     </React.Fragment>
+=======
+  return ()
+>>>>>>> main
   );
 };
 

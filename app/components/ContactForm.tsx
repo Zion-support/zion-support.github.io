@@ -15,29 +15,28 @@ interface FormStatus {
   message: string,
 }
 
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+  const [formData, setFormData] = useState<FormData>()
   })
 
+<<<<<<< HEAD
   const [status, setStatus] = useState</FormData><FormStatus>({
     type: 'idle',
     message: ''
   })
 
   const handleChange = (e: React.ChangeEvent</FormStatus><HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+=======
+  const [status, setStatus] = useState<FormStatus>()
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+>>>>>>> main
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+    setFormData()
     }));
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' })
 
@@ -45,24 +44,14 @@ interface FormStatus {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+      setStatus()
       })
 
       // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+      setFormData()
       })
     } catch (error) {
-      setStatus({
-        type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again.'
+      setStatus()
       })
     }
   }
@@ -73,6 +62,7 @@ interface FormStatus {
     'Mobile App Development',
     'Cloud Services',
     'Data Analytics',
+<<<<<<< HEAD
     'Cybersecurity',
     'IT Consulting',
     'Other'
@@ -141,48 +131,55 @@ interface FormStatus {
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+=======
+    'Cybersecurity',;
+    'IT Consulting',;
+    'Other';
+  ];
+  return ()
+>>>>>>> main
                 placeholder="+1 (555) 123-4567"
-              />
+              /></input>
             </div>
           </div>
 
+<<<<<<< HEAD
           <div>
             </div><label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+          <div></div>
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2" /></label>
+>>>>>>> main
               Service Interest
             </label>
-            <select
-              id="service"
+            <select id="service"
               name="service"
               value={formData.service}
               onChange={handleChange}
+<<<<<<< HEAD
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
               ) : (
                 </select><div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+=======
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" /></select>
+              ) : ()
+>>>>>>> main
               )}
               <span className="text-sm font-medium">{status.message}</span>
             </div>
           )}
 
-          <button
-            type="submit"
+          <button type="submit"
             disabled={status.type === 'loading'}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-          >
-            {status.type === 'loading' ? (
-              <>
-                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                <span>Sending...</span>
-              </>
-            ) : (
-              <>
-                <Send className="h-5 w-5" />
-                <span>Send Message</span>
-              </>
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2" /></button>
+            {status.type === 'loading' ? ()
+            ) : ()
             )}
           </button>
         </form>
 
+<<<<<<< HEAD
         <div className="mt-8 pt-8 border-t border-gray-200">
           </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             </div><div className="flex flex-col items-center space-y-2">
@@ -191,26 +188,54 @@ interface FormStatus {
               </div>
               <div>
                 </div><p className="font-semibold text-gray-900">Phone</p>
+=======
+        <div className="mt-8 pt-8 border-t border-gray-200" /></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center" /></div>
+            <div className="flex flex-col items-center space-y-2" /></div>
+              <div className="p-3 bg-blue-100 rounded-full" /></div>
+                <Phone className="h-6 w-6 text-blue-600" / /></Phone>
+              </div>
+              <div></div>
+                <p className="font-semibold text-gray-900">Phone</p>
+>>>>>>> main
                 <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="flex flex-col items-center space-y-2">
               </div><div className="p-3 bg-green-100 rounded-full">
                 </div><Mail className="h-6 w-6 text-green-600" />
               </div>
               <div>
                 </div><p className="font-semibold text-gray-900">Email</p>
+=======
+            <div className="flex flex-col items-center space-y-2" /></div>
+              <div className="p-3 bg-green-100 rounded-full" /></div>
+                <Mail className="h-6 w-6 text-green-600" / /></Mail>
+              </div>
+              <div></div>
+                <p className="font-semibold text-gray-900">Email</p>
+>>>>>>> main
                 <p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="flex flex-col items-center space-y-2">
               </div><div className="p-3 bg-purple-100 rounded-full">
                 </div><MapPin className="h-6 w-6 text-purple-600" />
               </div>
               <div>
                 </div><p className="font-semibold text-gray-900">Office</p>
+=======
+            <div className="flex flex-col items-center space-y-2" /></div>
+              <div className="p-3 bg-purple-100 rounded-full" /></div>
+                <MapPin className="h-6 w-6 text-purple-600" / /></MapPin>
+              </div>
+              <div></div>
+                <p className="font-semibold text-gray-900">Office</p>
+>>>>>>> main
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>
             </div>

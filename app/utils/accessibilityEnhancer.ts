@@ -3,18 +3,21 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => {
+    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]');
+    modals.forEach()
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     })
     
     // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {
+    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]');
+    menus.forEach()
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
     })
@@ -38,10 +41,10 @@
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
-    const menuItems = Array.from(
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
-    
+    const menuItems = Array.from()
+      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
+    ) as HTMLElement[];
+    ;
     const currentIndex = menuItems.indexOf(activeElement);
     
     if (currentIndex === -1) return;
@@ -119,7 +122,7 @@
   private setupAriaLabels(): void {
     // Add ARIA labels to buttons without text
     const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    iconButtons.forEach(button => {
+    iconButtons.forEach()
       const icon = button.querySelector('svg');
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button';
@@ -129,7 +132,7 @@
     
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {
+    inputs.forEach()
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
@@ -147,8 +150,8 @@
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
+    const handleContrastChange = (e: MediaQueryListEvent) => {;
+      if (e.matches) {;
         document.body.classList.add('high-contrast');
       } else {
         document.body.classList.remove('high-contrast');
@@ -233,11 +236,17 @@
     this.skipLinks = []
     this.landmarks = []
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 
 // Export utility functions
-export const announceToScreenReader = (message: string) => {
+export const announceToScreenReader = (message: string) => {;
   accessibilityEnhancer.announce(message);
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main

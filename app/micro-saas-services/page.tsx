@@ -81,7 +81,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-    users: '15,000+',;
+    users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
     capabilities: [,
@@ -170,7 +170,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Productivity',
 
     rating: 4.8,
-    users: '25,000+',;
+    users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
     capabilities: [,
@@ -259,7 +259,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Content & Marketing',
     rating: 4.7,
-    users: '40,000+',;
+    users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
     capabilities: [,
@@ -347,7 +347,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Content & Marketing',
 
     rating: 4.6,
-    users: '30,000+',;
+    users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
     capabilities: [,
@@ -437,7 +437,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Business & Finance',
     rating: 4.8,
-    users: '20,000+',;
+    users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
     capabilities: [,
@@ -526,7 +526,7 @@ export const microSaasServices: MicroSaasService[] = [
     category: 'Business & Finance',
 
     rating: 4.9,
-    users: '12,000+',;
+    users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
     capabilities: [,
@@ -612,7 +612,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Customer Service',
     rating: 4.7,
-    users: '35,000+',;
+    users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
     capabilities: [,
@@ -702,7 +702,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Development',
     rating: 4.8,
-    users: '18,000+',;
+    users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
     capabilities: [,
@@ -792,7 +792,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Healthcare',
     rating: 4.9,
-    users: '8,000+',;
+    users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
     capabilities: [,
@@ -882,7 +882,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'E-commerce',
     rating: 4.7,
-    users: '22,000+',;
+    users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
     capabilities: [,
@@ -972,7 +972,7 @@ export const microSaasServices: MicroSaasService[] = [
     popular: true,
     category: 'Education',
     rating: 4.8,
-    users: '28,000+',;
+    users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
     capabilities: [,
@@ -1023,7 +1023,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     }
   }
-]
+  ]
 // Service categories for filtering and organization;
 export const serviceCategories = [
   'All',
@@ -1039,11 +1039,11 @@ export const serviceCategories = [
 
   'AI & ML',
 
-  'Analytics',
-
-  'Automation'
-]
-// Pricing tiers for comparison;
+  'Analytics',;
+;
+  'Automation';
+];
+// Pricing tiers for comparison;];
 export const pricingTiers = {
     starter: {,
     name: 'Starter',
@@ -1062,8 +1062,8 @@ export const pricingTiers = {
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'],
   }
-  }
-}
+  };
+};
 // Contact information;
 export const contactInfo = {
     phone: '+1 302 464 0950',
@@ -1072,4 +1072,5 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   }
-  timezone: 'EST (Eastern Standard Time)'}
+  timezone: 'EST (Eastern Standard Time)'};
+;

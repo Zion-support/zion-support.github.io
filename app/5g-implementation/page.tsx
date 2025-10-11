@@ -39,6 +39,7 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations'],
+<<<<<<< HEAD
     },
   ]
   return (
@@ -57,15 +58,30 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G Network </h1><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
+=======
+    },;
+  ];
+  return ()
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
+          <div className="relative max-w-7xl mx-auto text-center" /></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
+              5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
+>>>>>>> main
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
               Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div><button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></button>
+>>>>>>> main
                 Get Started
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
                 Schedule Demo
               </button>
             </div>
@@ -73,16 +89,24 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
         
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl font-bold text-white mb-4">
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-3xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                 Advanced 5G Features
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300" /></p>
                 Cutting-edge 5G technology for the next generation of connectivity
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -98,6 +122,11 @@ const FiveGImplementationPage: React.FC = () => {
                           </li><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
+              {features.map((feature, index) => ()
+                      {feature.benefits.map((benefit, idx) => ()
+>>>>>>> main
                       ))}
                     </ul>
                   )}
@@ -108,20 +137,32 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
         
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
               </div><h2 className="text-3xl font-bold text-white mb-6">
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto text-center" /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto" /></div>
+              <h2 className="text-3xl font-bold text-white mb-6" /></h2>
+>>>>>>> main
                 Ready to Implement 5G?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8" /></p>
                 Contact our experts to discuss your 5G implementation needs and get started today.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 </div><button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></button>
+>>>>>>> main
                   Contact Us
                 </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
                   Learn More
                 </button>
               </div>
@@ -134,4 +175,3 @@ const FiveGImplementationPage: React.FC = () => {
 };
 
 export default FiveGImplementationPage;
-

@@ -12,8 +12,8 @@ const DocsPage: React.FC = () => {
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
     { id: 'it-services', name: 'IT Services', icon: Cloud },
-    { id: 'api', name: 'API Reference', icon: Code },
-    { id: 'security', name: 'Security', icon: Shield }
+    { id: 'api', name: 'API Reference', icon: Code },;
+    { id: 'security', name: 'Security', icon: Shield };
   ];
   const documentation = [
     {
@@ -26,10 +26,17 @@ const DocsPage: React.FC = () => {
       lastUpdated: '2024-01-15',
       sections: [
         'Account Setup',
+<<<<<<< HEAD
         'First API Call',
         'Authentication',
         'Basic Configuration'
       ],
+=======
+        'First API Call',,
+        'Authentication',;
+        'Basic Configuration';
+      ];
+>>>>>>> main
     },
     {
       id: 2,
@@ -110,20 +117,29 @@ const DocsPage: React.FC = () => {
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
+<<<<<<< HEAD
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
   ];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
+=======
+    { title: 'Community', url: '/community', icon: Users },;
+    { title: 'Support', url: '/support', icon: Shield };
+  ];
+  const filteredDocs = selectedCategory === 'all' ;
+    ? documentation ;
+>>>>>>> main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery 
-    ? documentation.filter(doc => 
+    ? documentation.filter()
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase());
+      );
     : filteredDocs;
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -159,6 +175,9 @@ const DocsPage: React.FC = () => {
                 type="text"
                 placeholder="Search documentation..."
                 value={searchQuery}
+=======
+  return ()
+>>>>>>> main
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
@@ -166,6 +185,7 @@ const DocsPage: React.FC = () => {
           </div>
 
           {/* Quick Links */}
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {quickLinks.map((link, index) => (
               </div><a
@@ -176,16 +196,27 @@ const DocsPage: React.FC = () => {
                 </a><link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
               </a>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" /></div>
+            {quickLinks.map((link, index) => ()
+>>>>>>> main
             ))}
           </div>
 
           {/* Category Filter */}
+<<<<<<< HEAD
           <div className="mb-8">
             </div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 </div><button
                   key={category.id}
+=======
+          <div className="mb-8" /></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
+            <div className="flex flex-wrap gap-4" /></div>
+              {categories.map((category) => ()
+>>>>>>> main
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
@@ -193,7 +224,11 @@ const DocsPage: React.FC = () => {
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
                 >
+<<<<<<< HEAD
                   </button><category.icon className="w-5 h-5" />
+=======
+                  <category.icon className="w-5 h-5" /></category>
+>>>>>>> main
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -201,6 +236,7 @@ const DocsPage: React.FC = () => {
           </div>
 
           {/* Documentation List */}
+<<<<<<< HEAD
           <div className="space-y-6">
             {searchResults.map((doc) => (
               </div><div key={doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
@@ -248,10 +284,16 @@ const DocsPage: React.FC = () => {
                         </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {section}
                       </div>
+=======
+          <div className="space-y-6" /></div>
+            {searchResults.map((doc) => ()
+                    {doc.sections.map((section, sectionIndex) => ()
+>>>>>>> main
                     ))}
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                   </div><div className="flex space-x-4">
                     </div><a
@@ -266,6 +308,18 @@ const DocsPage: React.FC = () => {
                       className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
                       </a><Download className="w-4 h-4 mr-2" />
+=======
+                <div className="flex items-center justify-between" /></div>
+                  <div className="flex space-x-4" /></div>
+                    <a href={`/docs/${doc.id}`}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center" /></a>
+                      Read Guide
+                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
+                    </a>
+                    <a href={`/docs/${doc.id}/download`}
+                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center" /></a>
+                      <Download className="w-4 h-4 mr-2" / /></Download>
+>>>>>>> main
                       Download PDF
                     </a>
                   </div>
@@ -274,6 +328,7 @@ const DocsPage: React.FC = () => {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* No Results */}
           {searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhanced p-8 text-center">
@@ -283,12 +338,17 @@ const DocsPage: React.FC = () => {
                 Try adjusting your search terms or browse our documentation categories.
               </p>
               <button
+=======
+          {/* No Results */},
+    {searchResults.length === 0 && searchQuery && ()
+>>>>>>> main
                 onClick={() => setSearchQuery('')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Clear Search
               </button>
             </div>
+<<<<<<< HEAD
           )}
 
           {/* Additional Resources */}
@@ -302,10 +362,23 @@ const DocsPage: React.FC = () => {
                 </a><BookOpen className="w-8 h-8 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Tutorials</div>
+=======
+          )},
+    {/* Additional Resources */}
+          <div className="cyber-card-enhanced p-8 mt-16" /></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
+              <a href="/tutorials"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
+                <BookOpen className="w-8 h-8 text-cyan-400" / /></BookOpen>
+                <div></div>
+                  <div className="text-white font-semibold">Tutorials</div>
+>>>>>>> main
                   <div className="text-gray-300 text-sm">Step-by-step guides</div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
+<<<<<<< HEAD
               <a
                 href="/api"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -313,10 +386,18 @@ const DocsPage: React.FC = () => {
                 </a><Code className="w-8 h-8 text-green-400" />
                 <div>
                   </div><div className="text-white font-semibold">API Reference</div>
+=======
+              <a href="/api"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
+                <Code className="w-8 h-8 text-green-400" / /></Code>
+                <div></div>
+                  <div className="text-white font-semibold">API Reference</div>
+>>>>>>> main
                   <div className="text-gray-300 text-sm">Complete API documentation</div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
+<<<<<<< HEAD
               <a
                 href="/community"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -324,10 +405,18 @@ const DocsPage: React.FC = () => {
                 </a><Users className="w-8 h-8 text-purple-400" />
                 <div>
                   </div><div className="text-white font-semibold">Community</div>
+=======
+              <a href="/community"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
+                <Users className="w-8 h-8 text-purple-400" / /></Users>
+                <div></div>
+                  <div className="text-white font-semibold">Community</div>
+>>>>>>> main
                   <div className="text-gray-300 text-sm">Developer community</div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
+<<<<<<< HEAD
               <a
                 href="/support"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -335,9 +424,16 @@ const DocsPage: React.FC = () => {
                 </a><Shield className="w-8 h-8 text-orange-400" />
                 <div>
                   </div><div className="text-white font-semibold">Support</div>
+=======
+              <a href="/support"
+                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
+                <Shield className="w-8 h-8 text-orange-400" / /></Shield>
+                <div></div>
+                  <div className="text-white font-semibold">Support</div>
+>>>>>>> main
                   <div className="text-gray-300 text-sm">Get help and support</div>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
             </div>
           </div>

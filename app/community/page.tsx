@@ -9,8 +9,8 @@ const CommunityPage: React.FC = () => {
   const communityStats = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },
-    { icon: Star, value: '4.9', label: 'Average Rating' }
+    { icon: Calendar, value: '12', label: 'Events Monthly' },;
+    { icon: Star, value: '4.9', label: 'Average Rating' };
   ];
   const events = [
     {
@@ -35,8 +35,8 @@ const CommunityPage: React.FC = () => {
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses'
-    }
+      description: 'Expert panel on scaling SaaS businesses';
+    };
   ];
   const forums = [
     {
@@ -61,8 +61,8 @@ const CommunityPage: React.FC = () => {
       name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000
-    }
+      members: 3000;
+    };
   ];
   const benefits = [
     {
@@ -83,6 +83,7 @@ const CommunityPage: React.FC = () => {
     {
       icon: Award,
       title: 'Recognition',
+<<<<<<< HEAD
       description: 'Showcase your projects and get community recognition'
     }
   ]
@@ -142,20 +143,35 @@ const CommunityPage: React.FC = () => {
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
+=======
+      description: 'Showcase your projects and get community recognition';
+    };
+  ];
+  return() {communityStats.map((stat, index) => ()
+>>>>>>> main
             ))}
           </div>
 
           {/* Tabs */}
+<<<<<<< HEAD
           <div className="mb-8">
             </div><div className="flex flex-wrap justify-center gap-4">
+=======
+          <div className="mb-8" /></div>
+            <div className="flex flex-wrap justify-center gap-4" /></div>
+>>>>>>> main
               {[
                 { id: 'overview', name: 'Overview' },
                 { id: 'events', name: 'Events' },
                 { id: 'forums', name: 'Forums' },
                 { id: 'benefits', name: 'Benefits' }
+<<<<<<< HEAD
               ].map((tab) => (
                 </div><button
                   key={tab.id}
+=======
+              ].map((tab) => ()
+>>>>>>> main
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === tab.id
@@ -169,6 +185,7 @@ const CommunityPage: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-12">
@@ -269,10 +286,19 @@ const CommunityPage: React.FC = () => {
                         </a><ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </div>
+=======
+          {/* Overview Tab */},
+    {activeTab === 'overview' && ()
+          )},
+    {/* Events Tab */},
+    {activeTab === 'events' && ()
+                  {events.map((event, index) => ()
+>>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           )}
 
           {/* Forums Tab */}
@@ -305,10 +331,17 @@ const CommunityPage: React.FC = () => {
                         </a><ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                     </div>
+=======
+          )},
+    {/* Forums Tab */},
+    {activeTab === 'forums' && ()
+                  {forums.map((forum, index) => ()
+>>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           )}
 
           {/* Benefits Tab */}
@@ -329,10 +362,17 @@ const CommunityPage: React.FC = () => {
                         <p className="text-gray-300">{benefit.description}</p>
                       </div>
                     </div>
+=======
+          )},
+    {/* Benefits Tab */},
+    {activeTab === 'benefits' && ()
+                  {benefits.map((benefit, index) => ()
+>>>>>>> main
                   ))}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           )}
 
           {/* Join Community CTA */}
@@ -347,18 +387,30 @@ const CommunityPage: React.FC = () => {
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
+=======
+          )},
+    {/* Join Community CTA */}
+          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center" /></div>
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
+              Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
+              Start connecting, learning, and growing today.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4" /></div>
+              <a href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
+>>>>>>> main
                 Join Now
               </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              <a href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
                 Learn More
               </a>
             </div>
           </div>
 
           {/* Contact Information */}
+<<<<<<< HEAD
           <div className="cyber-card-enhanced p-8 mt-8">
             </div><h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -367,23 +419,48 @@ const CommunityPage: React.FC = () => {
                 <div>
                   </div><div className="text-white font-semibold">Email</div>
                   <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+=======
+          <div className="cyber-card-enhanced p-8 mt-8" /></div>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6" /></div>
+              <div className="flex items-center space-x-3" /></div>
+                <Mail className="w-6 h-6 text-cyan-400" / /></Mail>
+                <div></div>
+                  <div className="text-white font-semibold">Email</div>
+                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300" /></a>
+>>>>>>> main
                     community@ziontechgroup.com
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-3">
                 </div><Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Phone</div>
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+=======
+              <div className="flex items-center space-x-3" /></div>
+                <Phone className="w-6 h-6 text-cyan-400" / /></Phone>
+                <div></div>
+                  <div className="text-white font-semibold">Phone</div>
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300" /></a>
+>>>>>>> main
                     +1 (302) 464-0950
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-3">
                 </div><MapPin className="w-6 h-6 text-cyan-400" />
                 <div>
                   </div><div className="text-white font-semibold">Address</div>
+=======
+              <div className="flex items-center space-x-3" /></div>
+                <MapPin className="w-6 h-6 text-cyan-400" / /></MapPin>
+                <div></div>
+                  <div className="text-white font-semibold">Address</div>
+>>>>>>> main
                   <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
                 </div>
               </div>

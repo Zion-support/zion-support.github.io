@@ -23,16 +23,16 @@ const ContentPromotionBanner: React.FC = () => {
     {
       title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users
-    }
+      icon: Users;
+    };
   ];
-
   const benefits = [
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
+    'Proven track record of success';
   ];
 
+<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
       </div><div className="text-center mb-8">
@@ -58,6 +58,16 @@ const ContentPromotionBanner: React.FC = () => {
         </div><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
           Get Started Now
           </button><ArrowRight className="w-5 h-5 ml-2" />
+=======
+  return() {features.map((feature, index) => ()
+        ))}
+      </div>
+
+      <div className="text-center" /></div>
+        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center" /></button>
+          Get Started Now
+          <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
+>>>>>>> main
         </button>
       </div>
     </div>

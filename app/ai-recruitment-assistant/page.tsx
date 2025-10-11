@@ -32,6 +32,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Screening',
+<<<<<<< HEAD
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
   ]
@@ -64,12 +65,18 @@ const AIRecruitmentAssistantPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.';
+    };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

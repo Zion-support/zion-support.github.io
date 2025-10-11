@@ -8,8 +8,13 @@ const EdgeComputingPage: React.FC = () => {
     const features = [
     {
       icon: Cpu,
+<<<<<<< HEAD
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
+=======
+      title: 'Edge Processing',;
+      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',;
+>>>>>>> main
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'],
   },
     {
@@ -40,9 +45,15 @@ const EdgeComputingPage: React.FC = () => {
     icon: Server,
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
+<<<<<<< HEAD
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'],
   }
     ]
+=======
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
+  },
+  ];
+>>>>>>> main
 const services = [
     {
     icon: '⚡',
@@ -63,10 +74,17 @@ const services = [
     icon: '📱',
       title: 'Mobile Edge',
       description: 'Mobile edge computing for 5G and mobile applications'
+<<<<<<< HEAD
   }
     }
   ];
   const benefits = [
+=======
+  };
+    };
+  ];
+const benefits = [
+>>>>>>> main
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
 
@@ -74,10 +92,10 @@ const services = [
 
     'Enhanced Security',
 
-    'Real-time Processing',
-
-    'Global Scalability'
-  ]
+    'Real-time Processing',;
+;
+    'Global Scalability';
+  ];
 const useCases = [
     {
     title: 'Autonomous Vehicles',
@@ -108,6 +126,7 @@ const useCases = [
     title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
       icon: '🎮'
+<<<<<<< HEAD
   }
     }
   ]
@@ -134,40 +153,64 @@ return (
           <h1>
             Edge Computing;
             </h1><span>
+=======
+  };
+    };
+  ];
+return ()
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
+        <div className="relative max-w-7xl mx-auto text-center" / /></div>
+          <h1></h1>
+            Edge Computing;
+            <span></span>
+>>>>>>> main
               Solutions
             </span>
           </h1>
-          <p>
+          <p></p>
             Bring computing power closer to your data and users with our advanced edge computing solutions.;
             Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+            <button></button>
               Get Started Today
+<<<<<<< HEAD
               </button><ArrowRight>
+=======
+              <ArrowRight></ArrowRight>
+>>>>>>> main
             </button>
-            <button>
+            <button></button>
               View Demo,
             </button>
           </div>
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
-            <p>
+            <p></p>
               Advanced edge computing capabilities designed for modern applications and IoT solutions
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
@@ -184,6 +227,11 @@ return (
 
                       {benefit}
                     </li>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+            {features.map((feature, index) => ()
+    feature.benefits.map((benefit, benefitIndex) => ()
+>>>>>>> main
                   ))}
                 </ul>
               </div>
@@ -193,117 +241,127 @@ return (
         </div>
       </section>
       {/* Services Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
-            <p>
+            <p></p>
               Comprehensive edge computing solutions for all your business needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
-    services.map((service, index) => (
-  }
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
+    services.map((service, index) => ()
             ))}
           </div>
         </div>
       </section>
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
-            <p>
+            <p></p>
               Edge computing solutions for various industries and applications
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
             {
-    useCases.map((useCase, index) => (
-  }
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group"></div>
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
+    useCases.map((useCase, index) => ()
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
-            <p>
+            <p></p>
               Experience the benefits of edge computing with our proven solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle />
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
+            {benefits.map((benefit, index) => ()
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
-          <p>
+          <p></p>
             Transform your applications with ultra-low latency edge computing solutions
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+            <button></button>
               Start Free Trial
             </button>
-            <button>
+            <button></button>
               Contact Sales
             </button>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /></Footer>
   ),
 };
 
 export default EdgeComputingPage;
-

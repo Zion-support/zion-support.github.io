@@ -12,6 +12,7 @@ const benefits = [
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -56,8 +57,14 @@ return (
             </div>
           </div>
         </div>
+=======
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return ()
+>>>>>>> main
   ),
 };
 
 export default FuturisticServiceCardPage;
-

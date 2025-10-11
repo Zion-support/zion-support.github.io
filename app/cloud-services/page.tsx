@@ -8,8 +8,13 @@ const CloudServicesPage: React.FC = () => {
   const services = [
     {
       icon: Cloud,
+<<<<<<< HEAD
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
+=======
+      title: 'Cloud Migration',;
+      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',;
+>>>>>>> main
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'],
     },
     {
@@ -29,7 +34,7 @@ const CloudServicesPage: React.FC = () => {
       title: 'Cloud Security',
     }
   ];
-  const benefits = [
+  const benefits = [;
   ];
   const pricing = [
     {
@@ -40,10 +45,17 @@ const CloudServicesPage: React.FC = () => {
       features: [
         'Basic cloud setup',
         'Email support',
+<<<<<<< HEAD
         'Monthly monitoring',
         'Standard security',
         'Up to 5 users'
       ],
+=======
+        'Monthly monitoring',,
+        'Standard security',;
+        'Up to 5 users';
+      ];
+>>>>>>> main
     },
     {
       name: 'Professional',
@@ -74,6 +86,7 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ],
     }
+<<<<<<< HEAD
 
   ]
   return (
@@ -148,9 +161,17 @@ const CloudServicesPage: React.FC = () => {
                       </li><CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
+=======
+  ];
+  return() {services.map((service, index) => ()
+                  {service.features.map((feature, featureIndex) => ()
+>>>>>>> main
                   ))}
                 </ul>
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> main

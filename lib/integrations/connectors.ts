@@ -1,4 +1,34 @@
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from './types';
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+async function mockProviderCall<T>(
+  connection: ProviderConnection
+  action: string
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+}
+// CRM actions;
+export const crm = {
+  async syncContact(
+    connection: ProviderConnection
+    contact: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    contact: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "sync_contact", { contact });
+  }
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+import type { ProviderConnection, SyncLogEntry } from './types';
+import type { ProviderConnection, SyncLogEntry } from './types';
+>>>>>>> cursor/delete-records-e539
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection
@@ -16,6 +46,7 @@ const generateId = (): string => {
     return Math.random().toString(36).substr(2, 9)
   }
 
+>>>>>>> main
 export async function simulateAction<T = any>(
   connection: ProviderConnection
   action: string,
@@ -38,6 +69,24 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId,
     level: 'info',
     connectionId: connection.id,
+<<<<<<< HEAD
+=======
+    action,
+    status: 'success',
+    message: `Action ${action} completed successfully`,
+    details,
+    timestamp: new Date(),
+  };
+<<<<<<< HEAD
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
+}
+// CRM actions
+export const crm = {
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+    return simulateAction(connection, 'crm.syncContact', { contact });
+=======
+>>>>>>> cursor/delete-records-e539
 
 export async function simulateAction<T = any>(connectio,
   n: ProviderConnection,
@@ -148,11 +197,38 @@ export async function simulateAction<T = any>(connectio,
   n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
+>>>>>>> main
   },
   async addEmailTouchpoint(connectio,
   n: ProviderConnection, touc)
   h: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+<<<<<<< HEAD
+  },
+};
+// ATS actions
+export const ats = {
+  async updateStatus(
+    connection: ProviderConnection
+    status: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    status: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+=======
   }
 }
 // ATS actions;
@@ -198,6 +274,7 @@ export async function syncData(connectio,
   n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
+>>>>>>> main
   },
 
   async addProjectNote(connectio,
@@ -284,8 +361,17 @@ export async function syncData(connectio,
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
+<<<<<<< HEAD
 }
   return logs;
 }
 
 }}}}}}}}}}}}`
+=======
+};
+<<<<<<< HEAD
+=======
+  return logs;
+}
+>>>>>>> main
+>>>>>>> cursor/delete-records-e539

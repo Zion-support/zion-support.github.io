@@ -1007,8 +1007,8 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield
-    }
+      icon: Shield;
+    };
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1042,6 +1042,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
+<<<<<<< HEAD
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
@@ -1078,6 +1079,15 @@ const ItServicesPage: React.FC = () => {
                 {categories.map((category) => (
                   </div><button
                     key={category.id}
+=======
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },;
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length };
+  ];
+  const filteredServices = services.filter();
+  );
+
+  return() {categories.map((category) => ()
+>>>>>>> main
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
@@ -1092,6 +1102,7 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* Services Grid */}
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {filteredServices.map((service) => (
                 </div><div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -1107,19 +1118,30 @@ const ItServicesPage: React.FC = () => {
                         </span><Star className="w-4 h-4 mr-1" />
                         Popular
                       </span>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
+              {filteredServices.map((service) => ()
+>>>>>>> main
                     )}
                   </div>
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
+<<<<<<< HEAD
                   <div className="flex items-center justify-between mb-4">
                     </div><div>
                       </div><span className="text-2xl font-bold text-purple-400">{service.price}</span>
+=======
+                  <div className="flex items-center justify-between mb-4" /></div>
+                    <div></div>
+                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+>>>>>>> main
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
+<<<<<<< HEAD
                   <div className="mb-6">
                     </div><h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -1128,10 +1150,17 @@ const ItServicesPage: React.FC = () => {
                           </li><CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
+=======
+                  <div className="mb-6" /></div>
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                    <ul className="space-y-2" /></ul>
+                      {service.features.slice(0, 3).map((feature, index) => ()
+>>>>>>> main
                       ))}
                     </ul>
                   </div>
 
+<<<<<<< HEAD
                   <div className="flex items-center justify-between">
                     </div><Link
                       to="/contact"
@@ -1139,11 +1168,16 @@ const ItServicesPage: React.FC = () => {
                     >
                       Learn More
                       </Link><ArrowRight className="w-4 h-4 ml-1" />
+=======
+                  <div className="flex items-center justify-between" /></div>
+                    <Link to="/contact"
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors" /></Link>
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
+>>>>>>> main
                     </Link>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                    >
+                    <Link to="/contact"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
                       Get Quote
                     </Link>
                   </div>
@@ -1152,26 +1186,36 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
+<<<<<<< HEAD
             <div className="text-center">
               </div><div className="bg-slate-800/50 rounded-lg p-8">
                 </div><h2 className="text-2xl font-bold text-white mb-4">
+=======
+            <div className="text-center" /></div>
+              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
+                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
                   Let our IT experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
+<<<<<<< HEAD
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   </div><Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
+=======
+                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+                  <Link to="/contact"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
+>>>>>>> main
                     Get Free Consultation
                   </Link>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  <a href="tel:+13024640950"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
                     Call: (302) 464-0950
                   </a>
                 </div>
@@ -1181,7 +1225,7 @@ const ItServicesPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <Footer / /></Footer>
     </>
   );
 };

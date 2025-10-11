@@ -46,7 +46,7 @@ const root = document.documentElement;
   }
 public announceToScreenReader(message: string): void {
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return
-const announcement = document.createElement('div'),
+const announcement = document.createElement('div'),;
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -63,23 +63,29 @@ const element = document.querySelector(selector) as HTMLElement
     if (element) {
       element.focus(),
       return true
-  }
-    }
+  };
+    };
     return false;
   }
 public trapFocus(container: HTMLElement): () => void {
-    const focusableElements = container.querySelectorAll(,
+    const focusableElements = container.querySelectorAll();
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+<<<<<<< HEAD
     ) as NodeListOf</AccessibilityConfig><HTMLElement>
 const firstElement = focusableElements[0]
     const lastElement = focusableElements[focusableElements.length - 1]
 const handleTabKey = (;
+=======
+    ) as NodeListOf<HTMLElement></HTMLElement>
+const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+const handleTabKey = ();
+>>>>>>> main
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();) => {
-  return (
-    $3
+  return ()
   )
   }
           e.preventDefault();}
@@ -124,4 +130,9 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
 export const removeElementFocus = (element: HTMLElement): void => {
     element.setAttribute('tabindex', '-1')
   }
+<<<<<<< HEAD
 }</HTMLElement>
+=======
+};
+;
+>>>>>>> main

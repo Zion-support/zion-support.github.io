@@ -7,6 +7,7 @@ const PagePage: React.FC = () => {
     {
       icon: Zap,
       title: 'High Performance',
+<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   },
     {
@@ -31,15 +32,22 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+=======
+      description: 'Lightning-fast processing and real-time analytics for optimal results';
+  },;
+    {;
+    ];
+return ()
+>>>>>>> main
             ))}
 
           </div>
         </div>
       </section>
-            <h2>
+            <h2></h2>
               Key Benefits
             </h2>
-            <p>
+            <p></p>
               Experience the power of our page solutions for your business.
             </p>
               </div>
@@ -57,4 +65,3 @@ return (
 };
 
 export default PagePage;
-

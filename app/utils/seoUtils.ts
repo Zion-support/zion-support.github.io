@@ -66,7 +66,7 @@ private applyConfig(): void {
     }
 // Update tags;
     if (this.config.tags) {
-    this.config.tags.forEach(tag => {
+    this.config.tags.forEach()
         this.addMetaTag('article:tag', tag)
   }
       })
@@ -97,31 +97,31 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   }
 private updateOpenGraphTags(): void {
     if (typeof document === 'undefined') return;
-const ogTags = [}
-      { property: 'og:title', content: this.config.ogTitle || this.config.title },;
-      { property: 'og:description', content: this.config.ogDescription || this.config.description },;
+const ogTags = [},
+    { property: 'og:title', content: this.config.ogTitle || this.config.title },
+      { property: 'og:description', content: this.config.ogDescription || this.config.description },
       { property: 'og:type', content: this.config.ogType || 'website' },;
       { property: 'og:url', content: this.config.canonicalUrl || window.location.href },;
-    ]
+    ];
 if (this.config.ogImage) {}
       ogTags.push({ property: 'og:image', content: this.config.ogImage })
     }
-ogTags.forEach(tag => {
+ogTags.forEach()
     this.updateMetaTagByProperty(tag.property, tag.content)
   }
     })
   }
 private updateTwitterTags(): void {
-    if (typeof document === 'undefined') return;
-const twitterTags = [}
-      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },;
+    if (typeof document === 'undefined') return;];
+const twitterTags = [},
+    { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },;
       { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },;
-    ]
+    ];
 if (this.config.twitterImage) {}
       twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
     }
-twitterTags.forEach(tag => {
+twitterTags.forEach()
     this.updateMetaTag(tag.name, tag.content)
   }
     })
@@ -145,10 +145,10 @@ const meta = document.createElement('meta')
     meta.content = content,
     document.head.appendChild(meta)
   }
-  }
-}
+  };
+};
 // Utility functions;
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent
@@ -158,11 +158,12 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 }
 })
 }
-export const addStructuredData = (data: any): void => {
+export const addStructuredData = (data: any): void => {;
     if (typeof document === 'undefined') return;
 const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = createStructuredData(data),
   document.head.appendChild(script)
   }
-}
+};
+;

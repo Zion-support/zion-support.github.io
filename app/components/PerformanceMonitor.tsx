@@ -10,21 +10,21 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
+    const shouldMonitor = process.env.NODE_ENV === 'development' ||
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
 
     const updateMetrics = (newMetrics: Partial</PerformanceMetrics><PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
-    }
+    };
 
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
@@ -34,7 +34,7 @@ const PerformanceMonitor: React.FC = () => {
         getFCP((metric) => updateMetrics({ fcp: metric.value }));
         getLCP((metric) => updateMetrics({ lcp: metric.value }));
         getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      })
+      });
     }
 
     // Monitor performance with Performance Observer
@@ -42,21 +42,21 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime })
+            updateMetrics({ lcp: entry.startTime });
           }
           if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime })
+            updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime })
+              updateMetrics({ fcp: entry.startTime });
             }
           }
-        })
-      })
+        });
+      });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {
         console.warn('Performance Observer not supported:', e);
       }
@@ -77,18 +77,24 @@ const PerformanceMonitor: React.FC = () => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
-  }
+  };
 
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
-  }
+  };
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
       </div><div className="flex items-center justify-between mb-2">
         </div><h3 className="font-semibold text-cyan-400">Performance</h3>
+=======
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
+      <div className="flex justify-between items-center mb-2">
+        <span className="font-semibold text-cyan-400">Performance</span>
+>>>>>>> main
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
@@ -106,7 +112,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.fid && (
           <div className="flex justify-between">
             </div><span>FID:</span>
@@ -115,7 +120,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.cls && (
           <div className="flex justify-between">
             </div><span>CLS:</span>
@@ -124,7 +128,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.fcp && (
           <div className="flex justify-between">
             </div><span>FCP:</span>
@@ -133,7 +136,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.ttfb && (
           <div className="flex justify-between">
             </div><span>TTFB:</span>

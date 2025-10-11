@@ -4,9 +4,9 @@
  * Provides structured error logging with different severity levels;
  */;
 export enum ErrorSeverity {}
-  LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {
@@ -20,7 +20,7 @@ export interface ErrorLogEntry {}
   severity: ErrorSeverity;
   message: string;
   error?: Error;
-  context?: Record<string>
+  context?: Record<string></string>
   userAgent?: string
   url?: string
   stackTrace?: string,}
@@ -31,25 +31,35 @@ class ErrorLogger {}
   /**;
    * Log an error with context
    */
-  log(message: string,),;
+  log(message: string,),
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
+<<<<<<< HEAD
     error?: Error),;
     context?: Record</string><string>
+=======
+    error?: Error),
+    context?: Record<string></string>
+>>>>>>> main
   ): void {
     const entry: ErrorLogEntry = {,
   log();
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+<<<<<<< HEAD
     error?: Error,;
     context?: Record</string><string, unknown>
+=======
+    error?: Error,
+    context?: Record<string, unknown></string>
+>>>>>>> main
   }
   ): void {}
     const entry: ErrorLogEntry = {}
       timestamp: new Date().toISOString(),
-      severity,;
-      message,;
-      error,;
-      context,;
+      severity,
+      message,
+      error,
+      context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack}
@@ -131,17 +141,17 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {}
         return;}
       }
-      await fetch(endpoint, {
+      await fetch()
     method: 'POST'),
         headers: {)
   }
           'Content-Type': 'application/json'})
         })
-        body: JSON.stringify({
+        body: JSON.stringify()
     )
           ...entry;)
           error: entry.error;),
-            ? {),;
+            ? {),
                 message: entry.error.message),
                 name: entry.error.name),
   }
@@ -150,7 +160,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
         headers: {}
           'Content-Type': 'application/json'},
         body: JSON.stringify({)}
-          ...entry,;
+          ...entry,
           error: entry.error,
             ? {}
                 message: entry.error.message,
@@ -165,10 +175,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   private async sendToExternalService(entr);
   y: ErrorLogEntry): Promise</void><void> {/* TODO: Fix JSX expression */}
       }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */},
-        bod,;
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-              }
+      await fetch()
             : undefined;);
         })
       })
@@ -242,4 +249,8 @@ export const logInfo = (messag);
   e: string, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;
+<<<<<<< HEAD
 `;</string>
+=======
+`;
+>>>>>>> main

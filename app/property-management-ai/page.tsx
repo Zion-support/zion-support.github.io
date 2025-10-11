@@ -8,6 +8,7 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },
     { icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' },
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
+<<<<<<< HEAD
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
   ]
@@ -34,12 +35,18 @@ const PropertyManagementAIPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+    { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },;
+    { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

@@ -65,7 +65,16 @@ export interface EnterpriseItService {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const enterpriseITServices: EnterpriseItService[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "enterprise-architecture"
+=======
+;
+>>>>>>> main
+    id: "enterprise-architecture",
+>>>>>>> cursor/delete-records-e539
     name: "Enterprise Architecture Consulting",
     tagline: "Strategic IT architecture for large organizations",
     price: "$150/hour",

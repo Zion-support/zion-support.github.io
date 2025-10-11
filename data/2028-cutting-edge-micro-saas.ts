@@ -65,7 +65,16 @@ export interface CuttingEdgeMicroSaas2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2028-cutting-edge-micro-saas"
+=======
+;
+>>>>>>> main
+    id: "2028-cutting-edge-micro-saas",
+>>>>>>> cursor/delete-records-e539
     name: "2028 Cutting-Edge Micro SAAS Platform",
     tagline: "Cutting-edge micro SAAS for 2028",
     price: "$199/month",

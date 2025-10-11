@@ -9,8 +9,13 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
+<<<<<<< HEAD
       title: 'Real-Time Analytics',
       description: 'Get instant insights with real-time data visualization and monitoring.',
+=======
+      title: 'Real-Time Analytics',;
+      description: 'Get instant insights with real-time data visualization and monitoring.',;
+>>>>>>> main
       benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring'],
     },
     {
@@ -29,18 +34,23 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       icon: Activity,
       title: 'Performance Tracking',
       description: 'Monitor key performance indicators and track business metrics.',
+<<<<<<< HEAD
       benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis'],
     }
+=======
+      benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis']
+    },
+>>>>>>> main
   ];
-
   const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',
-    'Improve operational efficiency by 40%',
-    'Reduce reporting time by 80%',
-    'Gain competitive advantage with insights'
+    'Improve operational efficiency by 40%',;
+    'Reduce reporting time by 80%',;
+    'Gain competitive advantage with insights';
   ];
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -79,13 +89,31 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+  return ()
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}, {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                 Powerful Features
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300" /></p>
                 Everything you need to analyze and visualize your data
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -102,6 +130,11 @@ const AiAnalyticsDashboardPage: React.FC = () => {
                         </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
+              {features.map((feature, index) => ()
+                    {feature.benefits.map((benefit, benefitIndex) => ()
+>>>>>>> main
                     ))}
                   </ul>
                 </div>
@@ -111,42 +144,65 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
                 Why Choose AI Analytics?
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300" /></p>
                 Transform your business with intelligent data analysis
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div><div key={index} className="flex items-start space-x-4">
                   </div><CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
+              {benefits.map((benefit, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section><div className="
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
+          <div className="max-w-4xl mx-auto text-center" /></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
+>>>>>>> main
               Ready to Transform Your Data?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8" /></p>
               Start analyzing your data with AI-powered insights today.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div><button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors" /></button>
+>>>>>>> main
                 Get Started
               </button>
-              <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors" /></button>
                 Contact Sales
               </button>
             </div>
@@ -154,9 +210,12 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      <Footer /></Footer>
     </>
   );
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main

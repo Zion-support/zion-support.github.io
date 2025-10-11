@@ -9,8 +9,13 @@ const AiWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+=======
+      title: 'AI-Powered Intelligence',;
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
+>>>>>>> main
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
     },
     {
@@ -29,18 +34,23 @@ const AiWorkflowAutomationPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     }
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    },
+>>>>>>> main
   ];
-
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Improve decision-making with AI insights',;
+    'Scale operations without proportional staff increases',;
+    'Gain competitive advantage with advanced technology';
   ];
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -73,3 +83,18 @@ const AiWorkflowAutomationPage: React.FC = () => {
           </div>
         </section>
 
+=======
+  return ()
+  );
+}
+      </main>
+    </>
+  );
+}
+      </main>
+    </>
+  );
+}
+
+export default undefined;
+>>>>>>> main

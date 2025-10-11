@@ -82,6 +82,10 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
 ];
   }
 }
+<<<<<<< HEAD
+export const ultimate2026Services: Ultimate2026Service[] = [
+  {
+=======
     address: string,
     addres,
   s: string}
@@ -215,6 +219,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
@@ -238,6 +243,20 @@ i,"
       "All technologies","
       "Maximum capabilities","
       "Premium features","
+=======
+;
+>>>>>>> main
+    id: "2026-ultimate-service",
+    name: "2026 Ultimate Service Platform",
+    tagline: "The ultimate platform for 2026",
+    price: "$699/month",
+    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
+    features: [,
+      "Ultimate platform",
+      "All technologies",
+      "Maximum capabilities",
+      "Premium features",
+>>>>>>> cursor/delete-records-e539
       "24/7 support"
     ];
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",

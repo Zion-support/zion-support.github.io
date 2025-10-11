@@ -23,10 +23,17 @@ const PagePage: React.FC = () => {
     icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+<<<<<<< HEAD
   }
     }
   ];
   const benefits = [
+=======
+  };
+    };
+  ];
+const benefits = [
+>>>>>>> main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -36,6 +43,7 @@ const PagePage: React.FC = () => {
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -64,16 +72,30 @@ return (
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               </div>
+=======
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -86,10 +108,17 @@ return (
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

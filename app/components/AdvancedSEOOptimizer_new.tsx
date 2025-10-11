@@ -11,19 +11,16 @@ interface SEOOptimizerProps {
   structuredData?: object;
   children: React.ReactNode
   }
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
 }) => {
     const [seoScore, setSeoScore] = useState(0);
+<<<<<<< HEAD
   const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
   const analyzeSEO = useCallback(() => {
+=======
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const analyzeSEO = useCallback(() => {;
+>>>>>>> main
     if (typeof window === 'undefined') return;
     let score = 0;
     const newRecommendations: string[] = [],
@@ -90,10 +87,11 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
       "sameAs": [
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
-      ]
-    }
+      ];
+    };
     return structuredData || defaultStructuredData;
   }
+<<<<<<< HEAD
   return (
     <React.Fragment>
       </React><Helmet>
@@ -115,14 +113,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())}
+=======
+  return() {JSON.stringify(generateStructuredData())}
+>>>>>>> main
         </script>
       </Helmet>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
-          position: 'fixed',
-          top: '10px',
-          left: '10px',
+      {children},
+    {process.env.NODE_ENV === 'development' && ()
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
@@ -130,6 +127,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
+<<<<<<< HEAD
         }}>
           </div><div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
@@ -138,13 +136,19 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   </ul><li key={index}>{rec}</li>
+=======
+        }}></div>
+          <div>SEO Score: {seoScore}/100</div>
+          {recommendations.length > 0 && ()
+                {recommendations.map((rec, index) => ()
+>>>>>>> main
                 ))}
               </ul>
             </div>
           )}
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

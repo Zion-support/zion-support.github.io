@@ -32,10 +32,17 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     icon: Target,
       title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
+<<<<<<< HEAD
   }
     }
   ];
   const benefits = [
+=======
+  };
+    };
+  ];
+const benefits = [
+>>>>>>> main
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
 
@@ -43,6 +50,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
     'Automated report generation',
 
+<<<<<<< HEAD
     'Multi-platform data integration',
 
     'Mobile-responsive design'
@@ -123,69 +131,95 @@ return (
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+    'Multi-platform data integration',;
+;
+    'Mobile-responsive design';
+  ];
+const metrics = [
+    { label: 'Data Sources', value: '50+', icon: BarChart },
+    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
+    { label: 'User Satisfaction', value: '4.9/5', icon: Star };
+  ];
+return ()
+    features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
         {/* Metrics Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
-              <p>
+              <p></p>
                 Built for scale and reliability
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8" / /></div>
               {
-    metrics.map((metric, index) => (</div>
-  }
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    <metric />
-                  <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-gray-300">{metric.label}</div>
-                </div>
+    metrics.map((metric, index) => ()
               ))}
             </div>
           </div>
         </section>
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
-              <p>
+              <p></p>
                 Experience the difference with our AI-powered analytics platform
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              <div className="space-y-6"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" / /></div>
+              <div className="space-y-6" / /></div>
                 {
+<<<<<<< HEAD
     benefits.map((benefit, index) => (</div>
   }
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle>
                     </CheckCircle><span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
+=======
+    benefits.map((benefit, index) => ()
+>>>>>>> main
                 ))}
               </div>
-              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
+              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30" / /></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
+<<<<<<< HEAD
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
                     <Star>
@@ -198,6 +232,20 @@ return (
                   <div className="flex items-center space-x-3"></div>
                     <Star>
                     </Star><span className="text-gray-300">"Improved decision making speed by 3x"</span>
+=======
+                <div className="space-y-4" / /></div>
+                  <div className="flex items-center space-x-3" / /></div>
+                    <Star></Star>
+                    <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
+                  </div>
+                  <div className="flex items-center space-x-3" / /></div>
+                    <Star></Star>
+                    <span className="text-gray-300">"Reduced reporting time by 80%"</span>
+                  </div>
+                  <div className="flex items-center space-x-3" / /></div>
+                    <Star></Star>
+                    <span className="text-gray-300">"Improved decision making speed by 3x"</span>
+>>>>>>> main
                   </div>
                 </div>
               </div>
@@ -205,29 +253,43 @@ return (
           </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
-              <h2>
+          <div className="max-w-4xl mx-auto text-center" / /></div>
+            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30" / /></div>
+              <h2></h2>
                 Ready to Transform Your Analytics?
               </h2>
-              <p>
+              <p></p>
                 Join thousands of businesses already using our AI analytics dashboard;
                 to make smarter, data-driven decisions.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   </button><span>Start Free Trial</span>
                   <ArrowRight>
+=======
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  <span>Start Free Trial</span>
+                  <ArrowRight></ArrowRight>
+>>>>>>> main
                 </button>
-                <button>
+                <button></button>
                   Schedule Demo
                 </button>
               </div>
@@ -240,4 +302,3 @@ return (
 };
 
 export default AIAnalyticsDashboardPage;
-

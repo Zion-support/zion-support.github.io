@@ -23,18 +23,26 @@ const AdvancedAnalyticsPage: React.FC = () => {
     icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+<<<<<<< HEAD
   }
     }
   ];
   const benefits = [
+=======
+  };
+    };
+  ];
+const benefits = [
+>>>>>>> main
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
+<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -92,43 +100,67 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+=======
+  ];
+return ()
+    features.map((feature, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
+=======
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5" / /></section>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+>>>>>>> main
               Key Benefits
             </h2>
-            <p>
+            <p></p>
               Experience the power of our advancedanalytics solutions for your business.,
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
             {
+<<<<<<< HEAD
     benefits.map((benefit, index) => (
   }
               <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+=======
+    benefits.map((benefit, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2>
+=======
+      <section className="py-20 px-4 sm: px-6 lg:px-8" / /></section>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
+>>>>>>> main
               Ready to Get Started?;
             </h2>
-            <p>
+            <p></p>
               Contact our experts to discuss your advancedanalytics needs and get a customized solution.;
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 </button><Phone>
@@ -136,6 +168,15 @@ return (
               </button>
               <button>
                 </button><Mail>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                <Phone></Phone>
+                Call Now
+              </button>
+              <button></button>
+                <Mail></Mail>
+>>>>>>> main
                 Email Us
               </button>
             </div>

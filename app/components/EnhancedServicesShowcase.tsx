@@ -33,6 +33,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '95% Efficiency'
+<<<<<<< HEAD
   }
     }
   ]
@@ -80,14 +81,31 @@ return (
               </ul>
               <a>
                 Learn More </a><ArrowRight>
+=======
+  };
+    };
+  ];
+return ()
+    services.map((service, index) => ()
+    service.features.map((feature, featureIndex) => ()
+                ))}
+
+              </ul>
+              <a></a>
+                Learn More <ArrowRight></ArrowRight>
+>>>>>>> main
               </a>
             </div>
           ))}
         </div>
-        <div className="text-center mt-12"></div>
-          <a>
+        <div className="text-center mt-12" / /></div>
+          <a></a>
             View All Services;
+<<<<<<< HEAD
             </a><ArrowRight>
+=======
+            <ArrowRight></ArrowRight>
+>>>>>>> main
           </a>
         </div>
     </section>

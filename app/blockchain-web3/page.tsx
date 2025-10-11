@@ -6,8 +6,13 @@ const BlockchainWeb3Page: React.FC = () => {
     const features = [
     {
       icon: Zap,
+<<<<<<< HEAD
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
+=======
+      title: 'Smart Contracts',;
+      description: 'Automated, self-executing contracts with the terms directly written into code.',;
+>>>>>>> main
       benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'],
   },
     {
@@ -26,6 +31,7 @@ const BlockchainWeb3Page: React.FC = () => {
     icon: Globe,
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
+<<<<<<< HEAD
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'],
   }
     ]
@@ -65,6 +71,13 @@ return (
 
                       {benefit}
                     </li>
+=======
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
+  },
+  ];
+return() {features.map((feature, index) => ()
+    feature.benefits.map((benefit, benefitIndex) => ()
+>>>>>>> main
                   ))}
                 </ul>
               </div>

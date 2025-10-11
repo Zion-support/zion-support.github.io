@@ -14,6 +14,7 @@ const benefits = [
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -30,3 +31,10 @@ return (
 };
 
 export default PWAInstallerPage;
+=======
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return ()
+>>>>>>> main

@@ -14,20 +14,11 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',
-
-    'Proven track record of success'
-  ]
-return (
-            </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return ()
             ))}
           </div>
         </div>

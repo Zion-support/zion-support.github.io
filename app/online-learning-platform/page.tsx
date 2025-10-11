@@ -8,6 +8,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
     { icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' },
     { icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' },
     { icon: Zap, title: 'AI Tutoring', description: 'Personalized AI tutoring and adaptive learning experiences.' },
+<<<<<<< HEAD
     { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },
     { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' }
   ]
@@ -34,12 +35,18 @@ const OnlineLearningPlatformPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+    { icon: Shield, title: 'Secure Platform', description: 'Secure, scalable platform with role-based access and data protection.' },;
+    { icon: CheckCircle, title: 'Certification', description: 'Automated certification and credential management system.' };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

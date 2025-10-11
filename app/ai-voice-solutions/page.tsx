@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AiVoiceSolutionsPage: React.FC = () => {
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -110,6 +111,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
+=======
+  return ()
+>>>>>>> main
   );
 };
 

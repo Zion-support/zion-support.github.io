@@ -41,7 +41,7 @@ interface PageSEOData {}
   modifiedTime?: string
   author?: string
   section?: string,
-  tags?: string[],;
+  tags?: string[],
   noindex?: boolean;
   nofollow?: boolean;}
 }
@@ -91,8 +91,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   generateTitle(pageTitle?: string): string {
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
-  }
-  generateTitle(pageTitle?: string): string {}
+  };
+  generateTitle(pageTitle?: string): string {};
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName);
       ? title }
@@ -118,7 +118,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate keywords string;
    */;
   generateKeywords(pageKeywords?: string[]): string {}
-    const keywords = pageKeywords || this.currentPageData?.keywords || []
+    const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
   }
@@ -189,8 +189,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
-  private setMetaTag(nam,;
-  e: string, conten,;
+  private setMetaTag()
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
@@ -203,7 +202,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private getRobotsContent(): string {}
     if (!this.currentPageData) return 'index, follow';
-    const directives = []
+    const directives = [];
     if (!this.currentPageData.noindex) {}
       directives.push('noindex');}
     }
@@ -215,7 +214,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
+    }];
     return directives.join(', ');
   }
   /**;
@@ -224,7 +223,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setupStructuredData(): void {}
     this.addStructuredData(structuredData);
   private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
-  t: `${this.config.siteUrl}/search?q={search_term_string}`,;
+  t: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string';
       }
     }
@@ -236,7 +235,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-      '@context': 'https: //schema.org',
+      '@context': 'https: //schema.org',;
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();
       description: this.generateDescription()
@@ -248,20 +247,20 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     if (!this.currentPageData) return;
     const structuredData = {}
       '@context': 'https: //schema.org',
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {}
-        '@type': 'Organization',;
+        '@type': 'Organization',
         name: this.config.siteName,
         url: this.config.siteUrl}
-      }
-    }
+      };
+    };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {
-    Object.assign(structuredData, {
+    Object.assign()
         author: {)
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName,)
@@ -275,9 +274,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {)}
         author: {}
-// '@type': 'Person',;
+// '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName,
-        },;
+        },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
@@ -288,13 +287,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */},
-        datePublishe,;
+        datePublishe,
   d: this.currentPageData.publishedTime,
-        dateModifie,;
+        dateModifie,
   d: this.currentPageData.modifiedTime,
-        articleSectio,;
+        articleSectio,
   n: this.currentPageData.section,
-        keyword,;
+        keyword,
   s: this.generateKeywords(),
       })
     }
@@ -336,8 +335,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
     // Poor LCP
-  }
-        if (lastEntry.startTime > 4000) { // Poor LCP}
+  };
+        if (lastEntry.startTime > 4000) { // Poor LCP};
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] })
@@ -355,11 +354,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
         if (clsValue > 0.25) {
     // Poor CLS;
-      let clsValue = 0
+      let clsValue = let clsValue = let clsValue = 0
   }
       new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (!(entry as any).hadRecentInput) {}
+        for (const entry of list.getEntries()) {};
+          if (!(entry as any).hadRecentInput) {};
             clsValue += (entry as any).value;}
           }
         }
@@ -381,7 +380,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private trackSEOMetric(metric: string, value: number): void {
     ,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,;
+    if (typeof window !== 'undefined' && (window as any).gtag) {,
       (window as any).gtag('event', 'seo_metric', {);
         metric_name: metric),
   }
@@ -392,7 +391,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         metric_value: Math.round(value),
         event_category: 'seo'}
       })
-  private trackSEOMetric(metri,;
+  private trackSEOMetric()
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
       })
@@ -418,7 +417,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
   y: number }> {/* TODO: Fix JSX expression */}
       }
-    ]
+  ]
   }
   /**;
    * Generate robots.txt content;
@@ -438,13 +437,13 @@ Disallow: /_next/,
 Disallow: /static/`,
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
   p: ${this.config.siteUrl}/sitemap.xml;
-# Disallow admin and private areas,;
+# Disallow admin and private areas,
   Disallow: /admin/,
-Disallo,;
+Disallo,
   w: /private/,
-Disallo,;
+Disallo,
   w: /api/,
-Disallo,;
+Disallo,
   w: /_next/,
 Disallo,`;
   w: /static/`,
@@ -455,13 +454,13 @@ Disallo,`;
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length
-    const title = document.title,,;
-    if (title.length < 30) {
+    const title = document.title,,
+    if (title.length < 30) {;
     ,;
     // Check title length;
     const title = document.title
-  }
-    if (title.length < 30) {}
+  };
+    if (title.length < 30) {};
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
@@ -522,8 +521,8 @@ Disallo,`;
 }
 // Default configuration;
 const defaultConfig: SEOConfig = {
-    siteName: 'Zion Tech Group'
-  siteUrl: 'https://zion.app',
+    siteName: 'Zion Tech Group',
+    siteUrl: 'https://zion.app',
 // Default configuration
   }
 const defaultConfig: SEOConfig = {}
@@ -542,7 +541,7 @@ export default seoOptimizer;
   }
 }
 // Default configuration;
-const,;
+const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig);

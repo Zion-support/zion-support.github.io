@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const DataAnalyticsBiPage: React.FC = () => {
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -110,6 +111,9 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
+=======
+  return ()
+>>>>>>> main
   );
 };
 

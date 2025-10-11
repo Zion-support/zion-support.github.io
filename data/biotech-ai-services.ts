@@ -2018,6 +2018,55 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const biotechAIServices: BiotechAIService[] = [
+  {
+    id: 'ai-drug-discovery-platform',
+    name: 'AI Drug Discovery Platform',
+    tagline: 'Accelerate drug development with AI-powered discovery',
+    price: '$3,999',
+    period: '/month',
+    description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.',
+    features: [
+      'AI drug discovery algorithms',
+      'Genetic sequence analysis',
+      'Protein folding prediction',
+      'Drug interaction modeling',
+      'Clinical trial optimization',
+      'Regulatory compliance tools',
+      'Research collaboration platform',
+      'Advanced analytics dashboard',
+      'API for research integration',
+      'Multi-omics data analysis'
+    ],
+    popular: true,
+    icon: '🧬',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/biotech-ai',
+    marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.',
+    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers',
+    trialDays: 30,
+    setupTime: '2 weeks',
+    category: 'Biotech AI',
+    realService: true,
+    technology: ['AI Drug Discovery', 'Machine Learning', 'Bioinformatics', 'React', 'Node.js', 'PostgreSQL', 'Cloud Computing'],
+    integrations: ['Research databases', 'Laboratory systems', 'Clinical trial platforms', 'Regulatory databases', 'Scientific literature'],
+    useCases: ['Drug discovery', 'Target identification', 'Lead optimization', 'Clinical trial design', 'Regulatory compliance', 'Research collaboration'],
+    roi: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',
+    competitors: ['Insitro', 'Recursion', 'Basic research tools'],
+    marketSize: '$150B AI in healthcare market',
+    growthRate: '250% annual growth',
+    variant: 'biotech-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+;
+>>>>>>> cursor/delete-records-e539
 export const biotechAIServices: BiotechAIService[] = [;
   {
     id: 'ai-drug-discovery-platform'
@@ -2050,10 +2099,19 @@ export const biotechAIServices: BiotechAIService[] = [;
     growthRate: '250% annual growth',
     variant: 'biotech-futuristic'}
     contactInfo: {}
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
+=======
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+>>>>>>> main
+      website: 'https://ziontechgroup.com'
+    }
+>>>>>>> cursor/delete-records-e539
     real_implementation: true,
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.'
     launch_date: '2024 - 03 - 10'

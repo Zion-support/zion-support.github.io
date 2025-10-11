@@ -65,7 +65,16 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const newOperationalServices2025: NewOperationalService2025[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "smart-operations-center"
+=======
+;
+>>>>>>> main
+    id: "smart-operations-center",
+>>>>>>> cursor/delete-records-e539
     name: "Smart Operations Center",
     tagline: "AI-powered operations management",
     price: "$119/month",

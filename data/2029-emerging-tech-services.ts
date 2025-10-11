@@ -65,7 +65,16 @@ export interface EmergingTechService2029 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const emergingTechServices2029: EmergingTechService2029[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2029-emerging-tech-service"
+=======
+;
+>>>>>>> main
+    id: "2029-emerging-tech-service",
+>>>>>>> cursor/delete-records-e539
     name: "2029 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2029",
     price: "$399/month",

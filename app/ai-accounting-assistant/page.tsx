@@ -8,6 +8,7 @@ const AIAccountingAssistantPage: React.FC = () => {
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' },
     { icon: FileText, title: 'Tax Preparation', description: 'Automated tax preparation and compliance management.' },
     { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
+<<<<<<< HEAD
     { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
   ]
@@ -34,12 +35,18 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+    { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },;
+    { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

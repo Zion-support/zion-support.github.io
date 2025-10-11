@@ -26,9 +26,15 @@ export default function APIDocsPage() {
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
+<<<<<<< HEAD
   -d '{
     "text": "Your text to analyze",
     "features": ["sentiment", "entities", "key_phrases"],
+=======
+  -d '{,
+    "text": "Your text to analyze",;
+    "features": ["sentiment", "entities", "key_phrases"];
+>>>>>>> main
   }'`
         },
         {
@@ -44,7 +50,7 @@ export default function APIDocsPage() {
     "features": ["objects", "faces", "text"]
   }'`
         }
-      ]
+  ]
     },
     {
       title: 'Cloud Services',
@@ -69,7 +75,11 @@ export default function APIDocsPage() {
     }
   }'`
         }
+<<<<<<< HEAD
       ],
+=======
+  ]
+>>>>>>> main
     },
     {
       title: 'Data Analytics',
@@ -90,17 +100,16 @@ export default function APIDocsPage() {
     "output_format": "json"
   }'`
         }
-      ]
-    }
   ]
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,
-    endpoints: category.endpoints.filter(endpoint => 
+    }
+  ];
+  const filteredEndpoints = apiEndpoints.map()
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
+    );
   })).filter(category => category.endpoints.length > 0);
+<<<<<<< HEAD
   return (
     </string><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div><SEOOptimizer 
@@ -207,13 +216,27 @@ export default function APIDocsPage() {
                               </React><Copy className="w-4 h-4" />
                               Copy
                             </React.Fragment>
+=======
+  return() {filteredEndpoints.map((category, categoryIndex) => ()
+                  {category.endpoints.map((endpoint, endpointIndex) => ()
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? ()
+                          ) : ()
+>>>>>>> main
                           )}
                         </button>
                       </div>
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
+<<<<<<< HEAD
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         </div><pre className="text-gray-300 text-sm">
                           </pre><code>{endpoint.code}</code>
+=======
+                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" /></div>
+                        <pre className="text-gray-300 text-sm" /></pre>
+                          <code>{endpoint.code}</code>
+>>>>>>> main
                         </pre>
                       </div>
                     </div>
@@ -225,25 +248,36 @@ export default function APIDocsPage() {
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         </section><div className="
           </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+=======
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" /></section>
+        <div className="max-w-4xl mx-auto text-center" /></div>
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6" /></h2>
+>>>>>>> main
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8" /></p>
             Start building with our APIs today and create amazing applications.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div><button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" /></button>
+>>>>>>> main
               Get API Key
   </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" /></button>
               View SDKs
   </
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /></Footer>
     </div>
   ),
 }

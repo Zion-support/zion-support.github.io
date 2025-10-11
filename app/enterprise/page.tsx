@@ -8,8 +8,13 @@ const EnterprisePage: React.FC = () => {
     const features = [
     {
       icon: Shield,
+<<<<<<< HEAD
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
+=======
+      title: 'Enterprise Security',;
+      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',;
+>>>>>>> main
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'],
   },
     {
@@ -40,6 +45,7 @@ const EnterprisePage: React.FC = () => {
     icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
+<<<<<<< HEAD
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'],
   }
     ]
@@ -48,6 +54,16 @@ const solutions = [
     title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
+=======
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+  },
+  ];
+const solutions = [
+    {
+    title: 'Enterprise Resource Planning',
+      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
+      icon: Building,;
+>>>>>>> main
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'],
   },
     {
@@ -68,7 +84,7 @@ const solutions = [
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'],
   }
-    ]
+  ];
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -79,6 +95,7 @@ const benefits = [
 
     'Scale with business growth',
 
+<<<<<<< HEAD
     'Integrate with existing systems',
 
     'Provide 24/7 support and monitoring'
@@ -106,21 +123,42 @@ return (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
+=======
+    'Integrate with existing systems',;
+;
+    'Provide 24/7 support and monitoring';
+  ];
+const stats = [
+    { number: '500+', label: 'Enterprise Clients', icon: Building },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
+    { number: '24/7', label: 'Support Available', icon: Clock };
+  ];
+return ()
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
+        <div className="relative max-w-7xl mx-auto text-center" / /></div>
+          <h1></h1>
+>>>>>>> main
             Enterprise</h1>
-            <span>
+            <span></span>
               Solutions
             </span>
           </h1>
-          <p>
+          <p></p>
             Comprehensive enterprise-grade solutions designed for large-scale business operations.;
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+            <button></button>
               Get Enterprise Consultation
+<<<<<<< HEAD
               </button><ArrowRight>
+=======
+              <ArrowRight></ArrowRight>
+>>>>>>> main
             </button>
-            <button>
+            <button></button>
               View Case Studies,
             </button>
           </div>
@@ -128,55 +166,69 @@ return (
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" / /></div>
             {
-    stats.map((stat, index) => (
-  }
-              <div key={index} className="text-center"></div>
-                <div className="flex justify-center mb-4"></div>
-                  <stat />
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
+    stats.map((stat, index) => ()
             ))}
 
           </div>
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
               Enterprise-Grade Features
             </h2>
-            <p>
+            <p></p>
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature>
                   </feature><h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+                  <feature></feature>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+>>>>>>> main
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul>
+                <ul></ul>
                   {
+<<<<<<< HEAD
     feature.benefits.map((benefit, idx) => (
   }
                     </ul><li>
@@ -184,6 +236,9 @@ return (
 
                       {benefit}
                     </li>
+=======
+    feature.benefits.map((benefit, idx) => ()
+>>>>>>> main
                   ))}
                 </ul>
               </div>
@@ -192,10 +247,10 @@ return (
           </div>
         </div>
       </section>
-            <h2>
+            <h2></h2>
               Comprehensive Solutions
             </h2>
-            <p>
+            <p></p>
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
@@ -210,10 +265,17 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -225,35 +287,45 @@ return (
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <h2></h2>
             Ready to Transform Your Enterprise?
           </h2>
-          <p>
+          <p></p>
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+            <button></button>
               Contact Enterprise Sales
+<<<<<<< HEAD
               </button><ArrowRight>
+=======
+              <ArrowRight></ArrowRight>
+>>>>>>> main
             </button>
-            <button>
+            <button></button>
               Learn More
             </button>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer /></Footer>
   ),
 };
 
 export default EnterprisePage;
-

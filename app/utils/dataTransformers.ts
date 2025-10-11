@@ -25,23 +25,31 @@ export function deepClone<T>(ob);
 /**;
  * Deep merge two objects;
  */;
+<<<<<<< HEAD
 export function deepMerge</T><T extends Record<string, unknown>>(targe,;
+=======
+export function deepMerge<T extends Record<string, unknown>>()
+>>>>>>> main
   t: T, sourc);
   e: Partial</T><T>): T {/* TODO: Fix JSX expression */}
   const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    }
-  }
+    };
+  };
   return output;
 }
 /**;
  * Flatten a nested object;
  */;
+<<<<<<< HEAD
 export function flattenObject(ob,;
   j: Record</T><string, unknown>,;
   prefix = '',;
+=======
+export function flattenObject()
+>>>>>>> main
   separator = '.');
 ): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record</string><string, unknown> = {}
@@ -57,15 +65,23 @@ export function flattenObject(ob,;
 /**;
  * Unflatten a flattened object;
  */;
+<<<<<<< HEAD
 export function unflattenObject(ob,;
   j: Record</string><string, unknown>,;
+=======
+export function unflattenObject()
+>>>>>>> main
   separator = '.');
 ): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
   result: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
+<<<<<<< HEAD
           current = current[k] as Record</string><string>
+=======
+          current = current[k] as Record<string></string>
+>>>>>>> main
         }
       }
     }
@@ -75,6 +91,7 @@ export function unflattenObject(ob,;
 /**;
  * Pick specific keys from an object;
  */;
+<<<<<<< HEAD
 export function pick</string><T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
@@ -84,19 +101,33 @@ export function pick</string><T extends Record<string, unknown>, K extends keyof
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   })
+=======
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  s: K[]),
+): Pick<T, K> {/* TODO: Fix JSX expression */}
+  const result = {} as Pick<T></T>
+  keys.forEach()
+    });
+  });
+>>>>>>> main
   return result;
 }
 /**;
  * Omit specific keys from an object;
  */;
+<<<<<<< HEAD
 export function omit</T><T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
+=======
+export function omit<T extends Record<string, unknown>, K extends keyof T>()
+>>>>>>> main
   s: K[]),
 ): Omit</T><T, K> {/* TODO: Fix JSX expression */}
   const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   })
+<<<<<<< HEAD
   return result as Omit</T><T>
 }
 /**;
@@ -105,6 +136,14 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
 export function groupBy</T><T>(arra,;
   y: T[],
   ke,;
+=======
+  return result as Omit<T></T>;
+};
+/**;
+ * Group array items by a key;
+ */;
+export function groupBy<T>()
+>>>>>>> main
   y: keyof T | ((ite)
   m: T) => string | number),
 ): Record</T><string, T[]> {/* TODO: Fix JSX expression */},
@@ -118,7 +157,7 @@ export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
   }
   const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */}
+  return array.filter()
     })
     seen.add(value);
     return true;
@@ -127,12 +166,17 @@ export function unique<T>(arra);
 /**;
  * Sort array by multiple keys;
  */;
+<<<<<<< HEAD
 export function sortBy</T><T>(arra,;
   y: T[],
   key,;
   s: Array</T><keyof T | ((ite),
+=======
+export function sortBy<T>()
+  s: Array<keyof T | ((ite),
+>>>>>>> main
   m: T) => unknown)>,
-  order,;
+  order,
   s: Array<'asc' | 'desc'> = [],
 ): T[] {/* TODO: Fix JSX expression */}
       }
@@ -154,17 +198,22 @@ export function sortBy</T><T>(arra,;
 /**;
  * Chunk array into smaller arrays;
  */;
-export function chunk<T>(arra,;
+export function chunk<T>()
   y: T[], siz);
-  e: number): T[][] {/* TODO: Fix JSX expression */}
+  e: number): T[], [] {/* TODO: Fix JSX expression */}
   }
   return chunks;
 }
 /**;
  * Zip multiple arrays together;
  */;
+<<<<<<< HEAD
 export function zip</T><T>(...array);
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
+=======
+export function zip<T>(...array);
+  s: T[], []): T[], [] {/* TODO: Fix JSX expression */}
+>>>>>>> main
   }
   return result;
 }
@@ -191,10 +240,7 @@ export function formatCurrency(amoun);
 /**;
  * Format date;
  */;
-export function formatDate(dat,;
-  e: Date | string | number,
-  option,;
-  s: Intl.DateTimeFormatOptions = {},;
+export function formatDate()
   locale = 'en-US');
 ): string {/* TODO: Fix JSX expression */}
 }
@@ -213,7 +259,7 @@ export function formatRelativeTime(dat);
 /**;
  * Truncate string;
  */;
-export function truncate(st,;
+export function truncate()
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
 }

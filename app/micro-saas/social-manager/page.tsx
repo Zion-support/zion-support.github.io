@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 const SocialMediaManagerPage: React.FC = () => {
+<<<<<<< HEAD
     return (
     <>,
       <Helmet>
@@ -61,9 +62,11 @@ const SocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
     </>,
+=======
+    return ()
+>>>>>>> main
   )
   }
 };
 
 export default SocialMediaManagerPage;
-

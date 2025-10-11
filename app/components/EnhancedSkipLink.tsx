@@ -6,13 +6,13 @@ const EnhancedSkipLink: React.FC = () => {
     <React.Fragment>
       <a
       href="#main-content"
-      className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-slate-900"
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-cyan-600"
       onClick={(e) => {
         e.preventDefault();
         const main = document.querySelector('#main-content');
         if (main) {
           main.focus();
-          main.scrollIntoView({ behavior: 'smooth' })
+          main.scrollIntoView({ behavior: 'smooth' });
         }
       }}
     >

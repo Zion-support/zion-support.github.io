@@ -52,8 +52,8 @@ export interface AppConfig {
   }
 }
 const defaultConfig: AppConfig = {
-    environment: 'development'
-  api: {
+    environment: 'development',
+    api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
@@ -84,7 +84,7 @@ const defaultConfig: AppConfig = {
     theme: 'auto',
     language: 'en',
   }
-    timezone: 'UTC'},;
+    timezone: 'UTC'},
   logging: {
     ,
     level: 'info',
@@ -166,67 +166,91 @@ export default configManager;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   }
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */}
   }
-  performanc,;
+  performanc,
   e: {/* TODO: Fix JSX expression */}
   }
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */}
   }
-  u,;
+  u,
   i: {/* TODO: Fix JSX expression */}
   }
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
-const,;
+const,
   defaultConfig: AppConfig = {/* TODO: Fix JSX expression */},
-  feature,;
+  feature,
   s: {/* TODO: Fix JSX expression */},
-  performanc,;
+  performanc,
   e: {/* TODO: Fix JSX expression */},
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */},
-  u,;
+  u,
   i: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+<<<<<<< HEAD
 const,;
   developmentConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
+=======
+const,
+  developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
+  feature,
+>>>>>>> main
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+<<<<<<< HEAD
 const,;
   stagingConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
+=======
+const,
+  stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
+  feature,
+>>>>>>> main
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+<<<<<<< HEAD
 const,;
   productionConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
+=======
+const,
+  productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
+  feature,
+>>>>>>> main
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */},
-  securit,;
+  securit,
   y: {/* TODO: Fix JSX expression */}
   }
 }
+<<<<<<< HEAD
 const,;
   testConfig: Partial</AppConfig><AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
+=======
+const,
+  testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
+  feature,
+>>>>>>> main
   s: {/* TODO: Fix JSX expression */},
-  loggin,;
+  loggin,
   g: {/* TODO: Fix JSX expression */}
   }
 }
@@ -253,9 +277,9 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */;
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig }
-    switch (this.environment) {/* TODO: Fix JSX expression */}
-    }
+    let config = let config = let config = { ...defaultConfig }
+    switch (this.environment) {/* TODO: Fix JSX expression */};
+    };
     // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
@@ -263,7 +287,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Deep merge two config objects;
    */;
-  private mergeConfig(bas,;
+  private mergeConfig()
   e: AppConfig, overrid);
   e: Partial</AppConfig><AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
@@ -281,6 +305,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   get</K><K extends keyof AppConfig>(ke);
   y: K): AppConfig[K],
+<<<<<<< HEAD
   get</K><K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,
     nestedKe,;
@@ -288,14 +313,21 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   ): AppConfig[K][NK],
   get</K><K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,
+=======
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+  y: NK;)
+  ): AppConfig[K], [NK],
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+>>>>>>> main
     nestedKey?: NK;);
-  ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
+  ): AppConfig[K] | AppConfig[K], [NK] {/* TODO: Fix JSX expression */}
     }
     return this.config[key]
   }
   /**;
    * Set configuration value;
    */;
+<<<<<<< HEAD
   set</K><K extends keyof AppConfig>(ke,;
   y: K, valu);
   e: AppConfig[K]): void,
@@ -311,6 +343,16 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     nestedKeyOrValu,;
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK]);
+=======
+  set<K extends keyof AppConfig>()
+  y: K, valu);
+  e: AppConfig[K]): void,
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+  e: AppConfig[K], [NK])
+  ): void,
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    value?: AppConfig[K], [NK]);
+>>>>>>> main
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
         }) as AppConfig[K]
@@ -326,15 +368,15 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   private getDefaultForKey</K><K extends keyof AppConfig>(ke);
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */},
-      feature,;
+      feature,
   s: {/* TODO: Fix JSX expression */},
-      performanc,;
+      performanc,
   e: {/* TODO: Fix JSX expression */},
-      securit,;
+      securit,
   y: {/* TODO: Fix JSX expression */},
-      u,;
+      u,
   i: {/* TODO: Fix JSX expression */},
-      loggin,;
+      loggin,
   g: {/* TODO: Fix JSX expression */}
       }
     }
@@ -424,7 +466,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Validate configuration;
    */;
   validate(): {/* TODO: Fix JSX expression */}
-  s: string[] } {/* TODO: Fix JSX expression */}
+  s: string[] }, {/* TODO: Fix JSX expression */}
     }
     if (this.config.api.timeout < 1000) {/* TODO: Fix JSX expression */}
     }

@@ -56,26 +56,27 @@ const ContentCarousel: React.FC = () => {
         'Compliance management'
       ],
       icon: Shield,
-      color: 'from-red-500 to-pink-600'
-    }
+      color: 'from-red-500 to-pink-600';
+    };
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  useEffect(() => {];
+    const timer = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const nextSlide = () => {
+  const nextSlide = () => {;
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+<<<<<<< HEAD
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       </div><div className="relative overflow-hidden rounded-2xl">
@@ -104,6 +105,13 @@ const ContentCarousel: React.FC = () => {
                       </div><div className="w-2 h-2 bg-white rounded-full"></div>
                       <span className="text-sm">{feature}</span>
                     </div>
+=======
+  return ()
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        ></div>
+          {slides.map((slide) => ()
+                  {slide.features.map((feature, index) => ()
+>>>>>>> main
                   ))}
                 </div>
               </div>
@@ -111,6 +119,7 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
         
+<<<<<<< HEAD
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
@@ -130,6 +139,21 @@ const ContentCarousel: React.FC = () => {
         {slides.map((_, index) => (
           </div><button
             key={index}
+=======
+        <button onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors" /></button>
+          <ChevronLeft className="w-6 h-6" / /></ChevronLeft>
+        </button>
+        
+        <button onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors" /></button>
+          <ChevronRight className="w-6 h-6" / /></ChevronRight>
+        </button>
+      </div>
+      
+      <div className="flex justify-center space-x-2 mt-6" /></div>
+        {slides.map((_, index) => ()
+>>>>>>> main
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
               index === currentSlide ? 'bg-cyan-500' : 'bg-gray-300'

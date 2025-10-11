@@ -65,7 +65,16 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const quantumAIServices2025: QuantumAiService2025[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "quantum-ai-hybrid"
+=======
+;
+>>>>>>> main
+    id: "quantum-ai-hybrid",
+>>>>>>> cursor/delete-records-e539
     name: "Quantum AI Hybrid Platform",
     tagline: "Combining quantum computing with artificial intelligence",
     price: "$299/month",

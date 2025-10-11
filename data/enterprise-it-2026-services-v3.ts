@@ -65,7 +65,16 @@ export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2026-enterprise-it-v3"
+=======
+;
+>>>>>>> main
+    id: "2026-enterprise-it-v3",
+>>>>>>> cursor/delete-records-e539
     name: "2026 Enterprise IT Solutions V3",
     tagline: "Third generation enterprise IT",
     price: "$499/month",

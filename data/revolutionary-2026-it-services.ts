@@ -65,7 +65,16 @@ export interface Revolutionary2026ItService {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2026-revolutionary-it"
+=======
+;
+>>>>>>> main
+    id: "2026-revolutionary-it",
+>>>>>>> cursor/delete-records-e539
     name: "2026 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2026",
     price: "$199/month",

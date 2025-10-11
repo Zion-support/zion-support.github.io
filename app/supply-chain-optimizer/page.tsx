@@ -8,6 +8,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
     { icon: BarChart, title: 'Demand Forecasting', description: 'Accurate demand forecasting and inventory optimization using AI analytics.' },
     { icon: Zap, title: 'Process Automation', description: 'Automated supply chain processes and workflow optimization.' },
     { icon: Shield, title: 'Risk Management', description: 'Comprehensive risk assessment and mitigation strategies.' },
+<<<<<<< HEAD
     { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },
     { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
   ]
@@ -34,12 +35,18 @@ const SupplyChainOptimizerPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+    { icon: CheckCircle, title: 'Quality Control', description: 'Automated quality control and compliance monitoring.' },;
+    { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

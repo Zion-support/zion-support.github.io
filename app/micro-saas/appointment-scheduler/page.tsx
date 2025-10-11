@@ -4,6 +4,7 @@ import { Settings, ArrowRight } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'appointment-scheduler';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+<<<<<<< HEAD
 return (
     <>,
       <Helmet>
@@ -37,32 +38,48 @@ return (
               <button>
                 </button><span>Get Started</span>
                 <ArrowRight>
+=======
+return ()
+              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                <span>Get Started</span>
+                <ArrowRight></ArrowRight>
+>>>>>>> main
               </button>
-              <button>
+              <button></button>
                 View Demo,
               </button>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
+              <p></p>
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
               </p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

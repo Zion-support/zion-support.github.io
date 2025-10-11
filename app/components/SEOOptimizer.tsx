@@ -7,15 +7,11 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  structuredData
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
   const keywordsString = keywords.join(', ');
 
+<<<<<<< HEAD
   return (
     </SEOOptimizerProps><Helmet>
       </Helmet><title>{title}</title>
@@ -35,6 +31,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
+=======
+  return ()
+>>>>>>> main
   );
 };
 

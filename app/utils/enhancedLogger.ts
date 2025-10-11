@@ -2,7 +2,7 @@
 /**;
  * Enhanced Logging Utility;
  *;
- * Provides comprehensive logging capabilities with multiple levels,;
+ * Provides comprehensive logging capabilities with multiple levels,
  * structured logging, and remote logging support.;
  *;
  * @module enhancedLogger;
@@ -13,10 +13,10 @@
  * Log levels enum;
  */;
 export enum LogLevel {
-    DEBUG = 0,;
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
+    DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4
   }
 export enum LogLevel {/* TODO: Fix JSX expression */}
@@ -31,10 +31,10 @@ export interface LogEntry {
   level: LogLevel,
   /** Log message */;
   message: string,
-  /** Timestamp when the log was created */,;
+  /** Timestamp when the log was created */,
   timestamp: Date,
-  /** Optional data associated with the log */,;
-  data?: Record<string>
+  /** Optional data associated with the log */,
+  data?: Record<string></string>
   /** Source of the log (component, module, etc.) */;
   source?: string;
   /** Stack trace for errors */;
@@ -66,7 +66,7 @@ export interface LoggerConfig {
   maxLogs: number,
   /** Enable performance tracking */;
   enablePerformance: boolean,
-  /** Environment name */,;
+  /** Environment name */,
   environment: string,
   }
 export interface LoggerConfig {/* TODO: Fix JSX expression */}
@@ -83,13 +83,13 @@ const defaultConfig: LoggerConfig = {
   enablePerformance: true,
   }
   environment: process.env['NODE_ENV'] || 'development'}
-const,;
+const,
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */}
 }
 /**;
  * Enhanced Logger class;
  *;
- * Provides comprehensive logging functionality with multiple levels,;
+ * Provides comprehensive logging functionality with multiple levels,
  * remote logging support, and performance tracking.;
  *;
  * @example;
@@ -229,8 +229,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * }
    * ``;
    */;
+<<<<<<< HEAD
   public error(message: string,),;
     data?: Record</string><string, unknown>);
+=======
+  public error(message: string,),
+    data?: Record<string, unknown>);
+>>>>>>> main
     error?: Error);
     source?: string;
   ): void {}
@@ -240,8 +245,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         name: error.name
         message: error.message,
         stack: error.stack
-  }
-      }
+  };
+      };
    * @example;`;
    * ```typescript;
    * try {/* TODO: Fix JSX expression */}
@@ -250,16 +255,20 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * }`;
    * ```;
    */;
+<<<<<<< HEAD
   public error(messag,;
   e: string,
     data?: Record</string><string, unknown>,;
     error?: Error,;
+=======
+  public error()
+>>>>>>> main
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
     const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
-      }
-    }
+      };
+    };
     this.log(LogLevel.ERROR, message, logData, source, error?.stack);
   }
   /**;
@@ -270,8 +279,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param error - Optional Error object for stack trace;
    * @param source - Optional source identifier;
    */;
+<<<<<<< HEAD
   public fatal(message: string,),;
     data?: Record</string><string, unknown>);
+=======
+  public fatal(message: string,),
+    data?: Record<string, unknown>);
+>>>>>>> main
     error?: Error);
     source?: string;
   ): void {}
@@ -283,16 +297,20 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         stack: error.stack
   }
       }
+<<<<<<< HEAD
   public fatal(messag,;
   e: string,
     data?: Record</string><string, unknown>,;
     error?: Error,;
+=======
+  public fatal();
+>>>>>>> main
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
     const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
-      }
-    }
+      };
+    };
     this.log(LogLevel.FATAL, message, logData, source, error?.stack);
   }
   /**;
@@ -339,7 +357,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     this.performanceMarks.delete(markName);
     this.info(`Performance: ${markName}`);
       {}
-        duration: `${duration.toFixed(2)}ms`,;
+        duration: `${duration.toFixed(2)}ms`,
   public endPerformance(markNam);
   e: string, data?: Record</string><string, unknown>): number | undefined {/* TODO: Fix JSX expression */}`;
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
@@ -347,12 +365,10 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
-    this.info(`Performanc,`;
-  e: ${markName}`,;
-      {/* TODO: Fix JSX expression */})`;
-  n: `${duration.toFixed(2)}ms`,;
+    this.info() {/* TODO: Fix JSX expression */})`;
+  n: `${duration.toFixed(2)}ms`,
         ...data;
-      },;
+      },
       'PerformanceMonitor';
     );
     return duration;
@@ -367,9 +383,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source;
    * @param stack - Optional stack trace;
    */;
+<<<<<<< HEAD
   private log(level: LogLevel,),;
     message: string,),;
     data?: Record</string><string, unknown>);
+=======
+  private log(level: LogLevel,),
+    message: string,),
+    data?: Record<string, unknown>);
+>>>>>>> main
     source?: string);
     stack?: string;
   ): void {
@@ -377,12 +399,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (level < this.config.minLevel) return;
     const logEntry: LogEntry = {,
       id: this.generateLogId(),
-      level,;
-      message,;
+      level,
+      message,
       timestamp: new Date(),
-      data,;
-      source,;
-      stack,;
+      data,
+      source,
+      stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
       environment: this.config.environment
@@ -403,12 +425,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     // Remote logging;
     if (this.config.enableRemote && this.config.remoteEndpoint) {
     this.logToRemote(logEntry);
-  private log(leve,;
-  l: LogLevel,
-    messag,;
-  e: string,
-    data?: Record<string, unknown>,;
-    source?: string,;
+  private log()
     stack?: string;)
   }
   ): void {/* TODO: Fix JSX expression */}
@@ -444,9 +461,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   private logToConsole(entry: LogEntry): void {
     ,
-    const levelName = LogLevel[entry.level],;
-    const timestamp = entry.timestamp.toISOString(),
-  }
+    const levelName = LogLevel[entry.level],
+    const timestamp = entry.timestamp.toISOString(),;
+  };
     const source = entry.source ? ` [${entry.source}]` : '';
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {
@@ -461,8 +478,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       switch (entry.level) {
     case LogLevel.DEBUG: if (this.isDevelopment()) {,
             logger.debug(message, structuredLog)
-  }
-          }
+  };
+          };
           break;
         case LogLevel.INFO: if (this.isDevelopment()) {
     ,
@@ -508,16 +525,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       switch (entry.level) {/* TODO: Fix JSX expression */}
           }
           break;
-        case LogLevel.INF,;
+        case LogLevel.INF,
   O:;
           if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break;
-        case LogLevel.WAR,;
+        case LogLevel.WAR,
   N:;
           logger.warn(message, structuredLog);
           break;
-        case LogLevel.ERRO,;
+        case LogLevel.ERRO,
   R: ;
         case LogLevel.FATA,
   L:;
@@ -530,16 +547,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
           }
           break;
-        case LogLevel.INF,;
+        case LogLevel.INF,
   O:;
           if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break;
-        case LogLevel.WAR,;
+        case LogLevel.WAR,
   N:;
           logger.warn(message, entry.data);
           break;
-        case LogLevel.ERRO,;
+        case LogLevel.ERRO,
   R: ;
         case LogLevel.FATA,
   L:;
@@ -557,13 +574,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private async logToRemote(entry: LogEntry): Promise</string><void> {
     ,
     if (!this.config.remoteEndpoint) return;
-    try {,;
+    try {,
       await fetch(this.config.remoteEndpoint, {);
         method: 'POST'),
         headers: {)
   }
           'Content-Type': 'application/json')})
-        body: JSON.stringify({
+        body: JSON.stringify()
     ),
           ...entry),
   }
@@ -575,8 +592,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
         error: error instanceof Error ? error.message : String(error)})
   private async logToRemote(entr);
+<<<<<<< HEAD
   y: LogEntry): Promise</void><void> {/* TODO: Fix JSX expression */},
         bod,;
+=======
+  y: LogEntry): Promise<void> {/* TODO: Fix JSX expression */},
+        bod,
+>>>>>>> main
   y: JSON.stringify({/* TODO: Fix JSX expression */})
         })
       })
@@ -648,7 +670,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public getLogsBySource(source: string): LogEntry[] {
     ,
-    return this.logs.filter(log => log.source === source),;
+    return this.logs.filter(log => log.source === source),
   public getLogsBySource(sourc)
   }
   e: string): LogEntry[] {/* TODO: Fix JSX expression */}
@@ -660,6 +682,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public getStatistics(): {
     total: number,
+<<<<<<< HEAD
     byLevel: Record</void><string>
     bySource: Record</string><string, number>
   }
@@ -667,6 +690,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     const byLevel: Record</string><string, number> = {}
     const bySource: Record</string><string, number> = {}
     this.logs.forEach(log => {
+=======
+    byLevel: Record<string></string>
+    bySource: Record<string, number></string>
+  }
+  }, {}
+    const byLevel: Record<string, number> = {}
+    const bySource: Record<string, number> = {}
+    this.logs.forEach()
+>>>>>>> main
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
@@ -677,16 +709,24 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     })
     return {
     total: this.logs.length,
-      byLevel,;
+      byLevel,
       bySource
   }
     }
   public getStatistics(): {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   } {/* TODO: Fix JSX expression */}
   byLevel: Record</string><string, number> = {}
     const,;
   bySource: Record</string><string, number> = {}
     this.logs.forEach(log => {/* TODO: Fix JSX expression */}
+=======
+  }, {/* TODO: Fix JSX expression */}
+  byLevel: Record<string, number> = {}
+    const,
+  bySource: Record<string, number> = {}
+    this.logs.forEach()
+>>>>>>> main
       })
     })
     return {/* TODO: Fix JSX expression */}
@@ -722,8 +762,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     return JSON.stringify(this.logs.map(log => ({);
         ...log)
   }
-        timestamp: log.timestamp.toISOString()})),;
-      null,;
+        timestamp: log.timestamp.toISOString()})),
+      null,
       2;
     );
   }
@@ -733,8 +773,8 @@ export const logger = EnhancedLogger.getInstance();
 // Export default;
 export default EnhancedLogger;
   public exportLogs(): string {/* TODO: Fix JSX expression */}
-      })),;
-      null,;
+      })),
+      null,
       2;
     );
   }
@@ -743,4 +783,8 @@ export default EnhancedLogger;
 export const logger = EnhancedLogger.getInstance();
 // Export default;
 export default EnhancedLogger;
+<<<<<<< HEAD
 "`;</LoggerConfig>
+=======
+"`;
+>>>>>>> main

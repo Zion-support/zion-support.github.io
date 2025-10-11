@@ -13,20 +13,12 @@ interface SEOOptimizerProps {
   children: React.ReactNode;
 }
 
-const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
 
-  const analyzeSEO = useCallback(() => {
+  const analyzeSEO = useCallback(() => {;
     if (typeof window === 'undefined') return;
 
     let score = 0;
@@ -105,34 +97,37 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    }
-
+    };
+;
     return structuredData || defaultStructuredData;
   }
 
   const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag()
       })
     }
   }
 
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      window.addEventListener('load', () => {
+  const _trackPerformanceMetrics = () => {;
+    if (typeof window !== 'undefined' && 'performance' in window) {;
+      window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
           (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
+=======
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag()
+>>>>>>> main
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           })
         }
       })
     }
   }
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -157,16 +152,14 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())}
+=======
+  return() {JSON.stringify(generateStructuredData())}
+>>>>>>> main
         </script>
       </Helmet>
       
-      {children}
-      
-      {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
-          position: 'fixed',
-          top: '10px',
-          left: '10px',
+      {children},
+    {process.env.NODE_ENV === 'development' && ()
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
@@ -174,6 +167,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
+<<<<<<< HEAD
         }}>
           </div><div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
@@ -182,53 +176,54 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   </ul><li key={index}>{rec}</li>
+=======
+        }}></div>
+          <div>SEO Score: {seoScore}/100</div>
+          {recommendations.length > 0 && ()
+                {recommendations.map((rec, index) => ()
+>>>>>>> main
                 ))}
               </ul>
             </div>
           )}
         </div>
-      )}
-
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-
+      )},
+    {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" / /></meta>
+      <meta name="twitter:title" content={title} / /></meta>
+      <meta name="twitter:description" content={description} / /></meta>
+      <meta name="twitter:image" content={ogImage} / /></meta>
+      <meta name="twitter:site" content="@ziontechgroup" / /></meta>
+      <meta name="twitter:creator" content="@ziontechgroup" / /></meta>
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#1a1a2e" />
-      <meta name="msapplication-TileColor" content="#1a1a2e" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" / /></meta>
+      <meta name="googlebot" content="index, follow" / /></meta>
+      <meta name="bingbot" content="index, follow" / /></meta>
+      <meta name="author" content="Zion Tech Group" / /></meta>
+      <meta name="publisher" content="Zion Tech Group" / /></meta>
+      <meta name="copyright" content="Zion Tech Group" / /></meta>
+      <meta name="language" content="en" / /></meta>
+      <meta name="revisit-after" content="7 days" / /></meta>
+      <meta name="distribution" content="global" / /></meta>
+      <meta name="rating" content="general" / /></meta>
+      <meta name="theme-color" content="#1a1a2e" / /></meta>
+      <meta name="msapplication-TileColor" content="#1a1a2e" / /></meta>
+      <meta name="msapplication-config" content="/browserconfig.xml" / /></meta>
       {/* Open Graph Tags */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      <meta property="og:type" content="website" / /></meta>
+      <meta property="og:title" content={title} / /></meta>
+      <meta property="og:description" content={description} / /></meta>
+      <meta property="og:url" content={canonicalUrl} / /></meta>
+      <meta property="og:image" content={ogImage} / /></meta>
+      <meta property="og:image:width" content="1200" / /></meta>
+      <meta property="og:image:height" content="630" / /></meta>
+      <meta property="og:image:alt" content={title} / /></meta>
+      <meta property="og:site_name" content="Zion Tech Group" / /></meta>
+      <meta property="og:locale" content="en_US" / /></meta>
+      {/* Canonical URL */},
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {/* Structured Data */}
+      <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}
       </script>
     </Helmet>

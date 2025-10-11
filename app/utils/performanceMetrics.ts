@@ -59,7 +59,7 @@ export class PerformanceMetrics {
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {
-    ,;
+    ,
     if (typeof window !== 'undefined') {,
   }
 export class PerformanceMetrics {}
@@ -81,12 +81,12 @@ export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 }
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   }
-  timestam,;
+  timestam,
   p: Date,
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {}
-  private,;
+  private,
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
     }
@@ -122,8 +122,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       try {}
         // Navigation timing;
         const navObserver = new PerformanceObserver(list => {)}
-          for (const entry of list.getEntries()) {}
-            if (entry.entryType === 'navigation') {}
+          for (const entry of list.getEntries()) {};
+            if (entry.entryType === 'navigation') {};
               const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({)}
                 name: 'pageLoadTime',
@@ -143,7 +143,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver);
         // Paint timing;
-        const paintObserver = new PerformanceObserver(list => {
+        const paintObserver = new PerformanceObserver();
     );
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -155,8 +155,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Paint timing
   }
         const paintObserver = new PerformanceObserver(list => {)}
-          for (const entry of list.getEntries()) {}
-            if (entry.name === 'first-contentful-paint') {}
+          for (const entry of list.getEntries()) {};
+            if (entry.name === 'first-contentful-paint') {};
               this.webVitals.FCP = entry.startTime;
               this.recordMetric({)}
                 name: 'FCP',
@@ -171,11 +171,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         paintObserver.observe({ entryTypes: ['paint'] })
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
-        const lcpObserver = new PerformanceObserver(list => {
+        const lcpObserver = new PerformanceObserver();
     );
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {;
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({);
               name: 'LCP'),
@@ -183,10 +183,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               unit: 'ms'),
         // Largest Contentful Paint
   }
-        const lcpObserver = new PerformanceObserver(list => {)}
+        const lcpObserver = new PerformanceObserver(list => {)};
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {}
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {};
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({)}
               name: 'LCP',
@@ -200,7 +200,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver();
     );
           let clsValue = 0;);
           for (const entry of list.getEntries()) {
@@ -209,14 +209,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             clsValue += (entry as LayoutShift).value;}
           }
           this.webVitals.CLS = clsValue;
-          this.recordMetric({
+          this.recordMetric()
     );
             name: 'CLS'),
             value: clsValue),
             unit: 'score'),
         // Layout Shift
   }
-        const clsObserver = new PerformanceObserver(list => {)}
+        const clsObserver = new PerformanceObserver(list => {)};
           let clsValue = 0;
           for (const entry of list.getEntries()) {}
             if ((entry as LayoutShift).hadRecentInput) continue;
@@ -244,26 +244,24 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             }
           }
         })
-        paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] })
+        paintObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
             })
           }
         })
-        lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+        lcpObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-          }
-          this.webVitals.CLS = clsValue;
+        const clsObserver = new PerformanceObserver()
           this.recordMetric({/* TODO: Fix JSX expression */})
           })
         })
         clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+  s: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
         }
@@ -274,7 +272,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   recordMetric(metric: PerformanceMetric): void {
     ,
-    this.metrics.push(metric),;
+    this.metrics.push(metric),
     // Keep only last 1000 metrics;
     if (this.metrics.length > 1000) {,
   }
@@ -299,8 +297,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       value: pageLoadTime);
       unit: 'ms');
       timestamp: new Date();
-      category: 'load'
-      metadata: {
+      category: 'load',
+    metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart
@@ -345,10 +343,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestamp: new Date(),
       category: 'network',
       metadata: {}
-        url,;
+        url,
         status}
-  recordNetworkRequest(ur,;
-  l: string, duratio,;
+  recordNetworkRequest()
   n: number, statu);
   s: number): void {/* TODO: Fix JSX expression */}
       }
@@ -394,11 +391,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   measureFunction<T>(name: string, fn: () => T): T {
     ,
-    const startTime = performance.now(),;
-    const result = fn(),;
+    const startTime = performance.now(),
+    const result = fn(),
     const endTime = performance.now(),
-  }
-    this.recordMetric({})
+  };
+    this.recordMetric({});
       name: `function:${name}`);
       value: endTime - startTime),
       unit: 'ms'),
@@ -407,22 +404,26 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const result = fn();
     const endTime = performance.now();
     this.recordMetric({})
-      name: `function:${name}`,;
+      name: `function:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'})
+<<<<<<< HEAD
   measureFunction</T><T>(nam,;
+=======
+  measureFunction<T>()
+>>>>>>> main
   e: string, f);
   n: () => T): T {/* TODO: Fix JSX expression */}
-  n:${name}`,;
-      valu,;
+  n:${name}`,
+      valu,
   e: endTime - startTime,
-      uni,;
+      uni,
   t: 'ms',
-      timestam,;
+      timestam,
   p: new Date(),
-      categor,;
+      categor,
   y: 'runtime',
     })
     return result;
@@ -432,11 +433,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   async measureAsyncFunction</T><T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {
     ,
-    const startTime = performance.now(),;
-    const result = await fn(),;
+    const startTime = performance.now(),
+    const result = await fn(),
     const endTime = performance.now(),
-  }
-    this.recordMetric({`})
+  };
+    this.recordMetric({`});
       name: `async:${name}`);
       value: endTime - startTime),
       unit: 'ms'),
@@ -445,22 +446,30 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const result = await fn();
     const endTime = performance.now();
     this.recordMetric({`})
-      name: `async:${name}`,;
+      name: `async:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'})
+<<<<<<< HEAD
   async measureAsyncFunction</T><T>(nam,;
   e: string, f);
   n: () => Promise</T><T>): Promise</T><T> {/* TODO: Fix JSX expression */}`;
   c:${name}`,;
       valu,;
+=======
+  async measureAsyncFunction<T>()
+  e: string, f);
+  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`;
+  c:${name}`,
+      valu,
+>>>>>>> main
   e: endTime - startTime,
-      uni,;
+      uni,
   t: 'ms',
-      timestam,;
+      timestam,
   p: new Date(),
-      categor,;
+      categor,
   y: 'runtime',
     })
     return result;
@@ -557,7 +566,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   getRecommendations(): string[] {
     const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,;
+    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
       recommendations.push();
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',
   }
@@ -621,16 +630,16 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
       summary: {}
-        avgLoadTime,;
+        avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
         recommendations: this.getRecommendations()},
       timestamp: new Date()}
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */},
-      timestam,;
+      timestam,
   p: new Date(),
-    }
-  }
+    };
+  };
   /**;
    * Export metrics as JSON;
    */;
@@ -692,4 +701,8 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
+<<<<<<< HEAD
 `;</T>
+=======
+`;
+>>>>>>> main

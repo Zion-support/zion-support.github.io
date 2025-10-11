@@ -1,4 +1,3 @@
-
 /**;
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
@@ -32,7 +31,7 @@ export interface ErrorBoundaryConfig {
   /**;
    * Custom error messages by error type;
    */;
-  customMessages: Record<string>
+  customMessages: Record<string></string>
 /**
    * Fallback UI components
    */,
@@ -53,8 +52,8 @@ const DEFAULT_ERROR_MESSAGES = {
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.',
-  }
-}
+  };
+};
 /**;
  * Get error boundary configuration based on environment;
  */;
@@ -78,6 +77,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
  * Default error fallback component;
  */;
 function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
+<<<<<<< HEAD
     return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -97,9 +97,12 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
     process.env['NODE_ENV'] === 'development' && (
   }
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+=======
+    return ()
+>>>>>>> main
         )}
-        <div className="mt-6 flex gap-4"></div>
-          <button>
+        <div className="mt-6 flex gap-4" / /></div>
+          <button></button>
             Try Again
           </button>
           <button;
@@ -116,6 +119,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 /**;
  * Network error fallback component;
  */;
+<<<<<<< HEAD
 function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -135,22 +139,15 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
         </div>
       </div>
     </div>
+=======
+function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return ()
+>>>>>>> main
   )}
 /**;
  * Not found error fallback component;
  */;
 function NotFoundFallback(): JSX.Element {
-    return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p>
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          <button
-  }
+    return ()
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
           >

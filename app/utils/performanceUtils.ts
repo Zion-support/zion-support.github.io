@@ -1,4 +1,4 @@
-  private observers: PerformanceObserver[] = [],
+private observers: PerformanceObserver[] = [],
 constructor() {
     this.initializeMetrics()
   }
@@ -37,8 +37,8 @@ try {
   }
           }
         }
-      })
-      observer.observe({ entryTypes: ['paint'] })
+      });
+      observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
     console.warn('PerformanceObserver not supported:', error)
@@ -48,13 +48,13 @@ try {
 private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]
         this.metrics.largestContentfulPaint = lastEntry.startTime
   }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
     console.warn('LCP observer not supported:', error)
@@ -69,8 +69,8 @@ try {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime
   }
         }
-      })
-      observer.observe({ entryTypes: ['first-input'] })
+      });
+      observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
     console.warn('FID observer not supported:', error)
@@ -86,8 +86,8 @@ try {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value
   }
-          }
-        }
+          };
+        };
         this.metrics.cumulativeLayoutShift = clsValue;
       })
       observer.observe({ entryTypes: ['layout-shift'] })
@@ -121,11 +121,7 @@ public getCumulativeLayoutShift(): number {
   }
   }
 public isPerformanceGood(): boolean {
-    return (
-      this.metrics.firstContentfulPaint < 1800 &&;
-      this.metrics.largestContentfulPaint < 2500 &&;
-      this.metrics.firstInputDelay < 100 &&;
-      this.metrics.cumulativeLayoutShift < 0.1;
+    return ()
     )
   }
   }
@@ -137,9 +133,7 @@ public cleanup(): void {
 }
 export const performanceMonitor = new PerformanceMonitor();
 // Utility functions;
-export const measureFunction = <T extends (...args: any[]) => any>(,
-  fn: T,
-  name?: string;
+export const measureFunction = <T extends (...args: any[]) => any>()
 ): T => {
   return (
     <React.Fragment>
@@ -148,13 +142,14 @@ export const measureFunction = <T extends (...args: any[]) => any>(,
   ) => {
     const start = performance.now()
     const result = fn(...args)
-    const end = performance.now(),
-if (name) {}
+    const end = performance.now(),;
+if (name) {};
       console.log(`${name} took ${end - start} milliseconds`);
     }
 return result;
   }) as T;
 }
+<<<<<<< HEAD
 export const debounce = </T><T extends (...args: any[]) => any>(,
   func: T,
   wait: number
@@ -165,14 +160,24 @@ return (
       (...args: Parameters</T><T>
     </React.Fragment>
   ) => {
+=======
+export const debounce = <T extends (...args: any[]) => any>();
+): T => {;
+    let timeout: NodeJS.Timeout;
+return ((...args: Parameters<T>) => {
+>>>>>>> main
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
   }
   }) as T;
 }
+<<<<<<< HEAD
 export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number;
+=======
+export const throttle = <T extends (...args: any[]) => any>()
+>>>>>>> main
 ): T => {
     let inThrottle: boolean
 return (
@@ -185,7 +190,7 @@ return (
       inThrottle = true,
       setTimeout(() => inThrottle = false, limit)
   }
-    }
+    };
   }) as T;
 }
 export const lazyLoad = (callback: () => void): void => {
@@ -195,10 +200,17 @@ export const lazyLoad = (callback: () => void): void => {
   } else {
     setTimeout(callback, 1)
   }
+<<<<<<< HEAD
   }
 }
 export const preloadImage = (src: string): Promise</T><void> => {
     return new Promise((resolve, reject) => {
+=======
+  };
+};
+export const preloadImage = (src: string): Promise<void> => {;
+    return new Promise((resolve, reject) => {;
+>>>>>>> main
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
@@ -206,7 +218,14 @@ export const preloadImage = (src: string): Promise</T><void> => {
   }
   })
 }
+<<<<<<< HEAD
 export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
     return Promise.all(srcs.map(preloadImage))
   }
 }</void>
+=======
+export const preloadImages = (srcs: string[]): Promise<void[]> => {;
+    return Promise.all(srcs.map(preloadImage))
+  }
+}
+>>>>>>> main

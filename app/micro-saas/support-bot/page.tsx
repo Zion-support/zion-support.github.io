@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
 const SmartSupportBotPage: React.FC = () => {
+<<<<<<< HEAD
     return (
     <>
       <Helmet>
@@ -61,9 +62,11 @@ const SmartSupportBotPage: React.FC = () => {
         </section>
       </div>
     </>,
+=======
+    return ()
+>>>>>>> main
   )
   }
 };
 
 export default SmartSupportBotPage;
-

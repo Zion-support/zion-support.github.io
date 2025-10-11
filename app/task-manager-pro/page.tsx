@@ -23,10 +23,17 @@ const PagePage: React.FC = () => {
     icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+<<<<<<< HEAD
   }
     }
   ];
   const benefits = [
+=======
+  };
+    };
+  ];
+const benefits = [
+>>>>>>> main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -36,6 +43,7 @@ const PagePage: React.FC = () => {
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -116,8 +124,14 @@ return (
         </div>
       </section>
     </div>
+=======
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return ()
+>>>>>>> main
   ),
 };
 
 export default PagePage;
-

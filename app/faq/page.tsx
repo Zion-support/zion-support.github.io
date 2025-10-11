@@ -5,10 +5,10 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
+    setOpenItems()
+      prev.includes(index) ;
+        ? prev.filter(item => item !== index);
+        : [...prev, index];
     );
   }
   const faqs = [
@@ -42,6 +42,7 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "What industries do you serve?",
+<<<<<<< HEAD
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
   ]
@@ -82,6 +83,20 @@ const FAQPage: React.FC = () => {
                     <div className="px-6 pb-4">
                       </div><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
+=======
+      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.";
+    };
+  ];
+  return() {faqs.map((faq, index) => ()
+                    onClick={() => toggleItem(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    {openItems.includes(index) ? ()
+                    ) : ()
+                    )}
+                  </button>
+                  {openItems.includes(index) && ()
+>>>>>>> main
                   )}
                 </div>
               ))}
@@ -89,7 +104,7 @@ const FAQPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

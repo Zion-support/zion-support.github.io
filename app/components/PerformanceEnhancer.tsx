@@ -14,6 +14,7 @@ const benefits = [
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
 
     'Proven track record of success'
@@ -85,34 +86,53 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+=======
+    'Cost-effective pricing plans',;
+;
+    'Proven track record of success';
+  ];
+return() {features.map((feature, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
               Key Benefits
             </h2>
-            <p>
+            <p></p>
               Experience the power of our performanceenhancer solutions for your business.,
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
+            {benefits.map((benefit, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
@@ -120,4 +140,3 @@ return (
 };
 
 export default PerformanceEnhancerPage;
-

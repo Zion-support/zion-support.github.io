@@ -32,6 +32,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: Target,
       title: 'Conversion Tracking',
+<<<<<<< HEAD
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
   ]
@@ -64,12 +65,18 @@ const EcommerceAnalyticsProPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+=======
+      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.';
+    };
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
               ))}
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

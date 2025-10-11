@@ -2,26 +2,33 @@
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
 interface AnalyticsContextType {
+<<<<<<< HEAD
     track: (event: string, parameters?: Record<string, any>) => void;
   page: (pageName: string, parameters?: Record</string><string, any>) => void;
   identify: (userId: string, traits?: Record</string><string, any>) => void
   }
+=======
+  track: (event: string, parameters?: Record<string, any>) => void;
+  page: (pageName: string, parameters?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+}
+>>>>>>> main
 
 const AnalyticsContext = createContext</string><AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {
-    const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext);
   if (!context) {
     console.warn('useAnalytics must be used within an AnalyticsProvider');
-    return null
+    return null;
   }
   return context;
-}
+};
 
 interface AnalyticsProviderProps {
-    children: React.ReactNode,
-  trackingId?: string
-  }
+  children: React.ReactNode;
+  trackingId?: string;
+}
 
 export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProviderProps> = ({
   children,
@@ -37,28 +44,20 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
       document.head.appendChild(script);
 
       // Initialize gtag
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
-    window.dataLayer.push(args)
-  }
+        window.dataLayer.push(args);
+      }
       window.gtag = gtag;
 
       gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
-      })
+      gtag('config', trackingId);
     }
   }, [trackingId]);
 
   const track = useCallback((event: string, parameters?: Record</AnalyticsProviderProps><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, {
-        event_category: parameters?.category || 'general',
-        event_label: parameters?.label,
-        value: parameters?.value,
-        ...parameters
-      })
+      window.gtag('event', event, parameters);
     }
   }, []);
 
@@ -68,7 +67,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
         page_title: pageName,
         page_location: window.location.href,
         ...parameters
-      })
+      });
     }
   }, [trackingId]);
 
@@ -76,8 +75,8 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
-        ...traits
-      })
+        custom_map: traits
+      });
     }
   }, [trackingId]);
 
@@ -85,7 +84,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     track,
     page,
     identify
-  }
+  };
 
   return (
     </string><AnalyticsContext.Provider value={value}>

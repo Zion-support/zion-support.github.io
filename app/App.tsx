@@ -110,11 +110,11 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 // Loading component
-const AppLoadingSpinner = () => (
-  <LoadingSpinner />
+const AppLoadingSpinner = () => ();
 );
 
 const App: React.FC = () => {
+<<<<<<< HEAD
     return (
     <ErrorBoundary>
       </ErrorBoundary><HelmetProvider>
@@ -225,6 +225,9 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+    return ()
+>>>>>>> main
   );
 };
 

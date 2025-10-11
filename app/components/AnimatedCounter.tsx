@@ -10,12 +10,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  prefix = '',
-  suffix = '',
-  className = ''
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
 }) => {
   const [count, setCount] = useState(0);
 
@@ -23,7 +18,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     let startTime: number;
     let animationFrame: number;
 
-    const animate = (currentTime: number) => {
+    const animate = (currentTime: number) => {;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -49,9 +44,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     }
   }, [end, duration]);
 
-  return (
-    <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+  return() {prefix}, {count.toLocaleString()}, {suffix}
     </span>
     </React.Fragment>
   );

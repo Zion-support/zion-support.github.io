@@ -77,7 +77,7 @@ import {
 const ITConsultingPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-const itServices = [
+const itServices = [;
     // IT Infrastructure Services;
     {
       id: 'it-infrastructure-design',
@@ -85,7 +85,7 @@ const itServices = [
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Network architecture design',
         'Server deployment and configuration',
@@ -125,7 +125,7 @@ const itServices = [
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
-      price: 'Starting at $3,000',;
+      price: 'Starting at $3,000',
       features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
@@ -165,7 +165,7 @@ const itServices = [
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
-      price: 'Starting at $2,500',;
+      price: 'Starting at $2,500',
       features: [,
         'Security risk assessment',
         'Penetration testing',
@@ -205,7 +205,7 @@ const itServices = [
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Network architecture design',
         'Bandwidth optimization',
@@ -245,7 +245,7 @@ const itServices = [
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
-      price: 'Starting at $1,500',;
+      price: 'Starting at $1,500',
       features: [,
         'Database design and architecture',
         'Performance optimization',
@@ -325,7 +325,7 @@ const itServices = [
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Requirements analysis',
         'Custom application development',
@@ -405,7 +405,7 @@ const itServices = [
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
-      price: 'Starting at $3,500',;
+      price: 'Starting at $3,500',
       features: [,
         'Business impact analysis',
         'Recovery time objective planning',
@@ -445,7 +445,7 @@ const itServices = [
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
@@ -480,7 +480,7 @@ const itServices = [
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ]
+  ];
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -491,16 +491,24 @@ const categories = [
     { id: 'support', name: 'IT Support', icon: Headphones },
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
+<<<<<<< HEAD
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
   const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+=======
+    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare };
+  ];
+const filteredServices = itServices.filter();
+>>>>>>> main
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
   }
   })
+<<<<<<< HEAD
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
@@ -528,6 +536,13 @@ return (
             </a>
             <a>
               </a><Mail>
+=======
+return ()
+              Call (302) 464-0950
+            </a>
+            <a></a>
+              <Mail></Mail>
+>>>>>>> main
               Get IT Consultation,
             </a>
           </div>
@@ -535,21 +550,35 @@ return (
       </section>
 
       {/* Search and Filter Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8" / /></div>
             {/* Search */}</div>
+<<<<<<< HEAD
             <div className="flex-1"></div>
               <div className="relative"></div>
                 <Search>
                 </Search><input;
+=======
+            <div className="flex-1" / /></div>
+              <div className="relative" / /></div>
+                <Search></Search>
+                <input;
+>>>>>>> main
                   type="text";
                   placeholder="Search IT services...";
                   value={searchTerm}
@@ -561,7 +590,7 @@ return (
             </div>
 
             {/* Category Filter */}
-            <div className="lg: w-64"></div>
+            <div className="lg: w-64" / /></div>
               <select,
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -569,12 +598,16 @@ return (
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >,
                 {
+<<<<<<< HEAD
     categories.map((category) => (
   }
                   </select><option>
 
                     {category.name}
                   </option>
+=======
+    categories.map((category) => ()
+>>>>>>> main
                 ))}
 
               </select>
@@ -582,12 +615,9 @@ return (
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div className="flex flex-wrap gap-2 mb-8" / /></div>
             {
-    categories.map((category) => (</div>
-              <button
-  }
-                key={category.id}
+    categories.map((category) => ()
                 onClick={() => setSelectedCategory(category.id)}
                 className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -605,17 +635,25 @@ return (
         </div>
       </section>
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
             {
+<<<<<<< HEAD
     filteredServices.map((service) => (</div>
   }
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
@@ -640,50 +678,59 @@ return (
                           </li><CheckCircle>
                           </CheckCircle><span>{feature}</span>
                         </li>
+=======
+    filteredServices.map((service) => ()
+    service.features.slice(0, 4).map((feature, idx) => ()
+>>>>>>> main
                       ))}
                     </ul>
                   </div>
-                  <div />
+                  <div / /></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul>
+                    <ul></ul>
                       {
+<<<<<<< HEAD
     service.benefits.slice(0, 2).map((benefit, idx) => (
   }
                         </ul><li>
                           </li><TrendingUp>
                           </TrendingUp><span>{benefit}</span>
                         </li>
+=======
+    service.benefits.slice(0, 2).map((benefit, idx) => ()
+>>>>>>> main
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="space-y-2 mb-6 text-sm"></div>
-                  <div className="flex justify-between"></div>
+                <div className="space-y-2 mb-6 text-sm" / /></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
-                  <div className="flex justify-between"></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Free Consultation:</span>
                     <span className="text-green-400">{service.freeConsultation}</span>
                   </div>
-                  <div className="flex justify-between"></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Target:</span>
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
                 {
-    service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
-  }
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
+    service.caseStudy && ()
                 )}
-<div className="space-y-3"></div>
-                  <a>
+<div className="space-y-3" / /></div>
+                  <a></a>
                     Get Free Consultation
                   </a>
+<<<<<<< HEAD
                   <a>
                     </a><Phone>
+=======
+                  <a></a>
+                    <Phone></Phone>
+>>>>>>> main
                     Call for Quote
                   </a>
                 </div>
@@ -693,22 +740,30 @@ return (
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <h2></h2>
             Ready to Optimize Your IT Infrastructure?,
           </h2>
-          <p>
+          <p></p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
             All services include free consultations and ongoing support.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a>
               </a><Phone>
@@ -716,6 +771,15 @@ return (
             </a>
             <a>
               </a><Mail>
+=======
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+            <a></a>
+              <Phone></Phone>
+              Call (302) 464-0950
+            </a>
+            <a></a>
+              <Mail></Mail>
+>>>>>>> main
               Get Custom IT Strategy
             </a>
           </div>
@@ -726,4 +790,3 @@ return (
 };
 
 export default ITConsultingPage;
-

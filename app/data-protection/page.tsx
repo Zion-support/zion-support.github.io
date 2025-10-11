@@ -17,6 +17,7 @@ const PagePage: React.FC = () => {
     {
     icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
@@ -60,55 +61,82 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+=======
+      description: 'Bank-level security with encryption and compliance standards';
+  },;
+    {;
+    ];
+return() {features.map((feature, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
               Key Benefits
             </h2>
-            <p>
+            <p></p>
               Experience the power of our page solutions for your business.,
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
+            {benefits.map((benefit, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
           </section><div className="
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
               Ready to Get Started?
             </h2>
-            <p>
+            <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 </button><Phone>
@@ -116,6 +144,15 @@ return (
               </button>
               <button>
                 </button><Mail>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                <Phone></Phone>
+                Call Now
+              </button>
+              <button></button>
+                <Mail></Mail>
+>>>>>>> main
                 Email Us
               </button>
             </div>
@@ -127,4 +164,3 @@ return (
 };
 
 export default PagePage;
-

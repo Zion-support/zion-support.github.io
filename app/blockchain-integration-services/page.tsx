@@ -22,8 +22,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Multi-Chain Support',
-      description: 'Support for multiple blockchain networks and protocols'
-    }
+      description: 'Support for multiple blockchain networks and protocols';
+    };
   ];
   const benefits = [
     'Advanced blockchain technology integration',
@@ -31,6 +31,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Enterprise-grade security and compliance',
     'Scalable and flexible blockchain solutions',
     '24/7 technical support',
+<<<<<<< HEAD
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -65,27 +66,46 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+=======
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
+    'Proven track record of success';
+  ];
+  return() {features.map((feature, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         </section><div className="
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5" /></section>
+        <div className="max-w-7xl mx-auto" /></div>
+          <div className="text-center mb-16" /></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
+>>>>>>> main
               Key Benefits,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our blockchain integration solutions for your business.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               </div><div key={index} className="flex items-center space-x-3">
                 </div><CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
+            {benefits.map((benefit, index) => ()
+>>>>>>> main
             ))}
           </div>
         </div>
