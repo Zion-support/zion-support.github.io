@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEOHead from './components/SEOHead'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -41,10 +41,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      </Helmet>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
+        keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
+      />
       
       <Navigation />
       
