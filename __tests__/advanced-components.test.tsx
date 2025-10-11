@@ -41,14 +41,12 @@ return (
           <div>Test content</div>
         </AdvancedErrorBoundary>
       </MemoryRouter>
-);
-}
     );
 
-    expect(screen.getByText('Test content')).toBeInTheDocument()});
+    expect(screen.getByText('Test content')).toBeInTheDocument();
 
-  it('renders error UI when there is an error', () => {;
-const consoleSpy = jest
+  it('renders error UI when there is an error', () => {
+    const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
@@ -112,10 +110,11 @@ const retryButton = screen.getByText('Try Again (3 attempts left)');
         screen.queryByText('Oops! Something went wrong')
       ).not.toBeInTheDocument()});
 
-    consoleSpy.mockRestore()})});
+    consoleSpy.mockRestore();
+  });
 
-describe('AdvancedSEOOptimizer', () => {;
-const mockSEOData = {
+describe('AdvancedSEOOptimizer', () => {
+  const mockSEOData = {
     title: 'Test Title',
     description: 'Test Description',
     keywords: ['test', 'keywords'],
