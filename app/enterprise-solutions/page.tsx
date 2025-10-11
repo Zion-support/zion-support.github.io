@@ -6,6 +6,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const EnterpriseSolutionsPage: React.FC = () => {
+  const features = [
     {
       title: 'AI-Powered Analytics',
       description: 'Advanced analytics and insights for enterprise decision-making.',

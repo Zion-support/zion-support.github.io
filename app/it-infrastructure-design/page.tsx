@@ -6,6 +6,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ItInfrastructureDesignPage: React.FC = () => {
+  const features = [
     {
       title: 'IT Infrastructure Design',
       description: 'Professional IT infrastructure design services and solutions.',

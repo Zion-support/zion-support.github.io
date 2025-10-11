@@ -6,6 +6,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const MobileAppDevelopmentPage: React.FC = () => {
+  const features = [
     {
       title: 'Mobile App Development',
       description: 'Professional mobile app development services and solutions.',

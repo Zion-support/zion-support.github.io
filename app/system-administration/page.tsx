@@ -6,6 +6,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const SystemAdministrationPage: React.FC = () => {
+  const features = [
     {
       title: 'System Administration',
       description: 'Professional system administration services and solutions.',

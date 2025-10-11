@@ -6,6 +6,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ItProjectManagementPage: React.FC = () => {
+  const features = [
     {
       title: 'IT Project Management',
       description: 'Professional IT project management services and solutions.',
