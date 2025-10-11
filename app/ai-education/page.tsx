@@ -40,7 +40,7 @@ const PagePage: React.FC = () => {const features = [
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
-      </Helmet>
+      </Helmet />
       
       <Navigation />
       
