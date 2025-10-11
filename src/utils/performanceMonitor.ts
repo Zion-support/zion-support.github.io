@@ -10,8 +10,7 @@ interface PerformanceMetrics {
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
-  customMetrics: Record<string, number>
-  customMetrics: Record<string, number>
+  customMetrics: Record<string, number>;
 }
 
 class PerformanceMonitor {
@@ -38,62 +37,25 @@ class PerformanceMonitor {
     }
 
     // LCP Observer
-  init(): void {
-    if (this.isInitialized || typeof window === 'undefined') return
-    this.isInitialized = true
-    this.setupWebVitals()
-    this.setupCustomMetrics()
-  }
-
-  private setupWebVitals(): void {
-    // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp')
-    // Largest Contentful Paint
-    this.observeLCP()
-    // First Input Delay
-    this.observeFID()
-    // Cumulative Layout Shift
-    this.observeCLS()
-  }
-
-  private observePaint(name: string, metric: keyof PerformanceMetrics): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        const entry = entries[entries.length - 1]
-        if (entry) {
-          (this._metrics as any)[metric] = entry.startTime
-        }
-      })
-      observer.observe({ entryTypes: ['paint'] })
-      this.observers.push(observer)
-    } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error)
-    }
-  }
-
-  private observeLCP(): void {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        this.metrics.lcp = lastEntry.startTime;
-        this.reportMetric('LCP', lastEntry.startTime);
         if (lastEntry) {
-          this._metrics.lcp = lastEntry.startTime
+          this.metrics.lcp = lastEntry.startTime;
+          this.reportMetric('LCP', lastEntry.startTime);
         }
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe LCP:', error)
+      console.warn('Failed to observe LCP:', error);
     }
-  }
 
     // FID Observer
     try {
       const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach((entry) => {
           const fidEntry = entry as PerformanceEventTiming;
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
@@ -102,20 +64,14 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-          this._metrics.fid = entry.processingStart - entry.startTime
-        })
-      })
-      observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe FID:', error)
+      console.warn('Failed to observe FID:', error);
     }
-  }
 
     // CLS Observer
     try {
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           if (!(entry as any).hadRecentInput) {
@@ -127,13 +83,8 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-        })
-        this._metrics.cls = clsValue
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer)
     } catch (error) {
-      console.warn('Failed to observe CLS:', error)
+      console.warn('Failed to observe CLS:', error);
     }
 
     // FCP Observer
@@ -219,7 +170,6 @@ class PerformanceMonitor {
       this.observers.push(resourceObserver);
     } catch (e) {
       console.warn('Resource observer not supported');
-      })
     }
   }
 
@@ -281,9 +231,6 @@ class PerformanceMonitor {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isInitialized = false;
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-    this.isInitialized = false
   }
 }
 
@@ -292,6 +239,4 @@ export const performanceMonitor = new PerformanceMonitor();
 
 // Export class for testing
 export { PerformanceMonitor };
-  performanceMonitor.addCustomMetric(name, value)
-}
-export default performanceMonitor
+export default performanceMonitor;
