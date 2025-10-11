@@ -7,85 +7,142 @@ const ITServicesPage: React.FC = () => {
   const itServices = [
     {
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and enhanced security.',
-      features: ['AWS/Azure/GCP migration', 'Zero downtime migration', 'Cost optimization', 'Security compliance'],
-      pricing: 'Starting at $2,500',
+      title: 'Cloud Migration & Management',
+      description: 'Seamlessly migrate your infrastructure to AWS, Azure, or GCP with zero downtime and enhanced security.',
+      features: ['Multi-cloud strategy', 'Zero downtime migration', 'Cost optimization', 'Security compliance', 'Disaster recovery', '24/7 monitoring'],
+      pricing: '$4,500 - $15,000',
+      marketPrice: '$8,000 - $25,000',
       link: '/cloud-migration',
       popular: true,
-      duration: '2-4 weeks'
+      duration: '2-6 weeks',
+      users: '500+',
+      rating: '4.9'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      features: ['Security audit', 'Penetration testing', 'Compliance management', '24/7 monitoring'],
-      pricing: 'Starting at $1,500/month',
+      title: 'Cybersecurity & Compliance',
+      description: 'Comprehensive security solutions including SOC 2, GDPR, HIPAA compliance and threat protection.',
+      features: ['Security audit & assessment', 'Penetration testing', 'Compliance management', '24/7 SOC monitoring', 'Incident response', 'Security training'],
+      pricing: '$2,500 - $8,000/month',
+      marketPrice: '$5,000 - $15,000/month',
       link: '/cybersecurity-solutions',
       popular: true,
-      duration: 'Ongoing'
+      duration: 'Ongoing',
+      users: '300+',
+      rating: '4.8'
     },
     {
       icon: <Code className="w-8 h-8 text-green-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated deployment and continuous integration.',
-      features: ['CI/CD pipeline setup', 'Docker containerization', 'Kubernetes orchestration', 'Monitoring setup'],
-      pricing: 'Starting at $3,000',
+      title: 'DevOps & CI/CD Pipeline',
+      description: 'Complete DevOps transformation with automated deployment, monitoring, and infrastructure as code.',
+      features: ['CI/CD pipeline setup', 'Docker & Kubernetes', 'Infrastructure as Code', 'Monitoring & alerting', 'GitOps workflows', 'Performance optimization'],
+      pricing: '$5,000 - $12,000',
+      marketPrice: '$10,000 - $20,000',
       link: '/devops-cicd',
-      popular: false,
-      duration: '3-6 weeks'
+      popular: true,
+      duration: '4-8 weeks',
+      users: '400+',
+      rating: '4.7'
     },
     {
       icon: <Database className="w-8 h-8 text-purple-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: ['Data warehousing', 'Business intelligence', 'Predictive analytics', 'Custom dashboards'],
-      pricing: 'Starting at $2,000/month',
+      title: 'Data Analytics & BI',
+      description: 'Advanced data analytics platform with real-time dashboards, machine learning, and predictive insights.',
+      features: ['Data warehousing', 'Business intelligence', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'ML model deployment'],
+      pricing: '$3,500 - $10,000/month',
+      marketPrice: '$7,000 - $18,000/month',
       link: '/data-analytics',
       popular: false,
-      duration: '4-8 weeks'
+      duration: '6-12 weeks',
+      users: '250+',
+      rating: '4.9'
     },
     {
       icon: <Smartphone className="w-8 h-8 text-orange-500" />,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['Native iOS/Android apps', 'React Native development', 'UI/UX design', 'App store deployment'],
-      pricing: 'Starting at $5,000',
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications with modern UI/UX and backend integration.',
+      features: ['Native iOS/Android apps', 'React Native/Flutter', 'UI/UX design', 'Backend API development', 'App store deployment', 'Maintenance & updates'],
+      pricing: '$8,000 - $50,000',
+      marketPrice: '$15,000 - $80,000',
       link: '/mobile-development',
       popular: true,
-      duration: '6-12 weeks'
+      duration: '8-16 weeks',
+      users: '600+',
+      rating: '4.8'
     },
     {
       icon: <Database className="w-8 h-8 text-indigo-500" />,
-      title: 'Blockchain Solutions',
-      description: 'Implement blockchain technology for secure transactions and smart contracts.',
-      features: ['Smart contract development', 'DApp creation', 'Token development', 'Blockchain integration'],
-      pricing: 'Starting at $8,000',
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Complete blockchain development including smart contracts, DeFi protocols, and NFT marketplaces.',
+      features: ['Smart contract development', 'DeFi protocols', 'NFT marketplace', 'Token development', 'DApp creation', 'Blockchain consulting'],
+      pricing: '$15,000 - $100,000',
+      marketPrice: '$30,000 - $200,000',
       link: '/blockchain',
       popular: false,
-      duration: '8-16 weeks'
+      duration: '12-24 weeks',
+      users: '150+',
+      rating: '4.6'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-cyan-500" />,
+      title: 'Custom Software Development',
+      description: 'Bespoke software solutions tailored to your specific business requirements and workflows.',
+      features: ['Custom web applications', 'API development', 'Database design', 'Third-party integrations', 'Performance optimization', 'Maintenance & support'],
+      pricing: '$10,000 - $75,000',
+      marketPrice: '$20,000 - $150,000',
+      link: '/custom-development',
+      popular: true,
+      duration: '8-20 weeks',
+      users: '800+',
+      rating: '4.9'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-teal-500" />,
+      title: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure management including servers, networks, and end-user support.',
+      features: ['Server management', 'Network administration', 'Help desk support', 'Hardware procurement', 'Software licensing', 'Disaster recovery'],
+      pricing: '$2,000 - $8,000/month',
+      marketPrice: '$4,000 - $15,000/month',
+      link: '/infrastructure-management',
+      popular: false,
+      duration: 'Ongoing',
+      users: '200+',
+      rating: '4.7'
+    },
+    {
+      icon: <Database className="w-8 h-8 text-pink-500" />,
+      title: 'Database Administration',
+      description: 'Expert database management, optimization, and migration services for all major database systems.',
+      features: ['Database design & optimization', 'Migration services', 'Backup & recovery', 'Performance tuning', 'Security hardening', '24/7 monitoring'],
+      pricing: '$1,500 - $5,000/month',
+      marketPrice: '$3,000 - $10,000/month',
+      link: '/database-administration',
+      popular: false,
+      duration: 'Ongoing',
+      users: '180+',
+      rating: '4.8'
     }
   ];
 
   const benefits = [
     {
       title: 'Cost Effective',
-      description: 'Reduce IT costs by up to 40% with our optimized solutions',
+      description: 'Reduce IT costs by up to 50% with our optimized solutions and competitive pricing',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
       title: 'Fast Delivery',
-      description: 'Quick turnaround times with agile development methodologies',
+      description: 'Agile development with 30% faster delivery times than industry average',
       icon: <Clock className="w-6 h-6 text-blue-500" />
     },
     {
       title: 'Expert Team',
-      description: 'Certified professionals with 10+ years of experience',
+      description: 'Certified professionals with 15+ years of experience and 99% client satisfaction',
       icon: <Users className="w-6 h-6 text-purple-500" />
     },
     {
       title: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring',
+      description: 'Round-the-clock technical support with 15-minute response time guarantee',
       icon: <Shield className="w-6 h-6 text-red-500" />
     }
   ];
@@ -203,11 +260,24 @@ const ITServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mb-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-white">{service.pricing}</span>
-                    <span className="text-sm text-gray-400">{service.duration}</span>
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <div>
+                      <span className="text-2xl font-bold text-white">{service.pricing}</span>
+                      {service.marketPrice && (
+                        <span className="text-sm text-gray-400 line-through ml-2">{service.marketPrice}</span>
+                      )}
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-sm text-gray-400">{service.duration}</span>
+                    </div>
                   </div>
+                  <div className="text-sm text-gray-400 mb-2">{service.users} projects completed</div>
+                  {service.marketPrice && (
+                    <div className="text-xs text-green-400 font-semibold">
+                      Save up to 50% vs market rates
+                    </div>
+                  )}
                 </div>
                 <Link 
                   to={service.link}

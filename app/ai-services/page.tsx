@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
-=======
-import { CheckCircle, Brain, Zap, Eye, MessageSquare, BarChart3, Shield, Cog, ArrowRight } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3, Cog } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -11,58 +7,99 @@ const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
-      title: 'AI Content Generator',
+      title: 'AI Content Generator Pro',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
-      pricing: 'Starting at $29/month',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates', 'Plagiarism detection', 'Content scheduling'],
+      pricing: '$89/month',
+      marketPrice: '$149/month',
       link: '/ai-content-generator',
-      popular: true
+      popular: true,
+      users: '3,200+',
+      rating: '4.9'
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'AI Chatbot Builder',
-      description: 'Create intelligent chatbots for customer support, lead generation, and sales automation.',
-      features: ['No-code builder', 'Multi-channel deployment', 'Analytics dashboard', 'Custom integrations'],
-      pricing: 'Starting at $49/month',
+      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
+      title: 'AI Chatbot Enterprise',
+      description: 'Create intelligent chatbots for customer support, lead generation, and sales automation with advanced NLP.',
+      features: ['No-code builder', 'Multi-channel deployment', 'Analytics dashboard', 'Custom integrations', 'Voice support', 'Multi-language'],
+      pricing: '$149/month',
+      marketPrice: '$299/month',
       link: '/ai-chatbot-builder',
-      popular: false
+      popular: true,
+      users: '2,800+',
+      rating: '4.8'
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics and visualization.',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom reports', 'API integration'],
-      pricing: 'Starting at $79/month',
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'AI Analytics Platform',
+      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom reports', 'API integration', 'Machine learning', 'Data visualization'],
+      pricing: '$199/month',
+      marketPrice: '$399/month',
       link: '/ai-analytics-dashboard',
-      popular: true
+      popular: true,
+      users: '2,100+',
+      rating: '4.9'
+    },
+    {
+      icon: <Eye className="w-8 h-8 text-cyan-500" />,
+      title: 'Computer Vision Solutions',
+      description: 'Extract meaningful information from images and videos for business automation and quality control.',
+      features: ['Image recognition', 'Object detection', 'Facial recognition', 'Video analysis', 'Quality inspection', 'Security monitoring'],
+      pricing: '$249/month',
+      marketPrice: '$499/month',
+      link: '/computer-vision',
+      popular: false,
+      users: '1,500+',
+      rating: '4.7'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-orange-500" />,
+      title: 'AI Process Automation',
+      description: 'Automate repetitive tasks and workflows with intelligent process automation and RPA integration.',
+      features: ['Workflow automation', 'Task scheduling', 'Integration APIs', 'Performance monitoring', 'Document processing', 'Decision automation'],
+      pricing: '$179/month',
+      marketPrice: '$349/month',
+      link: '/ai-automation',
+      popular: true,
+      users: '2,400+',
+      rating: '4.8'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Email Assistant',
-      description: 'Automate email management, scheduling, and responses with intelligent email assistance.',
-      features: ['Smart scheduling', 'Auto-responses', 'Email categorization', 'Sentiment analysis'],
-      pricing: 'Starting at $39/month',
-      link: '/ai-email-assistant',
-      popular: false
+      title: 'AI Security Suite',
+      description: 'Protect your systems with AI-powered security solutions, threat detection, and anomaly monitoring.',
+      features: ['Threat detection', 'Anomaly detection', 'Security monitoring', 'Incident response', 'Fraud prevention', 'Compliance monitoring'],
+      pricing: '$299/month',
+      marketPrice: '$599/month',
+      link: '/ai-security',
+      popular: false,
+      users: '1,800+',
+      rating: '4.9'
     },
     {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
-      title: 'AI Voice Assistant',
-      description: 'Build custom voice assistants for your business with natural language processing.',
-      features: ['Voice recognition', 'Text-to-speech', 'Multi-language', 'Custom commands'],
-      pricing: 'Starting at $59/month',
+      icon: <Brain className="w-8 h-8 text-indigo-500" />,
+      title: 'Machine Learning Platform',
+      description: 'Build, train, and deploy custom machine learning models for your specific business needs.',
+      features: ['Model development', 'Data preprocessing', 'Model training', 'Deployment tools', 'A/B testing', 'Model monitoring'],
+      pricing: '$399/month',
+      marketPrice: '$799/month',
+      link: '/machine-learning',
+      popular: true,
+      users: '1,200+',
+      rating: '4.8'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-teal-500" />,
+      title: 'AI Voice Solutions',
+      description: 'Build custom voice assistants and speech recognition systems for your business applications.',
+      features: ['Voice recognition', 'Text-to-speech', 'Multi-language', 'Custom commands', 'Voice analytics', 'Integration APIs'],
+      pricing: '$129/month',
+      marketPrice: '$249/month',
       link: '/ai-voice-assistant',
-      popular: false
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Automation Suite',
-      description: 'Automate repetitive tasks and workflows with intelligent process automation.',
-      features: ['Workflow automation', 'Task scheduling', 'Integration APIs', 'Performance monitoring'],
-      pricing: 'Starting at $99/month',
-      link: '/ai-automation',
-      popular: true
+      popular: false,
+      users: '1,600+',
+      rating: '4.6'
     }
   ];
 
@@ -86,46 +123,6 @@ const AIServicesPage: React.FC = () => {
       title: 'Accuracy',
       description: 'Achieve 95%+ accuracy in AI-powered tasks and predictions',
       icon: <Star className="w-6 h-6 text-yellow-500" />
-=======
-      title: 'Machine Learning',
-      description: 'Build intelligent systems that learn and adapt to your business needs.',
-      features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],
-      applications: ['Fraud Detection', 'Customer Segmentation', 'Demand Forecasting', 'Quality Control']
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
-      title: 'Natural Language Processing',
-      description: 'Transform text and speech into actionable insights and automated responses.',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
-      applications: ['Customer Support', 'Content Moderation', 'Document Processing', 'Voice Assistants']
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-purple-500" />,
-      title: 'Computer Vision',
-      description: 'Extract meaningful information from images and videos for business automation.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
-      applications: ['Quality Inspection', 'Security Monitoring', 'Medical Imaging', 'Autonomous Vehicles']
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-500" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors to make data-driven business decisions.',
-      features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],
-      applications: ['Sales Forecasting', 'Market Analysis', 'Risk Management', 'Resource Planning']
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-red-500" />,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation that reduces manual work.',
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Decision Automation'],
-      applications: ['Invoice Processing', 'Customer Onboarding', 'Inventory Management', 'Report Generation']
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Security',
-      description: 'Protect your systems with AI-powered security solutions and threat detection.',
-      features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-      applications: ['Network Security', 'Data Protection', 'Access Control', 'Compliance Monitoring']
     }
   ];
 
@@ -187,7 +184,6 @@ const AIServicesPage: React.FC = () => {
       step: '05',
       title: 'Monitoring & Optimization',
       description: 'Continuous monitoring and optimization ensure your AI solutions perform at peak efficiency.'
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
     }
   ];
 
@@ -195,63 +191,20 @@ const AIServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Comprehensive AI services including content generation, chatbots, analytics, and automation. Transform your business with cutting-edge artificial intelligence." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, chatbots, content generation, analytics" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-20">
-=======
         <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, NLP, computer vision, and predictive analytics from Zion Tech Group." />
         <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, predictive analytics, AI automation, artificial intelligence" />
       </Helmet>
       
       <main className="pt-20 px-4 py-20">
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
               AI Services & Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with our comprehensive suite of AI-powered services. From content generation to intelligent automation, we provide cutting-edge solutions that drive results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Services?</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the power of artificial intelligence with our proven solutions
-=======
-              AI Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Harness the power of artificial intelligence to transform your business operations, 
               enhance decision-making, and drive innovation across every aspect of your organization.
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -269,31 +222,9 @@ const AIServicesPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-                <div className="mb-4 flex justify-center">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* AI Services Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our AI Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose from our comprehensive suite of AI-powered solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* AI Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {aiServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative">
                 {service.popular && (
@@ -303,47 +234,6 @@ const AIServicesPage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mb-6">
-                  <span className="text-2xl font-bold text-white">{service.pricing}</span>
-                </div>
-                <Link 
-                  to={service.link}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI services can accelerate your digital transformation and drive measurable results.
-=======
-
-          {/* AI Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-6">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -360,16 +250,34 @@ const AIServicesPage: React.FC = () => {
                   </ul>
                 </div>
 
-                <div>
-                  <h4 className="text-sm font-semibold text-white mb-3">Applications:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.applications.map((app, appIndex) => (
-                      <span key={appIndex} className="bg-blue-500/20 text-blue-300 text-xs px-2 py-1 rounded-full">
-                        {app}
-                      </span>
-                    ))}
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <div>
+                      <span className="text-2xl font-bold text-white">{service.pricing}</span>
+                      {service.marketPrice && (
+                        <span className="text-sm text-gray-400 line-through ml-2">{service.marketPrice}</span>
+                      )}
+                    </div>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                      <span className="text-sm text-gray-300">{service.rating}</span>
+                    </div>
                   </div>
+                  <div className="text-sm text-gray-400 mb-2">{service.users} active users</div>
+                  {service.marketPrice && (
+                    <div className="text-xs text-green-400 font-semibold">
+                      Save ${parseInt(service.marketPrice.replace('$', '').replace('/month', '')) - parseInt(service.pricing.replace('$', '').replace('/month', ''))}/month
+                    </div>
+                  )}
                 </div>
+
+                <Link 
+                  to={service.link}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
             ))}
           </div>
@@ -385,7 +293,7 @@ const AIServicesPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-3">{industry.name}</h3>
                   <p className="text-gray-300 text-sm">{industry.description}</p>
@@ -468,22 +376,10 @@ const AIServicesPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-<<<<<<< HEAD
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Start Your AI Journey
-                </Link>
-                <Link 
-                  to="/about" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Schedule Consultation
-=======
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Get Started Today
@@ -493,17 +389,12 @@ const AIServicesPage: React.FC = () => {
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
                   Explore All Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
                 </Link>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-=======
       </main>
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
     </div>
   );
 };

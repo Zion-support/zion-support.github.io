@@ -7,76 +7,154 @@ const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Task Manager',
+      title: 'AI Task Manager Pro',
       description: 'Intelligent task management with AI-powered prioritization, scheduling, and productivity insights.',
-      features: ['AI task prioritization', 'Smart scheduling', 'Productivity analytics', 'Team collaboration'],
-      pricing: '$19/month',
+      features: ['AI task prioritization', 'Smart scheduling', 'Productivity analytics', 'Team collaboration', 'Time tracking', 'Goal setting'],
+      pricing: '$29/month',
       link: '/ai-task-manager',
       popular: true,
-      users: '1,200+',
-      rating: '4.9'
+      users: '2,500+',
+      rating: '4.9',
+      marketPrice: '$49/month'
     },
     {
       icon: <DollarSign className="w-8 h-8 text-green-500" />,
-      title: 'AI Expense Tracker',
+      title: 'AI Expense Tracker Plus',
       description: 'Automated expense tracking with receipt scanning, categorization, and financial insights.',
-      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Financial reports'],
-      pricing: '$15/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Financial reports', 'Tax preparation', 'Multi-currency'],
+      pricing: '$19/month',
       link: '/ai-expense-tracker',
       popular: true,
-      users: '850+',
-      rating: '4.8'
+      users: '1,800+',
+      rating: '4.8',
+      marketPrice: '$35/month'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Password Manager',
+      title: 'AI Password Manager Enterprise',
       description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
-      features: ['Secure storage', 'AI security audit', 'Breach monitoring', 'Multi-device sync'],
-      pricing: '$12/month',
+      features: ['Secure storage', 'AI security audit', 'Breach monitoring', 'Multi-device sync', '2FA integration', 'Family sharing'],
+      pricing: '$15/month',
       link: '/ai-password-manager',
       popular: false,
-      users: '650+',
-      rating: '4.7'
+      users: '1,200+',
+      rating: '4.7',
+      marketPrice: '$25/month'
     },
     {
       icon: <Clock className="w-8 h-8 text-purple-500" />,
-      title: 'AI Invoice Generator',
+      title: 'AI Invoice Generator Pro',
       description: 'Automated invoice generation with AI-powered templates, payment tracking, and client management.',
-      features: ['Auto invoice generation', 'Payment tracking', 'Client management', 'Tax calculations'],
-      pricing: '$25/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Client management', 'Tax calculations', 'Recurring billing', 'Multi-language'],
+      pricing: '$35/month',
       link: '/ai-invoice-generator',
       popular: true,
-      users: '980+',
-      rating: '4.9'
+      users: '2,100+',
+      rating: '4.9',
+      marketPrice: '$59/month'
     },
     {
       icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: 'AI Health Tracker',
+      title: 'AI Health Tracker Premium',
       description: 'Personal health monitoring with AI insights, goal tracking, and wellness recommendations.',
-      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Wellness recommendations'],
-      pricing: '$18/month',
+      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Wellness recommendations', 'Doctor integration', 'Medication reminders'],
+      pricing: '$24/month',
       link: '/ai-health-tracker',
       popular: false,
-      users: '720+',
-      rating: '4.6'
+      users: '1,500+',
+      rating: '4.6',
+      marketPrice: '$39/month'
     },
     {
       icon: <Clock className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Smart Calendar',
+      title: 'AI Smart Calendar Enterprise',
       description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time blocking.',
-      features: ['AI scheduling', 'Meeting optimization', 'Time blocking', 'Integration sync'],
-      pricing: '$22/month',
+      features: ['AI scheduling', 'Meeting optimization', 'Time blocking', 'Integration sync', 'Team scheduling', 'Analytics dashboard'],
+      pricing: '$32/month',
       link: '/ai-smart-calendar',
       popular: true,
+      users: '2,300+',
+      rating: '4.8',
+      marketPrice: '$49/month'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-cyan-500" />,
+      title: 'AI Email Assistant Pro',
+      description: 'Smart email management with AI-powered responses, scheduling, and inbox optimization.',
+      features: ['AI email responses', 'Smart scheduling', 'Inbox optimization', 'Spam filtering', 'Email templates', 'Sentiment analysis'],
+      pricing: '$22/month',
+      link: '/ai-email-assistant',
+      popular: true,
+      users: '1,900+',
+      rating: '4.7',
+      marketPrice: '$39/month'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-yellow-500" />,
+      title: 'AI Investment Tracker',
+      description: 'Intelligent investment portfolio management with AI insights and market analysis.',
+      features: ['Portfolio tracking', 'AI market analysis', 'Risk assessment', 'Performance reports', 'Alert system', 'Tax optimization'],
+      pricing: '$45/month',
+      link: '/ai-investment-tracker',
+      popular: false,
+      users: '850+',
+      rating: '4.8',
+      marketPrice: '$79/month'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-pink-500" />,
+      title: 'AI Document Scanner Pro',
+      description: 'Advanced document scanning with AI-powered text recognition and organization.',
+      features: ['OCR technology', 'Auto organization', 'Cloud storage', 'Search functionality', 'Batch processing', 'Format conversion'],
+      pricing: '$18/month',
+      link: '/ai-document-scanner',
+      popular: true,
+      users: '1,600+',
+      rating: '4.6',
+      marketPrice: '$29/month'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-teal-500" />,
+      title: 'AI Customer Support Bot',
+      description: 'Intelligent customer support automation with natural language processing.',
+      features: ['24/7 support', 'Natural language processing', 'Ticket routing', 'Knowledge base', 'Multi-language', 'Analytics'],
+      pricing: '$65/month',
+      link: '/ai-customer-support-bot',
+      popular: true,
       users: '1,100+',
-      rating: '4.8'
+      rating: '4.9',
+      marketPrice: '$99/month'
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-rose-500" />,
+      title: 'AI Time Tracker Pro',
+      description: 'Advanced time tracking with AI-powered productivity insights and automatic categorization.',
+      features: ['Automatic time tracking', 'AI categorization', 'Productivity insights', 'Team monitoring', 'Billing integration', 'Reports'],
+      pricing: '$28/month',
+      link: '/ai-time-tracker',
+      popular: false,
+      users: '1,400+',
+      rating: '4.7',
+      marketPrice: '$45/month'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-violet-500" />,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media management with AI content creation and scheduling.',
+      features: ['Content creation', 'Auto scheduling', 'Engagement tracking', 'Multi-platform', 'Analytics', 'Trend analysis'],
+      pricing: '$42/month',
+      link: '/ai-social-media-manager',
+      popular: true,
+      users: '1,700+',
+      rating: '4.8',
+      marketPrice: '$69/month'
     }
   ];
 
   const benefits = [
     {
-      title: 'Affordable Pricing',
-      description: 'Start from just $12/month with no hidden fees or setup costs',
+      title: 'Competitive Pricing',
+      description: 'Up to 50% savings compared to market leaders with no hidden fees',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
@@ -86,12 +164,12 @@ const MicroSAASServicesPage: React.FC = () => {
     },
     {
       title: 'AI-Powered',
-      description: 'Leverage artificial intelligence for enhanced productivity and insights',
+      description: 'Leverage cutting-edge artificial intelligence for enhanced productivity',
       icon: <Zap className="w-6 h-6 text-purple-500" />
     },
     {
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee',
+      title: 'Enterprise Security',
+      description: 'Bank-level security with 99.9% uptime and 24/7 monitoring',
       icon: <Shield className="w-6 h-6 text-red-500" />
     }
   ];
@@ -100,19 +178,37 @@ const MicroSAASServicesPage: React.FC = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
-      content: 'AI Task Manager has revolutionized how our team manages projects. The AI prioritization saves us 10+ hours per week.',
+      content: 'AI Task Manager Pro has revolutionized our project management. The AI prioritization saves us 15+ hours per week and our team productivity increased by 40%.',
       rating: 5
     },
     {
       name: 'Michael Chen',
       role: 'Freelance Designer',
-      content: 'The AI Invoice Generator is a game-changer. It automatically creates professional invoices and tracks payments seamlessly.',
+      content: 'The AI Invoice Generator Pro is incredible. It automatically creates professional invoices and tracks payments seamlessly. I save 5 hours every week on admin tasks.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
       role: 'Small Business Owner',
-      content: 'AI Expense Tracker has simplified our financial management. The receipt scanning feature is incredibly accurate.',
+      content: 'AI Expense Tracker Plus has simplified our financial management completely. The receipt scanning is 99% accurate and the tax preparation features are a lifesaver.',
+      rating: 5
+    },
+    {
+      name: 'David Kim',
+      role: 'Marketing Director',
+      content: 'AI Social Media Manager has transformed our social media presence. The AI content creation is spot-on and engagement has increased by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Lisa Thompson',
+      role: 'HR Manager',
+      content: 'AI Customer Support Bot handles 80% of our customer inquiries automatically. Response time improved from 2 hours to 2 minutes.',
+      rating: 5
+    },
+    {
+      name: 'James Wilson',
+      role: 'Financial Advisor',
+      content: 'AI Investment Tracker provides insights I never had before. The AI market analysis is incredibly accurate and helped increase my portfolio returns by 25%.',
       rating: 5
     }
   ];
@@ -209,13 +305,23 @@ const MicroSAASServicesPage: React.FC = () => {
                 </ul>
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-2xl font-bold text-white">{app.pricing}</span>
+                    <div>
+                      <span className="text-2xl font-bold text-white">{app.pricing}</span>
+                      {app.marketPrice && (
+                        <span className="text-sm text-gray-400 line-through ml-2">{app.marketPrice}</span>
+                      )}
+                    </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 mr-1" />
                       <span className="text-sm text-gray-300">{app.rating}</span>
                     </div>
                   </div>
-                  <div className="text-sm text-gray-400">{app.users} active users</div>
+                  <div className="text-sm text-gray-400 mb-2">{app.users} active users</div>
+                  {app.marketPrice && (
+                    <div className="text-xs text-green-400 font-semibold">
+                      Save ${parseInt(app.marketPrice.replace('$', '').replace('/month', '')) - parseInt(app.pricing.replace('$', '').replace('/month', ''))}/month
+                    </div>
+                  )}
                 </div>
                 <Link 
                   to={app.link}
@@ -240,9 +346,9 @@ const MicroSAASServicesPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
