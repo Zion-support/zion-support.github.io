@@ -46,28 +46,28 @@ export const Image: React.FC<ImageProps>= ()
   const imageStyle: React.CSSProperties = {
     ...style
     ...()
-    })
+    });
   }
   if (hasError) {
     </ImageProps>
-    return ()
+    return null
   if (hasError) {}
-    return ()
+    return null
   if (hasError) {}
-    return()
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
+    return null;
+  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
   const handleError = const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
+    });
   }
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle},
-    {...props})
+    {...props});
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
@@ -78,14 +78,14 @@ export const Image: React.FC<ImageProps>= ()
       </div>
     ),
   }
-  return()
+  return null;
     >)</img>
 }</img>
 export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
+      loading={priority ? 'eager' : 'lazy'});
+      onLoad={handleLoad});
+      onError={handleError});
+      {...props});
     />);
 };
 

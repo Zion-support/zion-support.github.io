@@ -28,7 +28,7 @@ const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     // AI Services
     {
       icon: Brain,
@@ -985,20 +985,19 @@ const ServicesPage: React.FC = () => {
       benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'];
     };
   ];
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },;
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length };
   ];
-    const filteredServices = const filteredServices = const filteredServices = services.filter();
+    const filteredServices = services.filter();
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  })
-
-  return ()
+  });
+  return null
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
@@ -1010,7 +1009,7 @@ const ServicesPage: React.FC = () => {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
-                    {categories.map() {category.name} ({category.count})
+                    {categories.map() {category.name} ({category.count});
                       </option>
                     ))}
                   </select>

@@ -6,13 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
-  const supportChannels = const supportChannels = const supportChannels = [
+
+  const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -49,109 +45,7 @@ const SupportPage: React.FC = () => {
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
     };
-<<<<<<< HEAD;
-  ];
-  const filteredFaqs = const filteredFaqs = const filteredFaqs = faqs.filter()
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-=======;
-  ];
 
-  const faqCategories = const faqCategories = const faqCategories = [
-    {
-      id: 'general',
-      title: 'General Questions',
-      icon: FileText,
-      questions: [
-        {
-          question: 'What services does Zion Tech Group offer?',
-          answer: 'We offer comprehensive AI services, IT solutions, and Micro SaaS tools. Our AI services include chatbots, analytics, computer vision, and automation. IT services cover cloud infrastructure, cybersecurity, DevOps, and custom development. Micro SaaS tools provide ready-to-use business applications.'
-        },
-        {
-          question: 'How do I get started with your services?',
-          answer: 'Getting started is easy! Contact us for a free consultation where we assess your needs and recommend the best solutions. You can call us at (302) 464-0950, email kleber@ziontechgroup.com, or fill out our contact form.'
-        },
-        {
-          question: 'Do you offer free consultations?',
-          answer: 'Yes! We provide free consultations for all potential clients. During the consultation, we assess your current setup, discuss your goals, and provide recommendations for AI and IT solutions that can help your business grow.'
-        }
-      ]
-    },
-    {
-      id: 'ai-services',
-      title: 'AI Services',
-      icon: MessageSquare,
-      questions: [
-        {
-          question: 'How long does it take to implement AI solutions?',
-          answer: 'Implementation time varies based on complexity. Simple chatbots can be deployed in 2-4 weeks, while complex AI systems may take 3-6 months. We provide detailed timelines during the consultation phase.'
-        },
-        {
-          question: 'Do I need technical expertise to use your AI tools?',
-          answer: 'No! Our AI solutions are designed to be user-friendly. We provide comprehensive training and ongoing support to ensure your team can effectively use and manage the AI tools.'
-        },
-        {
-          question: 'Can AI solutions integrate with my existing systems?',
-          answer: 'Yes, our AI solutions are designed to integrate seamlessly with existing business systems including CRM, ERP, databases, and other enterprise applications. We handle all integration work as part of our service.'
-        }
-      ]
-    },
-    {
-      id: 'it-services',
-      title: 'IT Services',
-      icon: Headphones,
-      questions: [
-        {
-          question: 'What cloud platforms do you support?',
-          answer: 'We support all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and hybrid cloud solutions. We help you choose the best platform for your specific needs and budget.'
-        },
-        {
-          question: 'Do you provide 24/7 IT support?',
-          answer: 'Yes, we offer 24/7 emergency support for critical issues. Our standard support hours are Monday-Friday 9AM-6PM EST, with emergency support available around the clock for urgent technical problems.'
-        },
-        {
-          question: 'How do you ensure data security?',
-          answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable.'
-        }
-      ];
-    };
-  ];
-
-  const resources = const resources = const resources = [
-    {
-      title: 'Documentation',
-      description: 'Comprehensive guides and API documentation',
-      icon: FileText,
-      link: '/docs'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all our services',
-      icon: Video,
-      link: '/tutorials'
-    },
-    {
-      title: 'Knowledge Base',
-      description: 'Searchable database of articles and solutions',
-      icon: Search,
-      link: '/knowledge-base'
-    },
-    {
-      title: 'Status Page',
-      description: 'Real-time status of all our services',
-      icon: CheckCircle,
-      link: '/status';
-    };
-  ];
-
-  const filteredCategories = const filteredCategories = const filteredCategories = faqCategories.filter();
-  );
-
-  const filteredQuestions = const filteredQuestions = const filteredQuestions = filteredCategories.flatMap()
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    );
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5;
   );
 
   return() {supportChannels.map((channel, index) => ()
@@ -192,7 +86,7 @@ const SupportPage: React.FC = () => {
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="all">All Categories</option>
-                    {faqCategories.map()
+                    {faqCategories.map();
                     ))}
                   </select>
                 </div>
@@ -239,16 +133,7 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-    </div>
 
-=======
-      </main>
-      
-      <Footer / /></Footer>
-    </>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 };
 

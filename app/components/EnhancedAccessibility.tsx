@@ -18,11 +18,20 @@ interface EnhancedAccessibilityProps {
   enableFocusManagement?: boolean
   }
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = false,
+  enableFocusManagement = true
 }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>()
-  })
-
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    screenReader: false,
+    keyboardNavigation: false
+  });
   const analytics = useAnalytics();
 
   useEffect(() => {
@@ -30,19 +39,31 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
-    setSettings()
-    }));
+    setSettings({
+      highContrast: prefersHighContrast,
+      reducedMotion: prefersReducedMotion,
+      fontSize: 'medium',
+      screenReader: false,
+      keyboardNavigation: true
+    });
 
     // Apply initial accessibility settings
-    applyAccessibilitySettings()
-    })
+    applyAccessibilitySettings({
+      highContrast: prefersHighContrast,
+      reducedMotion: prefersReducedMotion,
+      fontSize: 'medium',
+      screenReader: false,
+      keyboardNavigation: true
+    });
 
     // Track accessibility usage
-    analytics?.track()
-    })
+    analytics?.track('accessibility_initialized', {
+      highContrast: prefersHighContrast,
+      reducedMotion: prefersReducedMotion
+    });
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -71,8 +92,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
   }
   }
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {;
-    const updatedSettings = const updatedSettings = { ...settings, ...newSettings };
+  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+      const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
     
@@ -83,13 +104,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
   useEffect(() => {
     if (!enableKeyboardNavigation) return;
 
-    const handleKeyDown = const handleKeyDown = const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: KeyboardEvent) => {;
       // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-        const skipLink = const skipLink = const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
+        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
         if (skipLink) {
           skipLink.focus(),
-          event.preventDefault()
+          event.preventDefault();
   }
       }
 ;
@@ -97,7 +118,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
       if (event.key === 'Escape') {;
     const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
-          activeElement.blur()
+          activeElement.blur();
   }
       }
     }
@@ -162,8 +183,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ()
     }
   }, [settings]);
 
-  return ()
-  );
+  return <>{children}</>;
 };
 
 export default EnhancedAccessibility;

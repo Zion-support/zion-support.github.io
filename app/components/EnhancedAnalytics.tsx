@@ -23,7 +23,9 @@ interface AnalyticsProviderProps {
   trackingId?: string
   }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ()
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+  trackingId = 'GA_TRACKING_ID'
 }) => {
   // Initialize Google Analytics
   useEffect(() => {
@@ -42,28 +44,26 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ()
       window.gtag = gtag;
 
       gtag('js', new Date());
-      gtag()
-      })
+      gtag('config', trackingId);
     }
   }, [trackingId]);
 
-  const track = const track = const track = useCallback((event: string, parameters?: Record<string, any>) => {
+  const track = useCallback((event: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
-      });
-    };
+      window.gtag('event', event, parameters);
+    }
   }, []);
 
-  const page = const page = const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
+  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
+      window.gtag();
       });
     };
   }, [trackingId]);
 
-  const identify = const identify = const identify = useCallback((userId: string, traits?: Record<string, any>) => {
+  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
+      window.gtag();
       });
     };
   }, [trackingId]);
@@ -74,7 +74,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ()
     identify
   }
 
-  return ()
+  return null
   );
 };
 

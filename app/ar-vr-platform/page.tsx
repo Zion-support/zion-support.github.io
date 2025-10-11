@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const ARVRPlatformPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered AR/VR',
@@ -25,7 +25,7 @@ const ARVRPlatformPage: React.FC = () => {
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
     'Enterprise-grade security and compliance',
@@ -35,7 +35,7 @@ const ARVRPlatformPage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-  return ()
+  return null
             ))}
           </div>
         </div>

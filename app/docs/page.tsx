@@ -7,7 +7,7 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen },
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
@@ -15,7 +15,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code },;
     { id: 'security', name: 'Security', icon: Shield };
   ];
-  const documentation = const documentation = const documentation = [
+  const documentation = [
     {
       id: 1,
       title: 'Getting Started Guide',
@@ -107,7 +107,7 @@ const DocsPage: React.FC = () => {
       ]
     }
   ];
-  const quickLinks = const quickLinks = const quickLinks = [
+  const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },;
@@ -117,14 +117,14 @@ const DocsPage: React.FC = () => {
     ? documentation ;
     : documentation.filter(doc => doc.category === selectedCategory);
 
-  const searchResults = const searchResults = const searchResults = searchQuery 
-    ? documentation.filter()
+  const searchResults = searchQuery 
+    ? documentation.filter();
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase());
       );
     : filteredDocs;
 
-  return ()
+  return null
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />

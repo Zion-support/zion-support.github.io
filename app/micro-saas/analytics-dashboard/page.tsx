@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -35,7 +35,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
 
@@ -47,13 +47,13 @@ const benefits = const benefits = const benefits = [
 ;
     'Mobile-responsive design';
   ];
-const metrics = const metrics = const metrics = [
+const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
     { label: 'User Satisfaction', value: '4.9/5', icon: Star };
   ];
-return ()
+return null
     features.map((feature, index) => ()
               ))}
             </div>

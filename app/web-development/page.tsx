@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const technologies = const technologies = const technologies = [
+const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
@@ -15,7 +15,7 @@ const technologies = const technologies = const technologies = [
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' };
   ];
-const process = const process = const process = [
+const process = [
     {
     step: '01',
       title: 'Discovery & Planning',
@@ -42,9 +42,9 @@ const process = const process = const process = [
   };
     };
   ];
-return ()
+return null
 const WebDevelopmentPage: React.FC = () => {
-  const webServices = const webServices = const webServices = [
+  const webServices = [
     {
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -90,7 +90,7 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'text-gray-400';
     };
   ];
-  const technologies = const technologies = const technologies = [
+  const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
@@ -98,7 +98,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' };
   ];
-  const process = const process = const process = [
+  const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
@@ -124,7 +124,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Shield;
     };
   ];
-  return ()
+  return null
   );
 }
       </main>

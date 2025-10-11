@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
 
 const ApiPage: React.FC = () => {
-  const apiEndpoints = const apiEndpoints = const apiEndpoints = [
+  const apiEndpoints = [
     {
       category: 'AI Services',
       endpoints: [
@@ -144,7 +144,7 @@ const ApiPage: React.FC = () => {
   ]
     }
   ];
-  const authenticationMethods = const authenticationMethods = const authenticationMethods = [
+  const authenticationMethods = [
     {
       name: 'API Key',
       description: 'Simple API key authentication',
@@ -164,7 +164,7 @@ const ApiPage: React.FC = () => {
       security: 'High';
     };
   ];
-  const rateLimits = const rateLimits = const rateLimits = [
+  const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },;
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' };

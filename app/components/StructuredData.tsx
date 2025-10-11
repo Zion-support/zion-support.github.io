@@ -8,7 +8,7 @@ interface StructuredDataProps {
 
 const StructuredData: React.FC<StructuredDataProps> = ()
 }) => {
-  const getDefaultData = const getDefaultData = const getDefaultData = () => {
+  const getDefaultData = () => {
     switch (type) {
       case 'Organization':
         return {
@@ -167,7 +167,7 @@ const StructuredData: React.FC<StructuredDataProps> = ()
 ;
   const structuredData = data || getDefaultData();
 
-  return ()
+  return null
         __html: JSON.stringify(structuredData, null, 2)
       }}
     /></script>

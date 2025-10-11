@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 const IoTPage: React.FC = () => {
-    const iotServices = const iotServices = const iotServices = [
+    const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -138,7 +138,7 @@ const IoTPage: React.FC = () => {
     }
   ];
 const categories = [...new Set(iotServices.map(service => service.category))];
-return ()
+return null
                   Specialized {category.toLowerCase()} solutions powered by IoT technology
                 </p>
               </div>

@@ -12,7 +12,7 @@ interface ServiceCardProps {
   }
 const ServiceCard: React.FC<ServiceCardProps> = ()
 }) => {
-  return ()
+  return null
       )}
       <div className="mb-4" /></div>
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors" /></h3>

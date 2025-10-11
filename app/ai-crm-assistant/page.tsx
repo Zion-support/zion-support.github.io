@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCrmAssistantPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
@@ -31,7 +31,7 @@ const AiCrmAssistantPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
   ];
-  return ()
+  return null
   );
 }
       </main>

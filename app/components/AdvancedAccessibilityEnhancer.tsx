@@ -12,7 +12,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference
-    const highContrastQuery = const highContrastQuery = const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(highContrastQuery.matches),;
     // Apply accessibility enhancements;
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
@@ -23,7 +23,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.documentElement.classList.add('reduced-motion')
   }
     // Add keyboard navigation support
-    const handleKeyDown = const handleKeyDown = const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
   }
@@ -42,11 +42,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setIsHighContrast(!isHighContrast);
     document.documentElement.classList.toggle('high-contrast')
   }
-  const changeFontSize = const changeFontSize = const changeFontSize = (size: string) => {
+  const changeFontSize = (size: string) => {
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
   }
-  return ()
+  return null
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"

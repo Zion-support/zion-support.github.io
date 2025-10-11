@@ -26,7 +26,7 @@ import Footer from '../components/Footer';
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
   ]
-  return ()
+  return null
   );
 }
       </main>

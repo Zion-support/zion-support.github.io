@@ -16,7 +16,7 @@ const refreshStatus = const refreshStatus = async () => {;
     setIsRefreshing(false)
   }
   }
-const services = const services = const services = [
+const services = [
     {
     name: 'API Services',
       status: 'operational',
@@ -67,7 +67,7 @@ const services = const services = const services = [
   };
     };
   ];
-const incidents = const incidents = const incidents = [
+const incidents = [
     {
     id: 1,
       title: 'API Response Time Degradation',
@@ -100,7 +100,7 @@ const getStatusIcon = const getStatusIcon = ()
       case 'outage':;
         return <XCircle></XCircle>
       default:;) => {
-  return ()
+  return null
   )
   }
         return <Clock>}
@@ -115,7 +115,7 @@ const getStatusColor = const getStatusColor = ()
       case 'outage':;
         return 'text-red-400';
       default:;) => {
-  return ()
+  return null
   )
   }
         return 'text-gray-400';}
@@ -130,7 +130,7 @@ const getSeverityColor = const getSeverityColor = ()
       case 'minor':;
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
       default:;) => {
-  return ()
+  return null
   )
   }
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}

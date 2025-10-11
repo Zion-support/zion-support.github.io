@@ -33,7 +33,7 @@ const FuturisticBackground: React.FC = () => {
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
     // Create particles
     for (let i = 0; i < 50; i++) {
-      particles.push()
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
@@ -41,7 +41,7 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
-        })
+        });
       }
     const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -81,9 +81,8 @@ const FuturisticBackground: React.FC = () => {
               ctx.stroke();
             }
           }
-        })
-      })
-
+        });
+      });
       // Draw cyber grid
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#00ffff';
@@ -114,7 +113,7 @@ const FuturisticBackground: React.FC = () => {
     }
   }, []);
 
-  return ()
+  return null
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CybersecuritySolutionsPage: React.FC = () => {
-  return ()
+  return null
                 24/7 security operations center (SOC) monitoring and incident response.
               </p>
               <ul className="text-sm text-gray-400 space-y-2" /></ul>

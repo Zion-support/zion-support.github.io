@@ -28,7 +28,7 @@ import {
   }
 } from 'lucide-react'
 const SecurityMonitoringPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',
@@ -51,7 +51,7 @@ const SecurityMonitoringPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
     'Real-time alerts and notifications',
@@ -65,7 +65,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Customizable monitoring rules';
   ];
-return ()
+return null
                   Call (302) 464-0950,
                 </button>
               </div>

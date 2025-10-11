@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 const AccessibilityPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',;
@@ -41,7 +41,7 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     },
   ];
-const standards = const standards = const standards = [
+const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -63,7 +63,7 @@ const standards = const standards = const standards = [
       status: 'Fully Compliant';
     };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
           <div className="relative max-w-7xl mx-auto text-center" /></div>

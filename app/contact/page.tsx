@@ -6,15 +6,22 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState()
-  })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-    setFormData()
-    }));
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {;
@@ -26,8 +33,13 @@ const ContactPage: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData()
-      })
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          message: ''
+        });
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -35,7 +47,7 @@ const ContactPage: React.FC = () => {
     }
   }, []);
 
-  return ()
+  return null
                 )},
     {submitStatus === 'error' && ()
                 )}

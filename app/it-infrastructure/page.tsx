@@ -24,7 +24,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   }
     }
   ]
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -38,7 +38,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Proven track record of success';
   ];
-return ()
+return null
             ))}
           </div>
         </div>

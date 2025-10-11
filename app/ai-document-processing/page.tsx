@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiDocumentProcessingPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
@@ -31,14 +31,14 @@ const AiDocumentProcessingPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   },
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-return ()
+return null
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
           <div className="relative max-w-7xl mx-auto text-center" / /></div>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Smartphone,
       title: 'Mobile Apps',
@@ -39,7 +39,7 @@ const BusinessAppsPage: React.FC = () => {
       description: 'Worldwide deployment and support for international business applications';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;

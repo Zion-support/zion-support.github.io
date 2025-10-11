@@ -27,8 +27,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
       
       // Configure Google Analytics
-      gtag()
-      })
+      gtag();
+      });
     }
   }, []);
 
@@ -38,8 +38,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Google Analytics
     if ('gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-      gtag()
-      })
+      gtag();
+      });
     }
 
     // Console logging for development
@@ -48,14 +48,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
   }
 
-  const trackPageView = const trackPageView = const trackPageView = (pageName: string, pagePath: string) => {
+  const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
 ;
     // Google Analytics;
     if ('gtag' in window) {;
       const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
-      gtag()
-      })
+      gtag();
+      });
     }
 
     // Console logging for development
@@ -69,7 +69,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView,
   }
 
-  return ()
+  return null
   );
 }
 

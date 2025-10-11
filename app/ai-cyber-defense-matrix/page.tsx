@@ -10,7 +10,7 @@ const AICyberDefenseMatrix: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'AI Threat Detection',;
@@ -36,7 +36,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Essential',
       price: '$499',
@@ -89,7 +89,7 @@ const AICyberDefenseMatrix: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Financial Services',
       description: 'Advanced cyber defense for banks and financial institutions',
@@ -115,7 +115,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       results: '100% infrastructure protection';
     };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent" / /></div>
           <div className="max-w-7xl mx-auto relative z-10" /></div>
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>

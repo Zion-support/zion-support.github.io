@@ -7,8 +7,8 @@ interface PerformanceOptimizerProps {
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState()
-  })
+  const [optimizationMetrics, setOptimizationMetrics] = useState();
+  });
   const optimizeImages = useCallback(() => {;
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img');
@@ -24,7 +24,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
     img.setAttribute('decoding', 'async');
         optimizedCount++
   }
-    })
+    });
     return optimizedCount;
   }, []);
   const optimizeScripts = useCallback(() => {;
@@ -37,7 +37,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
         script.setAttribute('defer', '');
         optimizedCount++
   }
-    })
+    });
     return optimizedCount;
   }, []);
   const optimizeCSS = useCallback(() => {;
@@ -51,7 +51,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
         link.setAttribute('onload', "this.media='all'");
         optimizedCount++
   }
-    })
+    });
     return optimizedCount;
   }, []);
   const runOptimizations = useCallback(() => {;
@@ -59,8 +59,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-    setOptimizationMetrics()
-    })
+    setOptimizationMetrics();
+    });
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {
@@ -80,12 +80,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
             console.warn('Page load time exceeded 1 second')
   }
         }
-      })
-    })
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+      });
+    });
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
     return () => observer.disconnect();
   }, []);
-  return ()
+  return null
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',

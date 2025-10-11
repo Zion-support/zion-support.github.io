@@ -30,12 +30,12 @@ const HomePage: React.FC = () => {
   const handlePhoneClick = const handlePhoneClick = useCallback(() => {;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag()
-      })
+      gtag();
+      });
     }
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',;
@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     },
   ];
-  const services = const services = const services = [
+  const services = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -96,7 +96,7 @@ const HomePage: React.FC = () => {
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
   ];
-  return ()
+  return null
                       aria-label="Call us at (302) 464-0950"></a>
                       <Phone className="w-5 h-5" / /></Phone>
                       <span>(302) 464-0950</span>
@@ -133,7 +133,7 @@ const HomePage: React.FC = memo(() => {
     setIsLoaded(true)
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',;
@@ -171,13 +171,13 @@ const HomePage: React.FC = memo(() => {
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
     },
   ];
-  const stats = const stats = const stats = [
+  const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },;
     { number: '50+', label: 'Expert Team Members' };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" / /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" / /></div>
           <div className="relative max-w-7xl mx-auto text-center" /></div>

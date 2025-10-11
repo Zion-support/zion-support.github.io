@@ -16,38 +16,34 @@ interface FormStatus {
 }
 
   const [formData, setFormData] = useState<FormData>()
-  })
-
+  });
   const [status, setStatus] = useState<FormStatus>()
-  })
-
+  });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-    setFormData()
+    setFormData();
     }));
   }
 
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' })
-
+    setStatus({ type: 'loading', message: 'Sending message...' });
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      setStatus()
-      })
-
+      setStatus();
+      });
       // Reset form
-      setFormData()
-      })
+      setFormData();
+      });
     } catch (error) {
-      setStatus()
-      })
+      setStatus();
+      });
     }
   }
 
-  const services = const services = const services = [
+  const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -57,7 +53,7 @@ interface FormStatus {
     'IT Consulting',;
     'Other';
   ];
-  return ()
+  return null
                 placeholder="+1 (555) 123-4567"
               /></input>
             </div>

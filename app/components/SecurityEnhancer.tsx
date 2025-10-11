@@ -11,7 +11,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     // Security enhancement logic;
     const enhanceSecurity = const enhanceSecurity = ();
         'X-XSS-Protection': '1; mode=block',) => {
-  return ()
+  return null
   )
   }
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
@@ -24,16 +24,16 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       document.head.appendChild(cspMeta);
 // Disable right-click context menu;
       document.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
+    e.preventDefault();
   }
-      })
+      });
 // Disable F12 and other dev tools shortcuts;
       document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-          e.preventDefault()
+          e.preventDefault();
   }
         }
-      })
+      });
     }
 enhanceSecurity();
   }, []);

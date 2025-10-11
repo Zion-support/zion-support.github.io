@@ -27,7 +27,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       if (!img.decoding) {
     img.decoding = 'async'
   }
-    })
+    });
   }, [enableImageOptimization]);
 
   const optimizeMemory = const optimizeMemory = useCallback(() => {;
@@ -36,7 +36,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
-          window.gc()
+          window.gc();
   }
       }
     }
@@ -66,7 +66,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 
   useEffect(() => {
     // Run initial optimizations
-    const timer = const timer = const timer = setTimeout(() => {;
+    const timer = setTimeout(() => {;
       runOptimizations();
   }, 1000);
 
@@ -106,23 +106,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       document.head.appendChild(fontPreload),
 
       // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
+      const criticalImages = [;
         '/images/hero-bg.jpg',;
         '/images/logo.png';
       ];
-      criticalImages.forEach()
+      criticalImages.forEach();
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
         document.head.appendChild(link)
-  })
+  });
     }
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
     const images = document.querySelectorAll('img');
-      images.forEach()
+      images.forEach();
         if (enableLazyLoading && !img.hasAttribute('loading')) {
           img.loading = 'lazy'
   }
@@ -131,12 +131,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
         if (!img.hasAttribute('decoding')) {
     img.decoding = 'async'
   }
-      })
+      });
     }
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-    const imageObserver = const imageObserver = const imageObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach();
           if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
@@ -146,16 +146,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
               observer.unobserve(img)
   }
           }
-        })
-      })
-
+        });
+      });
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
     }
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             // LCP measurement logged for performance monitoring
@@ -163,11 +162,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
           if (entry.entryType === 'first-input') {
             // FID measurement logged for performance monitoring
           }
-        })
-      })
-
+        });
+      });
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       };

@@ -9,19 +9,19 @@ interface OptimizedLoadingSpinnerProps {
   fullScreen?: boolean
   }
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo();
   }) => {
-    const sizeClasses = const sizeClasses = useMemo()
+    const sizeClasses = const sizeClasses = useMemo();
       () => ()
       }),
       [];
     );
-const textSizeClasses = const textSizeClasses = useMemo()
+const textSizeClasses = const textSizeClasses = useMemo();
       () => ()
       }),
       [];
     );
-const colorClasses = const colorClasses = useMemo()
+const colorClasses = const colorClasses = useMemo();
       () => ()
       }),
       [];
@@ -29,20 +29,20 @@ const colorClasses = const colorClasses = useMemo()
 const renderSpinner = const renderSpinner = useMemo(() => {;
     switch (variant) {;
         case 'dots':;
-          return ()
+          return null
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 / /></div>
               ))}</div>
           );
 case 'pulse':;
-          return ()
+          return null
           );
 case 'skeleton':;
-          return ()
+          return null
           );
 case 'bars':;
-          return ()
+          return null
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{}
                     height: `${12 + i * 4}px`,
@@ -53,16 +53,16 @@ case 'bars':;
           );
 case 'spinner':;
         default:  
-          return ()
+          return null
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
-return ()
+return null
           )}
         </div>
     );
-  } )
+  });
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

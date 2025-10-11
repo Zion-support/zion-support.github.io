@@ -22,7 +22,7 @@ const preloadComponents = const preloadComponents = ()
     // Preload critical components after initial render;
     setTimeout(() => {
       import('./components/ContentPromotionBanner');) => {
-  return ()
+  return null
   )
   }
       import('./components/ContentCarousel');}
@@ -47,14 +47,14 @@ useEffect(() => {
   }
   }, []);
   // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = const handlePhoneClick = const handlePhoneClick = useCallback(() => {
+  const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag()
+      (window as any).gtag();
       });
     };
   }, []);
 
-  return ()
+  return null
               📞 Call: (302) 464-0950
             </a>
             <a></a>
@@ -1302,7 +1302,7 @@ useEffect(() => {
       <Footer / /></Footer>
     </>
   );
-})
+});
 HomePage.displayName = 'HomePage';
 export default HomePage
   </button>

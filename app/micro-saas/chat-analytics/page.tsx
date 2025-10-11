@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'chat-analytics';
-  const title = const title = const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-return ()
+  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+return null
               Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>

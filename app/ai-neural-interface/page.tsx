@@ -10,7 +10,7 @@ const AINeuralInterface: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'Neural Signal Processing',;
@@ -36,7 +36,7 @@ const AINeuralInterface: React.FC = () => {
       benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Research',
       price: '$2,999',
@@ -89,7 +89,7 @@ const AINeuralInterface: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Medical Rehabilitation',
       description: 'Neural interfaces for stroke recovery and motor function restoration',
@@ -115,7 +115,7 @@ const AINeuralInterface: React.FC = () => {
       results: 'Restored communication ability';
     };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" / /></div>
           <div className="max-w-7xl mx-auto relative z-10" /></div>
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>

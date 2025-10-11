@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 const SmartCityInfrastructurePage: React.FC = () => {
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -34,7 +34,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
     icon: Globe,;
       title: 'Global Reach',];
 const PagePage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -60,7 +60,7 @@ const PagePage: React.FC = () => {
 ;
     };
   ];
-  const smartCityServices = const smartCityServices = const smartCityServices = [
+  const smartCityServices = [
     {
       icon: Building,
       title: 'Smart Buildings',;
@@ -148,7 +148,7 @@ const PagePage: React.FC = () => {
 
 export default PagePage;
 
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
-  const services = const services = const services = [
+  const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',;
@@ -31,7 +31,7 @@ const CloudServicesPage: React.FC = () => {
   ];
   const benefits = [;
   ];
-  const pricing = const pricing = const pricing = [
+  const pricing = [
     {
       name: 'Starter',
       price: '$2,999',

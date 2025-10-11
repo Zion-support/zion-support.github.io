@@ -30,7 +30,7 @@ import {
   }
 } from 'lucide-react'
 const CloudInfrastructureManagerPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
@@ -53,7 +53,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
     'Cost reduction and optimization',
@@ -67,7 +67,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Expert technical support';
   ];
-return ()
+return null
                   Call (302) 464-0950,
                 </button>
               </div>

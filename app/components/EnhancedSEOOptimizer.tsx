@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const EnhancedSEOOptimizerPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,7 +26,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

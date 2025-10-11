@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'Secure Blockchain Solutions',
@@ -25,7 +25,7 @@ const BlockchainPage: React.FC = () => {
       description: 'Worldwide blockchain deployment and support for international businesses';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
@@ -35,7 +35,7 @@ const BlockchainPage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-  return ()
+  return null
           ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16" /></div>
@@ -90,7 +90,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
         {/* Services by Category */},
-    {categories.map()
+    {categories.map();
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
   </
               </div>

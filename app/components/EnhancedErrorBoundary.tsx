@@ -23,9 +23,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState()
-    })
-
+    this.setState();
+    });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -34,8 +33,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag()
-      })
+      gtag();
+      });
     }
   }
 
@@ -45,7 +44,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      return ()
+      return null
               onClick={() => window.location.reload()}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >

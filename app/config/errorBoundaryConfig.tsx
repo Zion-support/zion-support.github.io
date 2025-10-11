@@ -45,7 +45,7 @@ export interface ErrorBoundaryConfig {
 /**;
  * Default error messages;
  */;
-const DEFAULT_ERROR_MESSAGES = const DEFAULT_ERROR_MESSAGES = const DEFAULT_ERROR_MESSAGES = {
+const DEFAULT_ERROR_MESSAGES = {
     default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',
@@ -77,7 +77,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
  * Default error fallback component;
  */;
 function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
-    return ()
+    return null
         )}
         <div className="mt-6 flex gap-4" / /></div>
           <button></button>
@@ -97,13 +97,13 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 /**;
  * Network error fallback component;
  */;
-function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return ()
+function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return null
   )}
 /**;
  * Not found error fallback component;
  */;
 function NotFoundFallback(): JSX.Element {
-    return ()
+    return null
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
           >

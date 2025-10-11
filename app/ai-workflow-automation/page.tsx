@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiWorkflowAutomationPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
@@ -32,7 +32,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     },
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',;
@@ -40,7 +40,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
     'Gain competitive advantage with advanced technology';
   ];
 
-  return ()
+  return null
   );
 }
       </main>

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, MessageCircle } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Brain,
       title: 'No-Code Builder',;
@@ -32,7 +32,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting']
     },
   ];
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Customer Support',;
       description: 'Provide 24/7 customer support with intelligent responses.',;
@@ -55,7 +55,7 @@ const AiChatbotBuilderPage: React.FC = () => {
     },
   ];
 
-  return ()
+  return null
   );
 }
       </main>

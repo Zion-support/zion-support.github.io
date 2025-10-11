@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 const PagePage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -24,7 +24,7 @@ const PagePage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
           </div>
         </div>
       </section>

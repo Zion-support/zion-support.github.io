@@ -11,7 +11,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
   const keywordsString = keywords.join(', ');
 
-  return ()
+  return null
   );
 };
 

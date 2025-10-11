@@ -110,11 +110,11 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 // Loading component
-const AppLoadingSpinner = const AppLoadingSpinner = const AppLoadingSpinner = () => ();
+const AppLoadingSpinner = () => ();
 );
 
 const App: React.FC = () => {
-    return ()
+    return null
   );
 };
 

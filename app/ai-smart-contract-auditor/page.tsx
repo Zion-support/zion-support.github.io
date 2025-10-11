@@ -10,7 +10,7 @@ const AISmartContractAuditor: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'Automated Security Analysis',;
@@ -36,7 +36,7 @@ const AISmartContractAuditor: React.FC = () => {
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Starter',
       price: '$299',
@@ -89,7 +89,7 @@ const AISmartContractAuditor: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'DeFi Protocol Audits',
       description: 'Comprehensive security analysis for decentralized finance protocols',
@@ -115,7 +115,7 @@ const AISmartContractAuditor: React.FC = () => {
       results: 'Prevented $50M+ in potential losses';
     };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" / /></div>
           <div className="max-w-7xl mx-auto relative z-10" /></div>
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>

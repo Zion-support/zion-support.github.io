@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 const EnterprisePage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',;
@@ -43,7 +43,7 @@ const EnterprisePage: React.FC = () => {
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   },
   ];
-const solutions = const solutions = const solutions = [
+const solutions = [
     {
     title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
@@ -69,7 +69,7 @@ const solutions = const solutions = const solutions = [
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -83,13 +83,13 @@ const benefits = const benefits = const benefits = [
 ;
     'Provide 24/7 support and monitoring';
   ];
-const stats = const stats = const stats = [
+const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
     { number: '24/7', label: 'Support Available', icon: Clock };
   ];
-return ()
+return null
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
         <div className="relative max-w-7xl mx-auto text-center" / /></div>

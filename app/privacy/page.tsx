@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'December 2024';
 
-  const sections = const sections = const sections = [
+  const sections = [
     {
       icon: Database,
       title: 'Information We Collect',
@@ -61,35 +61,8 @@ const PrivacyPage: React.FC = () => {
         'Opt-out: You can unsubscribe from marketing communications at any time.'
       ]
     };
-<<<<<<< HEAD;
-  ];
-  const purposes = const purposes = const purposes = [
-    {;
-    };
-  ];
-  const rights = const rights = const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
-    {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-    },
-    {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-    },
-    {
-      title: 'Portability',;
-      description: 'Receive your data in a structured format',;
-      icon: Database];
-=======
-  ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
-  return ()
+  return null
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
                 our website or use our services.

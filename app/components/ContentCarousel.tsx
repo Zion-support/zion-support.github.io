@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-rea
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = const slides = const slides = [
+  const slides = [
     {
       id: 1,
       title: 'AI Solutions',
@@ -76,7 +76,7 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  return ()
+  return null
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         ></div>
           {slides.map((slide) => ()

@@ -41,7 +41,7 @@ icon: Heart,
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
   },
   ]
-return ()
+return null
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
         <div className="relative max-w-7xl mx-auto text-center" / /></div>

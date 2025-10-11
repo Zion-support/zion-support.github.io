@@ -15,23 +15,23 @@ interface PerformanceMonitorProps {
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>()
-  })
+  });
   const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = const fcpEntries = const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
-        const lcpObserver = new PerformanceObserver()
+        const lcpObserver = new PerformanceObserver();
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1],;
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -42,15 +42,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
       try {
         const fidObserver = const fidObserver = new PerformanceObserver();
           const entries = list.getEntries();
-          entries.forEach()
+          entries.forEach();
             ) {
               const fidEntry = entry as PerformanceEventTiming;
-              setMetrics()
+              setMetrics();
               }));
             }
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -62,7 +62,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
         let clsValue = 0;
         const clsObserver = const clsObserver = new PerformanceObserver();
           const entries = list.getEntries();
-          entries.forEach()
+          entries.forEach();
             ) {
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
@@ -70,9 +70,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
             }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -86,33 +86,33 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
       // Measure Memory Usage
-      const memory = const memory = const memory =;
+      const memory = ;
         (performance as Performance & { memory?: { usedJSHeapSize: number } });
           .memory?.usedJSHeapSize || null;
-      setMetrics()
+      setMetrics();
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
     }
     // Cleanup observers
     return () => {
-    observers.forEach()
-          observer.disconnect()
+    observers.forEach();
+          observer.disconnect();
   } catch (error) {
           // eslint-disable-next-line no-console
         }
-      })
+      });
     }
   }, []);
   const measureResourceTiming = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
-    const slowResources = const slowResources = const slowResources = resources.filter()
+    const slowResources = resources.filter();
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     ),
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
-      console.log()
+      console.log();
         slowResources.map((r: PerformanceResourceTiming) => ();
         }));
     }
@@ -122,7 +122,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     // Use web-vitals library if available
     try {
       import('web-vitals')
-        .then()
+        .then();
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -143,10 +143,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
             );
           }
-        })
+        });
         .catch(() => {
           // web-vitals not available, continue without it
-        })
+        });
     } catch {
       // web-vitals not available, continue without it
     }
@@ -157,7 +157,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
     measureResourceTiming();
     measureCoreWebVitals();
     // Monitor performance every 5 seconds
-    const interval = const interval = const interval = setInterval(() => {;
+    const interval = setInterval(() => {;
       measureResourceTiming();
   }, 5000);
     return () => {
@@ -176,33 +176,33 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ()
   }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations
-  const getPerformanceRecommendations = const getPerformanceRecommendations = const getPerformanceRecommendations = useCallback(() => {
+  const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [],
     if (metrics.fcp && metrics.fcp > 1800) {
-      recommendations.push()
+      recommendations.push();
       )
   }
     if (metrics.lcp && metrics.lcp > 2500) {
-    recommendations.push()
+    recommendations.push();
       )
   }
     if (metrics.fid && metrics.fid > 100) {
-    recommendations.push()
+    recommendations.push();
       )
   }
     if (metrics.cls && metrics.cls > 0.1) {
-    recommendations.push()
+    recommendations.push();
       )
   }
     if (metrics.ttfb && metrics.ttfb > 600) {
-    recommendations.push()
+    recommendations.push();
       );
   };
     return recommendations;
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
-    return ()
+    return null
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>

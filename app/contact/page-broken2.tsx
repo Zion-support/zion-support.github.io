@@ -17,14 +17,14 @@ import {
   }
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
-    const [formData, setFormData] = useState()
-  })
+    const [formData, setFormData] = useState();
+  });
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = const handleInputChange = const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
 ;
     const { name, value } = e.target;
-    setFormData()
+    setFormData();
     }));
   }, []);
 const handleSubmit = async (e: React.FormEvent) => {;
@@ -36,8 +36,8 @@ try {
 
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-      setFormData()
-      })
+      setFormData();
+      });
     } catch (error) {
     setSubmitStatus('error')
   }
@@ -46,7 +46,7 @@ try {
   }
     }
   }
-const services = const services = const services = [
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -61,7 +61,7 @@ const services = const services = const services = [
 ;
     'Other';
   ];
-const contactInfo = const contactInfo = const contactInfo = [
+const contactInfo = [
     {
     icon: Phone,
       title: 'Phone',
@@ -88,7 +88,7 @@ const contactInfo = const contactInfo = const contactInfo = [
   };
     };
   ];
-return ()
+return null
               )},
     {
     submitStatus === 'error' && ()

@@ -481,7 +481,7 @@ const itServices = [;
   }
     }
   ];
-const categories = const categories = const categories = [
+const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -499,8 +499,8 @@ const filteredServices = const filteredServices = itServices.filter();
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
   }
-  })
-return ()
+  });
+return null
               Call (302) 464-0950
             </a>
             <a></a>

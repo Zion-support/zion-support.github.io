@@ -13,12 +13,12 @@ interface PerformanceProps {
   }
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>()
-  })
+  });
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {
     const updateMetrics = () => {;
-      const navigation = const navigation = const navigation = performance.getEntriesByType();
+      const navigation = performance.getEntriesByType();
       )[0] as PerformanceNavigationTiming;
       const loadTime = const loadTime = navigation;
         ? navigation.loadEventEnd - navigation.fetchStart;
@@ -82,7 +82,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   }
     setAlerts(newAlerts);
   }
-  const toggleMonitoring = const toggleMonitoring = const toggleMonitoring = () => {
+  const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
   };
   const formatBytes = (bytes: number) => {;

@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 const FinancialITPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',;
@@ -43,7 +43,7 @@ const FinancialITPage: React.FC = () => {
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
   },
   ];
-const services = const services = const services = [
+const services = [
     {
     icon: '🏦',
       title: 'Banking Solutions',
@@ -66,7 +66,7 @@ const services = const services = const services = [
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
 
@@ -78,7 +78,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Advanced Analytics';
   ];
-return ()
+return null
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
         <div className="relative max-w-7xl mx-auto text-center" / /></div>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
 const CompliancePage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: FileCheck,
       title: 'Compliance Management',
@@ -25,7 +25,7 @@ const CompliancePage: React.FC = () => {
       description: 'Stay audit-ready with continuous compliance monitoring and reporting';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
     'Enterprise-grade security and compliance',

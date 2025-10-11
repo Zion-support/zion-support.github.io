@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const BlockchainIntegrationServicesPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Shield,
       title: 'Secure Blockchain Integration',
@@ -25,7 +25,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       description: 'Support for multiple blockchain networks and protocols';
     };
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',

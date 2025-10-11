@@ -29,7 +29,7 @@ const ContentNewsletterSignup: React.FC = () => {
   }
 
   if (isSubscribed) {
-    return ()
+    return null
           onClick={() => setIsSubscribed(false)}
           className="text-white/80 hover:text-white underline"
         >
@@ -39,7 +39,7 @@ const ContentNewsletterSignup: React.FC = () => {
     );
   }
 
-  return ()
+  return null
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
             required

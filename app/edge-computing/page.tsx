@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
 const EdgeComputingPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: Cpu,
       title: 'Edge Processing',;
@@ -43,7 +43,7 @@ const EdgeComputingPage: React.FC = () => {
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   },
   ];
-const services = const services = const services = [
+const services = [
     {
     icon: '⚡',
       title: 'Edge Analytics',
@@ -66,7 +66,7 @@ const services = const services = const services = [
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
 
@@ -78,7 +78,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Global Scalability';
   ];
-const useCases = const useCases = const useCases = [
+const useCases = [
     {
     title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
@@ -111,7 +111,7 @@ const useCases = const useCases = const useCases = [
   };
     };
   ];
-return ()
+return null
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
         <div className="relative max-w-7xl mx-auto text-center" / /></div>

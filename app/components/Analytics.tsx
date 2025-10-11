@@ -11,19 +11,19 @@ const Analytics: React.FC<AnalyticsProps> = ()
 }) => {
     useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
+      initializeGoogleAnalytics();
   }
     }
 if (enablePerformanceMonitoring) {
-    initializePerformanceMonitoring()
+    initializePerformanceMonitoring();
   }
     }
 if (enableErrorTracking) {
-    initializeErrorTracking()
+    initializeErrorTracking();
   }
     }
 if (enableUserBehaviorTracking) {
-    initializeUserBehaviorTracking()
+    initializeUserBehaviorTracking();
   }
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
@@ -36,23 +36,23 @@ const initializeGoogleAnalytics = const initializeGoogleAnalytics = ();
     (window as any).dataLayer = (window as any).dataLayer || [],
     function gtag(...args: any[]) {
     ) => {
-  return ()
+  return null
   )
   }
       (window as any).dataLayer.push(args);}
     }
     (window as any).gtag = gtag;
 gtag('js', new Date());
-    gtag()
-    })
+    gtag();
+    });
   }
 const initializePerformanceMonitoring = const initializePerformanceMonitoring = ()
     if ('PerformanceObserver' in window) {;
     // Monitor Core Web Vitals;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {;
+      const observer = new PerformanceObserver((list) => {;
         for (const entry of list.getEntries()) {;
           if (entry.entryType === 'largest-contentful-paint') {) => {;
-  return ()
+  return null
   )
   }
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
@@ -67,8 +67,8 @@ const initializePerformanceMonitoring = const initializePerformanceMonitoring = 
             }
           }
         }
-      })
-observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+      });
+observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 // Monitor page load time;
       window.addEventListener('load', () => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -76,40 +76,40 @@ observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layo
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))
   }
         }
-      })
+      });
     }
   }
 const initializeErrorTracking = const initializeErrorTracking = ()
     window.addEventListener('error', (event) => {
-    trackEvent()
+    trackEvent();
         colno: event.colno,) => {
-  return ()
+  return null
   )
   }
         error: event.error?.stack,}
-      })
+      });
     });
 // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
-    trackEvent()
-      })
-    })
+    trackEvent();
+      });
+    });
 // Track resource loading errors;
     window.addEventListener('error', (event) => {
     if (event.target !== window) {
-        trackEvent()
+        trackEvent();
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
   }
 
-        })
+        });
       }
     }, true);
   }
 const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
       page_location: window.location.href,) => {
-  return ()
+  return null
   )
   }
       page_path: window.location.pathname,}
@@ -126,7 +126,7 @@ const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
   }
         }
       }
-    })
+    });
 // Track time on page;
 
     const startTime = Date.now();
@@ -134,7 +134,7 @@ const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
     const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       trackEvent('engagement', 'time_on_page', timeOnPage)
   }
-    })
+    });
 // Track clicks on important elements;
     document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
@@ -142,34 +142,34 @@ const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
 if (tagName === 'a') {
 
         const href = (target as HTMLAnchorElement).href;
-        trackEvent()
-          link_text: target.textContent?.trim()
+        trackEvent();
+          link_text: target.textContent?.trim();
   }
-        })
+        });
       } else if (tagName === 'button') {
-    trackEvent()
+    trackEvent();
           button_text: target.textContent?.trim(),
           button_class: target.className
   }
-        })
+        });
       }
-    })
+    });
 // Track form submissions;
     document.addEventListener('submit', (event) => {
     const form = event.target as HTMLFormElement;
-      trackEvent()
-      })
-    })
+      trackEvent();
+      });
+    });
   }
 const trackEvent = const trackEvent = ()
     if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag()
+    (window as any).gtag();
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
-  return ()
+  return null
   )
   }
         value: typeof value === 'number' ? value : undefined,}
-      })
+      });
     }
   };
 return null;
@@ -187,6 +187,6 @@ declare global {
 export default Analytics;
 // Analytics Provider for context;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    return ()
+    return null
   );
 }

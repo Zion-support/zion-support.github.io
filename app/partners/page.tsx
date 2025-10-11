@@ -77,8 +77,7 @@ const PartnersPage: React.FC = () => {
 
   const filteredPartners = const filteredPartners = partners.filter();
   });
-
-  const getTierColor = const getTierColor = const getTierColor = (tier: string) => {;
+  const getTierColor = (tier: string) => {;
     switch (tier) {;
       case 'strategic':;
         return 'from-purple-500 to-pink-600';
@@ -91,7 +90,7 @@ const PartnersPage: React.FC = () => {
     }
   };
 
-  const getTierIcon = const getTierIcon = const getTierIcon = (tier: string) => {;
+  const getTierIcon = (tier: string) => {;
     switch (tier) {;
       case 'strategic':;
         return <Star className="w-4 h-4" />;
@@ -104,11 +103,11 @@ const PartnersPage: React.FC = () => {
     }
   };
 
-  return ()
+  return null
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {categories.map()
+              {categories.map();
               ))}
             </select>
             <select

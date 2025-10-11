@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {
     const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const copyToClipboard = const copyToClipboard = const copyToClipboard = (code: string, id: string) => {
+  const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)
@@ -93,7 +93,7 @@ export default function APIDocsPage() {
   ]
     }
   ];
-  const filteredEndpoints = const filteredEndpoints = const filteredEndpoints = apiEndpoints.map()
+  const filteredEndpoints = apiEndpoints.map();
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());

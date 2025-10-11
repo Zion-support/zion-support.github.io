@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 const AIRecruitmentAssistantPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: Search,
       title: 'Smart Candidate Matching',

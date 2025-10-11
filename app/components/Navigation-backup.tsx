@@ -12,7 +12,7 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = const handleResize = const handleResize = () => {
+    const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false)
   }
@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
   }
 
   // Service data
-  const aiServices = const aiServices = const aiServices = [
+  const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },;
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' };
   ];
-  const itServices = const itServices = const itServices = [
+  const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },;
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' };
   ];
-  const microSaasServices = const microSaasServices = const microSaasServices = [
+  const microSaasServices = [
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
     { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },;
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' };
   ];
-  const emergingTech = const emergingTech = const emergingTech = [
+  const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {
-    const services = const services = const services = [
+    const services = [
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
@@ -36,7 +36,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   };
     };
   ];
-return ()
+return null
     services.map((service, index) => ()
     service.features.map((feature, featureIndex) => ()
                 ))}

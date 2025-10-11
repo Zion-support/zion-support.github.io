@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState()
+  const [counters, setCounters] = useState();
   });
-
-  const targetCounters = const targetCounters = const targetCounters = {
+  const targetCounters = {
     clients: 500,
     projects: 1000,;
     satisfaction: 99,;
     years: 10;
   };
 
-  const statistics = const statistics = const statistics = [
+  const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -43,7 +42,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-yellow-400';
     };
   ];
-  const achievements = const achievements = const achievements = [
+  const achievements = [
     {
       icon: Brain,
       title: 'AI Innovation',
@@ -66,7 +65,7 @@ const ContentStatistics: React.FC = () => {
       const increment = target / (duration / 16); // 60fps
       
       const timer = const timer = setInterval(() => {;
-        setCounters()
+        setCounters();
           if (current < target) {
             return {
               ...prev,
@@ -79,7 +78,6 @@ const ContentStatistics: React.FC = () => {
 
       return timer;
     });
-
     return () => {
       timers.forEach(timer => clearInterval(timer));
     };

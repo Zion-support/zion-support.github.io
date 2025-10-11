@@ -1,14 +1,14 @@
 'use client';
 export const useRouter = (;) => {
-    return ()
+    return null
   )
   }
-  const push = const push = const push = useCallback((url: string) => {
+  const push = useCallback((url: string) => {
     ,;
   };
     window.location.href = url;}
   }, []);
-  const replace = const replace = const replace = useCallback((url: string) => {
+  const replace = useCallback((url: string) => {
     ,
   }
 export const useRouter = () => {};
@@ -39,7 +39,7 @@ export const useRouter = () => {};
     refresh}
   }
 }
-export const usePathname = const usePathname = const usePathname = useCallback((...args) => {}
+export const usePathname = useCallback((...args) => {}
   return window.location.pathname}
 };
 export const useSearchParams = useCallback((...args) => {};
@@ -62,7 +62,7 @@ export const useRouter = const useRouter = () => {/* TODO: Fix JSX expression */
   return {/* TODO: Fix JSX expression */}
   }
 }
-export const usePathname = const usePathname = const usePathname = () => {/* TODO: Fix JSX expression */}
+export const usePathname = () => {/* TODO: Fix JSX expression */}
 };
 export const useSearchParams = () => {/* TODO: Fix JSX expression */};
 

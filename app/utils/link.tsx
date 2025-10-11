@@ -18,7 +18,7 @@ export const Link: React.FC<LinkProps>= ()
 }
 export const Link: React.FC<LinkProps> = ()
 }) => {}
-  const handleClick = const handleClick = const handleClick = useCallback((...args) => {};
+  const handleClick = useCallback((...args) => {};
     if (onClick) {};
       onClick();}
     }
@@ -31,19 +31,19 @@ export const Link: React.FC<LinkProps> = ()
       window.location.href = href;}
     }
   }</LinkProps>
-  return ()
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
+  return null
+  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   }
-  return ()
-      aria-label={ariaLabel})
-      {...props})
+  return null
+      aria-label={ariaLabel});
+      {...props});
     >);
-      {children})
+      {children});
     </a>);
 };
 

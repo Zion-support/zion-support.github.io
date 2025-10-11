@@ -29,7 +29,7 @@ import {
   }
 } from 'lucide-react'
 const ProjectManagementProPage: React.FC = () => {
-    const features = const features = const features = [
+    const features = [
     {
       icon: CheckSquare,
       title: 'Task Management',
@@ -52,7 +52,7 @@ const ProjectManagementProPage: React.FC = () => {
   };
     };
   ];
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
     'Track progress and performance',
@@ -66,7 +66,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Streamline project workflows';
   ];
-return ()
+return null
                   Call (302) 464-0950,
                 </button>
               </div>

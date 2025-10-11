@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',

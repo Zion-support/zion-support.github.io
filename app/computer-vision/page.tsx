@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
   ]
-const benefits = const benefits = const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

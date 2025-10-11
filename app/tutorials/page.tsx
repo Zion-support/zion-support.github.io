@@ -6,7 +6,7 @@ import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, Ar
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
@@ -14,7 +14,7 @@ const TutorialsPage: React.FC = () => {
     { id: 'security', name: 'Security', icon: Shield },;
     { id: 'integration', name: 'Integration', icon: Code };
   ];
-  const tutorials = const tutorials = const tutorials = [
+  const tutorials = [
     {
       id: 1,
       title: 'Getting Started with AI Chat API',

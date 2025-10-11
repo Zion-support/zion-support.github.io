@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -16,28 +15,15 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error for monitoring in production
-    if (process.env.NODE_ENV === 'production') {
-      // In production, you would send this to an error reporting service
-      // Example: errorReportingService.captureException(error, { extra: errorInfo })
-    }
-    this.setState({ error, errorInfo })
-  }
-
-  handleReload = () => {
-    window.location.reload();
-  }
-
-  handleGoHome = () => {
-    window.location.href = '/';
+    this.setState({ error, errorInfo });
   }
 
   render() {
@@ -46,46 +32,37 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-      return ()
+      return (
+        <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-slate-800 rounded-lg p-6 border border-red-500/20">
+            <h1 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+            >
+              Refresh Page
+            </button>
+            {process.env.NODE_ENV === 'development' && (
+              <details className="mt-4">
+                <summary className="text-sm text-gray-400 cursor-pointer">
                   Error Details (Development)
                 </summary>
-                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto" /></pre>
-                  {this.state.error.toString()},
-    {this.state.errorInfo?.componentStack}
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto mt-2">
+                  {this.state.error?.toString()}
+                  {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button onClick={this.handleReload}
-                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200" /></button>
-                <RefreshCw className="w-4 h-4" / /></RefreshCw>
-                <span>Reload Page</span>
-              </button>
-              
-              <button onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200" /></button>
-                <Home className="w-4 h-4" / /></Home>
-                <span>Go Home</span>
-              </button>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-white/20" /></div>
-              <p className="text-sm text-gray-400 mb-3" /></p>
-                Still having trouble? Contact our support team:
-              </p>
-              <a href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" /></a>
-                <Phone className="w-4 h-4 mr-2" / /></Phone>
-                kleber@ziontechgroup.com
-              </a>
-            </div>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
-};
+}
 
 export default ErrorBoundary;

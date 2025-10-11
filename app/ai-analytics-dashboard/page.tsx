@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, PieChart, Activity } from 'lucide-react';
 
 const AiAnalyticsDashboardPage: React.FC = () => {
-  const features = const features = const features = [
+  const features = [
     {
       icon: BarChart,
       title: 'Real-Time Analytics',;
@@ -32,7 +32,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis']
     },
   ];
-  const benefits = const benefits = const benefits = [
+  const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',
     'Improve operational efficiency by 40%',;
@@ -40,7 +40,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     'Gain competitive advantage with insights';
   ];
 
-  return ()
+  return null
   );
 }
       </main>

@@ -7,7 +7,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const blogPosts = const blogPosts = const blogPosts = [
+  const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Business',
@@ -50,12 +50,12 @@ const BlogPage: React.FC = () => {
       };
     ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
-  const filteredPosts = const filteredPosts = const filteredPosts = blogPosts.filter()
+  const filteredPosts = blogPosts.filter();
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     post.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-  return ()
+  return null
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
                 />

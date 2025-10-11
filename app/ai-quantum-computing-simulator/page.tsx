@@ -10,7 +10,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
     setIsVisible(true);
   }, []);
 
-  const features = const features = const features = [
+  const features = [
     {
       icon: Cpu,
       title: 'Quantum Circuit Simulation',;
@@ -36,7 +36,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
     },
   ];
-  const pricingPlans = const pricingPlans = const pricingPlans = [
+  const pricingPlans = [
     {
       name: 'Researcher',
       price: '$199',
@@ -89,7 +89,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
     };
   ];
 
-  const useCases = const useCases = const useCases = [
+  const useCases = [
     {
       title: 'Quantum Algorithm Development',
       description: 'Develop and test quantum algorithms for optimization, cryptography, and machine learning',
@@ -115,7 +115,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       results: 'Accurate molecular modeling';
     };
   ];
-  return ()
+  return null
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent" / /></div>
           <div className="max-w-7xl mx-auto relative z-10" /></div>
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>

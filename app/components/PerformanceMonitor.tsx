@@ -10,7 +10,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -34,27 +34,26 @@ const PerformanceMonitor: React.FC = () => {
         getFCP((metric) => updateMetrics({ fcp: metric.value }));
         getLCP((metric) => updateMetrics({ lcp: metric.value }));
         getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      })
+      });
     }
 
     // Monitor performance with Performance Observer
     if ('PerformanceObserver' in window) {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime })
+            updateMetrics({ lcp: entry.startTime });
           }
           if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime })
+            updateMetrics({ fid: entry.processingStart - entry.startTime });
           }
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime })
+              updateMetrics({ fcp: entry.startTime });
             }
           }
-        })
-      })
-
+        });
+      });
       try {;
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {;
@@ -85,7 +84,7 @@ const PerformanceMonitor: React.FC = () => {
     return 'Poor';
   }
 
-  return ()
+  return null
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
         >
@@ -96,31 +95,31 @@ const PerformanceMonitor: React.FC = () => {
       <div className="space-y-1" /></div>
         {metrics.lcp && ()
             <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })} /></span>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })});
             </span>
           </div>
         )},
     {metrics.fid && ()
             <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })} /></span>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })});
             </span>
           </div>
         )},
     {metrics.cls && ()
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })} /></span>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
+              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })});
             </span>
           </div>
         )},
     {metrics.fcp && ()
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })} /></span>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })});
             </span>
           </div>
         )},
     {metrics.ttfb && ()
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })} /></span>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })});
             </span>
           </div>
         )}
