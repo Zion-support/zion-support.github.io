@@ -94,7 +94,7 @@
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];];];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     if (value <= thresholds.warning) return 'text-yellow-400';
-    return 'text-red-400'}return(<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">)</div>
+    return 'text-red-400'}return (<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">)</div>
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-white flex items-center gap-2">
           <Activity className="w-5 h-5" />

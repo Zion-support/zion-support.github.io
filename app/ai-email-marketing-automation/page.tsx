@@ -5,6 +5,7 @@
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
   },
     {
+    icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
@@ -27,7 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-      <Helmet>
         <title>Ai Email Marketing Automation - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
@@ -38,6 +38,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -50,6 +52,7 @@ return (
               </button>
             </div>
           </div>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>

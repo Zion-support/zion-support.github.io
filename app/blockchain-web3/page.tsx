@@ -1,11 +1,3 @@
-    }
-  ];
-
-  const benefits = [
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     const features = [
     {
       icon: Zap,
@@ -47,15 +39,6 @@ return (
             </h1>
             <p>Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>
             </p>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  );
-};
-
-export default PagePage;
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {features.map((feature, index) => (

@@ -20,14 +20,6 @@
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-    'Proven track record of success';
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
@@ -186,3 +178,6 @@ export default SEOEnhancer
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+  )
+}
+export default SEOEnhancerPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>

@@ -10,6 +10,8 @@ const Navigation: React.FC = () => {
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react'
 const Navigation: React.FC = () => {
@@ -29,7 +31,6 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false)
   const [microSaasOpen, setMicroSaasOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -38,6 +39,7 @@ const Navigation: React.FC = () => {
     };
 
     const handleScroll = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -57,6 +59,10 @@ const Navigation: React.FC = () => {
     setIsOpen(false);
   };
 
+<<<<<<< HEAD
+  ];
+
+=======
     setIsScrolled(window.scrollY > 50)
   }
     window.addEventListener('resize', handleResize)
@@ -73,7 +79,6 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false)
     setIsOpen(false)
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const toggleMenu = () => {
     setIsOpen(!isOpen)
     if (isOpen) {
@@ -211,7 +216,6 @@ const Navigation: React.FC = () => {
   ];
 
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   return (
     < className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${$2 />
       isScrolled 
@@ -225,28 +229,38 @@ const Navigation: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z
             <div className="hidden sm:block">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
+<<<<<<< HEAD
+=======
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
               <p className="text-xs text-cyan-400">AI & IT Solutions
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
 
+<<<<<<< HEAD
+              </button>
+              
+                            <Link
+                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                    <Link
+                      to="/services"
+=======
   
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             {/* Services Dropdown */}
             <div className="relative">
               <$2 />
@@ -260,7 +274,6 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
@@ -288,7 +301,6 @@ const Navigation: React.FC = () => {
                               to={`/${category.title.toLowerCase().replace(' ', '-')}`}
                             <$2 />
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus}
                             >
@@ -300,11 +312,11 @@ const Navigation: React.FC = () => {
                       to="/services"
                     <$2 />
                       href="/services"
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
                       View All Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     </Link>
                   </div>
                 </div>
@@ -316,16 +328,18 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link 
               to="/case-studies" 
+<<<<<<< HEAD
+=======
               )}
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <$2 />
               href="/case-studies" 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Case Studies
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </Link>
 
             <Link
@@ -355,11 +369,12 @@ const Navigation: React.FC = () => {
             </a>
           </div>
 
+<<<<<<< HEAD
+=======
               Blog
               Contact
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <$2 />
@@ -368,11 +383,15 @@ const Navigation: React.FC = () => {
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </button>
           </div>
         </div>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+              <Link
+                to="/"
+=======
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -381,11 +400,11 @@ const Navigation: React.FC = () => {
                 to="/"
               <$2 />
                 href="/"
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
               </Link>
               <Link
                 to="/about"
@@ -398,9 +417,10 @@ const Navigation: React.FC = () => {
               {/* Mobile Services */}
               <div>
                 <button
+<<<<<<< HEAD
+=======
                 About
                 <$2 />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 >
@@ -422,16 +442,19 @@ const Navigation: React.FC = () => {
                             >
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                           ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                           <Link
                             to="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                           >
+<<<<<<< HEAD
+=======
                           <$2 />
                             href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                             View All →
                     ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                   </div>
                 </div>
               </div>
@@ -455,6 +478,8 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+<<<<<<< HEAD
+=======
           {/* Contact Info */}
           <div className="hidden lg: flex items-center space-x-4">
             <$2 />
@@ -521,4 +546,4 @@ export default Navigation</a>
   </Link>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></h1></h3></h3>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

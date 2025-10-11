@@ -1,14 +1,8 @@
     const features = [
     {
       icon: Brain,
-    }
-  ];
-
-  const benefits = [
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
   },
     {
     icon: BarChart,
@@ -34,7 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-      <Helmet>
         <title>Ai Ecommerce Solutions - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
@@ -45,9 +38,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-          </div>
-        </section>
-
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

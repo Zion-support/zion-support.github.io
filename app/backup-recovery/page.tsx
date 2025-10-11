@@ -14,14 +14,6 @@
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       </section>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our backup and recovery solutions deliver unmatched performance, security, and scalability.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                </div><feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>

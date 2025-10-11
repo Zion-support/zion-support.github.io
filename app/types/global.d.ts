@@ -5,7 +5,3 @@
     NEXT_PUBLIC_SITE_URL?: string;}}
 }
   label?: string,
-}
-
-// Service types
-export interface Service {

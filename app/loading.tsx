@@ -11,7 +11,6 @@
     },
   ]
   return (
-      <Helmet>
         <title>Loading - Zion Tech Group</title>
     <React.Fragment>
       </React><Helmet>

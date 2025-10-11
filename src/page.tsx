@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
 import { 
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   Phone, 
   Mail, 
   MapPin, 
@@ -122,6 +125,11 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
+<<<<<<< HEAD
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
+=======
   Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, 
   BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, 
   Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, 
@@ -179,7 +187,6 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -190,7 +197,6 @@ const preloadComponents = () => {
       import('./components/ContentPromotionBanner')
       import('./components/ContentCarousel')
   }, 100)
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   }
 };
 
@@ -205,6 +211,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -219,6 +226,8 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
+=======
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -229,7 +238,6 @@ const HomePage: React.FC = () => {
     initializePerformanceOptimizations()
     return () => clearTimeout(timer)
   }, [])
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -238,6 +246,7 @@ const HomePage: React.FC = () => {
         event_label: 'main_phone_number'
       })
     }
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   }, []);
 
   // Enhanced Micro SAAS Services with real functionality and pricing
@@ -307,6 +316,12 @@ const HomePage: React.FC = () => {
       
       {/* Accessibility Enhancer */}
       <AccessibilityEnhancer />
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        }}></div>
+
+=======
   }, [])
   // Enhanced error handling
   const handleError = useCallback((error: Error) => {
@@ -856,7 +871,6 @@ const HomePage: React.FC = () => {
         enableSkipLinks={true}
         enableARIALabels={true}
       />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       
       {/* Analytics */}
       <Analytics />
@@ -884,7 +898,6 @@ const HomePage: React.FC = () => {
           className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"
           aria-hidden="true"
         ></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         
         {/* Neon Grid Overlay */}
         <$2 />
@@ -912,15 +925,17 @@ const HomePage: React.FC = () => {
         }}></div>
 
         }}>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               ZION TECH GROUP
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </h1>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
             </p>
+<<<<<<< HEAD
+=======
   
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
@@ -943,17 +958,26 @@ const HomePage: React.FC = () => {
               </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">ZION TECH GROUP
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">AI-Powered Enterprise Solutions & Digital Transformation
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
+<<<<<<< HEAD
+
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                      🔥 POPULAR
+                    </div>
+                  </p>
+                </div>
+                
+=======
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" aria-hidden="true" />
                 <$2 />
@@ -961,7 +985,6 @@ const HomePage: React.FC = () => {
                   className="hover:text-purple-300 transition-colors"
                   aria-label="Email us at kleber@ziontechgroup.com"
                 >
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -1010,14 +1033,12 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl mb-4">🎯
                 <h3 className="text-xl font-bold text-white mb-2">90% Efficiency
                 <p className="text-gray-300">Gains with our AI solutions
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Micro SAAS Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="micro-saas-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             <h2 id="micro-saas-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               Micro SAAS Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1034,7 +1055,6 @@ const HomePage: React.FC = () => {
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg" aria-label="Popular service">
                       🔥 POPULAR
                     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSAASServices.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
@@ -1045,7 +1065,6 @@ const HomePage: React.FC = () => {
                     </div>
                       🔥 POPULAR,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   </div>
                 )}
                 
@@ -1059,7 +1078,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-cyan-400">{service.price}
@@ -1068,11 +1086,19 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     </span>
                   </div>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+                  </ul>
+                </div>
+                
+                  </ul>
+                </div>
+                
+=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:
                   <ul className="space-y-2">
@@ -1084,7 +1110,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:
                   <ul className="space-y-1">
@@ -1095,13 +1120,11 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={service.link}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                     aria-label={`Get started with ${service.title}`}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
@@ -1109,18 +1132,26 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           </div>
         </div>
       </section>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServicesData.map((service, index) => (
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                  </p>
+                </div>
+                
+=======
       {/* AI Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" role="region" aria-labelledby="ai-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             <h2 id="ai-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               AI Services & Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1136,7 +1167,6 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20" role="listitem">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                     <service.icon className={`w-8 h-8 ${service.color}`} />
@@ -1147,7 +1177,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-purple-400">{service.price}
@@ -1156,11 +1185,19 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     </span>
                   </div>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+                  </ul>
+                </div>
+                
+                  </ul>
+                </div>
+                
+=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:
                   <ul className="space-y-2">
@@ -1172,7 +1209,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:
                   <ul className="space-y-1">
@@ -1183,13 +1219,11 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                     aria-label={`Contact us about ${service.title}`}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   >
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
@@ -1197,18 +1231,26 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           </div>
         </div>
       </section>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServicesData.map((service, index) => (
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+                  </p>
+                </div>
+                
+=======
       {/* IT Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="it-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
             <h2 id="it-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               IT Services & Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1224,7 +1266,6 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20" role="listitem">
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`} aria-hidden="true">
                     <service.icon className={`w-8 h-8 ${service.color}`} />
@@ -1235,7 +1276,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-green-400">{service.price}
@@ -1244,11 +1284,19 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     </span>
                   </div>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+                  </ul>
+                </div>
+                
+                  </ul>
+                </div>
+                
+=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:
                   <ul className="space-y-2">
@@ -1260,7 +1308,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:
                   <ul className="space-y-1">
@@ -1271,7 +1318,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={`tel:${service.contact}`}
@@ -1283,15 +1329,18 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           </div>
         </div>
       </section>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+=======
       {/* Specialized Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Specialized Solutions
             </h2>
@@ -1301,11 +1350,15 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
+<<<<<<< HEAD
+                  </p>
+                </div>
+                
+=======
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Specialized Solutions
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
               Cutting-edge technology meets practical business needs.
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializedServicesData.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
@@ -1319,7 +1372,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-orange-400">{service.price}
@@ -1328,11 +1380,19 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     </span>
                   </div>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+                  </ul>
+                </div>
+                
+                  </ul>
+                </div>
+                
+=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:
                   <ul className="space-y-2">
@@ -1344,7 +1404,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-red-400 mb-3">Benefits:
                   <ul className="space-y-1">
@@ -1355,7 +1414,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
                 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
@@ -1364,11 +1422,13 @@ const HomePage: React.FC = () => {
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
                     <ArrowRight className="w-4 h-4 ml-2" />
             ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           </div>
         </div>
       </section>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+<<<<<<< HEAD
+=======
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="contact-heading">
         <div className="container mx-auto px-4">
@@ -1380,6 +1440,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1392,6 +1453,8 @@ const HomePage: React.FC = () => {
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+<<<<<<< HEAD
+=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" role="list">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300" role="listitem">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" aria-hidden="true" />
@@ -1409,7 +1472,6 @@ const HomePage: React.FC = () => {
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300" role="listitem">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" aria-hidden="true" />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <$2 />
@@ -1418,17 +1480,20 @@ const HomePage: React.FC = () => {
                 aria-label="Email us at kleber@ziontechgroup.com"
               >
                 kleber@ziontechgroup.com
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
               </a>
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+<<<<<<< HEAD
+              </p>
+=======
   
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300" role="listitem">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" aria-hidden="true" />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <address className="text-pink-400 text-sm not-italic">
@@ -1436,7 +1501,6 @@ const HomePage: React.FC = () => {
                 Middletown DE 19709
               </p>
               </address>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
           </div>
         </div>
@@ -1445,10 +1509,13 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   );
 };
 
 export default HomePage;
+<<<<<<< HEAD
+=======
   )
 }
 export default HomePage</p>
@@ -1489,4 +1556,4 @@ export default HomePage</p>
 }
 export default HomePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></h4></h4></h4></h4></h4></h4></h4></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></section></section></section></section></section></section>
 </h1>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

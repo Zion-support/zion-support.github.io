@@ -20,17 +20,9 @@
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-      {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -89,10 +81,6 @@
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AR/VR Platform?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
-                </p><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
               </div>
 Our AR/VR solutions deliver unmatched performance, security, and scalability.
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,11 +93,6 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
             {benefits.map((benefit, index) => (
               <div key={index}className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12">,</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
@@ -166,3 +149,6 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
                 Call Now
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+  )
+}
+export default ARVRPlatformPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></button></button></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>

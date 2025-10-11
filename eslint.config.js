@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+      'jest.setup.js'
+    ],
+=======
 import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from '@typescript-eslint/eslint-plugin'
@@ -107,3 +111,4 @@ export default [
     }
   }
 ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

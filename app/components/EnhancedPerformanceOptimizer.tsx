@@ -1,54 +1,73 @@
-'use client'
-import React, { useEffect } from 'react'
+'use client';
+import React, { useEffect } from 'react';
 
-interface EnhancedPerformanceOptimizerProps {
-  children: React.ReactNode
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
+  children, 
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true
+}) => {
   useEffect(() => {
-    // Performance optimization effects
+    // Performance optimization setup
     if (typeof window !== 'undefined') {
-      // Preload critical resources
-      const preloadCriticalResources = () => {
-        const criticalImages = [
-          '/images/hero-bg.jpg',
-          '/images/logo.png'
-        ]
-        
-        criticalImages.forEach(src => {
-          const link = document.createElement('link')
-          link.rel = 'preload'
-          link.as = 'image'
-          link.href = src
-          document.head.appendChild(link)
-        })
+      // Enable resource hints
+      if (enablePreloading) {
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.href = '/fonts/inter.woff2';
+        preloadLink.as = 'font';
+        preloadLink.type = 'font/woff2';
+        preloadLink.crossOrigin = 'anonymous';
+        document.head.appendChild(preloadLink);
       }
 
-      // Lazy load images
-      const lazyLoadImages = () => {
-        const images = document.querySelectorAll('img[data-src]')
+      // Enable intersection observer for lazy loading
+      if (enableLazyLoading && 'IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement
-              img.src = img.dataset.src || ''
-              img.classList.remove('lazy')
-              imageObserver.unobserve(img)
+              const img = entry.target as HTMLImageElement;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+              }
             }
-          })
-        })
+          });
+        });
 
-        images.forEach(img => imageObserver.observe(img))
+        // Observe all lazy images
+        document.querySelectorAll('img[data-src]').forEach((img) => {
+          imageObserver.observe(img);
+        });
       }
 
-      // Initialize optimizations
-      preloadCriticalResources()
-      lazyLoadImages()
+      // Performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const paint = performance.getEntriesByType('paint');
+          
+          // Log performance metrics
+          console.log('Performance Metrics:', {
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+          });
+        });
+      }
     }
-  }, [])
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading]);
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
 
-export default EnhancedPerformanceOptimizer
+export default PerformanceOptimizer;

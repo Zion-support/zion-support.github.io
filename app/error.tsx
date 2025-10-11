@@ -11,7 +11,6 @@
     },
   ]
   return (
-      <Helmet>
         <title>Error - Zion Tech Group</title>
     <React.Fragment>
       </React><Helmet>

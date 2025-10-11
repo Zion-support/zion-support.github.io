@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+  });
+fps
+      }
+=======
 'use client'
 import React, { useState, useEffect, useCallback } from 'react'
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react'
@@ -20,7 +25,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   });
 fps
       }
->>>>>>> main
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
   })
@@ -164,5 +168,5 @@ export default PerformanceDashboard</div>
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
->>>>>>> main
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></h4></ul></li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

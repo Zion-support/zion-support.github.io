@@ -123,11 +123,6 @@ return (
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-                  <feature>
-                  </feature><h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
 
                       {benefit} </li>
@@ -135,14 +130,6 @@ return (
                 </ul>
               </div>
             ))}
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-
-          </div>
-        </div>
-      </section>
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>

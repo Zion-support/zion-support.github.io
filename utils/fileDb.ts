@@ -29,7 +29,6 @@ export const readFromFile = async (filename: string) => {
 }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Stub file database utility - placeholder for missing functionality
 export const saveToFile = async (data: any, filename: string) => {
   // Placeholder implementation

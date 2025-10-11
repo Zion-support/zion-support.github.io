@@ -80,7 +80,7 @@
       )
     : filteredDocs;
 
-  return(<>)
+  return (<>)
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
     ? documentation 
@@ -303,11 +303,6 @@ export default function DocsPage() {
         keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
       />
       <Navigation />
-            </div>
-          ))
-        </div>
-      </section>
-
       {/* Popular Docs */}
       <section className="py-16 px-4">
         </section>

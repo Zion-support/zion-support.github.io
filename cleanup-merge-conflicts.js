@@ -6,6 +6,8 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Cleaning merge conflicts in: ${filePath}`);
       
@@ -60,6 +62,7 @@ function cleanMergeConflicts(filePath) {
     }
     return false
   } catch (error) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -99,6 +102,8 @@ for (const file of files) {
 }
 
 console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
+<<<<<<< HEAD
+=======
     console.error(`Error cleaning ${filePath}:`, error.message)
     return false
   }
@@ -157,3 +162,4 @@ for (const file of criticalFiles) {
 }
 
 console.log('Merge conflict cleanup completed!')
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

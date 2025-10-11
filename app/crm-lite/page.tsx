@@ -1,5 +1,4 @@
   const features = [
-    }
 const benefits = [
   ]
   const benefits = [
@@ -13,7 +12,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-          </div>
         </div>
       </section>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -32,3 +30,5 @@ return ()
           </div>
         </div>
       </section>
+}
+export default PagePage

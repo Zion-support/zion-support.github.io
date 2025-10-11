@@ -1,45 +1,3 @@
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-}
-
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-import React, {Component, ErrorInfo, ReactNode}from 'react';
-import {AlertTriangle, RefreshCw, Home, Phone}}from 'lucide-react';
-
-interface Props {children: ReactNode;,}
-  fallback?: ReactNode;}interface State {hasError: boolean;,}
-  error?: Error;
-  errorInfo?: ErrorInfo;}class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
-    super(props);
-    this.state = { hasError: false ,}}
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw } from 'lucide-react'
-
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-}
-
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
   }
 
 
@@ -110,3 +68,4 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children
   }
 }
+export default ErrorBoundary</$1></p>

@@ -1,4 +1,3 @@
-const FinancialITPage: React.FC = () => {
     const features = [
     {
       icon: DollarSign,
@@ -59,6 +58,12 @@ const benefits = [
   const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
+
+    'Real-time Processing',
+
+    'Regulatory Compliance',
+
+    'Fraud Prevention',
 
         <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -131,6 +136,8 @@ return (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300 mb-4">{feature.description}
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
@@ -146,11 +153,7 @@ return (
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
-      <section className="py-20 px-4">
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
               Financial Services
             </h2>
             <p></p>
@@ -193,6 +196,24 @@ return (
           </div>
         ))
       </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+              Why Choose Our Financial IT Solutions?
+            </h2>
+            <p></p>
+              Experience the benefits of modern financial technology with our proven solutions.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
+            {benefits.map((benefit, index) => ()
+            ))}
+      {/* CTA Section */}
+      <section className="py-20 px-4">
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

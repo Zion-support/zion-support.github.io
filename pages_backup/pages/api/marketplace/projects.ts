@@ -32,7 +32,6 @@ import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplac
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)

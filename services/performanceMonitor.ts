@@ -158,8 +158,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -217,8 +215,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -870,7 +866,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
     features: [
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ]
   }
 }

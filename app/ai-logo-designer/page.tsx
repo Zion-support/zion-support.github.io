@@ -38,6 +38,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900"></div>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -47,16 +49,10 @@ return (
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Logo Designer;</h1>
             </h1>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-              </button>
-              <button></button>
-                View Demo,
               </button>
             </div>
           </div>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -78,6 +74,7 @@ return (
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
+        </section>
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,

@@ -52,29 +52,10 @@
           </div>
         </section>
             </button>
-            <button>Schedule Demo;</button>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Why Choose Our IoT Platform?
-            </h2>
-            <p></p>
-              Experience the benefits of a comprehensive IoT platform designed for scale,
-              security, and performance.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
-            ))}
-      {/* CTA Section */}
-          <p></p>
-            Start building your IoT platform today. Get started with a free consultation
-            and discover how we can help you succeed.
-          </p>
-            </button>
-            <button></button>
-              Schedule Demo
-            </button>
           </div>
         </div>
       </section>
+      <Footer / /></Footer>
+  )
+}
+export default PagePage</$1>

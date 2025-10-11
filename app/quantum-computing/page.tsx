@@ -11,7 +11,6 @@
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-    }
 const benefits = [
   ]
   const benefits = [
@@ -19,6 +18,12 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
 
         <title>Page | Zion Tech Group</title>
     'Proven track record of success'
@@ -114,10 +119,6 @@ return (
         </div>
       </section>
     </div>
-  );
-};
-
-export default PagePage;
   ),
 }
 export default PagePage

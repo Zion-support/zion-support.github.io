@@ -43,7 +43,7 @@
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return() {features.map((feature, index) => ()
+  return () {features.map((feature, index) => ()
           ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16" /></div>
@@ -59,6 +59,7 @@
         </div>
       </div>
     </div>
+  ),
   </button>
   </button>
   </h1>

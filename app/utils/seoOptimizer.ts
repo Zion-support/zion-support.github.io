@@ -471,7 +471,7 @@ Disallo,`
     const issues: string[] = []
     // Check title length
     // Check title length;
-    const title = document.title,,;
+    const title = document.title,;
     if (title.length < 30) {,;
     // Check title length;
     const title = document.title;}if (title.length < 30) {}issues.push('Title is too short (less than 30 characters)');}

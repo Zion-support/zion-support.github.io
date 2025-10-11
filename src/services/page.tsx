@@ -36,6 +36,13 @@ const ServicesPage: React.FC = () => {
     popular: service.pricing.starter.price < 200,
     link: service.website.replace('https://ziontechgroup.com', '')
   }));
+<<<<<<< HEAD
+
+  ];
+
+  ];
+
+=======
   const benefits = [
     {
       icon: TrendingUp,
@@ -80,10 +87,13 @@ const ServicesPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business operations and drive growth
             </p>
+<<<<<<< HEAD
+=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -91,6 +101,7 @@ const ServicesPage: React.FC = () => {
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
               </a>
               <Link
                 to="/contact"
@@ -98,11 +109,16 @@ const ServicesPage: React.FC = () => {
               >
                 Get Free Consultation
               </Link>
+<<<<<<< HEAD
+=======
             </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,21 +141,27 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
               AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced artificial intelligence solutions to automate, optimize, and transform your business
             </p>
+<<<<<<< HEAD
+=======
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServicesData.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
+<<<<<<< HEAD
+=======
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-cyan-400 mr-3" />
@@ -158,6 +180,7 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                   >
                     Learn More
@@ -168,26 +191,35 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+=======
       {/* IT Services Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IT Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Robust IT infrastructure and support services to keep your business running smoothly
             </p>
+<<<<<<< HEAD
+=======
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServicesData.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
+<<<<<<< HEAD
+=======
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
@@ -206,6 +238,7 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                   >
                     Learn More
@@ -216,6 +249,11 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+              Micro SAAS Solutions
+            </h2>
+=======
       {/* Micro SAAS Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,10 +270,13 @@ const ServicesPage: React.FC = () => {
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
+<<<<<<< HEAD
+=======
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
@@ -254,6 +295,7 @@ const ServicesPage: React.FC = () => {
                   <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
                   <Link
                     to={service.link}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
                     className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                   >
                     Learn More
@@ -264,6 +306,18 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+              We deliver exceptional results with proven expertise and cutting-edge technology
+            </p>
+          </div>
+        </div>
+      </section>
+
+              </a>
+              <Link
+              </Link>
+=======
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,14 +361,12 @@ const ServicesPage: React.FC = () => {
               <Link
   
               <$2 />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
               </Link>
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
           </div>
         </div>
@@ -322,12 +374,15 @@ const ServicesPage: React.FC = () => {
 
       <Footer />
     </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
   );
 };
 
 export default ServicesPage;
 
 
+<<<<<<< HEAD
+=======
   ),
 }
 export default ServicesPage</Link>
@@ -350,4 +405,4 @@ export default ServicesPage</Link>
   </h1>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></h2></h3></h3></h3></h3></ul></ul></ul></li></li></li></section></section></section></section></section>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

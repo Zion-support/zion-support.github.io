@@ -1,29 +1,8 @@
- */
-
-import { apiCache } from './apiCache';
-
-interface RequestConfig {
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: any;
-  cache?: boolean;
-  cacheTTL?: number;
-}
-
 }
 interface APIResponse<T = any> {}data: T,
   status: number,
   statusText: string,
 }
-  private defaultHeaders: Record<string, string>;
-
-  constructor(baseURL: string = '/api') {
-    this.baseURL = baseURL;
-    this.defaultHeaders = {
-      'Content-Type': 'application/json',
-    };
-  }
-
       ...defaultHeaders;
       ...defaultHeaders
     }
@@ -97,16 +76,6 @@ const apiResponse: APIResponse</T><T> = {}
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries())
-      };
-
-      // Cache successful GET requests
-      if (cache && method === 'GET' && response.ok) {
-        apiCache.set(cacheKey, result, cacheTTL);
-      }
-
-      return result;
-    } catch (error) {
-      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
 }
 export interface ApiResponse</RequestInit><T = unknown> {/* TODO: Fix JSX expression */}
 }
@@ -303,30 +272,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * Health check
    */
   async healthCheck(endpoin)
-    }
-  }
-
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
-  }
-
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
-  }
-
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
-  }
-
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
-  }
-
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
-}
-
     ,
     this.baseURL = baseURL;}}
 // Set default headers;

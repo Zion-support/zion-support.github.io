@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -8,6 +10,7 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
@@ -78,6 +81,8 @@ export function usePerformanceMetrics() {
 
   return { metrics, isSupported };
 }
+<<<<<<< HEAD
+=======
 export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
 }
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
@@ -159,3 +164,4 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
   }, [])
   return { metrics, isSupported }
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

@@ -120,35 +120,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.focusableElements = []
     this.skipLinks = []
   }
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-
-
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message)
-}
-
-
-// Create global instance
-export const accessibilityEnhancer = new AccessibilityEnhancer()
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message)
-}
-export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements()
-}
-export const focusFirstElement = () => {
-  accessibilityEnhancer.focusFirst()
-}
-export const focusLastElement = () => {
-  accessibilityEnhancer.focusLast()
-}
 
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();

@@ -1,11 +1,3 @@
-    }
-  ];
-
-  const benefits = [
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     const features = [
     {
       icon: Brain,
@@ -36,7 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-      <Helmet>
         <title>Ai Healthcare - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
@@ -61,6 +52,7 @@ return (
               </button>
             </div>
           </div>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -82,10 +74,7 @@ return (
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
-    </div>
-  );
-};
-
+        </section>
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,

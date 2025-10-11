@@ -28,11 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-  ];
-return (
-    <>
-  </>
-      <Helmet>
         <title>Ai Document Scanner - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]

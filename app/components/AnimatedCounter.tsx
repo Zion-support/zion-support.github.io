@@ -16,7 +16,7 @@
         cancelAnimationFrame(animationFrame);}}
   }, [end, duration]);
 
-  return(<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
+  return (<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
   );
 };
 
@@ -59,7 +59,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
       }
     }
   }, [end, duration])
-  return() {prefix}, {count.toLocaleString()}, {suffix}
+  return () {prefix}, {count.toLocaleString()}, {suffix}
     </span>
     </React.Fragment>
   )

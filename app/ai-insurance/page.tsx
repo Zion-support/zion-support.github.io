@@ -1,6 +1,8 @@
     const features = [
     {
       icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
   },
     {
     icon: BarChart,
@@ -26,7 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-      <Helmet>
         <title>Ai Insurance - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
@@ -37,6 +38,8 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -46,10 +49,6 @@ return (
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Insurance;</h1>
             </h1>
-                Get Started
-              </button>
-              <button></button>
-                View Demo,
               </button>
             </div>
           </div>

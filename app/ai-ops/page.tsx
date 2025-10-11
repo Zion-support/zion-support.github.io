@@ -28,7 +28,6 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-      <Helmet>
         <title>Ai Ops - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
@@ -40,6 +39,7 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -112,17 +112,11 @@ return (
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                       ))}
-          </div>
-        </section>
                 </div>
               ))}
             </div>
           </div>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
         </section>
-        {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>

@@ -65,7 +65,7 @@ const getStatusIcon = (;
         return <XCircle>
 
       default: ;) => {,
-  return($3;)
+  return ($3;)
   )}return <Clock>}
     }
   }
@@ -77,7 +77,7 @@ const getStatusColor = (;
       case 'outage':;
         return 'text-red-400';
       default: ;) => {,
-  return($3;)
+  return ($3;)
   )}return 'text-gray-400';}
     }
   }
@@ -89,7 +89,7 @@ const getSeverityColor = (;
       case 'minor':;
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
       default: ;) => {,
-  return($3;)
+  return ($3;)
   )}return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
   }
@@ -98,6 +98,8 @@ const overallStatus = services.every(service => service.status === 'operational'
     : services.some(service => service.status === 'outage');
       ? 'outage';
       : 'degraded';
+return (</h1>)
+          <p>Real-time status of all our services. We're committed to providing reliable,</p>
             high-performance AI and IT solutions.
           </p>
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}

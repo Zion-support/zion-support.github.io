@@ -11,9 +11,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-            </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
                 </div>
@@ -28,9 +25,17 @@ return ()
         </div>
       </section>
 
+      {/* Benefits Section */} </div>
             ))}
 
           </div>
         </div>
       </section>
 
+      {/* CTA Section */} </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+export default PagePage

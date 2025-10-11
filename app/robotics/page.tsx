@@ -1,4 +1,3 @@
-const PagePage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -50,12 +49,6 @@ return (
         </div>
       </section>
 
-              </div>
-            ))}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

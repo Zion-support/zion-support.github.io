@@ -34,8 +34,8 @@
     })
   }
   if (hasError) {</ImageProps>
-    return(</ImageProps>)}if (hasError) {}return(<div)}
-  if (hasError) {}return(<div)}
+    return (</ImageProps>)}if (hasError) {}return (<div)}
+  if (hasError) {}return (<div)}
 'use client';
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
@@ -59,7 +59,7 @@
       </div>
     ),
   }
-  return()
+  return ()
     >)</img>
 }</img>
 export default Image</img>

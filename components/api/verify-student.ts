@@ -208,8 +208,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429)
     return res.status(429).json({ error: "Rate limit exceeded" })

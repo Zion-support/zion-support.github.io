@@ -1,58 +1,51 @@
-'use client'
-import React, { useEffect } from 'react'
+'use client';
+import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      const monitorWebVitals = () => {
-        // Monitor Largest Contentful Paint (LCP)
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          console.log('LCP:', lastEntry.startTime)
-        }).observe({ entryTypes: ['largest-contentful-paint'] })
-
-        // Monitor First Input Delay (FID)
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry) => {
-            console.log('FID:', entry.processingStart - entry.startTime)
-          })
-        }).observe({ entryTypes: ['first-input'] })
-
-        // Monitor Cumulative Layout Shift (CLS)
-        let clsValue = 0
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value
-            }
-          })
-          console.log('CLS:', clsValue)
-        }).observe({ entryTypes: ['layout-shift'] })
-      }
-
-      // Monitor resource loading
-      const monitorResources = () => {
-        const resources = performance.getEntriesByType('resource')
-        resources.forEach((resource) => {
-          if (resource.duration > 1000) {
-            console.warn('Slow resource:', resource.name, resource.duration)
-          }
-        })
-      }
-
-      // Initialize monitoring
-      monitorWebVitals()
-      
-      // Monitor resources after page load
-      window.addEventListener('load', monitorResources)
-    }
-  }, [])
-
-  return null
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+  enableMonitoring?: boolean;
+  enableReporting?: boolean;
 }
 
-export default PerformanceMonitor
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  children,
+  enableMonitoring = true,
+  enableReporting = true
+}) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && enableMonitoring) {
+      // Performance monitoring
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Navigation Performance:', {
+              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+              firstByte: navEntry.responseStart - navEntry.requestStart
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['navigation', 'paint'] });
+
+      // Web Vitals monitoring
+      if (enableReporting) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      }
+
+      return () => observer.disconnect();
+    }
+  }, [enableMonitoring, enableReporting]);
+
+  return <>{children}</>;
+};
+
+export default PerformanceMonitor;

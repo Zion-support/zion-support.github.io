@@ -76,7 +76,7 @@
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )})).filter(category => category.endpoints.length > 0);
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <SEOOptimizer;
   ]
   const filteredEndpoints = apiEndpoints.map()
@@ -93,19 +93,6 @@
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
-            </div>
-          ))
-        </div>
-      </section>
-
-      {/* Quick Start */}
-      <section className="py-16 px-4">
-        </section>
-      {/* Hero Section */}
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
-  </
             Explore endpoints, authentication, and integration guides.
           </p>
               Download SDK,

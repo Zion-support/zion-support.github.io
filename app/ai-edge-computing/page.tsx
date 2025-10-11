@@ -1,6 +1,8 @@
     const features = [
     {
       icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
   },
     {
     icon: BarChart,
@@ -50,6 +52,7 @@ return (
               </button>
             </div>
           </div>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>

@@ -1,6 +1,8 @@
     const features = [
     {
       icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
   },
     {
     icon: BarChart,
