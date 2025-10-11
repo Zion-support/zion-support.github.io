@@ -3,6 +3,7 @@ import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
+<<<<<<< HEAD
   const features = [
     {
       icon: Eye,
@@ -106,16 +107,106 @@ const AccessibilityPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Accessibility
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional accessibility services delivered by experienced professionals.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">Expert Solutions</h3>
               </div>
+              <p className="text-gray-300 mb-4">
+                Professional accessibility services delivered by experienced professionals.
+>>>>>>> cursor/fix-errors-and-merge-to-main-5dd0
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                  Quality Assurance
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                  Fast Delivery
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                  24/7 Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                  Custom Solutions
+                </li>
+              </ul>
             </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">Advanced Technology</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge tools and technologies to deliver superior results.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
+                  Latest Tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
+                  Modern Methods
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
+                  Scalable Solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
+                  Future-Ready
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-purple-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">Proven Results</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Track record of successful projects and satisfied clients.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                  High Success Rate
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                  Client Satisfaction
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                  Ongoing Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                  Continuous Improvement
+                </li>
+              </ul>
+            </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -249,8 +340,17 @@ const AccessibilityPage: React.FC = () => {
       </main>
 
       <Footer />
+=======
+          </div>
+        </div>
+      </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5dd0
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityPage;
+=======
+export default AccessibilityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5dd0

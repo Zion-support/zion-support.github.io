@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
+<<<<<<< HEAD
   // const services = [
   //   { name: 'AI Solutions', href: '/services/ai' },
   //   { name: 'Cloud Architecture', href: '/services/cloud' },
@@ -34,6 +35,8 @@ export default function Footer() {
   //   { name: 'API Reference', href: '/api' },
   //   { name: 'Status', href: '/status' },
   // ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5dd0
   return (
     <footer className="bg-white/5 backdrop-blur-lg border-t border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
