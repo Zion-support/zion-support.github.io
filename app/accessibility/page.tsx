@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react';
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -15,11 +9,7 @@ const AccessibilityPage: React.FC = () => {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
-<<<<<<< HEAD
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'],
-=======
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
     },
     {
       icon: MousePointer,
