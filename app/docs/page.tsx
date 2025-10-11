@@ -1,20 +1,18 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react'
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen },
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
     { id: 'it-services', name: 'IT Services', icon: Cloud },
-    { id: 'api', name: 'API Reference', icon: Code },;
-    { id: 'security', name: 'Security', icon: Shield };
-  ];
+    { id: 'api', name: 'API Reference', icon: Code },
+    { id: 'security', name: 'Security', icon: Shield }
+  ]
   const documentation = [
     {
       id: 1,
@@ -106,24 +104,22 @@ const DocsPage: React.FC = () => {
         'Support Resources'
       ],
     }
-  ];
+  ]
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ];
+  ]
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
-    : documentation.filter(doc => doc.category === selectedCategory);
-
+    : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
     ? documentation.filter()
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-    : filteredDocs;
-
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : filteredDocs
   return (
     <>
       <Helmet>
@@ -168,7 +164,7 @@ const DocsPage: React.FC = () => {
           {/* Quick Links */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {quickLinks.map((link, index) => (
-              </div><a
+              </div><$2 />
                 key={index}
                 href={link.url}
                 className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
@@ -184,7 +180,7 @@ const DocsPage: React.FC = () => {
             </div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
-                </div><button
+                </div><$2 />
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -228,7 +224,7 @@ const DocsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-6">
-                    </div><span className={`px-3 py-1 rounded text-xs font-semibold ${
+                    </div>< className={`px-3 py-1 rounded text-xs font-semibold ${$2 />
                       doc.difficulty === 'Beginner' 
                         ? 'bg-green-600 text-white' 
                         : doc.difficulty === 'Intermediate'
@@ -254,14 +250,14 @@ const DocsPage: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   </div><div className="flex space-x-4">
-                    </div><a
+                    </div><$2 />
                       href={`/docs/${doc.id}`}
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
                     >
                       Read Guide
                       </a><ArrowRight className="w-4 h-4 ml-2" />
                     </a>
-                    <a
+                    <$2 />
                       href={`/docs/${doc.id}/download`}
                       className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
@@ -282,7 +278,7 @@ const DocsPage: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 Try adjusting your search terms or browse our documentation categories.
               </p>
-              <button
+              <$2 />
                 onClick={() => setSearchQuery('')}
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
@@ -295,7 +291,7 @@ const DocsPage: React.FC = () => {
           <div className="cyber-card-enhanced p-8 mt-16">
             </div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              </div><a
+              </div><$2 />
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -306,7 +302,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-              <a
+              <$2 />
                 href="/api"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -317,7 +313,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-              <a
+              <$2 />
                 href="/community"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -328,7 +324,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-              <a
+              <$2 />
                 href="/support"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
               >
@@ -344,10 +340,9 @@ const DocsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default DocsPage;
+  )
+}
+export default DocsPage
 'use client'
 import React, { useState } from 'react'
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
@@ -479,3 +474,4 @@ export default function DocsPage() {
       <Footer />
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>
+</li></li>

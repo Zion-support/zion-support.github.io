@@ -22,9 +22,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Multi-Chain Support',
-      description: 'Support for multiple blockchain networks and protocols';
-    };
-  ];
+      description: 'Support for multiple blockchain networks and protocols'
+    }
+  ]
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -47,7 +47,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
           </p>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Blockchain Integration Services?
@@ -70,11 +70,11 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our blockchain integration solutions for your business.
             </p>
@@ -93,8 +93,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       </div>
     </div>
   ),
-};
-
+}
 export default BlockchainIntegrationServicesPage
   </button>
   </button>

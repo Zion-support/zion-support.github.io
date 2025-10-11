@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   a: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in revenue-ideas-lab: ') error
   }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'revenue-ideas-lab'})
-      });
+      })
     }
   }
 }

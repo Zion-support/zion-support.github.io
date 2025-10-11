@@ -4,11 +4,11 @@
  */
 
 export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
+  slug: string
+  title: string
+  description: string
+  category: string
+  date: string
   readTime: string
   tags: string[]
   featured?: boolean,,
@@ -160,7 +160,7 @@ export function getTotalValueProposition(): string {/* TODO: Fix JSX expression 
 }
 
 export const blogStats = {
-  totalPosts: allBlogPosts.length;
+  totalPosts: allBlogPosts.length
   featuredPosts: getFeaturedPosts().length
   categories: getAllCategories().length
   tags: getAllTags().length,

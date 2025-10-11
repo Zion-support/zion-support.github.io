@@ -10,15 +10,15 @@ interface PerformanceThresholds {/* TODO: Fix JSX expression */}
 }
 
 class AdvancedPerformanceMonitor {
-  private data: PerformanceData[] = [];
+  private data: PerformanceData[] = []
   private thresholds: PerformanceThresholds
   private observer: PerformanceObserver | null = null
   private isMonitoring = false,,
 ,
   constructor(thresholds: Partial<PerformanceThresholds> = {}) {
     this.thresholds = {
-      loadTime: 3000;
-      firstContentfulPaint: 1800;
+      loadTime: 3000
+      firstContentfulPaint: 1800
       largestContentfulPaint: 2500
       cumulativeLayoutShift: 0.1
       firstInputDelay: 100,
@@ -51,8 +51,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
    * Get performance summary
    */
   public getPerformanceSummary(): {
-    averageLoadTime: number;
-    averageFCP: number;
+    averageLoadTime: number
+    averageFCP: number
     averageLCP: number
     averageCLS: number
     averageFID: number,
@@ -60,9 +60,9 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   } {
     if (this.data.length === 0) {
       return {
-        averageLoadTime: 0;
-        averageFCP: 0;
-        averageLCP: 0;
+        averageLoadTime: 0
+        averageFCP: 0
+        averageLCP: 0
         averageCLS: 0
         averageFID: 0
         performanceScore: 0,
@@ -86,8 +86,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       cumulativeLayoutShift: avgCLS),
       firstInputDelay: avgFID)})
     return {
-      averageLoadTime: avgLoadTime;
-      averageFCP: avgFCP;
+      averageLoadTime: avgLoadTime
+      averageFCP: avgFCP
       averageLCP: avgLCP
       averageCLS: avgCLS
       averageFID: avgFID,
@@ -107,9 +107,8 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       const _entries = list.getEntries()
       entries.forEach(entry => {)
         this.handlePerformanceEntry(entry)
-  });
-    });
-
+  })
+    })
     try {
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
@@ -132,27 +131,23 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
     getCLS(metric => {)
           this.updateMetric('cumulativeLayoutShift', metric.value)
-  });
-
+  })
         getFID(metric => {
     )
           this.updateMetric('firstInputDelay', metric.value)
-  });
-
+  })
         getFCP(metric => {
     )
           this.updateMetric('firstContentfulPaint', metric.value)
-  });
-
+  })
         getLCP(metric => {
     )
           this.updateMetric('largestContentfulPaint', metric.value)
-  });
-
+  })
         getTTFB(metric => {
     )
           this.updateMetric('loadTime', metric.value)
-  });
+  })
       })
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
@@ -178,9 +173,9 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       }
     }
 
-    // Check memory every 30 seconds;
-    setInterval(checkMemory, 30000);
-    checkMemory(); // Initial check;
+    // Check memory every 30 seconds
+    setInterval(checkMemory, 30000)
+    checkMemory(); // Initial check
   }
 
   /**
@@ -227,18 +222,18 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   private updateMetric(metric: keyof PerformanceData, value: unknown): void {
     const _latestData = this.data[this.data.length - 1],
     if (latestData && Date.now() - latestData.timestamp < 1000) {,
-      // Update latest entry if it's recent;
+      // Update latest entry if it's recent
       (latestData as any)[metric] = value
   } else {
-      // Create new entry;
+      // Create new entry
       this.addPerformanceData({)
         timestamp: Date.now()
-        url: window.location.href;
-        loadTime: 0;
-        firstContentfulPaint: 0;
-        largestContentfulPaint: 0;
-        cumulativeLayoutShift: 0;
-        firstInputDelay: 0;
+        url: window.location.href
+        loadTime: 0
+        firstContentfulPaint: 0
+        largestContentfulPaint: 0
+        cumulativeLayoutShift: 0
+        firstInputDelay: 0
         timeToInteractive: 0
         memoryUsage: 0
         networkInfo: null,
@@ -324,8 +319,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     largestContentfulPaint: number;)
     cumulativeLayoutShift: number,),
     firstInputDelay: number,)}): number {
-    let _score = 100;
-
+    let _score = 100
     // Load time scoring (40% weight)
     if (metrics.loadTime > 3000) score -= 40
     else if (metrics.loadTime > 2000) score -= 20

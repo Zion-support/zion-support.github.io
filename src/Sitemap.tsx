@@ -1,18 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Header } from '@/components/header/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
 import { 
   Home, 
   Briefcase, 
   Users, 
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
-import { Badge } from '../components/ui/badge.js';
+import React from 'react'
+import { SEO } from '../components/SEO'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js'
+import { Badge } from '../components/ui/badge.js'
 import { 
   Home, 
   HelpCircle, 
@@ -25,29 +25,28 @@ import {
   Phone, 
   FileText, 
   Shield, 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Brain, 
   Shield, 
-import { SEO } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
-import { Badge } from '../components/ui/badge.js';
-import { Phone, Mail } from 'lucide-react';
-
+import { SEO } from '../components/SEO'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js'
+import { Badge } from '../components/ui/badge.js'
+import { Phone, Mail } from 'lucide-react'
 interface SitemapSection {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  links: SitemapLink[];
+  id: string
+  title: string
+  description: string
+  icon: React.ReactNode
+  links: SitemapLink[]
 }
 
 interface SitemapLink {
-  title: string;
-  href: string;
-  description?: string;
-  isExternal?: boolean;
-  badge?: string;
+  title: string
+  href: string
+  description?: string
+  isExternal?: boolean
+  badge?: string
 }
 
 const sitemapSections: SitemapSection[] = [
@@ -166,8 +165,7 @@ const sitemapSections: SitemapSection[] = [
       }
     ]
   }
-];
-
+]
 export default function Sitemap() {
   const sitemapStructure = [
     {
@@ -312,8 +310,7 @@ export default function Sitemap() {
   MessageSquare,
   Star,
   Play
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Sitemap() {
   const sitemapSections = [
     {
@@ -417,10 +414,10 @@ export default function Sitemap() {
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
         { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { SEO } from "@/components/SEO"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Link } from "react-router-dom"
 import { 
   Home, 
   Users, 
@@ -438,8 +435,7 @@ import {
   Mail,
   Phone,
   MapPin
-} from "lucide-react";
-
+} from "lucide-react"
 export default function Sitemap() {
   const sitemapSections = [
     {
@@ -522,9 +518,8 @@ export default function Sitemap() {
         { name: "Help Center", path: "/help", description: "Support and documentation" }
       ]
     }
-  ];
-
-import { motion } from 'framer-motion';
+  ]
+import { motion } from 'framer-motion'
 import { 
   Map, 
   Home, 
@@ -548,8 +543,7 @@ import {
   Award,
   Mail,
   ArrowRight
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Sitemap() {
   const mainPages = [
     { path: '/', title: 'Home', description: 'Welcome to Zion Tech Group', icon: Home },
@@ -558,8 +552,7 @@ export default function Sitemap() {
     { path: '/mission', title: 'Our Mission', description: 'Discover our mission and vision', icon: Award },
     { path: '/contact', title: 'Contact Us', description: 'Get in touch with our team', icon: Phone },
     { path: '/careers', title: 'Careers', description: 'Join our growing team', icon: Users }
-  ];
-
+  ]
   const servicePages = [
     { path: '/services', title: 'All Services', description: 'Comprehensive service overview', icon: Briefcase },
     { path: '/services/ai-autonomous-systems', title: 'AI Autonomous Systems', description: 'Advanced AI solutions', icon: Brain },
@@ -568,24 +561,21 @@ export default function Sitemap() {
     { path: '/services/quantum-technology', title: 'Quantum Technology', description: 'Next-gen computing', icon: Cpu },
     { path: '/services/it-infrastructure', title: 'IT Infrastructure', description: 'Complete IT solutions', icon: Cloud },
     { path: '/micro-saas-services', title: 'Micro SAAS Solutions', description: 'Custom software development', icon: Cpu }
-  ];
-
+  ]
   const solutionPages = [
     { path: '/solutions/enterprise', title: 'Enterprise Solutions', description: 'Large-scale business transformation', icon: Building },
     { path: '/solutions/healthcare', title: 'Healthcare Solutions', description: 'Medical technology innovation', icon: Heart },
     { path: '/solutions/financial', title: 'Financial Solutions', description: 'Fintech and banking solutions', icon: DollarSign },
     { path: '/solutions/manufacturing', title: 'Manufacturing Solutions', description: 'Smart manufacturing', icon: Factory },
     { path: '/solutions/retail', title: 'Retail Solutions', description: 'Digital retail transformation', icon: ShoppingCart }
-  ];
-
+  ]
   const technologyPages = [
     { path: '/quantum-neural-network-platform', title: 'Quantum Neural Networks', description: 'Quantum-powered AI', icon: Brain },
     { path: '/ai-autonomous-business-manager', title: 'AI Business Manager', description: 'Autonomous business operations', icon: Brain },
     { path: '/ai-autonomous-research-assistant', title: 'AI Research Assistant', description: 'Research automation', icon: Brain },
     { path: '/autonomous-business-operations-platform', title: 'Autonomous Business Platform', description: 'Self-operating systems', icon: Rocket },
     { path: '/ai-powered-it-asset-management', title: 'AI Asset Management', description: 'Intelligent IT management', icon: Cloud }
-  ];
-
+  ]
   const resourcePages = [
     { path: '/pricing', title: 'Pricing', description: 'Transparent pricing plans', icon: DollarSign },
     { path: '/case-studies', title: 'Case Studies', description: 'Success stories and results', icon: FileText },
@@ -593,15 +583,13 @@ export default function Sitemap() {
     { path: '/help', title: 'Help Center', description: 'Support and documentation', icon: FileText },
     { path: '/docs', title: 'Documentation', description: 'Technical documentation', icon: FileText },
     { path: '/support', title: 'Support', description: 'Technical support services', icon: Phone }
-  ];
-
+  ]
   const legalPages = [
     { path: '/privacy', title: 'Privacy Policy', description: 'Data protection and privacy', icon: Shield },
     { path: '/terms', title: 'Terms of Service', description: 'Service terms and conditions', icon: FileText },
     { path: '/cookies', title: 'Cookie Policy', description: 'Cookie usage information', icon: Shield },
     { path: '/accessibility', title: 'Accessibility', description: 'Accessibility commitment', icon: Users }
-  ];
-
+  ]
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
     <motion.div
       key={title}
@@ -617,7 +605,7 @@ export default function Sitemap() {
       <ul className="space-y-3">
         {pages.map((page) => (
           <li key={page.href}>
-            <Link 
+            <$2 />
               to={page.href} 
               className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
             >
@@ -634,8 +622,7 @@ export default function Sitemap() {
     { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
     { name: 'Contact Sales', path: '/contact-sales', icon: MessageSquare, color: 'bg-purple-100 text-purple-700' },
     { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
-  ];
-
+  ]
   return (
     <>
       <SEO
@@ -662,7 +649,7 @@ export default function Sitemap() {
           {/* Quick Links */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {quickLinks.map((link, index) => (
-              <Link
+              <$2 />
                 key={index}
                 to={link.path}
                 className={`${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`}
@@ -689,7 +676,7 @@ export default function Sitemap() {
                   <div className="space-y-3">
                     {section.links.map((link, linkIndex) => (
                       <div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
-                        <Link
+                        <$2 />
                           to={link.path}
                           className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors"
                         >
@@ -743,13 +730,13 @@ export default function Sitemap() {
                   Can't find what you're looking for? Our support team is here to help.
                 </p>
                 <div className="space-y-2">
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
                   >
                     Contact Support →
                   </Link>
-                  <Link
+                  <$2 />
                     to="/help-center"
                     className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
                   >
@@ -764,8 +751,7 @@ export default function Sitemap() {
       
       <Footer />
     </>
-  );
-
+  )
   return (
     </>
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
@@ -776,7 +762,7 @@ export default function Sitemap() {
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {pages.map((page) => (
-          <Link
+          <$2 />
             key={page.path}
             to={page.path}
             className="block p-4 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-500/50 transition-all duration-200 group"
@@ -789,8 +775,7 @@ export default function Sitemap() {
         ))}
       </div>
     </div>
-  );
-
+  )
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
@@ -841,7 +826,7 @@ export default function Sitemap() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link
+            <$2 />
               to="/services"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
@@ -852,7 +837,7 @@ export default function Sitemap() {
               <p className="text-sm text-gray-400">Explore our comprehensive service offerings</p>
             </Link>
 
-            <Link
+            <$2 />
               to="/pricing"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
@@ -863,7 +848,7 @@ export default function Sitemap() {
               <p className="text-sm text-gray-400">Transparent pricing for all our services</p>
             </Link>
 
-            <Link
+            <$2 />
               to="/contact"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
@@ -874,7 +859,7 @@ export default function Sitemap() {
               <p className="text-sm text-gray-400">Contact our team for inquiries</p>
             </Link>
 
-            <Link
+            <$2 />
               to="/careers"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
@@ -899,14 +884,14 @@ export default function Sitemap() {
             our website and find the information you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
               <span>Contact Support</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
+            <$2 />
               to="/help"
               className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
@@ -970,8 +955,7 @@ import {
   Server,
   RefreshCw,
   MessageSquare
-} from 'lucide-react';
-
+} from 'lucide-react'
 const Sitemap = () => {
   const siteStructure = [
     {
@@ -1054,8 +1038,7 @@ const Sitemap = () => {
         { name: 'Services Showcase', path: '/services-showcase', description: 'Featured services' }
       ]
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -1071,3 +1054,4 @@ const Sitemap = () => {
         </div>
       </div>
 
+</div></div></div></p></li></section>

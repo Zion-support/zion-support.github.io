@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 // Function to fix common lint issues in a file
 function fixLintIssues(filePath) {
     try {
-    // Skip if not a source file;
+    // Skip if not a source file
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
       return false
   }
@@ -20,7 +20,7 @@ function fixLintIssues(filePath) {
 //     // Fix 1: Remove unused React imports (keep if JSX is used),
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {
     ,
-      content = content.replace(/import React from 'react';\n?/g, '');
+      content = content.replace(/import React from 'react';\n?/g, '')
       modified = true
   }
     
@@ -51,7 +51,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       if (usedImports.length === 0) {,
         modified = true
   } else if (usedImports.length < imports.length) {
-        modified = true;
+        modified = true
     // Fix,
   3: Remove unused lucide-react imports,
     if (lucideMatch) {/* TODO: Fix JSX expression */}
@@ -63,7 +63,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
   4: Remove unused variables (simple cases)
     
     for (let i = 0; i < lines.length; i++) {
-    // Skip lines that are just unused variable declarations;
+    // Skip lines that are just unused variable declarations
       if (line.match(/^\s*const\s+\w+\s*=\s*[^;]+;\s*$/) && 
           !line.includes('export') && 
           !line.includes('return') &&
@@ -83,7 +83,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       // Fix 5: Comment out console statements in production code
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {
         if (!line.trim().startsWith('//')) {
-          fixedLines.push('// ' + line);
+          fixedLines.push('// ' + line)
           modified = true
           continue
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
@@ -99,8 +99,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       fixedLines.push(line)
     }
     
-    content = fixedLines.join('\n');
-    
+    content = fixedLines.join('\n')
     // Fix 6: Remove unused useCallback imports,
     if (content.includes('useCallback') && !content.includes('useCallback(')) {,
       content = content.replace(/,\s*useCallback/g, '')
@@ -130,18 +129,18 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
     
     // Fix 8: Remove unused Link imports from react-router-dom,
-    if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {
+    if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<')) {$2 />
     // Fix,
   8: Remove unused Link imports from react-router-dom,
-    if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/import { Link } from 'react-router-dom';\n?/g, '');
-      modified = true;
+    if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<')) {/* TODO: Fix JSX expression */}$2 />
+      content = content.replace(/import { Link } from 'react-router-dom';\n?/g, '')
+      modified = true
     }
     
     // Fix 9: Remove unused Users imports,
     // Fix,
   9: Remove unused Users imports,
-//     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', 'Cpu'];
+//     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', 'Cpu']
     for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}`
         content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');`

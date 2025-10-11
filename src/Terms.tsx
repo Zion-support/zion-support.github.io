@@ -1,6 +1,5 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
 const Terms: React.FC = () => {
   return (
     
@@ -230,7 +229,6 @@ const Terms: React.FC = () => {
         </div>
       </div>
     
-  );
-};
-
-export default Terms;
+  )
+}
+export default Terms

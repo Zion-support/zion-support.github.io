@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Comprehensive PR Merge - Handles all remaining branches and PRs;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Comprehensive PR Merge - Handles all remaining branches and PRs
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -65,8 +64,7 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
       branch.includes('add-new') ||
       branch.includes('ai-') ||
       branch.includes('codex')
-  );
-
+  )
 // //Step 3: Enhanced merge function with conflict resolution,
 function mergeBranch(branchName) {,
 //   try {,
@@ -94,7 +92,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
-      );
+      )
 //       return { success: true, method: 'direct' }
     } catch (mergeError) {
 //       //Try different conflict resolution strategies
@@ -102,7 +100,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
         //Strategy 1: Use theirs,
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
-        );
+        )
 //         return { success: true, method: 'theirs' }
       } catch (theirsError) {
         try {
@@ -149,9 +147,9 @@ const results = {
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
       already_merged: 0
       not_found: 0
       failed: 0,
@@ -160,10 +158,9 @@ const results = {
 const results = {/* TODO: Fix JSX expression */}
     }}}
 
-// //Process in batches of 20 to avoid overwhelming the system;
-// const batchSize = 20;
-// const totalBatches = Math.ceil(recentBranches.length / batchSize);
-
+// //Process in batches of 20 to avoid overwhelming the system
+// const batchSize = 20
+// const totalBatches = Math.ceil(recentBranches.length / batchSize)
 for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   )
@@ -206,13 +203,12 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 
 //Step 5: Generate final report,
 // const report = {,
-  ...results;
+  ...results
   timestamp: new Date().toISOString()}
 
 fs.writeFileSync('comprehensive-pr-merge-report.json')
   JSON.stringify(report, null, 2)
-);
-
+)
 //Step 6: Final push,
 // try {,
   execSync('git push origin main', { stdio: 'inherit' })

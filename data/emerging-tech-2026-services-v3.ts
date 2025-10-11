@@ -1,13 +1,13 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: unknown
     mobile: string
     email: string,
@@ -67,7 +67,7 @@ export interface EmergingTech2026ServiceV3 {/* TODO: Fix JSX expression */}
 }
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -154,7 +154,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -169,7 +169,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "2026-emerging-tech-v3"
     id: "2026-emerging-tech-v3",
 ]

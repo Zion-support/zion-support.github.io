@@ -1,42 +1,42 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export type ExpandedServicePricing =
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  subcategory: string;
-  pricingTiers: starter: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+  serviceId: string
+  serviceName: string
+  category: string
+  subcategory: string
+  pricingTiers: starter: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    professional: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    professional: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    enterprise: unknown;
-      price: number;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    enterprise: unknown
+      price: number
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
       contractTerm: string}
-    custom: unknown;
-      priceRange: string;
-      currency: string;
-      billingCycle: string;
-      features: string[];
+    custom: unknown
+      priceRange: string
+      currency: string
+      billingCycle: string
+      features: string[]
       limitations: string[]
       bestFor: string[]
       setupFee: number,
@@ -46,7 +46,7 @@ export type ExpandedServicePricing =
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging',
     priceAdvantage: string,
     valueProposition: string}
-  roiAnalysis: unknown;
+  roiAnalysis: unknown
     paybackPeriod: string
     annualROI: string
     costSavings: string[],
@@ -58,7 +58,7 @@ export type ExpandedServicePricing =
     integrationComplexity: 'low' | 'medium' | 'high',
     supportIncluded: string,
     customizationOptions: string[]}
-  contactInfo: unknown;
+  contactInfo: unknown
     phone: string
     email: string
     website: string,

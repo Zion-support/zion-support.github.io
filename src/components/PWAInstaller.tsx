@@ -4,9 +4,9 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 const PWAInstaller: React.FC = () => {
-    const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
+    const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
+  const [showInstallButton, setShowInstallButton] = useState(false)
+  const [isInstalled, setIsInstalled] = useState(false)
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -21,29 +21,29 @@ const PWAInstaller: React.FC = () => {
   }
     // Listen for the appinstalled event
     const handleAppInstalled = () => {
-    setIsInstalled(true);
-      setShowInstallButton(false);
+    setIsInstalled(true)
+      setShowInstallButton(false)
       setDeferredPrompt(null)
   }
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+    window.addEventListener('appinstalled', handleAppInstalled)
     return () => {
-    window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
       window.removeEventListener('appinstalled', handleAppInstalled)
   }
-  }, []);
+  }, [])
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) return
     try {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
+      await deferredPrompt.prompt()
+      const { outcome } = await deferredPrompt.userChoice
       if (outcome === 'accepted') {
     console.log('User accepted the install prompt')
   } else {
     console.log('User dismissed the install prompt')
   }
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
+      setDeferredPrompt(null)
+      setShowInstallButton(false)
     } catch (error) {
     console.error('Error installing PWA:', error)
   }
@@ -83,3 +83,4 @@ export default PWAInstaller</button>
   </button>
   </BeforeInstallPromptEvent>
   </void>
+</div></div></div></div></p></h3>

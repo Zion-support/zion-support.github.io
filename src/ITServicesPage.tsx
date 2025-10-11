@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPricing, setSelectedPricing] = useState<string>('all')
   // IT Services data
   const itServices = [
     {
@@ -34,12 +32,10 @@ import {
   Cpu, Network, HardDrive, Router, Firewall, Backup, Recovery, Analytics,
   Automation, Integration, Migration, Optimization, Maintenance, Support,
   X
-} from 'lucide-react';
-
+} from 'lucide-react'
 const ITServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<any>(null);
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedService, setSelectedService] = useState<any>(null)
   const serviceCategories = [
     {
       id: 'infrastructure',
@@ -83,8 +79,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Modernize your business operations',
       color: 'from-indigo-500 to-purple-500'
     }
-  ];
-
+  ]
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -579,58 +574,50 @@ const ITServicesPage: React.FC = () => {
         website: "https://ziontechgroup.com"
       }
     }
-  ];
-
-  const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database'];
-  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-
+  ]
+  const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database']
+  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    
-    return matchesSearch && matchesCategory && matchesPricing;
-  });
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
+    return matchesSearch && matchesCategory && matchesPricing
+  })
   const formatPrice = (price: number, model: string) => {
     switch (model) {
       case 'monthly':
-        return `$${price}/month`;
+        return `$${price}/month`
       case 'yearly':
-        return `$${price * 12}/year`;
+        return `$${price * 12}/year`
       case 'one-time':
-        return `$${price.toLocaleString()}`;
+        return `$${price.toLocaleString()}`
       default:
-        return `$${price}`;
+        return `$${price}`
     }
-  };
-
+  }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Cloud Services': return <Cloud className="w-6 h-6" />;
-      case 'Security': return <Shield className="w-6 h-6" />;
-      case 'Networking': return <Network className="w-6 h-6" />;
-      case 'Data Management': return <Database className="w-6 h-6" />;
-      case 'DevOps': return <Zap className="w-6 h-6" />;
-      case 'Asset Management': return <HardDrive className="w-6 h-6" />;
-      case 'Support Services': return <MessageSquare className="w-6 h-6" />;
-      case 'Database': return <Database className="w-6 h-6" />;
-      default: return <Server className="w-6 h-6" />;
+      case 'Cloud Services': return <Cloud className="w-6 h-6" />
+      case 'Security': return <Shield className="w-6 h-6" />
+      case 'Networking': return <Network className="w-6 h-6" />
+      case 'Data Management': return <Database className="w-6 h-6" />
+      case 'DevOps': return <Zap className="w-6 h-6" />
+      case 'Asset Management': return <HardDrive className="w-6 h-6" />
+      case 'Support Services': return <MessageSquare className="w-6 h-6" />
+      case 'Database': return <Database className="w-6 h-6" />
+      default: return <Server className="w-6 h-6" />
     }
-  };
-
+  }
   const getPricingColor = (pricing: string) => {
     switch (pricing) {
-      case 'Freemium': return 'text-green-400';
-      case 'Subscription': return 'text-blue-400';
-      case 'One-time': return 'text-purple-400';
-      default: return 'text-gray-400';
+      case 'Freemium': return 'text-green-400'
+      case 'Subscription': return 'text-blue-400'
+      case 'One-time': return 'text-purple-400'
+      default: return 'text-gray-400'
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -642,17 +629,17 @@ const ITServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
-export default ITServicesPage;
-import React from 'react';
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+export default ITServicesPage
+import React from 'react'
+import React from 'react'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Link } from 'react-router-dom'
 import { 
   Cloud, 
   Shield, 
@@ -675,9 +662,8 @@ import {
   CheckCircle,
   AlertTriangle,
   TrendingUp
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import { SEO } from '@/components/SEO'
 const IT_SERVICES = [
   {
     id: 'cloud-services',
@@ -823,8 +809,7 @@ const IT_SERVICES = [
     link: '/services/compliance-auditing',
     benefits: ['Regulatory Compliance', 'Risk Mitigation', 'Customer Trust', 'Business Continuity']
   }
-];
-
+]
 const IT_SERVICE_CATEGORIES = [
   { name: 'Infrastructure', count: 3, color: 'bg-blue-500' },
   { name: 'Security', count: 2, color: 'bg-red-500' },
@@ -835,8 +820,7 @@ const IT_SERVICE_CATEGORIES = [
   { name: 'Consulting', count: 1, color: 'bg-gray-500' },
   { name: 'Monitoring', count: 1, color: 'bg-teal-500' },
   { name: 'Compliance', count: 1, color: 'bg-emerald-500' }
-];
-
+]
 const SERVICE_BENEFITS = [
   {
     icon: <Zap className="h-12 w-12 text-zion-cyan" />,
@@ -858,8 +842,7 @@ const SERVICE_BENEFITS = [
     title: 'Expert Support',
     description: 'Access to certified IT professionals and 24/7 technical support'
   }
-];
-
+]
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
@@ -878,10 +861,10 @@ export default function ITServicesPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             IT Services & Solutions
           </h1>
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from 'react'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { 
   Server, 
   Shield, 
@@ -905,8 +888,7 @@ import {
   Star,
   TrendingUp,
 
-} from "lucide-react";
-
+} from "lucide-react"
 export default function ITServicesPage() {
   const itServices = [
     {
@@ -1197,8 +1179,7 @@ export default function ITServicesPage() {
       rating: 4.8,
       reviewCount: 134
     }
-  ];
-
+  ]
   const categories = [
     "All Services",
     "Cloud Services",
@@ -1213,19 +1194,16 @@ export default function ITServicesPage() {
     "Analytics",
     "Support",
     "Communications"
-  ];
-
-  const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-  const [filteredServices, setFilteredServices] = React.useState(itServices);
-
+  ]
+  const [selectedCategory, setSelectedCategory] = React.useState("All Services")
+  const [filteredServices, setFilteredServices] = React.useState(itServices)
   React.useEffect(() => {
     if (selectedCategory === "All Services") {
-      setFilteredServices(itServices);
+      setFilteredServices(itServices)
     } else {
-      setFilteredServices(itServices.filter(service => service.category === selectedCategory));
+      setFilteredServices(itServices.filter(service => service.category === selectedCategory))
     }
-  }, [selectedCategory]);
-
+  }, [selectedCategory])
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -1449,7 +1427,7 @@ export default function ITServicesPage() {
               <div className="border-t border-gray-600 pt-4">
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Start your free trial today</span>
-                  <a 
+                  <$2 />
                     href={service.contactInfo.website}
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                     target="_blank"
@@ -1513,7 +1491,7 @@ export default function ITServicesPage() {
         </div>
       </div>
     </div>
-  );
+  )
   Server, 
   Database, 
   Code, 
@@ -1531,8 +1509,7 @@ export default function ITServicesPage() {
   Star,
   Clock,
   DollarSign
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function ITServicesPage() {
   const itServices = [
     {
@@ -1694,8 +1671,7 @@ export default function ITServicesPage() {
       deliveryTime: '3-5 weeks',
       link: '/services/it-automation'
     }
-  ];
-
+  ]
   const categories = [
     { name: 'All Services', count: itServices.length, active: true },
     { name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length },
@@ -1703,8 +1679,7 @@ export default function ITServicesPage() {
     { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -1869,10 +1844,9 @@ export default function ITServicesPage() {
       
       <Footer />
     </>
-  );
+  )
 }
 }
 }
-};
-
-export default ITServicesPage;
+}
+export default ITServicesPage</$1></div></div></div></div></div></div></div>

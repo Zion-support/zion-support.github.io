@@ -1,6 +1,6 @@
-'use client';
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
+'use client'
+import React, { Suspense, lazy } from 'react'
+import { Link } from 'react-router-dom'
 import {
     Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
@@ -73,12 +73,12 @@ import {
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon
   }
-} from 'lucide-react';
+} from 'lucide-react'
 const ITConsultingPage: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-const itServices = [;
-    // IT Infrastructure Services;
+    const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+const itServices = [
+    // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
@@ -480,7 +480,7 @@ const itServices = [;
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
-  ];
+  ]
 const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -495,9 +495,9 @@ const categories = [
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ]
   const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch
   }
   })
@@ -505,7 +505,7 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -536,7 +536,7 @@ return (
 
       {/* Search and Filter Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -549,9 +549,9 @@ return (
             <div className="flex-1"></div>
               <div className="relative"></div>
                 <Search>
-                </Search><input;
-                  type="text";
-                  placeholder="Search IT services...";
+                </Search><input
+                  type="text"
+                  placeholder="Search IT services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
 
@@ -588,8 +588,8 @@ return (
                 onClick={() => setSelectedCategory(category.id)}
                 className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.id;
-                    ? 'bg-cyan-500 text-white';
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
   }
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
@@ -665,7 +665,7 @@ return (
       </section>
       {/* Services Grid */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -804,7 +804,7 @@ return (
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -816,7 +816,7 @@ return (
             Ready to Optimize Your IT Infrastructure?,
           </h2>
           <p></p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
+            Our certified IT professionals deliver reliable, secure, and scalable solutions.
             All services include free consultations and ongoing support.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -833,9 +833,8 @@ return (
       </section>
     </div>
   ),
-};
-
-export default ITConsultingPage;
+}
+export default ITConsultingPage
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">

@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
     const features = [
     {
@@ -12,7 +12,7 @@ const PagePage: React.FC = () => {
   }
       {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -48,7 +48,7 @@ const PagePage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -84,7 +84,7 @@ const PagePage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -113,13 +113,11 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  ),;
-};];
-export default PagePage;
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+  ),
+};]
+export default PagePage
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const SpecializedServicesPage: React.FC = () => {
   const features = [
     {
@@ -140,9 +138,9 @@ const SpecializedServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale your operations worldwide with our robust infrastructure';
-    };
-  ];
+      description: 'Scale your operations worldwide with our robust infrastructure'
+    }
+  ]
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
@@ -163,7 +161,7 @@ const SpecializedServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         </div><section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Specialized Services
             </h1>
@@ -183,7 +181,7 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our Services?
@@ -208,7 +206,7 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Benefits
@@ -230,7 +228,7 @@ const SpecializedServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Get Started?
@@ -255,9 +253,8 @@ const SpecializedServicesPage: React.FC = () => {
       <Footer / /></Footer>
     </>
   ),
-};
-
-export default SpecializedServicesPage;
+}
+export default SpecializedServicesPage
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

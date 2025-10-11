@@ -1,29 +1,29 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: unknown
     mobile: string
     email: string,
@@ -115,7 +115,7 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
 }
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -202,7 +202,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -217,7 +217,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "2029-enterprise-it"
     id: "2029-enterprise-it",
 ]

@@ -1,36 +1,36 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
-import { Resend } from "npm:resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
+import { Resend } from "npm:resend@1.0.0"
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type"};
+    "authorization, x-client-info, apikey, content-type"}
     "authorization, x-client-info, apikey, content-type",
-};
+}
 interface ReminderPayload {
-  user_id: string;
-  missing_milestone: string;
-  role: string;
+  user_id: string
+  missing_milestone: string
+  role: string
 }
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders});
+      headers: corsHeaders})
       headers: corsHeaders,
-    });
+    })
   }
   try {
     const supabase = createClient(
       supabaseUrl,
       supabaseServiceKey
-    );
-    const payload = await req.json() as ReminderPayload;
-    const { user_id, missing_milestone, role } = payload;
+    )
+    const payload = await req.json() as ReminderPayload
+    const { user_id, missing_milestone, role } = payload
     if (!user_id || !missing_milestone || !role) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
@@ -39,14 +39,14 @@ serve(async (req: Request) => {
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
-      );
+      )
     }
     // Get user data
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
-      .single();
+      .single()
     if (userError || !userData) {
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
@@ -55,7 +55,7 @@ serve(async (req: Request) => {
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
-      );
+      )
     }
     // Create message based on role and missing milestone
     const milestoneMessages = {
@@ -66,7 +66,7 @@ serve(async (req: Request) => {
       client: {
         job_posted: "post your first job to start finding talent",
         match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}};
+        talent_invited: "invite talent to speed up your hiring process"}}
         availability_set: "set your availability to help clients know when you can work",
       },
       client: {
@@ -74,11 +74,11 @@ serve(async (req: Request) => {
         match_viewed: "check out your AI-matched talent suggestions",
         talent_invited: "invite talent to speed up your hiring process",
       },
-    };
-    const name = userData.display_name || "there";
+    }
+    const name = userData.display_name || "there"
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
-    ] || "complete your next step";
+    ] || "complete your next step"
     // Send email
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion.ai>",
@@ -97,9 +97,9 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-      `});
+      `})
       `,
-    });
+    })
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
@@ -108,7 +108,7 @@ serve(async (req: Request) => {
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
-      );
+      )
     }
     // Create notification in database
     const { data: notification, error: notificationError } = await supabase.rpc(
@@ -120,9 +120,9 @@ serve(async (req: Request) => {
         _type: "onboarding"}
         _type: "onboarding",
       }
-    );
+    )
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError);
+      console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
@@ -137,9 +137,9 @@ serve(async (req: Request) => {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
-    );
+    )
   } catch (error) {
-    console.error(error);
+    console.error(error)
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
@@ -147,6 +147,6 @@ serve(async (req: Request) => {
         headers: { "Content-Type": "application/json", ...corsHeaders }}
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
-    );
+    )
   }
-});
+})

@@ -84,6 +84,6 @@ const AISecurityMonitorPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default AiSecurityMonitorPage;
+export default AiSecurityMonitorPage</$1></p>

@@ -1,10 +1,10 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
   link: string
   category: string
     address: string,

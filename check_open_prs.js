@@ -31,7 +31,7 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
 
 async function checkOpenPRs() {
     try {
-    // Get open pull requests;
+    // Get open pull requests
     if (prs.length === 0) {
 
       return []
@@ -39,7 +39,7 @@ async function checkOpenPRs() {
 
     for (const pr of prs) {
 
-      // Check if PR has merge conflicts;
+      // Check if PR has merge conflicts
       prDetails.push({
         number: pr.number
         title: pr.title;)
@@ -64,7 +64,7 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
   }
 }
 
-// Run the check;
+// Run the check
 checkOpenPRs().then(prs => {
     )
 )
@@ -73,7 +73,7 @@ checkOpenPRs().then(prs => {
     )
 )
   process.exit(1)
-  });
+  })
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

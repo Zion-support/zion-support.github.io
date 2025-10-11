@@ -4,7 +4,7 @@
 interface AccessibilityConfig {
     enableKeyboardNavigation: boolean
   }
-  enableScreenReaderSupport: boolean;
+  enableScreenReaderSupport: boolean
   enableHighContrast: boolean
   enableFocusIndicators: boolean
   enableAriaLabels: boolean,
@@ -24,8 +24,8 @@ class AccessibilityEnhancer {
   private init(): void {
     // Initialize accessibility enhancements
   }
-    this.setupKeyboardNavigation();
-    this.setupFocusIndicators();
+    this.setupKeyboardNavigation()
+    this.setupFocusIndicators()
   }
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}

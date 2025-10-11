@@ -4,7 +4,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-6">"
   return (
     <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">"
@@ -24,22 +24,22 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]" />"
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]" />"
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8, p, y-6">";
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
+  g:px-8, p, y-6">"
       {/* Conte, n, t */}</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8, p, y-6">"</div>
-        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
+        <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">"
           {/* Left, sid, e - Badge, and, Title */}</div>
           <div, className="flex, item, s-start, ga, p-4, fle, x-1, mi, n-w-0">"</div>
             <div, className="fl, e, x-shri, n, k-0, m, t-1">"</div>
               <div, className="relati, v, e">"</div>
-                <Brain, className="w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
+                <Brain, className="w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e" />"
                 <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e" />"</d, i, v>
             </d, i, v>
             <div, className="fl, e, x-1, mi, n-w-0">"</div>
               <div, className="flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p">"</div>
-                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e">";
+                <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e">"
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5</sp, a, n>
                 <span, className="inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg"></span>
                   <Award, className="w-3 h-3, m, r-1  />
@@ -228,7 +228,8 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fi
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025CognitiveRevolutionBanner;
+export default October2025CognitiveRevolutionBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></h2></h2>

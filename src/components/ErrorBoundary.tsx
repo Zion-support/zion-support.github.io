@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     }
   }
   handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
+  o: undefined })
   }
   handleReload = () => {/* TODO: Fix JSX expression */}
   }

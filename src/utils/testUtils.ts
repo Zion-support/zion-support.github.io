@@ -95,7 +95,7 @@ export class MockStorage implements Storage {
 }
   private,
   store: Map,
-          <string, string> = new Map();
+          <string, string> = new Map()
   get length(): number {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -168,7 +168,7 @@ export const mockWindow = (overrides: Partial,)
 
       writable: true,
 
-    });
+    })
   }
 }
 /**
@@ -363,7 +363,7 @@ export class ConsoleSpy {
   O: Add content,}
 }
     this.originalConsole = { ...console }
-    this.mock();
+    this.mock()
   }
   private mock(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -372,19 +372,19 @@ export class ConsoleSpy {
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.logs.push(args.map(String).join(' '));
+      this.logs.push(args.map(String).join(' '))
     }
     console.error = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.errors.push(args.map(String).join(' '));
+      this.errors.push(args.map(String).join(' '))
     }
     console.warn = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.warnings.push(args.map(String).join(' '));
+      this.warnings.push(args.map(String).join(' '))
     }
   }
   getLogs(): string[] {/* TODO: Fix JSX expression */}
@@ -501,9 +501,9 @@ export const measureExecutionTime = async
   }
 
 }
-  const start = performance.now();
-  const result = await fn();
-  const duration = performance.now() - start;
+  const start = performance.now()
+  const result = await fn()
+  const duration = performance.now() - start
   return { result, duration }
 }
 export default {/* TODO: Fix JSX expression */}
@@ -521,6 +521,6 @@ export default {/* TODO: Fix JSX expression */}
 //   ConsoleSpy,
 //   createDeferred,
 //   retryWithBackoff,
-//   measureExecutionTime;
+//   measureExecutionTime
 }
 

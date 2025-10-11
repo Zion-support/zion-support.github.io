@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Comprehensive Merge Remaining - Merges all remaining important branches;
- * This script targets the remaining branches that need to be merged;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Comprehensive Merge Remaining - Merges all remaining important branches
+ * This script targets the remaining branches that need to be merged
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -40,8 +39,7 @@ const remainingBranches = [
   'cursor/add-new-services-and-deploy-updates-27 d2',
   'cursor/add-new-services-and-deploy-updates-45 bb',
   'cursor/add-new-services-and-deploy-updates-483 a',
-  'cursor/add-new-services-and-deploy-updates-4 d5 b'];
-
+  'cursor/add-new-services-and-deploy-updates-4 d5 b']
 // //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
@@ -89,13 +87,12 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' }
-    );
-
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs for most conflicts,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
       execSync(
     } catch (e) {/* TODO: Fix JSX expression */}
     }
@@ -121,7 +118,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 2: Auto-resolve with ours,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
@@ -137,9 +134,8 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 3: Manual conflict resolution,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
-      //Get conflicted files;
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
+      //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {)
         encoding: 'utf8'),
     try {/* TODO: Fix JSX expression */}
@@ -203,10 +199,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
-      manual: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
+      manual: 0
       failed: 0
       not_found: 0
       already_merged: 0,
@@ -215,7 +211,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 // const results = {/* TODO: Fix JSX expression */}
     }}}
 
-//Merge all remaining branches;
+//Merge all remaining branches
 for (const branch of remainingBranches) {
 for (const branch of remainingBranches) {/* TODO: Fix JSX expression */}
   results.branches.push({ branch, ...result })
@@ -236,8 +232,7 @@ results.branchCounts = {
 
 fs.writeFileSync('comprehensive-remaining-merge-report.json')
   JSON.stringify(results, null, 2)
-);
-
+)
 //Step 6: Display summary,
 // // // // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))

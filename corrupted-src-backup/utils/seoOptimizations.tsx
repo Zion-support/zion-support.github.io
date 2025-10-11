@@ -41,10 +41,10 @@ export const seoUtils = {/* content */}
   }),
   // Generate article structured data
   generateArticleSchema: (article: {/* content */}
-    title: string;
-    description: string;
-    author: string;
-    datePublished: string;
+    title: string
+    description: string
+    author: string
+    datePublished: string
     dateModified: string
     image?: string
     url: string,
@@ -136,9 +136,9 @@ export const seoUtils = {/* content */}
   s://zion.app/logo.png"
     })
   })
-});
+})
 }
-// Sitemap generation utilities;
+// Sitemap generation utilities
 export const sitemapUtils = {/* content */}
   // Generate sitemap entries
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
@@ -179,7 +179,7 @@ Sitema,`
   p: ${sitemapUrl}`
   }
 }
-// URL optimization utilities;
+// URL optimization utilities
 export const urlUtils = {/* content */}
   // Generate canonical URL
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
@@ -213,7 +213,7 @@ export const urlUtils = {/* content */}
     return `${baseUrl}${path}`
   }
 }
-// Content optimization utilities;
+// Content optimization utilities
 export const contentOptimization = {/* content */}
   // Extract keywords from content
   extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
@@ -253,7 +253,7 @@ export const contentOptimization = {/* content */}
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName
   }
 }
-// Performance SEO utilities;
+// Performance SEO utilities
 export const performanceSEO = {/* content */}
   // Preload critical resources
   // Preload critical resources,
@@ -304,7 +304,7 @@ export const performanceSEO = {/* content */}
     }
   }
 }
-// Analytics and tracking utilities;
+// Analytics and tracking utilities
 export const analyticsUtils = {/* content */}
   // Track page views
   trackPageView: (url: string, title: string) => {/* content */}
@@ -323,7 +323,7 @@ export const analyticsUtils = {/* content */}
   e: title,
         page_locatio,
   n: url,)
-      });
+      })
     }
   },
   // Track custom events
@@ -352,15 +352,15 @@ export const analyticsUtils = {/* content */}
   o: conversionId,
         valu,
   e: value,)
-      });
+      })
     }
   }
 }
-// Core Web Vitals tracking;
+// Core Web Vitals tracking
 export const coreWebVitals = {/* content */}
   // Track Core Web Vitals
   trackCoreWebVitals: () => {/* content */}
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const trackMetric = (metric: { name: string; value: number; id: string, delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
@@ -382,9 +382,9 @@ export const coreWebVitals = {/* content */}
   d: metric.id,
         metric_delt,
   a: metric.delta,
-      });
+      })
     }
-    // Import and track web vitals;
+    // Import and track web vitals
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
       onCLS(trackMetric)
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions
@@ -394,7 +394,7 @@ export const coreWebVitals = {/* content */}
     })
   }
 }
-// SEO component for React;
+// SEO component for React
 export const SEOComponent = ({/* content */}
   title, 
   description, 
@@ -404,19 +404,19 @@ export const SEOComponent = ({/* content */}
   type = 'website',
   structuredData
 }: {/* content */}
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
   structuredData?: Record<string>)
 }) => {/* content */}
-//   const siteName = 'Zion Tech Group';
+//   const siteName = 'Zion Tech Group'
 //   const siteUrl = 'https: //zion.app',
 //   const siteUrl = 'http,
   s: //zion.app',`
-//   const defaultImage = `${siteUrl}/images/og-default.jpg`;
+//   const defaultImage = `${siteUrl}/images/og-default.jpg`
   `
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
@@ -470,9 +470,9 @@ export const SEOComponent = ({/* content */}
           {JSON.stringify(structuredData)}
       )}
     </Helmet>
-  );
+  )
 }
-// Initialize SEO optimizations;
+// Initialize SEO optimizations
 export const initializeSEO = () => {/* content */}
   // Preload critical resources
   performanceSEO.preloadCriticalResources()
@@ -490,3 +490,4 @@ export const initializeSEO = () => {/* content */}
     }
   }
 }"`
+</li></li>

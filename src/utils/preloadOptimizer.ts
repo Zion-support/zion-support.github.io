@@ -44,8 +44,7 @@ const criticalImages = [
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
-  ];
-
+  ]
   criticalImages.forEach(src => {
     // TODO: Add content
   }

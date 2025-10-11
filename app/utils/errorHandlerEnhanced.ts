@@ -1,5 +1,5 @@
-'use client';
-// Enhanced Error Handler;
+'use client'
+// Enhanced Error Handler
 export class AppError extends Error {
     // Enhanced Error Handler
   }
@@ -15,10 +15,10 @@ export class AppError extends Error {}
     Error.captureStackTrace(this, this.constructor)
   }
 }
-export const errorHandler = (error: AppError | Error) => {};
-  const isDevelopment = process.env.NODE_ENV === 'development';
-  const appError = error instanceof AppError ? error : new AppError(error.message);
-.toISOString();
+export const errorHandler = (error: AppError | Error) => {}
+  const isDevelopment = process.env.NODE_ENV === 'development'
+  const appError = error instanceof AppError ? error : new AppError(error.message)
+.toISOString()
     statusCode: appError.statusCode || 500,
   return {
     ,
@@ -36,15 +36,15 @@ export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => 
     if (next && typeof next === 'function') {,
   }
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {};
-    if (next && typeof next === 'function') {};
-      next(error);
-// Enhanced Error Handler;
+  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {}
+    if (next && typeof next === 'function') {}
+      next(error)
+// Enhanced Error Handler
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
-export const errorHandler = ();
-  const appError = error instanceof AppError ? error : new AppError(error.message);
+export const errorHandler = ()
+  const appError = error instanceof AppError ? error : new AppError(error.message)
 message: appError.message,
     stack: appError.stack,
     timestamp: new Date().toISOString(),) => {
@@ -56,10 +56,10 @@ message: appError.message,
   return {/* TODO: Fix JSX expression */}
   }
 }
-export const asyncHandler = ();
-  s: unknown, nex);
+export const asyncHandler = ()
+  s: unknown, nex)
   t: unknown) => unknown) => ()
-  s: unknown, nex);
+  s: unknown, nex)
   t: unknown) => {/* TODO: Fix JSX expression */}
     }
 }

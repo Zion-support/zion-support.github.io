@@ -67,14 +67,14 @@ export interface ErrorMetadata {
   categor,
   y: ErrorCategory,,
     severit,
-  y: ErrorSeverity;
-  userId?: string;
+  y: ErrorSeverity
+  userId?: string
   sessionId?: string
   context?: Record
           <string>
   tags?: string[],
   timestam,
-  p: number;
+  p: number
   stackTrace?: string
   userAgent?: string
   url?: string,
@@ -99,7 +99,7 @@ class ErrorTrackingService {
   instance: ErrorTrackingService,
   private,
   errors: Map,
-          <string, TrackedError> = new Map();
+          <string, TrackedError> = new Map()
   private,
   errorListeners: Array<(erro)
   r: TrackedError) => void> = []
@@ -188,7 +188,7 @@ class ErrorTrackingService {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
 
     }
-    const existingError = this.errors.get(errorId);
+    const existingError = this.errors.get(errorId)
     if (existingError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -213,10 +213,10 @@ const,
         lastSeen: timestamp,
 
       }
-      this.errors.set(errorId, trackedError);
-      // Notify listeners;
-      this.notifyListeners(trackedError);
-      // Maintain max stored errors;
+      this.errors.set(errorId, trackedError)
+      // Notify listeners
+      this.notifyListeners(trackedError)
+      // Maintain max stored errors
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -249,7 +249,7 @@ const,
   private generateErrorId(message: string): string {
     // Simple hash function for error ID
   }
-    for (let i = 0; i;
+    for (let i = 0; i
           < message.length; i++) {
     // TODO: Add content
   }
@@ -398,8 +398,8 @@ const,
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const errors = this.getErrors();
-    const byCategory = {} as Record;
+    const errors = this.getErrors()
+    const byCategory = {} as Record
           <ErrorCategory>
     const bySeverity = {} as Record<ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */}
@@ -420,7 +420,7 @@ const,
   l: errors.length,
 //       byCategory,
 //       bySeverity,
-//       topErrors;
+//       topErrors
     }
   }
   /**

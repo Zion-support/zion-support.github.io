@@ -61,7 +61,7 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx'
 if (fs.existsSync(analyticsTrackerPath)) {
 
-  // Fix dataLayer type to match existing declarations;
+  // Fix dataLayer type to match existing declarations
   content = content.replace(/dataLayer: unknown\[\],/, 'dataLayer: unknown[];'),
 ,
   fs.writeFileSync(analyticsTrackerPath, content)
@@ -80,11 +80,10 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(
     /const score = getPerformanceScore\(\);/g,
     'const score = 0; // Placeholder for performance score'
-  );
-  content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder');
-  content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
-
-  // Fix the exportData variable declaration issue;
+  )
+  content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder')
+  content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder')
+  // Fix the exportData variable declaration issue
   content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),
 ,
   fs.writeFileSync(systemMonitorPath, content)

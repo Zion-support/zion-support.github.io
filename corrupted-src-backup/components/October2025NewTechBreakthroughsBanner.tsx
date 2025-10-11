@@ -3,13 +3,13 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
       {/* Animated, backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">"
       {/* Animated, backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-12">"
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-10">
@@ -23,18 +23,18 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
       </d, i, v>)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>'</d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-12">";
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+  g:px-8, p, y-12">"
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10">"</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4">"</div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"
+            <span, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">"
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5</sp, a, n>
 export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
       {/* Animated, backgroun, d */}
@@ -42,7 +42,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
       </d, i, v>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, p, y-12">"
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-10"></div>"
@@ -425,3 +425,4 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
   )
 }
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3>

@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { 
-import React from 'react';
+import React from 'react'
 import { 
   HelpCircle, 
   Search, 
@@ -33,8 +33,8 @@ import {
   ChevronDown,
   ChevronRight,
   ExternalLink,
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async'
+import { motion } from 'framer-motion'
 import { 
   Search, 
   HelpCircle, 
@@ -99,8 +99,8 @@ import {
   Book,
   Mail as MailIcon,
   CreditCard
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+} from 'lucide-react'
+import SEOHead from '../components/SEOHead'
   Zap, 
   Brain, 
   Cloud, 
@@ -119,47 +119,43 @@ import SEOHead from '../components/SEOHead';
   ExternalLink,
   Building,
   CreditCard
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Header } from "@/components/header/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Phone, Mail, ArrowRight } from 'lucide-react';
-
+} from 'lucide-react'
+import React, { useState } from 'react'
+import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Header } from "@/components/header/Header"
+import { Footer } from "@/components/Footer"
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/Button"
+import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react"
+import { Link } from "react-router-dom"
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Search, Phone, Mail, ArrowRight } from 'lucide-react'
 export default function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
-import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
-import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
-
+  const [searchQuery, setSearchQuery] = useState('')
+import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react'
 const HelpCenter = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([])
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe } from 'lucide-react'
+import { SEO } from '@/components/SEO'
 const HelpCenter = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([])
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
         : [...prev, category]
-    );
-  };
+    )
+  }
   HelpCircle,
   Lightbulb,
   Clock,
@@ -170,13 +166,11 @@ const HelpCenter = () => {
   Globe,
   Shield,
   Zap
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFaqs, setExpandedFaqs] = useState<Set<string>>(new Set());
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFaqs, setExpandedFaqs] = useState<Set<string>>(new Set())
   const categories = [
     {
       id: 'getting-started',
@@ -253,8 +247,7 @@ export default function HelpCenter() {
         { title: 'Billing FAQ', path: '/help/billing-faq', description: 'Common billing questions' }
       ]
     }
-  } as const;
-
+  } as const
   const popularArticles = [
     'How to create your first account',
     'Understanding the marketplace',
@@ -262,18 +255,14 @@ export default function HelpCenter() {
     'Finding and hiring talent',
     'Payment and escrow system',
     'Account security best practices'
-  ];
-
-
+  ]
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
-    );
-  };
-
-
+    )
+  }
   const helpCategories = [
     {
   const popularArticles = [
@@ -301,23 +290,20 @@ export default function HelpCenter() {
       category: 'Technical Support',
       readTime: '6 min read'
     }
-  ];
-
+  ]
   const helpCategories = [
     {
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-  const [expandedFaqs, setExpandedFaqs] = useState<Set<number>>(new Set([0, 1]));
-
+  const [activeCategory, setActiveCategory] = useState('getting-started')
+  const [expandedFaqs, setExpandedFaqs] = useState<Set<number>>(new Set([0, 1]))
   const toggleFaq = (index: number) => {
-    const newExpanded = new Set(expandedFaqs);
+    const newExpanded = new Set(expandedFaqs)
     if (newExpanded.has(index)) {
-      newExpanded.delete(index);
+      newExpanded.delete(index)
     } else {
-      newExpanded.add(index);
+      newExpanded.add(index)
     }
-    setExpandedFaqs(newExpanded);
-  };
-
+    setExpandedFaqs(newExpanded)
+  }
   const categories = [
     {
       id: 'getting-started',
@@ -387,8 +373,7 @@ export default function HelpCenter() {
       articles: [
         'Contact Support',
         'Live Chat',
-  const [activeCategory, setActiveCategory] = useState('all');
-
+  const [activeCategory, setActiveCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Topics', icon: HelpCircle, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Play, count: 12 },
@@ -396,12 +381,11 @@ export default function HelpCenter() {
     { id: 'technical', name: 'Technical Support', icon: Code, count: 18 },
     { id: 'billing', name: 'Billing & Account', icon: FileText, count: 8 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Settings, count: 10 }
-  ];
-
+  ]
   const popularArticles = [
     {
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { 
   Search, 
   BookOpen, 
@@ -418,8 +402,7 @@ import {
   Zap,
   Brain,
   Rocket
-} from 'lucide-react';
-
+} from 'lucide-react'
 const HelpCenter = () => {
   const helpCategories = [
     {
@@ -470,35 +453,31 @@ const HelpCenter = () => {
       ],
       color: 'from-orange-500 to-red-500'
     }
-  ];
-
+  ]
   const quickActions = [
     { title: 'Contact Support', icon: MessageCircle, path: '/contact', color: 'from-blue-500 to-cyan-500' },
     { title: 'Live Chat', icon: MessageCircle, path: '/chat', color: 'from-green-500 to-emerald-500' },
     { title: 'Schedule Call', icon: Phone, path: '/schedule', color: 'from-purple-500 to-pink-500' },
     { title: 'Email Support', icon: Mail, path: 'mailto:kleber@ziontechgroup.com', color: 'from-orange-500 to-red-500' }
-  ];
-
+  ]
   const popularArticles = [
   const popularArticles = [
     { title: 'How to Set Up AI Business Intelligence', path: '/help/setup-ai-bi', category: 'AI Solutions' },
     { title: 'Cloud Infrastructure Best Practices', path: '/help/cloud-best-practices', category: 'Cloud & DevOps' },
     { title: 'Cybersecurity Compliance Checklist', path: '/help/security-checklist', category: 'Cybersecurity' },
     { title: 'Getting Started with Quantum Computing', path: '/help/quantum-getting-started', category: 'AI Solutions' }
-  ];
-
+  ]
   const supportChannels = [
     {
     { title: 'How to Implement AI in Your Business', path: '/help/ai-implementation', category: 'AI Services' },
     { title: 'Cybersecurity Compliance Checklist', path: '/help/cybersecurity-checklist', category: 'Cybersecurity' },
     { title: 'Cloud Migration Best Practices', path: '/help/cloud-migration', category: 'Technical Support' },
     { title: 'Setting Up Micro SAAS Solutions', path: '/help/micro-saas-setup', category: 'Getting Started' }
-  ];
-
+  ]
   const filteredFAQs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  )
   Search, 
   HelpCircle, 
   BookOpen, 
@@ -518,12 +497,10 @@ const HelpCenter = () => {
   Settings,
   FileText,
   Download
-} from 'lucide-react';
-
+} from 'lucide-react'
 const HelpCenter = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   const categories = [
     {
       title: "Getting Started",
@@ -583,9 +560,9 @@ const HelpCenter = () => {
         { title: "Payment Methods", path: "/help/payment-methods" },
         { title: "Support Plans", path: "/help/support-plans" },
         { title: "Refund Policy", path: "/help/refund-policy" }
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { motion } from 'framer-motion'
 import { 
   QuestionMarkCircleIcon, 
   BookOpenIcon, 
@@ -595,8 +572,7 @@ import {
   DocumentTextIcon,
   VideoCameraIcon,
   AcademicCapIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const HelpCenter: React.FC = () => {
   const faqCategories = [
     {
@@ -652,7 +628,7 @@ const HelpCenter: React.FC = () => {
           answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
         }
       ]
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Search, 
   MessageCircle, 
@@ -679,13 +655,11 @@ import {
   Play,
   Star,
   CheckCircle
-} from 'lucide-react';
-
+} from 'lucide-react'
 const HelpCenter = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
+  const [activeCategory, setActiveCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Topics', icon: HelpCircle, count: 0 },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 15 },
@@ -741,8 +715,7 @@ const HelpCenter = () => {
       color: 'from-yellow-500 to-orange-500',
       articleCount: 22
     }
-  ];
-
+  ]
   const popularArticles = [
     {
       id: 'getting-started-1',
@@ -780,8 +753,7 @@ const HelpCenter = () => {
       helpful: '96%',
       excerpt: 'Common reasons why workflows might not trigger and how to fix them quickly.'
     }
-  ];
-
+  ]
   const faqs = [
     {
       icon: Phone,
@@ -843,8 +815,7 @@ const HelpCenter = () => {
       icon: Settings,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       icon: MessageCircle,
@@ -912,8 +883,7 @@ const HelpCenter = () => {
       answer: 'Yes, you can schedule workflows to run at specific times, on specific days, or based on custom intervals. Use the scheduling feature in the workflow editor to set up recurring or one-time schedules.',
       category: 'workflows'
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       name: 'Live Chat',
@@ -947,7 +917,7 @@ const HelpCenter = () => {
       responseTime: 'Varies',
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ]
   CheckCircle,
   ArrowRight,
   ChevronDown,
@@ -959,13 +929,11 @@ const HelpCenter = () => {
   Brain,
   Cpu,
   Network
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
   const categories = [
     {
       id: 'getting-started',
@@ -1022,13 +990,11 @@ export default function HelpCenter() {
   Shield,
   Brain,
   Building
-} from 'lucide-react';
-
+} from 'lucide-react'
 const HelpCenter = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
   const helpCategories = [
     {
       id: 'getting-started',
@@ -1078,8 +1044,7 @@ const HelpCenter = () => {
         { title: 'Network Security', path: '/help/infrastructure/network-security' }
       ]
     }
-  ];
-
+  ]
   const faqs = [
     {
       id: 1,
@@ -1117,16 +1082,14 @@ const HelpCenter = () => {
       answer: "We serve a wide range of industries including healthcare, financial services, manufacturing, retail, government, and technology. Our solutions are tailored to meet industry-specific challenges and compliance requirements while maintaining flexibility for customization.",
       category: "Industries"
     }
-  ];
-
+  ]
   const filteredFAQs = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.category.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : faqs;
-
+    : faqs
   const supportChannels = [
     {
       title: 'Live Chat',
@@ -1160,8 +1123,7 @@ const HelpCenter = () => {
       color: 'from-orange-500 to-red-500',
       available: true
     }
-  ];
-
+  ]
   const resources = [
     {
       title: 'Product Documentation',
@@ -1191,8 +1153,7 @@ const HelpCenter = () => {
       link: '/community',
       type: 'Community'
     }
-  ];
-
+  ]
   const faqs = [
     {
       id: 1,
@@ -1242,19 +1203,16 @@ const HelpCenter = () => {
       answer: "Implementation timelines vary depending on the complexity of the solution. Simple AI integrations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We'll provide a detailed timeline during our initial consultation.",
       category: 'technical-support'
     }
-  ];
-
+  ]
   const filteredFaqs = activeCategory 
     ? faqs.filter(faq => faq.category === activeCategory)
-    : faqs;
-
+    : faqs
   const searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : [];
-
+    : []
   const resources = [
     {
       icon: BookOpen,
@@ -1284,8 +1242,7 @@ const HelpCenter = () => {
       link: "/community",
       color: "from-orange-500 to-red-500"
     }
-  ];
-
+  ]
       id: 'getting-started',
       title: 'Getting Started',
       icon: BookOpen,
@@ -1415,8 +1372,7 @@ const HelpCenter = () => {
         }
       ]
     }
-  ];
-
+  ]
   const popularArticles = [
     {
       title: 'Quick Troubleshooting Guide',
@@ -1436,8 +1392,7 @@ const HelpCenter = () => {
       views: '1.2k',
       category: 'Performance'
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       id: 7,
@@ -1446,32 +1401,27 @@ const HelpCenter = () => {
       category: 'security',
       tags: ['Data Privacy', 'Compliance', 'Encryption']
     }
-  ];
-
+  ]
   const filteredHelp = helpCategories.filter(item =>
     item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
+  )
   const toggleFaq = (faqId: string) => {
-    const newExpanded = new Set(expandedFaqs);
+    const newExpanded = new Set(expandedFaqs)
     if (newExpanded.has(faqId)) {
-      newExpanded.delete(faqId);
+      newExpanded.delete(faqId)
     } else {
-      newExpanded.add(faqId);
+      newExpanded.add(faqId)
     }
-    setExpandedFaqs(newExpanded);
-  };
-
+    setExpandedFaqs(newExpanded)
+  }
   const filteredCategories = selectedCategory === 'all' 
     ? categories 
-    : categories.filter(cat => cat.id === selectedCategory);
-
+    : categories.filter(cat => cat.id === selectedCategory)
   const filteredArticles = popularArticles.filter(article => 
     selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
-  );
-
+  )
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1557,20 +1507,17 @@ const HelpCenter = () => {
       action: "Browse Docs",
       color: "from-orange-500 to-red-500"
     }
-  ];
-
+  ]
   const filteredFaqs = faqs.filter(faq => 
     activeCategory === 'all' || faq.category === activeCategory
   ).filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
+  )
   const toggleFaq = (id: number) => {
-    setExpandedFaq(expandedFaq === id ? null : id);
-  };
-
+    setExpandedFaq(expandedFaq === id ? null : id)
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1644,16 +1591,14 @@ const HelpCenter = () => {
       action: 'Browse Docs',
       color: 'from-orange-500 to-red-600'
     }
-  ];
-
+  ]
   const filteredCategories = categories.filter(category =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article => 
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  );
-
+  )
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1673,8 +1618,7 @@ const HelpCenter = () => {
     category.articles.some(article => 
       article.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  );
-
+  )
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -1702,8 +1646,7 @@ const HelpCenter = () => {
   Video,
   Download,
   Users
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function HelpCenter() {
   const faqCategories = [
     {
@@ -1760,8 +1703,7 @@ export default function HelpCenter() {
         }
       ]
     }
-  ];
-
+  ]
   const helpResources = [
     {
       title: 'Documentation',
@@ -1791,8 +1733,7 @@ export default function HelpCenter() {
       link: '/community',
       color: 'from-orange-500 to-yellow-500'
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       title: 'Phone Support',
@@ -1817,16 +1758,14 @@ export default function HelpCenter() {
       contact: 'Available on website',
       availability: 'Business hours',
       color: 'from-purple-500 to-pink-500'
-  const [activeCategory, setActiveCategory] = useState('all');
-
+  const [activeCategory, setActiveCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Topics', icon: HelpCircle, count: 50 },
     { id: 'getting-started', name: 'Getting Started', icon: Rocket, count: 12 },
     { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 15 },
     { id: 'technical', name: 'Technical Support', icon: Settings, count: 18 },
     { id: 'billing', name: 'Billing & Account', icon: CreditCard, count: 8 }
-  ];
-
+  ]
   const faqs = [
     {
       question: "How do I get started with Zion Tech Group services?",
@@ -1864,8 +1803,7 @@ export default function HelpCenter() {
       category: "ai-solutions",
       tags: ["industries", "specialization", "expertise"]
     }
-  ];
-
+  ]
   const contactMethods = [
     {
       title: "Live Chat",
@@ -1895,31 +1833,28 @@ export default function HelpCenter() {
       action: "Browse Docs",
       available: "Always Available"
     }
-  ];
-
+  ]
   const filteredFAQs = faqs.filter(faq => 
     (activeCategory === 'all' || faq.category === activeCategory) &&
     (searchQuery === '' || 
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  );
-
+  )
   return (
                 placeholder="Search for help articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
-import { Search, MessageCircle, BookOpen, Video, FileText, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Button } from '@/components/ui/button'
+import { Search, MessageCircle, BookOpen, Video, FileText, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function HelpCenter() {
   const faqs = [
     {
@@ -1946,8 +1881,7 @@ export default function HelpCenter() {
       question: "Is my data secure?",
       answer: "Yes, we use industry-standard encryption and security measures to protect your personal and financial information. We never share your data with third parties without your consent."
     }
-  ];
-
+  ]
   const helpCategories = [
     {
       title: "Getting Started",
@@ -1981,8 +1915,7 @@ export default function HelpCenter() {
       bgColor: "bg-zion-orange/10",
       href: "/help/ai-tools"
     }
-  ];
-
+  ]
   return (
     <>
       <SEO
@@ -2064,7 +1997,7 @@ export default function HelpCenter() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -2095,7 +2028,7 @@ export default function HelpCenter() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.title}</h3>
                     </div>
-                    <button
+                    <$2 />
                       onClick={() => toggleCategory(key)}
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
@@ -2109,7 +2042,7 @@ export default function HelpCenter() {
                   {expandedCategories.includes(key) && (
                     <div className="space-y-2">
                       {category.articles.map((article, index) => (
-                        <Link
+                        <$2 />
                           key={index}
                           to={article.href}
                           className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
@@ -2137,7 +2070,7 @@ export default function HelpCenter() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <button
+          <$2 />
             onClick={() => setSelectedCategory('all')}
             className={`px-4 py-2 rounded-full border transition-all duration-200 ${
               selectedCategory === 'all'
@@ -2148,7 +2081,7 @@ export default function HelpCenter() {
             All Categories
           </button>
           {categories.map((category) => (
-            <button
+            <$2 />
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`px-4 py-2 rounded-full border transition-all duration-200 ${
@@ -2165,9 +2098,9 @@ export default function HelpCenter() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCategories.map((category) => {
-            const Icon = category.icon;
+            const Icon = category.icon
             return (
-              <div
+              <$2 />
                 key={category.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -2186,7 +2119,7 @@ export default function HelpCenter() {
                   </button>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -2203,7 +2136,7 @@ export default function HelpCenter() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredArticles.map((article) => (
-              <div
+              <$2 />
                 key={article.id}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300"
               >
@@ -2251,11 +2184,11 @@ export default function HelpCenter() {
         
         <div className="space-y-4">
           {faqs.map((faq) => (
-            <div
+            <$2 />
               key={faq.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden"
             >
-              <button
+              <$2 />
                 onClick={() => toggleFaq(faq.id)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
               >
@@ -2289,9 +2222,9 @@ export default function HelpCenter() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel, index) => {
-              const Icon = channel.icon;
+              const Icon = channel.icon
               return (
-                <div
+                <$2 />
                   key={index}
                   className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300 text-center"
                 >
@@ -2315,7 +2248,7 @@ export default function HelpCenter() {
                     Get Help
                   </button>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2336,7 +2269,7 @@ export default function HelpCenter() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportChannels.map((channel) => (
-              <div
+              <$2 />
                 key={channel.title}
                 className="text-center p-8 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
               >
@@ -2389,14 +2322,14 @@ export default function HelpCenter() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Support
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
@@ -2456,7 +2389,7 @@ export default function HelpCenter() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportChannels.map((channel, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
@@ -2487,7 +2420,7 @@ export default function HelpCenter() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {categories.map((category) => (
-                <button
+                <$2 />
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`p-6 rounded-xl border transition-all duration-300 text-center ${
@@ -2582,7 +2515,7 @@ export default function HelpCenter() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {popularArticles.map((article, index) => (
-                <div
+                <$2 />
                   key={index}
                   className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer"
                 >
@@ -2623,7 +2556,7 @@ export default function HelpCenter() {
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Get Help Fast</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {supportChannels.map((channel, index) => {
-            const Icon = channel.icon;
+            const Icon = channel.icon
             return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
                 <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -2635,7 +2568,7 @@ export default function HelpCenter() {
                   {channel.action}
                 </button>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -2645,12 +2578,11 @@ export default function HelpCenter() {
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Help Categories</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {helpCategories.map((category) => {
-            const Icon = category.icon;
-            const isExpanded = expandedCategory === category.id;
-            
+            const Icon = category.icon
+            const isExpanded = expandedCategory === category.id
             return (
               <div key={category.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
-                <button
+                <$2 />
                   onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
@@ -2676,7 +2608,7 @@ export default function HelpCenter() {
                   <div className="px-6 pb-6 border-t border-gray-700/50">
                     <div className="pt-4 space-y-3">
                       {category.articles.map((article, index) => (
-                        <Link
+                        <$2 />
                           key={index}
                           to={article.path}
                           className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300 group"
@@ -2692,7 +2624,7 @@ export default function HelpCenter() {
                   </div>
                 )}
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -2705,7 +2637,7 @@ export default function HelpCenter() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {popularArticles.map((article, index) => (
-              <Link
+              <$2 />
                 key={index}
                 to={article.path}
                 className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 group"
@@ -2774,11 +2706,11 @@ export default function HelpCenter() {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
               >
-                <button
+                <$2 />
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800/70 transition-colors duration-300"
                   onClick={() => toggleFaq(index)}
                 >
@@ -2811,10 +2743,10 @@ export default function HelpCenter() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {categories.map((category) => {
-                const Icon = category.icon;
-                const isActive = activeCategory === category.id;
+                const Icon = category.icon
+                const isActive = activeCategory === category.id
                 return (
-                  <button
+                  <$2 />
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
                     className={`group p-6 rounded-2xl transition-all duration-300 hover:transform hover:scale-105 ${
@@ -2823,25 +2755,25 @@ export default function HelpCenter() {
                         : 'bg-gray-900/50 border border-gray-700/50 hover:border-blue-500/50'
                     }`}
                   >
-                    <div className={`w-12 h-12 bg-gradient-to-r ${
+                    < className={`w-12 h-12 bg-gradient-to-r ${$2 />
                       isActive ? 'from-blue-500 to-cyan-500' : 'from-gray-600 to-gray-700'
                     } rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className={`w-6 h-6 ${
                         isActive ? 'text-white' : 'text-gray-400'
                       }`} />
                     </div>
-                    <h3 className={`text-sm font-semibold mb-2 ${
+                    < className={`text-sm font-semibold mb-2 ${$2 />
                       isActive ? 'text-white' : 'text-gray-300'
                     }`}>
                       {category.name}
                     </h3>
-                    <p className={`text-xs ${
+                    < className={`text-xs ${$2 />
                       isActive ? 'text-blue-300' : 'text-gray-500'
                     }`}>
                       {category.count} articles
                     </p>
                   </button>
-                );
+                )
               })}
             </div>
       {/* Categories */}
@@ -2952,11 +2884,10 @@ export default function HelpCenter() {
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
         <div className="max-w-4xl mx-auto space-y-4">
           {filteredFAQs.map((faq) => {
-            const isExpanded = expandedFAQ === faq.id;
-            
+            const isExpanded = expandedFAQ === faq.id
             return (
               <div key={faq.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
-                <button
+                <$2 />
                   onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
                 >
@@ -2985,7 +2916,7 @@ export default function HelpCenter() {
                   </div>
                 )}
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -2995,9 +2926,9 @@ export default function HelpCenter() {
         <h2 className="text-3xl font-bold text-center mb-12 text-white">Additional Resources</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {resources.map((resource, index) => {
-            const Icon = resource.icon;
+            const Icon = resource.icon
             return (
-              <Link
+              <$2 />
                 key={index}
                 to={resource.link}
                 className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group"
@@ -3011,7 +2942,7 @@ export default function HelpCenter() {
                   {resource.type}
                 </span>
               </Link>
-            );
+            )
           })}
         </div>
       </div>
@@ -3027,7 +2958,7 @@ export default function HelpCenter() {
             Get in touch with us for personalized assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -3153,7 +3084,7 @@ export default function HelpCenter() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <button
+                <$2 />
                   onClick={() => toggleCategory(item.id.toString())}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
                 >
@@ -3165,7 +3096,7 @@ export default function HelpCenter() {
                       <h3 className="text-lg font-semibold text-white">{item.question}</h3>
                       <div className="flex gap-2 mt-1">
                         {item.tags.map((tag, index) => (
-                          <span 
+                          <$2 />
                             key={index}
                             className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
                           >
@@ -3189,7 +3120,7 @@ export default function HelpCenter() {
         {/* Quick Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quickLinks.map((link) => (
-            <Link
+            <$2 />
               key={link.title}
               to={link.href}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 group"
@@ -3211,21 +3142,20 @@ export default function HelpCenter() {
         <div className="space-y-6">
           {filteredCategories.map((category) => (
             <div key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <button
+              <$2 />
                 onClick={() => toggleCategory(category.title)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
                 Contact Support
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 Explore Services
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -3246,13 +3176,12 @@ export default function HelpCenter() {
         { title: 'Cybersecurity Solutions', path: '/help/cybersecurity' },
         { title: 'Cloud & Infrastructure', path: '/help/cloud-infrastructure' },
         { title: 'Digital Transformation', path: '/help/digital-transformation' }
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function HelpCenter() {
   const faqCategories = [
     {
@@ -3327,12 +3256,10 @@ export default function HelpCenter() {
         }
       ]
     }
-  ];
-
-          </div>
+  ]</$1>
         </div>
       </div>
-            <a
+            <$2 />
               href="tel:+13024640950"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
@@ -3342,23 +3269,21 @@ export default function HelpCenter() {
         </div>
       </div>
     </div>
-  );
-};
-
-export default HelpCenter;
+  )
+}
+export default HelpCenter
 }
 }
 }
     </div>
-  );
-        </div>
+  )</$1>
 
         {/* Popular Articles */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Popular Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularArticles.map((article, index) => (
-              <Link
+              <$2 />
                 key={index}
                 to={article.path}
                 className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
@@ -3390,13 +3315,13 @@ export default HelpCenter;
             Can't find what you're looking for? Our support team is here to help you with any questions or issues.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Contact Support
             </Link>
-            <a
+            <$2 />
               href="mailto:support@ziontechgroup.com"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
@@ -3453,7 +3378,7 @@ export default HelpCenter;
         </div>
       </div>
     </>
-  );
+  )
 }
 
         </section>
@@ -3466,7 +3391,7 @@ export default HelpCenter;
               {popularArticles.map((article, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
-                  <Link
+                  <$2 />
                     to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                   >
@@ -3503,7 +3428,7 @@ export default HelpCenter;
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
                 <p className="text-gray-300 text-sm mb-4">Send us a detailed message</p>
-                <Link
+                <$2 />
                   to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
                 >
@@ -3516,7 +3441,7 @@ export default HelpCenter;
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
                 <p className="text-gray-300 text-sm mb-4">Call us directly for urgent issues</p>
-                <a
+                <$2 />
                   href="tel:+13024640950"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
                 >
@@ -3528,12 +3453,12 @@ export default HelpCenter;
         </section>
       </div>
     </>
-  );
+  )
 }
           {/* Help Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {helpCategories.map((category) => {
-              const Icon = category.icon;
+              const Icon = category.icon
               return (
                 <Card key={category.title} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                   <CardHeader className="text-center">
@@ -3551,7 +3476,7 @@ export default HelpCenter;
                     </Button>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
 
@@ -3611,11 +3536,10 @@ export default HelpCenter;
         </div>
       </main>
     </>
-  );
+  )
 }
-};
-
-export default HelpCenter;
+}
+export default HelpCenter
 // CreditCard icon component since it's not in lucide-react
 function CreditCard(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -3634,15 +3558,14 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
       <rect width="20" height="14" x="2" y="5" rx="2" />
       <line x1="2" x2="22" y1="10" y2="10" />
     </svg>
-  );
+  )
 }
   const quickLinks = [
     { title: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Get in touch with our support team' },
     { title: 'API Documentation', href: '/api-docs', icon: FileText, description: 'Developer resources and API guides' },
     { title: 'Community Forum', href: '/community', icon: Users, description: 'Connect with other users' },
     { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -3676,7 +3599,7 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
         {/* Quick Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {quickLinks.map((link) => {
-            const IconComponent = link.icon;
+            const IconComponent = link.icon
             return (
               <Link key={link.title} to={link.href}>
                 <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light">
@@ -3693,14 +3616,14 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
                   </CardContent>
                 </Card>
               </Link>
-            );
+            )
           })}
         </div>
 
         {/* FAQ Categories */}
         <div className="space-y-8">
           {faqCategories.map((category) => {
-            const IconComponent = category.icon;
+            const IconComponent = category.icon
             return (
               <Card key={category.title} className="border-zion-blue-light">
                 <CardHeader>
@@ -3724,7 +3647,7 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
                   </Accordion>
                 </CardContent>
               </Card>
-            );
+            )
           })}
         </div>
 
@@ -3739,14 +3662,14 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <$2 />
                   to="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
                   Contact Support
                 </Link>
-                <a
+                <$2 />
                   href="mailto:support@ziontechgroup.com"
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
                 >
@@ -3762,5 +3685,6 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
         </div>
       </div>
     </div>
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

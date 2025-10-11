@@ -1,11 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react'
 const AIApiManagerPage: React.FC = () => {
 
   const features = [
@@ -51,14 +49,14 @@ const AIApiManagerPage: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
               View Demo,
-  </
+  
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               </div><div key={index} className="text-center">
@@ -84,7 +82,7 @@ const AIApiManagerPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
       {/* Features Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Platform Features
@@ -121,7 +119,7 @@ const AIApiManagerPage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -152,8 +150,7 @@ const AIApiManagerPage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-        </section><div className="
-
+        </section>< className="$2 />
           </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Manage Your APIs?
@@ -176,9 +173,8 @@ const AIApiManagerPage: React.FC = () => {
       <Footer /></Footer>
     </div>
   ),
-};
-
-export default AIApiManagerPage;
+}
+export default AIApiManagerPage
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?

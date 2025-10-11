@@ -154,12 +154,12 @@ const CareersPage: React.FC = () => {
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View Open Positions
-  </
-            <Link
+  
+            <$2 />
               to="/contact"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Contact Us,
-  </
+  
           </div>
         </div>
       </section>
@@ -172,7 +172,7 @@ const CareersPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-600">
               We offer more than just a job - we offer a career and a community,
-  </
+  
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -189,7 +189,7 @@ const CareersPage: React.FC = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Culture,
-  </
+  
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
@@ -221,10 +221,10 @@ const CareersPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Open Positions
-  </
+  
             <p className="text-xl text-gray-600">
               Find your next career opportunity with us,
-  </
+  
           </div>
           <div className="space-y-8">
             {openPositions.map((position) => (
@@ -281,12 +281,12 @@ const CareersPage: React.FC = () => {
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Send Us Your Resume
-  </
-            <Link
+  
+            <$2 />
               to="/team"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Meet Our Team
-  </
+  
           </div>
         </div>
       </section>
@@ -302,3 +302,4 @@ export default CareersPage</Link>
   </p>
   </Link>
   </Link>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></li></section></section></section>

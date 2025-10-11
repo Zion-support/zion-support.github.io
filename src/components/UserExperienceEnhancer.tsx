@@ -1,10 +1,10 @@
 import React from 'react'
 'use client'
 interface UserExperienceEnhancerProps {
-    enableSmoothScrolling?: boolean;
-  enableLoadingStates?: boolean;
-  enableErrorBoundaries?: boolean;
-  enableAnalytics?: boolean;
+    enableSmoothScrolling?: boolean
+  enableLoadingStates?: boolean
+  enableErrorBoundaries?: boolean
+  enableAnalytics?: boolean
   enableNotifications?: boolean
   }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
@@ -22,10 +22,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     window.addEventListener('online', handleOnline)
     window.addEventListener('offline', handleOffline)
     return () => {
-      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('online', handleOnline)
       window.removeEventListener('offline', handleOffline)
   }
-  }, []);
+  }, [])
   // Smooth scrolling
   useEffect(() => {
     if (enableSmoothScrolling) {
@@ -46,7 +46,7 @@ const,
   // Handle online/offline status
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-  // Smooth scrolling;
+  // Smooth scrolling
   useEffect(() => {/* TODO: Fix JSX expression */}
         }
         @media (prefers-reduced-motio)
@@ -68,7 +68,7 @@ const,
       const links = document.querySelectorAll('a[href]')
       links.forEach(link => {
         link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
+          const href = link.getAttribute('href')
           if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('tel:')) {
   // Loading states management,
   const setLoading = useCallback((ke,
@@ -110,8 +110,8 @@ const,
           })
         }
       }
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
+      window.addEventListener('error', handleError)
+      window.addEventListener('unhandledrejection', handleUnhandledRejection)
       return () => {
         window.removeEventListener('error', handleError)
         window.removeEventListener('unhandledrejection', handleUnhandledRejection)
@@ -211,9 +211,9 @@ $4})
           })
         }
       }
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      window.addEventListener('beforeunload', handleBeforeUnload);
+      document.addEventListener('visibilitychange', handleVisibilityChange)
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('beforeunload', handleBeforeUnload)
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange)
         window.removeEventListener('scroll', handleScroll)
@@ -235,7 +235,7 @@ $4})
       document.body.appendChild(notification)
       const timer = setTimeout(() => {
         notification.remove()
-  }, 5000);
+  }, 5000)
       return () => {
         clearTimeout(timer)
         notification.remove()
@@ -298,10 +298,10 @@ $4})
       return () => {/* TODO: Fix JSX expression */}
       }
     }
-  }, []);
-  return null;
+  }, [])
+  return null
 }
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancer
 }
 export default UserExperienceEnhancer;`
   </UserExperienceEnhancerProps>

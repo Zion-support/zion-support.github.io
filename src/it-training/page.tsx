@@ -84,6 +84,6 @@ const ITTrainingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default ItTrainingPage;
+export default ItTrainingPage</$1></p>

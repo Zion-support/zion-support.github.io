@@ -1,25 +1,25 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components;
+'use client'
+import React from 'react'
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'
+import SecurityEnhancer from './components/SecurityEnhancer'
+// Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
+// Preload critical components
 const preloadComponents = ()
-  if (typeof window !== 'undefined') {;
-    // Preload critical components after initial render;
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');) => {
   return ()
@@ -29,31 +29,30 @@ const preloadComponents = ()
     }, 100)
   }
 }
-// Loading skeleton component;
+// Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => ()
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = memo(() => {
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 useEffect(() => {
 
-    setIsLoaded(true);
-    // Trigger visibility animation;
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components;
-    preloadComponents();
+    setIsLoaded(true)
+    // Trigger visibility animation
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    // Preload components
+    preloadComponents()
     return () => clearTimeout(timer)
   }
-  }, []);
-  // Analytics tracking for phone clicks - optimized;
+  }, [])
+  // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag()
-      });
-    };
-  }, []);
-
+      })
+    }
+  }, [])
   return (
     <>
       <SEOOptimizer>
@@ -71,13 +70,13 @@ useEffect(() => {
         </a>
 
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>;
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner>
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main></main>
         {/* Hero Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -92,7 +91,7 @@ useEffect(() => {
               Advanced AI and IT Solutions
             </p>
             <p>
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.;
+              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12"></div>
@@ -131,7 +130,7 @@ useEffect(() => {
         </section>
         {/* Services Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -147,7 +146,7 @@ useEffect(() => {
 
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12" / /></div>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
@@ -162,7 +161,7 @@ useEffect(() => {
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
@@ -177,7 +176,7 @@ useEffect(() => {
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm: p-6 energy-pulse" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
@@ -195,7 +194,7 @@ useEffect(() => {
           </div>
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12" / /></div>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
@@ -210,7 +209,7 @@ useEffect(() => {
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
@@ -225,7 +224,7 @@ useEffect(() => {
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
@@ -248,7 +247,7 @@ useEffect(() => {
               Micro SAAS Solutions
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8" / /></div>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>
@@ -263,7 +262,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>
@@ -278,7 +277,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3>
@@ -293,7 +292,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>
@@ -308,7 +307,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>
@@ -323,7 +322,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>
@@ -338,7 +337,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>
@@ -353,7 +352,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3>
@@ -368,7 +367,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
@@ -383,7 +382,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
@@ -398,7 +397,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>
@@ -413,7 +412,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>
@@ -428,7 +427,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
@@ -443,7 +442,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>
@@ -458,7 +457,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>
@@ -473,7 +472,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>
@@ -488,7 +487,7 @@ useEffect(() => {
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>
@@ -1569,7 +1568,7 @@ useEffect(() => {
                     Learn More →
         {/* Micro SAAS Solutions Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -1809,25 +1808,25 @@ useEffect(() => {
         </section>
 
         {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg" />}>;
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg" />}>
           <ContentStatistics></ContentStatistics>
         </Suspense>
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg" />}>;
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg" />}>
           <ContentCarousel></ContentCarousel>
         </Suspense>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg" />}>;
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg" />}>
           <DynamicContentShowcase></DynamicContentShowcase>
         </Suspense>
         {/* Newsletter Signup */}
 
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg" />}>;
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg" />}>
           <ContentNewsletterSignup></ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -1926,9 +1925,9 @@ useEffect(() => {
                     <label></label>
                       Message
                     </label>
-                    <textarea;
-                      id="message";
-                      name="message";
+                    <textarea
+                      id="message"
+                      name="message"
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">Developer Tools
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
@@ -2094,9 +2093,9 @@ useEffect(() => {
       {/* Footer */}
       <Footer / /></Footer>
     </>
-  );
+  )
 })
-HomePage.displayName = 'HomePage';
+HomePage.displayName = 'HomePage'
 export default HomePage
   </button>
   </label>
@@ -2128,3 +2127,4 @@ export default HomePage
   </AccessibilityEnhancer>
   </PerformanceOptimizer>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>

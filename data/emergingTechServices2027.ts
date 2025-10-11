@@ -1,37 +1,37 @@
 export type EmergingTechService2027 =
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  pricing: unknown;
-    monthly: number;
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  pricing: unknown
+    monthly: number
     yearly: number
     custom: string
     currency: string,
     pricingModel: string}
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
-  technicalSpecs: unknown;
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  technologies: string[]
+  integrations: string[]
+  support: string[]
+  link: string
+  badge: string
+  icon: string
+  image: string
+  innovationLevel: string
+  marketSize: string
+  competitors: string[]
+  technicalSpecs: unknown
     performance: string
     scalability: string
     security: string,
     compliance: string[]}
-  roi: string;
-  estimatedDelivery: string;
-  contactInfo: unknown;
+  roi: string
+  estimatedDelivery: string
+  contactInfo: unknown
     phone: string
     email: string
     website: string,

@@ -1,17 +1,15 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
 const CommunityPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-
+  const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },;
-    { icon: Star, value: '4.9', label: 'Average Rating' };
-  ];
+    { icon: Calendar, value: '12', label: 'Events Monthly' },
+    { icon: Star, value: '4.9', label: 'Average Rating' }
+  ]
   const events = [
     {
       title: 'AI Development Workshop',
@@ -35,9 +33,9 @@ const CommunityPage: React.FC = () => {
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses';
-    };
-  ];
+      description: 'Expert panel on scaling SaaS businesses'
+    }
+  ]
   const forums = [
     {
       name: 'AI Services',
@@ -61,9 +59,9 @@ const CommunityPage: React.FC = () => {
       name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000;
-    };
-  ];
+      members: 3000
+    }
+  ]
   const benefits = [
     {
       icon: Users,
@@ -113,19 +111,19 @@ const CommunityPage: React.FC = () => {
               Connect, learn, and grow together.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              </div><a
+              </div><$2 />
                 href="#join"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Join Community
               </a>
-              <a
+              <$2 />
                 href="#events"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 View Events
               </a>
-              <a
+              <$2 />
                 href="#forums"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
@@ -154,7 +152,7 @@ const CommunityPage: React.FC = () => {
                 { id: 'forums', name: 'Forums' },
                 { id: 'benefits', name: 'Benefits' }
               ].map((tab) => (
-                </div><button
+                </div><$2 />
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -261,7 +259,7 @@ const CommunityPage: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      <a
+                      <$2 />
                         href="#"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
                       >
@@ -297,7 +295,7 @@ const CommunityPage: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      <a
+                      <$2 />
                         href="#"
                         className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center"
                       >
@@ -343,13 +341,13 @@ const CommunityPage: React.FC = () => {
               Start connecting, learning, and growing today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              </div><a
+              </div><$2 />
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Join Now
               </a>
-              <a href="/contact"
+              < href="/contact"$2 />
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
                 Learn More
               </a>
@@ -390,10 +388,9 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default CommunityPage;
+  )
+}
+export default CommunityPage
         <title>Community | Zion Tech Group
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts." />
         <meta name="keywords" content="community, developers, tech community, networking, Zion Tech Group" />

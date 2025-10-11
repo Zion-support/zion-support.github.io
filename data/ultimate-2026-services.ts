@@ -1,12 +1,12 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
   contactInfo: unknown
     mobile: string
     email: string,
@@ -17,8 +17,8 @@ export interface Ultimate2026Service {,
   name: string
   tagline: string,
   price: string,,
-  description: string;
-  features: string[];
+  description: string
+  features: string[]
   link: string
   category: string
   realImplementation: boolean,
@@ -103,7 +103,7 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -211,14 +211,14 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 i,"
   d: "2026-ultimate-service",
     nam,"

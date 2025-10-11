@@ -1,11 +1,11 @@
-'use client';
-import React, { Suspense, lazy } from 'react';
+'use client'
+import React, { Suspense, lazy } from 'react'
 interface OptimizedLoadingSpinnerProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
-  text?: string;
-  className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
+  text?: string
+  className?: string
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean
   }
 }
@@ -14,25 +14,25 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
     const sizeClasses = useMemo()
       () => ()
       }),
-      [];
-    );
+      []
+    )
 const textSizeClasses = useMemo()
       () => ()
       }),
-      [];
-    );
+      []
+    )
 const colorClasses = useMemo()
       () => ()
       }),
-      [];
-    );
-const renderSpinner = useMemo(() => {;
-    switch (variant) {;
-        case 'dots':;
+      []
+    )
+const renderSpinner = useMemo(() => {
+    switch (variant) {
+        case 'dots':
           return (
             </OptimizedLoadingSpinnerProps><div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
-                <div
+                <$2 />
   }
 
                   key={i}
@@ -41,21 +41,20 @@ const renderSpinner = useMemo(() => {;
                   style={{ animationDelay: `${i * 0.1}s` }}
                 / /></div>
               ))}</div>
-          );
-case 'pulse':;
+          )
+case 'pulse':
           return (
     <React.Fragment>
-      <div;
-
+      <;$2 />
               className={`${baseClasses} rounded-full animate-pulse`}
-              role='status';
+              role='status'
               aria-label='Loading'/></div>
     </React.Fragment>
-  );
-case 'skeleton':;
+  )
+case 'skeleton':
           return ()
-          );
-case 'bars':;
+          )
+case 'bars':
           return ()
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{}
@@ -64,28 +63,27 @@ case 'bars':;
                   }}
                 / /></div>
               ))}</div>
-          );
-case 'spinner':;
+          )
+case 'spinner':
         default:  
           return (
     <React.Fragment>
-      <div,
-
+      <,$2 />
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status';
+              role='status'
               aria-label='Loading'/></div>
     </React.Fragment>
-  );
+  )
       }
-    }, [size, variant, color, sizeClasses, colorClasses]);
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+    }, [size, variant, color, sizeClasses, colorClasses])
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`
+    }, [fullScreen, className])
 return ()
           )}
         </div>
-    );
+    )
   } )
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner/>
               ))}
           )

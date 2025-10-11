@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const features = [
     {
     icon: Brain,
@@ -48,7 +48,7 @@ return (
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -70,7 +70,7 @@ return (
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -86,7 +86,7 @@ return (
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -98,9 +98,8 @@ return (
       </section>
     </div>
   ),
-};
-
-export default PagePage;
+}
+export default PagePage
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

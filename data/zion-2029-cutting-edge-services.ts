@@ -1,47 +1,47 @@
 export type ZionCuttingEdgeService2029 =
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  aiTechnology: string[];
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  aiTechnology: string[]
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
+  contactInfo: unknown
+    mobile: string
     email: string
     address: string
     website: string,
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  pricing: unknown;
-    starter: number;
-    professional: number;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  pricing: unknown
+    starter: number
+    professional: number
     enterprise: number
     currency: string
     period: string,
@@ -209,10 +209,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready quantum optimization platform with real quantum hardware access and AI-driven algorithm optimization.'
     launchDate: '2024-01-15'
-    customers: 45;
-    rating: 4.9;
-    reviews: 23;
-    pricing: unknown;
+    customers: 45
+    rating: 4.9
+    reviews: 23
+    pricing: unknown
       starter: 2999
       professional: 7999
       enterprise: 19999,
@@ -366,10 +366,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.'
     launchDate: '2024-03-01'
-    customers: 89;
-    rating: 4.8;
-    reviews: 156;
-    pricing: unknown;
+    customers: 89
+    rating: 4.8
+    reviews: 156
+    pricing: unknown
       starter: 1499
       professional: 3999
       enterprise: 9999,
@@ -523,10 +523,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.'
     launchDate: '2024-02-01'
-    customers: 234;
-    rating: 4.9;
-    reviews: 189;
-    pricing: unknown;
+    customers: 234
+    rating: 4.9
+    reviews: 189
+    pricing: unknown
       starter: 299
       professional: 799
       enterprise: 1999,
@@ -680,10 +680,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.'
     launchDate: '2024-01-01'
-    customers: 156;
-    rating: 4.8;
-    reviews: 234;
-    pricing: unknown;
+    customers: 156
+    rating: 4.8
+    reviews: 234
+    pricing: unknown
       starter: 1999
       professional: 4999
       enterprise: 12999,
@@ -837,10 +837,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.'
     launchDate: '2024-03-15'
-    customers: 67;
-    rating: 4.9;
-    reviews: 45;
-    pricing: unknown;
+    customers: 67
+    rating: 4.9
+    reviews: 45
+    pricing: unknown
       starter: 3999
       professional: 9999
       enterprise: 24999,
@@ -994,10 +994,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.'
     launchDate: '2024-02-15'
-    customers: 189;
-    rating: 4.8;
-    reviews: 267;
-    pricing: unknown;
+    customers: 189
+    rating: 4.8
+    reviews: 267
+    pricing: unknown
       starter: 2499
       professional: 5999
       enterprise: 14999,
@@ -1151,10 +1151,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.'
     launchDate: '2024-01-01'
-    customers: 234;
-    rating: 4.9;
-    reviews: 456;
-    pricing: unknown;
+    customers: 234
+    rating: 4.9
+    reviews: 456
+    pricing: unknown
       starter: 1799
       professional: 4499
       enterprise: 11999,
@@ -1308,10 +1308,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready autonomous trading platform with real exchange integrations and regulatory compliance.'
     launchDate: '2024-02-01'
-    customers: 89;
-    rating: 4.8;
-    reviews: 156;
-    pricing: unknown;
+    customers: 89
+    rating: 4.8
+    reviews: 156
+    pricing: unknown
       starter: 3999
       professional: 9999
       enterprise: 24999,
@@ -1465,10 +1465,10 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.'
     launchDate: '2024-01-15'
-    customers: 345;
-    rating: 4.9;
-    reviews: 567;
-    pricing: unknown;
+    customers: 345
+    rating: 4.9
+    reviews: 567
+    pricing: unknown
       starter: 2199
       professional: 5499
       enterprise: 13999,
@@ -1622,17 +1622,17 @@ export const,
     realImplementation: true
     implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.'
     launchDate: '2024-03-01'
-    customers: 78;
-    rating: 4.8;
-    reviews: 123;
-    pricing: unknown;
+    customers: 78
+    rating: 4.8
+    reviews: 123
+    pricing: unknown
       starter: 4999
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
       period: 'month'}
   }
-];
+]
 export const getServicesByCategory = (category: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),,
     popula,
@@ -1720,11 +1720,11 @@ export const getServicesByCategory = (categor)
   return zionCuttingEdgeServices2029.filter(service => service.category === category),
 }
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service => service.popular);
+  return zionCuttingEdgeServices2029.filter(service => service.popular)
 }
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})
 }
 export const getServicesByTechnology = (technology: string) =>,
   return zionCuttingEdgeServices2029.filter(service =>),
@@ -1735,7 +1735,7 @@ export const getServicesByPriceRange = (minPric)
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
+  })
 }
 export const getServicesByTechnology = (technolog)
   y: string) =>

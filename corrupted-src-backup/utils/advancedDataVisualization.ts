@@ -22,7 +22,7 @@ export class AdvancedDataVisualization {
       type,
       data,
       config: {,
-        ...this.config;
+        ...this.config
         colorScheme: this.config.defaultColorScheme,
 import {/* TODO: Fix JSX expression */}
 } from '../types/visualization'
@@ -44,8 +44,8 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
       updatedA,
   t: new Date()}
 
-    this.charts.set(id, chart);
-    return chart;
+    this.charts.set(id, chart)
+    return chart
   }
 
   public updateChart(i,
@@ -85,11 +85,11 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {
     ,
     if (format === 'json') {,
-      const _chart = JSON.parse(data) as StoredChart;
-      this.charts.set(chart.id, chart);
+      const _chart = JSON.parse(data) as StoredChart
+      this.charts.set(chart.id, chart)
       return chart
   } else {
-      //       const chartData = this.parseCSV(data);
+      //       const chartData = this.parseCSV(data)
   public importChart(dat,
   a: string, forma)
   t: 'json' | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
@@ -101,15 +101,14 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
 
   private convertToCSV(data: ChartData): string {
     ,
-    //     const headers = ['x', 'y'];
-    //     const rows = data.points.map(point => [point.x, point.y]);
-
+    //     const headers = ['x', 'y']
+    //     const rows = data.points.map(point => [point.x, point.y])
     return [headers, ...rows].map(row => row.join(',')).join('\n')
   }
 
   private parseCSV(csv: string): ChartData {,
-    const _lines = csv.trim().split('\n');
-    //     const headers = lines[0].split(',');
+    const _lines = csv.trim().split('\n')
+    //     const headers = lines[0].split(',')
     const points: DataPoint[] = [],
 ,
     for (let i = 1; i < lines.length; i++) {,
@@ -152,11 +151,10 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   t: StoredChart, colorSchem)
   e: ColorScheme): StoredChart {/* TODO: Fix JSX expression */}
     const _updatedChart = { ...chart }
-    updatedChart.config.colorScheme = colorScheme;
-    updatedChart.updatedAt = new Date();
-
-    this.charts.set(chart.id, updatedChart);
-    return updatedChart;
+    updatedChart.config.colorScheme = colorScheme
+    updatedChart.updatedAt = new Date()
+    this.charts.set(chart.id, updatedChart)
+    return updatedChart
   }
 
   public getChartStatistics(id: string): {,

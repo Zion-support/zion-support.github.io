@@ -23,7 +23,7 @@ const,
   e: {/* TODO: Fix JSX expression */}
     }
   }
-  const currentColor = colorClasses[color];
+  const currentColor = colorClasses[color]
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
@@ -95,7 +95,8 @@ const,
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
       ></div>
     </div>
-  );
+  )
 }
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>
+</div></button></p></ul>

@@ -4,7 +4,7 @@ import fs from 'fs'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
@@ -157,13 +157,13 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 const report = {
   timestamp: new Date().toISOString()
   summary: {
-    totalPRs: prs.length;
+    totalPRs: prs.length
     merged: mergedCount
     conflicts: conflictCount
     notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / prs.length) * 100)}%`},
   systemChecks: {
-    typeCheck: typeCheck.success;
+    typeCheck: typeCheck.success
     lintCheck: lintCheck.success
     testCheck: testCheck.success
     buildCheck: buildCheck.success,
@@ -175,7 +175,7 @@ const report = {
   results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes'}
 
-//Save detailed report;
+//Save detailed report
 fs.writeFileSync('enhanced-pr-merge-report.json')
 const report = {/* TODO: Fix JSX expression */}`
   e: `${Math.round((mergedCount / prs.length) * 100)}%`},
@@ -187,7 +187,7 @@ const report = {/* TODO: Fix JSX expression */}`
   statu,
   s: mergedCount > 0 ? 'success' : 'no-changes'}
 
-//Save detailed report;
+//Save detailed report
 fs.writeFileSync('enhanced-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 )

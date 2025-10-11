@@ -4,7 +4,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -52,7 +52,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} steps },
       null,
-      2);
+      2)
   }
 }
 const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}

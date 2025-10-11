@@ -93,7 +93,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       <main, className="m, i, n-h-screen, b, g-whi, t, e">"
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
@@ -106,16 +106,16 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   support, 12, 0+ languag, e, s, and, seamlessly, integrate with, your, existing syste, m, s.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
-        <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">";
+        <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-cent, e, r">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-cent, e, r">"</div>
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 AI, Virtua, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t</sp, a, n>"</h1>
-              <p, className="te, x, t-x, l, m;
-  d: te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
-                Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y;
+              <, className="te, x, t-x, l, m;$2 />
+  d: te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+                Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y
                 support, 12, 0+ languag, e, s, and, seamlessly, integrate with, your, existing syste, m, s.
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
                 <$2 />
@@ -168,18 +168,18 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <Link, className="w-5 h-5, m, l-2" />"
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-16, b, g-gr, a, y-50">";
+        <section, className="py-16, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="text-center mb-12">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-16, b, g-gr, a, y-50">";
+        <section, className="py-16, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="text-center mb-12">"</div>
         {/* Key, Benefit, s */}"
@@ -264,18 +264,18 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Ba, n, k-grade, encryption, and complian, c, e</p>"
         {/* Featur, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Featur, e, s */}"
@@ -355,7 +355,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               })}
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
@@ -413,7 +413,8 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
+  )
 }
-export default AIVirtualAssistant;
+export default AIVirtualAssistant
 }}"
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></p></p></p></h2></h2></h2></h2></h2></h3></li></li></li></main></section></section></section></section></section></section></section></section></section>

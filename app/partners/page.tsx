@@ -1,24 +1,21 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 const PartnersPage: React.FC = () => {
-  const partners = [;
-import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
-
+  const partners = [
+import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react'
 interface Partner {
-  id: string;
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website: string;
-  tier: 'preferred' | 'certified' | 'strategic';
-}];
+  id: string
+  name: string
+  logo: string
+  description: string
+  category: string
+  website: string
+  tier: 'preferred' | 'certified' | 'strategic'
+}]
 const PartnersPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedTier, setSelectedTier] = useState('all')
   const partners: Partner[] = [
 
     {
@@ -38,11 +35,10 @@ const PartnersPage: React.FC = () => {
     'Global reach and scalability',
     'Certified expertise and solutions'
 
-  ];
-
+  ]
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Our Technology Partners
@@ -54,7 +50,7 @@ const PartnersPage: React.FC = () => {
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
-                </div><button
+                </div><$2 />
                   key={category}
                   className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
                 >
@@ -84,28 +80,25 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
-  const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
-
-  const filteredPartners = partners.filter();
-  });
-
-  const getTierColor = (tier: string) => {;
-    switch (tier) {;
-      case 'strategic':;
-        return 'from-purple-500 to-pink-600';
+  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))]
+  const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))]
+  const filteredPartners = partners.filter()
+  })
+  const getTierColor = (tier: string) => {
+    switch (tier) {
+      case 'strategic':
+        return 'from-purple-500 to-pink-600'
       case 'preferred':
-        return 'from-blue-500 to-purple-600';
+        return 'from-blue-500 to-purple-600'
       case 'certified':
-        return 'from-green-500 to-blue-600';
+        return 'from-green-500 to-blue-600'
       default:
-        return 'from-gray-500 to-gray-600';
+        return 'from-gray-500 to-gray-600'
     }
-  };
-
-  const getTierIcon = (tier: string) => {;
-    switch (tier) {;
-      case 'strategic':;
+  }
+  const getTierIcon = (tier: string) => {
+    switch (tier) {
+      case 'strategic':
         return <Star className="w-4 h-4" />
       case 'preferred':
         return <Award className="w-4 h-4" />
@@ -114,8 +107,7 @@ const PartnersPage: React.FC = () => {
       default:
         return <Handshake className="w-4 h-4" />
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div><Helmet>
@@ -126,7 +118,7 @@ const PartnersPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Our </h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partners</span>
           </h1>
@@ -139,7 +131,7 @@ const PartnersPage: React.FC = () => {
 
       {/* Partnership Benefits */}
       <section className="py-16 px-4 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl font-bold text-white mb-6">Why Partner With Us?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -183,7 +175,7 @@ const PartnersPage: React.FC = () => {
 
       {/* Partners Grid */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="flex flex-col md:flex-row gap-4 mb-12">
             </div><select
               value={selectedCategory}
@@ -227,7 +219,7 @@ const PartnersPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">{partner.description}</p>
 
                 <div className="flex items-center justify-between">
-                  </div><a
+                  </div><$2 />
                     href={partner.website}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -250,7 +242,7 @@ const PartnersPage: React.FC = () => {
 
       {/* Partnership Tiers */}
       <section className="py-16 px-4 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -345,7 +337,7 @@ const PartnersPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Become Our Partner
@@ -367,10 +359,9 @@ const PartnersPage: React.FC = () => {
       </section>
     </div>
 
-  );
-};
-
-export default PartnersPage;
+  )
+}
+export default PartnersPage
       logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platform with global reach',
       category: 'Cloud & AI',

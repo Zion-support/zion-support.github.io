@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Targeted Latest Merge - Focuses on specific new branches;
- * This script targets only the specific new branches we identified;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Targeted Latest Merge - Focuses on specific new branches
+ * This script targets only the specific new branches we identified
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 //Step 1: Ensure we're on main,
 try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -36,8 +35,7 @@ const targetBranches = [
   'cursor/fix-errors-and-merge-to-main-afb8',
   'cursor/fix-errors-and-merge-to-main-b319',
   'cursor/fix-errors-and-merge-to-main-cf0 f',
-  'cursor/fix-errors-and-merge-to-main-e15 f'];
-
+  'cursor/fix-errors-and-merge-to-main-e15 f']
 //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {
 ,
@@ -46,8 +44,7 @@ function resolveConflictsAndMerge(branchName) {
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' })
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, {)
-      stdio: 'inherit')});
-
+      stdio: 'inherit')})
     return { success: true, method: 'direct' }
   } catch (error) {
 
@@ -75,8 +72,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
-          );
-
+          )
           return { success: true, method: 'theirs' }
         } catch () {}//Strategy 2: Auto-resolve with ours,
         try {,
@@ -92,8 +88,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
-          );
-
+          )
           return { success: true, method: 'ours' }
         } catch () {}//Strategy 3: Manual conflict resolution,
         try {,
@@ -165,7 +160,7 @@ const results = {
 const results = {/* TODO: Fix JSX expression */}
   d: 0 }}}
 
-//Process each target branch;
+//Process each target branch
 for (const branch of targetBranches) {
   results.summary.total++
   if (result.success) {
@@ -183,7 +178,7 @@ for (const branch of targetBranches) {/* TODO: Fix JSX expression */}
 //Step 5: Generate comprehensive report
 results.timestamp = new Date().toISOString()
 results.branchCounts = {
-  total: targetBranches.length;
+  total: targetBranches.length
   processed: results.summary.total
   successful: results.summary.successful
   failed: results.summary.failed,
@@ -193,8 +188,7 @@ results.timestamp = new Date().toISOString(),
 results.branchCounts = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, null, 2));
-
+fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, null, 2))
 //Step 6: Display summary,
 if (results.failed.length > 0) {,
 ,

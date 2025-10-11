@@ -4,7 +4,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -21,7 +21,7 @@ exports.config = {schedule: '0 * * * *'} // hourly
   }
 }
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '0 * * * *'} // hourly;
+  e: '0 * * * *'} // hourly
 }
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}

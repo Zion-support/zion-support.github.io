@@ -7,9 +7,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all TypeScript files in the app directory
 function getAllTsxFiles(dir) {
-    const files = [];
-  const items = fs.readdirSync(dir);
-  
+    const files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
@@ -25,18 +24,17 @@ function getAllTsxFiles(dir) {
 
 function fixTsxFile(filePath) {
     try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
     // Fix 1: Remove all </undefined>tags</undefined>
     if (content.includes('</undefined>')) {
-      content = content.replace(/<\/undefined>/g, '');
+      content = content.replace(/<\/undefined>/g, '')
       modified = true
   }
 
     // Fix 2: Fix malformed quotes in className
     if (content.includes('&quot;')) {
-    content = content.replace(/&quot,/g, '"');
+    content = content.replace(/&quot,/g, '"')
       modified = true
   }
 
@@ -66,14 +64,14 @@ function fixTsxFile(filePath) {
     })
     // Fix 6: Fix malformed closing tags
     const malformedClosingPattern = /<\/undefined><\/undefined>/g,
-    content = content.replace(malformedClosingPattern, '');
+    content = content.replace(malformedClosingPattern, '')
     if (content.includes('</undefined></undefined>')) {
     modified = true
   }
 
     // Fix 7: Fix malformed self-closing tags
     const malformedSelfClosingPattern = /\/><\/undefined>/g,
-    content = content.replace(malformedSelfClosingPattern, '/>');
+    content = content.replace(malformedSelfClosingPattern, '/>')
     if (content.includes('/></undefined>')) {
     modified = true
   }
@@ -88,9 +86,9 @@ function fixTsxFile(filePath) {
       return match
     })
     // Fix 9: Fix malformed return statements
-    const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g,
-    content = content.replace(malformedReturnPattern, 'return (\n    <div');
-    if (content.includes('</LoadingSpinner></div><div')) {
+    const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner></g,$2 />
+    content = content.replace(malformedReturnPattern, 'return (\n    <');$2 />
+    if (content.includes('</LoadingSpinner></div><')) {$2 />
     modified = true
   }
 

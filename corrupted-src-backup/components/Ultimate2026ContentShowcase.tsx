@@ -1,7 +1,7 @@
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   const, showcaseConten, t = [
     {
-      i;
+      i
   d: 1,
       tit, l, e: "Enterprise, AI, Transformation Playbook, 202, 6","
       descripti, o, n: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategie, s","
@@ -150,15 +150,15 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
   return (
-    <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+    <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">"</div>
-        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+        <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"
     }
@@ -572,6 +572,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
 export default Ultimate2026ContentShowcase;"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3>

@@ -132,7 +132,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
 "
         <meta name="description"
   content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords,
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical
+  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><nk rel: "canonical$2 />
   href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025,
         />
       </Helmet>",
@@ -262,7 +262,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   conten,"
   t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta,"
   name: "keywords,"
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link,"
+  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><nk,"$2 />
   rel: "canonical,"
   href=",
   http,
@@ -345,7 +345,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <span>October 1, 2025
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2 "></TrendingUp>"
-              <h1 className="text-4xl,"
+              < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 leading-tight"></h1>
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx,
   </div>
@@ -1156,3 +1156,4 @@ export default ZeroTrustAISecurityFramework2025</div>
   </div>
   </ul>
   </ul>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></article>

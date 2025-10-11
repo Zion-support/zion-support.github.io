@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const AiVoiceSolutionsPage: React.FC = () => {
   return (
     <>
@@ -110,7 +109,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default AiVoiceSolutionsPage;
+  )
+}
+export default AiVoiceSolutionsPage

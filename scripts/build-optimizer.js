@@ -11,27 +11,26 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 class BuildOptimizer {
     constructor() {
-    this.distPath = path.join(process.cwd(), 'dist');
+    this.distPath = path.join(process.cwd(), 'dist')
     this.optimizations = []
   }
 
   async optimize() {
     console.log('🚀 Starting build optimization...')
     try {
-      await this.analyzeBundle();
-      await this.optimizeImages();
-      await this.optimizeCSS();
-      await this.optimizeJS();
-      await this.addSecurityHeaders();
-      await this.generateSitemap();
-      await this.generateRobotsTxt();
-      await this.optimizeManifest();
-      await this.generateServiceWorker();
-      
-      console.log('✅ Build optimization completed successfully!');
+      await this.analyzeBundle()
+      await this.optimizeImages()
+      await this.optimizeCSS()
+      await this.optimizeJS()
+      await this.addSecurityHeaders()
+      await this.generateSitemap()
+      await this.generateRobotsTxt()
+      await this.optimizeManifest()
+      await this.generateServiceWorker()
+      console.log('✅ Build optimization completed successfully!')
       this.printSummary()
   } catch (error) {
-    console.error('❌ Build optimization failed:', error.message);
+    console.error('❌ Build optimization failed:', error.message)
       process.exit(1)
   }
   }
@@ -44,29 +43,26 @@ class BuildOptimizer {
 
     const files = this.getFilesRecursively(this.distPath)
     const totalSize = files.reduce((total, file) => {
-    const stats = fs.statSync(file);
+    const stats = fs.statSync(file)
       return total + stats.size
-  }, 0);
-
+  }, 0)
     this.optimizations.push({)
       name: 'Bundle Analysis'),
       status: 'completed'),
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
-    });
-
-    // Check for large files;
+    })
+    // Check for large files
     const largeFiles = files.filter(file => {
     )
-      const stats = fs.statSync(file);
+      const stats = fs.statSync(file)
       return stats.size > 100 * 1024; // 100KB
-  });
-
+  })
     if (largeFiles.length > 0) {
       console.log('⚠️  Large files detected: ')
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file),
-        console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
-      });
+        console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`)
+      })
     }
   }
 
@@ -84,20 +80,18 @@ class BuildOptimizer {
       return
     }
 
-    // Add image optimization metadata;
+    // Add image optimization metadata
     images.forEach(image => {
     )
-      const stats = fs.statSync(image);
-      const sizeKB = (stats.size / 1024).toFixed(2);
-      
-      // Add loading="lazy" to HTML if it contains images;
+      const stats = fs.statSync(image)
+      const sizeKB = (stats.size / 1024).toFixed(2)
+      // Add loading="lazy" to HTML if it contains images
       if (image.endsWith('.html')) {
-        let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
+        let content = fs.readFileSync(image, 'utf8')
+        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"')
         fs.writeFileSync(image, content)
   }
-    });
-
+    })
     this.optimizations.push({)
       name: 'Image Optimization'),
       status: 'completed'),
@@ -111,21 +105,17 @@ class BuildOptimizer {
       file.endsWith('.css')
     )
     cssFiles.forEach(cssFile => {)
-      let content = fs.readFileSync(cssFile, 'utf8');
-      
-      // Remove comments;
-      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-      
-      // Remove unnecessary whitespace;
-      content = content.replace(/\s+/g, ' ');
-      content = content.replace(/;\s*}/g, '}');
+      let content = fs.readFileSync(cssFile, 'utf8')
+      // Remove comments
+      content = content.replace(/\/\*[\s\S]*?\*\//g, '')
+      // Remove unnecessary whitespace
+      content = content.replace(/\s+/g, ' ')
+      content = content.replace(/;\s*}/g, '}')
       content = content.replace(/{
-    \s*/g, '{');
-      content = content.replace(/;\s*/g, ';');
-      
+    \s*/g, '{')
+      content = content.replace(/;\s*/g, ';')
       fs.writeFileSync(cssFile, content)
-  });
-
+  })
     this.optimizations.push({)
       name: 'CSS Optimization'),
       status: 'completed'),
@@ -226,7 +216,7 @@ class BuildOptimizer {
     const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml;
+Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 # Disallow admin and private areas,
@@ -246,16 +236,14 @@ Disallow: /private/`,
     console.log('📱 Optimizing manifest...')
     const manifestPath = path.join(this.distPath, 'manifest.json')
     if (fs.existsSync(manifestPath)) {
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-      
-      // Ensure required fields are present;
-      manifest.name = manifest.name || 'Zion Tech Group';
-      manifest.short_name = manifest.short_name || 'Zion Tech';
-      manifest.start_url = manifest.start_url || '/';
-      manifest.display = manifest.display || 'standalone';
-      manifest.theme_color = manifest.theme_color || '#4 f46 e5';
-      manifest.background_color = manifest.background_color || '#0 f172 a';
-      
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
+      // Ensure required fields are present
+      manifest.name = manifest.name || 'Zion Tech Group'
+      manifest.short_name = manifest.short_name || 'Zion Tech'
+      manifest.start_url = manifest.start_url || '/'
+      manifest.display = manifest.display || 'standalone'
+      manifest.theme_color = manifest.theme_color || '#4 f46 e5'
+      manifest.background_color = manifest.background_color || '#0 f172 a'
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))
   }
 
@@ -286,21 +274,18 @@ Disallow: /private/`,
       return files
   }
     
-    const items = fs.readdirSync(dir);
-    
+    const items = fs.readdirSync(dir)
     items.forEach(item => {
     )
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         files.push(...this.getFilesRecursively(fullPath))
   } else {
     files.push(fullPath)
   }
-    });
-    
-    return files;
+    })
+    return files
   }
 
   printSummary() {
@@ -318,7 +303,7 @@ Disallow: /private/`,
 
 // Run optimization if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-    const optimizer = new BuildOptimizer();
+    const optimizer = new BuildOptimizer()
   optimizer.optimize().catch(console.error)
   }
 

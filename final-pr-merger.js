@@ -4,7 +4,7 @@ import fs from 'fs'
 // // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
@@ -165,14 +165,14 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 const finalReport = {
   timestamp: new Date().toISOString()
   summary: {
-    totalPRs: allPRs.length;
-    merged: mergedCount;
+    totalPRs: allPRs.length
+    merged: mergedCount
     conflicts: conflictCount
     notFound: notFoundCount
     skipped: skippedCount,
     successRate: `${Math.round((mergedCount / allPRs.length) * 100)}%`},
   systemChecks: {
-    typeCheck: typeCheck.success;
+    typeCheck: typeCheck.success
     lintCheck: lintCheck.success
     testCheck: testCheck.success
     buildCheck: buildCheck.success,
@@ -200,7 +200,7 @@ const finalReport = {/* TODO: Fix JSX expression */}`
   y: {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim()}}
 
-//Save detailed final report;
+//Save detailed final report
 fs.writeFileSync('final-pr-merge-report.json')
 fs.writeFileSync('final-pr-merge-report.json')
   JSON.stringify(finalReport, null, 2)

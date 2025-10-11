@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Focused PR Merger - Merges specific recent branches that are likely open PRs;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Focused PR Merger - Merges specific recent branches that are likely open PRs
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -46,8 +45,7 @@ const branchesToMerge = [
   'cursor/build-ai-powered-project-teams-dcf8',
   'cursor/build-ai-powered-smart-contract-generator-b22 e',
   'cursor/build-ai-pricing-suggestion-engine-ea4 e',
-  'cursor/build-ai-resume-and-portfolio-builder-workflow-2029'];
-
+  'cursor/build-ai-resume-and-portfolio-builder-workflow-2029']
 // //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
@@ -73,7 +71,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     //Try direct merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' }
-    );
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
@@ -201,9 +199,9 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
       manual: 0
       already_merged: 0
       failed: 0,
@@ -212,7 +210,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 // const results = {/* TODO: Fix JSX expression */}
     }}}
 
-//Process each branch;
+//Process each branch
 for (const branch of branchesToMerge) {
   results.summary.total++
   if (result.success) {

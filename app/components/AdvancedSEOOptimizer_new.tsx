@@ -2,22 +2,22 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
-    title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: object;
+    title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
   children: React.ReactNode
   }
 const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
 }) => {
-    const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
+    const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([])
   const analyzeSEO = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    let score = 0;
+    if (typeof window === 'undefined') return
+    let score = 0
     const newRecommendations: string[] = [],
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
@@ -114,12 +114,12 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   } else {
     newRecommendations.push('Add internal links for better SEO')
   }
-    setSeoScore(score);
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
+    setSeoScore(score)
+    setRecommendations(newRecommendations)
+  }, [title, description, keywords])
   useEffect(() => {
     analyzeSEO()
-  }, [analyzeSEO]);
+  }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -131,9 +131,9 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
       "sameAs": [
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
-      ];
-    };
-    return structuredData || defaultStructuredData;
+      ]
+    }
+    return structuredData || defaultStructuredData
   }
   return (
     <React.Fragment>
@@ -192,8 +192,8 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           )}
       )}
     </>
-  );
-};
-
+  )
+}
 export default AdvancedSEOOptimizerNew
   </SEOOptimizerProps>
+</div></div></ul></li></li>

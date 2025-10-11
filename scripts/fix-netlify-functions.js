@@ -99,8 +99,7 @@ async function main() {/* TODO: Fix JSX expression */}
       }
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
-
+  })
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }

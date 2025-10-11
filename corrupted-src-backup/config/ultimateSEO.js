@@ -44,8 +44,8 @@ module.exports = {
         '@type': 'SearchAction',
         target: 'https://zion.app/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}},
-    breadcrumbs: true;
-    services: true;
+    breadcrumbs: true
+    services: true
     faq: true
     reviews: true
     events: true,
@@ -53,8 +53,8 @@ module.exports = {
   sitemapOptimization: {
     dynamic: true
     priority: {
-      home: 1;
-      services: 0.9;
+      home: 1
+      services: 0.9
       about: 0.8
       contact: 0.7
       blog: 0.6,

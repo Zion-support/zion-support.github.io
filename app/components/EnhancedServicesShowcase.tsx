@@ -1,5 +1,5 @@
-import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
 const EnhancedServicesShowcase: React.FC = () => {
     const services = [
     {
@@ -38,7 +38,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   ]
 return (
     <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -90,10 +90,9 @@ return (
           </a>
         </div>
     </section>
-  );
-};
-
-export default EnhancedServicesShowcase;
+  )
+}
+export default EnhancedServicesShowcase
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">

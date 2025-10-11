@@ -42,9 +42,9 @@ const AdvancedPerformanceMonitor: React.FC,
     cls: null,
     ttfb: null,
     memory: null,
-  });
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+  })
+    if (typeof window === 'undefined' || !('performance' in window)) return
+    if (typeof PerformanceObserver === 'undefined') return
     const,
   observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
@@ -100,7 +100,7 @@ const AdvancedPerformanceMonitor: React.FC,
 //                 ...prev,
                 fi,
   d: _fidEntry.processingStart - _fidEntry.startTime,)
-              }));
+              }))
             }
           })
         })
@@ -191,9 +191,9 @@ const memory =
   O: Add content,}
 }
           }
-      });
+      })
     }
-  }, []);
+  }, [])
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -213,7 +213,7 @@ const memory =
   n: r.duration,
       //   siz,
   e: r.transferSize,)
-      // })));
+      // })))
     }
   }, [])
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -292,8 +292,8 @@ const memory =
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
+      if (_cleanup) _cleanup()
+      clearInterval(interval)
     }
   }, [
   // TOD,
@@ -394,8 +394,9 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
         )}
     )
   }
-  return null;
+  return null
 }
 export default AdvancedPerformanceMonitor;`
   </PerformanceMetrics>
   </PerformanceMonitorProps>
+</div></div></div></div></div></div></div></div></h3></h4></ul>

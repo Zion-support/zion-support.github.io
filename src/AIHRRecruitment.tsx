@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Search, 
   Target, 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Target, 
@@ -35,14 +35,13 @@ import {
   Database,
   Code,
   GraduationCap
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck } from 'lucide-react';
-
+} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck } from 'lucide-react'
 export default function AIHRRecruitment() {
   const features = [
     {
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Brain, 
@@ -67,8 +66,7 @@ import {
   Heart,
   DollarSign,
   Graph
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AIHRRecruitment: React.FC = () => {
   const features = [
     {
@@ -129,8 +127,7 @@ const AIHRRecruitment: React.FC = () => {
       description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
       benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
     }
-  ];
-
+  ]
   const services = [
     {
       title: "Talent Acquisition",
@@ -167,8 +164,7 @@ const AIHRRecruitment: React.FC = () => {
   Award,
   Shield,
   TrendingUp
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AIHRRecruitment() {
   const services = [
     {
@@ -227,8 +223,7 @@ export default function AIHRRecruitment() {
       ],
       price: 'Starting at $2,999/month'
     }
-  ];
-
+  ]
   const recruitmentFeatures = [
     {
       title: 'Smart Sourcing',
@@ -290,7 +285,7 @@ export default function AIHRRecruitment() {
   DollarSign,
   TrendingUp,
   UserCheck
-import { SEO } from '../../components/SEO';
+import { SEO } from '../../components/SEO'
 import { 
   Users, 
   Search, 
@@ -307,14 +302,12 @@ import {
   CheckCircle,
   BarChart3,
   Award
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AIHRRecruitment() {
   const features = [
     {
     }
-  ];
-
+  ]
   const benefits = [
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40%",
@@ -322,8 +315,7 @@ export default function AIHRRecruitment() {
     "Enhance diversity and inclusion",
     "Streamlined interview scheduling",
     "Better candidate experience"
-  ];
-
+  ]
   const solutions = [
     {
       title: "Talent Acquisition",
@@ -375,8 +367,7 @@ export default function AIHRRecruitment() {
       icon: Shield,
       benefits: ["Bias detection", "Compliance reporting", "Diversity analytics", "Audit trails"]
     }
-  ];
-
+  ]
   const recruitmentStages = [
     {
       stage: "Sourcing & Attraction",
@@ -398,8 +389,7 @@ export default function AIHRRecruitment() {
       description: "Automated onboarding and employee retention monitoring",
       tools: ["Onboarding automation", "Performance tracking", "Engagement monitoring", "Retention analytics"]
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: "Starter",
@@ -452,8 +442,7 @@ export default function AIHRRecruitment() {
       cta: "Contact Sales",
       popular: false
     }
-  ];
-
+  ]
   const successMetrics = [
     {
       metric: "60%",
@@ -475,8 +464,7 @@ export default function AIHRRecruitment() {
       description: "Improved retention rates",
       detail: "Better cultural fit and performance prediction"
     }
-  ];
-
+  ]
   const industries = [
     "Reduce time-to-hire by 60%",
     "Improve candidate quality by 40%",
@@ -484,8 +472,7 @@ export default function AIHRRecruitment() {
     "Increase retention rates by 35%",
     "Automate 80% of repetitive tasks",
     "Enhance diversity and inclusion"
-  ];
-
+  ]
   const pricingPlans = [
     {
       title: "Reduce Time-to-Hire",
@@ -507,8 +494,7 @@ export default function AIHRRecruitment() {
       value: "40%",
       description: "Better candidate selection and cultural alignment"
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: "Starter",
@@ -543,7 +529,7 @@ export default function AIHRRecruitment() {
       name: "Enterprise",
       price: "$1,599",
       period: "/month",
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Target, 
@@ -566,7 +552,7 @@ import {
   LineChart,
   Building,
   GraduationCap
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Search, 
@@ -582,8 +568,7 @@ import {
   FileText,
   Clock,
   Award
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AIHRRecruitment = () => {
   const features = [
     {
@@ -628,8 +613,7 @@ const AIHRRecruitment = () => {
       title: "Predictive Performance Analytics",
       description: "Data-driven insights to predict candidate success and optimize hiring decisions."
     }
-  ];
-
+  ]
   const useCases = [
     {
       description: "Complete HR solution for large organizations",
@@ -666,8 +650,7 @@ const AIHRRecruitment = () => {
       icon: Award,
       benefits: ["Safety training verification", "Skills assessment", "Performance tracking"]
     }
-  ];
-
+  ]
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -725,8 +708,7 @@ const AIHRRecruitment = () => {
       description: "AI-driven matching of technical skills with manufacturing requirements",
       metrics: ["55% better skill matching", "40% training reduction", "25% productivity increase"]
     }
-  ];
-
+  ]
   const technologies = [
     {
       name: "Machine Learning",
@@ -758,8 +740,7 @@ const AIHRRecruitment = () => {
       description: "Built-in compliance and bias detection features",
       icon: Shield
     }
-  ];
-
+  ]
   const pricingTiers = [
     {
       name: "Starter",
@@ -807,8 +788,7 @@ const AIHRRecruitment = () => {
       description: "Safety training verification, skill assessment, and operational readiness",
       metrics: ["Safety Score", "Skill Proficiency", "Training Completion"]
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: "Starter",
@@ -870,8 +850,7 @@ const AIHRRecruitment = () => {
         "API access"
       ]
     }
-  ];
-
+  ]
   return (
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -890,14 +869,14 @@ const AIHRRecruitment = () => {
               faster and more efficiently than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
               >
@@ -1011,8 +990,7 @@ const AIHRRecruitment = () => {
       description: "Predict turnover risk and identify factors that contribute to employee satisfaction.",
       icon: TrendingUp
     }
-  ];
-
+  ]
   const benefits = [
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40-60%",
@@ -1020,8 +998,7 @@ const AIHRRecruitment = () => {
     "Reduce recruitment costs by 30-50%",
     "Improve candidate experience",
     "Better employee retention rates"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -1130,7 +1107,7 @@ const AIHRRecruitment = () => {
               >
                 Schedule a Demo
               </Link>
-              <Link
+              <$2 />
                 to="/case-studies"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
@@ -1162,7 +1139,7 @@ const AIHRRecruitment = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
+            const Icon = feature.icon
             return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -1398,7 +1375,7 @@ const AIHRRecruitment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -1462,7 +1439,7 @@ const AIHRRecruitment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+              < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-blue-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
@@ -1483,7 +1460,7 @@ const AIHRRecruitment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+              < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular 
                   ? 'border-green-500/50 shadow-2xl shadow-green-500/25' 
                   : 'border-gray-700/50 hover:border-green-500/50'
@@ -1525,7 +1502,7 @@ const AIHRRecruitment = () => {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -1579,7 +1556,7 @@ const AIHRRecruitment = () => {
             Join forward-thinking organizations that have already revolutionized their HR processes with AI. 
             Start building better teams today with intelligent recruitment and management.
             {services.map((service, index) => {
-              const Icon = service.icon;
+              const Icon = service.icon
               return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
@@ -1603,14 +1580,14 @@ const AIHRRecruitment = () => {
                     ))}
                   </ul>
                   
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                   >
                     Learn More
                   </Link>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1628,7 +1605,7 @@ const AIHRRecruitment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {recruitmentFeatures.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -1650,7 +1627,7 @@ const AIHRRecruitment = () => {
                     ))}
                   </ul>
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -1659,12 +1636,12 @@ const AIHRRecruitment = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -1716,7 +1693,7 @@ const AIHRRecruitment = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
-            const Icon = tech.icon;
+            const Icon = tech.icon
             return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1725,7 +1702,7 @@ const AIHRRecruitment = () => {
                 <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -1743,7 +1720,7 @@ const AIHRRecruitment = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
-            <div key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${
+            < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
               tier.popular 
                 ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                 : 'border-gray-700/50'
@@ -1774,7 +1751,7 @@ const AIHRRecruitment = () => {
                 ))}
               </ul>
               
-              <Link
+              <$2 />
                 to="/contact"
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
                   tier.popular
@@ -1828,14 +1805,14 @@ const AIHRRecruitment = () => {
             the best candidates while eliminating bias and reducing time-to-hire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
+            <$2 />
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
             >
@@ -1869,15 +1846,14 @@ const AIHRRecruitment = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIHRRecruitment;
+  )
+}
+export default AIHRRecruitment
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
             </Link>
-            <Link
+            <$2 />
               to="/pricing"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
@@ -1886,7 +1862,7 @@ export default AIHRRecruitment;
             >
               Start Your Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/case-studies"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
@@ -1896,14 +1872,14 @@ export default AIHRRecruitment;
             >
               Get Started
             </Link>
-            <Link
+            <$2 />
               to="/demo"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
@@ -1927,7 +1903,7 @@ export default AIHRRecruitment;
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon;
+              const Icon = useCase.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
@@ -1940,7 +1916,7 @@ export default AIHRRecruitment;
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1975,7 +1951,7 @@ export default AIHRRecruitment;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
@@ -1984,7 +1960,7 @@ export default AIHRRecruitment;
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2037,7 +2013,7 @@ export default AIHRRecruitment;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${
+              < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
@@ -2063,7 +2039,7 @@ export default AIHRRecruitment;
                     </li>
                   ))}
                 </ul>
-                <Link
+                <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -2089,13 +2065,13 @@ export default AIHRRecruitment;
               to find and hire the best talent faster and more efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
@@ -2106,10 +2082,9 @@ export default AIHRRecruitment;
         </div>
       </div>
     </div>
-  );
-};
-
-export default AIHRRecruitment;
+  )
+}
+export default AIHRRecruitment
 }
 }
 }
@@ -2183,8 +2158,8 @@ export default AIHRRecruitment;
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIHRRecruitment;
+  )
 }
+export default AIHRRecruitment
+}
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

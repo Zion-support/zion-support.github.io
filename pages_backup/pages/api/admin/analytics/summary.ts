@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-import { ensureAdminFromApi } from '../../../../utils/auth',;
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+import { ensureAdminFromApi } from '../../../../utils/auth',
 type EventRow = {
   name: string,
   page?: string,
@@ -12,15 +12,15 @@ type EventRow = {
       } catch {}
     }
     return rows
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { ensureAdminFromApi } from '../../../../utils/auth';
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+import { ensureAdminFromApi } from '../../../../utils/auth'
     }
-    return rows;
+    return rows
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {
-    return [];
+    return []
   }
 }
 function featureFromPath(page?: string): string {
@@ -56,7 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
+  res.status(200).json({ pagesMostUsed, events, line, funnel })
 }
     .sort((a, b) => b.value - a.value),
 function featureFromPath (page?: string): string {
@@ -74,7 +74,7 @@ if (return 'other', ) {
   if () return 'rentals', ) {
   $2
 }
-  return 'other';
+  return 'other'
 }
 export default async /**
  * handler - Function description
@@ -94,35 +94,35 @@ function handler() {
     by_feature[f] = (by_feature[f] || 0) + 1,
     by_event[r.name] = (by_event[r.name] || 0) + 1,
     const day = r.at.slice (0, 10),
-    by_day[day] = (by_day[day] || 0) + 1;
+    by_day[day] = (by_day[day] || 0) + 1
   }
-  const pagesMostUsed = Object.entries (by_feature);
-    .map (([label, value]) => ({ label, value }));
+  const pagesMostUsed = Object.entries (by_feature)
+    .map (([label, value]) => ({ label, value }))
 .sort ((a, b) => b.value - a.value),
-  const events = Object.entries (by_event);
-    .map (([label, value]) => ({ label, value }));
+  const events = Object.entries (by_event)
+    .map (([label, value]) => ({ label, value }))
     .sort ((a, b) => b.value - a.value),
   const days = Object.keys (by_day).sort (),
   const line = days.map ((d) => ({ date: d, value: by_day[d] })),
   const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
-  res.status (200).json ({ pagesMostUsed, events, line, funnel });
+  res.status (200).json ({ pagesMostUsed, events, line, funnel })
 }
-;
-};
+
+}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await ensureAdminFromApi(req);
+    await ensureAdminFromApi(req)
     if (req.method !== 'GET') {
-      res.setHeader('Allow', 'GET');
-      return res.status(405).end('Method Not Allowed');
+      res.setHeader('Allow', 'GET')
+      return res.status(405).end('Method Not Allowed')
     }
-    const { start, end } = req.query;
-    const events = parseLines(start as string, end as string);
-    res.json({ events });
+    const { start, end } = req.query
+    const events = parseLines(start as string, end as string)
+    res.json({ events })
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

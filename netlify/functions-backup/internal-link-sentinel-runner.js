@@ -55,12 +55,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   spawnSync('node')
     [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')],
     {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' })
   return {statusCode: 200,
-    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
+    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' })
   return {/* TODO: Fix JSX expression */}
   k: true} tas,
-  k: 'internal-link-sentinel-runner' });
+  k: 'internal-link-sentinel-runner' })
   }
 }
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})

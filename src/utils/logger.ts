@@ -11,7 +11,7 @@ export const logger = {
     console.warn(`[WARN] ${message}`, ...args)
   },
   error: (message: string, error?: Error, ...args: any[]) => {
-    console.error(`[ERROR] ${message}`, error, ...args);
+    console.error(`[ERROR] ${message}`, error, ...args)
   }}
 
 /**
@@ -94,7 +94,7 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log a debug message
    */
 
-  debug(message: string, context?: LogContext, metadata?: Record;
+  debug(message: string, context?: LogContext, metadata?: Record
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -106,7 +106,7 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log an info message
    */
 
-  info(message: string, context?: LogContext, metadata?: Record;
+  info(message: string, context?: LogContext, metadata?: Record
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -118,7 +118,7 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log a warning message
    */
 
-  warn(message: string, context?: LogContext, metadata?: Record;
+  warn(message: string, context?: LogContext, metadata?: Record
           <string, unknown>): void {
     // TODO: Add content
   }
@@ -148,8 +148,8 @@ class Logger {/* TODO: Fix JSX expression */}
   context: LogContext | undefined,
     let,
   meta: Record,
-          <string, unknown> | undefined;
-    // Handle different parameter combinations;
+          <string, unknown> | undefined
+    // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -161,13 +161,13 @@ class Logger {/* TODO: Fix JSX expression */}
 }
       context = {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata }
-      meta = contextOrMetadata as Record;
+      meta = contextOrMetadata as Record
           <string>
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record;
+      context = errorOrContextOrMetadata as LogContext
+      meta = contextOrMetadata as Record
           <string>
     }
     this.log(LogLevel.ERROR, message, context, { ...meta, error })
@@ -212,10 +212,10 @@ class Logger {/* TODO: Fix JSX expression */}
 //       level,
 //       message,
 //       context,
-//       ...metadata;
+//       ...metadata
     }
-    // Format the log entry;
-    // Output to console in development;
+    // Format the log entry
+    // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

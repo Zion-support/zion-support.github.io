@@ -72,7 +72,7 @@ export const _validationRules = {
    * Validate minimum length
    */
 
-  minLength: (min: number, message?: string): ValidationRule;
+  minLength: (min: number, message?: string): ValidationRule
           <string> => ({
     // TODO: Add content
   }
@@ -85,7 +85,7 @@ export const _validationRules = {
    * Validate maximum length
    */
 
-  maxLength: (max: number, message?: string): ValidationRule;
+  maxLength: (max: number, message?: string): ValidationRule
           <string> => ({
     // TODO: Add content
   }
@@ -147,7 +147,7 @@ export const _validationRules = {
    * Validate number range
    */
 
-  numberRange: (min: number, max: number, message?: string): ValidationRule;
+  numberRange: (min: number, max: number, message?: string): ValidationRule
           <number> => ({
     // TODO: Add content
   }
@@ -226,7 +226,7 @@ export const _validationRules = {
    * Validate file size
    */
 
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule;
+  fileSize: (maxSizeInMB: number, message?: string): ValidationRule
           <File> => ({
     // TODO: Add content
   }
@@ -283,7 +283,7 @@ export function validateField
 }
   vali,
   d: errors.length === 0,
-//     errors;
+//     errors
   }
 }
 /**
@@ -300,7 +300,7 @@ export function validateForm
   }
 
 }
-  const results = {} as Record;
+  const results = {} as Record
           <keyof>
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -343,7 +343,7 @@ export function getFormErrors
   }
 
 }
-  const errors = {} as Record;
+  const errors = {} as Record
           <keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -396,8 +396,8 @@ export function debounce
     const later = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      timeout = null;
-      func(...args);
+      timeout = null
+      func(...args)
     }
     if (timeout) {/* TODO: Fix JSX expression */}
   O: Add content,}

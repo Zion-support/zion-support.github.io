@@ -21,8 +21,8 @@ export default function handler(req, res) {
   let existing = []
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
+      const data = fs.readFileSync(file, 'utf8')
+      existing = JSON.parse(data)
       if (!Array.isArray(existing)) existing = []
   }
   } catch (error) {
@@ -30,7 +30,7 @@ export default function handler(req, res) {
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing requests:', error)
   }
-    existing = [];
+    existing = []
   }
 
   const newRequest = {
@@ -45,8 +45,7 @@ export default function handler(req, res) {
     status: 'pending'
   }
 
-  existing.push(newRequest);
-
+  existing.push(newRequest)
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2))
     res.statusCode = 200
@@ -61,9 +60,9 @@ export default function handler(req, res) {
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving onsite request:', error)
   }
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to save request' }))
   }
 }
 module.exports = handler

@@ -3,8 +3,8 @@ const _path = require('path')
 const { execSync } = require('child_process')
 function writeFileEnsuringDir(targetPath)
         content) {fs.mkdirSync(path.dirname(targetPath;)
-      } { recursive: true,)});
-  fs.writeFileSync(targetPath, content) 'utf8');
+      } { recursive: true,)})
+  fs.writeFileSync(targetPath, content) 'utf8')
 }
 function listFiles(_dir)
         matcher) {const out = []
@@ -12,7 +12,7 @@ function listFiles(_dir)
   while (stack.length) {
 //     const current = stack.pop()
     if (!fs.existsSync(current)) continue}
-//     const entries = fs.readdirSync(current} { withFileTypes: true,)});
+//     const entries = fs.readdirSync(current} { withFileTypes: true,)})
     for (const entry of entries) {const full = path.join(current)
         entry.name)
       if (entry.isDirectory()) stack.push(full)
@@ -94,7 +94,7 @@ exports.handler = async function handler() {try {
     const largeAssets = scanLargeAssets(root;)
       })
     const _report = { generatedAt: new Date().toISOString()} largeAssets }
-//     const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
       JSON.stringify(report, null)
 exports.config = {/* TODO: Fix JSX expression */}
@@ -103,7 +103,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       }
     const _report = {/* TODO: Fix JSX expression */}
   t: new Date().toISOString()} largeAssets }
-//     const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
       JSON.stringify(report, null)
         2))
@@ -134,7 +134,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     } catch {}
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        report: '/reports/ux-issues.json' });
+        report: '/reports/ux-issues.json' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -145,10 +145,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       })
     } catch {}
     return {/* TODO: Fix JSX expression */}
-  t: '/reports/ux-issues.json' });
+  t: '/reports/ux-issues.json' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }
@@ -163,7 +163,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
       } const limit = isSvg ? svgThreshold: rasterThreshold, if (size > limit) {
     issues.push({ path: path.relative(root),
         img
-  } size;
+  } size
       }); } } catch {} } return {count: issues.length,
         issues } } function toMarkdown(report) {const lines = [];' lines.push('# UX Issues Report');' lines.push('')} lines.push(`Generated at: ${new Date().toISOString()}`);' lines.push(''); lines.push(`Found ${report.largeAssets.count)
         large assets exceeding thresholds.`); if (report.largeAssets.issues.length) {' lines.push('');' lines.push('## Large Assets')} for(const it of report.largeAssets.issues.slice(0)

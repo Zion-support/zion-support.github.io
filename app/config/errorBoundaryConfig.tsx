@@ -1,50 +1,50 @@
-/**;
- * Error Boundary Configuration;
- * Centralized configuration for error handling across the application;
- */;
-import React from 'react';
+/**
+ * Error Boundary Configuration
+ * Centralized configuration for error handling across the application
+ */
+import React from 'react'
 export interface ErrorBoundaryConfig {
-  /**;
-   * Whether to log errors to console;
-   */;
+  /**
+   * Whether to log errors to console
+   */
   logErrors: boolean,
-  /**;
-   * Whether to show detailed error messages;
-   */;
+  /**
+   * Whether to show detailed error messages
+   */
   showDetails: boolean,
-  /**;
-   * Whether to send errors to external service;
-   */;
+  /**
+   * Whether to send errors to external service
+   */
   reportErrors: boolean,
-  /**;
-   * Error reporting endpoint;
-   */;
-  reportingEndpoint?: string;
-/**;
-   * Whether to show error overlay in development;
-   */;
+  /**
+   * Error reporting endpoint
+   */
+  reportingEndpoint?: string
+/**
+   * Whether to show error overlay in development
+   */
   showErrorOverlay: boolean,
-  /**;
-   * Maximum number of errors to store;
-   */;
+  /**
+   * Maximum number of errors to store
+   */
   maxStoredErrors: number,
-  /**;
-   * Custom error messages by error type;
-   */;
+  /**
+   * Custom error messages by error type
+   */
   customMessages: Record<string></string>
 /**
    * Fallback UI components
    */,
   fallbackComponents: {}
 
-    default: React.ComponentType<{ error: Error, resetError: () => void }>;
-    network: React.ComponentType<{ error: Error, resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error, resetError: () => void }>;
+    default: React.ComponentType<{ error: Error, resetError: () => void }>
+    network: React.ComponentType<{ error: Error, resetError: () => void }>
+    notFound: React.ComponentType<{ error: Error, resetError: () => void }>
   }
 }
-/**;
- * Default error messages;
- */;
+/**
+ * Default error messages
+ */
 const DEFAULT_ERROR_MESSAGES = {
     default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
@@ -52,11 +52,11 @@ const DEFAULT_ERROR_MESSAGES = {
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.',
-  };
-};
-/**;
- * Get error boundary configuration based on environment;
- */;
+  }
+}
+/**
+ * Get error boundary configuration based on environment
+ */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     return {
     logErrors: true,
@@ -73,9 +73,9 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   },
   }
 }
-/**;
- * Default error fallback component;
- */;
+/**
+ * Default error fallback component
+ */
 function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
     return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
@@ -101,9 +101,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
           <button></button>
             Try Again
           </button>
-          <button;
+          <;$2 />
             onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Home
           </button>
@@ -112,9 +112,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
     </div>
   ),
 }
-/**;
- * Network error fallback component;
- */;
+/**
+ * Network error fallback component
+ */
 function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -135,19 +135,19 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
       </div>
     </div>
   )}
-/**;
- * Not found error fallback component;
- */;
+/**
+ * Not found error fallback component
+ */
 function NotFoundFallback(): JSX.Element {
     return ()
             onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Go Home
           </button>
-          <button,
+          <,$2 />
             onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
             Go Back
           </button>
@@ -156,9 +156,9 @@ function NotFoundFallback(): JSX.Element {
     </div>
   ),
 }
-/**;
- * Get error type from error object;
- */;
+/**
+ * Get error type from error object
+ */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
     if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network'
@@ -290,9 +290,9 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default'
 }
-/**;
- * Format error for logging;
- */;
+/**
+ * Format error for logging
+ */
 export function formatErrorForLogging(error: Error): Record<string, unknown> {
     return {
     message: error.message,
@@ -304,6 +304,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   }
   }
-};
-
+}
 export default getErrorBoundaryConfig</string>
+</a></a></p></p></p></p></p></p></p></h1></h2></h2></h2>

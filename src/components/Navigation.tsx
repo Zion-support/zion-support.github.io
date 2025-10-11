@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react'
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react'
 const Navigation: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
@@ -27,22 +26,22 @@ const Navigation: React.FC = () => {
     const handleScroll = () => {
     setIsScrolled(window.scrollY > 50)
   }
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-    window.removeEventListener('resize', handleResize);
+    window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
   }
-  }, []);
+  }, [])
   const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
+    setServicesOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
     setIsOpen(false)
   }
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
     if (isOpen) {
       closeAllMenus()
   }
@@ -194,13 +193,13 @@ const Navigation: React.FC = () => {
           <div className="hidden lg: flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-  </
+  
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About,
-  </
+  
             {/* Services Dropdown */}
             <div className="relative">
-              <button
+              <$2 />
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
@@ -306,7 +305,7 @@ const Navigation: React.FC = () => {
                     ))}
           {/* Contact Info */}
           <div className="hidden lg: flex items-center space-x-4">
-            <a
+            <$2 />
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
               <Phone className="w-4 h-4" />
@@ -320,7 +319,7 @@ const Navigation: React.FC = () => {
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
               Get Started,
-  </
+  
           </div>
           {/* Mobile Menu Button */}
           <$2 />
@@ -355,7 +354,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
+  )
 }
 export default Navigation</a>
   </a>
@@ -369,3 +368,4 @@ export default Navigation</a>
   </Link>
   </Link>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></h1></h3></h3>

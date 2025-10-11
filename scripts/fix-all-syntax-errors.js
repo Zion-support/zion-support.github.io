@@ -13,28 +13,25 @@ const fixes = [
   { pattern: /\.map\([^)]*\)\s*=>\s*\(}/g, replacement: (match) => match.replace('(}', '(') },
   // Fix stray backticks
   { pattern: /`\s*$/gm, replacement: '' },
-  // Fix missing closing parentheses;
+  // Fix missing closing parentheses
   { pattern: /\)\s*,[\s]*$/gm, replacement: '),' },
-  // Fix template literal issues;
+  // Fix template literal issues
   { pattern: /className=\{`([^`]+)`\}/g, replacement: 'className={`$1`}' },
-  // Fix missing semicolons;
+  // Fix missing semicolons
   { pattern: /}\s*$/gm, replacement: '}' },
-  // Fix console statements;
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' }];
-
+  // Fix console statements
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' }]
 function fixFile(filePath) {
     try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
     fixes.forEach(fix => {)
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-        content = newContent;
+        content = newContent
         modified = true
   }
-    });
-
+    })
     if (modified) {
       fs.writeFileSync(filePath, content)
       console.log(`✅ Fixed: ${filePath}`)
@@ -49,8 +46,7 @@ function fixFile(filePath) {
 
 // Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-    let files = [];
-  
+    let files = []
   try {
     const items = fs.readdirSync(dir)
     for (const item of items) {
@@ -71,12 +67,10 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files
 }
 
-// Main fix process;
-const files = findFiles('./app');
-let fixedCount = 0;
-
-console.log(`Found ${files.length} files to process...`);
-
+// Main fix process
+const files = findFiles('./app')
+let fixedCount = 0
+console.log(`Found ${files.length} files to process...`)
 files.forEach(file => {
     )
   if (fixFile(file)) {

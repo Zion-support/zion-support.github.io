@@ -16,20 +16,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(meta): refresh autonomous meta [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'meta-orchestrator-runner' });
+        task: 'meta-orchestrator-runner' })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'meta-orchestrator-runner' });
+  k: 'meta-orchestrator-runner' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

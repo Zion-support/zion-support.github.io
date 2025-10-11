@@ -47,7 +47,7 @@ function runGitCommand(command) {
     const result = execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
-      stdio: 'pipe'});
+      stdio: 'pipe'})
     return { success: true, output: result }
   } catch (error) {
     return {
@@ -66,7 +66,7 @@ function runGitCommand(command) {/* TODO: Fix JSX expression */}
 
 async function mergePRWithGit(pr) {
     try {
-    // Get detailed PR info;
+    // Get detailed PR info
     if (!prDetails) {
 
       return false
@@ -84,8 +84,8 @@ async function mergePRWithGit(pr) {
     if (mergeResult.success) {
     return true
   } else {
-    // If merge failed due to conflicts, try to resolve them;
-      // Check if there are merge conflicts;
+    // If merge failed due to conflicts, try to resolve them
+      // Check if there are merge conflicts
       if (statusResult.success && statusResult.output.includes('UU')) {
 
         // Use our conflict resolution script
@@ -140,19 +140,19 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     }
 
-    // Filter PRs that target main branch;
+    // Filter PRs that target main branch
     if (mainPRs.length === 0) {
 
       return
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
     }
 
-    // Process PRs one by one;
+    // Process PRs one by one
     for (const pr of mainPRs) {
     if (success) {
         successCount++
   } else {
-        failCount++;
+        failCount++
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -172,7 +172,7 @@ mergeAllPRsWithGit().then(() => {
     )
 )
   process.exit(1)
-  });
+  })
 mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

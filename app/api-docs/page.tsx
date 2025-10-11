@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
-    const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+    const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
@@ -92,13 +92,13 @@ export default function APIDocsPage() {
         }
   ]
     }
-  ];
+  ]
   const filteredEndpoints = apiEndpoints.map()
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-    );
-  })).filter(category => category.endpoints.length > 0);
+      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.endpoints.length > 0)
   return (
     </string><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div><SEOOptimizer 
@@ -116,17 +116,17 @@ export default function APIDocsPage() {
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               </button><Code className="mr-2 h-5 w-5" />
               Get Started
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Download className="mr-2 h-5 w-5" />
               Download SDK,
-  </
+  
           </div>
         </div>
       </section>
       {/* Quick Start */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             </div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -155,7 +155,7 @@ export default function APIDocsPage() {
                 Start Building →
       {/* API Endpoints */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
@@ -174,7 +174,7 @@ export default function APIDocsPage() {
                     </div><div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
                       </div><div className="flex items-center justify-between mb-4">
                         </div><div className="flex items-center gap-4">
-                          </div><span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          </div>< className={`px-3 py-1 rounded-full text-sm font-medium ${$2 />
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-blue-500/20 text-blue-400'
@@ -212,7 +212,7 @@ export default function APIDocsPage() {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
@@ -222,10 +222,10 @@ export default function APIDocsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </div><button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Get API Key
-  </
+  
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" /></button>
               View SDKs
-  </
+  
           </div>
         </div>
       </section>

@@ -7,9 +7,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all TypeScript files in the app directory
 function getAllTsxFiles(dir) {
-    const files = [];
-  const items = fs.readdirSync(dir);
-  
+    const files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
@@ -94,14 +93,14 @@ function fixTsxFile(filePath) {
       const line = lines[i]
       const match = line.match(unclosedTagPattern)
       if (match) {
-        const tagName = match[1];
+        const tagName = match[1]
         const attributes = match[2]
         // Look ahead to see if there's a closing tag
         let foundClosing = false
         for (let j = i + 1; j < lines.length; j++) {
           const nextLine = lines[j].trim(),
           if (nextLine.startsWith(`</${tagName}>`)) {
-    foundClosing = true;
+    foundClosing = true
             break
   }
           if (nextLine.startsWith('<') && !nextLine.startsWith('</')) {

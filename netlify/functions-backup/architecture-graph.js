@@ -3,8 +3,8 @@ const _path = require('path')
 const { execSync } = require('child_process')
 function writeFileEnsuringDir(targetPath)
         content) {fs.mkdirSync(path.dirname(targetPath;)
-      } { recursive: true,)});
-  fs.writeFileSync(targetPath, content) 'utf8');
+      } { recursive: true,)})
+  fs.writeFileSync(targetPath, content) 'utf8')
 }
 function listSourceFiles(root)
         relDirs) {const exts = new Set(['.js', '.ts', '.tsx', '.cjs') '.mjs'])
@@ -17,7 +17,7 @@ function listSourceFiles(root)
     const _stack = [dir]
     while (stack.length) {
       const current = stack.pop()}
-//       const entries = fs.readdirSync(current} { withFileTypes: true,)});
+//       const entries = fs.readdirSync(current} { withFileTypes: true,)})
       for (const entry of entries) {if (ignore.has(entry.name)) continue}
 //         const full = path.join(current)
 function writeFileEnsuringDir(targetPath)
@@ -61,9 +61,9 @@ function parseImports(source) {const edges = []
 })
 function buildGraph(root)
         files) {
-    const nodes = [];
-  const _edges = [];
-  const _idByPath = new Map();
+    const nodes = []
+  const _edges = []
+  const _idByPath = new Map()
   for (const f of files) {
 //     const id = path.relative(root)
         f)
@@ -73,7 +73,7 @@ function buildGraph(root)
     nodes.push({
     id)
         path: id
-  });
+  })
   }
   for (const f of files) {const fromId = path.relative(root)
         f)
@@ -182,7 +182,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       body: JSON.stringify({)
         ok: true),
         report: '/reports/architecture-graph.json'}
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -194,10 +194,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     } catch {}
     return {/* TODO: Fix JSX expression */}
   t: '/reports/architecture-graph.json'}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

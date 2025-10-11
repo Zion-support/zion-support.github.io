@@ -3,24 +3,24 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
     setupTim,
   e: string}
   }
-  keyFeatures: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
+  keyFeatures: string[]
+  benefits: string[]
+  targetAudience: string[]
+  marketPosition: string
+  competitors: string[]
+  techStack: string[]
+  realImplementation: boolean
+  implementationDetails: string
+  roi: string
+  useCases: string[]
+  integrations: string[]
+  support: string
+  compliance: string[]
+  link: string
+  icon: string
+  color: string
+  popular: boolean
+  launchDate: string
   customers: number
   rating: number
   reviews: number,

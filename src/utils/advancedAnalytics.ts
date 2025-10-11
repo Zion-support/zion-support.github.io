@@ -32,7 +32,7 @@ interface UserSession {/* TODO: Fix JSX expression */}
   i,
   d: string,
     startTim,
-  e: string;
+  e: string
   endTime?: string
   duration?: number
     pageViews: number,,
@@ -96,8 +96,8 @@ class AdvancedAnalytics {
       enableUserJourneyTracking: true,
 
     }
-    this.currentSession = this.createNewSession();
-    this.initializeTracking();
+    this.currentSession = this.createNewSession()
+    this.initializeTracking()
   }
   static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -502,7 +502,7 @@ class AdvancedAnalytics {
   t: true,
       subtre,
   e: true,)
-    });
+    })
   }
   /**
    * Setup network monitoring
@@ -643,7 +643,7 @@ let label = id || className || text?.substring(0, 50) || tagName
 //       tagName,
 //       id,
 //       className,
-//       text;
+//       text
     }
   }
   /**
@@ -840,7 +840,7 @@ let label = id || className || text?.substring(0, 50) || tagName
 //       eventsByCategory,
       topPages: topPages.slice(0, 10),
 
-//       conversionRate;
+//       conversionRate
     }
   }
   /**

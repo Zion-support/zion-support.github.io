@@ -2,16 +2,16 @@
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
     interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+  _placeholder?: 'blur' | 'empty'
+  _blurDataURL?: string
+  fill?: boolean
   sizes?: string
   style?: React.CSSProperties
   onLoad?: () => void,
@@ -34,16 +34,16 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-    const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+    const [, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
     if (onLoad) onLoad()
-  }, [onLoad]);
+  }, [onLoad])
   const handleError = useCallback(() => {
-    setHasError(true);
+    setHasError(true)
     if (onError) onError()
-  }, [onError]);
+  }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
@@ -79,11 +79,11 @@ $4})
       onError={handleError}
       {...props}
     />
-  );
+  )
 }
-export default Image;
-'use client';
-import React, { useState, useCallback } from 'react';
+export default Image
+'use client'
+import React, { useState, useCallback } from 'react'
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
@@ -97,9 +97,9 @@ const,
   priority?: boolean
   _quality?: number
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
   style?: React.CSSProperties
   onLoad?: () => void
   onError?: () => void,
@@ -123,7 +123,7 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props;
+//   ...props
 }) => {
     // TODO: Add content
   }

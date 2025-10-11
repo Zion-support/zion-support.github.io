@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react'
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
@@ -61,9 +60,9 @@ const ApiPage: React.FC = () => {
               word_count: 500,
               readability_score: 8.2
             }
-          };
-        };
-      ];
+          }
+        }
+      ]
     },
     {
       category: 'IT Services',
@@ -143,7 +142,7 @@ const ApiPage: React.FC = () => {
         }
   ]
     }
-  ];
+  ]
   const authenticationMethods = [
     {
       name: 'API Key',
@@ -161,9 +160,9 @@ const ApiPage: React.FC = () => {
       name: 'JWT Token',
       description: 'JSON Web Token authentication',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'High';
-    };
-  ];
+      security: 'High'
+    }
+  ]
   const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
@@ -191,19 +190,19 @@ const ApiPage: React.FC = () => {
               Build powerful applications with our AI, IT, and Micro SaaS APIs.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              </div><a
+              </div><$2 />
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Get Started
               </a>
-              <a
+              <$2 />
                 href="#authentication"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Authentication
               </a>
-              <a
+              <$2 />
                 href="#endpoints"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
@@ -278,7 +277,7 @@ const ApiPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     </div><span className="text-sm text-gray-400">Security Level:</span>
-                    <span className={`text-sm font-semibold ${
+                    < className={`text-sm font-semibold ${$2 />
                       method.security === 'Very High' ? 'text-green-400' : 'text-yellow-400'
                     }`}>
                       {method.security}
@@ -331,7 +330,7 @@ const ApiPage: React.FC = () => {
                       </div><div key={endpointIndex} className="border border-gray-700 rounded-lg p-6">
                         </div><div className="flex items-center justify-between mb-4">
                           </div><div className="flex items-center space-x-4">
-                            </div><span className={`px-3 py-1 rounded text-sm font-semibold ${
+                            </div>< className={`px-3 py-1 rounded text-sm font-semibold ${$2 />
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
                                 : 'bg-blue-600 text-white'
@@ -409,23 +408,23 @@ const ApiPage: React.FC = () => {
 
           {/* Support */}
           <section className="mb-16">
-            </section><div className="
+            </section>< className="$2 />
               </div><h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">
                 Our developer support team is here to help you integrate our APIs successfully.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                </div><a
+                </div><$2 />
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Contact Support
                 </a>
-                <a href="/docs"
+                < href="/docs"$2 />
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
                   View Documentation
                 </a>
-                <a href="/community"
+                < href="/community"$2 />
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300" /></a>
                   Join Community
                 </a>
@@ -435,7 +434,6 @@ const ApiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ApiPage;
+  )
+}
+export default ApiPage</$1></p></p>

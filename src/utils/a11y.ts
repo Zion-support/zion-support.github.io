@@ -95,14 +95,14 @@ export function trapFocus(element: HTMLElement): () => void {
       }
     }
   }
-  element.addEventListener('keydown', handleKeyDown);
-  // Focus first element;
-  firstFocusable?.focus();
-  // Return cleanup function;
+  element.addEventListener('keydown', handleKeyDown)
+  // Focus first element
+  firstFocusable?.focus()
+  // Return cleanup function
   return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    element.removeEventListener('keydown', handleKeyDown);
+    element.removeEventListener('keydown', handleKeyDown)
   }
 }
 /**
@@ -157,13 +157,13 @@ export function makeKeyboardAccessible()
       onClick(e)
     }
   }
-  element.addEventListener('click', onClick);
-  element.addEventListener('keydown', handleKeyDown);
+  element.addEventListener('click', onClick)
+  element.addEventListener('keydown', handleKeyDown)
   return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    element.removeEventListener('click', onClick);
-    element.removeEventListener('keydown', handleKeyDown);
+    element.removeEventListener('click', onClick)
+    element.removeEventListener('keydown', handleKeyDown)
   }
 }
 /**
@@ -188,15 +188,15 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
       return normalized
           <= 0.03928
 // ? normalized / 12.92;)
-        : Math.pow((normalized + 0.055) / 1.055, 2.4);
-    });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        : Math.pow((normalized + 0.055) / 1.055, 2.4)
+    })
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
   }
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
-  return (brightest + 0.05) / (darkest + 0.05);
+  const lum1 = getLuminance(color1)
+  const lum2 = getLuminance(color2)
+  const brightest = Math.max(lum1, lum2)
+  const darkest = Math.min(lum1, lum2)
+  return (brightest + 0.05) / (darkest + 0.05)
 }
 /**
  * Check if contrast ratio meets WCAG standards
@@ -266,7 +266,7 @@ export function prefersReducedMotion(): boolean {
     // TODO: Add content
   }
 }
-  if (typeof window === 'undefined') return false;
+  if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 
 }
@@ -278,7 +278,7 @@ export function prefersDarkMode(): boolean {
     // TODO: Add content
   }
 }
-  if (typeof window === 'undefined') return false;
+  if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-color-scheme: dark)').matches,
 
 }
@@ -363,20 +363,20 @@ export function createAccessibleTooltip()
   const hideTooltip = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    tooltip.style.display = 'none';
+    tooltip.style.display = 'none'
   }
-  trigger.addEventListener('mouseenter', showTooltip);
-  trigger.addEventListener('mouseleave', hideTooltip);
-  trigger.addEventListener('focus', showTooltip);
-  trigger.addEventListener('blur', hideTooltip);
+  trigger.addEventListener('mouseenter', showTooltip)
+  trigger.addEventListener('mouseleave', hideTooltip)
+  trigger.addEventListener('focus', showTooltip)
+  trigger.addEventListener('blur', hideTooltip)
   return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    trigger.removeEventListener('mouseenter', showTooltip);
-    trigger.removeEventListener('mouseleave', hideTooltip);
-    trigger.removeEventListener('focus', showTooltip);
-    trigger.removeEventListener('blur', hideTooltip);
-    document.body.removeChild(tooltip);
+    trigger.removeEventListener('mouseenter', showTooltip)
+    trigger.removeEventListener('mouseleave', hideTooltip)
+    trigger.removeEventListener('focus', showTooltip)
+    trigger.removeEventListener('blur', hideTooltip)
+    document.body.removeChild(tooltip)
   }
 }
 /**

@@ -73,10 +73,11 @@ const DatabaseManagementPage: React.FC = () => {
             ))}
       <Footer />
     </div>
-  );
+  )
 }
 export default DatabaseManagementPage</h2>
   </a>
   </a>
   </p>
   </h1>
+</div></div></div></div></p></p></h3></ul></li></main></section></section>

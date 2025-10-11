@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiInfrastructureMonitoringPage: React.FC = () => {
     const features = [
     {
@@ -34,9 +34,9 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
-    'Gain competitive advantage with advanced technology';
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ]
 return (
     <>
@@ -49,7 +49,7 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -87,7 +87,7 @@ return (
               <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -111,7 +111,7 @@ return (
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
-    feature.benefits && (;
+    feature.benefits && (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (
   }
@@ -151,7 +151,7 @@ return (
               ))}
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -172,7 +172,7 @@ return (
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -202,6 +202,5 @@ return (
       <Footer></Footer>
     </>
   ),
-};
-
-export default AiInfrastructureMonitoringPage;
+}
+export default AiInfrastructureMonitoringPage</$1></h3>

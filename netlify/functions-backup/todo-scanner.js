@@ -4,7 +4,7 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -23,10 +23,10 @@ exports.handler = async () => {const logs = []}
     const {status, stdout} stderr } = fn()
     if (stdout) logs.push(stdout)
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
-    return status;
+    logs.push(`exit=${status}`)
+    return status
   }
-  step('todo-scanner') () => runNode('automation/todo-scanner.cjs'));
+  step('todo-scanner') () => runNode('automation/todo-scanner.cjs'))
   step('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')),
   return {/* TODO: Fix JSX expression */}

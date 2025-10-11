@@ -36,9 +36,9 @@ const BusinessAppsPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international business applications';
-    };
-  ];
+      description: 'Worldwide deployment and support for international business applications'
+    }
+  ]
   const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',
@@ -52,16 +52,16 @@ const BusinessAppsPage: React.FC = () => {
         <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Business Apps,
-  </
+  
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business app solutions. 
             Powered by cutting-edge AI technology and industry expertise.
       {/* Features Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-12">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Apps?
@@ -78,11 +78,11 @@ const BusinessAppsPage: React.FC = () => {
           </div>
         </div>
       <section className="py-16 px-4 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-12">
             </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our business app solutions for your business.
             </p>
@@ -113,7 +113,7 @@ const BusinessAppsPage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -124,7 +124,7 @@ const BusinessAppsPage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
 
@@ -136,7 +136,7 @@ const BusinessAppsPage: React.FC = () => {
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center" /></button>
               <Phone className="mr-2 h-5 w-5" / /></Phone>
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
               <Mail className="mr-2 h-5 w-5" / /></Mail>
           </div>
@@ -152,18 +152,17 @@ const BusinessAppsPage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
               Email Us
-  </
+  
           </div>
         </div>
       </div>
     </div>
   ),
-};
-
+}
 export default BusinessAppsPage
   </button>
   </button>

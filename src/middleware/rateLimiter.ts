@@ -10,7 +10,7 @@ export interface RateLimitConfig {
   }
 }
   windowMs: number, // Time window in milliseconds,
-  max: number; // Maximum number of requests per window;
+  max: number; // Maximum number of requests per window
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean
   skipFailedRequests?: boolean,
@@ -21,7 +21,7 @@ interface RequestRecord {
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
 export class RateLimiter {
-  private requests: Map<string, RequestRecord> = new Map();
+  private requests: Map<string, RequestRecord> = new Map()
   private config: RateLimitConfig,
   constructor(config: RateLimitConfig) {
     this.config = {
@@ -32,13 +32,13 @@ interface RequestRecord {// TODO: Add content
   count: number,,
     resetTime: number
  * Simple in-memory rate limiter,
- * For production, use Redis or similar distributed storage;
+ * For production, use Redis or similar distributed storage
 export class RateLimiter {
     // TODO: Add content
   }
 }
   private requests: Map,
-          <string, RequestRecord> = new Map();
+          <string, RequestRecord> = new Map()
   private config: RateLimitConfig,
   constructor(config: RateLimitConfig) {
     // TODO: Add content
@@ -51,50 +51,50 @@ export class RateLimiter {
   message: 'Too many requests, please try again later.',
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
-//       ...config;
+//       ...config
     }
-    // Cleanup old entries every minute;
-    setInterval(() => this.cleanup(), 60000);
+    // Cleanup old entries every minute
+    setInterval(() => this.cleanup(), 60000)
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
   check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
-    const now = Date.now();
-    const record = this.requests.get(identifier);
-    const __now = Date.now();
-    const _record = this.requests.get(identifier);
+    const now = Date.now()
+    const record = this.requests.get(identifier)
+    const __now = Date.now()
+    const _record = this.requests.get(identifier)
     // No record or expired
     if (!record || now > record.resetTime) {
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
+      const resetTime = now + this.config.windowMs
+      this.requests.set(identifier, { count: 1, resetTime })
       return { allowed: true, remaining: this.config.max - 1, resetTime }
     // Increment count
     if (record.count < this.config.max) {
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
-   * @returns Whether the request is allowed;
+   * @returns Whether the request is allowed
   check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
     const now = Date.now()
   }
-    const record = this.requests.get(identifier);
-    const __now = Date.now();
-    const _record = this.requests.get(identifier);
-    // No record or expired;
+    const record = this.requests.get(identifier)
+    const __now = Date.now()
+    const _record = this.requests.get(identifier)
+    // No record or expired
     if (!record || now > record.resetTime) {
     // TODO: Add content
   }
 }
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
+      const resetTime = now + this.config.windowMs
+      this.requests.set(identifier, { count: 1, resetTime })
       return { allowed: true, remaining: this.config.max - 1, resetTime }
-    // Increment count;
-    if (record.count;
+    // Increment count
+    if (record.count
           < this.config.max) {
     // TODO: Add content
   }
 }
-      record.count++;
-      this.requests.set(identifier, record);
+      record.count++
+      this.requests.set(identifier, record)
       return {
     // TODO: Add content
   }
@@ -150,8 +150,8 @@ export function getClientIdentifier(request: Request): string {
         resetTime: record.resetTime
     // Limit exceeded,
     return { allowed: false, remaining: 0, resetTime: record.resetTime }
-   * Reset rate limit for identifier;
-   * @param identifier - Unique identifier;
+   * Reset rate limit for identifier
+   * @param identifier - Unique identifier
   reset(identifier: string): void {
     // TODO: Add content
   }
@@ -165,14 +165,14 @@ export function getClientIdentifier(request: Request): string {
     // TODO: Add content
   }
 }
-        this.requests.delete(key);
-   * Get current stats;
+        this.requests.delete(key)
+   * Get current stats
   getStats(): { totalTracked: number } {
     // TODO: Add content
   }
 }
     return { totalTracked: this.requests.size }
- * Pre-configured rate limiters for common use cases;
+ * Pre-configured rate limiters for common use cases
 export const rateLimiters = {
     // TODO: Add content
   }
@@ -235,7 +235,7 @@ export function getClientIdentifier(request: Request): string {
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
     const identifier = getClientIdentifier(request),
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
+    const { allowed, remaining, resetTime } = limiter.check(identifier)
     if (!allowed) {
     return new Response(
         JSON.stringify({
@@ -244,8 +244,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
         {
           status: 429,
           headers: {
-  // Fallback to a default identifier;
-  return 'unknown';
+  // Fallback to a default identifier
+  return 'unknown'
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
  * @returns Middleware function,
@@ -257,8 +257,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
     // TODO: Add content
   }
 }
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
+    const identifier = getClientIdentifier(request)
+    const { allowed, remaining, resetTime } = limiter.check(identifier)
     if (!allowed) {
     // TODO: Add content
   }
@@ -286,12 +286,11 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
             'X-RateLimit-Reset': String(resetTime)
       )
     // Request allowed - headers can be added to response later
-    return null;
-    // Request allowed - headers can be added to response later;
-return null;
-
+    return null
     // Request allowed - headers can be added to response later
-    return null;
+return null
+    // Request allowed - headers can be added to response later
+    return null
   }
 }
 

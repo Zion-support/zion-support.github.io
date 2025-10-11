@@ -6,9 +6,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Find all TypeScript and JavaScript files
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-    let files = [];
-  const items = fs.readdirSync(dir);
-  
+    let files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
@@ -19,10 +18,10 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   }
   }
   
-  return files;
+  return files
 }
 
-// Remove console.log statements;
+// Remove console.log statements
 const removeConsoleLogs = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -95,28 +94,24 @@ console.log(`🗑️  Total console statements)`
   removed: ${totalRemoved}`);`
 console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`),`
-    // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
+    // console.error(`❌ Error processing ${filePath}:`, error.message)
+    return false
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
 }
 
-// Main execution;
-const srcDir = path.join(__dirname, '..', 'src');
-const appDir = path.join(__dirname, '..', 'app');
-
-console.log('Starting console.log removal...');
-
-// Find all files;
-const srcFiles = findFiles(srcDir);
-const appFiles = findFiles(appDir);
-const allFiles = [...srcFiles, ...appFiles];
-
-console.log(`Found ${allFiles.length} files to process`);
-
-let cleanedCount = 0;
+// Main execution
+const srcDir = path.join(__dirname, '..', 'src')
+const appDir = path.join(__dirname, '..', 'app')
+console.log('Starting console.log removal...')
+// Find all files
+const srcFiles = findFiles(srcDir)
+const appFiles = findFiles(appDir)
+const allFiles = [...srcFiles, ...appFiles]
+console.log(`Found ${allFiles.length} files to process`)
+let cleanedCount = 0
 for (const file of allFiles) {
     if (removeConsoleLogs(file)) {
     cleanedCount++

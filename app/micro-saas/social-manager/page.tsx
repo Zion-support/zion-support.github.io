@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Share2, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Share2, ArrowRight } from 'lucide-react'
 const SocialMediaManagerPage: React.FC = () => {
     return (
     <>,
@@ -11,7 +11,7 @@ const SocialMediaManagerPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -43,7 +43,7 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -63,9 +63,8 @@ const SocialMediaManagerPage: React.FC = () => {
     </>,
   )
   }
-};
-
-export default SocialMediaManagerPage;
+}
+export default SocialMediaManagerPage
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager" />
@@ -96,3 +95,4 @@ export default SocialMediaManagerPage;
 }
 export default SocialMediaManagerPage
 </div></div></div></div></div></div></span></span></span></button></button></p></p></h1></h2></li></section></section>
+</li>

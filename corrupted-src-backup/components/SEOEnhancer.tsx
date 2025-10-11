@@ -58,7 +58,7 @@ const,
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     }}
-  //   const finalStructuredData = structuredData || defaultStructuredData;
+  //   const finalStructuredData = structuredData || defaultStructuredData
   return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
@@ -175,9 +175,10 @@ const,
         {/* Structured Data */}"
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
       {children}
-  );
+  )
 }
-export default SEOEnhancer;
+export default SEOEnhancer
 "`
   </SEOEnhancerProps>
   </SEOEnhancerProps>
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

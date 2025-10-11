@@ -220,7 +220,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default October2025NewBreakthroughBanner;
+export default October2025NewBreakthroughBanner
 `
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></h2></h2></h3></h3></h3></ul>

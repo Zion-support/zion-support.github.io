@@ -138,6 +138,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
         </div>
       </div>
     </di, v>
-  );
+  )
 }
-export default October2025 CognitiveRevolutionBanner;
+export default October2025 CognitiveRevolutionBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></h2></h2>

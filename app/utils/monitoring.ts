@@ -1,23 +1,23 @@
-'use client';
-/**;
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- */;
-import React from 'react';
-import { performanceConfig } from '../../performance.config';
+'use client'
+/**
+ * Comprehensive Monitoring Utility
+ * Real-time application monitoring, performance tracking, and error reporting
+ */
+import React from 'react'
+import { performanceConfig } from '../../performance.config'
 export interface PerformanceMetrics {
-    lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+    lcp?: number
+  fid?: number
+  cls?: number
+  fcp?: number
+  ttfb?: number
   inp?: number
   }
 }
 export interface ErrorReport {
     message: string,
-  stack?: string;
-  component?: string;
+  stack?: string
+  component?: string
   timestamp: number,
   userAgent: string,
   url: string,
@@ -34,31 +34,31 @@ class MonitoringService {}
     }
   }
   private initializeMonitoring(): void {
-    // Monitor Web Vitals;
-    this.monitorWebVitals();
-    // Monitor Long Tasks;
-    this.monitorLongTasks();
-    // Monitor Resource Loading;
-    this.monitorResourceTiming();
-    // Global Error Handler;
+    // Monitor Web Vitals
+    this.monitorWebVitals()
+    // Monitor Long Tasks
+    this.monitorLongTasks()
+    // Monitor Resource Loading
+    this.monitorResourceTiming()
+    // Global Error Handler
     this.setupErrorHandling()
   }
   }
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
-        // Largest Contentful Paint;
+        // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-  };
+          const entries = list.getEntries()
+  }
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
-          this.reportMetric('lcp', this.metrics.lcp);
+          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
+          this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay;
-        const fidObserver = new PerformanceObserver((list) => {;
-    const entries = list.getEntries();
+        // First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
@@ -66,10 +66,10 @@ class MonitoringService {}
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
-        // Cumulative Layout Shift;
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver();
-    const entries = list.getEntries();
+        // Cumulative Layout Shift
+        let clsValue = 0
+        const clsObserver = new PerformanceObserver()
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
     // Keep HEAD version
@@ -80,9 +80,9 @@ class MonitoringService {}
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver();
-    const entries = list.getEntries();
+        // First Contentful Paint
+        const fcpObserver = new PerformanceObserver()
+    const entries = list.getEntries()
           entries.forEach()
             this.reportMetric('fcp', entry.startTime)
   }
@@ -109,11 +109,11 @@ class MonitoringService {}
       }
     }
   }
-  private monitorResourceTiming(): void {;
-    if ('PerformanceObserver' in window) {;
-      try {;
-        const resourceObserver = new PerformanceObserver((list) => {;
-          const entries = list.getEntries();
+  private monitorResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const resourceObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
     // Keep HEAD version
   }
           })
@@ -125,7 +125,7 @@ class MonitoringService {}
     }
   }
   private setupErrorHandling(): void {
-    // Global error handler;
+    // Global error handler
     window.addEventListener('error', (event) => {
       this.logError()
         timestamp: Date.now(),
@@ -134,7 +134,7 @@ class MonitoringService {}
   }
       })
     })
-    // Unhandled promise rejection handler;
+    // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError()
         timestamp: Date.now(),
@@ -149,11 +149,11 @@ class MonitoringService {}
       return
   }
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
-    if (thresholds) {;
-    const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
-    // Keep HEAD version;
-    // Send to analytics (if configured);
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    if (thresholds) {
+    const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+    // Keep HEAD version
+    // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag()
         value: Math.round(name === 'cls' ? value * 1000 : value),
@@ -184,7 +184,7 @@ class MonitoringService {}
   }
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory
       if (memory) {
     // Keep HEAD version
   }
@@ -193,7 +193,7 @@ class MonitoringService {}
   }
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
     // Keep HEAD version
   }
@@ -201,6 +201,6 @@ class MonitoringService {}
     }
   }
 }
-// Singleton instance;
-const monitoring = new MonitoringService();
-export default monitoring;
+// Singleton instance
+const monitoring = new MonitoringService()
+export default monitoring

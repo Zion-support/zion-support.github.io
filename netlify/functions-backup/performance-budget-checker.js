@@ -41,7 +41,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-performance-budget-checker')
     }
-    let sha;
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-performance-budget-checker'}
-    let sha;
+    let sha
     try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
@@ -74,7 +74,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
-    );
+    )
     return {
     ok: putRes.ok
       status: putRes.status,
@@ -84,7 +84,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if (!baseUrl) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
-        error: 'No base URL' });
+        error: 'No base URL' })
     }
   }
   try {const htmlRes = await fetch(baseUrl)
@@ -119,7 +119,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
   }
   if (!baseUrl) {/* TODO: Fix JSX expression */}
-  r: 'No base URL' });
+  r: 'No base URL' })
     }
   }
   try {/* TODO: Fix JSX expression */}
@@ -131,7 +131,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       .filter(Boolean)
       .slice(0)
       .slice(0)
-        20);
+        20)
     const _sizes = {}
     let totalJs = 0,
       totalCss = 0,
@@ -154,8 +154,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         bytes]) => ({
     url,
         bytes
-  }));
-//     const KB = 1024;
+  }))
+//     const KB = 1024
     const budgets = {jsTotalKb: 500
       cssTotalKb: 200,
       imgTotalKb: 1500}
@@ -177,13 +177,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       largestAssets}
     const commit = await commitJson('data/reports/performance-budget.json')
       report)
-    );
+    )
     return {
     statusCode: 200,
       body: JSON.stringify({ ok: true),
         report),
         commit
-  });
+  })
     }
   } catch (err) {return {
       statusCode: 200,
@@ -216,10 +216,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       report)
     )
     return {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   } catch (err) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }
@@ -295,3 +295,4 @@ exports.handler = async function(event, context) {/* TODO: Fix JSX expression */
   g: totalImg / KB <= budgets.imgTotalKb }, largestAssets } ' const commit = await commitJson('data/reports/performance-budget.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (err) {/* TODO: Fix JSX expression */}
       }) } } }'"`
+</li></li>

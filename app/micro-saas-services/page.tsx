@@ -1,5 +1,5 @@
-// Real Micro SAAS Services for Zion Tech Group;
-// Comprehensive list of innovative, real-world micro SAAS solutions;
+// Real Micro SAAS Services for Zion Tech Group
+// Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
     id: string,
   title: string,
@@ -7,7 +7,7 @@ export interface MicroSaasService {
   shortDescription: string,
   icon: string,
   price: string,
-  originalPrice?: string;
+  originalPrice?: string
   features: string[]
   benefits: string[],
   link: string,
@@ -111,7 +111,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations';
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -199,7 +199,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
-      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier';
+      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -220,7 +220,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Content & Marketing Tools;
+  // AI Content & Marketing Tools
   {
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
@@ -288,7 +288,7 @@ export const microSaasServices: MicroSaasService[] = [
     ],
     integrations: [,
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
-      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs';
+      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -377,7 +377,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
-      'HubSpot', 'Salesforce', 'Zapier';
+      'HubSpot', 'Salesforce', 'Zapier'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -398,7 +398,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Business & Finance Tools;
+  // AI Business & Finance Tools
   {
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
@@ -467,7 +467,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
-      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams';
+      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -556,7 +556,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
-      'Excel', 'Google Sheets', 'Tableau', 'Power BI';
+      'Excel', 'Google Sheets', 'Tableau', 'Power BI'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -577,7 +577,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Customer Service Tools;
+  // AI Customer Service Tools
   {
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
@@ -594,7 +594,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Knowledge base integration and learning',
       'Omnichannel support (web, mobile, social)',
       'Advanced analytics and reporting',
-      'Custom branding and white-label options';
+      'Custom branding and white-label options'
     ],
     benefits: [,
       '70% reduction in support costs',
@@ -642,7 +642,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs';
+      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -663,7 +663,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Development Tools;
+  // AI Development Tools
   {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
@@ -732,7 +732,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
-      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana';
+      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
     ],
     apiAvailable: true,
     mobileApp: false,
@@ -753,7 +753,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Healthcare Tools;
+  // AI Healthcare Tools
   {
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
@@ -822,7 +822,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
-      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio';
+      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -843,7 +843,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI E-commerce Tools;
+  // AI E-commerce Tools
   {
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
@@ -912,7 +912,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
-      'Google Shopping', 'PayPal', 'Stripe', 'Square';
+      'Google Shopping', 'PayPal', 'Stripe', 'Square'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -933,7 +933,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
     },
 
-  // AI Education Tools;
+  // AI Education Tools
   {
     id: 'ai-education-platform',
     title: 'AI Education Platform',
@@ -1002,7 +1002,7 @@ export const microSaasServices: MicroSaasService[] = [
     integrations: [,
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
-      'Google Drive', 'OneDrive', 'Dropbox', 'Box';
+      'Google Drive', 'OneDrive', 'Dropbox', 'Box'
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -1024,7 +1024,7 @@ export const microSaasServices: MicroSaasService[] = [
     }
   }
   ]
-// Service categories for filtering and organization;
+// Service categories for filtering and organization
 export const serviceCategories = [
   'All',
   'Productivity',
@@ -1039,10 +1039,10 @@ export const serviceCategories = [
 
   'AI & ML',
 
-  'Analytics',;
-  'Automation';
-];
-// Pricing tiers for comparison;];
+  'Analytics',
+  'Automation'
+]
+// Pricing tiers for comparison;]
 export const pricingTiers = {
     starter: {,
     name: 'Starter',
@@ -1061,9 +1061,9 @@ export const pricingTiers = {
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'],
   }
-  };
-};
-// Contact information;
+  }
+}
+// Contact information
 export const contactInfo = {
     phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -1071,4 +1071,4 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   }
-  timezone: 'EST (Eastern Standard Time)'};
+  timezone: 'EST (Eastern Standard Time)'}

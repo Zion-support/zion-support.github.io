@@ -1,32 +1,32 @@
 const, October2025UltimateEnterpriseBanne, r = () => {
-  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
-  return(<div, className="relative, p, y-16, p, x-4, s, m: px-6 l,
+  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t
+  return(<, className="relative, p, y-16, p, x-4, s, m: px-6 l,$2 />
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>)
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>)
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>)
-    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l,),
+    <, className="relative, p, y-16, p, x-4, s, m: px-6 l,),$2 />
       {/* Animated, Backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>
-    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l
-  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";
+    <, className="relative, p, y-16, p, x-4, s, m: px-6 l$2 />
+  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
+        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
 const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>"
-    <div, className="relative, p, y-16, p, x-4, s, m: px-6 l,"
-  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";
+    <, className="relative, p, y-16, p, x-4, s, m: px-6 l,"$2 />
+  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */}"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -482,7 +482,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025UltimateEnterpriseBanner;
+export default October2025UltimateEnterpriseBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></h2></h2></h2></h2></h3></h3>

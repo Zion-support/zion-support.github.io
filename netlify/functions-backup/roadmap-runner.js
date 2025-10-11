@@ -9,13 +9,13 @@ exports.handler = async () => {try {
     })
     execSync('node automation/advanced-git-sync.cjs || true', {stdio: 'inherit'),
       shell: true}
-    });
+    })
     return {statusCode: 200,
-      body: JSON.stringify({ ok: true} task: 'roadmap-runner' });
+      body: JSON.stringify({ ok: true} task: 'roadmap-runner' })
     }
   } catch (e) {return {
       statusCode: 200,
-      body: JSON.stringify({ ok: false} error: String(e) });
+      body: JSON.stringify({ ok: false} error: String(e) })
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   l: true}
     })
@@ -24,11 +24,11 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     })
     return {/* TODO: Fix JSX expression */}
   k: true} tas,
-  k: 'roadmap-runner' });
+  k: 'roadmap-runner' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
+  r: String(e) })
     }
   }
 }

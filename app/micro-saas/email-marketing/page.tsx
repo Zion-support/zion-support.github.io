@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
     return (
     <>,
@@ -11,7 +11,7 @@ const EmailMarketingSuitePage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -28,7 +28,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p>
-              AI-powered email marketing automation. Create, send, and optimize email campaigns;
+              AI-powered email marketing automation. Create, send, and optimize email campaigns
               with intelligent automation and personalization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -43,7 +43,7 @@ const EmailMarketingSuitePage: React.FC = () => {
           </div>
         </section>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -63,9 +63,8 @@ const EmailMarketingSuitePage: React.FC = () => {
     </>,
   )
   }
-};
-
-export default EmailMarketingSuitePage;
+}
+export default EmailMarketingSuitePage
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
@@ -96,3 +95,4 @@ export default EmailMarketingSuitePage;
 }
 export default EmailMarketingSuitePage
 </div></div></div></div></div></div></span></span></span></button></button></p></p></h1></h2></li></section></section>
+</li>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Bot, ArrowRight } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Bot, ArrowRight } from 'lucide-react'
 const SmartSupportBotPage: React.FC = () => {
     return (
     <>
@@ -11,7 +11,7 @@ const SmartSupportBotPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -28,7 +28,7 @@ const SmartSupportBotPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p>
-              AI-powered customer service automation with intelligent support bot.;
+              AI-powered customer service automation with intelligent support bot.
               24/7 customer assistance and automated responses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -43,7 +43,7 @@ const SmartSupportBotPage: React.FC = () => {
           </div>
         </section>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -63,9 +63,8 @@ const SmartSupportBotPage: React.FC = () => {
     </>,
   )
   }
-};
-
-export default SmartSupportBotPage;
+}
+export default SmartSupportBotPage
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" />
@@ -96,3 +95,4 @@ export default SmartSupportBotPage;
 }
 export default SmartSupportBotPage
 </div></div></div></div></div></div></span></span></span></button></button></p></p></h1></h2></li></section></section>
+</li>

@@ -14,19 +14,19 @@ const, October2025BreakthroughBanne, r = () => {
           <div, className="flex, item, s-center, ga, p-3, m, b-6">
             <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e  />
             <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30"></span>
-    <section, className="relative, p, y-20, overflo, w-hidd, e, n">";
+    <section, className="relative, p, y-20, overflo, w-hidd, e, n">"
       {/* Background, Effect, s */}
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20" />"</section>
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10" />"</div>
-      <div, className="container, m, x-auto, p, x-6, relative, z-10">";
+      <div, className="container, m, x-auto, p, x-6, relative, z-10">"
         {/* Main, Banne, r */}</div>
         <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/50, vi, a-indi, g, o-9, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, backdro, p-bl, u, r-s, m, p-8, m, d: p-12, m, b-8, shado, w-2, x, l">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-6">"</div>
-            <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
-            <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30">";
+            <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />"
+            <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30">"
               🔥 OCTOBER, 2025, BREAKTHROUGH</sp, a, n>
           </d, i, v>
-          <h2, className="te, x, t-4x, l, m;
+          <, className="te, x, t-4x, l, m;$2 />
   d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
@@ -41,7 +41,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e  /></Sparkles>"
             <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30"></span>"
-    <section, className="relative, p, y-20, overflo, w-hidd, e, n">";
+    <section, className="relative, p, y-20, overflo, w-hidd, e, n">"
       {/* Background, Effect, s */}"
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20" />";"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10" />";"
@@ -290,7 +290,8 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
+  )
 }
-export default October2025BreakthroughBanner;
+export default October2025BreakthroughBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h3></h3></h3></section>

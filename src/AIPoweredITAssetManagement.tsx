@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock } from 'lucide-react'
+import SEOHead from '../components/SEOHead'
+import { Helmet } from 'react-helmet-async'
 const AIPoweredITAssetManagement = () => {
     const features = [
         {
@@ -37,8 +36,7 @@ const AIPoweredITAssetManagement = () => {
             title: "Predictive Maintenance",
             description: "AI algorithms predict potential failures and maintenance needs before they impact operations."
         }
-    ];
-
+    ]
     const capabilities = [
         {
             icon: Cpu,
@@ -60,8 +58,7 @@ const AIPoweredITAssetManagement = () => {
             title: "Centralized Management",
             description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
         }
-    ];
-
+    ]
     const benefits = [
         {
             icon: CheckCircle,
@@ -83,8 +80,7 @@ const AIPoweredITAssetManagement = () => {
             title: "Improved Productivity",
             description: "Streamlined asset management reduces administrative overhead"
         }
-    ];
-
+    ]
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             <Helmet>
@@ -110,13 +106,13 @@ const AIPoweredITAssetManagement = () => {
                             real-time monitoring, and predictive maintenance powered by AI.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
+                            <$2 />
                                 to="/contact"
                                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                             >
                                 Get Started Today
                             </Link>
-                            <Link
+                            <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
                                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                             >
@@ -260,13 +256,13 @@ const AIPoweredITAssetManagement = () => {
                             with our AI-powered asset management solution.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
+                            <$2 />
                                 to="/contact"
                                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                             >
                                 Schedule Demo
                             </Link>
-                            <Link
+                            <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
                                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                             >
@@ -277,7 +273,6 @@ const AIPoweredITAssetManagement = () => {
                 </div>
             </section>
         </div>
-    );
-};
-
-export default AIPoweredITAssetManagement;
+    )
+}
+export default AIPoweredITAssetManagement

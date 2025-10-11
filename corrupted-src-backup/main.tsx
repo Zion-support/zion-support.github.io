@@ -9,10 +9,10 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
     }
-    onCLS(log);
-    onLCP(log);
-    onFCP(log);
-    onTTFB(log);
+    onCLS(log)
+    onLCP(log)
+    onFCP(log)
+    onTTFB(log)
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }

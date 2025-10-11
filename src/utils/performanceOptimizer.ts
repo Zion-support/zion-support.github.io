@@ -85,7 +85,7 @@ class PerformanceOptimizer {
   O: Add content,}
 }
     this.config = { ...this.config, ...config }
-    this.initializePerformanceMonitoring();
+    this.initializePerformanceMonitoring()
   }
   /**
    * Initialize performance monitoring
@@ -369,7 +369,7 @@ class PerformanceOptimizer {
     jsHeapSizeLimi,
   t: number,)
       })
-    }).memory;
+    }).memory
     if (memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -426,11 +426,10 @@ class PerformanceOptimizer {
   }
 
 }
-    if (typeof window === 'undefined') return false;
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-
+    if (typeof window === 'undefined') return false
+    const canvas = document.createElement('canvas')
+    canvas.width = 1
+    canvas.height = 1
     return canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0,
 
   }

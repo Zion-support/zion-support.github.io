@@ -68,10 +68,10 @@ $4}
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
-  </
+  
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               AI-powered development tools that accelerate your coding workflow and improve productivity,
-  </
+  
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -329,7 +329,7 @@ $4}
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                       Get Started Now,
-  </
+  
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
@@ -353,16 +353,16 @@ $4}
               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Call (302) 464-0950
-  </
-              <a
+  
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
                 Email Us,
-  </
+  
             </div>
           </div>
         </section>
@@ -377,12 +377,12 @@ $4}
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
           </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
 //                 Call (302) 464-0950
           </a>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
 //                 Email Us
@@ -397,3 +397,4 @@ $4}
 }
 export default DeveloperToolsPage</a>
   </a>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>

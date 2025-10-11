@@ -16,15 +16,15 @@ export interface RevolutionaryBreakthroughContent {
   trending?: boolean
   valueProposition: string
   metrics: {
-    performance: string;
+    performance: string
     savings: string
     accuracy: string
     roi: string,
 export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
   }
-  consciousnessLevel?: string;
-  transcendenceLevel?: string;
-  superintelligenceLevel?: string;
+  consciousnessLevel?: string
+  transcendenceLevel?: string
+  superintelligenceLevel?: string
 }
 
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [

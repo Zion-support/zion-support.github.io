@@ -77,10 +77,10 @@ $4}
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-pink-500/10 rounded-full text-pink-400 text-sm font-medium mb-6">
               <Share2 className="w-4 h-4 mr-2" />
-              AI-Powered Social Media Management</
+              AI-Powered Social Media Management
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Social Media Manager,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Automate your social media presence with AI that creates, schedules, and optimizes 
               content across all platforms to maximize engagement and grow your audience.
@@ -92,7 +92,7 @@ $4}
               </button>
               <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
                 Watch Demo,
-  </
+  
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">All Platforms, One Solution
@@ -172,9 +172,9 @@ $4}
               Contact Sales
   ),
 }
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
 export default AISocialMediaManagerPage</p>
   </h2>
   </div>
@@ -210,3 +210,4 @@ export default AISocialMediaManagerPage</p>
   </div>
   </section>
   </div>
+</span></span></span></p></p></h3></h3></ul></li>

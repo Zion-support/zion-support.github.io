@@ -1,10 +1,8 @@
-const fs = require('fs');
-
-// Read the Footer component;
-const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8');
-
-// Extract all href values from the Footer;
-const footerLinks = [];
+const fs = require('fs')
+// Read the Footer component
+const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8')
+// Extract all href values from the Footer
+const footerLinks = []
 const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g)
 if (hrefMatches) {
     hrefMatches.forEach(match => {)
@@ -12,14 +10,13 @@ if (hrefMatches) {
     if (href.startsWith('/')) {,
       footerLinks.push(href.substring(1)); // Remove leading slash
   }
-  });
+  })
 }
 
-// Read the Navigation component;
-const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
-
-// Extract all path values from the Navigation;
-const navLinks = [];
+// Read the Navigation component
+const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8')
+// Extract all path values from the Navigation
+const navLinks = []
 const pathMatches = navContent.match(/path: \s*'([^']+)'/g)
 if (pathMatches) {
     pathMatches.forEach(match => {)
@@ -27,7 +24,7 @@ if (pathMatches) {
     if (path.startsWith('/')) {,
       navLinks.push(path.substring(1)); // Remove leading slash
   }
-  });
+  })
 }
 
 // Get all existing pages

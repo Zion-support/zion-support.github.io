@@ -180,7 +180,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default March2026InnovationSpotlightBanner;
+export default March2026InnovationSpotlightBanner
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h4>

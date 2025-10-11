@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const AutonomousSystemsPage: React.FC = () => {
     return (
     <>
@@ -23,9 +23,8 @@ const AutonomousSystemsPage: React.FC = () => {
     </>,
   )
   }
-};
-
-export default AutonomousSystemsPage;
+}
+export default AutonomousSystemsPage
         <title>Autonomous Systems - Zion Tech Group
         <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

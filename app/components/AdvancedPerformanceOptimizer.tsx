@@ -6,73 +6,73 @@ interface PerformanceOptimizerProps {
   }
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
+  const [isOptimized, setIsOptimized] = useState(false)
   const [optimizationMetrics, setOptimizationMetrics] = useState()
   })
-  const optimizeImages = useCallback(() => {;
-    if (typeof window === 'undefined') return;
-    const images = document.querySelectorAll('img');
-    let optimizedCount = 0;
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const images = document.querySelectorAll('img')
+    let optimizedCount = 0
     images.forEach((img) => {
       // Add lazy loading if not already present
       if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+        img.setAttribute('loading', 'lazy')
         optimizedCount++
   }
       // Add decoding attribute for better performance
       if (!img.hasAttribute('decoding')) {
-    img.setAttribute('decoding', 'async');
+    img.setAttribute('decoding', 'async')
         optimizedCount++
   }
     })
-    return optimizedCount;
-  }, []);
-  const optimizeScripts = useCallback(() => {;
-    if (typeof window === 'undefined') return;
-    const scripts = document.querySelectorAll('script[src]');
-    let optimizedCount = 0;
+    return optimizedCount
+  }, [])
+  const optimizeScripts = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const scripts = document.querySelectorAll('script[src]')
+    let optimizedCount = 0
     scripts.forEach((script) => {
       // Add defer attribute if not already present
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-        script.setAttribute('defer', '');
+        script.setAttribute('defer', '')
         optimizedCount++
   }
     })
-    return optimizedCount;
-  }, []);
-  const optimizeCSS = useCallback(() => {;
-    if (typeof window === 'undefined') return;
-    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-    let optimizedCount = 0;
+    return optimizedCount
+  }, [])
+  const optimizeCSS = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
+    let optimizedCount = 0
     stylesheets.forEach((link) => {
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
-        link.setAttribute('media', 'print');
-        link.setAttribute('onload', "this.media='all'");
+        link.setAttribute('media', 'print')
+        link.setAttribute('onload', "this.media='all'")
         optimizedCount++
   }
     })
-    return optimizedCount;
-  }, []);
-  const runOptimizations = useCallback(() => {;
-    if (!enableOptimizations) return;
-    const imagesOptimized = optimizeImages();
-    const scriptsOptimized = optimizeScripts();
-    const cssOptimized = optimizeCSS();
+    return optimizedCount
+  }, [])
+  const runOptimizations = useCallback(() => {
+    if (!enableOptimizations) return
+    const imagesOptimized = optimizeImages()
+    const scriptsOptimized = optimizeScripts()
+    const cssOptimized = optimizeCSS()
     setOptimizationMetrics()
     })
-    setIsOptimized(true);
-  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
+    setIsOptimized(true)
+  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
   useEffect(() => {
     // Run optimizations after component mount
-    const timer = setTimeout(runOptimizations, 100);
+    const timer = setTimeout(runOptimizations, 100)
     return () => clearTimeout(timer)
-  }, [runOptimizations]);
+  }, [runOptimizations])
   // Add performance monitoring
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
+    if (typeof window === 'undefined') return
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming
@@ -83,13 +83,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       })
     })
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect()
+  }, [])
   return (
     </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}>
       {children}
       {process.env.NODE_ENV === 'development' && (
-        </div><div className="optimization-debug" style={{
+        </div>< className="optimization-debug" style={{$2 />
           position: 'fixed',
           bottom: '10px',
           right: '10px',
@@ -108,9 +108,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
         </div>
       )}
     </div>
-  );
-};
-
+  )
+}
 export default AdvancedPerformanceOptimizer
   </PerformanceOptimizerProps>
           <div>Images: {optimizationMetrics.imagesOptimized}

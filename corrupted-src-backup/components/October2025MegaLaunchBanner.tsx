@@ -124,7 +124,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           <Link, className="w-5 h-5" />"</Li, n, k>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025MegaLaunchBanner;
+export default October2025MegaLaunchBanner
 }}"
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></p></p></h2>

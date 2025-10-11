@@ -49,7 +49,7 @@ export const _usePerformanceOptimization = () => {
       firstInputDelay: 0,
 
     }
-    // Measure LCP;
+    // Measure LCP
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
@@ -159,5 +159,4 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
   }, [measurePerformance, optimizeImages, preloadCriticalResources])
   return {measurePerformance}
     optimizeImages,
-    preloadCriticalResources;
-
+    preloadCriticalResources

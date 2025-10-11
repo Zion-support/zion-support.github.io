@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 }
   titl,
   e: 'IoT Device Management Platform',
@@ -155,20 +155,20 @@ titl,
   sm:px-6,"
   lg:px-8"></div>"
             <div className="text-center"></div>"
-              <h1 className="text-4xl,"
+              < className="text-4xl,"$2 />
   md: text-6xl font-bold mb-6"></h1>
 // IoT & Edge Computing Services,
           </h1>"
-              <p className="text-xl,"
+              < className="text-xl,"$2 />
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions</p>"
-              <div className="flex flex-col,"
+              < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
-                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
+                < className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"$2 />
   hover: bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions,
           </button>"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+                < className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
   hover: text-cyan-600 transition-colors"></button>
 Schedule Demo,
@@ -254,7 +254,7 @@ Save up to 40% vs market rates;"
           <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}"
-<button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"
+< className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"$2 />
   hover: bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
@@ -289,12 +289,12 @@ Save up to 40% vs market rates;"
           < className="max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
   lg:px-8 text-center"></div>"
-            <h2 className="text-3xl,"
+            < className="text-3xl,"$2 />
   md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
               Contact our IoT experts for a free consultation and custom connected solution strategy
-              <a
+              <$2 />
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950
@@ -303,6 +303,7 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
                 ✉️ kleber@ziontechgroup.com,
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-  );
+  )
 }
 export default IotEdgePage</div>
+</p></h4>

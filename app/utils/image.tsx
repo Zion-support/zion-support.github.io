@@ -1,34 +1,33 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useState, useCallback } from 'react';
+'use client'
+import React from 'react'
+'use client'
+import React, { useState, useCallback } from 'react'
 interface ImageProps {
     src: string,
     alt: string
   }
 interface ImageProps {}
 
-  src: string;
-  alt: string;
-
-  width?: number;
-  height?: number;
+  src: string
+  alt: string
+  width?: number
+  height?: number
   className?: string
   priority?: boolean
   _quality?: number,
   src: string,
   alt: string,
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+  _placeholder?: 'blur' | 'empty'
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
   onError?: () => void;}
 }
 export const Image: React.FC<ImageProps>= ({}
@@ -36,7 +35,7 @@ export const Image: React.FC</ImageProps><ImageProps> = ({}
   src,
 export const Image: React.FC</ImageProps><ImageProps> = ({
     ,
-  src;
+  src
   alt,
   width,
   height,
@@ -54,16 +53,16 @@ export const Image: React.FC</ImageProps><ImageProps> = ({
   ...props}
 export const Image: React.FC<ImageProps>= ()
 }) => {}
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const handleLoad = useCallback(() => {};
-    setIsLoaded(true);
+  const [, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
+  const handleLoad = useCallback(() => {}
+    setIsLoaded(true)
     if (onLoad) onLoad();}
-  }, [onLoad]);
-  const handleError = useCallback(() => {};
-    setHasError(true);
+  }, [onLoad])
+  const handleError = useCallback(() => {}
+    setHasError(true)
     if (onError) onError();}
-  }, [onError]);
+  }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style
     ...()
@@ -78,9 +77,9 @@ export const Image: React.FC<ImageProps>= ()
     return()
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
-  }, [onError]);
+  }, [onLoad])
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+  }, [onError])
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
     })
@@ -107,12 +106,9 @@ export default Image</img>
       onLoad={handleLoad})
       onError={handleError})
       {...props})
-    />);
-};
-
-export default Image/>);
-};
-
-export default Image;
-
-"`;
+    />)
+}
+export default Image/>)
+}
+export default Image
+"`

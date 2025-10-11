@@ -6,10 +6,10 @@ const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems()
-      prev.includes(index) ;
-        ? prev.filter(item => item !== index);
-        : [...prev, index];
-    );
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    )
   }
   const faqs = [
     {
@@ -53,18 +53,18 @@ const FAQPage: React.FC = () => {
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Frequently Asked </h1><span className="text-cyan-400">Questions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Find answers to common questions about our AI and IT services, pricing, and implementation.
         <section className="py-16 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="space-y-4">
               {faqs.map((faq, index) => (
                 </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  </div><button
+                  </div><$2 />
                     onClick={() => toggleItem(index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
                     </button><h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
@@ -85,7 +85,6 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default FAQPage;
+  )
+}
+export default FAQPage</$1></p>

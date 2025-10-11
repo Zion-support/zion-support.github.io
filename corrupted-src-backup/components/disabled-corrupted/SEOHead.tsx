@@ -106,9 +106,10 @@ const,
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
+  )
 }
-export default SEOHead;
+export default SEOHead
 "`
   </SEOHeadProps>
   </SEOHeadProps>
+</li></li></li></li></li></li>

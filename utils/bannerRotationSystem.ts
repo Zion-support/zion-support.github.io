@@ -6,13 +6,13 @@
  */
 
 interface BannerConfig {
-  id: string;
-  component: string;
-  priority: number;
+  id: string
+  component: string
+  priority: number
   maxDailyImpressions?: number
   targetAudience?: string[]
   conversionGoal?: string,,
-  abTestGroup?: 'A' | 'B' | 'control';
+  abTestGroup?: 'A' | 'B' | 'control'
 interface BannerConfig {/* TODO: Fix JSX expression */}
 }
 
@@ -29,7 +29,7 @@ const getSessionId = (): string => {/* TODO: Fix JSX expression */}
     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     sessionStorage.setItem(SESSION_KEY, sessionId)
   }
-  return sessionId;
+  return sessionId
 }
 
 /**
@@ -73,11 +73,10 @@ export const recordBannerImpression = (impressio,
 ) => {/* TODO: Fix JSX expression */}
     }
 
-    impressions.push(newImpression);
-
-    // Keep only last 1000 impressions to prevent storage bloat;
-    //     const trimmedImpressions = impressions.slice(-1000);
-    storeImpressions(trimmedImpressions);
+    impressions.push(newImpression)
+    // Keep only last 1000 impressions to prevent storage bloat
+    //     const trimmedImpressions = impressions.slice(-1000)
+    storeImpressions(trimmedImpressions)
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
@@ -106,18 +105,16 @@ export const shouldShowBanner = (banne)
  * Calculate banner score for rotation
  */
 export const calculateBannerScore = (banner: BannerConfig): number => {
-  const _impressions = getStoredImpressions();
-  const _bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
-
-  // Calculate engagement rate;
-  //   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
+  const _impressions = getStoredImpressions()
+  const _bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id)
+  // Calculate engagement rate
+  //   const clicks = bannerImpressions.filter(imp => imp.clicked).length
   //   const engagementRate = bannerImpressions.length > 0 ? clicks / bannerImpressions.length : 0
   // Calculate recency score (more recent impressions = higher score)
   const recentImpressions = bannerImpressions.filter()
     imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000
   ),
-  //   const recencyScore = Math.min(1, recentImpressions.length / 10);
-
+  //   const recencyScore = Math.min(1, recentImpressions.length / 10)
   // Calculate fatigue score (too many impressions = lower score)
   //   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50))
   // Weighted combination
@@ -146,10 +143,9 @@ export const selectBannersForRotation = (allBanner,
 ): BannerConfig[] => {/* TODO: Fix JSX expression */}
   }))
   // Sort by score (highest first)
-  scoredBanners.sort((a, b) => b.score - a.score);
-
-  // Take top N banners;
-  return scoredBanners.slice(0, maxBanners).map(item => item.banner);
+  scoredBanners.sort((a, b) => b.score - a.score)
+  // Take top N banners
+  return scoredBanners.slice(0, maxBanners).map(item => item.banner)
 }
 
 /**

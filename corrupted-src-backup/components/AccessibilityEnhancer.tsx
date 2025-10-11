@@ -17,8 +17,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       setIsHighContrast(mediaQuery.matches),
 ,
       const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches),
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -32,8 +32,8 @@ const,
       setIsReducedMotion(mediaQuery.matches),
 ,
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches),
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
     return undefined
@@ -60,9 +60,9 @@ const,
           }
         }
       }
-      // Focus management;
+      // Focus management
       const handleFocusIn = (e: FocusEvent) => {
-        setFocusVisible(true);
+        setFocusVisible(true)
         const _target = e.target as HTMLElement
         // Announce focus changes to screen readers
         if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
@@ -75,9 +75,9 @@ const,
       }
       const handleFocusOut = () => {/* TODO: Fix JSX expression */}
       }
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('focusin', handleFocusIn);
-      document.addEventListener('focusout', handleFocusOut);
+      document.addEventListener('keydown', handleKeyDown)
+      document.addEventListener('focusin', handleFocusIn)
+      document.addEventListener('focusout', handleFocusOut)
       return () => {/* TODO: Fix JSX expression */}
       }
     }
@@ -89,7 +89,7 @@ const,
     if (isHighContrast) {
       root.classList.add('high-contrast')
   } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast')
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -116,7 +116,7 @@ const,
       }, 1000)
     }
   }
-  return(<div;
+  return(<;$2 />
   return (<div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       role="main""
@@ -173,9 +173,10 @@ const,
           {isReducedMotion ? '🏃' : '🚶'} Motion
       {children}
     </div>
-  );
+  )
 }
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer
 "`
   </AccessibilityEnhancerProps>
   </AccessibilityEnhancerProps>
+</div></div></button></button>

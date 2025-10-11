@@ -81,14 +81,14 @@ const CloudServicesPage: React.FC = () => {
 // Cloud Services</h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-  </
+  
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
 //               Get Started Today
           </a>
-            <a
+            <$2 />
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
 //               Learn More,
@@ -135,12 +135,12 @@ const CloudServicesPage: React.FC = () => {
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a
+            <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
 //               Call (302) 464-0950
           </a>
-            <a
+            <$2 />
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
 //               Get Free Consultation
@@ -152,4 +152,4 @@ const CloudServicesPage: React.FC = () => {
     </div>
   ),
 }
-export default CloudServicesPage;
+export default CloudServicesPage</$1></p></ul>

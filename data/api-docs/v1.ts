@@ -26,14 +26,14 @@
             {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123"}"body":"Hello"}'` },
             {language: 'javascript'} code: `await fetch('${baseUrl}/v1/messages', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }) body: JSON && JSON.stringify({to: 'USER123'} body: 'Hello' }) }).then(r => r && r.json())` },
             {language: 'python'} code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123'}'body':'Hello'}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ];
+          ]
           versions: ['v1'],
         }
       ]
     },
       id: 'jobs'
       title: 'Job Listings'
-      endpoints: [;
+      endpoints: [
           id: 'jobs-list'
           title: 'List Jobs'
           description: 'List job postings with optional filters.'
@@ -43,7 +43,7 @@
           auth: ['jwt'],
           query: {q: 'Search text'} status: 'open|closed' }
           responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } }
-          samples: [;
+          samples: [
 const baseUrl = 'https://api.zion.os'
 const baseUrl = 'https://api.zion.os'
 const v1: ApiDocsSpec =,
@@ -54,7 +54,7 @@ const v1: ApiDocsSpec =,
     description: 'Zion OS API Documentation'
   },
   servers: [{ url: baseUrl }],
-  paths: '/v1/nation/stats': unknown;
+  paths: '/v1/nation/stats': unknown
       get: unknown,
         summary: 'Get Nation Stats',
         responses: '200': unknown,
@@ -65,7 +65,7 @@ const v1: ApiDocsSpec =,
             }
           }
         }
-      ];
+      ]
     }
             {language: 'curl'} code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             {language: 'javascript'} code: `await fetch('${baseUrl}/v1/wallet/balance') { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
@@ -86,7 +86,7 @@ const v1: ApiDocsSpec =,
             {language: 'curl'} code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'` },
             {language: 'javascript'} code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open') { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             {language: 'python'} code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer'}'status':'open'}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ];
+          ]
           versions: ['v1'],
         }
       ]
@@ -104,7 +104,7 @@ const v1: ApiDocsSpec =,
             {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design"}"amount":1000}]}'` },
             {language: 'javascript'} code: `await fetch('${baseUrl}/v1/quotes', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }, body: JSON.stringify({jobId: 'JOB123') milestones: [{ title: 'Design'} amount: 1000 }] }) }).then(r => r.json())` },
             {language: 'python'} code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design'}'amount':1000}]}) headers={'Authorization':'Bearer <token>'}).json()` }
-          ];
+          ]
           versions: ['v1'],
         }
       ]
@@ -123,7 +123,7 @@ const v1: ApiDocsSpec =,
         {language: 'curl'} code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123"}"body":"Hello"}'` },
         {language: 'javascript'} code: `await fetch('${baseUrl}/v1/messages', {method: 'POST', headers: { Authorization: 'Bearer <token>'} 'Content-Type': 'application/json' }) body: JSON.stringify({to: 'USER123'} body: 'Hello' }) }).then(r => r.json())` },
         {language: 'python'} code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123'}'body':'Hello'}) headers={'Authorization':'Bearer <token>'}).json()` }
-      ];
+      ]
       versions: ['v1'],
     }
   ],
@@ -139,7 +139,7 @@ const v1: ApiDocsSpec =,
             {language: 'curl'} code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             {language: 'javascript'} code: `await fetch('${baseUrl}/v1/wallet/balance') { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             {language: 'python'} code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance') headers={'Authorization':'Bearer <token>'}).json()` }
-          ];
+          ]
           versions: ['v1'],
       description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
       endpoints: [,
@@ -368,7 +368,7 @@ const v1: ApiDocsSpec =,
             { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]}]};
+          versions: ['v1']}]}]}
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` },
           ],
           versions: ['v1'],
@@ -376,5 +376,5 @@ const v1: ApiDocsSpec =,
       ],
     },
   ],
-};
-export default v1;
+}
+export default v1

@@ -101,4 +101,4 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }]}
 
-export default january2026 NewContent;
+export default january2026 NewContent

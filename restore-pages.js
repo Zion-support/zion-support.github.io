@@ -1,9 +1,8 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// List of all page files that need to be restored;
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+// List of all page files that need to be restored
 const pageFiles = [
   'ai-services/page.tsx',
   'ai-marketing/page.tsx',
@@ -74,15 +73,15 @@ function createPageComponent(pageName) {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
+        < href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"$2 />
   hover: bg-cyan-600 transition-colors"></a>
           Contact Us,
         </a>
       </div>,
-    </div>);
+    </div>)
 }
 
-export default ${componentName}`;
+export default ${componentName}`
 }
 
 // Function to restore a page file

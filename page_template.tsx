@@ -5,9 +5,9 @@ import Footer from '../app/components/Footer'
 import SEOOptimizer from '../app/components/SEOOptimizer'
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react'
 const PageTemplate: React.FC<{
-    title: string;
-  description: string;
-  icon: React.ComponentType<any></any>features</any>: string[];
+    title: string
+  description: string
+  icon: React.ComponentType<any></any>features</any>: string[]
   benefits: string[]
   price: string
   category: string,
@@ -45,7 +45,7 @@ const PageTemplate: React.FC<{
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Get Started Today
               </a>
-              <a
+              <$2 />
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />
@@ -63,7 +63,7 @@ const PageTemplate: React.FC<{
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Features
-  </
+  
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Powerful capabilities designed to transform your business,
             </p>
@@ -108,7 +108,7 @@ const PageTemplate: React.FC<{
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pricing
-  </
+  
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Transparent pricing with no hidden fees,
             </p>
@@ -163,13 +163,13 @@ const PageTemplate: React.FC<{
                 Middletown DE 19709
                 364 E Main St STE 1008</p><br />
                 Middletown DE 19709,
-  </
+  
             </div>
           </div>
         </section>
       </main>
       <Footer />,
-    </div>);
+    </div>)
 }
 export default PageTemplate</h2>
   </h2>
@@ -178,3 +178,4 @@ export default PageTemplate</h2>
   </h2>
   </h2>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></h1></h2></h2></h3></h3></h3></h3></h3></h3>

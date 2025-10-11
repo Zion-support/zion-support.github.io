@@ -85,9 +85,10 @@ const,
         </a>
       </div>
     </div>
-  );
+  )
 }
-export default AdvertisingBanner;
+export default AdvertisingBanner
 "
   </AdvertisingBannerProps>
   </AdvertisingBannerProps>
+</div></p></h2>

@@ -1,32 +1,31 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from 'react'
 interface Event {
-  type: string;
-  target: EventTarget | null;
+  type: string
+  target: EventTarget | null
 }
-type EventListener = (event: Event) => void;
-;
+type EventListener = (event: Event) => void
 interface EventTarget {
-  addEventListener (type: string, listener: EventListener): void;
-  removeEventListener (type: string, listener: EventListener): void;
+  addEventListener (type: string, listener: EventListener): void
+  removeEventListener (type: string, listener: EventListener): void
 }
 interface MessageEventSource {
-  post_message (message: any, target_origin: string): void;
+  post_message (message: any, target_origin: string): void
 }
 interface MessagePort {
-  post_message (message: any): void;
-  start (): void;
-  close (): void;
+  post_message (message: any): void
+  start (): void
+  close (): void
 }
 interface MessageEvent < T = any> extends Event {
-  data: T;
-  origin: string;
-  lastEventId: string;
-  source: MessageEventSource | null;
-  ports: ReadonlyArray < MessagePort>;
+  data: T
+  origin: string
+  lastEventId: string
+  source: MessageEventSource | null
+  ports: ReadonlyArray < MessagePort>
 }
 interface MessageChannelHandlerProps {
-  on_message?: (message: unknown) => void;
-  on_error?: (error: Error) => void;
+  on_message?: (message: unknown) => void
+  on_error?: (error: Error) => void
 }
 export /**
  * useMessageChannelHandler - Function description
@@ -43,27 +42,27 @@ function useMessageChannelHandler() {
 if ( {) {
   $2
 }
-          on_message (event.data);
+          on_message (event.data)
         }
       } catch (error) {
         // Check condition
 if ( {) {
   $2
 }
-          on_error (error as Error);
+          on_error (error as Error)
         }
       }
     } catch (error) {
       if (onError) {
-        onError(error as Error);
+        onError(error as Error)
       }
     }
     [onMessage, onError]
-  );
+  )
   useEffect(() => {
-    window && window.addEventListener('message', handleMessage);
+    window && window.addEventListener('message', handleMessage)
     return () => {
-      window && window.removeEventListener('message', handleMessage);
-    };
-  }, [handleMessage]);
+      window && window.removeEventListener('message', handleMessage)
+    }
+  }, [handleMessage])
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

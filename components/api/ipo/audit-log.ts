@@ -1,14 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../utils/api/auth';
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readJsonFile } from '../../../utils/api/storage'
+import { requireSuperadminApi } from '../../../utils/api/auth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log && log.json', [] as unknown[]);
-  res && res.setHeader('Content-Type', 'application/json');
-  res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');
+  if (!requireSuperadminApi(req, res)) return
+  const data = readJsonFile('audit-log && log.json', [] as unknown[])
+  res && res.setHeader('Content-Type', 'application/json')
+  res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"')
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import { readJsonFile } from '../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../utils / api / auth';
+import { readJsonFile } from '../../../utils / api / storage'
+import { requireSuperadminApi } from '../../../utils / api / auth'
 export default /**
  * handler - Function description
  */
@@ -18,12 +18,12 @@ function handler() {
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { readJsonFile } from '../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../utils/api/auth';
+import { readJsonFile } from '../../../utils/api/storage'
+import { requireSuperadminApi } from '../../../utils/api/auth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const data = readJsonFile('audit-log.json', [] as unknown[]);
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
-  res.status(200).send(JSON.stringify(data, null, 2));
+  if (!requireSuperadminApi(req, res)) return
+  const data = readJsonFile('audit-log.json', [] as unknown[])
+  res.setHeader('Content-Type', 'application/json')
+  res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"')
+  res.status(200).send(JSON.stringify(data, null, 2))
 }

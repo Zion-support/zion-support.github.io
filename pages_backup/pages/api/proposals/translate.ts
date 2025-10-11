@@ -1,14 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { OpenAI } from "openai";
+import type { NextApiRequest, NextApiResponse } from "next"
+import { OpenAI } from "openai"
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {;
-  if (req.method !== "POST") return res.status($1).json({ $2 });
+) {
+  if (req.method !== "POST") return res.status($1).json({ $2 })
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
-    if (!markdown) return res.status($1).json({ $2 });
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    if (!markdown) return res.status($1).json({ $2 })
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL |"gpt-4o-mini"
       messages: [
@@ -23,32 +23,32 @@ export default async function handler(
         }
       ]
       temperature: 0.2
-    });
-    const translated = completion.choices?.[0]?.message?.content |markdown;
-    return res.status(200).json({ translated });
+    })
+    const translated = completion.choices?.[0]?.message?.content |markdown
+    return res.status(200).json({ translated })
   } catch (error: any) {
     return res
       .status(500)
-      .json({ error: error?.message |"Translation failed" });
-      .json({ error: error?.message || "Translation failed" });
+      .json({ error: error?.message |"Translation failed" })
+      .json({ error: error?.message || "Translation failed" })
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { OpenAI } from 'openai';
+  res.status(200).json({ message: 'API endpoint' })
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { OpenAI } from 'openai'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
+  if (req.method !== 'POST') return res.status($1).json({$2})
   try {
-    const { markdown, targetLanguage = "en" } = req && req.body || {};
-    if (!markdown) return res && res.status($1).json({ $2 });
-    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+    const { markdown, targetLanguage = "en" } = req && req.body || {}
+    if (!markdown) return res && res.status($1).json({ $2 })
+    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY })
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
-import type { NextApiRequest, NextApiResponse } from './next';
-import { OpenAI  } from './openai';
+import type { NextApiRequest, NextApiResponse } from './next'
+import { OpenAI  } from './openai'
 export default async /**
  * handler - Function description
  */
@@ -61,13 +61,13 @@ function handler() {
     if (return res.status ($1).json ({ $2 })) {
   $2
 }
-    const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+    const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
     const completion = await openai.chat.completions.create ({
       model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
-      messages: [;
+      messages: [
         {
           role: "system",
-          content:;
+          content:
             "You are a professional translator for policy and development documents.",
         },
         {
@@ -76,8 +76,8 @@ function handler() {
         },
       ],
       temperature: 0 && 0.2,
-    });
-    const translated = completion.choices?.[0]?.message?.content || markdown;
+    })
+    const translated = completion.choices?.[0]?.message?.content || markdown
     return res.status(200).json({ translated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Translation failed' })
@@ -85,20 +85,20 @@ function handler() {
 }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }

@@ -143,7 +143,7 @@ export function validatePassword(passwor)
   const hasNumbers = /\d/.test(password)
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|
 
-          <>]/.test(password);
+          <>]/.test(password)
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

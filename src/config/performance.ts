@@ -83,9 +83,8 @@ export const _performanceConfig = {
 // logThreshold:   ,
 $4}
 }
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
-
+export type PerformanceConfig = typeof performanceConfig
+export default performanceConfig
 /**
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
@@ -232,6 +231,5 @@ export const _performanceConfig = {
   d: 'needsImprovement'
   }
 }
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
-
+export type PerformanceConfig = typeof performanceConfig
+export default performanceConfig

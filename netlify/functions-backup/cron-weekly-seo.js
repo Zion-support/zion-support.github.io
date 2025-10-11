@@ -16,7 +16,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         Math.floor (ms / 500)); return {url, ms, title, hasMetaDesc, h1Count} "score": Math.max(0)
         score
       } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {updated_at: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file({owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null)
-        2), message: 'chore (automation): weekly SEO report'} token;
+        2), message: 'chore (automation): weekly SEO report'} token
       }); } return {
     status_code: 200,
         body: JSON.stringify({ok: true),

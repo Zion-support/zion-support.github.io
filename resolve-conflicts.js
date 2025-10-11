@@ -2,9 +2,8 @@
 import { readFileSync, writeFileSync } from 'fs'
 console.log('🔧 Resolving merge conflicts in app/page.tsx...')
 try {
-    // Read the file;
-  const content = readFileSync('/workspace/app/page.tsx', 'utf8');
-  
+    // Read the file
+  const content = readFileSync('/workspace/app/page.tsx', 'utf8')
   // Split by conflict markers and keep our version (after )
   const lines = content.split('\n')
   const resolvedLines = []
@@ -12,12 +11,12 @@ try {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
     if (line.includes('')) {
-      skipUntilNextMarker = true;
+      skipUntilNextMarker = true
       continue
   }
     
     if (line.includes('')) {
-    skipUntilNextMarker = false;
+    skipUntilNextMarker = false
       continue
   }
     
@@ -42,6 +41,6 @@ try {
   writeFileSync('/workspace/app/page.tsx', cleanedContent)
   console.log('✅ Duplicate imports cleaned up!')
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message);
+    console.error('❌ Error resolving conflicts:', error.message)
   process.exit(1)
   }

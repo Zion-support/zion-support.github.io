@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
 const FinancialITPage: React.FC = () => {
     const features = [
     {
@@ -91,7 +91,7 @@ return (
       <Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -107,7 +107,7 @@ return (
             </span>
           </h1>
           <p></p>
-            Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.;
+            Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.
             Built for banks, credit unions, investment firms, and fintech companies.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
@@ -146,7 +146,7 @@ return (
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo
       {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -204,7 +204,7 @@ return (
             ))}
       {/* Services Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -237,7 +237,7 @@ return (
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -258,7 +258,7 @@ return (
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -282,9 +282,8 @@ return (
       </section>
       <Footer /></Footer>
   ),
-};
-
-export default FinancialITPage;
+}
+export default FinancialITPage
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?
           <p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security

@@ -4,24 +4,20 @@
  */
 
 interface EnvConfig {
-    // App Configuration;
-  NODE_ENV: 'development' | 'production' | 'test';
-  APP_URL: string;
-  APP_NAME: string;
-
-  // Analytics;
-  GOOGLE_ANALYTICS_ID?: string;
-
-  // API Configuration;
-  API_BASE_URL: string;
-  API_TIMEOUT: number;
-
-  // Feature Flags;
-  ENABLE_ANALYTICS: boolean;
-  ENABLE_ERROR_TRACKING: boolean;
-  ENABLE_PERFORMANCE_MONITORING: boolean;
-
-  // Logging;
+    // App Configuration
+  NODE_ENV: 'development' | 'production' | 'test'
+  APP_URL: string
+  APP_NAME: string
+  // Analytics
+  GOOGLE_ANALYTICS_ID?: string
+  // API Configuration
+  API_BASE_URL: string
+  API_TIMEOUT: number
+  // Feature Flags
+  ENABLE_ANALYTICS: boolean
+  ENABLE_ERROR_TRACKING: boolean
+  ENABLE_PERFORMANCE_MONITORING: boolean
+  // Logging
   LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
   // Build Configuration
   BUILD_ID?: string,
@@ -63,8 +59,8 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
     ,
-    const _value = this.getEnvVar(key);
-    //     const parsed = parseInt(value, 10);
+    const _value = this.getEnvVar(key)
+    //     const parsed = parseInt(value, 10)
     return isNaN(parsed) ? defaultValue : parsed
   }
 
@@ -149,10 +145,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   private isValidUrl(url: string): boolean {
     ,
     try {,
-      new URL(url);
+      new URL(url)
       return true
   } catch {
-      return false;
+      return false
   private isValidUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
@@ -194,11 +190,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 }
 
-// Export singleton instance;
-export const env = EnvironmentConfig.getInstance();
-
-// Export typed config;
+// Export singleton instance
+export const env = EnvironmentConfig.getInstance()
+// Export typed config
 export type { EnvConfig }
 
-export default env;
+export default env
 `

@@ -1,48 +1,48 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface NextGenInnovation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics
@@ -407,7 +407,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     customers: 320,
     rating: 4.8,
     reviews: 267
-  };
+  }
 }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {

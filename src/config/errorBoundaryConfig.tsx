@@ -8,8 +8,8 @@ export interface ErrorBoundaryConfig {
   }
 }
   /**
-   * Whether to log errors to console;
-   */;
+   * Whether to log errors to console
+   */
   logErrors: boolean
   /**
    * Whether to show detailed error messages,
@@ -56,7 +56,7 @@ export interface ErrorBoundaryConfig {
   r: () => void }>
     notFoun,
   d: React.ComponentType<{/* TODO: Fix JSX expression */}
-  r: () => void }>;
+  r: () => void }>
   }
 }
 /**
@@ -293,4 +293,4 @@ export function formatErrorForLogging(error: Error): Record,
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   }
-}"</div></div></div></div></div></div></button></button></button></button></button></p></p></h2>
+}"</div></div></div></div></div></div></button></button></button></button></button></p></p></h2></a></a>

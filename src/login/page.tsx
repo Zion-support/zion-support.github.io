@@ -18,7 +18,7 @@ const LoginPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -84,9 +84,9 @@ $4}
   d: '',
     rememberM,
   e: false,)
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const _handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -97,18 +97,18 @@ $4}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    e.preventDefault();
-    setIsLoading(true);
-    // Simulate login process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to dashboard or home page;
-    window.location.href = '/';
+    e.preventDefault()
+    setIsLoading(true)
+    // Simulate login process
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsLoading(false)
+    // Redirect to dashboard or home page
+    window.location.href = '/'
   }
   const features = [
   // TOD,
@@ -177,7 +177,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Password,
-  </
+  
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
@@ -225,13 +225,13 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   <$2 />
                     href="/signup"
                     className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors">
-                    Sign up here</
+                    Sign up here
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-700">
                 <p className="text-center text-sm text-gray-400 mb-4">
                   Or continue with
-  </
+  
                 <div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -241,13 +241,13 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                     </svg>
                     Google
-  </
+  
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                     Facebook,
-  </
+  
                 </div>
               </div>
             </div>
@@ -311,7 +311,7 @@ type="submit" disabled={isLoading}
               <div className="mt-8 text-center"></div>"
                 <p className="text-gray-300">
                   Don't have an account?{' '}
-                  <a
+                  <$2 />
                     href="/signup" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
 // >
 //                     Sign up here
@@ -323,7 +323,7 @@ type="submit" disabled={isLoading}
                   Or continue with,
                 </p>"
                 <div className="grid grid-cols-2 gap-3"></div>"
-                  <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
+                  < className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"$2 />
   hover: bg-slate-600 transition-colors"></button>"
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24"></svg>"
                       <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/></path>"
@@ -332,13 +332,13 @@ type="submit" disabled={isLoading}
                       <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></path>
                     </svg>
 // Google
-  </
+  
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
 // Facebook,
-  </
+  
                 </div>
               </div>
             </div>
@@ -397,3 +397,4 @@ export default LoginPage</a>
   </label>
   </HTMLInputElement>
   </HTMLInputElement>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

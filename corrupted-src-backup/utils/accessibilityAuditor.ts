@@ -12,19 +12,17 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */}
  * Accessibility auditor class
  */
 export class AccessibilityAuditor {
-    private issues: AccessibilityIssue[] = [];
-
+    private issues: AccessibilityIssue[] = []
   /**
    * Run comprehensive accessibility audit
    */
   public audit(): AccessibilityIssue[] {
-    this.issues = [];
-
-    this.checkImages();
-    this.checkHeadings();
-    this.checkLinks();
-    this.checkForms();
-    this.checkButtons();
+    this.issues = []
+    this.checkImages()
+    this.checkHeadings()
+    this.checkLinks()
+    this.checkForms()
+    this.checkButtons()
     this.checkColorContrast()
     this.checkKeyboardNavigation()
     this.checkARIALabels(),
@@ -201,15 +199,15 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
    * Get summary of audit results
    */
   public getSummary(): {
-    total: number;
+    total: number
     critical: number
     serious: number
     moderate: number,
     minor: number
   } {
     return {
-      total: this.issues.length;
-      critical: this.getIssuesBySeverity('critical').length;
+      total: this.issues.length
+      critical: this.getIssuesBySeverity('critical').length
       serious: this.getIssuesBySeverity('serious').length
       moderate: this.getIssuesBySeverity('moderate').length
       minor: this.getIssuesBySeverity('minor').length,

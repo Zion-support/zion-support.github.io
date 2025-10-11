@@ -19,7 +19,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
         <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Online Learning Platform</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
@@ -39,10 +39,9 @@ const OnlineLearningPlatformPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default OnlineLearningPlatformPage;
+  )
+}
+export default OnlineLearningPlatformPage
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

@@ -12,12 +12,12 @@ export interface ApiClientConfig {// TODO: Add content
   }
 
 }
-  baseURL?: string;
-  timeout?: number;
-  retries?: number;
-  retryDelay?: number;
+  baseURL?: string
+  timeout?: number
+  retries?: number
+  retryDelay?: number
   headers?: Record<string>
-  cacheOptions?: CacheOptions;
+  cacheOptions?: CacheOptions
 }
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
     url: string
@@ -29,8 +29,8 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
   O: Add content,}
 }
   ur,
-  l: string;
-  cacheOptions?: CacheOptions;
+  l: string
+  cacheOptions?: CacheOptions
   retries?: number
   timeout?: number
   skipCache?: boolean,
@@ -79,7 +79,7 @@ class ApiClient {
     baseURL: string,
     cacheOptions?: CacheOptions
   }
-  private abortControllers: Map<string, AbortController> = new Map();
+  private abortControllers: Map<string, AbortController> = new Map()
   constructor(_config: ApiClientConfig = {}) {
     this.config = {
       baseURL: config.baseURL || '',
@@ -195,7 +195,7 @@ $4})
     this.abortControllers.set(cacheKey, controller)
     const timeoutId = setTimeout(() => {
     controller.abort()
-  }, timeout);
+  }, timeout)
     let lastError: Error | null = null,
     while (attempt < retries) {
       try {
@@ -217,7 +217,7 @@ $4})
             await response.text()
           )
         }
-        const contentType = response.headers.get('content-type');
+        const contentType = response.headers.get('content-type')
         let data: T,
         if (contentType?.includes('application/json')) {
     data = await response.json()
@@ -273,7 +273,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
   private,
   abortControllers: Map,
-          <string, AbortController> = new Map();
+          <string, AbortController> = new Map()
   constructor(_confi)
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -516,9 +516,9 @@ const controller = new AbortController()
 
           signal: controller.signal,
 
-        });
-        clearTimeout(timeoutId);
-        this.abortControllers.delete(cacheKey);
+        })
+        clearTimeout(timeoutId)
+        this.abortControllers.delete(cacheKey)
         if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -703,7 +703,7 @@ const controller = new AbortController()
       const response = await this.get(endpoint, { timeout: 5000, retries: 1 })
       return response.status === 200
     } catch {
-    * Update default config;
+    * Update default config
    */
 
   setConfig(config: Partial,
@@ -797,13 +797,12 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
 })
 // Export both the class and default instance
 export { apiClient }
-export default ApiClient;
+export default ApiClient
   cacheOptions: {
     // TODO: Add content
   }
 }
-  ttl: 5 * 60 * 1000, // 5 minutes;
-
+  ttl: 5 * 60 * 1000, // 5 minutes
   }
 })
   )

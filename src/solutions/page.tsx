@@ -210,7 +210,7 @@ $4}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Our Solutions,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
@@ -233,9 +233,9 @@ $4}
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-  );
+  )
 }
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
   // TOD,
   O: Add items
@@ -638,7 +638,7 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Our Solutions
           </h1>"
@@ -724,7 +724,7 @@ $4}
                     <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
                     </div>
-                    <a
+                    <$2 />
                       href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
 // >
 //                       Learn More,"
@@ -768,24 +768,24 @@ $4}
               and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
+              <$2 />
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <Phone className="w-5 h-5 mr-2" />
                 Get Free Consultation
-  </
-              <a
+  
+              <$2 />
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-  </
-              <a
+  
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us,
-  </
+  
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
@@ -796,7 +796,7 @@ $4}
 //               and drive unprecedented growth.
           </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
+              <$2 />
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           "
@@ -809,7 +809,7 @@ $4}
           <Phone className="w-4 h-4 mr-2" /></Phone>
 // (302) 464-0950
           </a>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
@@ -829,3 +829,4 @@ export default SolutionsPage</a>
   </a>
   </a>
   </a>
+</div></div></div></div></div></div></div></div></div></div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>

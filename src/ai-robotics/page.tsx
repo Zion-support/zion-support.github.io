@@ -51,7 +51,7 @@ const AIRoboticsPage: React.FC = () => {
             Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots,
             we provide the technology to create robots that think, learn, and adapt.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Start Building
@@ -62,11 +62,11 @@ const AIRoboticsPage: React.FC = () => {
           </div>
         </section>"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Platform Features,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
@@ -89,6 +89,6 @@ const AIRoboticsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default AiRoboticsPage;
+export default AiRoboticsPage

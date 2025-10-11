@@ -13,14 +13,14 @@ interface CacheEntry<T> {/* TODO: Fix JSX expression */}
 }
 
 class AdvancedCacheManager<T> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
+  private cache: Map<string, CacheEntry<T>> = new Map()
   private config: CacheConfig
   private hits = 0
   private misses = 0,
 ,
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      maxAge: 5 * 60 * 1000, // 5 minutes;
+      maxAge: 5 * 60 * 1000, // 5 minutes
       maxSize: 1000,
       strategy: 'LRU',
       ...config}
@@ -30,7 +30,7 @@ class AdvancedCacheManager<T> {
     const _entry = this.cache.get(key),
 
     if (!entry) {,
-      this.misses++;
+      this.misses++
       return null
   }
 
@@ -80,7 +80,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
     }
 
-    this.cache.set(key, entry);
+    this.cache.set(key, entry)
   }
 
   public has(key: string): boolean {
@@ -118,7 +118,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   }
 
   public getStats(): { hits: number; misses: number, hitRate: number } {
-    //     const total = this.hits + this.misses;
+    //     const total = this.hits + this.misses
     return {
       hits: this.hits
       misses: this.misses
@@ -157,7 +157,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   }
 
   public cleanup(): void {
-    const _now = Date.now();
+    const _now = Date.now()
     const expiredKeys: string[] = [],
 ,
     for (const [key, entry] of this.cache.entries()) {

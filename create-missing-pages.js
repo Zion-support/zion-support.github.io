@@ -92,13 +92,12 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       </section>
 
       <Footer />,
-    </div>);
+    </div>)
 }
 
-export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
-`;
-
-// Function to create a page;
+export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page
+`
+// Function to create a page
 const createPage = (route, title, description, category) => {
   const pageContent = createPageTemplate(route, title, description, category)
   const pagePath = path.join('/workspace/src', route, 'page.tsx')
@@ -108,12 +107,12 @@ const createPage = (route, title, description, category) => {
     fs.mkdirSync(dir, { recursive: true })
   }
   
-  // Write the page file;
-  fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
+  // Write the page file
+  fs.writeFileSync(pagePath, pageContent)
+  console.log(`Created page: ${route}`)
 }
 
-// Page configurations;
+// Page configurations
 const pageConfigs = {
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
@@ -261,12 +260,10 @@ const pageConfigs = {
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 }
 
-// Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
-
-console.log(`Creating ${missingPages.length} missing pages...`);
-
+// Create pages in batches
+let createdCount = 0
+const batchSize = 10
+console.log(`Creating ${missingPages.length} missing pages...`)
 for (const route of missingPages) {
   if (pageConfigs[route]) {
     const config = pageConfigs[route]

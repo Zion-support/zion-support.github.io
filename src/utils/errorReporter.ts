@@ -4,17 +4,17 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 export interface ErrorReport {
-    message: string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
+    message: string
+  stack?: string
+  componentStack?: string
+  timestamp: string
   userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record<string, unknown>
   }
 export interface ErrorReporterConfig {
-    enableConsoleLogging: boolean;
+    enableConsoleLogging: boolean
   enableRemoteLogging: boolean
   remoteEndpoint?: string
   maxErrorsInMemory: number,
@@ -32,7 +32,7 @@ export class ErrorReporter {
   private static instance: ErrorReporter
   private config: ErrorReporterConfig
   private errorQueue: ErrorReport[] = [],
-  private errorCount: Map<string, number> = new Map();
+  private errorCount: Map<string, number> = new Map()
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config }
   }
@@ -102,7 +102,7 @@ export class ErrorReporter {
   errorQueue: ErrorReport[] = [],
   private,
   errorCount: Map,
-          <string, number> = new Map();
+          <string, number> = new Map()
   private constructor(confi)
   g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -113,7 +113,7 @@ export class ErrorReporter {
    * Get singleton instance
    */
 
-  static getInstance(config?: Partial;
+  static getInstance(config?: Partial
           <ErrorReporterConfig>): ErrorReporter {
     // TODO: Add content
   }
@@ -178,8 +178,8 @@ export class ErrorReporter {
     //       severity,
       context: this.config.captureContext ? context : undefined
   }
-    // Track error frequency;
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
+    // Track error frequency
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport)
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */}
@@ -205,7 +205,7 @@ export class ErrorReporter {
    */
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity),
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
+    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
@@ -227,7 +227,7 @@ export class ErrorReporter {
       high: 'color: #F44336, font-weight: bold',
       critical:     ,
 $4}
-    return styles[severity];
+    return styles[severity]
   }
   /**
    * Send error to remote logging service
@@ -370,7 +370,7 @@ $4}
    * Clear error queue
    */
   clearQueue(): void {
-    * Get all errors in queue;
+    * Get all errors in queue
    */
 
   getErrorQueue(): ErrorReport[] {// TODO: Add content
@@ -457,10 +457,10 @@ export const captureComponentError = (
   report.reportError(error, 'high', {
     componentName,
     componentStack: errorInfo.componentStack
-  });
+  })
 }
-export default ErrorReporter;
-   * Export errors as JSON;
+export default ErrorReporter
+   * Export errors as JSON
    */
 
   exportErrors(): string {
@@ -515,7 +515,6 @@ export const captureComponentError = ()
 //     componentName,
     componentStac,
   k: errorInfo.componentStack,)
-  });
+  })
 }
-export default ErrorReporter;
-
+export default ErrorReporter

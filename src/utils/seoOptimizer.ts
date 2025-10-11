@@ -4,22 +4,22 @@
  * Provides comprehensive SEO enhancements and monitoring
  */
 interface SEOConfig {
-    siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+    siteName: string
+  siteUrl: string
+  defaultTitle: string
+  defaultDescription: string
+  defaultImage: string
   twitterHandle?: string
   facebookAppId?: string
   googleAnalyticsId?: string,
   googleTagManagerId?: string
   }
 interface PageSEOData {
-    title: string;
-  description: string;
-  keywords: string[];
-  image?: string;
-  url?: string;
+    title: string
+  description: string
+  keywords: string[]
+  image?: string
+  url?: string
   type?: 'website' | 'article' | 'product' | 'profile'
 'use client'
 /**
@@ -51,10 +51,10 @@ interface PageSEOData {
   url?: string
 
   type?: 'website' | 'article' | 'product' | 'profile'
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
+  publishedTime?: string
+  modifiedTime?: string
+  author?: string
+  section?: string
   tags?: string[]
   noindex?: boolean
   nofollow?: boolean,
@@ -182,7 +182,7 @@ class SEOOptimizer {
    * Update meta tags
    */
   private updateMetaTags(): void {
-    * Update meta tags;
+    * Update meta tags
    */
 
   private updateMetaTags(): void {// TODO: Add content
@@ -286,7 +286,7 @@ class SEOOptimizer {
   } else {
     directives.push('nofollow')
   }
-    return directives.join(', ');
+    return directives.join(', ')
   }
   /**
    * Setup structured data
@@ -341,7 +341,7 @@ class SEOOptimizer {
         'query-input': 'required name=search_term_string'
       }
     }
-    this.addStructuredData(structuredData);
+    this.addStructuredData(structuredData)
   }
   /**
    * Update structured data for current page
@@ -415,9 +415,9 @@ class SEOOptimizer {
    * Setup canonical URLs
    */
   private setupCanonicalUrls(): void {
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = window.location.href;
+    const canonical = document.createElement('link')
+    canonical.rel = 'canonical'
+    canonical.href = window.location.href
     document.head.appendChild(canonical)
   }
   /**
@@ -433,7 +433,7 @@ class SEOOptimizer {
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime)
   }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      }).observe({ entryTypes: ['largest-contentful-paint'] })
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
       new PerformanceObserver((list) => {
@@ -446,7 +446,7 @@ class SEOOptimizer {
     // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue)
   }
-      }).observe({ entryTypes: ['layout-shift'] });
+      }).observe({ entryTypes: ['layout-shift'] })
     }
   }
   /**
@@ -524,7 +524,7 @@ Disallow: /static/`,
   } else if (h1s.length > 1) {
     issues.push('Page has multiple H1 tags')
   }
-    return issues;
+    return issues
   }
   /**
    * Get SEO score
@@ -532,7 +532,7 @@ Disallow: /static/`,
   getSEOScore(): number {
     const issues = this.checkSEOIssues()
     const maxIssues = 10; // Maximum possible issues
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
+    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
     return Math.round(score)
   }
 }
@@ -547,8 +547,8 @@ const defaultConfig: SEOConfig = {
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 }
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
+export const seoOptimizer = new SEOOptimizer(defaultConfig)
+export default seoOptimizer
       publisher: {
     // TODO: Add content
   }
@@ -561,7 +561,7 @@ export default seoOptimizer;
   l: this.config.siteUrl,
       }
     }
-    // Add article-specific properties;
+    // Add article-specific properties
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -629,12 +629,12 @@ private addStructuredData(data: unknown): void {
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
     // Poor LCP
   }
-          this.trackSEOMetric('poor_lcp', lastEntry.startTime);
+          this.trackSEOMetric('poor_lcp', lastEntry.startTime)
         }
       }).observe({/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint'] })
@@ -656,7 +656,7 @@ private addStructuredData(data: unknown): void {
         if (clsValue > 0.25) {
     // Poor CLS
   }
-          this.trackSEOMetric('poor_cls', clsValue);
+          this.trackSEOMetric('poor_cls', clsValue)
         }
       }).observe({/* TODO: Fix JSX expression */}
   s: ['layout-shift'] })
@@ -746,7 +746,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml
 
 }
     const,
-  issues: string[] = [];
+  issues: string[] = []
     // Check title length
 const title = document.title
     if (title.length,)
@@ -839,6 +839,5 @@ const,
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID,
 }
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
-
+export const seoOptimizer = new SEOOptimizer(defaultConfig)
+export default seoOptimizer

@@ -1,9 +1,9 @@
 const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   const, latestArticle, s = [
     {
-      i;
+      i
   d: 1,
-      tit, l, e: 'AI, 20, 2;
+      tit, l, e: 'AI, 20, 2
   6: Autonomous, Agent, Factories - The, Future, of Enterprise, Automatio, n','
       sl, u, g: 'ai-20, 2, 6-autonomo, u, s-age, n, t-factori, e, s','
       excer, p, t: 'Discover, how, autonomous agent, factories, are revolutionizing, enterprise, automation in, 202, 6. Learn, about, self-replicating, AI, systems, agent, orchestratio, n, and, achieving, 95% automation, rates, with breakthrough, agent, factory architectur, e, s.','
@@ -16,7 +16,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0}
     {
       id: 2,
-      tit, l, e: 'AI, 20, 2;
+      tit, l, e: 'AI, 20, 2
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h','
       sl, u, g: 'ai-20, 2, 6-quant, u, m-neur, a, l-optimizati, o, n','
       excer, p, t: 'Explore, quantum, neural optimization, in, 202
@@ -30,7 +30,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0}
     {
       id: 3,
-      tit, l, e: 'AI, 20, 2;
+      tit, l, e: 'AI, 20, 2
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence','
       sl, u, g: 'ai-20, 2, 6-me, t, a-cogniti, v, e-reasoni, n, g','
       excer, p, t: 'Explore, met, a-cognitive, reasoning, in AI, 20, 2
@@ -63,32 +63,32 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
     }
     {
       id: 2,
-      tit, l, e: 'AI, 20, 2;
-  6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h',';
-      sl, u, g: 'ai-20, 2, 6-quant, u, m-neur, a, l-optimizati, o, n',';
-      excer, p, t: 'Explore, quantum, neural optimization, in, 202;
-  6: breakthrough, AI, performance gai, n, s, quant, u, m-enhanced, neural, networks, and, achieving, 1000x faster, training, with quantum, computing, integration.',';
-      catego, r, y: 'Quantum, A, I',';
-      da, t, e: '20, 2, 5-01-30',';
-      readTi, m, e: '18, mi, n',';
-      trendi, n, g: tr, u, e;
-      ic, o, n: '⚛️',';
-      featur, e, d: tr, u, e;
+      tit, l, e: 'AI, 20, 2
+  6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h','
+      sl, u, g: 'ai-20, 2, 6-quant, u, m-neur, a, l-optimizati, o, n','
+      excer, p, t: 'Explore, quantum, neural optimization, in, 202
+  6: breakthrough, AI, performance gai, n, s, quant, u, m-enhanced, neural, networks, and, achieving, 1000x faster, training, with quantum, computing, integration.','
+      catego, r, y: 'Quantum, A, I','
+      da, t, e: '20, 2, 5-01-30','
+      readTi, m, e: '18, mi, n','
+      trendi, n, g: tr, u, e
+      ic, o, n: '⚛️','
+      featur, e, d: tr, u, e
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0'
     }
     {
       id: 3,
-      tit, l, e: 'AI, 20, 2;
-  6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence',';
-      sl, u, g: 'ai-20, 2, 6-me, t, a-cogniti, v, e-reasoni, n, g',';
-      excer, p, t: 'Explore, met, a-cognitive, reasoning, in AI, 20, 2;
-  6: se, l, f-aware, AI, systems, cognitive, architecture, breakthroughs, and, achieving, human-level, reasoning, through advanced, met, a-cognition, framework, s.',';
-      catego, r, y: 'Cognitive, A, I',';
-      da, t, e: '20, 2, 5-01-30',';
-      readTi, m, e: '20, mi, n',';
-      trendi, n, g: tr, u, e;
-      ic, o, n: '🧠',';
-      featur, e, d: tr, u, e;
+      tit, l, e: 'AI, 20, 2
+  6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence','
+      sl, u, g: 'ai-20, 2, 6-me, t, a-cogniti, v, e-reasoni, n, g','
+      excer, p, t: 'Explore, met, a-cognitive, reasoning, in AI, 20, 2
+  6: se, l, f-aware, AI, systems, cognitive, architecture, breakthroughs, and, achieving, human-level, reasoning, through advanced, met, a-cognition, framework, s.','
+      catego, r, y: 'Cognitive, A, I','
+      da, t, e: '20, 2, 5-01-30','
+      readTi, m, e: '20, mi, n','
+      trendi, n, g: tr, u, e
+      ic, o, n: '🧠','
+      featur, e, d: tr, u, e
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0'
     }
   ]
@@ -96,15 +96,15 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">
   return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">"</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}

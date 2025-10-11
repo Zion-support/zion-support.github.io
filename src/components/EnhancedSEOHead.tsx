@@ -1,11 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-    title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
+    title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
   type?: string
   }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
@@ -170,4 +170,4 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
     </Helmet>
   ),
 }
-export default EnhancedSEOHead;
+export default EnhancedSEOHead</$1></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

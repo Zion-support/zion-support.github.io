@@ -15,7 +15,7 @@ function App() {
     //     // Cleanup on unmount
     return () => {
       //       }
-  }, []);
+  }, [])
   return(<ErrorBoundary>
       <div>
   return (
@@ -26,7 +26,7 @@ function App() {/* TODO: Fix JSX expression */}
 }
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
-  }, []);
+  }, [])
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>

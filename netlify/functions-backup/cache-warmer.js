@@ -53,12 +53,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
     try {
-      const res = await fetch(url} { signal: controller.signal,)});
-//       const ms = Date.now() - startedAt;
-      clearTimeout(id);
+      const res = await fetch(url} { signal: controller.signal,)})
+//       const ms = Date.now() - startedAt
+      clearTimeout(id)
       return {url, ok: res.ok
         status: res.status, ms }
-    } catch (e) {const ms = Date.now() - startedAt;
+    } catch (e) {const ms = Date.now() - startedAt
       clearTimeout(id;)
       })
       return { url, ok: false, status: 0),
@@ -106,8 +106,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-cache-warmer'}
-    // get sha if exists;
-    let sha;
+    // get sha if exists
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -183,7 +183,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       pages: warmedPages
       functions: warmedFunctions,
     }
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'
     const summary = {/* TODO: Fix JSX expression */}
   s: warmedFunctions.length}
@@ -198,7 +198,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: warmedPages,
       function,
   s: warmedFunctions}
-    // Commit reports if possible;
+    // Commit reports if possible
     const dirLatest = 'data/reports/cache-warm/latest.json'`
 //     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`
     let commitLatest = {/* TODO: Fix JSX expression */}
@@ -215,7 +215,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     ok: true, summary)
         commitLatest)
         commitHistory
-  });
+  })
     }
   } catch (err) {log(String(err))}
     return {
@@ -229,11 +229,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-      });
+      })
     }
   } catch (err) {log(String(err))}
     return {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

@@ -42,8 +42,8 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   // Debounce utility,
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
       }
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
     }
   },
 
@@ -71,9 +71,9 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   // Memoization,
   memoize: fn => {/* TODO: Fix JSX expression */}
       }
-      //       const result = fn.apply(this, args);
-      cache.set(key, result);
-      return result;
+      //       const result = fn.apply(this, args)
+      cache.set(key, result)
+      return result
     }
   }}
 `

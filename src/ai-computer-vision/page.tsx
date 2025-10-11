@@ -87,7 +87,7 @@ const PagePage: React.FC = () => {
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
@@ -99,11 +99,11 @@ Transform your business with cutting-edge computer vision technology. From objec
         </section>
         {/* Features Section */}
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8">
             {features.map((feature, index) => ()}"
@@ -183,7 +183,7 @@ Most Popular
 Ready to See the Future?"
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
-                Start Your Vision Journey;
+                Start Your Vision Journey
                 href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
                 Request Demo
@@ -193,3 +193,4 @@ Ready to See the Future?"
   ),
 }
 export default PagePage</p>
+</p></p></p></h3></h4></ul></ul>

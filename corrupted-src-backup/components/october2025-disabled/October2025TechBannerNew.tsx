@@ -145,7 +145,8 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         ))}
       </div></moti>
     </moti, o, n.d, i, v>
-  );
+  )
 }
-export default October2025TechBannerNew;
+export default October2025TechBannerNew
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></a></p></p></h2></h2></h3>

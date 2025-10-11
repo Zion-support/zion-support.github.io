@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+    const [searchTerm, setSearchTerm] = useState('')
+  const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
@@ -134,7 +134,7 @@ $4]
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
+              <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
@@ -150,22 +150,22 @@ $4]
       <Footer />
     </React.Fragment>
 export default FAQPage,
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
   )
   }
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [openItems, setOpenItems] = useState<number[]>([])
 const toggleItem = (inde)
   x: number) => {setOpenItems(prev =>})
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
+    )
   }
   const faqData = [
   // TOD,
@@ -365,7 +365,7 @@ type="text" placeholder="Search FAQs..."
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
+              <$2 />
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
 // Call (302) 464-0950
@@ -393,3 +393,4 @@ export default FaqPage</div>
   </div>
   </div>
   </div>
+</div></div></div></div></div></div></span></span></button></p></p></p></p></p></h2></h2>

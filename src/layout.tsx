@@ -168,8 +168,8 @@ $4]
         </ErrorBoundary>
       </body>
     </html>
-  );
-export default RootLayout;
+  )
+export default RootLayout
         priceSpecification: {
     // TODO: Add content
   }
@@ -187,3 +187,4 @@ export default RootLayout;
 export default SrcPage,
 }
   </script>
+</li></li></li></li></li></li></li></li></li></li></li>

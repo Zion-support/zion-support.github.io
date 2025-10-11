@@ -45,8 +45,7 @@ try {/* TODO: Fix JSX expression */}`
 
 // Check TypeScript configuration
 try {
-    const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
-  
+    const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'))
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions')
   } else {

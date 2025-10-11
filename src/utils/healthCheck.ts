@@ -151,7 +151,7 @@ export interface HealthCheck {
   nam,
   e: string,,
     statu,
-  s: 'pass' | 'warn' | 'fail';
+  s: 'pass' | 'warn' | 'fail'
   message?: string
   details?: Record
           <string>
@@ -235,7 +235,7 @@ constructor() {/* TODO: Fix JSX expression */}
     // Return cached status if still valid
     if ()
 //       this.cachedStatus &&
-//       now - this.lastCheckTime;
+//       now - this.lastCheckTime
           < this.cacheTimeout) {
     // TODO: Add content
   }
@@ -307,12 +307,12 @@ const hasFailures = checks.some((c) => c.status === 'fail')
   p: now,
       uptim,
   e: now - this.startTime,
-//       checks;
+//       checks
     }
-    // Cache the result;
-    this.cachedStatus = healthStatus;
-    this.lastCheckTime = now;
-    // Log unhealthy status;
+    // Cache the result
+    this.cachedStatus = healthStatus
+    this.lastCheckTime = now
+    // Log unhealthy status
     if (status === 'unhealthy') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -662,7 +662,7 @@ $4}
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {
-    localStorage.setItem('_size_test', testData);
+    localStorage.setItem('_size_test', testData)
         localStorage.removeItem('_size_test')
   } catch {
         return {

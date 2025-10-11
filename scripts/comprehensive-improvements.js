@@ -38,9 +38,9 @@ packageJson.scripts = {/* TODO: Fix JSX expression */}
   test:unit',
   'postinstall': 'npm run type-check'}
 
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-// // 2. Create TypeScript configuration improvements;
-// // const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json');
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+// // 2. Create TypeScript configuration improvements
+// // const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json')
 let _tsConfig = {}
 
 if (fs.existsSync(tsConfigPath)) {/* TODO: Fix JSX expression */}
@@ -50,20 +50,20 @@ if (fs.existsSync(tsConfigPath)) {/* TODO: Fix JSX expression */}
 const improvedTsConfig = {
     ...tsConfig,
   compilerOptions: {
-    ...tsConfig.compilerOptions;
-    strict: true;
-    noImplicitAny: true;
-    noImplicitReturns: true;
-    noImplicitThis: true;
-    noUnusedLocals: true;
-    noUnusedParameters: true;
-    exactOptionalPropertyTypes: true;
-    noImplicitOverride: true;
-    noPropertyAccessFromIndexSignature: true;
-    noUncheckedIndexedAccess: true;
-    allowUnusedLabels: false;
-    allowUnreachableCode: false;
-    skipLibCheck: true;
+    ...tsConfig.compilerOptions
+    strict: true
+    noImplicitAny: true
+    noImplicitReturns: true
+    noImplicitThis: true
+    noUnusedLocals: true
+    noUnusedParameters: true
+    exactOptionalPropertyTypes: true
+    noImplicitOverride: true
+    noPropertyAccessFromIndexSignature: true
+    noUncheckedIndexedAccess: true
+    allowUnusedLabels: false
+    allowUnreachableCode: false
+    skipLibCheck: true
     forceConsistentCasingInFileNames: true
     resolveJsonModule: true
     isolatedModules: true,
@@ -89,8 +89,8 @@ const improvedTsConfig = {/* TODO: Fix JSX expression */}
     '**/*.spec.ts',
     '**/*.spec.tsx']}
 
-fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
-// // 3. Create ESLint configuration improvements;
+fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2))
+// // 3. Create ESLint configuration improvements
 // const eslintConfig = {
     extends: [,
     'eslint:recommended',
@@ -139,8 +139,8 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
   v: {/* TODO: Fix JSX expression */}
   }}
 
-fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2));
-// // 4. Create Prettier configuration;
+fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2))
+// // 4. Create Prettier configuration
 // const prettierConfig = {
   semi: true
   trailingComma: 'es5'
@@ -162,11 +162,10 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
 // const prettierConfig = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2));
-// // 5. Create Vite configuration improvements;
-// // const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
-let _viteConfig = '';
-
+fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2))
+// // 5. Create Vite configuration improvements
+// // const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts')
+let _viteConfig = ''
 if (fs.existsSync(viteConfigPath)) {/* TODO: Fix JSX expression */}
 }
 
@@ -294,7 +293,7 @@ function runBuild() {
     execSync('npm run build', { stdio: 'inherit' })
     console.log('✅ Build completed')
   } catch (error) {
-    console.error('❌ Build failed:', error.message);
+    console.error('❌ Build failed:', error.message)
     process.exit(1)
   }
 }
@@ -370,36 +369,29 @@ function generateImprovementReport() {
 // 6. Run all improvements
 async function runAllImprovements() {
     try {
-    console.log('🎯 Starting comprehensive improvements process...\n');
-    
-    runPerformanceOptimization();
-    console.log('');
-    
-    runSEOEnhancement();
-    console.log('');
-    
-    runAccessibilityEnhancement();
-    console.log('');
-    
-    runBuild();
-    console.log('');
-    
-    generateImprovementReport();
-    console.log('');
-    
-    console.log('🎉 All improvements completed successfully!');
+    console.log('🎯 Starting comprehensive improvements process...\n')
+    runPerformanceOptimization()
+    console.log('')
+    runSEOEnhancement()
+    console.log('')
+    runAccessibilityEnhancement()
+    console.log('')
+    runBuild()
+    console.log('')
+    generateImprovementReport()
+    console.log('')
+    console.log('🎉 All improvements completed successfully!')
     console.log('📋 Check the improvement-report.json for details')
   } catch (error) {
-    console.error('❌ Error during improvements:', error);
+    console.error('❌ Error during improvements:', error)
     process.exit(1)
   }
 }
 
 runAllImprovements()
 `
-export { analytics, errorHandler, performanceOptimizer }`;
-
-fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup);
+export { analytics, errorHandler, performanceOptimizer }`
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup)
 // // 7. Create development utilities;`
 // const devUtils = `/**
  * Development Utilities
@@ -443,10 +435,9 @@ export const createDebugger = (componentNam)
   e: string, f)`
   n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)})
 export default {/* TODO: Fix JSX expression */}`
-}`;
-
-fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils);
-// // 8. Run final checks;
+}`
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils)
+// // 8. Run final checks
 // try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
 //   // Lint check

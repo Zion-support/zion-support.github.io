@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface SEOProps {
     // TODO: Add content
   }
@@ -46,7 +46,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   tags = []}) => {
     const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description
   }
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
   return (
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]')
@@ -93,8 +93,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-  );
+  )
 }
 export default EnhancedSEO;"`
   </SEOProps>
   </SEOProps>
+</li></li></li></li>

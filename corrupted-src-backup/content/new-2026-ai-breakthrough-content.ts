@@ -1,12 +1,12 @@
 export interface AIBreakthroughContent {
-    id: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
+    id: string
+  title: string
+  description: string
+  content: string
+  author: string
+  publishedAt: string
+  category: string
+  tags: string[]
   featured: boolean
   readTime: string
   image?: string,,
@@ -45,8 +45,8 @@ The next evolution of AI is here - systems that not only think but feel, create,
 # Quantum AI Synthesis 2026
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
 
-## Revolutionary Capabilities;
-- Quantum-enhanced machine learning algorithms;
+## Revolutionary Capabilities
+- Quantum-enhanced machine learning algorithms
 - Exponential speedup in complex problem solving
 - Unprecedented computational efficiency
 - New paradigms in AI development,

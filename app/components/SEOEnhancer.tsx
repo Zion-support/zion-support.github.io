@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -23,9 +22,9 @@ const SEOEnhancer: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses';
-    };
-  ];
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -45,7 +44,7 @@ const SEOEnhancer: React.FC = () => {
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -70,7 +69,7 @@ const SEOEnhancer: React.FC = () => {
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our SEOEnhancer?
@@ -93,7 +92,7 @@ const SEOEnhancer: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -122,7 +121,7 @@ const SEOEnhancer: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -144,10 +143,9 @@ const SEOEnhancer: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your seoenhancer needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

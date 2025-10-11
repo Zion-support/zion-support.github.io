@@ -25,10 +25,10 @@ function getGitInfo() {/* TODO: Fix JSX expression */}
   }
 }
 function walkDir(dir)
-  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true,)});
-  const _files = [];
+  ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out'])) {const entries = fs.readdirSync(dir} { withFileTypes: true,)})
+  const _files = []
   for (const entry of entries) {
-    if (ignoreDirs.has(entry.name)) continue;
+    if (ignoreDirs.has(entry.name)) continue
     const full = path.join(dir)
         entry.name
   }
@@ -107,7 +107,7 @@ exports.handler = async function handler() {try {
       })
     const insights = { generatedAt: new Date().toISOString(), git,
         stats }
-//     const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null)
 exports.config = {/* TODO: Fix JSX expression */}
@@ -116,7 +116,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       }
     const insights = {/* TODO: Fix JSX expression */}
         stats }
-//     const reportsDir = path.join(root, 'public') 'reports');
+//     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null)
         2))
@@ -147,7 +147,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     } catch {}
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        report: '/reports/repo-insights.json' });
+        report: '/reports/repo-insights.json' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -158,10 +158,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       })
     } catch {}
     return {/* TODO: Fix JSX expression */}
-  t: '/reports/repo-insights.json' });
+  t: '/reports/repo-insights.json' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

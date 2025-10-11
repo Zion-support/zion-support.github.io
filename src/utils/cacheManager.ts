@@ -56,7 +56,7 @@ export class CacheManager {
 }
   private,
   memoryCache: Map,
-          <string, CacheEntry<unknown>> = new Map();
+          <string, CacheEntry<unknown>> = new Map()
   private readonly,
   defaultTTL: number,
   private readonly,
@@ -141,7 +141,7 @@ export class CacheManager {
             if (item) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              const entry = JSON.parse(item) as CacheEntry;
+              const entry = JSON.parse(item) as CacheEntry
           <unknown>
               if (this.isExpired(entry, now)) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -203,9 +203,9 @@ export class CacheManager {
 //       value,
       timestam,
   p: Date.now(),
-//       ttl;
+//       ttl
     }`
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count')
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -282,7 +282,7 @@ export class CacheManager {
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          entry = JSON.parse(item) as CacheEntry;
+          entry = JSON.parse(item) as CacheEntry
           <T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -305,7 +305,7 @@ export class CacheManager {
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          entry = JSON.parse(item) as CacheEntry;
+          entry = JSON.parse(item) as CacheEntry
           <T>
         }
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -624,7 +624,7 @@ export class CacheManager {
   memorySiz,
   e: this.memoryCache.size,
 //       localStorageSize,
-//       sessionStorageSize;
+//       sessionStorageSize
     }
   }
 }

@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react'
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -84,7 +84,7 @@ const FiveGImplementationPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl font-bold text-white mb-4">
                 Advanced 5G Features
@@ -139,7 +139,7 @@ const FiveGImplementationPage: React.FC = () => {
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
               </div><h2 className="text-3xl font-bold text-white mb-6">
                 Ready to Implement 5G?
@@ -160,10 +160,9 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default FiveGImplementationPage;
+  )
+}
+export default FiveGImplementationPage
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your 5G implementation needs and get started today.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

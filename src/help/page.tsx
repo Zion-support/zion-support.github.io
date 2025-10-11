@@ -149,7 +149,7 @@ questionquestion: 'Is there a free trial available?',
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Help Center,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
               We're here to help you succeed.
@@ -242,12 +242,12 @@ questionquestion: 'Is there a free trial available?',
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
+              <$2 />
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Support
-  </
+  
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -261,8 +261,8 @@ questionquestion: 'Is there a free trial available?',
     <div>Coming Soon</div>
   ),
 }
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeCategory, setActiveCategory] = useState('getting-started')
 const categories = [
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -395,3 +395,4 @@ export default HelpPage,
   </h1>
   </div>
   </div>
+</div></div></div></div></span></span></a></p></p></p></p></p></h3></h3></h3></h3></article>

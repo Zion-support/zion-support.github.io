@@ -1,6 +1,6 @@
 export interface Service {
-  id: string;
-  name: string;
+  id: string
+  name: string
   category:
     | 'AI Services'
     | 'IT Services'
@@ -9,27 +9,27 @@ export interface Service {
     | 'IoT & Edge'
     | 'Cybersecurity'
     | 'Cloud & DevOps'
-    | 'Data & Analytics';
-  description: string;
-  features: string[];
+    | 'Data & Analytics'
+  description: string
+  features: string[]
   pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
+    starter: string
+    professional: string
+    enterprise: string
+    custom?: string
+  }
+  technologyStack: string[]
+  benefits: string[]
+  useCases: string[]
+  status: 'active' | 'beta' | 'coming-soon'
+  priority: number
+  demoUrl?: string
+  documentationUrl?: string
   contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
+    email: string
+    phone: string
+    address: string
+  }
 }
 export const services: Service[] = [
   // AI Services
@@ -525,19 +525,19 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter((service) => service.category === category);
-};
+  return services.filter((service) => service.category === category)
+}
 export const getServiceById = (id: string) => {
-  return services.find((service) => service.id === id);
-};
+  return services.find((service) => service.id === id)
+}
 export const getCategories = () => {
-  return Array.from(new Set(services.map((service) => service.category)));
-};
+  return Array.from(new Set(services.map((service) => service.category)))
+}
 export interface Service {
-  id: string;
-  name: string;
+  id: string
+  name: string
   category:
     | 'AI Services'
     | 'IT Services'
@@ -546,27 +546,27 @@ export interface Service {
     | 'IoT & Edge'
     | 'Cybersecurity'
     | 'Cloud & DevOps'
-    | 'Data & Analytics';
-  description: string;
-  features: string[];
+    | 'Data & Analytics'
+  description: string
+  features: string[]
   pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
+    starter: string
+    professional: string
+    enterprise: string
+    custom?: string
+  }
+  technologyStack: string[]
+  benefits: string[]
+  useCases: string[]
+  status: 'active' | 'beta' | 'coming-soon'
+  priority: number
+  demoUrl?: string
+  documentationUrl?: string
   contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
+    email: string
+    phone: string
+    address: string
+  }
 }
 export const services: Service[] = [
   // AI Services
@@ -1062,42 +1062,42 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter((service) => service.category === category);
-};
+  return services.filter((service) => service.category === category)
+}
 export const getServiceById = (id: string) => {
-  return services.find((service) => service.id === id);
-};
+  return services.find((service) => service.id === id)
+}
 export const getCategories = () => {
-  return Array.from(new Set(services.map((service) => service.category)));
-};
-export interface Service {id: string;
+  return Array.from(new Set(services.map((service) => service.category)))
+}
+export interface Service {id: string
 >>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 export interface Service {
-  id: string;
-  name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
-  description: string;
-  features: string[];
+  id: string
+  name: string
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics'
+  description: string
+  features: string[]
   pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
+    starter: string
+    professional: string
+    enterprise: string
+    custom?: string
+  }
+  technologyStack: string[]
+  benefits: string[]
+  useCases: string[]
+  status: 'active' | 'beta' | 'coming-soon'
+  priority: number
+  demoUrl?: string
+  documentationUrl?: string
   contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
+    email: string
+    phone: string
+    address: string
+  }
 }
 export const services: Service[] = [
   // AI Services
@@ -1694,13 +1694,13 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)
+}
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)
+}
 export const getCategories = () => {
-  return Array.from(new Set(services.map(service => service.category)));
-};
+  return Array.from(new Set(services.map(service => service.category)))
+}

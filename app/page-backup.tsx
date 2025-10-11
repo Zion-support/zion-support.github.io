@@ -1,15 +1,12 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
-import StructuredData from './components/StructuredData';
-
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import StructuredData from './components/StructuredData'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -21,25 +18,22 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
 const HomePage: React.FC = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 100)
     return () => clearTimeout(timer)
-  }, []);
-
+  }, [])
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {;
-    if (typeof window !== 'undefined' && 'gtag' in window) {;
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag()
       })
     }
-  }, []);
-
+  }, [])
 'use client'
 import React from 'react'
 'use client'
@@ -81,7 +75,7 @@ const PageBackupPage: React.FC = () => {
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training'],
     },
-  ];
+  ]
   const services = [
     {
       icon: Brain,
@@ -166,7 +160,7 @@ const PageBackupPage: React.FC = () => {
             </div><Navigation />
             
             {/* Skip to main content for accessibility */}
-            <a
+            <$2 />
               href="#main-content"
               className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
               Skip to main content
@@ -174,8 +168,7 @@ const PageBackupPage: React.FC = () => {
 
             {/* Hero Section */}
             <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              </section><div className="
-
+              </section>< className="$2 />
                 </div><div className="text-center">
                   </div><div className="mb-8">
                     </div><div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -197,14 +190,14 @@ const PageBackupPage: React.FC = () => {
                     and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    </div><a
+                    </div><$2 />
                       href="/contact"
                       className="cyber-button text-lg px-8 py-4 inline-flex items-center space-x-2 group"
                       aria-label="Get started with our services">
                       </a><span>Get Started</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </a>
-                    <a
+                    <$2 />
                       href="tel:+13024640950"
                       onClick={handlePhoneClick}
                       className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
@@ -235,16 +228,13 @@ const PageBackupPage: React.FC = () => {
       </main>
       <Footer />
     </>
-  );
-
+  )
 const HomePage: React.FC = memo(() => {
-    const [isLoaded, setIsLoaded] = useState(false);
-
+    const [isLoaded, setIsLoaded] = useState(false)
   useEffect(() => {
-    preloadComponents();
+    preloadComponents()
     setIsLoaded(true)
-  }, []);
-
+  }, [])
   const features = [
     {
       icon: Brain,
@@ -282,7 +272,7 @@ const HomePage: React.FC = memo(() => {
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training'],
     },
-  ];
+  ]
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -321,7 +311,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
-              </section><div className="
+              </section>< className="$2 />
                 </div><div className="text-center mb-16">
                   </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Our Core Services
@@ -332,7 +322,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, index) => (
-                    </div><div
+                    </div><$2 />
                       key={service.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
@@ -351,7 +341,7 @@ const HomePage: React.FC = memo(() => {
                             </div>
                           ))}
                         </div>
-                        <a
+                        <$2 />
                           href={service.href}
                           className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
                         >
@@ -368,7 +358,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* Features Section */}
             <section className="py-20">
-              </section><div className="
+              </section>< className="$2 />
                 </div><div className="text-center mb-16">
                   </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Why Choose Zion Tech Group?
@@ -379,7 +369,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {features.map((feature, index) => (
-                    </div><div
+                    </div><$2 />
                       key={feature.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
@@ -407,7 +397,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* Testimonials Section */}
             <section className="py-20 bg-slate-900/50">
-              </section><div className="
+              </section>< className="$2 />
                 </div><div className="text-center mb-16">
                   </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     What Our Clients Say
@@ -486,7 +476,7 @@ const HomePage: React.FC = memo(() => {
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-              </section><div className="
+              </section>< className="$2 />
                 </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   Ready to Transform Your Business?
                 </h2>
@@ -494,14 +484,14 @@ const HomePage: React.FC = memo(() => {
                   Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  </div><a
+                  </div><$2 />
                     href="/contact"
                     className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2 group"
                   >
                     </a><span>Start Your Project</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  <a href="tel:+13024640950"
+                  < href="tel:+13024640950"$2 />
                     onClick={handlePhoneClick}
                     className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
                   >
@@ -520,12 +510,11 @@ const HomePage: React.FC = memo(() => {
       </PerformanceOptimizer>
 
     </>
-  );
+  )
 }
 
-HomePage.displayName = 'HomePage';
-
-export default HomePage;
+HomePage.displayName = 'HomePage'
+export default HomePage
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'

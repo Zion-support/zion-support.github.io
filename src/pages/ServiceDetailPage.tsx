@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '../data/comprehensiveServices';
-
+import React, { useState, useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react'
+import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '../data/comprehensiveServices'
 interface ServiceDetailPageProps {}
 
 const ServiceDetailPage: React.FC<ServiceDetailPageProps> = () => {
-  const params = useParams();
-  const id = params.id;
-  const [service, setService] = useState<any>(null);
-  const [selectedTier, setSelectedTier] = useState<string>('basic');
-
+  const params = useParams()
+  const id = params.id
+  const [service, setService] = useState<any>(null)
+  const [selectedTier, setSelectedTier] = useState<string>('basic')
   useEffect(() => {
     if (id) {
-      const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
-      setService(foundService);
+      const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id)
+      setService(foundService)
     }
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '@/data/comprehensiveServices';
+import React, { useState, useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '@/data/comprehensiveServices'
 import { 
   Star, 
   Clock, 
@@ -34,34 +32,30 @@ import {
   Shield,
   Zap,
   TrendingUp
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { SEO } from '@/components/SEO'
 export default function ServiceDetailPage() {
-  const { id } = useParams();
-  const [service, setService] = useState<any>(null);
-  const [selectedPricingTier, setSelectedPricingTier] = useState<string>('smb');
-
+  const { id } = useParams()
+  const [service, setService] = useState<any>(null)
+  const [selectedPricingTier, setSelectedPricingTier] = useState<string>('smb')
   useEffect(() => {
-    const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
-    setService(foundService);
-  }, [id]);
-
+    const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id)
+    setService(foundService)
+  }, [id])
   if (!service) {
     return (
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Check, Star, TrendingUp, Clock, Shield, Zap, Cloud, BarChart3, Smartphone, Link as LinkIcon, Phone, Mail, MapPin, ArrowLeft } from 'lucide-react';
-import { EXPANDED_SERVICES } from '@/data/expandedServices';
-import { SEO } from '@/components/SEO';
-import { TrustedBySection } from '@/components/TrustedBySection';
-
+import React from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { Check, Star, TrendingUp, Clock, Shield, Zap, Cloud, BarChart3, Smartphone, Link as LinkIcon, Phone, Mail, MapPin, ArrowLeft } from 'lucide-react'
+import { EXPANDED_SERVICES } from '@/data/expandedServices'
+import { SEO } from '@/components/SEO'
+import { TrustedBySection } from '@/components/TrustedBySection'
 const categoryIcons: Record<string, React.ReactNode> = {
   "AI & Automation": <Zap className="w-6 h-6" />,
   "Cybersecurity": <Shield className="w-6 h-6" />,
@@ -70,19 +64,16 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "Digital Transformation": <TrendingUp className="w-6 h-6" />,
   "IoT & Edge Computing": <Smartphone className="w-6 h-6" />,
   "Blockchain & Web3": <LinkIcon className="w-6 h-6" />,
-};
-
+}
 const pricingModelColors: Record<string, string> = {
   "subscription": "bg-blue-100 text-blue-800",
   "project-based": "bg-purple-100 text-purple-800",
   "one-time": "bg-green-100 text-green-800",
   "usage-based": "bg-orange-100 text-orange-800",
-};
-
+}
 export default function ServiceDetailPage() {
-  const { serviceId } = useParams();
-  const service = EXPANDED_SERVICES.find(s => s.id === serviceId);
-
+  const { serviceId } = useParams()
+  const service = EXPANDED_SERVICES.find(s => s.id === serviceId)
   if (!service) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
@@ -92,12 +83,11 @@ export default function ServiceDetailPage() {
           <Button>Back to Services</Button>
         </Link>
       </div>
-    );
+    )
   }
 
-  const pricingTier = SERVICE_PRICING_TIERS.find(tier => tier.name === selectedTier);
-  const servicePricing = service.pricing[selectedTier as keyof typeof service.pricing];
-
+  const pricingTier = SERVICE_PRICING_TIERS.find(tier => tier.name === selectedTier)
+  const servicePricing = service.pricing[selectedTier as keyof typeof service.pricing]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
       {/* Hero Section */}
@@ -144,7 +134,7 @@ export default function ServiceDetailPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors"
               >
@@ -152,7 +142,7 @@ export default function ServiceDetailPage() {
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/pricing"
                 className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors"
               >
@@ -254,7 +244,7 @@ export default function ServiceDetailPage() {
                     ))}
                   </div>
 
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold text-center block hover:bg-zion-gold-light transition-colors"
                   >
@@ -292,7 +282,7 @@ export default function ServiceDetailPage() {
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {service.tags.map((tag: string, index: number) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="bg-zion-gold/20 text-zion-gold px-3 py-1 rounded-full text-sm"
                       >
@@ -302,28 +292,25 @@ export default function ServiceDetailPage() {
                   </div>
                 </div>
   const getDiscountedPrice = (price: number, tier: string) => {
-    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
+    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS]
     if (pricingTier) {
-      return price * (1 - pricingTier.discount);
+      return price * (1 - pricingTier.discount)
     }
-    return price;
-  };
-
+    return price
+  }
   const formatPrice = (price: number) => {
     if (price >= 1000) {
-      return `$${(price / 1000).toFixed(1)}k`;
+      return `$${(price / 1000).toFixed(1)}k`
     }
-    return `$${price}`;
-  };
-
+    return `$${price}`
+  }
   const getOriginalPrice = (price: number, tier: string) => {
-    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
+    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS]
     if (pricingTier && pricingTier.discount > 0) {
-      return price;
+      return price
     }
-    return null;
-  };
-
+    return null
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <SEO 
@@ -350,3 +337,4 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
+</div></div></div></div></div></div></div></a></a>

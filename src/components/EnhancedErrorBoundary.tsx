@@ -6,7 +6,7 @@ interface State {/* TODO: Fix JSX expression */}
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-    this.maxRetries = props.maxRetries || 3;
+    this.maxRetries = props.maxRetries || 3
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}`
@@ -41,7 +41,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     // Enhanced error reporting logic
     const errorReport = {/* TODO: Fix JSX expression */}
     }
-    // Log to console in development;
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
     // Send to error reporting service (implement as needed)
@@ -59,10 +59,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('sessionId', sessionId)
     }
-    return sessionId;
+    return sessionId
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
+  o: undefined })
   }
   private handleReload = () => {/* TODO: Fix JSX expression */}
   }
@@ -76,7 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
         }
       })
       .catch(() => {/* TODO: Fix JSX expression */}
-      });
+      })
   }
   render() {/* TODO: Fix JSX expression */}
       }

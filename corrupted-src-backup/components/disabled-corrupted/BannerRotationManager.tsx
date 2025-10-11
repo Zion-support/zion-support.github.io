@@ -19,13 +19,13 @@ const bannerComponents = {
   ),
 const bannerComponents = {/* TODO: Fix JSX expression */}
 }
-type BannerKey = keyof typeof bannerComponents;
+type BannerKey = keyof typeof bannerComponents
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners
  *
- * Features: * - Lazy loads banner components for better performance;
+ * Features: * - Lazy loads banner components for better performance
  * - Rotates banners at specified intervals
  * - Limits the number of visible banners
  * - Provides fallback loading states,
@@ -35,20 +35,20 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   maxBanners = 3,
   rotationInterval = 10000,
   className = ''}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([])</BannerKey>
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-//     const selected = banners.slice(0, maxBanners);
+//     const selected = banners.slice(0, maxBanners)
     setVisibleBanners(selected)
-  }, [banners, maxBanners]);
-  // Rotate banners at specified interval;
+  }, [banners, maxBanners])
+  // Rotate banners at specified interval
   useEffect(() => {
     if (visibleBanners.length <= 1) return
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length)
  * Feature,
-  s: * - Lazy loads banner components for better performance;
+  s: * - Lazy loads banner components for better performance
  * - Rotates banners at specified intervals
  * - Limits the number of visible banners
  * - Provides fallback loading states,
@@ -107,9 +107,10 @@ export const,
 
       )}
     </div>
-  );
+  )
 }
-export default BannerRotationManager;
+export default BannerRotationManager
 `
   </BannerRotationManagerProps>
   </BannerRotationManagerProps>
+</div>

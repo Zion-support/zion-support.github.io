@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { randomUUID } from 'crypto',;
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { randomUUID } from 'crypto'
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { randomUUID } from 'crypto',
 type Note = {
   id: string
   targetType: string
@@ -36,27 +36,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 }
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
+}
+import type { NextApiRequest, NextApiResponse } from 'next'
 interface Note {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
-const notesStore: Note[] = [];
+  id: string
+  targetType: string
+  targetId: string
+  text: string
+  authorId: string
+  createdAt: number
+}
+const notesStore: Note[] = []
     if (req.method === 'GET') {
-      const { targetType, targetId } = req.query;
-      if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
-      if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
+      const { targetType, targetId } = req.query
+      if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' })
+      if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' })
       const notes = notesStore
-        .filter((n) => n.targetType === targetType && n.targetId === targetId);
-      res.json({ notes });
+        .filter((n) => n.targetType === targetType && n.targetId === targetId)
+      res.json({ notes })
     } else if (req.method === 'POST') {
-      const { targetType, targetId, content, author } = req.body;
+      const { targetType, targetId, content, author } = req.body
       const note: Note = {
         id: Date.now().toString(),
         targetType,
@@ -64,15 +64,15 @@ const notesStore: Note[] = [];
         content,
         author,
         createdAt: new Date().toISOString()
-      };
-      notesStore.push(note);
-      res.json({ note });
+      }
+      notesStore.push(note)
+      res.json({ note })
     } else {
-      res.setHeader('Allow', 'GET, POST');
-      res.status(405).end('Method Not Allowed');
+      res.setHeader('Allow', 'GET, POST')
+      res.status(405).end('Method Not Allowed')
     }
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }

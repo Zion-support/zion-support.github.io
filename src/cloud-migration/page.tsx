@@ -196,7 +196,7 @@ const,
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>"
-            <div className="flex flex-col,"
+            < className="flex flex-col,"$2 />
   sm: flex-row gap-4 justify-center"></div>
               <Link></Link>"
                 href="/contact""
@@ -255,7 +255,7 @@ const,
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
               Our Migration Services,
             </h2>"
-            <div className="grid grid-cols-1,
+            < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
                 < key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"$2 />
@@ -313,7 +313,7 @@ const,
                 <div className="text-cyan-400 font-semibold">Duratio,
   n: {step.duration}
       {/* Benefits Section */}"
-          <div className="grid grid-cols-1,"
+          < className="grid grid-cols-1,"$2 />
   lg: grid-cols-2 gap-12 items-center"></div>
             <div></div>"
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Cloud Migration?</h2>"
@@ -388,11 +388,11 @@ const,
       <div className="text-center"></div>"
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
+        < href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"$2 />
   hover: bg-cyan-600 transition-colors"></a>
           Contact Us
   ),
 }
-export default CloudMigrationPage;
+export default CloudMigrationPage
 "`
 </div></div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>

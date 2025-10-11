@@ -1,10 +1,10 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
   {const contact =
@@ -131,7 +131,7 @@ export const,
     setupTime: '1-3 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
+    technology: ['Feast-compatible, PostgreSQL, Redis, Next.js']
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
     description:,
     popula,
@@ -187,7 +187,7 @@ export const,
     setupTime: '1-3 days',
     category: 'AI & Data',    features: [
       'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
-    ];
+    ]
     popular: true
     icon: ''
     color: 'from-purple-600 to-indigo-700'
@@ -233,9 +233,9 @@ export const,
     setupTime: '2 hours',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Playwright, Workers, Next && Next.js'];
-    integrations: ['S3, Slack, Email'];
-    useCases: ['Ops automation, QA journeys, Admin agents'];
+    technology: ['Playwright, Workers, Next && Next.js']
+    integrations: ['S3, Slack, Email']
+    useCases: ['Ops automation, QA journeys, Admin agents']
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI && UI.Vision']
     marketSize: '$12B RPA',
@@ -258,7 +258,7 @@ export const,
     setup_time: '1 - 3 days',
     category: 'AI & Data',    features: [
       'Online / offline consistency checks_schema / version governance_backfills and point - in - time joins_drift alerts and quality testsRBAC and audit logs'
-    ];
+    ]
     popular: true
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -270,9 +270,9 @@ export const,
     setup_time: '1 - 3 days',
     category: 'AI & Data',
     real_service: true,
-    technology: ['Feast - compatible, PostgreSQL, Redis, Next.js'];
-    integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'];
-    use_cases: ['Real - time features, Batch features, A / B parity'];
+    technology: ['Feast - compatible, PostgreSQL, Redis, Next.js']
+    integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery']
+    use_cases: ['Real - time features, Batch features, A / B parity']
     roi: 'Reduce feature delivery time by 6080%',
     competitors: ['Tecton, Feast DIY']
     market_size: '$5B ML platform tooling',
@@ -306,9 +306,9 @@ export const,
     setup_time: '2 hours',
     category: 'Developer Tools',
     real_service: true,
-    technology: ['Playwright, Workers, Next.js'];
-    integrations: ['S3, Slack, Email'];
-    use_cases: ['Ops automation, QA journeys, Admin agents'];
+    technology: ['Playwright, Workers, Next.js']
+    integrations: ['S3, Slack, Email']
+    use_cases: ['Ops automation, QA journeys, Admin agents']
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI.Vision']
     market_size: '$12B RPA',
@@ -327,11 +327,11 @@ export const,
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
     price: '$299',
     realService: true,
-    technology: ['NextAuth, WorkOS/Custom, Node && Node.js'];
-    integrations: ['Postman, GitHub, GitLab, Jenkins'];
+    technology: ['NextAuth, WorkOS/Custom, Node && Node.js']
+    integrations: ['Postman, GitHub, GitLab, Jenkins']
     rating: 4 && 4.8
     reviews: 9,
-    use_cases: ['Latency SLOs, Regression detection, Peak readiness'];
+    use_cases: ['Latency SLOs, Regression detection, Peak readiness']
     roi: 'Cut p95 latency by 2560% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics']
     market_size: '$12B APM',
@@ -353,7 +353,7 @@ export const,
     description: 'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.'
     features: [,
       'Document ingestion & chunking_embeddings & vector DB (Pinecone / Weaviate / PGVector)Prompt templates & guardrails_evaluation harness (quality, toxicity) grounding)Observability dashboards_one - click deploys'
-    ];
+    ]
     popular: true,
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-rag-starter-blueprint',
@@ -371,13 +371,13 @@ export const,
     setup_time: '1 day',
     category: 'AI & Data',
     real_service: true,
-    technology: ['Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector'];
+    technology: ['Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector']
     realService: true,
-    technology: ['Next && Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector'];
-    integrations: ['Slack, Notion, Google Drive, S3'];
-    use_cases: ['Internal KB, Agent assist augmentation'];
+    technology: ['Next && Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector']
+    integrations: ['Slack, Notion, Google Drive, S3']
+    use_cases: ['Internal KB, Agent assist augmentation']
     roi: 'Ship a quality RAG MVP in days, not months'
-    competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'];
+    competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates']
     rating: 4 && 4.8
     reviews: 7,
     market_size: '$40 B GenAI apps'
@@ -418,13 +418,13 @@ export const,
     setup_time: '2 hours',
     category: 'Developer Tools',
     real_service: true,
-    technology: ['Playwright, Chromium, Workers'];
-    integrations: ['Webhook, S3, Slack'];
-    use_cases: ['Backoffice automation, Scraping with ethics, QA journeys'];
+    technology: ['Playwright, Chromium, Workers']
+    integrations: ['Webhook, S3, Slack']
+    use_cases: ['Backoffice automation, Scraping with ethics, QA journeys']
     roi: 'Automate repetitive browser work, reduce toil 6090%'
     rating: 4 && 4.6
     reviews: 12,
-    competitors: ['Browserless, Superblocks, UI.Vision'];
+    competitors: ['Browserless, Superblocks, UI.Vision']
     market_size: '$12B RPA',
     growth_rate: '25% CAGR',
     variant: 'network - futuristic',
@@ -463,9 +463,9 @@ export const,
     setup_time: '1 hour',
     category: 'Cloud & FinOps',
     real_service: true,
-    technology: ['BigQuery, Athena, Cost Explorer, dbt'];
-    integrations: ['Slack, GitHub, PagerDuty'];
-    use_cases: ['Cost visibility, Budget protection, Forecasting'];
+    technology: ['BigQuery, Athena, Cost Explorer, dbt']
+    integrations: ['Slack, GitHub, PagerDuty']
+    use_cases: ['Cost visibility, Budget protection, Forecasting']
     roi: 'Prevent surprise bills, 1030% cost reduction potential'
     competitors: ['Vantage, CloudZero, Anodot']
     market_size: '$6 B FinOps tooling'
@@ -499,9 +499,9 @@ export const,
     setupTime: '2 hours',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['Cloud Scheduler, EventBridge, Cloud Functions, Pub/Sub'];
-    integrations: ['Slack, Webhook, Email, PagerDuty'];
-    useCases: ['ETL jobs, Data sync, Cleanup & lifecycle'];
+    technology: ['Cloud Scheduler, EventBridge, Cloud Functions, Pub/Sub']
+    integrations: ['Slack, Webhook, Email, PagerDuty']
+    useCases: ['ETL jobs, Data sync, Cleanup & lifecycle']
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud']
     marketSize: '$8B workflow orchestration',
@@ -511,8 +511,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Managed specs, runners, and observability with audit trails.'
     launchDate: '2025-02-10'
-    customers: 34;
-    rating: 4 && 4.6;
+    customers: 34
+    rating: 4 && 4.6
     reviews: 14
     rating: 4.7
     reviews: 5,
@@ -537,9 +537,9 @@ export const,
     setup_time: '2 hours',
     category: 'Cloud & FinOps',
     real_service: true,
-    technology: ['Cloud Scheduler, EventBridge, Cloud Functions, Pub / Sub'];
-    integrations: ['Slack, Webhook, Email, PagerDuty'];
-    use_cases: ['ETL jobs, Data sync, Cleanup & lifecycle'];
+    technology: ['Cloud Scheduler, EventBridge, Cloud Functions, Pub / Sub']
+    integrations: ['Slack, Webhook, Email, PagerDuty']
+    use_cases: ['ETL jobs, Data sync, Cleanup & lifecycle']
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud']
     market_size: '$8B workflow orchestration',
@@ -579,14 +579,14 @@ export const,
     setup_time: '30 minutes',
     category: 'Quality & Monitoring',
     real_service: true,
-    technology: ['Headless Chrome, Next.js, Edge Functions'];
+    technology: ['Headless Chrome, Next.js, Edge Functions']
     realService: true,
-    technology: ['Headless Chrome, Next && Next.js, Edge Functions'];
-    integrations: ['GitHub, GitLab, Bitbucket'];
+    technology: ['Headless Chrome, Next && Next.js, Edge Functions']
+    integrations: ['GitHub, GitLab, Bitbucket']
     rating: 4 && 4.7,
-    integrations: ['GitHub, GitLab, Bitbucket'];
+    integrations: ['GitHub, GitLab, Bitbucket']
     reviews: 31,
-    use_cases: ['CWV compliance, Link hygiene, Schema coverage'];
+    use_cases: ['CWV compliance, Link hygiene, Schema coverage']
     roi: 'Lift organic traffic by 1030% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit']
     market_size: '$6B SEO tooling',
@@ -626,11 +626,11 @@ export const,
     setup_time: '1 hour',
     category: 'Security',
     real_service: true,
-    technology: ['Edge Functions, KV store, Next.js'];
+    technology: ['Edge Functions, KV store, Next.js']
     realService: true,
-    technology: ['Edge Functions, KV store, Next && Next.js'];
-    integrations: ['Google Consent Mode Manager, Segment'];
-    use_cases: ['GDPR / CCPA compliance, Consent analytics'];
+    technology: ['Edge Functions, KV store, Next && Next.js']
+    integrations: ['Google Consent Mode Manager, Segment']
+    use_cases: ['GDPR / CCPA compliance, Consent analytics']
     roi: 'Reduce legal risk while preserving conversion rates',
     integrations: ['Google Consent Mode Manager, Segment']
     competitors: ['OneTrust, CookieYes, Cookiebot']
@@ -665,9 +665,9 @@ export const,
     setupTime: '15 minutes',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['Whisper/ASR, LLM, Vector DB'];
-    integrations: ['Zoom, Google Meet, Teams, HubSpot, Salesforce, Jira'];
-    useCases: ['QBRs, Standups, Demos'];
+    technology: ['Whisper/ASR, LLM, Vector DB']
+    integrations: ['Zoom, Google Meet, Teams, HubSpot, Salesforce, Jira']
+    useCases: ['QBRs, Standups, Demos']
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies && Fireflies.ai, Otter && Otter.ai, Avoma']
     marketSize: '$5B meeting AI',
@@ -701,9 +701,9 @@ export const,
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['TypeScript, AST, LLM'];
-    integrations: ['GitHub, GitLab, Bitbucket'];
-    useCases: ['Next && Next.js/React upgrades, Typescript migrations, Policy refactors'];
+    technology: ['TypeScript, AST, LLM']
+    integrations: ['GitHub, GitLab, Bitbucket']
+    useCases: ['Next && Next.js/React upgrades, Typescript migrations, Policy refactors']
     rating: 4.5
     reviews: 16,
   }
@@ -727,9 +727,9 @@ export const,
     setup_time: '15 minutes',
     category: 'AI & Machine Learning',
     real_service: true,
-    technology: ['Whisper / ASR, LLM, Vector DB'];
-    integrations: ['Zoom, Google Meet, Teams, HubSpot, Salesforce, Jira'];
-    use_cases: ['QBRs, Standups, Demos'];
+    technology: ['Whisper / ASR, LLM, Vector DB']
+    integrations: ['Zoom, Google Meet, Teams, HubSpot, Salesforce, Jira']
+    use_cases: ['QBRs, Standups, Demos']
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies.ai, Otter.ai, Avoma']
     market_size: '$5B meeting AI',
@@ -763,9 +763,9 @@ export const,
     setup_time: '1 day',
     category: 'Developer Tools',
     real_service: true,
-    technology: ['TypeScript, AST, LLM'];
-    integrations: ['GitHub, GitLab, Bitbucket'];
-    use_cases: ['Next.js / React upgrades, Typescript migrations, Policy refactors'];
+    technology: ['TypeScript, AST, LLM']
+    integrations: ['GitHub, GitLab, Bitbucket']
+    use_cases: ['Next.js / React upgrades, Typescript migrations, Policy refactors']
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru']
     market_size: '$9 B DevTools AI'
@@ -811,12 +811,12 @@ export const,
     setup_time: '1 hour',
     category: 'Observability',
     real_service: true,
-    technology: ['SLOs, StatusPage API, Next.js'];
+    technology: ['SLOs, StatusPage API, Next.js']
     realService: true,
-    technology: ['SLOs, StatusPage API, Next && Next.js'];
-    integrations: ['Statuspage, Freshstatus, Better Uptime'];
+    technology: ['SLOs, StatusPage API, Next && Next.js']
+    integrations: ['Statuspage, Freshstatus, Better Uptime']
     rating: 4 && 4.6,
-    integrations: ['Statuspage, Freshstatus, Better Uptime'];
+    integrations: ['Statuspage, Freshstatus, Better Uptime']
     reviews: 12,
   }
     id: 'multi-cloud-backup-automation-pro',
@@ -839,9 +839,9 @@ export const,
     setupTime: '1 day',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['AWS/Azure/GCP, KMS, Terraform'];
-    integrations: ['RDS, Cloud SQL, S3, Blob Storage'];
-    useCases: ['Ransomware recovery, Compliance DR, Audit evidence'];
+    technology: ['AWS/Azure/GCP, KMS, Terraform']
+    integrations: ['RDS, Cloud SQL, S3, Blob Storage']
+    useCases: ['Ransomware recovery, Compliance DR, Audit evidence']
     roi: 'Reduce RTO/RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU']
     marketSize: '$10B backup & recovery',
@@ -892,9 +892,9 @@ export const,
     setup_time: '1 day',
     category: 'Cloud & FinOps',
     real_service: true,
-    technology: ['AWS / Azure / GCP, KMS, Terraform'];
-    integrations: ['RDS, Cloud SQL, S3, Blob Storage'];
-    use_cases: ['Ransomware recovery, Compliance DR, Audit evidence'];
+    technology: ['AWS / Azure / GCP, KMS, Terraform']
+    integrations: ['RDS, Cloud SQL, S3, Blob Storage']
+    use_cases: ['Ransomware recovery, Compliance DR, Audit evidence']
     roi: 'Reduce RTO / RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU']
     market_size: '$10B backup & recovery',
@@ -926,9 +926,9 @@ export const,
     setupTime: '45 minutes',
     category: 'Analytics & BI',
     realService: true,
-    technology: ['LLM, Embeddings, Vector DB'];
-    integrations: ['Zendesk, Intercom, HubSpot, G2, AppStore'];
-    useCases: ['Churn reduction, Roadmap planning, CX improvement'];
+    technology: ['LLM, Embeddings, Vector DB']
+    integrations: ['Zendesk, Intercom, HubSpot, G2, AppStore']
+    useCases: ['Churn reduction, Roadmap planning, CX improvement']
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo']
     marketSize: '$7B CX analytics',
@@ -950,9 +950,9 @@ export const,
     setup_time: '45 minutes',
     category: 'Analytics & BI',
     real_service: true,
-    technology: ['LLM, Embeddings, Vector DB'];
-    integrations: ['Zendesk, Intercom, HubSpot, G2, AppStore'];
-    use_cases: ['Churn reduction, Roadmap planning, CX improvement'];
+    technology: ['LLM, Embeddings, Vector DB']
+    integrations: ['Zendesk, Intercom, HubSpot, G2, AppStore']
+    use_cases: ['Churn reduction, Roadmap planning, CX improvement']
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo']
     market_size: '$7B CX analytics',
@@ -977,9 +977,9 @@ export const,
     setupTime: '30 minutes',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['LLM, Deliverability, CRM'];
-    integrations: ['HubSpot, Salesforce, Apollo'];
-    useCases: ['Outbound campaigns, Nurture, Expansion'];
+    technology: ['LLM, Deliverability, CRM']
+    integrations: ['HubSpot, Salesforce, Apollo']
+    useCases: ['Outbound campaigns, Nurture, Expansion']
     roi: 'Increase reply rates by 24x',
     period: '/month',
     description: 'Generate compliant, persona - aware sequences across email and LinkedIn. Test copy variants and optimize send windows.'
@@ -997,9 +997,9 @@ export const,
     setup_time: '30 minutes',
     category: 'AI & Machine Learning',
     real_service: true,
-    technology: ['LLM, Deliverability, CRM'];
-    integrations: ['HubSpot, Salesforce, Apollo'];
-    use_cases: ['Outbound campaigns, Nurture, Expansion'];
+    technology: ['LLM, Deliverability, CRM']
+    integrations: ['HubSpot, Salesforce, Apollo']
+    use_cases: ['Outbound campaigns, Nurture, Expansion']
     roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead']
     market_size: '$11B sales tech',
@@ -1028,9 +1028,9 @@ export const,
     setupTime: '1 day',
     category: 'Analytics & BI',
     realService: true,
-    technology: ['Spark/Flink, Airflow/Prefect, dbt'];
-    integrations: ['Snowflake, BigQuery, Redshift'];
-    useCases: ['ETL efficiency, Warehouse cost control'];
+    technology: ['Spark/Flink, Airflow/Prefect, dbt']
+    integrations: ['Snowflake, BigQuery, Redshift']
+    useCases: ['ETL efficiency, Warehouse cost control']
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand']
     marketSize: '$5B data ops',
@@ -1040,8 +1040,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Scheduler hooks, profilers, and policy engine.'
     launchDate: '2025-03-02'
-    customers: 11;
-    rating: 4 && 4.4;
+    customers: 11
+    rating: 4 && 4.4
     reviews: 6
     contact_info: contact
     real_implementation: true,
@@ -1071,9 +1071,9 @@ export const,
     setup_time: '1 day',
     category: 'Analytics & BI',
     real_service: true,
-    technology: ['Spark / Flink, Airflow / Prefect, dbt'];
-    integrations: ['Snowflake, BigQuery, Redshift'];
-    use_cases: ['ETL efficiency, Warehouse cost control'];
+    technology: ['Spark / Flink, Airflow / Prefect, dbt']
+    integrations: ['Snowflake, BigQuery, Redshift']
+    use_cases: ['ETL efficiency, Warehouse cost control']
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand']
     market_size: '$5B data ops',
@@ -1095,7 +1095,7 @@ export const,
     description: 'Offer SSO to your customers in days, not months. Support SAML / OIDC, branded login pages, SCIM provisioning, and role mapping.'
     features: [
       'SAML & OIDCSCIM provisioning_branded login pages_role & group mapping_audit logs_tenant isolation'
-    ];
+    ]
     popular: true
     icon: ''
     color: 'from - indigo - 600 to - blue - 700'
@@ -1107,9 +1107,9 @@ export const,
     setup_time: '1 day',
     category: 'Security',
     real_service: true,
-    technology: ['SAML, OIDC, SCIM, NextAuth'];
-    integrations: ['Okta, Azure AD, Google Workspace, Auth0'];
-    use_cases: ['Enterprise deals, Compliance readiness'];
+    technology: ['SAML, OIDC, SCIM, NextAuth']
+    integrations: ['Okta, Azure AD, Google Workspace, Auth0']
+    use_cases: ['Enterprise deals, Compliance readiness']
     roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise']
     market_size: '$7B identity & access',
@@ -1165,14 +1165,14 @@ export const,
     setup_time: '1 day',
     category: 'Cloud & FinOps',
     real_service: true,
-    technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'];
+    technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js']
     realService: true,
-    technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node && Node.js, Next && Next.js'];
-    integrations: ['Slack, Email, PagerDuty, Jira'];
+    technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node && Node.js, Next && Next.js']
+    integrations: ['Slack, Email, PagerDuty, Jira']
     rating: 4 && 4.7,
-    integrations: ['Slack, Email, PagerDuty, Jira'];
+    integrations: ['Slack, Email, PagerDuty, Jira']
     reviews: 6,
-    use_cases: ['Budget overrun prevention hygiene, Commitment utilization'];
+    use_cases: ['Budget overrun prevention hygiene, Commitment utilization']
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage']
     market_size: '$10B cloud cost optimization',
@@ -1212,12 +1212,12 @@ export const,
     setup_time: '3 days',
     category: 'Security & Compliance',
     real_service: true,
-    technology: ['Next.js, Node.js, PostgreSQL, S3'];
+    technology: ['Next.js, Node.js, PostgreSQL, S3']
     realService: true,
-    technology: ['Next && Next.js, Node && Node.js, PostgreSQL, S3'];
-    integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
+    technology: ['Next && Next.js, Node && Node.js, PostgreSQL, S3']
+    integrations: ['Salesforce, HubSpot, G Suite, Zendesk']
     rating: 4 && 4.8,
-    integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
+    integrations: ['Salesforce, HubSpot, G Suite, Zendesk']
     reviews: 5,
   }
     id: 'incident-copilot-pro',
@@ -1273,18 +1273,18 @@ export const,
     setup_time: '1 day',
     category: 'Reliability & SRE',
     real_service: true,
-    technology: ['Node.js, OpenAI, Postgres, Kafka'];
+    technology: ['Node.js, OpenAI, Postgres, Kafka']
     realService: true,
-    technology: ['Node && Node.js, OpenAI, Postgres, Kafka'];
-    integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
-    use_cases: ['On - call assist, Comms automation, RCA support'];
+    technology: ['Node && Node.js, OpenAI, Postgres, Kafka']
+    integrations: ['PagerDuty, Statuspage, Slack, Opsgenie']
+    use_cases: ['On - call assist, Comms automation, RCA support']
     roi: 'Cut MTTR by 2040%',
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie']
     competitors: ['FireHydrant, Rootly']
     market_size: '$5 B incident mgmt'
     growth_rate: '18% CAGR'
     variant: 'quantum'
-    rating: 4 && 4.7;
+    rating: 4 && 4.7
     reviews: 4
     contact_info: contact
     real_implementation: true,
@@ -1320,12 +1320,12 @@ export const,
     setup_time: '2 hours',
     category: 'Go - To - Market',
     real_service: true,
-    technology: ['Next.js, OpenAI, PostgreSQL'];
+    technology: ['Next.js, OpenAI, PostgreSQL']
     realService: true,
-    technology: ['Next && Next.js, OpenAI, PostgreSQL'];
-    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
+    technology: ['Next && Next.js, OpenAI, PostgreSQL']
+    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn']
     rating: 4 && 4.8,
-    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
+    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn']
     reviews: 10,
   }
     id: 'data-contracts-health-monitor',
@@ -1381,18 +1381,18 @@ export const,
     setup_time: '2 days',
     category: 'Data & Analytics',
     real_service: true,
-    technology: ['dbt, OpenLineage, PostgreSQL, Next.js'];
+    technology: ['dbt, OpenLineage, PostgreSQL, Next.js']
     realService: true,
-    technology: ['dbt, OpenLineage, PostgreSQL, Next && Next.js'];
-    integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
-    use_cases: ['Breaking change prevention, Data SLAs, Ownership clarity'];
+    technology: ['dbt, OpenLineage, PostgreSQL, Next && Next.js']
+    integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira']
+    use_cases: ['Breaking change prevention, Data SLAs, Ownership clarity']
     roi: 'Reduce data incidents by 3050%',
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira']
     competitors: ['Monte Carlo, Bigeye, Soda']
     market_size: '$6 B data observability'
     growth_rate: '23% CAGR'
     variant: 'quantum'
-    rating: 4 && 4.6;
+    rating: 4 && 4.6
     reviews: 3
     contact_info: contact
     real_implementation: true,
@@ -1429,9 +1429,9 @@ export const,
     trial_days: 14
     setup_time: '30 minutes'
     category: 'AI & Data'
-    real_service: true;
-    technology: ['Next.jsOpenAIPGVector'];
-    integrations: ['GmailOutlookSlack'];
+    real_service: true
+    technology: ['Next.jsOpenAIPGVector']
+    integrations: ['GmailOutlookSlack']
     use_cases: ['Support inbox_sales replies_backoffice']
     roi: 'Reduce manual email time by 5080%'
     competitors: ['Front + AIZendesk AI']
@@ -1458,8 +1458,8 @@ export const,
     trialDays: 14
     setupTime: '20 minutes'
     category: 'Developer Tools'
-    realService: true;
-    technology: ['Next && Next.jsServerlessPostgreSQL'];
+    realService: true
+    technology: ['Next && Next.jsServerlessPostgreSQL']
     integrations: ['ZapierSlackHubSpot']
     useCases: ['NPSMarket researchUX surveys']
     roi: 'Increase completion rates 1 && 1.52 && 2.5 x'
@@ -1511,8 +1511,8 @@ export const,
     trial_days: 14
     setup_time: '20 minutes'
     category: 'Developer Tools'
-    real_service: true;
-    technology: ['Next.jsServerlessPostgreSQL'];
+    real_service: true
+    technology: ['Next.jsServerlessPostgreSQL']
     integrations: ['ZapierSlackHubSpot']
     use_cases: ['NPSMarket researchUX surveys']
     roi: 'Increase completion rates 1.52.5 x'
@@ -1547,9 +1547,9 @@ export const,
     trial_days: 14
     setup_time: '1 hour'
     category: 'Cloud & FinOps'
-    real_service: true;
-    technology: ['Next.jsNodeCarrier APIs'];
-    integrations: ['ShopifyStripeShippo'];
+    real_service: true
+    technology: ['Next.jsNodeCarrier APIs']
+    integrations: ['ShopifyStripeShippo']
     use_cases: ['RMA automationRefundsAnalytics']
     roi: 'Cut return handling time by 4070%'
     competitors: ['Loop ReturnsReturnly']
@@ -1578,9 +1578,9 @@ export const,
     popular: true,
     icon: '',
     realService: true,
-    technology: ['IMAP/Graph API, OpenAI-compatible, Next && Next.js'];
-    integrations: ['Gmail, Outlook, HubSpot, Salesforce'];
-    useCases: ['Support triage, Sales inquiries, Vendor emails'];
+    technology: ['IMAP/Graph API, OpenAI-compatible, Next && Next.js']
+    integrations: ['Gmail, Outlook, HubSpot, Salesforce']
+    useCases: ['Support triage, Sales inquiries, Vendor emails']
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)']
     marketSize: '$10B productivity tooling',
@@ -1602,9 +1602,9 @@ export const,
     setup_time: '30 minutes',
     category: 'AI & Data',
     real_service: true,
-    technology: ['IMAP / Graph API, OpenAI - compatible, Next.js'];
-    integrations: ['Gmail, Outlook, HubSpot, Salesforce'];
-    use_cases: ['Support triage, Sales inquiries, Vendor emails'];
+    technology: ['IMAP / Graph API, OpenAI - compatible, Next.js']
+    integrations: ['Gmail, Outlook, HubSpot, Salesforce']
+    use_cases: ['Support triage, Sales inquiries, Vendor emails']
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)']
     market_size: '$10B productivity tooling',
@@ -1638,12 +1638,12 @@ export const,
     setup_time: '20 minutes',
     category: 'Developer Tools',
     real_service: true,
-    technology: ['Next.js, Serverless functions, ClickHouse'];
+    technology: ['Next.js, Serverless functions, ClickHouse']
     realService: true,
-    technology: ['Next && Next.js, Serverless functions, ClickHouse'];
-    integrations: ['Slack, HubSpot, Zapier, Webhooks'];
+    technology: ['Next && Next.js, Serverless functions, ClickHouse']
+    integrations: ['Slack, HubSpot, Zapier, Webhooks']
     rating: 4 && 4.6,
-    integrations: ['Slack, HubSpot, Zapier, Webhooks'];
+    integrations: ['Slack, HubSpot, Zapier, Webhooks']
     reviews: 6,
   }
     id: 'affiliate-tracking-hub',
@@ -1699,12 +1699,12 @@ export const,
     setup_time: '1 hour',
     category: 'Developer Tools',
     real_service: true,
-    technology: ['Next.js, Postgres, Stripe'];
+    technology: ['Next.js, Postgres, Stripe']
     realService: true,
-    technology: ['Next && Next.js, Postgres, Stripe'];
-    integrations: ['Stripe, Shopify, WooCommerce'];
+    technology: ['Next && Next.js, Postgres, Stripe']
+    integrations: ['Stripe, Shopify, WooCommerce']
     rating: 4 && 4.5,
-    integrations: ['Stripe, Shopify, WooCommerce'];
+    integrations: ['Stripe, Shopify, WooCommerce']
     reviews: 5,
   }
     id: 'podcast-transcription-studio',
@@ -1735,9 +1735,9 @@ export const,
     popular: false,
     icon: '',
     realService: true,
-    technology: ['Whisper/Deepgram, Next && Next.js, Workers'];
-    integrations: ['YouTube, RSS, Libsyn, Anchor'];
-    useCases: ['Accessibility, SEO, repurposing'];
+    technology: ['Whisper/Deepgram, Next && Next.js, Workers']
+    integrations: ['YouTube, RSS, Libsyn, Anchor']
+    useCases: ['Accessibility, SEO, repurposing']
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev']
     marketSize: '$2B creator tooling',
@@ -1762,9 +1762,9 @@ export const,
     setup_time: '10 minutes',
     category: 'AI & Data',
     real_service: true,
-    technology: ['Whisper / Deepgram, Next.js, Workers'];
-    integrations: ['YouTube, RSS, Libsyn, Anchor'];
-    use_cases: ['Accessibility, SEO, repurposing'];
+    technology: ['Whisper / Deepgram, Next.js, Workers']
+    integrations: ['YouTube, RSS, Libsyn, Anchor']
+    use_cases: ['Accessibility, SEO, repurposing']
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev']
     market_size: '$2B creator tooling',
@@ -1786,7 +1786,7 @@ export const,
     description: 'Allow customers to initiate returns, generate labels, and track status. Automate refunds and reasons for analytics.'
     features: [
       'Return reasons & RMA flow_label creation and tracking_status pages and notifications_exchange or refund rules_analytics and exports'
-    ];
+    ]
     popular: true
     icon: ''
     color: 'from - amber - 600 to - orange - 700'
@@ -1798,9 +1798,9 @@ export const,
     setup_time: '1 hour',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next && Next.js, Shopify/Woo APIs, Webhooks'];
-    integrations: ['Shopify, WooCommerce, Stripe'];
-    useCases: ['Returns, exchanges, refunds'];
+    technology: ['Next && Next.js, Shopify/Woo APIs, Webhooks']
+    integrations: ['Shopify, WooCommerce, Stripe']
+    useCases: ['Returns, exchanges, refunds']
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly']
     marketSize: '$3B ecommerce tooling',
@@ -1817,9 +1817,9 @@ export const,
     id: 'msP-it-helpdesk-lite',
     name: 'MSP IT Helpdesk Lite',
     real_service: true,
-    technology: ['Next.js, Shopify / Woo APIs, Webhooks'];
-    integrations: ['Shopify, WooCommerce, Stripe'];
-    use_cases: ['Returns, exchanges, refunds'];
+    technology: ['Next.js, Shopify / Woo APIs, Webhooks']
+    integrations: ['Shopify, WooCommerce, Stripe']
+    use_cases: ['Returns, exchanges, refunds']
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly']
     market_size: '$3B ecommerce tooling',
@@ -1841,7 +1841,7 @@ export const,
     description: 'Simple helpdesk for MSPs with SLA timers, KB, and client portal. Integrates with remote monitoring for alerts  tickets.'
     features: [
       'Tickets and SLAsKB and canned replies_client portal and roles_alerts  ticket rules_email ingest & automation'
-    ];
+    ]
     popular: false
     icon: ''
     color: 'from - slate - 600 to - gray - 700'
@@ -1853,9 +1853,9 @@ export const,
     setup_time: '1 day',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Next && Next.js, Postgres, Email'];
-    integrations: ['Zabbix, Datadog, Prometheus email/webhooks'];
-    useCases: ['Service desk, Client support, SLA reporting'];
+    technology: ['Next && Next.js, Postgres, Email']
+    integrations: ['Zabbix, Datadog, Prometheus email/webhooks']
+    useCases: ['Service desk, Client support, SLA reporting']
     roi: 'Stand up a support desk in days, not months'
     competitors: ['Zendesk, Freshdesk']
     marketSize: '$15B helpdesk software',
@@ -1877,7 +1877,7 @@ export const,
     description: 'End-to-end privacy ops: system inventory, data flows, DPIAs, risk scoring, DSAR triage, and evidence exports mapped to GDPR/CCPA.'
     features: [,
       'Automated system discovery and RoPA builderDPIA templates with AI risk suggestionsDSAR intake, identity verification, redactionPolicy generation and version controlEvidence exports (ISO 27001/SOC2 mappings)'
-    ];
+    ]
     popular: true,
     icon: ''
     color: 'from-indigo-600 to-violet-700'
@@ -1891,9 +1891,9 @@ export const,
     realService: true,
     technology: ['Next && Next.jsNode.jsVector DBOCR redaction'],
     real_service: true,
-    technology: ['Next.js, Postgres, Email'];
-    integrations: ['Zabbix, Datadog, Prometheus email / webhooks'];
-    use_cases: ['Service desk, Client support, SLA reporting'];
+    technology: ['Next.js, Postgres, Email']
+    integrations: ['Zabbix, Datadog, Prometheus email / webhooks']
+    use_cases: ['Service desk, Client support, SLA reporting']
     roi: 'Stand up a support desk in days, not months'
     competitors: ['Zendesk, Freshdesk']
     market_size: '$15B helpdesk software',
@@ -1915,7 +1915,7 @@ export const,
     description: 'End - to - end privacy ops: system inventory, data flows, DPIAs, risk scoring, DSAR triage, and evidence exports mapped to GDPR / CCPA.'
     features: [,
       'Automated system discovery and RoPA builderDPIA templates with AI risk suggestionsDSAR intake, identity verification, redaction_policy generation and version control_evidence exports (ISO 27001 / SOC2 mappings)'
-    ];
+    ]
     popular: true,
     icon: ''
     color: 'from - indigo - 600 to - violet - 700'
@@ -1928,7 +1928,7 @@ export const,
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['Next.js_node.js_vector DBOCR redaction'],
-    integrations: ['Google, Microsoft 365, Okta, Slack, Zendesk'];
+    integrations: ['Google, Microsoft 365, Okta, Slack, Zendesk']
     use_cases: ['DPIA / RoPA automationDSAR processing_evidence collection'],
     roi: 'Reduce manual privacy ops hours by 6080%'
     competitors: ['OneTrustTranscendSecuriti'],
@@ -1954,7 +1954,7 @@ export const,
     trialDays: 14
     setupTime: '1 day'
     category: 'Developer Tools'
-    realService: true;
+    realService: true
     technology: ['Next && Next.jsLLM APIsWebhooks']
     integrations: ['SalesforceHubSpotGmail/Outlook']
     useCases: ['Outbound sequencesCall notesCRM hygiene'],
@@ -2001,8 +2001,8 @@ export const,
     real_implementation: true
     implementation_details: 'Sequence engine with deliverability checks and CRM sync.'
     launch_date: '2025 - 07 - 10'
-    customers: 21;
-    rating: 4 && 4.6;
+    customers: 21
+    rating: 4 && 4.6
     reviews: 12
     rating: 4.6
     reviews: 12,
@@ -2183,9 +2183,9 @@ export const,
     trial_days: 14
     setup_time: '1 day'
     category: 'AI & Data'
-    real_service: true;
-    technology: ['Events APIEmbeddingsDashboards'];
-    integrations: ['SlackZendeskJira'];
+    real_service: true
+    technology: ['Events APIEmbeddingsDashboards']
+    integrations: ['SlackZendeskJira']
     use_cases: ['Feedback centralizationPrioritizationVOC analytics']
     roi: 'Improve roadmap - fit and customer satisfaction'
     competitors: ['CannyProductboard (lite)']
@@ -2215,7 +2215,7 @@ export const,
     description: 'Edge - deployed flags, segments, and experiments for teams that need speed without platform bloat.'
     features: [,
       'Edge evaluation and low latencySDKs for JS, Node, PythonAudit log and approvals_experiments and rollouts_usage quotas'
-    ];
+    ]
     popular: false,
     icon: ''
     color: 'from - rose - 600 to - pink - 700'
@@ -2239,8 +2239,8 @@ export const,
     real_implementation: true
     implementation_details: 'Edge functions and SDK package templates.'
     launch_date: '2025 - 07 - 20'
-    customers: 10;
-    rating: 4 && 4.5;
+    customers: 10
+    rating: 4 && 4.5
     reviews: 5
     rating: 4.5
     reviews: 5,
@@ -2372,9 +2372,9 @@ export const,
     trial_days: 14
     setup_time: '24 hours'
     category: 'Observability'
-    real_service: true;
-    technology: ['Warehouse APIsAnomaly detectionLLM'];
-    integrations: ['SnowflakeBigQueryRedshiftdbt'];
+    real_service: true
+    technology: ['Warehouse APIsAnomaly detectionLLM']
+    integrations: ['SnowflakeBigQueryRedshiftdbt']
     use_cases: ['Data SLAsIncident routing_automated fixes']
     roi: 'Reduce broken dashboards and ML drift'
     competitors: ['Monte Carlo (lite)']
@@ -2461,7 +2461,7 @@ export const,
     trial_days: 14
     setup_time: '25 days'
     category: 'Quality & Monitoring'
-    real_service: true;
+    real_service: true
     technology: ['RegistryEvalsWorkflows']
     integrations: ['GitHubJiraSlack']
     use_cases: ['Model registry_risk tracking_policy compliance'],
@@ -2470,7 +2470,7 @@ export const,
     rating: 4 && 4.6
     reviews: 2,
   }
-];
+]
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next && Next.js'],
     realService: true,
@@ -2490,7 +2490,7 @@ export const,
     rating: 4.7
     reviews: 4,
   }
-];
+]
     real_service: true,
     technology: ['Feast - compatible, PostgreSQL, Redis, Next.js'],
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'],
@@ -11710,10 +11710,10 @@ export const,
     setupTime: '1-3 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
-    integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'];
-    useCases: ['Real-time features, Batch features, A/B parity'];
-    competitors: ['Tecton, Feast DIY'];
+    technology: ['Feast-compatible, PostgreSQL, Redis, Next.js']
+    integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery']
+    useCases: ['Real-time features, Batch features, A/B parity']
+    competitors: ['Tecton, Feast DIY']
     marketSize: '$5B ML platform tooling', growthRate: '30% CAGR',
     variant: 'holographic-matrix', contactInfo: contact
     realImplementation: true,
@@ -11734,9 +11734,9 @@ export const,
     targetAudience: 'Ops, QA, growth, backoffice teams',
     trialDays: 14, setupTime: '2 hours',
     category: 'Developer Tools', realService: true,
-    technology: ['Playwright, Workers, Next.js'];
-    integrations: ['S3, Slack, Email'];
-    useCases: ['Ops automation, QA journeys, Admin agents'];
+    technology: ['Playwright, Workers, Next.js']
+    integrations: ['S3, Slack, Email']
+    useCases: ['Ops automation, QA journeys, Admin agents']
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI.Vision']
     marketSize: '$12B RPA', growthRate: '25% CAGR',
@@ -11759,9 +11759,9 @@ export const,
     targetAudience: 'SaaS teams targeting enterprise', trialDays: 14,
     setupTime: '3-7 days', category: 'Enterprise IT',
     realService: true,
-    technology: ['NextAuth, WorkOS/Custom, Node.js'];
-    integrations: ['Okta, Azure AD, Google Workspace, OneLogin'];
-    useCases: ['SSO rollout, Enterprise pilots lifecycle'];
+    technology: ['NextAuth, WorkOS/Custom, Node.js']
+    integrations: ['Okta, Azure AD, Google Workspace, OneLogin']
+    useCases: ['SSO rollout, Enterprise pilots lifecycle']
     roi: 'Shorten security review time by 5070%',
     competitors: ['WorkOS, Auth0 PS']
     integrations: ['Postman, GitHub, GitLab, Jenkins']
@@ -11808,11 +11808,11 @@ export const,
     integrations: ['Snowflake, BigQuery, Redshift']
     useCases: ['ETL efficiency, Warehouse cost control']
     roi: 'Cut pipeline spend by 3050%',
-    competitors: ['Monte Carlo, Databand'];
+    competitors: ['Monte Carlo, Databand']
     realService: true,
-    technology: ['SAML, OIDC, SCIM, NextAuth'];
-    integrations: ['Okta, Azure AD, Google Workspace, Auth0'];
-    useCases: ['Enterprise deals, Compliance readiness'];
+    technology: ['SAML, OIDC, SCIM, NextAuth']
+    integrations: ['Okta, Azure AD, Google Workspace, Auth0']
+    useCases: ['Enterprise deals, Compliance readiness']
     roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise']
     integrations: ['Slack, Email, PagerDuty, Jira']
@@ -11838,9 +11838,9 @@ export const,
     targetAudience: 'SRE, platform and support teams',
     trialDays: 14, setupTime: '1 day',
     category: 'Reliability & SRE', realService: true,
-    technology: ['Node.js, OpenAI, Postgres, Kafka'];
-    integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
-    useCases: ['On-call assist, Comms automation, RCA support'];
+    technology: ['Node.js, OpenAI, Postgres, Kafka']
+    integrations: ['PagerDuty, Statuspage, Slack, Opsgenie']
+    useCases: ['On-call assist, Comms automation, RCA support']
     roi: 'Cut MTTR by 2040%',
     competitors: ['FireHydrant, Rootly']
     marketSize: '$5B incident mgmt', growthRate: '18% CAGR',
@@ -11864,9 +11864,9 @@ export const,
     targetAudience: 'Growth and sales teams', trialDays: 14,
     setupTime: '2 hours', category: 'Go-To-Market',
     realService: true,
-    technology: ['Next.js, OpenAI, PostgreSQL'];
-    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
-    useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration'];
+    technology: ['Next.js, OpenAI, PostgreSQL']
+    integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn']
+    useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration']
     roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist']
     marketSize: '$20B sales tech', growthRate: '15% CAGR',
@@ -11890,9 +11890,9 @@ export const,
     targetAudience: 'Data platform & analytics engineering', trialDays: 14,
     setupTime: '2 days', category: 'Data & Analytics',
     realService: true,
-    technology: ['dbt, OpenLineage, PostgreSQL, Next.js'];
-    integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
-    useCases: ['Breaking change prevention, Data SLAs, Ownership clarity'];
+    technology: ['dbt, OpenLineage, PostgreSQL, Next.js']
+    integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira']
+    useCases: ['Breaking change prevention, Data SLAs, Ownership clarity']
     roi: 'Reduce data incidents by 3050%',
     competitors: ['Monte Carlo, Bigeye, Soda']
     marketSize: '$6B data observability', growthRate: '23% CAGR',
@@ -11984,9 +11984,9 @@ export const,
     targetAudience: 'Support, sales, operations, founders',
     trialDays: 14, setupTime: '30 minutes',
     category: 'AI & Data', realService: true,
-    technology: ['IMAP/Graph API, OpenAI-compatible, Next.js'];
-    integrations: ['Gmail, Outlook, HubSpot, Salesforce'];
-    useCases: ['Support triage, Sales inquiries, Vendor emails'];
+    technology: ['IMAP/Graph API, OpenAI-compatible, Next.js']
+    integrations: ['Gmail, Outlook, HubSpot, Salesforce']
+    useCases: ['Support triage, Sales inquiries, Vendor emails']
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)']
     marketSize: '$10B productivity tooling', growthRate: '20% CAGR',
@@ -12010,9 +12010,9 @@ export const,
     targetAudience: 'Marketing, CX, product research',
     trialDays: 14, setupTime: '20 minutes',
     category: 'Developer Tools', realService: true,
-    technology: ['Next.js, Serverless functions, ClickHouse'];
-    integrations: ['Slack, HubSpot, Zapier, Webhooks'];
-    useCases: ['Feature feedback, NPS, onboarding research'];
+    technology: ['Next.js, Serverless functions, ClickHouse']
+    integrations: ['Slack, HubSpot, Zapier, Webhooks']
+    useCases: ['Feature feedback, NPS, onboarding research']
     roi: 'Increase completion rates by 2040% on mobile',
     competitors: ['Typeform, Tally']
     marketSize: '$6B survey & CX', growthRate: '14% CAGR',
@@ -12035,9 +12035,9 @@ export const,
     targetAudience: 'SaaS, courses, ecommerce',
     trialDays: 14, setupTime: '1 hour',
     category: 'Developer Tools', realService: true,
-    technology: ['Next.js, Postgres, Stripe'];
-    integrations: ['Stripe, Shopify, WooCommerce'];
-    useCases: ['Affiliate sales, referrals, partnerships'];
+    technology: ['Next.js, Postgres, Stripe']
+    integrations: ['Stripe, Shopify, WooCommerce']
+    useCases: ['Affiliate sales, referrals, partnerships']
     roi: 'Lift new-user acquisition 515%',
     competitors: ['Impact, PartnerStack']
     marketSize: '$4B affiliate software', growthRate: '12% CAGR',
@@ -12061,9 +12061,9 @@ export const,
     targetAudience: 'Podcasters, media teams, agencies',
     trialDays: 7, setupTime: '10 minutes',
     category: 'AI & Data', realService: true,
-    technology: ['Whisper/Deepgram, Next.js, Workers'];
-    integrations: ['YouTube, RSS, Libsyn, Anchor'];
-    useCases: ['Accessibility, SEO, repurposing'];
+    technology: ['Whisper/Deepgram, Next.js, Workers']
+    integrations: ['YouTube, RSS, Libsyn, Anchor']
+    useCases: ['Accessibility, SEO, repurposing']
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev']
     marketSize: '$2B creator tooling', growthRate: '15% CAGR',
@@ -12086,9 +12086,9 @@ export const,
     targetAudience: 'Shopify/WooCommerce merchants', trialDays: 14,
     setupTime: '1 hour', category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js, Shopify/Woo APIs, Webhooks'];
-    integrations: ['Shopify, WooCommerce, Stripe'];
-    useCases: ['Returns, exchanges, refunds'];
+    technology: ['Next.js, Shopify/Woo APIs, Webhooks']
+    integrations: ['Shopify, WooCommerce, Stripe']
+    useCases: ['Returns, exchanges, refunds']
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly']
     popula,
@@ -17692,7 +17692,7 @@ export const,
   g: 4.6,
     review,
   s: 2}
-];
+]
 'System registry and ownership'
       'Risk assessment and mitigations'
       'Prompt evals and guardrails'
@@ -17970,8 +17970,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Recorder UI, compiler, runner fleet, replay UIs.',
     launchDate: '2025-03-16'
-    customers: 5;
-    rating: 4.6;
+    customers: 5
+    rating: 4.6
     reviews: 3
     reviews: 3
     reviews: 3,
@@ -18084,8 +18084,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Adapters, sample app, e2e tests, and docs.',
     launchDate: '2025-03-17'
-    customers: 4;
-    rating: 4.8;
+    customers: 4
+    rating: 4.8
     reviews: 2
     reviews: 2
     reviews: 2,
@@ -18585,8 +18585,8 @@ export const,
     realImplementation: true
     implementationDetails: 'ETL + anomaly models + alerting with IaC guidance.'
     launchDate: '2025-03-09'
-    customers: 11;
-    rating: 4.7;
+    customers: 11
+    rating: 4.7
     reviews: 5
     reviews: 5
     reviews: 5,
@@ -19584,8 +19584,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Connectors, NLP pipelines, and dashboard.',
     launchDate: '2025-02-12'
-    customers: 63;
-    rating: 4.5;
+    customers: 63
+    rating: 4.5
     reviews: 24
     reviews: 24
     reviews: 24,
@@ -19697,8 +19697,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Template library, sequence runner, and analytics.',
     launchDate: '2025-01-28'
-    customers: 210;
-    rating: 4.8;
+    customers: 210
+    rating: 4.8
     reviews: 77
     reviews: 77
     reviews: 77,
@@ -19810,8 +19810,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Scheduler hooks, profilers, and policy engine.',
     launchDate: '2025-03-02'
-    customers: 11;
-    rating: 4.4;
+    customers: 11
+    rating: 4.4
     reviews: 6
     reviews: 6
     reviews: 6,
@@ -20462,8 +20462,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Sequencer, warmup checks, and CRM connector pack.',
     launchDate: '2025-03-15'
-    customers: 17;
-    rating: 4.8;
+    customers: 17
+    rating: 4.8
     reviews: 10
     reviews: 10
     reviews: 10,
@@ -20854,8 +20854,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Survey builder, response store, analytics.',
     launchDate: '2025-03-18'
-    customers: 3;
-    rating: 4.6;
+    customers: 3
+    rating: 4.6
     reviews: 2
     reviews: 2
     reviews: 2,
@@ -21240,8 +21240,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Visual builder, CDN forms, realtime aggregation.',
     launchDate: '2026-03-11'
-    customers: 18;
-    rating: 4.6;
+    customers: 18
+    rating: 4.6
     reviews: 6
     reviews: 6
     reviews: 6,
@@ -21355,8 +21355,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Tracking pixels, webhook handlers, payout engine.',
     launchDate: '2026-03-12'
-    customers: 11;
-    rating: 4.5;
+    customers: 11
+    rating: 4.5
     reviews: 5
     reviews: 5
     reviews: 5,
@@ -21720,8 +21720,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Ticket intake, workflow, roles, portal and KB UI.',
     launchDate: '2026-03-07'
-    customers: 16;
-    rating: 4.5;
+    customers: 16
+    rating: 4.5
     reviews: 8
     reviews: 8
     reviews: 8,
@@ -22531,7 +22531,7 @@ export const,
     rating: 4.6,
     reviews: 5
   }
-];
+]
     trialDays: 14
     setupTime: '1 day',
     category: 'Developer Tools',
@@ -22695,8 +22695,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Agentless collectors with export pipelines.'
     launchDate: '2025-06-01'
-    customers: 11;
-    rating: 4.5;
+    customers: 11
+    rating: 4.5
     reviews: 7
     reviews: 7
     reviews: 7,
@@ -22826,8 +22826,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Scheduled crawlers + summarization with citations.'
     launchDate: '2025-07-01'
-    customers: 18;
-    rating: 4.6;
+    customers: 18
+    rating: 4.6
     reviews: 10
     reviews: 10
     reviews: 10,
@@ -22957,8 +22957,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Guided workflow with template library and exports.'
     launchDate: '2025-05-15'
-    customers: 25;
-    rating: 4.5;
+    customers: 25
+    rating: 4.5
     reviews: 9
     reviews: 9
     reviews: 9,
@@ -23088,8 +23088,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Embed widgets, event ingestors, tagging pipeline.',
     launchDate: '2025-06-25'
-    customers: 15;
-    rating: 4.6;
+    customers: 15
+    rating: 4.6
     reviews: 8
     reviews: 8
     reviews: 8,
@@ -23216,8 +23216,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Edge functions and SDK package templates.'
     launchDate: '2025-07-20'
-    customers: 10;
-    rating: 4.5;
+    customers: 10
+    rating: 4.5
     reviews: 5
     reviews: 5
     reviews: 5,
@@ -23347,8 +23347,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Template packs + contract parsers.'
     launchDate: '2025-05-28'
-    customers: 8;
-    rating: 4.5;
+    customers: 8
+    rating: 4.5
     reviews: 4
     reviews: 4
     reviews: 4,
@@ -23516,8 +23516,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Event ingestors and summarization pipelines.'
     launchDate: '2025-08-05'
-    customers: 7;
-    rating: 4.6;
+    customers: 7
+    rating: 4.6
     reviews: 3
     reviews: 3
     reviews: 3,
@@ -23617,8 +23617,8 @@ export const,
     realImplementation: true,
     implementationDetails: 'Warehouse connectors, alerting, and PR generators.',
     launchDate: '2025-07-14'
-    customers: 12;
-    rating: 4.6;
+    customers: 12
+    rating: 4.6
     reviews: 6
     reviews: 6
     reviews: 6,
@@ -23761,8 +23761,8 @@ export const,
     realImplementation: true
     implementationDetails: 'Browser extension + flag hooks + PR templates.'
     launchDate: '2025-06-18'
-    customers: 14;
-    rating: 4.5;
+    customers: 14
+    rating: 4.5
     reviews: 5
     reviews: 5
     reviews: 5,
@@ -23898,7 +23898,7 @@ export const,
     customers: 5
     rating: 4.6
 reviews: 2,
-  }];
+  }]
     reviews: 2,
     popula,
   r: true,
@@ -23967,7 +23967,7 @@ review,
   s: 2}]
     review,
   s: 2}
-];
+]
 export const,
   newlyAddedServices: EnhancedRealMicroSaasService[] = [ {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,

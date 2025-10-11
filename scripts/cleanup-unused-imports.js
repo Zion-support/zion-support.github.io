@@ -9,13 +9,12 @@ console.log('🧹 Starting cleanup of unused imports and console statements...')
 // Function to remove unused imports and console statements
 function cleanupFile(filePath) {
     try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove console.log, console.warn, console.error statements;
-    const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Remove console.log, console.warn, console.error statements
+    const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm
     if (consoleRegex.test(content)) {
-      content = content.replace(consoleRegex, '');
+      content = content.replace(consoleRegex, '')
       modified = true
   }
 
@@ -35,15 +34,15 @@ function cleanupFile(filePath) {
           return matches.length <= 1; // Only appears in the import statement
         })
         if (unusedItems.length === importedItems.length) {
-    // Remove entire import if all items are unused;
-          content = content.replace(importStatement, '');
+    // Remove entire import if all items are unused
+          content = content.replace(importStatement, '')
           modified = true
   } else if (unusedItems.length > 0) {
-          // Remove unused items from import;
-          const usedItems = importedItems.filter(item => !unusedItems.includes(item));
-          const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]}`;
-          content = content.replace(importStatement, newImport);
-          modified = true;
+          // Remove unused items from import
+          const usedItems = importedItems.filter(item => !unusedItems.includes(item))
+          const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]}`
+          content = content.replace(importStatement, newImport)
+          modified = true
         }
       }
     })
@@ -61,8 +60,7 @@ function cleanupFile(filePath) {
 
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-    let files = [];
-  
+    let files = []
   try {
     const items = fs.readdirSync(dir)
     for (const item of items) {
@@ -84,12 +82,10 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files
 }
 
-// Main cleanup process;
-const files = findFiles('./app');
-let cleanedCount = 0;
-
-console.log(`Found ${files.length} files to process...`);
-
+// Main cleanup process
+const files = findFiles('./app')
+let cleanedCount = 0
+console.log(`Found ${files.length} files to process...`)
 files.forEach(file => {
     )
   if (cleanupFile(file)) {

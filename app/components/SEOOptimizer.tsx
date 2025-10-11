@@ -1,16 +1,15 @@
-'use client';
+'use client'
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
+  title: string
+  description: string
   keywords?: string[]
-  canonicalUrl?: string;
-  structuredData?: object;
+  canonicalUrl?: string
+  structuredData?: object
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
-  const keywordsString = keywords.join(', ');
-
+  const keywordsString = keywords.join(', ')
   return (
     </SEOOptimizerProps><Helmet>
       </Helmet><title>{title}</title>
@@ -30,10 +29,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
-  );
-};
-
-export default SEOOptimizer;
+  )
+}
+export default SEOOptimizer
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO meta tags */}

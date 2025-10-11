@@ -1,10 +1,10 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+}
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-redteam-evaluator',
@@ -209,7 +209,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5
     reviews: 9,
   }
-];
+]
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']
@@ -217,8 +217,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: ''
 		color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300',
-		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
+		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']
+		popular: true
 		icon: '',
 		color: 'from-rose-600 to-red-700'
 		textColor: 'text-rose-300'
@@ -420,43 +420,43 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5
   reviews: 9,
 }
-		rating: 4.5;
+		rating: 4.5
 		reviews: 9
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
-		id: 'ai-redteam-evaluator';
+		id: 'ai-redteam-evaluator'
 		name: 'AI RedTeam Evaluator'
 		tagline: 'Continuous LLM redteaming and safety scoring'
 		price: '$149',
 		period: '/month',,
-  description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
-		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: '';
-		color: 'from-rose-600 to-red-700';
+  description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
+		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']
+		popular: true
+		icon: ''
+		color: 'from-rose-600 to-red-700'
 		textColor: 'text-rose-300'
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator'
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
-		targetAudience: 'AI platform, Security, Compliance';
-		trialDays: 14;
-		setupTime: '45 minutes';
-		category: 'AI & Machine Learning';
-		realService: true;
-		technology: ['OpenAI compatiblePolicy enginesEmbeddings'];
-		integrations: ['SlackPagerDuty'];
-		useCases: ['Safety testingCompliance checksRelease gating'];
-		roi: 'Reduce incident risk by 70% in first quarter';
-		competitors: ['LakeraGuardrails'];
-		marketSize: '$3.2 B AI Safety';
-		growthRate: '35% CAGR';
-		variant: 'ai-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		targetAudience: 'AI platform, Security, Compliance'
+		trialDays: 14
+		setupTime: '45 minutes'
+		category: 'AI & Machine Learning'
+		realService: true
+		technology: ['OpenAI compatiblePolicy enginesEmbeddings']
+		integrations: ['SlackPagerDuty']
+		useCases: ['Safety testingCompliance checksRelease gating']
+		roi: 'Reduce incident risk by 70% in first quarter'
+		competitors: ['LakeraGuardrails']
+		marketSize: '$3.2 B AI Safety'
+		growthRate: '35% CAGR'
+		variant: 'ai-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,
@@ -598,7 +598,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   g: 4.5,
     review,
   s: 9}
-];
+]
 		perio,
   d: '/month'
 		descriptio,
@@ -1032,42 +1032,42 @@ export const,
 		review,
   s: 9}
 	}
-];
+]
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
-		id: 'ai-redteam-evaluator';
-		name: 'AI RedTeam Evaluator';
+		id: 'ai-redteam-evaluator'
+		name: 'AI RedTeam Evaluator'
 		tagline: 'Continuous LLM redteaming and safety scoring'
 		price: '$149'
 		period: '/month',
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
-		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
-		popular: true;
-		icon: '';
-		color: 'from-rose-600 to-red-700';
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
+		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']
+		popular: true
+		icon: ''
+		color: 'from-rose-600 to-red-700'
 		textColor: 'text-rose-300'
 		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator'
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
-		targetAudience: 'AI platform, Security, Compliance';
-		trialDays: 14;
-		setupTime: '45 minutes';
-		category: 'AI & Machine Learning';
-		realService: true;
-		technology: ['OpenAI compatiblePolicy enginesEmbeddings'];
-		integrations: ['SlackPagerDuty'];
-		useCases: ['Safety testingCompliance checksRelease gating'];
-		roi: 'Reduce incident risk by 70% in first quarter';
-		competitors: ['LakeraGuardrails'];
-		marketSize: '$3.2 B AI Safety';
-		growthRate: '35% CAGR';
-		variant: 'ai-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		targetAudience: 'AI platform, Security, Compliance'
+		trialDays: 14
+		setupTime: '45 minutes'
+		category: 'AI & Machine Learning'
+		realService: true
+		technology: ['OpenAI compatiblePolicy enginesEmbeddings']
+		integrations: ['SlackPagerDuty']
+		useCases: ['Safety testingCompliance checksRelease gating']
+		roi: 'Reduce incident risk by 70% in first quarter'
+		competitors: ['LakeraGuardrails']
+		marketSize: '$3.2 B AI Safety'
+		growthRate: '35% CAGR'
+		variant: 'ai-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,

@@ -23,7 +23,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
           <T>) {
     timeout = null
   }
-      func(...args);
+      func(...args)
     }
     if (timeout) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -87,11 +87,11 @@ export function memoize
 }
       return cache.get(key)!
     }
-    const result = func(...args) as ReturnType;
+    const result = func(...args) as ReturnType
           <T>
-    cache.set(key, result);
-    return result;
-  }) as T;
+    cache.set(key, result)
+    return result
+  }) as T
 }
 /**
  * Lazy load a component with dynamic import
@@ -294,7 +294,7 @@ export class VirtualScroller
   t: Math.max(0, start),
       en,
   d: Math.min(this.items.length, end),
-//       offsetY;
+//       offsetY
     }
   }
   getVisibleItems(scrollTo)
@@ -519,6 +519,6 @@ export default {/* TODO: Fix JSX expression */}
 //   supportsCodeSplitting,
 //   prefetchBundle,
 //   getMemoryUsage,
-//   FPSMonitor;
+//   FPSMonitor
 }
 

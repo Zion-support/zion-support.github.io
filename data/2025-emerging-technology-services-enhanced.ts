@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface EmergingTechnologyService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
@@ -300,4 +300,4 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.9,
     reviews: 23
   }
-];
+]

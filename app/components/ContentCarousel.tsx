@@ -1,10 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react'
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
     {
       id: 1,
@@ -56,30 +54,25 @@ const ContentCarousel: React.FC = () => {
         'Compliance management'
       ],
       icon: Shield,
-      color: 'from-red-500 to-pink-600';
-    };
-  ];
-
-  useEffect(() => {];
-    const timer = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {;
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {;
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
+      color: 'from-red-500 to-pink-600'
+    }
+  ]
+  useEffect(() => {]
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [slides.length])
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
   return (
     <div className="relative w-full max-w-4xl mx-auto">
       </div><div className="relative overflow-hidden rounded-2xl">
-        </div><div 
+        </div><$2 />
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
@@ -111,14 +104,14 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
         
-        <button
+        <$2 />
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
         >
           </button><ChevronLeft className="w-6 h-6" />
         </button>
         
-        <button
+        <$2 />
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
         >
@@ -128,7 +121,7 @@ const ContentCarousel: React.FC = () => {
       
       <div className="flex justify-center space-x-2 mt-6">
         {slides.map((_, index) => (
-          </div><button
+          </div><$2 />
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
@@ -138,10 +131,9 @@ const ContentCarousel: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
-
-export default ContentCarousel;
+  )
+}
+export default ContentCarousel
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],

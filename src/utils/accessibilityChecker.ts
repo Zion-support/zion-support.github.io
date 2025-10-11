@@ -18,9 +18,9 @@ import React from 'react'
  * Accessibility issue severity levels
  */
 export enum A11ySeverity {
-    * @module accessibilityChecker;
- * @author Zion Tech Group;
- * @version 1.0.0;
+    * @module accessibilityChecker
+ * @author Zion Tech Group
+ * @version 1.0.0
  */
 /**
  * Accessibility issue severity levels
@@ -43,7 +43,7 @@ export enum A11ySeverity {// TODO: Add content
  * WCAG success criteria levels
  */
 export enum WCAGLevel {
-    * WCAG success criteria levels;
+    * WCAG success criteria levels
  */
 
 export enum WCAGLevel {// TODO: Add content
@@ -62,7 +62,7 @@ export enum WCAGLevel {// TODO: Add content
  */
 export interface A11yIssue {
     /** Unique identifier for the issue */
-  id: string;
+  id: string
   /** Issue type/category */
   type: string
   /** Severity level */
@@ -79,7 +79,7 @@ export interface A11yIssue {
 export interface A11yIssue {// TODO: Add content
   }
 }
-  /** Unique identifier for the issue */;
+  /** Unique identifier for the issue */
   id: string,
 
   /** Issue type/category */,
@@ -112,7 +112,7 @@ export interface A11yIssue {// TODO: Add content
  */
 export interface A11yCheckResult {
     /** Whether the check passed */
-  passed: boolean;
+  passed: boolean
   /** Number of issues found */
   issueCount: number
   /** List of issues */
@@ -150,7 +150,7 @@ export class AccessibilityChecker {
 export interface A11yCheckResult {// TODO: Add content
   }
 }
-  /** Whether the check passed */;
+  /** Whether the check passed */
   passed: boolean,
 
   /** Number of issues found */,
@@ -257,7 +257,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       issues: [...this.issues],
       timestamp: new Date(),
 
-//       score;
+//       score
     }
   }
   /**
@@ -1123,7 +1123,7 @@ $4})
     }
     const totalPenalty = this.issues.reduce((sum, issue) => {
     return sum + severityWeights[issue.severity]
-  }, 0);
+  }, 0)
     // Score decreases with more/severe issues
     const score = Math.max(0, 100 - totalPenalty)
     return Math.round(score)
@@ -1219,7 +1219,7 @@ $4})
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
-      [A11ySeverity.CRITICAL]: 15;
+      [A11ySeverity.CRITICAL]: 15
     }
     const totalPenalty = this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -1277,3 +1277,4 @@ const score = Math.max(0, 100 - totalPenalty)
   }
 }"`
 
+</main></main>

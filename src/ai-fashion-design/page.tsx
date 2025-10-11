@@ -141,7 +141,7 @@ const AIFashionDesignPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join leading fashion brands using AI design technology</span>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                   Start Your Free Trial
@@ -165,3 +165,4 @@ export default AIFashionDesignPage</a>
   </h1>
   </div>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h2></h3></h3></h3></ul></li></main></section></section></section></section></section>

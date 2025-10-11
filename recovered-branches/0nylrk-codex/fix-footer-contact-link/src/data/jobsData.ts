@@ -1,4 +1,4 @@
-import { Job } from "@/types/jobs";
+import { Job } from "@/types/jobs"
 export const JOB_POSTS: Job[] = [
   {
     id: "job-1",
@@ -28,4 +28,4 @@ export const JOB_POSTS: Job[] = [
     updated_at: "2024-05-05"}
     updated_at: "2024-05-05",
   }
-];
+]

@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
+import SEOOptimizer from '../components/SEOOptimizer'
 icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -47,7 +47,7 @@ return (
       </SEOOptimizer><Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -63,7 +63,7 @@ return (
             </span>
           </h1>
           <p></p>
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;
+            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
             Protect patient data while improving operational efficiency.
           </p>
               <ArrowRight></ArrowRight>
@@ -100,7 +100,7 @@ return (
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
 {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -117,7 +117,7 @@ return (
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -138,7 +138,7 @@ return (
             ))}
       {/* CTA Section */}
 <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -153,7 +153,7 @@ return (
         </div>
       </section>
       <Footer / /></Footer>
-  );
+  )
 }
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies
       <Footer />

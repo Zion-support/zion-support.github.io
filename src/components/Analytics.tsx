@@ -18,7 +18,7 @@ const,
     (window as any).gtag = gtag
     gtag('js', new Date())
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
-    });
+    })
   }
   const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
@@ -46,7 +46,7 @@ const,
     window.addEventListener('error', (event) => {/* TODO: Fix JSX expression */}
         })
       }
-    }, true);
+    }, true)
   }
   const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     })
@@ -69,8 +69,8 @@ const,
     })
     // Track form submissions
     document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
+      })
+    })
   }
   const trackEvent = (categor,
   y: string, actio)
@@ -78,6 +78,6 @@ const,
       })
     }
   }
-  return null;
+  return null
 }
 export default Analytics</AnalyticsProps>

@@ -4,17 +4,17 @@ import path from 'path'
 import { glob } from 'glob'
 // Performance optimization patterns
 const optimizations = {
-    // Remove unused CSS classes;
+    // Remove unused CSS classes
   removeUnusedCSS: (content) => {,
-    // This is a simplified version - in production, use tools like PurgeCSS;
+    // This is a simplified version - in production, use tools like PurgeCSS
     return content
   },
 
   // Optimize images (placeholder - would need actual image processing)
   optimizeImages: (content) => {
     ,
-    // Replace large image references with optimized versions;
-    return content;
+    // Replace large image references with optimized versions
+    return content
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
       .replace(/\.jpeg/g, '.webp')
@@ -47,12 +47,12 @@ const optimizations = {
       content = content.replace(
         /const (\w+): React\.FC = \(/g
         'const $1: React.FC = React.memo((')
-      );
+      )
       // Add closing parenthesis for React.memo
       content = content.replace()
         /(\w+)\.displayName = '\w+';/g
         '$1.displayName = \'$1\',\n});'
-      );
+      )
     }
     return content
   },
@@ -71,7 +71,7 @@ const optimizations = {
   }
 }
 
-// Files to process;
+// Files to process
 const filePatterns = [
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
@@ -102,19 +102,17 @@ let processedFiles = 0
 let optimizationsApplied = 0
 function processFile(filePath) {
     try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let newContent = content;
-    let fileOptimizations = 0;
-
-    // Apply optimizations;
+    const content = fs.readFileSync(filePath, 'utf8')
+    let newContent = content
+    let fileOptimizations = 0
+    // Apply optimizations
     Object.entries(optimizations).forEach(([name, optimizer]) => {
       const before = newContent
       newContent = optimizer(newContent)
       if (newContent !== before) {
         fileOptimizations++
   }
-    });
-
+    })
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8')
       console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`)
@@ -138,19 +136,16 @@ async function main() {
     allFiles.push(...files)
   }
 
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
-  uniqueFiles.forEach(processFile);
-
-  console.log(`\n🎉 Enhanced performance optimization completed!`);
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 Enhanced performance optimization completed!`)
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Optimizations applied: ${optimizationsApplied}`);
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Optimizations applied: ${optimizationsApplied}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -158,3 +153,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
 
 export { processFile, optimizations }
+</li></li></li>

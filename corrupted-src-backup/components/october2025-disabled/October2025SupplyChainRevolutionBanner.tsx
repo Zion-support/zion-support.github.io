@@ -8,7 +8,7 @@ impo, r, t {
   ClockIc, o, n, 
   GlobeAltIc, o, n, 
   ArrowRightIc, o, n
-  } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
+  } fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e'
 const October2025SupplyChainRevolutionBanne, r: React.FC = () => { ,
   return (
     <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
@@ -394,7 +394,8 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         </div>
       </div>
     </di, v>
-  );
+  )
 }
-export default October2025SupplyChainRevolutionBanner;
+export default October2025SupplyChainRevolutionBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></h2></h3></h3></h3></h3></h4></h4></ul>

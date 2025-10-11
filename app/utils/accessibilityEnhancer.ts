@@ -6,17 +6,17 @@
 
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]');
+    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]')
     modals.forEach()
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
+      closeButton?.click()
     })
     
     // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]');
+    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
     menus.forEach()
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
-      trigger?.click();
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
+      trigger?.click()
     })
   }
 
@@ -36,16 +36,13 @@
    * Handle menu navigation with arrow keys
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement;
+    const activeElement = document.activeElement as HTMLElement
     const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
-    ) as HTMLElement[];
-    const currentIndex = menuItems.indexOf(activeElement);
-    
-    if (currentIndex === -1) return;
-    
-    let nextIndex = currentIndex;
-    
+      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
+    ) as HTMLElement[]
+    const currentIndex = menuItems.indexOf(activeElement)
+    if (currentIndex === -1) return
+    let nextIndex = currentIndex
     switch (event.key) {
       case 'ArrowDown':
         nextIndex = (currentIndex + 1) % menuItems.length
@@ -115,9 +112,9 @@
    */
   private setupAriaLabels(): void {
     // Add ARIA labels to buttons without text
-    const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
     iconButtons.forEach()
-      const icon = button.querySelector('svg');
+      const icon = button.querySelector('svg')
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button'
         button.setAttribute('aria-label', iconName)
@@ -125,9 +122,9 @@
     })
     
     // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
     inputs.forEach()
-      const label = document.querySelector(`label[for="${input.id}"]`);
+      const label = document.querySelector(`label[for="${input.id}"]`)
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
         if (!label.id) {
@@ -142,18 +139,17 @@
    */
   private setupColorContrast(): void {
     // Add high contrast mode support
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
-    const handleContrastChange = (e: MediaQueryListEvent) => {;
-      if (e.matches) {;
-        document.body.classList.add('high-contrast');
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)')
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast')
       } else {
         document.body.classList.remove('high-contrast')
       }
     }
     
-    mediaQuery.addEventListener('change', handleContrastChange);
-    handleContrastChange(mediaQuery);
+    mediaQuery.addEventListener('change', handleContrastChange)
+    handleContrastChange(mediaQuery)
   }
 
   /**
@@ -224,7 +220,7 @@
    * Cleanup and destroy
    */
   public destroy(): void {
-    this.isInitialized = false;
+    this.isInitialized = false
     this.focusableElements = []
     this.skipLinks = []
     this.landmarks = []
@@ -232,8 +228,8 @@
 
 
 // Export utility functions
-export const announceToScreenReader = (message: string) => {;
-  accessibilityEnhancer.announce(message);
+export const announceToScreenReader = (message: string) => {
+  accessibilityEnhancer.announce(message)
 }
 
 

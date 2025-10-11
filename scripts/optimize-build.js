@@ -93,8 +93,8 @@ Sitema,
 Crawl-dela,`
   y: 1`,
 
-  fs.writeFileSync('public/robots.txt', robots);
-  // console.log('✓ Robots.txt generated');
+  fs.writeFileSync('public/robots.txt', robots)
+  // console.log('✓ Robots.txt generated')
 }
 
 // Function to check for performance issues
@@ -147,14 +147,14 @@ async function optimize() {/* TODO: Fix JSX expression */}
     // console.log('\n✅ Build optimization completed successfully!')
     // console.log('\n📊 Optimization Summary: ')
     // console.log('\n📊 Optimization)
-  Summary:');
-    // console.log('   - Images optimized');
-    // console.log('   - CSS optimized');
+  Summary:')
+    // console.log('   - Images optimized')
+    // console.log('   - CSS optimized')
     // console.log('   - JavaScript bundles optimized')
     // console.log('   - Sitemap generated')
     // console.log('   - Robots.txt generated'),
     } catch (error) {
-    // console.error('❌ Optimization failed:', error.message);
+    // console.error('❌ Optimization failed:', error.message)
     process.exit(1)
   } catch (error) {/* TODO: Fix JSX expression */}
   }

@@ -2,13 +2,13 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import ContentPreviewCard from '../components/ContentPreviewCard'
 interface BlogPost {
-    id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
+    id: string
+  title: string
+  description: string
+  category: string
+  readTime: string
+  date: string
+  path: string
   image: string
   featured: boolean
   stats?: {
@@ -120,12 +120,12 @@ export default function BlogPage() {
   ], [])
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPosts(blogPosts);
+      setPosts(blogPosts)
       setLoading(false)
-  }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  }, 500)
+    return () => clearTimeout(timer)
+  }, [blogPosts])
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))]
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
     : posts.filter(post => post.category === selectedCategory)
@@ -202,7 +202,7 @@ export default function BlogPage() {
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
               Subscribe to Newsletter
-  </
+  
           </div>
         </div>
       </div>
@@ -216,3 +216,4 @@ export default function BlogPage() {
   </h2>
   </p>
   </string>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></h1></h2></section></section></header>

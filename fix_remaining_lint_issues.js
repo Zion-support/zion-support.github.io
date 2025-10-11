@@ -1,12 +1,11 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Function to fix remaining lint issues in a file;
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+// Function to fix remaining lint issues in a file
 function fixRemainingLintIssues(filePath) {
     try {
-    // Skip if not a source file;
+    // Skip if not a source file
     if (
       !filePath.endsWith('.tsx') &&
       !filePath.endsWith('.ts') &&
@@ -78,9 +77,8 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
         return match.replace(param1, `_${param1}`)
       }
-      return match;
-    });
-
+      return match
+    })
     // Fix 2: Comment out unused variable declarations
     for (let i = 0; i < lines.length; i++) {
 
@@ -349,8 +347,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       fixedLines.push(line)
     }
 
-    content = fixedLines.join('\n');
-
+    content = fixedLines.join('\n')
     // Fix 4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '')
@@ -382,7 +379,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix 6: Add proper TypeScript types instead of any,
     // Fix,
   6: Add proper TypeScript types instead of any,
-    content = content.replace(/:\s*any\b/g, ': unknown');
+    content = content.replace(/:\s*any\b/g, ': unknown')
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
     }
 

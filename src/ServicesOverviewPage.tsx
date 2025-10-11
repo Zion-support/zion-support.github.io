@@ -1,8 +1,8 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
 import { 
   Brain, 
   Link as LinkIcon, 
@@ -27,9 +27,8 @@ import {
   Network,
   DollarSign as Coins,
   Wallet
-} from "lucide-react";
-import { TrustedBySection } from "@/components/TrustedBySection";
-
+} from "lucide-react"
+import { TrustedBySection } from "@/components/TrustedBySection"
 const serviceCategories = [
   {
     id: "ai-services",
@@ -236,8 +235,7 @@ const serviceCategories = [
       }
     ]
   }
-];
-
+]
 const benefits = [
   {
     title: "Innovation First",
@@ -258,10 +256,10 @@ const benefits = [
     title: "24/7 Support",
     description: "Round-the-clock support and monitoring for critical services",
     icon: <Globe className="h-6 w-6" />
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
       {/* Benefits Section */}
@@ -383,13 +381,13 @@ import {
 
       <TrustedBySection />
     </div>
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { 
   Brain, 
   Shield, 
@@ -409,18 +407,15 @@ import {
   Database,
   Code,
   Lock
-} from "lucide-react";
-import { SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices";
-
+} from "lucide-react"
+import { SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices"
 export default function ServicesOverviewPage() {
   const getCategoryIcon = (icon: string) => {
-    return <span className="text-4xl">{icon}</span>;
-  };
-
+    return <span className="text-4xl">{icon}</span>
+  }
   const getCategoryColor = (color: string) => {
-    return `bg-gradient-to-br ${color}`;
-  };
-
+    return `bg-gradient-to-br ${color}`
+  }
   return (
     <>
       <SEO 
@@ -811,12 +806,11 @@ export default function ServicesOverviewPage() {
   Star,
   Clock,
   DollarSign
-} from 'lucide-react';
-import Wifi from 'lucide-react/dist/esm/icons/wifi';
-import Target from 'lucide-react/dist/esm/icons/target';
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import Wifi from 'lucide-react/dist/esm/icons/wifi'
+import Target from 'lucide-react/dist/esm/icons/target'
+import Rocket from 'lucide-react/dist/esm/icons/rocket'
+import { SEO } from '@/components/SEO'
 const categoryIcons = {
   "AI & Machine Learning": Brain,
   "Cybersecurity": Shield,
@@ -825,8 +819,7 @@ const categoryIcons = {
   "Digital Transformation": RefreshCw,
   "IoT & Smart Solutions": Wifi,
   "Blockchain & Web3": Link
-};
-
+}
 const categoryColors = {
   "AI & Machine Learning": "from-purple-500 to-pink-500",
   "Cybersecurity": "from-red-500 to-orange-500",
@@ -835,20 +828,17 @@ const categoryColors = {
   "Digital Transformation": "from-indigo-500 to-purple-500",
   "IoT & Smart Solutions": "from-yellow-500 to-orange-500",
   "Blockchain & Web3": "from-gray-500 to-blue-500"
-};
-
+}
 export default function ServicesOverviewPage() {
   const getServicesByCategory = (category: string) => {
-    return ENHANCED_SERVICES.filter(service => service.category === category);
-  };
-
+    return ENHANCED_SERVICES.filter(service => service.category === category)
+  }
   const formatPrice = (price: number) => {
     if (price >= 1000) {
-      return `$${(price / 1000).toFixed(1)}k`;
+      return `$${(price / 1000).toFixed(1)}k`
     }
-    return `$${price}`;
-  };
-
+    return `$${price}`
+  }
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -920,7 +910,7 @@ export default function ServicesOverviewPage() {
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
               {SERVICE_CATEGORIES.map((category) => {
-                const Icon = categoryIcons[category as keyof typeof categoryIcons];
+                const Icon = categoryIcons[category as keyof typeof categoryIcons]
                 return (
                   <TabsTrigger
                     key={category}
@@ -930,15 +920,14 @@ export default function ServicesOverviewPage() {
                     <Icon className="h-6 w-6" />
                     <span className="text-xs text-center">{category}</span>
                   </TabsTrigger>
-                );
+                )
               })}
             </TabsList>
 
             {SERVICE_CATEGORIES.map((category) => {
-              const services = getServicesByCategory(category);
-              const Icon = categoryIcons[category as keyof typeof categoryIcons];
-              const gradient = categoryColors[category as keyof typeof categoryColors];
-
+              const services = getServicesByCategory(category)
+              const Icon = categoryIcons[category as keyof typeof categoryIcons]
+              const gradient = categoryColors[category as keyof typeof categoryColors]
               return (
                 <TabsContent
                   key={category}
@@ -1093,7 +1082,7 @@ export default function ServicesOverviewPage() {
                     </Button>
                   </div>
                 </TabsContent>
-              );
+              )
             })}
           </Tabs>
         </div>
@@ -1202,5 +1191,5 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )
+}</div></div></div></Link>

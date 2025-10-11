@@ -1,20 +1,20 @@
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  category: string;
-  features: string[];
-  benefits: string[];
+  id: string
+  title: string
+  description: string
+  icon: string
+  category: string
+  features: string[]
+  benefits: string[]
   pricing: {
-    starting: string;
-    popular?: string;
-    enterprise?: string;
-  };
-  marketPrice: string;
-  link: string;
-  popular: boolean;
-  tags: string[];
+    starting: string
+    popular?: string
+    enterprise?: string
+  }
+  marketPrice: string
+  link: string
+  popular: boolean
+  tags: string[]
 }
 
 export const aiServices: Service[] = [
@@ -198,8 +198,7 @@ export const aiServices: Service[] = [
     popular: true,
     tags: ['E-commerce', 'Optimization', 'AI']
   }
-];
-
+]
 export const itServices: Service[] = [
   {
     id: 'cloud-migration',
@@ -381,8 +380,7 @@ export const itServices: Service[] = [
     popular: true,
     tags: ['Network', 'Security', 'Firewall']
   }
-];
-
+]
 export const microSaasServices: Service[] = [
   {
     id: 'analytics-dashboard',
@@ -564,6 +562,5 @@ export const microSaasServices: Service[] = [
     popular: false,
     tags: ['Inventory', 'Management', 'Automation']
   }
-];
-
-export const allServices = [...aiServices, ...itServices, ...microSaasServices];
+]
+export const allServices = [...aiServices, ...itServices, ...microSaasServices]

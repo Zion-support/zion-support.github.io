@@ -89,10 +89,10 @@ const NewsPage: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               News & Updates
-  </
+  
             <p className="text-xl text-cyan-400 mb-8">
               Stay informed with our latest innovations and success stories,
-  </
+  
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
@@ -169,9 +169,9 @@ const NewsPage: React.FC = () => {
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated</
+                Stay Updated
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates</
+                Subscribe to our newsletter for the latest AI insights and company updates
               <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
@@ -180,14 +180,14 @@ const NewsPage: React.FC = () => {
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
                   Subscribe,
-  </
+  
               </div>
               <p className="text-gray-400 text-sm mt-4">
                 No spam, unsubscribe at any time.
         <Footer />
       </div>
     </React.Fragment>
-  );
+  )
 }
 export default NewsPage</button>
   </p>
@@ -197,3 +197,4 @@ export default NewsPage</button>
   </p>
   </h1>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></a></a></p></p></p></p></h3></h3></main></section></section></section></section></section></article></article>

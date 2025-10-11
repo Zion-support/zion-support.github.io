@@ -13,7 +13,7 @@ export interface AnalyticsEvent {
   categor,
   y: string,,
     actio,
-  n: string;
+  n: string
   label?: string
   value?: number
   metadata?: Record,
@@ -36,7 +36,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private,
   _userProperties: UserProperties = {}
   private,
-  sessionId: string;
+  sessionId: string
   private isInitialized = false
   private batchSize = 10
   private flushInterval = 30000; // 30 seconds,
@@ -96,9 +96,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 //       ...this.userProperties,
       sessionI,
   d: this.sessionId,
-//       ...config;
+//       ...config
     }
-    // Track initialization;
+    // Track initialization
     this.trackEvent({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -128,7 +128,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //       ...this.userProperties,
-//       ...properties;
+//       ...properties
     }
   }
   public trackEvent(even)
@@ -153,11 +153,11 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   l: typeof window !== 'undefined' ? window.location.href : ''
       }
     }
-    // Add to queue;
-    this.queue.push(enrichedEvent);
-    // Send to gtag if available;
-    this.sendToGtag(enrichedEvent);
-    // Check if we should flush;
+    // Add to queue
+    this.queue.push(enrichedEvent)
+    // Send to gtag if available
+    this.sendToGtag(enrichedEvent)
+    // Check if we should flush
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -178,7 +178,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   d: string, actio,
   n: string, parameter,
   s: Record,)
-          <string, unknown>) => void;
+          <string, unknown>) => void
         }
 // ).gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -192,7 +192,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   d: string, actio,
   n: string, parameter,
   s: Record,)
-          <string, unknown>) => void;
+          <string, unknown>) => void
         }
       ).gtag('event', event.action, {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -419,6 +419,5 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     }
   }
 }
-// Export singleton instance;
-export default analytics;
-
+// Export singleton instance
+export default analytics

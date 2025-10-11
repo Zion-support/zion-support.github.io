@@ -86,6 +86,6 @@ const GlobalITSupportPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default GlobalItSupportPage;
+export default GlobalItSupportPage</$1>

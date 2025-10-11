@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Merge All Remaining Branches - Comprehensive merge of all remaining branches;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Merge All Remaining Branches - Comprehensive merge of all remaining branches
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -45,8 +44,7 @@ const relevantBranches = allBranches.filter(branch =>)
     branch.includes('chore') ||
     branch.includes('add-new') ||
     branch.includes('ai-')
-);
-
+)
 // //Step 3: Merge function with conflict resolution,
 function mergeBranch(branchName) {,
 //   try {,
@@ -73,7 +71,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
-      );
+      )
 //       return { success: true, method: 'direct' }
     } catch (mergeError) {
 //       //Try different conflict resolution strategies
@@ -81,7 +79,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
         //Strategy 1: Use theirs,
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
-        );
+        )
 //         return { success: true, method: 'theirs' }
       } catch (theirsError) {
         try {
@@ -128,9 +126,9 @@ const results = {
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
       already_merged: 0
       not_found: 0
       failed: 0,
@@ -139,10 +137,9 @@ const results = {
 const results = {/* TODO: Fix JSX expression */}
     }}}
 
-// //Process in batches of 50 to avoid overwhelming the system;
-// const batchSize = 50;
-// const totalBatches = Math.ceil(relevantBranches.length / batchSize);
-
+// //Process in batches of 50 to avoid overwhelming the system
+// const batchSize = 50
+// const totalBatches = Math.ceil(relevantBranches.length / batchSize)
 for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   )
@@ -185,13 +182,12 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 
 //Step 5: Generate final report,
 // const report = {,
-  ...results;
+  ...results
   timestamp: new Date().toISOString()}
 
 fs.writeFileSync('all-remaining-branches-merge-report.json')
   JSON.stringify(report, null, 2)
-);
-
+)
 //Step 6: Final push,
 // try {,
   execSync('git push origin main', { stdio: 'inherit' })

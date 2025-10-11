@@ -3,7 +3,7 @@
  */
 
 export interface SEOConfig {
-    title: string;
+    title: string
   description: string
   keywords?: string[]
   ogImage?: string,,
@@ -31,7 +31,7 @@ export const generateMetaTags = (confi)
     tags += `<link rel="canonical" href="${canonicalUrl}" />`
   }
 
-  return tags;
+  return tags
 }
 
 export const updatePageTitle = (title: string) => {,
@@ -42,3 +42,4 @@ export const updatePageTitle = (titl)
   }
 }
 "`
+</li>

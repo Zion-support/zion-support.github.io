@@ -43,11 +43,11 @@
         {/* FAQ Items */}
         <div className="space-y-4">
           {filteredFAQs.map((item, index) => (
-            <div
+            <$2 />
               key={index}
               className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden"
             >
-              <button
+              <$2 />
                 onClick={() => toggleItem(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
               >
@@ -57,7 +57,7 @@
                     <h3 className="text-lg font-medium text-white">{item.question}</h3>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {item.tags.map((tag, tagIndex) => (
-                        <span
+                        <$2 />
                           key={tagIndex}
                           className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
                         >
@@ -91,10 +91,10 @@
             <p className="text-gray-400 mb-6">
               Try adjusting your search terms or category filter.
             </p>
-            <button
+            <$2 />
               onClick={() => {
-                setSearchQuery('');
-                setActiveCategory('all');
+                setSearchQuery('')
+                setActiveCategory('all')
               }}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
             >
@@ -129,15 +129,13 @@
         </div>
       </div>
     </div>
-  );
+  )
 }
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { SEO } from "@/components/SEO"
+import { ChevronDown, ChevronUp } from 'lucide-react'
 const FAQ: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
+  const [openItems, setOpenItems] = useState<number[]>([])
   const faqItems = [
     {
       id: 1,
@@ -179,16 +177,14 @@ const FAQ: React.FC = () => {
       question: "What makes Zion Tech Group different from other providers?",
       answer: "We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions rather than one-size-fits-all approaches, provide comprehensive end-to-end services, and maintain a strong focus on innovation and customer success."
     }
-  ];
-
+  ]
   const toggleItem = (id: number) => {
     setOpenItems(prev => 
       prev.includes(id) 
         ? prev.filter(item => item !== id)
         : [...prev, id]
-    );
-  };
-
+    )
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <SEO 
@@ -216,7 +212,7 @@ const FAQ: React.FC = () => {
           <div className="space-y-4">
             {faqData.map((item, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
-                <button
+                <$2 />
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
                 >
@@ -254,7 +250,7 @@ const FAQ: React.FC = () => {
             Contact us for personalized assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <$2 />
               href="mailto:contact@ziontechgroup.com"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
             >
@@ -263,7 +259,7 @@ const FAQ: React.FC = () => {
               </svg>
               Email Us
             </a>
-            <a
+            <$2 />
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
             >
@@ -276,25 +272,23 @@ const FAQ: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default FAQ;
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
+  )
+}
+export default FAQ
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Footer } from '@/components/Footer'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 export default function FAQ() {
   const faqs = [
     {
@@ -376,27 +370,23 @@ const faqData: FAQItem[] = [
     answer: "You can reach our support team through our contact page, email support, or live chat. We typically respond within 24 hours and offer priority support for enterprise clients.",
     category: "Support"
   }
-];
-
-const categories = ["General", "Marketplace", "Services", "Talent", "Pricing", "Payments", "Projects", "Enterprise", "Security", "Support", "Mobile"];
-
+]
+const categories = ["General", "Marketplace", "Services", "Talent", "Pricing", "Payments", "Projects", "Enterprise", "Security", "Support", "Mobile"]
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<Set<number>>(new Set());
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set())
+  const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const toggleItem = (index: number) => {
-    const newOpenItems = new Set(openItems);
+    const newOpenItems = new Set(openItems)
     if (newOpenItems.has(index)) {
-      newOpenItems.delete(index);
+      newOpenItems.delete(index)
     } else {
-      newOpenItems.add(index);
+      newOpenItems.add(index)
     }
-    setOpenItems(newOpenItems);
-  };
-
+    setOpenItems(newOpenItems)
+  }
   const filteredFAQs = selectedCategory === "All" 
     ? faqData 
-    : faqData.filter(faq => faq.category === selectedCategory);
+    : faqData.filter(faq => faq.category === selectedCategory)
       category: "General",
       questions: [
         {
@@ -410,13 +400,12 @@ export default function FAQ() {
         {
           question: "How do I get started on Zion?",
           answer: "Getting started is easy! Simply create an account, choose whether you're looking for services or offering them, and start exploring our marketplace. You can browse talent, post jobs, or list your services immediately."
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-react";
-
+import React from 'react'
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Search, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-react"
 export default function FAQ() {
   const faqData = [
     {
@@ -527,8 +516,7 @@ export default function FAQ() {
         }
       ]
     }
-  ];
-
+  ]
       question: "How does the AI matching work?",
       answer: "Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results."
     },
@@ -568,8 +556,7 @@ export default function FAQ() {
       question: "How do I get paid as a talent?",
       answer: "Once your work is approved by the client, funds are released from escrow to your Zion wallet. You can then withdraw to your bank account or use the funds for other services on the platform."
     }
-  ];
-
+  ]
   return (
     <>
       <SEO
@@ -595,7 +582,7 @@ export default function FAQ() {
           {/* Category Filter */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-3">
-              <button
+              <$2 />
                 onClick={() => setSelectedCategory("All")}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === "All"
@@ -636,7 +623,7 @@ export default function FAQ() {
           <div className="container mx-auto px-4">
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">
-              <button
+              <$2 />
                 onClick={() => setActiveCategory('all')}
                 className={`px-6 py-2 rounded-full transition-colors ${
                   activeCategory === 'all'
@@ -693,8 +680,7 @@ export default function FAQ() {
       question: "How can I stay updated with Zion news?",
       answer: "Subscribe to our newsletter, follow us on social media, or check our blog regularly for updates on new features, success stories, and industry insights."
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-zion-blue-dark">
       <SEO 
@@ -793,25 +779,25 @@ export default function FAQ() {
                 Our support team is here to help you get the most out of Zion Tech Group
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="mailto:support@ziontechgroup.com"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors"
                 >
                   <MessageCircle className="h-4 w-4 mr-2" />
                   Email Support
                 </a>
-                <a
+                <$2 />
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
                 >
           {/* FAQ Items */}
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQs.map((faq, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden"
               >
-                <button
+                <$2 />
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-blue-light/20 transition-colors"
                 >
@@ -838,7 +824,7 @@ export default function FAQ() {
               <p className="text-zion-slate-light mb-6">
                 Can't find what you're looking for? Our support team is here to help.
               </p>
-              <a
+              <$2 />
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
               >
@@ -866,13 +852,12 @@ export default function FAQ() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { FaqSection } from "@/components/FaqSection";
-import { Footer } from "@/components/Footer";
-
+import React from 'react'
+import { SEO } from "@/components/SEO"
+import { FaqSection } from "@/components/FaqSection"
+import { Footer } from "@/components/Footer"
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
@@ -898,10 +883,10 @@ export default function FAQ() {
 
       <Footer />
     </div>
-  );
+  )
 }
               {faqs.map((category) => (
-                <button
+                <$2 />
                   key={category.category}
                   onClick={() => setActiveCategory(category.category)}
                   className={`px-6 py-2 rounded-full transition-colors ${
@@ -958,13 +943,13 @@ export default function FAQ() {
                 Can't find the answer you're looking for? Our support team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
                 >
                   Contact Support
                 </a>
-                <a
+                <$2 />
                   href="/blog"
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
                 >
@@ -978,11 +963,12 @@ export default function FAQ() {
 
       <Footer />
     </div>
-  );
+  )
 }
     </>
-  );
+  )
 }
     </>
-  );
+  )
 }
+</div></div></div></p></p></p></main></main></section>

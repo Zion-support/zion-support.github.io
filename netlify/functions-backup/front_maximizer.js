@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {try {
         message: 'front_maximizer function executed successfully'),
         timestamp: timestamp),
         function: 'front_maximizer'}
-      });
+      })
     }
 //   } catch (error) {
     // console.error('❌ front_maximizer function failed: ') error
@@ -22,13 +22,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'front_maximizer'}
-      });
+      })
     }
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
+      })
     }
   }
 }

@@ -2,7 +2,7 @@
   fallback?: ReactNode,
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void;
+  o: ErrorInfo) => void
   enableErrorReporting?: boolean
   maxRetries?: number
   showRetryButton?: boolean,
@@ -11,7 +11,7 @@ interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   hasErro,
-  r: boolean;
+  r: boolean
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string,,
@@ -44,7 +44,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorI,
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-    this.maxRetries = props.maxRetries || 3;
+    this.maxRetries = props.maxRetries || 3
   }
   static getDerivedStateFromError(erro)
   r: Error): Partial,
@@ -107,7 +107,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCoun,
   t: this.state.retryCount,
     }
-    // Send to error reporting service;
+    // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -159,13 +159,13 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   t: prevState.retryCount + 1,
         isRetryin,
   g: false,)
-      }));
+      }))
     }
   }
   private handleReload = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.reload();
+    window.location.reload()
   }
   render() {/* TODO: Fix JSX expression */}
   O: Add content,}

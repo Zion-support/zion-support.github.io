@@ -84,6 +84,6 @@ const AIVoiceAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default AiVoiceAssistantPage;
+export default AiVoiceAssistantPage</$1></p>

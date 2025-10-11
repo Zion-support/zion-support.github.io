@@ -665,13 +665,13 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation'
-    ];
+    ]
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud']
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'],
 ,
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    ];
+    ]
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud']
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'],
 export const cuttingEdgeITServices2025 = [,
@@ -726,8 +726,8 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$22.1 B',
-    targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions';
-    competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
+    targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
+    competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization'
     useCases: [
     categor,
   y: 'Quantum IT',
@@ -794,8 +794,8 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$18.7 B',
-    targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers';
-    competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization';
+    targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
+    competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization'
     useCases: [
     categor,
   y: 'Edge Computing',
@@ -862,8 +862,8 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$31.2 B',
-    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions';
-    competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
+    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
+    competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response'
     useCases: [
     categor,
   y: 'Cybersecurity',
@@ -930,8 +930,8 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$19.9 B',
-    targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies';
-    competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
+    targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
+    competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration'
     useCases: [
     categor,
   y: 'Blockchain',
@@ -998,8 +998,8 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$25.6 B',
-    targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies';
-    competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
+    targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
+    competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response'
     useCases: [
     categor,
   y: 'DevOps',
@@ -1040,7 +1040,7 @@ export const cuttingEdgeITServices2025 = [
   s: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     complianc,
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
-];
+]
 export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = [ i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,

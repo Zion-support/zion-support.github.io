@@ -70,12 +70,12 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
             View, All, Articles
             <Link, className='w-6 h-6' />
           ></Link>
-            View, All, Articles;
+            View, All, Articles
             <Link, className='w-6 h-6' /></Link>
           </Li, n, k>
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }
-export default LatestArticlesShowcase;
+export default LatestArticlesShowcase</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></p></p></h2></h3></section></section>

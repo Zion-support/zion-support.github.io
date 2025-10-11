@@ -1,18 +1,15 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState()
-  });
-
+  })
   const targetCounters = {
     clients: 500,
-    projects: 1000,;
-    satisfaction: 99,;
-    years: 10;
-  };
-
+    projects: 1000,
+    satisfaction: 99,
+    years: 10
+  }
   const statistics = [
     {
       icon: Users,
@@ -40,9 +37,9 @@ const ContentStatistics: React.FC = () => {
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400';
-    };
-  ];
+      color: 'text-yellow-400'
+    }
+  ]
   const achievements = [
     {
       icon: Brain,
@@ -57,15 +54,14 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Zap,
       title: 'Performance',
-      description: '99.9% uptime and lightning-fast response';
-    };
-  ];
-
+      description: '99.9% uptime and lightning-fast response'
+    }
+  ]
   useEffect(() => {
-    const timers = Object.keys(targetCounters).map();
+    const timers = Object.keys(targetCounters).map()
       const increment = target / (duration / 16); // 60fps
       
-      const timer = setInterval(() => {;
+      const timer = setInterval(() => {
         setCounters()
           if (current < target) {
             return {
@@ -73,24 +69,21 @@ const ContentStatistics: React.FC = () => {
               [key]: Math.min(current + increment, target)
             }
           }
-          return prev;
-        });
-      }, 16);
-
-      return timer;
-    });
-
+          return prev
+        })
+      }, 16)
+      return timer
+    })
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
-
+      timers.forEach(timer => clearInterval(timer))
+    }
+  }, [])
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Statistics Grid */}
       </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {statistics.map((stat, index) => (
-          </div><div
+          </div><$2 />
             key={index}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
           >
@@ -135,10 +128,9 @@ const ContentStatistics: React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
-
-export default ContentStatistics;
+  )
+}
+export default ContentStatistics
           return prev
         })
       }, 16)
@@ -245,3 +237,4 @@ export default ContentStatistics;
   )
 }
 export default ContentStatistics</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></a></a></p></p></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h4></h4>
+</a>

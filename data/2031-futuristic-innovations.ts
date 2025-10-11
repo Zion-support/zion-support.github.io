@@ -1,45 +1,45 @@
 export interface FuturisticInnovation2031 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
+  aiCapabilities: string[]
+  marketDisruption: string
 }
 export const futuristicInnovations2031: FuturisticInnovation2031[] = [
   // AI CONSCIOUSNESS EVOLUTION PLATFORM
@@ -360,4 +360,4 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     aiCapabilities: ['Quantum Creativity', 'AI Content Generation', 'Creative Algorithms', 'Design Optimization', 'Innovation AI'],
     marketDisruption: 'Advances creative AI by integrating quantum computing principles, enabling breakthrough creative content and innovative design solutions.'
   }
-];
+]

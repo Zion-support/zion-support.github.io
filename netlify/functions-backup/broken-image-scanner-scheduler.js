@@ -1,4 +1,4 @@
-// netlify/functions/broken-image-scanner-scheduler.js;
+// netlify/functions/broken-image-scanner-scheduler.js
 exports.config = { schedule: '0 */6 * * *' }
 exports.handler = async function () {
   const { execSync } = require('child_process')
@@ -16,12 +16,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): broken image scan report [ci skip]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({)
         ok: true),
         task: 'broken-image-scanner-scheduler'}
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -29,10 +29,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
   k: 'broken-image-scanner-scheduler'}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

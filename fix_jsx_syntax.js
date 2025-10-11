@@ -43,20 +43,20 @@ async function main() {/* TODO: Fix JSX expression */}
 
       //5. Fix template literal syntax: ${
     > -> ${,
-      //       const templateFix = content.replace(/\$\{>/g, '${');
+      //       const templateFix = content.replace(/\$\{>/g, '${')
       if (templateFix !== content) {
-        content = templateFix;
+        content = templateFix
         modified = true
   }
 
-      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
+      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<$2 />
       const inputFix = content.replace(
-        /<input([^>]*?)\n\s*\n\s*<button/g
-        '<input$1\n/>\n\n<button'
+        /<input([^>]*?)\n\s*\n\s*</g$2 />
+        '<input$1\n/>\n\n<'$2 />
       ),
       if (inputFix !== content) {
     ,
-        content = inputFix;
+        content = inputFix
         modified = true
   }
 

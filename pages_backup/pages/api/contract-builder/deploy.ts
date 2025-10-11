@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Interface } from 'ethers';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { Interface } from 'ethers',;
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { Interface } from 'ethers'
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { Interface } from 'ethers',
 // Simple ABI for demonstration (release/refund)
 const abi = [
   'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
@@ -33,21 +33,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
-  };
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Interface } from 'ethers';
-// Simple ABI for demonstration (release/refund);
-const abi = [;
-  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)';
-],;
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { Interface } from 'ethers'
+// Simple ABI for demonstration (release/refund)
+const abi = [
+  'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
+],
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' })
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error:", error)
+    return res.status(500).json({ error: "Internal server error" })
   }
 }
   }

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const Ai3dGenerationPage: React.FC = () => {
     const features = [
     {
@@ -31,14 +31,14 @@ const Ai3dGenerationPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
   },
   ]
-];
+]
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
-    'Gain competitive advantage with advanced technology';
-  ];
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
 return (
     <>
       <Helmet>
@@ -77,7 +77,7 @@ return (
               <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">
                 Key Features
@@ -111,7 +111,7 @@ return (
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">
         <section className="py-20 px-4" /></section>
@@ -138,7 +138,7 @@ return (
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               </div><h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -160,10 +160,9 @@ return (
       </div>
       <Footer /></Footer>
     </>
-  );
-};
-
-export default Ai3dGenerationPage;
+  )
+}
+export default Ai3dGenerationPage
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

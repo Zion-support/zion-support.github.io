@@ -59,7 +59,7 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }}
-  // Add article structured data if type is article;
+  // Add article structured data if type is article
   if (type === 'article') {
     const articleData = {
       '@context': 'https: //schema.org',
@@ -284,9 +284,10 @@ const,
               }]})}
       )}
     </Helmet>
-  );
+  )
 }
-export default EnhancedSEO;
+export default EnhancedSEO
 "`
   </SEOProps>
   </SEOProps>
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

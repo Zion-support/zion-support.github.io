@@ -22,20 +22,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(ui): evolve and beautify UI [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'ui-evolution-runner' });
+        task: 'ui-evolution-runner' })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'ui-evolution-runner' });
+  k: 'ui-evolution-runner' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

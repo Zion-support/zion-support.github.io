@@ -58,7 +58,7 @@ export const _securityHeaders = {
 // 'Referrer-Policy': 'strict-origin-when-cross-origin',
 // 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
 }
- * Rate limiting configuration;
+ * Rate limiting configuration
 export const rateLimitConfig = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -125,9 +125,9 @@ export function sanitizeInput(inpu)
 
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
 
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers;
-    .trim();
- * Validate email address;
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers
+    .trim()
+ * Validate email address
 export function validateEmail(emai)
   l: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}

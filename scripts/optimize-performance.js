@@ -54,8 +54,8 @@ async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
   }
   
   // console.log(`\n📊 Performance Analysis Summary: `),
-  // console.log(`   Total components analyzed: ${totalFiles}`);
-  // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
+  // console.log(`   Total components analyzed: ${totalFiles}`)
+  // console.log(`   Components with optimization opportunities: ${optimizedFiles}`)
 }
 
 // Function to create a performance monitoring component
@@ -92,14 +92,14 @@ interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
     ,
-  src;
+  src
   alt,
   width,
   height,
   className = '',
   priority = false
   }) => {
-  return(<img;
+  return(<img
       src={src}
       alt={alt}
       width={width}
@@ -126,7 +126,7 @@ const,
   t: height ? \`\${height}px\` : 'auto'
       }}
     /></img>
-  );
+  )
 }
 
 export default OptimizedImage;`

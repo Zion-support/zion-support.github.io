@@ -216,7 +216,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default October2025FeaturedContentBanner;
+export default October2025FeaturedContentBanner
 `
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></p></p></p></h2></h2></h3></h3>

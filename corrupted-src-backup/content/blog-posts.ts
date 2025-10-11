@@ -1,11 +1,11 @@
 export interface BlogPost {
-    slug: string;
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
+    slug: string
+  title: string
+  description: string
+  content: string
+  author: string
+  date: string
+  category: string
   tags: string[]
   featured: boolean
   readTime: string,
@@ -21,13 +21,13 @@ export const blogPosts: BlogPost[] = [,
     content: `
 # Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.
 
-## What You'll Implement;
-- KPI-linked SLIs that predict outcomes;
-- Online canaries as deploy gates;
+## What You'll Implement
+- KPI-linked SLIs that predict outcomes
+- Online canaries as deploy gates
 - Budget-aware routing with safe fallbacks
 - One-click rollback with blast-radius checks
 ## Results,
-- Fewer regressions, faster iteration, clearer ownership;
+- Fewer regressions, faster iteration, clearer ownership
     `,
     author: 'Zion Tech Group Reliability Lab',
     date: '2025-10-04',
@@ -44,8 +44,8 @@ export const blogPosts: BlogPost[] = [,
     content: `
 # Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
 
-## Core Patterns;
-- Domain schemas and strict source governance;
+## Core Patterns
+- Domain schemas and strict source governance
 - Freshness windows per intent
 - Retrieval budgets with quality tiers
 - Semantic caches for cost optimization,

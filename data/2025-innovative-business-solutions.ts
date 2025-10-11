@@ -1,33 +1,33 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface InnovativeBusinessSolution {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string[]
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
+  contact_info: unknown
+    mobile: string
     email: string
     address: string
     website: string,
@@ -56,7 +56,7 @@ export interface InnovativeBusinessSolution {id: string, name: string,
   reviews: number,
 }
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
-  // AI Business Intelligence Suite;
+  // AI Business Intelligence Suite
   id: string
   name: string
   tagline: string
@@ -140,7 +140,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launch_date: '2025 - 05 - 01'
-    customers: 38;
+    customers: 38
     rating: 4.7
     reviews: 26
 ],
@@ -302,9 +302,9 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
     }
-];
+]
 }
-];
+]
 realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
@@ -1099,49 +1099,49 @@ realImplementation: true,
   g: 4.7,
     review,
   s: 26}
-];
+]
 export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
 }
 realImplementation: true,
     implementationDetails:,
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {,
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
     address: string}
     website: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
@@ -1225,85 +1225,85 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 26
   }
-];
-import { ServiceVariant } from '../types/service-variants',;
-export interface InnovativeBusinessSolution {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string[],;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
+]
+import { ServiceVariant } from '../types/service-variants',
+export interface InnovativeBusinessSolution {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
-  // AI Business Intelligence Suite;
-  {;
-    id: 'ai-business-intelligence-suite',;
-    name: 'AI Business Intelligence Suite',;
-    tagline: 'Intelligent business insights and analytics',;
-    price: '$3,200',;
-    period: '/month',;
-    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',;
-    features: [;
-      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',;
-      'Advanced analytics and reportingCustom business intelligence workflows';
-    ],;
-    popular: true,;
-    icon: '📈',;
-    color: 'from-blue-500 to-indigo-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',;
-    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',;
-    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'],;
-    trialDays: 30,;
-    setupTime: '3-4 weeks',;
-    category: 'AI Business Intelligence',;
-    realService: true,;
-    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],;
-    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'],;
-    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],;
-    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.',;
-    competitors: ['TableauPower BIQlikViewLooker'],;
-    marketSize: '$7.8B business intelligence market',;
-    growthRate: '28% annual growth',;
-    variant: 'ai-business-intelligence',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
+  // AI Business Intelligence Suite
+  {
+    id: 'ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite',
+    tagline: 'Intelligent business insights and analytics',
+    price: '$3,200',
+    period: '/month',
+    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',
+    features: [
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',
+      'Advanced analytics and reportingCustom business intelligence workflows'
+    ],
+    popular: true,
+    icon: '📈',
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
+    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'],
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'AI Business Intelligence',
+    realService: true,
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'],
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.',
+    competitors: ['TableauPower BIQlikViewLooker'],
+    marketSize: '$7.8B business intelligence market',
+    growthRate: '28% annual growth',
+    variant: 'ai-business-intelligence',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
     realImplementation: true
     implementationDetails:
@@ -1682,54 +1682,54 @@ export const,
     name: 'AI Business Intelligence Suite'
     tagline: 'Intelligent business insights and analytics',
 }
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
-  // AI Business Intelligence Suite;
-  {;
-    id: 'ai-business-intelligence-suite',;
-    name: 'AI Business Intelligence Suite',;
-    tagline: 'Intelligent business insights and analytics',;
-    price: '$3,200',;
-    period: '/month',;
-    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',;
-    features: [;
-      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',;
-      'Advanced analytics and reportingCustom business intelligence workflows';
-    ],;
-    popular: true,;
-    icon: '📈',;
-    color: 'from-blue-500 to-indigo-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',;
-    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',;
-    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'],;
-    trialDays: 30,;
-    setupTime: '3-4 weeks',;
-    category: 'AI Business Intelligence',;
-    realService: true,;
-    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],;
-    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'],;
-    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],;
-    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.',;
-    competitors: ['TableauPower BIQlikViewLooker'],;
-    marketSize: '$7.8B business intelligence market',;
-    growthRate: '28% annual growth',;
-    variant: 'ai-business-intelligence',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
+  // AI Business Intelligence Suite
+  {
+    id: 'ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite',
+    tagline: 'Intelligent business insights and analytics',
+    price: '$3,200',
+    period: '/month',
+    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',
+    features: [
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',
+      'Advanced analytics and reportingCustom business intelligence workflows'
+    ],
+    popular: true,
+    icon: '📈',
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
+    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'],
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'AI Business Intelligence',
+    realService: true,
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'],
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.',
+    competitors: ['TableauPower BIQlikViewLooker'],
+    marketSize: '$7.8B business intelligence market',
+    growthRate: '28% annual growth',
+    variant: 'ai-business-intelligence',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
     real_implementation: true,
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
-    launch_date: '2025 - 05 - 01';
-    customers: 38;
+    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
+    launch_date: '2025 - 05 - 01'
+    customers: 38
     rating: 4.7,
-    reviews: 26;
+    reviews: 26
   }
-];
+]
   }
-];
+]
     technology: ['Artificial Intelligence', 'Machine Learning', 'Business Analytics', 'Data Visualization', 'Python', 'TensorFlow', 'React'],
     integrations: ['ERP systems', 'CRM platforms', 'Databases', 'Cloud platforms', 'Business applications', 'API services'],
     useCases: ['Business analytics', 'Performance monitoring', 'Predictive insights', 'Decision support', 'Business optimization'],
@@ -2059,7 +2059,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
-    price: '$3,200';
+    price: '$3,200'
     tagline: 'Intelligent business insights and analytics'
     price: '$3,200'
     period: '/month',,
@@ -2067,23 +2067,23 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     features: [
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems'
       'Advanced analytics and reportingCustom business intelligence workflows'
-    ];
-    popular: true;
-    icon: '';
+    ]
+    popular: true
+    icon: ''
     color: 'from-blue-500 to-indigo-600'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
-    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.';
-    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'];
-    trialDays: 30;
-    setupTime: '3-4 weeks';
-    category: 'AI Business Intelligence';
-    realService: true;
-    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'];
-    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'];
-    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'];
-    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.';
-    competitors: ['TableauPower BIQlikViewLooker'];
+    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.'
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies']
+    trialDays: 30
+    setupTime: '3-4 weeks'
+    category: 'AI Business Intelligence'
+    realService: true
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact']
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services']
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization']
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.'
+    competitors: ['TableauPower BIQlikViewLooker']
     marketSize: '$7.8 B business intelligence market'
     growthRate: '28% annual growth'
     variant: 'ai-business-intelligence',
@@ -2134,7 +2134,7 @@ export const,
   g: 4.7,
     review,
   s: 26}
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

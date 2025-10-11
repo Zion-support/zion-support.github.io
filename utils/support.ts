@@ -7,63 +7,63 @@ export const support = {
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
-  getArticleById: (id: string) => null;
-};
+  getArticleById: (id: string) => null
+}
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
-  return null;
+  return null
 export interface IntentMatch {
-  intentMatched: boolean;
-  matchedArticleIds: string[];
-  confidence: number;
+  intentMatched: boolean
+  matchedArticleIds: string[]
+  confidence: number
 }
 export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
-  const queryLower = query && query.toLowerCase();
-  const matchedArticles: string[] = [];
-  let confidence = 0;
+  const queryLower = query && query.toLowerCase()
+  const matchedArticles: string[] = []
+  let confidence = 0
     if (titleMatch || contentMatch || tagMatch) {
-      matchedArticles && matchedArticles.push(article && article.id);
-      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
+      matchedArticles && matchedArticles.push(article && article.id)
+      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0
     }
   }
   return {
     intentMatched: matchedArticles && matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
     confidence: Math && Math.min(confidence, 1)
-  };
+  }
 }
 }
-  // Add support functionality here;
+  // Add support functionality here
   log_event: (event: any) => null,
   get_articles: () => [],
-  getArticleById: (id: string) => null;
-};
+  getArticleById: (id: string) => null
+}
 export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
-  return null;
+  // Add support event logging functionality here
+  return null
 }
 export type HelpArticle = {
-  id: string;
-  slug: string;
-  title: string;
-  body: string;
-  category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes';
-  updatedAt: string;
-  keywords?: string[];
-};
+  id: string
+  slug: string
+  title: string
+  body: string
+  category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes'
+  updatedAt: string
+  keywords?: string[]
+}
 export type IntentResult = {
-  intentMatched: boolean;
-  matchedArticleIds: string[];
-};
+  intentMatched: boolean
+  matchedArticleIds: string[]
+}
 export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {
-  const q = query.toLowerCase();
-  const matched = new Set<string>();
-  const keywordToArticle = new Map<string, string[]>();
+  const q = query.toLowerCase()
+  const matched = new Set<string>()
+  const keywordToArticle = new Map<string, string[]>()
   for (const art of articles) {
     for (const kw of art.keywords ?? []) {
-      const list = keywordToArticle.get(kw) ?? [];
-      list.push(art.id);
-      keywordToArticle.set(kw, list);
+      const list = keywordToArticle.get(kw) ?? []
+      list.push(art.id)
+      keywordToArticle.set(kw, list)
     }
   }
   // Simple heuristics
@@ -74,20 +74,20 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
     [/bill|invoice|payment|refund|charge|card/i, []],
     [/dispute|issue|complaint|chargeback/i, []],
     [/profile|setup|verification|kyc|tax/i, []],
-  ];
-  let heuristicHit = false;
+  ]
+  let heuristicHit = false
   for (const [re] of heuristics) {
     if (re.test(q)) {
-      heuristicHit = true;
+      heuristicHit = true
       for (const [kw, ids] of keywordToArticle.entries()) {
-        if (q.includes(kw)) ids.forEach((id) => matched.add(id));
+        if (q.includes(kw)) ids.forEach((id) => matched.add(id))
       }
     }
   }
   // Keyword fallback
   for (const [kw, ids] of keywordToArticle.entries()) {
-    if (q.includes(kw)) ids.forEach((id) => matched.add(id));
+    if (q.includes(kw)) ids.forEach((id) => matched.add(id))
   }
-  const matchedIds = Array.from(matched);
-  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) };
+  const matchedIds = Array.from(matched)
+  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
 }

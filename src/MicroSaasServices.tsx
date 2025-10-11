@@ -1,34 +1,34 @@
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight } from 'lucide-react';
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone } from 'lucide-react';
-import { MICRO_SAAS_SERVICES, MicroSaasService } from '../data/microSaasServices';
-import { Badge } from '../components/ui/badge';
-import { Card } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Select } from '../components/ui/select';
-import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground';
-import FuturisticNeonButton from '../components/ui/FuturisticNeonButton';
-import React, { useState, useMemo } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory } from '@/data/microSaasServices';
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import React, { useState, useMemo } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight } from 'lucide-react'
+import React, { useState, useMemo } from 'react'
+import { motion } from 'framer-motion'
+import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone } from 'lucide-react'
+import { MICRO_SAAS_SERVICES, MicroSaasService } from '../data/microSaasServices'
+import { Badge } from '../components/ui/badge'
+import { Card } from '../components/ui/card'
+import { Button } from '../components/ui/button'
+import { Input } from '../components/ui/input'
+import { Select } from '../components/ui/select'
+import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
+import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
+import React, { useState, useMemo } from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory } from '@/data/microSaasServices'
+import React, { useState } from 'react'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import React, { useState, useMemo } from 'react'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
       name: "AI CodeGen Pro",
       category: "Development",
       pricing: "Freemium",
@@ -731,22 +731,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
         website: "https://ziontechgroup.com"
       }
     }
-  ];
-
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & Marketing', 'Customer Success', 'Human Resources'];
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
-  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & ML', 'Blockchain', 'IoT', 'Cybersecurity', 'Data Science', 'Cloud Computing', 'DevOps', 'AR/VR', 'FinTech', 'Smart Cities', 'Biotechnology', 'Quantum Security', 'Space Technology', 'Neurotechnology'];
-  const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise'];
-
+  ]
+  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & Marketing', 'Customer Success', 'Human Resources']
+  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure']
+  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
+  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & ML', 'Blockchain', 'IoT', 'Cybersecurity', 'Data Science', 'Cloud Computing', 'DevOps', 'AR/VR', 'FinTech', 'Smart Cities', 'Biotechnology', 'Quantum Security', 'Space Technology', 'Neurotechnology']
+  const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise']
   const filteredServices = microSaasServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { 
   Search, 
   Filter, 
@@ -766,8 +764,8 @@ import {
   Lock,
   Settings,
   Link as LinkIcon
-} from 'lucide-react';
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices } from '@/data/microSaasServices';
+} from 'lucide-react'
+import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices } from '@/data/microSaasServices'
   ExternalLink, 
   Phone, 
   Mail, 
@@ -786,151 +784,135 @@ import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeatur
   Lock,
   Zap as ZapIcon,
   BarChart3
-} from 'lucide-react';
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory } from '@/data/microSaasServices';
-import { Link } from 'react-router-dom';
-
+} from 'lucide-react'
+import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory } from '@/data/microSaasServices'
+import { Link } from 'react-router-dom'
 export default function MicroSaasServices() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
-  const featuredServices = getFeaturedServices();
-  const popularServices = getPopularServices();
-  const newServices = getNewServices();
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPricing, setSelectedPricing] = useState<string>('all')
+  const featuredServices = getFeaturedServices()
+  const popularServices = getPopularServices()
+  const newServices = getNewServices()
   const getPricingDisplay = (service: MicroSaasService) => {
     if (service.pricingModel === 'subscription') {
-      return `$${service.monthlyPrice}/month`;
+      return `$${service.monthlyPrice}/month`
     } else if (service.pricingModel === 'one-time') {
-      return `$${service.price.toLocaleString()}`;
+      return `$${service.price.toLocaleString()}`
     } else if (service.pricingModel === 'usage-based') {
-      return 'Usage-based';
+      return 'Usage-based'
     } else {
-      return 'Contact us';
+      return 'Contact us'
     }
-  };
-
+  }
   const getCategoryIcon = (category: string) => {
-      case 'AI & ML': return <Brain className="w-6 h-6" />;
-      case 'Blockchain': return <Lock className="w-6 h-6" />;
-      case 'IoT': return <Wifi className="w-6 h-6" />;
-      case 'Cybersecurity': return <ShieldIcon className="w-6 h-6" />;
-      case 'Data Science': return <DatabaseIcon className="w-6 h-6" />;
-      case 'Cloud Computing': return <Cloud className="w-6 h-6" />;
-      case 'DevOps': return <Server className="w-6 h-6" />;
-      case 'AR/VR': return <Glasses className="w-6 h-6" />;
-      case 'FinTech': return <CreditCard className="w-6 h-6" />;
-      case 'Smart Cities': return <Building className="w-6 h-6" />;
-      case 'Biotechnology': return <Leaf className="w-6 h-6" />;
-      case 'Quantum Security': return <Lock className="w-6 h-6" />;
-      case 'Space Technology': return <Rocket className="w-6 h-6" />;
-      case 'Neurotechnology': return <BrainIcon className="w-6 h-6" />;
-      default: return <ZapIcon2 className="w-6 h-6" />;
+      case 'AI & ML': return <Brain className="w-6 h-6" />
+      case 'Blockchain': return <Lock className="w-6 h-6" />
+      case 'IoT': return <Wifi className="w-6 h-6" />
+      case 'Cybersecurity': return <ShieldIcon className="w-6 h-6" />
+      case 'Data Science': return <DatabaseIcon className="w-6 h-6" />
+      case 'Cloud Computing': return <Cloud className="w-6 h-6" />
+      case 'DevOps': return <Server className="w-6 h-6" />
+      case 'AR/VR': return <Glasses className="w-6 h-6" />
+      case 'FinTech': return <CreditCard className="w-6 h-6" />
+      case 'Smart Cities': return <Building className="w-6 h-6" />
+      case 'Biotechnology': return <Leaf className="w-6 h-6" />
+      case 'Quantum Security': return <Lock className="w-6 h-6" />
+      case 'Space Technology': return <Rocket className="w-6 h-6" />
+      case 'Neurotechnology': return <BrainIcon className="w-6 h-6" />
+      default: return <ZapIcon2 className="w-6 h-6" />
     }
-  };
-
+  }
   const getPricingColor = (pricing: string) => {
     switch (pricing) {
-      case 'Freemium': return 'text-green-400';
-      case 'Premium': return 'text-blue-400';
-      case 'Enterprise': return 'text-purple-400';
-      default: return 'text-gray-400';
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-  const [priceRange, setPriceRange] = useState<number>(1000);
-
+      case 'Freemium': return 'text-green-400'
+      case 'Premium': return 'text-blue-400'
+      case 'Enterprise': return 'text-purple-400'
+      default: return 'text-gray-400'
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name')
+  const [priceRange, setPriceRange] = useState<number>(1000)
   const filteredServices = useMemo(() => {
     let filtered = MICRO_SAAS_SERVICES.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesPrice = service.pricing.some(plan => plan.price <= priceRange);
-      
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
-  const [sortBy, setSortBy] = useState<string>('rating');
-
-  const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.category)))];
-  const pricingModels = ['all', 'subscription', 'usage', 'one-time', 'enterprise'];
-
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+      const matchesPrice = service.pricing.some(plan => plan.price <= priceRange)
+      return matchesSearch && matchesCategory && matchesPrice
+    })
+  const [sortBy, setSortBy] = useState<string>('rating')
+  const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.category)))]
+  const pricingModels = ['all', 'subscription', 'usage', 'one-time', 'enterprise']
   const filteredServices = useMemo(() => {
-    let filtered = MICRO_SAAS_SERVICES;
-
+    let filtered = MICRO_SAAS_SERVICES
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
+      )
     }
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Filter by pricing model
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing);
+      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'price':
-          return a.price.monthly - b.price.monthly;
+          return a.price.monthly - b.price.monthly
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         case 'name':
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare(b.title)
         default:
-          return 0;
+          return 0
       }
-    });
-
-    return filtered;
-    
+    })
+    return filtered
     const matchesPrice = selectedPriceRange === 'all' || 
       (selectedPriceRange === '0-200' && service.pricing.starter <= 200) ||
       (selectedPriceRange === '200-500' && service.pricing.starter > 200 && service.pricing.starter <= 500) ||
       (selectedPriceRange === '500-1000' && service.pricing.starter > 500 && service.pricing.starter <= 1000) ||
-      (selectedPriceRange === '1000+' && service.pricing.starter > 1000);
-
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
-
+      (selectedPriceRange === '1000+' && service.pricing.starter > 1000)
+    return matchesSearch && matchesCategory && matchesPrice
+  })
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="w-6 h-6" />;
-      case 'IT': return <Database className="w-6 h-6" />;
-      case 'Development': return <Code className="w-6 h-6" />;
-      case 'Analytics': return <BarChart3 className="w-6 h-6" />;
-      case 'Security': return <Shield className="w-6 h-6" />;
-      case 'Automation': return <Workflow className="w-6 h-6" />;
-      case 'Integration': return <LinkIcon className="w-6 h-6" />;
-      case 'Consulting': return <Users className="w-6 h-6" />;
-      default: return <Sparkles className="w-6 h-6" />;
+      case 'AI': return <Brain className="w-6 h-6" />
+      case 'IT': return <Database className="w-6 h-6" />
+      case 'Development': return <Code className="w-6 h-6" />
+      case 'Analytics': return <BarChart3 className="w-6 h-6" />
+      case 'Security': return <Shield className="w-6 h-6" />
+      case 'Automation': return <Workflow className="w-6 h-6" />
+      case 'Integration': return <LinkIcon className="w-6 h-6" />
+      case 'Consulting': return <Users className="w-6 h-6" />
+      default: return <Sparkles className="w-6 h-6" />
     }
-  };
-
+  }
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'AI': return 'from-purple-500 to-pink-500';
-      case 'IT': return 'from-blue-500 to-cyan-500';
-      case 'Development': return 'from-green-500 to-emerald-500';
-      case 'Analytics': return 'from-orange-500 to-red-500';
-      case 'Security': return 'from-red-500 to-pink-500';
-      case 'Automation': return 'from-indigo-500 to-purple-500';
-      case 'Integration': return 'from-teal-500 to-blue-500';
-      case 'Consulting': return 'from-yellow-500 to-orange-500';
-      default: return 'from-gray-500 to-slate-500';
+      case 'AI': return 'from-purple-500 to-pink-500'
+      case 'IT': return 'from-blue-500 to-cyan-500'
+      case 'Development': return 'from-green-500 to-emerald-500'
+      case 'Analytics': return 'from-orange-500 to-red-500'
+      case 'Security': return 'from-red-500 to-pink-500'
+      case 'Automation': return 'from-indigo-500 to-purple-500'
+      case 'Integration': return 'from-teal-500 to-blue-500'
+      case 'Consulting': return 'from-yellow-500 to-orange-500'
+      default: return 'from-gray-500 to-slate-500'
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-black to-zion-blue-dark relative overflow-hidden">
       {/* Animated Background */}
@@ -1056,11 +1038,11 @@ export default function MicroSaasServices() {
               ))}
             </select>
 
-            <button
+            <$2 />
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedPricing('all');
+                setSearchTerm('')
+                setSelectedCategory('all')
+                setSelectedPricing('all')
               }}
               className="px-4 py-3 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
             >
@@ -1162,7 +1144,7 @@ export default function MicroSaasServices() {
               <div className="border-t border-zion-cyan/20 pt-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-zion-slate-light">Ready to get started?</span>
-                  <a 
+                  <$2 />
                     href={service.contactInfo.website}
                     className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-black font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
                     target="_blank"
@@ -1185,7 +1167,7 @@ export default function MicroSaasServices() {
               Our micro SAAS solutions are designed to grow with your business needs and provide measurable ROI
             </p>
             <div className="mb-6">
-              <a 
+              <$2 />
                 href="/comprehensive-services"
                 className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 mb-4"
               >
@@ -1304,7 +1286,7 @@ export default function MicroSaasServices() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+                <$2 />
                   href={`mailto:${microSaasServices[0].contactInfo.email}`}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-black font-bold rounded-xl hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25 transform hover:scale-105"
                 >
@@ -1312,7 +1294,7 @@ export default function MicroSaasServices() {
                   Request Demo
                 </a>
                 
-                <a 
+                <$2 />
                   href={`tel:${microSaasServices[0].contactInfo.phone}`}
                   className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-xl hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
                 >
@@ -1458,53 +1440,49 @@ export default function MicroSaasServices() {
       'Security': <Shield className="h-5 w-5" />,
       'Automation': <Settings className="h-5 w-5" />,
       'Integration': <LinkIcon className="h-5 w-5" />
-    };
-    return icons[category] || <Code className="h-5 w-5" />;
-  }, [searchQuery, selectedCategory, selectedPricing, sortBy]);
-
+    }
+    return icons[category] || <Code className="h-5 w-5" />
+  }, [searchQuery, selectedCategory, selectedPricing, sortBy])
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
-        return <Brain className="w-6 h-6" />;
+        return <Brain className="w-6 h-6" />
       case 'IT Services':
-        return <Monitor className="w-6 h-6" />;
+        return <Monitor className="w-6 h-6" />
       case 'Innovation':
-        return <ZapIcon className="w-6 h-6" />;
+        return <ZapIcon className="w-6 h-6" />
       case 'Business Solutions':
-        return <Settings className="w-6 h-6" />;
+        return <Settings className="w-6 h-6" />
       default:
-        return <Zap className="w-6 h-6" />;
+        return <Zap className="w-6 h-6" />
     }
-  };
-
+  }
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'subscription':
-        return 'Monthly/Yearly';
+        return 'Monthly/Yearly'
       case 'usage':
-        return 'Pay per use';
+        return 'Pay per use'
       case 'one-time':
-        return 'One-time payment';
+        return 'One-time payment'
       case 'enterprise':
-        return 'Custom pricing';
+        return 'Custom pricing'
       default:
-        return model;
+        return model
     }
-  };
-
+  }
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'live':
-        return <Badge className="bg-green-500 hover:bg-green-600">Live</Badge>;
+        return <Badge className="bg-green-500 hover:bg-green-600">Live</Badge>
       case 'beta':
-        return <Badge className="bg-blue-500 hover:bg-blue-600">Beta</Badge>;
+        return <Badge className="bg-blue-500 hover:bg-blue-600">Beta</Badge>
       case 'coming-soon':
-        return <Badge className="bg-yellow-500 hover:bg-yellow-600">Coming Soon</Badge>;
+        return <Badge className="bg-yellow-500 hover:bg-yellow-600">Coming Soon</Badge>
       default:
-        return null;
+        return null
     }
-  };
-
+  }
   return (
     <>
       <SEO 
@@ -1519,7 +1497,7 @@ export default function MicroSaasServices() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
-          <div 
+          <$2 />
             className="absolute inset-0 opacity-30"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -1855,10 +1833,9 @@ export default function MicroSaasServices() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => {
-            const CategoryIcon = categoryIcons[service.category] || Globe;
-            const minPrice = Math.min(...service.pricing.map(p => p.price));
-            const maxPrice = Math.max(...service.pricing.map(p => p.price));
-            
+            const CategoryIcon = categoryIcons[service.category] || Globe
+            const minPrice = Math.min(...service.pricing.map(p => p.price))
+            const maxPrice = Math.max(...service.pricing.map(p => p.price))
             return (
               <motion.div
                 key={service.id}
@@ -1972,7 +1949,7 @@ export default function MicroSaasServices() {
                   </div>
                 </Card>
               </motion.div>
-            );
+            )
           })}
         </div>
 
@@ -1988,9 +1965,9 @@ export default function MicroSaasServices() {
             </div>
             <Button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setPriceRange(10000);
+                setSearchTerm('')
+                setSelectedCategory('all')
+                setPriceRange(10000)
               }}
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white"
             >
@@ -2039,10 +2016,9 @@ export default function MicroSaasServices() {
       </main>
 
     </>
-  );
-};
-
-export default MicroSaasServices;
+  )
+}
+export default MicroSaasServices
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
@@ -2084,7 +2060,7 @@ export default MicroSaasServices;
 
       <Footer />
     </>
-  );
+  )
 }
 import { 
   Bot, 
@@ -2100,26 +2076,25 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import Cpu from 'lucide-react/dist/esm/icons/cpu';
-import Target from 'lucide-react/dist/esm/icons/target';
-import Palette from 'lucide-react/dist/esm/icons/palette';
-import { SEO } from '@/components/SEO';
-
+} from 'lucide-react'
+import Cpu from 'lucide-react/dist/esm/icons/cpu'
+import Target from 'lucide-react/dist/esm/icons/target'
+import Palette from 'lucide-react/dist/esm/icons/palette'
+import { SEO } from '@/components/SEO'
 interface MicroSaasService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  link: string;
-  icon: React.ReactNode;
-  tags: string[];
-  rating: number;
-  reviewCount: number;
+  id: string
+  title: string
+  description: string
+  category: string
+  price: string
+  features: string[]
+  benefits: string[]
+  marketPrice: string
+  link: string
+  icon: React.ReactNode
+  tags: string[]
+  rating: number
+  reviewCount: number
 }
 
 const MICRO_SAAS_SERVICES: MicroSaasService[] = [
@@ -2303,8 +2278,7 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 189
   }
-];
-
+]
 const categories = [
   { name: "All Services", value: "all", icon: <Shield className="h-4 w-4" /> },
   { name: "AI & Machine Learning", value: "ai", icon: <Bot className="h-4 w-4" /> },
@@ -2314,36 +2288,31 @@ const categories = [
   { name: "Development", value: "development", icon: <Shield className="h-4 w-4" /> },
   { name: "Automation", value: "automation", icon: <Zap className="h-4 w-4" /> },
   { name: "Monitoring", value: "monitoring", icon: <Cpu className="h-4 w-4" /> }
-];
-
+]
 export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
-
+  const [selectedCategory, setSelectedCategory] = useState("all")
+  const [searchQuery, setSearchQuery] = useState("")
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === "all" || 
       service.category.toLowerCase().includes(selectedCategory) ||
-      service.tags.some(tag => tag.toLowerCase().includes(selectedCategory));
-    
+      service.tags.some(tag => tag.toLowerCase().includes(selectedCategory))
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    return matchesCategory && matchesSearch;
-  });
-
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    return matchesCategory && matchesSearch
+  })
+import React, { useState } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { 
   MICRO_SAAS_SERVICES, 
   getServicesByCategory, 
   getFeaturedServices, 
   getNewServices,
   type MicroSaasService 
-} from "@/data/microSaasServices";
+} from "@/data/microSaasServices"
 import { 
   Star, 
   ExternalLink, 
@@ -2360,9 +2329,8 @@ import {
   ArrowRight,
   Globe,
   Lock
-} from "lucide-react";
-import { SEO } from "@/components/SEO";
-
+} from "lucide-react"
+import { SEO } from "@/components/SEO"
 const categoryIcons = {
   'AI': <Brain className="h-6 w-6" />,
   'IT': <Building className="h-6 w-6" />,
@@ -2372,28 +2340,23 @@ const categoryIcons = {
   'Automation': <Zap className="h-6 w-6" />,
   'Integration': <Globe className="h-6 w-6" />,
   'Consulting': <Users className="h-6 w-6" />
-};
-
+}
 const statusColors = {
   'Live': 'bg-green-500',
   'Beta': 'bg-yellow-500',
   'Coming Soon': 'bg-blue-500'
-};
-
+}
 export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [searchQuery, setSearchQuery] = useState('')
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(s => s.category)))];
-
+                         service.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesCategory && matchesSearch
+  })
+  const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(s => s.category)))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       <SEO 
@@ -2404,20 +2367,20 @@ export default function MicroSaasServices() {
       />
 
       {/* Hero Section */}
-import React, { useState } from 'react';
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState } from 'react'
+import { DynamicListingPage } from "@/components/DynamicListingPage"
+import { TrustedBySection } from "@/components/TrustedBySection"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { 
   MICRO_SAAS_SERVICES, 
   MICRO_SAAS_CATEGORIES, 
   MICRO_SAAS_SUBCATEGORIES,
   PRICING_TIERS,
   CONTACT_INFO 
-} from "@/data/microSaasServices";
+} from "@/data/microSaasServices"
 import { 
   Brain, 
   Cloud, 
@@ -2439,9 +2402,8 @@ import {
   Users,
   Lock,
   Clock
-} from "lucide-react";
-import { Link } from "react-router-dom";
-
+} from "lucide-react"
+import { Link } from "react-router-dom"
 const categoryIcons = {
   'AI Business Solutions': Brain,
   'IT Infrastructure': Cloud,
@@ -2451,8 +2413,7 @@ const categoryIcons = {
   'HealthTech': Heart,
   'E-commerce': ShoppingCart,
   'EdTech': GraduationCap
-};
-
+}
 const benefits = [
   {
     icon: <Zap className="h-6 w-6" />,
@@ -2474,8 +2435,7 @@ const benefits = [
     title: "Proven ROI",
     description: "Average 300% ROI within 6 months of implementation"
   }
-];
-
+]
 const features = [
   "AI-Powered Automation",
   "Real-time Analytics",
@@ -2485,17 +2445,14 @@ const features = [
   "Custom Integrations",
   "White-label Solutions",
   "Comprehensive Documentation"
-];
-
+]
 export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const filteredServices = selectedCategory === 'all' 
     ? MICRO_SAAS_SERVICES 
     : MICRO_SAAS_SERVICES.filter(service => 
         service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory
-      );
-
+      )
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -2754,13 +2711,13 @@ export default function MicroSaasServices() {
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
               {MICRO_SAAS_CATEGORIES.map((category) => {
-                const IconComponent = categoryIcons[category.label as keyof typeof categoryIcons];
+                const IconComponent = categoryIcons[category.label as keyof typeof categoryIcons]
                 return (
                   <TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2" />}
                     {category.label.split(' ')[0]}
                   </TabsTrigger>
-                );
+                )
               })}
             </TabsList>
             
@@ -3019,10 +2976,10 @@ export default function MicroSaasServices() {
       {/* Trusted By Section */}
       <TrustedBySection />
     </div>
-  );
+  )
 }
     </div>
-  );
+  )
 }
 
 function ServiceCard({ service }: { service: MicroSaasService }) {
@@ -3045,16 +3002,15 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
 function ServiceCard({ service }: { service: MicroSaasService }) {
   const getPricingDisplay = (service: MicroSaasService) => {
     if (service.pricingModel === 'subscription') {
-      return `$${service.monthlyPrice}/month`;
+      return `$${service.monthlyPrice}/month`
     } else if (service.pricingModel === 'one-time') {
-      return `$${service.price.toLocaleString()}`;
+      return `$${service.price.toLocaleString()}`
     } else if (service.pricingModel === 'usage-based') {
-      return 'Usage-based';
+      return 'Usage-based'
     } else {
-      return 'Contact us';
+      return 'Contact us'
     }
-  };
-
+  }
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light/20 hover:border-zion-purple/50">
       <CardHeader className="pb-4">
@@ -3126,7 +3082,7 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
             )}
           </div>
@@ -3158,5 +3114,6 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
       
       <Footer />
     </>
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></Link></Link></section></section>

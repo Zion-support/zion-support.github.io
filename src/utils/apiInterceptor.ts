@@ -58,10 +58,10 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
   ur,
   l: string,,
     metho,
-  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record;
+  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'
+  headers?: Record
           <string>
-  body?: unknown;
+  body?: unknown
   params?: Record<string>
   timeout?: number
   cache?: boolean
@@ -100,7 +100,7 @@ export class APIInterceptor {
   config: APIConfig,
   private,
   cache: Map,
-          <string, CacheEntry> = new Map();
+          <string, CacheEntry> = new Map()
   private,
   errorHandler: ErrorHandler,
   private,
@@ -124,7 +124,7 @@ export class APIInterceptor {
     }
     this.errorHandler = ErrorHandler.getInstance()
   }
-  static getInstance(config?: Partial;
+  static getInstance(config?: Partial
           <APIConfig>): APIInterceptor {
     // TODO: Add content
   }
@@ -145,7 +145,7 @@ export class APIInterceptor {
   g: RequestConfig): Promise<APIResponse<T>> {
     const cacheKey = this.getCacheKey(fullConfig)
   }
-    // Check cache for GET requests;
+    // Check cache for GET requests
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -153,7 +153,7 @@ export class APIInterceptor {
       if (cachedResponse) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        return cachedResponse as APIResponse;
+        return cachedResponse as APIResponse
           <T>
       }
     }
@@ -203,11 +203,11 @@ const requestPromise = this.executeRequest
         signa,
   l: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
       }
-      const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime;
-      // Record performance metric;
-      performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses;
+      const response = await fetch(url, fetchOptions)
+      const duration = performance.now() - startTime
+      // Record performance metric
+      performanceMetrics.recordNetworkRequest(url, duration, response.status)
+      // Handle non-2xx responses
       if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -504,7 +504,7 @@ const data = await this.parseResponse
   p: Date.now(),
       expiresA,
   t: Date.now() + this.config.cacheTimeout,
-    });
+    })
   }
   /**
    * Clear cache
@@ -599,6 +599,5 @@ const data = await this.parseResponse
     return { ...this.config }
   }
 }
-// Export singleton instance;
-export const apiInterceptor = APIInterceptor.getInstance();
-
+// Export singleton instance
+export const apiInterceptor = APIInterceptor.getInstance()

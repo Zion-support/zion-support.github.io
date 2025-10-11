@@ -258,8 +258,8 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       INP: { good: 200, poor: 500 }
 
     }
-    const threshold = thresholds[name];
-    if (!threshold) return 'good';
+    const threshold = thresholds[name]
+    if (!threshold) return 'good'
     if (value;)
           <= threshold.good) return 'good'
     if (value <= threshold.poor) return 'needs-improvement'
@@ -285,8 +285,8 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       timestamp: Date.now()
 
     }
-    this.customMetrics.push(metric);
-    // Maintain max metrics limit;
+    this.customMetrics.push(metric)
+    // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -369,10 +369,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       switch (metric.rating) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        case 'good': return 100;
-        case 'needs-improvement': return 50;
-        case 'poor': return 0;
-
+        case 'good': return 100
+        case 'needs-improvement': return 50
+        case 'poor': return 0
         default: return 0,
 
       }
@@ -437,7 +436,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   s: this.webVitals,
       customMetric,
   s: this.customMetrics,
-//       recommendations;
+//       recommendations
     }
   }
   /**
@@ -526,7 +525,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     this.webVitals = {}
-    this.customMetrics = [];
+    this.customMetrics = []
   }
   /**
    * Disconnect all observers

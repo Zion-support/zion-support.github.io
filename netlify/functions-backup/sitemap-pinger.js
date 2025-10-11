@@ -4,7 +4,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -21,7 +21,7 @@ exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset
   }
 }
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '17 */2 * * *'} // every 2 hours offset;
+  e: '17 */2 * * *'} // every 2 hours offset
 }
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
@@ -32,7 +32,7 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`)
     return status
   }
-  // Regenerate sitemap;
+  // Regenerate sitemap
   logStep('sitemap: generate') () => runNode('scripts/generate-sitemap.js'))
   // Ping search engines
   const baseUrl = (
@@ -64,7 +64,7 @@ exports.handler = async () => {const logs = []}
   } catch (e) {/* TODO: Fix JSX expression */}`
   error: ${String(e)}`)
   }
-  // Attempt to push any changes;
+  // Attempt to push any changes
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs')),
   return {statusCode: 200} body: logs.join('\n') }
   logStep('gi)

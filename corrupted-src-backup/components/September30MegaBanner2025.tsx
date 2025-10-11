@@ -45,8 +45,8 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">")
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",),
         {/* Header, Sectio, n */}
-        <div, className="text-center mb-12">";
-          <moti, o, n.d, i, v;
+        <div, className="text-center mb-12">"
+          <moti, o, n.d, i, v
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>"</d, i, v>
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">"</div>
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",
@@ -365,12 +365,12 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             ].m, a, p((top, i, c) => (
               <, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e$2 />
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">"
-        <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">";
-              <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e
+        <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">"
+              <, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e$2 />
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">"</span>
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">"</div>
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>",
-          <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>";
+          <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>"
             {[
               "Re, a, l-Time, A, I","
               "Neural, Code, Synthesis", "
@@ -395,7 +395,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">""
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">";"
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>","
-          <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">";
+          <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">"
             {/* TODO: Fix JSX expression */}"
               <, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e,"$2 />
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">"
@@ -405,7 +405,8 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </moti, o, n.d, i, v>
-  );
+  )
 }
-export default September30MegaBanner2025;
+export default September30MegaBanner2025
 }"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></p></p></h2></h3></h3></h3>

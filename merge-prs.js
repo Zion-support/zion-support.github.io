@@ -121,7 +121,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: 'inherit' })
   console.log('✨ All done! Feature branch merged and cleaned up.')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message);
+    console.error('❌ Error during merge process:', error.message)
   process.exit(1)
   }
   } catch (error) {/* TODO: Fix JSX expression */}

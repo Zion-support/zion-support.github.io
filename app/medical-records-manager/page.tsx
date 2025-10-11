@@ -43,16 +43,16 @@ const MedicalRecordsManagerPage: React.FC = () => {
         <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
                 Medical Records Manager,
-  </
+  
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
                   </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
@@ -67,9 +67,8 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
+  )
+}
 export default MedicalRecordsManagerPage
   </h1>
                 <$2 />

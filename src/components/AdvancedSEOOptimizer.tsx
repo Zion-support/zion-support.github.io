@@ -33,27 +33,27 @@ const,
     return {/* TODO: Fix JSX expression */}
       }))
     }
-  }, [seoData, enableStructuredData]);
+  }, [seoData, enableStructuredData])
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
       }))
     }
-  }, [seoData, enableStructuredData]);
-  // Generate Open Graph data;
+  }, [seoData, enableStructuredData])
+  // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
-  }, [seoData, enableOpenGraph]);
-  // Generate Twitter Card data;
+  }, [seoData, enableOpenGraph])
+  // Generate Twitter Card data
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     return {/* TODO: Fix JSX expression */}
     }
-  }, [seoData, enableTwitterCards]);
-  // Generate meta tags;
+  }, [seoData, enableTwitterCards])
+  // Generate meta tags
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
@@ -77,18 +77,18 @@ const,
     return {/* TODO: Fix JSX expression */}
       }))
     }
-  }, [seoData.breadcrumbs]);
+  }, [seoData.breadcrumbs])
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
       }))
     }
-  }, [seoData.faqs]);
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
+  }, [seoData.faqs])
+  const structuredData = generateStructuredData()
+  const openGraphData = generateOpenGraphData()
+  const twitterCardData = generateTwitterCardData()
+  const metaTags = generateMetaTags()
   useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
@@ -102,11 +102,11 @@ const,
   const addStructuredData = (dat)
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(data)
+    document.head.appendChild(script)
+    structuredDataRef.current = script
   }
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
@@ -161,8 +161,9 @@ const,
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
-  );
+  )
 }
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer
 }"
   </AdvancedSEOOptimizerProps>
+</li></li></li></li></li></li></li></li></li>

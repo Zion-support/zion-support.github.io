@@ -103,7 +103,7 @@ for (const pr of openPRs) {/* TODO: Fix JSX expression */}
 
 // Create summary report
 const summary = {
-  totalPRs: openPRs.length;
+  totalPRs: openPRs.length
   successfulMerges: successCount
   failedMerges: failCount
   results: results,
@@ -111,9 +111,8 @@ const summary = {
 const summary = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
-
-// // // // // Push changes to main if there were successful merges;
+fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2))
+// // // // // Push changes to main if there were successful merges
 if (successCount > 0) {
   try {
 //     execSync('git push origin main', { stdio: 'inherit' })

@@ -36,3 +36,4 @@
   Breakdown: ')} catch (error) {
     ' process.exit(1)
   } } // Run if called directly if (require.main === module) {main()} } module.exports = {generateSitemap} createXMLSitemap } '"`
+</p>

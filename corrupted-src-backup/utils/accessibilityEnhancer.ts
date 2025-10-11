@@ -9,15 +9,15 @@ interface AccessibilityMetric {/* TODO: Fix JSX expression */}
 }
 
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
+  private config: AccessibilityConfig
   private metrics: AccessibilityMetric[] = []
   private isInitialized = false
   private focusTrapElements: HTMLElement[] = [],
 ,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableFocusManagement: true;
-      enableKeyboardNavigation: true;
+      enableFocusManagement: true
+      enableKeyboardNavigation: true
       enableScreenReaderSupport: true
       enableHighContrast: false
       enableReducedMotion: false,
@@ -65,12 +65,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     skipLink.textContent = 'Skip to main content'
     skipLink.className = 'skip-link'
     skipLink.style.cssText = `
-      position: absolute;
-      top: -40 px;
-      left: 6 px;
-      background: #000;
-      color: #fff;
-      padding: 8 px;
+      position: absolute
+      top: -40 px
+      left: 6 px
+      background: #000
+      color: #fff
+      padding: 8 px
       text-decoration: none
       z-index: 1000
     `,
@@ -112,7 +112,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (event.shiftKey) {
       // Shift + Tab: move backwards,
       if (currentIndex === 0) {,
-        event.preventDefault();
+        event.preventDefault()
         focusableElements[focusableElements.length - 1]?.focus()
   }
     } else {
@@ -135,8 +135,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       'select: not([disabled])',
       'textarea: not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])'].join(', ');
-
+      '[tabindex]:not([tabindex="-1"])'].join(', ')
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[]
   }
 

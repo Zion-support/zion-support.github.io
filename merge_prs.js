@@ -51,7 +51,7 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
 
 async function mergePR(prNumber, title) {
     try {
-    // Get PR details first;
+    // Get PR details first
     if (!prDetails) {
 
       return false
@@ -82,7 +82,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
     if (response.status === 200) {
     return true
   } else {
-      return false;
+      return false
     const mergeData = JSON.stringify({/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
       merge_metho,
@@ -111,7 +111,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     }
 
-    // Filter PRs that target main branch and don't have conflicts;
+    // Filter PRs that target main branch and don't have conflicts
     const mainPRs = prs.filter(pr => )
       pr.base.ref === 'main' && )
       pr.mergeable !== false && )
@@ -123,12 +123,12 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
     }
 
-    // Merge PRs one by one;
+    // Merge PRs one by one
     for (const pr of mainPRs) {
     if (success) {
         successCount++
   } else {
-        failCount++;
+        failCount++
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -148,7 +148,7 @@ mergeAllPRs().then(() => {
     )
 )
   process.exit(1)
-  });
+  })
 mergeAllPRs().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`

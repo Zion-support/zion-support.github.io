@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react'
 const IoTPage: React.FC = () => {
     const iotServices = [
     {
@@ -10,7 +10,7 @@ const IoTPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Alert management'],
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
-      marketPrice: '$4,000-15,000/month',;
+      marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'],
   },
@@ -148,7 +148,7 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
         {/* Hero Section */}</div>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -178,7 +178,7 @@ return (
         </section>
         {/* Key Benefits */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -227,7 +227,7 @@ return (
     categories.map(category => (
   }
           <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -313,7 +313,7 @@ return (
         ))}
 {/* IoT Capabilities Showcase */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -365,7 +365,7 @@ return (
         </section>
         {/* Contact Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -394,10 +394,9 @@ return (
         </section>
       </div>
     </>
-  );
-};
-
-export default IoTPage;
+  )
+}
+export default IoTPage
   ]
   const categories = [...new Set(iotServices.map(service => service.category))]
   return (

@@ -1,11 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const SmartCityInfrastructurePage: React.FC = () => {
 
   const features = [
@@ -30,9 +28,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
       description: 'Bank-level security with advanced encryption and compliance standards'
 
     },
-    {;
-    icon: Globe,;
-      title: 'Global Reach',];
+    {
+    icon: Globe,
+      title: 'Global Reach',]
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -57,8 +55,8 @@ const PagePage: React.FC = () => {
   }
 
       description: 'Worldwide deployment and support for international smart city projects'
-    };
-  ];
+    }
+  ]
   const smartCityServices = [
     {
       icon: Building,
@@ -90,7 +88,7 @@ const PagePage: React.FC = () => {
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -157,7 +155,7 @@ const PagePage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -187,10 +185,8 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   ),
-};
-
-export default PagePage;
-
+}
+export default PagePage
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -213,7 +209,7 @@ export default PagePage;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center">
               </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -241,7 +237,7 @@ export default PagePage;
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our Smart City Solutions?
@@ -266,7 +262,7 @@ export default PagePage;
 
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Smart City Services
@@ -303,7 +299,7 @@ export default PagePage;
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Benefits
@@ -325,7 +321,7 @@ export default PagePage;
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Build Your Smart City?
@@ -350,9 +346,8 @@ export default PagePage;
       <Footer /></Footer>
     </>
   ),
-};
-
-export default SmartCityInfrastructurePage;
+}
+export default SmartCityInfrastructurePage
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

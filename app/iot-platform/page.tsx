@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
 },
     {
     icon: Clock,
@@ -25,7 +25,7 @@ return ()
       </section>
       {/* Use Cases Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -60,7 +60,7 @@ return ()
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -82,7 +82,7 @@ return ()
             ))}
       {/* CTA Section */}
           <p></p>
-            Start building your IoT platform today. Get started with a free consultation;
+            Start building your IoT platform today. Get started with a free consultation
             and discover how we can help you succeed.
           </p>
             </button>
@@ -93,7 +93,6 @@ return ()
         </div>
       </section>
       <Footer / /></Footer>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage</$1>

@@ -67,22 +67,22 @@ const AIVideoGenerationPage: React.FC = () => {
                 </div>
                 <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
                   AI Video Generator Pro,
-  </
+  
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                Create professional videos with AI-powered editing, voice synthesis, and intelligent automation</
+                Create professional videos with AI-powered editing, voice synthesis, and intelligent automation
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                   Start Free Trial
-  </
-                <a
+  
+                <$2 />
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
                   Watch Demo,
-  </
+  
               </div>
             </div>
           </section>
@@ -145,14 +145,14 @@ const AIVideoGenerationPage: React.FC = () => {
                 Ready to Transform Your Video Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses creating professional videos with AI</
+                Join thousands of businesses creating professional videos with AI
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
                   Start Your Free Trial
-  </
-                <a
+  
+                <$2 />
                   href="tel:+13024640950"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <span>Call +1 302 464 0950</span>
@@ -177,3 +177,4 @@ export default AIVideoGenerationPage</a>
   </h1>
   </div>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>

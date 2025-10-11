@@ -54,7 +54,7 @@ const,
       case 'dots':
         return renderDots()
       case 'pulse':
-        return renderPulse();
+        return renderPulse()
       default: return renderSpinner()
   }
   }
@@ -70,9 +70,10 @@ const,
       <div className="mb-4">{renderLoader()}</div>"
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
-  );
+  )
 }
-export default EnhancedLoading;
+export default EnhancedLoading
 "`
   </LoadingProps>
   </LoadingProps>
+</div></div></div></div>

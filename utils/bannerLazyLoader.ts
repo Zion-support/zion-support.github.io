@@ -27,7 +27,7 @@ export const lazyLoadBanner = (importF)
         }, 1000)
       })
     })
-  );
+  )
 }
 
 /**

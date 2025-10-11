@@ -1,13 +1,13 @@
 import React from 'react'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 interface SEOHeadProp, s {
-    title?: string;
-  description?: string;
-  keywor, d, s?: string | string[];
-  canonic, a, l?: string;
-  image?: string;
-  u, r, l?: string;
-  ty, p, e?: string;
+    title?: string
+  description?: string
+  keywor, d, s?: string | string[]
+  canonic, a, l?: string
+  image?: string
+  u, r, l?: string
+  ty, p, e?: string
   author ?  : string
   }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
@@ -144,6 +144,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>
-  );
+  )
 }
-export default EnhancedSEOHead;
+export default EnhancedSEOHead</$1></li></li></li></li></li>

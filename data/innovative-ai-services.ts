@@ -1,30 +1,30 @@
-export interface InnovativeAIService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
+export interface InnovativeAIService {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
+  contactInfo: unknown
     mobile: string
     email: string
     address: string,
@@ -37,15 +37,15 @@ export interface InnovativeAIService {id: string;
     period: '/month',
     description: unknown,
       'Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
-    features: [;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
+    features: [
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
   icon: string
   color: string
     mobile: string,
@@ -68,9 +68,9 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
     popular: true,
     website: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -1549,7 +1549,7 @@ export const,
     rating: 4 && 4.7
     reviews: 34,
   }
-];
+]
     reviews: 34,
     market_siz,
   e: '$300B supply chain management',
@@ -1607,7 +1607,7 @@ export const,
   s: 34}
 ]
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1694,9 +1694,9 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -2943,10 +2943,10 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7,
     reviews: 34
   }
-];
-];
+]
+]
 }
-];
+]
 ]
 ]
   }

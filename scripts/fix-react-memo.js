@@ -27,10 +27,9 @@ let totalFiles = 0
 let processedFiles = 0
 let fixedFiles = 0
 function fixReactMemo(content) {
-    let newContent = content;
-  let fixed = false;
-
-  // Fix React.memo syntax issues;
+    let newContent = content
+  let fixed = false
+  // Fix React.memo syntax issues
   // Pattern 1: const Component: React.FC = React.memo(() => {,
   const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g
   if (pattern1.test(newContent)) {,
@@ -40,9 +39,9 @@ function fixReactMemo(content) {
 
   // Pattern 2: const Component = React.memo(() => {
     ,
-  const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
+  const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g
   if (pattern2.test(newContent)) {,
-    newContent = newContent.replace(pattern2, 'const $1 = () => {');
+    newContent = newContent.replace(pattern2, 'const $1 = () => {')
     fixed = true
   }
 
@@ -58,7 +57,7 @@ function fixReactMemo(content) {
     ,
   const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern4.test(newContent)) {,
-    newContent = newContent.replace(pattern4, 'const $1 = () => {');
+    newContent = newContent.replace(pattern4, 'const $1 = () => {')
     fixed = true
   }
 
@@ -66,14 +65,14 @@ function fixReactMemo(content) {
   // Pattern: }); at the end of component
   const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g
   if (closingPattern.test(newContent)) {
-    newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';');
+    newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';')
     fixed = true
   }
 
   // Alternative closing pattern
   const closingPattern2 = /^\s*\}\);\s*$/gm
   if (closingPattern2.test(newContent)) {
-    newContent = newContent.replace(closingPattern2, '');
+    newContent = newContent.replace(closingPattern2, '')
     fixed = true
   }
 
@@ -107,19 +106,16 @@ async function main() {
     allFiles.push(...files)
   }
 
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
-  uniqueFiles.forEach(processFile);
-
-  console.log(`\n🎉 React.memo syntax fixes completed!`);
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 React.memo syntax fixes completed!`)
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Files fixed: ${fixedFiles}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

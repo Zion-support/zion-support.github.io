@@ -31,9 +31,9 @@ const,
             }
           }
         }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] })
       }
-      measureWebVitals();
+      measureWebVitals()
     }
   }, [enableWebVitals])
   // Advanced caching strategies
@@ -52,10 +52,10 @@ const,
       const response = await originalFetch(input, init)
       if (response.ok) {/* TODO: Fix JSX expression */}
       }
-      return response;
+      return response
     }
-  }, [enableServiceWorker]);
-  // Image optimization with WebP and lazy loading;
+  }, [enableServiceWorker])
+  // Image optimization with WebP and lazy loading
   const optimizeImages = useCallback(() => {/* TODO: Fix JSX expression */}
             } else {/* TODO: Fix JSX expression */}
             }
@@ -120,8 +120,8 @@ const,
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableResourceHints, enableCriticalCSS, setupAdvancedCaching, optimizeImages, preloadCriticalResources, addResourceHints, inlineCriticalCSS])
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
-  return null;
+  }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
+  return null
 }
 export default AdvancedPerformanceOptimizer;`
   </AdvancedPerformanceOptimizerProps>

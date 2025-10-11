@@ -55,32 +55,26 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     'const $1: React.FC = (',
     'const $1: React.FC = (')
   ),
-  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
-
-  //Fix corrupted JSX;
-  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9_$]*)\s*([^>]*)\s*>/g, '<$1 $2>');
-  fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9_$]*)\s*>/g, '</$1>');
-
-  //Fix corrupted object properties;
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (')
+  //Fix corrupted JSX
+  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9_$]*)\s*([^>]*)\s*>/g, '<$1 $2>')
+  fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9_$]*)\s*>/g, '</$1>')
+  //Fix corrupted object properties
   fixed = fixed.replace(
   fixed = fixed.replace()
     /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+)\s*\}/g,
     '{ $1: $2, $3: $4 }'
-  );
-
-  //Fix corrupted array syntax;
-  fixed = fixed.replace(/\[\s*([^[\]]+)\s*\]/g, '[$1]');
-
-  //Fix corrupted function calls;
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
-
-  //Fix corrupted arrow functions;
+  )
+  //Fix corrupted array syntax
+  fixed = fixed.replace(/\[\s*([^[\]]+)\s*\]/g, '[$1]')
+  //Fix corrupted function calls
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)')
+  //Fix corrupted arrow functions
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
     /g, match => {
     return match.replace(/\s+/g, ' ').trim()
-  });
-
-  //Fix corrupted string literals;
+  })
+  //Fix corrupted string literals
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
   })
   //Fix corrupted string literals;"

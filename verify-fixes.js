@@ -5,12 +5,10 @@ import { fileURLToPath } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 // try {
-    //   const appTsxPath = path.join(__dirname, 'App.tsx');
-
-  // Check for duplicate class definitions;
-  //   //   //   // Check for syntax issues;
-  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
-
+    //   const appTsxPath = path.join(__dirname, 'App.tsx')
+  // Check for duplicate class definitions
+  //   //   //   // Check for syntax issues
+  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)')
   if(classMatches &&
     classMatches.length === 1 &&
     interfaceStateMatches &&)

@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
-    {;
-    };
-  ];
+    {
+    }
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -27,7 +27,7 @@ const BusinessIntelligencePage: React.FC = () => {
         </div><div className="text-center mb-16">
           </div><h1 className="text-5xl font-bold text-white mb-6">
             Business Intelligence
-  </
+  
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business intelligence solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -55,11 +55,11 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       <section className="py-16 px-4 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-12">
             </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our business intelligence solutions for your business.
             </p>
@@ -89,7 +89,7 @@ const BusinessIntelligencePage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -100,18 +100,17 @@ const BusinessIntelligencePage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
               Email Us
-  </
+  
           </div>
         </div>
       </section>
     </div>
   ),
-};
-
+}
 export default BusinessIntelligencePage
   </button>
   </button>

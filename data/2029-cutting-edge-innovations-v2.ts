@@ -1,37 +1,37 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface CuttingEdge2029Service {
 export interface CuttingEdgeInnovation2029V2 {
 export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
 }
-  id: string;
-  name: string;
-  tagline: string;
+  id: string
+  name: string
+  tagline: string
   price: string,
   period: string,
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: ServiceVariant
+  contact_info: unknown
+    mobile: string
+    email: string
     address: string}
     website: string}
   }
@@ -101,7 +101,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     rating: 5 && 5.0,
     reviews: 5,
   },
-  // Space Technology & Colonization;
+  // Space Technology & Colonization
     id: 'space - colonization - automation - platform',
     name: 'Space Colonization Automation Platform',
     tagline: 'Automate space colonization and resource extraction',
@@ -163,7 +163,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     reviews: 3,
   },
       'DNA-based algorithms',
-  // Biotech & DNA Computing;
+  // Biotech & DNA Computing
     id: 'dna - computing - platform - 2029',
     name: 'DNA Computing Platform 2029',
     tagline: 'Molecular computing with DNA - based algorithms',
@@ -224,7 +224,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     rating: 4 && 4.9,
     reviews: 7,
   },
-  // Metaverse & Digital Reality;
+  // Metaverse & Digital Reality
     id: 'metaverse - consciousness - platform',
     name: 'Metaverse Consciousness Platform',
     tagline: 'Digital consciousness in virtual worlds',
@@ -285,7 +285,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     rating: 4 && 4.8,
     reviews: 15,
   },
-  // Autonomous Business & Operations;
+  // Autonomous Business & Operations
     id: 'autonomous - business - ecosystem - 2029',
     name: 'Autonomous Business Ecosystem 2029',
     tagline: 'Fully autonomous business operations',
@@ -312,7 +312,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     customers: 8,
     rating: 4.9,
     reviews: 6,
-  };
+  }
 ];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -321,8 +321,8 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     realImplementation: true,
     implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.'
     launchDate: '2029-01-10'
-    customers: 8;
-    rating: 4.9;
+    customers: 8
+    rating: 4.9
     reviews: 6,
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
@@ -442,20 +442,20 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     launch_date: '2029 - 01 - 10'
     customers: 8,
     rating: 4.9,
-    reviews: 6;
-];
+    reviews: 6
+]
 ,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-];
+]
   }
-];
-    realImplementation: true;
+]
+    realImplementation: true
     implementationDetails: 'Advanced quantum consciousness computing platform with real-time quantum consciousness processing and validation.'
     launchDate: '2029-02-01'
-    customers: 8;
-    rating: 5.0;
+    customers: 8
+    rating: 5.0
     reviews: 5,
   }
   // Space Technology & Colonization
@@ -466,7 +466,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     period: '/month'
     description:
       'Comprehensive platform for automating space colonization, resource extraction, and space infrastructure development. The future of human space exploration.'
-    features: [;
+    features: [
       'Automated space mining'
       'Colony infrastructure automation'
       'Resource extraction optimization'
@@ -478,7 +478,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'Automated space manufacturing'
       'Space colony planning'
     ]
-    popular: true;
+    popular: true
     icon: '',
     color: 'from-teal-600 via-emerald-600 to-green-600'
     textColor: 'text-teal-400'
@@ -486,10 +486,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'Leading space colonization automation platform. Essential for future space exploration.'
     targetAudience:
       'Space agencies, Private space companies, Mining companies, Government, Research institutions'
-    trialDays: 60;
+    trialDays: 60
     setupTime: '2-3 months'
     category: 'Space Technology & Colonization'
-    realService: true;
+    realService: true
     technology: [,
       'AI Automation, Space Robotics, Resource Management, Colony Planning'
     ]
@@ -513,8 +513,8 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     implementationDetails:
       'Advanced space colonization automation platform with real-time monitoring, automated decision-making, and comprehensive colony management.'
     launchDate: '2029-01-01'
-    customers: 5;
-    rating: 5.0;
+    customers: 5
+    rating: 5.0
     reviews: 3,
   }
   // Biotech & DNA Computing
@@ -525,7 +525,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     period: '/month'
     description:
       'Revolutionary platform for DNA-based computing, enabling molecular-level computation and biological data processing at unprecedented speeds.'
-    features: [;
+    features: [
       'DNA-based algorithms'
       'Molecular computation'
       'Biological data processing'
@@ -537,7 +537,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'DNA computation validation'
       'Biological security protocols'
     ]
-    popular: true;
+    popular: true
     icon: '',
     color: 'from-green-600 via-yellow-600 to-orange-600'
     textColor: 'text-green-400'
@@ -545,10 +545,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'Leading DNA computing platform. Revolutionary approach to computation.'
     targetAudience:
       'Biotech companies, Research institutions, Universities, Government labs, Tech companies'
-    trialDays: 45;
+    trialDays: 45
     setupTime: '1-2 months'
     category: 'Biotech & DNA Computing'
-    realService: true;
+    realService: true
     technology: [,
       'DNA Computing, Molecular Biology, Bioinformatics, Biological Algorithms'
     ]
@@ -572,8 +572,8 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     implementationDetails:
       'Advanced DNA computing platform with molecular algorithms, biological data processing, and DNA-based computation validation.'
     launchDate: '2029-01-20'
-    customers: 12;
-    rating: 4.9;
+    customers: 12
+    rating: 4.9
     reviews: 7,
   }
   // Metaverse & Digital Reality
@@ -585,7 +585,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     price: '$24,999',
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. This is not just advanced AI - it\'s the foundation for true artificial consciousness.'
-    features: [;
+    features: [
       'Consciousness mapping and developmentSelf-awareness training modulesEmotional intelligence cultivationConsciousness validation protocolsEthical consciousness frameworksConsciousness evolution trackingMulti-dimensional awareness trainingConsciousness integration APIs'
       'Real-time consciousness monitoringConsciousness safety protocols'
     ],
@@ -595,9 +595,9 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     targetAudience: 'AI research institutions, Tech companies, Government agencies, Universities, AI ethics organizations',
     trialDays: 30, setupTime: '2-4 weeks',
     category: 'AI Consciousness & Evolution', realService: true,
-    technology: ['Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces'];
-    integrations: ['Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks'];
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research'];
+    technology: ['Advanced Neural Networks, Consciousness Algorithms, Quantum Computing, Brain-Computer Interfaces']
+    integrations: ['Research platforms, AI development tools, Consciousness monitoring systems, Ethics frameworks']
+    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research']
     roi: 'Pioneering technology with potential for revolutionary breakthroughs in AI consciousness.', competitors: ['None - First to market'],
     marketSize: 'Emerging market - $50B+ potential', growthRate: '500%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -606,11 +606,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Advanced quantum consciousness computing platform with real-time quantum consciousness processing and validation.'
     launchDate: '2029-02-01'
-    customers: 8;
-    rating: 5.0;
+    customers: 8
+    rating: 5.0
     reviews: 5,
   }
   // Space Technology & Colonization
@@ -621,7 +621,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     period: '/month'
     description:
       'Comprehensive platform for automating space colonization, resource extraction, and space infrastructure development. The future of human space exploration.'
-    features: [;
+    features: [
       'Automated space mining'
       'Colony infrastructure automation'
       'Resource extraction optimization'
@@ -633,7 +633,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'Automated space manufacturing'
       'Space colony planning'
     ]
-    popular: true;
+    popular: true
     icon: '',
     color: 'from-teal-600 via-emerald-600 to-green-600'
     textColor: 'text-teal-400'
@@ -641,10 +641,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'Leading space colonization automation platform. Essential for future space exploration.'
     targetAudience:
       'Space agencies, Private space companies, Mining companies, Government, Research institutions'
-    trialDays: 60;
+    trialDays: 60
     setupTime: '2-3 months'
     category: 'Space Technology & Colonization'
-    realService: true;
+    realService: true
     technology: [,
       'AI Automation, Space Robotics, Resource Management, Colony Planning'
     ]
@@ -655,7 +655,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'Space mining, Colony development, Resource extraction, Space infrastructure'
     ]
     roi: 'Critical infrastructure for future space economy. Potential for massive returns.'
-    competitors: ['Limited competition in space automation'];
+    competitors: ['Limited competition in space automation']
     marketSize: 'Emerging market - $500B+ potential'
     growthRate: '2000%+ annual growth potential'
     variant: 'space-futuristic'
@@ -671,10 +671,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'Leading DNA computing platform. Revolutionary approach to computation.'
     targetAudience:
       'Biotech companies, Research institutions, Universities, Government labs, Tech companies'
-    trialDays: 45;
+    trialDays: 45
     setupTime: '1-2 months'
     category: 'Biotech & DNA Computing'
-    realService: true;
+    realService: true
     technology: [,
       'DNA Computing, Molecular Biology, Bioinformatics, Biological Algorithms'
     ]
@@ -685,7 +685,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'DNA research, Biological computation, Molecular algorithms, Biotech innovation'
     ]
     roi: 'Revolutionary technology with potential for breakthroughs in computing and biology.'
-    competitors: ['Limited competition in DNA computing'];
+    competitors: ['Limited competition in DNA computing']
     marketSize: 'Emerging market - $200B+ potential'
     growthRate: '1500%+ annual growth potential'
     variant: 'biotech-futuristic'
@@ -701,10 +701,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'First metaverse consciousness platform. Revolutionary for virtual reality and gaming.'
     targetAudience:
       'Gaming companies, VR companies, Metaverse platforms, Entertainment, Tech companies'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '2-4 weeks'
     category: 'Metaverse & Digital Reality'
-    realService: true;
+    realService: true
     technology: [,
       'AI Consciousness, Virtual Reality, Metaverse Development, Digital Intelligence'
     ]
@@ -728,8 +728,8 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     implementationDetails:
       'Advanced metaverse consciousness platform with digital consciousness creation, virtual being management, and metaverse integration.'
     launchDate: '2029-02-15'
-    customers: 25;
-    rating: 4.8;
+    customers: 25
+    rating: 4.8
     reviews: 15,
   }
   // Autonomous Business & Operations
@@ -740,7 +740,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     period: '/month'
     description:
       'Complete ecosystem for fully autonomous business operations, from decision-making to execution, requiring minimal human intervention.'
-    features: [;
+    features: [
       'Autonomous decision making'
       'Self-optimizing operations'
       'Automated business strategy'
@@ -752,7 +752,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
       'Self-improving processes'
       'Autonomous innovation'
     ]
-    popular: true;
+    popular: true
     icon: '',
     color: 'from-blue-600 via-cyan-600 to-teal-600'
     textColor: 'text-blue-400'
@@ -760,10 +760,10 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     marketPosition: 'Most advanced autonomous business platform. Complete business automation.'
     targetAudience:
       'Large enterprises, Tech companies, Innovative businesses, Government, Research institutions'
-    trialDays: 90;
+    trialDays: 90
     setupTime: '3-6 months'
     category: 'Autonomous Business & Operations'
-    realService: true;
+    realService: true
     technology: [,
       'AI Automation, Business Intelligence, Process Automation, Decision Systems'
     ]
@@ -787,8 +787,8 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     implementationDetails:
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.'
     launchDate: '2029-01-10'
-    customers: 8;
-    rating: 4.9;
+    customers: 8
+    rating: 4.9
     reviews: 6,
   }
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
@@ -796,7 +796,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     customers: 8,
     rating: 4.9,
     reviews: 6,
-  };
+  }
 ];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -805,50 +805,50 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [,
     realImplementation: true,
     implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.'
     launchDate: '2029-01-10'
-    customers: 8;
-    rating: 4.9;
+    customers: 8
+    rating: 4.9
     reviews: 6,
   }
-];
-import { ServiceVariant } from '../types/service-variants';
-export interface CuttingEdgeInnovation2029V2 {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+]
+import { ServiceVariant } from '../types/service-variants'
+export interface CuttingEdgeInnovation2029V2 {
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {,
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
     address: string}
     website: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number,
 }
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
@@ -1460,23 +1460,23 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.8,
     reviews: 134
   }
-];
+]
 export const getPopularCuttingEdge2029Services = () => {
-  return cuttingEdge2029Services.filter(service => service.popular);
-};
+  return cuttingEdge2029Services.filter(service => service.popular)
+}
 export const getCuttingEdge2029ServicesByCategory = (category: string) => {
-  return cuttingEdge2029Services.filter(service => service.category === category);
-};
+  return cuttingEdge2029Services.filter(service => service.category === category)
+}
 export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return cuttingEdge2029Services.filter(service => {
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''))
+    return price >= minPrice && price <= maxPrice
+  })
+}
     implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
     customers: 8,
     rating: 4.9,
     reviews: 6
   }
-];
+]

@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'],
     },
-  ];
+  ]
 const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -105,7 +105,7 @@ const standards = [
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl font-bold text-white mb-4">
                 Comprehensive Accessibility Features
@@ -116,7 +116,7 @@ const standards = [
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
@@ -143,7 +143,7 @@ const standards = [
         
         {/* Standards Compliance */}
         <section className="py-20 px-4 bg-white/5">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl font-bold text-white mb-4">
                 Standards Compliance
@@ -154,7 +154,7 @@ const standards = [
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center"
                 >
@@ -215,7 +215,7 @@ const standards = [
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               </div><h2 className="text-3xl font-bold text-white mb-6">
                 Ready to Make Your Digital Experience Accessible?
@@ -236,10 +236,9 @@ const standards = [
         </section>
       </div>
     </>
-  );
-};
-
-export default AccessibilityPage;
+  )
+}
+export default AccessibilityPage
               <p className="text-xl text-gray-300 mb-8">
                 Contact us today for a comprehensive accessibility audit and implementation plan.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

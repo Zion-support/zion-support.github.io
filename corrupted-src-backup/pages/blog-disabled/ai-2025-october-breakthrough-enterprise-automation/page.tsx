@@ -205,11 +205,11 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"
   AI-Powered Enterprise Automation 2025: </h1> <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
   Complete Implementation Guide,
-  </
+  
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"</p>
                     ></Link>
-                      Start, Your, Transformation;
+                      Start, Your, Transformation
                       <Link, classNam, e='w-5 h-5' /></Link>
     <div></div>
       <Helmet></Helmet>
@@ -301,7 +301,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
         <nk rel="canonical", href="http,"$2 />
   s: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />
         <div></div>"
-            <Link to="/", className="text-white,"
+            < to="/", className="text-white,"$2 />
   hover: text-zion-cyan transition-colors">← Back to Home</Link>
   </div>
   </div>
@@ -309,7 +309,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
               <Zap className="w-4 h-4 mr-2" /></Zap>
   October 2025 • Enterprise AI,
   </div>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation,"
   2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
@@ -556,7 +556,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5" />
                     </Link>
 :src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx
-                    <Link to="/case-studies"
+                    < to="/case-studies"$2 />
   className= " />
                     <Link to="/case-studies>"
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors,
@@ -587,7 +587,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5" /></Link>
                     </Link>
 :src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx,"
-                    <Link to="/case-studies""
+                    < to="/case-studies""$2 />
   className= " /></Link>"
                     <Link to="/case-studies>""
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold,
@@ -603,7 +603,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
           </article>
         </div>
       </div>,
-    </React.Fragment>);
+    </React.Fragment>)
 }
 export default EnterpriseAutomation2025</div>
 </article>
@@ -662,3 +662,4 @@ export default EnterpriseAutomation2025</div>
   </span>
   </span>
   </h1>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></a></a></a></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></li></li></li></li></li></section></section></section></section></section></article></article></article></article></article></article>

@@ -1,7 +1,7 @@
-/**;
- * Application Configuration;
- * Centralized configuration management for the Zion Tech Group application;
- */;
+/**
+ * Application Configuration
+ * Centralized configuration management for the Zion Tech Group application
+ */
 export interface AppConfig {
     app: {
     name: string,
@@ -40,7 +40,7 @@ const config: AppConfig = {
     app: {
     name: 'Zion Tech Group',
     version: '1.0.0',
-    environment:;
+    environment:
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
   },
   api: {
@@ -66,10 +66,10 @@ const config: AppConfig = {
     enableXSSProtection: true,
   },
 }
-/**;
- * Get configuration value by key path;
- * @example getConfig('app.name') => 'Zion Tech Group';
- */;
+/**
+ * Get configuration value by key path
+ * @example getConfig('app.name') => 'Zion Tech Group'
+ */
 export function getConfig<T = unknown>(keyPath: string): T {
     let value: unknown = config,
 for (const key of keys) {
@@ -77,35 +77,35 @@ for (const key of keys) {
       value = (value as Record</T><string, unknown>)[key]
   }
     } else {}
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`)
     }
   }
-return value as T;
+return value as T
 }
-/**;
- * Check if a feature is enabled;
- */;
+/**
+ * Check if a feature is enabled
+ */
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
     return config.features[feature]
   }
 }
-/**;
- * Get current environment;
- */;
+/**
+ * Get current environment
+ */
 export function getEnvironment(): string {
     return config.app.environment
   }
 }
-/**;
- * Check if running in production;
- */;
+/**
+ * Check if running in production
+ */
 export function isProduction(): boolean {
     return config.app.environment === 'production'
   }
 }
-/**;
- * Check if running in development;
- */;
+/**
+ * Check if running in development
+ */
 export function isDevelopment(): boolean {
     return config.app.environment === 'development'
   }

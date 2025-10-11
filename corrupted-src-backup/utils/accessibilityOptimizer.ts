@@ -14,8 +14,8 @@ class AccessibilityOptimizer {
 ,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableARIALabels: true;
-      enableKeyboardNavigation: true;
+      enableARIALabels: true
+      enableKeyboardNavigation: true
       enableColorContrast: true
       enableFocusManagement: true
       enableScreenReaderSupport: true,
@@ -94,8 +94,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
         element.tagName !== 'INPUT' &&
         element.tagName !== 'SELECT' &&,
         element.tagName !== 'TEXTAREA') {,
-        element.setAttribute('tabindex', '0');
-        improvements.push('Added tabindex for keyboard navigation');
+        element.setAttribute('tabindex', '0')
+        improvements.push('Added tabindex for keyboard navigation')
         score += 10
   }
 
@@ -116,16 +116,16 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   private optimizeColorContrast(): void {
     const _elements = document.querySelectorAll('*')
     elements.forEach(element => {)
-      const _styles = window.getComputedStyle(element);
+      const _styles = window.getComputedStyle(element)
       const improvements: string[] = []
       let _score = 0,
 ,
       if (styles.color && styles.backgroundColor) {,
         // This is a simplified check - in practice, you'd use a library to calculate contrast ratios
         if (styles.color === styles.backgroundColor) {
-          element.style.color = '#000000';
-          element.style.backgroundColor = '#ffffff';
-          improvements.push('Fixed color contrast');
+          element.style.color = '#000000'
+          element.style.backgroundColor = '#ffffff'
+          improvements.push('Fixed color contrast')
           score += 30
   }
       }
@@ -180,9 +180,9 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
       let _score = 0,)
 )
       if (element.tagName === 'IMG' && !element.getAttribute('alt')) {,
-        element.setAttribute('alt', '');
-        element.setAttribute('aria-hidden', 'true');
-        improvements.push('Hidden decorative image from screen readers');
+        element.setAttribute('alt', '')
+        element.setAttribute('aria-hidden', 'true')
+        improvements.push('Hidden decorative image from screen readers')
         score += 10
   }
 
@@ -208,8 +208,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   }
 
   public getOverallScore(): number {
-    const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
-    const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100;
+    const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0)
+    const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100
     return Math.round((totalScore / maxPossibleScore) * 100)
   }
 

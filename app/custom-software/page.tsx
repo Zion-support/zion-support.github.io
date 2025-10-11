@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const CustomSoftwarePage: React.FC = () => {
   return (
     <>
@@ -110,7 +109,6 @@ const CustomSoftwarePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default CustomSoftwarePage;
+  )
+}
+export default CustomSoftwarePage

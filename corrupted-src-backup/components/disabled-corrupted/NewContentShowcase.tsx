@@ -117,6 +117,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }
 export default NewContentShowcase;"
+</div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></h2></h3></h3></h3></h3></h4></h4></section></section>

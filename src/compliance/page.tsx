@@ -113,7 +113,7 @@ Compliance Areas;"
             <p className="text-gray-600 mb-6">
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
-            <a
+            <$2 />
               href="mailto: compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team,
             </a>"
@@ -121,7 +121,8 @@ Compliance Areas;"
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-  );
+  )
 }
 export default CompliancePage</div>
   </div>
+</span></p></p></h2></h2></h2></ul>

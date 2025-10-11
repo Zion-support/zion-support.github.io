@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Comprehensive Final Merge - Handles all remaining branches systematically;
- * This script processes all remaining branches in batches to avoid conflicts;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Comprehensive Final Merge - Handles all remaining branches systematically
+ * This script processes all remaining branches in batches to avoid conflicts
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -104,13 +103,12 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'pipe' }
-    );
-
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs for most conflicts,
-      execSync('git reset --hard HEAD', { stdio: 'pipe' });
+      execSync('git reset --hard HEAD', { stdio: 'pipe' })
       execSync(
     } catch (e) {/* TODO: Fix JSX expression */}
     }
@@ -136,7 +134,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 2: Auto-resolve with ours,
-      execSync('git reset --hard HEAD', { stdio: 'pipe' });
+      execSync('git reset --hard HEAD', { stdio: 'pipe' })
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'pipe' })
@@ -152,9 +150,8 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 3: Manual conflict resolution,
-      execSync('git reset --hard HEAD', { stdio: 'pipe' });
-
-      //Get conflicted files;
+      execSync('git reset --hard HEAD', { stdio: 'pipe' })
+      //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {)
         encoding: 'utf8'),
     try {/* TODO: Fix JSX expression */}
@@ -217,10 +214,10 @@ const results = {
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
-      manual: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
+      manual: 0
       failed: 0
       not_found: 0
       already_merged: 0,
@@ -238,10 +235,10 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
-      manual: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
+      manual: 0
       failed: 0
       not_found: 0
       already_merged: 0,
@@ -275,7 +272,7 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
 //Step 6: Generate comprehensive report
 // results.timestamp = new Date().toISOString()
 results.summary = {
-  totalBatches: batches.length;
+  totalBatches: batches.length
   totalBranches: results.total.branches
   successfulMerges: results.total.successful
   failedMerges: results.total.failed,
@@ -284,8 +281,7 @@ results.summary = {
 
 fs.writeFileSync('comprehensive-final-merge-report.json')
   JSON.stringify(results, null, 2)
-);
-
+)
 //Step 7: Display final summary
 // // // // // // // // // // // // // // // // Step 8: Final push,
 // try {,

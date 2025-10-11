@@ -1,19 +1,17 @@
-'use client';
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
+'use client'
+import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
-    trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+    trackEvent: (eventName: string, parameters?: Record<string, any>) => void
   trackPageView: (pageName: string, pagePath: string) => void
   }
 
-const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {;
-    const context = useContext(AnalyticsContext);
+const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
+export const useAnalytics = () => {
+    const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
-  return context;
+  return context
 }
 
 interface AnalyticsProviderProps {
@@ -46,14 +44,12 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
       gtag()
       })
     }
-  }, []);
-
+  }, [])
   const trackEvent = (eventName: string, parameters: Record</AnalyticsProviderProps><string, any> = {}) => {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
     // Google Analytics
     if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record</string><string, any>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record</string><string, any>) => void }).gtag
       gtag('event', eventName, {
         event_category: parameters.category || 'engagement',
         event_label: parameters.label,
@@ -88,9 +84,9 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
-    // Google Analytics;
-    if ('gtag' in window) {;
-      const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
+    // Google Analytics
+    if ('gtag' in window) {
+      const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag
       gtag()
       })
     }
@@ -110,10 +106,10 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     </string><AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
+  )
 }
 
-export default undefined;
+export default undefined
   )
 }
 

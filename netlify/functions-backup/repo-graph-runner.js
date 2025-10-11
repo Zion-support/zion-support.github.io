@@ -1,4 +1,4 @@
-// netlify/functions/repo-graph-runner.js;
+// netlify/functions/repo-graph-runner.js
 exports.config = { schedule: '0 5 * * 1' }
 exports.handler = async function () {
   const { execSync } = require('child_process')
@@ -16,20 +16,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(knowledge): refresh repo knowledge graph [ci skip]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'repo-graph-runner' });
+        task: 'repo-graph-runner' })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'repo-graph-runner' });
+  k: 'repo-graph-runner' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

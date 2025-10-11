@@ -1,41 +1,36 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
+  let files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
       // Skip certain directories
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
-        files = files.concat(findFiles(fullPath, extensions));
+        files = files.concat(findFiles(fullPath, extensions))
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
+      files.push(fullPath)
     }
   }
   
-  return files;
+  return files
 }
 
 // Function to fix malformed JSX
 function fixMalformedJSX(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
     // Fix malformed JSX patterns
     const fixes = [
       // Fix extra closing div tags
@@ -52,8 +47,8 @@ function fixMalformedJSX(filePath) {
       {
         pattern: /<div className="[^"]*">\s*<\/div><\/div>/g,
         replacement: (match) => {
-          const className = match.match(/className="([^"]*)"/)?.[1];
-          return `<div className="${className}">`;
+          const className = match.match(/className="([^"]*)"/)?.[1]
+          return `<div className="${className}">`
         }
       },
       // Fix malformed Link tags
@@ -74,77 +69,72 @@ function fixMalformedJSX(filePath) {
       // Fix malformed button tags
       {
         pattern: /<\/button><div className="[^"]*">/g,
-        replacement: '<div className="'
+        replacement: '< className="'$2 />
       },
       // Fix malformed section tags
       {
         pattern: /<\/section><div className="[^"]*">/g,
-        replacement: '<div className="'
+        replacement: '< className="'$2 />
       },
       // Fix malformed main tags
       {
         pattern: /<\/main><div className="[^"]*">/g,
-        replacement: '<div className="'
+        replacement: '< className="'$2 />
       }
-    ];
-    
+    ]
     for (const fix of fixes) {
       if (typeof fix.replacement === 'function') {
-        const newContent = content.replace(fix.pattern, fix.replacement);
+        const newContent = content.replace(fix.pattern, fix.replacement)
         if (newContent !== content) {
-          content = newContent;
-          modified = true;
+          content = newContent
+          modified = true
         }
       } else {
-        const newContent = content.replace(fix.pattern, fix.replacement);
+        const newContent = content.replace(fix.pattern, fix.replacement)
         if (newContent !== content) {
-          content = newContent;
-          modified = true;
+          content = newContent
+          modified = true
         }
       }
     }
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed malformed JSX in: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed malformed JSX in: ${filePath}`)
+      return true
     }
     
-    return false;
+    return false
   } catch (error) {
-    console.error(`Error fixing malformed JSX in ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing malformed JSX in ${filePath}:`, error.message)
+    return false
   }
 }
 
 // Main execution
-console.log('Starting malformed JSX fixes...');
-
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-let fixedCount = 0;
-let errorCount = 0;
-
+console.log('Starting malformed JSX fixes...')
+const appDir = path.join(__dirname, 'app')
+const files = findFiles(appDir)
+let fixedCount = 0
+let errorCount = 0
 for (const file of files) {
   try {
     if (fixMalformedJSX(file)) {
-      fixedCount++;
+      fixedCount++
     }
   } catch (error) {
-    console.error(`Failed to process ${file}:`, error.message);
-    errorCount++;
+    console.error(`Failed to process ${file}:`, error.message)
+    errorCount++
   }
 }
 
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors: ${errorCount} files`);
-
+console.log(`\nFixed ${fixedCount} files`)
+console.log(`Errors: ${errorCount} files`)
 // Try building again
-console.log('\nTrying build again...');
+console.log('\nTrying build again...')
 try {
-  execSync('pnpm run build:no-check', { stdio: 'inherit' });
-  console.log('Build successful!');
+  execSync('pnpm run build:no-check', { stdio: 'inherit' })
+  console.log('Build successful!')
 } catch (error) {
-  console.log('Build still has issues, continuing with merge...');
-}
+  console.log('Build still has issues, continuing with merge...')
+}</div></div></div></div></div></div></div></div></div>

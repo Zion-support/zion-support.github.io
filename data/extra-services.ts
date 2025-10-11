@@ -1,11 +1,11 @@
 
-export interface ExtraService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
+export interface ExtraService {id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
   category: string
   real_implementation: boolean
   contact_info: unknown,
@@ -67,18 +67,18 @@ export const,
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
-    mobile: string, email: string;
-    address: string;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
+    mobile: string, email: string
+    address: string
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
+  contactInfo: unknown
     mobile: string
     email: string
 }
@@ -393,8 +393,8 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
-];
+]
+]
     id: "cloud-migration-expert"
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",

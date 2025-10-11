@@ -500,7 +500,7 @@ const pageConfigs = {
   }
 }
 
-// Create missing pages;
+// Create missing pages
 missingPages.forEach(pageName => {)
   const config = pageConfigs[pageName];)
   if (!config) {
@@ -540,7 +540,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               >
                 Get Started Today
               </a>
-              <a
+              <$2 />
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
@@ -649,13 +649,12 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
       </main>
 
       <Footer />,
-    </div>);
+    </div>)
 }
 
-export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
-
-  // Create directory if it doesn't exist;
-  const dirPath = `app/${pageName}`;
+export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`
+  // Create directory if it doesn't exist
+  const dirPath = `app/${pageName}`
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })
   }

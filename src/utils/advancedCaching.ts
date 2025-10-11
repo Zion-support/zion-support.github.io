@@ -31,7 +31,7 @@ class AdvancedCache
 }
   private,
   cache: Map,
-          <string, CacheEntry<T>> = new Map();
+          <string, CacheEntry<T>> = new Map()
   private,
   accessOrder: string[] = [],
   private,
@@ -51,7 +51,7 @@ class AdvancedCache
       maxSiz,
   e: options.maxSize || 100,
     }
-    // Load from persistent storage if needed;
+    // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -77,7 +77,7 @@ class AdvancedCache
   private loadFromStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     try {
     const data = storage?.getItem(this.storageKey)
   }
@@ -109,7 +109,7 @@ class AdvancedCache
         accessOrde,
   r: this.accessOrder,
       }
-      storage?.setItem(this.storageKey, JSON.stringify(data));
+      storage?.setItem(this.storageKey, JSON.stringify(data))
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -319,8 +319,8 @@ class AdvancedCache
   s: entry.hits,
         ag,
   e: now - entry.lastAccessed,)
-      });
-    });
+      })
+    })
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -364,6 +364,5 @@ export function createCache
   return new AdvancedCache
           <T>(options)
 }
-// Export default cache instance;
-export const defaultCache = new AdvancedCache();
-
+// Export default cache instance
+export const defaultCache = new AdvancedCache()

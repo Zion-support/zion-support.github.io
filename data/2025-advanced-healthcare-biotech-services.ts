@@ -1,34 +1,34 @@
-import { ServiceVariant } from '../types/service-variants';
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants'
 export interface AdvancedHealthcareBiotechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
+  contact_info: unknown
+    mobile: string
     email: string
     address: string
     website: string,
@@ -94,9 +94,9 @@ export interface AdvancedHealthcareBiotechService {
   s: string,
     websit,
   e: string}
-    email: string;
-    address: string;
-    website: string;
+    email: string
+    address: string
+    website: string
   }
         'AI-powered molecular modeling and simulation',
   real_implementatio,

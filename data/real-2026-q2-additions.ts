@@ -1970,7 +1970,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-    ];
+    ]
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance']
     integrations: ['Azure ADOktaSlackServiceNow'],
     competitors: ['AteraNinjaOne']
@@ -1989,8 +1989,8 @@ export const real2026Q2Additions = [
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data',
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.';
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.'
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     ]
@@ -1998,9 +1998,9 @@ export const real2026Q2Additions = [
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Strong enterprise traction with compliance-led buyers'
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
@@ -2009,17 +2009,17 @@ export const real2026Q2Additions = [
     id: 'ai-synthetic-data-factory'
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data',
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.';
-    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+    tagline: 'Generate high-quality, private, and balanced datasets for ML training.'
+    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     features: [,
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
+    ]
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
     integrations: ['S3 BigQuerySnowflakeDatabricks'],
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations'
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -2124,13 +2124,13 @@ export const real2026Q2Additions = [
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces'
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -2162,13 +2162,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps'
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -2200,13 +2200,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams'
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -2238,13 +2238,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams'
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -2276,13 +2276,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach'
     roi: 'Improve uptime communications and reduce churn risk',
@@ -2314,13 +2314,13 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption'
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -2353,13 +2353,13 @@ export const real2026Q2Additions = [
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs'
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -2391,18 +2391,18 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
     trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
 period: '/device/month'
     trialDays: 14,
     setupTime: 'Fast'
@@ -2424,9 +2424,9 @@ export const real2026 Q2 Additions = [
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Strong enterprise traction with compliance-led buyers'
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
@@ -2436,16 +2436,16 @@ export const real2026 Q2 Additions = [
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data',
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     features: [,
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
+    ]
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
     integrations: ['S3 BigQuerySnowflakeDatabricks'],
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations'
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -2472,7 +2472,7 @@ export const real2026 Q2 Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 perio,
   d: '/device/month'
     trialDay,
@@ -2531,13 +2531,13 @@ export const real2026Q2Additions = [
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces'
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -2569,13 +2569,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps'
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -2607,13 +2607,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams'
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -2645,13 +2645,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams'
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -2683,13 +2683,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach'
     roi: 'Improve uptime communications and reduce churn risk',
@@ -2721,13 +2721,13 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption'
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -2760,13 +2760,13 @@ export const real2026Q2Additions = [
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs'
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -2798,18 +2798,18 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
     trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
 export const real2026 Q2 Additions = [
   {
     id: 'ai-governance-compliance-hub'
@@ -2824,9 +2824,9 @@ export const real2026 Q2 Additions = [
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Strong enterprise traction with compliance-led buyers'
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
@@ -2836,16 +2836,16 @@ export const real2026 Q2 Additions = [
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data',
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     features: [,
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
+    ]
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
     integrations: ['S3 BigQuerySnowflakeDatabricks'],
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations'
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -2872,7 +2872,7 @@ export const real2026 Q2 Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
@@ -2916,13 +2916,13 @@ export const real2026Q2Additions = [
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces'
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -2954,13 +2954,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps'
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -2992,13 +2992,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams'
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -3030,13 +3030,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams'
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -3068,13 +3068,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach'
     roi: 'Improve uptime communications and reduce churn risk',
@@ -3106,13 +3106,13 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption'
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -3145,13 +3145,13 @@ export const real2026Q2Additions = [
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs'
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -3183,12 +3183,12 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
     trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
@@ -3245,9 +3245,9 @@ export const real2026Q2Additions = [
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Strong enterprise traction with compliance-led buyers'
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
@@ -3257,16 +3257,16 @@ export const real2026Q2Additions = [
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data',
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     features: [,
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
+    ]
     useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
     integrations: ['S3 BigQuerySnowflakeDatabricks'],
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations'
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -3340,13 +3340,13 @@ export const real2026Q2Additions = [
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces'
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -3378,13 +3378,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps'
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -3416,13 +3416,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams'
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -3454,13 +3454,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams'
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -3492,13 +3492,13 @@ export const real2026Q2Additions = [
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach'
     roi: 'Improve uptime communications and reduce churn risk',
@@ -3530,13 +3530,13 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption'
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -3569,13 +3569,13 @@ export const real2026Q2Additions = [
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs'
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -3607,12 +3607,12 @@ export const real2026Q2Additions = [
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
     trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',

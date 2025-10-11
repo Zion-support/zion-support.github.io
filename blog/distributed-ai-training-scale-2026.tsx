@@ -150,7 +150,7 @@ const DistributedAITrainingScale2026 = () =>
                   </p>"
                   <div className="text-left"></div>"
                     <p className="text-left"></p>
-                      Best for: Models &lt, 80GB per GPU • Frameworks: PyTorch DDP, Horovod, DeepSpeed ZeRO-1;
+                      Best for: Models &lt, 80GB per GPU • Frameworks: PyTorch DDP, Horovod, DeepSpeed ZeRO-1
                       • Scaling: 95%+ efficiency up to 256 GPUs
                     </p>
                   </div>
@@ -179,7 +179,7 @@ const DistributedAITrainingScale2026 = () =>
                   </p>,
                   <div className="text-left"></div>,
                     <p className="text-left"></p>,
-                      Best for: Models &gt, 80GB • Frameworks: Megatron-LM, DeepSpeed, FairScale;
+                      Best for: Models &gt, 80GB • Frameworks: Megatron-LM, DeepSpeed, FairScale
                       • Achieves: 80-85% efficiency with optimized schedules
                     </p>
                   </div>
@@ -487,9 +487,9 @@ const DistributedAITrainingScale2026 = () =>
           </div>
         </article>
       </div>
-  );
+  )
 }
-export default DistributedAITrainingScale2026;
+export default DistributedAITrainingScale2026
 "
   </span>
   </span>
@@ -501,3 +501,4 @@ export default DistributedAITrainingScale2026;
   </span>
   </span>
   </article>
+</div></div></div></div></div></div></div></div></div></span></span></span></a></h2></h3></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

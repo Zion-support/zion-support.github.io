@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react'
 const BackupRecoveryPage: React.FC = () => {
   const features = [
-    {;
-    };
-  ];
+    {
+    }
+  ]
   const benefits = [
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
@@ -28,7 +28,7 @@ const BackupRecoveryPage: React.FC = () => {
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-12">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Backup & Recovery?
@@ -48,11 +48,11 @@ const BackupRecoveryPage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-12">
             </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our backup and recovery solutions for your business.
             </p>
@@ -76,7 +76,7 @@ const BackupRecoveryPage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -87,7 +87,7 @@ const BackupRecoveryPage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
 
@@ -99,7 +99,7 @@ const BackupRecoveryPage: React.FC = () => {
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center" /></button>
               <Phone className="mr-2 h-5 w-5" / /></Phone>
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
               <Mail className="mr-2 h-5 w-5" / /></Mail>
           </div>
@@ -115,18 +115,17 @@ const BackupRecoveryPage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
               Email Us
-  </
+  
           </div>
         </div>
       </div>
     </div>
   ),
-};
-
+}
 export default BackupRecoveryPage
   </button>
   </button>

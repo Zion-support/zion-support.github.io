@@ -5,8 +5,8 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-  enableStructuredData?: boolean;
-  enableAnalytics?: boolean;
+  enableStructuredData?: boolean
+  enableAnalytics?: boolean
   enablePerformanceTracking?: boolean;`
 }`
   )
@@ -54,7 +54,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
   s: ['Zion Tech Group']")
     ),
 
-    fs.writeFileSync(pagePath, content);
+    fs.writeFileSync(pagePath, content)
     //         }
 })
 // 6. Fix missing Calculator import

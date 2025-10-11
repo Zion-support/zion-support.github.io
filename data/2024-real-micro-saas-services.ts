@@ -65,7 +65,7 @@ export const realMicroSaasCategories2024 = [
   'Revenue Optimization'
 ]
 export const realMicroSaasStats2024 =
-  totalServices: 2;
+  totalServices: 2
   categories: 4
   averageRating: 4.7
   activeUsers: 1200,

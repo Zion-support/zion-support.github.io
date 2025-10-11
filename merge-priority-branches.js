@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Merge Priority Branches - Focus on the most important branches first;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Merge Priority Branches - Focus on the most important branches first
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -57,8 +56,7 @@ const priorityBranches = [
   'chore/animated-section-typing-fix',
   'chore/build-fixes',
   'chore/build-fixes-and-seo',
-  'chore/build-fixes-and-slim-app'];
-
+  'chore/build-fixes-and-slim-app']
 // //Step 3: Merge function with conflict resolution,
 function mergeBranch(branchName) {,
 //   try {,
@@ -85,7 +83,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
-      );
+      )
 //       return { success: true, method: 'direct' }
     } catch (mergeError) {
 //       //Try different conflict resolution strategies
@@ -93,7 +91,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
         //Strategy 1: Use theirs,
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
-        );
+        )
 //         return { success: true, method: 'theirs' }
       } catch (theirsError) {
         try {
@@ -140,9 +138,9 @@ const results = {
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
       already_merged: 0
       not_found: 0
       failed: 0,
@@ -178,13 +176,12 @@ const results = {/* TODO: Fix JSX expression */}
 
 //Step 5: Generate report,
 // const report = {,
-  ...results;
+  ...results
   timestamp: new Date().toISOString()}
 
 fs.writeFileSync('priority-branches-merge-report.json')
   JSON.stringify(report, null, 2)
-);
-
+)
 //Step 6: Push changes,
 // try {,
   execSync('git push origin main', { stdio: 'inherit' })

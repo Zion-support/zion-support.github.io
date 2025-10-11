@@ -1,13 +1,13 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface Q3Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular?: boolean
   icon: string
   color: string
   link: string,
@@ -16,35 +16,35 @@ export interface Q3Service {id: string, name: string,
   period: string, description: string,
   features: string[], popular?: boolean,
   icon: string, color: string,
-  textColor: string, link: string;
-  marketPosition?: string;
+  textColor: string, link: string
+  marketPosition?: string
   targetAudience?: string
   trialDays?: number
   setupTime?: string,
-  category: string, realService: boolean;
+  category: string, realService: boolean
   technology?: string[]
   integrations?: string[]
   useCases?: string[],,
-  roi?: string;
+  roi?: string
   competitors?: string[],
-  marketSize?: string;
-  growthRate?: string;
-  text_color: string;
-  link: string;  market_position?: string;
-  target_audience?: string;
-  trial_days?: number;
-  setup_time?: string;
-  category: string;
-  real_service: boolean;  technology?: string[];  integrations?: string[];
-  use_cases?: string[];
-  roi?: string;
+  marketSize?: string
+  growthRate?: string
+  text_color: string
+  link: string;  market_position?: string
+  target_audience?: string
+  trial_days?: number
+  setup_time?: string
+  category: string
+  real_service: boolean;  technology?: string[];  integrations?: string[]
+  use_cases?: string[]
+  roi?: string
   competitors?: string[]
   market_size?: string
   growth_rate?: string,,
-  variant?: ServiceVariant;
-  customers?: number;
-  rating?: number;
-  reviews?: number;
+  variant?: ServiceVariant
+  customers?: number
+  rating?: number
+  reviews?: number
 const contact = {
   customers?: number}
   rating?: number,
@@ -99,9 +99,9 @@ export const,
 const contact = {
   mobile: '+1 302 464 0950',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-const contact = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact = {
   mobile: '+1 302 464 0950',
@@ -224,7 +224,7 @@ export const,
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
-      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries';
+      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
@@ -241,16 +241,16 @@ export const,
     trialDays: 14,
     setupTime: '12 weeks'
     color: 'from - emerald - 600 to - teal - 700'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: '',
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.'
-    targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
-    trialDays: 14;
-    setupTime: '1–2 weeks';
+    targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
+    trialDays: 14
+    setupTime: '1–2 weeks'
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
@@ -291,27 +291,27 @@ export const,
     rating: 4 && 4.9
     reviews: 31,
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.'
-    competitors: ['Lemon SqueezyGumroadPaddle'];
-    customers: 12;
-    rating: 4 && 4.8;
-    reviews: 18;
+    competitors: ['Lemon SqueezyGumroadPaddle']
+    customers: 12
+    rating: 4 && 4.8
+    reviews: 18
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     // @ts - expect - error augment common shape for UI components that expect contact_info,,
     contact_info: contact,
   }
     id: 'digital - product - commerce - stack',
-    contactInfo: contact;
-    // @ts - expect - error augment common shape for UI components that expect contact_info;
+    contactInfo: contact
+    // @ts - expect - error augment common shape for UI components that expect contact_info
     contact_info: contact,
   }
   {
-    targetAudience: 'Content sites, ecommerce, publishers on WordPress';
-    trialDays: 7;
-    setupTime: '2–4 days';
-    color: 'from - purple - 600 to - pink - 600';
-    text_color: 'text - purple - 200';
-    link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation';
+    targetAudience: 'Content sites, ecommerce, publishers on WordPress'
+    trialDays: 7
+    setupTime: '2–4 days'
+    color: 'from - purple - 600 to - pink - 600'
+    text_color: 'text - purple - 200'
+    link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation'
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions'
     price: '$1, 200'
@@ -333,8 +333,8 @@ export const,
     integrations: ['StripeLemon SqueezyGumroadMake / Zapier'],
     use_cases: ['Course sales_plugin licenses_templates marketplace'],
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.'
-    competitors: ['Lemon SqueezyGumroadPaddle'];
-    customers: 12;
+    competitors: ['Lemon SqueezyGumroadPaddle']
+    customers: 12
     rating: 4 && 4.8
     reviews: 18
     // @ts - expect - error augment common shape for UI components that expect contact_info,,
@@ -368,10 +368,10 @@ export const,
     integrations: ['Link WhisperYoast / RankMathSearch Console']
     use_cases: ['Boost organic traffic_fix site structure_improve crawl and CTR']
     roi: '525% organic uplift in 812 weeks on content libraries.'
-    competitors: ['Link WhisperInternal Link Juicer'];
-    customers: 30;
-    rating: 4 && 4.7;
-    reviews: 22;
+    competitors: ['Link WhisperInternal Link Juicer']
+    customers: 30
+    rating: 4 && 4.7
+    reviews: 22
     reviews: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
@@ -407,7 +407,7 @@ export const,
     integrations: ['YotpoJudge.meLooxStamped']
     use_cases: ['Increase trust_lift CVRCollect UGC for ads']
     roi: '210% CVR lift on PDPs post - deployment.'
-    competitors: ['YotpoJudge.meLooxStamped.io'];
+    competitors: ['YotpoJudge.meLooxStamped.io']
     customers: 10
     rating: 4 && 4.8
     reviews: 12,
@@ -714,7 +714,7 @@ export const,
     marketSize: '$30 B+ subscription economy tooling'
     growthRate: '30% YoY'
     variant: 'ai-futuristic'
-    customers: 24;
+    customers: 24
     rating: 4.9
     reviews: 31
     // @ts-expect-error augment common shape for UI components that expect contactInfo,,
@@ -793,7 +793,7 @@ export const,
     useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace']
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.',
   competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle']
-    customers: 12;
+    customers: 12
     rating: 4.8
     reviews: 18
     // @ts-expect-error augment common shape for UI components that expect contactInfo,,
@@ -887,7 +887,7 @@ export const,
       'Improve crawl and CTR'],
     roi: '525% organic uplift in 812 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer']
-    customers: 30;
+    customers: 30
     rating: 4.7
     reviews: 22
     // @ts-expect-error augment common shape for UI components that expect contactInfo,,
@@ -977,7 +977,7 @@ export const,
     useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads']
     roi: '210% CVR lift on PDPs post-deployment.',
     competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io']
-    customers: 10;
+    customers: 10
     rating: 4.8
     reviews: 12
     // @ts-expect-error augment common shape for UI components that expect contactInfo,,
@@ -1104,7 +1104,7 @@ export const,
     targetAudience: 'Indie SaaS, creators, agencies launching digital products',
     setupTime: '57 days'
     category: 'Developer Tools'
-    realService: true;
+    realService: true
     customers: 12
     rating: 4.8
     reviews: 18,
@@ -1145,7 +1145,7 @@ export const,
     trialDays: 7
     setupTime: '24 days'
     category: 'Growth & Marketing'
-    realService: true;
+    realService: true
     customers: 30
     rating: 4.7
     reviews: 22,
@@ -1187,7 +1187,7 @@ export const,
     targetAudience: 'Shopify and custom ecommerce brands'
     setupTime: '36 days'
     category: 'Quality & Monitoring'
-    realService: true;
+    realService: true
     customers: 10
     rating: 4.8
     reviews: 12,
@@ -1216,7 +1216,7 @@ export const,
   s: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
   }
-];
+]
 }
 }
 export const,
@@ -1465,9 +1465,9 @@ export const,
   },];    contactInfo: contact
     contactInfo: contact
   }
-];
+]
 }
-};
+}
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',
@@ -1545,10 +1545,10 @@ export const realServicesQ32025: Q3Service[] = [
     marketSize: '$30B+ subscription economy tooling'
     growthRate: '30% YoY'
     variant: 'ai-futuristic'
-    customers: 24;
-    rating: 4.9;
-    reviews: 31;
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
+    customers: 24
+    rating: 4.9
+    reviews: 31
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     contactInfo: contact
     contactInfo: contact,
@@ -1639,10 +1639,10 @@ export const realServicesQ32025: Q3Service[] = [
     useCases: ['Course salesPlugin licenses', 'Templates marketplace'],
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.',
     competitors: ['Lemon SqueezyGumroad', 'Paddle'],
-    customers: 12;
-    rating: 4.8;
-    reviews: 18;
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
+    customers: 12
+    rating: 4.8
+    reviews: 18
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     contactInfo: contact
     contactInfo: contact,
@@ -1790,10 +1790,10 @@ export const realServicesQ32025: Q3Service[] = [
     useCases: ['Boost organic trafficFix site structure', 'Improve crawl and CTR'],
     roi: '525% organic uplift in 812 weeks on content libraries.'
     competitors: ['Link WhisperInternal Link Juicer']
-    customers: 30;
-    rating: 4.7;
-    reviews: 22;
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;
+    customers: 30
+    rating: 4.7
+    reviews: 22
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     contactInfo: contact
     contactInfo: contact,
@@ -1877,9 +1877,9 @@ export const realServicesQ32025: Q3Service[] = [
     useCases: ['Increase trustLift CVR', 'Collect UGC for ads'],
     roi: '210% CVR lift on PDPs post-deployment.',
     competitors: ['YotpoJudge.me', 'LooxStamped.io'],
-    customers: 10;
-    rating: 4.8;
-    reviews: 12;
+    customers: 10
+    rating: 4.8
+    reviews: 12
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     contactInfo: contact,
@@ -1941,7 +1941,7 @@ export const realServicesQ32025: Q3Service[] = [
   o: contact,
     contactInf,
   o: contact}
-];
+]
 i,
   d: string, nam,
   e: string, taglin,

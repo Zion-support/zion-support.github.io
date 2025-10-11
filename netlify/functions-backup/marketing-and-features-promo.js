@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   o: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in marketing-and-features-promo: ') error
   }
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'marketing-and-features-promo'})
-      });
+      })
     }
   }
 }

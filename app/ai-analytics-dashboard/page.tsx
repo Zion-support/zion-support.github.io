@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, PieChart, Activity } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, PieChart, Activity } from 'lucide-react'
 const AiAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -31,15 +30,14 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor key performance indicators and track business metrics.',
       benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis'],
     }
-  ];
+  ]
   const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',
-    'Improve operational efficiency by 40%',;
-    'Reduce reporting time by 80%',;
-    'Gain competitive advantage with insights';
-  ];
-
+    'Improve operational efficiency by 40%',
+    'Reduce reporting time by 80%',
+    'Gain competitive advantage with insights'
+  ]
   return (
     <>
       <Helmet>
@@ -52,7 +50,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center">
               </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Analytics Dashboard
@@ -75,7 +73,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
@@ -111,7 +109,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose AI Analytics?
@@ -134,7 +132,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
@@ -155,10 +153,8 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       
       <Footer /></Footer>
     </>
-  );
-};
-
-
+  )
+}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />

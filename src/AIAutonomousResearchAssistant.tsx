@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Brain, Search, FileText, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Lightbulb, Target, Zap } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { Brain, Search, FileText, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Lightbulb, Target, Zap } from 'lucide-react'
+import SEOHead from '../components/SEOHead'
+import { Helmet } from 'react-helmet-async'
 const AIAutonomousResearchAssistant = () => {
     const features = [
         {
@@ -27,8 +26,7 @@ const AIAutonomousResearchAssistant = () => {
             title: "Trend Analysis",
             description: "Identify emerging trends and patterns across industries with predictive analytics and market intelligence."
         }
-    ];
-
+    ]
     const capabilities = [
         {
             icon: Users,
@@ -50,8 +48,7 @@ const AIAutonomousResearchAssistant = () => {
             title: "Real-time Updates",
             description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
         }
-    ];
-
+    ]
     const benefits = [
         {
             icon: CheckCircle,
@@ -73,8 +70,7 @@ const AIAutonomousResearchAssistant = () => {
             title: "Competitive Advantage",
             description: "Stay ahead with cutting-edge research and market intelligence"
         }
-    ];
-
+    ]
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             <Helmet>
@@ -100,13 +96,13 @@ const AIAutonomousResearchAssistant = () => {
                             gathers, analyzes, and synthesizes information from multiple sources.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
+                            <$2 />
                                 to="/contact"
                                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                             >
                                 Get Started Today
                             </Link>
-                            <Link
+                            <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
                                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                             >
@@ -250,13 +246,13 @@ const AIAutonomousResearchAssistant = () => {
                             capabilities with our AI-powered research assistant.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
+                            <$2 />
                                 to="/contact"
                                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                             >
                                 Schedule Demo
                             </Link>
-                            <Link
+                            <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
                                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                             >
@@ -267,7 +263,6 @@ const AIAutonomousResearchAssistant = () => {
                 </div>
             </section>
         </div>
-    );
-};
-
-export default AIAutonomousResearchAssistant;
+    )
+}
+export default AIAutonomousResearchAssistant

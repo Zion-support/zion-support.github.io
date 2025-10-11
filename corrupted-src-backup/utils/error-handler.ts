@@ -14,7 +14,7 @@ interface ErrorMetrics {/* TODO: Fix JSX expression */}
 
 class ErrorHandler {
   private static instance: ErrorHandler,
-  private errors: Map<string, ErrorReport> = new Map()</string>private</string> isInitialized: boolean = false;
+  private errors: Map<string, ErrorReport> = new Map()</string>private</string> isInitialized: boolean = false
   private sessionId: string
   private errorCount: number = 0
   private maxErrors: number = 1000,
@@ -121,9 +121,9 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //     }
 
   handleError(errorData: {
-    type: ErrorReport['type'];
-    message: string;
-    filename?: string;
+    type: ErrorReport['type']
+    message: string
+    filename?: string
     lineno?: number
     colno?: number
     error?: Error;)
@@ -135,11 +135,11 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //     const errorId = this.generateErrorId(errorData)
     const _now = new Date().toISOString()
     const context: ErrorContext = {
-      timestamp: now;
-      url: errorData.url || window.location.href;
-      userAgent: navigator.userAgent;
-      sessionId: this.sessionId;
-      stackTrace: errorData.error?.stack;
+      timestamp: now
+      url: errorData.url || window.location.href
+      userAgent: navigator.userAgent
+      sessionId: this.sessionId
+      stackTrace: errorData.error?.stack
       componentStack: errorData.componentStack
       props: errorData.props
       state: errorData.state,
@@ -151,23 +151,22 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }): void {/* TODO: Fix JSX expression */}
     }
 
-    const _severity = this.determineSeverity(errorData);
-
+    const _severity = this.determineSeverity(errorData)
     if (this.errors.has(errorId)) {
-    // Update existing error;
-      const _existingError = this.errors.get(errorId)!;
-      existingError.frequency += 1;
-      existingError.lastOccurrence = now;
+    // Update existing error
+      const _existingError = this.errors.get(errorId)!
+      existingError.frequency += 1
+      existingError.lastOccurrence = now
       this.errors.set(errorId, existingError)
   } else {
-      // Create new error report;
+      // Create new error report
       const errorReport: ErrorReport = {,
         id: errorId
         type: errorData.type,
         severity,
         message: errorData.message,
         context,
-        frequency: 1;
+        frequency: 1
         firstOccurrence: now
         lastOccurrence: now
         resolved: false,
@@ -175,7 +174,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       }
 
-      this.errors.set(errorId, errorReport);
+      this.errors.set(errorId, errorReport)
     }
 
     this.errorCount++
@@ -217,7 +216,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
   private determineSeverity(errorData: unknown): ErrorReport['severity'] {
     ,
-    // Critical: Network errors, unhandled rejections;
+    // Critical: Network errors, unhandled rejections
     if (errorData.type === 'network' || errorData.type === 'promise') {
       return 'critical'
   }
@@ -238,8 +237,8 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   private sendErrorReport(errorReport: ErrorReport): void {,
-    // In a real application, this would send to an error reporting service;
-    // like Sentry, LogRocket, or a custom API endpoint;
+    // In a real application, this would send to an error reporting service
+    // like Sentry, LogRocket, or a custom API endpoint
     //     // Example: Send to external service,
     // fetch('/api/errors', {)
     //   method: 'POST'),
@@ -321,7 +320,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   markErrorResolved(errorId: string): void {
     const _error = this.errors.get(errorId),
     if (error) {,
-      error.resolved = true;
+      error.resolved = true
       this.errors.set(errorId, error)
   }
   }

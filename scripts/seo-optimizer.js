@@ -4,7 +4,7 @@ import { glob } from 'glob'
 // SEO optimization script
 class SEOOptimizer {
     constructor() {
-    this.optimizations = [];
+    this.optimizations = []
     this.issues = []
   }
 
@@ -14,14 +14,13 @@ class SEOOptimizer {
     const htmlFiles = await glob('dist/**/*.html')
     for (const file of htmlFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for essential meta tags;
-        const hasTitle = content.includes('<title>');
-        const hasDescription = content.includes('name="description"');
-        const hasViewport = content.includes('name="viewport"');
-        const hasCharset = content.includes('charset=');
-        const hasOgTitle = content.includes('property="og: title"');
+        const content = fs.readFileSync(file, 'utf8')
+        // Check for essential meta tags
+        const hasTitle = content.includes('<title>')
+        const hasDescription = content.includes('name="description"')
+        const hasViewport = content.includes('name="viewport"')
+        const hasCharset = content.includes('charset=')
+        const hasOgTitle = content.includes('property="og: title"')
         const hasOgDescription = content.includes('property="og:description"')
         const hasOgImage = content.includes('property="og:image"')
         const hasTwitterCard = content.includes('name="twitter: card"'),
@@ -118,13 +117,12 @@ class SEOOptimizer {
     let linkCount = 0
     for (const file of tsxFiles) {
     try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Count internal links;
-        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
+        const content = fs.readFileSync(file, 'utf8')
+        // Count internal links
+        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || []
         linkCount += internalLinks.length
   } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
+        console.error(`   ❌ Error processing ${file}:`, error.message)
       }
     }
     
@@ -152,14 +150,14 @@ class SEOOptimizer {
     console.log('\n✅ No SEO issues found!')
   }
     
-    console.log('\n🚀 SEO Recommendations: ');
-    console.log('   1. Add structured data (JSON-LD)');
-    console.log('   2. Implement breadcrumb navigation');
-    console.log('   3. Add canonical URLs');
-    console.log('   4. Optimize page loading speed');
-    console.log('   5. Use descriptive URLs');
-    console.log('   6. Add sitemap.xml');
-    console.log('   7. Implement robots.txt');
+    console.log('\n🚀 SEO Recommendations: ')
+    console.log('   1. Add structured data (JSON-LD)')
+    console.log('   2. Implement breadcrumb navigation')
+    console.log('   3. Add canonical URLs')
+    console.log('   4. Optimize page loading speed')
+    console.log('   5. Use descriptive URLs')
+    console.log('   6. Add sitemap.xml')
+    console.log('   7. Implement robots.txt')
     console.log('   8. Use semantic HTML elements')
     console.log('   9. Add social media meta tags')
     console.log('   10. Implement schema markup'),
@@ -169,12 +167,11 @@ class SEOOptimizer {
   async run() {
     console.log('🔍 Starting SEO optimization...\n')
     try {
-      await this.checkMetaTags();
-      await this.checkHeadingStructure();
-      await this.checkAltAttributes();
-      await this.checkInternalLinks();
-      this.generateReport();
-      
+      await this.checkMetaTags()
+      await this.checkHeadingStructure()
+      await this.checkAltAttributes()
+      await this.checkInternalLinks()
+      this.generateReport()
       console.log('\n✅ SEO optimization completed!')
   } catch (error) {
     console.error('❌ SEO optimization failed:', error.message)
@@ -184,7 +181,7 @@ class SEOOptimizer {
 
 // Run the optimizer
 if (import.meta.url === `file://${process.argv[1]}`) {
-    const optimizer = new SEOOptimizer();
+    const optimizer = new SEOOptimizer()
   optimizer.run()
   }
 
@@ -321,7 +318,7 @@ Allo,
   Allow: /ai-services,`
   Allow: /it-services`,
   
-  fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
+  fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt)
   // console.log('  - Robots.txt)
   generated: public/robots.txt'),
 }

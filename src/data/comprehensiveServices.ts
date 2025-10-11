@@ -1,52 +1,52 @@
 export interface ComprehensiveService {
 export interface ComprehensiveService {
 export interface ComprehensiveService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactLink: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'project-based';
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  deliveryTime: string;
-  tags: string[];
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
+  features: string[]
+  useCases: string[]
+  targetAudience: string[]
+  tags: string[]
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketPrice: string
+  contactLink: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'project-based'
+  features: string[]
+  benefits: string[]
+  marketPrice: string
+  deliveryTime: string
+  tags: string[]
   author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-    verified: boolean;
-  };
-  images: string[];
-  rating: number;
-  reviewCount: number;
-  aiScore: number;
-  featured: boolean;
+    name: string
+    id: string
+    avatarUrl?: string
+    verified: boolean
+  }
+  images: string[]
+  rating: number
+  reviewCount: number
+  aiScore: number
+  featured: boolean
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string
+    email: string
+    website: string
+  }
 }
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -2225,7 +2225,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   }
-];
+]
 export const serviceCategories = [
   {
     id: "ai-services",
@@ -2233,13 +2233,13 @@ export const serviceCategories = [
     description: "Artificial Intelligence and Machine Learning solutions",
     icon: "🤖",
     count: 3
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings"
 export interface ServiceCategory {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  color: string;
+  id: string
+  name: string
+  description: string
+  icon: string
+  color: string
 }
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
@@ -2298,10 +2298,10 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     icon: "🎯",
     color: "from-teal-500 to-green-600"
   }
-];
-import { ProductListing } from "@/types/listings";
+]
+import { ProductListing } from "@/types/listings"
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-  supportLevel: 'basic' | 'premium' | 'enterprise';
+  supportLevel: 'basic' | 'premium' | 'enterprise'
 }
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -2314,9 +2314,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2500,
     currency: "$",
     tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services & Solutions
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services and Solutions
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -2379,7 +2379,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings"
 // Comprehensive Micro SAAS Services & Solutions
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -4664,7 +4664,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "1-2 Weeks"
   }
-];
+]
 // Service categories for filtering
 export const SERVICE_CATEGORIES = [
   { label: 'AI Automation', value: 'ai-automation' },
@@ -4688,13 +4688,13 @@ export const SERVICE_CATEGORIES = [
   { label: 'Telemedicine', value: 'telemedicine' },
   { label: 'EdTech', value: 'edtech' },
   { label: 'Virtual Learning', value: 'virtual-learning' }
-];
+]
 // Pricing tiers for different service levels
 export const PRICING_TIERS = {
   basic: { name: 'Basic', multiplier: 0.7, features: ['Core functionality', 'Basic support', 'Standard SLA'] },
   professional: { name: 'Professional', multiplier: 1.0, features: ['Full functionality', 'Priority support', 'Enhanced SLA', 'Custom integrations'] },
   enterprise: { name: 'Enterprise', multiplier: 1.5, features: ['Full functionality', '24/7 support', 'Premium SLA', 'Custom integrations', 'Dedicated account manager', 'On-premise option'] }
-};
+}
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
@@ -4992,7 +4992,7 @@ export const CONTACT_INFO = {
       website: "https://ziontechgroup.com"
     }
   }
-];
+]
 // Service categories for filtering
 export const SERVICE_CATEGORIES = [
     images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
@@ -5004,7 +5004,7 @@ export const SERVICE_CATEGORIES = [
     availability: "4-6 Weeks",
     aiScore: 95
   }
-];
+]
 // Service Categories for filtering
 export const SERVICE_CATEGORIES = [
   { id: "ai-services", name: "AI Services", description: "Artificial Intelligence & Machine Learning Solutions" },
@@ -5014,7 +5014,7 @@ export const SERVICE_CATEGORIES = [
   { id: "specialized-solutions", name: "Specialized Solutions", description: "Healthcare, FinTech & Industry-Specific" },
   { id: "iot-solutions", name: "IoT Solutions", description: "Internet of Things & Smart Systems" },
   { id: "education-solutions", name: "Education Solutions", description: "Learning & Training Platforms" }
-];
+]
 // Service Subcategories
 export const SERVICE_SUBCATEGORIES = {
   "ai-services": ["Chatbots & Virtual Assistants", "Content Creation", "Data Analytics", "Computer Vision", "Natural Language Processing"],
@@ -5024,13 +5024,13 @@ export const SERVICE_SUBCATEGORIES = {
   "specialized-solutions": ["Healthcare", "FinTech", "Manufacturing", "Retail", "Logistics"],
   "iot-solutions": ["Platform", "Smart Buildings", "Industrial IoT", "Connected Devices", "Data Analytics"],
   "education-solutions": ["Learning Management", "VR/AR Training", "Skill Assessment", "Content Creation", "Analytics"]
-};
+}
 // Pricing Tiers
 export const PRICING_TIERS = {
   "starter": { min: 500, max: 1999, label: "Starter Solutions" },
   "professional": { min: 2000, max: 4999, label: "Professional Solutions" },
   "enterprise": { min: 5000, max: 15000, label: "Enterprise Solutions" }
-};
+}
     description: "Secure smart contract development for DeFi, NFTs, and blockchain applications with comprehensive security auditing.",
     category: "Blockchain & Web3",
     subcategory: "Smart Contracts",
@@ -5265,7 +5265,7 @@ export const PRICING_TIERS = {
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium"
   }
-];
+]
 export const SERVICE_CATEGORIES = [
   "AI & Machine Learning",
   "Cloud & DevOps",
@@ -5276,7 +5276,7 @@ export const SERVICE_CATEGORIES = [
   "Blockchain & Web3",
   "IoT & Edge Computing",
   "Emerging Technologies"
-];
+]
 export const SERVICE_SUBCATEGORIES = {
   "AI & Machine Learning": [
     "Chatbots & Conversational AI",
@@ -5342,7 +5342,7 @@ export const SERVICE_SUBCATEGORIES = {
     "Augmented Reality",
     "Extended Reality (XR)"
   ]
-};
+}
     description: "Develop comprehensive disaster recovery and business continuity plans. Includes risk assessment, recovery procedures, testing protocols, and ongoing maintenance. Features cloud-based backup solutions and failover systems.",
     category: "Managed IT Services",
     subcategory: "Disaster Recovery",
@@ -5362,7 +5362,7 @@ export const SERVICE_SUBCATEGORIES = {
     availability: "8-10 Weeks",
     aiScore: 89
   }
-];
+]
 // Service Categories for better organization
 export const SERVICE_CATEGORIES = [
   {
@@ -5435,15 +5435,15 @@ export const SERVICE_CATEGORIES = [
     icon: "🛠️",
     services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Managed IT Services")
   }
-];
+]
 // Featured Services for homepage display
-export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured);
+export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured)
 // Services by price range
 export const SERVICES_BY_PRICE = {
   budget: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price < 5000),
   midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
   enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
-};
+}
   { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
   { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
   { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
@@ -5452,7 +5452,7 @@ export const SERVICES_BY_PRICE = {
   { id: "blockchain-web3", name: "Blockchain & Web3", description: "Decentralized technology solutions" },
   { id: "iot-hardware", name: "IoT & Hardware", description: "Internet of Things and hardware solutions" },
   { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" }
-];
+]
 // Pricing tiers for subscription services
 export const SUBSCRIPTION_TIERS = [
   {
@@ -5476,11 +5476,11 @@ export const SUBSCRIPTION_TIERS = [
     period: "month",
     features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
   }
-];
+]
   website: "https://ziontechgroup.com"
-};
+}
   website: "https://ziontechgroup.com"
-};
+}
   "Process Automation",
   "Governance",
   "Quantum Computing",
@@ -5511,6 +5511,6 @@ export const SUBSCRIPTION_TIERS = [
   "Learning Analytics",
   "Digital Assets",
   "Penetration Testing"
-];
+]
   "Process Automation"
-];
+]

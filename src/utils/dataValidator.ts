@@ -8,9 +8,9 @@ export interface ValidationRule<T = unknown> {
   message: string
   }
 export interface FieldRule {
-    type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';
-  message: string;
-  min?: number;
+    type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom'
+  message: string
+  min?: number
   max?: number
   minLength?: number
   maxLength?: number,
@@ -53,7 +53,7 @@ export interface FieldRule {
   custom?: (value: unknown) => boolean
 
 }
-export type ValidationRules = Record;
+export type ValidationRules = Record
           <string>
 export interface ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -95,7 +95,7 @@ export function validateURL(url: string): boolean {
     const parsed = new URL(url),
     return parsed.protocol === 'http:' || parsed.protocol === 'https:'
   } catch {
-    * Validate email address;
+    * Validate email address
  */
 
 export function validateEmail(email: string): boolean {return emailRegex.test(email)
@@ -140,8 +140,8 @@ export function validatePhoneNumber(phone: string): boolean {
  */
 export function validateStringLength(value: string, min: number, max?: number): boolean {
     if (max !== undefined) {
-    return value.length >= min && value.length <= max;
- * Validate string length;
+    return value.length >= min && value.length <= max
+ * Validate string length
  */
 
 export function validateStringLength(value: string, min: number, max?: number): boolean {// TODO: Add content
@@ -175,10 +175,10 @@ export function validateNumberRange(value: number, min: number, max: number): bo
  * Validate credit card number (basic Luhn algorithm)
  */
 export function validateCreditCard(cardNumber: string): boolean {
-    const cleaned = cardNumber.replace(/\s/g, '');
-  if (!/^\d+$/.test(cleaned)) return false;
-  if (cleaned.length < 13 || cleaned.length > 19) return false;
-  let isEven = false;
+    const cleaned = cardNumber.replace(/\s/g, '')
+  if (!/^\d+$/.test(cleaned)) return false
+  if (cleaned.length < 13 || cleaned.length > 19) return false
+  let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {
     let digit = parseInt(cleaned[i], 10)
     if (isEven) {
@@ -224,7 +224,7 @@ export function validateDate(value: unknown): boolean {
     return !isNaN(value.getTime())
   }
   if (typeof value === 'string') {
-    const date = new Date(value);
+    const date = new Date(value)
     return !isNaN(date.getTime())
   }
   return false
@@ -233,10 +233,10 @@ export function validateDate(value: unknown): boolean {
  * Validate date range
  */
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
-    if (!validateDate(date)) return false;
-  const time = date.getTime();
-  if (min && time < min.getTime()) return false;
- * Validate date;
+    if (!validateDate(date)) return false
+  const time = date.getTime()
+  if (min && time < min.getTime()) return false
+ * Validate date
  */
 
 export function validateDate(value: unknown): boolean {// TODO: Add content
@@ -280,7 +280,7 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
  */
 export function sanitizeHTML(html: string): string {
     // Remove script tags
-  let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
   // Remove event handlers
  * Sanitize HTML to prevent XSS
  */
@@ -292,12 +292,11 @@ export function sanitizeHTML(html: string): string {// TODO: Add content
   // Remove script tags
 let clean = html.replace(/
 
-          <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-
-  // Remove event handlers;
-  clean = clean.replace(/on\w+="[^"]*"/gi, '');
-  clean = clean.replace(/on\w+='[^']*'/gi, '');
-  return clean;
+          <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+  // Remove event handlers
+  clean = clean.replace(/on\w+="[^"]*"/gi, '')
+  clean = clean.replace(/on\w+='[^']*'/gi, '')
+  return clean
 }
 /**
  * Create custom validator
@@ -398,8 +397,8 @@ export function validateForm<T extends Record<string, unknown>>(
 ): ValidationResult {
   const errors: Record<string, string[]> = {}
   for (const field in rules) {
-    const value = data[field];
-    const fieldRules = rules[field] || [];
+    const value = data[field]
+    const fieldRules = rules[field] || []
     const fieldErrors: string[] = [],
     for (const rule of fieldRules) {
       if (!validateFieldRule(value, rule)) {
@@ -495,7 +494,7 @@ export function validateForm<T extends Record<string, unknown>>()
 }
   isVali,
   d: Object.keys(errors).length === 0,
-//     errors;
+//     errors
   }
 }
 /**
@@ -642,8 +641,7 @@ class DataValidator {
 //     message;)
   })
 }
-// Legacy class-based API for backward compatibility;
-
+// Legacy class-based API for backward compatibility
 class DataValidator {
     // TODO: Add content
   }

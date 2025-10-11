@@ -98,7 +98,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
 "
         <meta name="description"
   content: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.", /><meta name: "keywords,
-  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><link rel: "canonical
+  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><nk rel: "canonical$2 />
   href="https://ziontechgroup.com/blog/real-time-ai-inference-optimization-2025,
         />
       </Helmet>",
@@ -187,7 +187,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
   conten,"
   t: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.", /><meta,"
   name: "keywords,"
-  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><link,"
+  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><nk,"$2 />
   rel: "canonical,"
   href=",
   http,
@@ -291,7 +291,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
                   <span>October 1, 2025
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2 "></TrendingUp>"
-              <h1 className="text-4xl,"
+              < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 leading-tight"></h1>
 :src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx,
   </div>
@@ -870,3 +870,4 @@ export default RealTimeAIInferenceOptimization2025</div>
 </TrendingUp>
 </TrendingUp>
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></Link></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></article></article>

@@ -7,7 +7,7 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 export interface UsePerformanceOptions {
-  componentName: string;
+  componentName: string
   trackRenderTime?: boolean
   trackMemoryUsage?: boolean
   slowRenderThreshold?: number; // in milliseconds,
@@ -33,27 +33,26 @@ export const usePerformance = (option)
     return () => {
       //       const mountDuration = performance.now() - mountTimeRef.current
   useEffect(() => {/* TODO: Fix JSX expression */}
-      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
+      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration)
     }
-  }, [componentName]);
-
-  // Track render performance;
+  }, [componentName])
+  // Track render performance
   const trackRender = useCallback(() => {
     if (!trackRenderTime) return
     renderStartTimeRef.current = performance.now()
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
-      //       const renderTime = performance.now() - renderStartTimeRef.current;
+      //       const renderTime = performance.now() - renderStartTimeRef.current
       //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>
 
       const metrics: PerformanceMetrics = {,
-        renderTime;
+        renderTime
         componentMountTime: performance.now() - mountTimeRef.current,
         isSlowRender}
 
-      // Track memory usage if available;
+      // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {
-    const _memory = (performance as any).memory;
+    const _memory = (performance as any).memory
         metrics.memoryUsage = memory.usedJSHeapSize
   }
 
@@ -61,7 +60,7 @@ export const usePerformance = (option)
   const trackRender = useCallback(() => {/* TODO: Fix JSX expression */}
       }
 
-      // Track memory usage if available;
+      // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {/* TODO: Fix JSX expression */}
       }
 
@@ -93,19 +92,19 @@ export const usePageLoadPerformance = () => {
         )[0] as PerformanceNavigationTiming
         if (navigation) {
           const metrics = {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart
             firstByte: navigation.responseStart - navigation.requestStart
             domInteractive: navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart
   }
 
-          // Track each metric;
+          // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           }
 
-          // Track each metric;
+          // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
             analytics.trackPerformance(`page_load_${key}`, value)
           })
@@ -125,17 +124,17 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
       }
     }
 
-    // Track immediately if page is already loaded;
+    // Track immediately if page is already loaded
     if (document.readyState === 'complete') {
     trackPageLoad()
   } else {
-      // Wait for load event;
-      window.addEventListener('load', trackPageLoad);
-      return () => window.removeEventListener('load', trackPageLoad);
+      // Wait for load event
+      window.addEventListener('load', trackPageLoad)
+      return () => window.removeEventListener('load', trackPageLoad)
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
-  }, []);
+  }, [])
 }
 
 /**
@@ -157,10 +156,9 @@ export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
       })
     })
     observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-
-    return () => observer.disconnect();
-  }, []);
+  s: ['resource'] })
+    return () => observer.disconnect()
+  }, [])
 }
 
 /**
@@ -177,8 +175,8 @@ export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */}
     return () => {/* TODO: Fix JSX expression */}
       }
     }
-  }, []);
+  }, [])
 }
 
-export default usePerformance;
+export default usePerformance
 `

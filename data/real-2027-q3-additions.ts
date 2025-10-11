@@ -1,4 +1,4 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'mdm-mobile-device-management',
@@ -791,7 +791,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     real_service: true
     roi: 'Prevent high - severity API incidents and cut MTTR.'
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/email-dmarc-analyzer'
     realService: true,
@@ -844,7 +844,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     feature,
   s: [}
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/api-security-scanner'
     realService: true,
@@ -858,14 +858,14 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
-];
+]
 export const real2027Q3Additions = [
   {/* TODO: Fix JSX expression */}
   n: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'}
     feature,
   s: [,
       'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow} and Jira exportChange detection and drift alerts'
-    ];
+    ]
     category: 'Enterprise IT'
     link: '/it-asset-discovery-agent'
     realService: true,
@@ -884,7 +884,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Streaming replication and automatic failoverPITR backups with retention policiesPerformance tuning and query insightsSecurity hardening and auditing'
-    ];
+    ]
     category: 'Cloud & Infrastructure'
     link: '/managed-postgres-ha'
     realService: true,
@@ -903,7 +903,7 @@ export const real2027Q3Additions = [
     feature,
   s: [,
       'Pinecone/Weaviate/Elastic integrationsChunking strategies and deduplicationEval harness with regression testsTracing, metrics} and dashboards'
-    ];
+    ]
     category: 'AI & Data'
     link: '/vector-search-starter'
     realService: true,
@@ -922,7 +922,7 @@ export const real2027Q3Additions = [
     feature,
   s: [,
       'Idempotent job executionPer-job concurrency and rate limitsDLQ, retries, and exponential backoffMetrics, logs} and alerting'
-    ];
+    ]
     category: 'Developer Tools'
     link: '/serverless-cron-manager'
     realService: true,
@@ -941,7 +941,7 @@ export const real2027Q3Additions = [
     feature,
   s: [,
       'WHOIS expiry and registrar checksNS, MX, TXT, and CAA drift detectionTLS expiry and configuration healthSlack, Email} and Webhook alerts'
-    ];
+    ]
     category: 'Quality & Monitoring'
     link: '/domain-dns-monitor'
     realService: true,
@@ -960,7 +960,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'SLO templates and burn-rate alertsMulti-region synthetic and API checksStatus pages and dashboardsChange annotations and incident links'
-    ];
+    ]
     category: 'Observability'
     link: '/uptime-slo-monitor'
     realService: true,
@@ -979,7 +979,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Just-in-time provisioningSCIM connectors and custom mappersAccess review workflowsAudit logs and exports'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/sso-user-lifecycle-automation'
     realService: true,
@@ -998,7 +998,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Automatic instrumentation presetsLatency percentiles and error ratesSLO burn and dependency graphsAlert templates and runbooks'
-    ];
+    ]
     category: 'Observability'
     link: '/api-observability-starter'
     realService: true,
@@ -1017,7 +1017,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'RBAC graph analysis and reportsPolicy suggestions and PRsAudit trails and drift alertsMulti-cluster support'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/kubernetes-rbac-auditor'
     realService: true,
@@ -1036,7 +1036,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Terraform plan diffs as PR commentsChange approval workflowsSelective auto-remediationMulti-cloud support'
-    ];
+    ]
     category: 'Cloud & Infrastructure'
     link: '/infrastructure-drift-detector'
     realService: true,
@@ -1055,7 +1055,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Auto triage and severity suggestionChannel orchestration (Slack/Teams)Timeline and comms templatesPostmortem drafts and actions'
-    ];
+    ]
     category: 'Operations'
     link: '/incident-copilot'
     realService: true,
@@ -1074,7 +1074,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Web and doc ingestion with citationsCompetitor profiles and matricesAlerts for launches and pricing changesExport to Slides/Docs'
-    ];
+    ]
     category: 'AI & Data'
     link: '/ai-market-research'
     realService: true,
@@ -1093,7 +1093,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Lead enrichment and routingMultichannel sequencesAI-generated replies with approvalsPipeline analytics'
-    ];
+    ]
     category: 'Sales & Marketing'
     link: '/ai-sales-automation'
     realService: true,
@@ -1112,7 +1112,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Smart clause detection and summariesRisk scoring and deviationsPlaybook alignment and suggestionsExport to Word/PDF'
-    ];
+    ]
     category: 'Legal & Compliance'
     link: '/ai-legal-contract-analyzer'
     realService: true,
@@ -1131,7 +1131,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Templates and brand voicesSEO scoring and suggestionsCollaboration and approvalsWordPress/Shopify integrations'
-    ];
+    ]
     category: 'Content & Marketing'
     link: '/ai-content-generator'
     realService: true,
@@ -1150,7 +1150,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/email-dmarc-analyzer'
     realService: true,
@@ -1169,7 +1169,7 @@ export const real2027Q3Additions = [
     feature,
   s: [}
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
-    ];
+    ]
     category: 'Security & Identity'
     link: '/api-security-scanner'
     realService: true,
@@ -1183,7 +1183,7 @@ export const real2027Q3Additions = [
     ro,
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
-];
+]
 export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   d: 'it - asset - discovery - agent',' nam,
   e: 'IT Asset Discovery Agent',' taglin,

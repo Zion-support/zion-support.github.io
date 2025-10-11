@@ -1,7 +1,7 @@
-/**;
- * API Interceptor Utility;
- * Provides request/response interceptors for API calls;
- */;
+/**
+ * API Interceptor Utility
+ * Provides request/response interceptors for API calls
+ */
 interface InterceptorConfig {
     onRequest?: (config: any) => any
   onResponse?: (response: any) => any,
@@ -17,46 +17,46 @@ class APIInterceptor {
     this.requestInterceptors.push(interceptor)
   }
   }
-// Add response interceptor;
+// Add response interceptor
   addResponseInterceptor(interceptor: (response: any) => any): void {
     ,
     this.responseInterceptors.push(interceptor)
   }
   }
-// Add error interceptor;
+// Add error interceptor
   addErrorInterceptor(interceptor: (error: any) => any): void {
     ,
     this.errorInterceptors.push(interceptor)
   }
   }
-// Remove request interceptor;
+// Remove request interceptor
   removeRequestInterceptor(interceptor: (config: any) => any): void {
     ,
-    const index = this.requestInterceptors.indexOf(interceptor);
+    const index = this.requestInterceptors.indexOf(interceptor)
     if (index > -1) {,
       this.requestInterceptors.splice(index, 1)
   }
     }
   }
-// Remove response interceptor;
+// Remove response interceptor
   removeResponseInterceptor(interceptor: (response: any) => any): void {
     ,
-    const index = this.responseInterceptors.indexOf(interceptor);
+    const index = this.responseInterceptors.indexOf(interceptor)
     if (index > -1) {,
       this.responseInterceptors.splice(index, 1)
   }
     }
   }
-// Remove error interceptor;
+// Remove error interceptor
   removeErrorInterceptor(interceptor: (error: any) => any): void {
     ,
-    const index = this.errorInterceptors.indexOf(interceptor);
+    const index = this.errorInterceptors.indexOf(interceptor)
     if (index > -1) {,
       this.errorInterceptors.splice(index, 1)
   }
     }
   }
-// Apply request interceptors;
+// Apply request interceptors
   applyRequestInterceptors(config: any): any {
     ,
     return this.requestInterceptors.reduce((acc, interceptor) => {
@@ -69,7 +69,7 @@ class APIInterceptor {
       }
     }, config)
   }
-// Apply response interceptors;
+// Apply response interceptors
   applyResponseInterceptors(response: any): any {
     ,
     return this.responseInterceptors.reduce((acc, interceptor) => {
@@ -82,7 +82,7 @@ class APIInterceptor {
       }
     }, response)
   }
-// Apply error interceptors;
+// Apply error interceptors
   applyErrorInterceptors(error: any): any {
     ,
     return this.errorInterceptors.reduce((acc, interceptor) => {
@@ -95,14 +95,14 @@ class APIInterceptor {
       }
     }, error)
   }
-// Clear all interceptors;
+// Clear all interceptors
   clearAll(): void {
     this.requestInterceptors = []
     this.responseInterceptors = []
     this.errorInterceptors = []
   }
   }
-// Get interceptor counts;
+// Get interceptor counts
   getInterceptorCounts(): {
     request: number,
     response: number,
@@ -117,18 +117,18 @@ class APIInterceptor {
     }
   }
 }
-// Create singleton instance;
-export const apiInterceptor = new APIInterceptor();
-export default APIInterceptor;
- * Centralized API request handling with error handling, retry logic, and caching;
- */;
-// ErrorHandler class definition;
+// Create singleton instance
+export const apiInterceptor = new APIInterceptor()
+export default APIInterceptor
+ * Centralized API request handling with error handling, retry logic, and caching
+ */
+// ErrorHandler class definition
 class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance
   }
   handleNetworkError()
-  r: Error, ur);
+  r: Error, ur)
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
@@ -143,11 +143,11 @@ export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
 export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: Partial</T><APIConfig> = {}) {/* TODO: Fix JSX expression */}
-  headers: config.headers || {},;
-      interceptor,;
+  headers: config.headers || {},
+      interceptor,
   s: config.interceptors || {}
     }
-    this.errorHandler = ErrorHandler.getInstance();
+    this.errorHandler = ErrorHandler.getInstance()
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
   headers: config.headers || {},
       interceptor,
@@ -159,42 +159,42 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     }
     return APIInterceptor.instance
   }
-  /**;
-   * Make API request;
-   */;
-  async request</APIConfig><T = unknown>(confi);
+  /**
+   * Make API request
+   */
+  async request</APIConfig><T = unknown>(confi)
   g: RequestConfig): Promise</T><APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
     }
     // Check for pending identical requests
     if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
     }
-    // Create the request promise;
-    const requestPromise = this.executeRequest</APIResponse><T>(fullConfig);
-    this.pendingRequests.set(cacheKey, requestPromise as Promise</T><APIResponse>);
+    // Create the request promise
+    const requestPromise = this.executeRequest</APIResponse><T>(fullConfig)
+    this.pendingRequests.set(cacheKey, requestPromise as Promise</T><APIResponse>)
     try {/* TODO: Fix JSX expression */}
       }
       return response
     } finally {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Execute the actual request;
-   */;
-  private async executeRequest</APIResponse><T>(confi);
+  /**
+   * Execute the actual request
+   */
+  private async executeRequest</APIResponse><T>(confi)
   g: RequestConfig, attempt = 1): Promise</T><APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
-      const url = this.buildURL(finalConfig);
+      const url = this.buildURL(finalConfig)
       const,
   fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
       }
-      const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime;
-      // Record performance metric;
-      performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses;
+      const response = await fetch(url, fetchOptions)
+      const duration = performance.now() - startTime
+      // Record performance metric
+      performanceMetrics.recordNetworkRequest(url, duration, response.status)
+      // Handle non-2xx responses
       if (!response.ok) {/* TODO: Fix JSX expression */}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
       const response = await fetch(url, fetchOptions)
       const duration = performance.now() - startTime
@@ -208,8 +208,8 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       let finalResponse = response
       if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
       }
-      // Parse response data;
-      const data = await this.parseResponse</APIResponse><T>(finalResponse);
+      // Parse response data
+      const data = await this.parseResponse</APIResponse><T>(finalResponse)
       return {/* TODO: Fix JSX expression */}
       }
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -220,63 +220,63 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       throw err
     }
   }
-  /**;
-   * GET request;
-   */;
-  async get</T><T = unknown>(ur,;
+  /**
+   * GET request
+   */
+  async get</T><T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'GET' })
   }
-  /**;
-   * POST request;
-   */;
-  async post</APIResponse><T = unknown>(ur,;
+  /**
+   * POST request
+   */
+  async post</APIResponse><T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'POST', body })
   }
-  /**;
-   * PUT request;
-   */;
-  async put</APIResponse><T = unknown>(ur,;
+  /**
+   * PUT request
+   */
+  async put</APIResponse><T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PUT', body })
   }
-  /**;
-   * DELETE request;
-   */;
-  async delete</APIResponse><T = unknown>(ur,;
+  /**
+   * DELETE request
+   */
+  async delete</APIResponse><T = unknown>(ur,
   l: string,
-    confi,;
+    confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'DELETE' })
   }
-  /**;
-   * PATCH request;
-   */;
-  async patch</APIResponse><T = unknown>(ur,;
+  /**
+   * PATCH request
+   */
+  async patch</APIResponse><T = unknown>(ur,
   l: string,
-    body?: unknown,;
-    confi,;
+    body?: unknown,
+    confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PATCH', body })
   }
-  /**;
-   * Prepare request configuration;
-   */;
-  private prepareRequest(confi);
+  /**
+   * Prepare request configuration
+   */
+  private prepareRequest(confi)
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */},
   /**
    * GET request
@@ -345,15 +345,15 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   e: config.cache ?? this.config.enableCaching,
     }
   }
-  /**;
-   * Build full URL with query parameters;
-   */;
-  private buildURL(confi);
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
+  /**
+   * Build full URL with query parameters
+   */
+  private buildURL(confi)
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
+    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`
     if (config.params) {/* TODO: Fix JSX expression */}
-      })`;
-      url += `?${params.toString()}`;
+      })`
+      url += `?${params.toString()}`
     }
   }
   /**
@@ -375,7 +375,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
     })
-    return headers;
+    return headers
   }
   /**
    * Create abort signal for timeout
@@ -383,10 +383,10 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   private createAbortSignal(timeou)
   t: number): AbortSignal {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Parse response based on content type;
-   */;
-  private async parseResponse</APIResponse><T>(respons);
+  /**
+   * Parse response based on content type
+   */
+  private async parseResponse</APIResponse><T>(respons)
   e: Response): Promise</T><T> {/* TODO: Fix JSX expression */}
     }
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
@@ -408,11 +408,11 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     }
     return entry.data as APIResponse
   }
-  /**;
-   * Set response in cache;
-   */;
+  /**
+   * Set response in cache
+   */
   private setInCache()
-  y: string, respons);
+  y: string, respons)
   e: APIResponse): void {/* TODO: Fix JSX expression */}
     })
   }
@@ -434,16 +434,16 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   getCacheStats() {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Delay helper for retry logic;
-   */;
-  private delay(m);
+  /**
+   * Delay helper for retry logic
+   */
+  private delay(m)
   s: number): Promise</T><void> {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Update configuration;
-   */;
-  updateConfig(confi);
+  /**
+   * Update configuration
+   */
+  updateConfig(confi)
   g: Partial</void><APIConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }
   }
@@ -454,9 +454,9 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     return { ...this.config }
   }
 }
-// Export singleton instance;
-export const apiInterceptor = APIInterceptor.getInstance();
-export default APIInterceptor;
+// Export singleton instance
+export const apiInterceptor = APIInterceptor.getInstance()
+export default APIInterceptor
 `</APIConfig>
 // Export singleton instance
 export const apiInterceptor = APIInterceptor.getInstance()

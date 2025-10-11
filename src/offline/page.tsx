@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
  */
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
-    window.location.reload();
+    window.location.reload()
   }
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -55,4 +55,4 @@ onClick={handleGoHome}"
             Try refreshing the page once you're back online.
   ),
 }
-export default OfflinePage;
+export default OfflinePage</$1></h1>

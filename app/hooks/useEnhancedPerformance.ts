@@ -1,14 +1,14 @@
-/**;
- * Enhanced Performance Hook;
- * Combines performance monitoring, error tracking, and analytics;
- */;
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
+/**
+ * Enhanced Performance Hook
+ * Combines performance monitoring, error tracking, and analytics
+ */
+import { useEffect, useCallback, useRef } from 'react'
+import { errorTracker } from '../utils/enhancedErrorTracking'
+import { analytics } from '../utils/enhancedAnalytics'
 export interface UseEnhancedPerformanceOptions {
-    component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
+    component?: string
+  trackErrors?: boolean
+  trackPerformance?: boolean
   trackAnalytics?: boolean
   }
 }
@@ -19,11 +19,11 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackPerformance = true,
     trackAnalytics = true,
   }
-  } = _options;const _renderCountRef = useRef<number>(0);
+  } = _options;const _renderCountRef = useRef<number>(0)
 useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
-// Track component mount;
+    mountTimeRef.current = performance.now()
+    renderCountRef.current = 0
+// Track component mount
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component)
   }
@@ -31,35 +31,35 @@ useEffect(() => {
 return (
     <React.Fragment>
       ) => {
-    // Track component unmount duration;
+    // Track component unmount duration
       if (trackPerformance) {
-        const _duration = performance.now() - mountTimeRef.current;
+        const _duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {
-          // Long-lived component;
+          // Long-lived component
           analytics.trackCustomEvent()
-            Math.round(duration);
+            Math.round(duration)
           )
   }
         }
       }
-// Track component unmount;
+// Track component unmount
       if (trackAnalytics) {
     analytics.trackCustomEvent('Component', 'Unmounted', component)
   }
       }
     }
-  }, [component, trackAnalytics, trackPerformance]);
-// Track render performance;
+  }, [component, trackAnalytics, trackPerformance])
+// Track render performance
   useEffect(() => {
-    renderCountRef.current++;
+    renderCountRef.current++
 if (trackPerformance && renderCountRef.current > 10) {
-      // Many re-renders detected;
+      // Many re-renders detected
       analytics.trackCustomEvent()
       )
   }
     }
   })
-const trackError = useCallback(;
+const trackError = useCallback(
     (error: Error, context?: Record</number><string, unknown>
     </React.Fragment>
   ) => {
@@ -67,32 +67,32 @@ const trackError = useCallback(;
         errorTracker.trackError()
         })
       },
-    [component, trackErrors];
-  );
-const trackUserAction = useCallback(;
+    [component, trackErrors]
+  )
+const trackUserAction = useCallback(
     (action: string, metadata?: Record</string><string, unknown>) => {
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
   }
       },
-    [component, trackAnalytics];
-  );
+    [component, trackAnalytics]
+  )
 const measureOperation = useCallback()
-    (operationName: string) => {};
-      const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
+    (operationName: string) => {}
+      const _markName = `${component}-${operationName}`
+      const _startTime = performance.now()
 return {
     end: () => {
           const _duration = performance.now() - startTime,
 if (trackPerformance) {
-            analytics.trackPerformance();
-            );
+            analytics.trackPerformance()
+            )
           }
-return duration;
+return duration
         },
       },
     [component, trackPerformance]
-  );
+  )
 return {
     trackError,
     trackUserAction,

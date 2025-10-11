@@ -88,10 +88,10 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   setupRecoveryStrategies() {
-    // Define recovery strategies for different error types;
-    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
-    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
-    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
+    // Define recovery strategies for different error types
+    this.recoveryStrategies.set('network', this.handleNetworkError.bind(this))
+    this.recoveryStrategies.set('resource', this.handleResourceError.bind(this))
+    this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this))
     this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this))
   }
 
@@ -178,8 +178,8 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   handleMemoryError(errorInfo) {
-    // Clear caches and free memory;
-    this.clearCaches();
+    // Clear caches and free memory
+    this.clearCaches()
     this.garbageCollect()
   }
 
@@ -241,7 +241,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       script.src = '/js/fallback.js'
   loadFallbackScript(src) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script)
   }
 
   loadFallbackStylesheet(src) {
@@ -254,16 +254,16 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       link.href = '/css/fallback.css'
   loadFallbackStylesheet(src) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(link);
+    document.head.appendChild(link)
   }
 
   handlePropertyAccessError(errorInfo) {
-    // Try to fix property access errors;
+    // Try to fix property access errors
     //     // Implementation would depend on specific error
   }
 
   handleFunctionCallError(errorInfo) {
-    // Try to fix function call errors;
+    // Try to fix function call errors
     //     // Implementation would depend on specific error
   }
 
@@ -296,7 +296,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     // Reload page as last resort
     setTimeout(() => {
       window.location.reload()
-  }, 1000);
+  }, 1000)
   }
 
   showOfflineMessage() {
@@ -304,20 +304,20 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _offlineMessage = document.createElement('div')
     offlineMessage.className = 'offline-message'
     offlineMessage.innerHTML = `
-      <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #ff6 b6 b;
-        color: white;
+      < style="$2 />
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        background: #ff6 b6 b
+        color: white
         padding: 10 px
         text-align: center
         z-index: 9999,
       ">
         You're offline. Some features may not be available.
       </div>,
-    `;
+    `
     document.body.appendChild(offlineMessage)
   }
 
@@ -334,38 +334,38 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _modal = document.createElement('div')
     modal.className = 'error-modal'
     modal.innerHTML = `
-      <div style="
-        position: fixed;
-        top: 0;
+      < style="$2 />
+        position: fixed
+        top: 0
         left: 0
         right: 0
         bottom: 0,
-        background: rgba(0,0,0,0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
+        background: rgba(0,0,0,0.8)
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 10000
       "></div>
-        <div style="
-          background: white;
-          padding: 20 px;
+        < style="$2 />
+          background: white
+          padding: 20 px
           border-radius: 8 px
           max-width: 500 px
           text-align: center,
         ">,
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-          <button onclick="window.location.reload()" style="
-            background: #007 bff;
-            color: white;
-            border: none;
+          < onclick="window.location.reload()" style="$2 />
+            background: #007 bff
+            color: white
+            border: none
             padding: 10 px 20 px
             border-radius: 4 px
             cursor: pointer,
           ">Refresh Page</button>
         </div>
       </div>,
-    `;
+    `
     document.body.appendChild(modal)
   }
 
@@ -373,13 +373,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _toast = document.createElement('div')
     toast.className = 'error-toast'
     toast.innerHTML = `
-      <div style="
-        position: fixed;
-        top: 20 px;
-        right: 20 px;
-        background: #ff6 b6 b;
-        color: white;
-        padding: 15 px;
+      < style="$2 />
+        position: fixed
+        top: 20 px
+        right: 20 px
+        background: #ff6 b6 b
+        color: white
+        padding: 15 px
         border-radius: 4 px
         z-index: 9999
         max-width: 300px,

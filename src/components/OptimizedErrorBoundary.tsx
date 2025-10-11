@@ -85,7 +85,7 @@ $4}
             parameters: Record<string, unknown>
           ) => void
   }
-      ).gtag;
+      ).gtag
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
@@ -106,8 +106,8 @@ $4}
         error: null,
         errorInfo: null,
         errorId:       ,
-$4});
-    }, 100);
+$4})
+    }, 100)
   }
   private handleRetry = () => {
     this.resetErrorBoundary()
@@ -229,4 +229,4 @@ ErrorFallback.displayName = 'ErrorFallback'
         )}
 //   )
 )
-ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1>
+ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1></a>

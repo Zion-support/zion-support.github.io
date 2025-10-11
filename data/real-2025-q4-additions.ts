@@ -1,19 +1,19 @@
 
-export interface Q4Service {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  text_color?: string;
-  link: string;
-  market_position?: string;
-  target_audience?: string;
-  trial_days?: number;
+export interface Q4Service {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  text_color?: string
+  link: string
+  market_position?: string
+  target_audience?: string
+  trial_days?: number
   setup_time?: string
   category: string
   roi?: string,,
@@ -22,10 +22,10 @@ export interface Q4Service {id: string;
   growthRate?: string
   variant?: string
   contactInfo?:
-  real_service: boolean;  technology?: string[];  integrations?: string[];
-  use_cases?: string[];
-  roi?: string;
-  competitors?: string[];
+  real_service: boolean;  technology?: string[];  integrations?: string[]
+  use_cases?: string[]
+  roi?: string
+  competitors?: string[]
   market_size?: string
   growth_rate?: string
   variant?: string,
@@ -40,9 +40,9 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   e: string}
   }
   real_implementatio,
-  n: boolean;
-  implementation_details?: string;
-  launch_date?: string;
+  n: boolean
+  implementation_details?: string
+  launch_date?: string
   customers?: number
   rating?: number
   reviews?: number,
@@ -788,7 +788,7 @@ const contact =
     customers: 70
     rating: 4 && 4.5
     reviews: 28,
-  }];
+  }]
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -999,7 +999,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70
     rating: 4.5
     reviews: 28,
-  }];
+  }]
 }
     customers: 120
     rating: 4.7
@@ -1289,7 +1289,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 28}]
 export const real2025 Q4 Additions = [
   },
-];
+]
 export const real2025Q4Additions = [
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
@@ -3648,9 +3648,9 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     setupTime: '35 days',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Postgres, Patroni/Cloud-native HA'];
-    integrations: ['Grafana, Prometheus'];
-    useCases: ['Reliability, Backups, Performance'];
+    technology: ['Postgres, Patroni/Cloud-native HA']
+    integrations: ['Grafana, Prometheus']
+    useCases: ['Reliability, Backups, Performance']
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)']
     marketSize: '$3B DB ops services',
@@ -3680,7 +3680,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     rating: 4.6
     reviews: 9,
   }
-];
+]
     rating: 4 && 4.6
     reviews: 9,
 		popula,
@@ -4293,7 +4293,7 @@ export const,
     customers: 70
     rating: 4.5
     reviews: 28,
-  }];
+  }]
 }
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
@@ -5325,7 +5325,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     rating: 4.6
     reviews: 9,
   }
-];
+]
     reviews: 9,
     ico,
   n: '',

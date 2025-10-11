@@ -1,30 +1,26 @@
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
-
+'use client'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, AlertCircle } from 'lucide-react'
 const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    setIsLoading(true);
-
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    setIsSubmitting(true)
+    setIsLoading(true)
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubscribed(true);
-      setEmail('');
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      console.error('Newsletter signup error:', error);
+      console.error('Newsletter signup error:', error)
     } finally {
-      setIsSubmitting(false);
-      setIsLoading(false);
+      setIsSubmitting(false)
+      setIsLoading(false)
     }
   }
 
@@ -38,14 +34,14 @@ const ContentNewsletterSignup: React.FC = () => {
         <p className="text-white/90 mb-4">
           You've successfully subscribed to our newsletter. Check your email for confirmation.
         </p>
-        <button
+        <$2 />
           onClick={() => setIsSubscribed(false)}
           className="text-white/80 hover:text-white underline"
         >
           Subscribe another email
         </button>
       </div>
-    );
+    )
 'use client'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
@@ -144,7 +140,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             required
             className="flex-1 px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-          <button type="submit"
+          < type="submit"$2 />
             disabled={isSubmitting || !email}
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
           >
@@ -176,10 +172,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">

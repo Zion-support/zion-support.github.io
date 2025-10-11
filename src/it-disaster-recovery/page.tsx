@@ -60,11 +60,11 @@ const ITDisasterRecoveryPage: React.FC = () => {
           </div>
         </section>"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Recovery Services,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
@@ -87,6 +87,6 @@ const ITDisasterRecoveryPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default ItDisasterRecoveryPage;
+export default ItDisasterRecoveryPage

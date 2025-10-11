@@ -342,6 +342,6 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
         </div>
       </div>
     </di, v>
-  );
+  )
 }
-export default October2025 OperationalExcellenceBanner;
+export default October2025 OperationalExcellenceBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3>

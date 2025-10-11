@@ -92,7 +92,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     } catch {}
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        path: 'docs/ROADMAP_AUTO.md' });
+        path: 'docs/ROADMAP_AUTO.md' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -103,10 +103,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       })
     } catch {}
     return {/* TODO: Fix JSX expression */}
-  h: 'docs/ROADMAP_AUTO.md' });
+  h: 'docs/ROADMAP_AUTO.md' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

@@ -61,14 +61,14 @@ export async function registerServiceWorker()
       if (document.readyState === 'complete') {} else {
     window.addEventListener('load', () => resolve())
   }
-    });
+    })
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
       scope:     ,
 $4})
     // Handle updates
     registration.addEventListener('updatefound', () => {
-    const installingWorker = registration.installing;
-      if (!installingWorker) return;
+    const installingWorker = registration.installing
+      if (!installingWorker) return
       installingWorker.addEventListener('statechange', () => {
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
@@ -159,8 +159,8 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     return false
   }
   try {
-    const registration = await navigator.serviceWorker.ready;
-    const result = await registration.unregister();
+    const registration = await navigator.serviceWorker.ready
+    const result = await registration.unregister()
     return result
   } catch (error) {
     // // console.error('[SW] Unregistration failed:', error)
@@ -194,7 +194,7 @@ export async function checkForUpdates(): Promise<void> {
     return
   }
   try {
-    const registration = await navigator.serviceWorker.ready;
+    const registration = await navigator.serviceWorker.ready
     await registration.update()
   } catch (error) {
     // // console.error('[SW] Update check failed:', error)
@@ -262,9 +262,8 @@ export async function checkForUpdates(): Promise
   try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const registration = await navigator.serviceWorker.ready;
-    await registration.update();
-
+    const registration = await navigator.serviceWorker.ready
+    await registration.update()
     } catch (error) {
     // // console.error('[SW] Update check failed:', error)
   }

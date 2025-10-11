@@ -6,7 +6,7 @@ interface State {/* TODO: Fix JSX expression */}
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
-    super(props);
+    super(props)
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {,
@@ -18,9 +18,9 @@ class ErrorBoundary extends Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     ,
-//     // Report error to analytics/monitoring service;
-    this.reportError(error, errorInfo);
-    // Call custom error handler if provided;
+//     // Report error to analytics/monitoring service
+    this.reportError(error, errorInfo)
+    // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
   }
@@ -55,7 +55,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     }
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  d: undefined });
+  d: undefined })
   }
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   }
@@ -82,7 +82,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <RefreshCw className="w-4 h-4" />
                 Try Again,
               </button>,
-              <button;
+              <;$2 />
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />

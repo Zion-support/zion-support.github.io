@@ -1,82 +1,82 @@
 export interface EmergingTechInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string[];
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string
+  period: string
+  features: string[]
+  category: string
+  marketSize: string
+  targetAudience: string[]
+  competitiveAdvantage: string
+  useCases: string[]
+  integrations: string[]
+  compliance: string[]
+  website: string
   contact: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
+    phone: string
+    email: string
+    address: string
+  }
+  trialDays: number
+  setupTime: string
+  competitors: string[]
+  roi: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  technologyStack: string[]
+  innovationLevel: string
+  futureProofing: string
+  researchPartnerships: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  textColor?: string
+  link?: string
+  marketPosition?: string
+  technology?: string[]
+  growthRate?: string
+  variant?: string
   contactInfo?: {
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface EmergingTechInnovation {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation?: boolean;
-  implementationDetails?: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation?: boolean
+  implementationDetails?: string
 }
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
   {
@@ -140,23 +140,23 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     growthRate: '45% YoY',
     variant: 'premium'
   }
-];
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
+]
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+}
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
@@ -716,4 +716,4 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
-];
+]

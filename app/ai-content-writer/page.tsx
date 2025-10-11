@@ -1,9 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -21,15 +20,15 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
     },
-  ];
+  ]
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
-    'Multi-language support',;
-    'Content analytics',;
-    'Team collaboration';
-  ];
+    'Multi-language support',
+    'Content analytics',
+    'Team collaboration'
+  ]
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
@@ -70,7 +69,7 @@ const AIContentWriterPage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               </div><div key={index} className="text-center">
@@ -88,7 +87,7 @@ const AIContentWriterPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
       {/* Features Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful Writing Features
@@ -125,7 +124,7 @@ const AIContentWriterPage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Writer?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -156,8 +155,7 @@ const AIContentWriterPage: React.FC = () => {
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-        </section><div className="
-
+        </section>< className="$2 />
           </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Create Amazing Content?
@@ -179,8 +177,8 @@ const AIContentWriterPage: React.FC = () => {
 
       <Footer /></Footer>
     </div>
-  );
-};
+  )
+}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?

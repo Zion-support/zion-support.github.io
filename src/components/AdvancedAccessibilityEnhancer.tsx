@@ -15,17 +15,17 @@ const,
     const contrastQuery = window.matchMedia('(prefers-contras)
   t: high)'),
     const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  n: e.matches }));
+  n: e.matches }))
     }
     const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  t: e.matches }));
+  t: e.matches }))
     }
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
+    motionQuery.addEventListener('change', handleMotionChange)
+    contrastQuery.addEventListener('change', handleContrastChange)
     return () => {/* TODO: Fix JSX expression */}
     }
-  }, []);
-  // Apply accessibility styles;
+  }, [])
+  // Apply accessibility styles
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -49,10 +49,10 @@ const,
         }
       }
     }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-  // Screen reader enhancements;
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
+  // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     }
@@ -63,8 +63,8 @@ const,
     }
     history.replaceState = function(...args) {/* TODO: Fix JSX expression */}
     }
-  }, []);
-  // Focus management;
+  }, [])
+  // Focus management
   const setupFocusManagement = useCallback(() => {/* TODO: Fix JSX expression */}
             }
           } else {/* TODO: Fix JSX expression */}
@@ -72,12 +72,12 @@ const,
           }
         }
       }
-      element.addEventListener('keydown', handleTabKey);
-      firstElement?.focus();
-      return () => element.removeEventListener('keydown', handleTabKey);
+      element.addEventListener('keydown', handleTabKey)
+      firstElement?.focus()
+      return () => element.removeEventListener('keydown', handleTabKey)
     }
-    // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
+    // Apply focus trap to modals
+    const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal => {/* TODO: Fix JSX expression */})
     })
   }, [])
@@ -122,10 +122,10 @@ const,
   const checkColorContrast = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     }
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement));
-  }, []);
-  // Voice navigation support;
+    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
+    elements.forEach(element => checkElementContrast(element as HTMLElement))
+  }, [])
+  // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to about')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to contact')) {/* TODO: Fix JSX expression */}
@@ -134,13 +134,13 @@ const,
       } else if (command.includes('send email')) {/* TODO: Fix JSX expression */}
       }
     }
-    // Add voice navigation button;
-    const voiceButton = document.createElement('button');
-    voiceButton.textContent = 'Voice Navigation';
-    voiceButton.className = 'voice-navigation-button';
-    voiceButton.setAttribute('aria-label', 'Start voice navigation');
-    voiceButton.onclick = () => recognition.start();
-    const header = document.querySelector('header') || document.querySelector('nav');
+    // Add voice navigation button
+    const voiceButton = document.createElement('button')
+    voiceButton.textContent = 'Voice Navigation'
+    voiceButton.className = 'voice-navigation-button'
+    voiceButton.setAttribute('aria-label', 'Start voice navigation')
+    voiceButton.onclick = () => recognition.start()
+    const header = document.querySelector('header') || document.querySelector('nav')
     if (header) {/* TODO: Fix JSX expression */}
     }
   }, [])
@@ -159,8 +159,8 @@ const,
     }
     if (enableVoiceNavigation) {/* TODO: Fix JSX expression */}
     }
-  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
-  return null;
+  }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
+  return null
 }
 export default AdvancedAccessibilityEnhancer;"`
   </AdvancedAccessibilityEnhancerProps>

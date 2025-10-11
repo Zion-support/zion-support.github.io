@@ -10,8 +10,7 @@ console.log('🔍 Starting comprehensive website audit...\n')
 const appDir = path.join(__dirname, '..', 'app')
 const allPages = []
 function scanDirectory(dir, basePath = '') {
-    const items = fs.readdirSync(dir);
-  
+    const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
@@ -24,7 +23,7 @@ function scanDirectory(dir, basePath = '') {
           path: route),
           file: pageFile),
           exists: true
-  });
+  })
       }
       // Recursively scan subdirectories
       scanDirectory(fullPath, basePath + '/' + item)
@@ -32,19 +31,16 @@ function scanDirectory(dir, basePath = '') {
   }
 }
 
-// Scan the app directory for pages;
-scanDirectory(appDir);
-
+// Scan the app directory for pages
+scanDirectory(appDir)
 console.log(`📄 Found ${allPages.length} pages: `),
 allPages.forEach(page => {),
-  console.log(`  ✅ ${page.path}`);
-});
-
-// Check for missing pages referenced in Footer;
-const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
-const footerContent = fs.readFileSync(footerFile, 'utf8');
-
-// Extract all href links from Footer;
+  console.log(`  ✅ ${page.path}`)
+})
+// Check for missing pages referenced in Footer
+const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx')
+const footerContent = fs.readFileSync(footerFile, 'utf8')
+// Extract all href links from Footer
 const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g
 const footerLinks = []
 let match,
@@ -56,13 +52,11 @@ while ((match = hrefRegex.exec(footerContent)) !== null) {
 
 console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `),
 footerLinks.forEach(link => {),
-  console.log(`  📎 ${link}`);
-});
-
-// Check which footer links are missing pages;
-const missingPages = [];
-const existingRoutes = allPages.map(p => p.path);
-
+  console.log(`  📎 ${link}`)
+})
+// Check which footer links are missing pages
+const missingPages = []
+const existingRoutes = allPages.map(p => p.path)
 footerLinks.forEach(link => {
     )
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
@@ -104,17 +98,14 @@ if (additionalMissing.length > 0) {
   })
 }
 
-// Check for broken internal links in existing pages;
-console.log(`\n🔍 Checking for broken internal links in existing pages...`);
-
-const brokenLinks = [];
-
+// Check for broken internal links in existing pages
+console.log(`\n🔍 Checking for broken internal links in existing pages...`)
+const brokenLinks = []
 allPages.forEach(page => {
     )
   try {)
-    const content = fs.readFileSync(page.file, 'utf8');
-    
-    // Find all internal links in the page;
+    const content = fs.readFileSync(page.file, 'utf8')
+    // Find all internal links in the page
     const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g
     let linkMatch
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {
@@ -123,7 +114,7 @@ allPages.forEach(page => {
         brokenLinks.push({),
           page: page.path),
           brokenLink: link
-  });
+  })
       }
     }
   } catch (error) {
@@ -142,8 +133,8 @@ if (brokenLinks.length > 0) {
 // Generate report
 const report = {
   timestamp: new Date().toISOString()
-  totalPages: allPages.length;
-  totalFooterLinks: footerLinks.length;
+  totalPages: allPages.length
+  totalFooterLinks: footerLinks.length
   missingPages: missingPages
   additionalMissing: additionalMissing
   brokenLinks: brokenLinks,
@@ -152,18 +143,16 @@ const report = {
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),
   JSON.stringify(report, null, 2)
-);
-
+)
 console.log(`\n📊 Audit Summary: `),
-console.log(`  📄 Total pages found: ${allPages.length}`);
-console.log(`  🔗 Footer links: ${footerLinks.length}`);
-console.log(`  ❌ Missing pages: ${missingPages.length}`);
-console.log(`  💡 Additional pages to consider: ${additionalMissing.length}`);
-console.log(`  🔗 Broken internal links: ${brokenLinks.length}`);
-console.log(`\n📋 Report saved to: website-audit-report.json`);
-
-console.log(`\n🎯 Next steps:`);
-console.log(`  1. Create missing pages identified above`);
+console.log(`  📄 Total pages found: ${allPages.length}`)
+console.log(`  🔗 Footer links: ${footerLinks.length}`)
+console.log(`  ❌ Missing pages: ${missingPages.length}`)
+console.log(`  💡 Additional pages to consider: ${additionalMissing.length}`)
+console.log(`  🔗 Broken internal links: ${brokenLinks.length}`)
+console.log(`\n📋 Report saved to: website-audit-report.json`)
+console.log(`\n🎯 Next steps:`)
+console.log(`  1. Create missing pages identified above`)
 console.log(`  2. Fix broken internal links`)
 console.log(`  3. Test all links on the live website`)
 console.log(`  4. Improve navigation structure`),

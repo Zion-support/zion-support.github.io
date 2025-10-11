@@ -19,14 +19,14 @@ const { execSync } = require('child_process')
       return null,
     }
   }
-  //Step 1: Check current status;
-//   execGit('git status --porcelain') 'Checking git status');
-  execGit('git branch -a') 'Checking branches');
-  //Step 2: Add all changes;
-//   execGit('git add .') 'Adding all changes');
-  //Step 3: Commit changes;
-//   const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+  //Step 1: Check current status
+//   execGit('git status --porcelain') 'Checking git status')
+  execGit('git branch -a') 'Checking branches')
+  //Step 2: Add all changes
+//   execGit('git add .') 'Adding all changes')
+  //Step 3: Commit changes
+//   const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,
@@ -54,8 +54,8 @@ const { execSync } = require('child_process')
   //Step,
   3: Commit changes,`
 //   const commitMessage = `Fix syntax,
-  errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+  errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,`
@@ -67,8 +67,8 @@ const { execSync } = require('child_process')
     'Pushing to feature branch')
   ),
   //Step,
-  5: Switch to main and merge;
-//   execGit('git checkout main') 'Switching to main branch');
+  5: Switch to main and merge
+//   execGit('git checkout main') 'Switching to main branch')
   execGit('git pull origin main') 'Pulling latest main')
   execGit('git merge cursor/fix-syntax-push-and-merge-to-main-c855')
     'Merging feature branch')

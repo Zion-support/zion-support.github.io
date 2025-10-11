@@ -27,12 +27,11 @@ let totalFiles = 0
 let processedFiles = 0
 let fixedFiles = 0
 function fixSyntaxErrors(content) {
-  let newContent = content;
-  let fixed = false;
-
-  // Fix missing closing braces and parentheses;
+  let newContent = content
+  let fixed = false
+  // Fix missing closing braces and parentheses
   // Pattern: Missing closing brace for setState,
-  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;
+  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm
   if (setStatePattern.test(newContent)) {
     newContent = newContent.replace(setStatePattern, (match) => {
       if (!match.includes('});')) {
@@ -91,9 +90,8 @@ function fixSyntaxErrors(content) {
     fixed = true
   }
 
-  // Clean up multiple empty lines;
-  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
+  // Clean up multiple empty lines
+  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
   return { content: newContent, fixed }
 }
 
@@ -124,19 +122,16 @@ async function main() {
     allFiles.push(...files)
   }
 
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
-  uniqueFiles.forEach(processFile);
-
-  console.log(`\n🎉 Syntax error fixes completed!`);
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 Syntax error fixes completed!`)
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Files fixed: ${fixedFiles}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -1,8 +1,7 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom')
-const React = require('react');
-const { TextEncoder, TextDecoder } = require('util');
-
+const React = require('react')
+const { TextEncoder, TextDecoder } = require('util')
 // Polyfills for Node.js environment
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
@@ -73,8 +72,7 @@ jest.mock('react-router-dom', () => {
     },
     RouterProvider: ({ router }) => null,
   }
-});
-
+})
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -111,10 +109,9 @@ beforeAll(() => {
     ) {
       return
   }
-    originalError.call(console, ...args);
-  });
-});
-
+    originalError.call(console, ...args)
+  })
+})
 afterAll(() => {
     console.error = originalError
-  });
+  })

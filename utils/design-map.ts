@@ -1,14 +1,14 @@
-export type UIKitKind = 'ios' | 'android' | 'web';
+export type UIKitKind = 'ios' | 'android' | 'web'
 export interface TokenSet {
-export interface TokenSet {;
-  colors: Record<string, string>;
-  typography: Record<string, any>;
-  spacing: Record<string, number>;
+export interface TokenSet {
+  colors: Record<string, string>
+  typography: Record<string, any>
+  spacing: Record<string, number>
 }
 export interface UIKit {
-export interface UIKit {;
-  components: Record<string, any>;
-  tokens: TokenSet;
+export interface UIKit {
+  components: Record<string, any>
+  tokens: TokenSet
 }
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
@@ -32,11 +32,11 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       lg: 24
       xl: 32
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-    };
+    }
   }
   if (kind === 'chakra') {
     return {
@@ -46,105 +46,105 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
         "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
       'components/Button && Button.tsx':
         'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
-    };
+    }
   }
   return {
     'README && README.md':
       '# Zion OS React UI Kit\n\nFramework-agnostic React components.',
     'components/Button && Button.tsx':
       "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
-  };
+  }
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
-  const base = process && process.env.LOVABLE_CMS_URL;
-  if (!base) return null;
+  const base = process && process.env.LOVABLE_CMS_URL
+  if (!base) return null
   try {
-    const res = await fetch(`${base && base.replace(/\/$/, '')}/api/design-tokens`);
-    if (!res && res.ok) return null;
-    return (await res && res.json()) as Partial<TokenSet>;
+    const res = await fetch(`${base && base.replace(/\/$/, '')}/api/design-tokens`)
+    if (!res && res.ok) return null
+    return (await res && res.json()) as Partial<TokenSet>
   } catch {
-    return null;
+    return null
   }
 // Design mapping utilities
 export interface DesignElement {
-  id: string;
-  type: 'component' | 'layout' | 'style' | 'asset';
-  name: string;
-  figmaId?: string;
-  properties: Record<string, any>;
-  children?: DesignElement[];
-  parent?: string;
+  id: string
+  type: 'component' | 'layout' | 'style' | 'asset'
+  name: string
+  figmaId?: string
+  properties: Record<string, any>
+  children?: DesignElement[]
+  parent?: string
 }
 export interface DesignSystem {
-  id: string;
-  name: string;
-  version: string;
-  components: DesignElement[];
-  tokens: Record<string, any>;
-  assets: DesignElement[];
-  lastUpdated: Date;
+  id: string
+  name: string
+  version: string
+  components: DesignElement[]
+  tokens: Record<string, any>
+  assets: DesignElement[]
+  lastUpdated: Date
 }
 export interface FigmaNode {
-  id: string;
-  name: string;
-  type: string;
-  children?: FigmaNode[];
+  id: string
+  name: string
+  type: string
+  children?: FigmaNode[]
   absoluteBoundingBox?: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
+    x: number
+    y: number
+    width: number
+    height: number
+  }
   fills?: Array<{
-    type: string;
+    type: string
     color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
+      r: number
+      g: number
+      b: number
+      a: number
+    }
+  }>
   effects?: Array<{
-    type: string;
-    radius?: number;
+    type: string
+    radius?: number
     color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
-  characters?: string;
+      r: number
+      g: number
+      b: number
+      a: number
+    }
+  }>
+  characters?: string
   style?: {
-    fontFamily?: string;
-    fontSize?: number;
-    fontWeight?: number;
-    textAlignHorizontal?: string;
-    textAlignVertical?: string;
-  };
+    fontFamily?: string
+    fontSize?: number
+    fontWeight?: number
+    textAlignHorizontal?: string
+    textAlignVertical?: string
+  }
 }
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-  const tokens = await buildTokenSet(fileId);
-    };
-  };
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+  const tokens = await buildTokenSet(fileId)
+    }
+  }
 }
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-  const tokens = await buildTokenSet(fileId);
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+  const tokens = await buildTokenSet(fileId)
   return {
     id,
     type,
     name,
     properties,
     children: []
-  };
+  }
 }
           background_color: tokens.colors.primary,
-          padding: tokens.spacing.md;
+          padding: tokens.spacing.md
         }
       }
     }
     tokens
   }
-  };
+  }
 }
 export type DesignMapSection = {
   id: string

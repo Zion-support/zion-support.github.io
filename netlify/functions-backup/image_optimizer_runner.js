@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {try {
         message: 'image_optimizer_runner function executed successfully'),
         timestamp: timestamp),
         function: 'image_optimizer_runner'}
-      });
+      })
     }
 //   } catch (error) {
     // console.error('❌ image_optimizer_runner function failed: ') error
@@ -22,13 +22,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'image_optimizer_runner'}
-      });
+      })
     }
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
+      })
     }
   }
 }

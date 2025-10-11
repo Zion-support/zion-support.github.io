@@ -64,17 +64,16 @@ class MonitoringService {
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-    const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
-  });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        let clsValue = 0;
+  })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
+        let clsValue = 0
         const clsObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value || 0
@@ -87,13 +86,13 @@ class MonitoringService {
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime
             this.reportMetric('fcp', entry.startTime)
-  });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+  })
+        })
+        fcpObserver.observe({ entryTypes: ['paint'] })
       } catch (error) {
     // console.error('Error setting up performance observers:', error)
   }

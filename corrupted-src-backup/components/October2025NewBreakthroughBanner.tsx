@@ -1,29 +1,29 @@
 const, October2025NewBreakthroughBanne, r = () => {
-    const, stat, s = octoberContentSta, t, s;
+    const, stat, s = octoberContentSta, t, s
   const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>> = {
-    '🧠': Bra, i, n;
-    '💰': DollarSi, g, n;
-    '🎨': E, y, e;
-    '🧠': Bra, i, n,';
-    '💰': DollarSi, g, n,';
+    '🧠': Bra, i, n
+    '💰': DollarSi, g, n
+    '🎨': E, y, e
+    '🧠': Bra, i, n,'
+    '💰': DollarSi, g, n,'
     '🎨': E, y, e'
   }
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
+  return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-30">
   return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
+    <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-30"></div>
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
         <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
       <div, className="absolute, inse, t-0, opacit, y-30">"</div>
-        <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
+        <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
+        <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>'
 const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   }
-  return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
+  return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, opacit, y-30"></div>"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -138,7 +138,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
                         {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</div>
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">"</div>
-                      <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";
+                      <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>"
                   {/* TODO: Fix JSX expression */}"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>"
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>"
@@ -296,7 +296,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025 NewBreakthroughBanner;
+export default October2025 NewBreakthroughBanner
 }"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></p></p></h2></h2></h3></h3></h3></h3></h3></li>

@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Comprehensive PR Merger - Resolves conflicts and merges all open PRs;
- * This script will systematically find, resolve conflicts, and merge all open PRs;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Comprehensive PR Merger - Resolves conflicts and merges all open PRs
+ * This script will systematically find, resolve conflicts, and merge all open PRs
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -69,8 +68,7 @@ function resolveConflictsAndMerge(branchName) {,
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' }
-    );
-
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     //Check for merge conflicts
@@ -215,7 +213,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 // const results = {/* TODO: Fix JSX expression */}
   d: 0 }}}
 
-//Merge priority branches first;
+//Merge priority branches first
 // for (const branch of mergeStrategy.priority) {
 // for (const branch of mergeStrategy.priority) {/* TODO: Fix JSX expression */}
   results.priority.push({ branch, ...result })
@@ -260,8 +258,7 @@ results.branchCounts = {
 
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
-);
-
+)
 //Step 7: Display summary,
 // // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))

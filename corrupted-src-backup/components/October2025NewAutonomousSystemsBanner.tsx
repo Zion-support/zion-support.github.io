@@ -6,7 +6,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
       {/* Floating, particles, effect */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
@@ -24,24 +24,24 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
             <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">
               🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">";
+    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]" />"</div>
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t" />";
+      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t" />"
       {/* Floating, particles, effect */})
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
       {/* Floating, particles, effect */}</div>
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"</div>
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />"</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-8">";
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+  g:px-8, p, y-8">"
         {/* Header, with, badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">"</div>
           <div, className="flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, rounde, d-full, p, x-4, p, y-2">"</div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"
+            <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">"
               🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5</sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"</Sparkles>
           </d, i, v>
@@ -74,7 +74,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
             <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">
               🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5</$1>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">";
+    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]" />";"
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t" />"
@@ -442,7 +442,8 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025NewAutonomousSystemsBanner;
+export default October2025NewAutonomousSystemsBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></h3>

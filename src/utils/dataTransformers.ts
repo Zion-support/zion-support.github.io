@@ -170,7 +170,7 @@ export function unflattenObject()
   O: Add content,}
 }
           current[k] = current[k] || {}
-          current = current[k] as Record;
+          current = current[k] as Record
           <string>
         }
       }
@@ -190,7 +190,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const result = {} as Pick;
+  const result = {} as Pick
           <T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -222,8 +222,8 @@ export function omit
   O: Add content,}
 }
     delete result[key];)
-  });
-  return result as Omit;
+  })
+  return result as Omit
           <T>
 }
 /**
@@ -567,6 +567,6 @@ export default {
 //   titleCase,
 //   kebabCase,
 //   camelCase,
-//   snakeCase;
+//   snakeCase
 }
 

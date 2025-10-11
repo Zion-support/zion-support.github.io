@@ -5,7 +5,7 @@ interface State {/* TODO: Fix JSX expression */}
 }
 export class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
-    super(props);
+    super(props)
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {,

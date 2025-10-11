@@ -46,8 +46,7 @@ function cleanMergeConflicts(filePath) {
 
 // Function to recursively find and clean files
 function cleanDirectory(dirPath) {
-    let cleanedCount = 0;
-  
+    let cleanedCount = 0
   try {
     const items = fs.readdirSync(dirPath)
     for (const item of items) {
@@ -58,10 +57,10 @@ function cleanDirectory(dirPath) {
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
           continue
   }
-        cleanedCount += cleanDirectory(fullPath);
+        cleanedCount += cleanDirectory(fullPath)
       } else if (stat.isFile()) {
     // Only process certain file types
-        const ext = path.extname(item);
+        const ext = path.extname(item)
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
             cleanedCount++

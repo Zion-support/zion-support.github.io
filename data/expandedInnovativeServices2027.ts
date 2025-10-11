@@ -1,21 +1,21 @@
 // Expanded Innovative Services 2027 - Zion Tech Group
 // Additional Micro SAAS, IT Infrastructure, and AI Services
 export type ExpandedService2027 =
-  id: string;
-  name: string;
-  category: string;
-  subcategory: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  pricing: unknown;
-    model: string;
-    basePrice: number;
-    currency: string;
-    pricingTiers: unknown;
-      starter: number;
+  id: string
+  name: string
+  category: string
+  subcategory: string
+  description: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  pricing: unknown
+    model: string
+    basePrice: number
+    currency: string
+    pricingTiers: unknown
+      starter: number
       professional: number
       enterprise: number
       custom: string,
@@ -23,29 +23,29 @@ export type ExpandedService2027 =
     freeTier: boolean
     trialPeriod: string,
   }
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  technology: string[];
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    phone: string;
+  marketPrice: string
+  competitors: string[]
+  roi: string
+  setupTime: string
+  integrations: string[]
+  technology: string[]
+  innovationLevel: string
+  marketSize: string
+  growthRate: string
+  contactInfo: unknown
+    phone: string
     email: string
     website: string
     address: string,
   }
-  technicalSpecs: unknown;
-    uptime: string;
-    security: string[];
+  technicalSpecs: unknown
+    uptime: string
+    security: string[]
     compliance: string[]
     apiEndpoints: number
     scalability: string,
   }
-  support: string;
+  support: string
   rating: number
   reviews: number
   launchDate: string,
@@ -204,7 +204,7 @@ export const,
       model: 'Tiered Subscription'
       basePrice: 2500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2500
         professional: 5000
         enterprise: 10000,
@@ -372,7 +372,7 @@ export const,
       model: 'Per-User + Base'
       basePrice: 1500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1500
         professional: 3000
         enterprise: 6000,
@@ -547,7 +547,7 @@ export const,
       model: 'Usage-based + Base'
       basePrice: 1800
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1800
         professional: 3500
         enterprise: 7000,
@@ -715,7 +715,7 @@ export const,
       model: 'Per-Stream + Processing'
       basePrice: 2200
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2200
         professional: 4500
         enterprise: 9000,
@@ -890,7 +890,7 @@ export const,
       model: 'Percentage of Cloud Spend'
       basePrice: 2000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2000
         professional: 4000
         enterprise: 8000,
@@ -1052,7 +1052,7 @@ export const,
       model: 'Per-Developer + Base'
       basePrice: 1200
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1200
         professional: 2500
         enterprise: 5000,
@@ -1227,7 +1227,7 @@ export const,
       model: 'Per-Smartphone + Data Processing'
       basePrice: 2800
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2800
         professional: 5500
         enterprise: 11000,
@@ -1389,7 +1389,7 @@ export const,
       model: 'City Size + Services'
       basePrice: 5000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 5000
         professional: 10000
         enterprise: 20000,
@@ -1564,7 +1564,7 @@ export const,
       model: 'Usage-based + Base'
       basePrice: 8000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 8000
         professional: 15000
         enterprise: 30000,
@@ -1726,7 +1726,7 @@ export const,
       model: 'Transaction Fees + Governance'
       basePrice: 0
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 0
         professional: 0
         enterprise: 0,
@@ -1901,7 +1901,7 @@ export const,
       model: 'Per-Provider + Usage'
       basePrice: 3500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 3500
         professional: 7000
         enterprise: 14000,
@@ -2063,7 +2063,7 @@ export const,
       model: 'Per-Provider + Transaction'
       basePrice: 2500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2500
         professional: 5000
         enterprise: 10000,
@@ -2192,8 +2192,8 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'IoT & Edge Computing',
   'Financial Technology',
   'Healthcare Technology'
-];
-// Helper function to get services by category;
+]
+// Helper function to get services by category
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>,
   if (category === 'All'),
 export const getExpandedServicesByCategory = (categor)
@@ -2201,18 +2201,18 @@ export const getExpandedServicesByCategory = (categor)
   if (category === 'All')
     return ALL_EXPANDED_SERVICES_2027,
   }
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)
 }
-// Helper function to get services by subcategory;
+// Helper function to get services by subcategory
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}
-// Helper function to search services;
+// Helper function to search services
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>
 export const getExpandedServicesBySubcategory = (subcategor)
   y: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),
 }
-// Helper function to search services;
+// Helper function to search services
 export const searchExpandedServices = (quer)
   y: string): ExpandedService2027[] =>
 //   const lowercaseQuery = query.toLowerCase(),
@@ -2222,7 +2222,7 @@ export const searchExpandedServices = (quer)
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||,
-    service.subcategory.toLowerCase().includes(lowercaseQuery));
+    service.subcategory.toLowerCase().includes(lowercaseQuery))
 }
 // Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027 = i,
   d: string, nam,

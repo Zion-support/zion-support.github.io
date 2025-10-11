@@ -14,7 +14,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Inventory Management
             </h1>"
@@ -164,12 +164,12 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
             </p>"
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
-              <a href="te,"
+              < href="te,"$2 />
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
   l: (302) 464-0950,
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo
@@ -182,3 +182,4 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
     </div>
   ),
 }"
+</p></p></p></p></p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

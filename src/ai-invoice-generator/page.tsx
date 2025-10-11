@@ -251,12 +251,12 @@ namename: 'Emily Rodriguez',
         <Footer />
     </React.Fragment>
   ),
-});
-AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+})
+AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage'
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
 export default AIInvoiceGeneratorPage</div>
   </p>
   </div>
@@ -298,3 +298,4 @@ export default AIInvoiceGeneratorPage</div>
   </main>
   </div>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></h1></h3></h3></h3></ul></li></section>

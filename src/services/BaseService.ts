@@ -4,9 +4,9 @@
  * Base Service Class
  * Provides common functionality for all service classes
  */
-import logger from '../utils/logger';
-import axios from 'axios';
-// Create axios instance with default config;
+import logger from '../utils/logger'
+import axios from 'axios'
+// Create axios instance with default config
 const apiClient = axios.create({
     // TODO: Add content
   }
@@ -16,7 +16,7 @@ const apiClient = axios.create({
     // TODO: Add content
   }
 }
-    'Content-Type': 'application/json'}});
+    'Content-Type': 'application/json'}})
 export interface ServiceOptions {
     // TODO: Add content
   }
@@ -27,7 +27,7 @@ export interface ServiceOptions {
   cache?: boolean
   cacheDuration?: number
 }
-export interface CacheEntry;
+export interface CacheEntry
           <T> {
     // TODO: Add content
   }
@@ -41,26 +41,26 @@ export class BaseService {
   protected baseUrl: string
   protected options: ServiceOptions
   private cache: Map,
-          <string, CacheEntry<unknown>> = new Map();
+          <string, CacheEntry<unknown>> = new Map()
 constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl
   }
     this.options = {
     retries: 3,
     cache: false,
-      cacheDuration: 300000, // 5 minutes;
+      cacheDuration: 300000, // 5 minutes
 //       ...options
   }
-   * Check if cached data is still valid;
+   * Check if cached data is still valid
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key)
   }
-    const __entry = this.cache.get(key);
-    if (!entry) return false;
-    const age = Date.now() - entry.timestamp;
-    return age;
-          < (this.options.cacheDuration || 300000);
-   * Get data from cache;
+    const __entry = this.cache.get(key)
+    if (!entry) return false
+    const age = Date.now() - entry.timestamp
+    return age
+          < (this.options.cacheDuration || 300000)
+   * Get data from cache
   protected getFromCache<T>(key: string): T | null {
     // TODO: Add content
   }
@@ -83,12 +83,12 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
     if (this.isCacheValid(key)) {// TODO: Add content
   }
 }
-      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
-      return this.cache.get(key)?.data as T;
-    this.cache.delete(key);
-    return null;
-   * Set data in cache;
-  protected setInCache;
+      logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' })
+      return this.cache.get(key)?.data as T
+    this.cache.delete(key)
+    return null
+   * Set data in cache
+  protected setInCache
           <T>(key: string, data: T): void {
     // TODO: Add content
   }
@@ -119,7 +119,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const cacheKey = `GET:${endpoint}`
     if (useCache) {
-    const cached = this.getFromCache<T>(cacheKey);
+    const cached = this.getFromCache<T>(cacheKey)
       if (cached) return cached
   }
     try {
@@ -131,7 +131,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
       if (useCache) {
     this.setInCache(cacheKey, response.data)
   }
-      return response.data;
+      return response.data
     } catch (error) {
       logger.error('GET request failed', error as Error, {
         component: 'BaseService',
@@ -227,7 +227,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
     throw error
   }
 }
-    if (!this.options.cache) return;
+    if (!this.options.cache) return
     this.cache.set(key, {
     // TODO: Add content
   }
@@ -243,35 +243,35 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
     // TODO: Add content
   }
 }
-      this.cache.clear();
-   * Make a GET request;
-  protected async get;
+      this.cache.clear()
+   * Make a GET request
+  protected async get
           <T>(endpoint: string, useCache = true): Promise<T> {
     // TODO: Add content
   }
 }
-    const cacheKey = `GET:${endpoint}`;
+    const cacheKey = `GET:${endpoint}`
     if (useCache) {
     // TODO: Add content
   }
 }
-      const cached = this.getFromCache;
-          <T>(cacheKey);
-      if (cached) return cached;
+      const cached = this.getFromCache
+          <T>(cacheKey)
+      if (cached) return cached
     try {
     // TODO: Add content
   }
 }
-      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.get;
+      logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' })
+      const response = await apiClient.get
           <T>(`${this.baseUrl}${endpoint}`, {
     // TODO: Add content
   }
 }
   timeout: this.options.timeout,
         retries: this.options.retries,
-        this.setInCache(cacheKey, response.data);
-      return response.data;
+        this.setInCache(cacheKey, response.data)
+      return response.data
     } catch (error) {
     // TODO: Add content
   }
@@ -300,7 +300,7 @@ logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' })
   protected async delete<T>(endpoint: string): Promise<T> {
 logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {logger.error('DELETE request failed', error as Error, {}
-   * Handle service error;
+   * Handle service error
   protected handleError(error: Error, context?: Record<string, unknown>): never {
     // TODO: Add content
   }
@@ -310,5 +310,4 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' })
   }
 }
   component: this.constructor.name,
-...context;
-
+...context

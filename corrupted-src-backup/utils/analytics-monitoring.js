@@ -7,14 +7,14 @@ export const analyticsUtils = {
       const _paint = performance.getEntriesByType('paint')
       const metrics = {
         domContentLoaded:
-          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
       }
 
-      return metrics;
+      return metrics
     }
     return null
   },
@@ -32,7 +32,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
     }
 
-    // Send to analytics service;
+    // Send to analytics service
     //     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData
   },
@@ -51,7 +51,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
     }
 
-    //     return interactionData;
+    //     return interactionData
   },
 
   // Core Web Vitals

@@ -51,20 +51,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'auto-heal-and-optimize' });
+        task: 'auto-heal-and-optimize' })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'auto-heal-and-optimize' });
+  k: 'auto-heal-and-optimize' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

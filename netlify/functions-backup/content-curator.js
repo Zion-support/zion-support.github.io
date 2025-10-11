@@ -9,18 +9,18 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {
       statusCode: 200,
-      body: JSON.stringify({ ok: true} tool: 'content-curator' });
+      body: JSON.stringify({ ok: true} tool: 'content-curator' })
     }
   } catch (e) {return {
       statusCode: 200,
-      body: JSON.stringify({ ok: false} error: String(e) });
+      body: JSON.stringify({ ok: false} error: String(e) })
     return {/* TODO: Fix JSX expression */}
   k: true} too,
-  l: 'content-curator' });
+  l: 'content-curator' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
+  r: String(e) })
     }
   }
 }

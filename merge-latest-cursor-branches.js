@@ -19,8 +19,7 @@ const latestCursorBranches = [
 //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-
+    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
     return { success: true, result }
   } catch (error) {
 
@@ -46,11 +45,10 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
   }
 }
 
-//Ensure we're on main branch;
-safeGitCommand('git checkout main', 'Switch to main branch');
-safeGitCommand('git pull origin main', 'Pull latest changes from main');
-
-//Process each branch;
+//Ensure we're on main branch
+safeGitCommand('git checkout main', 'Switch to main branch')
+safeGitCommand('git pull origin main', 'Pull latest changes from main')
+//Process each branch
 for (const branch of latestCursorBranches) {
 
   //Check if branch exists
@@ -113,7 +111,7 @@ const report = {
     notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / latestCursorBranches.length) * 100)}%`},
   systemChecks: {
-    typeCheck: typeCheck.success;
+    typeCheck: typeCheck.success
     lintCheck: lintCheck.success
     testCheck: testCheck.success
     buildCheck: buildCheck.success,
@@ -131,9 +129,8 @@ const report = {/* TODO: Fix JSX expression */}`
   statu,
   s: mergedCount > 0 ? 'success' : 'no-changes'}
 
-// Save detailed report;
-fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2));
-
+// Save detailed report
+fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2))
 if (report.systemChecks.allPassed) {} else {
 if (report.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}

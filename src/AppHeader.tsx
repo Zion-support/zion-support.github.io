@@ -1,41 +1,36 @@
-import React, { useState } from 'react';
-import { Link, useRouter } from 'next/router';
-import { useSelector } from 'react-redux';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, User, Bell, Search, ChevronDown } from 'lucide-react';
-import { cn } from '../lib/utils';
-import { RootState } from '../store';
-import { useAuth } from '../hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { useIsMobile } from '../hooks/useIsMobile';
-import { useMessaging } from '../context/MessagingContext';
-
+import React, { useState } from 'react'
+import { Link, useRouter } from 'next/router'
+import { useSelector } from 'react-redux'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, User, Bell, Search, ChevronDown } from 'lucide-react'
+import { cn } from '../lib/utils'
+import { RootState } from '../store'
+import { useAuth } from '../hooks/useAuth'
+import { useTranslation } from 'react-i18next'
+import { useIsMobile } from '../hooks/useIsMobile'
+import { useMessaging } from '../context/MessagingContext'
 const AppHeader = () => {
-  const router = useRouter();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const { unreadCount } = useMessaging();
-  
-  const showTagline = router.pathname === '/';
-
+  const router = useRouter()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const { user } = useAuth()
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
+  const { unreadCount } = useMessaging()
+  const showTagline = router.pathname === '/'
   const openLoginModal = (returnToPath?: string) => {
-    setLoginOpen(true);
-  };
-
+    setLoginOpen(true)
+  }
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/pages/InnovativeServicesShowcase2025' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-  ];
-
+  ]
   return (
     <>
-      <header
+      <$2 />
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
@@ -57,7 +52,7 @@ const AppHeader = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               {navigationItems.map((item) => (
-                <Link
+                <$2 />
                   key={item.name}
                   href={item.href}
                   className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
@@ -93,7 +88,7 @@ const AppHeader = () => {
                   <span className="text-sm font-medium">{user?.name || 'User'}</span>
                 </div>
               ) : (
-                <button
+                <$2 />
                   onClick={() => openLoginModal()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
@@ -102,7 +97,7 @@ const AppHeader = () => {
               )}
 
               {/* Mobile menu button */}
-              <button
+              <$2 />
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
               >
@@ -124,7 +119,7 @@ const AppHeader = () => {
               <div className="container mx-auto px-4 py-4">
                 <nav className="flex flex-col space-y-4">
                   {navigationItems.map((item) => (
-                    <Link
+                    <$2 />
                       key={item.name}
                       href={item.href}
                       className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors py-2"
@@ -149,7 +144,6 @@ const AppHeader = () => {
         </div>
       )}
     </>
-  );
-};
-
-export default AppHeader;
+  )
+}
+export default AppHeader

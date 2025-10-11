@@ -66,14 +66,14 @@ const fixes = [
   {
     pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g
     replacement: '$1 = $2, $3'},
-  //Fix import statements;
+  //Fix import statements
   {
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
   //Fix export statements
   {
     pattern: /export\s+(\w+)\s*(\w+)/g
     replacement: 'export $1, $2'},
-  //Fix interface syntax;
+  //Fix interface syntax
   {
     pattern: /interface\s+(\w+)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacement: 'interface $1 { $2 } $3'},
@@ -81,15 +81,15 @@ const fixes = [
   {
     pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g
     replacement: 'type $1 = $2, $3'},
-  //Fix React component syntax;
+  //Fix React component syntax
   {
     pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
     replacement: 'const $1 = () => { $2 } $3'},
-  //Fix JSX return statements;
+  //Fix JSX return statements
   {
     pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g
     replacement: 'return (<$1> $2 </$1>), $3'},
-  //Fix event handlers;
+  //Fix event handlers
   {
     pattern: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'onClick={ $1 } $2'},
@@ -218,7 +218,7 @@ const fixes = [
   n: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'const $1 = () => { $2 } $3'},
-  //Fix JSX return statements;
+  //Fix JSX return statements
   {/* TODO: Fix JSX expression */}
   },
   //Fix event handlers
@@ -294,8 +294,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 //Main function
 async function main() {
-    //Find all TypeScript/TSX files;
-  //   let fixedCount = 0;
+    //Find all TypeScript/TSX files
+  //   let fixedCount = 0
   files.forEach(file => {)
     if (fixFile(file)) {
       fixedCount++

@@ -9,14 +9,13 @@ try {
     execSync('git stash', { stdio: 'inherit' })
   }
 
-  // Fetch latest changes;
-  console.log('📥 Fetching latest changes...');
-  execSync('git fetch origin', { stdio: 'inherit' });
-
-  // Check what we're merging;
-  console.log('🔍 Checking differences with origin/main...');
-  const diff = execSync('git diff HEAD origin/main --name-only', { encoding: 'utf8' });
-  console.log('Files changed in origin/main: ');
+  // Fetch latest changes
+  console.log('📥 Fetching latest changes...')
+  execSync('git fetch origin', { stdio: 'inherit' })
+  // Check what we're merging
+  console.log('🔍 Checking differences with origin/main...')
+  const diff = execSync('git diff HEAD origin/main --name-only', { encoding: 'utf8' })
+  console.log('Files changed in origin/main: ')
   console.log(diff)
   // Try to merge with origin/main
   console.log('🔄 Attempting to merge with origin/main...'),
@@ -35,8 +34,8 @@ try {
         execSync('git commit -m "feat: Resolve merge conflicts with main branch"', { stdio: 'inherit' })
         console.log('✅ Conflicts resolved and committed')
       } catch (resolveError) {
-    console.log('❌ Could not automatically resolve conflicts');
-        console.log('Manual intervention needed for:', conflictFiles);
+    console.log('❌ Could not automatically resolve conflicts')
+        console.log('Manual intervention needed for:', conflictFiles)
         throw resolveError
   }
     }
@@ -47,6 +46,6 @@ try {
   execSync('git push origin main', { stdio: 'inherit' })
   console.log('🎉 Successfully synced with main branch!')
 } catch (error) {
-    console.error('❌ Error syncing with main:', error.message);
+    console.error('❌ Error syncing with main:', error.message)
   process.exit(1)
   }

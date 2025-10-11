@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Focused PR Merger - Targets specific important branches for merging;
- * This script focuses on merging the most important branches while avoiding conflicts;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Focused PR Merger - Targets specific important branches for merging
+ * This script focuses on merging the most important branches while avoiding conflicts
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -69,13 +68,12 @@ function resolveConflictsAndMerge(branchName) {,
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' }
-    );
-
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs for most conflicts,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
       execSync(
 // //Step,
   4: Enhanced conflict resolution function,
@@ -111,7 +109,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 2: Auto-resolve with ours,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' })
@@ -127,9 +125,8 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {
       //Strategy 3: Manual conflict resolution,
-      execSync('git reset --hard HEAD', { stdio: 'inherit' });
-
-      //Get conflicted files;
+      execSync('git reset --hard HEAD', { stdio: 'inherit' })
+      //Get conflicted files
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {)
         encoding: 'utf8'),
     try {/* TODO: Fix JSX expression */}
@@ -194,9 +191,9 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     successful: 0
     failed: 0
     methods: {
-      direct: 0;
-      theirs: 0;
-      ours: 0;
+      direct: 0
+      theirs: 0
+      ours: 0
       manual: 0
       failed: 0
       not_found: 0,
@@ -205,7 +202,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 // const results = {/* TODO: Fix JSX expression */}
     }}}
 
-//Merge priority branches first;
+//Merge priority branches first
 // for (const branch of priorityBranches) {
 // for (const branch of priorityBranches) {/* TODO: Fix JSX expression */}
   results.priority.push({ branch, ...result })
@@ -239,8 +236,7 @@ results.branchCounts = {
 results.branchCounts = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2));
-
+fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2))
 //Step 7: Display summary,
 // // // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))

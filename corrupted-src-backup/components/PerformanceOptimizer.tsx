@@ -2,16 +2,16 @@ import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "w, e, b-vita, l, s"
 interface, PerformanceMetric, s {
-    c, l, s: numb, e, r | nu, l, l;
-f, i, d: numb, e, r | nu, l, l;
-f, c, p: numb, e, r | nu, l, l;
-l, c, p: numb, e, r | nu, l, l;
-tt, f, b: numb, e, r | nu, l, l;
-sc, o, r;
+    c, l, s: numb, e, r | nu, l, l
+f, i, d: numb, e, r | nu, l, l
+f, c, p: numb, e, r | nu, l, l
+l, c, p: numb, e, r | nu, l, l
+tt, f, b: numb, e, r | nu, l, l
+sc, o, r
   e: numb, e, r
   }
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
-    isVisib, l, e;
+    isVisib, l, e
   onClo, s, e
   }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({

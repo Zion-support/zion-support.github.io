@@ -9,7 +9,7 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }}
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData
   return (<React.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
@@ -78,8 +78,9 @@ const,
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       {children}
     </React.Fragment>
-  );
+  )
 }
-export default SEOEnhancer;
+export default SEOEnhancer
 "
   </SEOEnhancerProps>
+</li></li></li></li>

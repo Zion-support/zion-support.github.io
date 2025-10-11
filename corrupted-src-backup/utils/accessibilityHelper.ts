@@ -6,13 +6,13 @@
  * Focus trap class for managing focus within modal dialogs
  */
 export class FocusTrap {
-    private element: HTMLElement;
+    private element: HTMLElement
   private focusableElements: HTMLElement[] = []
   private firstFocusableElement?: HTMLElement
   private lastFocusableElement?: HTMLElement,
 
   constructor(element: HTMLElement) {,
-    this.element = element;
+    this.element = element
     this.updateFocusableElements()
   }
 
@@ -26,9 +26,8 @@ export class FocusTrap {
       '[tabindex]:not([tabindex="-1"])'].join(', ')
     this.focusableElements = Array.from(
       this.element.querySelectorAll(focusableSelectors)
-    ) as HTMLElement[];
-
-    this.firstFocusableElement = this.focusableElements[0];
+    ) as HTMLElement[]
+    this.firstFocusableElement = this.focusableElements[0]
     this.lastFocusableElement = this.focusableElements[this.focusableElements.length - 1]
   }
 
@@ -109,7 +108,7 @@ export const announceToScreenReader = (message: string): void => {,
     document.body.removeChild(announcement)
 export const announceToScreenReader = (messag)
   e: string): void => {/* TODO: Fix JSX expression */}
-  }, 1000);
+  }, 1000)
 }
 
 /**
@@ -123,8 +122,8 @@ export const keyboardNavigation = {
       //       const nextIndex = (currentIndex + 1) % items.length,,
       items[nextIndex]?.focus()
   } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-    event.preventDefault();
-      const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+    event.preventDefault()
+      const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1
       items[prevIndex]?.focus()
   }
   },

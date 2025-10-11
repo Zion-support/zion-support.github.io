@@ -36,7 +36,7 @@ function mergeBranch(branchName) {
     //Try direct merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' }
-    );
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
@@ -147,7 +147,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 // const results = {/* TODO: Fix JSX expression */}
   d: 0 }}}
 
-//Merge each branch;
+//Merge each branch
 for (const branch of newBranches) {
   results.summary.total++
   if (result.success) {

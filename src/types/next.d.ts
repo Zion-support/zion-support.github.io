@@ -9,9 +9,9 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   keywords?: string[]
   authors?: Array
           <{/* TODO: Fix JSX expression */}
-  e: string, url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
+  e: string, url?: string }> | string[]
+  creator?: string
+  publisher?: string
   formatDetection?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -37,17 +37,17 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   ur,
-  l: string;
+  l: string
       width?: number
       height?: number
       alt?: string,
     }>
-    locale?: string;
-    type?: string;
-    authors?: Array;
+    locale?: string
+    type?: string
+    authors?: Array
           <{/* TODO: Fix JSX expression */}
-  e: string, url?: string }> | string[];
-    publishedTime?: string;
+  e: string, url?: string }> | string[]
+    publishedTime?: string
   }
   twitter?: {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -92,7 +92,7 @@ export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   ur,
-  l: string;
+  l: string
   lastModified?: Date | string
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number,

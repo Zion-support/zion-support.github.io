@@ -45,10 +45,10 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
     }
-  ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)
+  ]
+  return(<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)$2 />
   g:px-8, relative, overflow-hidd, e, n">")
-    <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,),
+    <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,),$2 />
   return (
     <, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l$2 />
   g:px-8, relative, overflow-hidd, e, n">"
@@ -230,7 +230,8 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025AIOperationsBanner;
+export default October2025AIOperationsBanner
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></h2></h2></h2></h3></h3></h3>

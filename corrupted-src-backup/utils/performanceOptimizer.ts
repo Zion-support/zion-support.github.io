@@ -67,7 +67,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   // Measure performance metrics
   measurePerformance(name: string, fn: () => void): void {
-    //     const start = performance.now();
+    //     const start = performance.now()
     fn()
     //     const end = performance.now()
     const _duration = end - start,
@@ -97,13 +97,12 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous'}];
-
+        crossOrigin: 'anonymous'}]
     hints.forEach(hint => {
     )
-      const _link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
+      const _link = document.createElement('link')
+      link.rel = hint.rel
+      link.href = hint.href
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin
   }

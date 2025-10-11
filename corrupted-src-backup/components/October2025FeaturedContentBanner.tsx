@@ -403,7 +403,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025FeaturedContentBanner;
+export default October2025FeaturedContentBanner
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3>

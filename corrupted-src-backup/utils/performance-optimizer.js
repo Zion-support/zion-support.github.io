@@ -6,16 +6,16 @@
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {
-      pageLoadTime: 0;
-      firstContentfulPaint: 0;
-      largestContentfulPaint: 0;
+      pageLoadTime: 0
+      firstContentfulPaint: 0
+      largestContentfulPaint: 0
       cumulativeLayoutShift: 0
       firstInputDelay: 0
       interactionToNextPaint: 0,
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     }
-    this.observers = new Map();
-    this.init();
+    this.observers = new Map()
+    this.init()
   }
 
   init() {/* TODO: Fix JSX expression */}
@@ -39,13 +39,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupResourceOptimization() {
-    // Preload critical resources;
-    this.preloadCriticalResources();
-
-    // Lazy load non-critical resources;
-    this.setupLazyLoading();
-
-    // Optimize font loading;
+    // Preload critical resources
+    this.preloadCriticalResources()
+    // Lazy load non-critical resources
+    this.setupLazyLoading()
+    // Optimize font loading
     this.optimizeFontLoading()
   }
 
@@ -76,10 +74,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupCodeSplitting() {
-    // Dynamic imports for route-based code splitting;
-    this.setupRouteBasedSplitting();
-
-    // Component-based splitting;
+    // Dynamic imports for route-based code splitting
+    this.setupRouteBasedSplitting()
+    // Component-based splitting
     this.setupComponentSplitting()
   }
 
@@ -107,12 +104,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/src/components/Header.tsx',
       '/src/components/Footer.tsx']
     criticalResources.forEach(resource => {)
-      const _link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'script';
+      const _link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = 'script'
       document.head.appendChild(link)
-  });
+  })
   }
 
   setupLazyLoading() {
@@ -146,7 +143,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ]
     criticalFonts.forEach(font => {)
-      const _link = document.createElement('link');
+      const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = font
       link.as = 'style',
@@ -154,8 +151,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         link.rel = 'stylesheet'
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
       }
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)
+    })
   }
 
   setupRouteBasedSplitting() {
@@ -172,8 +169,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
     }
 
-    // Preload next likely routes;
-    this.preloadNextRoutes(routes);
+    // Preload next likely routes
+    this.preloadNextRoutes(routes)
   }
 
   setupComponentSplitting() {
@@ -185,7 +182,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'InteractiveMaps']
     heavyComponents.forEach(component => {)
       this.setupComponentLazyLoading(component)
-  });
+  })
   }
 
   preloadNextRoutes(routes) {
@@ -207,7 +204,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   getLikelyNextRoutes(currentPath) {/* TODO: Fix JSX expression */}
     }
 
-    return routeMap[currentPath] || [];
+    return routeMap[currentPath] || []
   }
 
   setupComponentLazyLoading(componentName) {
@@ -307,10 +304,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   optimizeStyles() {
-    // Inline critical CSS;
-    this.inlineCriticalCSS();
-
-    // Defer non-critical CSS;
+    // Inline critical CSS
+    this.inlineCriticalCSS()
+    // Defer non-critical CSS
     this.deferNonCriticalCSS()
   }
 
@@ -351,12 +347,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         link.media = 'all'
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
       }
-    });
+    })
   }
 
   // Memory management
   cleanup() {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect())
     this.observers.clear()
   }
 
@@ -366,9 +362,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       const observer = new PerformanceObserver(list => {)
         list.getEntries().forEach(entry => {)
           this.handlePerformanceEntry(entry)
-  });
-      });
-
+  })
+      })
       observer.observe({)
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
   cleanup() {/* TODO: Fix JSX expression */}

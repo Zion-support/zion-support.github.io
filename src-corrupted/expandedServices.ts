@@ -1,27 +1,27 @@
 export interface ExpandedService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  deliveryTime: string;
-  tags: string[];
+  id: string
+  title: string
+  description: string
+  category: string
+  subcategory: string
+  price: number
+  currency: string
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
+  features: string[]
+  benefits: string[]
+  marketPrice: string
+  deliveryTime: string
+  tags: string[]
   author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-import { ProductListing } from "@/types/listings";
+    name: string
+    id: string
+    avatarUrl?: string
+import { ProductListing } from "@/types/listings"
 // Expanded Services - Real Micro SAAS and IT Solutions
 export const EXPANDED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -34,7 +34,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     price: 8999,
     currency: "$",
     tags: ["Process Automation", "RPA", "Workflow", "AI", "Efficiency"],
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings"
 // AI & Machine Learning Services
 export const AI_SERVICES: ProductListing[] = [
   {
@@ -97,37 +97,37 @@ export const AI_SERVICES: ProductListing[] = [
       id: "ziontech",
       email: "kleber@ziontechgroup.com",
     },
-  createdAt: string;
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
-  isNew?: boolean;
-  isFeatured?: boolean;
-    email?: string;
-  };
-  images: string[];
-  createdAt: string;
-  rating: number;
-  reviewCount: number;
-  aiScore: number;
-  website?: string;
-  documentation?: string;
-  support?: string;
-  integration?: string[];
-  compliance?: string[];
-  sla?: string;
-    verified: boolean;
-  };
-  images: string[];
-  createdAt: string;
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
+  createdAt: string
+  aiScore: number
+  rating: number
+  reviewCount: number
+  isNew?: boolean
+  isFeatured?: boolean
+    email?: string
+  }
+  images: string[]
+  createdAt: string
+  rating: number
+  reviewCount: number
+  aiScore: number
+  website?: string
+  documentation?: string
+  support?: string
+  integration?: string[]
+  compliance?: string[]
+  sla?: string
+    verified: boolean
+  }
+  images: string[]
+  createdAt: string
+  aiScore: number
+  rating: number
+  reviewCount: number
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string
+    email: string
+    website: string
+  }
 }
 export const EXPANDED_SERVICES: ExpandedService[] = [
   // AI & Machine Learning Services
@@ -717,7 +717,7 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     availability: "2-3 Weeks",
     aiScore: 95
   }
-];
+]
 // Cybersecurity Services
 export const CYBERSECURITY_SERVICES: ProductListing[] = [
   {
@@ -997,7 +997,7 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 91
   }
-];
+]
 // Cloud & DevOps Services
 export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
   {
@@ -1067,7 +1067,7 @@ export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 89
   }
-];
+]
 // Data & Analytics Services
 export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
   {
@@ -1115,7 +1115,7 @@ export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 90
   }
-];
+]
 // Digital Transformation Services
 export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
   {
@@ -1164,7 +1164,7 @@ export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 94
   }
-];
+]
 // IoT & Edge Computing Services
 export const IOT_EDGE_SERVICES: ProductListing[] = [
   {
@@ -1211,7 +1211,7 @@ export const IOT_EDGE_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 88
   }
-];
+]
 // Blockchain & Web3 Services
 export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
   {
@@ -1259,7 +1259,7 @@ export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 90
   }
-];
+]
 // All services combined
 export const ALL_EXPANDED_SERVICES: ProductListing[] = [
   ...AI_SERVICES,
@@ -1269,7 +1269,7 @@ export const ALL_EXPANDED_SERVICES: ProductListing[] = [
   ...DIGITAL_TRANSFORMATION_SERVICES,
   ...IOT_EDGE_SERVICES,
   ...BLOCKCHAIN_WEB3_SERVICES
-];
+]
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'AI & Machine Learning', value: 'ai-ml' },
@@ -1307,7 +1307,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     author: { name: "Mobile Developer" },
     tags: ["iOS", "Android", "React Native"]
   }
-];
+]
 export const SERVICE_CATEGORIES: Category[] = [
   {
     id: "ai",
@@ -1330,14 +1330,14 @@ export const SERVICE_CATEGORIES: Category[] = [
     description: "iOS and Android apps",
     services: EXPANDED_SERVICES.filter(s => s.category === "Mobile")
   }
-];
+]
 export const CONTACT_INFO = {
   email: "contact@ziontechgroup.com",
   phone: "+1 (555) 123-4567",
   address: "123 Tech Street, Innovation City, IC 12345",
   mobile: "+1 (555) 123-4567",
   website: "https://ziontechgroup.com"
-};
+}
 export const PRICING_TIERS = [
   {
     name: "Starter",
@@ -1357,7 +1357,7 @@ export const PRICING_TIERS = [
     description: "Tailored for large organizations",
     features: ["Dedicated support", "Custom features", "White-label options"]
   }
-];
+]
     id: "digital-workplace",
     title: "Digital Workplace Transformation",
     description: "Complete digital workplace solution that modernizes employee experience, improves collaboration, and increases productivity through intelligent digital tools.",
@@ -1795,7 +1795,7 @@ export const PRICING_TIERS = [
     availability: "12-16 Weeks",
     aiScore: 94
   }
-];
+]
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'AI Development', value: 'ai-development' },
@@ -1810,9 +1810,9 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'Hardware', value: 'hardware' },
   { label: 'Business Automation', value: 'business-automation' },
   { label: 'Business Solutions', value: 'business-solutions' }
-];
-export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured);
-export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
+]
+export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured)
+export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew)
     id: "ai-services",
     name: "AI Services",
     description: "Artificial Intelligence and Machine Learning solutions",
@@ -1861,7 +1861,7 @@ export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
     icon: "📊",
     subcategories: ["Data Science & ML", "Business Intelligence", "Data Engineering", "Data Governance", "Predictive Analytics"]
   }
-];
+]
     name: "AI & Machine Learning",
     description: "Advanced artificial intelligence and machine learning solutions",
     icon: "🤖",
@@ -1909,7 +1909,7 @@ export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
     icon: "⚙️",
     count: 2
   }
-];
+]
 export const PRICING_TIERS = [
   {
     name: "Starter",
@@ -1929,8 +1929,8 @@ export const PRICING_TIERS = [
     description: "Full-featured solutions for large organizations",
     features: ["Full functionality", "24/7 support", "Custom development", "Dedicated team", "SLA guarantees"]
   }
-];
+]
   { label: 'Digital Transformation', value: 'digital-transformation' },
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
   { label: 'Blockchain & Web3', value: 'blockchain-web3' }
-];
+]

@@ -98,11 +98,11 @@ export const useIntersectionObserver = ()
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return () => disconnect();
-  }, [disconnect]);
+    return () => disconnect()
+  }, [disconnect])
   return { observe, disconnect }
 }
-// Image lazy loading hook;
+// Image lazy loading hook
 export const useLazyImage = (sr)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -125,25 +125,25 @@ export const useLazyImage = (sr)
             img.onload = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              setImageSrc(src);
-              setIsLoaded(true);
+              setImageSrc(src)
+              setIsLoaded(true)
             }
             img.onerror = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-              setIsError(true);
+              setIsError(true)
             }
-            img.src = src;
+            img.src = src
           }
         }
   )
       },
 //       [src, isLoaded, isError]
 //     )
-  );
+  )
   return { imageSrc, isLoaded, isError, observe }
 }
-// Performance monitoring hook;
+// Performance monitoring hook
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -175,9 +175,9 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 //         lcp,
         ttf,
   b: navigation?.responseStart - navigation?.requestStart,)
-      });
+      })
     }
-    // Monitor performance after page load;
+    // Monitor performance after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -206,12 +206,12 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      window.removeEventListener('load', updateMetrics);
+      window.removeEventListener('load', updateMetrics)
     }
-  }, []);
-  return metrics;
+  }, [])
+  return metrics
 }
-// Memory usage monitoring;
+// Memory usage monitoring
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -243,42 +243,42 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   e: memory.totalJSHeapSize,
           jsHeapSizeLimi,
   t: memory.jsHeapSizeLimit,)
-        });
+        })
       }
     }
-    const interval = setInterval(updateMemoryInfo, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  return memoryInfo;
+    const interval = setInterval(updateMemoryInfo, 5000)
+    return () => clearInterval(interval)
+  }, [])
+  return memoryInfo
 }
-// Resource preloading utility;
+// Resource preloading utility
 export const preloadResource = (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
+  if (typeof window === 'undefined') return
+  const link = document.createElement('link')
+  link.rel = 'preload'
+  link.href = href
+  link.as = as
+  document.head.appendChild(link)
 }
-// Critical resource preloading;
+// Critical resource preloading
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images;
-  preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS;
-  preloadResource('/styles/critical.css', 'style');
+  if (typeof window === 'undefined') return
+  // Preload critical fonts
+  preloadResource('/fonts/inter-var.woff2', 'font')
+  preloadResource('/fonts/inter-var.woff', 'font')
+  // Preload critical images
+  preloadResource('/images/hero-bg.webp', 'image')
+  preloadResource('/images/logo.svg', 'image')
+  // Preload critical CSS
+  preloadResource('/styles/critical.css', 'style')
 }
-// Bundle size monitoring;
+// Bundle size monitoring
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -328,9 +328,9 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 //         jsSize,
 //         cssSize,
 //         imageSize;)
-      });
+      })
     }
-    // Calculate after page load;
+    // Calculate after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -340,10 +340,10 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      window.removeEventListener('load', calculateBundleSize);
+      window.removeEventListener('load', calculateBundleSize)
     }
-  }, []);
-  return bundleSize;
+  }, [])
+  return bundleSize
 }
 export default {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -356,6 +356,6 @@ export default {/* TODO: Fix JSX expression */}
 //   useMemoryMonitoring,
 //   preloadResource,
 //   preloadCriticalResources,
-//   useBundleSizeMonitoring;
+//   useBundleSizeMonitoring
 }
 

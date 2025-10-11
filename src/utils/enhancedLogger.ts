@@ -33,7 +33,7 @@ export interface LogEntry {
     // TODO: Add content
   }
 }
-  /** Unique identifier for the log entry */;
+  /** Unique identifier for the log entry */
   id: string,
 
   /** Log level */,
@@ -69,7 +69,7 @@ export interface LoggerConfig {
     // TODO: Add content
   }
 }
-  /** Minimum log level to output */;
+  /** Minimum log level to output */
   minLevel: LogLevel,
 
   /** Enable console logging */,
@@ -138,7 +138,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   logs: LogEntry[] = [],
   private,
   performanceMarks: Map,
-          <string, number> = new Map();
+          <string, number> = new Map()
   private constructor(confi)
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -152,7 +152,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns EnhancedLogger instance
    */
 
-  public static getInstance(config?: Partial;
+  public static getInstance(config?: Partial
           <LoggerConfig>): EnhancedLogger {
     // TODO: Add content
   }
@@ -352,7 +352,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Duration in milliseconds, or undefined if mark not found
    */
 
-  public endPerformance(markName: string, data?: Record;
+  public endPerformance(markName: string, data?: Record
           <string, unknown>): number | undefined {
     // TODO: Add content
   }
@@ -429,9 +429,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       environment: this.config.environment,
 
     }
-    // Store log entry;
-    this.logs.push(logEntry);
-    // Maintain max logs limit;
+    // Store log entry
+    this.logs.push(logEntry)
+    // Maintain max logs limit
     if (this.logs.length > this.config.maxLogs) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -763,7 +763,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   tota,
   l: this.logs.length,
 //       byLevel,
-//       bySource;
+//       bySource
     }
   }
   /**
@@ -814,7 +814,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 //       2)
   }
 }
-// Export singleton instance;
-export const logger = EnhancedLogger.getInstance();
-// Export default;
-
+// Export singleton instance
+export const logger = EnhancedLogger.getInstance()
+// Export default

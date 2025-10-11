@@ -5,7 +5,7 @@
  */
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 export interface AppConfig {
-    environment: Environment;
+    environment: Environment
   api: {
     baseURL: string
     timeout: number
@@ -13,8 +13,8 @@ export interface AppConfig {
     enableCaching: boolean
   }
   features: {
-    enableAnalytics: boolean;
-    enableErrorReporting: boolean;
+    enableAnalytics: boolean
+    enableErrorReporting: boolean
     enablePerformanceMonitoring: boolean
     enableAccessibility: boolean
     enableSEO: boolean,
@@ -444,7 +444,7 @@ export class ConfigManager {
   private environment: Environment,
   private overrides: Partial<AppConfig> = {}
   constructor() {
-    this.environment = this.detectEnvironment();
+    this.environment = this.detectEnvironment()
     this.config = this.loadConfig()
   }
   static getInstance(): ConfigManager {
@@ -464,7 +464,7 @@ export class ConfigManager {
     // TODO: Add content
   }
 }
-  private static instance: ConfigManager;
+  private static instance: ConfigManager
   private config: AppConfig
   private environment: Environment
   private overrides: Partial,
@@ -495,9 +495,9 @@ export class ConfigManager {
       if (nextEnv) {
         return nextEnv as Environment
   }
-      if (nodeEnv === 'test') return 'test';
-      if (nodeEnv === 'production') return 'production';
-      if (nodeEnv === 'development') return 'development';
+      if (nodeEnv === 'test') return 'test'
+      if (nodeEnv === 'production') return 'production'
+      if (nodeEnv === 'development') return 'development'
     }
     return 'development'
   }
@@ -516,7 +516,7 @@ export class ConfigManager {
         config = this.mergeConfig(config, productionConfig)
         break
       case 'test':
-        config = this.mergeConfig(config, testConfig);
+        config = this.mergeConfig(config, testConfig)
         break
   }
     // Apply overrides
@@ -569,7 +569,7 @@ export class ConfigManager {
           ) {
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue
           } else {
-    * Deep merge two config objects;
+    * Deep merge two config objects
    */
 
   private mergeConfig(base: AppConfig, override: Partial,
@@ -627,7 +627,7 @@ export class ConfigManager {
     if (nestedKey !== undefined) {
       return this.config[key][nestedKey]
   }
-    return this.config[key];
+    return this.config[key]
   }
   /**
    * Set configuration value
@@ -823,7 +823,7 @@ $4},
         enableNetwork: false
       }
     }
-    return defaultValues[key];
+    return defaultValues[key]
   }
   /**
    * Get full configuration
@@ -1074,7 +1074,7 @@ $4},
    * Reset configuration
    */
   reset(): void {
-    * Reset configuration;
+    * Reset configuration
    */
 
   reset(): void {// TODO: Add content
@@ -1082,7 +1082,7 @@ $4},
 
 }
     this.overrides = {}
-    this.config = this.loadConfig();
+    this.config = this.loadConfig()
   }
   /**
    * Export configuration as JSON
@@ -1166,10 +1166,9 @@ export const configManager = ConfigManager.getInstance()
 }
   vali,
   d: errors.length === 0,
-//       errors;
+//       errors
     }
   }
 }
-// Export singleton instance;
-export const configManager = ConfigManager.getInstance();
-
+// Export singleton instance
+export const configManager = ConfigManager.getInstance()

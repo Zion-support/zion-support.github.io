@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-og-preview-validator')
     }
-    let sha;
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-og-preview-validator'}
-    let sha;
+    let sha
     try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
-    );
+    )
     return {
     ok: putRes.ok
       status: putRes.status,
@@ -74,7 +74,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   if (!baseUrl,
         return {/* TODO: Fix JSX expression */})
-  r: 'No base URL' });
+  r: 'No base URL' })
     }
   try {/* TODO: Fix JSX expression */}
     const html = await res.text()}
@@ -89,7 +89,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const fields = {/* TODO: Fix JSX expression */}
   r:card')}
     }
-    let _imageStatus = null;
+    let _imageStatus = null
     if (fields['og: image']) {const imgUrl = /^https?:\/\//i.test(fields['og:image'])
         ? fields['og:image']
         : baseUrl +,
@@ -97,7 +97,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
             ? fields['og:image'],
             : '/' + fields['og:image']),
       try {,
-        const _head = await fetch(imgUrl} { method: 'HEAD' });
+        const _head = await fetch(imgUrl} { method: 'HEAD' })
         imageStatus = {ok: head.ok
           status: head.status,
           contentType: head.headers.get('content-type')}
@@ -136,27 +136,27 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
   l: imageStatus,)
-      });
+      })
     const report = {/* TODO: Fix JSX expression */}
       issues}
     }
-//     const commit = await commitJson('data/reports/og-preview.json') report);
+//     const commit = await commitJson('data/reports/og-preview.json') report)
     return {
     statusCode: 200,
       body: JSON.stringify({ ok: true),
         report),
         commit
-  });
+  })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

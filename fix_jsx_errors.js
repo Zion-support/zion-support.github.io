@@ -6,30 +6,29 @@ function fixJSXErrors(filePath) {
     const patterns = [
       {
         //Fix CheckCircleIcon and similar patterns
-        pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
-        replacement: '$1 />\n                  <span'},
+        pattern: /(<CheckCircleIcon[^>]*>)\s*</g,$2 />
+        replacement: '$1 />\n                  <'},$2 />
       {
-        //Fix other icon patterns;
+        //Fix other icon patterns
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
         replacement: '$1 />\n                <'},
       {
-        //Fix closing tag issues;
+        //Fix closing tag issues
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
         replacement: '$1 />\n              </'},
       {
-        //Fix ArrowRightIcon patterns;
+        //Fix ArrowRightIcon patterns
         pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
         replacement: '$1 />\n            </Link>'},
       {
-        //Fix TruckIcon patterns;
+        //Fix TruckIcon patterns
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
-        replacement: '$1 />\n          </div>'}];
-
+        replacement: '$1 />\n          </div>'}]
     patterns.forEach(fix => {
     )
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-        content = newContent;
+        content = newContent
         modified = true
   }
 function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}

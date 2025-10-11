@@ -5,7 +5,7 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   messag,
-  e: string;
+  e: string
   type?: ToastType
   duration?: number
   onClose?: () => void,,
@@ -29,7 +29,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    setIsVisible(show);
+    setIsVisible(show)
     if (show && duration > 0) {
     setIsVisible(false)
   }
@@ -106,3 +106,4 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
 }
 export default Toast;"`
   </ToastProps>
+</span></span>

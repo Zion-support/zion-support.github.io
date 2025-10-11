@@ -1259,23 +1259,23 @@
     customers: 9
     rating: 4 && 4.7
     reviews: 6,
-  }];
+  }]
 		integrations: ['StripePayPalGoogle Analytics']
 		useCases: ['Partner growthAutomated payouts']
 		roi: 'Grow partner revenue by 1025%'
 		competitors: ['ImpactPartnerStack'],
-		integrations: ['StripePayPalGoogle Analytics'];
-		useCases: ['Partner growthAutomated payouts'];
+		integrations: ['StripePayPalGoogle Analytics']
+		useCases: ['Partner growthAutomated payouts']
 		roi: 'Grow partner revenue by 1025%'
-		competitors: ['ImpactPartnerStack'];
-		marketSize: '$5B+';
-		growthRate: '12% YoY';
-		variant: 'neural-quantum';
-		contactInfo: contact;
+		competitors: ['ImpactPartnerStack']
+		marketSize: '$5B+'
+		growthRate: '12% YoY'
+		variant: 'neural-quantum'
+		contactInfo: contact
 		realImplementation: true,
-		implementationDetails: 'Event ingestion, attribution, payout jobs';
-		launchDate: '2026-01-10';
-		customers: 12;
+		implementationDetails: 'Event ingestion, attribution, payout jobs'
+		launchDate: '2026-01-10'
+		customers: 12
 		rating: 4 && 4.6,
 		reviews: 7
 		marketSize: '$5B+'
@@ -1304,7 +1304,7 @@
 		price: '$149',
 		period: '/month',
 		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.'
-		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export']
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -1316,7 +1316,7 @@
 		targetAudience: 'Product and CX teams',
 		trialDays: 14,
 		setupTime: '1 hour',
-		technology: ['Embeddings, Vector DB, Next && Next.js'];
+		technology: ['Embeddings, Vector DB, Next && Next.js']
 		integrations: ['ZendeskIntercomG2 Capterra']
 		useCases: ['Prioritize roadmapReduce churn']
 		roi: 'Ship high-impact features faster'
@@ -1349,7 +1349,7 @@
 		price: '$199',
 		period: '/month',
 		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.'
-		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs']
 		popular: true
 		icon: ''
 		color: 'from-rose-600 to-pink-700'
@@ -1361,7 +1361,7 @@
 		targetAudience: 'Platform and security teams',
 		trialDays: 14,
 		setupTime: '30 minutes',
-		technology: ['OpenAPI, Node, CI'];
+		technology: ['OpenAPI, Node, CI']
 		integrations: ['GitHubGitLabJenkins']
 		useCases: ['Pre-deploy API checksSecurity posture']
 		roi: 'Reduce security escapes by 60%'
@@ -1396,7 +1396,7 @@
 		targetAudience: 'SaaS and platform teams'
 		trialDays: 14
 		setupTime: '2 hours'
-		technology: ['Workers/LambdaWebhooks'];
+		technology: ['Workers/LambdaWebhooks']
 		integrations: ['AWSCloudflareGCP']
 		useCases: ['Billing cyclesData syncs']
 		roi: 'Fewer missed jobs and incidents'
@@ -1431,7 +1431,7 @@
 		targetAudience: 'Developers and platform'
 		trialDays: 14
 		setupTime: '30 minutes'
-		technology: ['SMTP/WebhooksVirus scan'];
+		technology: ['SMTP/WebhooksVirus scan']
 		integrations: ['SESSendGridMailgun']
 		useCases: ['Ticket intakeCRM capture']
 		roi: 'Automate manual email triage'
@@ -1454,7 +1454,7 @@
 		price: '$119',
 		period: '/month',
 		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.'
-		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export']
 		popular: true
 		icon: ''
 		color: 'from-fuchsia-600 to-pink-700'
@@ -1501,7 +1501,7 @@
 		targetAudience: 'Developers and security'
 		trialDays: 14
 		setupTime: '15 minutes'
-		technology: ['NodePlaywright'];
+		technology: ['NodePlaywright']
 		integrations: ['GitHubGitLab']
 		useCases: ['Header hardeningCompliance reports']
 		roi: 'Reduce risk and review toil'
@@ -1524,7 +1524,7 @@
 		price: '$149',
 		period: '/month',
 		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.'
-		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];
+		features: ['Feature versioningValidation rulesLineage trackingOnline serving API']
 		popular: false
 		icon: ''
 		color: 'from-emerald-600 to-teal-700'
@@ -1536,7 +1536,7 @@
 		targetAudience: 'Data/ML teams',
 		trialDays: 14,
 		setupTime: '1 day',
-		technology: ['DB, Vector/Key-Value'];
+		technology: ['DB, Vector/Key-Value']
 		integrations: ['DatabricksdbtAirflow']
 		useCases: ['Faster model delivery']
 		roi: 'Shorter time-to-prod models'
@@ -1571,7 +1571,7 @@
 		targetAudience: 'SRE and platform'
 		trialDays: 14
 		setupTime: '1 hour'
-		technology: ['Prom/OTEL'];
+		technology: ['Prom/OTEL']
 		integrations: ['PagerDutySlack']
 		useCases: ['Error budgetsCoaching']
 		roi: 'Fewer incidents'
@@ -1594,7 +1594,7 @@
 		price: '$69',
 		period: '/month',
 		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.'
-		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
+		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints']
 		popular: false
 		icon: ''
 		color: 'from-cyan-600 to-purple-700'
@@ -1641,7 +1641,7 @@
 		targetAudience: 'Finance and platform'
 		trialDays: 14
 		setupTime: '3 days'
-		technology: ['AWS/GCP/Azure APIs'];
+		technology: ['AWS/GCP/Azure APIs']
 		integrations: ['DatadogSlackJira']
 		useCases: ['Spend controlChargeback']
 		roi: 'Reduce overspend by 1030%'
@@ -1664,7 +1664,7 @@
 		price: '$59',
 		period: '/month',
 		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.'
-		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
+		features: ['Docs from schemasSDK generationChangelogsSearchable portal']
 		popular: false
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -1676,7 +1676,7 @@
 		targetAudience: 'API and platform teams',
 		trialDays: 14,
 		setupTime: '30 minutes',
-		technology: ['OpenAPI, GraphQL, MDX'];
+		technology: ['OpenAPI, GraphQL, MDX']
 		integrations: ['GitHubGitLab']
 		useCases: ['Dev portalsSDKs']
 		roi: 'Docs/SDKs 5 faster'
@@ -2544,7 +2544,7 @@ export const,
     feature,
   s: [,
 	website: 'https://ziontechgroup.com'
-};
+}
 export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   {
     id: 'affiliate-analytics-starter',
@@ -3652,7 +3652,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.7
     reviews: 6,
   }
-];
+]
 		id: 'affiliate-analytics-starter',
 		id: 'affiliate-analytics-starter',
 	{
@@ -4207,8 +4207,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.7
 		reviews: 6,
 	}
-];
-];
+]
+]
     popula,
   r: false,
     ico,
@@ -4262,7 +4262,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   g: 4.7,
     review,
   s: 6}
-];
+]
 		i,
   d: 'affiliate-analytics-starter'
 		i,

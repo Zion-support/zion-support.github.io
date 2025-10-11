@@ -63,15 +63,14 @@ function resolveAllMergeConflicts() {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0)
     if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found');
+    console.log('✅ No merge conflicts found')
       return true
   }
     
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `),
-    conflictedFiles.forEach(file => console.log(`  - ${file}`));
-    
-    // Resolve conflicts in each file;
-    let resolvedCount = 0;
+    conflictedFiles.forEach(file => console.log(`  - ${file}`))
+    // Resolve conflicts in each file
+    let resolvedCount = 0
     for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
         resolvedCount++
@@ -81,7 +80,7 @@ function resolveAllMergeConflicts() {
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length
   } catch (error) {
-    console.log('❌ Error finding merge conflicts:', error.message);
+    console.log('❌ Error finding merge conflicts:', error.message)
     return false
   }
 }
@@ -98,7 +97,7 @@ function getAllRemoteBranches() {
       .filter(branch => !branch.includes('main'))
     return branches
   } catch (error) {
-    console.log('❌ Error getting remote branches:', error.message);
+    console.log('❌ Error getting remote branches:', error.message)
     return []
   }
 }
@@ -138,37 +137,30 @@ function mergeBranch(branchName) {
 
 // Main execution
 async function main() {
-    console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n');
-  
+    console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
   // Step 1: Check current status
   console.log('📊 Current Git Status: '),
-  execGitCommand('git status --porcelain', 'Checking git status');
-  
+  execGitCommand('git status --porcelain', 'Checking git status')
   // Step 2: Fetch latest changes,
-  execGitCommand('git fetch origin', 'Fetching latest changes from origin');
-  
+  execGitCommand('git fetch origin', 'Fetching latest changes from origin')
   // Step 3: Try to merge with main first
   console.log('\n🔄 Attempting to merge with origin/main...'),
-  const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main');
-  
+  const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main')
   if (mergeResult) {
     console.log('✅ Successfully merged with origin/main')
   } else {
-    console.log('⚠️  Merge had conflicts, attempting to resolve...');
-    
+    console.log('⚠️  Merge had conflicts, attempting to resolve...')
     // Step 4: Resolve merge conflicts
     if (resolveAllMergeConflicts()) {
       console.log('✅ All merge conflicts resolved'),
       ,
       // Step 5: Add resolved files,
-      execGitCommand('git add .', 'Adding resolved files');
-      
+      execGitCommand('git add .', 'Adding resolved files')
       // Step 6: Commit the merge,
-      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution');
-      
+      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution')
       console.log('✅ Merge conflicts resolved and committed')
   } else {
-    console.log('❌ Failed to resolve all merge conflicts');
+    console.log('❌ Failed to resolve all merge conflicts')
       return
   }
   }
@@ -178,7 +170,7 @@ async function main() {
   const allBranches = getAllRemoteBranches(),
   ,
   console.log(`📋 Found ${allBranches.length} remote branches to process: `),
-  allBranches.slice(0, 10).forEach(branch => console.log(`  - ${branch}`));
+  allBranches.slice(0, 10).forEach(branch => console.log(`  - ${branch}`))
   if (allBranches.length > 10) {
     console.log(`  ... and ${allBranches.length - 10} more branches`)
   }
@@ -219,10 +211,9 @@ async function main() {
   
   // Step 8: Final status check
   console.log('\n📊 Final Status: '),
-  execGitCommand('git status', 'Final git status');
-  execGitCommand('git log --oneline -10', 'Recent commits');
-  
-  console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!');
+  execGitCommand('git status', 'Final git status')
+  execGitCommand('git log --oneline -10', 'Recent commits')
+  console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')
 }
 
 // Run the main function

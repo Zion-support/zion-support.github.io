@@ -161,7 +161,7 @@ icon$5: Award,
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               AI Analytics Services,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.
@@ -289,7 +289,7 @@ icon$5: Award,
     </React.Fragment>
   ),
 }
-export default AIAnalyticsPage;
+export default AIAnalyticsPage
 {/* Use Cases */}
               Use Cases;"
             < className="grid grid-cols-1,$2 />
@@ -351,7 +351,7 @@ export default AIAnalyticsPage;
               Start your journey with AI analytics today. Get a free consultation and discover
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
@@ -393,3 +393,4 @@ export default AiAnalyticsPage</div>
   </div>
   </div>
   </div>
+</span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li></li>

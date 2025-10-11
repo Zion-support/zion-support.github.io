@@ -299,8 +299,8 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   ),
-});
-Footer.displayName = 'Footer';
+})
+Footer.displayName = 'Footer'
 export default Footer</Link>
   </Link>
   </Link>
@@ -310,3 +310,4 @@ export default Footer</Link>
   </li>
   </li>
   </h4>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></p></p></p></p></p></h3></h3></h3></h3></h4></h4></h4></h4></h5></h5></ul></ul></ul></ul></ul></li></li></li></li></li></li></li>

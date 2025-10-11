@@ -64,14 +64,14 @@ const,
   const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    setIsLoaded(true);
-    onLoad?.();
+    setIsLoaded(true)
+    onLoad?.()
   }
   const handleError = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    setHasError(true);
-    onError?.();
+    setHasError(true)
+    onError?.()
   }
   return (<div>Coming Soon</div>)
   )
@@ -101,7 +101,8 @@ const,
           )}
       )}
     </div>
-  );
+  )
 }
 export default LazyImage;"
   </LazyImageProps>
+</div>

@@ -6,9 +6,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Find all TypeScript and JavaScript files
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-    let files = [];
-  const items = fs.readdirSync(dir);
-  
+    let files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
@@ -19,10 +18,10 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
   }
   }
   
-  return files;
+  return files
 }
 
-// Fix merge conflicts;
+// Fix merge conflicts
 const fixMergeConflicts = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
@@ -46,20 +45,16 @@ const fixMergeConflicts = (filePath) => {
   }
 }
 
-// Main execution;
-const srcDir = path.join(__dirname, '..', 'src');
-const appDir = path.join(__dirname, '..', 'app');
-
-console.log('Starting merge conflict resolution...');
-
-// Find all files;
-const srcFiles = findFiles(srcDir);
-const appFiles = findFiles(appDir);
-const allFiles = [...srcFiles, ...appFiles];
-
-console.log(`Found ${allFiles.length} files to process`);
-
-let fixedCount = 0;
+// Main execution
+const srcDir = path.join(__dirname, '..', 'src')
+const appDir = path.join(__dirname, '..', 'app')
+console.log('Starting merge conflict resolution...')
+// Find all files
+const srcFiles = findFiles(srcDir)
+const appFiles = findFiles(appDir)
+const allFiles = [...srcFiles, ...appFiles]
+console.log(`Found ${allFiles.length} files to process`)
+let fixedCount = 0
 for (const file of allFiles) {
     if (fixMergeConflicts(file)) {
     fixedCount++

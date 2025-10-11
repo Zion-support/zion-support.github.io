@@ -34,7 +34,7 @@ const ITConsultingPage: React.FC = () => {
         <main className="pt-24 pb-16 px-4"></main>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
-              <h1 className="text-4xl,"
+              < className="text-4xl,"$2 />
   md: text-6xl font-bold text-gray-900 mb-6"></h1>
                 IT Consulting Services,
               </h1>"
@@ -77,7 +77,7 @@ const ITConsultingPage: React.FC = () => {
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
                         Get Started,
-  </
+  
                     </div>
                   </div>
                 </div>
@@ -92,11 +92,11 @@ const ITConsultingPage: React.FC = () => {
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call Us
-  </
+  
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
                   Email Us
-  </
+  
               </div>
             </div>
           </section>
@@ -109,3 +109,4 @@ const ITConsultingPage: React.FC = () => {
 export default ITConsultingPage</button>
   </button>
   </button>
+</div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>

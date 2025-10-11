@@ -51,7 +51,7 @@ const SmartCitiesPage: React.FC = () => {
             Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services,
             we help create sustainable, efficient, and connected urban environments.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
@@ -62,11 +62,11 @@ const SmartCitiesPage: React.FC = () => {
           </div>
         </section>"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Smart City Solutions,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
@@ -89,6 +89,6 @@ const SmartCitiesPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default SmartCitiesPage;
+export default SmartCitiesPage

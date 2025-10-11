@@ -1,150 +1,97 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Users, MapPin, Clock, ArrowRight, CheckCircle } from 'lucide-react'
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
+  const jobOpenings = [
     {
       title: 'Senior AI Engineer',
-      department: 'AI Solutions',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise'],
-description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: [
-        '5+ years experience in AI/ML development',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong understanding of deep learning algorithms',
-        'Previous experience in production AI systems'
-      ],
-      benefits: [
-        'Competitive salary: $120,000 - $180,000',
-        'Equity participation',
-        'Flexible remote work',
-        'Professional development budget'
-      ],
-      posted: '2 days ago',
-      featured: true
-    },
-    {
-      title: 'Cloud Architect',
-      department: 'Cloud Services',
-      location: 'New York, NY',
-      type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications'],
-    },
-    {
-      title: 'Data Scientist',
-      department: 'Data Analytics',
       location: 'San Francisco, CA',
       type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills'],
-    }
-  ];
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
+      description: 'Lead the development of cutting-edge AI solutions for our clients.',
+      requirements: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science']
+    },
+    {
+      title: 'Cloud Solutions Architect',
+      location: 'Remote',
+      type: 'Full-time',
+      description: 'Design and implement scalable cloud infrastructure solutions.',
+      requirements: ['AWS/Azure certification', '3+ years cloud experience', 'Strong communication skills']
+    },
+    {
+      title: 'Frontend Developer',
+      location: 'New York, NY',
+      type: 'Full-time',
+      description: 'Build beautiful and responsive user interfaces for our applications.',
+      requirements: ['React, TypeScript', '2+ years frontend experience', 'UI/UX design skills']
     }
   ]
+
   const benefits = [
     'Competitive salary and equity',
-    'Comprehensive health insurance',
+    'Health, dental, and vision insurance',
     'Flexible work arrangements',
     'Professional development budget',
-    'Top-tier equipment and tools',
-    'Team building events',;
-      'Career growth opportunities';
-  ];
-  const values = [
-    {
-      icon: Star,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
-    },
-    {
-      icon: Heart,
-      title: 'Impact',
-      description: 'We create solutions that make a real difference'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
-    }
+    'Unlimited PTO',
+    '401(k) matching',
+    'Gym membership',
+    'Team building events'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
-      </Helmet>
-
-      <section className="relative py-20 px-4 overflow-hidden">
-        </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-            Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-          </p>
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Join Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Team</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        </section><div className="
-          </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {openPositions.map((position, index) => (
-              </div><div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                </div><h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
-                  </div><div className="flex items-center space-x-1">
-                    </div><Briefcase className="w-4 h-4" />
-                    <span>{position.department}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    </div><MapPin className="w-4 h-4" />
-                    <span>{position.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    </div><Clock className="w-4 h-4" />
-                    <span>{position.type}</span>
-                  </div>
+      {/* Job Openings Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-300">
+              Explore our current job openings and find your next career opportunity.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {jobOpenings.map((job, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                <div className="flex items-center text-gray-300 mb-4">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  <span className="mr-4">{job.location}</span>
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span>{job.type}</span>
                 </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <div className="mb-4">
-                  </div><h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
-                  <ul className="text-sm text-gray-300 space-y-1">
-                    {position.requirements?.map((req, reqIndex) => (
-                      </ul><li key={reqIndex} className="flex items-center space-x-2">
-                        </li><span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                        <span>{req}</span>
-                      </li>
+                <p className="text-gray-300 mb-6">{job.description}</p>
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Requirements:</h4>
+                  <ul className="space-y-1">
+                    {job.requirements.map((req, reqIndex) => (
+                      <li key={reqIndex} className="text-sm text-gray-300">• {req}</li>
                     ))}
                   </ul>
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" /></button>
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                   Apply Now
-                  </button><ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
             ))}
@@ -152,50 +99,47 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white/5">
-        </section><div className="
-          </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {values.map((value, index) => (
-              </div><div key={index} className="text-center">
-                </div><div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  </div><value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-300">
+              We offer competitive benefits and a great work environment.
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4">
-        </section><div className="
-          </div><h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              </div><div key={index} className="flex items-center space-x-3">
-                </div><div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-gray-300">{benefit}</span>
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{benefit}</span>
               </div>
             ))}
-          <div className="mt-8">
-            </div><Link
-              to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-            >
-              Get in Touch
-              </Link><ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
-};
 
-export default CareersPage;
-              <ArrowRight className="w-5 h-5 ml-2" />
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Don't See Your Role?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+          </p>
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+            Send Resume
+          </button>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   )
 }
-export default CareersPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></button></button></button></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section></section></section>
+
+export default CareersPage

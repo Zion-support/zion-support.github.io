@@ -113,19 +113,16 @@ async function main() {
     allFiles.push(...files)
   }
 
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
-  uniqueFiles.forEach(processFile);
-
-  console.log(`\n🎉 Console statement removal completed!`);
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 Console statement removal completed!`)
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Console statements removed: ${removedStatements}`)
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -148,7 +145,6 @@ export { processFile, consolePatterns }
   }
 }
 
-// Run the script;
-main().catch(console.error);
-
+// Run the script
+main().catch(console.error)
 export { removeConsoleStatements }`

@@ -1,20 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-    title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+    title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
   structuredData?: object
   }
 }
 const SEOHead: React.FC<SEOHeadProps> = ()
 }) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -34,9 +34,9 @@ const defaultStructuredData = {
     "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com";
-  },;
-    "sameAs": [;
+      "email": "kleber@ziontechgroup.com"
+  },
+    "sameAs": [
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
     ],
@@ -76,10 +76,9 @@ return (
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}
+export default SEOHead
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
@@ -122,4 +121,5 @@ export default SEOHead;
   )
 }
 export default SEOHead
+</li>
 </li>

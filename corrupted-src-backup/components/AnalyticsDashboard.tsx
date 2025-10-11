@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 :corrupted-src-backup/components/AnalyticsDashboard.tsx
 interface AnalyticsData {
-    pageViews: number;
-  uniqueVisitors: number;
+    pageViews: number
+  uniqueVisitors: number
   bounceRate: number
   avgSessionDuration: number
   conversionRate: number,

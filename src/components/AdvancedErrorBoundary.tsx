@@ -11,12 +11,12 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   }
 interface ErrorReport {
-    errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  errorMessage: string;
-  errorStack: string | undefined;
-  errorComponentStack: string | null | undefined;
+    errorId: string | null
+  error: Error
+  errorInfo: ErrorInfo
+  errorMessage: string
+  errorStack: string | undefined
+  errorComponentStack: string | null | undefined
   errorBoundary: string
   errorTimestamp: string
   errorUserAgent: string | null,
@@ -86,7 +86,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       error: null,
       errorInfo: null,
       errorId: null
-    });
+    })
   }
   private handleReload = () => {
     if (typeof window !== 'undefined') {
@@ -121,12 +121,12 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 Try Again,
-  </
-              <button
+  
+              <$2 />
                 onClick={this.handleReload}
                 className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                 Reload Page,
-  </
+  
             </div>
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">

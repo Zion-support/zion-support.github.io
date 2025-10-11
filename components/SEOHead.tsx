@@ -1,15 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react'
+import Head from 'next/head'
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
 }
 
 export default function SEOHead({
@@ -22,9 +21,8 @@ export default function SEOHead({
   twitterCard = "summary_large_image",
   structuredData,
 }: SEOHeadProps) {
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -73,10 +71,8 @@ export default function SEOHead({
         }
       ]
     }
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
+  }
+  const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -141,5 +137,6 @@ export default function SEOHead({
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Head>
-  );
+  )
 }
+</li></li></li></li></li></li></li></li></li></li></li></li>

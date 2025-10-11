@@ -59,13 +59,13 @@ export function useEnhancedPerformance(__option)
 //             'Long Component Lifetime',
 //             component,
 //             Math.round(duration)
-          );
-      // Track component unmount;
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+          )
+      // Track component unmount
+        analytics.trackCustomEvent('Component', 'Unmounted', component)
     }
-  }, [component, trackAnalytics, trackPerformance]);
-  // Track render performance;
-    renderCountRef.current++;
+  }, [component, trackAnalytics, trackPerformance])
+  // Track render performance
+    renderCountRef.current++
     if (trackPerformance && renderCountRef.current > 10) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

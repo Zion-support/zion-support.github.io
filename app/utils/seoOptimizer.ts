@@ -1,16 +1,16 @@
-'use client';
-/**;
- * Advanced SEO Optimization Utility;
- * Provides comprehensive SEO enhancements and monitoring;
- */;
+'use client'
+/**
+ * Advanced SEO Optimization Utility
+ * Provides comprehensive SEO enhancements and monitoring
+ */
 interface SEOConfig {
     siteName: string,
   siteUrl: string,
   defaultTitle: string,
   defaultDescription: string,
   defaultImage: string,
-  twitterHandle?: string;
-  facebookAppId?: string;
+  twitterHandle?: string
+  facebookAppId?: string
   googleAnalyticsId?: string
   }
   googleTagManagerId?: string;}
@@ -20,29 +20,29 @@ interface PageSEOData {
   description: string,
   }
 interface SEOConfig {}
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
-  twitterHandle?: string;
+  siteName: string
+  siteUrl: string
+  defaultTitle: string
+  defaultDescription: string
+  defaultImage: string
+  twitterHandle?: string
   facebookAppId?: string
   googleAnalyticsId?: string
   googleTagManagerId?: string,}
 }
 interface PageSEOData {}
-  title: string;
-  description: string;
+  title: string
+  description: string
   keywords: string[]
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  publishedTime?: string;
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product' | 'profile'
+  publishedTime?: string
   modifiedTime?: string
   author?: string
   section?: string,
   tags?: string[],
-  noindex?: boolean;
+  noindex?: boolean
   nofollow?: boolean;}
 }
 class SEOOptimizer {
@@ -71,12 +71,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setupPerformanceMonitoring();}
   init(): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Set page-specific SEO data;
-   */;
+  /**
+   * Set page-specific SEO data
+   */
   setPageData(data: PageSEOData): void {
     ,
-    this.currentPageData = data;
+    this.currentPageData = data
     this.updateMetaTags(),
   }
   setPageData(data: PageSEOData): void {}
@@ -86,25 +86,25 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   setPageData(dat)
   a: PageSEOData): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Generate optimized title;
-   */;
+  /**
+   * Generate optimized title
+   */
   generateTitle(pageTitle?: string): string {
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
-  };
-  generateTitle(pageTitle?: string): string {};
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
-    return title.includes(this.config.siteName);
+  }
+  generateTitle(pageTitle?: string): string {}
+    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
+    return title.includes(this.config.siteName)
       ? title }
       : `${title} | ${this.config.siteName}`
   generateTitle(pageTitle?: string): string {/* TODO: Fix JSX expression */}
       : `${title} | ${this.config.siteName}`
   }
-  /**;
-   * Generate optimized description;
-   */;
+  /**
+   * Generate optimized description
+   */
   generateDescription(pageDescription?: string): string {
-    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
+    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
     return description.length > 160
   }
   generateDescription(pageDescription?: string): string {}
@@ -122,34 +122,34 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Update meta tags;
-   */;
+  /**
+   * Update meta tags
+   */
   private updateMetaTags(): void {
     if (!this.currentPageData) return
   }
   private updateMetaTags(): void {}
-    if (!this.currentPageData) return;
-    const title = this.generateTitle();
-    const description = this.generateDescription();
-    const keywords = this.generateKeywords();
-    const image = this.currentPageData.image || this.config.defaultImage;
-    const url = this.currentPageData.url || window.location.href;
-    // Update title;
-    document.title = title;
-    // Update or create meta tags;
-    this.setMetaTag('description', description);
-    this.setMetaTag('keywords', keywords);
-    this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
-    this.setMetaTag('robots', this.getRobotsContent());
-    // Open Graph tags;
-    this.setMetaTag('og:title', title, 'property');
-    this.setMetaTag('og:description', description, 'property');
-    this.setMetaTag('og:image', image, 'property');
-    this.setMetaTag('og:url', url, 'property');
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');
-    this.setMetaTag('og:site_name', this.config.siteName, 'property');
-    // Twitter Card tags;
+    if (!this.currentPageData) return
+    const title = this.generateTitle()
+    const description = this.generateDescription()
+    const keywords = this.generateKeywords()
+    const image = this.currentPageData.image || this.config.defaultImage
+    const url = this.currentPageData.url || window.location.href
+    // Update title
+    document.title = title
+    // Update or create meta tags
+    this.setMetaTag('description', description)
+    this.setMetaTag('keywords', keywords)
+    this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
+    this.setMetaTag('robots', this.getRobotsContent())
+    // Open Graph tags
+    this.setMetaTag('og:title', title, 'property')
+    this.setMetaTag('og:description', description, 'property')
+    this.setMetaTag('og:image', image, 'property')
+    this.setMetaTag('og:url', url, 'property')
+    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
+    this.setMetaTag('og:site_name', this.config.siteName, 'property')
+    // Twitter Card tags
     if (this.config.twitterHandle) {
     // Twitter Card tags
   }
@@ -182,17 +182,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
     if (!meta) {}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
       document.head.appendChild(meta);}
   private setMetaTag()
-  t: string, attribut);
-  e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+  t: string, attribut)
+  e: string = 'name'): void {/* TODO: Fix JSX expression */}`
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
     if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.content = content
@@ -214,30 +214,30 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }];
-    return directives.join(', ');
+    }]
+    return directives.join(', ')
   }
   /**
    * Setup structured data
    */
   private setupStructuredData(): void {}
-    this.addStructuredData(structuredData);
-  private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
+    this.addStructuredData(structuredData)
+  private setupStructuredData(): void {/* TODO: Fix JSX expression */}`
   t: `${this.config.siteUrl}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string';
+        'query-input': 'required name=search_term_string'
       }
     }
-    this.addStructuredData(structuredData);
+    this.addStructuredData(structuredData)
   }
-  /**;
-   * Update structured data for current page;
-   */;
+  /**
+   * Update structured data for current page
+   */
   private updateStructuredData(): void {
-    if (!this.currentPageData) return;
+    if (!this.currentPageData) return
     const structuredData = {
-      '@context': 'https: //schema.org',;
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
-      headline: this.generateTitle();
+      '@context': 'https: //schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle()
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href
       image: this.currentPageData.image || this.config.defaultImage,
@@ -256,9 +256,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         '@type': 'Organization',
         name: this.config.siteName,
         url: this.config.siteUrl}
-      };
-    };
-    // Add article-specific properties;
+      }
+    }
+    // Add article-specific properties
     if (this.currentPageData.type === 'article') {
     Object.assign()
         author: {)
@@ -270,7 +270,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         dateModified: this.currentPageData.modifiedTime),
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
-    // Add article-specific properties;
+    // Add article-specific properties
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {)}
         author: {}
@@ -285,7 +285,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
       }
     }
-    // Add article-specific properties;
+    // Add article-specific properties
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */},
         datePublishe,
   d: this.currentPageData.publishedTime,
@@ -333,23 +333,23 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     document.head.appendChild(canonical);}
   private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */}
   }
-  /**;
-   * Setup performance monitoring for SEO;
-   */;
+  /**
+   * Setup performance monitoring for SEO
+   */
   private setupPerformanceMonitoring(): void {
-    // Monitor Core Web Vitals for SEO impact;
+    // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {}
   private setupPerformanceMonitoring(): void {}
     // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {}
       // Monitor LCP (Largest Contentful Paint)
       new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+        const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
     // Poor LCP
-  };
-        if (lastEntry.startTime > 4000) { // Poor LCP};
+  }
+        if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] })
@@ -357,8 +357,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
       }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
-      // Monitor CLS (Cumulative Layout Shift);
-      let clsValue = 0;
+      // Monitor CLS (Cumulative Layout Shift)
+      let clsValue = 0
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {}
@@ -366,12 +366,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
           }
         }
         if (clsValue > 0.25) {
-    // Poor CLS;
+    // Poor CLS
       let clsValue = let clsValue = let clsValue = 0
   }
       new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {};
-          if (!(entry as any).hadRecentInput) {};
+        for (const entry of list.getEntries()) {}
+          if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;}
           }
         }
@@ -388,13 +388,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   s: ['layout-shift'] })
     }
   }
-  /**;
-   * Track SEO-related metrics;
-   */;
+  /**
+   * Track SEO-related metrics
+   */
   private trackSEOMetric(metric: string, value: number): void {
     ,
     if (typeof window !== 'undefined' && (window as any).gtag) {,
-      (window as any).gtag('event', 'seo_metric', {);
+      (window as any).gtag('event', 'seo_metric', {)
         metric_name: metric),
   }
   private trackSEOMetric(metric: string, value: number): void {}
@@ -405,23 +405,23 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         event_category: 'seo'}
       })
   private trackSEOMetric()
-  c: string, valu);
+  c: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
       })
     }
   }
-  /**;
-   * Generate sitemap data;
-   */;
+  /**
+   * Generate sitemap data
+   */
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
-    // This would typically come from your CMS or routing system;
-    return [;
+    // This would typically come from your CMS or routing system
+    return [
       {
         url: this.config.siteUrl
   }
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {}
-    // This would typically come from your CMS or routing system;
-    return [;
+    // This would typically come from your CMS or routing system
+    return [
       {}
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
@@ -432,24 +432,24 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       }
   ]
   }
-  /**;
-   * Generate robots.txt content;
-   */;
+  /**
+   * Generate robots.txt content
+   */
   generateRobotsTxt(): string {
     return `User-agent: *,
   }
   generateRobotsTxt(): string {}
     return `User-agent: *,
 Allow: /}
-Sitemap: ${this.config.siteUrl}/sitemap.xml;
-# Disallow admin and private areas;
+Sitemap: ${this.config.siteUrl}/sitemap.xml
+# Disallow admin and private areas
 Disallow: /admin/,
 Disallow: /private/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /static/`,
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
-  p: ${this.config.siteUrl}/sitemap.xml;
+  p: ${this.config.siteUrl}/sitemap.xml
 # Disallow admin and private areas,
   Disallow: /admin/,
 Disallo,
@@ -458,7 +458,7 @@ Disallo,
   w: /api/,
 Disallo,
   w: /_next/,
-Disallo,`;
+Disallo,`
   w: /static/`,
   }
   /**
@@ -468,12 +468,12 @@ Disallo,`;
     const issues: string[] = []
     // Check title length
     const title = document.title,,
-    if (title.length < 30) {;
-    ,;
-    // Check title length;
+    if (title.length < 30) {
+    ,
+    // Check title length
     const title = document.title
-  };
-    if (title.length < 30) {};
+  }
+    if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
@@ -494,8 +494,8 @@ Disallo,`;
         issues.push(`Image ${index + 1} is missing alt text`)
       }
     })
-    // Check for heading structure;
-    const h1s = document.querySelectorAll('h1');
+    // Check for heading structure
+    const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {}
       issues.push('Page is missing H1 tag');}
     } else if (h1s.length > 1) {}
@@ -515,8 +515,8 @@ Disallo,`;
         issues.push(`Image ${index + 1} is missing alt text`)
       }
     })
-    // Check for heading structure;
-    const h1s = document.querySelectorAll('h1');
+    // Check for heading structure
+    const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
     } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
     }
@@ -532,7 +532,7 @@ Disallo,`;
     return Math.round(score);}
   }
 }
-// Default configuration;
+// Default configuration
 const defaultConfig: SEOConfig = {
     siteName: 'Zion Tech Group',
     siteUrl: 'https://zion.app',
@@ -553,9 +553,9 @@ export default seoOptimizer
   getSEOScore(): number {/* TODO: Fix JSX expression */}
   }
 }
-// Default configuration;
+// Default configuration
 const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
 }
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;"`;
+export const seoOptimizer = new SEOOptimizer(defaultConfig)
+export default seoOptimizer;"`

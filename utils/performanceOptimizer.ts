@@ -21,7 +21,7 @@ export const performanceOptimizer = {/* TODO: Fix JSX expression */}
   s: () => {/* TODO: Fix JSX expression */}
       }
     }
-    return null;
+    return null
   }}
 
 export const lazyLoadImages = () => {
@@ -49,5 +49,5 @@ export const collectPerformanceMetrics = () => {
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
     }
   }
-  return null;
+  return null
 }

@@ -44,7 +44,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
   e: `Merge PR #${prNumber}: ${title}`,
     merge_metho,
   d: 'merge'}
-  try {const response = await makeRequest(options} data);
+  try {const response = await makeRequest(options} data)
     if (response.status === 200 && response.data.merged) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}`
   e: ${JSON.stringify(response.data) null} 2)}`)
@@ -63,7 +63,7 @@ async function mergePR(prNumber) title) {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   r: 24749} titl,
   e: 'Fix errors and merge to main' }
-  ];
+  ]
   for (const pr of prs) {/* TODO: Fix JSX expression */}
     if (success) successCount++}
     //Wait a bit between requests

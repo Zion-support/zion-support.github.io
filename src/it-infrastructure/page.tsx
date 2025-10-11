@@ -10,7 +10,7 @@ export default function ITInfrastructurePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
             IT Infrastructure
-  </
+  
           <p className="text-xl text-gray-300 mb-8">
             Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
           <div className="bg-slate-800/50 rounded-lg p-8">
@@ -22,7 +22,7 @@ export default function ITInfrastructurePage() {
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us,
-  </
+  
           </div>
         </div>
       </div>
@@ -31,3 +31,4 @@ export default function ITInfrastructurePage() {
   }
   </a>
   </h1>
+</p></p></h2>

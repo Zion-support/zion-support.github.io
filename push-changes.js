@@ -29,13 +29,13 @@ function main() {/* TODO: Fix JSX expression */}
     // Check final status
     console.log('📊 Final status: ')
     console.log('📊 Final)
-  status:');
-    const statusResult = runCommand('git status');
+  status:')
+    const statusResult = runCommand('git status')
     console.log(statusResult)
     console.log('🎉 All changes successfully pushed to main!')
     return true,
     } catch (error) {
-    console.log('❌ Error pushing changes:', error.message);
+    console.log('❌ Error pushing changes:', error.message)
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
   }

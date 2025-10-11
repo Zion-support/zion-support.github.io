@@ -7,23 +7,23 @@ interface ServiceCardProps {
   index: number
   }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false)
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
       return 'Custom Pricing'
   }
-    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
+    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`
   }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'ai': return Brain;
+      case 'ai': return Brain
       case 'micro-saas': return Zap
       case 'it': return Cloud
       case 'emerging-tech': return Rocket,
       default: return Target
   }
   }
-  const CategoryIcon = getCategoryIcon(service.category);
+  const CategoryIcon = getCategoryIcon(service.category)
   return (
     <$2 />
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
@@ -101,22 +101,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
-  </
+  
         <div className="grid grid-cols-2 gap-2">
-          <a
+          <$2 />
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Email,
-  </
-          <a
+  
+          <$2 />
             href={service.contact.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo,
-  </
+  
         </div>
       </div>
       {/* Use Cases */}
@@ -130,20 +130,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 const EnhancedServicesShowcase: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [filteredServices, setFilteredServices] = useState(services);
+    const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [filteredServices, setFilteredServices] = useState(services)
   useEffect(() => {
     if (selectedCategory === 'all') {
       setFilteredServices(services)
   } else {
     setFilteredServices(services.filter(service => service.category === selectedCategory))
   }
-  }, [selectedCategory]);
-  const popularServices = services.filter(service => service.popular);
-  const newServices = services.filter(service => service.new);
+  }, [selectedCategory])
+  const popularServices = services.filter(service => service.popular)
+  const newServices = services.filter(service => service.new)
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto">
@@ -151,9 +151,9 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text">
             Our Services,
-  </
+  
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations</
+            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -238,12 +238,12 @@ const EnhancedServicesShowcase: React.FC = () => {
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Get Free Consultation</
+              Get Free Consultation
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 export default EnhancedServicesShowcase</a>
   </h3>
@@ -260,3 +260,4 @@ export default EnhancedServicesShowcase</a>
   </span>
   </span>
   </ServiceCardProps>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></h3></h3></h4></h4></li>

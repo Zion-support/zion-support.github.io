@@ -232,10 +232,10 @@ const PricingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Add-on Services
-  </
+  
             <p className="text-xl text-gray-600">
               Enhance your plan with additional services and features,
-  </
+  
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
@@ -252,10 +252,10 @@ const PricingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
-  </
+  
             <p className="text-xl text-gray-600">
               Everything you need to know about our pricing and plans,
-  </
+  
           </div>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
@@ -275,12 +275,12 @@ const PricingPage: React.FC = () => {
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Start Free Trial
-  </
-            <Link
+  
+            <$2 />
               to="/demo"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Schedule Demo
-  </
+  
           </div>
         </div>
       </section>
@@ -295,3 +295,4 @@ export default PricingPage</Link>
   </p>
   </h2>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></li></section></section></section></section>

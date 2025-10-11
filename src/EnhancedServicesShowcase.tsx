@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '../ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { Badge } from '../ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
 import { 
   Phone, 
   Mail, 
@@ -27,22 +27,19 @@ import {
   CheckCircle,
   ArrowRight,
   ExternalLink
-} from 'lucide-react';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices';
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
-
+} from 'lucide-react'
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices'
+import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices'
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices'
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const filteredServices = selectedCategory === 'all' 
     ? comprehensiveServices 
-    : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+    : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()))
     ? ENHANCED_SERVICES 
     : ENHANCED_SERVICES.filter(service => 
         SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
-      );
-
+      )
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -286,13 +283,12 @@ export default function EnhancedServicesShowcase() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {
-  const [showDetails, setShowDetails] = useState(false);
-
+  const [showDetails, setShowDetails] = useState(false)
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
       <CardHeader>
@@ -330,7 +326,7 @@ function ServiceCard({ service }: { service: any }) {
             <span className="text-zion-cyan-light">AI Score:</span>
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
-                <div 
+                <$2 />
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
@@ -422,5 +418,5 @@ function ServiceCard({ service }: { service: any }) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

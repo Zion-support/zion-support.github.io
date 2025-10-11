@@ -10,8 +10,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       waterfall: 'waterfall-operations'}
     }
     const _results = {}
-//     const startTime = Date.now();
-    // Test 1: Sequential operations;
+//     const startTime = Date.now()
+    // Test 1: Sequential operations
 //     const sequentialStart = Date.now()
     const _sequentialResults = []
     for(let i = 0, i < 5),
@@ -34,9 +34,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   l: 'waterfall-operations'}
     }
     const _results = {}
-//     const startTime = Date.now();
+//     const startTime = Date.now()
     // Test,
-  1: Sequential operations;
+  1: Sequential operations
 //     const sequentialStart = Date.now()
     const _sequentialResults = []
     for (let i = 0, i < 5)
@@ -117,7 +117,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     }
     // Test,
-  5: Retry logic;
+  5: Retry logic
 //     const retryStart = Date.now()
     let _retryAttempts = 0
     let _retrySuccess = false,
@@ -131,8 +131,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     reject(new Error(`Attempt ${retryAttempts)
         failed`))
   }
-        });
-        retrySuccess = true;
+        })
+        retrySuccess = true
       } catch (error) {
     if (retryAttempts === 3) {
           // Final attempt failed
@@ -145,7 +145,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       duration: Date.now() - retryStart,
       status: retrySuccess ? 'succeeded' : 'failed-after-retries'}
     }
-    // Test 6: Waterfall operations;
+    // Test 6: Waterfall operations
 //     const waterfallStart = Date.now()
     const _waterfallResults = []
     let previousResult = 'initial'
@@ -160,10 +160,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       duration: Date.now() - waterfallStart,
       status: 'completed'}
     }
-//     const totalDuration = Date.now() - startTime;
-    // Calculate concurrency metrics;
-    const concurrencyMetrics = {totalDuration: totalDuration;
-      sequentialDuration: results.sequential.duration;
+//     const totalDuration = Date.now() - startTime
+    // Calculate concurrency metrics
+    const concurrencyMetrics = {totalDuration: totalDuration
+      sequentialDuration: results.sequential.duration
       parallelDuration: results.parallel.duration
       efficiencyGain: (
         ((results.sequential.duration - results.parallel.duration) /
@@ -174,7 +174,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         Object.keys(results).length /
         (totalDuration / 1000)).toFixed(2,)}
     }
-    const result = {statusCode: 200;
+    const result = {statusCode: 200
       body: JSON.stringify({)
         message: 'Async concurrency tester completed successfully')
         timestamp: timestamp;)
@@ -188,7 +188,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
               r.status === 'completed' ||)
               r.status === 'succeeded' ||)
               r.status === 'timeout-prevented')
-          ).length;
+          ).length
           totalDuration: totalDuration
           averageTestDuration: (
             totalDuration / Object.keys(asyncTests).length
@@ -209,7 +209,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: retrySuccess ? 'succeeded' : 'failed-after-retries'}
     }
     // Test,
-  6: Waterfall operations;
+  6: Waterfall operations
 //     const waterfallStart = Date.now()
     const _waterfallResults = []
     let previousResult = 'initial'
@@ -221,8 +221,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     results.waterfall = {/* TODO: Fix JSX expression */}
   s: 'completed'}
     }
-//     const totalDuration = Date.now() - startTime;
-    // Calculate concurrency metrics;
+//     const totalDuration = Date.now() - startTime
+    // Calculate concurrency metrics
     const concurrencyMetrics = {/* TODO: Fix JSX expression */}
       }
     }
@@ -230,10 +230,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
         },
         nextRu,
-  n: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now;
+  n: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now
       })}
 
-    return result;
+    return result
   } catch (error) {
     // console.error('❌ async-concurrency-tester failed: ') error
   }
@@ -248,7 +248,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
     return {/* TODO: Fix JSX expression */}
   s: 'error'}
-      });
+      })
     }
   }
 }

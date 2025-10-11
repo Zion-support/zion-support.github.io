@@ -13,11 +13,10 @@ packageJson.scripts = {
 packageJson.scripts = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-// // 2. Create performance optimization script;
-// const performanceScript = `import { execSync } from 'child_process';
-
-// // Optimize images;
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+// // 2. Create performance optimization script
+// const performanceScript = `import { execSync } from 'child_process'
+// // Optimize images
 // try {
     execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' })
 //     } catch (error) {
@@ -76,12 +75,11 @@ fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript)
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     })
     it('should pass performance test', () => {
-    //         const startTime = Date.now();
-        // Simulate some work;
-//         const endTime = Date.now();
+    //         const startTime = Date.now()
+        // Simulate some work
+//         const endTime = Date.now()
         expect(endTime - startTime).toBeLessThan(1000)
-  });
-
+  })
     it('should pass accessibility test', () => {
         // Basic accessibility check
         expect(document).toBeDefined()
@@ -149,10 +147,10 @@ pnpm test
 pnpm perf: audit
 \`\`\`
 
-## Available Scripts;
-- \`pnpm dev\` - Start development server;
-- \`pnpm build\` - Build for production;
-- \`pnpm test\` - Run tests;
+## Available Scripts
+- \`pnpm dev\` - Start development server
+- \`pnpm build\` - Build for production
+- \`pnpm test\` - Run tests
 - \`pnpm lint\` - Run linting
 - \`pnpm optimize:all\` - Run all optimizations
 - \`pnpm perf:audit\` - Run performance audit,
@@ -193,5 +191,5 @@ const improvementSummary = {
 const improvementSummary = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
+fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2))
 // // // // // // // // // // // // // // `

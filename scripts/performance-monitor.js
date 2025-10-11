@@ -11,22 +11,19 @@ const performanceReport = {
   pageCount: 0,
   recommendations: []}
 
-// Analyze build output;
-const buildDir = path.join(process.cwd(), '.next');
-const staticDir = path.join(buildDir, 'static');
-
+// Analyze build output
+const buildDir = path.join(process.cwd(), '.next')
+const staticDir = path.join(buildDir, 'static')
 if (fs.existsSync(staticDir)) {
-  const files = fs.readdirSync(staticDir, { recursive: true });
-  const jsFiles = files.filter(file => file.endsWith('.js'));
-  
+  const files = fs.readdirSync(staticDir, { recursive: true })
+  const jsFiles = files.filter(file => file.endsWith('.js'))
   jsFiles.forEach(file => {
     )
-    const filePath = path.join(staticDir, file);
-    const stats = fs.statSync(filePath);
+    const filePath = path.join(staticDir, file)
+    const stats = fs.statSync(filePath)
     performanceReport.buildSize += stats.size
-  });
-  
-  performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB;
+  })
+  performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB
 }
 
 // Performance recommendations
@@ -38,13 +35,11 @@ if (performanceReport.buildSize > 1000) {
     performanceReport.recommendations.push('Bundle size is large - consider lazy loading components')
   }
 
-performanceReport.recommendations.push('Enable gzip compression on server');
-performanceReport.recommendations.push('Consider using a CDN for static assets');
-
-// Write report;
-const reportPath = path.join(process.cwd(), 'performance-report.json');
-fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
-
+performanceReport.recommendations.push('Enable gzip compression on server')
+performanceReport.recommendations.push('Consider using a CDN for static assets')
+// Write report
+const reportPath = path.join(process.cwd(), 'performance-report.json')
+fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2))
 console.log('Performance Report Generated: '),
-console.log(`Build Size: ${performanceReport.buildSize} KB`);
-console.log(`Recommendations: ${performanceReport.recommendations.length}`);
+console.log(`Build Size: ${performanceReport.buildSize} KB`)
+console.log(`Recommendations: ${performanceReport.recommendations.length}`)

@@ -18,9 +18,9 @@ class AccessibilityEnhancer {
 ,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableAutoFix: true;
-      enableKeyboardNavigation: true;
-      enableScreenReaderSupport: true;
+      enableAutoFix: true
+      enableKeyboardNavigation: true
+      enableScreenReaderSupport: true
       enableColorContrastCheck: true
       enableFocusManagement: true
       enableARIALabels: true,
@@ -48,7 +48,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     })
     // Make all interactive elements focusable
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-    );
+    )
     interactiveElements.forEach(element => {
     )
       if (!element.hasAttribute('tabindex')) {
@@ -119,9 +119,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Track focus changes
     document.addEventListener('focusin', e => {)
       this.manageFocus(e.target as HTMLElement)
-  });
-
-    // Trap focus in modals;
+  })
+    // Trap focus in modals
     document.addEventListener('keydown', e => {
     )
       if (e.key === 'Tab') {
@@ -145,9 +144,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Remove focus indicator after blur
     element.addEventListener('blur', () => {
       element.classList.remove('focus-visible')
-  });
-
-    // Announce focus changes to screen readers;
+  })
+    // Announce focus changes to screen readers
     if (this.config.enableScreenReaderSupport) {
   private manageFocus(elemen)
   t: HTMLElement): void {/* TODO: Fix JSX expression */}
@@ -171,11 +169,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _firstElement = focusableElements[0] as HTMLElement
     const _lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     if (e.shiftKey && document.activeElement === firstElement) {
-      e.preventDefault();
+      e.preventDefault()
       lastElement.focus()
   } else if (!e.shiftKey && document.activeElement === lastElement) {
-      e.preventDefault();
-      firstElement.focus();
+      e.preventDefault()
+      firstElement.focus()
   private trapFocusInModal(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
     } else if (!e.shiftKey && document.activeElement === lastElement) {/* TODO: Fix JSX expression */}
     }
@@ -185,9 +183,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    * Enhance ARIA labels
    */
   private enhanceARIALabels(): void {
-    if (!this.config.enableARIALabels) return;
-
-    // Add ARIA labels to buttons without text;
+    if (!this.config.enableARIALabels) return
+    // Add ARIA labels to buttons without text
     const _buttons = document.querySelectorAll('button: not([aria-label])'),
     buttons.forEach(button => {),
       const _icon = button.querySelector('svg, i')
@@ -196,13 +193,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', label)
   private enhanceARIALabels(): void {/* TODO: Fix JSX expression */}
       }
-    });
-
-    // Add ARIA labels to form inputs;
+    })
+    // Add ARIA labels to form inputs
     const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach(input => {
     ),
-      const _label = this.findAssociatedLabel(input as HTMLInputElement);
+      const _label = this.findAssociatedLabel(input as HTMLInputElement)
       if (label) {,
         input.setAttribute('aria-labelledby', label.id || this.generateId(label))
   }
@@ -337,13 +333,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _style = document.createElement('style')
     style.textContent = `
       .sr-only {
-        position: absolute;
-        width: 1 px;
-        height: 1 px;
+        position: absolute
+        width: 1 px
+        height: 1 px
         padding: 0
         margin: -1 px
         overflow: hidden,
-        clip: rect(0, 0, 0, 0);
+        clip: rect(0, 0, 0, 0)
         white-space: nowrap,
         border: 0
   }
@@ -466,8 +462,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private calculateContrast(color1: string, color2: string): number {
     ,
-    // Simplified contrast calculation;
-    // In a real implementation, you'd parse the colors and calculate luminance;
+    // Simplified contrast calculation
+    // In a real implementation, you'd parse the colors and calculate luminance
     return 4.5; // Placeholder
   }
 
@@ -526,18 +522,17 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private closeModal(modal: HTMLElement): void {
     ,
-    modal.setAttribute('aria-hidden', 'true');
-    const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
+    modal.setAttribute('aria-hidden', 'true')
+    const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement
     if (focusableElement) {
       focusableElement.focus()
   }
   }
 
   private getElementDescription(element: HTMLElement): string {
-    //     const ariaLabel = element.getAttribute('aria-label');
-    if (ariaLabel) return ariaLabel;
-
-    //     const text = element.textContent?.trim();
+    //     const ariaLabel = element.getAttribute('aria-label')
+    if (ariaLabel) return ariaLabel
+    //     const text = element.textContent?.trim()
     if (text) return text
     //     const alt = element.getAttribute('alt')
     if (alt) return alt,

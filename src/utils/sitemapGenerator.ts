@@ -5,7 +5,7 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   lo,
-  c: string;
+  c: string
   lastmod?: string
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number,
@@ -43,11 +43,10 @@ ${
   .join('
 ')}
 
-</urlset>`;
-  return sitemap;
+</urlset>`
+  return sitemap
 }
-// Define all the pages for the sitemap;
-
+// Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {
     // TODO: Add content
   }
@@ -184,3 +183,4 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'yearly' }]
 }"`
 
+</p>

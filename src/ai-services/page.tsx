@@ -52,28 +52,28 @@ $4}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
-  </
+  
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-  </
+  
       <Footer />
   ),
 }
-export default $1;
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+export default $1
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react'
 export default function AIServicesPage() {
-    const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+    const [activeTab, setActiveTab] = useState('overview')
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsVisible(true)
-  }, []);
+  }, [])
   const aiServices = [
     {
       id: 'ai-automation',
@@ -230,18 +230,18 @@ export default function AIServicesPage() {
                 and 90% efficiency gains with our comprehensive AI services.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
-  </
-                <a
+  
+                <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Mail className="w-5 h-5 mr-2" />
                   Get Quote,
-  </
+  
               </div>
             </div>
           </div>
@@ -296,16 +296,16 @@ export default function AIServicesPage() {
                             <div className="text-cyan-400 font-bold">{details.price}{details.period}
                       ))}
                   <div className="mt-6 flex gap-3">
-                    <a
+                    <$2 />
                       href="tel: +13024640950"
                       className="flex-1 cyber-button text-center py-3">
                       Get Started
-  </
-                    <a
+  
+                    <$2 />
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
                       Learn More,
-  </
+  
                   </div>
                 </div>
               ))}
@@ -322,13 +322,13 @@ export default function AIServicesPage() {
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
-  </
-              <a
+  
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
-  </
+  
             </div>
           </div>
         </section>
@@ -349,3 +349,4 @@ export default function AIServicesPage() {
   </div>
   </div>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></h1></h1></h2></h2></h3></h4></h4></ul></li></section></section>

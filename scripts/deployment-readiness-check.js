@@ -118,8 +118,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 2: Dependencies installed,
   checker.addCheck('Dependencies Check', async () => {
     try {
@@ -145,8 +144,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 3: Linting,
   checker.addCheck('Linting', async () => {
     try {
@@ -167,8 +165,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 4: Type checking,
   checker.addCheck('Type Checking', async () => {
     try {
@@ -189,8 +186,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 5: Tests,
   checker.addCheck('Test Suite', async () => {
     try {
@@ -217,8 +213,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 6: Build,
   checker.addCheck('Build Process', async () => {
     try {
@@ -267,8 +262,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     return {
       success: true,
       message: 'All required environment variables set'}
-  });
-
+  })
   // Check 8: Security audit (warning only),
   checker.addCheck('Security Audit', async () => {
     try {
@@ -290,8 +284,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     
     return {/* TODO: Fix JSX expression */}
     }
-  });
-
+  })
   // Check,
   8: Security audit (warning only)
   checker.addCheck('Security Audit', async () => {/* TODO: Fix JSX expression */}
@@ -301,8 +294,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 9: Git status,
   checker.addCheck('Git Status', async () => {
     try {
@@ -335,8 +327,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
   // Check 10: Branch check,
   checker.addCheck('Git Branch', async () => {
     try {
@@ -390,10 +381,10 @@ async function main() {/* TODO: Fix JSX expression */}
   process.exit(success ? 0 : 1)
 }
 
-// Run the checker;
+// Run the checker
 main().catch(error => {
     )
 //   process.exit(1)
-  });
+  })
 main().catch(error => {/* TODO: Fix JSX expression */})
 });`

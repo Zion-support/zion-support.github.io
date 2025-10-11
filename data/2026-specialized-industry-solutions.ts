@@ -1,53 +1,53 @@
 export interface SpecializedIndustrySolution2026 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
-  averageMarketPrice: string;
-  featuresCapabilities: string[];
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
+  averageMarketPrice: string
+  featuresCapabilities: string[]
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+}
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -990,7 +990,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     rating: 4.7,
     reviews: 58
   }
-];
+]
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
   'FinTech Solutions',
@@ -998,4 +998,4 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Retail Technology',
   'Logistics Technology'
   }
-];
+]

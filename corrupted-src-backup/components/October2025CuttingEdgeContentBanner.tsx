@@ -222,7 +222,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
   }
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s,
-          animati, o, n: blob, 7s, infinite;
+          animati, o, n: blob, 7s, infinite
         .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}
         }
         .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}
@@ -235,7 +235,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         }`
       `}</sty, l, e>`;`
     </d, i, v>
-  );
+  )
 }
-export default October2025CuttingEdgeContentBanner;
+export default October2025CuttingEdgeContentBanner
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></h2></h2></h2>

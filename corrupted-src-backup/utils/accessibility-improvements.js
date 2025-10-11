@@ -22,19 +22,18 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     })
   },
 
-  // Screen reader announcements;
+  // Screen reader announcements
   announceToScreenReader: message => {
     ,
-    const _announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-
+    const _announcement = document.createElement('div')
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
+    announcement.textContent = message
+    document.body.appendChild(announcement)
     setTimeout(() => {
       document.body.removeChild(announcement)
-  }, 1000);
+  }, 1000)
   },
 
   // Color contrast checker
@@ -54,15 +53,13 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
   // Color contrast checker,
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
-      });
-
-      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+      })
+      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs
     }
 
-    //     const l1 = getLuminance(foreground);
-    //     const l2 = getLuminance(background);
-    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
-
+    //     const l1 = getLuminance(foreground)
+    //     const l2 = getLuminance(background)
+    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)
     return {
       ratio,
       meetsAA: ratio >= 4.5

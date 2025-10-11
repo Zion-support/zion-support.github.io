@@ -140,8 +140,8 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       }
       
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      console.log('✅ Updated package.json with optimized scripts');
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+      console.log('✅ Updated package.json with optimized scripts')
     } catch (error) {/* TODO: Fix JSX expression */}`
   n: ${error.message}`)
     }
@@ -195,14 +195,13 @@ async function main() {/* TODO: Fix JSX expression */}
     // Push to main
     console.log('\n🚀 Pushing to main branch...')
     execSync('git push origin main', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
-    console.log('\n🎉 PR merge process completed!');
+  o: 'pipe' })
+    console.log('\n🎉 PR merge process completed!')
     console.log('📊 Summary: '),
-    console.log(`  ✅ Successfully merged: ${mergedCount} PRs`);
-    console.log(`  ❌ Failed to merge: ${failedCount} PRs`);
-    console.log(`  🧹 Console.log statements cleaned`);
-    console.log(`  ⚡ Build configuration optimized`);
+    console.log(`  ✅ Successfully merged: ${mergedCount} PRs`)
+    console.log(`  ❌ Failed to merge: ${failedCount} PRs`)
+    console.log(`  🧹 Console.log statements cleaned`)
+    console.log(`  ⚡ Build configuration optimized`)
     console.log('📊 Summar)
   y: '),`
     console.log(`  ✅ Successfully)`

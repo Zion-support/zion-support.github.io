@@ -20,31 +20,31 @@ const,
     let meta = document.querySelector(`meta[${attribute}="${name}"]`)
     if (!meta) {/* TODO: Fix JSX expression */}
     }
-    meta.setAttribute('content', content);
+    meta.setAttribute('content', content)
   }
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
-    canonical.setAttribute('href', url);
+    canonical.setAttribute('href', url)
   }
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script)
   }
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
     }
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
-    const existing = document.getElementById('breadcrumb-structured-data');
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(breadcrumbData)
+    script.id = 'breadcrumb-structured-data'
+    // Remove existing breadcrumb data
+    const existing = document.getElementById('breadcrumb-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script)
   }
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
@@ -57,15 +57,15 @@ const,
         }
       ]
     }
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
-    script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
-    const existing = document.getElementById('faq-structured-data');
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(faqData)
+    script.id = 'faq-structured-data'
+    // Remove existing FAQ data
+    const existing = document.getElementById('faq-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script)
   }
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
@@ -78,12 +78,12 @@ const,
   s://linkedin.com/company/ziontechgroup'
       ]
     }
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
-    script.id = 'organization-structured-data';
-    // Remove existing organization data;
-    const existing = document.getElementById('organization-structured-data');
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(organizationData)
+    script.id = 'organization-structured-data'
+    // Remove existing organization data
+    const existing = document.getElementById('organization-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
   }
@@ -206,8 +206,9 @@ const,
         })}
       </script>
     </Helmet>
-  );
+  )
 }
-SEOOptimizer.displayName = 'SEOOptimizer';
+SEOOptimizer.displayName = 'SEOOptimizer'
 export default SEOOptimizer;"`
   </SEOOptimizerProps>
+</li></li></li></li></li></li></li></li></li></li></li>

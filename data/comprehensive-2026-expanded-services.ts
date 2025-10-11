@@ -11,19 +11,19 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   colo,
   r: string,
   textColo,
-  r: string;
-  popular?: boolean;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  r: string
+  popular?: boolean
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   launchDate: string
   customers: number
   rating: number,

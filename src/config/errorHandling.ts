@@ -35,9 +35,9 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-    enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
+    enabled: boolean
+  logToConsole: boolean
+  sendToServer: boolean
   sampleRate: number
   maxStackTraceLength: number
   ignoreErrors: RegExp[],
@@ -208,5 +208,4 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor)
   }
 }
-export default errorHandlingConfig;
-
+export default errorHandlingConfig

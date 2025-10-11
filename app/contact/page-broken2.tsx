@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+'use client'
+import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
     Phone,
   Mail,
@@ -19,22 +19,22 @@ import {
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState()
   })
-const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    const { name, value } = e.target;
+const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+    const { name, value } = e.target
     setFormData()
-    }));
-  }, []);
-const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
+    }))
+  }, [])
+const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
 try {
       // Simulate form submission,
 
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setSubmitStatus('success')
       setFormData()
       })
     } catch (error) {
@@ -104,7 +104,7 @@ return (
               </span>
             </h1>
             <p>
-              Ready to transform your business? Let's discuss your project and explore;
+              Ready to transform your business? Let's discuss your project and explore
               how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
@@ -114,7 +114,7 @@ return (
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               {
-    submitStatus === 'success' && (;
+    submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
                   </CheckCircle><span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
@@ -122,7 +122,7 @@ return (
   }
               )}
 {
-    submitStatus === 'error' && (;
+    submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
@@ -190,12 +190,12 @@ return (
                 </div>
                 <button></button>
                   {
-    isSubmitting ? (;
+    isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
-                  ) : (;
+                  ) : (
                     <>
                       <Send>
                       </Send><span>Send Message</span>
@@ -300,7 +300,7 @@ return (
               <div / /></div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p></p>
-                  We're here to help! Reach out to us through any of these channels;
+                  We're here to help! Reach out to us through any of these channels
                   and we'll get back to you as soon as possible.
               {/* Contact Information */}
               <div className="space-y-8" / /></div>
@@ -359,6 +359,5 @@ return (
       </div>
 </div>
   ),
-};
-
-export default ContactPage;
+}
+export default ContactPage</$1></span>

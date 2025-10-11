@@ -46,7 +46,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
   G: OCTOBER 1, 2025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION</span>"
             <Bot className="w-5 h-5 text-cyan-400" />
           </div>"
-          <h2 className="text-4xl,"
+          < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-4 leading-tight"></h2>
             Real-Time Autonomous Infrastructure Orchestration;"
             <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400"></span>
@@ -138,9 +138,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div></div>
               <h3 className="text-2xl font-bold text-white mb-2">
                 Fortune 100 Financial Services: $410M Annual Value Creation,
-  </
+  
               <p className="text-gray-300">
-                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries</
+                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
             </div>
           <div className="grid md: grid-cols-3 gap-6 mb-6"></div>
             <div className="bg-black/20 rounded-lg p-4"></div>
@@ -202,7 +202,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-xs text-gray-400">Scale without team growth</div>,
         {/* Call-to-Action Buttons */}
         <div className="grid md: grid-cols-3 gap-6 mb-8">
-          <Link,
+          <,$2 />
           <div className="grid md:grid-cols-5 gap-4"></div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors"></div>
               <div className="text-2xl mb-2">🏦</div>
@@ -271,9 +271,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             Get a comprehensive evaluation of your infrastructure readiness for autonomous operations. 
             Includes ROI projection, implementation roadmap, and executive presentation. No cost. No obligation.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <Link
+            <$2 />
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
               Request Free Assessment,
@@ -289,7 +289,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />
               Typical assessment value: $75K • Yours free,
-  </
+  
         {/* Trust Indicators */}
         <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
@@ -390,7 +390,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-3xl font-bold text-purple-400 mb-1">96%</div>"
               <div className="text-sm text-gray-300">Incident Prevention</div>"
               <div className="text-xs text-gray-400 mt-1">396 incidents prevented</div>"
-          <div className="grid,"
+          < className="grid,"$2 />
   md: grid-cols-2 gap-4"></div>"
             <div className="flex items-start gap-3"></div>"
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /></CheckCircle>"
@@ -517,7 +517,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             </div>
         {/* Trust Indicators */}"
         <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>"
-          <div className="grid grid-cols-2,"
+          < className="grid grid-cols-2,"$2 />
   md: grid-cols-5 gap-4 text-sm text-gray-400"></div>
             <div></div>"
               <div className="text-2xl font-bold text-white mb-1">12+
@@ -536,3 +536,4 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
 }
 export default October2025 AutonomousInfrastructureBanner</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
   </strong>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></Link></Link></Link></p></p></p></h3></h3></h3></h3></h3></h3></h3>

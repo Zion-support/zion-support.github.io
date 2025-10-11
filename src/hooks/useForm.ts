@@ -5,8 +5,7 @@ import React from 'react'
  * useForm Hook
  * Provides form state management and validation
  */
-// import { logger } from '../utils/logger';
-
+// import { logger } from '../utils/logger'
 import {
     // TODO: Add content
   }
@@ -26,7 +25,7 @@ export interface UseFormConfig
   initialValue,
   s: T
   validationSchema?: Partial,
-          <Record<keyof T, ValidationRule[]>>;
+          <Record<keyof T, ValidationRule[]>>
   onSubmi,
   t: (value)
   s: T) => void | Promise<void>
@@ -114,7 +113,7 @@ let,
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        fieldValue = (e.target as HTMLInputElement).checked;
+        fieldValue = (e.target as HTMLInputElement).checked
       setValues(prev => ({
     [fieldName]: fieldValue
   }
@@ -126,8 +125,7 @@ let,
     [validateOnChange, touched, validateSingleField]
   // Handle input blur
   const handleBlur = useCallback(
-      const fieldName = e.target.name as keyof T;
-
+      const fieldName = e.target.name as keyof T
       setTouched(prev => ({
     [fieldName]: true
   }
@@ -159,13 +157,13 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       if (!isValid) {
     return
   }
-      setIsSubmitting(true);
+      setIsSubmitting(true)
       try {
     await onSubmit(values)
   } catch (error) {
     console.error('Form submission error:', error)
   } finally {
-    setIsSubmitting(false);
+    setIsSubmitting(false)
 [values, validateAllFields]
   // Set field value programmatically
   const setFieldValue = useCallback((fiel,
@@ -183,14 +181,14 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
   s: string[]) => {
     [field]: fieldErrors
   }
-  }, []);
-// Set field touched programmatically;
+  }, [])
+// Set field touched programmatically
   const setFieldTouched = useCallback((fiel,
   d: keyof T, isTouche)
   d: boolean) => {
     [field]: isTouched
   }
-  // Reset form to initial values;
+  // Reset form to initial values
   const resetForm = useCallback(() => {
     setValues(initialValues)
   }
@@ -215,6 +213,6 @@ const isValid = Object.keys(errors).length === 0 ||
     resetForm,
 
     validateField: validateSingleField,
-    validateAllFields;
+    validateAllFields
   }
 

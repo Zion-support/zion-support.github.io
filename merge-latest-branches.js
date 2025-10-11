@@ -47,16 +47,13 @@ try {
   }
 
   console.log(`\n📊 Merge Summary: `),
-  console.log(`✅ Successfully merged: ${mergedCount} branches`);
-  console.log(`⏭️  Skipped: ${skippedCount} branches`);
-
-  // Push all changes;
-  console.log('\n📤 Pushing all changes to origin/main...');
-  execSync('git push origin main', { stdio: 'inherit' });
-
-  console.log('🎉 All merges completed successfully!');
-
+  console.log(`✅ Successfully merged: ${mergedCount} branches`)
+  console.log(`⏭️  Skipped: ${skippedCount} branches`)
+  // Push all changes
+  console.log('\n📤 Pushing all changes to origin/main...')
+  execSync('git push origin main', { stdio: 'inherit' })
+  console.log('🎉 All merges completed successfully!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message);
+    console.error('❌ Error during merge process:', error.message)
   process.exit(1)
   }

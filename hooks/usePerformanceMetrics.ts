@@ -79,8 +79,7 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
         }))
       }
     }).observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
-  }, []);
-
+  s: ['navigation'] })
+  }, [])
   return { metrics, isSupported }
 }

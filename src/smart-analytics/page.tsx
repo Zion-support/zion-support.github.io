@@ -73,28 +73,28 @@ $4}
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Smart Analytics</
+            Smart Analytics
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics that drive real business results
-  </
+  
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
               📞 Call: (302) 464-0950
-  </
-            <Link
+  
+            <$2 />
               to="/contact"
               className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               Get Free Consultation,
-  </
+  
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Analytics Features,
-  </
+  
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
@@ -165,10 +165,10 @@ const PagePage: React.FC = () => {
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
-  </
+  
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
-  </
+  
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
       <Footer />
@@ -240,7 +240,7 @@ const PagePage: React.FC = () => {
                   kleber@ziontechgroup.com,
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  );
+  )
 }
 export default SmartAnalyticsPage</a>
   </a>
@@ -270,3 +270,4 @@ export default SmartAnalyticsPage</a>
   </h1>
   </div>
   </div>
+</div></span></span></span></span></p></p></p></h3></h3></ul></ul></li></main></section>

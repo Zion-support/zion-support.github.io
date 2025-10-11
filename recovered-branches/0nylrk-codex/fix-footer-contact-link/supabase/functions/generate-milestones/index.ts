@@ -1,23 +1,23 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
+}
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })
   }
   try {
     // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    const apiKey = Deno.env.get('OPENAI_API_KEY')
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set');
+      throw new Error('OPENAI_API_KEY is not set')
     }
     // Parse request body
-    const { scope, startDate, endDate, projectType } = await req.json();
+    const { scope, startDate, endDate, projectType } = await req.json()
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -35,7 +35,7 @@ serve(async (req) => {
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
-    `;
+    `
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -53,7 +53,7 @@ serve(async (req) => {
           {
             role: 'user',
             content: prompt}],
-        temperature: 0.7})});
+        temperature: 0.7})})
             content: 'You are a project management expert that breaks work into appropriate milestones.',
           },
           {
@@ -63,27 +63,27 @@ serve(async (req) => {
         ],
         temperature: 0.7,
       }),
-    });
-    const data = await response.json();
+    })
+    const data = await response.json()
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate milestones');
+      throw new Error(data.error?.message || 'Failed to generate milestones')
     }
     // Parse the AI-generated content to ensure it's valid JSON
     try {
-      const content = data.choices[0].message.content.trim();
+      const content = data.choices[0].message.content.trim()
       // Try to parse the response as JSON
-      const milestones = JSON.parse(content);
+      const milestones = JSON.parse(content)
       return new Response(JSON.stringify({ milestones }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      });
+      })
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
-      console.error('Failed to parse AI response as JSON:', parseError);
-      throw new Error('Failed to parse AI response');
+      console.error('Failed to parse AI response as JSON:', parseError)
+      throw new Error('Failed to parse AI response')
     }
   } catch (error) {
-    console.error('Error generating milestones:', error);
+    console.error('Error generating milestones:', error)
     return new Response(
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
       { 
@@ -91,6 +91,6 @@ serve(async (req) => {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
-    );
+    )
   }
-});
+})

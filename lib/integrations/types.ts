@@ -1,15 +1,5 @@
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-export type IntegrationProviderId =;
-  | 'salesforce';
-  | 'hubspot';
-  | 'zoho';
-  | 'pipedrive';
-  | 'greenhouse';
-  | 'lever';
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationCategory = 'crm' | 'ats'
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 export type IntegrationProviderId =
   | 'salesforce'
   | 'hubspot'
@@ -17,50 +7,59 @@ export type IntegrationProviderId =
   | 'pipedrive'
   | 'greenhouse'
   | 'lever'
-  | 'workable';
-  | 'bamboohr';
-  | 'workable';
-  | 'bamboohr';
+export type IntegrationCategory = 'crm' | 'ats'
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected'
+export type IntegrationCategory = 'crm' | 'ats'
+export type IntegrationProviderId =
+  | 'salesforce'
+  | 'hubspot'
+  | 'zoho'
+  | 'pipedrive'
+  | 'greenhouse'
+  | 'lever'
+  | 'workable'
+  | 'bamboohr'
+  | 'workable'
+  | 'bamboohr'
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId, name: string
-  id: IntegrationProviderId, name: string,;
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[]
   icon?: string
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string,;
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[]
   icon?: string
 }
-export interface SyncRules {
-  // CRM rules;
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
-  // ATS rules;
-  autoSyncApplicants?: boolean;
-  autoUploadResumes?: boolean;
-export interface ProviderConnection {
-export interface ProviderConnection {;
-  providerId: IntegrationProviderId;
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
-  | 'workable'
-  | 'bamboohr';
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
-  icon?: string;
-}
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export interface SyncRules {
   // CRM rules
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
+  autoCreateContacts?: boolean
+  pushNotesMode?: 'auto' | 'manual'
   // ATS rules
-  autoSyncApplicants?: boolean;
-  autoUploadResumes?: boolean;
-
+  autoSyncApplicants?: boolean
+  autoUploadResumes?: boolean
+export interface ProviderConnection {
+export interface ProviderConnection {
+  providerId: IntegrationProviderId
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string
+  | 'workable'
+  | 'bamboohr'
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId
+  name: string
+  category: IntegrationCategory
+  description?: string
+  oauthScopes?: string[]
+  icon?: string
+}
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'
+export interface SyncRules {
+  // CRM rules
+  autoCreateContacts?: boolean
+  pushNotesMode?: 'auto' | 'manual'
+  // ATS rules
+  autoSyncApplicants?: boolean
+  autoUploadResumes?: boolean
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
@@ -77,15 +76,15 @@ export interface IntegrationProviderMeta {
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
+  id: string
+  providerId: IntegrationProviderId
   accessToken: string
   refreshToken?: string
   expiresAt?: number,
   config?: Record<string></string>
 }
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+  category: 'crm' | 'ats' | 'hr'
+  description: string
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string,
@@ -103,77 +102,76 @@ export interface ProviderConnection {
   apiDocsUrl?: string
 }
 export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
-  accessToken?: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  lastSyncAt?: number;
+  id: string
+  providerId: IntegrationProviderId
+  name: string
+  status: SyncStatus
+  accessToken?: string
+  refreshToken?: string
+  expiresAt?: number
+  lastSyncAt?: number
 export interface SyncLogEntry {
-  lastError?: string | null;
-export interface SyncLogEntry {;
-  id: string;
-  timestamp: number;
-  provider_id: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
+  lastError?: string | null
+export interface SyncLogEntry {
+  id: string
+  timestamp: number
+  provider_id: IntegrationProviderId
+  level: 'info' | 'warn' | 'error'
+  action: string
   details?: Record<string, any>
 export interface ManualOverride {
-  job_id: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
+  job_id: string
+  disableCrmSync?: boolean
+  disableAtsSync?: boolean
 export interface ZapierEvent {
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-export interface ZapierEvent {;
-  id: string;
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
-  timestamp: number;
+export interface ManualOverride {
+  jobId: string
+  disableCrmSync?: boolean
+  disableAtsSync?: boolean
+export interface ZapierEvent {
+  id: string
+  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched'
+  timestamp: number
   payload: Record < string, any>
 export interface IntegrationsState {
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-export interface ZapierEvent {;
-  lastError?: string | null;
+export interface ManualOverride {
+  jobId: string
+  disableCrmSync?: boolean
+  disableAtsSync?: boolean
+export interface ZapierEvent {
+  lastError?: string | null
 }
 export interface SyncLogEntry {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
+  id: string
+  providerId: IntegrationProviderId
+  name: string
+  status: SyncStatus
 }
 
-  status: SyncStatus;
-  lastSync?: number;
+  status: SyncStatus
+  lastSync?: number
 }
 
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
-  status: SyncStatus;
-  lastSync?: number;
+  status: SyncStatus
+  lastSync?: number
+  createdAt: number
+  updatedAt: number
+  status: SyncStatus
+  lastSync?: number
   config?: Record<string, any>
-  expiresAt?: number;
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
+  expiresAt?: number
+  status: SyncStatus
+  lastSync?: number
+  createdAt: number
+  updatedAt: number
   expiresAt?: number
   status: SyncStatus
   lastSync?: number,
   config?: Record<string></string>
 }
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-  status: SyncStatus;
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'
+  status: SyncStatus
   lastSync?: number
   createdAt: number
   expiresAt?: number,
@@ -216,7 +214,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 
 }
 
-  lastSync?: Date;
+  lastSync?: Date
   config: Record<string></string>createdAt</string>: Date
   updatedAt: Date,
 }
@@ -260,9 +258,9 @@ export interface IntegrationProviderMeta {,
 }
 
 export interface IntegrationOverride {
-    id: string;
-  connectionId: string;
-  field: string;
+    id: string
+  connectionId: string
+  field: string
   value: unknown
   reason: string
   createdAt: Date,
@@ -280,7 +278,7 @@ export interface ZapierEvent {
   }
 
 export interface IntegrationsState {
-    connections: ProviderConnection[];
+    connections: ProviderConnection[]
   logs: SyncLogEntry[]
   overrides: ManualOverride[]
   events: ZapierEvent[],
@@ -294,11 +292,11 @@ export interface IntegrationsState {
   events: ZapierEvent[]
   }
   payload: Record<string></string>
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-  lastError?: string | null;
+  connections: ProviderConnection[]
+  logs: SyncLogEntry[]
+  overrides: ManualOverride[]
+  events: ZapierEvent[]
+  lastError?: string | null
 }
 }
 }
@@ -327,25 +325,25 @@ export interface IntegrationsState {
 }
 
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
+  id: IntegrationProviderId
+  name: string
+  category: 'crm' | 'ats'
+  description: string
   payload: Record<string, any>
 }
 export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
+  connections: ProviderConnection[]
+  logs: SyncLogEntry[]
+  overrides: ManualOverride[]
+  events: ZapierEvent[]
 }
 }
 
 export interface ProviderConnection {
-    id: string;
-  providerId: IntegrationProviderId;
-  accessToken: string;
-  refreshToken?: string;
+    id: string
+  providerId: IntegrationProviderId
+  accessToken: string
+  refreshToken?: string
   expiresAt?: number
   status: SyncStatus
   lastSync?: number,
@@ -358,16 +356,16 @@ export interface IntegrationProviderMeta {
   category: 'crm' | 'ats' | 'hr',
   description: string
   }
-  logoUrl?: string;
-  websiteUrl?: string;
-  apiDocsUrl?: string;
+  logoUrl?: string
+  websiteUrl?: string
+  apiDocsUrl?: string
 }
   payload: Record<string></string>
 }
 }
 
 export interface IntegrationsState {
-    connections: ProviderConnection[];
+    connections: ProviderConnection[]
   logs: SyncLogEntry[]
   overrides: ManualOverride[]
   events: ZapierEvent[],

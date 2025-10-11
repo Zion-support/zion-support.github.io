@@ -48,10 +48,9 @@ const conflictedFiles = [
   'public/sitemap.xml'
 ]
 async function main() {
-    console.log('🚀 Resolving remaining merge conflicts...\n');
-  
-  // Resolve conflicts in each file;
-  let resolvedCount = 0;
+    console.log('🚀 Resolving remaining merge conflicts...\n')
+  // Resolve conflicts in each file
+  let resolvedCount = 0
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
       resolvedCount++
@@ -79,7 +78,7 @@ async function main() {
   }
   }
   
-  // Final status;
+  // Final status
   console.log('\n📊 Final Status: '),
   try {,
     const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() })

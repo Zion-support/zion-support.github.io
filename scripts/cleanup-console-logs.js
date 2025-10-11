@@ -41,8 +41,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         '**/*.test.*')
         '**/*.spec.*'
       ]
-    });
-    
+    })
     files.forEach(file => {
     )
       totalFiles++;)

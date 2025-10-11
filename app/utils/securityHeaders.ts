@@ -1,12 +1,12 @@
-/**;
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
- */;
+/**
+ * Security Headers Configuration
+ * Comprehensive security headers for production applications
+ */
 export interface SecurityHeadersConfig {
-    contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
+    contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
   referrerPolicy?: string
   }
   permissionsPolicy?: string;}
@@ -24,7 +24,7 @@ export interface SecurityHeadersConfig {}
   permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy;
+  // Content Security Policy
   contentSecurityPolicy: [,
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
@@ -36,11 +36,11 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     "base-uri 'self'",
     "form-action 'self'",
     'upgrade-insecure-requests'].join('; '),
-  // HTTP Strict Transport Security (HSTS);
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';
-  // Prevent clickjacking;
-  xFrameOptions: 'DENY';
-  // Prevent MIME type sniffing;
+  // HTTP Strict Transport Security (HSTS)
+  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
+  // Prevent clickjacking
+  xFrameOptions: 'DENY'
+  // Prevent MIME type sniffing
   xContentTypeOptions: 'nosniff'
   // Referrer Policy
   referrerPolicy: 'strict-origin-when-cross-origin',
@@ -56,16 +56,16 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'gyroscope=()',
     'magnetometer=()'].join(', ')}
 }
-/**;
- * Get security headers as key-value pairs;
- */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-export function getSecurityHeaders();
+/**
+ * Get security headers as key-value pairs
+ */
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
+export function getSecurityHeaders()
   customConfig?: Partial</SecurityHeadersConfig><SecurityHeadersConfig>
 ): Record</SecurityHeadersConfig><string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record</string><string, string> = {}
-    'X-XSS-Protection': '1; mode=block',;
+    'X-XSS-Protection': '1; mode=block',
 /**
  * Get security headers as key-value pairs
  */
@@ -100,13 +100,13 @@ export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 export const,
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 }
-/**;
- * Get security headers as key-value pairs;
- */;
-export function getSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig />);
+/**
+ * Get security headers as key-value pairs
+ */
+export function getSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig />)
 ): Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig }
-  const,;
+  const,
   headers: Record</string><string, string> = {/* TODO: Fix JSX expression */}
 /**
  * Get security headers as key-value pairs
@@ -127,25 +127,25 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   }
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
   }
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */};
-  };
-  return headers;
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+  }
+  return headers
 }
-/**;
- * Get security headers in Next.js format;
- */;
-export function getNextSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig>);
+/**
+ * Get security headers in Next.js format
+ */
+export function getNextSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig>)
 ): Array<{ key: string, value: string }> {
-    export function getNextSecurityHeaders();
+    export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
   }
 ): Array<{ key: string, value: string }> {}
-  const headers = getSecurityHeaders(customConfig);
+  const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ()
-  }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
+  }))
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
   }))
 }
-export default defaultSecurityHeaders;
+export default defaultSecurityHeaders

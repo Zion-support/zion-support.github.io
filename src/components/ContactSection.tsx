@@ -11,7 +11,7 @@ export default function ContactSection() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
+    })
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -202,3 +202,4 @@ export default function ContactSection() {
   </h3>
   </h3>
   </HTMLInputElement>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></ul></li></li></li></li>

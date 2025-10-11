@@ -41,7 +41,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -92,7 +92,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const report = {/* TODO: Fix JSX expression */}
     unused}
   }
-//   const outDir = path.join(publicDir, 'reports') 'assets');
+//   const outDir = path.join(publicDir, 'reports') 'assets')
   writeFileEnsured(path.join(outDir) 'unused-assets.json'),
     JSON.stringify(report, null) 2))
   // Simple HTML report

@@ -28,7 +28,7 @@ $4})
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -43,8 +43,8 @@ $4})
     e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitted(true);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitted(true)
     setIsSubmitting(false)
   }
   const contactInfo = {

@@ -25,12 +25,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(autonomy): invention orchestrator updates [ci skip]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })
     return {statusCode: 200,
       body: JSON.stringify({)
         ok: true),
         task: 'autonomous-invention-orchestrator'}
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -38,10 +38,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
   k: 'autonomous-invention-orchestrator'}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

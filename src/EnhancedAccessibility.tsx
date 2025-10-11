@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import React, { useState, useEffect, useCallback } from 'react';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState, useEffect, useRef } from 'react'
 import { 
   Accessibility, 
   Eye, 
@@ -82,13 +82,12 @@ import {
   ArrowLeft,
   ArrowRight,
   Space
-} from 'lucide-react';
-
+} from 'lucide-react'
 interface AccessibilitySettings {
   // Visual
-  highContrast: boolean;
-  largeText: boolean;
-  fontSize: number;
+  highContrast: boolean
+  largeText: boolean
+  fontSize: number
   EyeIcon, 
   EyeSlashIcon, 
   SpeakerWaveIcon, 
@@ -100,56 +99,55 @@ interface AccessibilitySettings {
   CheckCircleIcon,
   ExclamationTriangleIcon,
   XMarkIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  largeText: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  dyslexia: boolean;
-  highContrastText: boolean;
-  largeCursor: boolean;
-  soundEffects: boolean;
-  autoPlay: boolean;
-  showFocusRings: boolean;
-  showKeyboardShortcuts: boolean;
-  showScreenReaderHints: boolean;
-  showAccessibilityInfo: boolean;
-  fontSize: number;
-  colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  deviceMode: 'desktop' | 'tablet' | 'mobile';
-  theme: 'light' | 'dark' | 'auto';
+  highContrast: boolean
+  reducedMotion: boolean
+  largeText: boolean
+  screenReader: boolean
+  keyboardNavigation: boolean
+  reducedMotion: boolean
+  screenReader: boolean
+  keyboardNavigation: boolean
+  focusIndicator: boolean
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'
+  dyslexia: boolean
+  highContrastText: boolean
+  largeCursor: boolean
+  soundEffects: boolean
+  autoPlay: boolean
+  showFocusRings: boolean
+  showKeyboardShortcuts: boolean
+  showScreenReaderHints: boolean
+  showAccessibilityInfo: boolean
+  fontSize: number
+  colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'
+  deviceMode: 'desktop' | 'tablet' | 'mobile'
+  theme: 'light' | 'dark' | 'auto'
 }
 
 interface EnhancedAccessibilityProps {
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ 
   position = 'bottom-right' 
-  theme: 'light' | 'dark' | 'auto';
+  theme: 'light' | 'dark' | 'auto'
 }
 
 const EnhancedAccessibility: React.FC<{ position?: 'top-right' | 'bottom-right' | 'top-left' | 'bottom-left' }> = ({ 
   position = 'bottom-right' 
 }) => {
 interface EnhancedAccessibilityProps {
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ 
   position = 'bottom-right' 
 }) => {
-  soundEnabled: boolean;
-  focusIndicator: boolean;
-  screenReader: boolean;
+  soundEnabled: boolean
+  focusIndicator: boolean
+  screenReader: boolean
 }
 
 export const EnhancedAccessibility: React.FC = () => {
@@ -158,8 +156,8 @@ export const EnhancedAccessibility: React.FC = () => {
 const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({ 
   position = 'bottom-right' 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -182,175 +180,150 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     showKeyboardShortcuts: false,
     showScreenReaderHints: false,
     showAccessibilityInfo: false,
-  });
-
-  const [currentFocus, setCurrentFocus] = useState<string>('');
-  const [focusHistory, setFocusHistory] = useState<string[]>([]);
-  const [keyboardShortcuts, setKeyboardShortcuts] = useState<Map<string, string>>(new Map());
-  const [announcements, setAnnouncements] = useState<string[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-  const [positionState, setPositionState] = useState(position);
-  const [isMinimized, setIsMinimized] = useState(false);
-
-  const accessibilityRef = useRef<HTMLDivElement>(null);
-  const announcementRef = useRef<HTMLDivElement>(null);
-
+  })
+  const [currentFocus, setCurrentFocus] = useState<string>('')
+  const [focusHistory, setFocusHistory] = useState<string[]>([])
+  const [keyboardShortcuts, setKeyboardShortcuts] = useState<Map<string, string>>(new Map())
+  const [announcements, setAnnouncements] = useState<string[]>([])
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
+  const [positionState, setPositionState] = useState(position)
+  const [isMinimized, setIsMinimized] = useState(false)
+  const accessibilityRef = useRef<HTMLDivElement>(null)
+  const announcementRef = useRef<HTMLDivElement>(null)
   // Initialize accessibility features
   useEffect(() => {
     theme: 'auto'
-  });
-
+  })
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // High contrast
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--contrast-filter', 'contrast(1.5) brightness(1.2)');
+      root.classList.add('high-contrast')
+      root.style.setProperty('--contrast-filter', 'contrast(1.5) brightness(1.2)')
     } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--contrast-filter');
+      root.classList.remove('high-contrast')
+      root.style.removeProperty('--contrast-filter')
     }
     
     // Font size
-    root.style.setProperty('--font-size-multiplier', `${newSettings.fontSize / 100}`);
-    
+    root.style.setProperty('--font-size-multiplier', `${newSettings.fontSize / 100}`)
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-      root.style.setProperty('--animation-duration', '0.01ms');
+      root.classList.add('reduced-motion')
+      root.style.setProperty('--animation-duration', '0.01ms')
     } else {
-      root.classList.remove('reduced-motion');
-      root.style.removeProperty('--animation-duration');
+      root.classList.remove('reduced-motion')
+      root.style.removeProperty('--animation-duration')
     // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
       try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...prev, ...parsed }));
+        const parsed = JSON.parse(savedSettings)
+        setSettings(prev => ({ ...prev, ...parsed }))
       } catch (error) {
-        console.warn('Failed to parse accessibility settings:', error);
+        console.warn('Failed to parse accessibility settings:', error)
       }
     }
 
     // Apply initial settings
-    applyAccessibilitySettings(settings);
-
+    applyAccessibilitySettings(settings)
     // Set up keyboard shortcuts
-    setupKeyboardShortcuts();
-
+    setupKeyboardShortcuts()
     // Set up focus tracking
-    setupFocusTracking();
-
+    setupFocusTracking()
     // Set up screen reader announcements
-    setupScreenReaderAnnouncements();
-
+    setupScreenReaderAnnouncements()
     // Set up high contrast detection
-    setupHighContrastDetection();
-
+    setupHighContrastDetection()
     // Set up motion detection
-    setupMotionDetection();
-
+    setupMotionDetection()
     // Set up color blindness simulation
-    setupColorBlindnessSimulation();
-
+    setupColorBlindnessSimulation()
     // Set up dyslexia support
-    setupDyslexiaSupport();
-
+    setupDyslexiaSupport()
     // Set up large cursor
-    setupLargeCursor();
-
+    setupLargeCursor()
     // Set up sound effects
-    setupSoundEffects();
-
+    setupSoundEffects()
     // Set up auto-play prevention
-    setupAutoPlayPrevention();
-
+    setupAutoPlayPrevention()
     // Set up focus rings
-    setupFocusRings();
-
+    setupFocusRings()
     // Set up keyboard navigation
-    setupKeyboardNavigation();
-
+    setupKeyboardNavigation()
     // Set up screen reader hints
-    setupScreenReaderHints();
-
+    setupScreenReaderHints()
     // Set up accessibility info
-    setupAccessibilityInfo();
-
-  }, []);
-
+    setupAccessibilityInfo()
+  }, [])
   // Apply accessibility settings when they change
   useEffect(() => {
-    applyAccessibilitySettings(settings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
-
+    applyAccessibilitySettings(settings)
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))
+  }, [settings])
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // High contrast mode
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--accent-color', '#ffff00');
+      root.classList.add('high-contrast')
+      root.style.setProperty('--bg-primary', '#000000')
+      root.style.setProperty('--text-primary', '#ffffff')
+      root.style.setProperty('--accent-color', '#ffff00')
     } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--accent-color');
+      root.classList.remove('high-contrast')
+      root.style.removeProperty('--bg-primary')
+      root.style.removeProperty('--text-primary')
+      root.style.removeProperty('--accent-color')
     }
 
     // Font size
-    root.style.setProperty('--font-size-base', `${newSettings.fontSize}px`);
-    root.style.setProperty('--font-size-lg', `${newSettings.fontSize * 1.125}px`);
-    root.style.setProperty('--font-size-xl', `${newSettings.fontSize * 1.25}px`);
-    root.style.setProperty('--font-size-2xl', `${newSettings.fontSize * 1.5}px`);
-
+    root.style.setProperty('--font-size-base', `${newSettings.fontSize}px`)
+    root.style.setProperty('--font-size-lg', `${newSettings.fontSize * 1.125}px`)
+    root.style.setProperty('--font-size-xl', `${newSettings.fontSize * 1.25}px`)
+    root.style.setProperty('--font-size-2xl', `${newSettings.fontSize * 1.5}px`)
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.style.setProperty('--transition-duration', '0s');
-      root.style.setProperty('--animation-duration', '0s');
+      root.style.setProperty('--transition-duration', '0s')
+      root.style.setProperty('--animation-duration', '0s')
     } else {
-      root.style.removeProperty('--transition-duration');
-      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--transition-duration')
+      root.style.removeProperty('--animation-duration')
     }
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
-      root.classList.add(`color-blindness-${newSettings.colorBlindness}`);
+      root.classList.add(`color-blindness-${newSettings.colorBlindness}`)
     } else {
-      root.classList.remove('color-blindness-protanopia', 'color-blindness-deuteranopia', 'color-blindness-tritanopia');
+      root.classList.remove('color-blindness-protanopia', 'color-blindness-deuteranopia', 'color-blindness-tritanopia')
     }
 
     // Dyslexia support
     if (newSettings.dyslexia) {
-      root.classList.add('dyslexia-friendly');
-      root.style.setProperty('--font-family', 'OpenDyslexic, Arial, sans-serif');
-      root.style.setProperty('--line-height', '1.5');
-      root.style.setProperty('--letter-spacing', '0.1em');
+      root.classList.add('dyslexia-friendly')
+      root.style.setProperty('--font-family', 'OpenDyslexic, Arial, sans-serif')
+      root.style.setProperty('--line-height', '1.5')
+      root.style.setProperty('--letter-spacing', '0.1em')
     } else {
-      root.classList.remove('dyslexia-friendly');
-      root.style.removeProperty('--font-family');
-      root.style.removeProperty('--line-height');
-      root.style.removeProperty('--letter-spacing');
+      root.classList.remove('dyslexia-friendly')
+      root.style.removeProperty('--font-family')
+      root.style.removeProperty('--line-height')
+      root.style.removeProperty('--letter-spacing')
     }
 
     // High contrast text
     if (newSettings.highContrastText) {
-      root.classList.add('high-contrast-text');
+      root.classList.add('high-contrast-text')
     } else {
-      root.classList.remove('high-contrast-text');
+      root.classList.remove('high-contrast-text')
     }
 
     // Large cursor
     if (newSettings.largeCursor) {
-      root.classList.add('large-cursor');
+      root.classList.add('large-cursor')
     } else {
-      root.classList.remove('large-cursor');
+      root.classList.remove('large-cursor')
     }
     
     // Color blindness
@@ -359,55 +332,52 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
         protanopia: 'url(#protanopia)',
         deuteranopia: 'url(#deuteranopia)',
         tritanopia: 'url(#tritanopia)'
-      };
-      root.style.setProperty('--color-filter', filters[newSettings.colorBlindness]);
+      }
+      root.style.setProperty('--color-filter', filters[newSettings.colorBlindness])
     } else {
-      root.style.removeProperty('--color-filter');
+      root.style.removeProperty('--color-filter')
     }
     
     // Focus indicator
     if (newSettings.focusIndicator) {
-      root.classList.add('show-focus');
+      root.classList.add('show-focus')
     } else {
-      root.classList.remove('show-focus');
+      root.classList.remove('show-focus')
     }
     
     // Theme
     if (newSettings.theme === 'light') {
-      root.classList.remove('dark');
-      root.classList.add('light');
+      root.classList.remove('dark')
+      root.classList.add('light')
     } else if (newSettings.theme === 'dark') {
-      root.classList.remove('light');
-      root.classList.add('dark');
+      root.classList.remove('light')
+      root.classList.add('dark')
     } else {
-      root.classList.remove('light', 'dark');
+      root.classList.remove('light', 'dark')
     }
     
     // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
-
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
+  }, [])
   // Load settings from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem('accessibility-settings');
+    const saved = localStorage.getItem('accessibility-settings')
     if (saved) {
       try {
-        const savedSettings = JSON.parse(saved);
-        setSettings(savedSettings);
-        applySettings(savedSettings);
+        const savedSettings = JSON.parse(saved)
+        setSettings(savedSettings)
+        applySettings(savedSettings)
       } catch (error) {
-        console.warn('Failed to load accessibility settings:', error);
+        console.warn('Failed to load accessibility settings:', error)
       }
     }
-  }, [applySettings]);
-
+  }, [applySettings])
   // Update settings
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-  }, [settings, applySettings]);
-
+    const newSettings = { ...settings, [key]: value }
+    setSettings(newSettings)
+    applySettings(newSettings)
+  }, [settings, applySettings])
   // Reset to defaults
   const resetSettings = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
@@ -419,83 +389,73 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       focusIndicator: true,
       colorBlindness: 'none',
       theme: 'auto'
-    };
-    setSettings(defaultSettings);
-    applySettings(defaultSettings);
-  }, [applySettings]);
-
+    }
+    setSettings(defaultSettings)
+    applySettings(defaultSettings)
+  }, [applySettings])
   // Increase/decrease font size
   const adjustFontSize = useCallback((direction: 'increase' | 'decrease') => {
     const newSize = direction === 'increase' 
       ? Math.min(settings.fontSize + 10, 200)
-      : Math.max(settings.fontSize - 10, 80);
-    updateSetting('fontSize', newSize);
-  }, [settings.fontSize, updateSetting]);
-
+      : Math.max(settings.fontSize - 10, 80)
+    updateSetting('fontSize', newSize)
+  }, [settings.fontSize, updateSetting])
   // Toggle high contrast
   const toggleHighContrast = useCallback(() => {
-    updateSetting('highContrast', !settings.highContrast);
-  }, [settings.highContrast, updateSetting]);
-
+    updateSetting('highContrast', !settings.highContrast)
+  }, [settings.highContrast, updateSetting])
   // Toggle reduced motion
   const toggleReducedMotion = useCallback(() => {
-    updateSetting('reducedMotion', !settings.reducedMotion);
-  }, [settings.reducedMotion, updateSetting]);
-
+    updateSetting('reducedMotion', !settings.reducedMotion)
+  }, [settings.reducedMotion, updateSetting])
   // Toggle screen reader mode
   const toggleScreenReader = useCallback(() => {
-    updateSetting('screenReader', !settings.screenReader);
-  }, [settings.screenReader, updateSetting]);
-
+    updateSetting('screenReader', !settings.screenReader)
+  }, [settings.screenReader, updateSetting])
   // Toggle keyboard navigation
   const toggleKeyboardNavigation = useCallback(() => {
-    updateSetting('keyboardNavigation', !settings.keyboardNavigation);
-  }, [settings.keyboardNavigation, updateSetting]);
-
+    updateSetting('keyboardNavigation', !settings.keyboardNavigation)
+  }, [settings.keyboardNavigation, updateSetting])
   // Toggle focus indicator
   const toggleFocusIndicator = useCallback(() => {
-    updateSetting('focusIndicator', !settings.focusIndicator);
-  }, [settings.focusIndicator, updateSetting]);
-
+    updateSetting('focusIndicator', !settings.focusIndicator)
+  }, [settings.focusIndicator, updateSetting])
   // Handle keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Ctrl/Cmd + Shift + A to open accessibility panel
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-        event.preventDefault();
-        setIsOpen(!isOpen);
+        event.preventDefault()
+        setIsOpen(!isOpen)
       }
       
       // Ctrl/Cmd + Plus to increase font size
       if ((event.ctrlKey || event.metaKey) && event.key === '=') {
-        event.preventDefault();
-        adjustFontSize('increase');
+        event.preventDefault()
+        adjustFontSize('increase')
       }
       
       // Ctrl/Cmd + Minus to decrease font size
       if ((event.ctrlKey || event.metaKey) && event.key === '-') {
-        event.preventDefault();
-        adjustFontSize('decrease');
+        event.preventDefault()
+        adjustFontSize('decrease')
       }
       
       // Ctrl/Cmd + 0 to reset font size
       if ((event.ctrlKey || event.metaKey) && event.key === '0') {
-        event.preventDefault();
-        updateSetting('fontSize', 100);
+        event.preventDefault()
+        updateSetting('fontSize', 100)
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, adjustFontSize, updateSetting]);
-
-    if (newSettings.focusIndicator) {
-      root.classList.add('show-focus');
-    } else {
-      root.classList.remove('show-focus');
     }
-  };
-
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, adjustFontSize, updateSetting])
+    if (newSettings.focusIndicator) {
+      root.classList.add('show-focus')
+    } else {
+      root.classList.remove('show-focus')
+    }
+  }
   const setupKeyboardShortcuts = () => {
     const shortcuts = new Map([
       ['Alt + A', 'Toggle accessibility panel'],
@@ -515,39 +475,34 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       ['Enter', 'Activate element'],
       ['Space', 'Toggle element'],
       ['Arrow keys', 'Navigate through options'],
-    ]);
-    setKeyboardShortcuts(shortcuts);
-  };
-
+    ])
+    setKeyboardShortcuts(shortcuts)
+  }
   const setupFocusTracking = () => {
     document.addEventListener('focusin', (e) => {
-      const target = e.target as HTMLElement;
-      const focusId = target.getAttribute('data-focus-id') || target.tagName.toLowerCase();
-      setCurrentFocus(focusId);
-      setFocusHistory(prev => [...prev.slice(-9), focusId]);
-      
+      const target = e.target as HTMLElement
+      const focusId = target.getAttribute('data-focus-id') || target.tagName.toLowerCase()
+      setCurrentFocus(focusId)
+      setFocusHistory(prev => [...prev.slice(-9), focusId])
       if (settings.screenReader) {
-        announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || focusId} focused`);
+        announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || focusId} focused`)
       }
-    });
-
+    })
     document.addEventListener('focusout', (e) => {
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement
       if (settings.screenReader) {
-        announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || 'Element'} lost focus`);
+        announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || 'Element'} lost focus`)
       }
-    });
-  };
-
+    })
+  }
   const setupScreenReaderAnnouncements = () => {
     // Create live region for screen reader announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    document.body.appendChild(liveRegion);
-  };
-
+    const liveRegion = document.createElement('div')
+    liveRegion.setAttribute('aria-live', 'polite')
+    liveRegion.setAttribute('aria-atomic', 'true')
+    liveRegion.className = 'sr-only'
+    document.body.appendChild(liveRegion)
+  }
     reducedMotion: false,
     largeText: false,
     screenReader: false,
@@ -555,56 +510,51 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     focusIndicator: true,
     colorBlindness: 'none',
     fontSize: 'medium'
-  });
-  
-  const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
-  const [activeTab, setActiveTab] = useState<'settings' | 'scanner' | 'help'>('settings');
-
+  })
+  const [issues, setIssues] = useState<AccessibilityIssue[]>([])
+  const [isScanning, setIsScanning] = useState(false)
+  const [activeTab, setActiveTab] = useState<'settings' | 'scanner' | 'help'>('settings')
   // Apply accessibility settings to document
   useEffect(() => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // High contrast mode
     if (settings.highContrast) {
     fontSize: 16,
     colorBlindMode: 'none',
     deviceMode: 'desktop'
-  });
-
+  })
   // Apply accessibility settings to the document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // High contrast mode
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--accent-color', '#ffff00');
+      root.classList.add('high-contrast')
+      root.style.setProperty('--bg-primary', '#000000')
+      root.style.setProperty('--text-primary', '#ffffff')
+      root.style.setProperty('--accent-color', '#ffff00')
     } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--text-primary');
-      root.style.removeProperty('--accent-color');
+      root.classList.remove('high-contrast')
+      root.style.removeProperty('--bg-primary')
+      root.style.removeProperty('--text-primary')
+      root.style.removeProperty('--accent-color')
     }
 
     // Large text mode
     if (newSettings.largeText) {
-      root.style.fontSize = '18px';
-      root.style.setProperty('--text-scale', '1.2');
+      root.style.fontSize = '18px'
+      root.style.setProperty('--text-scale', '1.2')
     } else {
-      root.style.fontSize = '16px';
-      root.style.setProperty('--text-scale', '1');
+      root.style.fontSize = '16px'
+      root.style.setProperty('--text-scale', '1')
     }
 
     // Reduced motion
     if (newSettings.reducedMotion) {
-      root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--transition-duration', '0.01ms');
+      root.style.setProperty('--animation-duration', '0.01ms')
+      root.style.setProperty('--transition-duration', '0.01ms')
     } else {
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--transition-duration');
+      root.style.removeProperty('--animation-duration')
+      root.style.removeProperty('--transition-duration')
     }
 
     // Color blind modes
@@ -613,73 +563,65 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       protanopia: 'url(#protanopia)',
       deuteranopia: 'url(#deuteranopia)',
       tritanopia: 'url(#tritanopia)'
-    };
-    root.style.filter = colorBlindFilters[newSettings.colorBlindMode];
-
+    }
+    root.style.filter = colorBlindFilters[newSettings.colorBlindMode]
     // Device mode simulation
     if (newSettings.deviceMode !== 'desktop') {
-      const viewport = document.querySelector('meta[name="viewport"]');
+      const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
-        const width = newSettings.deviceMode === 'mobile' ? '375' : '768';
-        viewport.setAttribute('content', `width=${width}, initial-scale=1`);
+        const width = newSettings.deviceMode === 'mobile' ? '375' : '768'
+        viewport.setAttribute('content', `width=${width}, initial-scale=1`)
       }
     }
 
     // Store settings in localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
-
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
+  }, [])
   // Load saved settings on component mount
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
-      const parsedSettings = JSON.parse(savedSettings);
-      setSettings(parsedSettings);
-      applySettings(parsedSettings);
+      const parsedSettings = JSON.parse(savedSettings)
+      setSettings(parsedSettings)
+      applySettings(parsedSettings)
     }
-  }, [applySettings]);
-
+  }, [applySettings])
   // Apply settings when they change
   useEffect(() => {
-    applySettings(settings);
-  }, [settings, applySettings]);
-
+    applySettings(settings)
+  }, [settings, applySettings])
   // Keyboard navigation support
   useEffect(() => {
-    if (!settings.keyboardNavigation) return;
-
+    if (!settings.keyboardNavigation) return
     const handleKeyDown = (event: KeyboardEvent) => {
   fontSize: number; // 50% to 200%
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  reducedMotion: boolean;
-  darkMode: 'auto' | 'light' | 'dark';
-  
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'
+  reducedMotion: boolean
+  darkMode: 'auto' | 'light' | 'dark'
   // Audio
-  soundEffects: boolean;
-  autoPlayMedia: boolean;
-  voiceCommands: boolean;
-  
+  soundEffects: boolean
+  autoPlayMedia: boolean
+  voiceCommands: boolean
   // Navigation
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  
+  screenReader: boolean
+  keyboardNavigation: boolean
+  focusIndicator: boolean
   // Advanced
-  dyslexia: boolean;
+  dyslexia: boolean
   lineSpacing: number; // 1.0 to 2.0
   wordSpacing: number; // 0.5 to 2.0
   letterSpacing: number; // -0.5 to 2.0
 }
 
 interface VoiceCommand {
-  command: string;
-  action: string;
-  description: string;
+  command: string
+  action: string
+  description: string
 }
 
 const EnhancedAccessibility: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
+  const [isVisible, setIsVisible] = useState(false)
+  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general')
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 100,
@@ -696,15 +638,12 @@ const EnhancedAccessibility: React.FC = () => {
     lineSpacing: 1.5,
     wordSpacing: 1.0,
     letterSpacing: 0.0
-  });
-  
-  const [accessibilityScore, setAccessibilityScore] = useState(85);
-  const [isListening, setIsListening] = useState(false);
-  const [recognition, setRecognition] = useState<any>(null);
-  const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
-  
-  const audioRef = useRef<HTMLAudioElement>(null);
-
+  })
+  const [accessibilityScore, setAccessibilityScore] = useState(85)
+  const [isListening, setIsListening] = useState(false)
+  const [recognition, setRecognition] = useState<any>(null)
+  const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null)
   // Voice commands
   const voiceCommands: VoiceCommand[] = [
     { command: 'open accessibility', action: 'open', description: 'Open accessibility panel' },
@@ -722,71 +661,65 @@ const EnhancedAccessibility: React.FC = () => {
     { command: 'focus indicator', action: 'focusIndicator', description: 'Toggle focus indicator' },
     { command: 'reduced motion', action: 'reducedMotion', description: 'Toggle reduced motion' },
     { command: 'help', action: 'help', description: 'Show keyboard shortcuts' }
-  ];
+  ]
       const focusableElements = document.querySelectorAll(
         'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
-      const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-
+      )
+      const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement)
       switch (event.key) {
         case 'Tab':
           // Enhanced tab navigation
           if (event.shiftKey) {
             if (currentIndex <= 0) {
-              event.preventDefault();
-              (focusableElements[focusableElements.length - 1] as HTMLElement).focus();
+              event.preventDefault()
+              (focusableElements[focusableElements.length - 1] as HTMLElement).focus()
             }
           } else {
             if (currentIndex >= focusableElements.length - 1) {
-              event.preventDefault();
-              (focusableElements[0] as HTMLElement).focus();
+              event.preventDefault()
+              (focusableElements[0] as HTMLElement).focus()
             }
           }
-          break;
+          break
         case 'Escape':
           // Close modals and dropdowns
-          const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
+          const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]')
           modals.forEach(modal => {
             if (modal instanceof HTMLElement) {
-              modal.style.display = 'none';
+              modal.style.display = 'none'
             }
-          });
-          break;
+          })
+          break
         case 'Enter':
         case ' ':
           // Activate focused elements
           if (document.activeElement instanceof HTMLElement) {
-            document.activeElement.click();
+            document.activeElement.click()
           }
-          break;
+          break
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [settings.keyboardNavigation]);
-
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [settings.keyboardNavigation])
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     if (settings.screenReader) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      
+      const announcement = document.createElement('div')
+      announcement.setAttribute('aria-live', 'polite')
+      announcement.setAttribute('aria-atomic', 'true')
+      announcement.className = 'sr-only'
+      announcement.textContent = message
+      document.body.appendChild(announcement)
       setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
+        document.body.removeChild(announcement)
+      }, 1000)
     }
-  }, [settings.screenReader]);
-
+  }, [settings.screenReader])
   // Update settings
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    
+    const newSettings = { ...settings, [key]: value }
+    setSettings(newSettings)
     // Announce changes to screen reader
     const settingNames = {
       highContrast: 'High contrast mode',
@@ -797,214 +730,190 @@ const EnhancedAccessibility: React.FC = () => {
       fontSize: 'Font size',
       colorBlindMode: 'Color blind mode',
       deviceMode: 'Device mode'
-    };
-    
-    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
-  }, [settings, announceToScreenReader]);
-
+    }
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)
+  }, [settings, announceToScreenReader])
   // Initialize speech recognition
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-      const recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = false;
-      recognition.lang = 'en-US';
-      
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
+      const recognition = new SpeechRecognition()
+      recognition.continuous = false
+      recognition.interimResults = false
+      recognition.lang = 'en-US'
       recognition.onresult = (event: any) => {
-        const command = event.results[0][0].transcript.toLowerCase();
-        handleVoiceCommand(command);
-      };
-      
+        const command = event.results[0][0].transcript.toLowerCase()
+        handleVoiceCommand(command)
+      }
       recognition.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
-      
+        console.error('Speech recognition error:', event.error)
+        setIsListening(false)
+      }
       recognition.onend = () => {
-        setIsListening(false);
-      };
-      
-      setRecognition(recognition);
+        setIsListening(false)
+      }
+      setRecognition(recognition)
     }
-  }, []);
-
+  }, [])
   // Apply accessibility settings
   useEffect(() => {
-    applyAccessibilitySettings();
-    calculateAccessibilityScore();
-  }, [settings]);
-
+    applyAccessibilitySettings()
+    calculateAccessibilityScore()
+  }, [settings])
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.altKey) {
         switch (event.key.toLowerCase()) {
           case 'a':
-            event.preventDefault();
-            setIsVisible(!isVisible);
-            break;
+            event.preventDefault()
+            setIsVisible(!isVisible)
+            break
           case 'h':
-            event.preventDefault();
-            setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
-            break;
+            event.preventDefault()
+            setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))
+            break
           case 'f':
-            event.preventDefault();
-            setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }));
-            break;
+            event.preventDefault()
+            setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }))
+            break
           case 'r':
-            event.preventDefault();
-            resetAllSettings();
-            break;
+            event.preventDefault()
+            resetAllSettings()
+            break
           case 't':
-            event.preventDefault();
+            event.preventDefault()
             setSettings(prev => ({ 
               ...prev, 
               darkMode: prev.darkMode === 'light' ? 'dark' : 'light' 
-            }));
-            break;
+            }))
+            break
           case 's':
-            event.preventDefault();
-            setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }));
-            break;
+            event.preventDefault()
+            setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }))
+            break
           case 'k':
-            event.preventDefault();
-            setShowKeyboardShortcuts(!showKeyboardShortcuts);
-            break;
+            event.preventDefault()
+            setShowKeyboardShortcuts(!showKeyboardShortcuts)
+            break
         }
       }
       
       if (event.key === 'Escape') {
-        setIsVisible(false);
-        setShowKeyboardShortcuts(false);
+        setIsVisible(false)
+        setShowKeyboardShortcuts(false)
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
   // Get position classes
   const getPositionClasses = () => {
     switch (position) {
   const announceToScreenReader = (message: string) => {
     if (settings.screenReader) {
-      setAnnouncements(prev => [...prev, message]);
-      
+      setAnnouncements(prev => [...prev, message])
       // Remove announcement after 5 seconds
       setTimeout(() => {
-        setAnnouncements(prev => prev.filter(a => a !== message));
-      }, 5000);
+        setAnnouncements(prev => prev.filter(a => a !== message))
+      }, 5000)
     }
-  };
-
+  }
   const setupHighContrastDetection = () => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)')
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...prev, highContrast: true }));
+      setSettings(prev => ({ ...prev, highContrast: true }))
     }
     
     mediaQuery.addEventListener('change', (e) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-    });
-  };
-
+      setSettings(prev => ({ ...prev, highContrast: e.matches }))
+    })
+  }
   const setupMotionDetection = () => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...prev, reducedMotion: true }));
+      setSettings(prev => ({ ...prev, reducedMotion: true }))
     }
     
     mediaQuery.addEventListener('change', (e) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-    });
-  };
-
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
+    })
+  }
   const setupColorBlindnessSimulation = () => {
     // CSS filters for color blindness simulation
-    const style = document.createElement('style');
+    const style = document.createElement('style')
     style.textContent = `
       .color-blindness-protanopia { filter: url('#protanopia'); }
       .color-blindness-deuteranopia { filter: url('#deuteranopia'); }
       .color-blindness-tritanopia { filter: url('#tritanopia'); }
-    `;
-    document.head.appendChild(style);
-  };
-
+    `
+    document.head.appendChild(style)
+  }
   const setupDyslexiaSupport = () => {
     // Load OpenDyslexic font if needed
     if (settings.dyslexia) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://fonts.googleapis.com/css2?family=OpenDyslexic:wght@400;700&display=swap';
-      document.head.appendChild(link);
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = 'https://fonts.googleapis.com/css2?family=OpenDyslexic:wght@400;700&display=swap'
+      document.head.appendChild(link)
     }
-  };
-
+  }
   const setupLargeCursor = () => {
     if (settings.largeCursor) {
-      document.body.style.cursor = 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\'><circle cx=\'16\' cy=\'16\' r=\'14\' fill=\'none\' stroke=\'black\' stroke-width=\'2\'/><circle cx=\'16\' cy=\'16\' r=\'4\' fill=\'black\'/></svg>") 16 16, auto';
+      document.body.style.cursor = 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\'><circle cx=\'16\' cy=\'16\' r=\'14\' fill=\'none\' stroke=\'black\' stroke-width=\'2\'/><circle cx=\'16\' cy=\'16\' r=\'4\' fill=\'black\'/></svg>") 16 16, auto'
     } else {
-      document.body.style.cursor = '';
+      document.body.style.cursor = ''
     }
-  };
-
+  }
   const setupSoundEffects = () => {
     if (settings.soundEffects) {
       // Add sound effects for interactions
       document.addEventListener('click', () => {
-        playSound('click');
-      });
-      
+        playSound('click')
+      })
       document.addEventListener('focusin', () => {
-        playSound('focus');
-      });
+        playSound('focus')
+      })
     }
-  };
-
+  }
   const playSound = (type: string) => {
     // Simple sound effects using Web Audio API
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-    
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-    
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+    const oscillator = audioContext.createOscillator()
+    const gainNode = audioContext.createGain()
+    oscillator.connect(gainNode)
+    gainNode.connect(audioContext.destination)
     switch (type) {
       case 'click':
-        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-        break;
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime)
+        break
       case 'focus':
-        oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
-        break;
+        oscillator.frequency.setValueAtTime(600, audioContext.currentTime)
+        break
     }
     
-    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-    
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.1);
-  };
-
+    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime)
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1)
+    oscillator.start(audioContext.currentTime)
+    oscillator.stop(audioContext.currentTime + 0.1)
+  }
   const setupAutoPlayPrevention = () => {
     if (settings.autoPlay) {
       // Prevent autoplay of media
-      const mediaElements = document.querySelectorAll('video, audio');
+      const mediaElements = document.querySelectorAll('video, audio')
       mediaElements.forEach((media: any) => {
-        media.setAttribute('preload', 'none');
-        media.setAttribute('autoplay', 'false');
-        media.setAttribute('muted', 'true');
-      });
+        media.setAttribute('preload', 'none')
+        media.setAttribute('autoplay', 'false')
+        media.setAttribute('muted', 'true')
+      })
     }
-  };
-
+  }
   const setupFocusRings = () => {
     if (settings.showFocusRings) {
-      document.documentElement.classList.add('show-focus-rings');
+      document.documentElement.classList.add('show-focus-rings')
     } else {
-      document.documentElement.classList.remove('show-focus-rings');
+      document.documentElement.classList.remove('show-focus-rings')
     }
-  };
-
+  }
   const setupKeyboardNavigation = () => {
     if (settings.keyboardNavigation) {
       // Enhanced keyboard navigation
@@ -1013,77 +922,69 @@ const EnhancedAccessibility: React.FC = () => {
           // Enhanced tab navigation
           const focusableElements = document.querySelectorAll(
             'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
-          
+          )
           if (e.shiftKey) {
             // Shift + Tab: navigate backwards
-            const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-            const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-            (focusableElements[prevIndex] as HTMLElement).focus();
+            const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement)
+            const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1
+            (focusableElements[prevIndex] as HTMLElement).focus()
           } else {
             // Tab: navigate forwards
-            const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
-            const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-            (focusableElements[nextIndex] as HTMLElement).focus();
+            const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement)
+            const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0
+            (focusableElements[nextIndex] as HTMLElement).focus()
           }
         }
-      });
+      })
     }
-  };
-
+  }
   const setupScreenReaderHints = () => {
     if (settings.showScreenReaderHints) {
       // Add ARIA labels and descriptions to elements
-      const elements = document.querySelectorAll('[data-sr-hint]');
+      const elements = document.querySelectorAll('[data-sr-hint]')
       elements.forEach((element) => {
-        const hint = element.getAttribute('data-sr-hint');
+        const hint = element.getAttribute('data-sr-hint')
         if (hint) {
-          element.setAttribute('aria-label', hint);
-          element.setAttribute('aria-describedby', `sr-hint-${element.id || Math.random()}`);
+          element.setAttribute('aria-label', hint)
+          element.setAttribute('aria-describedby', `sr-hint-${element.id || Math.random()}`)
         }
-      });
+      })
     }
-  };
-
+  }
   const setupAccessibilityInfo = () => {
     if (settings.showAccessibilityInfo) {
       // Show accessibility information for elements
       document.addEventListener('mouseover', (e) => {
-        const target = e.target as HTMLElement;
-        const info = target.getAttribute('data-accessibility-info');
+        const target = e.target as HTMLElement
+        const info = target.getAttribute('data-accessibility-info')
         if (info) {
-          showAccessibilityTooltip(target, info);
+          showAccessibilityTooltip(target, info)
         }
-      });
+      })
     }
-  };
-
+  }
   const showAccessibilityTooltip = (element: HTMLElement, info: string) => {
-    const tooltip = document.createElement('div');
-    tooltip.className = 'accessibility-tooltip';
-    tooltip.textContent = info;
+    const tooltip = document.createElement('div')
+    tooltip.className = 'accessibility-tooltip'
+    tooltip.textContent = info
     tooltip.style.cssText = `
-      position: absolute;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      border-radius: 4px;
-      font-size: 14px;
-      z-index: 10000;
-      pointer-events: none;
-    `;
-    
-    document.body.appendChild(tooltip);
-    
-    const rect = element.getBoundingClientRect();
-    tooltip.style.left = `${rect.left + rect.width / 2}px`;
-    tooltip.style.top = `${rect.top - 40}px`;
-    
+      position: absolute
+      background: #000
+      color: #fff
+      padding: 8px
+      border-radius: 4px
+      font-size: 14px
+      z-index: 10000
+      pointer-events: none
+    `
+    document.body.appendChild(tooltip)
+    const rect = element.getBoundingClientRect()
+    tooltip.style.left = `${rect.left + rect.width / 2}px`
+    tooltip.style.top = `${rect.top - 40}px`
     setTimeout(() => {
-      document.body.removeChild(tooltip);
-    }, 3000);
-  };
-
+      document.body.removeChild(tooltip)
+    }, 3000)
+  }
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
@@ -1102,73 +1003,65 @@ const EnhancedAccessibility: React.FC = () => {
       showKeyboardShortcuts: false,
       showScreenReaderHints: false,
       showAccessibilityInfo: false,
-    };
-    setSettings(defaultSettings);
-  };
-
+    }
+    setSettings(defaultSettings)
+  }
   const getPositionClasses = () => {
     switch (positionState) {
       case 'top-left':
-        return 'top-4 left-4';
+        return 'top-4 left-4'
       case 'top-right':
-        return 'top-4 right-4';
+        return 'top-4 right-4'
       case 'bottom-left':
-        return 'bottom-4 left-4';
+        return 'bottom-4 left-4'
       case 'bottom-right':
       default:
-        return 'bottom-4 right-4';
+        return 'bottom-4 right-4'
     }
-  };
-
+  }
   const handleDragStart = (e: React.MouseEvent) => {
     if (e.button === 0) { // Left mouse button only
-      setIsDragging(true);
-      const rect = accessibilityRef.current?.getBoundingClientRect();
+      setIsDragging(true)
+      const rect = accessibilityRef.current?.getBoundingClientRect()
       if (rect) {
         setDragOffset({
           x: e.clientX - rect.left,
           y: e.clientY - rect.top
-        });
+        })
       }
     }
-  };
-
+  }
   const handleDragMove = (e: MouseEvent) => {
     if (isDragging && accessibilityRef.current) {
-      const x = e.clientX - dragOffset.x;
-      const y = e.clientY - dragOffset.y;
-      
-      accessibilityRef.current.style.position = 'fixed';
-      accessibilityRef.current.style.left = `${x}px`;
-      accessibilityRef.current.style.top = `${y}px`;
-      accessibilityRef.current.style.transform = 'none';
+      const x = e.clientX - dragOffset.x
+      const y = e.clientY - dragOffset.y
+      accessibilityRef.current.style.position = 'fixed'
+      accessibilityRef.current.style.left = `${x}px`
+      accessibilityRef.current.style.top = `${y}px`
+      accessibilityRef.current.style.transform = 'none'
     }
-  };
-
+  }
   const handleDragEnd = () => {
-    setIsDragging(false);
-  };
-
+    setIsDragging(false)
+  }
   useEffect(() => {
     if (isDragging) {
-      document.addEventListener('mousemove', handleDragMove);
-      document.addEventListener('mouseup', handleDragEnd);
-      
+      document.addEventListener('mousemove', handleDragMove)
+      document.addEventListener('mouseup', handleDragEnd)
       return () => {
-        document.removeEventListener('mousemove', handleDragMove);
-        document.removeEventListener('mouseup', handleDragEnd);
-      };
+        document.removeEventListener('mousemove', handleDragMove)
+        document.removeEventListener('mouseup', handleDragEnd)
+      }
     }
-  }, [isDragging, dragOffset]);
-
+  }, [isDragging, dragOffset])
   if (isMinimized) {
     return (
-      <div 
+      <$2 />
         ref={accessibilityRef}
         className={`fixed ${getPositionClasses()} z-50`}
         onMouseDown={handleDragStart}
       >
-        <button
+        <$2 />
           onClick={() => setIsMinimized(false)}
           className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
           aria-label="Open accessibility panel"
@@ -1176,7 +1069,7 @@ const EnhancedAccessibility: React.FC = () => {
           <Accessibility className="w-6 h-6" />
         </button>
       </div>
-    );
+    )
   }
 
   return (
@@ -1186,13 +1079,13 @@ const EnhancedAccessibility: React.FC = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       {/* Accessibility Button */}
-      <button
+      <$2 />
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()} z-50 p-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50`}
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
       {/* Screen Reader Announcements */}
-      <div 
+      <$2 />
         aria-live="polite" 
         aria-atomic="true" 
         className="sr-only"
@@ -1209,28 +1102,25 @@ const EnhancedAccessibility: React.FC = () => {
     soundEnabled: true,
     focusIndicator: true,
     screenReader: false
-  });
-  
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
-  const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-
+  })
+  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null)
+  const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([])
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
   // Apply accessibility settings to the document
   useEffect(() => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // High contrast mode
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--text-color', '#ffffff');
-      root.style.setProperty('--bg-color', '#000000');
-      root.style.setProperty('--accent-color', '#ffff00');
+      root.classList.add('high-contrast')
+      root.style.setProperty('--text-color', '#ffffff')
+      root.style.setProperty('--bg-color', '#000000')
+      root.style.setProperty('--accent-color', '#ffff00')
     } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--text-color');
-      root.style.removeProperty('--bg-color');
-      root.style.removeProperty('--accent-color');
+      root.classList.remove('high-contrast')
+      root.style.removeProperty('--text-color')
+      root.style.removeProperty('--bg-color')
+      root.style.removeProperty('--accent-color')
     }
 
     // Font size
@@ -1238,127 +1128,112 @@ const EnhancedAccessibility: React.FC = () => {
       small: '14px',
       medium: '16px',
       large: '18px'
-    };
-    root.style.fontSize = fontSizeMap[settings.fontSize];
-
+    }
+    root.style.fontSize = fontSizeMap[settings.fontSize]
     // Reduced motion
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-      root.style.setProperty('--animation-duration', '0.01ms');
+      root.classList.add('reduced-motion')
+      root.style.setProperty('--animation-duration', '0.01ms')
     } else {
-      root.classList.remove('reduced-motion');
-      root.style.removeProperty('--animation-duration');
+      root.classList.remove('reduced-motion')
+      root.style.removeProperty('--animation-duration')
     }
 
     // Focus indicator
     if (settings.focusIndicator) {
-      root.classList.add('focus-visible');
+      root.classList.add('focus-visible')
     } else {
-      root.classList.remove('focus-visible');
+      root.classList.remove('focus-visible')
     }
 
     // Save settings to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
-
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))
+  }, [settings])
   // Load settings from localStorage on mount
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    const savedSettings = localStorage.getItem('accessibility-settings')
     if (savedSettings) {
       try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(parsed);
+        const parsed = JSON.parse(savedSettings)
+        setSettings(parsed)
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+        console.error('Failed to parse accessibility settings:', error)
       }
     }
-  }, []);
-
+  }, [])
   // Enhanced focus management
   useEffect(() => {
     const handleFocusChange = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement
       if (target && target !== currentFocus) {
-        setFocusHistory(prev => [...prev.slice(-4), target]);
-        setCurrentFocus(target);
-        
+        setFocusHistory(prev => [...prev.slice(-4), target])
+        setCurrentFocus(target)
         // Announce focus changes for screen readers
         if (settings.screenReader) {
-          announceFocus(target);
+          announceFocus(target)
         }
       }
-    };
-
+    }
     const handleKeyDown = (event: KeyboardEvent) => {
       // Enhanced keyboard navigation
       if (event.key === 'Tab') {
         // Track tab navigation
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation')
       }
       
       // Escape key to close accessibility panel
       if (event.key === 'Escape' && isOpen) {
-        setIsOpen(false);
-        buttonRef.current?.focus();
+        setIsOpen(false)
+        buttonRef.current?.focus()
       }
       
       // Alt + A to toggle accessibility panel
       if (event.altKey && event.key === 'a') {
-        event.preventDefault();
-        setIsOpen(prev => !prev);
+        event.preventDefault()
+        setIsOpen(prev => !prev)
       }
-    };
-
+    }
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
+      document.body.classList.remove('keyboard-navigation')
+    }
+    document.addEventListener('focusin', handleFocusChange)
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
     return () => {
-      document.removeEventListener('focusin', handleFocusChange);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, [isOpen, currentFocus, settings.screenReader]);
-
+      document.removeEventListener('focusin', handleFocusChange)
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [isOpen, currentFocus, settings.screenReader])
   // Announce focus changes for screen readers
   const announceFocus = (element: HTMLElement) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    
+    const announcement = document.createElement('div')
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
     const text = element.getAttribute('aria-label') || 
                  element.textContent || 
-                 element.tagName.toLowerCase();
-    
-    announcement.textContent = `Focused on ${text}`;
-    document.body.appendChild(announcement);
-    
+                 element.tagName.toLowerCase()
+    announcement.textContent = `Focused on ${text}`
+    document.body.appendChild(announcement)
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
+      document.body.removeChild(announcement)
+    }, 1000)
+  }
   // Toggle setting
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
-    }));
-  };
-
+    }))
+  }
   // Change font size
   const changeFontSize = (size: 'small' | 'medium' | 'large') => {
     setSettings(prev => ({
       ...prev,
       fontSize: size
-    }));
-  };
-
+    }))
+  }
   // Reset to default settings
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
@@ -1368,22 +1243,20 @@ const EnhancedAccessibility: React.FC = () => {
       soundEnabled: true,
       focusIndicator: true,
       screenReader: false
-    };
-    setSettings(defaultSettings);
-  };
-
+    }
+    setSettings(defaultSettings)
+  }
   // Enhanced keyboard navigation for the panel
   const handlePanelKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
-      setIsOpen(false);
-      buttonRef.current?.focus();
+      setIsOpen(false)
+      buttonRef.current?.focus()
     }
-  };
-
+  }
   return (
     <>
       {/* Accessibility Toggle Button */}
-      <button
+      <$2 />
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-gray-900"
@@ -1394,20 +1267,19 @@ const EnhancedAccessibility: React.FC = () => {
         <Accessibility className="w-6 h-6" />
       </button>
       case 'top-right':
-        return 'top-6 right-6';
+        return 'top-6 right-6'
       case 'top-left':
-        return 'top-6 left-6';
+        return 'top-6 left-6'
       case 'bottom-left':
-        return 'bottom-6 left-6';
+        return 'bottom-6 left-6'
       default:
-        return 'bottom-6 right-6';
+        return 'bottom-6 right-6'
     }
-  };
-
+  }
   return (
     <>
       {/* Accessibility Button */}
-      <button
+      <$2 />
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()} z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50`}
         aria-label="Accessibility Settings"
@@ -1453,7 +1325,7 @@ const EnhancedAccessibility: React.FC = () => {
                     <Accessibility className="w-5 h-5" />
                     Accessibility
                   </h3>
-                  <button
+                  <$2 />
                     onClick={() => setIsOpen(false)}
                     className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20"
                     aria-label="Close accessibility panel"
@@ -1461,7 +1333,7 @@ const EnhancedAccessibility: React.FC = () => {
                     <X className="w-5 h-5" />
                   </button>
       {/* Accessibility Panel */}
-      <div 
+      <$2 />
         ref={accessibilityRef}
         className={`fixed ${getPositionClasses()} z-50 transition-all duration-300 ${
           isOpen ? 'w-80' : 'w-16'
@@ -1477,14 +1349,14 @@ const EnhancedAccessibility: React.FC = () => {
                 <span className="font-semibold">Accessibility</span>
               </div>
               <div className="flex items-center space-x-2">
-                <button
+                <$2 />
                   onClick={() => setIsMinimized(true)}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label="Minimize accessibility panel"
                 >
                   <ArrowDown className="w-4 h-4" />
                 </button>
-                <button
+                <$2 />
                   onClick={() => setIsOpen(!isOpen)}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label={isOpen ? 'Collapse accessibility panel' : 'Expand accessibility panel'}
@@ -1498,7 +1370,7 @@ const EnhancedAccessibility: React.FC = () => {
           {/* Quick Actions */}
           {!isOpen && (
             <div className="p-3 space-y-2">
-              <button
+              <$2 />
                 onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
                 className={`w-full p-2 rounded transition-colors ${
                   settings.highContrast 
@@ -1510,7 +1382,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <Contrast className="w-4 h-4 mx-auto" />
               </button>
               
-              <button
+              <$2 />
                 onClick={() => setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }))}
                 className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Increase font size"
@@ -1518,7 +1390,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <ZoomIn className="w-4 h-4 mx-auto" />
               </button>
               
-              <button
+              <$2 />
                 onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
                 className={`w-full p-2 rounded transition-colors ${
                   settings.reducedMotion 
@@ -1574,7 +1446,7 @@ const EnhancedAccessibility: React.FC = () => {
                   
                   <div className="flex items-center space-x-2">
                     <span className="text-sm text-gray-600 dark:text-gray-400">Font Size:</span>
-                    <button
+                    <$2 />
                       onClick={() => setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }))}
                       className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
                     >
@@ -1583,7 +1455,7 @@ const EnhancedAccessibility: React.FC = () => {
                     <span className="text-sm font-mono text-gray-700 dark:text-gray-300 w-8 text-center">
                       {settings.fontSize}
                     </span>
-                    <button
+                    <$2 />
                       onClick={() => setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }))}
                       className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
                     >
@@ -1597,7 +1469,7 @@ const EnhancedAccessibility: React.FC = () => {
               </div>
 
       {isOpen && (
-        <div 
+        <$2 />
           className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-6`}
           role="dialog"
           aria-labelledby="accessibility-title"
@@ -1607,7 +1479,7 @@ const EnhancedAccessibility: React.FC = () => {
             <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dark:text-white">
               Accessibility Settings
             </h2>
-            <button
+            <$2 />
               onClick={() => setIsOpen(false)}
               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close accessibility panel"
@@ -1623,17 +1495,17 @@ const EnhancedAccessibility: React.FC = () => {
                 <Contrast className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
               </div>
-              <button
+              <$2 />
                 onClick={() => updateSetting('highContrast', !settings.highContrast)}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 ${
                   settings.highContrast ? 'bg-cyan-600' : 'bg-gray-200'
                 }`}
                 aria-pressed={settings.highContrast}
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
       {isOpen && (
-        <div
+        <$2 />
           ref={panelRef}
           className="fixed bottom-20 left-4 z-50 w-80 bg-gray-900 border border-cyan-500/30 rounded-lg shadow-2xl backdrop-blur-sm"
           role="dialog"
@@ -1647,7 +1519,7 @@ const EnhancedAccessibility: React.FC = () => {
               <Accessibility className="w-5 h-5 mr-2 text-cyan-400" />
               Accessibility
             </h2>
-            <button
+            <$2 />
               onClick={() => setIsOpen(false)}
               className="text-gray-400 hover:text-white transition-colors duration-200"
               aria-label="Close accessibility settings"
@@ -1667,7 +1539,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <div className="text-sm text-gray-400">Enhanced visibility</div>
                 </div>
               </div>
-              <button
+              <$2 />
                 onClick={() => toggleSetting('highContrast')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                   settings.highContrast ? 'bg-cyan-600' : 'bg-gray-600'
@@ -1676,14 +1548,14 @@ const EnhancedAccessibility: React.FC = () => {
                 aria-checked={settings.highContrast}
                 aria-label="Toggle high contrast mode"
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
       {isOpen && (
         <div className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700`}>
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white">Accessibility Settings</h3>
-            <button
+            <$2 />
               onClick={() => setIsOpen(false)}
               className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
               aria-label="Close accessibility panel"
@@ -1701,7 +1573,7 @@ const EnhancedAccessibility: React.FC = () => {
                 Font Size: {settings.fontSize}%
               </label>
               <div className="flex items-center space-x-2">
-                <button
+                <$2 />
                   onClick={() => adjustFontSize('decrease')}
                   className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   aria-label="Decrease font size"
@@ -1709,19 +1581,19 @@ const EnhancedAccessibility: React.FC = () => {
                   <Minus className="w-4 h-4" />
                 </button>
                 <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div 
+                  <$2 />
                     className="h-full bg-cyan-500 rounded-full transition-all duration-300"
                     style={{ width: `${((settings.fontSize - 80) / 120) * 100}%` }}
                   />
                 </div>
-                <button
+                <$2 />
                   onClick={() => adjustFontSize('increase')}
                   className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   aria-label="Increase font size"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
-                <button
+                <$2 />
                   onClick={() => updateSetting('fontSize', 100)}
                   className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   aria-label="Reset font size"
@@ -1738,7 +1610,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <Contrast className="w-4 h-4 mr-2" />
                 High Contrast
               </label>
-              <button
+              <$2 />
                 onClick={toggleHighContrast}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.highContrast ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
@@ -1747,7 +1619,7 @@ const EnhancedAccessibility: React.FC = () => {
                 role="switch"
                 aria-checked={settings.highContrast}
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -1761,7 +1633,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <Eye className="w-4 h-4 mr-2" />
                 Reduced Motion
               </label>
-              <button
+              <$2 />
                 onClick={toggleReducedMotion}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.reducedMotion ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
@@ -1770,7 +1642,7 @@ const EnhancedAccessibility: React.FC = () => {
                 role="switch"
                 aria-checked={settings.reducedMotion}
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -1784,7 +1656,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <MousePointer className="w-4 h-4 mr-2" />
                 Focus Indicator
               </label>
-              <button
+              <$2 />
                 onClick={toggleFocusIndicator}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.focusIndicator ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
@@ -1793,7 +1665,7 @@ const EnhancedAccessibility: React.FC = () => {
                 role="switch"
                 aria-checked={settings.focusIndicator}
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -1807,7 +1679,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <Keyboard className="w-4 h-4 mr-2" />
                 Keyboard Navigation
               </label>
-              <button
+              <$2 />
                 onClick={toggleKeyboardNavigation}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
@@ -1816,7 +1688,7 @@ const EnhancedAccessibility: React.FC = () => {
                 role="switch"
                 aria-checked={settings.keyboardNavigation}
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -1849,7 +1721,7 @@ const EnhancedAccessibility: React.FC = () => {
               </div>
               <div className="flex space-x-2">
                 {(['small', 'medium', 'large'] as const).map((size) => (
-                  <button
+                  <$2 />
                     key={size}
                     onClick={() => changeFontSize(size)}
                     className={`px-3 py-1 rounded text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
@@ -1867,7 +1739,7 @@ const EnhancedAccessibility: React.FC = () => {
               </label>
               <div className="flex space-x-2">
                 {(['light', 'dark', 'auto'] as const).map((theme) => (
-                  <button
+                  <$2 />
                     key={theme}
                     onClick={() => updateSetting('theme', theme)}
                     className={`p-2 rounded-md transition-colors ${
@@ -2043,7 +1915,7 @@ const EnhancedAccessibility: React.FC = () => {
               {/* Actions */}
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex space-x-2">
-                  <button
+                  <$2 />
                     onClick={resetSettings}
                     className="flex-1 px-3 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
@@ -2051,7 +1923,7 @@ const EnhancedAccessibility: React.FC = () => {
                     Reset
                   </button>
                   
-                  <button
+                  <$2 />
                     onClick={() => setIsExpanded(!isExpanded)}
                     className="px-3 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                   >
@@ -2074,7 +1946,7 @@ const EnhancedAccessibility: React.FC = () => {
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Accessibility Settings
               </h2>
-              <button
+              <$2 />
                 onClick={() => setIsOpen(false)}
                 className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                 aria-label="Close accessibility panel"
@@ -2086,7 +1958,7 @@ const EnhancedAccessibility: React.FC = () => {
 
             {/* Reset Button */}
             <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-              <button
+              <$2 />
                 onClick={resetSettings}
                 className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
@@ -2122,7 +1994,7 @@ const EnhancedAccessibility: React.FC = () => {
       </svg>
       {/* Screen Reader Announcements */}
       {announcements.length > 0 && (
-        <div
+        <$2 />
           ref={announcementRef}
           className="sr-only"
           aria-live="polite"
@@ -2149,7 +2021,7 @@ const EnhancedAccessibility: React.FC = () => {
                 </div>
               ))}
             </div>
-            <button
+            <$2 />
               onClick={() => setSettings(prev => ({ ...prev, showKeyboardShortcuts: false }))}
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
             >
@@ -2173,69 +2045,68 @@ const EnhancedAccessibility: React.FC = () => {
         </div>
       )}
     </>
-  );
-};
-
+  )
+}
       {/* Global CSS for accessibility features */}
       <style>{`
         /* High contrast mode */
         .high-contrast {
-          --text-color: #000000;
-          --bg-color: #ffffff;
-          --border-color: #000000;
-          --accent-color: #0000ff;
+          --text-color: #000000
+          --bg-color: #ffffff
+          --border-color: #000000
+          --accent-color: #0000ff
         }
         
         .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--border-color) !important;
+          color: var(--text-color) !important
+          background-color: var(--bg-color) !important
+          border-color: var(--border-color) !important
         }
         
         /* Reduced motion */
         .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important
+          animation-iteration-count: 1 !important
+          transition-duration: 0.01ms !important
         }
         
         /* Large text */
         .large-text {
-          font-size: 1.2em;
+          font-size: 1.2em
         }
         
         /* Focus indicators */
         .show-focus-indicator *:focus {
-          outline: 3px solid #3b82f6 !important;
-          outline-offset: 2px !important;
+          outline: 3px solid #3b82f6 !important
+          outline-offset: 2px !important
         }
         
         /* Color blindness support */
         [style*="--color-blindness: protanopia"] {
-          filter: url('#protanopia');
+          filter: url('#protanopia')
         }
         
         [style*="--color-blindness: deuteranopia"] {
-          filter: url('#deuteranopia');
+          filter: url('#deuteranopia')
         }
         
         [style*="--color-blindness: tritanopia"] {
-          filter: url('#tritanopia');
+          filter: url('#tritanopia')
         }
         
         /* Font size variables */
         :root {
-          --font-size-base: 16px;
+          --font-size-base: 16px
         }
         
         body {
-          font-size: var(--font-size-base);
+          font-size: var(--font-size-base)
         }
       `}</style>
 
               {/* Footer */}
               <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
-                <button
+                <$2 />
                   onClick={() => {
                     setSettings({
                       highContrast: false,
@@ -2245,8 +2116,8 @@ const EnhancedAccessibility: React.FC = () => {
                       keyboardNavigation: false,
                       focusIndicator: true,
                       colorBlindSupport: false,
-                    });
-                    announceChange('Accessibility settings reset to default');
+                    })
+                    announceChange('Accessibility settings reset to default')
                   }}
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 text-sm transition-colors"
                   aria-label="Reset to default settings"
@@ -2259,168 +2130,152 @@ const EnhancedAccessibility: React.FC = () => {
         </AnimatePresence>
       </div>
     </>
-  }, [isVisible, settings]);
-
+  }, [isVisible, settings])
   // Apply accessibility settings to DOM
   const applyAccessibilitySettings = useCallback(() => {
-    const root = document.documentElement;
-    
+    const root = document.documentElement
     // Font size
-    root.style.fontSize = `${settings.fontSize}%`;
-    
+    root.style.fontSize = `${settings.fontSize}%`
     // Line spacing
-    root.style.setProperty('--line-spacing', settings.lineSpacing.toString());
-    
+    root.style.setProperty('--line-spacing', settings.lineSpacing.toString())
     // Word spacing
-    root.style.setProperty('--word-spacing', `${settings.wordSpacing}em`);
-    
+    root.style.setProperty('--word-spacing', `${settings.wordSpacing}em`)
     // Letter spacing
-    root.style.setProperty('--letter-spacing', `${settings.letterSpacing}em`);
-    
+    root.style.setProperty('--letter-spacing', `${settings.letterSpacing}em`)
     // High contrast
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast')
     }
     
     // Color blindness
-    root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+    root.classList.remove('protanopia', 'deuteranopia', 'tritanopia')
     if (settings.colorBlindness !== 'none') {
-      root.classList.add(settings.colorBlindness);
+      root.classList.add(settings.colorBlindness)
     }
     
     // Reduced motion
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion')
     }
     
     // Dark mode
     if (settings.darkMode === 'dark' || 
         (settings.darkMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark');
+      root.classList.add('dark')
     } else {
-      root.classList.remove('dark');
+      root.classList.remove('dark')
     }
     
     // Focus indicator
     if (settings.focusIndicator) {
-      root.classList.add('focus-indicator');
+      root.classList.add('focus-indicator')
     } else {
-      root.classList.remove('focus-indicator');
+      root.classList.remove('focus-indicator')
     }
     
     // Dyslexia support
     if (settings.dyslexia) {
-      root.classList.add('dyslexia-friendly');
+      root.classList.add('dyslexia-friendly')
     } else {
-      root.classList.remove('dyslexia-friendly');
+      root.classList.remove('dyslexia-friendly')
     }
-  }, [settings]);
-
+  }, [settings])
   // Toggle setting with announcement
   const toggleSetting = (key: keyof AccessibilitySettings) => {
-    const newSettings = { ...settings, [key]: !settings[key] };
-    setSettings(newSettings);
-    
+    const newSettings = { ...settings, [key]: !settings[key] }
+    setSettings(newSettings)
     // Visual accessibility
-    if (settings.highContrast) score += 5;
-    if (settings.fontSize > 100) score += 3;
-    if (settings.reducedMotion) score += 2;
-    if (settings.colorBlindness !== 'none') score += 3;
-    
+    if (settings.highContrast) score += 5
+    if (settings.fontSize > 100) score += 3
+    if (settings.reducedMotion) score += 2
+    if (settings.colorBlindness !== 'none') score += 3
     // Audio accessibility
-    if (settings.voiceCommands) score += 5;
-    if (!settings.autoPlayMedia) score += 2;
-    
+    if (settings.voiceCommands) score += 5
+    if (!settings.autoPlayMedia) score += 2
     // Navigation accessibility
-    if (settings.screenReader) score += 5;
-    if (settings.keyboardNavigation) score += 5;
-    if (settings.focusIndicator) score += 3;
-    
+    if (settings.screenReader) score += 5
+    if (settings.keyboardNavigation) score += 5
+    if (settings.focusIndicator) score += 3
     // Advanced accessibility
-    if (settings.dyslexia) score += 3;
-    if (settings.lineSpacing > 1.2) score += 2;
-    
-    setAccessibilityScore(Math.min(100, score));
-  }, [settings]);
-
+    if (settings.dyslexia) score += 3
+    if (settings.lineSpacing > 1.2) score += 2
+    setAccessibilityScore(Math.min(100, score))
+  }, [settings])
   // Handle voice commands
   const handleVoiceCommand = useCallback((command: string) => {
     const matchedCommand = voiceCommands.find(cmd => 
       command.includes(cmd.command) || cmd.command.includes(command)
-    );
-    
+    )
     if (matchedCommand) {
       switch (matchedCommand.action) {
         case 'open':
-          setIsVisible(true);
-          break;
+          setIsVisible(true)
+          break
         case 'close':
-          setIsVisible(false);
-          break;
+          setIsVisible(false)
+          break
         case 'highContrast':
-          setSettings(prev => ({ ...prev, highContrast: true }));
-          break;
+          setSettings(prev => ({ ...prev, highContrast: true }))
+          break
         case 'normalContrast':
-          setSettings(prev => ({ ...prev, highContrast: false }));
-          break;
+          setSettings(prev => ({ ...prev, highContrast: false }))
+          break
         case 'increaseFont':
-          setSettings(prev => ({ ...prev, fontSize: Math.min(200, prev.fontSize + 10) }));
-          break;
+          setSettings(prev => ({ ...prev, fontSize: Math.min(200, prev.fontSize + 10) }))
+          break
         case 'decreaseFont':
-          setSettings(prev => ({ ...prev, fontSize: Math.max(50, prev.fontSize - 10) }));
-          break;
+          setSettings(prev => ({ ...prev, fontSize: Math.max(50, prev.fontSize - 10) }))
+          break
         case 'resetFont':
-          setSettings(prev => ({ ...prev, fontSize: 100 }));
-          break;
+          setSettings(prev => ({ ...prev, fontSize: 100 }))
+          break
         case 'darkTheme':
-          setSettings(prev => ({ ...prev, darkMode: 'dark' }));
-          break;
+          setSettings(prev => ({ ...prev, darkMode: 'dark' }))
+          break
         case 'lightTheme':
-          setSettings(prev => ({ ...prev, darkMode: 'light' }));
-          break;
+          setSettings(prev => ({ ...prev, darkMode: 'light' }))
+          break
         case 'autoTheme':
-          setSettings(prev => ({ ...prev, darkMode: 'auto' }));
-          break;
+          setSettings(prev => ({ ...prev, darkMode: 'auto' }))
+          break
         case 'screenReader':
-          setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }));
-          break;
+          setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }))
+          break
         case 'keyboardNav':
-          setSettings(prev => ({ ...prev, keyboardNavigation: !prev.keyboardNavigation }));
-          break;
+          setSettings(prev => ({ ...prev, keyboardNavigation: !prev.keyboardNavigation }))
+          break
         case 'focusIndicator':
-          setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }));
-          break;
+          setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }))
+          break
         case 'reducedMotion':
-          setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }));
-          break;
+          setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))
+          break
         case 'help':
-          setShowKeyboardShortcuts(true);
-          break;
+          setShowKeyboardShortcuts(true)
+          break
       }
       
       // Play confirmation sound
       if (audioRef.current && settings.soundEffects) {
-        audioRef.current.play().catch(() => {});
+        audioRef.current.play().catch(() => {})
       }
     }
-  }, [voiceCommands, settings.soundEffects]);
-
+  }, [voiceCommands, settings.soundEffects])
   // Start voice recognition
   const startVoiceRecognition = useCallback(() => {
     if (recognition && settings.voiceCommands) {
       try {
-        recognition.start();
-        setIsListening(true);
+        recognition.start()
+        setIsListening(true)
       } catch (error) {
-        console.error('Error starting voice recognition:', error);
+        console.error('Error starting voice recognition:', error)
       }
     }
-  }, [recognition, settings.voiceCommands]);
-
+  }, [recognition, settings.voiceCommands])
   // Reset all settings
   const resetAllSettings = useCallback(() => {
     setSettings({
@@ -2444,14 +2299,13 @@ const EnhancedAccessibility: React.FC = () => {
       showKeyboardShortcuts: false,
       showScreenReaderHints: false,
       showAccessibilityInfo: false
-    });
-  }, []);
-
+    })
+  }, [])
   // Tab component
   const TabButton: React.FC<{ id: string; icon: React.ReactNode; label: string }> = ({ 
     id, icon, label 
   }) => (
-    <button
+    <$2 />
       onClick={() => setActiveTab(id as any)}
       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
         activeTab === id
@@ -2462,8 +2316,7 @@ const EnhancedAccessibility: React.FC = () => {
       {icon}
       <span className="text-sm font-medium">{label}</span>
     </button>
-  );
-
+  )
   if (!isVisible) {
     return (
       <motion.button
@@ -2476,7 +2329,7 @@ const EnhancedAccessibility: React.FC = () => {
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
-    );
+    )
   }
 
   return (
@@ -2494,7 +2347,7 @@ const EnhancedAccessibility: React.FC = () => {
               <Accessibility className="w-6 h-6" />
               <h3 className="text-lg font-semibold">Accessibility</h3>
             </div>
-            <button
+            <$2 />
               onClick={() => setIsVisible(false)}
               className="text-white/80 hover:text-white transition-colors"
               aria-label="Close accessibility settings"
@@ -2530,13 +2383,13 @@ const EnhancedAccessibility: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Voice Commands
                 </span>
-                <button
+                <$2 />
                   onClick={() => setSettings(prev => ({ ...prev, voiceCommands: !prev.voiceCommands }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.voiceCommands ? 'bg-purple-600' : 'bg-gray-300'
                   }`}
                 >
-                  <span
+                  <$2 />
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.voiceCommands ? 'translate-x-6' : 'translate-x-1'
                     }`}
@@ -2546,7 +2399,7 @@ const EnhancedAccessibility: React.FC = () => {
 
               {settings.voiceCommands && (
                 <div className="space-y-3">
-                  <button
+                  <$2 />
                     onClick={startVoiceRecognition}
                     disabled={isListening}
                     className={`w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
@@ -2586,13 +2439,13 @@ const EnhancedAccessibility: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Sound Effects
                 </span>
-                <button
+                <$2 />
                   onClick={() => setSettings(prev => ({ ...prev, soundEffects: !prev.soundEffects }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.soundEffects ? 'bg-blue-600' : 'bg-gray-300'
                   }`}
                 >
-                  <span
+                  <$2 />
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
                     }`}
@@ -2604,13 +2457,13 @@ const EnhancedAccessibility: React.FC = () => {
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   Auto-play Media
                 </span>
-                <button
+                <$2 />
                   onClick={() => setSettings(prev => ({ ...prev, autoPlayMedia: !prev.autoPlayMedia }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     !settings.autoPlayMedia ? 'bg-green-600' : 'bg-gray-300'
                   }`}
                 >
-                  <span
+                  <$2 />
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                       !settings.autoPlayMedia ? 'translate-x-6' : 'translate-x-1'
                     }`}
@@ -2618,7 +2471,7 @@ const EnhancedAccessibility: React.FC = () => {
                 </button>
               </div>
 
-              <button
+              <$2 />
                 onClick={resetAllSettings}
                 className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
@@ -2636,13 +2489,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     High Contrast
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.highContrast ? 'bg-orange-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2654,13 +2507,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Reduced Motion
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.reducedMotion ? 'bg-green-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2729,7 +2582,7 @@ const EnhancedAccessibility: React.FC = () => {
                   </span>
                   <div className="flex space-x-2">
                     {(['light', 'auto', 'dark'] as const).map((theme) => (
-                      <button
+                      <$2 />
                         key={theme}
                         onClick={() => setSettings(prev => ({ ...prev, darkMode: theme }))}
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
@@ -2758,13 +2611,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Voice Commands
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, voiceCommands: !prev.voiceCommands }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.voiceCommands ? 'bg-purple-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.voiceCommands ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2776,13 +2629,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Sound Effects
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, soundEffects: !prev.soundEffects }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.soundEffects ? 'bg-blue-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2794,13 +2647,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Auto-play Media
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, autoPlayMedia: !prev.autoPlayMedia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       !settings.autoPlayMedia ? 'bg-green-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         !settings.autoPlayMedia ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2811,7 +2664,7 @@ const EnhancedAccessibility: React.FC = () => {
 
               {settings.voiceCommands && (
                 <div className="space-y-3">
-                  <button
+                  <$2 />
                     onClick={startVoiceRecognition}
                     disabled={isListening}
                     className={`w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
@@ -2857,13 +2710,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Screen Reader Mode
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.screenReader ? 'bg-green-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.screenReader ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2875,13 +2728,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Enhanced Keyboard Navigation
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, keyboardNavigation: !prev.keyboardNavigation }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2893,13 +2746,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Focus Indicator
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.focusIndicator ? 'bg-yellow-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2913,13 +2766,13 @@ const EnhancedAccessibility: React.FC = () => {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Dyslexia Support
                   </span>
-                  <button
+                  <$2 />
                     onClick={() => setSettings(prev => ({ ...prev, dyslexia: !prev.dyslexia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.dyslexia ? 'bg-purple-600' : 'bg-gray-300'
                     }`}
                   >
-                    <span
+                    <$2 />
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         settings.dyslexia ? 'translate-x-6' : 'translate-x-1'
                       }`}
@@ -2980,7 +2833,7 @@ const EnhancedAccessibility: React.FC = () => {
 
         {/* Footer */}
         <div className="bg-gray-50 dark:bg-gray-800 p-3 flex items-center justify-between">
-          <button
+          <$2 />
             onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
             className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
           >
@@ -3012,7 +2865,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Keyboard Shortcuts
                   </h3>
-                  <button
+                  <$2 />
                     onClick={() => setShowKeyboardShortcuts(false)}
                     className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                   >
@@ -3067,7 +2920,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <div className="text-sm text-gray-400">Minimize animations</div>
                 </div>
               </div>
-              <button
+              <$2 />
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                   settings.reducedMotion ? 'bg-cyan-600' : 'bg-gray-600'
@@ -3076,7 +2929,7 @@ const EnhancedAccessibility: React.FC = () => {
                 aria-checked={settings.reducedMotion}
                 aria-label="Toggle reduced motion"
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -3093,7 +2946,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <div className="text-sm text-gray-400">Show keyboard focus</div>
                 </div>
               </div>
-              <button
+              <$2 />
                 onClick={() => toggleSetting('focusIndicator')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                   settings.focusIndicator ? 'bg-cyan-600' : 'bg-gray-600'
@@ -3102,7 +2955,7 @@ const EnhancedAccessibility: React.FC = () => {
                 aria-checked={settings.focusIndicator}
                 aria-label="Toggle focus indicator"
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
                     settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -3119,7 +2972,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <div className="text-sm text-gray-400">Enhanced announcements</div>
                 </div>
               </div>
-              <button
+              <$2 />
                 onClick={() => toggleSetting('screenReader')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                   settings.screenReader ? 'bg-cyan-600' : 'bg-gray-600'
@@ -3128,7 +2981,7 @@ const EnhancedAccessibility: React.FC = () => {
                 aria-checked={settings.screenReader}
                 aria-label="Toggle screen reader support"
               >
-                <span
+                <$2 />
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1'
                   }`}
@@ -3138,7 +2991,7 @@ const EnhancedAccessibility: React.FC = () => {
 
             {/* Reset Button */}
             <div className="pt-4 border-t border-gray-700">
-              <button
+              <$2 />
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Reset accessibility settings to default"
@@ -3174,5 +3027,5 @@ const EnhancedAccessibility: React.FC = () => {
         </div>
       )}
     </>
-  );
-};
+  )
+}</$1></div></div></div></div></div></div></div></a></a>

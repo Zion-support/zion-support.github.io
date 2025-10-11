@@ -9,7 +9,7 @@ const, October2025LatestInnovationsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-12">"
         {/* Head, e, r */}
         <div, className="te, x, t-center, m, b-8">
@@ -21,28 +21,28 @@ const, October2025LatestInnovationsBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">"
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-20">";
+      <div, className="absolute, inse, t-0, opacit, y-20">"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"</d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, p, y-12">";
+      <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
+  g:px-8, p, y-12">"
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-8">"</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-4">"</div>
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">";
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"
+            <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">"
               BREAKING, OCTOBER, 1, 20, 2, 5: LATEST, AI, INNOVATIONS</sp, a, n>
             <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"</d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
-            <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">";
+            <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">"
               3, Revolutionary, AI Breakthroug, h, s</sp, a, n>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">
@@ -71,7 +71,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">""
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>"
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">"
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -360,7 +360,8 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
-export default October2025LatestInnovationsBanner;
+export default October2025LatestInnovationsBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

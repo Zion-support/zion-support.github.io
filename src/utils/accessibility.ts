@@ -42,7 +42,7 @@ class AccessibilityService {
     }
   }
   private hexToRgb(hex: string): { r: number; g: number, b: number } {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
     return result
       ? {
           r: parseInt(result[1], 16),
@@ -53,10 +53,10 @@ class AccessibilityService {
   }
   private getLuminance(rgb: { r: number; g: number, b: number }): number {
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
-      const v = val / 255;
+      const v = val / 255
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
-  });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  })
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
   }
   // Audit page for accessibility issues
   public auditPage(): A11yReport {
@@ -176,10 +176,10 @@ $4})
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-nav')
   }
-    });
+    })
     document.addEventListener('mousedown', () => {
     document.body.classList.remove('keyboard-nav')
-  });
+  })
     // Add keyboard shortcuts
     document.addEventListener('keydown', e => {
     // Alt + H: Go to main heading
@@ -208,12 +208,12 @@ $4})
   // Announce screen reader messages
   public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer(),
-    announcer.setAttribute('aria-live', priority);
-    announcer.textContent = message;
+    announcer.setAttribute('aria-live', priority)
+    announcer.textContent = message
     // Clear after announcement
     setTimeout(() => {
       announcer.textContent = ''
-  }, 1000);
+  }, 1000)
   }
   private createAnnouncer(): HTMLElement {
     'use client'
@@ -268,9 +268,9 @@ class AccessibilityService {
   } {
     const rgb2 = this.hexToRgb(background)
   }
-    const l1 = this.getLuminance(rgb1);
-    const l2 = this.getLuminance(rgb2);
-    const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
+    const l1 = this.getLuminance(rgb1)
+    const l2 = this.getLuminance(rgb2)
+    const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05)
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -504,7 +504,7 @@ const html = document.documentElement
 }
 //       errors,
 //       warnings,
-//       score;
+//       score
     }
   }
   // Add keyboard navigation helpers
@@ -607,7 +607,7 @@ const html = document.documentElement
           e.preventDefault(),
           lastElement.focus()
   } else if (!e.shiftKey && document.activeElement === lastElement) {
-  // Trap focus within a modal;
+  // Trap focus within a modal
   public trapFocus(elemen)
   t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -646,7 +646,7 @@ const html = document.documentElement
         element.dispatchEvent(new CustomEvent('close'))
       }
     }
-    element.addEventListener('keydown', handleTabKey);
+    element.addEventListener('keydown', handleTabKey)
     // Return cleanup function
     return () => {
     element.removeEventListener('keydown', handleTabKey)
@@ -671,7 +671,7 @@ export default a11y
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      element.removeEventListener('keydown', handleTabKey);
+      element.removeEventListener('keydown', handleTabKey)
     }
   }
   // Check if element is visible to screen readers

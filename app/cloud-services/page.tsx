@@ -1,9 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react'
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -28,9 +26,9 @@ const CloudServicesPage: React.FC = () => {
       icon: Shield,
       title: 'Cloud Security',
     }
-  ];
-  const benefits = [;
-  ];
+  ]
+  const benefits = [
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -93,7 +91,7 @@ const CloudServicesPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -122,7 +120,7 @@ const CloudServicesPage: React.FC = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Cloud Services

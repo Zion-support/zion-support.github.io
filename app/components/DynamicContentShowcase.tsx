@@ -1,10 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react'
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
   const features = [
     {
       id: 1,
@@ -46,20 +44,19 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing',
       icon: Globe,
-      color: 'from-teal-500 to-cyan-600';
-    };
-  ];
+      color: 'from-teal-500 to-cyan-600'
+    }
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
-
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -80,18 +77,15 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'The best investment we made. Seamless integration and exceptional support.',
-      rating: 5;
-    };
-  ];
-
-  useEffect(() => {];
-    const timer = setInterval(() => {;
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [features.length]);
-
+      rating: 5
+    }
+  ]
+  useEffect(() => {]
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % features.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [features.length])
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Features Showcase */}
@@ -107,7 +101,7 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {features.map((feature, index) => (
-          </div><div
+          </div><$2 />
             key={feature.id}
             className={`bg-gradient-to-br ${feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
               index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'
@@ -163,10 +157,9 @@ const DynamicContentShowcase: React.FC = () => {
         </button>
       </div>
     </div>
-  );
-};
-
-export default DynamicContentShowcase;
+  )
+}
+export default DynamicContentShowcase
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
       rating: 5
     }

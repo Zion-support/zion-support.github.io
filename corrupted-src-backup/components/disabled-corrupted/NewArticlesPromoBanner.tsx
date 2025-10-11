@@ -206,6 +206,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         ))}
       </div>
     </div>
-  );
+  )
 }
 export default NewArticlesPromoBanner;"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></p></p></p></h2></h2></h2></h2></h3></h3></h3></h4></h4></h4>

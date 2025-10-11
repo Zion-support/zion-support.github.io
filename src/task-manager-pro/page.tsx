@@ -102,26 +102,26 @@ $4}
           </div>
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Task Manager Pro
-  </
+  
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
             AI-Powered Productivity Platform,
-  </
+  
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
             Get intelligent prioritization, automated workflows, and team collaboration 
             tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
-  </
-            <Link 
+  
+            <$2 />
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               Start Free Trial,
-  </
+  
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -141,7 +141,7 @@ $4}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Task Management Features,
-  </
+  
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -183,11 +183,11 @@ $4}
                       {feature}
                     </li>
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   Get Started,
-  </
+  
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -240,11 +240,11 @@ const PagePage: React.FC = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>"
             <CheckSquare className="w-10 h-10 text-white" />
           </div>"
-          <h1 className="text-4xl,"
+          < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6"></h1>
 // Task Manager Pro,
           </h1>"
-          <p className="text-xl,"
+          < className="text-xl,"$2 />
   md: text-2xl text-cyan-400 mb-8 font-medium"></p>
 // AI-Powered Productivity Platform,
           </p>"
@@ -261,7 +261,7 @@ Supercharge your productivity with our AI-powered task management platform.
  Cal,
   l: (302) 464-0950
             </a>
-            <Link
+            <$2 />
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
 Start Free Trial,
             </Link>
@@ -283,11 +283,11 @@ Start Free Trial,
             <div className="text-gray-300 text-sm">With smart tracking
         {/* Features Section */}"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center"></h2>
 // Powerful Task Management Features,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8">
             {features.map((feature, index) => ()}"
@@ -368,7 +368,7 @@ Most Popular
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-  );
+  )
 }
 export default TaskManagerProPage</div>
   </div>
@@ -395,3 +395,4 @@ export default TaskManagerProPage</div>
   </div>
   </section>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></h3></h3></h3></section></section>

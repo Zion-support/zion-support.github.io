@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
-    lcp: number | null;
+    lcp: number | null
   fid: number | null
   cls: number | null
   fcp: number | null,
@@ -42,7 +42,7 @@ const PerformanceMonitor: React.FC = () => {
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value,
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
+            setMetrics(prev => ({ ...prev, cls: clsValue }))
           }
         })
       })
@@ -67,13 +67,13 @@ const PerformanceMonitor: React.FC = () => {
       }
       // Cleanup observers
       return () => {
-    lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
+    lcpObserver.disconnect()
+        fidObserver.disconnect()
+        clsObserver.disconnect()
         fcpObserver.disconnect()
   }
     }
-    const cleanup = measureWebVitals();
+    const cleanup = measureWebVitals()
     // Send metrics to analytics (if available)
     const sendToAnalytics = (metrics: PerformanceMetrics) => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -101,12 +101,12 @@ const PerformanceMonitor: React.FC = () => {
     // Send metrics after a delay to allow all measurements to complete
     const timeoutId = setTimeout(() => {
     sendToAnalytics(metrics)
-  }, 5000);
+  }, 5000)
     return () => {
-    cleanup?.();
+    cleanup?.()
       clearTimeout(timeoutId)
   }
-  }, [metrics]);
+  }, [metrics])
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null
@@ -120,6 +120,6 @@ const PerformanceMonitor: React.FC = () => {
       <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}</div>
       <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}</div>
     </div>
-  );
+  )
 }
 export default PerformanceMonitor</PerformanceMetrics>

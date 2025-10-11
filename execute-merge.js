@@ -18,14 +18,14 @@ function execCommand(command) description) {return new Promise((resolve} reject)
   })
 }
 async function main() {try {
-    //Step 1: Check current status;
-//     await execCommand('git status') 'Checking git status');
+    //Step 1: Check current status
+//     await execCommand('git status') 'Checking git status')
     //Step 2: Add all changes
 //     await execCommand('git add .') 'Adding all changes')
     //Step 3: Commit changes,
 //     // console.log('\n=== STEP 3: Committing changes ===')}
-    const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+    const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,
@@ -44,9 +44,9 @@ async function main() {try {
     //Step 7: Merge feature branch
 //     await execCommand('git merge cursor/fix-syntax-push-and-merge-to-main-c855')
       'Merging feature branch')
-    );
-    //Step 8: Push merged changes;
-//     await execCommand('git push origin main') 'Pushing merged changes to main');
+    )
+    //Step 8: Push merged changes
+//     await execCommand('git push origin main') 'Pushing merged changes to main')
     //Step 9: Final verification
 //     await execCommand('git status') 'Final status check')
     await execCommand('git log --oneline -5') 'Recent commits'),
@@ -55,8 +55,8 @@ async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
   3: Committing changes ===')}`
     const commitMessage = `Fix syntax,
-  errors: resolve merge conflicts and fix JavaScript parsing issues;
-- Fixed merge conflict markers in api-disabled files;
+  errors: resolve merge conflicts and fix JavaScript parsing issues
+- Fixed merge conflict markers in api-disabled files
 - Fixed JavaScript syntax errors in .js files
 - Converted CommonJS to ES modules where needed
 - Cleaned up duplicate function declarations,`

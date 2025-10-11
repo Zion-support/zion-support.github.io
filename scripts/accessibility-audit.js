@@ -72,7 +72,7 @@ const accessibilityChecklist = {
   }
 }
 
-// Check HTML files for accessibility issues;
+// Check HTML files for accessibility issues
 function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...')
   const distDir = path.join(__dirname, '../dist')
@@ -90,17 +90,16 @@ function auditHTMLFiles() {
       console.log('    ⚠️  Missing <nav>element</nav>')
     }
     
-    // Check for alt attributes;
-    const imgTags = content.match(/<img[^>]*>/g) || [];
+    // Check for alt attributes
+    const imgTags = content.match(/<img[^>]*>/g) || []
     imgTags.forEach(img => {
     )
       if (!img.includes('alt=')) {
         console.log('    ⚠️  Image missing alt attribute')
   }
-    });
-    
-    // Check for heading hierarchy;
-    const headings = content.match(/<h[1-6][^>]*>/g) || [];
+    })
+    // Check for heading hierarchy
+    const headings = content.match(/<h[1-6][^>]*>/g) || []
     if (headings.length === 0) {
     console.log('    ⚠️  No heading elements found')
   }
@@ -109,7 +108,7 @@ function auditHTMLFiles() {
     if (!content.includes('skip') && !content.includes('Skip')) {
     console.log('    ⚠️  No skip links found')
   }
-  });
+  })
 }
 
 // Check CSS files for accessibility issues
@@ -135,7 +134,7 @@ function auditCSSFiles() {
     if (!content.includes('prefers-reduced-motion')) {
     console.log('    ⚠️  No reduced motion support')
   }
-  });
+  })
 }
 
 // Generate accessibility report
@@ -175,8 +174,7 @@ function generateAccessibilityReport() {
 
 // Generate accessibility improvements
 function generateAccessibilityImprovements() {
-    console.log('🔧 Generating accessibility improvements...');
-  
+    console.log('🔧 Generating accessibility improvements...')
   const improvements = `
 // Accessibility improvements to implement
 // 1. Add ARIA labels to interactive elements
@@ -194,20 +192,20 @@ const trapFocus = (element) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
-          lastElement.focus();
+          lastElement.focus()
           e.preventDefault()
   }
       } else {
     if (document.activeElement === lastElement) {
-          firstElement.focus();
+          firstElement.focus()
           e.preventDefault()
   }
       }
     }
-  });
+  })
 }
 
-// 3. Add live regions for dynamic content;
+// 3. Add live regions for dynamic content
 <div aria-live="polite" aria-atomic="true" className="sr-only">
   {announcement}
 // 4. Ensure proper heading hierarchy
@@ -251,8 +249,8 @@ const trapFocus = (element) => {
 // - UI components: 3:1
 // 10. Keyboard navigation
 // All interactive elements should be:
-// - Focusable with Tab key;
-// - Activable with Enter/Space;
+// - Focusable with Tab key
+// - Activable with Enter/Space
 // - Have visible focus indicators
 // - Follow logical tab order
 `,
@@ -267,16 +265,15 @@ const trapFocus = (element) => {
 // Main audit function
 function audit() {
     try {
-    auditHTMLFiles();
-    auditCSSFiles();
-    generateAccessibilityReport();
-    generateAccessibilityImprovements();
-    
-    console.log('✅ Accessibility audit completed successfully!');
-    console.log('📋 Check accessibility-report.json for detailed results');
+    auditHTMLFiles()
+    auditCSSFiles()
+    generateAccessibilityReport()
+    generateAccessibilityImprovements()
+    console.log('✅ Accessibility audit completed successfully!')
+    console.log('📋 Check accessibility-report.json for detailed results')
     console.log('🔧 Check accessibility-improvements.js for implementation guide')
   } catch (error) {
-    console.error('❌ Error during accessibility audit:', error);
+    console.error('❌ Error during accessibility audit:', error)
     process.exit(1)
   }
 }

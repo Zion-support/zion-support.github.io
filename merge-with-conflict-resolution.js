@@ -4,9 +4,8 @@ import { readFileSync, writeFileSync } from 'fs'
 console.log('🔄 Merging branches with automatic conflict resolution...')
 function resolveConflicts(filePath) {
     try {
-    const content = readFileSync(filePath, 'utf8');
-    
-    // Check if file has conflict markers;
+    const content = readFileSync(filePath, 'utf8')
+    // Check if file has conflict markers
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts
   }
@@ -17,15 +16,14 @@ function resolveConflicts(filePath) {
     const resolvedLines = []
     let skipUntilNextMarker = false
     for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-      
+    const line = lines[i]
       if (line.includes('')) {
-        skipUntilNextMarker = true;
+        skipUntilNextMarker = true
         continue
   }
       
       if (line.includes('')) {
-    skipUntilNextMarker = false;
+    skipUntilNextMarker = false
         continue
   }
       
@@ -120,16 +118,13 @@ try {
   }
 
   console.log(`\n📊 Merge Summary: `),
-  console.log(`✅ Successfully merged: ${mergedCount} branches`);
-  console.log(`❌ Failed to merge: ${failedCount} branches`);
-
-  // Push all changes;
-  console.log('\n📤 Pushing all changes to origin/main...');
-  execSync('git push origin main', { stdio: 'inherit' });
-
-  console.log('🎉 Merge process completed!');
-
+  console.log(`✅ Successfully merged: ${mergedCount} branches`)
+  console.log(`❌ Failed to merge: ${failedCount} branches`)
+  // Push all changes
+  console.log('\n📤 Pushing all changes to origin/main...')
+  execSync('git push origin main', { stdio: 'inherit' })
+  console.log('🎉 Merge process completed!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message);
+    console.error('❌ Error during merge process:', error.message)
   process.exit(1)
   }

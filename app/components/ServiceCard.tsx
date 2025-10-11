@@ -2,8 +2,8 @@
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 interface ServiceCardProps {
-    title: string;
-  description: string;
+    title: string
+  description: string
   features: string[]
   price?: string
   popular?: boolean
@@ -13,7 +13,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ()
 }) => {
   return (
-    </ServiceCardProps><div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
+    </ServiceCardProps>< className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${$2 />
       popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
     }`}>
       {popular && (
@@ -54,9 +54,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
         </button>
       )}
     </div>
-  );
-};
-
+  )
+}
 export default ServiceCard
   </ServiceCardProps>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -34,8 +34,8 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 # Quantum AI Security Insights
 Protect your AI systems with next-generation quantum security frameworks.
 
-## Security Insights;
-- Quantum-resistant encryption prevents 99.99% of threats;
+## Security Insights
+- Quantum-resistant encryption prevents 99.99% of threats
 - Advanced threat detection identifies zero-day attacks
 - Zero-trust architecture eliminates security vulnerabilities
 - Real-time monitoring provides instant threat response,

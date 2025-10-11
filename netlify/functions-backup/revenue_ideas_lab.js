@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {try {
         message: 'revenue_ideas_lab function executed successfully'),
         timestamp: timestamp),
         function: 'revenue_ideas_lab'}
-      });
+      })
     }
 //   } catch (error) {
     // console.error('❌ revenue_ideas_lab function failed: ') error
@@ -22,13 +22,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'revenue_ideas_lab'}
-      });
+      })
     }
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
+      })
     }
   }
 }

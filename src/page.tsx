@@ -34,15 +34,15 @@ import {
   ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, 
   Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, 
   MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink 
-} from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
+} from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'
+import SecurityEnhancer from './components/SecurityEnhancer'
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations'
 } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -62,9 +62,9 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 const preloadComponents = () => {
     if (typeof window !== 'undefined') {
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
+      import('./components/ContentPromotionBanner')
       import('./components/ContentCarousel')
-  }, 100);
+  }, 100)
   }
 }
 // Loading skeleton component
@@ -77,16 +77,16 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsLoaded(true)
     const timer = setTimeout(() => setIsVisible(true), 100)
     preloadComponents()
     // Initialize performance optimizations
-    initializePerformanceOptimizations();
+    initializePerformanceOptimizations()
     return () => clearTimeout(timer)
-  }, []);
+  }, [])
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -95,19 +95,17 @@ const HomePage: React.FC = () => {
         event_label: 'main_phone_number'
       })
     }
-  }, []);
-
+  }, [])
   // Enhanced error handling
   const handleError = useCallback((error: Error) => {
-    console.error('Application error:', error);
+    console.error('Application error:', error)
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      })
     }
-  }, []);
-
+  }, [])
   }, [])
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
@@ -654,23 +652,23 @@ const HomePage: React.FC = () => {
       {/* Navigation */}
       <Navigation />
       {/* Hero Section with Futuristic Design */}
-      <section 
+      <$2 />
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         role="banner"
         aria-label="Zion Tech Group - AI and IT Solutions"
       >
         {/* Animated Background */}
-        <div 
+        <$2 />
           className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"
           aria-hidden="true"
         ></div>
-        <div 
+        <$2 />
           className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"
           aria-hidden="true"
         ></div>
         
         {/* Neon Grid Overlay */}
-        <div 
+        <$2 />
           className="absolute inset-0 cyber-grid" 
           aria-hidden="true"
           style={{
@@ -697,7 +695,7 @@ const HomePage: React.FC = () => {
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               ZION TECH GROUP
-  </
+  
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
             </p>
@@ -708,14 +706,14 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" aria-hidden="true" />
-                <a 
+                <$2 />
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick} 
                   className="hover:text-cyan-300 transition-colors"
                   aria-label="Call us at +1 302 464 0950"
                 >
                   +1 302 464 0950
-  </
+  
               </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">ZION TECH GROUP
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">AI-Powered Enterprise Solutions & Digital Transformation
@@ -726,7 +724,7 @@ const HomePage: React.FC = () => {
                   +1 302 464 0950
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" aria-hidden="true" />
-                <a 
+                <$2 />
                   href="mailto:kleber@ziontechgroup.com" 
                   className="hover:text-purple-300 transition-colors"
                   aria-label="Email us at kleber@ziontechgroup.com"
@@ -806,7 +804,7 @@ const HomePage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                       🔥 POPULAR,
-  </
+  
                   </div>
                 )}
                 <div className="text-center mb-4">
@@ -1031,27 +1029,27 @@ const HomePage: React.FC = () => {
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a 
+              <$2 />
                 href="tel:+13024640950" 
                 onClick={handlePhoneClick} 
                 className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold"
                 aria-label="Call us at +1 302 464 0950"
               >
                 +1 302 464 0950
-  </
+  
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300" role="listitem">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" aria-hidden="true" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a 
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com" 
                 className="text-purple-400 hover:text-purple-300 text-lg font-semibold"
                 aria-label="Email us at kleber@ziontechgroup.com"
               >
                 kleber@ziontechgroup.com
-  </
+  
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300" role="listitem">
@@ -1069,7 +1067,7 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
+  )
 }
 export default HomePage</p>
   </a>
@@ -1108,3 +1106,4 @@ export default HomePage</p>
   )
 }
 export default HomePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></h4></h4></h4></h4></h4></h4></h4></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></section></section></section></section></section></section>
+</h1>

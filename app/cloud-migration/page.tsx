@@ -9,9 +9,9 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
-    {;
-    };
-  ];
+    {
+    }
+  ]
   const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',
@@ -34,7 +34,7 @@ const CloudMigrationPage: React.FC = () => {
           </p>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Migration?
@@ -57,11 +57,11 @@ const CloudMigrationPage: React.FC = () => {
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
               Experience the power of our cloud migration solutions for your business.
             </p>
@@ -80,8 +80,7 @@ const CloudMigrationPage: React.FC = () => {
       </div>
     </div>
   ),
-};
-
+}
 export default CloudMigrationPage
   </button>
   </button>

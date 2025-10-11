@@ -1,34 +1,34 @@
-import { ServiceVariant } from '../types/service-variants';
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants'
 export interface InnovativeMicroSaasExpansionService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: ServiceVariant
+  contact_info: unknown
+    mobile: string
     email: string
     address: string
     website: string,
@@ -94,9 +94,9 @@ export interface InnovativeMicroSaasExpansionService {
   s: string,
     websit,
   e: string}
-    email: string;
-    address: string;
-    website: string;
+    email: string
+    address: string
+    website: string
   }
         'AI-powered churn prediction with 94% accuracy',
   real_implementatio,
@@ -428,7 +428,7 @@ export const,
       integrations: [,
         'Salesforce, Microsoft 365, Google Workspace, Dropbox, Box, Slack, Zapier',
       ],
-      use_cases: [;
+      use_cases: [
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation',
       ],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
@@ -761,7 +761,7 @@ export const,
       integrations: [,
         'Workday, BambooHR, ADP, Paychex, LinkedIn, Indeed, ZipRecruiter, Slack',
       ],
-      use_cases: [;
+      use_cases: [
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking',
       ],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',

@@ -1,17 +1,17 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function StatusPage() {
-    const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-const refreshStatus = async () => {;
-    setIsRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
+    const [lastUpdated, setLastUpdated] = useState(new Date())
+  const [isRefreshing, setIsRefreshing] = useState(false)
+const refreshStatus = async () => {
+    setIsRefreshing(true)
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setLastUpdated(new Date())
     setIsRefreshing(false)
   }
   }
@@ -88,15 +88,14 @@ const services = [
       affectedServices: ['Database', 'API Services'],
   }
     }
-  ];
+  ]
 const getStatusIcon = ()
-    switch (status) {;
-    case 'operational':;
-
+    switch (status) {
+    case 'operational':
         return <CheckCircle></CheckCircle>
-      case 'degraded':;
+      case 'degraded':
         return </CheckCircle><AlertTriangle>
-      case 'outage':;
+      case 'outage':
         return </AlertTriangle><XCircle>
 
       default:;) => {
@@ -107,13 +106,13 @@ const getStatusIcon = ()
     }
   }
 const getStatusColor = ()
-    switch (status) {;
-    case 'operational':;
-        return 'text-green-400';
-      case 'degraded':;
-        return 'text-yellow-400';
-      case 'outage':;
-        return 'text-red-400';
+    switch (status) {
+    case 'operational':
+        return 'text-green-400'
+      case 'degraded':
+        return 'text-yellow-400'
+      case 'outage':
+        return 'text-red-400'
       default:;) => {
   return ()
   )
@@ -122,13 +121,13 @@ const getStatusColor = ()
     }
   }
 const getSeverityColor = ()
-    switch (severity) {;
-    case 'critical':;
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
-      case 'major':;
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-      case 'minor':;
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+    switch (severity) {
+    case 'critical':
+        return 'bg-red-500/20 text-red-400 border-red-500/50'
+      case 'major':
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
+      case 'minor':
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
       default:;) => {
   return ()
   )
@@ -136,11 +135,11 @@ const getSeverityColor = ()
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
   }
-const overallStatus = services.every(service => service.status === 'operational');
-    ? 'operational';
-    : services.some(service => service.status === 'outage');
-      ? 'outage';
-      : 'degraded';
+const overallStatus = services.every(service => service.status === 'operational')
+    ? 'operational'
+    : services.some(service => service.status === 'outage')
+      ? 'outage'
+      : 'degraded'
 return() {getStatusIcon(overallStatus)}
               <span></span>
                 {
@@ -162,7 +161,7 @@ return() {getStatusIcon(overallStatus)}
 
       {/* Services Status */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -205,7 +204,7 @@ return() {getStatusIcon(overallStatus)}
 
       {/* Recent Incidents */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -351,7 +350,7 @@ return() {getStatusIcon(overallStatus)}
             ))}
       {/* Performance Metrics */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -414,7 +413,7 @@ return() {getStatusIcon(overallStatus)}
               <div className="text-gray-400">Requests Today
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -439,5 +438,5 @@ return() {getStatusIcon(overallStatus)}
         </div>
       </section>
       <Footer /></Footer>
-  );
-};
+  )
+}</$1></span></span></span></span></span></span></span></span></p></p></h2></h2></h3></h3>

@@ -266,7 +266,7 @@ const slowResources = resources
   n: resource.duration,
             typ,
   e: resource.initiatorType,)
-          });
+          })
         })
       }, 0)
     }

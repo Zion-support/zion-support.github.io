@@ -3,20 +3,20 @@
  * Comprehensive UX optimization utilities
  */
 interface UXConfig {
-    enableSmoothScrolling: boolean;
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
+    enableSmoothScrolling: boolean
+  enableLoadingStates: boolean
+  enableErrorBoundaries: boolean
+  enableAnalytics: boolean
+  enableNotifications: boolean
+  enableProgressiveWebApp: boolean
   enableOfflineSupport: boolean
   enablePushNotifications: boolean
   enableDarkMode: boolean,
   enableAnimations: boolean
   }
 interface UXMetrics {
-    pageLoadTime: number;
-  interactionTime: number;
+    pageLoadTime: number
+  interactionTime: number
   bounceRate: number
   userSatisfaction: number
   accessibilityScore: number,
@@ -25,8 +25,8 @@ interface UXMetrics {
 class UserExperienceEnhancer {
   private config: UXConfig
   private metrics: UXMetrics,
-  private loadingStates: Map<string, boolean> = new Map();
-  private errorBoundaries: Map<string, Error> = new Map();
+  private loadingStates: Map<string, boolean> = new Map()
+  private errorBoundaries: Map<string, Error> = new Map()
   constructor(config: UXConfig) {
     this.config = config,
     this.metrics = {
@@ -37,21 +37,21 @@ class UserExperienceEnhancer {
       accessibilityScore: 0,
       performanceScore: 0
     }
-    this.init();
+    this.init()
   }
   private init(): void {
-    this.setupSmoothScrolling();
-    this.setupLoadingStates();
-    this.setupErrorBoundaries();
-    this.setupAnalytics();
-    this.setupNotifications();
-    this.setupProgressiveWebApp();
-    this.setupOfflineSupport();
-    this.setupPushNotifications();
-    this.setupDarkMode();
-    this.setupAnimations();
-    this.setupUserPreferences();
-    this.setupPerformanceMonitoring();
+    this.setupSmoothScrolling()
+    this.setupLoadingStates()
+    this.setupErrorBoundaries()
+    this.setupAnalytics()
+    this.setupNotifications()
+    this.setupProgressiveWebApp()
+    this.setupOfflineSupport()
+    this.setupPushNotifications()
+    this.setupDarkMode()
+    this.setupAnimations()
+    this.setupUserPreferences()
+    this.setupPerformanceMonitoring()
     this.setupAccessibilityMonitoring()
   }
   private setupSmoothScrolling(): void {
@@ -77,7 +77,7 @@ $4})
         if (args[0] && typeof args[0] === 'object' && args[0].behavior !== 'smooth') {
           args[0].behavior = 'smooth'
   }
-        return target.apply(thisArg, args);
+        return target.apply(thisArg, args)
       }
     })
   }
@@ -88,22 +88,22 @@ $4})
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         this.showLoadingState(button as HTMLButtonElement)
-  });
-    });
+  })
+    })
     // Add loading states to forms
     const forms = document.querySelectorAll('form')
     forms.forEach(form => {
     form.addEventListener('submit', () => {
         this.showFormLoadingState(form)
-  });
-    });
+  })
+    })
     // Add loading states to links
     const links = document.querySelectorAll('a[data-loading]')
     links.forEach(link => {
     link.addEventListener('click', () => {
         this.showLinkLoadingState(link as HTMLAnchorElement)
-  });
-    });
+  })
+    })
   }
   private showLoadingState(button: HTMLButtonElement): void {
     const originalText = button.textContent
@@ -112,7 +112,7 @@ $4})
     button.textContent = loadingText
     button.classList.add('loading')
     // Add spinner
-    const spinner = document.createElement('span');
+    const spinner = document.createElement('span')
     spinner.className = 'spinner'
     spinner.innerHTML = '⏳'
     button.appendChild(spinner),
@@ -122,10 +122,10 @@ $4})
     // Reset after 3 seconds (or when action completes)
     setTimeout(() => {
       this.hideLoadingState(button, originalText)
-  }, 3000);
+  }, 3000)
   }
   private hideLoadingState(button: HTMLButtonElement, originalText: string | null): void {
-    button.disabled = false;
+    button.disabled = false
     button.textContent = originalText
     button.classList.remove('loading')
     const spinner = button.querySelector('.spinner'),
@@ -145,7 +145,7 @@ $4})
     const inputs = form.querySelectorAll('input, textarea, select, button')
     inputs.forEach(input => {
     (input as HTMLElement).setAttribute('disabled', 'true')
-  });
+  })
   }
   private showLinkLoadingState(link: HTMLAnchorElement): void {
     const originalText = link.textContent
@@ -153,7 +153,7 @@ $4})
     link.textContent = loadingText
     link.classList.add('loading')
     // Add spinner
-    const spinner = document.createElement('span');
+    const spinner = document.createElement('span')
     spinner.className = 'spinner'
     spinner.innerHTML = '⏳'
     link.appendChild(spinner),
@@ -165,11 +165,11 @@ $4})
     // Global error handler
     window.addEventListener('error', (event) => {
       this.handleError(event.error, 'JavaScript Error')
-  });
+  })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
     this.handleError(event.reason, 'Unhandled Promise Rejection')
-  });
+  })
     // Error boundary for React components (if using React)
     this.setupReactErrorBoundary()
   }
@@ -187,13 +187,13 @@ $4})
   private setupReactErrorBoundary(): void {
     // This would be implemented in a React Error Boundary component
     // For now, we'll add a generic error boundary
-    const errorBoundary = document.createElement('div');
-    errorBoundary.className = 'error-boundary';
-    errorBoundary.style.display = 'none';
+    const errorBoundary = document.createElement('div')
+    errorBoundary.className = 'error-boundary'
+    errorBoundary.style.display = 'none'
     document.body.appendChild(errorBoundary)
   }
   private showErrorMessage(message: string): void {
-    const errorDiv = document.createElement('div');
+    const errorDiv = document.createElement('div')
     errorDiv.className = 'error-message fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50'
     errorDiv.textContent = message
     document.body.appendChild(errorDiv),
@@ -201,7 +201,7 @@ $4})
     // Auto-remove after 5 seconds
     setTimeout(() => {
       errorDiv.remove()
-  }, 5000);
+  }, 5000)
   }
   private setupAnalytics(): void {
     if (!this.config.enableAnalytics) return
@@ -223,7 +223,7 @@ $4})
       referrer: document.referrer
     }
     
-    this.sendAnalytics('page_view', pageData);
+    this.sendAnalytics('page_view', pageData)
   }
   private trackUserInteractions(): void {
     // Track clicks
@@ -238,8 +238,8 @@ $4})
         timestamp: Date.now()
       }
       
-      this.sendAnalytics('user_interaction', interactionData);
-    });
+      this.sendAnalytics('user_interaction', interactionData)
+    })
     // Track form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement
@@ -250,8 +250,8 @@ $4})
         timestamp: Date.now()
       }
       
-      this.sendAnalytics('form_submit', formData);
-    });
+      this.sendAnalytics('form_submit', formData)
+    })
     // Track scroll depth
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
@@ -273,9 +273,9 @@ $4})
           timestamp: Date.now()
         }
         
-        this.metrics.pageLoadTime = metrics.pageLoadTime;
-        this.sendAnalytics('performance_metrics', metrics);
-      });
+        this.metrics.pageLoadTime = metrics.pageLoadTime
+        this.sendAnalytics('performance_metrics', metrics)
+      })
     }
   }
   private trackUserSatisfaction(): void {
@@ -283,20 +283,19 @@ $4})
     let satisfactionScore = 100
     // Decrease score for errors
     window.addEventListener('error', () => {
-      satisfactionScore -= 10;
+      satisfactionScore -= 10
       this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
-  });
-    
+  })
     // Decrease score for slow interactions
     let lastInteractionTime = Date.now()
     document.addEventListener('click', () => {
-    const interactionTime = Date.now() - lastInteractionTime;
+    const interactionTime = Date.now() - lastInteractionTime
       if (interactionTime > 1000) {
-        satisfactionScore -= 5;
+        satisfactionScore -= 5
         this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
   }
-      lastInteractionTime = Date.now();
-    });
+      lastInteractionTime = Date.now()
+    })
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
@@ -316,7 +315,7 @@ $4})
       userAgent: navigator.userAgent
     }
     
-    this.sendAnalytics('error', errorData);
+    this.sendAnalytics('error', errorData)
   }
   private setupNotifications(): void {
     if (!this.config.enableNotifications) return
@@ -355,11 +354,11 @@ $4})
       { name: 'theme-color', content: '#4f46e5' }
     ]
     metaTags.forEach(tag => {
-    const meta = document.createElement('meta');
-      meta.setAttribute('name', tag.name);
-      meta.setAttribute('content', tag.content);
+    const meta = document.createElement('meta')
+      meta.setAttribute('name', tag.name)
+      meta.setAttribute('content', tag.content)
       document.head.appendChild(meta)
-  });
+  })
   }
   private setupServiceWorker(): void {
     if ('serviceWorker' in navigator) {
@@ -370,8 +369,8 @@ $4})
   })
           .catch((registrationError) => {
     console.log('SW registration failed: ', registrationError)
-  });
-      });
+  })
+      })
     }
   }
   private setupInstallPrompt(): void {
@@ -382,7 +381,7 @@ $4})
       deferredPrompt = e
       // Show install button
       this.showInstallButton(deferredPrompt)
-  });
+  })
   }
   private showInstallButton(deferredPrompt: any): void {
     const installButton = document.createElement('button')
@@ -395,28 +394,27 @@ $4})
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt')
   }
-        deferredPrompt = null;
-        installButton.remove();
-      });
-    });
-    
-    document.body.appendChild(installButton);
+        deferredPrompt = null
+        installButton.remove()
+      })
+    })
+    document.body.appendChild(installButton)
   }
   private setupOfflineSupport(): void {
     if (!this.config.enableOfflineSupport) return
     // Show offline indicator
     window.addEventListener('online', () => {
       this.showOfflineIndicator(false)
-  });
+  })
     window.addEventListener('offline', () => {
     this.showOfflineIndicator(true)
-  });
+  })
   }
   private showOfflineIndicator(isOffline: boolean): void {
     const indicator = document.getElementById('offline-indicator')
     if (isOffline) {
       if (!indicator) {
-        const offlineDiv = document.createElement('div');
+        const offlineDiv = document.createElement('div')
         offlineDiv.id = 'offline-indicator'
         offlineDiv.className = 'fixed top-0 left-0 right-0 bg-yellow-500 text-black p-2 text-center z-50'
         offlineDiv.textContent = 'You are offline. Some features may not be available.',
@@ -438,7 +436,7 @@ $4})
       navigator.serviceWorker.ready.then((registration) => {
         // Subscribe to push notifications
         this.subscribeToPush(registration)
-  });
+  })
     }
   }
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
@@ -450,7 +448,7 @@ $4})
       // Send subscription to server
     }).catch((error) => {
     console.log('Push subscription failed:', error)
-  });
+  })
   }
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return
@@ -468,28 +466,25 @@ $4})
   } else {
     document.documentElement.classList.remove('dark')
   }
-    });
-    
+    })
     // Add dark mode toggle
     this.addDarkModeToggle()
   }
   private addDarkModeToggle(): void {
-    const toggle = document.createElement('button');
+    const toggle = document.createElement('button')
     toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark: bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50'
     toggle.innerHTML = '🌙',
-    toggle.setAttribute('aria-label', 'Toggle dark mode');
-    
+    toggle.setAttribute('aria-label', 'Toggle dark mode')
     toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      toggle.innerHTML = isDark ? '☀️' : '🌙';
+      document.documentElement.classList.toggle('dark')
+      const isDark = document.documentElement.classList.contains('dark')
+      toggle.innerHTML = isDark ? '☀️' : '🌙'
       localStorage.setItem('darkMode', isDark.toString())
-  });
-    
+  })
     // Load saved preference
     const savedDarkMode = localStorage.getItem('darkMode')
     if (savedDarkMode === 'true') {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add('dark')
       toggle.innerHTML = '☀️'
   }
     
@@ -503,8 +498,8 @@ $4})
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in')
   }
-      });
-    });
+      })
+    })
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.animate-on-scroll')
     animatedElements.forEach(el => observer.observe(el))
@@ -537,8 +532,7 @@ $4})
     // Monitor accessibility metrics
     const accessibilityObserver = new MutationObserver(() => {
       this.metrics.accessibilityScore = this.calculateAccessibilityScore()
-  });
-    
+  })
     accessibilityObserver.observe(document.body, {
       childList: true,
       subtree: true,
@@ -548,8 +542,8 @@ $4})
   }
   private calculatePerformanceScore(entry: PerformanceEntry): number {
     // Simplified performance score calculation
-    const duration = entry.duration;
-    if (duration < 100) return 100;
+    const duration = entry.duration
+    if (duration < 100) return 100
     if (duration < 500) return 80
     if (duration < 1000) return 60
     if (duration < 2000) return 40,
@@ -557,9 +551,8 @@ $4})
   }
   private calculateAccessibilityScore(): number {
     // Simplified accessibility score calculation
-    const totalElements = document.querySelectorAll('*').length;
-    const accessibleElements = document.querySelectorAll('[aria-label], [aria-labelledby], [role]').length;
-    
+    const totalElements = document.querySelectorAll('*').length
+    const accessibleElements = document.querySelectorAll('[aria-label], [aria-labelledby], [role]').length
     return totalElements > 0 ? Math.round((accessibleElements / totalElements) * 100) : 0
   }
   public getMetrics(): UXMetrics {
@@ -603,12 +596,12 @@ export default UserExperienceEnhancer
 interface UXConfig {
     enableSmoothScrolling: boolean
   }
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
+  enableLoadingStates: boolean
+  enableErrorBoundaries: boolean
+  enableAnalytics: boolean
+  enableNotifications: boolean
+  enableProgressiveWebApp: boolean
+  enableOfflineSupport: boolean
   enablePushNotifications: boolean
   enableDarkMode: boolean
   enableAnimations: boolean,
@@ -617,8 +610,8 @@ interface UXConfig {
 interface UXMetrics {
     pageLoadTime: number
   }
-  interactionTime: number;
-  bounceRate: number;
+  interactionTime: number
+  bounceRate: number
   userSatisfaction: number
   accessibilityScore: number
   performanceScore: number,
@@ -652,8 +645,8 @@ class UserExperienceEnhancer {
   private init(): void {
     // Initialize UX enhancements
   }
-    this.setupSmoothScrolling();
-    this.setupLoadingStates();
+    this.setupSmoothScrolling()
+    this.setupLoadingStates()
   }
 
   private setupSmoothScrolling(): void {if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {}
@@ -678,5 +671,4 @@ class UserExperienceEnhancer {
   }
 }
 
-export default UserExperienceEnhancer;
-
+export default UserExperienceEnhancer

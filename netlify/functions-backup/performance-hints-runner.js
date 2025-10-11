@@ -15,8 +15,8 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
   async function head(_url) {/* TODO: Fix JSX expression */}
   d: 'HEAD'} redirec,
-  t: 'follow' });
-//       const len = r.headers.get('content-length');
+  t: 'follow' })
+//       const len = r.headers.get('content-length')
       return {
     ok: r.ok
         status: r.status,
@@ -36,7 +36,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-performance-hints')
     }
-    let sha;
+    let sha
     try {
       const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -55,7 +55,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-performance-hints'}
-    let sha;
+    let sha
     try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
@@ -100,9 +100,9 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         return {
         statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: 'No base URL' });
+        error: 'No base URL' })
       }
-    const _res = await fetch(baseUrl);
+    const _res = await fetch(baseUrl)
     if(!res.ok)
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
@@ -115,14 +115,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         status; error }
   }
   try {/* TODO: Fix JSX expression */}
-  r: 'No base URL' });
+  r: 'No base URL' })
       }
-    const _res = await fetch(baseUrl);
+    const _res = await fetch(baseUrl)
     if (!res.ok,
         return {/* TODO: Fix JSX expression */})`
-  r: `Fetch ${res.status}` });
+  r: `Fetch ${res.status}` })
       }
-    const _html = await res.text();
+    const _html = await res.text()
     const imgSrcs = Array.from(new Set()
         [...html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi)]
           .map(m => absolute(m[1]))
@@ -192,14 +192,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       commitFile(jsonPath, jsonContent)
         msg),
       commitFile(mdPath)
-        mdLines.join('\n'), msg)]);
+        mdLines.join('\n'), msg)])
     return {statusCode: 200
       body: JSON.stringify({)
         ok: true,),
         totals: summary.totals),
         jsonRes),
         mdRes}
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 500,
@@ -212,10 +212,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         mdLines.join('\n'), msg)])
     return {/* TODO: Fix JSX expression */}
         mdRes}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }
@@ -292,7 +292,7 @@ exports.config = {/* TODO: Fix JSX expression */}
         b) => (b.size||0)-(a.size||0)); const summary = {/* TODO: Fix JSX expression */}
   e: large.length }, larg,
   e: large.slice(0,
-        50;
+        50
       } ' const jsonPath = 'automation/reports/performance-hints.json'' const mdPath = 'docs/performance-hints.md' const jsonContent = JSON.stringify({/* TODO: Fix JSX expression */}
   l: checks }, null)`
         2); const mdLines = [' '# Performance Hints', `Generate,`

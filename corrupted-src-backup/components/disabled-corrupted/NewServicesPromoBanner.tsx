@@ -1,9 +1,9 @@
 import React from 'react'
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6'
 interface NewServicesPromoBannerProp, s {
-    varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-  showCou, n, t?: number;
-  featuredOn, l, y?: boolean;
+    varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d'
+  showCou, n, t?: number
+  featuredOn, l, y?: boolean
   classNa, m, e ?  : string
   }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</NewServicesPromoBannerPro>varia</NewServicesPromoBannerPro>, n, t = 'def, a, u, l, t',
@@ -228,6 +228,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
         ))}
       </div>
     </div>
-  );
+  )
 }
 export default NewServicesPromoBanner;"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></h3></h3></h4>

@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 interface ImageOptimizerProps {
-    src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
+    src: string
+  alt: string
+  className?: string
+  width?: number
+  height?: number
   priority?: boolean
   placeholder?: string
   onLoad?: () => void,
@@ -12,7 +12,7 @@ interface ImageOptimizerProps {
   }
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
-  src;
+  src
   alt,
   className = '',
   width,
@@ -22,15 +22,15 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   onLoad,
   onError
   }) => {
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)</HTMLImageElement>useEffect</HTMLImageElement>(() => {
-    if (priority) return;
+    if (priority) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsInView(true)
           observer.disconnect()
   }
       },
@@ -38,18 +38,18 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     rootMargin: '50px 0px',
         threshold: 0.01
   }
-    );
+    )
     if (imgRef.current) {
     observer.observe(imgRef.current)
   }
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()
+  }, [priority])
   const handleLoad = () => {
-    setIsLoaded(true);
+    setIsLoaded(true)
     onLoad?.()
   }
   const handleError = () => {
-    setHasError(true);
+    setHasError(true)
     onError?.()
   }
   const generatePlaceholder = () => {
@@ -67,7 +67,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       </svg>,
     `
     ,
-    return `data: image/svg+xml,base64,${btoa(svg)}`;
+    return `data: image/svg+xml,base64,${btoa(svg)}`
   }
   if (hasError) {
     return(<$2 />
@@ -114,6 +114,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         />
       )}
     </div>
-  );
+  )
 }
 export default ImageOptimizer</ImageOptimizerProps>

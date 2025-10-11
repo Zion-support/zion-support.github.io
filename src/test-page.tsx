@@ -37,11 +37,11 @@ const testPagetsx: React.FC = () => {
               Advanced testtsx solutions powered by AI and cutting-edge technology</$1>"
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
-              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
+              < href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"$2 />
   hover: bg-cyan-600 transition-colors"></a>
                 Get Started,
               </a>"
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
+              < href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-500,"
   hover: text-white transition-colors"></a>
                 View Demo,
@@ -72,7 +72,7 @@ const testPagetsx: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center"></div>"
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
-            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
+            < href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"$2 />
   hover: bg-cyan-600 transition-colors"></a>
               Contact Us
             </a>
@@ -83,4 +83,4 @@ const testPagetsx: React.FC = () => {
     </div>
   ),
 }
-export default testPagetsx;
+export default testPagetsx</$1></p></h1></h2></h3></ul>

@@ -85,7 +85,7 @@ export function getConfig,
   h: string): T {
     const keys = keyPath.split('.')
   }
-  const __keys = keyPath.split('.');
+  const __keys = keyPath.split('.')
   let,
   value: unknown = config,
   for (const key of keys) {/* TODO: Fix JSX expression */}
@@ -121,6 +121,5 @@ export function isProduction(): boolean {/* TODO: Fix JSX expression */}
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return config.app.environment === 'development';
-export default config;
-
+  return config.app.environment === 'development'
+export default config

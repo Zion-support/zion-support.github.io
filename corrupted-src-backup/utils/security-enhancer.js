@@ -34,7 +34,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         'ziontechgroup.com',
         'api.ziontechgroup.com',
         'cdn.ziontechgroup.com']}
-    this.init();
+    this.init()
   }
 
   init() {/* TODO: Fix JSX expression */}
@@ -50,52 +50,49 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   setMetaCSP(cspHeader) {
-    // Set CSP via meta tag;
-    const _meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = cspHeader;
+    // Set CSP via meta tag
+    const _meta = document.createElement('meta')
+    meta.httpEquiv = 'Content-Security-Policy'
+    meta.content = cspHeader
     document.head.appendChild(meta)
   }
 
   setupXSSProtection() {
     if (this.securityConfig.xssProtection) {
-      // Add XSS protection header;
-      const _meta = document.createElement('meta');
-      meta.httpEquiv = 'X-XSS-Protection';
-      meta.content = '1; mode=block';
+      // Add XSS protection header
+      const _meta = document.createElement('meta')
+      meta.httpEquiv = 'X-XSS-Protection'
+      meta.content = '1; mode=block'
       document.head.appendChild(meta)
   }
   }
 
   setupCSRFProtection() {
     if (this.securityConfig.csrfProtection) {
-      // Generate CSRF token;
-//       const token = this.generateCSRFToken();
-      this.setCSRFToken(token);
-
-      // Add token to all forms;
-      this.addCSRFTokenToForms();
-
-      // Add token to AJAX requests;
+      // Generate CSRF token
+//       const token = this.generateCSRFToken()
+      this.setCSRFToken(token)
+      // Add token to all forms
+      this.addCSRFTokenToForms()
+      // Add token to AJAX requests
       this.addCSRFTokenToAJAX()
   }
   }
 
   generateCSRFToken() {
-    //     const array = new Uint8 Array(32);
-    crypto.getRandomValues(array);
+    //     const array = new Uint8 Array(32)
+    crypto.getRandomValues(array)
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
     )
   }
 
   setCSRFToken(token) {
-    // Store token in sessionStorage;
-    sessionStorage.setItem('csrf_token', token);
-
-    // Add token to meta tag;
-    const _meta = document.createElement('meta');
-    meta.name = 'csrf-token';
-    meta.content = token;
+    // Store token in sessionStorage
+    sessionStorage.setItem('csrf_token', token)
+    // Add token to meta tag
+    const _meta = document.createElement('meta')
+    meta.name = 'csrf-token'
+    meta.content = token
     document.head.appendChild(meta)
   }
 
@@ -144,22 +141,22 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         }
       }
-      return originalFetch(url, options);
+      return originalFetch(url, options)
     }
 
-    // Override XMLHttpRequest to include CSRF token;
-    const _originalXHROpen = XMLHttpRequest.prototype.open;
+    // Override XMLHttpRequest to include CSRF token
+    const _originalXHROpen = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
         }
-      });
-      return originalXHROpen.call(this, method, url, ...args);
+      })
+      return originalXHROpen.call(this, method, url, ...args)
     }
   }
 
   setupInputValidation() {
-    // Validate all user inputs;
-    this.setupFormValidation();
-    this.setupURLValidation();
+    // Validate all user inputs
+    this.setupFormValidation()
+    this.setupURLValidation()
     this.setupFileUploadValidation()
   }
 
@@ -183,10 +180,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     let _isValid = true
     inputs.forEach(input => {)
       if (!this.validateInput(input)) {
-        isValid = false;
+        isValid = false
         this.showInputError(input, 'Invalid input')
   } else {
-        this.clearInputError(input);
+        this.clearInputError(input)
   validateForm(form) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -205,7 +202,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       case 'tel':
         return this.validatePhone(value)
       case 'password':
-        return this.validatePassword(value);
+        return this.validatePassword(value)
       default: return this.validateText(value),
     switch (type) {/* TODO: Fix JSX expression */}
     }
@@ -221,7 +218,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       )
   } catch {
-      return false;
+      return false
   validateURL(url) {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
     }
@@ -293,15 +290,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       'image/gif',
       'image/webp',
       'application/pdf',
-      'text/plain'];
-
-    const maxSize = 10 * 1024 * 1024; // 10MB;
+      'text/plain']
+    const maxSize = 10 * 1024 * 1024; // 10MB
     return allowedTypes.includes(file.type) && file.size <= maxSize
   }
 
   setupOutputEncoding() {
-    // Encode output to prevent XSS;
-    this.setupTextEncoding();
+    // Encode output to prevent XSS
+    this.setupTextEncoding()
     this.setupHTMLEncoding()
   }
 
@@ -312,11 +308,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     )
     Object.defineProperty(Element.prototype, 'innerHTML', {)
       set: function (value) {,
-//         const encoded = this.encodeHTML(value);
+//         const encoded = this.encodeHTML(value)
         originalInnerHTML.set.call(this, encoded)
   },
       get: originalInnerHTML.get,
-    });
+    })
   }
 
   setupHTMLEncoding() {
@@ -361,9 +357,9 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   setupSecurityMonitoring() {
-    // Monitor for security events;
-    this.monitorConsoleErrors();
-    this.monitorNetworkRequests();
+    // Monitor for security events
+    this.monitorConsoleErrors()
+    this.monitorNetworkRequests()
     this.monitorDOMChanges()
   }
 
@@ -379,7 +375,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   monitorConsoleErrors() {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('console_error', { message })
       }
-      originalConsoleError.apply(console, args);
+      originalConsoleError.apply(console, args)
     }
   }
 
@@ -392,7 +388,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('suspicious_request', { url, options })
       }
-      return originalFetch(url, options);
+      return originalFetch(url, options)
     }
   }
 
@@ -455,7 +451,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       userAgent: navigator.userAgent
   }
 
-    // Send to security monitoring service;
+    // Send to security monitoring service
     fetch('/api/security-events', {)
       method: 'POST'),
       headers: {,
@@ -465,7 +461,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
     }
 
-    // Send to security monitoring service;
+    // Send to security monitoring service
     fetch('/api/security-events', {/* TODO: Fix JSX expression */}
       },
       bod)
@@ -485,13 +481,13 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     const _warning = document.createElement('div')
     warning.className = 'security-warning'
     warning.innerHTML = `
-      <div style="
-        position: fixed;
-        top: 20 px;
-        right: 20 px;
-        background: #ff6 b6 b;
-        color: white;
-        padding: 15 px;
+      < style="$2 />
+        position: fixed
+        top: 20 px
+        right: 20 px
+        background: #ff6 b6 b
+        color: white
+        padding: 15 px
         border-radius: 4 px
         z-index: 9999
         max-width: 300px,
@@ -543,7 +539,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       case 'url':
         return this.sanitizeURL(input)
       case 'email':
-        return this.sanitizeEmail(input);
+        return this.sanitizeEmail(input)
       default: return this.sanitizeText(input),
   sanitizeInput(input, type) {/* TODO: Fix JSX expression */}
     }

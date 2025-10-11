@@ -1,12 +1,12 @@
 
-export interface VerifiedRealService2025Batch2 {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
+export interface VerifiedRealService2025Batch2 {id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
@@ -105,7 +105,7 @@ export const,
 ]
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -249,7 +249,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "ai-quality-assurance"
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",

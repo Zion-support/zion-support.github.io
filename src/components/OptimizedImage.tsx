@@ -17,8 +17,8 @@ const,
   t: height ? `${height}px` : 'auto'
       }}
     />
-  );
+  )
 }
-export default OptimizedImage;
+export default OptimizedImage
 "`
   </OptimizedImageProps>

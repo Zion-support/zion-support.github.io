@@ -4,24 +4,24 @@ const optimizeImages = () => {
     //   //Add image optimization logic here
   }
 
-//Optimize CSS;
+//Optimize CSS
 const optimizeCSS = () => {
     //   //Add CSS optimization logic here
   }
 
-//Optimize JavaScript;
+//Optimize JavaScript
 const optimizeJS = () => {
   //   //Add JS optimization logic here
 const optimizeImages = () => {/* TODO: Fix JSX expression */}
 }
 
-//Optimize CSS;
+//Optimize CSS
 const optimizeCSS = () => {/* TODO: Fix JSX expression */}
 }
 
-//Optimize JavaScript;
+//Optimize JavaScript
 const optimizeJS = () => {/* TODO: Fix JSX expression */}
 }
 
-// Run optimizations;
+// Run optimizations
 // 

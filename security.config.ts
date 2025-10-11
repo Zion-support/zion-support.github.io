@@ -32,7 +32,7 @@ export const securityConfig = {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},
 
-  // Input validation;
+  // Input validation
   validation: {
     ,
     maxInputLength: 10000,
@@ -40,16 +40,16 @@ export const securityConfig = {
     maxFileSize: 10 * 1024 * 1024, // 10MB
   },
 
-  // Rate limiting;
+  // Rate limiting
   rateLimit: {
     ,
-    windowMs: 15 * 60 * 1000, // 15 minutes;
+    windowMs: 15 * 60 * 1000, // 15 minutes
     maxRequests: 100
     skipSuccessfulRequests: false,
     skipFailedRequests: false
   },
 
-  // CORS configuration;
+  // CORS configuration
   cors: {
     ,
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
@@ -59,12 +59,12 @@ export const securityConfig = {
     maxAge: 86400, // 24 hours
   },
 
-  // Authentication;
+  // Authentication
   auth: {
     ,
-    sessionTimeout: 3600000, // 1 hour;
+    sessionTimeout: 3600000, // 1 hour
     maxLoginAttempts: 5,
-    lockoutDuration: 900000, // 15 minutes;
+    lockoutDuration: 900000, // 15 minutes
     passwordMinLength: 12
     requireSpecialChars: true
     requireNumbers: true,
@@ -73,7 +73,7 @@ export const securityConfig = {
 
   // Data sanitization
   sanitization: {
-    stripHtml: true;
+    stripHtml: true
     encodeSpecialChars: true
     trimWhitespace: true
     removeNullBytes: true,
@@ -106,4 +106,4 @@ export const securityConfig = {/* TODO: Fix JSX expression */}
   sanitization: {/* TODO: Fix JSX expression */}
   }}
 
-export default securityConfig;
+export default securityConfig

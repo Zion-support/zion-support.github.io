@@ -22,9 +22,9 @@ const ARVRPlatformPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Cross-Platform Support',
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility';
-    };
-  ];
+      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
+    }
+  ]
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
@@ -43,12 +43,12 @@ const ARVRPlatformPage: React.FC = () => {
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 AR/VR Platform
-  </
+  
               <br />
               <span className="text-white">Solutions
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -61,14 +61,14 @@ const ARVRPlatformPage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More,
-  </
+  
             </div>
           </div>
         </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AR/VR Platform?
@@ -86,11 +86,11 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           </p><div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -112,7 +112,7 @@ Experience the power of our AR/VR platform solutions for your business.
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        </section><div className="
+        </section>< className="$2 />
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -124,19 +124,18 @@ Experience the power of our AR/VR platform solutions for your business.
               </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 </button><Phone className="mr-2 h-5 w-5" />
                 Call Now
-  </
+  
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 </button><Mail className="mr-2 h-5 w-5" />
                 Email Us
-  </
+  
             </div>
           </div>
         </div>
       </section>
     </div>
   ),
-};
-
+}
 export default ARVRPlatformPage
   </button>
   </button>

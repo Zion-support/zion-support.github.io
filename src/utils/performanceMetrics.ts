@@ -4,8 +4,8 @@
  * Advanced performance tracking and monitoring for web applications
  */
 export interface PerformanceMetric {
-    name: string;
-  value: number;
+    name: string
+  value: number
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
@@ -20,8 +20,8 @@ export interface WebVitalsMetrics {
   INP?: number; // Interaction to Next Paint
 }
 export interface PerformanceReport {
-    metrics: PerformanceMetric[];
-  webVitals: WebVitalsMetrics;
+    metrics: PerformanceMetric[]
+  webVitals: WebVitalsMetrics
   summary: {
     avgLoadTime: number
     totalMetrics: number
@@ -624,25 +624,25 @@ $4})
     let score = 100
     // FCP scoring
     if (this.webVitals.FCP) {
-      if (this.webVitals.FCP > 3000) score -= 20;
+      if (this.webVitals.FCP > 3000) score -= 20
       else if (this.webVitals.FCP > 1800) score -= 10
   }
     // LCP scoring
     if (this.webVitals.LCP) {
-    if (this.webVitals.LCP > 4000) score -= 25;
+    if (this.webVitals.LCP > 4000) score -= 25
       else if (this.webVitals.LCP > 2500) score -= 12
   }
     // CLS scoring
     if (this.webVitals.CLS) {
-    if (this.webVitals.CLS > 0.25) score -= 20;
+    if (this.webVitals.CLS > 0.25) score -= 20
       else if (this.webVitals.CLS > 0.1) score -= 10
   }
     // FID scoring
     if (this.webVitals.FID) {
-    if (this.webVitals.FID > 300) score -= 15;
+    if (this.webVitals.FID > 300) score -= 15
       else if (this.webVitals.FID > 100) score -= 8
   }
-    return Math.max(0, Math.min(100, score));
+    return Math.max(0, Math.min(100, score))
   }
   /**
    * Get performance recommendations
@@ -667,14 +667,13 @@ $4})
     if (this.webVitals.FID && this.webVitals.FID > 100) {
     recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
   }
-    const networkMetrics = this.getMetricsByCategory('network');
+    const networkMetrics = this.getMetricsByCategory('network')
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
     if (avgNetworkTime > 500) {
     recommendations.push(
         'Optimize network requests - consider caching and reducing payload sizes'
-      );
-
+      )
   calculatePerformanceScore(): number {// TODO: Add content
   }
 
@@ -796,7 +795,7 @@ $4})
    * Clear all metrics
    */
   clearMetrics(): void {
-    * Generate performance report;
+    * Generate performance report
    */
 
   generateReport(): PerformanceReport {// TODO: Add content
@@ -848,14 +847,14 @@ $4})
   }
 
 }
-    this.metrics = [];
+    this.metrics = []
     this.webVitals = {}
   }
   /**
    * Cleanup observers
    */
   cleanup(): void {
-    * Cleanup observers;
+    * Cleanup observers
    */
 
   cleanup(): void {// TODO: Add content
@@ -902,6 +901,5 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
   value: number,,
     hadRecentInput: boolean
 }
-// Export singleton instance;
-export const performanceMetrics = PerformanceMetrics.getInstance();
-
+// Export singleton instance
+export const performanceMetrics = PerformanceMetrics.getInstance()

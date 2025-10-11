@@ -84,6 +84,6 @@ const AIEdgeComputingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default PagePage;
+export default PagePage</$1></p>

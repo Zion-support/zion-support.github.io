@@ -1,43 +1,43 @@
 export interface SpaceMetaverseService2029 {
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
+  id: string
+  name: string
+  description: string
+  category: string[]
+  price: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  marketSize: string
+  competitors: string[]
+  technology: string[]
+  integration: string[]
+  support: string[]
+  compliance: string[]
+  scalability: string
+  roi: string
+  deployment: string
+  maintenance: string
+  training: string
+  documentation: string
+  api: string
+  mobile: string
+  security: string
+  backup: string
+  monitoring: string
+  analytics: string
+  customization: string
+  whiteLabel: string
+  affiliate: string
+  referral: string
+  partnership: string
+  funding: string
+  exit: string
   contact: {
-    mobile: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+    mobile: string
+    email: string
+    website: string
+    address: string
+  }
 }
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
@@ -296,4 +296,4 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+]

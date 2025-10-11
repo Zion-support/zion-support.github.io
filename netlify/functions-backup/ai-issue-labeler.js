@@ -6,7 +6,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({ ok: false),
         error: 'GITHUB_TOKEN required' })
   if (!githubToken) {/* TODO: Fix JSX expression */}
-  r: 'GITHUB_TOKEN required' });
+  r: 'GITHUB_TOKEN required' })
     }
   }
   const ghHeaders = {/* TODO: Fix JSX expression */}
@@ -77,10 +77,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   t: prompt }],
           temperatur,
   e: 0,)
-      })});
-      const _json = await res.json();
-//       const content = json?.choices?.[0]?.message?.content?.trim();
-      try {const arr = JSON.parse(content);
+      })})
+      const _json = await res.json()
+//       const content = json?.choices?.[0]?.message?.content?.trim()
+      try {const arr = JSON.parse(content)
         if (Array.isArray(arr)) return arr.slice(0)
         3
       try {/* TODO: Fix JSX expression */}
@@ -97,18 +97,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`)
       {method: POST),
         headers: ghHeaders),
-        body: JSON.stringify({ labels,)})});
+        body: JSON.stringify({ labels,)})})
     return {ok: res.ok,
         status: res.status }
   }
-  const _issues = await listRecentIssues();
-  const _actions = [];
+  const _issues = await listRecentIssues()
+  const _actions = []
   for (const issue of issues) {
     if(issue.labels && issue.labels.length > 0)
-        continue;
-//     const rule = ruleLabels(issue.title || '') issue.body || '');
-    const _ai = await aiSuggestLabels(issue.title || '') issue.body || '');
-//     const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]));
+        continue
+//     const rule = ruleLabels(issue.title || '') issue.body || '')
+    const _ai = await aiSuggestLabels(issue.title || '') issue.body || '')
+//     const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]))
     const res = await addLabels(issue.number)
         finalLabels
   }
@@ -116,15 +116,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     issue: issue.number),
         labels: finalLabels),
         result: res
-  });
+  })
   }
   const log = {generatedAt: new Date().toISOString(),
     totalOpen: issues.length
     labeled: actions.length,
     actions}
   }
-  // Try to store log as an artifact in repo;
-  try {const headers = ghHeaders;
+  // Try to store log as an artifact in repo
+  try {const headers = ghHeaders
     let sha,
         const path = 'data/reports/ai-issue-labeler-log.json'
     const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
@@ -150,7 +150,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const log = {/* TODO: Fix JSX expression */}
     actions}
   }
-  // Try to store log as an artifact in repo;
+  // Try to store log as an artifact in repo
   try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
@@ -174,7 +174,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           conten,
   t: Buffer.from(JSON.stringify(log, null)
         2)).toString('base64'),
-          sha})});
+          sha})})
     return {
     statusCode: 200
       body: JSON.stringify({)
@@ -183,7 +183,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         store: { ok: putRes.ok),
         status: putRes.status
   })
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 200
@@ -194,10 +194,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         error: String(e,)})
     return {/* TODO: Fix JSX expression */}
       })
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      }});
+      }})
     }
   }
 }
@@ -235,7 +235,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {' method: 'PUT', headers)
         body: JSON.stringify({ message: `chore: update AI issue labeler log (${new Date().toISOString()})`, content: Buffer.from(JSON.stringify(log, null)
-        2)).toString('base64'), sha;
+        2)).toString('base64'), sha
       }) }); return {statusCode: 200, body: JSON.stringify({ ok: true,),
         log),
         store: {ok: putRes.ok),

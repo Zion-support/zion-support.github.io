@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react'
 const EdgeComputingPage: React.FC = () => {
     const features = [
     {
@@ -77,9 +77,9 @@ const services = [
 
     'Enhanced Security',
 
-    'Real-time Processing',;
-    'Global Scalability';
-  ];
+    'Real-time Processing',
+    'Global Scalability'
+  ]
 const useCases = [
     {
     title: 'Autonomous Vehicles',
@@ -123,7 +123,7 @@ return (
       <Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -139,7 +139,7 @@ return (
             </span>
           </h1>
           <p></p>
-            Bring computing power closer to your data and users with our advanced edge computing solutions.;
+            Bring computing power closer to your data and users with our advanced edge computing solutions.
             Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
@@ -155,7 +155,7 @@ return (
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -195,7 +195,7 @@ return (
       </section>
       {/* Services Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -218,7 +218,7 @@ return (
       </section>
       {/* Use Cases Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -241,7 +241,7 @@ return (
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -263,7 +263,7 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -287,9 +287,8 @@ return (
       </section>
       <Footer /></Footer>
   ),
-};
-
-export default EdgeComputingPage;
+}
+export default EdgeComputingPage
     'Real-time Processing',
     'Global Scalability'
   ]

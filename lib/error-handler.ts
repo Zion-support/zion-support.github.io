@@ -37,12 +37,11 @@ export const errorHandler = (er,
 //     // .toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-  });
-
+  })
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-    });
+    })
   }
 
   res.status(statusCode).json({)
@@ -74,8 +73,7 @@ export const errorHandler = (er,
       userAgent: req.headers['user-agent'],
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
 
-  });
-
+  })
     timestam,
   p: new Date().toISOString(),
     userAgen,
@@ -98,7 +96,7 @@ export const errorHandler = (er,
       timestam,
   p: new Date().toISOString()
     }
-  });
+  })
 }
 
 export const asyncHandler =
@@ -116,8 +114,7 @@ export const asyncHandler =
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
   }
     stack: err.stack,
-  });
-
+  })
   res.status(statusCode).json({)
     error: {)
       message: message || 'Internal Server Error'),
@@ -143,12 +140,11 @@ export const asyncHandler = {}
   }
     stac,
   k: err.stack,
-  });
-
+  })
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
   k: err.stack })
     }
-  });
+  })
 }
 
 export const asyncHandler = (fn: Function) => {,
@@ -158,7 +154,7 @@ export const asyncHandler = (fn: Function) => {,
       timestamp: new Date().toISOString(),
 export const asyncHandler = (f)
   n: Function) => {/* TODO: Fix JSX expression */}
-    }});
+    }})
 }
 
 export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {
@@ -166,7 +162,7 @@ export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => 
   return (req: NextApiRequest, res: NextApiResponse) => {,
     Promise.resolve(fn(req, res)).catch(err => {)
       errorHandler(err, req, res)
-  });
+  })
   }
 }
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
@@ -217,7 +213,7 @@ export const asyncHandler = (f,
   n: (re,
   q: NextApiRequest, re)
   s: NextApiResponse) => Promise<void> | void) => {/* TODO: Fix JSX expression */}
-    });
+    })
   }
 }
   (re,

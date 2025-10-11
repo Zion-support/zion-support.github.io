@@ -42,7 +42,7 @@ Home
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
           </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
 // >
 //                 Explore Our Services
@@ -129,3 +129,4 @@ Ready to Transform Your Business?
   </div>
   </div>
   </div>
+</div></div></Link></Link></h2></h3></main>

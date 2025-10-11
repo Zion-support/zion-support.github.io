@@ -4,13 +4,13 @@
  * Applies production-ready optimizations to the codebase
  */
 
-// Configuration;
+// Configuration
 const config = {
   appDir: path.join(__dirname, 'app'),
   improvements: [],
   errors: []}
 
-// Helper function to read files recursively;
+// Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
 
   files.forEach(file => {)
@@ -21,7 +21,7 @@ function getAllFiles(_dir, fileList = []) {
 const config = {/* TODO: Fix JSX expression */}
 }
 
-// Helper function to read files recursively;
+// Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
       }
     } else if ()
@@ -191,9 +191,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
   }
 }
 
-// Run improvements;
-// const files = getAllFiles(config.appDir);
-
+// Run improvements
+// const files = getAllFiles(config.appDir)
 files.forEach(file => {
     )
   if (processFile(file)) {

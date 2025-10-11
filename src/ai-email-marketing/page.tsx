@@ -93,18 +93,19 @@ import Footer from '../components/Footer'
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
-  </
+  
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-  </
+  
       <Footer />
   ),
 }
-export default $1;
-import { Helmet } from 'react-helmet-async';
+export default $1
+import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Mail as EmailIcon, Send, BarChart3 } from 'lucide-react'</button>
   </button>
   </div>
   </div>
   </div>
   </div>
+</h1>

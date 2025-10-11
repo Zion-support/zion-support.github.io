@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
     ,
   const revolutionaryConten, t = [
@@ -358,6 +358,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
         </div>
       </div>
     </div>
-  );
+  )
 }
 export default Revolutionary2026ContentMegaBanner;"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></h2></h2></h3></h3>

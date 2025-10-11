@@ -9,19 +9,18 @@ class AnalyticsOptimizer {
       trackingEnabled: true
       privacyMode: false
       batchSize: 10,
-      flushInterval: 30000, // 30 seconds;
+      flushInterval: 30000, // 30 seconds
       maxRetries: 3
       retryDelay: 1000,
 class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     }
 
-    this.eventQueue = [];
-    this.sessionId = this.generateSessionId();
-    this.userId = this.getUserId();
-    this.pageViews = 0;
-    this.startTime = Date.now();
-
-    this.init();
+    this.eventQueue = []
+    this.sessionId = this.generateSessionId()
+    this.userId = this.getUserId()
+    this.pageViews = 0
+    this.startTime = Date.now()
+    this.init()
   }
 
   init() {/* TODO: Fix JSX expression */}
@@ -156,9 +155,9 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
           url: args[0]),
           error: error.message),
     window.fetch = (...args) => {/* TODO: Fix JSX expression */}
-        });
-        throw error;
-      });
+        })
+        throw error
+      })
     }
   }
 
@@ -208,7 +207,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   setupPrivacyCompliance() {
     // Check for privacy settings
     if (localStorage.getItem('privacy_mode') === 'true') {
-      this.config.privacyMode = true;
+      this.config.privacyMode = true
       this.config.trackingEnabled = false
   }
 
@@ -254,9 +253,8 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
         viewportSiz,`
   e: `${window.innerWidth}x${window.innerHeight}`}}
 
-    this.eventQueue.push(event);
-
-    // Process immediately if batch is full;
+    this.eventQueue.push(event)
+    // Process immediately if batch is full
     if (this.eventQueue.length >= this.config.batchSize) {
     this.flush()
   }
@@ -305,7 +303,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     try {
       await this.sendEvents(events)
   } catch (error) {
-    //       // Re-queue events for retry;
+    //       // Re-queue events for retry
       this.eventQueue.unshift(...events)
   }
   }
@@ -324,10 +322,9 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   async sendEvents(events) {/* TODO: Fix JSX expression */}
     }
 
-    // Send to multiple analytics services;
-    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
-
-    await Promise.allSettled(promises);
+    // Send to multiple analytics services
+    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)]
+    await Promise.allSettled(promises)
   }
 
   async sendToGoogleAnalytics(payload) {
@@ -371,7 +368,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   // Analytics insights and reporting
   getSessionData() {
     return {
-      sessionId: this.sessionId;
+      sessionId: this.sessionId
       userId: this.userId
       pageViews: this.pageViews
       timeOnSite: Date.now() - this.startTime,
@@ -382,7 +379,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
   getPerformanceMetrics() {
     const _navigation = performance.getEntriesByType('navigation')[0]
     return {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0;
+      loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0
       domContentLoaded: navigation
         ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
         : 0,

@@ -31,13 +31,11 @@ const importantBranches = [
   'ai-dashboard-improvements'
 ]
 async function main() {
-  console.log('🚀 Starting manual merge handling for important branches...\n');
-  
-  // Check current status;
+  console.log('🚀 Starting manual merge handling for important branches...\n')
+  // Check current status
   console.log('📊 Current Status: '),
-  execGitCommand('git status --porcelain', 'Checking git status');
-  
-  // Try to merge each important branch;
+  execGitCommand('git status --porcelain', 'Checking git status')
+  // Try to merge each important branch
   for (const branch of importantBranches) {
     console.log(`\n🔄 Attempting to merge ${branch}...`)
     try {
@@ -62,12 +60,11 @@ async function main() {
     await new Promise(resolve => setTimeout(resolve, 500))
   }
   
-  // Final status;
+  // Final status
   console.log('\n📊 Final Status: '),
-  execGitCommand('git status', 'Final git status');
-  execGitCommand('git log --oneline -5', 'Recent commits');
-  
-  console.log('\n🎉 Manual merge handling completed!');
+  execGitCommand('git status', 'Final git status')
+  execGitCommand('git log --oneline -5', 'Recent commits')
+  console.log('\n🎉 Manual merge handling completed!')
 }
 
 main().catch(console.error)

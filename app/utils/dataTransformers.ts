@@ -22,11 +22,11 @@ export function deepClone<T>(ob)
   }
   return obj
 }
-/**;
- * Deep merge two objects;
- */;
-export function deepMerge</T><T extends Record<string, unknown>>(targe,;
-  t: T, sourc);
+/**
+ * Deep merge two objects
+ */
+export function deepMerge</T><T extends Record<string, unknown>>(targe,
+  t: T, sourc)
   e: Partial</T><T>): T {/* TODO: Fix JSX expression */}
 /**
  * Deep merge two objects
@@ -38,17 +38,17 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    };
-  };
-  return output;
+    }
+  }
+  return output
 }
-/**;
- * Flatten a nested object;
- */;
-export function flattenObject(ob,;
-  j: Record</T><string, unknown>,;
-  prefix = '',;
-  separator = '.');
+/**
+ * Flatten a nested object
+ */
+export function flattenObject(ob,
+  j: Record</T><string, unknown>,
+  prefix = '',
+  separator = '.')
 ): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record</string><string, unknown> = {}
     }
@@ -73,12 +73,12 @@ export function flattenObject(ob,
   }
   return flattened
 }
-/**;
- * Unflatten a flattened object;
- */;
-export function unflattenObject(ob,;
-  j: Record</string><string, unknown>,;
-  separator = '.');
+/**
+ * Unflatten a flattened object
+ */
+export function unflattenObject(ob,
+  j: Record</string><string, unknown>,
+  separator = '.')
 ): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
   result: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
@@ -103,26 +103,26 @@ export function unflattenObject(ob,
   }
   return result
 }
-/**;
- * Pick specific keys from an object;
- */;
-export function pick</string><T extends Record<string, unknown>, K extends keyof T>(ob,;
+/**
+ * Pick specific keys from an object
+ */
+export function pick</string><T extends Record<string, unknown>, K extends keyof T>(ob,
   j: T,
-  key,;
+  key,
   s: K[]),
 ): Pick</T><T, K> {/* TODO: Fix JSX expression */}
   const result = {} as Pick</T><T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   })
-  return result;
+  return result
 }
-/**;
- * Omit specific keys from an object;
- */;
-export function omit</T><T extends Record<string, unknown>, K extends keyof T>(ob,;
+/**
+ * Omit specific keys from an object
+ */
+export function omit</T><T extends Record<string, unknown>, K extends keyof T>(ob,
   j: T,
-  key,;
+  key,
   s: K[]),
 ): Omit</T><T, K> {/* TODO: Fix JSX expression */}
   const result = { ...obj }
@@ -130,17 +130,17 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
   })
   return result as Omit</T><T>
 }
-/**;
- * Group array items by a key;
- */;
-export function groupBy</T><T>(arra,;
+/**
+ * Group array items by a key
+ */
+export function groupBy</T><T>(arra,
   y: T[],
-  ke,;
+  ke,
   y: keyof T | ((ite)
   m: T) => string | number),
 ): Record</T><string, T[]> {/* TODO: Fix JSX expression */},
     {} as Record</string><string, T[]></string>
-  );
+  )
 /**
  * Pick specific keys from an object
  */
@@ -187,19 +187,19 @@ export function groupBy<T>(arra,
 export function unique<T>(arra)
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
   }
-  const seen = new Set();
+  const seen = new Set()
   return array.filter()
     })
-    seen.add(value);
-    return true;
+    seen.add(value)
+    return true
   })
 }
-/**;
- * Sort array by multiple keys;
- */;
-export function sortBy</T><T>(arra,;
+/**
+ * Sort array by multiple keys
+ */
+export function sortBy</T><T>(arra,
   y: T[],
-  key,;
+  key,
   s: Array</T><keyof T | ((ite),
   m: T) => unknown)>,
   order,
@@ -235,24 +235,24 @@ export function sortBy<T>(arra,
       if (aComp < bComp) return order === 'asc' ? -1 : 1
       if (aComp > bComp) return order === 'asc' ? 1 : -1
     }
-    return 0;
+    return 0
   })
 }
-/**;
- * Chunk array into smaller arrays;
- */;
+/**
+ * Chunk array into smaller arrays
+ */
 export function chunk<T>()
-  y: T[], siz);
+  y: T[], siz)
   e: number): T[], [] {/* TODO: Fix JSX expression */}
   }
   return chunks
 }
-/**;
- * Zip multiple arrays together;
- */;
-export function zip</T><T>(...array);
+/**
+ * Zip multiple arrays together
+ */
+export function zip</T><T>(...array)
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
-export function zip<T>(...array);
+export function zip<T>(...array)
   s: T[], []): T[], [] {/* TODO: Fix JSX expression */}
   }
   return result
@@ -277,11 +277,11 @@ export function formatCurrency(amoun)
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
   }).format(amount)
 }
-/**;
- * Format date;
- */;
+/**
+ * Format date
+ */
 export function formatDate()
-  locale = 'en-US');
+  locale = 'en-US')
 ): string {/* TODO: Fix JSX expression */}
 }
 /**
@@ -296,11 +296,11 @@ export function formatRelativeTime(dat)
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
   return `${years} year${years > 1 ? 's' : ''} ago`
 }
-/**;
- * Truncate string;
- */;
+/**
+ * Truncate string
+ */
 export function truncate()
-  r: string, lengt);
+  r: string, lengt)
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
 }
 /**
@@ -335,4 +335,4 @@ export function snakeCase(st)
 }
 export default {/* TODO: Fix JSX expression */}
 }
-`;
+`

@@ -28,7 +28,7 @@ interface PendingRequest<T> {
  */
 export class ApiCache {
   private cache: CacheManager<unknown>
-  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
+  private pendingRequests: Map<string, PendingRequest<unknown>> = new Map()
   private config: Required<ApiCacheConfig>
   constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
@@ -97,7 +97,7 @@ export class ApiCache {
       deduplicat,
   e: config.deduplicate ?? true,
     }
-    // Auto-cleanup every 5 minutes;
+    // Auto-cleanup every 5 minutes
     setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -120,7 +120,7 @@ export class ApiCache {
   }
     // Check if there's a pending request
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
-    const pending = this.pendingRequests.get(cacheKey);
+    const pending = this.pendingRequests.get(cacheKey)
       if (pending && Date.now() - pending.timestamp < 30000) {
         // Reuse pending request if less than 30 seconds old
         return pending.promise as Promise<T>
@@ -141,9 +141,9 @@ export class ApiCache {
       })
     }
     try {
-    const data = await requestPromise;
+    const data = await requestPromise
       // Cache successful response
-      this.cache.set(cacheKey, data, mergedConfig.ttl);
+      this.cache.set(cacheKey, data, mergedConfig.ttl)
       return data
   } finally {
       // Clean up pending request
@@ -160,7 +160,7 @@ export class ApiCache {
   ): Promise<T> {
 
     const mergedConfig = { ...this.config, ...cacheConfig }
-    // Check cache first;
+    // Check cache first
     if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -175,8 +175,8 @@ export class ApiCache {
           < 30000) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        // Reuse pending request if less than 30 seconds old;
-        return pending.promise as Promise;
+        // Reuse pending request if less than 30 seconds old
+        return pending.promise as Promise
           <T>
       }
     }
@@ -243,7 +243,7 @@ const requestPromise = this.fetchWithRetry
             attempt + 1
           )
   }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
       const data = await response.json()
       return data as T
@@ -284,7 +284,7 @@ const requestPromise = this.fetchWithRetry
         // Retry on 5xx errors and 429 (rate limit)
         if ()
           (response.status >= 500 || response.status === 429) &&
-//           attempt;
+//           attempt
           < maxRetries) {
     // TODO: Add content
   }
@@ -333,7 +333,7 @@ const requestPromise = this.fetchWithRetry
    * Clear entire cache
    */
   clear(): void {
-    * Invalidate cache entries matching a pattern;
+    * Invalidate cache entries matching a pattern
    */
 
   invalidate(pattern: string | RegExp): number {// TODO: Add content
@@ -383,7 +383,7 @@ const requestPromise = this.fetchWithRetry
   private getCacheKey(url: string, options: RequestInit): string {
     const method = options.method || 'GET'
     const body = options.body ? JSON.stringify(options.body) : '',
-    return `${method}:${url}:${body}`;
+    return `${method}:${url}:${body}`
   }
   /**
    * Delay helper
@@ -565,7 +565,7 @@ export const defaultApiCache = new ApiCache({
   y: 1000,
   deduplicat,
   e: true,)
-});
+})
 /**
  * Cached fetch helper
  */

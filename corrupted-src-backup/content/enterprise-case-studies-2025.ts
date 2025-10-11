@@ -9,7 +9,7 @@ export interface EnterpriseCaseStudy {
   solution: string
   results: string
   metrics: {
-    costSavings: string;
+    costSavings: string
     efficiencyGain: string
     roi: string
     timeline: string,

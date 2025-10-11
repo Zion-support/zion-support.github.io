@@ -1,17 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { prisma } from '@/lib/prisma';
+import { NextRequest, NextResponse } from 'next/server'
+import { getServerSession } from 'next-auth'
+import { prisma } from '@/lib/prisma'
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession();
+    const session = await getServerSession()
 if (!session?.user?.email) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email }
       data: { onboardingCompleted: true }
-    });
+    })
     return NextResponse.json(
       {
         message: 'Onboarding completed successfully'
@@ -24,9 +24,9 @@ if (!session?.user?.email) {
         },
       },
       { status: 200 }
-    );
+    )
   } catch (error) {
-    console.error('Onboarding completion error:', error);
+    console.error('Onboarding completion error:', error)
     return NextResponse.json(
           id: updated_user.id,
           name: updated_user.name,
@@ -36,51 +36,51 @@ if (!session?.user?.email) {
         },
       },
       { status: 200 }
-    );
+    )
   } catch (error) {
-    console.error ('Onboarding completion error:', error);
+    console.error ('Onboarding completion error:', error)
     return NextResponse.json (
       { error: 'Internal server error' },
-import { NextRequest, NextResponse } from "next/server",;
-import { getServerSession } from "next-auth",;
-import { prisma } from "@/lib/prisma",;
-export async function POST(request: NextRequest) {;
-  try {;
-    const session = await getServerSession(),;
-    if (!session?.user?.email) {;
-      return NextResponse.json(;
-        { error: "Unauthorized" },;
+import { NextRequest, NextResponse } from "next/server",
+import { getServerSession } from "next-auth",
+import { prisma } from "@/lib/prisma",
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession(),
+    if (!session?.user?.email) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
         { status: 401 }
-      );
+      )
     }
-;
-    // Update user's onboarding status;
-    const updatedUser = await prisma.user.update({;
-      where: { email: session.user.email },;
-      data: { onboardingCompleted: true }}),;
-    return NextResponse.json(;
-      {;
-        message: "Onboarding completed successfully",;
-        user: {;
-          id: updatedUser.id,;
-          name: updatedUser.name,;
-          email: updatedUser.email,;
-          role: updatedUser.role,;
+
+    // Update user's onboarding status
+    const updatedUser = await prisma.user.update({
+      where: { email: session.user.email },
+      data: { onboardingCompleted: true }}),
+    return NextResponse.json(
+      {
+        message: "Onboarding completed successfully",
+        user: {
+          id: updatedUser.id,
+          name: updatedUser.name,
+          email: updatedUser.email,
+          role: updatedUser.role,
           onboardingCompleted: updatedUser.onboardingCompleted}
-      },;
+      },
       { status: 200 }
-    );
-  } catch (error) {;
-    console.error("Onboarding completion error:", error);
-    return NextResponse.json(;
-      { error: "Internal server error" };
+    )
+  } catch (error) {
+    console.error("Onboarding completion error:", error)
+    return NextResponse.json(
+      { error: "Internal server error" }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
-    );
+    )
   }
 export async function POST(request: NextRequest) { try {
-    const body = await request.json();
-    const { userId, preferences  } = body;
+    const body = await request.json()
+    const { userId, preferences  } = body
     // Mock user update - replace with actual database operation
     const updatedUser = {
       id: userId,
@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) { try {
       role: 'user',
       onboardingCompleted: true,
       preferences
-    };
+    }
     return NextResponse.json({
       message: "Onboarding completed successfully",
       user: {
@@ -100,38 +100,38 @@ export async function POST(request: NextRequest) { try {
         onboardingCompleted: updatedUser.onboardingCompleted
       }
       { status: 200 }
-    );
+    )
   } catch (error) {
-    console.error('Onboarding completion error:', error);
+    console.error('Onboarding completion error:', error)
     return NextResponse.json(
       { error: 'Internal server error' }
       { error: 'Internal server error' },
       { status: 500 }
-    );
+    )
   }
 }
       { status: 500 }
-    );
+    )
   }
 }
 }
-import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { prisma } from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server"
+import { getServerSession } from "next-auth"
+import { prisma } from "@/lib/prisma"
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession();
+    const session = await getServerSession()
     if (!session?.user?.email) {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
-      );
+      )
     }
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email },
       data: { onboardingCompleted: true },
-    });
+    })
     return NextResponse.json(
       { 
         message: "Onboarding completed successfully",
@@ -144,12 +144,12 @@ export async function POST(request: NextRequest) {
         }
       },
       { status: 200 }
-    );
+    )
   } catch (error) {
-    console.error("Onboarding completion error:", error);
+    console.error("Onboarding completion error:", error)
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
-    );
+    )
   }
 }

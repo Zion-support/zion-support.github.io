@@ -61,7 +61,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ]
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
   return (
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
@@ -132,21 +132,21 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   ]
   return ()
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)$2 />
   g:px-8">",),
   return (</div>
-    <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+    <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">"
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">",</div>
-        <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
+        <div, className="flex, justif, y-between, item, s-cente, r, h-16">"
           {/* Lo, g, o */}</div>
-          <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";
+          <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">"
             <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">"</div>
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";"
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g: px-8">","
-        <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
+        <div, className="flex, justif, y-between, item, s-cente, r, h-16">"
           {/* Lo, g, o */}"
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";"
             <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
@@ -279,16 +279,16 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,"
 <nav, className="flex, fle, x-col, spac, e-y-1">"
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e
+<, ke, y={it, e, m.na, m, e$2 />
   }
 }>
-                  <Li, n, k;
-<div, className="m
+                  <Li, n, k
+<, className="m$2 />
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,"</div>
-<nav, className="flex, fle, x-col, spac, e-y-1">";
+<nav, className="flex, fle, x-col, spac, e-y-1">"
 {
     navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e
+<, ke, y={it, e, m.na, m, e$2 />
   }></div>
                   <Li, n, k
   to={it, e, m.hr, e, f}
@@ -343,6 +343,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         )}
       </d, i, v>
     </head, e, r>
-  );
+  )
 }
 export default ModernHeader;"
+</div></div></div></div></div></div></div></div></span></span></Link></Link></a></a></a></a></p></p></p></header></header></header></header></header></nav></nav></nav></nav></nav>

@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Merge Analysis and Improvement Branches;
- * This script will merge all the analysis and improvement branches;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Merge Analysis and Improvement Branches
+ * This script will merge all the analysis and improvement branches
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 // //Step 1: Ensure we're on main and up to date,
 // try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -36,8 +35,7 @@ import fs from 'fs';
   'cursor/analyze-improve-and-deploy-application-360 d',
   'cursor/analyze-improve-and-deploy-application-3647',
   'cursor/analyze-improve-and-deploy-application-3 cc7',
-  'cursor/analyze-improve-and-deploy-application-3 db4'];
-
+  'cursor/analyze-improve-and-deploy-application-3 db4']
 // //Step 3: Enhanced merge function with conflict resolution,
 function mergeAnalysisBranch(branchName) {,
 //   try {,
@@ -46,8 +44,7 @@ function mergeAnalysisBranch(branchName) {,
     //Try direct merge first
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`)
       { stdio: 'inherit' }
-    );
-
+    )
 //     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
@@ -81,8 +78,7 @@ function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
           `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }
-        );
-
+        )
 //         return { success: true, method: 'ours' }
       } catch (oursError) {
 //         //Abort and skip
@@ -133,8 +129,7 @@ for (const branch of analysisBranches) {/* TODO: Fix JSX expression */}
 //Step 5: Generate report,
 fs.writeFileSync('analysis-merge-report.json'),
   JSON.stringify(results, null, 2)
-);
-
+)
 //Step 6: Display summary,
 // // // // // // // // // // if (results.failed.length > 0) {,
 //   //   results.failed.forEach(branch => // console.log(`  - ${branch}`))

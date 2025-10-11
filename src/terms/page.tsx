@@ -80,7 +80,7 @@ export default function TermsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Terms of Service,
-  </
+  
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
             <div className="flex flex-wrap justify-center gap-4">
@@ -230,7 +230,7 @@ export default function TermsPage() {
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
-  </
+  
           </div>
         </div>
       </section>
@@ -239,3 +239,4 @@ export default function TermsPage() {
 }
   </a>
   </h1>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>

@@ -4,14 +4,14 @@ import React from 'react'
  * Jest setup file for testing environment
  */
 /* eslint-disable no-console */
-import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder;
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-// Suppress jsdom navigation warnings;
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console;
-const __originalConsoleError = console.error;
+import '@testing-library/jest-dom'
+// Polyfill for TextEncoder/TextDecoder
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder
+// Suppress jsdom navigation warnings
+const originalConsoleError = console.error
+// eslint-disable-next-line no-console
+const __originalConsoleError = console.error
 console.error = (...args) => {
     // TODO: Add content
   }
@@ -21,16 +21,16 @@ console.error = (...args) => {
 const originalConsoleError = console.error
 // eslint-disable-next-line no-console
 console.error = (...args) => {
-    const message = args[0]?.toString?.() || args[0]?.message || '';
+    const message = args[0]?.toString?.() || args[0]?.message || ''
   if (message.includes('Not implemented: navigation') ||
       message.includes('navigation (except hash changes)')) {// TODO: Add content
   }
 }
     return
   }
-  originalConsoleError(...args);
+  originalConsoleError(...args)
 }
-// Mock window.matchMedia;
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
     // TODO: Add content
   }
@@ -49,11 +49,11 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
-// Mock requestAnimationFrame;
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-// Mock localStorage;
+})
+// Mock requestAnimationFrame
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
+// Mock localStorage
 const localStorageMock = {
     // TODO: Add content
   }
@@ -71,9 +71,9 @@ Object.defineProperty(window, 'localStorage', {
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
   // TODO: Add content,
 }
-  value: sessionStorageMock;
-// Mock fetch;
-global.fetch = jest.fn();
+  value: sessionStorageMock
+// Mock fetch
+global.fetch = jest.fn()
 // Mock console methods for cleaner test output
 // Mock console methods for cleaner test output
 // eslint-disable-next-line no-console
@@ -90,21 +90,21 @@ console.warn = (...args) => {
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
   // TODO: Add content,
 }
-    return; // Suppress JSDOM navigation warnings;
-// Mock window.location;
-delete (window as unknown as Record;
-          <string, unknown>).location;
+    return; // Suppress JSDOM navigation warnings
+// Mock window.location
+delete (window as unknown as Record
+          <string, unknown>).location
 (window as unknown as Record<string, unknown>).location = {
     // TODO: Add content
   }
 }
 // eslint-disable-next-line no-console
 console.info = (...args) => {
-    const message = args[0]?.toString?.() || '';
+    const message = args[0]?.toString?.() || ''
   if (message.includes('ReactDOM.render is no longer supported')) {
     return
   }
-  originalConsoleInfo(...args);
+  originalConsoleInfo(...args)
 }
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -122,7 +122,7 @@ console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError(...args);
+  originalConsoleError(...args)
 }
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location

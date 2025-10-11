@@ -11,7 +11,7 @@ export interface EnvConfig {
 
 }
   NODE_EN,
-  V: 'development' | 'production' | 'test';
+  V: 'development' | 'production' | 'test'
   NEXT_PUBLIC_API_URL?: string
   NEXT_PUBLIC_GA_ID?: string
   NEXT_PUBLIC_SITE_URL?: string,
@@ -67,7 +67,7 @@ ${validation.errors.join('
     if (validation.warnings.length > 0) {
     const nodeEnv = process.env['NODE_ENV']
   }
-    const validEnvs = ['development', 'production', 'test'];
+    const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

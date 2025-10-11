@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
     const features = [
     {
@@ -49,7 +49,7 @@ return (
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -66,7 +66,7 @@ return (
               <span className="text-white">Solutions</span>
             </h1>
             <p>
-              Transform your business with our advanced page solutions.;
+              Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -112,9 +112,8 @@ return (
       </section>
     </div>
   ),
-};
-
-export default PagePage;
+}
+export default PagePage
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

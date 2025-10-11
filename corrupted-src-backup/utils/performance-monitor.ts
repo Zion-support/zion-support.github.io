@@ -18,7 +18,7 @@ class PerformanceMonitor {
       fcp: null
       ttfb: null
       navigationStart: performance.now()
-      loadTime: 0;
+      loadTime: 0
       domContentLoaded: 0
       firstPaint: null
       firstContentfulPaint: null,
@@ -72,8 +72,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         if (entry.name === 'first-paint') {,
           this.metrics.firstPaint = entry.startTime
   } else if (entry.name === 'first-contentful-paint') {
-          this.metrics.firstContentfulPaint = entry.startTime;
-          this.metrics.fcp = entry.startTime;
+          this.metrics.firstContentfulPaint = entry.startTime
+          this.metrics.fcp = entry.startTime
   private processPerformanceEntry(entr)
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
         } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
@@ -110,9 +110,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
           }
 
-          this.interactions.push(interaction);
-
-          // Keep only last 100 interactions;
+          this.interactions.push(interaction)
+          // Keep only last 100 interactions
           if (this.interactions.length > 100) {
             this.interactions = this.interactions.slice(-100)
           if (this.interactions.length > 100) {/* TODO: Fix JSX expression */}
@@ -135,13 +134,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // Measure page load time
     window.addEventListener('load', () => {
     this.metrics.loadTime = performance.now() - this.metrics.navigationStart
-  });
-
-    // Measure DOM content loaded;
+  })
+    // Measure DOM content loaded
     document.addEventListener('DOMContentLoaded', () => {
     this.metrics.domContentLoaded =
         performance.now() - this.metrics.navigationStart
-  });
+  })
   }
 
   private trackPageLoadMetrics(): void {
@@ -182,21 +180,21 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor: >4s),
     if (lcp !== null) {
     ,
-      if (lcp > 4000) score -= 30;
+      if (lcp > 4000) score -= 30
       else if (lcp > 2500) score -= 15
   }
 
     // FID scoring (Good: <100ms, Needs Improvement: 100-300ms, Poor: >300ms),
     if (fid !== null) {
     ,
-      if (fid > 300) score -= 30;
+      if (fid > 300) score -= 30
       else if (fid > 100) score -= 15
   }
 
     // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor: >0.25),
     if (cls !== null) {
     ,
-      if (cls > 0.25) score -= 30;
+      if (cls > 0.25) score -= 30
       else if (cls > 0.1) score -= 15
   }
 

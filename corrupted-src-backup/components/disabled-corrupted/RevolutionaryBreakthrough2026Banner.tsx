@@ -207,7 +207,8 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default RevolutionaryBreakthrough2026Banner;
+export default RevolutionaryBreakthrough2026Banner
 `
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></Link></Link></p></p></p></p></h2></h2></h3></h3></h3>

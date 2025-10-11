@@ -1,15 +1,12 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin } from 'lucide-react'
 const AISmartContractAuditor: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+    setIsVisible(true)
+  }, [])
   const features = [
     {
       icon: Shield,
@@ -35,7 +32,7 @@ const AISmartContractAuditor: React.FC = () => {
       description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis'],
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -85,10 +82,9 @@ const AISmartContractAuditor: React.FC = () => {
         'White-label solutions',
         'On-site consultation'
       ],
-      popular: false;
-    };
-  ];
-
+      popular: false
+    }
+  ]
   const useCases = [
     {
       title: 'DeFi Protocol Audits',
@@ -112,10 +108,9 @@ const AISmartContractAuditor: React.FC = () => {
       title: 'Cross-Chain Bridge Audits',
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
-      results: 'Prevented $50M+ in potential losses';
-    };
-  ];
-
+      results: 'Prevented $50M+ in potential losses'
+    }
+  ]
   return (
     <>
       <Helmet>
@@ -167,14 +162,14 @@ const AISmartContractAuditor: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><a
+                </div><$2 />
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
                 >
                   </a><Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
                 </a>
-                <a
+                <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
                 >
@@ -188,7 +183,7 @@ const AISmartContractAuditor: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Advanced AI Security Features
@@ -201,7 +196,7 @@ const AISmartContractAuditor: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
                 >
@@ -226,7 +221,7 @@ const AISmartContractAuditor: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Trusted by Leading Projects
@@ -239,7 +234,7 @@ const AISmartContractAuditor: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
                 >
@@ -259,7 +254,7 @@ const AISmartContractAuditor: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                 Transparent Pricing
@@ -272,7 +267,7 @@ const AISmartContractAuditor: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     plan.popular 
@@ -306,7 +301,7 @@ const AISmartContractAuditor: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <a href="tel:+13024640950"
+                  < href="tel:+13024640950"$2 />
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
@@ -322,7 +317,7 @@ const AISmartContractAuditor: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          </section><div className="
+          </section>< className="$2 />
             </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Secure Your Smart Contracts Today
             </h2>
@@ -331,14 +326,14 @@ const AISmartContractAuditor: React.FC = () => {
               with our advanced security analysis platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><a
+              </div><$2 />
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
               >
                 </a><Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
               </a>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
               >
@@ -350,7 +345,6 @@ const AISmartContractAuditor: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default AISmartContractAuditor;
+  )
+}
+export default AISmartContractAuditor

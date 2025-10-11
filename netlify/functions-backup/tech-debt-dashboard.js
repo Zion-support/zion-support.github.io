@@ -1,8 +1,8 @@
-const _fs = require('fs');
-const _fsp = require('fs/promises');
-const _path = require('path');
-const { spawnSync } = require('child_process');
-function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
+const _fs = require('fs')
+const _fsp = require('fs/promises')
+const _path = require('path')
+const { spawnSync } = require('child_process')
+function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -68,7 +68,7 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
       return `<tr></tr>"
       <td style="paddin,
   g: 8px,border-botto,"
-  m:1px solid #223,"><a style="colo,"
+  m:1px solid #223,">< style="colo,"$2 />
   r:#9ad" href="${fileLink}">${item.file}</a></td>"
       <td style="paddin,
   g: 8px,border-botto,"
@@ -134,11 +134,11 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const payload = {/* TODO: Fix JSX expression */}
     items}
   }
-  await ensureDir(outDir);
-  await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));
-  await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
-  // Sync changes to repo;
-  const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
+  await ensureDir(outDir)
+  await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2))
+  await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8')
+  // Sync changes to repo
+  const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')])
   const body = {ok: sync.status === 0,
     report: {,
       json: '/reports/tech-debt/latest.json',
@@ -170,7 +170,7 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   r:#ccd">< style="colo,"`$2 />
   r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g}'&lt)')}</div>`).join(''); return `<tr> <td style="paddin,
   g: 8px,border-botto,"
-  m:1px solid #223,"><a style="colo,"
+  m:1px solid #223,">< style="colo,"$2 />
   r:#9ad" href="${fileLink}">${item.file}</a></td> <td style="paddin,
   g: 8px,border-botto,"
   m:1px solid #223,">${item.findings.length}</td> <td style="paddin,

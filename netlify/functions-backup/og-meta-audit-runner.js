@@ -9,18 +9,18 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {
       statusCode: 200,
-      body: JSON.stringify({ ok: true} tool: 'og-meta-audit-runner' });
+      body: JSON.stringify({ ok: true} tool: 'og-meta-audit-runner' })
     }
   } catch (e) {return {
       statusCode: 200,
-      body: JSON.stringify({ ok: false} error: String(e) });
+      body: JSON.stringify({ ok: false} error: String(e) })
     return {/* TODO: Fix JSX expression */}
   k: true} too,
-  l: 'og-meta-audit-runner' });
+  l: 'og-meta-audit-runner' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
+  r: String(e) })
     }
   }
 }

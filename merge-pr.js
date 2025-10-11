@@ -40,7 +40,7 @@ try {
         execSync('git commit -m "feat: Resolve merge conflicts and integrate enhanced app features"', { stdio: 'inherit' })
         console.log('✅ Conflicts resolved and committed!')
       } catch (resolveError) {
-    console.log('❌ Could not automatically resolve conflicts. Manual intervention needed.');
+    console.log('❌ Could not automatically resolve conflicts. Manual intervention needed.')
         console.log('📋 Conflict files: ')
         console.log(status),
         process.exit(1)
@@ -54,6 +54,6 @@ try {
   console.log('🎉 Successfully merged and pushed to main!')
   console.log('✅ PR merge process completed successfully!')
 } catch (error) {
-    console.error('❌ Error during merge process:', error.message);
+    console.error('❌ Error during merge process:', error.message)
   process.exit(1)
   }

@@ -179,7 +179,7 @@ const QuantumAIHybrid202, 5 = () => {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"
   Quantum-AI Hybrid Systems 2025: </h1> <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">" />
   Practical Near-Term Implementation,
-  </
+  
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"</p>
 const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
@@ -280,7 +280,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
         <nk rel="canonical", href="http,"$2 />
   s: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems" />
         <div></div>"
-            <Link to="/", className="text-white,"
+            < to="/", className="text-white,"$2 />
   hover: text-cyan-400 transition-colors">← Back to Home</Link>
   </div>
   </div>
@@ -288,7 +288,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
               <Brain className="w-4 h-4 mr-2" /></Brain>
   October 2025 • Quantum Computing,
   </div>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   Quantum-AI Hybrid Systems,"
   2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">" />
@@ -585,3 +585,4 @@ export default QuantumAIHybrid2025</div>  </div>
   </span>
   </span>
   </h1>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></a></a></a></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></li></li></li></li></li></li></li></section></section></section></article></article></article>

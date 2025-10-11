@@ -145,18 +145,16 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
   }
 
-  const _files = fs.readdirSync(functionsDir);
-  let _removedCount = 0;
-  let _keptCount = 0;
-
+  const _files = fs.readdirSync(functionsDir)
+  let _removedCount = 0
+  let _keptCount = 0
   files.forEach(file => {
     )
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
         const _filePath = path.join(functionsDir, file)
         try {
-          fs.unlinkSync(filePath);
-
+          fs.unlinkSync(filePath)
           removedCount++
   } catch (error) {}
       } else {
@@ -167,8 +165,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
+  })
 }
 
 // Run the cleanup

@@ -1,9 +1,9 @@
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
   const, blogPost, s = [
     {
-      i;
+      i
   d: 1,
-      tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2;
+      tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2
   6: From, Concept, to Implementati, o, n','
       sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-20, 2, 6','
       excer, p, t: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.','
@@ -13,8 +13,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Sarah, Che, n','
       vie, w, s: '12, 5, K','
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: tr, u, e
+      featur, e, d: tr, u, e
       ic, o, n: <Brain, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'FEATUR, E, D','
@@ -22,7 +22,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     }
     {
       id: 2,
-      tit, l, e: 'Quantum, Computing, Breakthrough;
+      tit, l, e: 'Quantum, Computing, Breakthrough
   s: The, Future, of AI, Processin, g','
       sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-processi, n, g','
       excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000 x, processing, speed improvemen, t, s.','
@@ -32,8 +32,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. Michael, Rodrigue, z','
       vie, w, s: '9, 8, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e
+      featur, e, d: fal, s, e
       ic, o, n: <Zap, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'TRENDI, N, G','
@@ -41,7 +41,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     }
     {
       id: 3,
-      tit, l, e: 'Enterprise, AI, Implementatio;
+      tit, l, e: 'Enterprise, AI, Implementatio
   n: A, Ste, p-by-Step, Success, Guide','
       sl, u, g: 'enterpri, s, e-ai-implementati, o, n-succe, s, s-gui, d, e','
       excer, p, t: 'Learn, how, to successfully, implement, AI in, your, enterprise. This, comprehensive, guide covers, strateg, y, planni, n, g, executi, o, n, and, optimization, for maximum, RO, I.','
@@ -51,8 +51,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Jennifer, Li, u','
       vie, w, s: '8, 7, K','
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: tr, u, e
+      featur, e, d: tr, u, e
       ic, o, n: <Award, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'POPUL, A, R','
@@ -60,7 +60,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     }
     {
       id: 4,
-      tit, l, e: 'Se, l, f-Evolving, AI, System;
+      tit, l, e: 'Se, l, f-Evolving, AI, System
   s: The, Next, Frontier of, Artificial, Intelligence','
       sl, u, g: 'se, l, f-evolvi, n, g-ai-syste, m, s-ne, x, t-fronti, e, r','
       excer, p, t: 'Discover, how, self-evolving, AI, systems are, reshaping, the landscape, of, artificial intelligen, c, e. Learn, about, autonomous learni, n, g, se, l, f-modificati, o, n, and, continuous, improvement.','
@@ -70,8 +70,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Alex, Thompso, n','
       vie, w, s: '7, 6, K','
       rati, n, g: 4.7,
-      trendi, n, g: fal, s, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: fal, s, e
+      featur, e, d: fal, s, e
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'INNOVATI, O, N','
@@ -79,7 +79,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     }
     {
       id: 5,
-      tit, l, e: 'Predictive, Analytics, Revolutio;
+      tit, l, e: 'Predictive, Analytics, Revolutio
   n: Forecasting, the, Future with, 9, 9.9% Accura, c, y','
       sl, u, g: 'predicti, v, e-analyti, c, s-revoluti, o, n-forecasti, n, g-futu, r, e','
       excer, p, t: 'Explore, the, revolutionary advances, in, predictive analyti, c, s. Learn, how, AI-powered, forecasting, achieves 99.9% accuracy, in, predicting business, trends, and market, dynamic, s.','
@@ -89,8 +89,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Maria, Santo, s','
       vie, w, s: '9, 2, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e
+      featur, e, d: fal, s, e
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'ANALYTI, C, S','
@@ -98,7 +98,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
     }
     {
     id: 6,
-      tit, l, e: 'AI, Ethics, and Governa, n, c;
+      tit, l, e: 'AI, Ethics, and Governa, n, c
   e: Building, Responsible, AI Syste, m, s','
       sl, u, g: 'ai-ethi, c, s-governan, c, e-responsib, l, e-ai-syste, m, s','
       excer, p, t: 'Learn, about, the critical, importance, of AI, ethics, and governance, in, building responsible, AI, systems. Discover, frameworks, for ethical, AI, deployment and, complianc, e.','
@@ -108,123 +108,123 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. David, Ki, m','
       vie, w, s: '6, 8, K','
       rati, n, g: 4.9,
-      trendi, n, g: fal, s, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: fal, s, e
+      featur, e, d: tr, u, e
       ic, o, n: <Award, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'ETHI, C, S','
       ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']'
-      tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2;
-  6: From, Concept, to Implementati, o, n',';
-      sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-20, 2, 6',';
-      excer, p, t: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',';
-      catego, r, y: 'AI, Revolutio, n',';
-      da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '25, mi, n',';
-      auth, o, r: 'Dr. Sarah, Che, n',';
-      vie, w, s: '12, 5, K',';
+      tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2
+  6: From, Concept, to Implementati, o, n','
+      sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-20, 2, 6','
+      excer, p, t: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.','
+      catego, r, y: 'AI, Revolutio, n','
+      da, t, e: '20, 2, 6-01-20','
+      readTi, m, e: '25, mi, n','
+      auth, o, r: 'Dr. Sarah, Che, n','
+      vie, w, s: '12, 5, K','
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
-      ic, o, n: <Brain, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
-      bad, g, e: 'FEATUR, E, D',';
+      trendi, n, g: tr, u, e
+      featur, e, d: tr, u, e
+      ic, o, n: <Brain, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
+      bad, g, e: 'FEATUR, E, D','
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
   }
     {
     id: 2,
-      tit, l, e: 'Quantum, Computing, Breakthrough;
-  s: The, Future, of AI, Processin, g',';
-      sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-processi, n, g',';
-      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000 x, processing, speed improvemen, t, s.',';
-      catego, r, y: 'Quantum, Computin, g',';
-      da, t, e: '20, 2, 6-01-19',';
-      readTi, m, e: '18, mi, n',';
-      auth, o, r: 'Pr, o, f. Michael, Rodrigue, z',';
-      vie, w, s: '9, 8, K',';
+      tit, l, e: 'Quantum, Computing, Breakthrough
+  s: The, Future, of AI, Processin, g','
+      sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-processi, n, g','
+      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000 x, processing, speed improvemen, t, s.','
+      catego, r, y: 'Quantum, Computin, g','
+      da, t, e: '20, 2, 6-01-19','
+      readTi, m, e: '18, mi, n','
+      auth, o, r: 'Pr, o, f. Michael, Rodrigue, z','
+      vie, w, s: '9, 8, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
-      ic, o, n: <Zap, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
-      bad, g, e: 'TRENDI, N, G',';
+      trendi, n, g: tr, u, e
+      featur, e, d: fal, s, e
+      ic, o, n: <Zap, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
+      bad, g, e: 'TRENDI, N, G','
       ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'
   }
     {
     id: 3,
-      tit, l, e: 'Enterprise, AI, Implementatio;
-  n: A, Ste, p-by-Step, Success, Guide',';
-      sl, u, g: 'enterpri, s, e-ai-implementati, o, n-succe, s, s-gui, d, e',';
-      excer, p, t: 'Learn, how, to successfully, implement, AI in, your, enterprise. This, comprehensive, guide covers, strateg, y, planni, n, g, executi, o, n, and, optimization, for maximum, RO, I.',';
-      catego, r, y: 'Enterprise, A, I',';
-      da, t, e: '20, 2, 6-01-18',';
-      readTi, m, e: '22, mi, n',';
-      auth, o, r: 'Jennifer, Li, u',';
-      vie, w, s: '8, 7, K',';
+      tit, l, e: 'Enterprise, AI, Implementatio
+  n: A, Ste, p-by-Step, Success, Guide','
+      sl, u, g: 'enterpri, s, e-ai-implementati, o, n-succe, s, s-gui, d, e','
+      excer, p, t: 'Learn, how, to successfully, implement, AI in, your, enterprise. This, comprehensive, guide covers, strateg, y, planni, n, g, executi, o, n, and, optimization, for maximum, RO, I.','
+      catego, r, y: 'Enterprise, A, I','
+      da, t, e: '20, 2, 6-01-18','
+      readTi, m, e: '22, mi, n','
+      auth, o, r: 'Jennifer, Li, u','
+      vie, w, s: '8, 7, K','
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
-      ic, o, n: <Award, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
-      bad, g, e: 'POPUL, A, R',';
+      trendi, n, g: tr, u, e
+      featur, e, d: tr, u, e
+      ic, o, n: <Award, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
+      bad, g, e: 'POPUL, A, R','
       ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'
   }
     {
     id: 4,
-      tit, l, e: 'Se, l, f-Evolving, AI, System;
-  s: The, Next, Frontier of, Artificial, Intelligence',';
-      sl, u, g: 'se, l, f-evolvi, n, g-ai-syste, m, s-ne, x, t-fronti, e, r',';
-      excer, p, t: 'Discover, how, self-evolving, AI, systems are, reshaping, the landscape, of, artificial intelligen, c, e. Learn, about, autonomous learni, n, g, se, l, f-modificati, o, n, and, continuous, improvement.',';
-      catego, r, y: 'AI, Innovatio, n',';
-      da, t, e: '20, 2, 6-01-17',';
-      readTi, m, e: '20, mi, n',';
-      auth, o, r: 'Dr. Alex, Thompso, n',';
-      vie, w, s: '7, 6, K',';
+      tit, l, e: 'Se, l, f-Evolving, AI, System
+  s: The, Next, Frontier of, Artificial, Intelligence','
+      sl, u, g: 'se, l, f-evolvi, n, g-ai-syste, m, s-ne, x, t-fronti, e, r','
+      excer, p, t: 'Discover, how, self-evolving, AI, systems are, reshaping, the landscape, of, artificial intelligen, c, e. Learn, about, autonomous learni, n, g, se, l, f-modificati, o, n, and, continuous, improvement.','
+      catego, r, y: 'AI, Innovatio, n','
+      da, t, e: '20, 2, 6-01-17','
+      readTi, m, e: '20, mi, n','
+      auth, o, r: 'Dr. Alex, Thompso, n','
+      vie, w, s: '7, 6, K','
       rati, n, g: 4.7,
-      trendi, n, g: fal, s, e;
-      featur, e, d: fal, s, e;
-      ic, o, n: <Sparkles, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
-      bad, g, e: 'INNOVATI, O, N',';
+      trendi, n, g: fal, s, e
+      featur, e, d: fal, s, e
+      ic, o, n: <Sparkles, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
+      bad, g, e: 'INNOVATI, O, N','
       ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'
   }
     {
     id: 5,
-      tit, l, e: 'Predictive, Analytics, Revolutio;
-  n: Forecasting, the, Future with, 9, 9.9% Accura, c, y',';
-      sl, u, g: 'predicti, v, e-analyti, c, s-revoluti, o, n-forecasti, n, g-futu, r, e',';
-      excer, p, t: 'Explore, the, revolutionary advances, in, predictive analyti, c, s. Learn, how, AI-powered, forecasting, achieves 99.9% accuracy, in, predicting business, trends, and market, dynamic, s.',';
-      catego, r, y: 'Predictive, Analytic, s',';
-      da, t, e: '20, 2, 6-01-16',';
-      readTi, m, e: '16, mi, n',';
-      auth, o, r: 'Dr. Maria, Santo, s',';
-      vie, w, s: '9, 2, K',';
+      tit, l, e: 'Predictive, Analytics, Revolutio
+  n: Forecasting, the, Future with, 9, 9.9% Accura, c, y','
+      sl, u, g: 'predicti, v, e-analyti, c, s-revoluti, o, n-forecasti, n, g-futu, r, e','
+      excer, p, t: 'Explore, the, revolutionary advances, in, predictive analyti, c, s. Learn, how, AI-powered, forecasting, achieves 99.9% accuracy, in, predicting business, trends, and market, dynamic, s.','
+      catego, r, y: 'Predictive, Analytic, s','
+      da, t, e: '20, 2, 6-01-16','
+      readTi, m, e: '16, mi, n','
+      auth, o, r: 'Dr. Maria, Santo, s','
+      vie, w, s: '9, 2, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
-      ic, o, n: <TrendingUp, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
-      bad, g, e: 'ANALYTI, C, S',';
+      trendi, n, g: tr, u, e
+      featur, e, d: fal, s, e
+      ic, o, n: <TrendingUp, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
+      bad, g, e: 'ANALYTI, C, S','
       ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'
   }
     {
       id: 6,
-      tit, l, e: 'AI, Ethics, and Governa, n, c;
-  e: Building, Responsible, AI Syste, m, s',';
-      sl, u, g: 'ai-ethi, c, s-governan, c, e-responsib, l, e-ai-syste, m, s',';
-      excer, p, t: 'Learn, about, the critical, importance, of AI, ethics, and governance, in, building responsible, AI, systems. Discover, frameworks, for ethical, AI, deployment and, complianc, e.',';
-      catego, r, y: 'AI, Ethic, s',';
-      da, t, e: '20, 2, 6-01-15',';
-      readTi, m, e: '19, mi, n',';
-      auth, o, r: 'Pr, o, f. David, Ki, m',';
-      vie, w, s: '6, 8, K',';
+      tit, l, e: 'AI, Ethics, and Governa, n, c
+  e: Building, Responsible, AI Syste, m, s','
+      sl, u, g: 'ai-ethi, c, s-governan, c, e-responsib, l, e-ai-syste, m, s','
+      excer, p, t: 'Learn, about, the critical, importance, of AI, ethics, and governance, in, building responsible, AI, systems. Discover, frameworks, for ethical, AI, deployment and, complianc, e.','
+      catego, r, y: 'AI, Ethic, s','
+      da, t, e: '20, 2, 6-01-15','
+      readTi, m, e: '19, mi, n','
+      auth, o, r: 'Pr, o, f. David, Ki, m','
+      vie, w, s: '6, 8, K','
       rati, n, g: 4.9,
-      trendi, n, g: fal, s, e;
-      featur, e, d: tr, u, e;
-      ic, o, n: <Award, className="w-6 h-6" />,";
-      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0',';
-      bad, g, e: 'ETHI, C, S',';
-      ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']';
+      trendi, n, g: fal, s, e
+      featur, e, d: tr, u, e
+      ic, o, n: <Award, className="w-6 h-6" />,"
+      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
+      bad, g, e: 'ETHI, C, S','
+      ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']'
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}

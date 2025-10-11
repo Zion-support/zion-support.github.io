@@ -19,7 +19,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
   classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
           sty, l, e={{ animationDel, a, y: '2s' }}
         ></d, i, v>
-        <d, i, v;
+        <d, i, v
 const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements - purely, decorativ, e */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">";"
@@ -31,9 +31,9 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         <d, i, v;"
   classNa, m, e="absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
           sty, l, e={{ animationDel, a, y: '4s' }}
-          sty, l, e={{ animationDel, a, y: '2s' }}';
+          sty, l, e={{ animationDel, a, y: '2s' }}'
         ></d, i, v>
-        <d, i, v;
+        <d, i, v
         <d, i, v;"
   classNa, m, e="absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
           sty, l, e={{ animationDel, a, y: '4s' }}'
@@ -404,9 +404,10 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
         </d, i, v>)
       </d, i, v>)
     </secti, o, n>)
-  );
-});
-October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';
-October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';';
-export default October2025CognitiveMeshLaunchBanner;
+  )
+})
+October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r'
+October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';'
+export default October2025CognitiveMeshLaunchBanner
 "
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></li></li></li></li></section></article></article></article></nav></nav>

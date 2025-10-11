@@ -12,18 +12,18 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       body: JSON.stringify({)
         ok: true),
         tool: 'external-link-rel-auditor-runner'}
-      });
+      })
     }
   } catch (e) {return {
       statusCode: 200,
-      body: JSON.stringify({ ok: false} error: String(e) });
+      body: JSON.stringify({ ok: false} error: String(e) })
     return {/* TODO: Fix JSX expression */}
   l: 'external-link-rel-auditor-runner'}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
+  r: String(e) })
     }
   }
 }

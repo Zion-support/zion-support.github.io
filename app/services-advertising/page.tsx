@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 }
   ]
 const benefits = [
@@ -14,9 +14,9 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
 return ()
             ))}
           </div>
@@ -36,7 +36,6 @@ return ()
         </div>
       </section>
     </div>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage

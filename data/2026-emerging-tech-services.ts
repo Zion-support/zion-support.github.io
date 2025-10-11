@@ -1,48 +1,48 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  contact_info: unknown;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  contactInfo: unknown
+    mobile: string
+    email: string
+    address: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  contact_info: unknown
     mobile: string
     email: string
     address: string,
@@ -50,7 +50,7 @@
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
 ],,
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)
 }
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform',
@@ -155,7 +155,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     addres,
   s: string}
 export const,
-  emergingTechServices2026: EmergingTechService2026[] = [;
+  emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
 ]
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular),
@@ -252,7 +252,7 @@ export const,
     rating: 4.4
     reviews: 29,
   }
-];
+]
 export const getEmergingTechServices2026ByCategory = (category: string) =>,
   return emergingTechServices2026.filter(service => service.category === category)),
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
@@ -293,7 +293,7 @@ export const getEmergingTechServices2026ByCategory = (categor)
   g: 4.4,
     review,
   s: 29}
-];
+]
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>
   return emergingTechServices2026.filter(service => service.category === category)
@@ -987,7 +987,7 @@ export const,
     rating: 4 && 4.4
     reviews: 29,
   }
-];
+]
 export const getEmergingTechServices2026ByCategory = (category: string) =>,
   return emergingTechServices2026.filter(service => service.category === category),
     marketSiz,
@@ -1018,7 +1018,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   g: 4 && 4.4,
     review,
   s: 29}
-];
+]
 export const getEmergingTechServices2026ByCategory = (categor)
   y: string) =>,
   return emergingTechServices2026.filter(service => service.category === category)
@@ -1041,7 +1041,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     const _price = parseInt(service && service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice,
   })
-}    return price >= minPrice && price <= maxPrice;
+}    return price >= minPrice && price <= maxPrice
   })
 }
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
@@ -1068,7 +1068,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     rating: 4.9
     reviews: 18,
   }
-  // Blockchain & Web3 Solutions;
+  // Blockchain & Web3 Solutions
     id: 'ai-blockchain-intelligence-platform', name: 'AI Blockchain Intelligence Platform',
     tagline: 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', price: '$299',
     period: '/month',
@@ -1093,7 +1093,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     rating: 4.7
     reviews: 89,
   }
-  // Internet of Things (IoT) Platform;
+  // Internet of Things (IoT) Platform
     id: 'ai-iot-intelligence-platform', name: 'AI IoT Intelligence Platform',
     tagline: 'Intelligent IoT device management and data analytics with AI-powered automation', price: '$199',
     period: '/month',
@@ -1118,7 +1118,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     rating: 4.6
     reviews: 45,
   }
-  // Edge Computing & 5G Services;
+  // Edge Computing & 5G Services
     id: 'edge-computing-optimization-platform', name: 'Edge Computing Optimization Platform',
     tagline: 'Optimize edge computing performance and 5 G network efficiency with AI', price: '$399',
     period: '/month',
@@ -1168,7 +1168,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     rating: 4.4
     reviews: 34,
   }
-  // Robotics & Automation Services;
+  // Robotics & Automation Services
     id: 'ai-robotics-automation-platform', name: 'AI Robotics & Automation Platform',
     tagline: 'Intelligent robotics control and automation with AI-powered optimization', price: '$599',
     period: '/month',
@@ -1193,7 +1193,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
     rating: 4.3
     reviews: 18,
   }
-  // Digital Twin & Simulation;
+  // Digital Twin & Simulation
     id: 'ai-digital-twin-platform', name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights', price: '$349',
     period: '/month',
@@ -1653,8 +1653,8 @@ export const getEmergingTechServices2026ByCategory = (categor)
   return emergingTechServices2026.filter ()
     service => service.category === category),
 }
-export const getPopularEmergingTechServices2026 = () =>: unknown;
-  return emergingTechServices2026.filter (service => service.popular);
+export const getPopularEmergingTechServices2026 = () =>: unknown
+  return emergingTechServices2026.filter (service => service.popular)
 }
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
@@ -1685,9 +1685,9 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -1703,8 +1703,8 @@ export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number}
-export const getPopularEmergingTechServices2026 = () =>: unknown;
-  return emergingTechServices2026.filter (service => service.popular);
+export const getPopularEmergingTechServices2026 = () =>: unknown
+  return emergingTechServices2026.filter (service => service.popular)
 }
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
@@ -1723,7 +1723,7 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
 
 export interface EmergingTechService2026
 }
-export interface EmergingTechService2026;
+export interface EmergingTechService2026
 }
 i,
   d: string, nam,

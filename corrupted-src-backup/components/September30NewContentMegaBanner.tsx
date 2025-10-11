@@ -97,10 +97,10 @@ const, September30NewContentMegaBanne, r = () => {
         {/* Articles Grid */})
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
           {newArticles.map((article, index) => (
-            <Link;
+            <;$2 />
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs,
-  </
+  
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {newArticles.map((article, index) => (
@@ -162,7 +162,7 @@ const, September30NewContentMegaBanne, r = () => {
         </div>,
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-          <Link,
+          <,$2 />
             <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -196,7 +196,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>"
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
           </div>"
-          <h2 className="text-4xl,"
+          < className="text-4xl,"$2 />
   md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
             🚀 5 Revolutionary AI Breakthroughs,
         </div>
@@ -229,7 +229,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>"
             <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
               Explore Now,"
-              <Link className="w-5 h-5 group-hove,"
+              < className="w-5 h-5 group-hove,"$2 />
   r:translate-x-1 transition-transform" /></Link>
             </div>
           </Link>
@@ -254,7 +254,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
               <div className="text-sm text-blue-200">Market Impact
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
-          <Link
+          <$2 />
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />

@@ -1,10 +1,9 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
-
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
@@ -15,7 +14,7 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { hasError: false }
   }
 
@@ -33,17 +32,17 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleReload = () => {
-    window.location.reload();
+    window.location.reload()
   }
 
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/'
   }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -74,7 +73,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><button
+              </div><$2 />
                 onClick={this.handleReload}
                 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
@@ -82,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <span>Reload Page</span>
               </button>
               
-              <button
+              <$2 />
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
               >
@@ -95,7 +94,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div><p className="text-sm text-gray-400 mb-3">
                 Still having trouble? Contact our support team:
               </p>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                 </a><Phone className="w-4 h-4 mr-2" />
@@ -103,13 +102,13 @@ class ErrorBoundary extends Component<Props, State> {
               </a>
             </div>
             <div className="space-y-4">
-              <button
+              <$2 />
                 onClick={() => window.location.reload()}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 Refresh Page
               </button>
-              <button
+              <$2 />
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="block w-full text-gray-400 hover:text-cyan-400 transition-colors duration-200"
               >
@@ -134,6 +133,5 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children
   }
-};
-
-export default ErrorBoundary;
+}
+export default ErrorBoundary</$1></p>

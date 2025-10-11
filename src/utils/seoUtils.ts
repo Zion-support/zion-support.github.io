@@ -1,25 +1,24 @@
-'use client';
-
+'use client'
 /**
  * Advanced SEO Utilities for Zion Tech Group
  * Provides comprehensive SEO optimization functions
  */
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: any
+  robots?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 
 export class SEOUtils {
@@ -41,53 +40,47 @@ export class SEOUtils {
       modifiedTime,
       section,
       tags
-    } = data;
-
-    let metaTags = '';
-
+    } = data
+    let metaTags = ''
     // Basic meta tags
-    metaTags += `<title>${this.escapeHtml(title)}</title>\n`;
-    metaTags += `<meta name="description" content="${this.escapeHtml(description)}">\n`;
-    metaTags += `<meta name="keywords" content="${keywords.join(', ')}">\n`;
-    metaTags += `<meta name="author" content="${this.escapeHtml(author)}">\n`;
-    metaTags += `<meta name="robots" content="${robots}">\n`;
-
+    metaTags += `<title>${this.escapeHtml(title)}</title>\n`
+    metaTags += `<meta name="description" content="${this.escapeHtml(description)}">\n`
+    metaTags += `<meta name="keywords" content="${keywords.join(', ')}">\n`
+    metaTags += `<meta name="author" content="${this.escapeHtml(author)}">\n`
+    metaTags += `<meta name="robots" content="${robots}">\n`
     // Canonical URL
-    metaTags += `<link rel="canonical" href="${canonicalUrl}">\n`;
-
+    metaTags += `<link rel="canonical" href="${canonicalUrl}">\n`
     // Open Graph tags
-    metaTags += `<meta property="og:title" content="${this.escapeHtml(title)}">\n`;
-    metaTags += `<meta property="og:description" content="${this.escapeHtml(description)}">\n`;
-    metaTags += `<meta property="og:url" content="${canonicalUrl}">\n`;
-    metaTags += `<meta property="og:type" content="${ogType}">\n`;
-    metaTags += `<meta property="og:image" content="${ogImage}">\n`;
-    metaTags += `<meta property="og:site_name" content="Zion Tech Group">\n`;
-
+    metaTags += `<meta property="og:title" content="${this.escapeHtml(title)}">\n`
+    metaTags += `<meta property="og:description" content="${this.escapeHtml(description)}">\n`
+    metaTags += `<meta property="og:url" content="${canonicalUrl}">\n`
+    metaTags += `<meta property="og:type" content="${ogType}">\n`
+    metaTags += `<meta property="og:image" content="${ogImage}">\n`
+    metaTags += `<meta property="og:site_name" content="Zion Tech Group">\n`
     // Twitter Card tags
-    metaTags += `<meta name="twitter:card" content="${twitterCard}">\n`;
-    metaTags += `<meta name="twitter:title" content="${this.escapeHtml(title)}">\n`;
-    metaTags += `<meta name="twitter:description" content="${this.escapeHtml(description)}">\n`;
-    metaTags += `<meta name="twitter:image" content="${ogImage}">\n`;
-    metaTags += `<meta name="twitter:site" content="@ziontechgroup">\n`;
-    metaTags += `<meta name="twitter:creator" content="@ziontechgroup">\n`;
-
+    metaTags += `<meta name="twitter:card" content="${twitterCard}">\n`
+    metaTags += `<meta name="twitter:title" content="${this.escapeHtml(title)}">\n`
+    metaTags += `<meta name="twitter:description" content="${this.escapeHtml(description)}">\n`
+    metaTags += `<meta name="twitter:image" content="${ogImage}">\n`
+    metaTags += `<meta name="twitter:site" content="@ziontechgroup">\n`
+    metaTags += `<meta name="twitter:creator" content="@ziontechgroup">\n`
     // Additional meta tags
     if (publishedTime) {
-      metaTags += `<meta property="article:published_time" content="${publishedTime}">\n`;
+      metaTags += `<meta property="article:published_time" content="${publishedTime}">\n`
     }
     if (modifiedTime) {
-      metaTags += `<meta property="article:modified_time" content="${modifiedTime}">\n`;
+      metaTags += `<meta property="article:modified_time" content="${modifiedTime}">\n`
     }
     if (section) {
-      metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`;
+      metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`
     }
     if (tags && tags.length > 0) {
       tags.forEach(tag => {
-        metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`;
-      });
+        metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
+      })
     }
 
-    return metaTags;
+    return metaTags
   }
 
   /**
@@ -141,7 +134,7 @@ export class SEOUtils {
           }
         ]
       }
-    };
+    }
   }
 
   /**
@@ -159,7 +152,7 @@ export class SEOUtils {
           "text": faq.answer
         }
       }))
-    };
+    }
   }
 
   /**
@@ -175,18 +168,18 @@ export class SEOUtils {
         "name": crumb.name,
         "item": crumb.url
       }))
-    };
+    }
   }
 
   /**
    * Generate service structured data
    */
   static generateServiceStructuredData(service: {
-    name: string;
-    description: string;
-    price: string;
-    category: string;
-    provider: string;
+    name: string
+    description: string
+    price: string
+    category: string
+    provider: string
   }): any {
     return {
       "@context": "https://schema.org",
@@ -203,27 +196,25 @@ export class SEOUtils {
         "price": service.price,
         "priceCurrency": "USD"
       }
-    };
+    }
   }
 
   /**
    * Generate sitemap data
    */
   static generateSitemapData(pages: Array<{url: string, lastmod: string, changefreq: string, priority: string}>): string {
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     pages.forEach(page => {
-      sitemap += '  <url>\n';
-      sitemap += `    <loc>${page.url}</loc>\n`;
-      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
-      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-      sitemap += `    <priority>${page.priority}</priority>\n`;
-      sitemap += '  </url>\n';
-    });
-    
-    sitemap += '</urlset>';
-    return sitemap;
+      sitemap += '  <url>\n'
+      sitemap += `    <loc>${page.url}</loc>\n`
+      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`
+      sitemap += `    <priority>${page.priority}</priority>\n`
+      sitemap += '  </url>\n'
+    })
+    sitemap += '</urlset>'
+    return sitemap
   }
 
   /**
@@ -243,50 +234,46 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
+Disallow: /private/`
   }
 
   /**
    * Optimize title for SEO
    */
   static optimizeTitle(title: string, maxLength: number = 60): string {
-    if (title.length <= maxLength) return title;
-    
+    if (title.length <= maxLength) return title
     // Try to cut at word boundary
-    const words = title.split(' ');
-    let optimized = '';
-    
+    const words = title.split(' ')
+    let optimized = ''
     for (const word of words) {
       if ((optimized + ' ' + word).trim().length <= maxLength) {
-        optimized += (optimized ? ' ' : '') + word;
+        optimized += (optimized ? ' ' : '') + word
       } else {
-        break;
+        break
       }
     }
     
-    return optimized || title.substring(0, maxLength - 3) + '...';
+    return optimized || title.substring(0, maxLength - 3) + '...'
   }
 
   /**
    * Optimize description for SEO
    */
   static optimizeDescription(description: string, maxLength: number = 160): string {
-    if (description.length <= maxLength) return description;
-    
+    if (description.length <= maxLength) return description
     // Try to cut at sentence boundary
-    const sentences = description.split('. ');
-    let optimized = '';
-    
+    const sentences = description.split('. ')
+    let optimized = ''
     for (const sentence of sentences) {
-      const test = optimized + (optimized ? '. ' : '') + sentence;
+      const test = optimized + (optimized ? '. ' : '') + sentence
       if (test.length <= maxLength) {
-        optimized = test;
+        optimized = test
       } else {
-        break;
+        break
       }
     }
     
-    return optimized || description.substring(0, maxLength - 3) + '...';
+    return optimized || description.substring(0, maxLength - 3) + '...'
   }
 
   /**
@@ -311,24 +298,23 @@ Disallow: /private/`;
       'blockchain',
       'IoT',
       'edge computing'
-    ];
-
-    return [...new Set([...baseKeywords, ...variations])];
+    ]
+    return [...new Set([...baseKeywords, ...variations])]
   }
 
   /**
    * Check if URL is SEO-friendly
    */
   static isSEO FriendlyURL(url: string): boolean {
-    const seoPattern = /^[a-z0-9\-/]+$/;
-    return seoPattern.test(url) && !url.includes('_') && !url.includes(' ');
+    const seoPattern = /^[a-z0-9\-/]+$/
+    return seoPattern.test(url) && !url.includes('_') && !url.includes(' ')
   }
 
   /**
    * Generate meta viewport tag
    */
   static generateViewportTag(): string {
-    return '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">';
+    return '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">'
   }
 
   /**
@@ -337,7 +323,7 @@ Disallow: /private/`;
   static generatePreconnectTags(domains: string[]): string {
     return domains.map(domain => 
       `<link rel="preconnect" href="${domain}" crossorigin>`
-    ).join('\n');
+    ).join('\n')
   }
 
   /**
@@ -350,10 +336,9 @@ Disallow: /private/`;
       '>': '&gt;',
       '"': '&quot;',
       "'": '&#039;'
-    };
-    
-    return text.replace(/[&<>"']/g, (m) => map[m]);
+    }
+    return text.replace(/[&<>"']/g, (m) => map[m])
   }
 }
 
-export default SEOUtils;
+export default SEOUtils</$1></li></li>

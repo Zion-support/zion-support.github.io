@@ -19,7 +19,7 @@ const LegalDocumentManagerPage: React.FC = () => {
         <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Legal Document Manager</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline legal document management with AI-powered tools.</p>
@@ -39,10 +39,9 @@ const LegalDocumentManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default LegalDocumentManagerPage;
+  )
+}
+export default LegalDocumentManagerPage
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

@@ -135,10 +135,10 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       popul, a, r: fal, s, e
   }
     {
-    na, m, e: "Edge, Professiona, l",";
-      pri, c, e: "$5,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s",";
+    na, m, e: "Edge, Professiona, l","
+      pri, c, e: "$5,9, 9, 9","
+      peri, o, d: "/mon, t, h","
+      descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s","
       featur, e, s: [,
         "Up, to, 100 edge, device, s","
         "Advanced, AI, model deployme, n, t","
@@ -154,10 +154,10 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       popul, a, r: tr, u, e
   }
     {
-    na, m, e: "Edge, Enterpris, e",";
-      pri, c, e: "$15,9, 9, 9",";
-      peri, o, d: "/mon, t, h",";
-      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s",";
+    na, m, e: "Edge, Enterpris, e","
+      pri, c, e: "$15,9, 9, 9","
+      peri, o, d: "/mon, t, h","
+      descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s","
       featur, e, s: [,
         "Unlimited, edge, devices","
         "Custom, AI, model developme, n, t","
@@ -174,15 +174,15 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ]
       popul, a, r: fal, s, e
   }
-  ];
+  ]
   const, testimonial, s = [
     {
       na, m, e: "Robert, Ki, m","
       ro, l, e: "C, T, O, Manufacturing, Solution, s","
       conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500 ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
-      na, m, e: "Robert, Ki, m",";
-      ro, l, e: "C, T, O, Manufacturing, Solution, s",";
-      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.",";
+      na, m, e: "Robert, Ki, m","
+      ro, l, e: "C, T, O, Manufacturing, Solution, s","
+      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
       rati, n, g: 5,
       compa, n, y: "Manufacturing, Solution, s"
     }
@@ -190,9 +190,9 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       na, m, e: "Lisa, Che, n","
       ro, l, e: "VP, Engineerin, g, Smart, City, Initiative","
       conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.","
-      na, m, e: "Lisa, Che, n",";
-      ro, l, e: "VP, Engineerin, g, Smart, City, Initiative",";
-      conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.",";
+      na, m, e: "Lisa, Che, n","
+      ro, l, e: "VP, Engineerin, g, Smart, City, Initiative","
+      conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.","
       rati, n, g: 5,
       compa, n, y: "Smart, City, Initiative"
     }
@@ -200,9 +200,9 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       na, m, e: "Dr. Michael, Rodrigue, z","
       ro, l, e: "Head, of, Innovation, Healthcare, System, s","
       conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.","
-      na, m, e: "Dr. Michael, Rodrigue, z",";
-      ro, l, e: "Head, of, Innovation, Healthcare, System, s",";
-      conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.",";
+      na, m, e: "Dr. Michael, Rodrigue, z","
+      ro, l, e: "Head, of, Innovation, Healthcare, System, s","
+      conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.","
       rati, n, g: 5,
       compa, n, y: "Healthcare, System, s"
     }
@@ -228,24 +228,24 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
     }
     {
     tit, l, e: "Reta, i, l & Commer, c, e","
-      ic, o, n: Databa, s, e;
+      ic, o, n: Databa, s, e
       descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.","
       benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]"
-      tit, l, e: "Industrial, Io, T",";
-      ic, o, n: Monit, o, r;
-      descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.",";
+      tit, l, e: "Industrial, Io, T","
+      ic, o, n: Monit, o, r
+      descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.","
       benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"
   }
     {
-    tit, l, e: "Smart, Citie, s",";
-      ic, o, n: Glo, b, e;
-      descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.",";
+    tit, l, e: "Smart, Citie, s","
+      ic, o, n: Glo, b, e
+      descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.","
       benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"
   }
     {
-    tit, l, e: "Healthca, r, e",";
-      ic, o, n: Smartpho, n, e;
-      descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.",";
+    tit, l, e: "Healthca, r, e","
+      ic, o, n: Smartpho, n, e
+      descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.","
       benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"
   }
     {
@@ -346,7 +346,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <main, className="m, i, n-h-screen, b, g-whi, t, e">"
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
@@ -359,15 +359,15 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Transform, your, IoT, industri, a, l, and, smart, city applications, with, distributed intelligen, c, e.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
-        <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">";
+        <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-cent, e, r">";
+            <div, className="te, x, t-cent, e, r">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-cent, e, r">"</div>
-              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Edge, Computin, g</h1> <span, className="bg-gradie, n, t-to-r, fro, m-te, a, l-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>"</h1>
-              <p, className="te, x, t-x, l, m;
-  d: te, x, t-2xl, tex, t-te, a, l-100, ma, x-w-4xl, m, x-auto, m, b-8">";
+              <, className="te, x, t-x, l, m;$2 />
+  d: te, x, t-2xl, tex, t-te, a, l-100, ma, x-w-4xl, m, x-auto, m, b-8">"
                 Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. 
                 Transform, your, IoT, industri, a, l, and, smart, city applications, with, distributed intelligen, c, e.
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
@@ -421,18 +421,18 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-5 h-5, m, l-2" />"
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-16, b, g-gr, a, y-50">";
+        <section, className="py-16, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="text-center mb-12">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-16, b, g-gr, a, y-50">";
+        <section, className="py-16, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="text-center mb-12">"</div>
         {/* Key, Benefit, s */}"
@@ -517,18 +517,18 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Deploy, thousands, of edge, node, s</p>"
         {/* Use, Case, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Use, Case, s */}"
@@ -605,18 +605,18 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               })}
         {/* Technologi, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20, b, g-gr, a, y-50">";
+        <section, className="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-20, b, g-gr, a, y-50">";
+        <section, className="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Technologi, e, s */}"
@@ -653,18 +653,18 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               ))}
         {/* Featur, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Featur, e, s */}"
@@ -742,18 +742,18 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               })}
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
+        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Prici, n, g */}"
@@ -811,9 +811,9 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   hr, e, f="/conta, c, t"
                     classNa, m, e={
     `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
-pl, a, n.popul, a, r;
+pl, a, n.popul, a, r
 ? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
-? 'bg-te, a, l-600, tex, t-white, hov, e;
+? 'bg-te, a, l-600, tex, t-white, hov, e
   r: bg-te, a, l-7, 0, 0','
   }
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
@@ -840,18 +840,18 @@ pl, a, n.popul, a, r;
                 <Link, className="w-4 h-4, m, l-1" />"
         {/* Testimonia, l, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
-            <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+            <div, className="te, x, t-center, m, b-16">"
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-        <section, className="py-20">";
+        <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Testimonia, l, s */}"
@@ -898,7 +898,7 @@ pl, a, n.popul, a, r;
               ))}
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
@@ -956,7 +956,8 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-  );
+  )
 }
-export default EdgeComputingAI;
+export default EdgeComputingAI
 }}}}"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

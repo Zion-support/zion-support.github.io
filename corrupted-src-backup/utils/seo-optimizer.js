@@ -34,7 +34,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   s://linkedin.com/company/ziontechgroup',
             'http,
   s://twitter.com/ziontechgroup']}}}
-    this.init();
+    this.init()
   }
 
   init() {/* TODO: Fix JSX expression */}
@@ -95,10 +95,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   buildSitemapXML(pages) {
-    //     const baseUrl = this.seoConfig.siteUrl;
-    //     const lastmod = new Date().toISOString().split('T')[0];
-
-    let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    //     const baseUrl = this.seoConfig.siteUrl
+    //     const lastmod = new Date().toISOString().split('T')[0]
+    let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n',
 
     pages.forEach(page => {),
@@ -118,8 +117,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   createSitemapFile(sitemap) {
-    // In a real implementation, this would be saved to a file;
-    // For now, we'll store it in a data attribute for reference;
+    // In a real implementation, this would be saved to a file
+    // For now, we'll store it in a data attribute for reference
     document.documentElement.setAttribute('data-sitemap', sitemap)
   }
 
@@ -172,10 +171,10 @@ Disallow: /middleware/`,
   }
 
   setupCanonicalUrls() {
-    // Add canonical URL;
-    const _canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = this.seoConfig.siteUrl + window.location.pathname;
+    // Add canonical URL
+    const _canonical = document.createElement('link')
+    canonical.rel = 'canonical'
+    canonical.href = this.seoConfig.siteUrl + window.location.pathname
     document.head.appendChild(canonical)
   }
 
@@ -270,7 +269,7 @@ Disallo,
 Disallo,`
   w: /middleware/`,
 
-    document.documentElement.setAttribute('data-robots-txt', robotsTxt);
+    document.documentElement.setAttribute('data-robots-txt', robotsTxt)
   }
 
   setupCanonicalUrls() {/* TODO: Fix JSX expression */}
@@ -373,9 +372,9 @@ Disallo,`
   }
 
   setupPerformanceSEO() {
-    // Optimize for Core Web Vitals;
-    this.optimizeImages();
-    this.optimizeFonts();
+    // Optimize for Core Web Vitals
+    this.optimizeImages()
+    this.optimizeFonts()
     this.optimizeCriticalCSS()
   }
 
@@ -445,7 +444,7 @@ Disallo,`
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ]
     criticalFonts.forEach(font => {)
-      const _link = document.createElement('link');
+      const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = font
       link.as = 'style',
@@ -453,8 +452,8 @@ Disallo,`
         link.rel = 'stylesheet'
   optimizeFonts() {/* TODO: Fix JSX expression */}
       }
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)
+    })
   }
 
   optimizeCriticalCSS() {
@@ -484,26 +483,25 @@ Disallo,`
   n: center, }
       .btn {/* TODO: Fix JSX expression */}
   y: inline-block, }`
-    `;
-
-    const _style = document.createElement('style');
-    style.textContent = criticalCSS;
-    document.head.appendChild(style);
+    `
+    const _style = document.createElement('style')
+    style.textContent = criticalCSS
+    document.head.appendChild(style)
   }
 
   getPageTitle() {/* TODO: Fix JSX expression */}
     }
-    return titles[currentPath] || this.seoConfig.siteName;
+    return titles[currentPath] || this.seoConfig.siteName
   }
 
   getPageDescription() {/* TODO: Fix JSX expression */}
     }
-    return descriptions[currentPath] || this.seoConfig.siteDescription;
+    return descriptions[currentPath] || this.seoConfig.siteDescription
   }
 
   getPageImage() {/* TODO: Fix JSX expression */}
     }
-    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
+    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage)
   }
 
   // Public methods
@@ -569,7 +567,7 @@ Disallo,`
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
       }))}
 
-    this.addStructuredData(breadcrumbSchema);
+    this.addStructuredData(breadcrumbSchema)
   }
 
   trackPageView() {

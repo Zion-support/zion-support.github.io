@@ -7,10 +7,10 @@ exports.handler = async function () {
     })
     execSync('node automation/git-sync.cjs || true', {stdio: inherit),
         shell: true}
-    });
+    })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'autonomous-innovation-studio' });
+        task: 'autonomous-innovation-studio' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -25,10 +25,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true})
     })
     return {/* TODO: Fix JSX expression */}
-  k: 'autonomous-innovation-studio' });
+  k: 'autonomous-innovation-studio' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

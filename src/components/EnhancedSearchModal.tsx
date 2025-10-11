@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react'
 interface SearchResult {
-    id: string;
-  title: string;
-  description: string;
-  url: string;
+    id: string
+  title: string
+  description: string
+  url: string
   category: string
   type: 'page' | 'service' | 'blog' | 'documentation'
   popularity?: number,
@@ -76,46 +76,46 @@ const popularSearches = [
   'Quantum Computing',
   'Cybersecurity',
   'Data Analytics'
-];
+]
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-    </SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+    </SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('')
+  const [results, setResults] = useState<SearchResult[]>([])</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [showSuggestions, setShowSuggestions] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus()
   }
-  }, [isOpen]);
+  }, [isOpen])
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return,
       if (e.key === 'Escape') {
         onClose()
   } else if (e.key === 'ArrowDown') {
-    e.preventDefault();
+    e.preventDefault()
         setSelectedIndex(prev => 
           prev < results.length - 1 ? prev + 1 : prev
         )
   } else if (e.key === 'ArrowUp') {
-    e.preventDefault();
+    e.preventDefault()
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)
   } else if (e.key === 'Enter' && selectedIndex >= 0) {
-    e.preventDefault();
+    e.preventDefault()
         handleResultClick(results[selectedIndex])
   }
     }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, results, selectedIndex, onClose]);
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, results, selectedIndex, onClose])
   const searchResults = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([])
       setShowSuggestions(true),
       return
   }
-    setIsSearching(true);
-    setShowSuggestions(false);
+    setIsSearching(true)
+    setShowSuggestions(false)
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 300))
     const filteredResults = mockSearchResults.filter(result =>
@@ -125,13 +125,13 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     )
     // Sort by popularity and relevance
     const sortedResults = filteredResults.sort((a, b) => {
-    const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
+    const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
+      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance
-  });
-    setResults(sortedResults);
-    setSelectedIndex(-1);
-    setIsSearching(false);
+  })
+    setResults(sortedResults)
+    setSelectedIndex(-1)
+    setIsSearching(false)
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     </HTMLInputElement>const</HTMLInputElement> value = e.target.value
@@ -176,7 +176,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-gray-400'
   }
   }
-  if (!isOpen) return null;
+  if (!isOpen) return null
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}
@@ -283,10 +283,11 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         </div>
       </div>
     </div>
-  );
+  )
 }
 export default EnhancedSearchModal</p>
   </h3>
   </h3>
   </div>
   </div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></h3></h3>

@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 /**
- * Latest Comprehensive Merge - Handles all new branches and PRs;
- * This script will systematically merge all new branches found;
- */ import { execSync } from 'child_process';
-import fs from 'fs';
-
+ * Latest Comprehensive Merge - Handles all new branches and PRs
+ * This script will systematically merge all new branches found
+ */ import { execSync } from 'child_process'
+import fs from 'fs'
 //Step 1: Ensure we're on main and up to date,
 try {,
   execSync('git checkout main', { stdio: 'inherit' })
@@ -29,8 +28,7 @@ const branches = execSync('git branch -r', {/* TODO: Fix JSX expression */})
   .filter(branch => branch.trim())
   .map(branch => branch.trim().replace('origin/', ''))
   .filter(branch => branch.startsWith('cursor/fix-errors-and-merge-to-main-') && branch !== 'HEAD')
-  .filter(branch => !branch.includes('disabled') && !branch.includes('backup'));
-
+  .filter(branch => !branch.includes('disabled') && !branch.includes('backup'))
 //Step 3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {
 ,
@@ -39,8 +37,7 @@ function resolveConflictsAndMerge(branchName) {
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' })
     //Try initial merge
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, {)
-      stdio: 'inherit')});
-
+      stdio: 'inherit')})
     return { success: true, method: 'direct' }
   } catch (error) {
 
@@ -68,8 +65,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
-          );
-
+          )
           return { success: true, method: 'theirs' }
         } catch () {}//Strategy 2: Auto-resolve with ours,
         try {,
@@ -85,8 +81,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
-          );
-
+          )
           return { success: true, method: 'ours' }
         } catch () {}//Strategy 3: Manual conflict resolution,
         try {,
@@ -158,8 +153,8 @@ const results = {
 const results = {/* TODO: Fix JSX expression */}
   d: 0 }}}
 
-//Process branches in batches to avoid overwhelming the system;
-// const batchSize = 5;
+//Process branches in batches to avoid overwhelming the system
+// const batchSize = 5
 for (let i = 0; i < branches.length; i += batchSize) {/* TODO: Fix JSX expression */}
 }
 
@@ -186,7 +181,7 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fi
 //Step 5: Generate comprehensive report
 results.timestamp = new Date().toISOString()
 results.branchCounts = {
-  total: branches.length;
+  total: branches.length
   processed: results.summary.total
   successful: results.summary.successful
   failed: results.summary.failed,
@@ -200,8 +195,7 @@ results.timestamp = new Date().toISOString(),
 results.branchCounts = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('latest-comprehensive-merge-report.json', JSON.stringify(results, null, 2));
-
+fs.writeFileSync('latest-comprehensive-merge-report.json', JSON.stringify(results, null, 2))
 //Step 6: Display summary,
 if (results.failed.length > 0) {,
 ,

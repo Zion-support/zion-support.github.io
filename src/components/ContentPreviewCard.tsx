@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface ContentPreviewCardProps {
     // TODO: Add content
   }
@@ -28,7 +28,7 @@ interface ContentPreviewCardProps {
     engagemen,
   t: number,
   }
-  excerpt?: string;
+  excerpt?: string
 }
 const,
   ContentPreviewCard: React.FC,
@@ -52,7 +52,7 @@ const,
 }
       return (num / 1000).toFixed(1) + 'k'
     }
-    return num.toString();
+    return num.toString()
   }
   const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
@@ -72,7 +72,7 @@ const,
       'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600'
     }
-    return colors[category] || colors.default;
+    return colors[category] || colors.default
   }
   return (<div>Coming Soon</div>)
   )
@@ -152,7 +152,8 @@ const,
         </div>
       </div>
     </article>
-  );
+  )
 }
 export default ContentPreviewCard;"`
   </ContentPreviewCardProps>
+</span></span></span></span></span></span></p></p></p></p></p>

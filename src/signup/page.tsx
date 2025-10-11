@@ -24,7 +24,7 @@ const SignupPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -63,7 +63,7 @@ $4]
   return (
     <React.Fragment>
     <div>Coming Soon</div>
-  );
+  )
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -86,10 +86,10 @@ $4]
   s: false,
     subscribeNewslette,
   r: false,)
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target
@@ -98,7 +98,7 @@ const handleInputChange = (e: React.ChangeEvent,)
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -154,7 +154,7 @@ const PagePage: React.FC = () => {
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       First Name,
-  </
+  
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
@@ -219,7 +219,7 @@ const PagePage: React.FC = () => {
 // Join thousands of businesses transforming with AI and IT solutions
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
-                <div className="grid grid-cols-1,"
+                < className="grid grid-cols-1,"$2 />
   md: grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -276,7 +276,7 @@ Confirm Password
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">
                         Privacy Policy,
-  </
+  
                     </span>
                       name="subscribeNewsletter"
                       checked={formData.subscribeNewsletter}
@@ -329,7 +329,7 @@ Confirm Password
       <Footer />
 // Terms of Service</$1>{' '}
                       and{' '}"
-                      <a href="/privacy" className="text-cyan-400,"
+                      < href="/privacy" className="text-cyan-400,"$2 />
   hover: text-cyan-300"></a>
 // Privacy Policy,
           </a>
@@ -348,7 +348,7 @@ Creating Account...
           </form>"
               <div className="mt-8 text-center">
                   Already have an account?{' '}
-                  <a
+                  <$2 />
                     href="/login" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
 Sign in here,
             {/* Right Side - Features and Benefits */}"

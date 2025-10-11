@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  );
+  )
 }
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
+  const [currentCost, setCurrentCost] = useState(100000)
+  const [efficiencyGain, setEfficiencyGain] = useState(70)
+  const [timeframe, setTimeframe] = useState(12)
   const calculateROI = () => {
     return Math.max(0, roi)
   }return (

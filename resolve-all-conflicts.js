@@ -31,15 +31,14 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
     const resolvedLines = []
     let skipUntilNextMarker = false
     for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-      
+    const line = lines[i]
       if (line.includes('')) {
-        skipUntilNextMarker = true;
+        skipUntilNextMarker = true
         continue
   }
       
       if (line.includes('')) {
-    skipUntilNextMarker = false;
+    skipUntilNextMarker = false
         continue
   }
       
@@ -66,11 +65,11 @@ try {
   // Get list of files with conflicts
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
   if (!conflictFiles.trim()) {
-    console.log('✅ No merge conflicts found');
+    console.log('✅ No merge conflicts found')
     process.exit(0)
   }
 
-  console.log('📋 Files with conflicts: ');
+  console.log('📋 Files with conflicts: ')
   console.log(conflictFiles)
   const files = conflictFiles.trim().split('\n')
   let resolvedCount = 0,
@@ -95,7 +94,7 @@ try {
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' })
   console.log('✅ All conflicts resolved and committed!')
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message);
+    console.error('❌ Error resolving conflicts:', error.message)
   process.exit(1)
   }
 console.log('🎉 Merge conflict resolution completed!');`

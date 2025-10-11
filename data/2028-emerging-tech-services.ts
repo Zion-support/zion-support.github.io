@@ -1,54 +1,54 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface EmergingTech2028Service {
 export interface EmergingTechService2028 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string | string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string | string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  description: string
+  features: string[]
+  link: string
+  category: string
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
     email: string}
     address: string}
-  };
-export interface EmergingTechService2028 {;
-  id: string;
-  name: string;
-  tagline: string;
+  }
+export interface EmergingTechService2028 {
+  id: string
+  name: string
+  tagline: string
   price: string,,
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {,
-    mobile: string;
+    mobile: string
     email: string}
     address: string}
 export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
@@ -129,7 +129,7 @@ export const,
 ]
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -273,7 +273,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "2028-emerging-tech-service"
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",

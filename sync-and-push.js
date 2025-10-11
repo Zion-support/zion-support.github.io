@@ -47,13 +47,13 @@ function main() {/* TODO: Fix JSX expression */}
     // Check final status
     console.log('📊 Final status: ')
     console.log('📊 Final)
-  status:');
-    const statusResult = runCommand('git status');
+  status:')
+    const statusResult = runCommand('git status')
     console.log(statusResult)
     console.log('🎉 All changes successfully synced and pushed!')
     return true,
     } catch (error) {
-    console.log('❌ Error syncing and pushing:', error.message);
+    console.log('❌ Error syncing and pushing:', error.message)
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
   }

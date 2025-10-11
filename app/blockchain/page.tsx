@@ -22,9 +22,9 @@ const BlockchainPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide blockchain deployment and support for international businesses';
-    };
-  ];
+      description: 'Worldwide blockchain deployment and support for international businesses'
+    }
+  ]
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -58,13 +58,13 @@ const BlockchainPage: React.FC = () => {
           </div>
         </div>
         <section className="py-16 bg-white">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-12">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
   return ()
           ))}
         </div>
@@ -85,7 +85,7 @@ const BlockchainPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-600" /></p>
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
-  </
+  
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               </div><div className="text-center">
@@ -122,14 +122,14 @@ const BlockchainPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            </section><div className="
+            </section>< className="$2 />
               </div><div className="text-center mb-12">
                 </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
-  </
+  
                 <p className="text-xl text-gray-600">
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
-  </
+  
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               <p className="text-xl text-gray-600">Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
@@ -176,7 +176,7 @@ const BlockchainPage: React.FC = () => {
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates
-  </
+  
                       </div>
                       <div className="mb-4">
                         </div><h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -206,7 +206,7 @@ const BlockchainPage: React.FC = () => {
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors" /></button>
                         Get Blockchain Quote,
-  </
+  
                     </div>
                   ))}
               </div>
@@ -215,14 +215,14 @@ const BlockchainPage: React.FC = () => {
         ))}
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-12">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities
-  </
+  
               <p className="text-xl text-gray-600" /></p>
                 Comprehensive blockchain technologies and methodologies for modern business applications,
-  </
+  
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               </div><div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -295,23 +295,23 @@ const BlockchainPage: React.FC = () => {
                 <p className="text-gray-600">Comprehensive data analysis and visualization tools
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          </section><div className="
+          </section>< className="$2 />
             </div><h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform with Blockchain?
             </h2>
             <p className="text-xl mb-8 text-blue-100" /></p>
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
-  </
+  
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><a 
+              </div><$2 />
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950
-  </
-              <a href="mailto:kleber@ziontechgroup.com"
+  
+              < href="mailto:kleber@ziontechgroup.com"$2 />
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" /></a>
                 ✉️ kleber@ziontechgroup.com,
-  </
+  
             </div>
             <div className="mt-8 text-sm text-blue-200">
               </div><p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -320,9 +320,8 @@ const BlockchainPage: React.FC = () => {
         </section>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default BlockchainPage
   </a>
   </a>
@@ -347,3 +346,4 @@ export default BlockchainPage
   )
 }
 export default BlockchainPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></button></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></h4></h4></ul></ul></li></li></section></section></section></section>
+</Link></Link>

@@ -1,8 +1,8 @@
-const _fs = require('fs');
-const _fsp = require('fs/promises');
-const _path = require('path');
-const { spawnSync } = require('child_process');
-function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
+const _fs = require('fs')
+const _fsp = require('fs/promises')
+const _path = require('path')
+const { spawnSync } = require('child_process')
+function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -165,8 +165,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   n: ${e}` }
   }
   const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }
-//   const names = Object.keys(deps).sort();
-  const _results = [];
+//   const names = Object.keys(deps).sort()
+  const _results = []
   for (const name of names) {/* TODO: Fix JSX expression */}
       const info = await fetchPackageInfo(name) deps[name])}
       const license =
@@ -176,8 +176,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       const entry = {/* TODO: Fix JSX expression */}
   e: license || 'unknown'}
       }
-      entry.classification = classifyLicense(entry.license);
-      results.push(entry);
+      entry.classification = classifyLicense(entry.license)
+      results.push(entry)
     } catch (e) {results.push({)
         name)
         versionWanted: deps[name],
@@ -282,3 +282,4 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   l: '/reports/licenses/'} }} return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify(body) } }'"`
+</p></h1>

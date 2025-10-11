@@ -147,12 +147,12 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
       return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        resourceObserver.disconnect();
+        lcpObserver.disconnect()
+        fidObserver.disconnect()
+        clsObserver.disconnect()
+        fcpObserver.disconnect()
+        navigationObserver.disconnect()
+        resourceObserver.disconnect()
       }
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -193,14 +193,13 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
         })
       }
     }
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
+    window.addEventListener('load', handleLoad)
+    return () => window.removeEventListener('load', handleLoad)
+  }, [reportMetric])
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//     reportMetric;
+//     reportMetric
   }
 }
-export default usePerformanceMonitoring;
-
+export default usePerformanceMonitoring

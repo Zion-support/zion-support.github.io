@@ -17,7 +17,7 @@ export const usePerformance = () => {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
         console.log('Running performance optimizations...')
-  });
+  })
     }
   }, [])
   useEffect(() => {
@@ -34,15 +34,14 @@ export const usePerformance = () => {
       }
     }
 
-    measurePerformance();
-  }, []);
-
+    measurePerformance()
+  }, [])
   return {
     metrics,
     optimize}
 }
 
-'use client';
+'use client'
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -147,13 +146,13 @@ export const _usePerformance = () => {
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
-//         firstInputDelay;
+//         firstInputDelay
       }
-      setMetrics(performanceData);
-      setIsMonitoring(false);
-      // Report to analytics using trackTiming;
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
+      setMetrics(performanceData)
+      setIsMonitoring(false)
+      // Report to analytics using trackTiming
+      analytics.trackTiming('performance', 'load_time', performanceData.loadTime)
+      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded)
 //       analytics.trackTiming()
 //         'performance',
 //         'first_contentful_paint',
@@ -165,12 +164,12 @@ export const _usePerformance = () => {
 //       analytics.trackTiming()
 //         'performance',
 //         'cumulative_layout_shift',
-//         performanceData.cumulativeLayoutShift);
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
+//         performanceData.cumulativeLayoutShift)
+      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay)
     }
-    // Start monitoring;
-    setIsMonitoring(true);
-    // Measure performance after page load;
+    // Start monitoring
+    setIsMonitoring(true)
+    // Measure performance after page load
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -180,9 +179,9 @@ export const _usePerformance = () => {
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('load', measurePerformance)
     }
-  }, []);
+  }, [])
   return { metrics, isMonitoring }
 }
 

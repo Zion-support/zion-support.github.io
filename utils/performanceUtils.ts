@@ -11,7 +11,7 @@ export const measurePerformance = (nam,
 
 export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression */}
   }
-  return null;
+  return null
 }
 
 export const optimizeImages = () => {

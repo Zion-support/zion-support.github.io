@@ -149,7 +149,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }
-export default January2026RevolutionaryContentBanner;
+export default January2026RevolutionaryContentBanner
 `
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></h2></h2></h3></h3></h3></section></section>

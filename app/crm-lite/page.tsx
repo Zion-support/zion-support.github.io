@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
   const features = [
     {}
@@ -17,9 +17,9 @@ const PagePage: React.FC = () => {
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
 return ()
             ))}
           </div>
@@ -31,6 +31,5 @@ return ()
           </div>
         </div>
       </section>
-};
-
-export default PagePage;
+}
+export default PagePage

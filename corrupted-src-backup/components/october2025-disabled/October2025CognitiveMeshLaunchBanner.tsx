@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
  * @description High-performance promotional banner with accessibility features
  */
 const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
-  return(<section,
+  return(<,$2 />
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
      > {/* Animated background elements - purely decorative */}
@@ -69,12 +69,12 @@ const,
               🚀 JUST LAUNCHED - OCTOBER 2025</$1>"
              aria-hidden="true"
 "
-          <h1 className="text-4xl,"
+          < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-4 animate-slide-up"></h1>
             Cognitive Mesh Orchestration Platform,
           </h1>
           "
-          <p className="text-xl,"
+          < className="text-xl,"$2 />
   md: text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p>
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
           </p>
@@ -104,7 +104,7 @@ const,
             >
               Schedule Free Consultation
             </Link>
-            <Link
+            <$2 />
               to="/blog"
                className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               aria-label="Learn more about Cognitive Mesh technology"

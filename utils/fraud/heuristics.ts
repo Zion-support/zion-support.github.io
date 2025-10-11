@@ -47,7 +47,7 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     if (recent >= 3) {
       reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`),
       severity = recent >= 10 ? 'high' : 'medium',
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
+import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types'
 const suspiciousLinkHosts = [
   'paypal.me',
   'cash.app',
@@ -58,7 +58,7 @@ const suspiciousLinkHosts = [
   'whatsapp.com',
   'westernunion.com',
   'moneygram.com',
-];
+]
 const suspiciousPhrases = [
   'whatsapp me',
   'telegram me',
@@ -77,7 +77,7 @@ const suspiciousPhrases = [
   'reach me on whatsapp',
   'skype me',
   'email me at',
-];
+]
 const vagueScammyJobPhrases = [
   'easy work',
   'quick money',
@@ -85,35 +85,35 @@ const vagueScammyJobPhrases = [
   'work from home and earn fast',
   'daily payouts',
   'earn $\\d+ per day',
-];
+]
 function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some((host) => lower.includes(host));
+  const lower = text.toLowerCase()
+  return suspiciousLinkHosts.some((host) => lower.includes(host))
 }
 function containsSuspiciousPhrase(text: string): string[] {
-  const lower = text.toLowerCase();
-  return suspiciousPhrases.filter((p) => lower.includes(p));
+  const lower = text.toLowerCase()
+  return suspiciousPhrases.filter((p) => lower.includes(p))
 }
 function containsVagueJobClaims(text: string): string[] {
-  const lower = text.toLowerCase();
-  const reasons: string[] = [];
+  const lower = text.toLowerCase()
+  const reasons: string[] = []
   for (const pattern of vagueScammyJobPhrases) {
-    const re = new RegExp(pattern, 'i');
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`);
+    const re = new RegExp(pattern, 'i')
+    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`)
   }
-  return reasons;
+  return reasons
 }
 export interface HeuristicDeps {
-  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>;
+  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>
 }
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
-  const reasons: string[] = [];
-  let severity: HeuristicEvaluation['severity'] = 'low';
+  const reasons: string[] = []
+  let severity: HeuristicEvaluation['severity'] = 'low'
   if (event.source === 'signup' && event.ipAddress) {
-    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
+    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10)
     if (recent >= 3) {
-      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`);
-      severity = recent >= 10 ? 'high' : 'medium';
+      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`)
+      severity = recent >= 10 ? 'high' : 'medium'
     }
   }
   if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {
@@ -125,13 +125,13 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     if (phrases.length > 0) {
       reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),
       if (severity === 'low') severity = 'medium',
-      reasons.push('outside_payment_link_detected');
-      severity = 'high';
+      reasons.push('outside_payment_link_detected')
+      severity = 'high'
     }
-    const phrases = containsSuspiciousPhrase(event.content);
+    const phrases = containsSuspiciousPhrase(event.content)
     if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`));
-      if (severity === 'low') severity = 'medium';
+      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`))
+      if (severity === 'low') severity = 'medium'
     }
   }
   if (event.source === 'job_post' && event.content) {
@@ -139,10 +139,10 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     if (vague.length > 0) {
       reasons.push(...vague),
       if (severity === 'low') severity = 'medium',
-    const vague = containsVagueJobClaims(event.content);
+    const vague = containsVagueJobClaims(event.content)
     if (vague.length > 0) {
-      reasons.push(...vague);
-      if (severity === 'low') severity = 'medium';
+      reasons.push(...vague)
+      if (severity === 'low') severity = 'medium'
     }
   }
   return {
@@ -150,5 +150,5 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     reasons,
     severity},
     severity,
-  };
+  }
 }

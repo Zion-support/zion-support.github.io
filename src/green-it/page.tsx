@@ -165,7 +165,7 @@ valuevalue: '100%',
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Green IT Solutions,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.
@@ -295,16 +295,16 @@ valuevalue: '100%',
     </React.Fragment>
   ),
 }
-export default GreenITPage;
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+export default GreenITPage
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const GreenITPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
   )
   }
-  const [activeTab, setActiveTab] = useState('solutions');
+  const [activeTab, setActiveTab] = useState('solutions')
 const tabs = [
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -547,12 +547,12 @@ const tabs = [
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Green IT Solutions,
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Transform your IT infrastructure into a sustainable, environmentally friendly system;
+// Transform your IT infrastructure into a sustainable, environmentally friendly system
               that reduces costs while protecting our planet.
           </p>"
             <div className="flex flex-wrap justify-center gap-4"></div>"
@@ -628,7 +628,7 @@ const tabs = [
                     <div className="flex items-center justify-between"></div>`
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
-                      <a
+                      <$2 />
                         href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
 Learn More,
                         <ArrowRight className="w-4 h-4 ml-1" />
@@ -687,7 +687,7 @@ Benefits of Green IT;"
 // Start your journey towards sustainable IT operations. Get a free environmental
               assessment and discover how much you can save while protecting the planet.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
@@ -729,3 +729,4 @@ export default GreenItPage</div>
   </div>
   </div>
   </div>
+</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>

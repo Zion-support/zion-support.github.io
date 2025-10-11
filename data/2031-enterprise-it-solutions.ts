@@ -1,45 +1,45 @@
 export interface EnterpriseITSolution2031 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+    mobile: string
+    email: string
+    address: string
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
+  aiCapabilities: string[]
+  marketDisruption: string
 }
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE
@@ -307,4 +307,4 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['Autonomous Systems', 'Self-Healing', 'Intelligent Optimization', 'Predictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
   }
-];
+]

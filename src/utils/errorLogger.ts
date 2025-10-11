@@ -26,9 +26,9 @@ export interface ErrorLogEntry {
     severit,
   y: ErrorSeverity,,
     messag,
-  e: string;
-  error?: Error;
-  context?: Record;
+  e: string
+  error?: Error
+  context?: Record
           <string>
   userAgent?: string
   url?: string
@@ -73,8 +73,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       stackTrace: error?.stack,
 
     }
-    // Add to internal log;
-    this.logs.push(entry);
+    // Add to internal log
+    this.logs.push(entry)
     if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -114,7 +114,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       [ErrorSeverity.CRITICAL]: 'color: #ef4444, font-weight: bold'
 
     }
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
+    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity])
     if (entry.error) {/* TODO: Fix JSX expression */}
   r:', entry.error);}
     }

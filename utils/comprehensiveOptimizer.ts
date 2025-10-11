@@ -24,24 +24,24 @@ export interface OptimizationConfig {/* TODO: Fix JSX expression */}
  */
 export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
     accessibility: {
-    enableFocusManagement: true;
-    enableAriaUtils: true;
-    enableKeyboardNavigation: true;
+    enableFocusManagement: true
+    enableAriaUtils: true
+    enableKeyboardNavigation: true
     enableColorContrast: true
     enableScreenReader: true
     enableFormAccessibility: true,
     enableMotionAccessibility: true
   },
   performance: {
-    enableMemoryMonitoring: true;
+    enableMemoryMonitoring: true
     enablePerformanceMetrics: true
     enableLazyLoading: true
     enablePreloading: true,
     enableScrollOptimization: true
   },
   seo: {
-    enableMetaTags: true;
-    enableOpenGraph: true;
+    enableMetaTags: true
+    enableOpenGraph: true
     enableTwitterCards: true
     enableStructuredData: true
     enableCanonicalUrl: true,
@@ -124,8 +124,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
    * Optimize page for performance
    */
   public optimizePerformance(): void {
-    if (!this.config.performance.enablePerformanceMetrics) return;
-
+    if (!this.config.performance.enablePerformanceMetrics) return
     // Start performance monitoring
   }
 
@@ -151,9 +150,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
     keywords: string[];)
     url: string,),
     image?: string;)}): void {
-    if (!this.config.seo.enableMetaTags) return;
-
-    // Set basic meta tags;
+    if (!this.config.seo.enableMetaTags) return
+    // Set basic meta tags
         title: pageData.title
         description: pageData.description
         url: pageData.url,

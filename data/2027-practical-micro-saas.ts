@@ -1,38 +1,38 @@
 export interface PracticalMicroSaasService2027 {
 export interface PracticalMicroSaas2027 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export interface PracticalMicroSaasService2027 {
-    address: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
-  averageMarketPrice: string;
-  featuresCapabilities: string[];
+    address: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
+  averageMarketPrice: string
+  featuresCapabilities: string[]
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+}
 export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
   // 1. AI-Powered Customer Success Automation Platform
   {
@@ -586,9 +586,9 @@ export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
       'Support analytics'
     ]
   }
-];
-    address: string;
-  };
+]
+    address: string
+  }
 }
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
@@ -613,4 +613,4 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
 const EnterprisePage: React.FC = () => {
     const features = [
     {
@@ -50,12 +50,12 @@ const solutions = [
       icon: Building,
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   },
-  ];
+  ]
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',;
-      icon: Building,;
+      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
+      icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'],
   },
     {
@@ -76,7 +76,7 @@ const solutions = [
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'],
   }
-  ];
+  ]
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -103,7 +103,7 @@ return (
       </SEOOptimizer><Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -120,7 +120,7 @@ return (
             </span>
           </h1>
           <p></p>
-            Comprehensive enterprise-grade solutions designed for large-scale business operations.;
+            Comprehensive enterprise-grade solutions designed for large-scale business operations.
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
@@ -137,7 +137,7 @@ return (
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -190,7 +190,7 @@ return (
             ))}
       {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -268,7 +268,7 @@ return (
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -283,7 +283,7 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -310,9 +310,8 @@ return (
       </section>
       <Footer /></Footer>
   ),
-};
-
-export default EnterprisePage;
+}
+export default EnterprisePage
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?

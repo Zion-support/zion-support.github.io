@@ -1,61 +1,61 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  contact_info: unknown;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  contactInfo: unknown
+    mobile: string
+    email: string
+    address: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  contact_info: unknown
     mobile: string
     email: string
     address: string,
 }
-export const specializedITSolutions2026: SpecializedITSolution2026[] = [;
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps,,
     website: string,
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -1369,7 +1369,7 @@ export const,
     rating: 4.4
     reviews: 33,
   }
-];
+]
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category),
       'Compliance management'
@@ -1408,7 +1408,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   g: 4.4,
     review,
   s: 33}
-];
+]
 export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>,
   return specializedITSolutions2026.filter(solution => solution.category === category)
@@ -1418,8 +1418,8 @@ export const getPopularSpecializedITSolutions2026 = () =>
 export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
   return specializedITSolutions2026.filter(solution => solution.popular)}
 }
-];
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular);
+]
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular)
 }
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number)
   maxPrice: number)) =>,
@@ -1433,13 +1433,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     const _price = parseInt(solution && solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice,
   })
-}    return price >= minPrice && price <= maxPrice;
+}    return price >= minPrice && price <= maxPrice
   })
 }
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
-    description: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.';
+    description: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.'
     features: [,
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers',
       'Custom automation workflowsAdvanced analytics and reporting'],
@@ -1460,7 +1460,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.8
     reviews: 45,
   }
-  // Cybersecurity & Threat Intelligence;
+  // Cybersecurity & Threat Intelligence
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
     tagline: 'Advanced threat detection and response with AI-powered security intelligence', price: '$299',
     period: '/month',
@@ -1485,7 +1485,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.7
     reviews: 78,
   }
-  // Data Engineering & Analytics;
+  // Data Engineering & Analytics
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
     tagline: 'Streamline data pipelines and analytics with intelligent automation', price: '$249',
     period: '/month',
@@ -1510,7 +1510,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.6
     reviews: 34,
   }
-  // API Management & Integration;
+  // API Management & Integration
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
     tagline: 'Intelligent API lifecycle management with AI-powered optimization', price: '$199',
     period: '/month',
@@ -1535,7 +1535,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.5
     reviews: 22,
   }
-  // Network Monitoring & Management;
+  // Network Monitoring & Management
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
     tagline: 'Intelligent network monitoring and management with AI-powered insights', price: '$179',
     period: '/month',
@@ -1560,7 +1560,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.4
     reviews: 39,
   }
-  // Database Management & Optimization;
+  // Database Management & Optimization
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
     tagline: 'Intelligent database performance optimization with AI-powered insights', price: '$159',
     period: '/month',
@@ -1585,7 +1585,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.3
     reviews: 28,
   }
-  // IT Service Management;
+  // IT Service Management
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
     tagline: 'Intelligent IT service management with AI-powered automation', price: '$129',
     period: '/month',
@@ -1610,7 +1610,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     rating: 4.5
     reviews: 45,
   }
-  // Backup & Disaster Recovery;
+  // Backup & Disaster Recovery
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
     tagline: 'Intelligent backup and recovery with AI-powered automation', price: '$199',
     period: '/month',
@@ -2127,8 +2127,8 @@ export const getSpecializedITSolutions2026ByCategory = (categor)
   return specializedITSolutions2026.filter ()
     solution => solution.category === category),
 }
-export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular);
+export const getPopularSpecializedITSolutions2026 = () =>: unknown
+  return specializedITSolutions2026.filter (solution => solution.popular)
 }
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
@@ -2161,9 +2161,9 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -2179,8 +2179,8 @@ export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number}
-export const getPopularSpecializedITSolutions2026 = () =>: unknown;
-  return specializedITSolutions2026.filter (solution => solution.popular);
+export const getPopularSpecializedITSolutions2026 = () =>: unknown
+  return specializedITSolutions2026.filter (solution => solution.popular)
 }
 export const getSpecializedITSolutions2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
@@ -2199,7 +2199,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
 
 export interface SpecializedITSolution2026
 }
-export interface SpecializedITSolution2026;
+export interface SpecializedITSolution2026
 }
 i,
   d: string, nam,

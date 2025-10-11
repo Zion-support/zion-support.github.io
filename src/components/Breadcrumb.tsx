@@ -21,18 +21,18 @@ const Breadcrumb: React.FC = () => {
       const name = segment
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+        .join(' ')
       breadcrumbs.push({
     )
         name)
         href: currentPath),
         current: isLast
-  });
-    });
-    return breadcrumbs;
+  })
+    })
+    return breadcrumbs
   }
-  const breadcrumbs = generateBreadcrumbs();
-  // Don't show breadcrumb on home page;
+  const breadcrumbs = generateBreadcrumbs()
+  // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null
   }
@@ -77,7 +77,8 @@ const Breadcrumb: React.FC = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
-  );
+  )
 }
 export default Breadcrumb</ol>
   </nav>
+</div></div></span></ol></li></nav>

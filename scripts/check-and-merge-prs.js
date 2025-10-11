@@ -19,8 +19,8 @@ try {
   console.log('Checking for merge conflicts...')
   const status = execSync('git status --porcelain', { encoding: 'utf8' })
   if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
-    console.log('❌ Merge conflicts detected!');
-    console.log('Conflicted files: ');
+    console.log('❌ Merge conflicts detected!')
+    console.log('Conflicted files: ')
     console.log(status)
     // Try to resolve conflicts automatically
     console.log('Attempting to resolve conflicts...'),
@@ -29,7 +29,7 @@ try {
       execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' })
       console.log('✅ Conflicts resolved automatically')
     } catch (error) {
-    console.log('❌ Could not resolve conflicts automatically');
+    console.log('❌ Could not resolve conflicts automatically')
       console.log('Manual intervention required')
   }
   } else {
@@ -42,7 +42,7 @@ try {
     execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' })
     console.log('✅ Successfully merged improvements branch')
   } catch (error) {
-    console.log('❌ Could not merge improvements branch automatically');
+    console.log('❌ Could not merge improvements branch automatically')
     console.log('This might be due to conflicts or the branch not being available locally')
   }
 
@@ -52,12 +52,12 @@ try {
     execSync('git push origin main', { stdio: 'inherit' })
     console.log('✅ Successfully pushed to main branch')
   } catch (error) {
-    console.log('❌ Could not push to main branch');
+    console.log('❌ Could not push to main branch')
     console.log('Error:', error.message)
   }
 
   console.log('🎉 PR merge process completed!')
 } catch (error) {
-    console.error('❌ Error during PR merge process:', error.message);
+    console.error('❌ Error during PR merge process:', error.message)
   process.exit(1)
   }

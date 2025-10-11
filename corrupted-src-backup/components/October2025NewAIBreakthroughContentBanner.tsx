@@ -174,11 +174,11 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">"
               💎 Combined, Enterprise, Impac
   t: $13.3 B,
-  </
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-              These, three, breakthrough technologies, work, together to, create, a comprehensive, AI, innovation platfo, r, m:</p> <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>, ";
-              <strong, className="te, x, t-emera, l, d-4, 0, 0"> distributed, RL, trains them, at, scale</stro, n, g>, a, n, d ";
-              <strong, className="te, x, t-indi, g, o-4, 0, 0"> priva, c, y-preserving, technique, s</stro, n, g>enable</g>, deployment, on sensitive, dat, a. ";
+  
+            <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">"
+              These, three, breakthrough technologies, work, together to, create, a comprehensive, AI, innovation platfo, r, m:</p> <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>, "
+              <strong, className="te, x, t-emera, l, d-4, 0, 0"> distributed, RL, trains them, at, scale</stro, n, g>, a, n, d "
+              <strong, className="te, x, t-indi, g, o-4, 0, 0"> priva, c, y-preserving, technique, s</stro, n, g>enable</g>, deployment, on sensitive, dat, a. "
               Fortune, 500, companies are, already, achieving 8, 4, 7% ROI, with, integrated implementatio, n, s.
           <div, className="flex, fle, x-col, ga, p-3">"
             <Li, n, k
@@ -203,4 +203,4 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   )
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 }
-export default October2025 NewAIBreakthroughContentBanner;
+export default October2025 NewAIBreakthroughContentBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li>

@@ -6,10 +6,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     })
     execSync('node automation/git-sync.cjs || true', {stdio: inherit),
         shell: true}
-    });
+    })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'newsroom-publisher' });
+        task: 'newsroom-publisher' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -22,10 +22,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true})
     })
     return {/* TODO: Fix JSX expression */}
-  k: 'newsroom-publisher' });
+  k: 'newsroom-publisher' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

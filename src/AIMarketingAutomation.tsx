@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Brain, 
   Target, 
@@ -25,10 +25,9 @@ import {
   Shield,
   Clock,
   DollarSign
-} from 'lucide-react';
-
+} from 'lucide-react'
   Shield, 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Target, 
   TrendingUp, 
@@ -42,19 +41,18 @@ const AIMarketingAutomation: React.FC = () => {
   Lock,
   PieChart,
   LineChart
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AIMarketingAutomation = () => {
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Campaign Optimization",
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Target, 
   TrendingUp, 
   Users, 
-import { SEO } from '../../components/SEO';
+import { SEO } from '../../components/SEO'
 import { 
   Target, 
   TrendingUp, 
@@ -83,7 +81,7 @@ import {
     {
       icon: Users,
       title: "Personalized Content Generation",
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Target, 
   BarChart3, 
@@ -109,10 +107,9 @@ import {
   Building,
   FileText,
   Share2
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Brain, Target, Users, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
-
+} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Brain, Target, Users, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react'
 export default function AIMarketingAutomation() {
   const features = [
     {
@@ -174,7 +171,7 @@ export default function AIMarketingAutomation() {
       icon: TrendingUp,
       title: "Predictive Performance Modeling",
       description: "AI-driven forecasting to predict campaign performance and optimize strategies."
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Target, 
   TrendingUp, 
@@ -190,8 +187,7 @@ import {
   Palette,
   Monitor,
   Smartphone
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AIMarketingAutomation() {
   const services = [
     {
@@ -250,8 +246,7 @@ export default function AIMarketingAutomation() {
       ],
       price: 'Starting at $1,799/month'
     }
-  ];
-
+  ]
   const channels = [
     {
       title: 'Email Marketing',
@@ -319,8 +314,7 @@ export default function AIMarketingAutomation() {
   ArrowRight,
   Brain,
   Palette
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AIMarketingAutomation = () => {
   const features = [
     {
@@ -353,8 +347,7 @@ const AIMarketingAutomation = () => {
       title: "Cross-Channel Automation",
       description: "Seamlessly coordinate marketing efforts across email, social media, and web channels."
     }
-  ];
-
+  ]
   const useCases = [
     {
       title: "Lead Generation & Nurturing",
@@ -376,8 +369,7 @@ const AIMarketingAutomation = () => {
       description: "Automated social media posting, engagement, and audience growth strategies.",
       icon: Globe
     }
-  ];
-
+  ]
   const benefits = [
       title: "Lead Generation",
       description: "Automated lead scoring and nurturing processes that convert prospects into customers.",
@@ -389,8 +381,7 @@ const AIMarketingAutomation = () => {
     "Save 20+ hours per week on manual marketing tasks",
     "Boost ROI by 35-55% with predictive optimization",
     "Achieve 24/7 marketing presence across all channels"
-  ];
-
+  ]
   const useCases = [
     {
       industry: "E-commerce",
@@ -412,8 +403,7 @@ const AIMarketingAutomation = () => {
       description: "Student recruitment, course recommendations, and alumni engagement",
       metrics: ["Enrollment Rate", "Course Completion", "Alumni Engagement"]
     }
-  ];
-
+  ]
   const pricing = [
     "Increase conversion rates by up to 300%",
     "Reduce marketing costs by 40-60%",
@@ -427,8 +417,7 @@ const AIMarketingAutomation = () => {
     "Automate 80% of repetitive marketing tasks",
     "Real-time campaign optimization",
     "Advanced ROI tracking and attribution"
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: "Starter",
@@ -451,8 +440,7 @@ const AIMarketingAutomation = () => {
   Palette,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AIMarketingAutomation() {
   const features = [
     {
@@ -491,8 +479,7 @@ export default function AIMarketingAutomation() {
       icon: Users,
       benefits: ["Real-time personalization", "Behavioral triggers", "Contextual messaging"]
     }
-  ];
-
+  ]
   const marketingChannels = [
     {
       name: "Email Marketing",
@@ -518,8 +505,7 @@ export default function AIMarketingAutomation() {
       icon: Video,
       features: ["Auto-generated videos", "Thumbnail optimization", "Performance tracking", "Platform optimization"]
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: "Starter",
@@ -550,8 +536,7 @@ export default function AIMarketingAutomation() {
     'Automate 80% of repetitive marketing tasks',
     'Achieve 3x better ROI on marketing spend',
     'Reduce time-to-market for campaigns by 70%'
-  ];
-
+  ]
   const useCases = [
     {
       description: "Automated product recommendations, abandoned cart recovery, and personalized shopping experiences.",
@@ -606,8 +591,7 @@ export default function AIMarketingAutomation() {
       description: "Built-in compliance features for GDPR, CAN-SPAM, and other marketing regulations",
       benefits: ["GDPR compliance", "Data privacy", "Audit trails", "Secure data handling"]
     }
-  ];
-
+  ]
   const useCases = [
     {
       industry: "E-commerce",
@@ -633,8 +617,7 @@ export default function AIMarketingAutomation() {
       description: "Intelligent cross-selling and retention campaigns based on financial behavior",
       metrics: ["40% cross-sell success", "35% retention improvement", "50% customer lifetime value"]
     }
-  ];
-
+  ]
   const technologies = [
     {
       name: "Machine Learning",
@@ -666,8 +649,7 @@ export default function AIMarketingAutomation() {
       description: "Instant campaign adjustments based on live performance data",
       icon: Cpu
     }
-  ];
-
+  ]
   const pricingTiers = [
     {
       name: "Starter",
@@ -769,8 +751,7 @@ export default function AIMarketingAutomation() {
       cta: "Contact Sales",
       popular: false
     }
-  ];
-
+  ]
   const successMetrics = [
     {
       metric: "3.5x",
@@ -792,8 +773,7 @@ export default function AIMarketingAutomation() {
       description: "ROI improvement",
       detail: "Automated optimization and personalization"
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -859,14 +839,14 @@ export default function AIMarketingAutomation() {
               optimizes, and delivers personalized experiences at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/case-studies"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
               >
@@ -907,7 +887,7 @@ export default function AIMarketingAutomation() {
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <$2 />
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-purple-500 hover:text-purple-400 transition-all duration-300"
               >
@@ -991,7 +971,7 @@ export default function AIMarketingAutomation() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
+            const Icon = feature.icon
             return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
@@ -1150,7 +1130,7 @@ export default function AIMarketingAutomation() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -1319,7 +1299,7 @@ export default function AIMarketingAutomation() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+              < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-purple-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
@@ -1340,7 +1320,7 @@ export default function AIMarketingAutomation() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+              < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular 
                   ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' 
                   : 'border-gray-700/50 hover:border-purple-500/50'
@@ -1401,7 +1381,7 @@ export default function AIMarketingAutomation() {
                 ))}
               </div>
             </motion.div>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -1429,13 +1409,13 @@ export default function AIMarketingAutomation() {
               optimizes campaigns, and drives measurable results across all channels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Your Free Trial
               </Link>
-              <Link
+              <$2 />
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1497,8 +1477,7 @@ export default function AIMarketingAutomation() {
     "24/7 automated customer engagement",
     "Personalized customer experiences at scale",
     "Data-driven marketing decisions"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -1549,7 +1528,7 @@ export default function AIMarketingAutomation() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -1558,7 +1537,7 @@ export default function AIMarketingAutomation() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1578,7 +1557,7 @@ export default function AIMarketingAutomation() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon;
+              const Icon = useCase.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
@@ -1591,12 +1570,12 @@ export default function AIMarketingAutomation() {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -1648,7 +1627,7 @@ export default function AIMarketingAutomation() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
-            const Icon = tech.icon;
+            const Icon = tech.icon
             return (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1657,7 +1636,7 @@ export default function AIMarketingAutomation() {
                 <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -1675,7 +1654,7 @@ export default function AIMarketingAutomation() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
-            <div key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${
+            < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
               tier.popular 
                 ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                 : 'border-gray-700/50'
@@ -1706,7 +1685,7 @@ export default function AIMarketingAutomation() {
                 ))}
               </ul>
               
-              <Link
+              <$2 />
                 to="/contact"
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
                   tier.popular
@@ -1762,14 +1741,14 @@ export default function AIMarketingAutomation() {
             optimizes performance, and drives results across all channels.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
+            <$2 />
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
             >
@@ -1805,14 +1784,14 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 }
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Schedule a Demo
             </Link>
-            <Link
+            <$2 />
               to="/pricing"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
@@ -1821,7 +1800,7 @@ export default function AIMarketingAutomation() {
             >
               Start Your Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/case-studies"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
@@ -1832,7 +1811,7 @@ export default function AIMarketingAutomation() {
             >
               Start Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
@@ -1871,7 +1850,7 @@ export default function AIMarketingAutomation() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
@@ -1880,7 +1859,7 @@ export default function AIMarketingAutomation() {
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1933,7 +1912,7 @@ export default function AIMarketingAutomation() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${
+              < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
@@ -1959,7 +1938,7 @@ export default function AIMarketingAutomation() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -1985,13 +1964,13 @@ export default function AIMarketingAutomation() {
               to create personalized campaigns that convert.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
@@ -2002,10 +1981,9 @@ export default function AIMarketingAutomation() {
         </div>
       </div>
     </div>
-  );
-};
-
-export default AIMarketingAutomation;
+  )
+}
+export default AIMarketingAutomation
 }
 }
 }
@@ -2079,8 +2057,8 @@ export default AIMarketingAutomation;
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIMarketingAutomation;
+  )
 }
+export default AIMarketingAutomation
+}
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

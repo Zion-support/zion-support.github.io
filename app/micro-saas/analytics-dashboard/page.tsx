@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
 const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
     {
@@ -64,7 +64,7 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -82,7 +82,7 @@ return (
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
               </h1>
               <p>
-                Transform your data into actionable insights with our AI-powered analytics dashboard.;
+                Transform your data into actionable insights with our AI-powered analytics dashboard.
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -99,7 +99,7 @@ return (
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -165,7 +165,7 @@ return (
               ))}
         {/* Metrics Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -197,7 +197,7 @@ return (
               ))}
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -244,7 +244,7 @@ return (
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -257,7 +257,7 @@ return (
                 Ready to Transform Your Analytics?
               </h2>
               <p></p>
-                Join thousands of businesses already using our AI analytics dashboard;
+                Join thousands of businesses already using our AI analytics dashboard
                 to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -275,9 +275,8 @@ return (
       </div>
     </>
   ),
-};
-
-export default AIAnalyticsDashboardPage;
+}
+export default AIAnalyticsDashboardPage
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -319,3 +318,4 @@ export default AIAnalyticsDashboardPage;
   )
 }
 export default AIAnalyticsDashboardPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></li></section></section></section></section></section>
+</li>

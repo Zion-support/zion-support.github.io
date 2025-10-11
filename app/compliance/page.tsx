@@ -22,9 +22,9 @@ const CompliancePage: React.FC = () => {
     {
       icon: Shield,
       title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting';
-    };
-  ];
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
+    }
+  ]
   const benefits = [
     'Advanced compliance technology integration',
     'Real-time compliance monitoring',
@@ -45,7 +45,7 @@ const CompliancePage: React.FC = () => {
         </div><div className="text-center mb-16">
           </div><h1 className="text-5xl font-bold text-white mb-6">
             Compliance
-  </
+  
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Ensure your business meets all regulatory and compliance requirements. 
             Powered by advanced AI technology and industry expertise.
@@ -71,10 +71,10 @@ const CompliancePage: React.FC = () => {
             ))}
         <div className="text-center">
           </div><h2 className="text-3xl font-bold text-white mb-6">
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
   return() {features.map((feature, index) => ()
           ))}
         </div>
@@ -98,18 +98,17 @@ const CompliancePage: React.FC = () => {
             </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               </button><Phone className="mr-2 h-5 w-5" />
               Call Now
-  </
+  
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button><Mail className="mr-2 h-5 w-5" />
               Email Us
-  </
+  
           </div>
         </div>
       </div>
     </div>
   ),
-};
-
+}
 export default CompliancePage
   </button>
   </button>

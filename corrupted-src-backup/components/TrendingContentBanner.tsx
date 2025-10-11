@@ -202,20 +202,20 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
   const, currentIte, m = trendingIte, m, s[currentInd, e, x]
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
     swit, c, h (bad, g, e) {
-ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';
-ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
-ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
-ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';
-defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';
-ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';';
-ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
-ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
-ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';';
-defa, u, l;
+ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e'
+ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e'
+ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e'
+ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e'
+defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e'
+ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';'
+ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';'
+ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';'
+ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';'
+defa, u, l
   t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';'
   }
   }
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n = currentIt, e, m.ic, o, n
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
         <div, className="fl, e, x-1">
@@ -266,7 +266,7 @@ defa, u, l;
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 }
   }
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n = currentIt, e, m.ic, o, n
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
@@ -398,6 +398,7 @@ defa, u, l;
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  /></d>
       </d, i, v>
     </d, i, v>
-  );
+  )
 }
 export default TrendingContentBanner;"`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></h3></h3>

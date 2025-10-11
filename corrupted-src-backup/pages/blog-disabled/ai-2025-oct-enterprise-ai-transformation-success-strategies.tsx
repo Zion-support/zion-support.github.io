@@ -429,10 +429,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <div>
                   {[
                     {
-                      company="Global Retail Chain;
-                      industry: "Fortune 100 Retailer;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$45M;
+                      company="Global Retail Chain
+                      industry: "Fortune 100 Retailer
+:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
+                      investment="$45M
                       value="$680M annual value
                       roi="15x ROI
                       investment: "$45M,
@@ -452,10 +452,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       ]
                     },
                     {
-                      company="Healthcare Provider;
-                      industry: "Multi-hospital system;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$28M;
+                      company="Healthcare Provider
+                      industry: "Multi-hospital system
+:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
+                      investment="$28M
                       value="$420M annual savings
                       roi="15x ROI
                       investment: "$28M,
@@ -475,10 +475,10 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                       ]
                     },
                     {
-                      company="Manufacturing Enterprise;
-                      industry: "Global manufacturer;
-:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
-                      investment="$38M;
+                      company="Manufacturing Enterprise
+                      industry: "Global manufacturer
+:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx
+                      investment="$38M
                       value="$580M annual value
                       roi="15.3x ROI
                       investment: "$38M,
@@ -524,7 +524,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         <div>{story.investment}</div>"
                           <div></div>
                       <h3 className="text-2xl font-bold text-white mb-2">{story.company}</h3>
-                          <li,"
+                          <,"$2 />
   key: {hIndex} className="flex items-start gap-2"></li>"
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <div></div>"
@@ -689,3 +689,4 @@ export default EnterpriseAITransformationSuccessStrategies</div>
   </strong>
   </strong>
   </strong>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></a></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h4></h4></h4></h4></h4></h4></h4></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></section></section></section></article>

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface MarketValidatedService {
 const contact_info =
   mobil,
@@ -1141,9 +1141,9 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     trial_days: 14,
     setup_time: '2 hours',
     contact_info},
-export interface MarketValidatedService;
+export interface MarketValidatedService
 export interface MarketValidatedService {
-export interface MarketValidatedService;
+export interface MarketValidatedService
 export interface MarketValidatedService {}
     trialDays: 14,
     setupTime: '2 hours',
@@ -1151,20 +1151,20 @@ export interface MarketValidatedService {}
   }
 ];import { ServiceVariant  } from "../types/service-variants"
 export interface MarketValidatedService {
-	id: string;
-	name: string;
-	tagline: string;
-	price: string;
-	period: string;
-  description: string;
-	features: string[];
-	category: string;
-	link: string;
-	variant?: ServiceVariant;
-	rating?: number;
-	customers?: number;
-	trialDays?: number;
-	setupTime?: string;
+	id: string
+	name: string
+	tagline: string
+	price: string
+	period: string
+  description: string
+	features: string[]
+	category: string
+	link: string
+	variant?: ServiceVariant
+	rating?: number
+	customers?: number
+	trialDays?: number
+	setupTime?: string
 export interface MarketValidatedService {
 	id: string
 	name: string
@@ -1213,7 +1213,7 @@ export interface MarketValidatedService {}
   e: '2 hours',
     contactInfo}
   }
-];import { ServiceVariant } from '../types/service-variants';
+];import { ServiceVariant } from '../types/service-variants'
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
 		website?: string}
@@ -1650,19 +1650,19 @@ export const,
 		customers: 420,
 		trialDays: 14}
 ];import { ServiceVariant   } from '../types / service - variants'
-export interface MarketValidatedService {id: string;
-name: string;
-tagline: string;
-price: string;
-period: string;
-description: string;
-features: string[];
-category: string;
-link: string;
-variant?: ServiceVariant;
-rating?: number;
-customers?: number;
-trial_days?: number;
+export interface MarketValidatedService {id: string
+name: string
+tagline: string
+price: string
+period: string
+description: string
+features: string[]
+category: string
+link: string
+variant?: ServiceVariant
+rating?: number
+customers?: number
+trial_days?: number
 setup_time?: string
 contact_info: unknown
   mobile: string,
@@ -2606,10 +2606,10 @@ export const,
   s: 14,
   setup_tim,
   e: '2 hours'
-  contact_info}];
-contactInfo;
+  contact_info}]
+contactInfo
 	}
-];
+]
   g: 4.6
   customer,
   s: 410

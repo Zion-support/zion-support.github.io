@@ -1,10 +1,10 @@
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+}
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-rfp-bid-writer',
@@ -5364,7 +5364,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     customers: 24
     rating: 4 && 4.6
     reviews: 6,
-  }];
+  }]
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -5449,7 +5449,7 @@ export const,
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support',
     price: '$39', period: '/month',
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
-    features: [;
+    features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		]
 		popular: true,
@@ -7370,7 +7370,7 @@ export const,
   rating: 4.6
   reviews: 6,
 }
-		rating: 4.6;
+		rating: 4.6
 		reviews: 6
 // const contact = {
 	mobile: '+1 302 464 0950'
@@ -7381,34 +7381,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{,
 		id: 'ai-email-responder'
 		name: 'AI Email Responder',
-		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
+		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
 		price: '$39'
 		period: '/month',
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
+		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		];
-		popular: true;
-		icon: '';
+		]
+		popular: true
+		icon: ''
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup.com/services/ai-email-responder',
-		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs';
-		targetAudience: 'Sales, support, founder-led teams';
-		trialDays: 14;
-		setupTime: '30 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Gmail/Outlook APIsLLMWebhook'];
-		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
-		useCases: ['Inbound triageNurture sequencesSLA reporting'];
-		roi: 'Cuts manual email time by 6080%';
-		competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10 B+ email productivity';
-		growthRate: '15% CAGR';
-		variant: 'network-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
+		targetAudience: 'Sales, support, founder-led teams'
+		trialDays: 14
+		setupTime: '30 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Gmail/Outlook APIsLLMWebhook']
+		integrations: ['GmailOutlookHubSpotPipedriveSlack']
+		useCases: ['Inbound triageNurture sequencesSLA reporting']
+		roi: 'Cuts manual email time by 6080%'
+		competitors: ['Superhuman AIFront AIGmail add-ons']
+		marketSize: '$10 B+ email productivity'
+		growthRate: '15% CAGR'
+		variant: 'network-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
@@ -7418,34 +7418,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'mobile-survey-studio'
 		name: 'Mobile Survey Studio',
-		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
-		price: '$19';
-		period: '/month';
-		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
+		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
+		price: '$19'
+		period: '/month'
+		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		];
-		popular: false;
-		icon: '';
+		]
+		popular: false
+		icon: ''
 		color: 'from-emerald-600 to-teal-700'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
-		marketPosition: 'Faster than legacy survey tools, better mobile UX';
-		targetAudience: 'Product, CX, research teams';
-		trialDays: 7;
-		setupTime: '15 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['TwilioNext.jsVercel/Netlify'];
-		integrations: ['HubSpotSheetsSlack'];
-		useCases: ['NPSFeature feedbackOnboarding'];
-		roi: '24 x higher completion on mobile';
-		competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7 B research tooling';
-		growthRate: '9% CAGR';
-		variant: 'holographic-matrix';
-		contactInfo: contact;
-		realImplementation: true;
+		marketPosition: 'Faster than legacy survey tools, better mobile UX'
+		targetAudience: 'Product, CX, research teams'
+		trialDays: 7
+		setupTime: '15 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['TwilioNext.jsVercel/Netlify']
+		integrations: ['HubSpotSheetsSlack']
+		useCases: ['NPSFeature feedbackOnboarding']
+		roi: '24 x higher completion on mobile'
+		competitors: ['TypeformSurveyMonkey']
+		marketSize: '$7 B research tooling'
+		growthRate: '9% CAGR'
+		variant: 'holographic-matrix'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
@@ -7455,34 +7455,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'niche-productivity-planner'
 		name: 'Niche Productivity Planner',
-		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
+		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
 		price: '$12'
 		period: '/month',
-		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
+		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		];
-		popular: false;
-		icon: '';
-		color: 'from-purple-600 to-indigo-700';
-		textColor: 'text-purple-300';
-		link: 'https://ziontechgroup.com/services/niche-productivity-planner';
-		marketPosition: 'Purpose-built vs generic task apps';
-		targetAudience: 'SMBs by vertical';
-		trialDays: 7;
-		setupTime: '10 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Next.jsSQLite/Postgres'];
-		integrations: ['Google CalendarOutlook'];
-		useCases: ['Agency opsClinic opsBoutique retail'];
-		roi: 'Saves 35 hrs/week per user';
-		competitors: ['Notion templatesClickUp'];
-		marketSize: '$3 B productivity niche';
-		growthRate: '8% CAGR';
-		variant: 'ai-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		]
+		popular: false
+		icon: ''
+		color: 'from-purple-600 to-indigo-700'
+		textColor: 'text-purple-300'
+		link: 'https://ziontechgroup.com/services/niche-productivity-planner'
+		marketPosition: 'Purpose-built vs generic task apps'
+		targetAudience: 'SMBs by vertical'
+		trialDays: 7
+		setupTime: '10 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Next.jsSQLite/Postgres']
+		integrations: ['Google CalendarOutlook']
+		useCases: ['Agency opsClinic opsBoutique retail']
+		roi: 'Saves 35 hrs/week per user'
+		competitors: ['Notion templatesClickUp']
+		marketSize: '$3 B productivity niche'
+		growthRate: '8% CAGR'
+		variant: 'ai-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
@@ -7492,34 +7492,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'event-management-dashboard'
 		name: 'Event Management Dashboard',
-		tagline: 'Tickets, scheduling, comms, and post-event analytics';
+		tagline: 'Tickets, scheduling, comms, and post-event analytics'
 		price: '$49'
 		period: '/month',
-		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
+		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		];
-		popular: true;
-		icon: '';
-		color: 'from-pink-600 to-rose-700';
+		]
+		popular: true
+		icon: ''
+		color: 'from-pink-600 to-rose-700'
 		textColor: 'text-pink-300'
 		link: 'https://ziontechgroup.com/services/event-management-dashboard'
 		marketPosition: 'Lightweight alternative to enterprise suites',
-		targetAudience: 'Marketing, HR, community teams';
-		trialDays: 14;
-		setupTime: '1 hour';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Next.jsStripeTwilio'];
-		integrations: ['ZoomGoogle CalendarSlack'];
-		useCases: ['WebinarsTown hallsCustomer training'];
-		roi: 'Saves 50% ops time per event';
-		competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6 B event tooling';
-		growthRate: '10% CAGR';
-		variant: 'network-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		targetAudience: 'Marketing, HR, community teams'
+		trialDays: 14
+		setupTime: '1 hour'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Next.jsStripeTwilio']
+		integrations: ['ZoomGoogle CalendarSlack']
+		useCases: ['WebinarsTown hallsCustomer training']
+		roi: 'Saves 50% ops time per event'
+		competitors: ['EventbriteHopin (basic)']
+		marketSize: '$6 B event tooling'
+		growthRate: '10% CAGR'
+		variant: 'network-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,
@@ -11430,7 +11430,7 @@ export const,
 		review,
   s: 6}
 	}
-];
+]
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
@@ -11440,34 +11440,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{,
 		id: 'ai-email-responder'
 		name: 'AI Email Responder',
-		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
+		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support'
 		price: '$39'
 		period: '/month',
-		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.';
+		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		];
-		popular: true;
-		icon: '';
+		]
+		popular: true
+		icon: ''
 		color: 'from-cyan-600 to-blue-700'
 		textColor: 'text-cyan-300'
 		link: 'https://ziontechgroup.com/services/ai-email-responder',
-		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs';
-		targetAudience: 'Sales, support, founder-led teams';
-		trialDays: 14;
-		setupTime: '30 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Gmail/Outlook APIsLLMWebhook'];
-		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
-		useCases: ['Inbound triageNurture sequencesSLA reporting'];
-		roi: 'Cuts manual email time by 6080%';
-		competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10 B+ email productivity';
-		growthRate: '15% CAGR';
-		variant: 'network-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
+		targetAudience: 'Sales, support, founder-led teams'
+		trialDays: 14
+		setupTime: '30 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Gmail/Outlook APIsLLMWebhook']
+		integrations: ['GmailOutlookHubSpotPipedriveSlack']
+		useCases: ['Inbound triageNurture sequencesSLA reporting']
+		roi: 'Cuts manual email time by 6080%'
+		competitors: ['Superhuman AIFront AIGmail add-ons']
+		marketSize: '$10 B+ email productivity'
+		growthRate: '15% CAGR'
+		variant: 'network-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
@@ -11477,34 +11477,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'mobile-survey-studio'
 		name: 'Mobile Survey Studio',
-		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
-		price: '$19';
-		period: '/month';
-		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
+		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
+		price: '$19'
+		period: '/month'
+		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		];
-		popular: false;
-		icon: '';
+		]
+		popular: false
+		icon: ''
 		color: 'from-emerald-600 to-teal-700'
 		textColor: 'text-emerald-300'
 		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
-		marketPosition: 'Faster than legacy survey tools, better mobile UX';
-		targetAudience: 'Product, CX, research teams';
-		trialDays: 7;
-		setupTime: '15 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['TwilioNext.jsVercel/Netlify'];
-		integrations: ['HubSpotSheetsSlack'];
-		useCases: ['NPSFeature feedbackOnboarding'];
-		roi: '24 x higher completion on mobile';
-		competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7 B research tooling';
-		growthRate: '9% CAGR';
-		variant: 'holographic-matrix';
-		contactInfo: contact;
-		realImplementation: true;
+		marketPosition: 'Faster than legacy survey tools, better mobile UX'
+		targetAudience: 'Product, CX, research teams'
+		trialDays: 7
+		setupTime: '15 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['TwilioNext.jsVercel/Netlify']
+		integrations: ['HubSpotSheetsSlack']
+		useCases: ['NPSFeature feedbackOnboarding']
+		roi: '24 x higher completion on mobile'
+		competitors: ['TypeformSurveyMonkey']
+		marketSize: '$7 B research tooling'
+		growthRate: '9% CAGR'
+		variant: 'holographic-matrix'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
@@ -11514,34 +11514,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'niche-productivity-planner'
 		name: 'Niche Productivity Planner',
-		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
+		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
 		price: '$12'
 		period: '/month',
-		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
+		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		];
-		popular: false;
-		icon: '';
-		color: 'from-purple-600 to-indigo-700';
-		textColor: 'text-purple-300';
-		link: 'https://ziontechgroup.com/services/niche-productivity-planner';
-		marketPosition: 'Purpose-built vs generic task apps';
-		targetAudience: 'SMBs by vertical';
-		trialDays: 7;
-		setupTime: '10 minutes';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Next.jsSQLite/Postgres'];
-		integrations: ['Google CalendarOutlook'];
-		useCases: ['Agency opsClinic opsBoutique retail'];
-		roi: 'Saves 35 hrs/week per user';
-		competitors: ['Notion templatesClickUp'];
-		marketSize: '$3 B productivity niche';
-		growthRate: '8% CAGR';
-		variant: 'ai-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		]
+		popular: false
+		icon: ''
+		color: 'from-purple-600 to-indigo-700'
+		textColor: 'text-purple-300'
+		link: 'https://ziontechgroup.com/services/niche-productivity-planner'
+		marketPosition: 'Purpose-built vs generic task apps'
+		targetAudience: 'SMBs by vertical'
+		trialDays: 7
+		setupTime: '10 minutes'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Next.jsSQLite/Postgres']
+		integrations: ['Google CalendarOutlook']
+		useCases: ['Agency opsClinic opsBoutique retail']
+		roi: 'Saves 35 hrs/week per user'
+		competitors: ['Notion templatesClickUp']
+		marketSize: '$3 B productivity niche'
+		growthRate: '8% CAGR'
+		variant: 'ai-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
@@ -11551,34 +11551,34 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{
 		id: 'event-management-dashboard'
 		name: 'Event Management Dashboard',
-		tagline: 'Tickets, scheduling, comms, and post-event analytics';
+		tagline: 'Tickets, scheduling, comms, and post-event analytics'
 		price: '$49'
 		period: '/month',
-		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
+		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		];
-		popular: true;
-		icon: '';
-		color: 'from-pink-600 to-rose-700';
+		]
+		popular: true
+		icon: ''
+		color: 'from-pink-600 to-rose-700'
 		textColor: 'text-pink-300'
 		link: 'https://ziontechgroup.com/services/event-management-dashboard'
 		marketPosition: 'Lightweight alternative to enterprise suites',
-		targetAudience: 'Marketing, HR, community teams';
-		trialDays: 14;
-		setupTime: '1 hour';
-		category: 'Developer Tools';
-		realService: true;
-		technology: ['Next.jsStripeTwilio'];
-		integrations: ['ZoomGoogle CalendarSlack'];
-		useCases: ['WebinarsTown hallsCustomer training'];
-		roi: 'Saves 50% ops time per event';
-		competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6 B event tooling';
-		growthRate: '10% CAGR';
-		variant: 'network-futuristic';
-		contactInfo: contact;
-		realImplementation: true;
+		targetAudience: 'Marketing, HR, community teams'
+		trialDays: 14
+		setupTime: '1 hour'
+		category: 'Developer Tools'
+		realService: true
+		technology: ['Next.jsStripeTwilio']
+		integrations: ['ZoomGoogle CalendarSlack']
+		useCases: ['WebinarsTown hallsCustomer training']
+		roi: 'Saves 50% ops time per event'
+		competitors: ['EventbriteHopin (basic)']
+		marketSize: '$6 B event tooling'
+		growthRate: '10% CAGR'
+		variant: 'network-futuristic'
+		contactInfo: contact
+		realImplementation: true
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,

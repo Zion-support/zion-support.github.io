@@ -10,12 +10,12 @@
 export interface PerformanceMetrics {
     fcp?: number; // First Contentful Paint
   }
-  lcp?: number; // Largest Contentful Paint;
-  fid?: number; // First Input Delay;
-  cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
-  fmp?: number; // First Meaningful Paint;
-  customMetrics?: Record;
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+  fmp?: number; // First Meaningful Paint
+  customMetrics?: Record
           <string>
 }
 /**

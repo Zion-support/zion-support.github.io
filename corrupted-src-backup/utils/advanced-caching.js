@@ -5,23 +5,21 @@
 
 class AdvancedCachingSystem {
     constructor() {
-    this.cache = new Map();
-    this.ttlMap = new Map();
-    this.accessCount = new Map();
-    this.maxSize = 1000;
-    this.defaultTTL = 5 * 60 * 1000; // 5 minutes;
-    this.cleanupInterval = 60 * 1000; // 1 minute;
+    this.cache = new Map()
+    this.ttlMap = new Map()
+    this.accessCount = new Map()
+    this.maxSize = 1000
+    this.defaultTTL = 5 * 60 * 1000; // 5 minutes
+    this.cleanupInterval = 60 * 1000; // 1 minute
     this.init()
   }
 
   init() {
-    // Start cleanup interval;
-    setInterval(() => this.cleanup(), this.cleanupInterval);
-
-    // Setup memory pressure handling;
-    this.setupMemoryPressureHandling();
-
-    // Setup cache analytics;
+    // Start cleanup interval
+    setInterval(() => this.cleanup(), this.cleanupInterval)
+    // Setup memory pressure handling
+    this.setupMemoryPressureHandling()
+    // Setup cache analytics
     this.setupCacheAnalytics()
   }
 
@@ -53,7 +51,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     //     const expiry = this.ttlMap.get(key)
     // Check if expired
     if (expiry && now > expiry) {
-      this.delete(key);
+      this.delete(key)
       return null
   }
 
@@ -101,7 +99,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
 
   persistToStorage(key, value, expiry) {/* TODO: Fix JSX expression */}
       }
-      localStorage.setItem(`cache_${key}`, JSON.stringify(item));
+      localStorage.setItem(`cache_${key}`, JSON.stringify(item))
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
@@ -133,12 +131,12 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
         if (key.startsWith('cache_')) {
           const _item = JSON.parse(localStorage.getItem(key))
           if (item && item.expiry>now</expiry>) {
-            //             const cacheKey = key.replace('cache_', '');
-            this.cache.set(cacheKey, item.value);
-            this.ttlMap.set(cacheKey, item.expiry);
+            //             const cacheKey = key.replace('cache_', '')
+            this.cache.set(cacheKey, item.value)
+            this.ttlMap.set(cacheKey, item.expiry)
             this.accessCount.set(cacheKey, 1)
   } else {
-            localStorage.removeItem(key);
+            localStorage.removeItem(key)
   loadFromStorage() {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
           }
@@ -176,7 +174,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
 
   setupCacheAnalytics() {
     this.stats = {
-      hits: 0;
+      hits: 0
       misses: 0
       sets: 0
       deletes: 0,
@@ -206,8 +204,8 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
           try {
-            //             const value = await fetcher(key);
-            this.set(key, value);
+            //             const value = await fetcher(key)
+            this.set(key, value)
             return { key, success: true }
           } catch (error) {
             return { key, success: false, error }
@@ -252,7 +250,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     try {
       return JSON.stringify(value)
   } catch (error) {
-      return value;
+      return value
   compressValue(value) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
     }

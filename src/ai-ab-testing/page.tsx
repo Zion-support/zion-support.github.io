@@ -21,7 +21,7 @@ const AIABTestingPage: React.FC = () => {
       <Navigation /></Navigation>"
       <main className="container mx-auto px-4 py-16 pt-24"></main>"
         <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
+          < className="text-5xl,"$2 />
   md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
             AI A/B Testing Platform
           </h1>"
@@ -33,11 +33,11 @@ const AIABTestingPage: React.FC = () => {
             Test, learn, and improve with intelligent experimentation and analysis.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
+            <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
               Get Started
             </a>
-            <a
+            <$2 />
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <TestTube className="w-5 h-5" />
               +1 302 464 0950,
@@ -46,11 +46,11 @@ const AIABTestingPage: React.FC = () => {
         </section>
 "
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+          < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
             A/B Testing Features,
           </h2>"
-          <div className="grid grid-cols-1,
+          < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => (}"
@@ -78,6 +78,6 @@ const AIABTestingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
-export default AIABTestingPage;
+export default AIABTestingPage

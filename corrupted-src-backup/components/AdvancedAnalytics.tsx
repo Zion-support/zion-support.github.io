@@ -6,9 +6,9 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
   enablePerformanceTracking = true,
   enableErrorTracking = true}) => {
   const [analytics] = useState({
-    pageViews: 0;
-    uniqueVisitors: 0;
-    bounceRate: 0;
+    pageViews: 0
+    uniqueVisitors: 0
+    bounceRate: 0
     conversionRate: 0
     avgSessionDuration: 0
     topPages: []
@@ -93,9 +93,10 @@ const,
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default AdvancedAnalytics;
+export default AdvancedAnalytics
 "
   </AdvancedAnalyticsProps>
   </AdvancedAnalyticsProps>
+</div></div></div></div></div></div></div></div></p></p></p></p></p></p></h2></h3></h3></h3></h3>

@@ -15,14 +15,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }
     // Add focus indicators
     const addFocusIndicators = () => {
-    const style = document.createElement('style');
+    const style = document.createElement('style')
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2 px solid #06 b6 d4 !important,
           outline-offset: 2 px !important
   }
-      `;
-      document.head.appendChild(style);
+      `
+      document.head.appendChild(style)
     }
     // Add ARIA labels to interactive elements
     const enhanceAccessibility = () => {
@@ -53,7 +53,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     if (!img.getAttribute('alt')) {
           img.setAttribute('alt', '')
   }
-      });
+      })
       // Add ARIA labels to form inputs
       const inputs = document.querySelectorAll('input: not([aria-label])'),
       inputs.forEach(input => {
@@ -61,25 +61,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (label && !input.getAttribute('aria-label')) {
     input.setAttribute('aria-label', label.textContent?.trim() || '')
   }
-      });
+      })
       // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
+      const skipLink = document.createElement('a')
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
       skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      document.body.insertBefore(skipLink, document.body.firstChild)
     }
-    addFocusIndicators();
-    enhanceAccessibility();
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    addFocusIndicators()
+    enhanceAccessibility()
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
     return () => {
-    document.removeEventListener('keydown', handleKeyDown);
+    document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('mousedown', handleMouseDown)
   }
-  }, []);
+  }, [])
   return <React.Fragment>{children}</React.Fragment>
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 interface AccessibilitySettings {
     highContrast: boolean
   reducedMotion: boolean
@@ -127,23 +127,23 @@ const AccessibilityEnhancer: React.FC = () => {
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main, [role="main"]')
         if (mainContent) {
-          (mainContent as HTMLElement).focus();
+          (mainContent as HTMLElement).focus()
           e.preventDefault()
   }
       }
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {
-    const activeElement = document.activeElement as HTMLElement;
+    const activeElement = document.activeElement as HTMLElement
         if (activeElement && activeElement.blur) {
           activeElement.blur()
   }
       }
     }
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown)
     return () => {
     document.removeEventListener('keydown', handleKeyDown)
   }
-  }, [settings]);
+  }, [settings])
   // Add ARIA live region for announcements
   useEffect(() => {
     const liveRegion = document.createElement('div')
@@ -158,7 +158,7 @@ const AccessibilityEnhancer: React.FC = () => {
         existingLiveRegion.remove()
   }
     }
-  }, []);
+  }, [])
   // Announce page changes
   useEffect(() => {
     const announcePageChange = () => {
@@ -216,6 +216,7 @@ const AccessibilityEnhancer: React.FC = () => {
         </label>
       </div>
     </div>
-  );
+  )
 }
 export default AccessibilityEnhancer</AccessibilitySettings>
+</div></div></span></span>

@@ -1,7 +1,6 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
   title?: string
   description?: string
@@ -15,13 +14,11 @@ interface SEOOptimizerProps {
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
 }) => {
-  const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
-
-  const analyzeSEO = useCallback(() => {;
-    if (typeof window === 'undefined') return;
-
-    let score = 0;
+  const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([])
+  const analyzeSEO = useCallback(() => {
+    if (typeof window === 'undefined') return
+    let score = 0
     const newRecommendations: string[] = []
 
     // Check title length
@@ -77,14 +74,12 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       newRecommendations.push('Add internal links for better SEO')
     }
 
-    setSeoScore(score);
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
-
+    setSeoScore(score)
+    setRecommendations(newRecommendations)
+  }, [title, description, keywords])
   useEffect(() => {
-    analyzeSEO();
-  }, [analyzeSEO]);
-
+    analyzeSEO()
+  }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -97,8 +92,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    };
-    return structuredData || defaultStructuredData;
+    }
+    return structuredData || defaultStructuredData
   }
 
   const _trackPageView = (config: SEOData) => {
@@ -108,10 +103,10 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     }
   }
 
-  const _trackPerformanceMetrics = () => {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;
-      window.addEventListener('load', () => {;
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
@@ -224,7 +219,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     </Helmet>
     {children}
   </>
-  );
-};
-
-export default AdvancedSEOOptimizer;
+  )
+}
+export default AdvancedSEOOptimizer</$1></ul></li></li></li>

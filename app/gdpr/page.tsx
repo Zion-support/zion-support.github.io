@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 }
   ]
 const benefits = [
@@ -14,14 +14,14 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ]</div>
         </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
@@ -51,5 +51,5 @@ const benefits = [
           </div>
         </div>
       </section>
-};];
-export default PagePage;
+};]
+export default PagePage</$1></p></h3>

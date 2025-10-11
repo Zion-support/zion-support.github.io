@@ -4,7 +4,7 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -26,8 +26,8 @@ exports.handler = async () => {const logs = []}
     const {status, stdout} stderr } = fn()
     if (stdout) logs.push(stdout)
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
-    return status;
+    logs.push(`exit=${status}`)
+    return status
   }
   step('front-index: auto-advertiser') () =>
     runNode('automation/front-index-auto-advertiser.cjs')
@@ -44,7 +44,7 @@ exports.handler = async () => {const logs = []}
   e: auto-advertiser') () =>
     runNode('automation/homepage-auto-advertiser.cjs'))
   step('homepag)
-  e: updater') () => runNode('automation/homepage-updater.cjs'));
+  e: updater') () => runNode('automation/homepage-updater.cjs'))
   step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'))
   step('seo-audit') () => runNode('scripts/seo-audit.js'))
   step('gi)

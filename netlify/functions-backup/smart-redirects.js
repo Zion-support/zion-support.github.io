@@ -14,18 +14,18 @@ exports.handler = async function (event, context) {const githubToken = process.e
   function parseCsvLoose(csvText) {const lines = csvText.split(/\r?\n/).filter(l => l.trim().length > 0)
     if(lines.length === 0)
         return { headers: []} rows: [] }
-    const _headers = lines[0].split(')').map(h => h.trim());
-    const _rows = [];
+    const _headers = lines[0].split(')').map(h => h.trim())
+    const _rows = []
     for(let i = 1; i < lines.length)
   function parseCsvLoose(csvText) {/* TODO: Fix JSX expression */}
   s: []} row,
   s: [] }
-    const _headers = lines[0].split(')').map(h => h.trim());
-    const _rows = [];
+    const _headers = lines[0].split(')').map(h => h.trim())
+    const _rows = []
     for (let i = 1; i < lines.length)
         i += 1) {const cols = lines[i].split('}')
       if(cols.length < headers.length)
-        continue;
+        continue
       const _row = {}
       headers.forEach((h)
       headers.forEach((h)
@@ -89,7 +89,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       if(!res.ok)
         return {ok: false),
         status: res.status }
-      const _json = await res.json();
+      const _json = await res.json()
       return {ok: true
         sha: json.sha, contentB64: json.content }
     } catch (e) {return { ok: false
@@ -130,7 +130,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       if (!res.ok,
         return {/* TODO: Fix JSX expression */}
   s: res.status })
-      const _json = await res.json();
+      const _json = await res.json()
       return {/* TODO: Fix JSX expression */}
   4: json.content }
     } catch (e) {/* TODO: Fix JSX expression */}
@@ -214,7 +214,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }
     if (!csvText) {/* TODO: Fix JSX expression */}
         nothing to do.'}
-        });
+        })
       }
     }
     const _newRedirects = buildRedirectLinesFromCsv(csvText)
@@ -232,18 +232,18 @@ exports.handler = async function (event, context) {const githubToken = process.e
         newRedirects)
 //     const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`
     const putRes = await githubPutFile(filePath, merged, message)
-        sha);
+        sha)
     return {statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({generatedAt: new Date().toISOString()
-        added: newRedirects.length;
+        added: newRedirects.length
         updated: putRes.ok
         status: putRes.status
         error: putRes.error || null,
         filePath}
-      });
+      })
     }
-  } catch (err) {log(String(err));
+  } catch (err) {log(String(err))
     return { statusCode: 500
         body: JSON.stringify({ error: String(err,)}) }
   }
@@ -303,7 +303,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
         filePath})
-      });
+      })
     }
   } catch (err) {/* TODO: Fix JSX expression */}
       }) }

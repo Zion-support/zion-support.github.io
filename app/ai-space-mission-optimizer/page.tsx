@@ -1,15 +1,12 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap } from 'lucide-react'
 const AISpaceMissionOptimizer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+    setIsVisible(true)
+  }, [])
   const features = [
     {
       icon: Rocket,
@@ -35,7 +32,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       description: 'Complex mission planning for interplanetary and deep space exploration',
       benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization'],
     }
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Explorer',
@@ -85,10 +82,9 @@ const AISpaceMissionOptimizer: React.FC = () => {
         'Research collaboration',
         'Training programs'
       ],
-      popular: false;
-    };
-  ];
-
+      popular: false
+    }
+  ]
   const useCases = [
     {
       title: 'Satellite Constellation Management',
@@ -112,10 +108,9 @@ const AISpaceMissionOptimizer: React.FC = () => {
       title: 'Deep Space Exploration',
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
-      results: 'Enhanced mission success rates';
-    };
-  ];
-
+      results: 'Enhanced mission success rates'
+    }
+  ]
   return (
     <>
       <Helmet>
@@ -167,14 +162,14 @@ const AISpaceMissionOptimizer: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><a
+                </div><$2 />
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"
                 >
                   </a><Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
                 </a>
-                <a
+                <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
                 >
@@ -188,7 +183,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Advanced Space Mission Features
@@ -201,7 +196,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
                 >
@@ -226,7 +221,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Space Mission Applications
@@ -239,7 +234,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105"
                 >
@@ -259,7 +254,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section><div className="
+          </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Mission-Ready Pricing
@@ -272,7 +267,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                </div><div
+                </div><$2 />
                   key={index}
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                     plan.popular 
@@ -306,7 +301,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
                     ))}
                   </ul>
                   
-                  <a href="tel:+13024640950"
+                  < href="tel:+13024640950"$2 />
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
@@ -322,7 +317,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
-          </section><div className="
+          </section>< className="$2 />
             </div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Launch Your Space Mission Success
             </h2>
@@ -331,14 +326,14 @@ const AISpaceMissionOptimizer: React.FC = () => {
               mission optimizer to achieve mission success and operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><a
+              </div><$2 />
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"
               >
                 </a><Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
               </a>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
               >
@@ -350,7 +345,6 @@ const AISpaceMissionOptimizer: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default AISpaceMissionOptimizer;
+  )
+}
+export default AISpaceMissionOptimizer

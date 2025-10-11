@@ -62,9 +62,9 @@ if (fs.existsSync(seoOptimizerPath)) {
   content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
     `interface AdvancedSEOOptimizerProps {
   config?: {
-    title: string;
-    description: string;
-    keywords: string[];
+    title: string
+    description: string
+    keywords: string[]
     canonicalUrl: string
     ogImage: string
     structuredData?: unknown,,
@@ -72,12 +72,12 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-  enableStructuredData?: boolean;
-  enableAnalytics?: boolean;
-  enablePerformanceTracking?: boolean;
-  seoData?: unknown;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
+  enableStructuredData?: boolean
+  enableAnalytics?: boolean
+  enablePerformanceTracking?: boolean
+  seoData?: unknown
+  enableOpenGraph?: boolean
+  enableTwitterCards?: boolean
   enableSchemaMarkup?: boolean;`
 }`
   )

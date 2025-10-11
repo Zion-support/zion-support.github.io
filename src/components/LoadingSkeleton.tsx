@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface SkeletonProps {
     // TODO: Add content
   }
@@ -22,12 +22,12 @@ const,
 }) => {
     const roundedClasses = rounded ? 'rounded' : ''
   }
-  const animatedClasses = animated ? 'animate-pulse' : '';
+  const animatedClasses = animated ? 'animate-pulse' : ''
   return (
     <div className="loadingskeleton">
       {/* Component content */}
     </div>)
-  );
+  )
 }
           "
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded />

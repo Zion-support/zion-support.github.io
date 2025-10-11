@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {try {
           'features_capabilities_benefits_advertiser function executed successfully'),
         timestamp: timestamp),
         function: 'features_capabilities_benefits_advertiser'}
-      });
+      })
     }
 //   } catch (error) {// console.error('❌ features_capabilities_benefits_advertiser function failed: '),
       error))}
@@ -24,13 +24,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'features_capabilities_benefits_advertiser'}
-      });
+      })
     }
 //   } catch (error) {/* TODO: Fix JSX expression */}
     )}
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
+      })
     }
   }
 }

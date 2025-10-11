@@ -36,7 +36,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
       ...pr, e, v)
       [k, e, y]: !pr, e, v[k, e, y])
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */}
-     }));
+     }))
   }
   const optimizationOption, s = [
     {/* TODO: Fix JSX expression */}
@@ -123,7 +123,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
         <, onClic, k = { onCl, o, s, e }, classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, b, g-white, border, border-gr, a, y-300, rounde, d-md, hove, r: bg-gr, a, y-50, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'$2 />
         >
           Clo, s, e</button>
-        <button, onCli, c, k={
+        <, onCli, c, k={$2 />
     () = > {
             setCurrentOptimizatio, n, s([])
   }
@@ -137,7 +137,8 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
           Apply, Optimization, s</button>
       </div>
     </div>
-  );
+  )
 }
-export default PerformanceOptimizer;
+export default PerformanceOptimizer
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></h2></h2></h3></h3>

@@ -1,9 +1,9 @@
 import React from 'react'
 'use client'
 interface ModernLoadingSpinnerProps {
-    size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
+    size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'accent'
+  text?: string
   fullScreen?: boolean
   }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
@@ -105,9 +105,10 @@ const,
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  );
+  )
 }
-export default ModernLoadingSpinner;
+export default ModernLoadingSpinner
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
+</div></div></div></div></div></p></p>

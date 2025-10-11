@@ -62,13 +62,13 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
             // If this import only has unused vars, remove the entire line
             const importMatch = line.match(/import\s*{([^}]+)}\s*from/)
             if (importMatch) {
-    const imports = importMatch[1].split(',').map(imp => imp.trim());
-              const usedImports = imports.filter(imp => !unusedVars.includes(imp));
+    const imports = importMatch[1].split(',').map(imp => imp.trim())
+              const usedImports = imports.filter(imp => !unusedVars.includes(imp))
               if (usedImports.length === 0) {
                 return false; // Remove entire import line
   } else {
-                // Keep the line but remove unused imports;
-                const newImportList = usedImports.join(', ');
+                // Keep the line but remove unused imports
+                const newImportList = usedImports.join(', ')
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})`
             line.includes(`{ ${varName}`) || `
             line.includes(`{${varName}`) ||`
@@ -101,7 +101,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     } catch (error) {
     // If ESLint fails, try a simpler approach
   } catch (error) {/* TODO: Fix JSX expression */}`
-      console.log(`ESLint failed for ${filePath}, trying simple approach...`);
+      console.log(`ESLint failed for ${filePath}, trying simple approach...`)
     }
     
   } catch (error) {/* TODO: Fix JSX expression */}`
@@ -120,9 +120,8 @@ const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
     !file.includes('dist') &&
     !file.includes('.next') &&
     !file.includes('out')
-  );
-
-let fixedCount = 0;
+  )
+let fixedCount = 0
 files.forEach(file => {
     )
   if (removeUnusedImports(file)) {

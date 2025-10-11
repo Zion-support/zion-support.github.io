@@ -107,6 +107,7 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>
-  );
+  )
 }
 export default TrendingContentBanner;"`
+</span></span></span></button></button></Link>

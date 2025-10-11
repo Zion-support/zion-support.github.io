@@ -23,4 +23,4 @@ export const metaTags = {/* TODO: Fix JSX expression */}
   r: {/* TODO: Fix JSX expression */}
   }}
 
-export default metaTags;
+export default metaTags

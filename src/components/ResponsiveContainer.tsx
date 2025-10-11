@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 interface ResponsiveContainerProps {
     // TODO: Add content
   }
@@ -9,13 +9,13 @@ interface ResponsiveContainerProps {
   breakpoints?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    sm?: string;
-    md?: string;
-    lg?: string;
-    xl?: string;
-    '2xl'?: string;
+    sm?: string
+    md?: string
+    lg?: string
+    xl?: string
+    '2xl'?: string
   }
-  fallback?: React.ReactNode;
+  fallback?: React.ReactNode
 }
 const,
   ResponsiveContainer: React.FC,
@@ -74,26 +74,26 @@ const,
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const baseClasses = className;
-    const responsiveClasses = breakpoints[screenSize] || '';
-    return `${baseClasses} ${responsiveClasses}`.trim();
+    const baseClasses = className
+    const responsiveClasses = breakpoints[screenSize] || ''
+    return `${baseClasses} ${responsiveClasses}`.trim()
   }
   return (
     <div className="responsivecontainer">
       {/* Component content */}
     </div>)
-  );
+  )
 }
-// Hook for responsive values;
+// Hook for responsive values
 export const useResponsiveValue = {}
           <T,>(value,
   s: {
     // sm?: T
   }
-// md?: T;
-// lg?: T;
-// xl?: T;
-// '2xl'?: T;
+// md?: T
+// lg?: T
+// xl?: T
+// '2xl'?: T
 // default?: T;)
 }): T => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -126,9 +126,9 @@ export const useResponsiveValue = {}
 }
     return values.sm
   }
-  return values.default || values.lg || values.md || values.sm || ({} as T);
+  return values.default || values.lg || values.md || values.sm || ({} as T)
 }
-// Hook for responsive breakpoints;
+// Hook for responsive breakpoints
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

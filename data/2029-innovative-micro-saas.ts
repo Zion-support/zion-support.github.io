@@ -1,54 +1,54 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface Innovative2029MicroSaasService {
 export interface InnovativeMicroSaas2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  description: string
+  features: string[]
+  link: string
+  category: string
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
     email: string}
     address: string}
-  };
-export interface InnovativeMicroSaas2029 {;
-  id: string;
-  name: string;
-  tagline: string;
+  }
+export interface InnovativeMicroSaas2029 {
+  id: string
+  name: string
+  tagline: string
   price: string,,
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {,
-    mobile: string;
+    mobile: string
     email: string}
     address: string}
 export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
@@ -129,7 +129,7 @@ export const,
 ]
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -273,7 +273,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 id: "2029-innovative-micro-saas"
     name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029",

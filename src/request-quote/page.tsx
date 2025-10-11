@@ -58,14 +58,14 @@ $4})
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
     setIsSubmitted(true)
   }
   const benefits = [
@@ -142,18 +142,18 @@ $4}
                 </div>
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                   <Phone className="w-5 h-5 mr-2" />
                   Contact Us
-  </
-                <a
+  
+                <$2 />
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Back to Home,
-  </
+  
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ $4}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Request a Quote,
-  </
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
@@ -211,7 +211,7 @@ $4}
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Company Name,
-  </
+  
                       <input
                         type="text"
                         name="company"
@@ -224,7 +224,7 @@ $4}
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number,
-  </
+  
                       <input
                         type="tel"
                         name="phone"
@@ -255,7 +255,7 @@ $4}
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Project Size,
-  </
+  
                       <select
                         name="projectSize"
                         value={formData.projectSize}
@@ -294,7 +294,7 @@ $4}
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Specific Requirements,
-  </
+  
                     <textarea
                       name="requirements"
                       value={formData.requirements}
@@ -304,7 +304,7 @@ $4}
                       placeholder="Any specific technical requirements, integrations, or constraints..."
                     />
                   </div>
-                  <button
+                  <$2 />
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
@@ -347,7 +347,7 @@ $4}
                 <p className="text-gray-300 text-sm mb-4">
                   For urgent inquiries or immediate assistance, contact us directly.
                 <div className="space-y-3">
-                  <a
+                  <$2 />
                     href="tel: +13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                     <Phone className="w-4 h-4 mr-2" />
@@ -437,7 +437,7 @@ $4}
 //     '$100,000 - $500,000',
 //     '$500,000+',
 //     'To be discussed'
-  ];
+  ]
   const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -448,17 +448,17 @@ $4}
 }
 //       ...prev,
       [name]: value;)
-    }));
+    }))
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
   }
   const benefits = [
   // TOD,
@@ -588,14 +588,14 @@ $4}
                 </div>
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Contact Us
           </a>
-                <a
+                <$2 />
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
@@ -621,13 +621,13 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
+            < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Request a Quote
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
-  </
+  
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -658,7 +658,7 @@ type="email" name="email"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 //                       />
                   </div>"
-                  <div className="grid grid-cols-1,"
+                  < className="grid grid-cols-1,"$2 />
   md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -696,7 +696,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           <option key={index} value={type}>{type}
                       ))}
                   </div>"
-                  <div className="grid grid-cols-1,"
+                  < className="grid grid-cols-1,"$2 />
   md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -800,7 +800,7 @@ type="submit" disabled={isSubmitting}
       </main>
       <Footer /></Footer>
     </div>
-  );
+  )
 }
 export default RequestQuotePage</textarea>
   </textarea>
@@ -810,3 +810,4 @@ export default RequestQuotePage</textarea>
   </a>
   </a>
   </HTMLInputElement>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>

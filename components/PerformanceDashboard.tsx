@@ -8,16 +8,16 @@ interface PerformanceMetrics {
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>()
   })
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const updateMetrics = const updateMetrics = const updateMetrics = () => {
-      const navigation = performance.getEntriesByType();
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      const navigation = performance.getEntriesByType()
+      )[0] as PerformanceNavigationTiming
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
+      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0
       setMetrics()
-      }));
+      }))
     }
     //Update metrics on load
     updateMetrics()
@@ -50,7 +50,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       )}
     </div>
-  );
+  )
 }
 export default PerformanceDashboard</button>
   </PerformanceMetrics>

@@ -208,7 +208,8 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
+  )
 }
-export default October2025NewContentBanner2;
+export default October2025NewContentBanner2
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3></section></section>

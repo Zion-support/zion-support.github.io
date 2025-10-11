@@ -36,9 +36,9 @@ const,
   t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       {/* TODO: Fix JSX expression */}
   t: 'max-age=63072000; includeSubDomains, preload' }
-    ];
+    ]
     headers.forEach(header => {/* TODO: Fix JSX expression */})
-    });
+    })
   }
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
@@ -73,15 +73,15 @@ const,
     let suspiciousActivity = 0
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
     }
-    // Reset suspicious activity counter every 5 minutes;
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
+    // Reset suspicious activity counter every 5 minutes
+    setInterval(resetSuspiciousActivity, 5 * 60 * 1000)
     // Track rapid clicks (potential bot activity)
     let clickCount = 0
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
-      });
+      })
     }
-    checkForXSS();
+    checkForXSS()
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form')
     forms.forEach(form => {
@@ -98,10 +98,10 @@ const,
     let keyCount = 0
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
           }
-        });
-      });
+        })
+      })
     }
-    checkSuspiciousCode();
+    checkSuspiciousCode()
     // Monitor for unusual network requests
     const originalFetch = window.fetch
     window.fetch = async (...args) => {
@@ -111,12 +111,12 @@ const,
         logger.warn('Suspicious network request blocked', { url })
         throw new Error('Suspicious network request blocked')
       }
-      return originalFetch.apply(window, args);
+      return originalFetch.apply(window, args)
     }
-  }, [validateURL]);
+  }, [validateURL])
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const warnings: string[] = []
     // Check for HTTPS
     if (location.protocol !== 'https:') {
@@ -164,8 +164,8 @@ const,
     const interval = setInterval(() => {
       validateSecurityHeaders()
   }, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
+    return () => clearInterval(interval)
+  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders])
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data })
@@ -220,7 +220,8 @@ const,
             <div>Suspicious Activity: {metrics.suspiciousActivity}
       )}
     </React.Fragment>
-  );
+  )
 }
 export default SecurityEnhancer</div>
   </SecurityEnhancerProps>
+</div></div></div></div></div></div></div></h4></h4></ul></li>

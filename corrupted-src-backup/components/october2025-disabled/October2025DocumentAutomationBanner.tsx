@@ -312,13 +312,13 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             <, t, o='/bl, o, g'$2 />
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-900, transitio, n-all, shado, w-xl'
             ></Link>
-              Explore, All, Solutions;
+              Explore, All, Solutions
               <Link, className='w-5 h-5, m, l-2' /></Link>
             </Li, n, k>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default October2025 DocumentAutomationBanner;
+export default October2025 DocumentAutomationBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>

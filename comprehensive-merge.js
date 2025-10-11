@@ -4,7 +4,7 @@ import fs from 'fs'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
     //     return { success: true, result }
   } catch (error) {
     //     return { success: false, error: error.message }
@@ -75,5 +75,5 @@ const summary = {
 const summary = {/* TODO: Fix JSX expression */}
 }
 
-fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
+fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2))
 // "`

@@ -4,8 +4,8 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
-    private retryCount = 0;
-  private maxRetries = 3;
+    private retryCount = 0
+  private maxRetries = 3
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -49,16 +49,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
-      errorId: this.state.errorId;
-      message: error.message;
-      stack: error.stack;
+      errorId: this.state.errorId
+      message: error.message
+      stack: error.stack
       componentStack: errorInfo.componentStack
       timestamp: new Date().toISOString()
       userAgent: navigator.userAgent
       url: window.location.href,
       retryCount: this.retryCount
   }
-    // Send to error reporting service;
+    // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {
       fetch('/api/errors', {)
         method: 'POST')
@@ -69,7 +69,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
     }
-    // Send to error reporting service;
+    // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
         },
         bod,
@@ -107,17 +107,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
   private handleReportBug = () => {
     const errorDetails = {
-      errorId: this.state.errorId;
+      errorId: this.state.errorId
       message: this.state.error?.message
       stack: this.state.error?.stack
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: window.location.href
   }
-    // Create a mailto link with error details;
-//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Create a mailto link with error details
+//     const subject = `Bug Report - Error ID: ${this.state.errorId}`
+//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`
+//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
     }
     // Create a mailto link with error details;`
@@ -126,8 +126,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 //     const body = `Error,`
   Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
 //     const mailtoLink = `mailt,`
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
+  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(mailtoLink)
   }
   override render() {
     if (this.state.hasError) {
@@ -135,13 +135,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       if (this.props.fallback) {
         return this.props.fallback
   }
-      // Default error UI;
+      // Default error UI
       return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
           <div className='max-w-md w-full space-y-8'>
             <div className='text-center'>)
               <div className='mx-auto h-12 w-12 text-red-500'>)
                 <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>)
-                  <path,)
+                  <ath,)$2 />
                     strokeLinecap='round'),
                     strokeLinejoin='round'),
       // Default error UI
@@ -230,7 +230,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 >
                   Report Bug,
                 </button>,
-                <button;
+                <;$2 />
                   onClick={() => window.history.back()}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 <button>
@@ -280,4 +280,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 }
 export default EnhancedErrorBoundary
-`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h2></h2>
+`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h2></h2></a>

@@ -106,8 +106,7 @@ const routes = [
   '/healthcare-it',
   '/iot-platform',
   '/5 g-implementation'
-];
-
+]
 const baseUrl = 'https: //ziontechgroup.com',
 const results = {
   working: []
@@ -135,28 +134,25 @@ function checkUrl(url) {
         status: res.statusCode),
         statusText: res.statusMessage),
         headers: res.headers
-  });
-    });
-
+  })
+    })
     req.on('error', (error) => {
     resolve({)
         url)
         error: error.message),
         status: 0
-  });
-    });
-
+  })
+    })
     req.on('timeout', () => {
-    req.destroy();
+    req.destroy()
       resolve({)
         url)
         error: 'Request timeout'),
         status: 0
-  });
-    });
-
-    req.end();
-  });
+  })
+    })
+    req.end()
+  })
 }
 
 async function auditWebsite() {

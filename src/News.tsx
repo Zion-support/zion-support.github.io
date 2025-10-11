@@ -1,13 +1,11 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
 const News: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
-
+  }
   const categories = [
   Calendar, 
   User, 
@@ -21,12 +19,10 @@ const News: React.FC = () => {
   TrendingUp,
   Award,
   Globe
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function News() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All')
   const categories = [
     'All',
     'Company News',
@@ -36,8 +32,7 @@ export default function News() {
     'Partnerships',
     'Research & Development',
     'Market Trends'
-  ];
-
+  ]
   const sources = [
     'All Sources',
     'Company Press Releases',
@@ -46,8 +41,7 @@ export default function News() {
     'Research Papers',
     'Partner Updates',
     'Customer Success Stories'
-  ];
-
+  ]
   const timeframes = [
     'All Time',
     'Last 24 Hours',
@@ -55,8 +49,7 @@ export default function News() {
     'Last Month',
     'Last 3 Months',
     'Last Year'
-  const [selectedYear, setSelectedYear] = useState('all');
-
+  const [selectedYear, setSelectedYear] = useState('all')
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 67 },
     { id: 'company', name: 'Company News', icon: Building, count: 23 },
@@ -64,15 +57,13 @@ export default function News() {
     { id: 'partnerships', name: 'Partnerships', icon: Globe, count: 12 },
     { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 8 },
     { id: 'industry', name: 'Industry Insights', icon: TrendingUp, count: 6 }
-  ];
-
+  ]
   const years = [
     { id: 'all', name: 'All Years', count: 67 },
     { id: '2025', name: '2025', count: 23 },
     { id: '2024', name: '2024', count: 28 },
     { id: '2023', name: '2023', count: 16 }
-  ];
-
+  ]
   const newsArticles = [
     {
       id: 1,
@@ -194,8 +185,7 @@ export default function News() {
       views: 7890,
       shares: 445
     }
-  ];
-
+  ]
   const filteredNews = newsArticles.filter(article => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
   const categories = [
@@ -206,34 +196,29 @@ export default function News() {
     "Industry Insights",
     "Company News",
     "Product Updates"
-  ];
-
-  const featuredArticle = newsArticles.find(article => article.featured);
-
+  ]
+  const featuredArticle = newsArticles.find(article => article.featured)
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear);
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory
+    const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear)
     const matchesSearch = searchQuery === '' || 
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.content.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    return matchesCategory && matchesYear && matchesSearch;
-  });
-
-  const featuredNews = filteredNews.filter(article => article.featured);
-  const regularNews = filteredNews.filter(article => !article.featured);
-
+      article.content.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesCategory && matchesYear && matchesSearch
+  })
+  const featuredNews = filteredNews.filter(article => article.featured)
+  const regularNews = filteredNews.filter(article => !article.featured)
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Search, 
   Calendar, 
@@ -257,13 +242,11 @@ import {
   ImageIcon,
   Video,
   FileText
-} from 'lucide-react';
-
+} from 'lucide-react'
 const News = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('latest');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [sortBy, setSortBy] = useState('latest')
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 89, color: 'from-gray-500 to-slate-500' },
     { id: 'company', name: 'Company News', icon: Building, count: 23, color: 'from-blue-500 to-cyan-500' },
@@ -271,8 +254,7 @@ const News = () => {
     { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 12, color: 'from-yellow-500 to-orange-500' },
     { id: 'partnerships', name: 'Partnerships', icon: Users, count: 18, color: 'from-purple-500 to-pink-500' },
     { id: 'technology', name: 'Technology', icon: TrendingUp, count: 25, color: 'from-red-500 to-rose-500' }
-  ];
-
+  ]
   const featuredNews = [
     {
       id: 1,
@@ -301,9 +283,8 @@ const News = () => {
       image: "/api/placeholder/600/400",
       views: "12.8k",
       type: "announcement",
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 export default function News() {
   const featuredNews = [
     {
@@ -314,10 +295,9 @@ export default function News() {
       date: '2024-08-25',
       readTime: '5 min read',
       image: '🚀',
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
 export default function News() {
   const newsItems = [
     {
@@ -339,8 +319,7 @@ export default function News() {
       image: '🔒',
       featured: true
     }
-  ];
-
+  ]
   const recentNews = [
     {
       id: 4,
@@ -502,28 +481,24 @@ export default function News() {
       externalLink: null,
       isPressRelease: false
     }
-  ];
-
+  ]
   const filteredNews = newsItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const featuredNews = newsItems.filter(item => item.featured);
-  const regularNews = filteredNews.filter(item => !item.featured);
-
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
+  const featuredNews = newsItems.filter(item => item.featured)
+  const regularNews = filteredNews.filter(item => !item.featured)
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
-
+    })
+  }
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -648,7 +623,7 @@ export default function News() {
 
                   {/* Action Button */}
                   {news.externalLink ? (
-                    <a
+                    <$2 />
                       href={news.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -758,8 +733,7 @@ export default function News() {
       readTime: '5 min read',
       image: '🏭'
     }
-  ];
-
+  ]
   const categories = [
     'All News',
     'Product Launch',
@@ -770,8 +744,7 @@ export default function News() {
     'Research',
     'Case Study',
     'Awards'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -822,7 +795,7 @@ export default function News() {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
-                <button
+                <$2 />
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -912,7 +885,7 @@ export default function News() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
-              <button
+              <$2 />
                 key={index}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   index === 0
@@ -931,7 +904,7 @@ export default function News() {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured News</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredNews.map((item) => (
-              <article
+              <rticle$2 />
                 key={item.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -981,7 +954,7 @@ export default function News() {
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.slice(0, 3).map((tag, index) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                       >
@@ -1143,10 +1116,9 @@ export default function News() {
         </section>
       </div>
     </>
-  );
-};
-
-export default News;
+  )
+}
+export default News
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
       date: '2025-01-10',
@@ -1185,10 +1157,8 @@ export default News;
       category: 'Security',
       image: '/images/news/cybersecurity-certification.jpg'
     }
-  ];
-
-  const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security'];
-
+  ]
+  const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security']
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -1231,7 +1201,7 @@ export default News;
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">{item.excerpt}</p>
-                  <Link 
+                  <$2 />
                     to={`/news/${item.id}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
                   >
@@ -1281,7 +1251,7 @@ export default News;
                   <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {item.excerpt}
                   </p>
-                  <Link 
+                  <$2 />
                     to={`/news/${item.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
                   >
@@ -1305,7 +1275,7 @@ export default News;
               high-resolution images, and executive bios for media coverage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <$2 />
                 href="/press-kit.zip"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-medium"
               >
@@ -1314,7 +1284,7 @@ export default News;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </a>
-              <Link 
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
               >
@@ -1347,7 +1317,7 @@ export default News;
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {regularNews.map((item) => (
-            <article
+            <rticle$2 />
               key={item.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
@@ -1390,7 +1360,7 @@ export default News;
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 2).map((tag, index) => (
-                    <span
+                    <$2 />
                       key={index}
                       className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                     >
@@ -1421,7 +1391,7 @@ export default News;
               high-resolution images, and contact our media relations team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
@@ -1436,5 +1406,6 @@ export default News;
         </div>
       </div>
     </div>
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></section></section></section>

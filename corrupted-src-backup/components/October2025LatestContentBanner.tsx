@@ -198,7 +198,8 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
+  )
 }
-export default October2025LatestContentBanner;
+export default October2025LatestContentBanner
 "`
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></Link></Link></Link></Link></p></h2></h2></h2></h3></h3></section></section>
