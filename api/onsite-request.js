@@ -15,12 +15,6 @@ export default function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-    const request = {
-      id: Date.now().toString(),
-      timestamp: new Date().toISOString(),
-      ...req.body
-=======
     const { name, email, phone, company, location, requirements } = req.body || {}
     
     if (!name || !email || !phone || !company) {
@@ -39,7 +33,6 @@ export default function handler(req, res) {
       location: location || 'Not specified',
       requirements: requirements || 'General onsite service request',
       timestamp: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-fe05
     }
 
     res.setHeader('Content-Type', 'application/json')
