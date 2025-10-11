@@ -93,9 +93,9 @@ const AIAccountingAssistantPage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
-        <meta name="description" content="Streamline your accounting with our AI-powered assistant. Automated bookkeeping, financial analytics, and compliance management." />
+        <meta name="description" content="Streamline your accounting with our AI-powered assistant. Automated bookkeeping, financial analytics, and compliance management." />;
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';

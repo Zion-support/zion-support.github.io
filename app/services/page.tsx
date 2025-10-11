@@ -2,7 +2,7 @@ import React from 'react'
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const services = [
+  const services = [;
 'use client';
 
 const ServicesPage: React.FC = () => {
@@ -31,7 +31,7 @@ const ServicesPage: React.FC = () => {
     return matchesSearch && matchesCategory;})
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />

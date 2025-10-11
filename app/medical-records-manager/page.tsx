@@ -2,7 +2,7 @@
 import React from 'react'
             </div>
           </div>
-        </section>
+        </section>;
 'use client';
 import React from 'react';
 ))}

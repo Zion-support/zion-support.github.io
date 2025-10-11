@@ -156,7 +156,7 @@ const PagePage: React.FC = () => {
       </ArrowRight>
     </Zap>
   </CheckCircle>
-    </div>
+    </div>;
   );
 };
 

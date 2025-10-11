@@ -67,7 +67,7 @@ const AccessibilityPage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>Accessibility Services - Zion Tech Group</title>
         <meta name="description" content="Make your digital products accessible to everyone. Comprehensive accessibility services including audits, implementation, and ongoing support." />
       icon: Wifi,
@@ -86,7 +86,7 @@ const AccessibilityPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

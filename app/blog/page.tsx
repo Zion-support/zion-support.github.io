@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
-import {Calendar, Clock, User, ArrowRight, Search, Filter, Tag} from 'lucide-react'
+import {Calendar, Clock, User, ArrowRight, Search, Filter, Tag} from 'lucide-react';
 'use client';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -84,7 +84,7 @@ const BlogPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

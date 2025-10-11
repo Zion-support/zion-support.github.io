@@ -35,7 +35,7 @@ const PerformanceOptimizationPage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
@@ -50,7 +50,7 @@ const PerformanceOptimizationPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

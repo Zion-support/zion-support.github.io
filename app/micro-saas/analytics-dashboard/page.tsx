@@ -7,7 +7,7 @@ import React from 'react'
         </section>
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
+                </div>;
 'use client';
 import React from 'react';
 <p>{benefit}</p>

@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
               </button>
             </div>
           </div>
-        </section>
+        </section>;
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';

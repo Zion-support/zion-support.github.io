@@ -138,7 +138,7 @@ const PagePage: React.FC = () => {const features = [
       </ArrowRight>
     </Zap>
   </CheckCircle>
-    </div>
+    </div>;
   );
 };
 export default PagePage;

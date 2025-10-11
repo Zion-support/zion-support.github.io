@@ -144,6 +144,5 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   )
-}
-
+};
 export default memo(Footer)

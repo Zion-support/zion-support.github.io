@@ -18,7 +18,6 @@ const benefits = [
 
 return (
     <>
-
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -38,7 +37,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-return (
+return (;
 'use client';
 
 const EmailOptimizerPage: React.FC = () => {

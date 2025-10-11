@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Helmet} from 'react-helmet-async'
-import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
+import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react';
 'use client';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -103,7 +103,7 @@ const PricingPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

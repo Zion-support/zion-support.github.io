@@ -59,7 +59,6 @@ return (
     <div className="min-h-screen bg-gray-50">
       ;
     <>
-
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />

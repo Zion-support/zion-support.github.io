@@ -19,7 +19,7 @@ Page
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">;
       ;
     <>
       <div>

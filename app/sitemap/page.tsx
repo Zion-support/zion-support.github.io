@@ -22,7 +22,7 @@ const PagePage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

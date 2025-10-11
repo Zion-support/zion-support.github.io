@@ -14,7 +14,7 @@ Why Choose Our Solution?
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Proven results that drive business growth
               </p>
-            </div>
+            </div>;
 'use client';
 import React from 'react';
 import React from 'react';

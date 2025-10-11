@@ -30,7 +30,7 @@ const PagePage: React.FC = () => {const features = [
     {icon: CheckCircle,,
       title: 'Feature 3',,
       description: 'Description for feature 3.',,
-      benefits: ['Benefit 1',, 'Benefit 2', 'Benefit 3']}
+      benefits: ['Benefit 1',, 'Benefit 2', 'Benefit 3']};
   ];
   const benefits = [
     'Increase efficiency by up to 80%',
@@ -42,7 +42,7 @@ const PagePage: React.FC = () => {const features = [
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         </Helmet><title>Page - Zion Tech Group</titl></title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />

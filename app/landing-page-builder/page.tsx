@@ -35,7 +35,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-return (
+return (;
 'use client';
 const LandingPageBuilderPage: React.FC = () => {const features = [
     {

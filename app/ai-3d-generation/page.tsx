@@ -93,7 +93,7 @@ const AI3DGenerationPage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>AI 3D Generation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation services. Fast, accurate, and professional results." />
       icon: Wifi,
@@ -112,7 +112,7 @@ const AI3DGenerationPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+    };
   ];
 
   const benefits = [

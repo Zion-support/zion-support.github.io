@@ -13,7 +13,7 @@ import React from 'react'
         </section>
       </div>
       
-      <Footer />
+      <Footer />;
 'use client';
 import React from 'react';
 <Footer />

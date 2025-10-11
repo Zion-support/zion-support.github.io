@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet-async'
 const SitemapXMLPage: React.FC = () => {return (
     <>
 <&gt
-      <Helmet&gt
+      <Helmet&gt;
         <title&gt;Sitemap | Zion Tech Group</title&gt
         <meta name="description" content="Complete sitemap of all pages and services available on Zion Tech Group website." /&gt
         <meta name="robots" content="noindex, nofollow" /&gt

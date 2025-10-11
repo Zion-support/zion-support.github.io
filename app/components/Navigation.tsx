@@ -119,6 +119,5 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
   )
-}
-
+};
 export default Navigation

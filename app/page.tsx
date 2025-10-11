@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
-    'Seamless integration with existing systems'
+    'Seamless integration with existing systems';
   ];
 
   return (

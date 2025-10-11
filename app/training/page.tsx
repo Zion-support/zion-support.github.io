@@ -35,7 +35,7 @@ import React from 'react'
 
       <Footer />
     </>
-    </>
+    </>;
   );
 export default PagePage
       </Footer>

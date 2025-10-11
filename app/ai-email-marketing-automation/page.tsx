@@ -35,7 +35,7 @@ const PagePage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
@@ -158,7 +158,7 @@ const PagePage: React.FC = () => {
       </CheckCircle>
     </ArrowRight>
   </Navigation>
-    </div>
+    </div>;
   );
 };
 

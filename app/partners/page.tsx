@@ -5,7 +5,7 @@ import React from 'react'
               </p>
             </div>
           </div>
-        </section>
+        </section>;
 import React from 'react';
 
               <p>
