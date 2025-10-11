@@ -1,318 +1,172 @@
-'use client'
-/**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
- */
-import React from 'react'
-// Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(,
-  func: T,
-  wait: number,
-    let timeout: NodeJS.Timeout,
-  return (
-    <>
-      ...args: Parameters</T><T>
-    </>
-  ) => 
-  }
-}
-// Throttle function for performance optimization
-export const throttle = </T><T extends (...args: unknown[]) => unknown>(,
-  func: T,
-  limit: number,
-  private observers: PerformanceObserver[] = [],
-  private metrics: Map<string, number> = new Map();
-  private observers: PerformanceObserver[] = [],
-  static getInstance(): PerformanceMonitor }if (!PerformanceMonitor.instance) {}PerformanceMonitor.instance = new PerformanceMonitor();
-  private metrics: Map</string><string, number> = new Map()
-  private observers: PerformanceObserver[] = [],
-'use client'
-/**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
- */
-import React from 'react'
+// Performance enhancement utilities
+import React from 'react';
+
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
-): ((...args: Parameters<T>) => void) => 
-  wait: number;}
-): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {}
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
-  }
-}
+  immediate = false
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return (...args: Parameters<T>) => {
+    const later = () => {
+      timeout = null;
+      if (!immediate) func(...args);
+    };
+
+    const callNow = immediate && !timeout;
+    
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    
+    if (callNow) func(...args);
+  };
+};
+
 // Throttle function for performance optimization
 export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => 
-  limit: number;}
-): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
-    if (!inThrottle) {}
-      func(...args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
-  }
-}
-// Performance monitoring utilities
-export class PerformanceMonitor 
-// Performance monitoring utilities;}
-export class PerformanceMonitor {}
-  private static instance: PerformanceMonitor,
-  private metrics: Map<string, number> = new Map()
-  private observers: PerformanceObserver[] = []
-  static getInstance(): PerformanceMonitor {}
-    if (!PerformanceMonitor.instance) {}
-      PerformanceMonitor.instance = new PerformanceMonitor()
+  };
+};
+
+// Memoization utility
+export const memoize = <T extends (...args: unknown[]) => unknown>(
+  func: T
+): T => {
+  const cache = new Map<string, ReturnType<T>>();
+
+  return ((...args: Parameters<T>) => {
+    const key = JSON.stringify(args);
+    
+    if (cache.has(key)) {
+      return cache.get(key);
     }
-    return PerformanceMonitor.instance
-  }
-    ,
-): ((...arg),
-}
-// Throttle function for performance optimization
-export const throttle = </T><T extends (...arg)
-  s: unknown[]) => unknown>(fun,
-  c: T,
-): ((...arg),
-  e: string, renderTim);
-  e: number) {/* TODO: Fix JSX expression */,}this.metrics.set(`${componentName)}_render`, renderTime);
-if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}`;
-      }ms`);
-}
-  }
-  // Track memory usage;
-  trackMemory(componentNam);
-  e: string) {/* TODO: Fix JSX expression */,}e: number ,} }).memory;
-      if (memory) {/* TODO: Fix JSX expression */,}`;
-        this.metrics.set(`${componentName)}_memory`, memory.usedJSHeapSize);
+    
+    const result = func(...args);
+    cache.set(key, result);
+    return result;
+  }) as T;
+};
+
+// Lazy loading utility
+export const lazyLoad = (importFunc: () => Promise<{ default: React.ComponentType }>) => {
+  return React.lazy(importFunc);
+};
+
+// Image lazy loading hook
+export const useLazyImage = (src: string, placeholder?: string) => {
+  const [imageSrc, setImageSrc] = React.useState(placeholder || '');
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageSrc(src);
+      setIsLoaded(true);
+    };
+    img.src = src;
+  }, [src]);
+
+  return { imageSrc, isLoaded };
+};
+
+// Intersection Observer hook for lazy loading
+export const useIntersectionObserver = (
+  ref: React.RefObject<HTMLElement>,
+  options: IntersectionObserverInit = {}
+) => {
+  const [isIntersecting, setIsIntersecting] = React.useState(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      options
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
-    }
-  }
-  // Get performance metrics;
-  getMetrics() {return Object.fromEntries(this.metrics)}}
-  // Clear metrics;
-  clearMetrics() {this.metrics.clear()}}
-  // Monitor long tasks;
-  startLongTaskMonitoring() 
-  // Get performance metrics;}getMetrics() {/* TODO: Fix JSX expression */,}}
-  // Clear metrics;
-  clearMetrics() {/* TODO: Fix JSX expression */,}}
-  // Monitor long tasks;
-        if (entry.duration > 50) 
-  // Get performance metrics;}getMetrics() {}return Object.fromEntries(this.metrics);
-  }
-  // Clear metrics;
-  clearMetrics() {}this.metrics.clear();
-  }
-  // Monitor long tasks;
-  startLongTaskMonitoring() {}if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}return;
-    }
-    const observer = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if (entry.duration > 50) {// Tasks longer than 50ms}}ms`);
-        }
-observer.observe({entryTypes: ['longtask'] ,)});
-    this.observers.push(observer);
-  }
-  // Cleanup observers;
-  cleanup() {// Cleanup observers;}cleanup() {}this.observers.forEach(observer => observer.disconnect());
-    this.observers = []
-  }
-}
-// React hook for performance monitoring;
-export const usePerformanceMonitor = (;) => 
-  )}// React hook for performance monitoring;}
-export const usePerformanceMonitor = (componentName: string) => {,}const renderStartTime = useRef<number>(0);
-  const monitor = PerformanceMonitor.getInstance();
-  useEffect(() => {}renderStartTime.current = performance.now();
-    return () => {,}return () => {}const renderTime = performance.now() - renderStartTime.current;
-      monitor.trackRender(componentName, renderTime);
-      monitor.trackMemory(componentName);
-    }
-  }, [componentName, monitor]);
-  return {}
-    trackRender: (fn: () => void) => {}
-      const start = performance.now()
-      fn();,
-      const duration = performance.now() - start;
-        if (entry.duration > 50) {// Tasks longer than 50ms;}}
+    };
+  }, [ref, options]);
+
+  return isIntersecting;
+};
+
+// Performance monitoring hook
+export const usePerformanceMonitor = (componentName: string) => {
+  React.useEffect(() => {
+    const startTime = performance.now();
+    
+    return () => {
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      
+      console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
+    };
+  }, [componentName]);
+};
+
+// Bundle size optimization
+export const preloadComponent = (importFunc: () => Promise<{ default: React.ComponentType }>) => {
+  return () => {
+    const [Component, setComponent] = React.useState<React.ComponentType | null>(null);
+    const [isLoading, setIsLoading] = React.useState(true);
+
+    React.useEffect(() => {
+      importFunc().then((module) => {
+        setComponent(() => module.default);
+        setIsLoading(false);
       });
-    });
-    observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['longtask'] ,});
-    this.observers.push(observer);
-  }
-  // Cleanup observers;
-  cleanup() {/* TODO: Fix JSX expression */,}}
-}
-// React hook for performance monitoring;
-export const usePerformanceMonitor = (componentNam);
-  e: string) => {/* TODO: Fix JSX expression */,}}
-  }, [componentName, monitor]);
-  return {/* TODO: Fix JSX expression */,}}`;
-      monitor.trackRender(`${componentName)}_function`, duration);
+    }, []);
+
+    if (isLoading) {
+      return React.createElement('div', null, 'Loading...');
     }
-  }
-}
-// Image lazy loading utility;
-export const lazyLoadImages = (;) => 
-  )}// Image lazy loading utility;}
-export const lazyLoadImages = () => {}if (typeof window === 'undefined') return;
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries) => {}entries.forEach((entry) => {}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement;
-        img['src'] = img.dataset['src'] || '';
-        img.classList.remove('lazy');
-        imageObserver.unobserve(img);
-// Image lazy loading utility;
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */,}}
-images.forEach((img) => imageObserver.observe(img));
-}
-// Preload critical resources;
-export const preloadCriticalResources = (;) => 
-  )}// Preload critical resources;}
-export const preloadCriticalResources = () => {}if (typeof window === 'undefined') return;
-  const criticalResources = [
-    '/fonts/inter-var.woff2',
+
+    return Component ? React.createElement(Component) : null;
+  };
+};
+
+// Memory optimization
+export const useMemoryOptimization = () => {
+  React.useEffect(() => {
+    // Force garbage collection if available
+    if ('gc' in window && typeof (window as unknown as { gc: () => void }).gc === 'function') {
+      (window as unknown as { gc: () => void }).gc();
+    }
+  }, []);
+};
+
+// Resource hints hook
+export const usePreloadResource = (href: string, as: string) => {
+  React.useEffect(() => {
+    const link = document.createElement('link');
     link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-    if (resource.endsWith('.woff2')) {}link.crossOrigin = 'anonymous';
-// Preload critical resources;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}}
+    link.href = href;
+    link.as = as;
     document.head.appendChild(link);
-}
-// Optimize scroll performance;
-export const optimizeScrollPerformance = (;
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-    // Update scroll position indicators;) => 
-  }
-// Optimize scroll performance;}
-export const optimizeScrollPerformance = () => {}
-  let ticking = false;
-  const updateScrollPosition = () => {}// Update scroll position indicators;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop)}px`);
-    ticking = false;
-  }
-  const requestTick = () => {}if (!ticking) {}requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }
-  // Track Core Web Vitals;
-  const trackCLS = (;
-    let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [],
-    ,) => 
-  }
-  // Track Core Web Vitals;}
-  const trackCLS = () => {}
-    let clsEntries: PerformanceEntry[] = [],
-    interface LayoutShiftEntry extends PerformanceEntry }hadRecentInput?: boolean;
-      value: number,
-    }
-    const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}const layoutEntry = entry as LayoutShiftEntry;
-        if (!layoutEntry.hadRecentInput) {}clsEntries.push(entry);
-          clsValue += layoutEntry.value;
-        }
-      }
-observer.observe({entryTypes: ['layout-shift'] ,)});
-    return () => {}observer.disconnect();
-      return clsValue;
-    let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [],
-    interface LayoutShiftEntry extends PerformanceEntry {}
-      hadRecentInput?: boolean
-      value: number,
-    }
-    const observer = new PerformanceObserver((list) => {}
-      for (const entry of list.getEntries()) {}
-        const layoutEntry = entry as LayoutShiftEntry
-        if (!layoutEntry.hadRecentInput) {}
-          clsEntries.push(entry)
-          clsValue += layoutEntry.value
-        }
-      }
-observer.observe({ entryTypes: ['layout-shift'] });
-    return () => {}
-      observer.disconnect()
-      return clsValue
-    }
-  }
-  const trackLCP = () => {}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (process.env['NODE_ENV'] === 'development') }
-      }
-  }
-  const trackFID = () => {}interface FirstInputEntry extends PerformanceEntry }processingStart: number,
-    }
-  }
-  const requestTick = () => {/* TODO: Fix JSX expression */,}}
-  }
-      }
-    });
-    observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['layout-shift'] ,});
-    return () => {/* TODO: Fix JSX expression */,}}
-  }
-  const trackLCP = () => {/* TODO: Fix JSX expression */,}}
-      }
-    });
-  }
-  const trackFID = () => {/* TODO: Fix JSX expression */,}}
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}}
-      }
-    });
-    limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}}
-}
-    ,
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
-// Memory usage monitoring;}export const getMemoryUsage = () => {}if (typeof window === 'undefined' || !('memory' in performance)) {}return null;
-  }
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
-  }
-}
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-// totalTime: navigation.loadEventEnd - navigation.fetchStart,
-}
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
-    pain,
-  t: {/* TODO: Fix JSX expression */},
-    memor,
-  y: getMemoryUsage(),
-  }
-}
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
-    }
-}`</number>
-// Memory usage monitoring
-export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
-  }
-  const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
-  t: number} }).memory
-  return {/* TODO: Fix JSX expression */}
-  }
-}
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-    },
-    pain,
-  t: {/* TODO: Fix JSX expression */}
-    },
-    memor,
-  y: getMemoryUsage()
-  }
-}
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
-    }
-};`
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, [href, as]);
+};

@@ -1,85 +1,150 @@
-timestamp: number,
-  userAgent: string,
-  url: string,}}
-class MonitoringService }private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
-  private observer: PerformanceObserver | null = null,
-  constructor() 
-      this.initializeMonitoring()}}
+// Monitoring utilities
+interface PerformanceMetrics {
+  fid: number;
+  lcp: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+}
+
+interface ErrorReport {
+  message: string;
+  stack?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
+}
+
+class MonitoringService {
+  private metrics: PerformanceMetrics = {
+    fid: 0,
+    lcp: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0
+  };
+  private errors: ErrorReport[] = [];
+  private observer: PerformanceObserver | null = null;
+
+  constructor() {
+    this.initializeMonitoring();
   }
-          entries.forEach((entry: PerformanceEntry) => 
-            this.reportMetric('fid', this.metrics.fid)}});
+
+  private initializeMonitoring(): void {
+    if (typeof window === 'undefined') return;
+
+    // Monitor performance metrics
+    if ('PerformanceObserver' in window) {
+      this.observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: PerformanceEntry) => {
+          this.reportMetric(entry.name, entry.startTime);
         });
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => 
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        // Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver()
-    const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => 
-              this.reportMetric('cls', clsValue)}}
-          });
-        });
-    const entries = list.getEntries();
-          entries.forEach(entry => 
-            this.reportMetric('fcp', entry.startTime)}});
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver()
-    const entries = list.getEntries()
-          entries.forEach()
-            this.reportMetric('fcp', entry.startTime)
-  }
-          });
-        });
-        fcpObserver.observe({entryTypes: ['paint'] ,)});
-      } catch (error) {// Keep HEAD version;}}
-  }
-  private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}
-      try {const longTaskObserver = new PerformanceObserver((list) => {}
-          for (const entry of list.getEntries()) 
-    // Keep HEAD version;}});
-        longTaskObserver.observe({entryTypes: ['longtask'] ,)});
-      } catch (error) {// Long task API might not be available;}}
+      });
+
+      try {
+        this.observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      } catch (error) {
+        console.warn('Performance monitoring not supported:', error);
+      }
     }
-  }
-          const entries = list.getEntries();
-    // Keep HEAD version;}});
-      try 
-  }
-          });
-        });
-        resourceObserver.observe({entryTypes: ['resource'] ,)});
-      } catch (_error) {// Keep HEAD version;}}
-  }
+
+    // Monitor errors
+    window.addEventListener('error', (event) => {
+      this.reportError({
+        message: event.message,
+        stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href;,}});
+        url: window.location.href
+      });
     });
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => 
+
+    // Monitor unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      this.reportError({
+        message: event.reason?.message || 'Unhandled promise rejection',
+        stack: event.reason?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
       });
     });
   }
-  private reportMetric(name: string, value: number): void {,}
-    // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) 
-      return;}}
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    // Keep HEAD version;
-    // Send to analytics (if configured);
-    if (typeof (window as any).gtag === 'function') 
-        event_category: 'Web Vitals',}});
+
+  private reportMetric(name: string, value: number): void {
+    switch (name) {
+      case 'fid':
+        this.metrics.fid = value;
+        break;
+      case 'lcp':
+        this.metrics.lcp = value;
+        break;
+      case 'cls':
+        this.metrics.cls = value;
+        break;
+      case 'fcp':
+        this.metrics.fcp = value;
+        break;
+      case 'ttfb':
+        this.metrics.ttfb = value;
+        break;
     }
   }
-  public logError(error: ErrorReport): void {,}
-    this.errors.push(error)
-    // Keep only last 50 errors,
-    if (this.errors.length > 50) 
-    // Keep HEAD version;}}
+
+  private reportError(error: ErrorReport): void {
+    this.errors.push(error);
+    
+    // Keep only last 100 errors
+    if (this.errors.length > 100) {
+      this.errors = this.errors.slice(-100);
+    }
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  getErrors(): ErrorReport[] {
+    return [...this.errors];
+  }
+
+  getErrorCount(): number {
+    return this.errors.length;
+  }
+
+  clearErrors(): void {
+    this.errors = [];
+  }
+
+  destroy(): void {
+    if (this.observer) {
+      this.observer.disconnect();
     }
   }
 }
-// Singleton instance
-const monitoring = new MonitoringService()
-export default monitoring
+
+// Export singleton instance
+export const monitoring = new MonitoringService();
+
+// Export utility functions
+export const trackPerformance = (name: string): void => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    performance.mark(`${name}-end`);
+    performance.measure(name, `${name}-start`, `${name}-end`);
+  }
+};
+
+export const startPerformanceMark = (name: string): void => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    performance.mark(`${name}-start`);
+  }
+};
+
+export const getPerformanceMetrics = (): PerformanceMetrics => {
+  return monitoring.getMetrics();
+};
+
+export const getErrorReports = (): ErrorReport[] => {
+  return monitoring.getErrors();
+};

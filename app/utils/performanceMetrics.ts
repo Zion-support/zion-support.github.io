@@ -1,592 +1,201 @@
-value: number,
-  unit: string,
-  timestamp: Date,
+// Performance metrics utilities
+export interface PerformanceMetric {
+  name: string;
+  value: number;
+  unit: string;
+  timestamp: Date;
 }
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
-  metadata?: Record</string><string>}</strin>
+
+export interface PerformanceEntry {
+  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+  metadata?: Record<string, string>;
 }
-export interface WebVitalsMetrics {}
+
+export interface WebVitalsMetrics {
   FCP?: number; // First Contentful Paint
   LCP?: number; // Largest Contentful Paint
   FID?: number; // First Input Delay
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
-  INP?: number; // Interaction to Next Paint}
+  INP?: number; // Interaction to Next Paint
 }
-export interface PerformanceReport }metrics: PerformanceMetric[],
-  webVitals: WebVitalsMetrics,
-  summary: 
-  summary: {}
-    avgLoadTime: number
-    totalMetrics: number
-    performanceScore: number
-    recommendations: string[],}
+
+class PerformanceMetricsCollector {
+  private metrics: PerformanceMetric[] = [];
+  private webVitals: WebVitalsMetrics = {};
+
+  constructor() {
+    this.initializeWebVitals();
   }
-  timestamp: Date,
-}
-export class PerformanceMetrics {private static instance: PerformanceMetrics,}}private metrics: PerformanceMetric[] = [],}
-  private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
-  constructor() 
-    if (typeof window !== 'undefined') {,}export class PerformanceMetrics }private static instance: PerformanceMetrics;,
-  private metrics: PerformanceMetric[] = [],}
-}
-export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
-  private webVitals: WebVitalsMetrics = {}
-  private observers: PerformanceObserver[] = [],
-  constructor() 
+
+  private initializeWebVitals(): void {
+    if (typeof window === 'undefined') return;
+
+    // Collect Web Vitals
+    this.collectFCP();
+    this.collectLCP();
+    this.collectFID();
+    this.collectCLS();
+    this.collectTTFB();
   }
-export class PerformanceMetrics {}
-  private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = [],}
-  private webVitals: WebVitalsMetrics = {}
-  private observers: PerformanceObserver[] = [],
-  constructor() {}
-    if (typeof window !== 'undefined') {}
-      this.initializeObservers();}
+
+  private collectFCP(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            this.webVitals.FCP = fcpEntry.startTime;
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (error) {
+        console.warn('FCP collection failed:', error);
+      }
     }
   }
-  static getInstance(): PerformanceMetrics {}
-    if (!PerformanceMetrics.instance) {}
-      PerformanceMetrics.instance = new PerformanceMetrics();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */}
-}
-export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
-}
-export interface PerformanceReport {/* TODO: Fix JSX expression */}
-  timestam,
-  p: Date,
-}
-export class PerformanceMetrics {/* TODO: Fix JSX expression */}
-  webVitals: WebVitalsMetrics = {}
-  private,
-  observers: PerformanceObserver[] = [],
-  constructor() {/* TODO: Fix JSX expression */,}}
-  }
-   * Initialize performance observers;
-   */;
-  private initializeObservers(): void {// Observe navigation timing;}
-    if ('PerformanceObserver' in window) 
-      try {// Navigation timing;}
-        const navObserver = new PerformanceObserver(list => 
-              });
-            }
-          }
-        });
-        // Paint timing;
-    );
-        navObserver.observe({ entryTypes: ['navigation'] });
-        this.observers.push(navObserver)
-        // Paint timing
-        const paintObserver = new PerformanceObserver()
-    )
-          for (const entry of list.getEntries()) 
-              });
-            }
-          }
-        });
-        // Largest Contentful Paint;
-    );
+
+  private collectLCP(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-        paintObserver.observe({ entryTypes: ['paint'] });
-        this.observers.push(paintObserver)
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver()
-    )
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          if (lastEntry) 
-          if (lastEntry) {}
-            this.webVitals.LCP = lastEntry.startTime
-              name: 'LCP',
-              value: lastEntry.startTime,
-              unit: 'ms',
-              timestamp: new Date(),
-        // Layout Shift;
-    );
-          let clsValue = 0;);
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver)
-        // Layout Shift
-        const clsObserver = new PerformanceObserver()
-    )
-          let clsValue = 0;)
-          for (const entry of list.getEntries()) 
-            if ((entry as LayoutShift).hadRecentInput) continue;}clsValue += (entry as LayoutShift).value;}
-          }
-          this.webVitals.CLS = clsValue;
-          this.recordMetric(
-        // Layout Shift;}const clsObserver = new PerformanceObserver(list => {)}let clsValue = 0;
-          for (const entry of list.getEntries()) {}if ((entry as LayoutShift).hadRecentInput) continue;
-            clsValue += (entry as LayoutShift).value;}
-          }
-          this.webVitals.CLS = clsValue;
-          this.recordMetric({)}name: 'CLS',
-          this.webVitals.CLS = clsValue
-          this.recordMetric()
-    )
-            name: 'CLS'),
-            value: clsValue),
-            unit: 'score'),
-        // Layout Shift
-          let clsValue = 0
-          for (const entry of list.getEntries()) {}
-            if ((entry as LayoutShift).hadRecentInput) continue
-            clsValue += (entry as LayoutShift).value;}
-          }
-          this.webVitals.CLS = clsValue
-            name: 'CLS',
-            value: clsValue,
-            unit: 'score',
-            timestamp: new Date(),
-              });
-            }
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.webVitals.LCP = lastEntry.startTime;
           }
         });
-   * Record a custom performance metric;
-   */;
-  recordMetric(metric: PerformanceMetric): void {,}
-    ,
-    this.metrics.push(metric),
-    // Keep only last 1000 metrics;
-    if (this.metrics.length > 1000) {,}recordMetric(metric: PerformanceMetric): void {,}}this.metrics.push(metric);
-    // Keep only last 1000 metrics;
-    if (this.metrics.length > 1000) {}this.metrics.shift();}
-  recordMetric(metri);
-  c: PerformanceMetric): void {/* TODO: Fix JSX expression */,}}}
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (error) {
+        console.warn('LCP collection failed:', error);
+      }
+    }
   }
-  /**;
-   * Record page load time;
-   */;
-  recordPageLoad(): void {if (typeof window === 'undefined') return;}
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    this.recordMetric(
-        serverResponse: perfData.responseEnd - perfData.requestStart;,}recordPageLoad(): void }if (typeof window === 'undefined') return;
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    this.recordMetric({)}name: 'pageLoad',
-        paintObserver.observe({/* TODO: Fix JSX expression */});
-  s: ['paint'] });
-        this.observers.push(paintObserver)
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
-            });
-          }
-        });
-        lcpObserver.observe({/* TODO: Fix JSX expression */});
-  s: ['largest-contentful-paint'] });
-        this.observers.push(lcpObserver)
-        // Layout Shift
-        const clsObserver = new PerformanceObserver()
-          this.recordMetric({/* TODO: Fix JSX expression */});
+
+  private collectFID(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEventTiming) => {
+            this.webVitals.FID = entry.processingStart - entry.startTime;
           });
         });
-        clsObserver.observe({/* TODO: Fix JSX expression */});
-  s: ['layout-shift'] });
-        this.observers.push(clsObserver)
-      } catch (error) {/* TODO: Fix JSX expression */}
-        }
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID collection failed:', error);
+      }
     }
   }
-  /**
-   * Record a custom performance metric
-   */
-  recordMetric(metric: PerformanceMetric): void 
-  }
-  recordMetric(metric: PerformanceMetric): void {}
-    this.metrics.push(metric)
-    // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {}
-      this.metrics.shift();}
-  recordMetric(metri)
-  c: PerformanceMetric): void {/* TODO: Fix JSX expression */}
+
+  private collectCLS(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: LayoutShift) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          this.webVitals.CLS = clsValue;
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('CLS collection failed:', error);
+      }
     }
   }
-  /**
-   * Record page load time
-   */
-  recordPageLoad(): void 
-  recordPageLoad(): void {}
-    if (typeof window === 'undefined') return
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
-      name: 'pageLoad',
-      value: pageLoadTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'load',
-      metadata: {,}dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
-        tcpConnection: perfData.connectEnd - perfData.connectStart,
-        serverResponse: perfData.responseEnd - perfData.requestStart,
-   * Record network request timing;
-   */;
-  recordNetworkRequest(url: string, duration: number, status: number): void {,}
-  /**
-   * Record network request timing
-   */
-  recordNetworkRequest(url: string, duration: number, status: number): void 
-  s: number): void {/* TODO: Fix JSX expression */,}}}
+
+  private collectTTFB(): void {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.webVitals.TTFB = navigation.responseStart - navigation.requestStart;
+      }
+    }
+  }
+
+  addMetric(name: string, value: number, unit: string = 'ms'): void {
+    this.metrics.push({
+      name,
+      value,
+      unit,
+      timestamp: new Date()
     });
   }
-  /**;
-   * Record memory usage;
-   */;
-  recordMemoryUsage(): void {if (typeof window === 'undefined') return;}
-    if (!(performance as PerformanceWithMemory).memory) return;
-    const memory = (performance as PerformanceWithMemory).memory;
-      unit: 'bytes'),
-      timestamp: new Date(),
-      category: 'memory',
-      metadata: 
-      metadata: {,}total: memory.totalJSHeapSize,
-        limit: memory.jsHeapSizeLimit,
-   * Measure function execution time;
-   */;
-  measureFunction<T>(name: string, fn: () => T): T {,}
-  /**
-   * Measure function execution time
-   */
-    ,
-      value: endTime - startTime),
-      unit: 'ms'),
-  measureFunction<T>(name: string, fn: () => T): T {,}}const startTime = performance.now();
-    const result = fn();
-    const endTime = performance.now();
-    this.recordMetric({});
-      name: `function:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime'});
-  measureFunction<T>(nam,
-  e: string, f)
-  n: () => T): T {/* TODO: Fix JSX expression */}
-  n:${name}`,
-      valu,
-  e: endTime - startTime,
-      uni,
-  t: 'ms',
-      timestam,
-  p: new Date(),
-      categor,
-   * Measure async function execution time;
-   */;
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> 
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
-    const result = await fn();
-    const endTime = performance.now();
-    this.recordMetric({`});
-      name: `async:${name}`,
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime'});
-  c:${name}`,
-      valu,
-  async measureAsyncFunction<T>(nam,
-  e: string, f)
-  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
-  c:${name}`,
-      valu,
-  e: endTime - startTime,
-      uni,
-  t: 'ms',
-      timestam,
-  p: new Date(),
-      categor,
-   * Get all metrics;
-   */;
-  getMetrics(): PerformanceMetric[] {}return [...this.metrics]}
-  getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */,}}
-  /**;
-   * Get metrics by category;
-   */;
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] 
-    ,}getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,}return this.metrics.filter(m => m.category === category);}
-  getMetricsByCategory(categor);
-  y: PerformanceMetric['category']): PerformanceMetric[] {/* TODO: Fix JSX expression */,}}
-  /**;
-   * Get Web Vitals;
-   */;
-  getWebVitals(): WebVitalsMetrics }return {...this.webVitals}}getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}}
-  /**;
-   * Calculate performance score (0-100);
-   */;
-  calculatePerformanceScore(): number {let score = 100;}
-    // FCP scoring;
-  /**
-   * Get all metrics
-   */
-  getMetrics(): PerformanceMetric[] {}
-  getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */}
+
+  getMetrics(): PerformanceMetric[] {
+    return [...this.metrics];
   }
-  /**
-   * Get metrics by category
-   */
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] 
+
+  getWebVitals(): WebVitalsMetrics {
+    return { ...this.webVitals };
   }
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {}
-    return this.metrics.filter(m => m.category === category);}
-  getMetricsByCategory(categor)
-  y: PerformanceMetric['category']): PerformanceMetric[] {/* TODO: Fix JSX expression */}
+
+  getMetricByName(name: string): PerformanceMetric | undefined {
+    return this.metrics.find(metric => metric.name === name);
   }
-  /**
-   * Get Web Vitals
-   */
-  getWebVitals(): WebVitalsMetrics {}
-    return { ...this.webVitals }
-  getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */}
+
+  getAverageMetric(name: string): number {
+    const metrics = this.metrics.filter(metric => metric.name === name);
+    if (metrics.length === 0) return 0;
+    
+    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
+    return sum / metrics.length;
   }
-  /**
-   * Calculate performance score (0-100)
-   */
-  calculatePerformanceScore(): number 
-    }
-    // FID scoring;
-    if (this.webVitals.FID) {if (this.webVitals.FID &gt; 300) score -= 15;}calculatePerformanceScore(): number }let score = 100;
-    // FCP scoring;
-    if (this.webVitals.FCP) {}if (this.webVitals.FCP > 3000) score -= 20;
-      else if (this.webVitals.FCP > 1800) score -= 10;}
-  calculatePerformanceScore(): number {/* TODO: Fix JSX expression */,}}}
-    // LCP scoring;
-    if (this.webVitals.LCP) {/* TODO: Fix JSX expression */,}}
-    // CLS scoring;
-    if (this.webVitals.CLS) {/* TODO: Fix JSX expression */,}}
-    // FID scoring;
-    if (this.webVitals.FID) {/* TODO: Fix JSX expression */,}}
-    // LCP scoring;
-    if (this.webVitals.LCP) {}if (this.webVitals.LCP > 4000) score -= 25;
-      else if (this.webVitals.LCP > 2500) score -= 12;}
-    }
-    // CLS scoring;
-    if (this.webVitals.CLS) {}if (this.webVitals.CLS > 0.25) score -= 20;
-      else if (this.webVitals.CLS > 0.1) score -= 10;}
-    }
-    // FID scoring;
-    if (this.webVitals.FID) {}if (this.webVitals.FID > 300) score -= 15;
-    // LCP scoring
-    if (this.webVitals.LCP) 
+
+  clearMetrics(): void {
+    this.metrics = [];
   }
-      else if (this.webVitals.LCP > 2500) score -= 12;}
-    }
-    // CLS scoring
-    if (this.webVitals.CLS) 
-  }
-      else if (this.webVitals.CLS > 0.1) score -= 10;}
-    }
-    // FID scoring
-    if (this.webVitals.FID) 
-  }
-  calculatePerformanceScore(): number {}
-    let score = 100
-    // FCP scoring
-    if (this.webVitals.FCP) {}
-      if (this.webVitals.FCP > 3000) score -= 20
-      else if (this.webVitals.FCP > 1800) score -= 10;}
-  calculatePerformanceScore(): number {/* TODO: Fix JSX expression */}
-    }
-    if (this.webVitals.FID) {/* TODO: Fix JSX expression */}
-    }
-    // LCP scoring
-    if (this.webVitals.LCP) {}
-      if (this.webVitals.LCP > 4000) score -= 25
-      else if (this.webVitals.LCP > 2500) score -= 12;}
-    }
-    // CLS scoring
-    if (this.webVitals.CLS) {}
-      if (this.webVitals.CLS > 0.25) score -= 20
-      else if (this.webVitals.CLS > 0.1) score -= 10;}
-    }
-    // FID scoring
-    if (this.webVitals.FID) {}
-      if (this.webVitals.FID > 300) score -= 15
-      else if (this.webVitals.FID > 100) score -= 8;}
-    }
-    return Math.max(0, Math.min(100, score))
-  }
-   * Get performance recommendations;
-   */;
-      recommendations.push();
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources',}getRecommendations(): string[] {}const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}recommendations.push();
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources';
-      );}
-    }
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}recommendations.push();
-        'Improve Largest Contentful Paint (LCP) - optimize largest element loading';
-      );}
-    }
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}recommendations.push();
-        'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds';
-      );}
-    }
-    if (this.webVitals.FID && this.webVitals.FID > 100) {}recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');}
-  getRecommendations(): string[] {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */,}}
-    const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime =;
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
-    if (avgNetworkTime > 500) 
-      networkMetrics.reduce((sum, m) =&gt; sum + m.value, 0) / networkMetrics.length;}if (avgNetworkTime > 500) {}recommendations.push();
-        'Optimize network requests - consider caching and reducing payload sizes';
-      );}
-    if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */,}}
-    return recommendations;
-  }
-  /**;
-   * Generate performance report;
-   */;
-  generateReport(): PerformanceReport }const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
-    return {metrics: this.getMetrics();,}
-  /**
-   * Get performance recommendations
-   */
-  getRecommendations(): string[] 
-  }
-  getRecommendations(): string[] {}
-    const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
-      recommendations.push()
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
-      );}
-    }
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}
-      recommendations.push()
-        'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
-      );}
-    }
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}
-      recommendations.push()
-        'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
-      );}
-    }
-    if (this.webVitals.FID && this.webVitals.FID > 100) {}
-      recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');}
-  getRecommendations(): string[] {/* TODO: Fix JSX expression */}
-    }
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {/* TODO: Fix JSX expression */}
-    }
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression */}
-    }
-    if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */}
-    }
-    const networkMetrics = this.getMetricsByCategory('network')
-    const avgNetworkTime =
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) 
-  }
-    if (avgNetworkTime > 500) {}
-      recommendations.push()
-        'Optimize network requests - consider caching and reducing payload sizes'
-      );}
-    if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Generate performance report
-   */
-  generateReport(): PerformanceReport {}
-    const loadMetrics = this.getMetricsByCategory('load')
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
-    return 
-  }
-    return {}
-      metrics: this.getMetrics(),
-      webVitals: this.getWebVitals(),
-  p: new Date(),
-    }
-  }
-   * Export metrics as JSON;
-   */;
-  exportMetrics(): string }return JSON.stringify(this.generateReport(), null, 2);}
-  exportMetrics(): string {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Clear all metrics;
-   */;
-  clearMetrics(): void }this.metrics = []}
-    this.webVitals = {}clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = }
-  /**;
-   * Cleanup observers;
-   */;
-  cleanup(): void }this.observers.forEach(observer => observer.disconnect());
-    this.observers = []}
+
+  exportMetrics(): string {
+    return JSON.stringify({
+      metrics: this.metrics,
+      webVitals: this.webVitals
+    }, null, 2);
   }
 }
-// Type for performance.memory;
-interface PerformanceWithMemory extends Performance {memory: {,}
-// Type for performance.memory;}interface PerformanceWithMemory extends Performance }memory: {,}// usedJSHeapSize: number,
-  /**
-   * Export metrics as JSON
-   */
-  exportMetrics(): string {}
-    return JSON.stringify(this.generateReport(), null, 2);}
-  exportMetrics(): string {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Clear all metrics
-   */
-  clearMetrics(): void {}
-    this.metrics = []}
-    this.webVitals = {}
-  clearMetrics(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Cleanup observers
-   */
-  cleanup(): void {}
-    this.observers.forEach(observer => observer.disconnect())
-// Type for performance.memory
-interface PerformanceWithMemory extends Performance 
-  }
-interface PerformanceWithMemory extends Performance {}
-  memory: {}
-// usedJSHeapSize: number,
-// totalJSHeapSize: number,
-// jsHeapSizeLimit: number,
-}
-}
-// Export singleton instance;
-export const performanceMetrics = PerformanceMetrics.getInstance();
-export default PerformanceMetrics;
-  cleanup(): void {/* TODO: Fix JSX expression */,}}}
-}
-// Type for performance.memory;
-interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */,}}}
-}
-// Type for LayoutShift;
-interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}}}
-// Export singleton instance;
-export const performanceMetrics = PerformanceMetrics.getInstance();
-export default PerformanceMetrics;
-`;
-// Type for LayoutShift
-interface LayoutShift extends PerformanceEntry 
-  }
-interface LayoutShift extends PerformanceEntry {}
-  value: number
-  hadRecentInput: boolean,}
-}
+
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
-  cleanup(): void {/* TODO: Fix JSX expression */}
-  }
-}
-// Type for performance.memory
-interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
-  }
-}
-// Type for LayoutShift
-interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
-}
-// Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
-`</T>
-// Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics
-`
+export const performanceMetrics = new PerformanceMetricsCollector();
+
+// Utility functions
+export const trackMetric = (name: string, value: number, unit?: string): void => {
+  performanceMetrics.addMetric(name, value, unit);
+};
+
+export const trackTiming = (name: string, startTime: number): void => {
+  const endTime = performance.now();
+  const duration = endTime - startTime;
+  trackMetric(name, duration);
+};
+
+export const getWebVitals = (): WebVitalsMetrics => {
+  return performanceMetrics.getWebVitals();
+};
+
+export const getMetrics = (): PerformanceMetric[] => {
+  return performanceMetrics.getMetrics();
+};
+
+// Performance timing utilities
+export const measurePerformance = <T>(name: string, fn: () => T): T => {
+  const startTime = performance.now();
+  const result = fn();
+  const endTime = performance.now();
+  
+  trackMetric(name, endTime - startTime);
+  return result;
+};
+
+export const measureAsyncPerformance = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
+  const startTime = performance.now();
+  const result = await fn();
+  const endTime = performance.now();
+  
+  trackMetric(name, endTime - startTime);
+  return result;
+};

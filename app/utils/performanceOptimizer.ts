@@ -1,245 +1,160 @@
 // Performance optimization utilities
-export const debounce = <T extends (...args: any[]) => any>(,
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
-    let timeout: NodeJS.Timeout,
-  return (
-    <>
-      ...args: Parameters</T><T>
-    </>
-  ) => 
-  }
-}
-export const throttle = </T><T extends (...args: any[]) => any>(,
+  immediate = false
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout | null = null;
+
+  return (...args: Parameters<T>) => {
+    const later = () => {
+      timeout = null;
+      if (!immediate) func(...args);
+    };
+
+    const callNow = immediate && !timeout;
+    
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    
+    if (callNow) func(...args);
+  };
+};
+
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number,
-      }
-}, options)
-return observer
-}
-}
-export const measurePerformance = (name: string, fn: () => void) => 
-    isDesktop: width &gt;= 1024;,}}
-  private observers: PerformanceObserver[] = [],
-  private isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {,}return }isMobile: width < 768,
-    isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024,}
-  private observers: PerformanceObserver[] = [],
-  private isMonitoring: boolean = false,
-const logger = {/* TODO: Fix JSX expression */},
-  performanc,
-  e: ()
-  e: string, dat)
-  a: Record</OptimizationConfig><string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
-  erro,
-  r: (messag,
-}
-  observers: PerformanceObserver[] = [],
-  private,
-  isMonitoring: boolean = false,
-      }
-  }
-        this.metrics.lcp = lastEntry.startTime;
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */,}}}
-        });
-      });
-      observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['measure'] ,});
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */,}}
-  }
-  private observeLCP() {/* TODO: Fix JSX expression */,}});
-      observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['largest-contentful-paint'] ,});
-      this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
-  }
-  private observeFID() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => 
-    ,}entries.forEach((entry: PerformanceEntry) => {,}const fidEntry = entry as PerformanceEntry & {processingStart: number ,}} catch {/* TODO: Fix JSX expression */,}}}
-  }
-  private observeFID() {/* TODO: Fix JSX expression */,}t: number ,}
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        });
-      });
-      observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['first-input'] ,});
-      this.observers.push(observer);
-    } catch {// Ignore if not supported;}}}
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */}
-          }
-        });
-      });
-      observer.observe({/* TODO: Fix JSX expression */});
-  s: ['measure'] });
-      this.observers.push(observer)
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeLCP() {/* TODO: Fix JSX expression */}
-      });
-      observer.observe({/* TODO: Fix JSX expression */});
-  s: ['largest-contentful-paint'] });
-      this.observers.push(observer)
-    } catch 
-  }
-    } catch {}
-      // Ignore if not supported
+  };
+};
+
+export const memoize = <T extends (...args: unknown[]) => unknown>(
+  func: T
+): T => {
+  const cache = new Map<string, ReturnType<T>>();
+
+  return ((...args: Parameters<T>) => {
+    const key = JSON.stringify(args);
+    
+    if (cache.has(key)) {
+      return cache.get(key);
     }
-  }
-  private observeFID() {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => 
-  }
-        entries.forEach((entry: PerformanceEntry) => {}
-          const fidEntry = entry as PerformanceEntry & { processingStart: number }
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeFID() {/* TODO: Fix JSX expression */}
-  t: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-        });
+    
+    const result = func(...args);
+    cache.set(key, result);
+    return result;
+  }) as T;
+};
+
+export const batchUpdates = (updates: (() => void)[]): void => {
+  // Use React's batching if available
+  if (typeof window !== 'undefined' && 'React' in window) {
+    const React = (window as unknown as { React: { unstable_batchedUpdates?: (fn: () => void) => void } }).React;
+    if (React && React.unstable_batchedUpdates) {
+      React.unstable_batchedUpdates(() => {
+        updates.forEach(update => update());
       });
-      observer.observe({/* TODO: Fix JSX expression */});
-  s: ['first-input'] });
-      this.observers.push(observer)
-    } catch 
-  }
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {clsValue += clsEntry.value;}} catch }// Ignore if not supported;
+    } else {
+      updates.forEach(update => update());
     }
+  } else {
+    updates.forEach(update => update());
   }
-  private observeCLS() {}try }let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {}clsValue += clsEntry.value;
-          }
-        });
-        this.metrics.cls = clsValue;
-      });
-      observer.observe({entryTypes: ['layout-shift'] ,)});
-      this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
+};
+
+export const createVirtualScroller = (
+  itemHeight: number,
+  containerHeight: number,
+  itemCount: number
+) => {
+  let scrollTop = 0;
+  
+  const getVisibleRange = () => {
+    const start = Math.floor(scrollTop / itemHeight);
+    const end = Math.min(
+      itemCount - 1,
+      Math.floor((scrollTop + containerHeight) / itemHeight)
+    );
+    return { start, end };
+  };
+  
+  const getTotalHeight = () => itemCount * itemHeight;
+  
+  const getOffsetY = () => {
+    const { start } = getVisibleRange();
+    return start * itemHeight;
+  };
+  
+  const updateScrollTop = (newScrollTop: number) => {
+    scrollTop = newScrollTop;
+  };
+  
+  return {
+    getVisibleRange,
+    getTotalHeight,
+    getOffsetY,
+    updateScrollTop
+  };
+};
+
+export const optimizeImages = (images: HTMLImageElement[]): void => {
+  images.forEach(img => {
+    // Add loading="lazy" if not already present
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
     }
-  }
-  private observeFCP() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry) => 
-            this.metrics.fcp = entry.startTime;}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.metrics.fcp = entry.startTime;
-    } catch {/* TODO: Fix JSX expression */,}}}
-  }
-  private observeCLS() {/* TODO: Fix JSX expression */,}e: number ,}
-          if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */,}}
-        });
-        this.metrics.cls = clsValue;
-      });
-      observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['layout-shift'] ,});
-      this.observers.push(observer);
-    } catch {/* TODO: Fix JSX expression */,}}}
-  }
-  private observeFCP() {/* TODO: Fix JSX expression */,}}
-        });
-      });
-      observer.observe({/* TODO: Fix JSX expression */,)});
-  s: ['paint'] ,});
-      this.observers.push(observer);
-    } catch {// Ignore if not supported;}}} catch }// Ignore if not supported;
+    
+    // Add decoding="async" if not already present
+    if (!img.hasAttribute('decoding')) {
+      img.setAttribute('decoding', 'async');
     }
+  });
+};
+
+export const preloadCriticalResources = (urls: string[]): void => {
+  urls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = url;
+    link.as = 'fetch';
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+};
+
+export const createIntersectionObserver = (
+  callback: (entries: IntersectionObserverEntry[]) => void,
+  options?: IntersectionObserverInit
+): IntersectionObserver | null => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    return null;
   }
-  private observeTTFB() {}try }const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => 
-    ,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;}entries.forEach((entry: PerformanceEntry) => {,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {}this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
-    } catch {/* TODO: Fix JSX expression */,}}}
-  }
-      if (!img.hasAttribute('loading')) 
-        img.setAttribute('loading', 'lazy')}}
-      // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {img.setAttribute('alt', 'Zion Tech Group content')}}
-      // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) 
-        if (this.supportsWebP()) {}images.forEach((img) => {}// Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {}img.setAttribute('loading', 'lazy');
-      }
-        }
-      }
-images.forEach((img) => imageObserver.observe(img))
-}
-              }
-              element.removeAttribute('data-lazy')
-              lazyObserver.unobserve(element)
-            }
-          }
-        });
-      });
-      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */,}});
-    }
-    this.metrics.lazyLoading = true
-  }
-      });
-    });
-    images.forEach(img => imageObserver.observe(img))
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
-  }
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },
-      {/* TODO: Fix JSX expression */}
-  s: 'style' }]
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */});
-    });
-    logger.info('Critical resource hints added', 'PerformanceOptimizer')
-  }
-          });
-        }
-      });
-    }
-  }
-  generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
-  Score: ${score}/100
-Load,
-  Time: ${metrics.loadTime.toFixed(2)}ms
-Render,
-  Time: ${metrics.renderTime.toFixed(2)}ms
-Memory,
-  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-Bundle,
-  Size: ${metrics.bundleSize}KB
-Cache Hit,
-  Rate: ${metrics.cacheHitRate}%
-Recommendation,
-  s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime &gt; 2000 ? '- Implement lazy loading for better initial load time' : ''}
-    `.trim();
-  }
-  /**;
-   * Optimize the entire application;
-   */;
-  optimize(): void {/* TODO: Fix JSX expression */,}}}
-  }
-}
-// Export singleton instance;
-export const performanceOptimizer = new PerformanceOptimizer();
-export default PerformanceOptimizer;
-${metrics.memoryUsage &gt; 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
-    `.trim()
-  }
-  /**
-   * Optimize the entire application
-   */
-  optimize(): void {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-// Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer()
-export default PerformanceOptimizer
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig }
-`
+  
+  return new IntersectionObserver(callback, options);
+};
+
+export const measurePerformance = <T>(name: string, fn: () => T): T => {
+  const startTime = performance.now();
+  const result = fn();
+  const endTime = performance.now();
+  
+  console.log(`${name} took ${endTime - startTime} milliseconds`);
+  return result;
+};
+
+export const measureAsyncPerformance = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
+  const startTime = performance.now();
+  const result = await fn();
+  const endTime = performance.now();
+  
+  console.log(`${name} took ${endTime - startTime} milliseconds`);
+  return result;
+};

@@ -1,240 +1,183 @@
-// Measure page load time;
-    window.addEventListener('load', () => 
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}});
-// Measure Core Web Vitals;
+// Performance utilities
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToFirstByte: number;
+}
+
+class PerformanceUtils {
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    timeToFirstByte: 0
+  };
+
+  constructor() {
+    this.initializeMetrics();
+  }
+
+  private initializeMetrics(): void {
+    if (typeof window === 'undefined') return;
+
+    // Measure page load time
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      }
+    });
+
+    // Measure Core Web Vitals
     this.measureCoreWebVitals();
   }
-private measureCoreWebVitals(): void {// First Contentful Paint;}
-    this.observePaint('first-contentful-paint', (entry) => 
-      this.metrics.firstContentfulPaint = entry.startTime;}});
-// Largest Contentful Paint;
-    this.observeLCP();
-// First Input Delay;
-    this.observeFID();
-// Cumulative Layout Shift;
-    this.observeCLS();
-    if (typeof window === 'undefined' || !('performance' in window)) return
-// Measure page load time
-    window.addEventListener('load', () => 
-  }
-    });
-// Measure Core Web Vitals
-    this.measureCoreWebVitals()
-  }
-private measureCoreWebVitals(): void 
-  }
-    });
-// Largest Contentful Paint
-    this.observeLCP()
-// First Input Delay
-    this.observeFID()
-// Cumulative Layout Shift
-    this.observeCLS()
-  }
-private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {,}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
-try {const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) 
-            callback(entry)}}
-        }
-      });
-  }
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime;}});
-      observer.observe({entryTypes: ['largest-contentful-paint'] ,)});
-      this.observers.push(observer);
-    } catch (error) {console.warn('LCP observer not supported:', error)}}
-  }
-private observeFID(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
-try {const observer = new PerformanceObserver((list) => {}
-      const observer = new PerformanceObserver((list) => 
-  }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer)
-    } catch (error) 
-  }
-    }
-  }
-private observeFID(): void 
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}}
-      });
-      const observer = new PerformanceObserver((list) => 
-            clsValue += (entry as any).value;}}
-        }
-        this.metrics.cumulativeLayoutShift = clsValue
-      });
-    }
-return result
-  }) as T
-}
-export const debounce = </T><T extends (...args: any[]) => any>(,
-  func: T,
-    clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)}}) as T;
-    let timeout: NodeJS.Timeout
-return (
-    <>
-      (...args: Parameters</T><T>
-    </>
-  ) => 
-  }
-  }) as T
-}
-export const throttle = </T><T extends (...args: any[]) => any>(,
-  func: T,
-}
-export const lazyLoad = (callback: () => void): void => 
-    requestIdleCallback(callback)}} else {setTimeout(callback, 1)}}}
-}
-    const img = new Image();
-    img.onload = () => resolve();
-    img.onerror = reject;
-    img.src = src;}});
-}
-    return Promise.all(srcs.map(preloadImage))
-  }
-}</void>
-  private observers: PerformanceObserver[] = []
-  constructor() 
-    this.initializeMetrics();}
-  }
 
-  private initializeMetrics(): void 
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;}
+  private measureCoreWebVitals(): void {
+    // First Contentful Paint
+    this.observePaint('first-contentful-paint', (entry) => {
+      this.metrics.firstContentfulPaint = entry.startTime;
     });
-    // Measure Core Web Vitals
-    this.measureCoreWebVitals()
-  }
 
-  private measureCoreWebVitals(): void 
-      this.metrics.firstContentfulPaint = entry.startTime;}
-    });
     // Largest Contentful Paint
-    this.observeLCP()
+    this.observeLCP();
+
     // First Input Delay
-    this.observeFID()
+    this.observeFID();
+
     // Cumulative Layout Shift
-    this.observeCLS()
+    this.observeCLS();
+
+    // Time to First Byte
+    this.measureTTFB();
   }
 
-  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void 
-            callback(entry);}
+  private observePaint(entryType: string, callback: (entry: PerformanceEntry) => void): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(callback);
+        });
+        observer.observe({ entryTypes: [entryType] });
+      } catch (error) {
+        console.warn(`Failed to observe ${entryType}:`, error);
+      }
+    }
+  }
+
+  private observeLCP(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            this.metrics.largestContentfulPaint = lastEntry.startTime;
           }
-        }
-      });
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer)
-    } catch (error) 
-      console.warn('PerformanceObserver not supported:', error);}
+        });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (error) {
+        console.warn('Failed to observe LCP:', error);
+      }
     }
   }
 
-  private observeLCP(): void 
-        this.metrics.largestContentfulPaint = lastEntry.startTime;}
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer)
-    } catch (error) 
-      console.warn('LCP observer not supported:', error);}
+  private observeFID(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEventTiming) => {
+            this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+          });
+        });
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('Failed to observe FID:', error);
+      }
     }
   }
 
-  private observeFID(): void 
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;}
-        }
-      });
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer)
-    } catch (error) 
-      console.warn('FID observer not supported:', error);}
+  private observeCLS(): void {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: LayoutShift) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          this.metrics.cumulativeLayoutShift = clsValue;
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('Failed to observe CLS:', error);
+      }
     }
   }
 
-  private observeCLS(): void 
-            clsValue += (entry as any).value;}
-          }
-        }
-        this.metrics.cumulativeLayoutShift = clsValue
-      });
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer)
-    } catch (error) 
-      console.warn('CLS observer not supported:', error);}
+  private measureTTFB(): void {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      this.metrics.timeToFirstByte = navigation.responseStart - navigation.requestStart;
     }
   }
 
-  public getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics }
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
 
-  public getLoadTime(): number 
-    return this.metrics.loadTime;}
+  getMetricValue(metricName: keyof PerformanceMetrics): number {
+    return this.metrics[metricName];
   }
 
-  public getFirstContentfulPaint(): number 
-    return this.metrics.firstContentfulPaint;}
+  isMetricGood(metricName: keyof PerformanceMetrics): boolean {
+    const value = this.metrics[metricName];
+    
+    switch (metricName) {
+      case 'firstContentfulPaint':
+        return value < 1800; // Good if < 1.8s
+      case 'largestContentfulPaint':
+        return value < 2500; // Good if < 2.5s
+      case 'firstInputDelay':
+        return value < 100; // Good if < 100ms
+      case 'cumulativeLayoutShift':
+        return value < 0.1; // Good if < 0.1
+      case 'timeToFirstByte':
+        return value < 600; // Good if < 600ms
+      default:
+        return true;
+    }
   }
 
-  public getLargestContentfulPaint(): number 
-    return this.metrics.largestContentfulPaint;}
-  }
-
-  public getFirstInputDelay(): number 
-    return this.metrics.firstInputDelay;}
-  }
-
-  public getCumulativeLayoutShift(): number 
-    return this.metrics.cumulativeLayoutShift;}
-  }
-
-  public isPerformanceGood(): boolean 
-    );}
-  }
-
-  public cleanup(): void 
+  exportMetrics(): string {
+    return JSON.stringify(this.metrics, null, 2);
   }
 }
 
-export const performanceMonitor = new PerformanceMonitor()
+// Export singleton instance
+export const performanceUtils = new PerformanceUtils();
+
 // Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(
-  fn: T,
-  name?: string
-): T => 
-    if (name) {}
-      console.log(`${name} took ${end - start} milliseconds`)
-    }
+export const getPerformanceMetrics = (): PerformanceMetrics => {
+  return performanceUtils.getMetrics();
+};
 
-    return result
-  }) as T
-}
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): T => 
-    timeout = setTimeout(() => func(...args), wait);}
-  }) as T
-}
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): T => 
-      setTimeout(() => inThrottle = false, limit);}
-    }
-  }) as T
-}
-export const lazyLoad = (callback: () => void): void => 
-    requestIdleCallback(callback);}
-  } else 
-    setTimeout(callback, 1);}
-  }
-}
-export const preloadImage = (src: string): Promise<void> => 
-    img.src = src;}
-  });
-}
-export const preloadImages = (srcs: string[]): Promise<void[]> => 
-  return Promise.all(srcs.map(preloadImage));}
-}
+export const getMetricValue = (metricName: keyof PerformanceMetrics): number => {
+  return performanceUtils.getMetricValue(metricName);
+};
+
+export const isMetricGood = (metricName: keyof PerformanceMetrics): boolean => {
+  return performanceUtils.isMetricGood(metricName);
+};
+
+export const exportMetrics = (): string => {
+  return performanceUtils.exportMetrics();
+};

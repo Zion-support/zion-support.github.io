@@ -7,135 +7,99 @@ import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Wifi} from 'lucide-
 const HomePage: React.FC = () => {
   const features = [
     {
-      icon: Wifi,
+      icon: Brain,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
+      title: 'Cloud Architecture',
+      description: 'Scalable and secure cloud infrastructure solutions.',
+      benefits: ['AWS', 'Azure', 'Google Cloud', 'Hybrid Solutions']
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Security Audits']
     },
     {
       icon: Code,
-      title: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      title: 'Web Development',
+      description: 'Modern web applications built with the latest technologies.',
+      benefits: ['React', 'Next.js', 'TypeScript', 'Responsive Design']
+    },
+    {
+      icon: Wifi,
+      title: 'IoT Solutions',
+      description: 'Internet of Things solutions for connected devices.',
+      benefits: ['Device Management', 'Data Analytics', 'Real-time Monitoring', 'Integration']
     }
-  ];
-
-  const stats = [
-    {number: '500+', label: 'Projects Completed'},
-    {number: '100+', label: 'Happy Clients'},
-    {number: '99.9%', label: 'Uptime Guarantee'},
-    {number: '24/7', label: 'Support Available'}
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>
+              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Leading provider of AI-powered solutions and cutting-edge technology services 
-              for modern businesses worldwide.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leading provider of AI-powered technology solutions and digital transformation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology solutions to drive your business forward
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
-                      <IconComponent className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                    <ul className="text-sm text-gray-400 space-y-1">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our technology solutions can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors">
-                Start Your Project
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
-      
+
       <Footer />
     </div>
   );
