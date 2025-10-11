@@ -1,168 +1,155 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
-
-// Function to fix JSX parent element issues
-function fixJSXParentElements(content) {
-  let fixed = content;
-  
-  // Check if there are multiple root elements
-  const lines = fixed.split('\n');
-  let inReturn = false;
-  let returnStart = -1;
-  let braceCount = 0;
-  let hasMultipleRoots = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.trim().startsWith('return (')) {
-      inReturn = true;
-      returnStart = i;
-      braceCount = 0;
-    }
-    
-    if (inReturn) {
-      // Count braces to find the end of return statement
-      for (const char of line) {
-        if (char === '(') braceCount++;
-        if (char === ')') braceCount--;
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = []
+  const items = fs.readdirSync(dir)
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        files = files.concat(findFiles(fullPath, extensions))
       }
-      
-      // Check for multiple root elements (JSX elements at same level)
-      if (line.trim().match(/^<[A-Z]/) && braceCount > 1) {
-        hasMultipleRoots = true;
-      }
-      
-      if (braceCount === 0 && line.trim().endsWith(')')) {
-        break;
-      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)
     }
   }
   
-  if (hasMultipleRoots) {
-    // Wrap everything in a React Fragment
-    fixed = fixed.replace(
-      /return \(\s*<div/g,
-      'return (\n    <>\n      <div'
-    );
-    
-    // Find the closing of the return statement and add closing fragment
-    const returnMatch = fixed.match(/return \([\s\S]*?\);/);
-    if (returnMatch) {
-      const returnContent = returnMatch[0];
-      const lastDivClose = returnContent.lastIndexOf('</div>');
-      if (lastDivClose !== -1) {
-        const beforeClose = returnContent.substring(0, lastDivClose + 6);
-        const afterClose = returnContent.substring(lastDivClose + 6);
-        fixed = fixed.replace(
-          returnContent,
-          beforeClose + '\n    </>\n  )'
-        );
+  return files
+}
+
+// Function to fix JSX fragment and syntax errors
+function fixJSXErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Fix JSX fragment issues
+    const jsxFixes = [
+      // Fix unclosed JSX fragments
+      {
+        pattern: /<>([^<]*?)(?=<\/>|$)/g,
+        replacement: '<React.Fragment>$1</React.Fragment>'
+      },
+      // Fix missing closing tags for React.Fragment
+      {
+        pattern: /<React\.Fragment>([^<]*?)(?=<\/React\.Fragment>|$)/g,
+        replacement: '<React.Fragment>$1</React.Fragment>'
+      },
+      // Fix JSX expressions that need parent elements
+      {
+        pattern: /return\s*\(\s*([^<]*?<[^>]*>[^<]*?<[^>]*>)\s*\)/g,
+        replacement: 'return (\n    <React.Fragment>\n      $1\n    </React.Fragment>\n  )'
+      }
+    ]
+    for (const fix of jsxFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
       }
     }
-  }
-  
-  return fixed;
-}
-
-// Function to fix missing closing tags
-function fixMissingClosingTags(content) {
-  let fixed = content;
-  
-  // Common elements that need closing tags
-  const elements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'p', 'span'];
-  
-  for (const element of elements) {
-    // Count opening and closing tags
-    const openRegex = new RegExp(`<${element}(?:\\s[^>]*)?(?:>|$)`, 'g');
-    const closeRegex = new RegExp(`</${element}>`, 'g');
     
-    const openMatches = (fixed.match(openRegex) || []).length;
-    const closeMatches = (fixed.match(closeRegex) || []).length;
-    
-    if (openMatches > closeMatches) {
-      // Add missing closing tags at the end
-      const missing = openMatches - closeMatches;
-      for (let i = 0; i < missing; i++) {
-        fixed += `</${element}>`;
+    // Fix specific syntax errors
+    const syntaxFixes = [
+      // Fix missing comma in object properties
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2],\n    $3: ['
+      },
+      // Fix missing semicolon after const declaration
+      {
+        pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*const\s+(\w+)/g,
+        replacement: 'const $1 = [$2];\n  const $3'
+      },
+      // Fix missing closing bracket in features array
+      {
+        pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
+        replacement: 'const features = [$1];\n  const benefits'
+      },
+      // Fix missing comma after array in object
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2],\n    $3: ['
+      }
+    ]
+    for (const fix of syntaxFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
       }
     }
-  }
-  
-  return fixed;
-}
-
-// Function to fix TypeScript interface issues
-function fixTypeScriptIssues(content) {
-  let fixed = content;
-  
-  // Fix syntax errors like ,)
-  fixed = fixed.replace(/,\)/g, ')');
-  fixed = fixed.replace(/,;/g, ';');
-  
-  // Fix missing semicolons in interfaces
-  fixed = fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1;\n  $2');
-  
-  return fixed;
-}
-
-// Main function to process files
-async function processFiles() {
-  console.log('Starting JSX error fixes...');
-  
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        '*.disabled/**',
-        '*-disabled/**',
-        'backup*/**',
-        '**/*.backup',
-        '**/*.broken'
-      ]
-    });
     
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check if file has JSX issues
-        if (content.includes('JSX expressions must have one parent element') || 
-            content.includes('Expected corresponding JSX closing tag') ||
-            content.includes(',)') ||
-            content.includes(',;')) {
-          
-          console.log(`Processing JSX errors in: ${file}`);
-          
-          let fixed = fixJSXParentElements(content);
-          fixed = fixMissingClosingTags(fixed);
-          fixed = fixTypeScriptIssues(fixed);
-          
-          fs.writeFileSync(file, fixed);
-          processedCount++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
+    // Fix specific parsing errors
+    const parsingFixes = [
+      // Fix missing closing tag for main
+      {
+        pattern: /<main([^>]*)>([^<]*?)(?=<\/main>|$)/g,
+        replacement: '<main$1>$2</main>'
+      },
+      // Fix missing closing tag for section
+      {
+        pattern: /<section([^>]*)>([^<]*?)(?=<\/section>|$)/g,
+        replacement: '<section$1>$2</section>'
+      },
+      // Fix missing closing tag for div
+      {
+        pattern: /<div([^>]*)>([^<]*?)(?=<\/div>|$)/g,
+        replacement: '<div$1>$2</div>'
+      }
+    ]
+    for (const fix of parsingFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
       }
     }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed JSX errors in: ${filePath}`)
+      return true
+    }
+    
+    return false
+  } catch (error) {
+    console.error(`Error fixing JSX errors in ${filePath}:`, error.message)
+    return false
   }
-  
-  console.log(`\nJSX error fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
 }
 
-// Run the script
-processFiles().catch(console.error);
+// Main execution
+console.log('Starting JSX error fixes...')
+const appDir = path.join(__dirname, 'app')
+const files = findFiles(appDir)
+let fixedCount = 0
+let errorCount = 0
+for (const file of files) {
+  try {
+    if (fixJSXErrors(file)) {
+      fixedCount++
+    }
+  } catch (error) {
+    console.error(`Failed to process ${file}:`, error.message)
+    errorCount++
+  }
+}
+
+console.log(`\nFixed ${fixedCount} files`)
+console.log(`Errors: ${errorCount} files`)
+// Run linting to check remaining issues
+console.log('\nRunning linting to check remaining issues...')
+try {
+  execSync('pnpm run lint', { stdio: 'inherit' })
+} catch (error) {
+  console.log('Linting completed with some remaining issues to fix manually')
+}</div></main></section>

@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss';
-
+import type { Config } from 'tailwindcss'
 const config: Config = {,
   content: [,
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -48,6 +47,6 @@ const config: Config = {,
         slideUp: {
           '0%': { transform: 'translateY(10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }}}}},
-  plugins: []};
+  plugins: []}
 
-export default config;
+export default config

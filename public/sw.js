@@ -1,41 +1,56 @@
+<<<<<<< HEAD
+const CACHE_NAME = 'zion-tech-group-v1';
+=======
+
 // Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-v1';
+
+const CACHE_NAME = 'zion-tech-group-v1'
+>>>>>>> origin/main
 const urlsToCache = [
   '/',
+  '/about',
+  '/services',
+  '/contact',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  '/site.webmanifest'
+<<<<<<< HEAD
+  '/manifest.json'
 ];
 
 // Install event
+=======
+
+  '/manifest.json',
+  '/favicon.ico'
+
+]
+>>>>>>> origin/main
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        return cache.addAll(urlsToCache);
+        console.log('Opened cache')
+        return cache.addAll(urlsToCache)
       })
-      .catch((error) => {
-        console.log('Cache installation failed:', error);
-      })
+<<<<<<< HEAD
   );
 });
 
 // Fetch event
+=======
+
+  )
+})
+>>>>>>> origin/main
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request).catch(() => {
-          // Return offline page if available
-          if (event.request.destination === 'document') {
-            return caches.match('/');
-          }
-        });
+        return response || fetch(event.request)
       })
-  );
-});
-
+  )
+})
 // Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -43,38 +58,29 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
+            console.log('Deleting old cache:', cacheName)
+            return caches.delete(cacheName)
           }
         })
-      );
+      )
     })
+<<<<<<< HEAD
   );
 });
 
-// Message event handler
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'contact-form') {
+    event.waitUntil(syncContactForm());
   }
 });
 
-// Push event handler
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/favicon.ico',
-      badge: '/favicon.ico',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
-      }
-    };
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
+async function syncContactForm() {
+  // Handle offline form submissions
+  console.log('Syncing contact form data');
+}
+=======
+
+  )
+})
+>>>>>>> origin/main

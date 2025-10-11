@@ -1,30 +1,30 @@
-// December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs;
+// December 2025 Revolutionary Breakthrough Content - Latest AI consciousness and superintelligence breakthroughs
 export interface RevolutionaryBreakthroughContent {
-  id: string;
-  slug?: string;
-  title: string;
-  description: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string;
-  newBadge?: boolean;
-  trending?: boolean;
-  valueProposition: string;
+  id: string
+  slug?: string
+  title: string
+  description: string
+  excerpt: string
+  author: string
+  date: string
+  category: string
+  tags: string[]
+  featured: boolean
+  readTime: string
+  image?: string
+  newBadge?: boolean
+  trending?: boolean
+  valueProposition: string
   metrics: {
-    performance: string;
-    savings: string;
-    accuracy: string;
-    roi: string;
+    performance: string
+    savings: string
+    accuracy: string
+    roi: string,
 export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
-  };
-  consciousnessLevel?: string;
-  transcendenceLevel?: string;
-  superintelligenceLevel?: string;
+  }
+  consciousnessLevel?: string
+  transcendenceLevel?: string
+  superintelligenceLevel?: string
 }
 
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
@@ -39,11 +39,11 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     date: '2025-12-01',
     category: 'AI Consciousness',
     tags: ['Quantum AI', 'Consciousness', 'Transcendence', '2025', 'Revolutionary'],
-    featured: true;
+    featured: true
     readTime: '20 min read'
     image: '/images/quantum-ai-transcendence-revolution-2025.jpg'
-    newBadge: true;
-    trending: true;
+    newBadge: true
+    trending: true,
     valueProposition: '$1.2B+ annual value creation'
     metrics: {
       performance: 'Infinite processing power',
@@ -70,11 +70,11 @@ export const,
     date: '2025-12-01',
     category: 'Superintelligence',
     tags: ['Superintelligence', 'Consciousness', 'Breakthrough', '2025', 'AI Evolution'],
-    featured: true;
+    featured: true
     readTime: '25 min read'
     image: '/images/artificial-superintelligence-breakthrough-2025.jpg'
-    newBadge: true;
-    trending: true;
+    newBadge: true
+    trending: true,
     valueProposition: '$2.5B+ annual value creation'
     metrics: {
       performance: 'Exponential learning',
@@ -88,4 +88,4 @@ export const,
     transcendenceLeve,
   l: 'Ultimate',
     superintelligenceLeve,
-  l: 'Infinite'}];
+  l: 'Infinite'}]

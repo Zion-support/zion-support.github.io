@@ -1,9 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -13,22 +11,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData}) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
-    ? canonicalUrl;
-    : `https://zion.app${canonicalUrl}`;
-
+    ? canonicalUrl
+    : `https://zion.app${canonicalUrl}`
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
-
+    description: description,
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
   return(<Helmet>
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
@@ -60,20 +56,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`;
-
+  s://zion.app${canonicalUrl}`
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  };
-
+  }
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
-      <link rel="canonical" href={fullCanonicalUrl} /></link>
+      <link rel="canonical" href={fullCanonicalUrl} />
       {/* Open Graph */}"
       <meta property="o,"
   g:title" content={fullTitle} /></meta>"
@@ -86,7 +80,7 @@ const,
       <meta property="o,"
   g:type" content={ogType} /></meta>"
       <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>
+  g:site_name" content="Zion Tech Group" />
       {/* Twitter */}"
       <meta name="twitte,"
   r:card" content={twitterCard} /></meta>"
@@ -95,25 +89,27 @@ const,
       <meta name="twitte,"
   r:description" content={description} /></meta>"
       <meta name="twitte,"
-  r:image" content={ogImage} /></meta>
+  r:image" content={ogImage} />
       {/* Additional SEO */}"
       <meta name="robots" content="index, follow" /></meta>"
       <meta name="author" content="Zion Tech Group" /></meta>"
       <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>"
-      <meta name="theme-color" content="#2563eb" /></meta>
+      <meta name="theme-color" content="#2563eb" />
       {/* Performance hints */}"
-      <link rel="preconnect" href="http,"
+      <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
-      <link rel="preconnect" href="http,"
+      <nk rel="preconnect" href="http,"$2 />
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}
+export default SEOHead
 "`
+  </SEOHeadProps>
+  </SEOHeadProps>
+</li></li></li></li></li></li>

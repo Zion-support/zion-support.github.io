@@ -1,154 +1,170 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Function to resolve merge conflicts by choosing the HEAD version
-function resolveMergeConflicts(content) {
-  // Remove merge conflict markers and choose HEAD version
-  let resolved = content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-  
-  // Clean up any remaining conflict markers
-  resolved = resolved
-    .replace(/<<<<<<< HEAD\n?/g, '')
-    .replace(/=======\n?/g, '')
-    .replace(/>>>>>>> [^\n]+\n?/g, '');
-  
-  return resolved;
-}
-
-// Function to fix common JSX syntax issues
-function fixJSXSyntax(content) {
-  // Fix unclosed JSX tags by adding proper closing tags
-  let fixed = content;
-  
-  // Fix common JSX issues
-  fixed = fixed
-    // Fix missing closing tags for common elements
-    .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-      // Only add closing tag if there's no corresponding closing tag
-      const openDivs = (match.match(/<div/g) || []).length;
-      const closeDivs = (match.match(/<\/div>/g) || []).length;
-      if (openDivs > closeDivs) {
-        return match + '</div>';
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = []
+  const items = fs.readdirSync(dir)
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        files = files.concat(findFiles(fullPath, extensions))
       }
-      return match;
-    })
-    // Fix missing closing tags for sections
-    .replace(/<section([^>]*)>(?!.*<\/section>)/g, (match, attrs) => {
-      const openSections = (match.match(/<section/g) || []).length;
-      const closeSections = (match.match(/<\/section>/g) || []).length;
-      if (openSections > closeSections) {
-        return match + '</section>';
-      }
-      return match;
-    })
-    // Fix missing closing tags for main
-    .replace(/<main([^>]*)>(?!.*<\/main>)/g, (match, attrs) => {
-      const openMain = (match.match(/<main/g) || []).length;
-      const closeMain = (match.match(/<\/main>/g) || []).length;
-      if (openMain > closeMain) {
-        return match + '</main>';
-      }
-      return match;
-    })
-    // Fix missing closing tags for article
-    .replace(/<article([^>]*)>(?!.*<\/article>)/g, (match, attrs) => {
-      const openArticle = (match.match(/<article/g) || []).length;
-      const closeArticle = (match.match(/<\/article>/g) || []).length;
-      if (openArticle > closeArticle) {
-        return match + '</article>';
-      }
-      return match;
-    })
-    // Fix missing closing tags for p
-    .replace(/<p([^>]*)>(?!.*<\/p>)/g, (match, attrs) => {
-      const openP = (match.match(/<p/g) || []).length;
-      const closeP = (match.match(/<\/p>/g) || []).length;
-      if (openP > closeP) {
-        return match + '</p>';
-      }
-      return match;
-    });
-  
-  return fixed;
-}
-
-// Function to fix TypeScript/JavaScript syntax issues
-function fixSyntaxIssues(content) {
-  let fixed = content;
-  
-  // Fix missing semicolons
-  fixed = fixed.replace(/([^;}])\n\s*}/g, '$1;\n}');
-  
-  // Fix missing commas in object literals
-  fixed = fixed.replace(/([^,}])\n\s*}/g, '$1,\n}');
-  
-  // Fix missing closing parentheses
-  fixed = fixed.replace(/([^)])\n\s*}/g, '$1)\n}');
-  
-  return fixed;
-}
-
-// Main function to process files
-async function processFiles() {
-  console.log('Starting merge conflict resolution...');
-  
-  // Find all TypeScript and JavaScript files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js',
-    'api/**/*.ts'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        '*.disabled/**',
-        '*-disabled/**',
-        'backup*/**',
-        '**/*.backup',
-        '**/*.broken'
-      ]
-    });
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check if file has merge conflicts
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          console.log(`Processing merge conflicts in: ${file}`);
-          
-          let resolved = resolveMergeConflicts(content);
-          resolved = fixJSXSyntax(resolved);
-          resolved = fixSyntaxIssues(resolved);
-          
-          fs.writeFileSync(file, resolved);
-          processedCount++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
-      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)
     }
   }
   
-  console.log(`\nMerge conflict resolution complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
+  return files
 }
 
-// Run the script
-processFiles().catch(console.error);
+// Function to fix merge conflicts
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Remove merge conflict markers
+    const conflictRegex = /[\s\S]*?[\s\S]*?    if (conflictRegex.test(content)) {
+      content = content.replace(conflictRegex, '')
+      modified = true
+    }
+    
+    // Fix common syntax issues
+    const fixes = [
+      // Fix missing closing tags in JSX
+      {
+        pattern: /<meta\s+[^>]*name="[^"]*"[^>]*>/g,
+        replacement: (match) => {
+          if (!match.includes('/>') && !match.includes('</meta>')) {
+            return match.replace(/>$/, ' />')
+          }
+          return match
+        }
+      },
+      // Fix unclosed JSX elements
+      {
+        pattern: /<(\w+)([^>]*?)(?<!\/)>/g,
+        replacement: (match, tagName, attributes) => {
+          // Skip self-closing tags
+          if (match.endsWith('/>') || ['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+            return match
+          }
+          return match
+        }
+      }
+    ]
+    for (const fix of fixes) {
+      if (typeof fix.replacement === 'function') {
+        const newContent = content.replace(fix.pattern, fix.replacement)
+        if (newContent !== content) {
+          content = newContent
+          modified = true
+        }
+      } else {
+        const newContent = content.replace(fix.pattern, fix.replacement)
+        if (newContent !== content) {
+          content = newContent
+          modified = true
+        }
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed: ${filePath}`)
+      return true
+    }
+    
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+  }
+}
+
+// Function to fix specific parsing errors
+function fixParsingErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Fix common parsing errors
+    const fixes = [
+      // Fix missing commas in object literals
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
+        replacement: '$1: [$2],\n    $3:'
+      },
+      // Fix missing closing brackets
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*\]/g,
+        replacement: '$1: [$2]\n  }'
+      },
+      // Fix JSX fragment issues
+      {
+        pattern: /<>([^<]+)<\/>/g,
+        replacement: '<React.Fragment>$1</React.Fragment>'
+      },
+      // Fix missing semicolons
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*$/gm,
+        replacement: '$1: [$2],'
+      }
+    ]
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed parsing errors in: ${filePath}`)
+      return true
+    }
+    
+    return false
+  } catch (error) {
+    console.error(`Error fixing parsing errors in ${filePath}:`, error.message)
+    return false
+  }
+}
+
+// Main execution
+console.log('Starting merge conflict and parsing error fixes...')
+const appDir = path.join(__dirname, 'app')
+const files = findFiles(appDir)
+let fixedCount = 0
+let errorCount = 0
+for (const file of files) {
+  try {
+    if (fixMergeConflicts(file)) {
+      fixedCount++
+    }
+    if (fixParsingErrors(file)) {
+      fixedCount++
+    }
+  } catch (error) {
+    console.error(`Failed to process ${file}:`, error.message)
+    errorCount++
+  }
+}
+
+console.log(`\nFixed ${fixedCount} files`)
+console.log(`Errors: ${errorCount} files`)
+// Run linting to check remaining issues
+console.log('\nRunning linting to check remaining issues...')
+try {
+  execSync('pnpm run lint', { stdio: 'inherit' })
+} catch (error) {
+  console.log('Linting completed with some remaining issues to fix manually')
+}

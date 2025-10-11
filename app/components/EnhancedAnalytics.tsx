@@ -1,43 +1,16 @@
+<<<<<<< HEAD
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { createContext, useContext, useCallback } from 'react';
 
-const EnhancedAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+interface AnalyticsContextType {
+  track: (event: string, parameters?: Record<string, any>) => void;
+  page: (pageName: string, parameters?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -152,6 +125,124 @@ const EnhancedAnalyticsPage: React.FC = () => {
       </section>
     </div>
   );
+=======
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+>>>>>>> origin/main
 };
 
-export default EnhancedAnalyticsPage;
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const track = useCallback((event: string, parameters?: Record<string, any>) => {
+    console.log('Analytics Event:', event, parameters);
+  }, []);
+
+  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
+    console.log('Analytics Page:', pageName, parameters);
+  }, []);
+
+  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
+    console.log('Analytics Identify:', userId, traits);
+  }, []);
+=======
+'use client'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void
+  trackPageView: (pageName: string) => void
+  trackUserAction: (action: string, category: string, label?: string) => void
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+  }
+  return context
+}
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [isInitialized, setIsInitialized] = useState(false)
+
+  useEffect(() => {
+    // Initialize analytics
+    const initAnalytics = () => {
+      // Add Google Analytics or other analytics services here
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        // Example: Initialize Google Analytics
+        // gtag('config', 'GA_MEASUREMENT_ID')
+      }
+      setIsInitialized(true)
+    }
+
+    initAnalytics()
+  }, [])
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (!isInitialized) return
+
+    // Track event with analytics service
+    if (typeof window !== 'undefined') {
+      console.log('Analytics Event:', eventName, properties)
+      
+      // Example: Send to Google Analytics
+      // gtag('event', eventName, properties)
+    }
+  }
+
+  const trackPageView = (pageName: string) => {
+    if (!isInitialized) return
+
+    // Track page view
+    if (typeof window !== 'undefined') {
+      console.log('Page View:', pageName)
+      
+      // Example: Send to Google Analytics
+      // gtag('config', 'GA_MEASUREMENT_ID', {
+      //   page_title: pageName,
+      //   page_location: window.location.href
+      // })
+    }
+  }
+
+  const trackUserAction = (action: string, category: string, label?: string) => {
+    if (!isInitialized) return
+
+    trackEvent('user_action', {
+      action,
+      category,
+      label,
+      timestamp: new Date().toISOString()
+    })
+  }
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    trackUserAction
+  }
+>>>>>>> origin/main
+
+  return (
+    <AnalyticsContext.Provider value={{ track, page, identify }}>
+      {children}
+    </AnalyticsContext.Provider>
+<<<<<<< HEAD
+  );
+};
+=======
+  )
+}
+
+export default AnalyticsProvider
+>>>>>>> origin/main

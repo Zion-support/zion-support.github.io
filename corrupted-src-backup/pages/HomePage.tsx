@@ -1,3 +1,2 @@
-import React from 'react';
-
-export default HomePage;
+import React from 'react'
+export default HomePage

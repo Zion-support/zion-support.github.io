@@ -1,72 +1,55 @@
+<<<<<<< HEAD
+import {MetadataRoute}}from 'next';
+export default function sitemap(): MetadataRoute.Sitemap {return [;}
+=======
 import { MetadataRoute } from 'next'
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+    return [
+>>>>>>> origin/main
     {
       url: 'https://ziontechgroup.com',
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://ziontechgroup.com/about',
+      priority: 1,},
+    {url: 'https://ziontechgroup.com/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://ziontechgroup.com/services',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/services',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://ziontechgroup.com/contact',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://ziontechgroup.com/blog',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://ziontechgroup.com/ai-3d-generation',
+      priority: 0.7,},
+    {url: 'https://ziontechgroup.com/ai-3d-generation',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://ziontechgroup.com/edge-computing',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/edge-computing',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://ziontechgroup.com/financial-it',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/financial-it',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://ziontechgroup.com/consultation',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/consultation',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: 'https://ziontechgroup.com/partners',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/partners',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://ziontechgroup.com/support',
+      priority: 0.5,},
+    {url: 'https://ziontechgroup.com/support',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.5,
-    },
+      priority: 0.5,},
   ]
 }

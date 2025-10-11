@@ -1,224 +1,145 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
-
-const CompliancePage: React.FC = () => {
-  const complianceStandards = [
-    {
-      icon: Shield,
-      title: 'SOC 2 Type II',
-      description: 'Comprehensive security and availability controls for service organizations.'
-    },
-    {
-      icon: Lock,
-      title: 'ISO 27001',
-      description: 'International standard for information security management systems.'
-    },
-    {
-      icon: FileText,
-      title: 'GDPR Compliance',
-      description: 'Full compliance with European data protection regulations.'
-    },
-    {
-      icon: CheckCircle,
-      title: 'HIPAA Ready',
-      description: 'Healthcare data protection standards and requirements.'
-    },
-    {
-      icon: Award,
-      title: 'PCI DSS',
-      description: 'Payment card industry data security standards.'
-    },
-    {
-      icon: Globe,
-      title: 'CCPA Compliance',
-      description: 'California Consumer Privacy Act compliance and data rights.'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Compliance & Security | Zion Tech Group</title>
-        <meta name="description" content="Learn about our comprehensive compliance standards and security measures to protect your data." />
-        <meta name="keywords" content="compliance, security, SOC 2, ISO 27001, GDPR, HIPAA, data protection" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Compliance</span> & Security
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We maintain the highest standards of security and compliance to protect your data and ensure regulatory adherence.
-            </p>
-          </div>
-        </section>
-
-        {/* Compliance Standards */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
-                    <standard.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
-                  <p className="text-gray-300">{standard.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Questions About Compliance?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our compliance team is here to help you understand our security measures and regulatory adherence.
-              </p>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Contact Compliance Team
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award}}from 'lucide-react';
+const CompliancePage: React.FC = () => {,
 =======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
 const CompliancePage: React.FC = () => {
+>>>>>>> origin/main
   const features = [
     {
-      icon: Shield,
-      title: 'Security Compliance',
-      description: 'Comprehensive security compliance with industry standards'
-    },
-    {
       icon: FileCheck,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with GDPR, HIPAA, and other regulations'
-    },
-    {
-      icon: Lock,
-      title: 'Data Protection',
-      description: 'Advanced data protection and privacy measures'
-    },
-    {
-      icon: Award,
-      title: 'Certifications',
-      description: 'Industry-recognized certifications and audits'
+      title: 'Compliance Management',
+      description: 'Comprehensive compliance management solutions for various industry standards',},
+    {icon: Lock,
+      title: 'Security Compliance',
+      description: 'Ensure your systems meet the highest security and compliance standards',},
+    {icon: Award,
+      title: 'Certification Support',
+      description: 'Get support for achieving and maintaining industry certifications',},
+    {icon: Shield,
+      title: 'Audit Readiness',
+<<<<<<< HEAD
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting',}];
+=======
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];
-
+<<<<<<< HEAD
+  ];];];
+>>>>>>> origin/main
+=======
+  ]
+>>>>>>> origin/main
   const benefits = [
-    'GDPR compliance',
-    'HIPAA compliance',
-    'SOC 2 Type II',
-    'ISO 27001 certification',
-    'Regular security audits',
-    'Data encryption',
-    'Access controls',
-    'Compliance monitoring'
+    'Advanced compliance technology integration',
+    'Real-time compliance monitoring',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible compliance solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+      <Helmet />
+=======
+    'Proven track record of success';
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+>>>>>>> origin/main
         <title>Compliance | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive compliance solutions by Zion Tech Group. Security, regulatory, and data protection compliance." />
-        <meta name="keywords" content="compliance, security compliance, regulatory compliance, data protection, Zion Tech Group" />
-      </Helmet>
-
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Compliance
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ensure your business meets all regulatory and security requirements 
-              with our comprehensive compliance solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+=======
+    'Proven track record of success'
+  ]
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div><Helmet>
+        </Helmet><title>Compliance | Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
+      <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Compliance;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ensure your business meets all regulatory and compliance requirements.</p>
+            Powered by advanced AI technology and industry expertise.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our compliance solutions deliver unmatched performance, security, and scalability.</p>
+          </p>
+        </div>
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,</div>
+          {features.map((feature, index) => (
+            <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+=======
+        </div><div className="text-center mb-16">
+          </div><h1 className="text-5xl font-bold text-white mb-6">
+            Compliance
+  
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Ensure your business meets all regulatory and compliance requirements. 
+            Powered by advanced AI technology and industry expertise.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our compliance solutions deliver unmatched performance, security, and scalability.
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              </div><feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+>>>>>>> origin/main
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description</p>}</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Compliance Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive compliance solutions for your business needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Compliance Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Why choose our compliance solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          ))}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+<<<<<<< HEAD
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Compliance Solutions?</h2>
+          </h2>
+          <div className="grid md: grid-cols-2 gap-6">,</div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+              <div key={index}className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit</span>}</span>
+=======
+          </div><h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Compliance Solutions?
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              </div><div key={index} className="flex items-center space-x-3">
+                </div><CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+>>>>>>> origin/main
               </div>
+            ))}
+        <div className="text-center">
+          </div><h2 className="text-3xl font-bold text-white mb-6">
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+  return() {features.map((feature, index) => ()
+          ))}
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16" /></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-8" /></h2>
+            Why Choose Our Compliance Solutions?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6" /></div>
+            {benefits.map((benefit, index) => ()
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -240,14 +161,65 @@ const CompliancePage: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+<<<<<<< HEAD
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your compliance needs and get a customized solution.</p>
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now;
+  </
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us;
+  </
+=======
+        <div className="text-center" /></div>
+          <h2 className="text-3xl font-bold text-white mb-6" /></h2>
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8" /></p>
+            Contact our experts to discuss your compliance needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              </button><Phone className="mr-2 h-5 w-5" />
+              Call Now
+  
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              </button><Mail className="mr-2 h-5 w-5" />
+              Email Us
+  
+>>>>>>> origin/main
+>>>>>>> origin/main
           </div>
         </div>
-      </section>
-
-      <Footer />
+      </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
-  );
+  ),
+<<<<<<< HEAD
 };
 
 export default CompliancePage;
+=======
+}
+export default CompliancePage
+>>>>>>> origin/main
+  </button>
+  </button>
+  </h1>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your compliance needs and get a customized solution.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+  )
+}
+export default CompliancePage</div></div></div></div></div></div></div></div></div></div></span></button></p></p></p></p></h1></h2></h2></h3>
