@@ -1,42 +1,9 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
 }
   ]
 </span>
               <br></br>
               <span className="text-white">Solutions</span>
             </h1>
-<<<<<<< HEAD
-            <p>Transform your business with our advanced systemmonitor solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-                <ArrowRight>
-              </button>
-              <button>Learn More;</button>
-=======
-            <p></p>
-              Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-                </button><ArrowRight>
-              </button>
-              <button></button>
-                Learn More
->>>>>>> origin/main
               </button>
             </div>
         </div>

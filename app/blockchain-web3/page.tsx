@@ -1,61 +1,15 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const BlockchainWeb3Page: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const BlockchainWeb3Page: React.FC = () => {
->>>>>>> origin/main
     const features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
-    {icon: Shield,
-=======
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
-=======
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'],
->>>>>>> origin/main
   },
     {
     icon: Shield,
->>>>>>> origin/main
       title: 'Decentralized Security',
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
-<<<<<<< HEAD
-      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
-    {icon: Brain,
-      title: 'AI Integration',
-      description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts']},
-    {icon: Globe,
-      title: 'Global Access',
-      description: 'Access blockchain services from anywhere in the world with global connectivity.',
-<<<<<<< HEAD
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
-return(<>)
-      <Helmet />
-=======
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
-  },
-  ];];
-return (
-    <>
-  </>
-      <Helmet>
->>>>>>> origin/main
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
-=======
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data'],
   },
     {
@@ -76,7 +30,6 @@ return (
       <Helmet>
         </Helmet><title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta>
->>>>>>> origin/main
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -99,16 +52,6 @@ return (
                   </div>
                 </div>
                 <ul>
-<<<<<<< HEAD
-                  {feature.benefits.map((benefit, benefitIndex) => (} <li>
-                      <CheckCircle />
-=======
-                  {
-    feature.benefits.map((benefit, benefitIndex) => (
-  }
-                    </ul><li>
-                      </li><CheckCircle>
->>>>>>> origin/main
 
                       {benefit} </li>
                   ))}
@@ -154,17 +97,3 @@ export default BlockchainWeb3Page
                       {benefit}
                   ))}
             ))}
-<<<<<<< HEAD
-          </div>
-        ))
-      </div>
-
-  );
-};
-
-export default BlockchainWeb3Page;
-=======
-  )
-}
-export default BlockchainWeb3Page</div></div></div></div></div></div></div></div></span></p></p></h1></h3></ul></li>
->>>>>>> origin/main

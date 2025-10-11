@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
 },
     {icon: Shield,
       title: 'Enterprise Security',
@@ -28,26 +17,12 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(</div>)
-=======
-    'Proven track record of success';
-  ];];];
-return (
-          </div>
->>>>>>> origin/main
         </div>
       </section>
               </div>
-=======
     'Proven track record of success'
   ]
 return ()
->>>>>>> origin/main
             ))}
           </div>
         </div>

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const PagePage: React.FC = () => {
->>>>>>> origin/main
     const features = [
     {
       icon: Brain,
@@ -24,21 +11,9 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-<<<<<<< HEAD
-  ];];];
->>>>>>> origin/main
 const benefits = [
-=======
   ]
   const benefits = [
->>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -50,19 +25,6 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
-    'Proven track record of success';
-  ];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
->>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -71,7 +33,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
     'Proven track record of success'
   ]
 return (
@@ -82,19 +43,6 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -102,34 +50,11 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-<<<<<<< HEAD
-              <span>Page;</span>
-=======
-              </h1><span>
->>>>>>> origin/main
                 Page
->>>>>>> origin/main
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-<<<<<<< HEAD
-            <p>Transform your business with our advanced page solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-                <ArrowRight>
-=======
-            <p>
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
-                </button><ArrowRight>
->>>>>>> origin/main
               </button>
               <button>Learn More,</button>
               </button>
@@ -145,38 +70,12 @@ return (
         </div>
       </section>
             </h2>
-<<<<<<< HEAD
-            <p>Experience the power of our page solutions for your business.</p>
-            </p>
-          </div>
-          </div>
-        </div>
-      </section>
-=======
-            <p>
-              Experience the power of our page solutions for your business.
->>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
-<<<<<<< HEAD
-                <Phone>
-                Call Now;
-              </button>
-              <button>
-                <Mail>
-                Email Us;
-=======
-                </button><Phone>
-                Call Now
-              </button>
-              <button>
-                </button><Mail>
-                Email Us
->>>>>>> origin/main
               </button>
             </div>
           </div>

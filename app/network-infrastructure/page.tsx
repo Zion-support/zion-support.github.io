@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const PagePage: React.FC = () => {
->>>>>>> origin/main
     const features = [
     {
       icon: Brain,
@@ -24,21 +11,9 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-<<<<<<< HEAD
-  ];];];
->>>>>>> origin/main
 const benefits = [
-=======
   ]
   const benefits = [
->>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -50,38 +25,17 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
-    'Proven track record of success';
-  ];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
->>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
             </h1>
-<<<<<<< HEAD
-            <p>Transform your business with our advanced page solutions.;</p>
-=======
-            <p>
-              Transform your business with our advanced page solutions.
->>>>>>> origin/main
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
@@ -92,38 +46,12 @@ return (
         </div>
       </section>
             </h2>
-<<<<<<< HEAD
-            <p>Experience the power of our page solutions for your business.</p>
-            </p>
-          </div>
-          </div>
-        </div>
-      </section>
-=======
-            <p>
-              Experience the power of our page solutions for your business.
->>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
-<<<<<<< HEAD
-                <Phone>
-                Call Now;
-              </button>
-              <button>
-                <Mail>
-                Email Us;
-=======
-                </button><Phone>
-                Call Now
-              </button>
-              <button>
-                </button><Mail>
-                Email Us
->>>>>>> origin/main
               </button>
             </div>
           </div>

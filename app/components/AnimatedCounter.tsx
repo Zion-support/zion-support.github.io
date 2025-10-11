@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import React, {useState, useEffect}from 'react';
-
-interface AnimatedCounterProps {end: number,}
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;}const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
-  end,
-  duration = 2000,
-  prefix = '',
-  suffix = '',
-  className = ''}) => {const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let startTime: number;,
-    let animationFrame: number;,
-
-<<<<<<< HEAD
-    const animate = (currentTime: number) => {,
-=======
-    const animate = (currentTime: number) => {;
->>>>>>> origin/main
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -41,12 +16,11 @@ interface AnimatedCounterProps {end: number,}
         cancelAnimationFrame(animationFrame);}}
   }, [end, duration]);
 
-  return(<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
+  return (<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
   );
 };
 
 export default AnimatedCounter;
-=======
 'use client'
 import React from 'react'
 import React, { useState, useEffect } from 'react'
@@ -85,10 +59,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
       }
     }
   }, [end, duration])
-  return() {prefix}, {count.toLocaleString()}, {suffix}
+  return () {prefix}, {count.toLocaleString()}, {suffix}
     </span>
     </React.Fragment>
   )
 }
 export default AnimatedCounter
->>>>>>> origin/main
