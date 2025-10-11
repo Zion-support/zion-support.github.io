@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxImportSource: '@emotion/react',
+      babel: {
+        plugins: ['@emotion/babel-plugin']
+      }
+    })
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
@@ -66,7 +74,7 @@ export default defineConfig({
           if (/\.(css)$/i.test(assetInfo.name || '')) {
             return `assets/css/[name]-[hash].${ext}`
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif)$/i.test(assetInfo.name || '')) {
             return `assets/images/[name]-[hash].${ext}`
           }
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
@@ -94,23 +102,34 @@ export default defineConfig({
         ascii_only: true
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
+    hmr: {
+      overlay: false
+    }
   },
   preview: {
     port: 4173,
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+    include: [
+      'react', 
+      'react-dom', 
+      'framer-motion', 
+      'lucide-react', 
+      'react-router-dom',
+      'react-helmet-async'
+    ]
   },
   css: {
     devSourcemap: true
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development')
   }
 })
