@@ -79,6 +79,11 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
+                <Link to="/ai-innovation-hub" className="hover:text-cyan-400 transition-colors">
+                  AI Innovation Hub
+                </Link>
+              </li>
+              <li>
                 <Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
                   View All AI Services →
                 </Link>
@@ -111,6 +116,16 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link to="/mobile-development" className="hover:text-cyan-400 transition-colors">
                   Mobile Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-solutions-hub" className="hover:text-cyan-400 transition-colors">
+                  IT Solutions Hub
+                </Link>
+              </li>
+              <li>
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Micro SAAS Services
                 </Link>
               </li>
               <li>

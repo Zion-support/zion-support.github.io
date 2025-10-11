@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = const caseStudies = const caseStudies = [
+  const caseStudies = [
     {
       title: 'AI-Powered Customer Service for E-commerce',
       client: 'ShopTech Solutions',
@@ -28,10 +28,10 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
-        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%'];
+        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
       };
     ];
-  return ()
+  return (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
         <div className="relative max-w-7xl mx-auto text-center" /></div>

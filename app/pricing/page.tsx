@@ -8,7 +8,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Cpu, Phone, Mail, Map
 const PricingPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const aiServices = const aiServices = const aiServices = [
+  const aiServices = [
     { name: 'AI-Powered Chatbots', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration'] },
     { name: 'AI Content Generation', price: '$199', period: '/month', marketPrice: '$300-1500', features: ['Blog Post Generation', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'] },
     { name: 'AI Data Analytics', price: '$399', period: '/month', marketPrice: '$800-3000', features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection'] },
@@ -23,10 +23,10 @@ const PricingPage: React.FC = () => {
     { name: 'AI Language Translation', price: '$149', period: '/month', marketPrice: '$250-1000', features: ['Real-time Translation', 'Multi-language Support', 'Context Understanding', 'Voice Translation'] },
     { name: 'AI Voice Recognition', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation'] },
     { name: 'AI Data Processing', price: '$199', period: '/month', marketPrice: '$350-1500', features: ['Data Cleaning', 'Validation Rules', 'Duplicate Detection', 'Data Enrichment'] },
-    { name: 'AI Cybersecurity', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning'] },;
-    { name: 'AI Scheduling Assistant', price: '$99', period: '/month', marketPrice: '$150-600', features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management'] };
+    { name: 'AI Cybersecurity', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning'] },
+    { name: 'AI Scheduling Assistant', price: '$99', period: '/month', marketPrice: '$150-600', features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management'] }
   ];
-  const itServices = const itServices = const itServices = [
+  const itServices = [
     { name: 'Cloud Infrastructure & Migration', price: '$2,500', period: '/month', marketPrice: '$4000-15000', features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery'] },
     { name: 'Cybersecurity Solutions', price: '$1,800', period: '/month', marketPrice: '$3000-12000', features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring'] },
     { name: 'Database Management', price: '$1,200', period: '/month', marketPrice: '$2000-8000', features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'] },

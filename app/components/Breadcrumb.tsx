@@ -13,30 +13,30 @@ const Breadcrumb: React.FC = () => {
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
-  const breadcrumbItems = const breadcrumbItems = const breadcrumbItems = [;
-    { name: 'Home', path: '/', icon: Home };
+  const breadcrumbItems = [
+    { name: 'Home', path: '/', icon: Home }
   ];
-    pathSegments.forEach((segment, index) => {
+  
+  pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null })
-  })
+    breadcrumbItems.push({ name, path, icon: null });
+  });
 
-  return() {breadcrumbItems.map((item, index) => ()
-              )}
-              <a href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`} /></a>
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
+  return (
+    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
+      {breadcrumbItems.map((item, index) => (
+        <React.Fragment key={item.path}>
+          {index > 0 && <ChevronRight className="w-4 h-4" />}
+          <a
+            href={item.path}
+            className="flex items-center space-x-1 hover:text-cyan-400 transition-colors"
+          >
+            {item.icon && <item.icon className="w-4 h-4" />}
+            <span>{item.name}</span>
+          </a>
+        </React.Fragment>
+      ))}
     </nav>
   );
 };

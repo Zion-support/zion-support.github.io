@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -61,7 +62,16 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setSolutionsOpen(false);
   }, [microSaasOpen]);
+
+  const toggleSolutions = useCallback(() => {
+    setSolutionsOpen(!solutionsOpen);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, [solutionsOpen]);
 
   const closeAllMenus = useCallback(() => {
     setIsOpen(false);
@@ -69,6 +79,7 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setSolutionsOpen(false);
   }, []);
 
   return (
@@ -103,13 +114,20 @@ const Navigation: React.FC = () => {
               </button>
               
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
+                <div className="absolute top-full left-0 mt-2 w-80 sm:w-96 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-4 sm:p-6">
                   <div className="grid grid-cols-1 gap-3">
                     <Link to="/ai-analytics" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
                       <BarChart className="w-5 h-5 text-cyan-400" />
                       <div>
                         <div className="font-medium text-white">AI Analytics</div>
                         <div className="text-sm text-gray-400">Advanced data insights</div>
+                      </div>
+                    </Link>
+                    <Link to="/ai-innovation-hub" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Sparkles className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">AI Innovation Hub</div>
+                        <div className="text-sm text-gray-400">Revolutionary AI solutions</div>
                       </div>
                     </Link>
                     <Link to="/ai-automation" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
@@ -160,7 +178,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-6">
+                <div className="absolute top-full left-0 mt-2 w-80 sm:w-96 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-4 sm:p-6">
                   <div className="grid grid-cols-1 gap-3">
                     <Link to="/cloud-infrastructure" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
                       <Cloud className="w-5 h-5 text-cyan-400" />
@@ -183,6 +201,13 @@ const Navigation: React.FC = () => {
                         <div className="text-sm text-gray-400">Modern web applications</div>
                       </div>
                     </Link>
+                    <Link to="/it-solutions-hub" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Server className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">IT Solutions Hub</div>
+                        <div className="text-sm text-gray-400">Enterprise technology solutions</div>
+                      </div>
+                    </Link>
                     <Link to="/mobile-development" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
                       <Smartphone className="w-5 h-5 text-cyan-400" />
                       <div>
@@ -198,6 +223,120 @@ const Navigation: React.FC = () => {
                       onClick={closeAllMenus}
                     >
                       View All IT Services
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Micro SAAS Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleMicroSaas}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Zap className="w-4 h-4" />
+                <span>Micro SAAS</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {microSaasOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 sm:w-96 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-4 sm:p-6">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Link to="/ai-social-media-manager" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <MessageSquare className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">AI Social Media Manager</div>
+                        <div className="text-sm text-gray-400">Automated social media management</div>
+                      </div>
+                    </Link>
+                    <Link to="/smart-expense-tracker" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <DollarSign className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Smart Expense Tracker</div>
+                        <div className="text-sm text-gray-400">AI-powered expense management</div>
+                      </div>
+                    </Link>
+                    <Link to="/ai-email-optimizer" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Mail className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">AI Email Optimizer</div>
+                        <div className="text-sm text-gray-400">Email optimization and automation</div>
+                      </div>
+                    </Link>
+                    <Link to="/smart-meeting-scheduler" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Calendar className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Smart Meeting Scheduler</div>
+                        <div className="text-sm text-gray-400">Intelligent scheduling automation</div>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                    <Link
+                      to="/micro-saas"
+                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                      onClick={closeAllMenus}
+                    >
+                      View All Micro SAAS
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleSolutions}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Settings className="w-4 h-4" />
+                <span>Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${solutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {solutionsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 sm:w-96 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 p-4 sm:p-6">
+                  <div className="grid grid-cols-1 gap-3">
+                    <Link to="/ai-innovation-hub" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Sparkles className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">AI Innovation Hub</div>
+                        <div className="text-sm text-gray-400">Revolutionary AI solutions</div>
+                      </div>
+                    </Link>
+                    <Link to="/it-solutions-hub" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Server className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">IT Solutions Hub</div>
+                        <div className="text-sm text-gray-400">Enterprise technology solutions</div>
+                      </div>
+                    </Link>
+                    <Link to="/micro-saas" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Zap className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">Micro SAAS Services</div>
+                        <div className="text-sm text-gray-400">Innovative micro solutions</div>
+                      </div>
+                    </Link>
+                    <Link to="/ai-services" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-cyan-500/10 transition-colors">
+                      <Brain className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <div className="font-medium text-white">AI Services</div>
+                        <div className="text-sm text-gray-400">Comprehensive AI solutions</div>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                    <Link
+                      to="/services"
+                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                      onClick={closeAllMenus}
+                    >
+                      View All Solutions
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
@@ -255,6 +394,27 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 IT Services
+              </Link>
+              <Link
+                to="/micro-saas"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link
+                to="/ai-innovation-hub"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                AI Innovation Hub
+              </Link>
+              <Link
+                to="/it-solutions-hub"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={closeAllMenus}
+              >
+                IT Solutions Hub
               </Link>
               <Link
                 to="/about"

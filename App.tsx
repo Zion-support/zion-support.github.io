@@ -33,6 +33,8 @@ const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiInnovationHubPage = React.lazy(() => import('./app/ai-innovation-hub/page'));
+const ItSolutionsHubPage = React.lazy(() => import('./app/it-solutions-hub/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
@@ -81,6 +83,8 @@ const App: React.FC = () => {
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-innovation-hub" element={<AiInnovationHubPage />} />
+                            <Route path="/it-solutions-hub" element={<ItSolutionsHubPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/demo" element={<DemoPage />} />

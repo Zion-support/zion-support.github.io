@@ -180,14 +180,14 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
+              <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
