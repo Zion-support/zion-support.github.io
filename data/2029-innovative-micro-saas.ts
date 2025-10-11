@@ -1,50 +1,84 @@
-
-export interface InnovativeMicroSaas2029;
-export interface InnovativeMicroSaas2029 {id: string;
-export interface InnovativeMicroSaas2029 {  id: string;
+import { ServiceVariant } from '../types/service-variants'
+export interface Innovative2029MicroSaasService {
 export interface InnovativeMicroSaas2029 {
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
+  description: string
+  features: string[]
+  link: string
+  category: string
+  real_implementation: boolean
+  contact_info: unknown
+    mobile: string,
+    email: string}
+    address: string}
+  }
+export interface InnovativeMicroSaas2029 {
+  id: string
+  name: string
+  tagline: string
+  price: string,,
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
+  contactInfo: {,
+    mobile: string
     email: string}
     address: string}
 export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  };
+  }
 export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
   }
 }
-    address: string;
+    address: string,
   }
-export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
-    address: string;
+export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
+    address: string,
   }
-;
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     id: '2029 - innovative - micro - saas',
     name: '2029 Innovative Micro SAAS Platform',
     tagline: 'Innovative micro SAAS for 2029',
     price: '$229 / month',
-    description: unknown;
+    description: unknown,
     addres,
   s: string}
 export const,
-  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
+  innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     addres,
   s: string}
-;
 export const,
   innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     i,
@@ -67,12 +101,13 @@ export const,
       'Future - ready solutions'],
     link: '/services / 2029 - innovative - micro - saas'
     category: 'Innovative Micro SAAS 2029'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "2029-innovative-micro-saas"
+    id: "2029-innovative-micro-saas",
     name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029",
     price: "$229/month",
@@ -86,42 +121,42 @@ export const,
     ],
     link: "/services/2029-innovative-micro-saas"
     category: "Innovative Micro SAAS 2029"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-  id: string, name: string;
-  tagline: string, price: string;
+]
+  id: string, name: string,
+  tagline: string, price: string,
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown,
+    mobile: string, email: string
+    address: string,
   }
 }
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
     id: "2029-innovative-micro-saas", name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029", price: "$229/month"
     description: "Innovative micro SAAS platform that showcases the latest innovations for 2029."
-    features: [;
+    features: [,
       "Innovative features"
       "Latest innovations"
       "Advanced technology"
       "Innovation platform",
       "Future-ready solutions"],
     link: "/services/2029-innovative-micro-saas", category: "Innovative Micro SAAS 2029",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
@@ -171,12 +206,12 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -210,7 +245,7 @@ export const,
     descriptio,"
   n: "Innovative micro SAAS platform that showcases the latest innovations for 2029.",
     feature,
-  s: [;"
+  s: [,"
       "Innovative features""
       "Latest innovations""
       "Advanced technology""
@@ -231,16 +266,15 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
-;
-    id: "2029-innovative-micro-saas"
+]
+id: "2029-innovative-micro-saas"
     name: "2029 Innovative Micro SAAS Platform",
     tagline: "Innovative micro SAAS for 2029",
     price: "$229/month",
@@ -254,13 +288,13 @@ export const,
     ],
     link: "/services/2029-innovative-micro-saas"
     category: "Innovative Micro SAAS 2029"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -301,7 +335,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -314,16 +348,16 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas2029,
-  id: string; export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
+  id: string, export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} }; export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
+  s: string} } export interface InnovativeMicroSaas2029 {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,
   s: string} export const,
   innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [ addres,
-  s: string} ; export const,
+  s: string} export const,
   innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [, i,
   d: '2029 - innovative - micro - saas',' nam,
   e: '2029 Innovative Micro SAAS Platform',' taglin,
@@ -398,7 +432,7 @@ export interface InnovativeMicroSaas2029 export interface InnovativeMicroSaas202
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

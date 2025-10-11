@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -151,3 +153,17 @@ const EnhancedLoadingPage: React.FC = () => {
 };
 
 export default EnhancedLoadingPage;
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react'
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
+</div>
+  )
+}
+export default EnhancedLoadingPage
+>>>>>>> origin/main

@@ -1,19 +1,26 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
+=======
+    return
+>>>>>>> origin/main
   }
 
   try {
-    const { name, email, phone, details } = req.body || {};
-
+    const { name, email, phone, details, country, service } = req.body || {}
     if (!name || !email || !phone || !details) {
+<<<<<<< HEAD
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
+=======
+      return
+>>>>>>> origin/main
     }
 
     // Process quote submission logic here
@@ -32,20 +39,22 @@ export default async function handler(req, res) {
       service: req.body.service || 'General inquiry',
       timestamp: new Date().toISOString(),
       status: 'pending'
-    };
+    }
+    // Log quote request for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Quote request received:', quoteData)
+    }
 
-    console.log('Quote request received:', quoteData);
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
       data: quoteData
-    }));
-
+    }))
   } catch (error) {
+<<<<<<< HEAD
     console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
@@ -53,5 +62,14 @@ export default async function handler(req, res) {
       error: 'Failed to submit quote request',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
+=======
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Quote submission error:', error)
+    }
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+>>>>>>> origin/main
   }
 }

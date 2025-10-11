@@ -1,8 +1,8 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -37,117 +37,138 @@ const LoadingSkeletonPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+=======
+<<<<<<< HEAD
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean;
+  animate?: boolean;
+}
+>>>>>>> origin/main
 
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
+  width = '100%',
+  height = '1rem',
+  rounded = false,
+  animate = true
+}) => {
+  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
+  const roundedClasses = rounded ? 'rounded-full' : 'rounded';
+  const animateClasses = animate ? 'animate-pulse' : '';
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>LoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional LoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="LoadingSkeleton, AI solutions, IT services, Zion Tech Group, loadingskeleton" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                LoadingSkeleton
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced loadingskeleton solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our LoadingSkeleton?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our loadingskeleton solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our loadingskeleton solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your loadingskeleton needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <div
+      className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
+      style={{ width, height }}
+      aria-hidden="true"
+    />
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSkeletonPage;
+=======
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200/20 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200/20 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200/20 rounded w-5/6"></div>
+    <div className="h-4 bg-gray-200/20 rounded w-4/6 mt-2"></div>
+  </div>
+);
+
+export const StatsSkeleton: React.FC = () => (
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+    {Array.from({ length: 4 }).map((_, index) => (
+      <div key={index} className="text-center bg-white/10 backdrop-blur-lg p-6 rounded-lg animate-pulse">
+        <div className="h-8 bg-gray-200/20 rounded mb-2 w-16 mx-auto"></div>
+        <div className="h-4 bg-gray-200/20 rounded w-24 mx-auto"></div>
+      </div>
+    ))}
+  </div>
+);
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="text-center mb-16 animate-pulse">
+    <div className="h-16 bg-gray-200/20 rounded mb-6 w-96 mx-auto"></div>
+    <div className="h-6 bg-gray-200/20 rounded mb-4 w-80 mx-auto"></div>
+    <div className="h-4 bg-gray-200/20 rounded mb-8 w-full max-w-4xl mx-auto"></div>
+    <div className="h-12 bg-gray-200/20 rounded w-48 mx-auto"></div>
+  </div>
+);
+
+export const NavigationSkeleton: React.FC = () => (
+  <nav className="bg-white/10 backdrop-blur-lg p-4 animate-pulse">
+    <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="h-8 bg-gray-200/20 rounded w-32"></div>
+      <div className="hidden md:flex space-x-8">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <div key={index} className="h-4 bg-gray-200/20 rounded w-16"></div>
+        ))}
+      </div>
+      <div className="h-8 bg-gray-200/20 rounded w-24"></div>
+    </div>
+  </nav>
+);
+
+export const ContentSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
+  <div className="space-y-2 animate-pulse">
+    {Array.from({ length: lines }).map((_, index) => (
+      <div
+        key={index}
+        className={`h-4 bg-gray-200/20 rounded ${
+          index === lines - 1 ? 'w-3/4' : 'w-full'
+        }`}
+      />
+    ))}
+  </div>
+);
+
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 animate-pulse">
+    <div className="h-12 w-12 bg-gray-200/20 rounded mb-4"></div>
+    <div className="h-6 bg-gray-200/20 rounded mb-3 w-3/4"></div>
+    <div className="space-y-2">
+      <div className="h-4 bg-gray-200/20 rounded w-full"></div>
+      <div className="h-4 bg-gray-200/20 rounded w-5/6"></div>
+      <div className="h-4 bg-gray-200/20 rounded w-4/6"></div>
+    </div>
+  </div>
+);
+
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+  rows = 5, 
+  columns = 4 
+}) => (
+  <div className="overflow-hidden rounded-lg animate-pulse">
+    <div className="bg-white/10 backdrop-blur-lg">
+      <div className="grid grid-cols-4 gap-4 p-4 border-b border-gray-200/20">
+        {Array.from({ length: columns }).map((_, index) => (
+          <div key={index} className="h-4 bg-gray-200/20 rounded"></div>
+        ))}
+      </div>
+      {Array.from({ length: rows }).map((_, rowIndex) => (
+        <div key={rowIndex} className="grid grid-cols-4 gap-4 p-4 border-b border-gray-200/10">
+          {Array.from({ length: columns }).map((_, colIndex) => (
+            <div key={colIndex} className="h-4 bg-gray-200/20 rounded"></div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+export default Skeleton;
+=======
+;
+>>>>>>> origin/main
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
+>>>>>>> origin/main

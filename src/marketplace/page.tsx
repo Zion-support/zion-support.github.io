@@ -1,18 +1,12 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-
-
-import { Link } from 'react-router-dom';
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react'
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [activeCategory, setActiveCategory] = useState('products')
+  const [searchTerm, setSearchTerm] = useState('')
   const categories = [
     {
       id: 'products',
@@ -35,8 +29,7 @@ idid: 'equipment',
       bgColor: 'bg-purple-500/10',
       description:     ,
 $4}
-  ];
-
+  ]
   const products = [
       id: 1,
       name: 'AI Project Manager Pro',
@@ -48,8 +41,8 @@ $4}
       image: '📊',
       features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendor: 'Zion Tech Group',
-      verified: true
-      id: 2,
+      verified: true,
+    id: 2,
       name: 'Smart Analytics Dashboard',
       description: 'Real-time business intelligence with customizable dashboards and reports',
       category: 'Analytics',
@@ -78,7 +71,6 @@ $4}
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
       vendor: 'QuantumSec',
-
   const talent = [
       name: 'Dr. Sarah Chen',
       title: 'AI Research Scientist',
@@ -88,8 +80,8 @@ $4}
       rate: '$150/hour',
       image: '👩‍💼',
       verified: true,
-      available: true
-      name: 'Michael Rodriguez',
+      available: true,
+    name: 'Michael Rodriguez',
       title: 'Cloud Architecture Expert',
       expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
       experience: '12 years',
@@ -104,7 +96,6 @@ $4}
       rate: '$180/hour',
       image: '👩‍🔬',
       available: false
-
   const equipment = [
       name: 'AI Workstation Pro',
       description: 'High-performance workstation optimized for AI development and training',
@@ -114,8 +105,8 @@ $4}
       image: '💻',
       features: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
       vendor: 'TechWorkstations',
-      inStock: true
-      name: 'Quantum Computing Access',
+      inStock: true,
+    name: 'Quantum Computing Access',
       description: 'Cloud access to quantum computing resources for research and development',
       category: 'Cloud Services',
       price: '$500/month',
@@ -123,24 +114,21 @@ $4}
       image: '⚛️',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',
-
   const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
-        return products;
+        return products
       case 'talent':
-        return talent;
+        return talent
       case 'equipment':
-        return equipment;
+        return equipment
       default:
-        return [];
-  };
-
+        return []
+  }
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  )
   const stats = [
       value: '500+',
       label: 'Products Available',
@@ -155,7 +143,6 @@ iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
       color: 'text-yellow-400'
-
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
@@ -169,33 +156,28 @@ icon$5: Clock,
 icon$5: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
-
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace
-            </h1>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Zion Tech Marketplace,
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
-            </p>
-          </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}
+                <div className="text-gray-300 text-sm">{stat.label}
             ))}
-
           {/* Search and Filters */}
           <div className="mb-12">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -206,17 +188,16 @@ icon$5: Award,
                   placeholder="Search marketplace..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters
-              </button>
-
+                Filters,
+  
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
+                <$2 />
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
@@ -226,74 +207,63 @@ icon$5: Award,
                   }`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}</span>
-
+                  <span className="font-medium">{category.name}
           {/* Items Grid */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
-            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredItems.map((item) => (
                 <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
-                    <div className="text-4xl mr-4">{item.image}</div>
+                    <div className="text-4xl mr-4">{item.image}
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+                        <h3 className="text-lg font-semibold text-white">{item.name}
                         {item.verified && (
                           <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                             <CheckCircle className="w-3 h-3 text-white" />
                         )}
-                      <p className="text-gray-300 text-sm mb-2">{item.description}</p>
+                      <p className="text-gray-300 text-sm mb-2">{item.description}
                       <div className="flex items-center text-sm text-gray-400 mb-2">
-                        <span className="mr-2">{item.category}</span>
+                        <span className="mr-2">{item.category}
                         {item.vendor && <span>• {item.vendor}</span>}
-
                   {activeCategory === 'products' && (
                       <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
                         <ul className="space-y-1">
                           {item.features.map((feature, index) => (
                             <li key={index} className="text-sm text-gray-300 flex items-start">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                               {feature}
-                            </li>
-                        </ul>
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center">
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="text-sm text-white font-medium">{item.rating}</span>
-                          <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.price}</div>
-                    </>
-
+                          <span className="text-sm text-white font-medium">{item.rating}
+                          <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)
+                        <div className="text-lg font-bold text-cyan-400">{item.price}
                   {activeCategory === 'talent' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:
                         <div className="flex flex-wrap gap-1">
                           {item.expertise.map((skill, index) => (
                             <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
-                            </span>
-                          <span className="text-sm text-gray-400 ml-1">({item.projects} projects)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.rate}</div>
+                          <span className="text-sm text-gray-400 ml-1">({item.projects} projects)
+                        <div className="text-lg font-bold text-cyan-400">{item.rate}
                       <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">{item.experience} experience</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
+                        <span className="text-gray-400">{item.experience} experience
+                        < className={`px-2 py-1 rounded text-xs ${$2 />
                           item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
                           {item.available ? 'Available' : 'Busy'}
-
                   {activeCategory === 'equipment' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
-                        <span className="text-gray-400">{item.vendor}</span>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:
+                        <span className="text-gray-400">{item.vendor}
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                           {item.inStock ? 'In Stock' : 'Out of Stock'}
-
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
                     <ArrowRight className="w-4 h-4 ml-2" />
-
           {/* Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Marketplace?
@@ -301,9 +271,8 @@ icon$5: Award,
               {benefits.map((benefit, index) => (
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
+                  <p className="text-gray-300 text-sm">{benefit.description}
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -311,13 +280,13 @@ icon$5: Award,
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <$2 />
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <ShoppingCart className="w-5 h-5 mr-2" />
                 Start Shopping
-              </a>
+  
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -329,15 +298,14 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  ),
+}
+  const [activeCategory, setActiveCategory] = useState('products')
+  const [searchTerm, setSearchTerm] = useState('')
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'products',
       nam,
@@ -363,7 +331,6 @@ const categories = [
   r: 'bg-green-500/10',
       descriptio,
   n: 'Expert professionals and consultants',
-
       i,
   d: 1,
       nam,
@@ -386,7 +353,6 @@ const categories = [
   r: 'Zion Tech Group',
       verifie,
   d: true,
-
       i,
   d: 3,
       nam,
@@ -435,28 +401,48 @@ const categories = [
   s: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendo,
   r: 'QuantumCloud',
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
-// Start Shopping;
-
-          </a>
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+// Start Shopping</a>
+                href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-
-                Email Us;
+                Email Us
       <Footer /></Footer>
-export default MarketplacePage;
-
-
-
+export default MarketplacePage,
+  </div>
+  </p>
+  </h2>
+  </div>
+  </div>
+  </div>
+  </h2>
+  </button>
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </button>
+  </div>
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </h1>
+  </div>
+  </div>
+</div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></h2></h3></h3></h4></h4></h4></ul></li>

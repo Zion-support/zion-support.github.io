@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const PagePage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
-  const features = [
+>>>>>>> origin/main
+    const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -28,15 +36,30 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
+=======
+  ],]
+const benefits = [
+>>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+
     '24/7 technical support',
+
     'Easy integration with existing systems',
+
     'Cost-effective pricing plans',
+<<<<<<< HEAD
+
+<<<<<<< HEAD
     'Proven track record of success'
+  ]
+return(</div>)
+=======
+    'Proven track record of success';
   ];
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,8 +93,13 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
+=======
+return (
+>>>>>>> origin/main
           </div>
+>>>>>>> origin/main
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -94,11 +122,22 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+=======
+      </section>} <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+>>>>>>> origin/main
               </div>
+=======
+    'Proven track record of success'
+  ]
+return ()
+>>>>>>> origin/main
+            ))}
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -143,11 +182,19 @@ const PagePage: React.FC = () => {
                 Email Us
               </button>
             </div>
+=======
+>>>>>>> origin/main
           </div>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default PagePage;
+=======
+  )
+}
+export default PagePage
+>>>>>>> origin/main
