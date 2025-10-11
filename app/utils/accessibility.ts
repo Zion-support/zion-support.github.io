@@ -1,4 +1,5 @@
 // Accessibility utilities for the application;
+<<<<<<< HEAD
 export interface AccessibilityConfig {
     enableHighContrast: boolean;,
       enableScreenReader: boolean;,
@@ -9,11 +10,25 @@ export interface AccessibilityConfig {
 }
 export const defaultAccessibilityConfig: AccessibilityConfig = {,
       enableHighContrast: false,
+=======
+export interface AccessibilityConfig {enableHighContrast: boolean;,}
+  enableScreenReader: boolean;,
+  enableKeyboardNavigation: boolean;,
+  fontSize: 'small' | 'medium' | 'large',
+  colorScheme: 'light' | 'dark' | 'auto',}}
+export const defaultAccessibilityConfig: AccessibilityConfig = {,
+    enableHighContrast: false,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   enableScreenReader: true,
   enableKeyboardNavigation: true,
   fontSize: 'medium',
-  colorScheme: 'auto',
+  colorScheme: 'auto',}}
+export class AccessibilityManager {private config: AccessibilityConfig,}
+constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {,
+    this.config = config;}}
+public updateConfig(newConfig: Partial<AccessibilityConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig();
   }
+<<<<<<< HEAD
 }
 export class AccessibilityManager {
     private config: AccessibilityConfig,
@@ -39,16 +54,28 @@ const root = document.documentElement;
     root.classList.remove('high-contrast')
   }
     }
+=======
+public getConfig(): AccessibilityConfig {}}return {...this.config}}}
+private applyConfig(): void {if (typeof document === 'undefined') return;}
+const root = document.documentElement;
+// Apply high contrast;
+    if (this.config.enableHighContrast) {
+      root.classList.add('high-contrast')}} else {root.classList.remove('high-contrast')}}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 // Apply font size;
     root.setAttribute('data-font-size', this.config.fontSize);
 // Apply color scheme;
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
+<<<<<<< HEAD
 public announceToScreenReader(message: string): void {
 <<<<<<< HEAD
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return
 const announcement = const announcement = document.createElement('div'),;
 =======
+=======
+public announceToScreenReader(message: string): void {,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
 const announcement = document.createElement('div'),
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -57,6 +84,7 @@ const announcement = document.createElement('div'),
     announcement.className = 'sr-only';
     announcement.textContent = message;
 document.body.appendChild(announcement);
+<<<<<<< HEAD
 setTimeout(() => 
       document.body.removeChild(announcement)
   }
@@ -88,6 +116,21 @@ const element = document.querySelector(selector) as HTMLElement;
 public trapFocus(container: HTMLElement): () => void {
     const focusableElements = container.querySelectorAll(,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+setTimeout(() => {
+      document.body.removeChild(announcement)}}, 1000);
+  }
+public focusElement(selector: string): boolean {,}
+    if (typeof document === 'undefined') return false;
+const element = document.querySelector(selector) as HTMLElement;
+    if (element) {
+      element.focus(),
+      return true;}}
+    return false;
+  }
+public trapFocus(container: HTMLElement): () => void {,}
+    const focusableElements = container.querySelectorAll(,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement></HTMLElement>
 const firstElement = focusableElements[0];
@@ -98,6 +141,7 @@ const handleTabKey = const handleTabKey = ();
 if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();) => {
+<<<<<<< HEAD
   return ()
   )
 =======
@@ -114,26 +158,42 @@ if (e.shiftKey) {
         }
       } else {
     if (document.activeElement === lastElement) 
-          firstElement.focus();
-          e.preventDefault()
-  }
+=======
+  return($3;)
+  )}e.preventDefault();}
         }
+      } else {if (document.activeElement === lastElement) {}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+          firstElement.focus();
+          e.preventDefault()}}
       }
     }
 container.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-return () => {
-    container.removeEventListener('keydown', handleTabKey)
-  }
-    }
+return () => {container.removeEventListener('keydown', handleTabKey)}}
   }
 }
 export const accessibilityManager = new AccessibilityManager();
 // Utility functions;
+<<<<<<< HEAD
 export const isAccessible = const isAccessible = const isAccessible = (element: HTMLElement): boolean => {
+=======
+export const isAccessible = (element: HTMLElement): boolean => {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
+<<<<<<< HEAD
+return isInteractive && (hasAriaLabel || hasTextContent)}}
+export const addAriaLabel = (element: HTMLElement, label: string): void => {,
+    element.setAttribute('aria-label', label)}}
+export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {,
+    element.setAttribute('aria-describedby', descriptionId)}}
+export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {,
+    element.setAttribute('tabindex', tabIndex.toString())}}
+export const removeElementFocus = (element: HTMLElement): void => {,
+    element.setAttribute('tabindex', '-1')}}
+=======
 return isInteractive && (hasAriaLabel || hasTextContent)
   }
 }
@@ -152,5 +212,10 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
 export const removeElementFocus = (element: HTMLElement): void => {
     element.setAttribute('tabindex', '-1')
   }
+<<<<<<< HEAD
 };
 ;
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44

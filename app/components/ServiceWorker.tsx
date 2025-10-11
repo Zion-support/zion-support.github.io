@@ -1,7 +1,8 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const ServiceWorker: React.FC = () => {
+<<<<<<< HEAD
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -15,6 +16,8 @@ const ServiceWorker: React.FC = () => {
     }
   }, []);
 
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return null;
 };
 

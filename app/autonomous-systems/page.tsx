@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const AutonomousSystemsPage: React.FC = () => {
 <<<<<<< HEAD
@@ -9,8 +10,14 @@ const AutonomousSystemsPage: React.FC = () => {
     return (
     <>
       <Helmet>
+=======
+import {Helmet}}from 'react-helmet-async';
+const AutonomousSystemsPage: React.FC = () => {,
+    return(<>)
+      <Helmet />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <title>Autonomous Systems - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
         <div className="container mx-auto px-4 py-16"></div></div></div>
@@ -18,6 +25,7 @@ const AutonomousSystemsPage: React.FC = () => {
             <h1>
               Autonomous </h1></h1><span className="text-cyan-400">Systems</span></span></span>
             </h1>
+<<<<<<< HEAD
             <p>
               Advanced autonomous systems solutions for modern businesses.
             </p></p></p>
@@ -28,5 +36,14 @@ const AutonomousSystemsPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
+=======
+            <p>Advanced autonomous systems solutions for modern businesses.</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </>,
+  )}};
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 
 export default AutonomousSystemsPage;

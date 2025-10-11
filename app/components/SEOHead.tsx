@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-    title?: string;
+import {Helmet}}from 'react-helmet-async';
+interface SEOHeadProps {title?: string;}
   description?: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   structuredData?: object;
   }
 }
@@ -15,6 +15,10 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ()
 =======
 const SEOHead: React.FC<SEOHeadProps> = ({
+=======
+  structuredData?: object;}}
+const SEOHead: React.FC<SEOHeadProps> = ({,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
@@ -26,14 +30,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   twitterCard = 'summary_large_image',
 
+<<<<<<< HEAD
   structuredData;)
   })
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+<<<<<<< HEAD
+  structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
+=======
+  structuredData
+  }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+>>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+<<<<<<< HEAD
 const defaultStructuredData = const defaultStructuredData = const defaultStructuredData = {
     "@context": "https: //schema.org",
+=======
+const defaultStructuredData = {"@context": "https: //schema.org",
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
@@ -45,12 +62,11 @@ const defaultStructuredData = const defaultStructuredData = const defaultStructu
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
-  },
-    "contactPoint": {
-    "@type": "ContactPoint",
+      "addressCountry": "US"},
+    "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
+<<<<<<< HEAD
       "email": "kleber@ziontechgroup.com";
   },;
     "sameAs": [;
@@ -65,37 +81,56 @@ return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
+=======
+      "email": "kleber@ziontechgroup.com"},
+    "sameAs": [;
+      "https: //www.linkedin.com/company/zion-tech-group",
+      "https: //twitter.com/ziontechgroup",
+    ],
+  }
+return(<Helmet />)
+      {/* Basic Meta Tags */} <title>{fullTitle}</title>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+<<<<<<< HEAD
+      <meta />
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
+=======
       <meta>
       {/* Canonical URL */},
     {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
+>>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Twitter Card Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
+      <meta />
+      {/* Twitter Card Meta Tags */} <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      {/* Additional SEO Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
+      {/* Additional SEO Meta Tags */} <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
 
+<<<<<<< HEAD
       {/* Structured Data */})
       <script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       </script>
+=======
+      {/* Structured Data */} <script>
+        {JSON.stringify(structuredData || defaultStructuredData)} </script>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </Helmet>
   );
 };

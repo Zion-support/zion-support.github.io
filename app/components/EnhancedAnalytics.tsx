@@ -1,5 +1,5 @@
 'use client';
-import React, { createContext, useContext, useEffect, useCallback } from 'react';
+import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, parameters?: Record<string, any>) => void;
@@ -12,30 +12,30 @@ const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
+<<<<<<< HEAD
     console.warn('useAnalytics must be used within an AnalyticsProvider');
     return null;
+=======
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   return context;
 };
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
+<<<<<<< HEAD
   trackingId?: string;
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
-}) => {
-  // Initialize Google Analytics
-  useEffect(() => {
-    if (typeof window !== 'undefined' && !window.gtag) {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const track = (event: string, parameters?: Record<string, any>) => {
+    console.log('Analytics track:', event, parameters);
+  };
 
+<<<<<<< HEAD
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
@@ -77,13 +77,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     track,
     page,
     identify
+=======
+  const page = (pageName: string, parameters?: Record<string, any>) => {
+    console.log('Analytics page:', pageName, parameters);
+  };
+
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    console.log('Analytics identify:', userId, traits);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={{ track, page, identify }}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-
-export default AnalyticsProvider;

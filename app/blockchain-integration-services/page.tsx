@@ -1,10 +1,17 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const BlockchainIntegrationServicesPage: React.FC = () => {
 <<<<<<< HEAD
   const features = const features = const features = [
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const BlockchainIntegrationServicesPage: React.FC = () => {,
+  const features = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     {
 =======
   const features = [
@@ -12,32 +19,57 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Shield,
       title: 'Secure Blockchain Integration',
-      description: 'Advanced blockchain technology integration with enterprise-grade security'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced blockchain technology integration with enterprise-grade security',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
-    },
-    {
-      icon: Brain,
+      description: 'Lightning-fast blockchain transactions and smart contract execution',},
+    {icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',},
+    {icon: Globe,
       title: 'Multi-Chain Support',
+<<<<<<< HEAD
       description: 'Support for multiple blockchain networks and protocols';
     };
   ];
   const benefits = const benefits = const benefits = [
+=======
+<<<<<<< HEAD
+      description: 'Support for multiple blockchain networks and protocols',}];
+=======
+      description: 'Support for multiple blockchain networks and protocols'
+    }
+  ];];];
+>>>>>>> origin/main
+  const benefits = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
     'Scalable and flexible blockchain solutions',
     '24/7 technical support',
+<<<<<<< HEAD
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
+=======
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+      <Helmet />
+        <title>Blockchain Integration Services | Zion Tech Group</title>
+        <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced blockchain integration solutions.</p>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Proven track record of success';
   ];
 <<<<<<< HEAD
@@ -51,7 +83,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
+<<<<<<< HEAD
           </p></p></p>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -74,10 +108,32 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          </p>
+      {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+              Why Choose Our Blockchain Integration Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain integration solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            {features.map((feature, index) => (
+              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section */}
 <<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5" /></section>
@@ -110,6 +166,23 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span></span></span>)
               </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+              Key Benefits,
+  </
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our blockchain integration solutions for your business.</p>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+            {benefits.map((benefit, index) => (
+              <div key={index}className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit</span>}</span>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             ))}
           </div>
         </div>

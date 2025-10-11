@@ -8,6 +8,7 @@ import { Phone, Mail, MessageSquare, Clock, CheckCircle, ArrowRight } from 'luci
 const SupportPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -179,10 +180,18 @@ const SupportPage: React.FC = () => {
         <title>Support | Zion Tech Group - Technical Support & Help</title>
         <meta name="description" content="Get technical support and help for our AI and IT solutions. 24/7 support, documentation, and expert assistance for all your needs." />
         <meta name="keywords" content="technical support, help desk, customer service, AI support, IT support, documentation, troubleshooting" />
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Get support for our AI and IT solutions." />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       </Helmet>
 
       <Navigation />
       
+<<<<<<< HEAD
       <main className="min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -433,6 +442,20 @@ const SupportPage: React.FC = () => {
 
       <Footer />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">Support</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Get support for our AI and IT solutions
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </>
   );
 };

@@ -5,12 +5,12 @@
 /**;
  * Generate unique ID for aria-describedby and aria-labelledby;
  */;
-export function generateId(prefix = 'a11y'): string {}
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 /**;
  * Announce message to screen readers;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function announceToScreenReader()
 =======
@@ -20,26 +20,42 @@ export function announceToScreenReader(;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): void {
     const announcement = const announcement = document.createElement('div'),;
+=======
+export function announceToScreenReader(;)
+  message: string,
+  priority: 'polite' | 'assertive' = 'polite',
+): void {const announcement = document.createElement('div'),}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
 document.body.appendChild(announcement);
 // Remove announcement after it's been read;
+<<<<<<< HEAD
   setTimeout(() => 
     document.body.removeChild(announcement)
   }
   }, 3000);
+=======
+  setTimeout(() => {
+    document.body.removeChild(announcement)}}, 3000);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
 /**;
  * Trap focus within a container (useful for modals);
  */;
+<<<<<<< HEAD
 export function trapFocus(element: HTMLElement): () => void {
 <<<<<<< HEAD
     const focusableElements = const focusableElements = const focusableElements = element.querySelectorAll();
 =======
     const focusableElements = element.querySelectorAll(,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export function trapFocus(element: HTMLElement): () => void {,}
+    const focusableElements = element.querySelectorAll(,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
@@ -50,6 +66,7 @@ const handleKeyDown = const handleKeyDown = ()
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {;
           lastFocusable?.focus();) => {
+<<<<<<< HEAD
   return ()
   )
 =======
@@ -66,23 +83,25 @@ const handleKeyDown = (;)
         }
       } else {
     if (document.activeElement === lastFocusable) 
-          firstFocusable?.focus();
-          e.preventDefault()
-  }
+=======
+  return($3;)
+  )}e.preventDefault();}
         }
+      } else {if (document.activeElement === lastFocusable) {}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+          firstFocusable?.focus();
+          e.preventDefault()}}
       }
     }
   }
 element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
-return () => {
-    element.removeEventListener('keydown', handleKeyDown)
-  }
-  }
+return () => {element.removeEventListener('keydown', handleKeyDown)}}
 }
 /**;
  * Check if element is keyboard accessible;
  */;
+<<<<<<< HEAD
 export function isKeyboardAccessible(element: HTMLElement): boolean {
     const tabIndex = const tabIndex = const tabIndex = element.getAttribute('tabindex'),
   return tabIndex !== null && tabIndex !== '-1'
@@ -97,9 +116,20 @@ export function makeKeyboardAccessible()
 export function makeKeyboardAccessible(;)
   element: HTMLElement,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export function isKeyboardAccessible(element: HTMLElement): boolean {,}
+    const tabIndex = element.getAttribute('tabindex'),
+  return tabIndex !== null && tabIndex !== '-1'}}
+/**;
+ * Add keyboard navigation support to custom interactive elements;
+ */;
+export function makeKeyboardAccessible(;)
+  element: HTMLElement,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   onClick: (e: Event) => void,
-  options: {
+  options: {,
     role?: string,
+<<<<<<< HEAD
     tabindex?: number;
   }
   } = {}
@@ -122,22 +152,35 @@ const handleKeyDown = (;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       onClick(e);}
+=======
+    tabindex?: number;}} = {}): () => void {}}const {role = 'button', tabindex = 0}}= options;
+element.setAttribute('role', role);
+  element.setAttribute('tabindex', tabindex.toString());
+const handleKeyDown = (;
+    if (e.key === 'Enter' || e.key === ' ') {e.preventDefault();) => {
+  return($3;)
+  )}onClick(e);}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   }
 element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
-return () => {
-    element.removeEventListener('click', onClick);
-    element.removeEventListener('keydown', handleKeyDown)
-  }
-  }
+return () => {element.removeEventListener('click', onClick);
+    element.removeEventListener('keydown', handleKeyDown)}}
 }
 /**;
  * Check color contrast ratio (WCAG 2.1);
  */;
+<<<<<<< HEAD
+export function getContrastRatio(color1: string, color2: string): number {,}
+    const getLuminance = (color: string): number => {,
+    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
+    const [r, g, b] = rgb.map(c => {)
+=======
 export function getContrastRatio(color1: string, color2: string): number {
     const getLuminance = (color: string): number => ;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+<<<<<<< HEAD
 <<<<<<< HEAD
     const [r, g, b] = rgb.map()
 =======
@@ -147,6 +190,12 @@ export function getContrastRatio(color1: string, color2: string): number {
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
     })
+=======
+    const [r, g, b] = rgb.map(c => {;
+>>>>>>> origin/main
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
 const lum1 = getLuminance(color1);
@@ -158,6 +207,7 @@ return (brightest + 0.05) / (darkest + 0.05);
 /**;
  * Check if contrast ratio meets WCAG standards;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function meetsContrastRequirements()
 =======
@@ -179,6 +229,19 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
     const skipLink = const skipLink = const skipLink = document.createElement('a');
   };
   skipLink.href = `#${targetId}`;
+=======
+export function meetsContrastRequirements(;)
+  color1: string,
+  color2: string,
+  level: 'AA' | 'AAA' = 'AA',
+  fontSize: 'normal' | 'large' = 'normal',
+): boolean {const ratio = getContrastRatio(color1, color2);}
+  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;}}
+/**;
+ * Skip to content link helper;
+ */;
+export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {const skipLink = document.createElement('a')}}skipLink.href = `#${targetId}`;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
   skipLink.style.position = 'absolute';
@@ -189,19 +252,14 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '0'
-  }
-  })
-skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px'
-  }
-  })
+skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})
+skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})
 return skipLink;
 }
 /**;
  * Detect if user prefers reduced motion;
  */;
+<<<<<<< HEAD
 export function prefersReducedMotion(): boolean {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
@@ -219,11 +277,23 @@ export function prefersDarkMode(): boolean {
 export function getAriaInvalid(hasError: boolean): Record<string, string> {
   return }
     ...(hasError && { 'aria-describedby': generateId('error') })
+=======
+export function prefersReducedMotion(): boolean {return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,}}}
+/**;
+ * Detect if user prefers dark mode;
+ */;
+export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-color-scheme: dark)').matches;,}}}
+/**;
+ * Get ARIA label for form validation error;
+ */;
+export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
 }
 /**;
  * Create accessible tooltip;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function createAccessibleTooltip()
 ): () => void {
@@ -237,6 +307,13 @@ export function createAccessibleTooltip(;
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';)
 ): () => void {
     const tooltip = document.createElement('div')
+=======
+export function createAccessibleTooltip(;)
+  trigger: HTMLElement,
+  content: string,
+  placement: 'top' | 'bottom' | 'left' | 'right' = 'top';,
+): () => void {const tooltip = document.createElement('div')}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   tooltip.textContent = content;
   tooltip.className = 'tooltip',
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -254,6 +331,7 @@ document.body.appendChild(tooltip);
 const showTooltip = const showTooltip = ();
     const triggerRect = trigger.getBoundingClientRect();
 switch (placement) {) => {
+<<<<<<< HEAD
   return ()
   )
 =======
@@ -266,6 +344,10 @@ switch (placement) ) =>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       case 'top':;}
+=======
+  return($3;)
+  )}case 'top':;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
         break;
@@ -283,6 +365,7 @@ switch (placement) ) =>
         break;
     }
   }
+<<<<<<< HEAD
 const hideTooltip = (;) => {
     return ()
 <<<<<<< HEAD
@@ -292,23 +375,25 @@ const hideTooltip = (;) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
     tooltip.style.display = 'none';}
+=======
+const hideTooltip = (;) => {return($3;)
+  )}tooltip.style.display = 'none';}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
 trigger.addEventListener('mouseenter', showTooltip);
   trigger.addEventListener('mouseleave', hideTooltip);
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
-return () => {
-    trigger.removeEventListener('mouseenter', showTooltip);
+return () => {trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('mouseleave', hideTooltip);
     trigger.removeEventListener('focus', showTooltip);
     trigger.removeEventListener('blur', hideTooltip);
-    document.body.removeChild(tooltip)
-  }
-  }
+    document.body.removeChild(tooltip)}}
 }
 /**;
  * Manage focus restoration (useful for modals);
  */;
+<<<<<<< HEAD
 export class FocusManager {
     private previousActiveElement: HTMLElement | null = null,
 saveFocus(): void;
@@ -327,10 +412,17 @@ moveFocusInside(container: HTMLElement): void {
 =======
     const focusableElements = container.querySelectorAll(,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export class FocusManager {private previousActiveElement: HTMLElement | null = null,}
+saveFocus(): void {this.previousActiveElement = document.activeElement as HTMLElement;}}}
+restoreFocus(): void {if (this.previousActiveElement) {}
+      this.previousActiveElement.focus()}}
+  }
+moveFocusInside(container: HTMLElement): void {,}
+    const focusableElements = container.querySelectorAll(,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
     const firstFocusable = focusableElements[0] as HTMLElement;
-    firstFocusable?.focus()
-  }
-  }
+    firstFocusable?.focus()}}
 }

@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
     children: React.ReactNode;
@@ -18,10 +19,23 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
 =======
     // Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+=======
+import React, {useEffect, useState}from 'react';
+interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children ,}) => {const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('medium');
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  useEffect(() => {
+    // Check for user's motion preferences;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
+    setIsReducedMotion(mediaQuery.matches)
+    // Check for high contrast preference;
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     setIsHighContrast(highContrastQuery.matches),
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     // Apply accessibility enhancements;
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
+<<<<<<< HEAD
     if (isHighContrast) 
       document.documentElement.classList.add('high-contrast')
   }
@@ -44,7 +58,21 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.body.classList.remove('keyboard-navigation');
   };
     document.addEventListener('keydown', handleKeyDown);
+=======
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
+    const handleKeyDown = (event: KeyboardEvent) => {,
+    if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')}}
+    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     document.addEventListener('mousedown', handleMouseDown);
+<<<<<<< HEAD
+    return () => {document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
+  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
+=======
     return () => {
     document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)
@@ -54,6 +82,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setIsHighContrast(!isHighContrast);
     document.documentElement.classList.toggle('high-contrast')
   }
+<<<<<<< HEAD
   const changeFontSize = const changeFontSize = const changeFontSize = (size: string) => {
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
@@ -96,7 +125,44 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         </div>
       </div>;
       {children};
+=======
+  const changeFontSize = (size: string) => {
+>>>>>>> origin/main
+    setFontSize(size),
+    document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
+        <button;
+          onClick={toggleHighContrast}className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>
+        <div className="font-size-controls">
+          <button;
+            onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A;
+  </
+          <button;
+            onClick={() =>changeFontSize('medium')</button>}className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A;
+  </
+          <button;
+            onClick={() =>changeFontSize('large')</button>}className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A;
+  </
+        </div>
+      </div>
+<<<<<<< HEAD
+      {children} </div>
+=======
+      {children}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </div>;
+>>>>>>> origin/main
   );
 };
 

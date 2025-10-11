@@ -16,8 +16,12 @@ const benefits = const benefits = const benefits = [
     'Proven track record of success';
   ];
 </h1>
+<<<<<<< HEAD
             <p></p>
               Transform your business with our advanced page solutions.;
+=======
+            <p>Transform your business with our advanced page solutions.;</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
             </div>
@@ -25,8 +29,13 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               </div>
             ))}
           </div>
@@ -37,16 +46,23 @@ const benefits = const benefits = const benefits = [
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
 <<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
@@ -89,6 +105,22 @@ const benefits = const benefits = const benefits = [
                 </button></button><Mail>
                 Email Us;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               </button>
             </div>
           </div>

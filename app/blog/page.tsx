@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -14,10 +15,15 @@ import {
   BookOpen,
   MessageCircle
 } from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -341,6 +347,29 @@ const BlogPage: React.FC = () => {
         
         <Footer />
       </div>
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Read our latest insights on AI and IT technology." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">Blog</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Latest insights on AI and IT technology
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </>
   );
 };

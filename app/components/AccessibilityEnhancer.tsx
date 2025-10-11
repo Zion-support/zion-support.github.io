@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -8,12 +8,18 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
+<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+=======
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
+  children,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = false,
   enableFocusManagement = true
 }) => {
+<<<<<<< HEAD
   useEffect(() => {
     // Keyboard navigation
     if (enableKeyboardNavigation) {
@@ -195,6 +201,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   return null;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  return <>{children}</>;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 };
 
 export default AccessibilityEnhancer;

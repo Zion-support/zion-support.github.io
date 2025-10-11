@@ -1,34 +1,37 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
+import React from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
+<<<<<<< HEAD
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
   keyboardNavigation: boolean;
+=======
+  fontSize: 'small' | 'medium' | 'large';
+  reducedMotion: boolean;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
+<<<<<<< HEAD
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+=======
+  settings?: AccessibilitySettings;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ 
+  children, 
+  settings = {
     highContrast: false,
-    reducedMotion: false,
     fontSize: 'medium',
+<<<<<<< HEAD
     screenReader: false,
     keyboardNavigation: true
   });
@@ -184,6 +187,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     };
   }, [settings]);
 
+=======
+    reducedMotion: false
+  }
+}) => {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return <>{children}</>;
 };
 

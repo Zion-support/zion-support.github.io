@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { lazy, Suspense, ComponentType } from 'react';
 interface DynamicOptions {
     loading?: () => React.ReactElement;
@@ -17,6 +18,16 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
 ): ComponentType<unknown> {}
   const LazyComponent = lazy(importFunc);
   return (props: unknown) => ()
+=======
+import React, {lazy, Suspense, ComponentType}from 'react';
+interface DynamicOptions {loading?: () => React.ReactElement;}}interface DynamicOptions {}}loading?: () => React.ReactElement;
+  ssr?: boolean;}
+}
+export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{default: T ,}>,
+  options: DynamicOptions = {,}): ComponentType<unknown>{const LazyComponent = lazy(importFunc)</unknown>}return (props: unknown) => (,}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>;
+): ComponentType<unknown> {}const LazyComponent = lazy(importFunc);
+  return (props: unknown) => (,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
       <LazyComponent></LazyComponent>
 =======
@@ -30,13 +41,12 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
       <LazyComponent>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 'use client';
-import React, { lazy, Suspense, ComponentType } from 'react';
-interface DynamicOptions {/* TODO: Fix JSX expression */}
-}
+import React, {lazy, Suspense, ComponentType}from 'react';
+interface DynamicOptions {/* TODO: Fix JSX expression */,}}}
 export function dynamic<T extends ComponentType<unknown>>(importFun);
-  c: () => Promise<{/* TODO: Fix JSX expression */}
-  t: T }>,
+  c: () => Promise<{/* TODO: Fix JSX expression */,}t: T ,}>,
   option,
+<<<<<<< HEAD
   s: DynamicOptions = {}
 ): ComponentType<unknown> {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
@@ -46,6 +56,10 @@ export function dynamic<T extends ComponentType<unknown>>(importFun);
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div></div></div>}>;
       <LazyComponent {...props} /></LazyComponent>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  s: DynamicOptions = {,}): ComponentType<unknown> {/* TODO: Fix JSX expression */,} <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
+      <LazyComponent {...props}}/></LazyComponent>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </Suspense>
   );
 };

@@ -8,6 +8,7 @@ import { Home, Users, Brain, Cloud, Shield, FileText, ArrowRight } from 'lucide-
 const SitemapPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const lastUpdated = const lastUpdated = new Date().toISOString().split('T')[0];
   ;
   const pageCategories = const pageCategories = const pageCategories = [
@@ -272,6 +273,24 @@ const SitemapPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </div>
             </div>
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Explore our website structure and find all our pages." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">Sitemap</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Explore our website structure and find all our pages
+            </p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           </div>
         </section>
 

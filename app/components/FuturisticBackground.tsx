@@ -1,7 +1,8 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 const FuturisticBackground: React.FC = () => {
+<<<<<<< HEAD
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -80,6 +81,13 @@ const FuturisticBackground: React.FC = () => {
       style={{ zIndex: -1 }}
     />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+    </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   );
 };
 

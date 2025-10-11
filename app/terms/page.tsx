@@ -7,6 +7,7 @@ import { FileText, Shield, Users, AlertCircle } from 'lucide-react';
 
 const TermsPage: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const lastUpdated = 'December 2024';
 
   const sections = const sections = const sections = [
@@ -290,8 +291,35 @@ const TermsPage: React.FC = () => {
 
       <Footer />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Read our terms of service for using our AI and IT solutions." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">Terms of Service</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Read our terms of service for using our AI and IT solutions
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </>
   );
 };
 
+<<<<<<< HEAD
 export default TermsPage;
+=======
+export default TermsPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44

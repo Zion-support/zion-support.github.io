@@ -1,4 +1,6 @@
+import React from 'react';
 'use client';
+<<<<<<< HEAD
 interface SEOOptimizerProps {
       title: string;,
       description: string;
@@ -28,21 +30,45 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <title>title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordsString} />
+=======
+interface SEOOptimizerProps {title: string;,}
+  description: string;,
+  keywords?: string[]
+  canonicalUrl?: string;
+  structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  structuredData;}) => {
+  const keywordsString = keywords.join(', ');
+
+  return(<Helmet />)
+      <title>{title}</title>
+      <meta name="description" content={description}/>
+      <meta name="keywords" content={keywordsString}/>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
+      <link rel="canonical" href={canonicalUrl}/>
       
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
+      {/* Open Graph */} <meta property="og: title" content={title,}/>
+      <meta property="og: description" content={description,}/>
+      <meta property="og: type" content="website" />,
+      <meta property="og: url" content={canonicalUrl,}/>
       
+<<<<<<< HEAD
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />)
     </Helmet>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+      {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: title" content={title,}/>
+      <meta name="twitter: description" content={description,}/>
+    </Helmet>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   );
 };
 

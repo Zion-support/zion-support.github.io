@@ -2,6 +2,7 @@
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
  */;
+<<<<<<< HEAD
 export interface AppConfig {
     app:  ,
       name: string,
@@ -31,12 +32,33 @@ export interface AppConfig {
   }
   security: {,
       enableCSP: boolean,
+=======
+export interface AppConfig {app: {,}
+    name: string,
+    version: string,
+    environment: 'development' | 'production' | 'test',}}
+  api: {,
+    baseUrl: string,
+    timeout: number,
+    retryAttempts: number,}}
+  features: {,
+    analytics: boolean,
+    monitoring: boolean,
+    errorTracking: boolean,
+    performanceOptimization: boolean,}}
+  performance: {,
+    enableLazyLoading: boolean,
+    imageLazyLoadThreshold: number,
+    componentLazyLoadThreshold: number,
+    cacheMaxAge: number,}}
+  security: {,
+    enableCSP: boolean,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableHSTS: boolean,
-    enableXSSProtection: boolean,
-  }
-  }
+    enableXSSProtection: boolean,}}
 }
 const config: AppConfig = {,
+<<<<<<< HEAD
       app:  ,
       name: 'Zion Tech Group',
     version: '1.0.0',
@@ -62,22 +84,50 @@ const config: AppConfig = {,
   },
   security: {,
       enableCSP: true,
+=======
+    app: {,
+    name: 'Zion Tech Group',
+    version: '1.0.0',
+    environment: ;,
+      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',},
+  api: {,
+    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
+    timeout: 30000,
+    retryAttempts: 3,},
+  features: {,
+    analytics: process.env['NODE_ENV'] === 'production',
+    monitoring: true,
+    errorTracking: true,
+    performanceOptimization: true,},
+  performance: {,
+    enableLazyLoading: true,
+    imageLazyLoadThreshold: 0.5,
+    componentLazyLoadThreshold: 0.25,
+    cacheMaxAge: 3600000, // 1 hour in milliseconds;},
+  security: {,
+    enableCSP: true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableHSTS: true,
-    enableXSSProtection: true,
-  },
+    enableXSSProtection: true,},
 }
 /**;
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group';
  */;
-export function getConfig<T = unknown>(keyPath: string): T {
+export function getConfig<T = unknown>(keyPath: string): T {,}
     let value: unknown = config,
+<<<<<<< HEAD
 for (const key of keys) 
     if (value && typeof value === 'object' && key in value) 
       value = (value as Record<string, unknown>)[key]
   }
     } else {}
       throw new Error(`Configuration key "${keyPath}" not found`);
+=======
+for (const key of keys) {
+    if (value && typeof value === 'object' && key in value) {
+      value = (value as Record<string, unknown>)[key]}} else {}}throw new Error(`Configuration key "${keyPath)}" not found`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   }
 return value as T;
@@ -85,29 +135,25 @@ return value as T;
 /**;
  * Check if a feature is enabled;
  */;
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return config.features[feature]
-  }
-}
+export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {,}
+    return config.features[feature]}}
 /**;
  * Get current environment;
  */;
+<<<<<<< HEAD
 export function getEnvironment(): string {
     return config.app.environment;
   }
 }
+=======
+export function getEnvironment(): string {return config.app.environment;}}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 /**;
  * Check if running in production;
  */;
-export function isProduction(): boolean {
-    return config.app.environment === 'production'
-  }
-}
+export function isProduction(): boolean {return config.app.environment === 'production'}}}
 /**;
  * Check if running in development;
  */;
-export function isDevelopment(): boolean {
-    return config.app.environment === 'development'
-  }
-}
+export function isDevelopment(): boolean {return config.app.environment === 'development'}}}
 export default config;

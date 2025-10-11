@@ -3,39 +3,37 @@
  * Comprehensive Test Runner and Testing Utilities;
  * Provides advanced testing capabilities, mocking, and test automation;
  */
-import React, { ReactElement, useCallback } from 'react';
+import React, {ReactElement, useCallback}from 'react';
 
+<<<<<<< HEAD
 export interface PerformanceMetrics {
     renderTime: number,
     memoryUsage: number;
   }
   timestamp: string,}
+=======
+export interface PerformanceMetrics {renderTime: number,}
+    memoryUsage: number;,}timestamp: string,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
-export interface CoverageMetrics {
-    statements: number,
+export interface CoverageMetrics {statements: number,}
     branches: number,
-  functions: number,
-  }
-
-    lines: number,}
+  functions: number,}lines: number,}
   renderTime: number,
   memoryUsage: number,
   timestamp: string,}
 }
-export interface CoverageMetrics {
-    statements: number,
+export interface CoverageMetrics {statements: number,}
   branches: number,
-  functions: number,
-  }
-  lines: number,}
+  functions: number,}lines: number,}
 }
 // Test configuration interface;
 
-export interface TestConfig {
-    enableMocking: boolean,
+export interface TestConfig {enableMocking: boolean,}
     enableCoverage: boolean,
   enablePerformance: boolean,
     enableAccessibility: boolean,
+<<<<<<< HEAD
 // Test result, types;
   }
 export interface PerformanceMetrics {}
@@ -59,6 +57,23 @@ export interface PerformanceMetrics {
   coverageThreshold: number,
     performanceThreshold: number;,
       accessibilityThreshold: number;
+=======
+// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions}}from '@testing-library/react';
+import {BrowserRouter}}from 'react-router-dom';
+
+// Test result types;
+export interface PerformanceMetrics {renderTime: number;,}
+  memoryUsage: number,
+  timestamp: string;,}enableMocking: boolean;,
+  enableCoverage: boolean;,
+  enablePerformance: boolean;,
+  enableAccessibility: boolean;,
+  enableVisualRegression: boolean;,
+  mockDataPath?: string,
+  coverageThreshold: number,
+    performanceThreshold: number;,
+  accessibilityThreshold: number;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   timeout?: number;
   verbose?: boolean;
   bail?: boolean,
@@ -85,20 +100,18 @@ export interface PerformanceMetrics {
 }
 
 // Default test configuration;
-export const defaultTestConfig: TestConfig = {
+export const defaultTestConfig: TestConfig = {,
     ,
-    enableMocking: true,
-  }
-export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,
+    enableMocking: true,}export const defaultTestConfig: TestConfig = {,}enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
   enableAccessibility: true,
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-  accessibilityThreshold: 90}
+  accessibilityThreshold: 90,}
 }
+<<<<<<< HEAD
 interface TestResult {
     name: string,
     status: 'passed' | 'failed' | 'skipped' | 'pending'
@@ -118,66 +131,82 @@ interface AssertionResult {
 interface AssertionResult {}
   name: string;,
       status: 'passed' | 'failed';
+=======
+interface TestResult {name: string,}
+    status: 'passed' | 'failed' | 'skipped' | 'pending',}interface TestResult {}}name: string;,
+  status: 'passed' | 'failed' | 'skipped' | 'pending';,
+  duration: number;,
+  error?: Error;
+  assertions: AssertionResult[],
+  coverage?: CoverageResult,}
+}
+interface AssertionResult {name: string,}
+    status: 'passed' | 'failed',}interface AssertionResult {}}name: string;,
+  status: 'passed' | 'failed';,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   expected?: unknown;
   actual?: unknown;
   message?: string,}
 }
-interface CoverageResult {
-    statements: number,
+interface CoverageResult {statements: number,}
     branches: number,
   functions: number,
+<<<<<<< HEAD
     lines: number;
   }
   uncovered: string[],}
+=======
+    lines: number;,}uncovered: string[],}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
-interface TestSuite {
-    name: string,
-    tests: Test[]
-  }
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
+interface TestSuite {name: string,}
+    tests: Test[],}beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
 }
-interface Test {
-    </void>
+interface Test {</void>}
   name: string,</void>
+<<<<<<< HEAD
     fn: () => void | Promise<void>timeout?: number;
   skip?: boolean;
 // Default test configuration,
 export const defaultTestConfig: TestConfig = ,
       enableMocking: true,
+=======
+    fn: () => void | Promise<void>timeout?: number;,
+  skip?: boolean;
+// Default test configuration,
+export const defaultTestConfig: TestConfig = {,
+  enableMocking: true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   enableCoverage: true,
   enablePerformance: true,
   enableAccessibility: true,
   enableVisualRegression: false,
   coverageThreshold: 80,
-  performanceThreshold: 100,
-  }
-  accessibilityThreshold: 90}
+  performanceThreshold: 100,}accessibilityThreshold: 90,}
 }
-interface TestResult {
-    name: string,
+interface TestResult {name: string,}
   status: 'passed' | 'failed' | 'skipped' | 'pending',
   duration: number,
   error?: Error;
-  assertions: AssertionResult[],
-  }
-  coverage?: CoverageResult;}
+  assertions: AssertionResult[],}coverage?: CoverageResult;}
 }
-interface AssertionResult {
-    name: string,
+interface AssertionResult {name: string,}
   status: 'passed' | 'failed',
   expected?: unknown;
+<<<<<<< HEAD
   actual?: unknown;
   }
   message?: string;}
+=======
+  actual?: unknown;}message?: string;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
-interface CoverageResult {
-    statements: number,
+interface CoverageResult {statements: number,}
   branches: number,
   functions: number,
-  lines: number,
-  }
-  uncovered: string[],}
+  lines: number,}uncovered: string[],}
 }
+<<<<<<< HEAD
 interface TestSuite {
     name: string,
   }
@@ -250,11 +279,43 @@ export class TestRunner {}
   private config: TestConfig;
   private suites: TestSuite[] = []
   private currentSuite: TestSuite | null = null;
+=======
+interface TestSuite {name: string,}}interface CoverageResult {}}export interface CoverageMetrics {statements: number;,}
+  branches: number;,
+  functions: number,
+  lines: number;,}// Test configuration interface;
+export interface TestConfig {timeout: number;,}
+  retries: number;,
+  parallel: boolean,
+  coverage: boolean;,}// Default test configuration;
+export const defaultTestConfig: TestConfig = {,
+  timeout: 5000,
+  retries: 3,
+  parallel: true,
+  coverage: true;,}interface TestResult {name: string;,}
+  status: 'passed' | 'failed' | 'skipped',
+  duration: number,
+  error?: string;}interface AssertionResult {passed: boolean;,}
+  message: string;,
+  expected?: unknown,
+  actual?: unknown;}interface CoverageResult {statements: number;,}
+  branches: number;,
+  functions: number,
+  lines: number;,}interface TestSuite {name: string;,}
+  tests: Test[],
+  beforeEach?: () => void,
+  afterEach?: () => void;}interface Test {name: string,}
+  fn: () => void | Promise<void>,
+  timeout?: number;}export class TestRunner {}}private static instance: TestRunner;,
+  private config: TestConfig;,
+  private suites: TestSuite[] = [],
+  private currentSuite: TestSuite | null = null;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   private results: TestResult[] = [],
-  private testResults: Array<{}
-    name: string,
+  private testResults: Array<{,}name: string,
     status: 'passed' | 'failed' | 'skipped',
 
+<<<<<<< HEAD
 export class TestRunner {
   private tests: Test[] = []
   private suites: TestSuite[] = []
@@ -288,12 +349,36 @@ export class TestRunner {
     try {
 <<<<<<< HEAD
     // Run individual tests
+=======
+export class TestRunner {private tests: Test[] = [],}
+  private suites: TestSuite[] = [],
+  private isRunning: boolean = false;,
+  private config: TestConfig = defaultTestConfig,
+
+  constructor(config?: Partial<TestConfig>) {
+    if (config) {
+      this.config = { ...defaultTestConfig, ...config}}
+  }
+
+  // Add a test to the runner;
+  addTest(name: string, fn: () => void | Promise<void>, timeout?: number): void {this.tests.push({ name, fn, timeout: timeout || this.config.timeout ,)}})
+  }
+
+  // Add a test suite;
+  addSuite(suite: TestSuite): void {,}
+    this.suites.push(suite)}// Run all tests;
+  async runTests(): Promise<TestResult[]> {if (this.isRunning) {
+      throw new Error('Test runner is already running')}this.isRunning = true;
+    const results: TestResult[] = [],
+    try {// Run individual tests;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       for (const test of this.tests) {
         const result = const result = const result = await this.runSingleTest(test),
 =======
     // Run individual tests;
       for (const test of this.tests) 
         const result = await this.runSingleTest(test),
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         results.push(result)
   }
@@ -306,13 +391,17 @@ export class TestRunner {
   };
           ;
           const result = await this.runSingleTest(test);
+=======
+        results.push(result)}// Run test suites;
+      for (const suite of this.suites) {for (const test of suite.tests) {
+          if (suite.beforeEach) {
+            suite.beforeEach()}const result = await this.runSingleTest(test);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           results.push(result);
           
-          if (suite.afterEach) {
-    suite.afterEach()
-  }
-        }
+          if (suite.afterEach) {suite.afterEach()}}
       }
+<<<<<<< HEAD
     } finally {
     this.isRunning = false;
   }
@@ -334,6 +423,16 @@ export class TestRunner {
 =======
     try 
       await Promise.race([)
+=======
+    } finally {this.isRunning = false;}}return results;
+  }
+
+  // Run a single test;
+  private async runSingleTest(test: Test): Promise<TestResult> {,
+    const startTime = performance.now(),
+    
+    try {await Promise.race([)}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         test.fn(),
         new Promise((_, reject) => 
           setTimeout(() => reject(new Error('Test timeout')), test.timeout)
@@ -341,6 +440,7 @@ export class TestRunner {
       ]);
       
       const duration = performance.now() - startTime;
+<<<<<<< HEAD
       return;
         name: test.name,
         status: 'passed',
@@ -350,15 +450,20 @@ export class TestRunner {
       const duration = performance.now() - startTime;
       return;
         name: test.name,
+=======
+      return {name: test.name,}
+        status: 'passed',
+        duration;}} catch (error) {const duration = performance.now() - startTime;
+      return {name: test.name,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         status: 'failed',
         duration,
-        error: error instanceof Error ? error.message : String(error)
-      }
-    }
+        error: error instanceof Error ? error.message : String(error),}}
   }
 
   // Get test statistics;
   getStats(results: TestResult[]): {,
+<<<<<<< HEAD
       total: number;,
       passed: number;,
       failed: number;,
@@ -371,17 +476,37 @@ export class TestRunner {
     duration: number;
   } {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    total: number;,
+    passed: number;,
+    failed: number;,
+    skipped: number,
+
+    duration: number;,}{
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     const total = results.length;
     const passed = results.filter(r => r.status === 'passed').length;
     const failed = results.filter(r => r.status === 'failed').length;
     const skipped = results.filter(r => r.status === 'skipped').length;
     const duration = results.reduce((sum, r) => sum + r.duration, 0);
 
+<<<<<<< HEAD
     return  total, passed, failed, skipped, duration }
   }
 }
 
 // Custom render function with providers;
+=======
+    return {total, passed, failed, skipped, duration}}}
+}
+
+<<<<<<< HEAD
+// Custom render function with providers;
+const AllTheProviders = ({children}: {children: React.ReactNode ,}) => {return(<BrowserRouter>)
+      {children} </BrowserRouter>
+=======
+// Custom render function with providers
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
 <<<<<<< HEAD
   return ()
@@ -392,21 +517,35 @@ const customRender = const customRender = const customRender = ()
 =======
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       children})
     </BrowserRouter>;)
+=======
+      {children}
+    </BrowserRouter>;
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   );
 }
 
 const customRender = (
+<<<<<<< HEAD
   ui: ReactElement,)
   options?: Omit<RenderOptions, 'wrapper'>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ) => {
   if (typeof window !== 'undefined') 
     return render(ui,  wrapper: AllTheProviders, ...options })
+=======
+  ui: ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>
+) => {if (typeof window !== 'undefined') {
+    return render(ui, { wrapper: AllTheProviders, ...options)})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
-  return render(ui, { wrapper: AllTheProviders, ...options })
+  return render(ui, {wrapper: AllTheProviders, ...options)})
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 if ('memory' in performance) {};
 ;
@@ -438,14 +577,29 @@ if ('memory' in performance) {}
       erro,`;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`);
+=======
+if ('memory' in performance) {}const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}).memory;
+        if (memory) {memoryUsage = memory.usedJSHeapSize;}}
+      }
+      unmount();
+    const metrics = {/* TODO: Fix JSX expression */,}}
+    const passed = renderTime < this.config.performanceThreshold;
+    this.testResults.push({/* TODO: Fix JSX expression */,)}e: ${testName,}`,
+      statu,
+  s: passed ? 'passed' : 'failed',
+      duratio,
+  n: renderTime,
+      erro,`;
+  r: passed ? undefined : `Render time ${renderTime,}ms exceeded threshold ${this.config.performanceThreshold}ms`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     })
-    return { passed, metrics }
-  }
+    return {passed, metrics}}}
   /**;
    * Create a skipped test;
    */;
-  public itSkip(name: string, fn: () => void | Promise<void>): void {
+  public itSkip(name: string, fn: () => void | Promise<void>): void {,}
     ,
+<<<<<<< HEAD
     if (!this.currentSuite) ,
   }
       throw new Error('Test must be inside a describe block');}
@@ -461,55 +615,75 @@ if ('memory' in performance) {}
     }
     this.currentSuite.tests.push({}
       name,
+=======
+    if (!this.currentSuite) {,}throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({)}public itSkip(name: string, fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({)}name,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       fn);
-    skip: true}
+    skip: true,}
     })
   }
   /**;
    * Create a focused test (only run this test)</void>
    */</void>
+<<<<<<< HEAD
   public itOnly(name: string, fn: () => void | Promise<void>): void {
     if (!this.currentSuite) 
+=======
+  public itOnly(name: string, fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    * Create a focused test (only run this test),
-   */
-  }
-  public itOnly(name: string, fn: () => void | Promise<void>): void {}
-    if (!this.currentSuite) {}
-      throw new Error('Test must be inside a describe block');}
+   */}public itOnly(name: string, fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('Test must be inside a describe block');}
     }
+<<<<<<< HEAD
     this.currentSuite.tests.push({}
       name,
+=======
+    this.currentSuite.tests.push({)}name,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       fn);
-    only: true}
+    only: true,}
     })
   }
   /**;
    * Setup before all tests in suite</void>
    */</void>
+<<<<<<< HEAD
   public beforeAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) 
     this.currentSuite.tests.push()
+=======
+  public beforeAll(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {
+    this.currentSuite.tests.push({)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       name),
-      fn)
-  }
-      skip: true}
+      fn)}skip: true,}
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
   public itSkip()
 =======
   public itSkip(nam,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  public itSkip(nam,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: string, f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
+    this.currentSuite.tests.push({/* TODO: Fix JSX expression */,)})
     })
   }
   /**;
    * Create a focused test (only run this test);
    */;
-  public itOnly(name: string, fn: () => void | Promise<void>): void {
+  public itOnly(name: string, fn: () => void | Promise<void>): void {,}
     ,
+<<<<<<< HEAD
     if (!this.currentSuite) ,
   }
       throw new Error('Test must be inside a describe block');}
@@ -519,130 +693,148 @@ if ('memory' in performance) {}
 =======
     this.currentSuite.tests.push({)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    if (!this.currentSuite) {,}throw new Error('Test must be inside a describe block');}
+    }
+    this.currentSuite.tests.push({)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     );
       name);
-      fn)
-  }
-      only: true}
+      fn)}only: true,}
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
   public itOnly()
 =======
   public itOnly(nam,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  public itOnly(nam,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: string, f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
+    this.currentSuite.tests.push({/* TODO: Fix JSX expression */,)})
     })
   }
   /**;
    * Setup before all tests in suite;
    */;
-  public beforeAll(fn: () => void | Promise<void>): void {
+  public beforeAll(fn: () => void | Promise<void>): void {,}
     ,
+<<<<<<< HEAD
     if (!this.currentSuite) ,
   }
   public beforeAll(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('beforeAll must be inside a describe block');}
+=======
+    if (!this.currentSuite) {,}public beforeAll(fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('beforeAll must be inside a describe block');}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   public beforeAll(f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
     this.currentSuite.beforeAll.push(fn);
   }
   /**;
    * Setup after all tests in suite</void>
    */</void>
-  public afterAll(fn: () => void | Promise<void>): void {
+  public afterAll(fn: () => void | Promise<void>): void {,}
     if (!this.currentSuite) {
    * Setup after all tests in suite;
    */,
+<<<<<<< HEAD
   public afterAll(fn: () => void | Promise<void>): void ,
     if (!this.currentSuite) ,
+=======
+  public afterAll(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    * Setup after all tests in suite;
-   */
-  }
-  public afterAll(fn: () => void | Promise<void>): void {}
-    if (!this.currentSuite) {}
-      throw new Error('afterAll must be inside a describe block');}
+   */}public afterAll(fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('afterAll must be inside a describe block');}
    * Setup after all tests in suite;
    */;
   public afterAll(f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
     this.currentSuite.afterAll.push(fn);
   }
   /**;
    * Setup before each test</void>
    */</void>
-  public beforeEach(fn: () => void | Promise<void>): void {
+  public beforeEach(fn: () => void | Promise<void>): void {,}
     if (!this.currentSuite) {
    * Setup before each test;
    */,
+<<<<<<< HEAD
   public beforeEach(fn: () => void | Promise<void>): void ,
     if (!this.currentSuite) ,
+=======
+  public beforeEach(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    * Setup before each test;
-   */
-  }
-  public beforeEach(fn: () => void | Promise<void>): void {}
-    if (!this.currentSuite) {}
-      throw new Error('beforeEach must be inside a describe block');}
+   */}public beforeEach(fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('beforeEach must be inside a describe block');}
    * Setup before each test;
    */;
   public beforeEach(f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
     this.currentSuite.beforeEach.push(fn);
   }
   /**;
    * Setup after each test</void>
    */</void>
-  public afterEach(fn: () => void | Promise<void>): void {
+  public afterEach(fn: () => void | Promise<void>): void {,}
     if (!this.currentSuite) {
    * Setup after each test;
    */,
+<<<<<<< HEAD
   public afterEach(fn: () => void | Promise<void>): void ,
     if (!this.currentSuite) ,
+=======
+  public afterEach(fn: () => void | Promise<void>): void {,}
+    if (!this.currentSuite) {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    * Setup after each test;
-   */
-  }
-  public afterEach(fn: () => void | Promise<void>): void {}
-    if (!this.currentSuite) {}
-      throw new Error('afterEach must be inside a describe block');}
+   */}public afterEach(fn: () => void | Promise<void>): void {,}}if (!this.currentSuite) {}throw new Error('afterEach must be inside a describe block');}
    * Setup after each test;
    */;
   public afterEach(f);
-  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
-    }
+  n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
     this.currentSuite.afterEach.push(fn);
   }
   /**;
    * Run all tests</void>
    */</void>
-  public async run(): Promise<TestResult[]>{
-   * Run all tests;
+  public async run(): Promise<TestResult[]>{* Run all tests;
    */;
+<<<<<<< HEAD
   public async run(): Promise<TestResult[]> 
     if (this.isRunning) }
   public async run(): Promise<TestResult[]> {}
     if (this.isRunning) {}
       throw new Error('Test runner is already running');}
+=======
+  public async run(): Promise<TestResult[]> {
+    if (this.isRunning) {}public async run(): Promise<TestResult[]> {}if (this.isRunning) {}throw new Error('Test runner is already running');}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
     this.isRunning = true;
     this.startTime = Date.now();
     this.results = []
+<<<<<<< HEAD
     try {}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
       for (const suite of this.suites) {}
         await this.runSuite(suite);}
+=======
+    try {}}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+      for (const suite of this.suites) {}await this.runSuite(suite);}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    * Run all tests;
    */;
-  public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */}
-    }
+  public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */,}}
     this.isRunning = true;
     this.startTime = Date.now();
     this.results = []
+<<<<<<< HEAD
     try {/* TODO: Fix JSX expression */}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
       for (const suite of this.suites) {/* TODO: Fix JSX expression */}
@@ -654,21 +846,31 @@ if ('memory' in performance) {}
   }
     } finally {}
       this.isRunning = false;}
+=======
+    try {/* TODO: Fix JSX expression */,}}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+      for (const suite of this.suites) {/* TODO: Fix JSX expression */,}}
+      this.generateReport();
+      return this.results;
+    } finally {return this.results;}}} finally {}}this.isRunning = false;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   }
   /**;
    * Run a test suite</TestResult>
    */</TestResult>
-  private async runSuite(suite: TestSuite): Promise<void>{}
-   * Run a test suite;
+  private async runSuite(suite: TestSuite): Promise<void>{,}* Run a test suite;
    */;
+<<<<<<< HEAD
   private async runSuite(suite: TestSuite): Promise<void> {}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
+=======
+  private async runSuite(suite: TestSuite): Promise<void> {,}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Run beforeAll hooks;
-    for (const hook of suite.beforeAll) {}
-      await this.runHook(hook, 'beforeAll');}
+    for (const hook of suite.beforeAll) {}await this.runHook(hook, 'beforeAll');}
     }
     // Run tests;
+<<<<<<< HEAD
     for (const test of suite.tests) {
 <<<<<<< HEAD
       if (test.skip) {}
@@ -680,35 +882,45 @@ if ('memory' in performance) {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     for (const hook of suite.beforeAll) {}
       await this.runHook(hook, 'beforeAll');}
+=======
+    for (const test of suite.tests) {if (test.skip) {}this.results.push({`)}// Run beforeAll hooks;
+    for (const hook of suite.beforeAll) {}await this.runHook(hook, 'beforeAll');}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
     // Run tests;
-    for (const test of suite.tests) {}
-      if (test.skip) {}
-        this.results.push({`})
-          name: `${suite.name} - ${test.name}`,
+    for (const test of suite.tests) {}if (test.skip) {}this.results.push({`)})
+          name: `${suite.name,}- ${test.name}`,
           status: 'skipped',
           duration: 0),
+<<<<<<< HEAD
       assertions: [],
         this.results.push({`})
           name: `${suite.name} - ${test.name}`);
+=======
+    assertions: [],
+        this.results.push({`)})
+          name: `${suite.name,}- ${test.name}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           status: 'skipped'),
           duration: 0),
-          assertions: []})
-    } finally {/* TODO: Fix JSX expression */}
-    }
+          assertions: [],})
+    } finally {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Run a test suite;
    */;
   private async runSuite(suit);
+<<<<<<< HEAD
   e: TestSuite): Promise<void> {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
+=======
+  e: TestSuite): Promise<void> {/* TODO: Fix JSX expression */,}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Run beforeAll hooks;
-    for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */}
-    }
+    for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */,}}
     // Run tests;
-    for (const test of suite.tests) {/* TODO: Fix JSX expression */}`;
-  e: `${suite.name} - ${test.name}`,
+    for (const test of suite.tests) {/* TODO: Fix JSX expression */,}`;
+  e: `${suite.name,}- ${test.name}`,
           statu,
   s: 'skipped',
           duratio,
@@ -721,26 +933,28 @@ if ('memory' in performance) {}
       await this.runTest(suite, test);
     }
     // Run afterAll hooks;
+<<<<<<< HEAD
     for (const hook of suite.afterAll) {
     // Run afterAll, hooks;
   }
     for (const hook of suite.afterAll) {}
       await this.runHook(hook, 'afterAll');}
+=======
+    for (const hook of suite.afterAll) {// Run afterAll hooks;}for (const hook of suite.afterAll) {}await this.runHook(hook, 'afterAll');}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   }
   /**;
    * Run a single test</void>
    */</void>
-  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
-   * Run a single test;
+  private async runTest(suite: TestSuite, test: Test): Promise<void>{`,}* Run a single test;
    */;
-  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
-    const testName = `${suite.name} - ${test.name}`;
+  private async runTest(suite: TestSuite, test: Test): Promise<void> {`,}const testName = `${suite.name}- ${test.name}`;
     const startTime = Date.now();
     const assertions: AssertionResult[] = [],
-    try {
-    ,
+    try {,}
       // Run beforeEach hooks;
+<<<<<<< HEAD
       for (const hook of suite.beforeEach) ,
     const assertions: AssertionResult[] = []
   }
@@ -748,13 +962,18 @@ if ('memory' in performance) {}
       // Run beforeEach hooks;
       for (const hook of suite.beforeEach) {}
         await this.runHook(hook, 'beforeEach');}
+=======
+      for (const hook of suite.beforeEach) {,
+    const assertions: AssertionResult[] = [],}try {}}// Run beforeEach hooks;
+      for (const hook of suite.beforeEach) {}await this.runHook(hook, 'beforeEach');}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
       // Run the test;
       await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
       // Run afterEach hooks;
-      for (const hook of suite.afterEach) {}
-        await this.runHook(hook, 'afterEach');}
+      for (const hook of suite.afterEach) {}await this.runHook(hook, 'afterEach');}
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.results.push()
 =======
@@ -796,52 +1015,80 @@ if ('memory' in performance) {}
 =======
       this.results.push({)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+      this.results.push({)
+    // Run afterEach hooks;}for (const hook of suite.afterEach) {}await this.runHook(hook, 'afterEach');}
+      }
+      this.results.push({)}name: testName,
+        status: 'passed'),
+    duration: Date.now() - startTime,
+      this.results.push({)
+    );
+        name: testName),
+        status: 'passed'),
+        duration: Date.now() - startTime;,}assertions}
+      })
+      if (this.config.verbose) {`}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) { - startTime}ms)`); } }
+      }
+    } catch (error) {}this.results.push({)}catch (error) {}this.results.push({)}name: testName,
+        status: 'failed'),
+    duration: Date.now() - startTime,
+        error: error as Error,
+      this.results.push({)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     );
         name: testName),
         status: 'failed'),
         duration: Date.now() - startTime,
+<<<<<<< HEAD
         error: error as, Error;
   }
         assertions}
+=======
+        error: error as Error;,}assertions}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       })
       - startTime}ms)`);
-      if (this.config.bail) {}
-        throw error;}
+      if (this.config.bail) {}throw error;}
     // Run afterAll hooks;
-    for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */}
-    }
+    for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Run a single test;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private async runTest()
 =======
   private async runTest(suit,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  private async runTest(suit,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: TestSuite, tes);
-  t: Test): Promise<void> {/* TODO: Fix JSX expression */}`;
-    const testName = `${suite.name} - ${test.name}`;
+  t: Test): Promise<void> {/* TODO: Fix JSX expression */,}`;
+    const testName = `${suite.name}- ${test.name}`;
     const startTime = Date.now();
     const,
   assertions: AssertionResult[] = [],
-    try {/* TODO: Fix JSX expression */}
-      }
+    try {/* TODO: Fix JSX expression */,}}}
       // Run the test;
       await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
       // Run afterEach hooks;
-      for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */}
-      }
-      this.results.push({/* TODO: Fix JSX expression */})
+      for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */,}}
+      this.results.push({/* TODO: Fix JSX expression */,)})
       })
+<<<<<<< HEAD
       if (this.config.verbose) {/* TODO: Fix JSX expression */}`;
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV)  - startTime}ms)`); } }
+=======
+      if (this.config.verbose) {/* TODO: Fix JSX expression */,}`;
+        if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) { - startTime}ms)`); } }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
-      })`;
+    } catch (error) {/* TODO: Fix JSX expression */,}})`;
       - startTime}ms)`);
-      if (this.config.bail) {/* TODO: Fix JSX expression */}
-      }
+      if (this.config.bail) {/* TODO: Fix JSX expression */,}}
     }
   }
   /**;
@@ -849,6 +1096,7 @@ if ('memory' in performance) {}
    */</void>
   private async runHook()</void>
     hook: () => void | Promise<void>,</void>
+<<<<<<< HEAD
     hookName: string</void>
   ): Promise<void>{
     try {
@@ -876,6 +1124,20 @@ if ('memory' in performance) {}
       await hook();}
     } catch (error) {}
       throw error;}
+=======
+    hookName: string</void>,
+  ): Promise<void>{try {* Run a hook;}
+   */
+  private async runHook(,)
+    hook: () => void | Promise<void>,
+    hookName: string,
+  ): Promise<void> {,
+    try {,}
+  private async runHook();
+    hook: () => void | Promise<void>,
+    hookName: string;,}): Promise<void> {}try {}}await hook();}
+    } catch (error) {}throw error;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   }
   /**;
@@ -883,13 +1145,19 @@ if ('memory' in performance) {}
    */</void>
   private async runWithTimeout()</void>
     fn: () => void | Promise<void>,</void>
+<<<<<<< HEAD
     timeout: number</void>
   ): Promise<void>{
     * Run function with timeout;
+=======
+    timeout: number</void>,
+  ): Promise<void>{* Run function with timeout;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
    */
   private async runWithTimeout(),
     fn: () => void | Promise<void>,
     timeout: number,
+<<<<<<< HEAD
   ): Promise<void> ,
     return new Promise((resolve, reject) => 
     timeout: number;
@@ -898,12 +1166,17 @@ if ('memory' in performance) {}
     return new Promise((resolve, reject) => {}
       const timer = const timer = setTimeout(() => {`};
         reject(new Error(`Test timed out after ${timeout}ms`));
+=======
+  ): Promise<void> {,
+    return new Promise((resolve, reject) => {
+    timeout: number;,}): Promise<void> {}return new Promise((resolve, reject) => {}const timer = setTimeout(() => {`}reject(new Error(`Test timed out after ${timeout)}ms`));
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }, timeout);
       Promise.resolve(fn());
-        .then(() => {}
-          clearTimeout(timer);
+        .then(() => {}clearTimeout(timer);
           resolve();}
         })
+<<<<<<< HEAD
 <<<<<<< HEAD
         .catch()
 =======
@@ -914,6 +1187,11 @@ if ('memory' in performance) {}
   }
         .catch(error => {}
           clearTimeout(timer);
+=======
+        .catch(error => {)
+    );
+    clearTimeout(timer)}.catch(error => {)}clearTimeout(timer);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           reject(error);}
         })
     })
@@ -923,9 +1201,7 @@ if ('memory' in performance) {}
   k: () => void | Promise<void>,
     hookNam,
   e: string,
-  ): Promise<void> {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
+  ): Promise<void> {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Run function with timeout;
@@ -934,22 +1210,21 @@ if ('memory' in performance) {}
   n: () => void | Promise<void>,
     timeou,
   t: number,
-  ): Promise<void> {/* TODO: Fix JSX expression */}`;
-        reject(new Error(`Test timed out after ${timeout}ms`));
+  ): Promise<void> {/* TODO: Fix JSX expression */,}`;
+        reject(new Error(`Test timed out after ${timeout)}ms`));
       }, timeout);
       Promise.resolve(fn());
-        .then(() => {/* TODO: Fix JSX expression */}
-        })
-        .catch(error => {/* TODO: Fix JSX expression */})
+        .then(() => {/* TODO: Fix JSX expression */,}})
+        .catch(error => {/* TODO: Fix JSX expression */,)})
         })
     })
   }
   /**;
    * Generate test report;
    */;
-  private generateReport(): void {
-    const duration = Date.now() - this.startTime;
+  private generateReport(): void {const duration = Date.now() - this.startTime;}
     const passed = this.results.filter(r => r.status === 'passed').length;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const failed = const failed = const failed = this.results.filter(r => r.status === 'failed').length
   };
@@ -980,10 +1255,27 @@ if ('memory' in performance) {}
     } else if (this.config.reporter === 'html') {/* TODO: Fix JSX expression */}
     } else if (this.config.reporter === 'junit') {/* TODO: Fix JSX expression */}
     }
+=======
+    const failed = this.results.filter(r => r.status === 'failed').length;}private generateReport(): void {}}const duration = Date.now() - this.startTime;
+    const passed = this.results.filter(r => r.status === 'passed').length;
+    const failed = this.results.filter(r => r.status === 'failed').length;
+    const skipped = this.results.filter(r => r.status === 'skipped').length;}
+  private generateReport(): void {/* TODO: Fix JSX expression */,}}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (this.config.reporter === 'json') {}this.generateJsonReport();}
+    } else if (this.config.reporter === 'html') {}this.generateHtmlReport();}
+    } else if (this.config.reporter === 'junit') {}this.generateJunitReport();}
+    if (this.config.reporter === 'json') {/* TODO: Fix JSX expression */,}} else if (this.config.reporter === 'html') {/* TODO: Fix JSX expression */,}} else if (this.config.reporter === 'junit') {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   /**;
    * Generate JSON report;
    */;
+<<<<<<< HEAD
   private generateJsonReport(): void {
 <<<<<<< HEAD
     const report = const report = const report = {
@@ -998,22 +1290,35 @@ if ('memory' in performance) {}
     const report = {}
       summary: {}
         total: this.results.length,
+=======
+  private generateJsonReport(): void {const report = {}
+      summary: {,
+    total: this.results.length,}private generateJsonReport(): void {}}const report = {}summary: {,}total: this.results.length,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         passed: this.results.filter(r => r.status === 'passed').length,
         failed: this.results.filter(r => r.status === 'failed').length,
         skipped: this.results.filter(r => r.status === 'skipped').length,
       summary: {,
+<<<<<<< HEAD
       total: this.results.length;,
       passed: this.results.filter(r => r.status === 'passed').length;,
       failed: this.results.filter(r => r.status === 'failed').length,
         skipped: this.results.filter(r => r.status === 'skipped').length;
   }
         duration: Date.now() - this.startTime},
+=======
+    total: this.results.length;,
+        passed: this.results.filter(r => r.status === 'passed').length;,
+        failed: this.results.filter(r => r.status === 'failed').length,
+        skipped: this.results.filter(r => r.status === 'skipped').length;,}duration: Date.now() - this.startTime,},
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       results: this.results,
     }
-  private generateJsonReport(): void {/* TODO: Fix JSX expression */},
+  private generateJsonReport(): void {/* TODO: Fix JSX expression */,}},
       result,
   s: this.results,
     }
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     if (process.env['NODE_ENV'] === 'development') {
 <<<<<<< HEAD
@@ -1023,11 +1328,16 @@ if ('memory' in performance) {}
 =======
     if (import.meta.env.DEV)
   } }
+=======
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) { )}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   /**;
    * Generate HTML report;
    */;
+<<<<<<< HEAD
   private generateHtmlReport(): void {
     </void>
     const html = const html = const html =</void>
@@ -1058,11 +1368,24 @@ if ('memory' in performance) {}
         .skipped {
     border-left-color: #ff9800;
   }</style>
+=======
+  private generateHtmlReport(): void {</void>}
+    const html =</void>}private generateHtmlReport(): void {}}const html =;
+<!DOCTYPE html>;
+<html></htm>
+<head></hea>
+    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>
+    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>
+    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>
+    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> {font-family: Arial, sans-serif; margin: 20 px;,}.summary {background: #f5 f5 f5; padding: 20 px; border-radius: 5 px, margin-bottom: 20 px;,}}.test {margin: 10 px 0; padding: 10 px, border-left: 4 px solid #ccc;,}}.passed {border-left-color: #4 CAF50;,}}.failed {border-left-color: #f44336;,}}</style>
+        .skipped {border-left-color: #ff9800;,}}</style>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     </style>
 </head>
 <<<<<<< HEAD
 <body></body>
     <h2 id="heading-test-results">Test Results</h2>
+<<<<<<< HEAD
     <div class="summary" / /></div>
         <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
@@ -1117,6 +1440,31 @@ if ('memory' in performance) {}
 <<<<<<< HEAD
           .map()
           .map();
+=======
+    <div class="summary"></div>
+        <h3 id="heading-summary">Summary<p>Total: ${this.results.length,</p>}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}<p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}<p>Duration: ${Date.now() - this.startTime,</p>}ms<div class="tests">${this.results</div>
+    <div class="summary"></div>} <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length,</p>}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}</p><p>Duration: ${Date.now() - this.startTime,</p>}ms</p><div class="tests">${this.results</div>
+          .map()</div>}result => `}</div>
+            <div class="test ${result.status}"></div>
+                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status,</p>}</p><p>Duration: ${result.duration,</p>}ms</p>
+                ${result.error ? `<p>Error: ${result.error.message,</p>}</p>` : ''}
+
+            </div>
+        <h3 id="heading-summary">Summary</h3>
+        <p>Total: ${this.results.length,</p>}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p>
+        <p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}</p>
+        <p>Duration: ${Date.now() - this.startTime,</p>}ms</p>
+    </div>
+    <div class="tests"></div>
+        ${this.results;}.map(result => `)}
+        ${this.results}.map();
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             result => `}</div>
             <div class="test ${result.status}" / /></div>
 =======
@@ -1127,14 +1475,21 @@ if ('memory' in performance) {}
             <div class="test ${result.status}"></div></div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 <h4 id="heading-${result.name}">${result.name}</h4>
+<<<<<<< HEAD
                 <p>Status: ${result.status}</p></p></p>);
                 <p>Duration: ${result.duration}ms</p></p></p>);
                 ${result.error ? `<p>Error: $result.error.message}</p></p></p>` : ''})
+=======
+                <p>Status: ${result.status,</p>}</p>);
+                <p>Duration: ${result.duration,</p>}ms</p>);
+                ${result.error ? `<p>Error: ${result.error.message,</p>}</p>` : ''})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>);
           .join('')}
     </div>
 </body>
 </html>`;
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
   }
@@ -1148,39 +1503,61 @@ if ('memory' in performance) {}
   async runAccessibilityTest(),
     component: ReactElement,
     testName: string;
+=======
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+  }
+  // Accessibility test;
+  async runAccessibilityTest(;)
+    component: ReactElement),
+  async runAccessibilityTest(),
+    component: ReactElement,
+    testName: string;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   // Accessibility test,
   async runAccessibilityTest(component: ReactElement),
     testName: string,
-  ): Promise<{ passed: boolean, violations: string[] }> {}
-    const { container } = this.customRender(component);
+  ): Promise<{passed: boolean, violations: string[] ,}> {}const {container}}= this.customRender(component);
     // Basic accessibility checks;
     const violations: string[] = [],
     // Check for missing alt text on images;
+<<<<<<< HEAD
     const images = const images = container.querySelectorAll('img'),;
+=======
+    const images = container.querySelectorAll('img'),
+<<<<<<< HEAD
+    images.forEach((img, index) => {// Basic accessibility checks;
+    const violations: string[] = [],
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     images.forEach((img, index) => {;
     // Basic accessibility checks;
     const violations: string[] = []
+>>>>>>> origin/main
     // Check for missing alt text on images,
+<<<<<<< HEAD
     const images = const images = const images = container.querySelectorAll('img')
   }
     images.forEach((img, index) => {};
       if (!img.getAttribute('alt')) {`};
         violations.push(`Image ${index} missing alt text`);
+=======
+    const images = container.querySelectorAll('img')}images.forEach((img, index) => {}if (!img.getAttribute('alt')) {`}violations.push(`Image ${index)}missing alt text`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
     })
     // Check for missing labels on form inputs;
     const inputs = container.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {}
-      const id = input.getAttribute('id');
+    inputs.forEach((input, index) => {}const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      if (!id && !ariaLabel && !ariaLabelledBy) {`}
-        violations.push(`Input ${index} missing label`);
+      if (!id && !ariaLabel && !ariaLabelledBy) {`}violations.push(`Input ${index)}missing label`);
       }
     })
     // Check for proper heading hierarchy;
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
+<<<<<<< HEAD
     headings.forEach((heading, index) => {
 <<<<<<< HEAD
     let previousLevel = let previousLevel = let previousLevel = 0
@@ -1194,30 +1571,32 @@ if ('memory' in performance) {}
       const level = parseInt(heading.tagName.charAt(1));
       if (<<<level>previousLevel</level></level> + 1) {`}
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+=======
+    headings.forEach((heading, index) => {let previousLevel = 0;}headings.forEach((heading, index) => {}const level = parseInt(heading.tagName.charAt(1));
+      if (<<<level>previousLevel</level></level> + 1) {`}violations.push(`Heading ${index)}skips level(h${previousLevel)}to h${level})`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
       previousLevel = level;
     })
     // Check for proper button text;
     const buttons = container.querySelectorAll('button');
-    buttons.forEach((button, index) => {}
-      const text = button.textContent?.trim();
+    buttons.forEach((button, index) => {}const text = button.textContent?.trim();
       const ariaLabel = button.getAttribute('aria-label');
-      if (!text && !ariaLabel) {`}
-        violations.push(`Button ${index} missing accessible text`);
+      if (!text && !ariaLabel) {`}violations.push(`Button ${index)}missing accessible text`);
       }
     })
     const passed = violations.length === 0;
-    this.testResults.push({`})
-      name: `Accessibility: ${testName}`,
+    this.testResults.push({`)})
+      name: `Accessibility: ${testName,}`,
       status: passed ? 'passed' : 'failed',
       duration: 0),
-    error: passed ? undefined : `Found ${violations.length} accessibility violations;
+    error: passed ? undefined : `Found ${violations.length,}accessibility violations;
     })
-    return { passed, violations }
-  }
+    return {passed, violations}}}
   // Component test;
   async runComponentTest();
     component: ReactElement,
+<<<<<<< HEAD
 <<<<<<< HEAD
     testName: string)
     assertions: (result: RenderResult) => void
@@ -1230,15 +1609,22 @@ if ('memory' in performance) {}
     this.testResults.push({`})
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       name: `Accessibility: ${testName}`);
+=======
+    testName: string),
+    assertions: (result: RenderResult) => void;,
+    const passed = violations.length === 0,
+    this.testResults.push({`)})
+      name: `Accessibility: ${testName,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       status: passed ? 'passed' : 'failed'),
       duration: 0),
-      error: passed ? undefined : `Found ${violations.length} accessibility violations;
+      error: passed ? undefined : `Found ${violations.length,}accessibility violations;
     })
-    return { passed, violations }
-  }
+    return {passed, violations}}}
   // Component test;
   async runComponentTest(component: ReactElement),
     testName: string),
+<<<<<<< HEAD
     assertions: (result: RenderResult) => void;
   ): Promise<{ passed: boolean, error?: string }> {
     try;
@@ -1278,23 +1664,39 @@ if ('memory' in performance) {}
       error: errorMessage,
       this.testResults.push({`})
         name: `Component: ${testName}`);
+=======
+    assertions: (result: RenderResult) => void;,
+  ): Promise<{passed: boolean, error?: string}> {try {const result = this.customRender(component);}
+      assertions(result)}this.testResults.push({`)}): Promise<{passed: boolean, error?: string}> {}try {}}const result = this.customRender(component);
+      assertions(result);
+      this.testResults.push({`)})
+        name: `Component: ${testName,}`,
+        status: 'passed'),
+    duration: 0,
+      this.testResults.push({`)})
+        name: `Component: ${testName,}`);
+        status: 'passed'),
+        duration: 0,
+      })
+      return {passed: true ,}}} catch (error) {}const errorMessage = error instanceof Error ? error.message : String(error);
+      this.testResults.push({`)}this.testResults.push({`)})
+        name: `Component: ${testName,}`,
+        status: 'failed',
+        duration: 0),
+    error: errorMessage,
+      this.testResults.push({`)})
+        name: `Component: ${testName,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         status: 'failed'),
         duration: 0),
         error: errorMessage,
       })
-      return { passed: false, error: errorMessage }
-  private generateHtmlReport(): void {/* TODO: Fix JSX expression */}
-  n: 20px, }
-        .summary {/* TODO: Fix JSX expression */}
-  m: 20px, }
-        .test {/* TODO: Fix JSX expression */}
-  t: 4px solid #ccc, }
-        .passed {/* TODO: Fix JSX expression */}
-  r: #4CAF50, }
-        .failed {/* TODO: Fix JSX expression */}
-  r: #f44336, }
-        .skipped {/* TODO: Fix JSX expression */}
-  r: #ff9800, }
+      return {passed: false, error: errorMessage ,}}private generateHtmlReport(): void {/* TODO: Fix JSX expression */,}}n: 20px, }
+        .summary {/* TODO: Fix JSX expression */,}}m: 20px, }
+        .test {/* TODO: Fix JSX expression */,}}t: 4px solid #ccc, }
+        .passed {/* TODO: Fix JSX expression */,}}r: #4CAF50, }
+        .failed {/* TODO: Fix JSX expression */,}}r: #f44336, }
+        .skipped {/* TODO: Fix JSX expression */,}}r: #ff9800, }
     </style>
 </head>
 <<<<<<< HEAD
@@ -1302,6 +1704,7 @@ if ('memory' in performance) {}
     <h1>Test Results</h1>
     <div class="summary" / /></div>
         <h2>Summary</h2>
+<<<<<<< HEAD
 =======
 <body />
     <h1>Test Results</h1></h1></h1>
@@ -1340,6 +1743,29 @@ if ('memory' in performance) {}
   n: ${result.duration}ms</p></p></p>
                 ${/* TODO: Fix JSX expression */}`;
   r: ${result.error.message}</p>` : ''}
+=======
+        <p>Tota,</p>
+  l: ${this.results.length,}</p>
+        <p>Passe,</p>
+  d: ${this.results.filter(r => r.status === 'passed').length,}</p>
+        <p>Faile,</p>
+  d: ${this.results.filter(r => r.status === 'failed').length,}</p>
+        <p>Skippe,</p>
+  d: ${this.results.filter(r => r.status === 'skipped').length,}</p>
+        <p>Duratio,</p>
+  n: ${Date.now() - this.startTime,}ms</p>
+    </div>"
+    <div class="tests"></div>
+        ${/* TODO: Fix JSX expression */,}";
+            <div class="test ${result.status}"></div>
+                <h3>${result.name}</h3>
+                <p>Statu,</p>
+  s: ${result.status,}</p>
+                <p>Duratio,</p>
+  n: ${result.duration,}ms</p>
+                ${/* TODO: Fix JSX expression */,}`;
+  r: ${result.error.message,}</p>` : ''}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>`;
         `;
           );
@@ -1347,6 +1773,7 @@ if ('memory' in performance) {}
     </div>
 </body>`
 </html>`;
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
   }
@@ -1358,12 +1785,20 @@ if ('memory' in performance) {}
   t: ReactElement,)
     testNam,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+  }
+  // Accessibility test;
+  async runAccessibilityTest(componen,)
+  t: ReactElement,
+    testNam,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: string;),
-  ): Promise<{/* TODO: Fix JSX expression */}
-  s: string[] }> {/* TODO: Fix JSX expression */}
-    const { container } = this.customRender(component);
+  ): Promise<{/* TODO: Fix JSX expression */,}s: string[] ,}> {/* TODO: Fix JSX expression */,}const {container}}= this.customRender(component);
     // Basic accessibility checks;
     const,
+<<<<<<< HEAD
   violations: string[] = []
 <<<<<<< HEAD
     // Check for missing alt text on images
@@ -1374,29 +1809,37 @@ if ('memory' in performance) {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`;
         violations.push(`Image ${index} missing alt text`);
+=======
+  violations: string[] = [],
+    // Check for missing alt text on images;
+    const images = container.querySelectorAll('img'),
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */,}`;
+        violations.push(`Image ${index)}missing alt text`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
     })
     // Check for missing labels on form inputs;
     const inputs = container.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Input ${index} missing label`);
+    inputs.forEach((input, index) => {/* TODO: Fix JSX expression */,}`;
+        violations.push(`Input ${index)}missing label`);
       }
     })
     // Check for proper heading hierarchy;
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+    headings.forEach((heading, index) => {/* TODO: Fix JSX expression */,}`;
+        violations.push(`Heading ${index)}skips level(h${previousLevel)}to h${level})`);
       }
       previousLevel = level;
     })
     // Check for proper button text;
     const buttons = container.querySelectorAll('button');
-    buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Button ${index} missing accessible text`);
+    buttons.forEach((button, index) => {/* TODO: Fix JSX expression */,}`;
+        violations.push(`Button ${index)}missing accessible text`);
       }
     })
     const passed = violations.length === 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.testResults.push()
 =======
@@ -1409,10 +1852,20 @@ if ('memory' in performance) {}
       erro,`;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: passed ? undefined : `Found ${violations.length} accessibility violations`);
+=======
+    this.testResults.push({/* TODO: Fix JSX expression */,)}`;
+  y: ${testName,}`,
+      statu,
+  s: passed ? 'passed' : 'failed',
+      duratio,
+  n: 0,
+      erro,`;
+  r: passed ? undefined : `Found ${violations.length,}accessibility violations`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     })
-    return { passed, violations }
-  }
+    return {passed, violations}}}
   // Component test;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runComponentTest()
   s: (resul)
@@ -1429,15 +1882,25 @@ if ('memory' in performance) {}
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}`;
   t: ${testName}`,
+=======
+  async runComponentTest(componen,)
+  t: ReactElement,
+    testNam,
+  e: string,
+    assertion,
+  s: (resul),
+  t: RenderResult) => void,
+  ): Promise<{/* TODO: Fix JSX expression */,}d: boolean, error?: string }> {/* TODO: Fix JSX expression */,}`;
+  t: ${testName,}`,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         statu,
   s: 'passed',
         duratio,
   n: 0,
       })
-      return {/* TODO: Fix JSX expression */}
-  d: true }
-    } catch (error) {/* TODO: Fix JSX expression */}`;
-  t: ${testName}`,
+      return {/* TODO: Fix JSX expression */,}}d: true ,}
+    } catch (error) {/* TODO: Fix JSX expression */,}`;
+  t: ${testName,}`,
         statu,
   s: 'failed',
         duratio,
@@ -1445,13 +1908,13 @@ if ('memory' in performance) {}
         erro,
   r: errorMessage,
       })
-      return {/* TODO: Fix JSX expression */}
-  r: errorMessage }
+      return {/* TODO: Fix JSX expression */,}}r: errorMessage ,}
     }
   }
   /**;
    * Generate JUnit report;
    */;
+<<<<<<< HEAD
   private generateJunitReport(): void {}
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>;
@@ -1465,6 +1928,15 @@ if ('memory' in performance) {}
     <testsuite name="Test Suite" tests="${this.results.length}", failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}", time="${(Date.now() - this.startTime) / 1000}">;
         ${this.results}
           .map();
+=======
+  private generateJunitReport(): void {}}const xml = `<?xml version="1.0" encoding="UTF-8"?>;
+<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+        ${this.results;
+          .map()</testsuite>}result => `}</testsuite>
+<testsuites>}
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+        ${this.results}.map();
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             result => `}
 <<<<<<< HEAD
             <testcase></testcase>
@@ -1477,6 +1949,7 @@ if ('memory' in performance) {}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
 <testsuites>}
+<<<<<<< HEAD
     <testsuite name="Test Suite" tests="${this.results.length}", failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}", time="${(Date.now() - this.startTime) / 1000}">;
         ${
     this.results;
@@ -1486,6 +1959,10 @@ if ('memory' in performance) {}
 =======
           .map(result => `})
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+        ${this.results;}.map(result => `)}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             <testcase name="${result.name}" time="${result.duration / 1000}">);
                 ${result.status === 'failed' ? `<failure message="$result.error?.message}">${result.error?.stack}</failure>` : ''})
                 ${result.status === 'skipped' ? '<skipped/>' : ''})
@@ -1493,12 +1970,18 @@ if ('memory' in performance) {}
           .join('')}
     </testsuite>
 </testsuites>`;
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
+=======
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   // Integration test;
   async runIntegrationTest();
     component: ReactElement,
+<<<<<<< HEAD
 <<<<<<< HEAD
     testName: string)
     userInteractions: (result: RenderResult) => Promise<void></void>
@@ -1547,14 +2030,41 @@ if ('memory' in performance) {}
       error: errorMessage,
       this.testResults.push({`})
         name: `Integration: ${testName}`);
+=======
+    testName: string),
+    userInteractions: (result: RenderResult) => Promise<void>,
+  // Integration test,
+  async runIntegrationTest(component: ReactElement),
+    testName: string),
+    userInteractions: (result: RenderResult) => Promise<void>): Promise<{passed: boolean, error?: string}> {try {const result = this.customRender(component);}
+      await userInteractions(result)}this.testResults.push({`)}): Promise<{passed: boolean, error?: string}> {}try {}}const result = this.customRender(component);
+      await userInteractions(result);
+      this.testResults.push({`)})
+        name: `Integration: ${testName,}`,
+        status: 'passed'),
+    duration: 0,
+      this.testResults.push({`)})
+        name: `Integration: ${testName,}`);
+        status: 'passed'),
+        duration: 0,
+      })
+      return {passed: true ,}}} catch (error) {}const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      this.testResults.push({`)}this.testResults.push({`)})
+        name: `Integration: ${testName,}`,
+        status: 'failed',
+        duration: 0),
+    error: errorMessage,
+      this.testResults.push({`)})
+        name: `Integration: ${testName,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         status: 'failed'),
         duration: 0),
         error: errorMessage,
       })
-      return { passed: false, error: errorMessage }
-    }
+      return {passed: false, error: errorMessage ,}}}
   }
   // Visual regression test;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runVisualRegressionTest()
     component: ReactElement)
@@ -1592,88 +2102,131 @@ if ('memory' in performance) {}
       duration: 0,
     this.testResults.push({`})
       name: `Visual: ${testName}`);
+=======
+  async runVisualRegressionTest(;)
+    component: ReactElement),
+    testName: string;,
+  // Visual regression test,
+  async runVisualRegressionTest(component: ReactElement),
+    testName: string,
+  ): Promise<{passed: boolean, diff?: unknown}> {// This would typically use a tool like Percy or Chromatic;}// For now, we'll just return a placeholder}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    this.testResults.push({`)}async runVisualRegressionTest();
+    component: ReactElement,
+    testName: string;,
+  ): Promise<{passed: boolean, diff?: unknown}> {}// This would typically use a tool like Percy or Chromatic;
+    // For now, we'll just return a placeholder}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    this.testResults.push({`)})
+      name: `Visual: ${testName,}`,
+      status: 'passed'),
+    duration: 0,
+    this.testResults.push({`)})
+      name: `Visual: ${testName,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       status: 'passed'),
       duration: 0,
     })
-    return { passed: true }
-  }
+    return {passed: true ,}}}
   // Coverage test;
   // Coverage test;
-  async runCoverageTest(): Promise<{ passed: boolean, coverage: CoverageMetrics }> {
-    // This would typically use Istanbul or similar;
+  async runCoverageTest(): Promise<{passed: boolean, coverage: CoverageMetrics ,}> {// This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
     const coverage: CoverageMetrics = ,
     statements: 85,
   // Coverage test;
+<<<<<<< HEAD
   // Coverage, test;
   }
   async runCoverageTest(): Promise<{ passed: boolean, coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar;
+=======
+  // Coverage test;}async runCoverageTest(): Promise<{passed: boolean, coverage: CoverageMetrics ,}> {}// This would typically use Istanbul or similar;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {}
-      statements: 85,
+    const coverage: CoverageMetrics = {,}statements: 85,
       branches: 80,
       functions: 90,
-      lines: 85}
+      lines: 85,}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
+<<<<<<< HEAD
     this.testResults.push({}
       name: 'Coverage',
+=======
+    this.testResults.push({)}name: 'Coverage',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       status: passed ? 'passed' : 'failed',
       duration: 0,`})
-    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%;
+    error: passed ? undefined : `Coverage ${coverage.statements,}% below threshold ${this.config.coverageThreshold}%;
     })
-    return { passed, coverage }
-  }
+    return {passed, coverage}}}
   // Run all tests;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runAllTests()
 =======
   async runAllTests(;
     tests: Array<{
+=======
+  async runAllTests(;)
+    tests: Array<{,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     ,
     name: string,)
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     component: ReactElement),
+<<<<<<< HEAD
     assertions?: (result: RenderResult) => void;
   }
       userInteractions?: (result: RenderResult) => Promise<void>}</voi>
+=======
+    assertions?: (result: RenderResult) => void;,}userInteractions?: (result: RenderResult) => Promise<void>,}</voi>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }></void>
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
     const coverage: CoverageMetrics = {,
+<<<<<<< HEAD
       statements: 85,
+=======
+    statements: 85,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       branches: 80,
-      functions: 90,
-  }
-      lines: 85}
+      functions: 90,}lines: 85,}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.testResults.push()
 =======
     this.testResults.push({)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    this.testResults.push({)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     );
       name: 'Coverage'),
-      status: passed ? 'passed' : 'failed'),
-  }
-      duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%;
+      status: passed ? 'passed' : 'failed'),}duration: 0,`}
+      error: passed ? undefined : `Coverage ${coverage.statements,}% below threshold ${this.config.coverageThreshold}%;
     })
-    return { passed, coverage }
-  }
+    return {passed, coverage}}}
   // Run all tests;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runAllTests()
 =======
   async runAllTests(tests: Array<{)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  async runAllTests(tests: Array<{,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     );
       name: string;),
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'),
       component: ReactElement;),
+<<<<<<< HEAD
       assertions?: (result: RenderResult) => void;
   }
       userInteractions?: (result: RenderResult) => Promise<void>}
@@ -1685,9 +2238,17 @@ if ('memory' in performance) {}
       name: string;,
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
       component: ReactElement;
-      assertions?: (result: RenderResult) => void,
-      userInteractions?: (result: RenderResult) => Promise<void>}
+=======
+      assertions?: (result: RenderResult) => void;,}userInteractions?: (result: RenderResult) => Promise<void>,}
     }>;
+  ): Promise<{async runAllTests()}tests: Array<{,}name: string;,
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+      component: ReactElement;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+      assertions?: (result: RenderResult) => void,
+      userInteractions?: (result: RenderResult) => Promise<void>,}
+    }>;
+<<<<<<< HEAD
   ): Promise<{}
     passed: boolean,}
     results: Array<{ name: string; type: string; passed: boolean, error?: string }>;
@@ -1706,6 +2267,16 @@ if ('memory' in performance) {}
       let result;
       switch (test.type) {}
         case 'component': ;
+=======
+  ): Promise<{}passed: boolean,}
+    results: Array<{name: string; type: string; passed: boolean, error?: string}>;
+  }> {}const results: Array<{name: string; type: string; passed: boolean, error?: string}> = []
+    for (const test of tests) {let result;
+      switch (test.type) {
+        case 'component':;
+          result = await this.runComponentTest()}for (const test of tests) {}let result;
+      switch (test.type) {}case 'component': ;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           result = await this.runComponentTest();
             test.component,
             test.name);
@@ -1736,6 +2307,7 @@ if ('memory' in performance) {}
           result = await this.runVisualRegressionTest(test.component, test.name);
           break;
         default:}
+<<<<<<< HEAD
           result = { passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}";
     <testsuite name="Test Suite" tests="${this.results.length}", failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}", time="${(Date.now() - this.startTime) / 1000}">;
@@ -1749,11 +2321,20 @@ if ('memory' in performance) {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>`;
+=======
+          result = {passed: false, error: 'Unknown test type' ,}private generateJunitReport(): void {/* TODO: Fix JSX expression */,}}";
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
+        ${/* TODO: Fix JSX expression */,}";
+            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`;
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+                ${result.status === 'skipped' ? '<skipped/>' : ''} </testcase>`;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         `;
           );
           .join('')}
     </testsuite>`
 </testsuites>`;
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
   }
@@ -1762,25 +2343,37 @@ if ('memory' in performance) {}
   async runIntegrationTest()
 =======
   async runIntegrationTest(componen,
+=======
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+  }
+  // Integration test;
+  async runIntegrationTest(componen,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   t: ReactElement,
     testNam,
   e: string,)
     userInteraction,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: (resul),
+<<<<<<< HEAD
   t: RenderResult) => Promise<void / /></void>
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}`;
   n: ${testName}`,
+=======
+  t: RenderResult) => Promise<void />,
+  ): Promise<{/* TODO: Fix JSX expression */,}d: boolean, error?: string }> {/* TODO: Fix JSX expression */,}`;
+  n: ${testName,}`,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         statu,
   s: 'passed',
         duratio,
   n: 0,
       })
-      return {/* TODO: Fix JSX expression */}
-  d: true }
-    } catch (error) {/* TODO: Fix JSX expression */}`;
-  n: ${testName}`,
+      return {/* TODO: Fix JSX expression */,}}d: true ,}
+    } catch (error) {/* TODO: Fix JSX expression */,}`;
+  n: ${testName,}`,
         statu,
   s: 'failed',
         duratio,
@@ -1788,11 +2381,11 @@ if ('memory' in performance) {}
         erro,
   r: errorMessage,
       })
-      return {/* TODO: Fix JSX expression */}
-  r: errorMessage }
+      return {/* TODO: Fix JSX expression */,}}r: errorMessage ,}
     }
   }
   // Visual regression test;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runVisualRegressionTest()
   e: string;),
@@ -1810,31 +2403,42 @@ if ('memory' in performance) {}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) } }
     this.testResults.push({/* TODO: Fix JSX expression */}`;
   l: ${testName}`,
+=======
+  async runVisualRegressionTest(componen,)
+  t: ReactElement,
+    testNam,
+  e: string;),
+  ): Promise<{/* TODO: Fix JSX expression */,}d: boolean, diff?: unknown }> {/* TODO: Fix JSX expression */,}if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}}
+    this.testResults.push({/* TODO: Fix JSX expression */,)}`;
+  l: ${testName,}`,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       statu,
   s: 'passed',)
       duratio,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   n: 0;),
     })
-    return {/* TODO: Fix JSX expression */}
-  d: true }
+    return {/* TODO: Fix JSX expression */,}}d: true ,}
   }
   // Coverage test;
   // Coverage test;
-  async runCoverageTest(): Promise<{/* TODO: Fix JSX expression */}
-  e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
-    }
+  async runCoverageTest(): Promise<{/* TODO: Fix JSX expression */,}e: CoverageMetrics ,}> {/* TODO: Fix JSX expression */,}}
     const passed = coverage.statements >= this.config.coverageThreshold;
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.testResults.push()
 =======
     this.testResults.push({/* TODO: Fix JSX expression */}`;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`);
+=======
+    this.testResults.push({/* TODO: Fix JSX expression */,)}`;
+  r: passed ? undefined : `Coverage ${coverage.statements,}% below threshold ${this.config.coverageThreshold}%`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     })
-    return { passed, coverage }
-  }
+    return {passed, coverage}}}
   // Run all tests;
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runAllTests()
 =======
@@ -1848,39 +2452,45 @@ if ('memory' in performance) {}
   d: boolean, error?: string }> = []
     for (const test of tests) {/* TODO: Fix JSX expression */}
   r: 'Unknown test type' }
+=======
+  async runAllTests(test,)
+  s: Array<{/* TODO: Fix JSX expression */,}}>);
+  ): Promise<{/* TODO: Fix JSX expression */,}d: boolean, error?: string }>;
+  }> {/* TODO: Fix JSX expression */,}d: boolean, error?: string }> = []
+    for (const test of tests) {/* TODO: Fix JSX expression */,}r: 'Unknown test type' ,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
     const,
   results: unknown[] = [],
-      results.push({/* TODO: Fix JSX expression */})
-  e: test.type })
+      results.push({/* TODO: Fix JSX expression */,)})
+  e: test.type ,})
     }
     const passed = results.every(result => result.passed);
-    return { passed, results }
-  }
+    return {passed, results}}}
   // Get test results;
-  getTestResults() {}
-    return [...this.testResults]}
+  getTestResults() {}return [...this.testResults]}
   }
   // Get test statistics;
-  getTestStatistics() {
-    const total = this.testResults.length;
+  getTestStatistics() {const total = this.testResults.length;
     const passed = this.testResults.filter(result => result.status === 'passed').length;
     const failed = this.testResults.filter(result => result.status === 'failed').length;
     const skipped = this.testResults.filter(result => result.status === 'skipped').length;
+<<<<<<< HEAD
     return;
   // Get test, results;
   }
   getTestResults() {}
     return [...this.testResults]}
+=======
+    return {// Get test results;}}getTestResults() {}return [...this.testResults]}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   // Get test statistics;
-  getTestStatistics() {}
-    const total = this.testResults.length;
+  getTestStatistics() {}const total = this.testResults.length;
     const passed = this.testResults.filter(result => result.status === 'passed').length;
     const failed = this.testResults.filter(result => result.status === 'failed').length;
     const skipped = this.testResults.filter(result => result.status === 'skipped').length;
-    return {}
-      total,
+    return {}}total,
 
       passed,
 
@@ -1888,37 +2498,48 @@ if ('memory' in performance) {}
 
       skipped,
 
-      passRate: total > 0 ? (passed / total) * 100 : 0}
+      passRate: total > 0 ? (passed / total) * 100 : 0,}
     }
   }
   // Clear test results;
+<<<<<<< HEAD
   clearTestResults() {}
     this.testResults = []}
+=======
+  clearTestResults() {}this.testResults = []}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   // Generate test report;
-  generateTestReport() {
-    const statistics = this.getTestStatistics();
+  generateTestReport() {const statistics = this.getTestStatistics();
     const results = this.getTestResults();
+<<<<<<< HEAD
     return;
       summary: statistics,
   // Clear test, results;
   }
   clearTestResults() {}
     this.testResults = []}
+=======
+    return {summary: statistics,}
+  // Clear test results;}clearTestResults() {}this.testResults = []}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   // Generate test report;
-  generateTestReport() {}
-    const statistics = this.getTestStatistics();
+  generateTestReport() {}const statistics = this.getTestStatistics();
     const results = this.getTestResults();
-    return {}
-      summary: statistics,
+    return {}}summary: statistics,
       results,
       timestamp: new Date().toISOString(),
-      config: this.config}
+      config: this.config,}
     }
   }
 }
 // React hook for testing;
+<<<<<<< HEAD
+export const useTestRunner = useCallback((...args) => {const testRunner = TestRunner.getInstance();
+  const runTest = useCallback(async (;)
+// React hook for testing;}export const useTestRunner = useCallback((...args) => {}const testRunner = TestRunner.getInstance();
+=======
 export const useTestRunner = useCallback((...args) => {;
     const testRunner = TestRunner.getInstance();
 <<<<<<< HEAD
@@ -1931,11 +2552,13 @@ export const useTestRunner = const useTestRunner = useCallback((...args) => {};
 export const useTestRunner = useCallback((...args) => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   const testRunner = TestRunner.getInstance();
+>>>>>>> origin/main
   const runTest = useCallback(async ();
     component: ReactElement,
     testName: string,
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'),
     assertions?: (result: RenderResult) => void,
+<<<<<<< HEAD
     userInteractions?: (result: RenderResult) => Promise<void>) => {
 <<<<<<< HEAD
     switch (type) {
@@ -1957,6 +2580,19 @@ export const useTestRunner = useCallback((...args) => {}
   ) => {
     ,
     switch (type) ,
+=======
+    userInteractions?: (result: RenderResult) => Promise<void>) => {,
+    switch (type) {
+    userInteractions?: (result: RenderResult) => Promise<void>,}) => {}switch (type) {}case 'component':;
+  const runTest = useCallback(async ();
+    component: ReactElement;);,
+    testName: string),
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'),
+    assertions?: (result: RenderResult) => void,
+    userInteractions?: (result: RenderResult) => Promise<void>,
+  ) => {,
+    switch (type) {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       case 'component':,
         return testRunner.runComponentTest(component, testName, assertions as any);
       case 'integration':;
@@ -1966,26 +2602,33 @@ export const useTestRunner = useCallback((...args) => {}
       case 'accessibility':;
         return testRunner.runAccessibilityTest(component, testName);
       case 'visual':;
-        return testRunner.runVisualRegressionTest(component, testName)
-  }
-      default:}
-        return { passed: false, error: 'Unknown test type' }
-    }
+        return testRunner.runVisualRegressionTest(component, testName)}default:}
+        return {passed: false, error: 'Unknown test type' ,}}}
   }, [testRunner]);
-  return {}
-    runTest,
+  return {}}runTest,
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
-    generateTestReport: () => testRunner.generateTestReport()}
+    generateTestReport: () => testRunner.generateTestReport(),}
   }
 }
 // Test utilities;
+<<<<<<< HEAD
 export const testUtils = const testUtils = const testUtils = {
     // Create mock data</void>;
   };
+=======
+<<<<<<< HEAD
+export const testUtils = {// Create mock data</void>}createMockData: (type: string, count: number = 10) => {,}</void>
+=======
+export const testUtils = {
+    // Create mock data</void>
+  }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   createMockData: (type: string, count: number = 10) => {}</void>;
+>>>>>>> origin/main
 // Test utilities;
+<<<<<<< HEAD
 export const testUtils = const testUtils = {};
   // Create mock data;
   createMockData: (type: string, count: number = 10) => {}
@@ -1995,9 +2638,17 @@ export const testUtils = const testUtils = {};
         id: i + 1,`}
         name: `Mock ${type} ${i + 1}`,
         description: `This is a mock ${type} item`);
+=======
+export const testUtils = {}// Create mock data;
+  createMockData: (type: string, count: number = 10) => {,}const mockData: Array<{id: number; name: string; description: string; createdAt: string, updatedAt: string ,}> = []
+    for (let i = 0; i < count; i++) {}mockData.push({)}id: i + 1,`}
+        name: `Mock ${type,}${i + 1}`,
+        description: `This is a mock ${type,}item`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        updatedAt: new Date().toISOString(),
   // Create mock data,
+<<<<<<< HEAD
   createMockData: (type: string, count: number = 10) => {}
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string, updatedAt: string }> = []
     for (let i = 0; i < count; i++) {
@@ -2006,14 +2657,21 @@ export const testUtils = const testUtils = {};
         id: i + 1,`})
         name: `Mock ${type} ${i + 1}`);
         description: `This is a mock ${type} item`);
+=======
+  createMockData: (type: string, count: number = 10) => {,}const mockData: Array<{id: number; name: string; description: string; createdAt: string, updatedAt: string ,}> = []
+    for (let i = 0; i < count; i++) {mockData.push({)}id: i + 1,`})
+        name: `Mock ${type,}${i + 1}`);
+        description: `This is a mock ${type,}item`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()})
+        updatedAt: new Date().toISOString(),})
     }
     return mockData;
   },
   // Wait for element to appear;
-  waitForElement: (selector: string, timeout: number = 5000) => {
+  waitForElement: (selector: string, timeout: number = 5000) => {,
     ,
+<<<<<<< HEAD
     return new Promise((resolve, reject) => 
   // Wait for element to, appear;
   }
@@ -2050,14 +2708,32 @@ export const testUtils = const testUtils = {};
       observer.observe(document.body, {}
         childList: true,
         subtree: true}
+=======
+    return new Promise((resolve, reject) => {
+  // Wait for element to appear;}waitForElement: (selector: string, timeout: number = 5000) => {,}return new Promise((resolve, reject) => {}const element = document.querySelector(selector);
+      if (element) {}resolve(element);
+        return;}
+      }
+      const observer = new MutationObserver(() => {}const element = document.querySelector(selector);
+        if (element) {}observer.disconnect();
+          resolve(element);}
+        }
       })
-      setTimeout(() => {}
-        observer.disconnect();`}
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+      observer.observe(document.body, {)
+    childList: true),}subtree: true,}
+      observer.observe(document.body, {)
+    );
+        childList: true),}observer.observe(document.body, {)}childList: true,
+        subtree: true,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+      })
+      setTimeout(() => {}observer.disconnect();`}
+        reject(new Error(`Element ${selector)}not found within ${timeout}ms`));
       }, timeout);
     })
   },
   // Simulate user interaction;
+<<<<<<< HEAD
   simulateUserInteraction: async (element: HTMLElement, action: string) => {
     switch (action) 
   // Simulate user, interaction;
@@ -2065,6 +2741,11 @@ export const testUtils = const testUtils = {};
   simulateUserInteraction: async (element: HTMLElement, action: string) => {}
     switch (action) {}
       case 'click': ;
+=======
+  simulateUserInteraction: async (element: HTMLElement, action: string) => {,
+    switch (action) {
+  // Simulate user interaction;}simulateUserInteraction: async (element: HTMLElement, action: string) => {,}switch (action) {}case 'click': ;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         element.click();
         break;
       case 'focus':;
@@ -2074,42 +2755,44 @@ export const testUtils = const testUtils = {};
         element.blur();
         break;
       case 'change':,
-        if (element instanceof HTMLInputElement) {
-    ,
+        if (element instanceof HTMLInputElement) {,
         break;
-      case 'change':
-  }
-        if (element instanceof HTMLInputElement) {}
-          element.value = 'test value';}
-          element.dispatchEvent(new Event('change', { bubbles: true }));
+      case 'change':}if (element instanceof HTMLInputElement) {}element.value = 'test value';}
+          element.dispatchEvent(new Event('change', {bubbles: true ,)}));
         }
         break;
-      default:;
-        throw new Error(`Unknown action: ${action}`);
+      default: ;,
+        throw new Error(`Unknown action: ${action,)}`);
   // Get test results;
-  getTestResults() {/* TODO: Fix JSX expression */}
-  }
+  getTestResults() {/* TODO: Fix JSX expression */,}}
   // Get test statistics;
-  getTestStatistics() {/* TODO: Fix JSX expression */}
-    }
+  getTestStatistics() {/* TODO: Fix JSX expression */,}}
   }
   // Clear test results;
-  clearTestResults() {/* TODO: Fix JSX expression */}
-  }
+  clearTestResults() {/* TODO: Fix JSX expression */,}}
   // Generate test report;
-  generateTestReport() {/* TODO: Fix JSX expression */}
-    }
+  generateTestReport() {/* TODO: Fix JSX expression */,}}
   }
 }
 // React hook for testing;
+<<<<<<< HEAD
 export const useTestRunner = const useTestRunner = const useTestRunner = () => {/* TODO: Fix JSX expression */}
   r: 'Unknown test type' };
     };
+=======
+export const useTestRunner = () => {/* TODO: Fix JSX expression */,}r: 'Unknown test type' ,}
+    }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }, [testRunner]);
+<<<<<<< HEAD
+  return {/* TODO: Fix JSX expression */,}}// Performance testing utilities;
+export const measurePerformance = (fn: () => void): PerformanceMetrics => {,
+=======
   return {/* TODO: Fix JSX expression */}
 
 // Performance testing utilities;
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
+>>>>>>> origin/main
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
@@ -2117,11 +2800,16 @@ export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
   const endTime = const endTime = const endTime = performance.now()
   const endMemory = (performance as any).memory?.usedJSHeapSize || 0,
   
+<<<<<<< HEAD
   return;
     renderTime: endTime - startTime,
+=======
+  return {renderTime: endTime - startTime,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     memoryUsage: endMemory - startMemory,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),}}
 
+<<<<<<< HEAD
   }
 }
 
@@ -2141,6 +2829,12 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
   }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       return jest.fn();
+=======
+// Mock utilities;
+export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {,}): T => {return new Proxy({)}as T, {get(target, prop) {
+      if (prop in overrides) {
+        return overrides[prop as keyof T]}return jest.fn();
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   })
 }
@@ -2148,21 +2842,38 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
 "`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Assertion utilities
 export const expect = const expect = const expect = (actual: unknown) => ()
   toBe: (expected: unknown): AssertionResult => ()
   }),
   toEqual: (expected: unknown): AssertionResult => ()
-    passed: JSON.stringify(actual) === JSON.stringify(expected),
-    message: `Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`,
+=======
+// Assertion utilities;
+export const expect = (actual: unknown) => ({,
+  toBe: (expected: unknown): AssertionResult => ({,
+    passed: actual === expected,
+    message: `Expected ${actual,}to be ${expected}`,
     expected,
-    actual
+    actual;
   }),
+  toEqual: (expected: unknown): AssertionResult => ({,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+    passed: JSON.stringify(actual) === JSON.stringify(expected),
+    message: `Expected ${JSON.stringify(actual),}to equal ${JSON.stringify(expected)}`,
+    expected,
+    actual;
+  }),
+<<<<<<< HEAD
   toBeTruthy: (): AssertionResult => ()
+=======
+  toBeTruthy: (): AssertionResult => ({,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     passed: Boolean(actual),
-    message: `Expected ${actual} to be truthy`,
-    actual
+    message: `Expected ${actual,}to be truthy`,
+    actual;
   }),
+<<<<<<< HEAD
   toBeFalsy: (): AssertionResult => ()
 =======
 // Assertion utilities;
@@ -2189,9 +2900,23 @@ export const expect = (actual: unknown) => ({),
     message: `Expected $actual} to be falsy`,)
     actual)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  toBeFalsy: (): AssertionResult => ({,
+    passed: !actual,
+    message: `Expected ${actual,}to be falsy`,
+    actual;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   })
 });
 ;
 // Export everything;
 export * from '@testing-library/react';
+<<<<<<< HEAD
 export { customRender as, render }
+=======
+<<<<<<< HEAD
+export {customRender as render}}
+=======
+export { customRender as render }
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44

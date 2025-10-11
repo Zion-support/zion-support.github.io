@@ -7,16 +7,11 @@
  * Deep clone an object;
  */;
 export function deepClone<T>(ob);
-  j: T): T {/* TODO: Fix JSX expression */}
-  }
-  if (obj instanceof Date) {/* TODO: Fix JSX expression */}
-  }
-  if (obj instanceof Array) {/* TODO: Fix JSX expression */}
-  }
-  if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
-    for (const key in obj) {/* TODO: Fix JSX expression */}
-      }
+  j: T): T {/* TODO: Fix JSX expression */,}}}
+  if (obj instanceof Date) {/* TODO: Fix JSX expression */,}}
+  if (obj instanceof Array) {/* TODO: Fix JSX expression */,}}
+  if (obj instanceof Object) {/* TODO: Fix JSX expression */,}const clonedObj = {}as T;
+    for (const key in obj) {/* TODO: Fix JSX expression */,}}
     }
     return clonedObj;
   }
@@ -31,6 +26,7 @@ export function deepMerge<T extends Record<string, unknown>>()
 export function deepMerge<T extends Record<string, unknown>>(targe,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: T, sourc);
+<<<<<<< HEAD
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   const output = const output = const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
@@ -38,11 +34,17 @@ export function deepMerge<T extends Record<string, unknown>>(targe,)
       }
     };
   };
+=======
+  e: Partial<T>): T {/* TODO: Fix JSX expression */,}}const output = {...target}for (const key in source) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
+    }
+  }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return output;
 }
 /**;
  * Flatten a nested object;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function flattenObject()
 =======
@@ -50,14 +52,19 @@ export function flattenObject(ob,
   j: Record<string, unknown>,)
   prefix = '',)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export function flattenObject(ob,;)
+  j: Record<string, unknown>,;
+  prefix = '',;
+=======
+export function flattenObject(ob,
+  j: Record<string, unknown>,
+  prefix = '',
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  flattened: Record<string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-      }
+): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
+      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
     }
   }
   return flattened;
@@ -65,6 +72,7 @@ export function flattenObject(ob,
 /**;
  * Unflatten a flattened object;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function unflattenObject()
 =======
@@ -78,6 +86,16 @@ export function unflattenObject(ob,)
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
           current = current[k] as Record<string></string>
+=======
+export function unflattenObject(ob,;)
+  j: Record<string, unknown>,;
+=======
+export function unflattenObject(ob,
+  j: Record<string, unknown>,
+>>>>>>> origin/main
+  separator = '.');
+): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         }
       }
     }
@@ -100,10 +118,15 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,
   j: T,)
   key,)
   s: K[]),
+<<<<<<< HEAD
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
   const result = {} as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */})
     })
+=======
+): Pick<T, K> {/* TODO: Fix JSX expression */,}const result = {}as Pick<T>
+  keys.forEach(key => {/* TODO: Fix JSX expression */,)}})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   })
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   return result;
@@ -119,9 +142,13 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
   key,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: K[]),
+<<<<<<< HEAD
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
   const result = const result = const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */})
+=======
+): Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   })
   return result as Omit<T></T>;
 };
@@ -129,9 +156,21 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
  * Group array items by a key;
  */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function groupBy<T>()
+=======
+export function groupBy<T>(arra,
+  y: T[],
+<<<<<<< HEAD
+  ke,;
+  y: keyof T | ((ite),
+=======
+  ke,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   y: keyof T | ((ite)
+>>>>>>> origin/main
   m: T) => string | number),
+<<<<<<< HEAD
 =======
 export function groupBy<T>(arra,
   y: T[],)
@@ -141,21 +180,28 @@ export function groupBy<T>(arra,
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Record<string, T[]> {/* TODO: Fix JSX expression */},
     {} as Record<string, T[]></string>
+=======
+): Record<string, T[]> {/* TODO: Fix JSX expression */,},
+    {}as Record<string, T[]></string>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   );
 }
 /**;
  * Get unique items from an array;
  */;
 export function unique<T>(arra);
-  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
-  }
+  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}}
   const seen = new Set();
+<<<<<<< HEAD
 <<<<<<< HEAD
   return array.filter()
 =======
   return array.filter(item => {/* TODO: Fix JSX expression */})
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     })
+=======
+  return array.filter(item => {/* TODO: Fix JSX expression */,)}})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     seen.add(value);
     return true;
   })
@@ -174,8 +220,7 @@ export function sortBy<T>(arra,
   m: T) => unknown)>,
   order,
   s: Array<'asc' | 'desc'> = [],
-): T[] {/* TODO: Fix JSX expression */}
-      }
+): T[] {/* TODO: Fix JSX expression */,}}
       // Convert to comparable values;
       const aComp =;
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
@@ -200,41 +245,48 @@ export function chunk<T>()
 export function chunk<T>(arra,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: T[], siz);
+<<<<<<< HEAD
   e: number): T[], [] {/* TODO: Fix JSX expression */}
   }
+=======
+  e: number): T[][] {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return chunks;
 }
 /**;
  * Zip multiple arrays together;
  */;
 export function zip<T>(...array);
+<<<<<<< HEAD
   s: T[], []): T[], [] {/* TODO: Fix JSX expression */}
   }
+=======
+  s: T[][]): T[][] {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return result;
 }
 /**;
  * Format bytes to human readable string;
  */;
 export function formatBytes(byte);
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`;
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+  s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}}`;
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}${sizes[i]}`;
 }
 /**;
  * Format number with separators;
  */;
 export function formatNumber(nu);
-  m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */}
-}
+  m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Format currency;
  */;
 export function formatCurrency(amoun);
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
-  }).format(amount);
+  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);
 }
 /**;
  * Format date;
  */;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function formatDate()
 =======
@@ -243,62 +295,81 @@ export function formatDate(dat,
   option,)
   s: Intl.DateTimeFormatOptions = {},)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export function formatDate(dat,;)
+  e: Date | string | number,
+  option,;
+  s: Intl.DateTimeFormatOptions = {,},;
+=======
+export function formatDate(dat,
+  e: Date | string | number,
+  option,
+  s: Intl.DateTimeFormatOptions = {},
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   locale = 'en-US');
-): string {/* TODO: Fix JSX expression */}
-}
+): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Format relative time;
  */;
 export function formatRelativeTime(dat);
-  e: Date | string | number): string {/* TODO: Fix JSX expression */}`;
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`;
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`;
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`;
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`;
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`;
-  return `${years} year${years > 1 ? 's' : ''} ago`;
+  e: Date | string | number): string {/* TODO: Fix JSX expression */,}}`;
+  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : ''}ago`;`;
+  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : ''}ago`;`;
+  if (days < 7) return `${days}day${days > 1 ? 's' : ''}ago`;`;
+  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : ''}ago`;`;
+  if (months < 12) return `${months}month${months > 1 ? 's' : ''}ago`;`;
+  return `${years}year${years > 1 ? 's' : ''}ago`;
 }
 /**;
  * Truncate string;
  */;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function truncate()
 =======
 export function truncate(st,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export function truncate(st,;)
+=======
+export function truncate(st,
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   r: string, lengt);
-  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */}
-}
+  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Capitalize first letter;
  */;
 export function capitalize(st);
-  r: string): string {/* TODO: Fix JSX expression */}
-}
+  r: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Convert to title case;
  */;
 export function titleCase(st);
-  r: string): string {/* TODO: Fix JSX expression */}
-}
+  r: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Convert to kebab case;
  */;
 export function kebabCase(st);
-  r: string): string {/* TODO: Fix JSX expression */}
-}
+  r: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Convert to camel case;
  */;
 export function camelCase(st);
-  r: string): string {/* TODO: Fix JSX expression */}
-}
+  r: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Convert to snake case;
  */;
 export function snakeCase(st);
+<<<<<<< HEAD
+  r: string): string {/* TODO: Fix JSX expression */,}}}
+export default {/* TODO: Fix JSX expression */,}}}
+`;
+=======
   r: string): string {/* TODO: Fix JSX expression */}
 }
 export default {/* TODO: Fix JSX expression */}
 }
 `;
+>>>>>>> origin/main

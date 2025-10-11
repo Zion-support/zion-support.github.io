@@ -4,6 +4,7 @@
  * Centralized configuration management with environment-based settings;
  */;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
+<<<<<<< HEAD
 export interface AppConfig {
     environment: Environment,
   api:  ,
@@ -15,10 +16,21 @@ export interface AppConfig {
   }
   features: {,
       enableAnalytics: boolean,
+=======
+export interface AppConfig {environment: Environment,}
+  api: {,
+    baseURL: string,
+    timeout: number,
+    retryAttempts: number,
+    enableCaching: boolean,}}
+  features: {,
+    enableAnalytics: boolean,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableErrorReporting: boolean,
     enablePerformanceMonitoring: boolean,
     enableAccessibility: boolean,
     enableSEO: boolean,
+<<<<<<< HEAD
     enablePWA: boolean,
   }
   }
@@ -31,30 +43,40 @@ export interface AppConfig {
   }
   security: {,
       enableCSP: boolean,
+=======
+    enablePWA: boolean,}}
+  performance: {,
+    enableCodeSplitting: boolean,
+    enableLazyLoading: boolean,
+    enableImageOptimization: boolean,
+    enableCaching: boolean,}}
+  security: {,
+    enableCSP: boolean,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableCORS: boolean,
     enableRateLimiting: boolean,
-    maxRequestsPerMinute: number,
-  }
-  }
-  ui: {
+    maxRequestsPerMinute: number,}}
+  ui: {,
     ,
     theme: 'light' | 'dark' | 'auto',
     language: string,
-    timezone: string,
-  }
-  }
-  logging: {
+    timezone: string,}}
+  logging: {,
     ,
     level: 'debug' | 'info' | 'warn' | 'error',
     enableConsole: boolean,
-    enableNetwork: boolean,
-  }
-  }
+    enableNetwork: boolean,}}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const defaultConfig: AppConfig = {
     environment: 'development',
     api: {
+=======
+const defaultConfig: AppConfig = {,
+    environment: 'development',
+  api: {,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
 =======
 const defaultConfig: AppConfig = {,
@@ -64,14 +86,21 @@ const defaultConfig: AppConfig = {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     timeout: 30000,
     retryAttempts: 3,
+<<<<<<< HEAD
     enableCaching: true,
   },
   features: {,
       enableAnalytics: true,
+=======
+    enableCaching: true,},
+  features: {,
+    enableAnalytics: true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
+<<<<<<< HEAD
     enablePWA: true,
   },
   performance: {,
@@ -82,38 +111,52 @@ const defaultConfig: AppConfig = {,
   },
   security: {,
       enableCSP: true,
+=======
+    enablePWA: true,},
+  performance: {,
+    enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true,},
+  security: {,
+    enableCSP: true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100,
-  },
-  ui: {
+    maxRequestsPerMinute: 100,},
+  ui: {,
     ,
     theme: 'auto',
+<<<<<<< HEAD
+    language: 'en',}timezone: 'UTC',},;
+  logging: {,
+=======
     language: 'en',
   }
     timezone: 'UTC'},
   logging: {
+>>>>>>> origin/main
     ,
     level: 'info',
     enableConsole: true,
-    enableNetwork: false,
-  }
-  }
+    enableNetwork: false,}}
 }
+<<<<<<< HEAD
 class ConfigManager {
     private config: AppConfig,
   constructor() ,
+=======
+class ConfigManager {private config: AppConfig,}
+  constructor() {,}this.config = {...defaultConfig}this.loadEnvironmentConfig();
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
-    this.config = { ...defaultConfig }
-    this.loadEnvironmentConfig();
-  }
-private loadEnvironmentConfig(): void {
-    const env = process.env.NODE_ENV as Environment || 'development';
+private loadEnvironmentConfig(): void {const env = process.env.NODE_ENV as Environment || 'development';}
     this.config.environment = env;
     // Override with environment-specific settings;
     if (env === 'production') 
       this.config.logging.level = 'error';
       this.config.logging.enableConsole = false;
+<<<<<<< HEAD
       this.config.features.enableAnalytics = true;
   }
     } else if (env === 'staging') {
@@ -165,12 +208,84 @@ public isProduction(): boolean {
 public isStaging(): boolean {
     return this.config.environment === 'staging'
   }
+=======
+      this.config.features.enableAnalytics = true;}} else if (env === 'staging') {this.config.logging.level = 'warn';
+      this.config.logging.enableConsole = true;}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
+public getConfig(): AppConfig {}}return {...this.config}}}
+public updateConfig(updates: Partial<AppConfig>): void {,}
+    ,}this.config = {...this.config, ...updates}}
+public getApiConfig() {return this.config.api;}}
+public getFeatureConfig() {return this.config.features;}}
+public getPerformanceConfig() {return this.config.performance;}}
+public getSecurityConfig() {return this.config.security;}}
+public getUIConfig() {return this.config.ui;}}
+public getLoggingConfig() {return this.config.logging;}}
+public isDevelopment(): boolean {return this.config.environment === 'development'}}}
+public isProduction(): boolean {return this.config.environment === 'production'}}}
+public isStaging(): boolean {return this.config.environment === 'staging'}}}
 }
 // Export singleton instance;
 export const configManager = new ConfigManager();
 export default configManager;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
+<<<<<<< HEAD
+export interface AppConfig {/* TODO: Fix JSX expression */,}}}
+  feature,;
+  s: {/* TODO: Fix JSX expression */,}}
+  performanc,;
+  e: {/* TODO: Fix JSX expression */,}}
+  securit,;
+  y: {/* TODO: Fix JSX expression */,}}
+  u,;
+  i: {/* TODO: Fix JSX expression */,}}
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+}
+const,;
+  defaultConfig: AppConfig = {/* TODO: Fix JSX expression */,},
+  feature,;
+  s: {/* TODO: Fix JSX expression */,},
+  performanc,;
+  e: {/* TODO: Fix JSX expression */,},
+  securit,;
+  y: {/* TODO: Fix JSX expression */,},
+  u,;
+  i: {/* TODO: Fix JSX expression */,},
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+}
+const,;
+  developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */,},
+  feature,;
+  s: {/* TODO: Fix JSX expression */,},
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+}
+const,;
+  stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */,},
+  feature,;
+  s: {/* TODO: Fix JSX expression */,},
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+}
+const,;
+  productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */,},
+  feature,;
+  s: {/* TODO: Fix JSX expression */,},
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,},
+  securit,;
+  y: {/* TODO: Fix JSX expression */,}}
+}
+const,;
+  testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */,},
+  feature,;
+  s: {/* TODO: Fix JSX expression */,},
+  loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+=======
 export interface AppConfig {/* TODO: Fix JSX expression */}
   }
   feature,
@@ -236,20 +351,16 @@ const,
   loggin,
   g: {/* TODO: Fix JSX expression */}
   }
+>>>>>>> origin/main
 }
-export class ConfigManager {/* TODO: Fix JSX expression */}
-  overrides: Partial<AppConfig> = {}
-  constructor() {/* TODO: Fix JSX expression */}
-  }
-  static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
-    }
+export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<AppConfig> = {,}constructor() {/* TODO: Fix JSX expression */,}}
+  static getInstance(): ConfigManager {/* TODO: Fix JSX expression */,}}}
     return ConfigManager.instance;
   }
   /**;
    * Detect current environment;
    */;
-  private detectEnvironment(): Environment {/* TODO: Fix JSX expression */}
-      }
+  private detectEnvironment(): Environment {/* TODO: Fix JSX expression */,}}}
       if (nodeEnv === 'test') return 'test';
       if (nodeEnv === 'production') return 'production';
       if (nodeEnv === 'development') return 'development';
@@ -259,10 +370,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Load configuration based on environment;
    */;
+<<<<<<< HEAD
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
     let config = let config = let config = { ...defaultConfig }
     switch (this.environment) {/* TODO: Fix JSX expression */};
     };
+=======
+  private loadConfig(): AppConfig {/* TODO: Fix JSX expression */,}}let config = {...defaultConfig}switch (this.environment) {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
@@ -271,18 +386,22 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Deep merge two config objects;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private mergeConfig()
 =======
   private mergeConfig(bas,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  private mergeConfig(bas,;)
+=======
+  private mergeConfig(bas,
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: AppConfig, overrid);
-  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result = { ...base } as AppConfig;
+  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}}const result = {...base}as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
-  y: K) => {/* TODO: Fix JSX expression */}
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
-          } else {/* TODO: Fix JSX expression */}
-          }
+  y: K) => {/* TODO: Fix JSX expression */,}result[key] = Object.assign({)}, baseValue, value) as typeof baseValue;
+          } else {/* TODO: Fix JSX expression */,}}}
         }
       } )
     return result;
@@ -299,16 +418,30 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
 =======
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
+<<<<<<< HEAD
   y: K,)
     nestedKe,)
+=======
+  y: K,
+<<<<<<< HEAD
+    nestedKe,;
+  y: NK;),
+=======
+    nestedKe,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   y: NK;)
+>>>>>>> origin/main
   ): AppConfig[K][NK],
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,)
   y: K,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     nestedKey?: NK;);
+<<<<<<< HEAD
   ): AppConfig[K] | AppConfig[K], [NK] {/* TODO: Fix JSX expression */}
     }
+=======
+  ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     return this.config[key]
   }
   /**;
@@ -330,30 +463,55 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
+<<<<<<< HEAD
   y: NK,)
     valu,)
+=======
+  y: NK,
+<<<<<<< HEAD
+    valu,;
+  e: AppConfig[K][NK]),
+=======
+    valu,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   e: AppConfig[K][NK])
+>>>>>>> origin/main
   ): void,
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKeyOrValu,)
   e: NK | AppConfig[K],)
     value?: AppConfig[K][NK]);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
+=======
+  ): void {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, currentValue, {/* TODO: Fix JSX expression */,})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         }) as AppConfig[K]
-      } else {/* TODO: Fix JSX expression */}
-        this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */})
+      } else {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, defaultValue, {/* TODO: Fix JSX expression */,})
         }) as AppConfig[K]
       }
-    } else {/* TODO: Fix JSX expression */}
-    }
+    } else {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Get default value for a config key;
    */;
   private getDefaultForKey<K extends keyof AppConfig>(ke);
+<<<<<<< HEAD
+  y: K): AppConfig[K] {/* TODO: Fix JSX expression */,},
+      feature,;
+  s: {/* TODO: Fix JSX expression */,},
+      performanc,;
+  e: {/* TODO: Fix JSX expression */,},
+      securit,;
+  y: {/* TODO: Fix JSX expression */,},
+      u,;
+  i: {/* TODO: Fix JSX expression */,},
+      loggin,;
+  g: {/* TODO: Fix JSX expression */,}}
+=======
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */},
       feature,
   s: {/* TODO: Fix JSX expression */},
@@ -366,92 +524,76 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
       loggin,
   g: {/* TODO: Fix JSX expression */}
       }
+>>>>>>> origin/main
     }
     return defaultValues[key]
   }
   /**;
    * Get full configuration;
    */;
-  getConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    return { ...this.config }
-  }
+  getConfig(): AppConfig {/* TODO: Fix JSX expression */,}}return {...this.config}}}
   /**;
    * Get environment;
    */;
-  getEnvironment(): Environment {/* TODO: Fix JSX expression */}
-  }
+  getEnvironment(): Environment {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if feature is enabled;
    */;
   isFeatureEnabled(featur);
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
-  }
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Enable feature;
    */;
   enableFeature(featur);
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
-  }
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}
   /**;
    * Disable feature;
    */;
   disableFeature(featur);
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
-  }
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}
   /**;
    * Get API configuration;
    */;
-  getAPIConfig() {/* TODO: Fix JSX expression */}
-    return { ...this.config.api }
-  }
+  getAPIConfig() {/* TODO: Fix JSX expression */,}return {...this.config.api}}}
   /**;
    * Update API configuration;
    */;
   updateAPIConfig(confi);
-  g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
-    this.config.api = { ...this.config.api, ...config }
-  }
+  g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */,}}this.config.api = {...this.config.api, ...config}}
   /**;
    * Check if in production;
    */;
-  isProduction(): boolean {/* TODO: Fix JSX expression */}
-  }
+  isProduction(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if in development;
    */;
-  isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  }
+  isDevelopment(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if in test;
    */;
-  isTest(): boolean {/* TODO: Fix JSX expression */}
-  }
+  isTest(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if in staging;
    */;
-  isStaging(): boolean {/* TODO: Fix JSX expression */}
-  }
+  isStaging(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Override configuration;
    */;
   override(confi);
-  g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */}
-  }
+  g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */,}}}
   /**;
    * Reset configuration;
    */;
-  reset(): void {/* TODO: Fix JSX expression */}
-    this.overrides = {}
-    this.config = this.loadConfig();
+  reset(): void {/* TODO: Fix JSX expression */,}}this.overrides = {}this.config = this.loadConfig();
   }
   /**;
    * Export configuration as JSON;
    */;
-  export(): string {/* TODO: Fix JSX expression */}
-  }
+  export(): string {/* TODO: Fix JSX expression */,}}}
   /**;
    * Validate configuration;
    */;
+<<<<<<< HEAD
   validate(): {/* TODO: Fix JSX expression */}
   s: string[] }, {/* TODO: Fix JSX expression */}
     }
@@ -459,11 +601,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
     if (this.config.api.retryAttempts < 0) {/* TODO: Fix JSX expression */}
     }
+=======
+  validate(): {/* TODO: Fix JSX expression */,}s: string[] ,} {/* TODO: Fix JSX expression */,}}
+    if (this.config.api.timeout < 1000) {/* TODO: Fix JSX expression */,}}
+    if (this.config.api.retryAttempts < 0) {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Validate security configuration;
-    if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
-    }
+    if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */,}}
+    return {/* TODO: Fix JSX expression */,}}}
   }
 }
 // Export singleton instance;

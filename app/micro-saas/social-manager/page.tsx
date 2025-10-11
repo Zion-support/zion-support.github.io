@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 const SocialMediaManagerPage: React.FC = () => {
@@ -9,8 +10,15 @@ const SocialMediaManagerPage: React.FC = () => {
     return (
     <>,
       <Helmet>
+=======
+import {Helmet}}from 'react-helmet-async';
+import {Share2, ArrowRight}}from 'lucide-react';
+const SocialMediaManagerPage: React.FC = () => {,
+    return(<>,)
+      <Helmet />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -31,18 +39,27 @@ const SocialMediaManagerPage: React.FC = () => {
               AI Social Media </h1></h1></h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span></span></span>
             </h1>
-            <p>
-              AI-powered social media management and automation. Schedule posts, analyze engagement,
+            <p>AI-powered social media management and automation. Schedule posts, analyze engagement,</p>
               and grow your social presence with intelligent automation.
+<<<<<<< HEAD
             </p></p></p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
+=======
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <button>
                 </button></button><span>Get Started</span></span></span>
                 <ArrowRight>
               </button>
+<<<<<<< HEAD
               <button>
                 View Demo;
               </button></button></button>
+=======
+              <button>View Demo;</button>
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>
           </div>
         </section>
@@ -54,6 +71,7 @@ const SocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div></div></div>
             <div className="text-center mb-16"></div></div></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2></h2></h2>
@@ -68,5 +86,18 @@ const SocialMediaManagerPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
+=======
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
+              <p>We're developing powerful social media management solutions. Stay tuned for updates!</p>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>,
+  )}};
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 
 export default SocialMediaManagerPage;

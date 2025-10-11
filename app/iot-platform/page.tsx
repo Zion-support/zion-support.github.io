@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import {CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
 },
+<<<<<<< HEAD
     {
       icon: Clock,
       title: '24/7 Monitoring',
@@ -19,6 +20,15 @@ return ()
 =======
 return (
             <p>
+=======
+    {icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
+      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']},
+    {}}
+  ]
+return(<p>)</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               Our IoT platform provides everything you need to build, deploy, and scale;
               Internet of Things solutions for any industry or use case.
             </p></p></p>
@@ -32,16 +42,23 @@ return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Use Cases Section */}
 <<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+      {/* Use Cases Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>
@@ -65,9 +82,17 @@ return (
             <p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               Our IoT platform supports a wide range of industries and applications,
+=======
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>IoT Use Cases;</h2>
+            </h2>
+            <p>Our IoT platform supports a wide range of industries and applications,</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               from smart manufacturing to connected cities.
             </p></p></p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
@@ -83,20 +108,35 @@ return (
                 <p className="text-gray-300">{useCase.description}</p></p></p>)
               </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
+                <div className="text-4xl mb-4">{useCase.icon</div>}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description</p>}</p>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section */}
 <<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>
@@ -120,9 +160,17 @@ return (
             <p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               Experience the benefits of a comprehensive IoT platform designed for scale,
+=======
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Why Choose Our IoT Platform?</h2>
+            </h2>
+            <p>Experience the benefits of a comprehensive IoT platform designed for scale,</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               security, and performance.
             </p></p></p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
@@ -131,6 +179,12 @@ return (
             {benefits.map((benefit, index) => (
                 <div key=index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div></div></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div></div></div>
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,
+            {benefits.map((benefit, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                   <CheckCircle />
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3></h3></h3>)
               </div>)
@@ -139,15 +193,23 @@ return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
           <p></p>
             Start building your IoT platform today. Get started with a free consultation;
+=======
+      {/* CTA Section */} <p>Start building your IoT platform today. Get started with a free consultation;</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             and discover how we can help you succeed.
           </p></p></p>
             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button></button>
               Schedule Demo
+=======
+            <button>Schedule Demo;</button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </button>
 =======
             <button>

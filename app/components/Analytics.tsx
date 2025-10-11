@@ -1,9 +1,9 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
-interface AnalyticsProps {
-    enableGoogleAnalytics?: boolean;
+import React, {Suspense, lazy}from 'react';
+interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
+<<<<<<< HEAD
   enableUserBehaviorTracking?: boolean;
   }
 }
@@ -35,6 +35,19 @@ if (enableUserBehaviorTracking) {
     initializeUserBehaviorTracking()
   }
     }
+=======
+  enableUserBehaviorTracking?: boolean;}}
+const Analytics: React.FC<AnalyticsProps> = ({,
+    enableGoogleAnalytics = true,
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
+  enableUserBehaviorTracking = true;}}) => {useEffect(() => {
+    if (enableGoogleAnalytics) {
+      initializeGoogleAnalytics()}}
+if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}}
+if (enableErrorTracking) {initializeErrorTracking()}}
+if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 <<<<<<< HEAD
 const initializeGoogleAnalytics = const initializeGoogleAnalytics = ();
@@ -44,10 +57,11 @@ const initializeGoogleAnalytics = (;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,
     document.head.appendChild(script)
 // Initialize gtag;
     (window as any).dataLayer = (window as any).dataLayer || [],
+<<<<<<< HEAD
     function gtag(...args: any[]) {
 <<<<<<< HEAD
     ) => {
@@ -92,6 +106,36 @@ const initializePerformanceMonitoring = (;)
   return ()
     $3)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    function gtag(...args: any[]) {,
+    ) => {
+  return($3;)
+  )}(window as any).dataLayer.push(args);}
+    }
+    (window as any).gtag = gtag;
+gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID', {)
+    page_title: document.title,
+      page_location: window.location.href,
+      send_page_view: true;,}})
+  }
+const initializePerformanceMonitoring = (;
+    if ('PerformanceObserver' in window) {// Monitor Core Web Vitals;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+<<<<<<< HEAD
+          if (entry.entryType === 'largest-contentful-paint') {) => {
+  return($3;)
+  )}trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
+          } else if (entry.entryType === 'first-input') {const fid = (entry as any).processingStart - entry.startTime;
+            trackEvent('web_vitals', 'FID', Math.round(fid))}} else if (entry.entryType === 'layout-shift') {if (!(entry as any).hadRecentInput) {
+              trackEvent('web_vitals', 'CLS', (entry as any).value)}}
+=======
+          if (entry.entryType === 'largest-contentful-paint') {) => {;
+  return (
+    $3
+  )
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
           } else if (entry.entryType === 'first-input') {
@@ -103,11 +147,13 @@ const initializePerformanceMonitoring = (;)
               trackEvent('web_vitals', 'CLS', (entry as any).value)
   }
             }
+>>>>>>> origin/main
           }
         }
       })
-observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'])})
 // Monitor page load time;
+<<<<<<< HEAD
       window.addEventListener('load', () => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) 
@@ -138,9 +184,27 @@ const initializeErrorTracking = (;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
         error: event.error?.stack,}
+=======
+      window.addEventListener('load', () => {const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))}}
+      })
+    }
+  }
+const initializeErrorTracking = (;
+    // Track JavaScript errors;
+    window.addEventListener('error', (event) => {trackEvent('error', 'javascript_error', {)
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,) => {
+  return($3;)
+  )}error: event.error?.stack,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       })
     });
 // Track unhandled promise rejections;
+<<<<<<< HEAD
     window.addEventListener('unhandledrejection', (event) => {
 <<<<<<< HEAD
     trackEvent()
@@ -167,6 +231,18 @@ const initializeErrorTracking = (;)
   }
 
         })
+=======
+    window.addEventListener('unhandledrejection', (event) => {trackEvent('error', 'unhandled_promise_rejection', {)
+        reason: event.reason,
+        promise: event.promise;,}})
+    })
+// Track resource loading errors;
+    window.addEventListener('error', (event) => {if (event.target !== window) {
+        trackEvent('error', 'resource_error', {)
+          type: (event.target as any).tagName,
+          src: (event.target as any).src || (event.target as any).href,
+          error: event.type;,}})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
     }, true);
   }
@@ -179,6 +255,7 @@ const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
 const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {)
+<<<<<<< HEAD
     page_title: document.title,)
       page_location: window.location.href,) => 
   return ()
@@ -198,23 +275,35 @@ const initializeUserBehaviorTracking = (;
           trackEvent('engagement', 'scroll_depth', maxScroll)
   }
         }
+=======
+    page_title: document.title,
+      page_location: window.location.href,) => {
+  return($3;)
+  )}page_path: window.location.pathname,}
+    })
+// Track scroll depth;
+
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%;
+          trackEvent('engagement', 'scroll_depth', maxScroll)}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
     })
 // Track time on page;
 
     const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {
-    const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage)
-  }
-    })
+    window.addEventListener('beforeunload', () => {const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      trackEvent('engagement', 'time_on_page', timeOnPage)}})
 // Track clicks on important elements;
-    document.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
+    document.addEventListener('click', (event) => {const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
 if (tagName === 'a') 
 
         const href = (target as HTMLAnchorElement).href;
+<<<<<<< HEAD
 <<<<<<< HEAD
         trackEvent()
 =======
@@ -269,22 +358,56 @@ const trackEvent = (;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
         value: typeof value === 'number' ? value : undefined,}
+=======
+        trackEvent('engagement', 'link_click', {)
+          link_url: href,
+          link_text: target.textContent?.trim(),}})
+      } else if (tagName === 'button') {trackEvent('engagement', 'button_click', {)
+          button_text: target.textContent?.trim(),
+          button_class: target.className;,}})
+      }
+    })
+// Track form submissions;
+    document.addEventListener('submit', (event) => {const form = event.target as HTMLFormElement;
+      trackEvent('engagement', 'form_submit', {)
+        form_id: form.id,
+        form_class: form.className,
+        form_action: form.action;,}})
+    })
+  }
+const trackEvent = (;
+    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', action, {)
+        event_category: category,
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
+  return($3;)
+  )}value: typeof value === 'number' ? value : undefined,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       })
     }
   };
 return null;
 }
 // Extend Window interface for gtag;
+<<<<<<< HEAD
 declare global {
     interface Window;
     dataLayer: any[],
     gtag: (...args: any[]) => void;
   }
   }
+=======
+declare global {interface Window {}
+    dataLayer: any[],
+    gtag: (...args: any[]) => void;,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 };
 
 export default Analytics;
 // Analytics Provider for context;
+<<<<<<< HEAD
+export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
+      <Analytics />}{children}
+=======
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 <<<<<<< HEAD
     return ()
@@ -293,8 +416,14 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     <>
       <Analytics />
   },
+<<<<<<< HEAD
     {children})
     </>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    {children}
+>>>>>>> origin/main
+    </>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   );
 }

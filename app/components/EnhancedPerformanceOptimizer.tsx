@@ -1,14 +1,15 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
 }
 
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
@@ -134,6 +135,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return <>{children}</>;
 };
 

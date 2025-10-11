@@ -1,37 +1,39 @@
+import React from 'react';
 'use client';
 /**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
+<<<<<<< HEAD
+ */,;
+export class SecurityManager {,;}
+=======
  */,
 export class SecurityManager {
     ,
+>>>>>>> origin/main
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
- */
-  }
-export class SecurityManager {}
-  private static instance: SecurityManager,}
-  private constructor() {}
-  static getInstance(): SecurityManager {}
-    if (!SecurityManager.instance) {}
-      SecurityManager.instance = new SecurityManager();}
+ */}export class SecurityManager {}}private static instance: SecurityManager,}
+  private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
  * Generate,
   d: 2025-10-08T0,
   2: 0,
+<<<<<<< HEAD
   6: 22.083Z;
+=======
+  6: 22.083Z;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
  */,
-export class SecurityManager {/* TODO: Fix JSX expression */}
-  private constructor() {}
-  static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
-    }
+export class SecurityManager {/* TODO: Fix JSX expression */,}}private constructor() {}static getInstance(): SecurityManager {/* TODO: Fix JSX expression */,}}}
     return SecurityManager.instance;
   }
   /**;
    * Sanitize user input to prevent XSS attacks;
    */;
-  sanitizeInput(input: string): string {
+  sanitizeInput(input: string): string {,}
     ,
+<<<<<<< HEAD
     return, input;
   }
   sanitizeInput(input: string): string {}
@@ -41,20 +43,29 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
 =======
       .replace(/[<>{)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    return input;}sanitizeInput(input: string): string {,}}return input;
+      .replace(/[<React.Fragment>{)</React.Fragment>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     ]/g, '');
       .replace(/javascript:/gi, '');
-      .replace(/on\w+=/gi, '')
-  }
-      .trim();}
+      .replace(/on\w+=/gi, '')}.trim();}
   sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */}
-  }
+  t: string): string {/* TODO: Fix JSX expression */,}}}
   /**;
    * Validate and sanitize URL;
    */;
-  sanitizeUrl(url: string): string {
+  sanitizeUrl(url: string): string {,}
     ,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    try {,;}
+      const parsed = new URL(url),;
+      if (!['http:', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);
+      if (!['http:', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     try {,
       const parsed = const parsed = const parsed = new URL(url),
       if (!['http:', 'https: '].includes(parsed.protocol)) {,
@@ -69,26 +80,32 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       const parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
+>>>>>>> origin/main
       }
       return parsed.toString();
-    } catch {}
-      return '';}
+    } catch {}}return '';}
   sanitizeUrl(ur);
-  l: string): string {/* TODO: Fix JSX expression */}
-      }
+  l: string): string {/* TODO: Fix JSX expression */,}}}
       return parsed.toString();
-    } catch {/* TODO: Fix JSX expression */}
-    }
+    } catch {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Generate secure random token;
    */;
-  generateSecureToken(length: number = 32): string {
+  generateSecureToken(length: number = 32): string {,}
     ,
+<<<<<<< HEAD
 <<<<<<< HEAD
     const array = const array = const array = new Uint8Array(length),
     if (typeof window !== 'undefined' && window.crypto) {,;
   };
+=======
+    const array = new Uint8Array(length),;
+    if (typeof window !== 'undefined' && window.crypto) {,}window.crypto.getRandomValues(array);}
+    } else {// Fallback for Node.js environment;}}generateSecureToken(length: number = 32): string {,}}const array = new Uint8Array(length);
+    if (typeof window !== 'undefined' && window.crypto) {}window.crypto.getRandomValues(array);}
+    } else {}}// Fallback for Node.js environment;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 =======
     const array = new Uint8Array(length),
     if (typeof window !== 'undefined' && window.crypto) ,
@@ -104,25 +121,34 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       window.crypto.getRandomValues(array);}
     } else {}
       // Fallback for Node.js environment;
+>>>>>>> origin/main
       const crypto = import("crypto");
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);
-  h: number = 32): string {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
+  h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
   /**;
    * Implement rate limiting;
    */;
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {}
-    const now = Date.now();
+  checkRateLimit(key: string, limit: number, windowMs: number): boolean {,}}const now = Date.now();
     const windowStart = now - windowMs;
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
+<<<<<<< HEAD
     const validRequests = const validRequests = requests.filter((time: number) => time > windowStart),;
+=======
+    const validRequests = requests.filter((time: number) => time > windowStart),
+<<<<<<< HEAD
+    if (validRequests.length >= limit) {,;
+    // Remove old requests;
+    const validRequests = requests.filter((time: number) => time > windowStart),}if (validRequests.length >= limit) {}return false;}
+  checkRateLimit(ke,;)
+  y: string, limi,;
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     if (validRequests.length >= limit) {;
     ,
     // Remove old requests;
@@ -131,23 +157,34 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     if (validRequests.length >= limit) {};
       return false;}
 <<<<<<< HEAD
+<<<<<<< HEAD
   checkRateLimit()
 =======
   checkRateLimit(ke,)
   y: string, limi,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  checkRateLimit(ke,
+  y: string, limi,
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   t: number, windowM);
-  s: number): boolean {/* TODO: Fix JSX expression */}
-    }
+  s: number): boolean {/* TODO: Fix JSX expression */,}}}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
+<<<<<<< HEAD
   }</>
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
     }
+=======
+  }}</React.Fragment>
+  private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
+  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     return global._rateLimitStorage;
   }
 }

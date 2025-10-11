@@ -1,15 +1,8 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
+import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
+<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
@@ -141,6 +134,9 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+=======
+  return null;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 };
 
 export default PerformanceMonitor;

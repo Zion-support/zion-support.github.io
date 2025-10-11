@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
 const EmailMarketingSuitePage: React.FC = () => {
@@ -9,8 +10,15 @@ const EmailMarketingSuitePage: React.FC = () => {
     return (
     <>,
       <Helmet>
+=======
+import {Helmet}}from 'react-helmet-async';
+import {Mail, ArrowRight}}from 'lucide-react';
+const EmailMarketingSuitePage: React.FC = () => {,
+    return(<>,)
+      <Helmet />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -31,18 +39,27 @@ const EmailMarketingSuitePage: React.FC = () => {
               AI Email </h1></h1></h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span></span></span>
             </h1>
-            <p>
-              AI-powered email marketing automation. Create, send, and optimize email campaigns;
+            <p>AI-powered email marketing automation. Create, send, and optimize email campaigns;</p>
               with intelligent automation and personalization.
+<<<<<<< HEAD
             </p></p></p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
+=======
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <button>
                 </button></button><span>Get Started</span></span></span>
                 <ArrowRight>
               </button>
+<<<<<<< HEAD
               <button>
                 View Demo;
               </button></button></button>
+=======
+              <button>View Demo;</button>
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>
           </div>
         </section>
@@ -54,6 +71,7 @@ const EmailMarketingSuitePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div></div></div>
             <div className="text-center mb-16"></div></div></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2></h2></h2>
@@ -68,5 +86,18 @@ const EmailMarketingSuitePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
+=======
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
+              <p>We're developing powerful email marketing solutions. Stay tuned for updates!</p>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>,
+  )}};
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 
 export default EmailMarketingSuitePage;

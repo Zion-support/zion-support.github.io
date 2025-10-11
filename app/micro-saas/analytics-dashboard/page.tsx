@@ -1,9 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
 <<<<<<< HEAD
     const features = const features = const features = [
+=======
+import {Helmet}}from 'react-helmet-async';
+import {BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield}}from 'lucide-react';
+const AIAnalyticsDashboardPage: React.FC = () => {,
+    const features = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     {
 =======
     const features = [
@@ -11,6 +18,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: BarChart,
       title: 'Real-time Analytics',
+<<<<<<< HEAD
       description: 'Live data visualization with instant updates and interactive charts.'
   },
     {
@@ -35,12 +43,40 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   },
     {
       icon: Target,
+=======
+      description: 'Live data visualization with instant updates and interactive charts.',},
+    {icon: TrendingUp,
+      title: 'Predictive Insights',
+      description: 'AI-powered forecasting and trend analysis for better decision making.',},
+    {icon: Users,
+      title: 'User Behavior Tracking',
+      description: 'Comprehensive user analytics and engagement metrics tracking.',},
+    {icon: DollarSign,
+      title: 'Revenue Analytics',
+      description: 'Detailed financial metrics and revenue optimization insights.',},
+    {icon: Zap,
+      title: 'Custom Dashboards',
+      description: 'Build personalized dashboards tailored to your business needs.',},
+    {icon: Target,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       title: 'Goal Tracking',
+<<<<<<< HEAD
+      description: 'Monitor KPIs and business objectives with automated alerts.',}}
+  ]
+=======
       description: 'Monitor KPIs and business objectives with automated alerts.'
+<<<<<<< HEAD
   };
     };
   ];
 const benefits = const benefits = const benefits = [
+=======
+  }
+    }
+  ];];];
+>>>>>>> origin/main
+const benefits = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
 
@@ -52,7 +88,19 @@ const benefits = const benefits = const benefits = [
 ;
     'Mobile-responsive design';
   ];
+<<<<<<< HEAD
 const metrics = const metrics = const metrics = [
+=======
+const metrics = [
+<<<<<<< HEAD
+    {label: 'Data Sources', value: '50+', icon: BarChart ,},
+    {label: 'Update Frequency', value: 'Real-time', icon: Clock ,},
+    {label: 'Accuracy Rate', value: '99.9%', icon: Shield ,},
+    {label: 'User Satisfaction', value: '4.9/5', icon: Star ,}]
+return(<>)
+      <Helmet />
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
 <<<<<<< HEAD
@@ -68,6 +116,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -93,22 +142,32 @@ return (
                 Real-time Business </h1></h1></h1>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span></span></span>
               </h1>
-              <p>
-                Transform your data into actionable insights with our AI-powered analytics dashboard.;
+              <p>Transform your data into actionable insights with our AI-powered analytics dashboard.;</p>
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
+<<<<<<< HEAD
               </p></p></p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
+=======
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 <button>
                   </button></button><span>Start Free Trial</span></span></span>
                   <ArrowRight>
                 </button>
+<<<<<<< HEAD
                 <button>
                   View Demo,
                 </button></button></button>
+=======
+                <button>View Demo,</button>
+                </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
@@ -136,15 +195,44 @@ return (
                   <p className="text-gray-300">{feature.description}</p></p></p>)
                 </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+        {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+              <p>Everything you need to make data-driven decisions with confidence;</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+              {features.map((feature, index) => (</div>} <div key={index}className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"></div>,
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform"></div>,
+                    <feature />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description</p>}</p>
+                </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Metrics Section */}
 <<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+        {/* Metrics Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -153,6 +241,7 @@ return (
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
+<<<<<<< HEAD
               <p></p>
                 Built for scale and reliability
               </p>
@@ -187,15 +276,33 @@ return (
                   <div className="text-gray-300">{metric.label}</div></div></div>)
                 </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+              <p>Built for scale and reliability;</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>,
+              {metrics.map((metric, index) => (</div>} <div key={index}className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                    <metric />
+                  <div className="text-3xl font-bold text-white mb-2">{metric.value</div>}</div>
+                  <div className="text-gray-300">{metric.label</div>}</div>
+                </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Benefits Section */}
 <<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+        {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -204,6 +311,7 @@ return (
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
+<<<<<<< HEAD
               <p></p>
                 Experience the difference with our AI-powered analytics platform
               </p>
@@ -253,6 +361,17 @@ return (
                     <CheckCircle>
                     <span className="text-gray-300 text-lg">{benefit}</span></span></span>)
                   </div>)
+=======
+              <p>Experience the difference with our AI-powered analytics platform;</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>,
+              <div className="space-y-6"></div>
+                {benefits.map((benefit, index) => (</div>} <div key={index}className="flex items-start space-x-3"></div>
+                    <CheckCircle />
+                    <span className="text-gray-300 text-lg">{benefit</span>}</span>
+                  </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 ))}
               </div>
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div></div></div>
@@ -276,16 +395,23 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* CTA Section */}
 <<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
+=======
+        {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center" / /></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30" / /></div>
               <h2></h2>
@@ -297,6 +423,17 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
                 <button></button>
+=======
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
+              <h2>Ready to Transform Your Analytics?</h2>
+              </h2>
+              <p>Join thousands of businesses already using our AI analytics dashboard;</p>
+                to make smarter, data-driven decisions.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                <button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                   <span>Start Free Trial</span>
                   <ArrowRight></ArrowRight>
                 </button>
@@ -326,10 +463,15 @@ return (
                   </button></button><span>Start Free Trial</span></span></span>
                   <ArrowRight>
                 </button>
+<<<<<<< HEAD
                 <button>
                   Schedule Demo;
                 </button></button></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+                <button>Schedule Demo;</button>
+                </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               </div>
             </div>
           </div>

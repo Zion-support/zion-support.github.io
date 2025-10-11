@@ -1,10 +1,17 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
 <<<<<<< HEAD
   const features = const features = const features = [
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap}}from 'lucide-react';
+const BlockchainPage: React.FC = () => {,
+  const features = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     {
 =======
   const features = [
@@ -12,32 +19,48 @@ const BlockchainPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Shield,
       title: 'Secure Blockchain Solutions',
-      description: 'Advanced blockchain technology with enterprise-grade security and compliance'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced blockchain technology with enterprise-grade security and compliance',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
-    },
-    {
-      icon: Brain,
+      description: 'Lightning-fast blockchain transactions and smart contract execution',},
+    {icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',},
+    {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide blockchain deployment and support for international businesses';
     };
   ];
   const benefits = const benefits = const benefits = [
+=======
+<<<<<<< HEAD
+      description: 'Worldwide blockchain deployment and support for international businesses',}];
+=======
+      description: 'Worldwide blockchain deployment and support for international businesses'
+    }
+  ];];];
+>>>>>>> origin/main
+  const benefits = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
     'Scalable and flexible blockchain solutions',
     '24/7 technical support',
+<<<<<<< HEAD
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
+=======
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+      <Helmet />
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Proven track record of success';
   ];
 <<<<<<< HEAD
@@ -70,11 +93,17 @@ const BlockchainPage: React.FC = () => {
 =======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
       </div></div><Helmet>
+=======
+      <Helmet>
+>>>>>>> origin/main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <title>Blockchain Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
+<<<<<<< HEAD
 )
             </div>)
           ))}
@@ -89,10 +118,45 @@ const BlockchainPage: React.FC = () => {
                 </div></div><CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span></span></span>)
               </div>)
+=======
+<<<<<<< HEAD
+<div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Blockchain Solutions;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with cutting-edge blockchain technology and decentralized solutions.</p>
+            Powered by advanced AI and industry expertise.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our blockchain solutions deliver unmatched performance, security, and scalability.</p>
+          </p>
+        </div>
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,</div>
+          {features.map((feature, index) => (
+            <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description</p>}</p>
+=======
+
+>>>>>>> origin/main
+            </div>
+          ))}
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Blockchain Solutions?</h2>
+          </h2>
+          <div className="grid md: grid-cols-2 gap-6">,</div>
+            {benefits.map((benefit, index) => (
+              <div key={index}className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit</span>}</span>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             ))}
           </div>
         </div>
         <section className="py-16 bg-white">
+<<<<<<< HEAD
           </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             </div></div><div className="text-center mb-12">
               </div></div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -107,6 +171,20 @@ const BlockchainPage: React.FC = () => {
                 </div></div><div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   </div></div><Link className="w-8 h-8 text-blue-600" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
+                Why Choose Our Blockchain Services?
+              </h2>
+              <p className="text-xl text-gray-600">Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions;</p>
+  </
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Link className="w-8 h-8 text-blue-600" />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3></h3></h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p></p></p>
@@ -153,7 +231,13 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Services by Category */}{categories.map(category => ()
+          <section key={category}className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
         {/* Services by Category */},
+<<<<<<< HEAD
 <<<<<<< HEAD
     {categories.map()
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
@@ -161,6 +245,21 @@ const BlockchainPage: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
                 {blockchainServices
+=======
+    {categories.map(category => (
+          <section key={category} className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/main
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
+                  {category}Services;
+  </
+                <p className="text-xl text-gray-600">Professional {category.toLowerCase()</p>}}solutions powered by blockchain technology;
+  </
+              </div>
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+                {blockchainServices;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                           {service.features.map((feature, featureIndex) => ()
@@ -194,6 +293,7 @@ const BlockchainPage: React.FC = () => {
                 {blockchainServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (
+<<<<<<< HEAD
                     </div></div><div key=index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                       </div></div><div className="text-4xl mb-4">{service.icon}</div></div></div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3></h3></h3>
@@ -215,20 +315,48 @@ const BlockchainPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature})
                             </li>)
+=======
+                    <div key={index}className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">,</div>
+                      <div className="text-4xl mb-4">{service.icon</div>}</div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description</p>}</p>
+                      <div className="mb-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-2xl font-bold text-blue-600">{service.price</span>}</span>
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice,</span>}</span>
+                        </div>
+                        <div className="text-sm text-green-600 font-semibold">Save up to 50% vs market rates;</div>
+  </
+                      </div>
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
+                        <ul className="space-y-1">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex}className="flex items-center text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                              {feature} </li>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                           ))}
                         </ul>
                       </div>
                       <div className="mb-4">
+<<<<<<< HEAD
                         </div></div><h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
                             </div></div><span key=techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech})
                             </span></span></span>)
+=======
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
+                        <div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div>
+                            <span key={techIndex}className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">{tech</span>} </span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                           ))}
                         </div>
                       </div>
                       <div className="mb-6">
+<<<<<<< HEAD
                         </div></div><h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
@@ -241,6 +369,18 @@ const BlockchainPage: React.FC = () => {
                         </ul>
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors" /></button>
+=======
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
+                        <ul className="space-y-1">
+                          {service.benefits.map((benefit, benefitIndex) => (
+                            <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
+                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                              {benefit} </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">,</button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                         Get Blockchain Quote,
   </button></button></
                     </div>
@@ -248,8 +388,14 @@ const BlockchainPage: React.FC = () => {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+        ))}
+        {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
         ))},
     {/* Blockchain Capabilities Showcase */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-16 bg-white" /></section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" /></div>
@@ -274,6 +420,21 @@ const BlockchainPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" /></div>
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" / /></Link>
+=======
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+>>>>>>> origin/main
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
+                Our Blockchain Capabilities;
+  </
+              <p className="text-xl text-gray-600">Comprehensive blockchain technologies and methodologies for modern business applications,</p>
+  </
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+                <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Automated contract execution with transparency and security</p>
               </div>
@@ -337,6 +498,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Contact Section */}
 <<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white" /></section>
@@ -375,6 +537,24 @@ const BlockchainPage: React.FC = () => {
   </
               <a;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+=======
+        {/* Contact Section */} <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,</div>
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">,</h2>
+              Ready to Transform with Blockchain?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100">Contact our blockchain experts for a free consultation and custom blockchain strategy development;</p>
+  </
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+              <a;
+                href="tel: +13024640950",
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors inline-flex items-center">,
+                📞 +1 302 464 0950;
+  </
+              <a;
+                href="mailto: kleber@ziontechgroup.com",
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 ✉️ kleber@ziontechgroup.com,
   </
             </div>

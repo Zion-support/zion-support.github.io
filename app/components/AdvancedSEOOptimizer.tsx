@@ -1,15 +1,15 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, {useEffect, useState, useCallback}from 'react';
+import {Helmet}}from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
+interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
+<<<<<<< HEAD
   children: React.ReactNode;
 }
 
@@ -17,26 +17,35 @@ interface SEOOptimizerProps {
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
 =======
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+=======
+  children: React.ReactNode;,}const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
   canonicalUrl,
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
+<<<<<<< HEAD
   structuredData,)
   children)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
   const [seoScore, setSeoScore] = useState(0);
+=======
+  structuredData,
+  children;}) => {const [seoScore, setSeoScore] = useState(0);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => ;
     if (typeof window === 'undefined') return;
 
     let score = 0;
-    const newRecommendations: string[] = []
+    const newRecommendations: string[] = [],
 
     // Check title length;
+<<<<<<< HEAD
     if (title.length >= 30 && title.length <= 60) 
       score += 20;
     } else {
@@ -82,21 +91,26 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Check for internal links;
+=======
+    if (title.length >= 30 && title.length <= 60) {
+      score += 20;}else {newRecommendations.push('Title should be between 30-60 characters');}}// Check description length;
+    if (description.length >= 120 && description.length <= 160) {score += 20;}else {newRecommendations.push('Description should be between 120-160 characters');}}// Check for keywords in title;
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in title');}}// Check for keywords in description;
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in description');}}// Check for heading structure;
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length > 0) {score += 10;}else {newRecommendations.push('Add proper heading structure');}}// Check for images with alt text;
+    const images = document.querySelectorAll('img');
+    const imagesWithAlt = document.querySelectorAll('img[alt]');
+    if (images.length === imagesWithAlt.length && images.length > 0) {score += 10;}else {newRecommendations.push('Add alt text to all images');}}// Check for internal links;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    if (internalLinks.length > 0) {
-      score += 10;
-    } else {
-      newRecommendations.push('Add internal links for better SEO');
-    }
-
-    setSeoScore(score);
+    if (internalLinks.length > 0) {score += 10;}else {newRecommendations.push('Add internal links for better SEO');}}setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
 
-  useEffect(() => {
-    analyzeSEO();
-  }, [analyzeSEO]);
+  useEffect(() => {analyzeSEO();}, [analyzeSEO]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
     const defaultStructuredData = {
@@ -104,6 +118,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const generateStructuredData = () => {
     const defaultStructuredData = 
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  const generateStructuredData = () => {const defaultStructuredData = {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -112,6 +129,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "https://linkedin.com/company/ziontechgroup"
       ]
@@ -143,10 +161,32 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const _trackPerformanceMetrics = () => {;
     if (typeof window !== 'undefined' && 'performance' in window) {;
+=======
+        "https: //linkedin.com/company/ziontechgroup",
+      ]}return structuredData || defaultStructuredData;
+  }
+
+  const _trackPageView = (config: SEOData) => {,
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}).gtag('config', 'GA_MEASUREMENT_ID', {)
+        page_title: config.title,
+        page_location: config.canonicalUrl,})
+    }
+  }
+
+<<<<<<< HEAD
+  const _trackPerformanceMetrics = () => {if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+=======
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       window.addEventListener('load', () => {;
+>>>>>>> origin/main
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 <<<<<<< HEAD
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag()
 =======
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) 
@@ -156,17 +196,44 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           })
+=======
+          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         }
       })
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return() {JSON.stringify(generateStructuredData())}
 =======
   return (
     <>
       <Helmet>
+=======
+  return(<>)
+      <Helmet />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <title>{title}</title>
+<<<<<<< HEAD
+        <meta name="description" content={description}/>
+        <meta name="keywords" content={keywords}/>
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+        
+        {/* Open Graph */} <meta property="og: title" content={title,}/>
+        <meta property="og: description" content={description,}/>
+        <meta property="og: image" content={ogImage,}/>
+        <meta property="og: type" content="website" />,
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
+        
+        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
+        <meta name="twitter: title" content={title,}/>
+        <meta name="twitter: description" content={description,}/>
+        <meta name="twitter: image" content={ogImage,}/>
+=======
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
@@ -181,20 +248,34 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
+>>>>>>> origin/main
         
+<<<<<<< HEAD
         {/* Structured Data */})
         <script type="application/ld+json">)
           {JSON.stringify(generateStructuredData())}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </script>
+=======
+        {/* Structured Data */} <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData())} </script>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       </Helmet>
       
+<<<<<<< HEAD
+      {children}{process.env.NODE_ENV === 'development' && (
+=======
       {children},
 <<<<<<< HEAD
     {process.env.NODE_ENV === 'development' && ()
 =======
     {process.env.NODE_ENV === 'development' && (
+<<<<<<< HEAD
         <div className="seo-debug" style=
+=======
+>>>>>>> origin/main
+        <div className="seo-debug" style={{
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           position: 'fixed',
           top: '10px',)
           left: '10px',)
@@ -205,6 +286,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
+<<<<<<< HEAD
           maxWidth: '300px'
 <<<<<<< HEAD
         }}></div>
@@ -221,13 +303,34 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 {recommendations.map((rec, index) => ()
                   <li key=index}>{rec}</li>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          maxWidth: '300px',}}>
+          <div>SEO Score: {seoScore,</div>}/100</div>
+          {recommendations.length > 0 && (
+            <div>
+              <div>Recommendations: </div>,
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+                {recommendations.map((rec, index) => (
+                  <li key={index}>{rec}</li>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 ))}
               </ul>
             </div>
           )}
         </div>
+<<<<<<< HEAD
+      )}
+
+      {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: title" content={title,}/>
+      <meta name="twitter: description" content={description,}/>
+      <meta name="twitter: image" content={ogImage,}/>
+      <meta name="twitter: site" content="@ziontechgroup" />,
+      <meta name="twitter: creator" content="@ziontechgroup" />,
+=======
       )},
     {/* Twitter Card Tags */}
+<<<<<<< HEAD
       <meta name="twitter:card" content="summary_large_image" / /></meta>
       <meta name="twitter:title" content={title} / /></meta>
       <meta name="twitter:description" content={description} / /></meta>
@@ -259,15 +362,56 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:image:alt" content={title} / /></meta>
       <meta property="og:site_name" content="Zion Tech Group" / /></meta>
       <meta property="og:locale" content="en_US" / /></meta>
+=======
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> origin/main
+
+      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      <meta name="theme-color" content="#1a1a2e" />
+      <meta name="msapplication-TileColor" content="#1a1a2e" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+
+      {/* Open Graph Tags */} <meta property="og: type" content="website" />,
+      <meta property="og: title" content={title,}/>
+      <meta property="og: description" content={description,}/>
+      <meta property="og: url" content={canonicalUrl,}/>
+      <meta property="og: image" content={ogImage,}/>
+      <meta property="og: image:width" content="1200" />,
+      <meta property="og: image:height" content="630" />,
+      <meta property="og: image:alt" content={title,}/>
+      <meta property="og: site_name" content="Zion Tech Group" />,
+      <meta property="og: locale" content="en_US" />,
+
+<<<<<<< HEAD
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+
+      {/* Structured Data */} <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())} </script>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       {/* Canonical URL */},
     {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Structured Data */}
       <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}
       </script>
+>>>>>>> origin/main
     </Helmet>
-    {children}
-  </>
+    {children} </>
   );
 };
 

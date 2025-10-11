@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
@@ -12,8 +13,20 @@ const benefits = const benefits = const benefits = [
 =======
   const features = [
     }
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const PagePage: React.FC = () => {,
+  const features = [
+<<<<<<< HEAD
+    {}}
+  ]
+=======
+    {}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
   ];];];
+>>>>>>> origin/main
 const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'Advanced AI technology integration',
@@ -25,8 +38,18 @@ const benefits = [
 
     'Easy integration with existing systems',
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',;
 ;
+=======
+    'Cost-effective pricing plans',
+
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(</div>)
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Proven track record of success';
   ];
 <<<<<<< HEAD
@@ -34,12 +57,19 @@ return ()
 =======
 return (
           </div>
+>>>>>>> origin/main
         </div>
       </section>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             ))}
           </div>
         </div>

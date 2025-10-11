@@ -1,8 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
-const MicroSaaSPage: React.FC = () => {
+import {Helmet}}from 'react-helmet-async';
+import {Settings, ArrowRight}}from 'lucide-react';
+const MicroSaaSPage: React.FC = () => {,
     const serviceName = 'seo-optimizer';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const title = const title = const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return ()
@@ -20,6 +21,12 @@ return (
   }
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta>
+=======
+  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+return(<>,)
+      <Helmet />} <title>{title}| Zion Tech Group - Micro SaaS Solutions</title>
+        <meta />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -34,6 +41,7 @@ return (
           <div className="max-w-7xl mx-auto text-center"></div></div></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div></div></div>
               <Settings>
+<<<<<<< HEAD
               <span>{title}</span></span></span>
             </div>
             <h1>
@@ -44,14 +52,29 @@ return (
               Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
             </p></p></p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
+=======
+              <span>{title</span>}</span>
+            </div>
+            <h1>{title</h1>} </h1>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
+            </h1>
+            <p>Powerful {title.toLowerCase()</p>}}micro SaaS solution designed for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               <button>
                 </button></button><span>Get Started</span></span></span>
                 <ArrowRight>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </button>
+<<<<<<< HEAD
               <button></button>
                 View Demo,
               </button></button></button>
+=======
+              <button>View Demo,</button>
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>
           </div>
         </section>
@@ -67,6 +90,7 @@ return (
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
+<<<<<<< HEAD
               <p></p>
 =======
         <section className="py-20 px-4">
@@ -74,6 +98,10 @@ return (
             </div></div><div className="text-center mb-16">
               </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
               <p className="text-xl text-gray-300">Section description</p></p></p>
+=======
+              <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!
+              </p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             </div>
           </div>
         </section>

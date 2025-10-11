@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 'use client';
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 interface SecurityEnhancerProps {
     children: React.ReactNode;
@@ -8,6 +9,11 @@ interface SecurityEnhancerProps {
 }
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     useEffect(() => {
+=======
+import React, {useEffect}from 'react';
+interface SecurityEnhancerProps {children: React.ReactNode;,}}}
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Security enhancement logic;
 <<<<<<< HEAD
     const enhanceSecurity = const enhanceSecurity = ();
@@ -17,6 +23,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
 =======
     const enhanceSecurity = (;
       // Add security headers;
+<<<<<<< HEAD
       const securityHeaders = 
         'X-Content-Type-Options': 'nosniff',)
         'X-Frame-Options': 'DENY',)
@@ -26,6 +33,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
+=======
+      const securityHeaders = {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',) => {
+  return($3;)
+  )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       }
 // Add CSP meta tag;
 
@@ -34,21 +49,23 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       cspMeta.content = "default-src 'self'; script-src 'self', 'unsafe-inline'; style-src 'self', 'unsafe-inline';";
       document.head.appendChild(cspMeta);
 // Disable right-click context menu;
-      document.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
-  }
-      })
+      document.addEventListener('contextmenu', (e) => {e.preventDefault()}})
 // Disable F12 and other dev tools shortcuts;
+<<<<<<< HEAD
       document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')
           e.preventDefault()
   }
         }
+=======
+      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault()}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       })
     }
 enhanceSecurity();
   }, []);
-return <>{children}</>
+return <React.Fragment>{children</React.Fragment>}</React.Fragment>
 };
 
 export default SecurityEnhancer;

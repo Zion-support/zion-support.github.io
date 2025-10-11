@@ -3,39 +3,51 @@
  * Enhanced Error Handling System;
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
  */;
-interface ErrorContext {
-    userId?: string;
+interface ErrorContext {userId?: string;}
   sessionId?: string;
   url: string,
   userAgent: string,
   timestamp: string,
   component?: string;
   action?: string;
+<<<<<<< HEAD
   props?: Record<string, unknown></string>
   }
   state?: Record<string>}
+=======
+  props?: Record<string, unknown>}state?: Record<string>}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
-interface ErrorReport {
-    id: string,
-  }
-interface ErrorContext {}
-  userId?: string;
+interface ErrorReport {id: string,}}interface ErrorContext {}}userId?: string;
   sessionId?: string;
   url: string,
     userAgent: string;,
+<<<<<<< HEAD
       timestamp: string;
+=======
+  timestamp: string;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   component?: string;
   action?: string,
   props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
+<<<<<<< HEAD
 interface ErrorReport {}
   id: string;,
       type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+=======
+interface ErrorReport {}}id: string;,
+  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   message: string,
   stack?: string;
   context: ErrorContext,
   severity: 'low' | 'medium' | 'high' | 'critical';,
+<<<<<<< HEAD
       category:;
+=======
+  category: ;,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     | 'syntax';
     | 'runtime'
     | 'network'
@@ -44,7 +56,11 @@ interface ErrorReport {}
     | 'unknown',
   tags: string[],
 <<<<<<< HEAD
+<<<<<<< HEAD
   metadata: Record<string></string>
+=======
+  metadata: Record<string>,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   resolved: boolean,
 =======
   metadata: Record<string>,
@@ -53,8 +69,7 @@ interface ErrorReport {}
   resolvedAt?: string;
   resolvedBy?: string;}
 }
-interface ErrorHandlerConfig {
-    enableConsoleLogging: boolean,
+interface ErrorHandlerConfig {enableConsoleLogging: boolean,}
   enableRemoteReporting: boolean,
   enableErrorRecovery: boolean,
   enableErrorCategorization: boolean,
@@ -62,6 +77,7 @@ interface ErrorHandlerConfig {
   enablePerformanceImpact: boolean,
   maxErrorsPerMinute: number,
   errorRetentionDays: number,
+<<<<<<< HEAD
   remoteEndpoint?: string;
   }
   apiKey?: string;}
@@ -92,6 +108,30 @@ class EnhancedErrorHandler {}
   private isInitialized: boolean = false,}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = 
+=======
+  remoteEndpoint?: string;}apiKey?: string;}
+}
+class EnhancedErrorHandler {private config: ErrorHandlerConfig,}
+  private errors: ErrorReport[] = [],}interface ErrorHandlerConfig {}}enableConsoleLogging: boolean;,
+  enableRemoteReporting: boolean;,
+  enableErrorRecovery: boolean;,
+  enableErrorCategorization: boolean;,
+  enableErrorAggregation: boolean;,
+  enablePerformanceImpact: boolean;,
+  maxErrorsPerMinute: number;,
+  errorRetentionDays: number;,
+  remoteEndpoint?: string;
+  apiKey?: string,}
+}
+class EnhancedErrorHandler {}}private config: ErrorHandlerConfig;,
+  private errors: ErrorReport[] = [],
+  private errorCounts: Map<string, number> = new Map();
+  private errorCategories: Map<string, number> = new Map();
+  private lastErrorTime: number = 0;,
+  private errorRateLimit: number = 0;,
+  private isInitialized: boolean = false,}
+  constructor(config: Partial<ErrorHandlerConfig> = {,)}) {this.config = {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -99,11 +139,7 @@ class EnhancedErrorHandler {}
       enableErrorAggregation: true,
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
-      errorRetentionDays: 30,
-  }
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {}
-    this.config = {}
-      enableConsoleLogging: true,
+      errorRetentionDays: 30,}constructor(config: Partial<ErrorHandlerConfig> = {,)}) {}this.config = {}enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
       enableErrorCategorization: true,
@@ -114,25 +150,24 @@ class EnhancedErrorHandler {}
       ...config}
     }
     this.initialize();
-interface ErrorContext {/* TODO: Fix JSX expression */}
-}
-interface ErrorReport {/* TODO: Fix JSX expression */}
-}
-interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
-}
-class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
-  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
-    }
+interface ErrorContext {/* TODO: Fix JSX expression */,}}}
+interface ErrorReport {/* TODO: Fix JSX expression */,}}}
+interface ErrorHandlerConfig {/* TODO: Fix JSX expression */,}}}
+class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHandlerConfig> = {,}) {/* TODO: Fix JSX expression */,}}
     this.initialize();
   }
   /**;
    * Initialize the error handler;
    */;
+<<<<<<< HEAD
   private initialize(): void {
     if (this.isInitialized) return;
   }
   private initialize(): void {}
     if (this.isInitialized) return;
+=======
+  private initialize(): void {if (this.isInitialized) return;}}private initialize(): void {}}if (this.isInitialized) return;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     this.setupGlobalErrorHandlers();
     this.setupUnhandledRejectionHandler();
     this.setupResourceErrorHandler();
@@ -141,18 +176,24 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     this.setupErrorRecovery();
     this.setupErrorCleanup();
     this.isInitialized = true;
-    if (process.env['NODE_ENV'] === 'development') {}
-  private initialize(): void {/* TODO: Fix JSX expression */}
-      }
+    if (process.env['NODE_ENV'] === 'development') {}private initialize(): void {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Setup global error handlers;
    */;
+<<<<<<< HEAD
   private setupGlobalErrorHandlers(): void {
 <<<<<<< HEAD
     window.addEventListener()
         message: event.message;)
         stack: event.error?.stack;)
+=======
+  private setupGlobalErrorHandlers(): void {window.addEventListener('error', event => {)}
+      this.handleError({)
+        type: 'javascript';,
+        message: event.message;),
+        stack: event.error?.stack;),
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         filename: event.filename;),
 =======
     window.addEventListener('error', event => 
@@ -163,27 +204,31 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       filename: event.filename;),
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         lineno: event.lineno),
+<<<<<<< HEAD
         colno: event.colno),
   }
   private setupGlobalErrorHandlers(): void {}
     window.addEventListener('error', event => {}
       this.handleError({}
         type: 'javascript',
+=======
+        colno: event.colno),}private setupGlobalErrorHandlers(): void {}}window.addEventListener('error', event => {)}this.handleError({)}type: 'javascript',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error}
+        error: event.error,}
       })
     })
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-      })
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */,}}})
     })
   }
   /**;
    * Setup unhandled promise rejection handler;
    */;
+<<<<<<< HEAD
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => );
       this.handleError();
@@ -193,23 +238,27 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('unhandledrejection', event => {}
       this.handleError({}
         type: 'promise',
+=======
+  private setupUnhandledRejectionHandler(): void {window.addEventListener('unhandledrejection', event => {);}
+      this.handleError({);
+        type: 'promise'),}private setupUnhandledRejectionHandler(): void {}}window.addEventListener('unhandledrejection', event => {)}this.handleError({)}type: 'promise',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
-        reason: event.reason}
+        reason: event.reason,}
       })
     })
-  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
-      })
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */,}}})
     })
   }
   /**;
    * Setup resource error handler;
    */;
-  private setupResourceErrorHandler(): void {
-    window.addEventListener('error');
+  private setupResourceErrorHandler(): void {window.addEventListener('error');}
       event => {
 <<<<<<< HEAD
         if (event.target !== window) {
+<<<<<<< HEAD
           const target = const target = const target = event.target as HTMLElement & {
             src?: string;
   };
@@ -229,8 +278,25 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             type: 'resource'})
             message: `Failed to load resource: ${target?.src || target?.href}`);
+=======
+          const target = event.target as HTMLElement & {
+            src?: string;}href?: string;}
+          }
+          this.handleError({)
+    )}type: 'resource',})
+            message: `Failed to load resource: ${target?.src || target?.href,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             element: event.target?.constructor.name),
             src: target?.src || target?.href,
+<<<<<<< HEAD
+  private setupResourceErrorHandler(): void {}}window.addEventListener();
+      'error',;
+      event => {}if (event.target !== window) {}const target = event.target as HTMLElement & {}src?: string;
+            href?: string;}
+          }
+          this.handleError({)}type: 'resource',}
+            message: `Failed to load resource: ${target?.src || target?.href,}`,;
+=======
   private setupResourceErrorHandler(): void {}
     window.addEventListener();
       'error',
@@ -243,12 +309,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           this.handleError({}
             type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
+>>>>>>> origin/main
             element: event.target?.constructor.name,
             src: target?.src || target?.href,
           })
         },
       true;
     );
+<<<<<<< HEAD
+  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */,}}}
+          this.handleError({/* TODO: Fix JSX expression */,)}resource: ${target?.src || target?.href,}`,;
+            elemen,;
+=======
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
           }
 <<<<<<< HEAD
@@ -257,9 +329,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           this.handleError({/* TODO: Fix JSX expression */}
   resource: ${target?.src || target?.href}`,
             elemen,
+<<<<<<< HEAD
   t: event.target?.constructor.name,)
             sr,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+>>>>>>> origin/main
+  t: event.target?.constructor.name,
+            sr,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   c: target?.src || target?.href;),
           })
         },
@@ -269,10 +347,16 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Setup network error handler;
    */;
-  private setupNetworkErrorHandler(): void {
-    // Monitor fetch requests;
+  private setupNetworkErrorHandler(): void {// Monitor fetch requests;}
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
+<<<<<<< HEAD
+      try {,;}
+        const response = await originalFetch(...args),;
+        if (!response.ok) {,;
+          this.handleError({)}type: 'network',`})
+            message: `Network request failed: ${response.status,}${response.statusText}`);
+=======
       try {,
 <<<<<<< HEAD
         const response = const response = const response = await originalFetch(...args),
@@ -288,22 +372,32 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             type: 'network',`})
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             message: `Network request failed: ${response.status} ${response.statusText}`);
+>>>>>>> origin/main
             url: args[0] as string),
             status: response.status),
             statusText: response.statusText,
           })
         }
         return response;
+<<<<<<< HEAD
       } catch (error) {
     this.handleError()
   }
           type: 'network',`})
           message: `Network request failed: ${error}`);
+=======
+      } catch (error) {this.handleError({)}type: 'network',`})
+          message: `Network request failed: ${error,}`);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
           url: args[0] as string),
           error: error instanceof Error ? error : new Error(String(error)),
-  private setupNetworkErrorHandler(): void {}
-    // Monitor fetch requests;
+  private setupNetworkErrorHandler(): void {}}// Monitor fetch requests;
     const originalFetch = window.fetch;
+<<<<<<< HEAD
+    window.fetch = async (...args: Parameters<typeof fetch>) => {,}try {}}const response = await originalFetch(...args);
+        if (!response.ok) {}this.handleError({)}type: 'network',`}
+            message: `Network request failed: ${response.status,}${response.statusText}`,;
+=======
     window.fetch = async (...args: Parameters<typeof fetch>) => {}
       try {}
         const response = await originalFetch(...args);
@@ -311,12 +405,23 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           this.handleError({}
             type: 'network',`}
             message: `Network request failed: ${response.status} ${response.statusText}`,
+>>>>>>> origin/main
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
           })
         }
         return response;
+<<<<<<< HEAD
+      } catch (error) {}this.handleError({)}type: 'network',`}
+          message: `Network request failed: ${error,}`,;
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error)),
+        })
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
+  failed: ${response.status,}${response.statusText}`,;
+            ur,;
+=======
       } catch (error) {}
         this.handleError({}
           type: 'network',`}
@@ -327,6 +432,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`;
   failed: ${response.status} ${response.statusText}`,
             ur,
+>>>>>>> origin/main
   l: args[0] as string,
             statu,
   s: response.status,
@@ -335,9 +441,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           })
         }
         return response;
+<<<<<<< HEAD
+      } catch (error) {/* TODO: Fix JSX expression */,}`;
+  failed: ${error,}`,;
+          ur,;
+=======
       } catch (error) {/* TODO: Fix JSX expression */}`;
   failed: ${error}`,
           ur,
+>>>>>>> origin/main
   l: args[0] as string,
           erro,
   r: error instanceof Error ? error : new Error(String(error)),
@@ -349,21 +461,29 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Setup performance error handler;
    */;
-  private setupPerformanceErrorHandler(): void {
-    if (!this.config.enablePerformanceImpact) return;
+  private setupPerformanceErrorHandler(): void {if (!this.config.enablePerformanceImpact) return;}
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver(list => {);
+      try {const observer = new PerformanceObserver(list => {);}
           list.getEntries().forEach(entry => {);
             if (entry.duration > 100) 
               // Tasks longer than 100ms;
+<<<<<<< HEAD
               this.handleError()
   }
                 type: 'custom',`})
   private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return;
+=======
+              this.handleError({)}type: 'custom',`})
+  private setupPerformanceErrorHandler(): void {}}if (!this.config.enablePerformanceImpact) return;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Monitor long tasks that might indicate performance issues;
+<<<<<<< HEAD
+    if ('PerformanceObserver' in window) {}try {}}const observer = new PerformanceObserver(list => {)}list.getEntries().forEach(entry => {)}if (entry.duration > 100) {}// Tasks longer than 100ms;
+              this.handleError({)}type: 'custom',`}
+                message: `Long task detected: ${entry.duration.toFixed(2),}ms`,;
+=======
     if ('PerformanceObserver' in window) {}
       try {}
 <<<<<<< HEAD
@@ -379,16 +499,24 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
               this.handleError({}
                 type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+>>>>>>> origin/main
                 duration: entry.duration,
-                category: 'performance'})
+                category: 'performance',})
             }
           })
         })
+<<<<<<< HEAD
+        observer.observe({type: 'longtask', buffered: true ,)})
+      } catch (error) {}private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
+  detected: ${entry.duration.toFixed(2),}ms`,;
+                duratio,;
+=======
         observer.observe({ type: 'longtask', buffered: true })
       } catch (error) {}
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`;
   detected: ${entry.duration.toFixed(2)}ms`,
                 duratio,
+>>>>>>> origin/main
   n: entry.duration,
                 categor,
   y: 'performance',
@@ -396,30 +524,31 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             }
           })
         })
-        observer.observe({/* TODO: Fix JSX expression */})
-  d: true })
-      } catch (error) {/* TODO: Fix JSX expression */}
-        }
+        observer.observe({/* TODO: Fix JSX expression */,)})
+  d: true ,})
+      } catch (error) {/* TODO: Fix JSX expression */,}}
     }
   }
   /**;
    * Setup error recovery mechanisms;
    */;
-  private setupErrorRecovery(): void {
-    if (!this.config.enableErrorRecovery) return;
+  private setupErrorRecovery(): void {if (!this.config.enableErrorRecovery) return;}
     // Auto-recovery for common errors;
+<<<<<<< HEAD
     setInterval(() => }
   private setupErrorRecovery(): void {}
     if (!this.config.enableErrorRecovery) return;
+=======
+    setInterval(() => {}private setupErrorRecovery(): void {}}if (!this.config.enableErrorRecovery) return;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Auto-recovery for common errors;
-    setInterval(() => {}
-      this.attemptErrorRecovery();}
-  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */}
-    }, 30000); // Check every 30 seconds;
+    setInterval(() => {}this.attemptErrorRecovery();}
+  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */,}}}, 30000); // Check every 30 seconds;
   }
   /**;
    * Setup error cleanup;
    */;
+<<<<<<< HEAD
   private setupErrorCleanup(): void {
     // Clean up old errors;
 <<<<<<< HEAD
@@ -431,18 +560,26 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   private setupErrorCleanup(): void {}
     // Clean up old errors;
+=======
+  private setupErrorCleanup(): void {// Clean up old errors;}
+    setInterval(;)
+      () => {}private setupErrorCleanup(): void {}}// Clean up old errors;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     setInterval();
-      () => {}
-        this.cleanupOldErrors();}
-  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */},
+      () => {}this.cleanupOldErrors();}
+  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */,}},
       24 * 60 * 60 * 1000;
     ); // Daily cleanup;
   }
   /**;
    * Handle error with comprehensive processing;
    */;
+<<<<<<< HEAD
   private handleError(errorData: {}
 // type: ErrorReport['type'],
+=======
+  private handleError(errorData: {),}// type: ErrorReport['type'],
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 // message: string,
 // stack?: string;
 // filename?: string;
@@ -455,16 +592,36 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // url?: string;);
 // status?: number;);
 // statusText?: string;);
+<<<<<<< HEAD
+// duration?: number;),;
+// category?: string;)}): void {// Rate limiting;}
+=======
 // duration?: number;),
 // category?: string;)}): void {
     // Rate limiting;
+<<<<<<< HEAD
     if (!this.checkRateLimit()
+=======
+>>>>>>> origin/main
+    if (!this.checkRateLimit()) {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 // src?: string;
 // url?: string;
 // status?: number;
 // statusText?: string;
 // duration?: number;
+<<<<<<< HEAD
 // category?: string;
+=======
+<<<<<<< HEAD
+// category?: string;}}): void {}}// Rate limiting;
+    if (!this.checkRateLimit()) {}return;}
+  private handleError(errorDat,;)
+  a: {/* TODO: Fix JSX expression */,})
+  }): void {/* TODO: Fix JSX expression */,}}}
+=======
+// category?: string
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   }): void {}
     // Rate limiting;
@@ -478,14 +635,19 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   a: {/* TODO: Fix JSX expression */})
   }): void {/* TODO: Fix JSX expression */}
     }
+>>>>>>> origin/main
     const errorReport = this.createErrorReport(errorData);
     this.processError(errorReport);
   }
   /**;
    * Create comprehensive error report;
    */;
+<<<<<<< HEAD
   private createErrorReport(errorData: {}
 // type: ErrorReport['type'],
+=======
+  private createErrorReport(errorData: {),}// type: ErrorReport['type'],
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 // message: string,
 // stack?: string;
 // filename?: string;
@@ -498,13 +660,19 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 // url?: string;);
 // status?: number;);
 // statusText?: string;);
+<<<<<<< HEAD
+// duration?: number;),;
+// category?: string;)}): ErrorReport {// src?: string;}
+=======
 // duration?: number;),
 // category?: string;)}): ErrorReport {
     // src?: string;
+>>>>>>> origin/main
 // url?: string;
 // status?: number;
 // statusText?: string;
 // duration?: number;
+<<<<<<< HEAD
 // category?: string;
   }
   }): ErrorReport {}
@@ -520,13 +688,37 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }
     return {}
       id: this.generateErrorId(),
+=======
+// category?: string;}}): ErrorReport {}}const context = this.getErrorContext();
+    const severity = this.determineSeverity(errorData);
+    const category = this.categorizeError(errorData);
+    const tags = this.generateTags(errorData);
+    return {id: this.generateErrorId(),}
+      type: errorData.type;,
+      message: errorData.message,
+      stack: errorData.stack;,}return {}}id: this.generateErrorId(),
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
+<<<<<<< HEAD
+      context,;
+      severity,;
+      category,;
+      tags,;
+      metadata: {,
+    filename: errorData.filename;,
+        lineno: errorData.lineno;,
+        colno: errorData.colno;,
+        element: errorData.element;,
+        src: errorData['src'],
+        url: errorData.url;,
+=======
       context,
       severity,
       category,
       tags,
+<<<<<<< HEAD
       metadata: {,
       filename: errorData.filename;,
       lineno: errorData.lineno;,
@@ -539,6 +731,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }
       metadata: {}
         filename: errorData.filename,
+=======
+      metadata: {
+    filename: errorData.filename;
+        lineno: errorData.lineno;
+        colno: errorData.colno;
+        element: errorData.element;
+        src: errorData['src']
+        url: errorData.url
+>>>>>>> origin/main
+        status: errorData.status,
+        statusText: errorData.statusText;,}metadata: {,}filename: errorData.filename,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         lineno: errorData.lineno,
         colno: errorData.colno,
         element: errorData.element,
@@ -546,79 +750,86 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-        duration: errorData.duration},
+        duration: errorData.duration,},
       resolved: false,
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   private createErrorReport()
 =======
   private createErrorReport(errorDat,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  private createErrorReport(errorDat,;)
+  a: {/* TODO: Fix JSX expression */,})
+  }): ErrorReport {/* TODO: Fix JSX expression */,}},
+      resolve,;
+=======
+  private createErrorReport(errorDat,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport {/* TODO: Fix JSX expression */},
       resolve,
+>>>>>>> origin/main
   d: false,
     }
   }
   /**;
    * Process error report;
    */;
+<<<<<<< HEAD
   private processError(errorReport: ErrorReport): void {
+=======
+  private processError(errorReport: ErrorReport): void {,}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     // Add to errors array;
     this.errors.push(errorReport)
     // Update counters,
     this.updateErrorCounts(errorReport),
     // Console logging;
+<<<<<<< HEAD
     if (this.config.enableConsoleLogging) ,
   }
       this.logError(errorReport);}
+=======
+    if (this.config.enableConsoleLogging) {,}this.logError(errorReport);}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
     // Remote reporting;
-    if (this.config.enableRemoteReporting) {}
-      this.reportToRemote(errorReport);}
+    if (this.config.enableRemoteReporting) {}this.reportToRemote(errorReport);}
     }
     // Error aggregation;
-    if (this.config.enableErrorAggregation) {}
-      this.aggregateError(errorReport);}
+    if (this.config.enableErrorAggregation) {}this.aggregateError(errorReport);}
     }
     // Performance impact;
-    if (this.config.enablePerformanceImpact) {}
-  private processError(errorReport: ErrorReport): void {}
-    // Add to errors array;
+    if (this.config.enablePerformanceImpact) {}private processError(errorReport: ErrorReport): void {,}}// Add to errors array;
     this.errors.push(errorReport);
     // Update counters;
     this.updateErrorCounts(errorReport);
     // Console logging;
-    if (this.config.enableConsoleLogging) {}
-      this.logError(errorReport);}
+    if (this.config.enableConsoleLogging) {}this.logError(errorReport);}
     }
     // Remote reporting;
-    if (this.config.enableRemoteReporting) {}
-      this.reportToRemote(errorReport);}
+    if (this.config.enableRemoteReporting) {}this.reportToRemote(errorReport);}
     }
     // Error aggregation;
-    if (this.config.enableErrorAggregation) {}
-      this.aggregateError(errorReport);}
+    if (this.config.enableErrorAggregation) {}this.aggregateError(errorReport);}
     }
     // Performance impact;
-    if (this.config.enablePerformanceImpact) {}
-      this.assessPerformanceImpact(errorReport);}
+    if (this.config.enablePerformanceImpact) {}this.assessPerformanceImpact(errorReport);}
   private processError(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}
-    }
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}}
     // Remote reporting;
-    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */}
-    }
+    if (this.config.enableRemoteReporting) {/* TODO: Fix JSX expression */,}}
     // Error aggregation;
-    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */}
-    }
+    if (this.config.enableErrorAggregation) {/* TODO: Fix JSX expression */,}}
     // Performance impact;
-    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */}
-    }
+    if (this.config.enablePerformanceImpact) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Get error context;
    */;
+<<<<<<< HEAD
   private getErrorContext(): ErrorContext {
     return;
       url: window.location.href,
@@ -626,33 +837,47 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }
   private getErrorContext(): ErrorContext {}
     return {}
+=======
+  private getErrorContext(): ErrorContext {return {}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       url: window.location.href,
+      userAgent: navigator.userAgent;,}private getErrorContext(): ErrorContext {}}return {}}url: window.location.href,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
-      userId: this.getUserId()}
+      userId: this.getUserId(),}
     }
-  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */}
-    }
+  private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Determine error severity;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private determineSeverity()
 =======
   private determineSeverity(errorData: {)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  private determineSeverity(errorData: {,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     ),
     type: ErrorReport['type']),
+<<<<<<< HEAD
+    message: string,),;
+    status?: number;),}element?: string;}
+  }): ErrorReport['severity'] {if(errorData.type === 'network' &&);
+=======
     message: string,),
     status?: number;),
   }
     element?: string;}
   }): ErrorReport['severity'] {
     if(errorData.type === 'network' &&);
+>>>>>>> origin/main
       errorData.status &&);
       errorData.status >= 500;);
+<<<<<<< HEAD
     ) }
   private determineSeverity(errorData: {}
     type: ErrorReport['type'],
@@ -670,12 +895,25 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ) {}
       return 'critical';}
+=======
+    ) {}private determineSeverity(errorData: {),}type: ErrorReport['type'],
+    message: string;,
+    status?: number;
+    element?: string,}
+  }): ErrorReport['severity'] {}if(;)
+      errorData.type === 'network' &&;
+      errorData.status &&;
+      errorData.status >= 500;
+    ) {}return 'critical';}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     }
     if(errorData.type === 'javascript' &&);
       errorData.message.includes('Cannot read property');
-    ) {}
-      return 'high';}
+    ) {}return 'high';}
     }
+<<<<<<< HEAD
+    if (errorData.type === 'resource' && errorData.element === 'img') {}return 'medium';}
+=======
     if (errorData.type === 'resource' && errorData.element === 'img') {}
       return 'medium';}
     }
@@ -688,20 +926,23 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport['severity'] {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
+    if (errorData.type === 'promise') {}return 'medium';}
+  private determineSeverity(errorDat,;)
+  a: {/* TODO: Fix JSX expression */,})
+  }): ErrorReport['severity'] {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'javascript' &&);
       errorData.message.includes('Cannot read property');
-    ) {/* TODO: Fix JSX expression */}
-    }
-    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */}
-    }
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
-    }
+    ) {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */,}}
     return 'low';
   }
   /**;
    * Categorize error;
    */;
+<<<<<<< HEAD
 <<<<<<< HEAD
   private categorizeError()
 =======
@@ -713,6 +954,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private categorizeError(errorData: {}
     type: ErrorReport['type'],
       message: string,}
+=======
+  private categorizeError(errorData: {,)
+    ),
+    type: ErrorReport['type']),}private categorizeError(errorData: {),}type: ErrorReport['type'],
+    message: string,}
+<<<<<<< HEAD
+  }): ErrorReport['category'] {}if (errorData.type === 'network') {}return 'network';}
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }): ErrorReport['category'] {}
     if (errorData.type === 'network') {}
       return 'network';}
@@ -728,35 +978,46 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
+    if (errorData.type === 'resource') {}return 'performance';}
+  private categorizeError(errorDat,;)
+  a: {/* TODO: Fix JSX expression */,})
+  }): ErrorReport['category'] {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */,}}
     if ();
       errorData.message.includes('SecurityError') ||;
       errorData.message.includes('CORS');
-    ) {}
-      return 'security';}
+    ) {}return 'security';}
     }
-    if (errorData.message.includes('SyntaxError')) {}
-      return 'syntax';}
+    if (errorData.message.includes('SyntaxError')) {}return 'syntax';}
     }
-    if (errorData.type === 'promise') {}
-      return 'runtime';}
-    ) {/* TODO: Fix JSX expression */}
-    }
-    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */}
-    }
-    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */}
-    }
+    if (errorData.type === 'promise') {}return 'runtime';}
+    ) {/* TODO: Fix JSX expression */,}}
+    if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'promise') {/* TODO: Fix JSX expression */,}}
     return 'unknown';
   }
   /**;
    * Generate error tags;
    */;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private generateTags()
 =======
   private generateTags(errorData: {)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  private generateTags(errorData: {,)
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     ),
+<<<<<<< HEAD
+    filename?: string;),;
+    type: ErrorReport['type']),}duration?: number;}
+  }): string[] {const tags: string[] = [],
+    if (errorData.filename) {,}private generateTags(errorData: {),}filename?: string;
+    type: ErrorReport['type'],
+=======
     filename?: string;),
     type: ErrorReport['type']),
   }
@@ -768,15 +1029,16 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private generateTags(errorData: {}
     filename?: string;
     type: ErrorReport['type']
+>>>>>>> origin/main
     duration?: number,}
-  }): string[] {}
-    const tags: string[] = [],
-    if (errorData.filename) {}
-      tags.push('client-side');}
+  }): string[] {}const tags: string[] = [],
+    if (errorData.filename) {}tags.push('client-side');}
     }
-    if (errorData.type === 'network') {}
-      tags.push('network');}
+    if (errorData.type === 'network') {}tags.push('network');}
     }
+<<<<<<< HEAD
+    if (errorData.type === 'resource') {}tags.push('resource');}
+=======
     if (errorData.type === 'resource') {}
       tags.push('resource');}
     }
@@ -795,26 +1057,31 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
     }
     if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */}
+>>>>>>> origin/main
     }
+    if (errorData.duration && errorData.duration > 1000) {}tags.push('slow');}
+  private generateTags(errorDat,;)
+  a: {/* TODO: Fix JSX expression */,})
+  }): string[] {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'network') {/* TODO: Fix JSX expression */,}}
+    if (errorData.type === 'resource') {/* TODO: Fix JSX expression */,}}
+    if (errorData.duration && errorData.duration > 1000) {/* TODO: Fix JSX expression */,}}
     return tags;
   }
   /**;
    * Generate unique error ID;
    */;
-  private generateErrorId(): string {`}
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  private generateErrorId(): string {/* TODO: Fix JSX expression */}`;
+  private generateErrorId(): string {`}}return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private generateErrorId(): string {/* TODO: Fix JSX expression */,}}`;
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**;
    * Get session ID;
    */;
-  private getSessionId(): string {}
-    let sessionId = sessionStorage.getItem('error_session_id');
-    if (!sessionId) {`}
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private getSessionId(): string {}}let sessionId = sessionStorage.getItem('error_session_id');
+    if (!sessionId) {`}sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
-  private getSessionId(): string {/* TODO: Fix JSX expression */}`;
+  private getSessionId(): string {/* TODO: Fix JSX expression */,}}`;
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
     }
@@ -823,16 +1090,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Get user ID;
    */;
-  private getUserId(): string | undefined {}
-    return localStorage.getItem('user_id') || undefined;}
-  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}
-  }
+  private getUserId(): string | undefined {}}return localStorage.getItem('user_id') || undefined;}
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check rate limiting;
    */;
-  private checkRateLimit(): boolean {}
-    const now = Date.now();
+  private checkRateLimit(): boolean {}}const now = Date.now();
     const timeDiff = now - this.lastErrorTime;
+<<<<<<< HEAD
     if (timeDiff < 60000) {
     // Within 1 minute;
 <<<<<<< HEAD
@@ -845,24 +1110,23 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if (timeDiff < 60000) {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       // Within 1 minute;
+=======
+    if (timeDiff < 60000) {// Within 1 minute;
+    const timeDiff = now - this.lastErrorTime;}if (timeDiff < 60000) {}// Within 1 minute;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       this.errorRateLimit++;
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {}
-        return false;}
+      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {}return false;}
       }
-    } else {}
-      this.errorRateLimit = 1;}
-  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */}
-      }
-    } else {/* TODO: Fix JSX expression */}
-    }
+    } else {}}this.errorRateLimit = 1;}
+  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */,}}}
+    } else {/* TODO: Fix JSX expression */,}}}
     this.lastErrorTime = now;
     return true;
   }
   /**;
    * Update error counters;
    */;
-  private updateErrorCounts(errorReport: ErrorReport): void {`}
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
+  private updateErrorCounts(errorReport: ErrorReport): void {`,}}this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category);
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     this.errorCategories.set();
@@ -870,7 +1134,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     );
   private updateErrorCounts(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}`;
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category);
@@ -880,24 +1144,17 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**;
    * Log error to console;
    */;
-  private logError(errorReport: ErrorReport): void {
-    ,
-  }
-  private logError(errorReport: ErrorReport): void {}
-    const emoji = this.getSeverityEmoji(errorReport.severity);`}
-if (errorReport.stack) {}
-  private logError(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}`;
-  Report: ${errorReport.id}`);
-    if (errorReport.stack) {/* TODO: Fix JSX expression */}
-      }
+  private logError(errorReport: ErrorReport): void {,}
+    ,}private logError(errorReport: ErrorReport): void {,}}const emoji = this.getSeverityEmoji(errorReport.severity);`}
+if (errorReport.stack) {}private logError(errorRepor);
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
+  Report: ${errorReport.id,}`);
+    if (errorReport.stack) {/* TODO: Fix JSX expression */,}}
 }
   /**;
    * Get severity emoji;
    */;
-  private getSeverityEmoji(severity: ErrorReport['severity']): string {}
-    switch (severity) {}
-      case 'critical': ;
+  private getSeverityEmoji(severity: ErrorReport['severity']): string {,}}switch (severity) {}case 'critical': ;
         return '🚨';
       case 'high':;
         return '🔴';
@@ -908,15 +1165,29 @@ if (errorReport.stack) {}
       default:,
         return '❓';}
   private getSeverityEmoji(severit);
-  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */}
-    }
+  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Report to remote service;
    */;
-  private async reportToRemote(errorReport: ErrorReport): Promise<void> {
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     ,
     if (!this.config.remoteEndpoint) return;
+<<<<<<< HEAD
+    try {,;}
+      await fetch(this.config.remoteEndpoint, {);
+        method: 'POST'),
+        headers: {,}private async reportToRemote(errorReport: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
+    try {}}await fetch(this.config.remoteEndpoint, {)}method: 'POST',
+        headers: {,}'Content-Type': 'application/json',`}
+          Authorization: `Bearer ${this.config.apiKey,}})
+        body: JSON.stringify(errorReport),})
+    } catch (error) {}private async reportToRemote(errorRepor);
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */,}`;
+  n: `Bearer ${this.config.apiKey,}`;
+        },;
+        bod,;
+=======
     try {,
       await fetch(this.config.remoteEndpoint, );
         method: 'POST'),
@@ -938,28 +1209,33 @@ if (errorReport.stack) {}
   n: `Bearer ${this.config.apiKey}`;
         },
         bod,
+>>>>>>> origin/main
   y: JSON.stringify(errorReport),
       })
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
+    } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Aggregate error data;
    */;
+<<<<<<< HEAD
   private aggregateError(errorReport: ErrorReport): void {
     ,
   }
   private aggregateError(errorReport: ErrorReport): void {}
     // This could be expanded to include more sophisticated, aggregation}
+=======
+  private aggregateError(errorReport: ErrorReport): void {,}
+    ,}private aggregateError(errorReport: ErrorReport): void {,}}// This could be expanded to include more sophisticated aggregation}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   private aggregateError(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */}
-    }
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}}
   /**;
    * Assess performance impact;
    */;
-  private assessPerformanceImpact(errorReport: ErrorReport): void {
+  private assessPerformanceImpact(errorReport: ErrorReport): void {,}
     ,
     if(errorReport.type === 'resource' ||);
+<<<<<<< HEAD
       errorReport.category === 'performance'),
   }
   private assessPerformanceImpact(errorReport: ErrorReport): void {}
@@ -974,28 +1250,35 @@ if (errorReport.stack) {}
   private assessPerformanceImpact(errorRepor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */}
       }
+=======
+      errorReport.category === 'performance'),}private assessPerformanceImpact(errorReport: ErrorReport): void {,}}if(;)
+      errorReport.type === 'resource' ||;
+      errorReport.category === 'performance';
+    ) {}private assessPerformanceImpact(errorRepor);
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   }
   /**;
    * Attempt error recovery;
    */;
-  private attemptErrorRecovery(): void {
-    const recentErrors = this.errors.filter(error =>);
+  private attemptErrorRecovery(): void {const recentErrors = this.errors.filter(error =>);}
         !error.resolved &&);
+<<<<<<< HEAD
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5, minutes;
   }
   private attemptErrorRecovery(): void {}
     const recentErrors = this.errors.filter();
+=======
+        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;}private attemptErrorRecovery(): void {}}const recentErrors = this.errors.filter();
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       error =>;
         !error.resolved &&;
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
     );
-    if (recentErrors.length > 5) {}
-      if (process.env['NODE_ENV'] === 'development') {}
-        }
+    if (recentErrors.length > 5) {}if (process.env['NODE_ENV'] === 'development') {}}
       // Implement recovery strategies here;
       this.clearErrorState();
-  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */}
-        }
+  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */,}}}
       // Implement recovery strategies here;
       this.clearErrorState();
     }
@@ -1003,36 +1286,36 @@ if (errorReport.stack) {}
   /**;
    * Clear error state;
    */;
+<<<<<<< HEAD
   private clearErrorState(): void {
     // Reset error, counters;
   }
   private clearErrorState(): void {}
     // Reset error counters;
+=======
+  private clearErrorState(): void {// Reset error counters;}}private clearErrorState(): void {}}// Reset error counters;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     this.errorCounts.clear();
     this.errorCategories.clear();
     this.errorRateLimit = 0;
-    if (process.env['NODE_ENV'] === 'development') {}
-  private clearErrorState(): void {/* TODO: Fix JSX expression */}
-      }
+    if (process.env['NODE_ENV'] === 'development') {}private clearErrorState(): void {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Clean up old errors;
    */;
-  private cleanupOldErrors(): void {}
-    const cutoffDate = new Date();
+  private cleanupOldErrors(): void {}}const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
     this.errors = this.errors.filter()
       error => new Date(error.context.timestamp) > cutoffDate;
     this.errors = this.errors.filter();
       error => new Date(error.context.timestamp) > cutoffDate;
     );
-    if (process.env['NODE_ENV'] === 'development') {}
-  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
-      }
+    if (process.env['NODE_ENV'] === 'development') {}private cleanupOldErrors(): void {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Get error statistics;
    */;
+<<<<<<< HEAD
   public getErrorStatistics(): {
     totalErrors: number,
   }
@@ -1065,11 +1348,26 @@ if (errorReport.stack) {}
   }
     this.errors.forEach(error => {}
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
+=======
+  public getErrorStatistics(): {totalErrors: number,}public getErrorStatistics(): {}totalErrors: number;,
+    errorsByType: Record<string>,
+    errorsByCategory: Record<string>,
+    errorsBySeverity: Record<string>,
+    recentErrors: ErrorReport[],}
+  } {}const errorsByType: Record<string, number> = {}const errorsByCategory: Record<string, number> = {}const errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {)
+    );
+      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;}this.errors.forEach(error => {)}errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       errorsByCategory[error.category] =;
         (errorsByCategory[error.category] || 0) + 1;
       errorsBySeverity[error.severity] =;
         (errorsBySeverity[error.severity] || 0) + 1;}
     })
+<<<<<<< HEAD
+  public getErrorStatistics(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}errorsByType: Record<string, number> = {}const,;
+  errorsByCategory: Record<string, number> = {}const,;
+  errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)})
+=======
   public getErrorStatistics(): {/* TODO: Fix JSX expression */}
   }, {/* TODO: Fix JSX expression */}
   errorsByType: Record<string, number> = {}
@@ -1078,6 +1376,7 @@ if (errorReport.stack) {}
     const,
   errorsBySeverity: Record<string, number> = {}
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
+>>>>>>> origin/main
     })
     const recentErrors = this.errors;
       .filter(error => !error.resolved);
@@ -1086,6 +1385,12 @@ if (errorReport.stack) {}
           new Date(b.context.timestamp).getTime() -;
           new Date(a.context.timestamp).getTime();
       .slice(0, 10);
+<<<<<<< HEAD
+    return {totalErrors: this.errors.length;,}}return {}}totalErrors: this.errors.length,
+      errorsByType,;
+      errorsByCategory,;
+      errorsBySeverity,;
+=======
     return {
     totalErrors: this.errors.length;
   }
@@ -1094,15 +1399,16 @@ if (errorReport.stack) {}
       errorsByType,
       errorsByCategory,
       errorsBySeverity,
+>>>>>>> origin/main
       recentErrors}
     }
       .slice(0, 10);
-    return {/* TODO: Fix JSX expression */}
-    }
+    return {/* TODO: Fix JSX expression */,}}}
   }
   /**;
    * Export error data;
    */;
+<<<<<<< HEAD
   public exportErrorData(): string {
     return JSON.stringify();
         errors: this.errors),
@@ -1111,23 +1417,45 @@ if (errorReport.stack) {}
     return JSON.stringify();
       {}
         errors: this.errors,
+=======
+  public exportErrorData(): string {return JSON.stringify({);}
+        errors: this.errors),}public exportErrorData(): string {}}return JSON.stringify();
+      {}errors: this.errors,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
         statistics: this.getErrorStatistics(),
         config: this.config,
+<<<<<<< HEAD
+        timestamp: new Date().toISOString(),},
+      null,;
+      2;
+    );
+  public exportErrorData(): string {/* TODO: Fix JSX expression */,}},
+      null,;
+=======
         timestamp: new Date().toISOString()},
       null,
       2;
     );
   public exportErrorData(): string {/* TODO: Fix JSX expression */},
       null,
+>>>>>>> origin/main
       2;
     );
   }
   /**;
    * Manually report error;
    */;
+<<<<<<< HEAD
   public reportError(message: string, context?: Partial<ErrorContext>): string {
     const errorReport = this.createErrorReport();
+=======
+  public reportError(message: string, context?: Partial<ErrorContext>): string {const errorReport = this.createErrorReport({);}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       type: 'custom'),
+<<<<<<< HEAD
+      message),}public reportError(message: string, context?: Partial<ErrorContext>): string {}}const errorReport = this.createErrorReport({)}type: 'custom',
+      message,;
+=======
       message),
   }
   public reportError(message: string, context?: Partial<ErrorContext>): string {}
@@ -1138,12 +1466,17 @@ if (errorReport.stack) {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       type: 'custom',
       message,
+<<<<<<< HEAD
       ...context};
     });
+=======
+>>>>>>> origin/main
+      ...context}
+    })
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     this.processError(errorReport);
   public reportError(messag);
-  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */}
-    })
+  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */,}}})
     this.processError(errorReport);
     return errorReport.id;
   }
@@ -1151,6 +1484,11 @@ if (errorReport.stack) {}
 // Export singleton instance;
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
+<<<<<<< HEAD
+export {// Export class for custom instances;}}export {}}EnhancedErrorHandler,;
+  type ErrorReport,;
+  type ErrorContext,;
+=======
 export {
     // Export class for custom, instances;
   }
@@ -1158,10 +1496,20 @@ export {}
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
+<<<<<<< HEAD
   type, ErrorHandlerConfig}
+=======
+>>>>>>> origin/main
+  type ErrorHandlerConfig}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 }
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
+<<<<<<< HEAD
+export {/* TODO: Fix JSX expression */,}}}
+`;
+=======
 export {/* TODO: Fix JSX expression */}
 }
 `;
+>>>>>>> origin/main
