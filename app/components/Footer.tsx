@@ -96,6 +96,16 @@ const Footer: React.FC = () => {
                   Mobile Development
                 </Link>
               </li>
+              <li>
+                <Link href="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Mobile Development
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -106,6 +116,11 @@ const Footer: React.FC = () => {
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -126,6 +141,43 @@ const Footer: React.FC = () => {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-cyan-400">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Consultation
+                </Link>
+              </li>
+              <li>
+                <Link href="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link href="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Sitemap
                 </Link>
               </li>
             </ul>
@@ -180,6 +232,10 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-3bf1
 
 export default Footer;
