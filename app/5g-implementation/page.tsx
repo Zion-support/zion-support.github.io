@@ -149,5 +149,3 @@ const FiveGImplementationPage: React.FC = () => {
     </div>
   );
 };
-
-export default FiveGImplementationPage;
