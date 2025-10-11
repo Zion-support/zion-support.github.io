@@ -1,42 +1,52 @@
 #!/usr/bin/env python3
 import os
 import re
-import subprocess
-import sys
+import glob
 
-def get_corrupted_files():
-    """Get list of files with parsing errors"""
+def fix_corrupted_file(file_path):
+    """Fix a corrupted React page file"""
     try:
-        result = subprocess.run(['pnpm', 'run', 'lint'], capture_output=True, text=True, cwd='/workspace')
-        lines = result.stderr.split('\n')
-        corrupted_files = []
-        for i, line in enumerate(lines):
-            if 'Parsing error' in line and i > 0:
-                file_path = lines[i-1].strip()
-                if file_path.startswith('/workspace/'):
-                    corrupted_files.append(file_path)
-        return corrupted_files
-    except Exception as e:
-        print(f"Error getting corrupted files: {e}")
-        return []
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Extract the page name from the file path
+        page_name = os.path.basename(os.path.dirname(file_path))
+        page_name = page_name.replace('-', ' ').title().replace(' ', '')
+        
+        # Check if file is corrupted (has "export default PagePage")
+        if "export default PagePage" in content:
+            # Extract the title from the path
+            title = page_name.replace('Page', '')
+            if title.startswith('Ai'):
+                title = title.replace('Ai', 'AI')
+            
+            # Create a proper React component
+            new_content = f"""'use client';
+import React from 'react';
+import {{ CheckCircle }} from 'lucide-react';
+import {{ Helmet }} from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-def create_simple_page(file_path):
-    """Create a simple placeholder page for corrupted files"""
-    # Extract page name from path
-    path_parts = file_path.split('/')
-    page_name = path_parts[-2] if path_parts[-1] == 'page.tsx' else path_parts[-1].replace('.tsx', '')
-    
-    # Convert kebab-case to Title Case
-    title = ' '.join(word.capitalize() for word in page_name.replace('-', ' ').split())
-    
-    content = f"""'use client'
-import React from 'react'
-import {{Helmet}} from 'react-helmet-async'
-import {{ArrowRight}} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+const {page_name}: React.FC = () => {{
+  const features = [
+    {{
+      title: '{title}',
+      description: 'Professional {title.lower()} services and solutions.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+    }},
+    {{
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    }},
+    {{
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }}
+  ];
 
-const {title.replace(' ', '')}Page: React.FC = () => {{
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -47,15 +57,49 @@ const {title.replace(' ', '')}Page: React.FC = () => {{
       
       <Navigation />
       
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              {title}
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional {title.lower()} services to help your business succeed and grow.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {{features.map((feature, index) => (
+              <div key={{index}} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-4">{{feature.title}}</h3>
+                <p className="text-gray-300 mb-4">{{feature.description}}</p>
+                <ul className="space-y-2">
+                  {{feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={{benefitIndex}} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {{benefit}}
+                    </li>
+                  ))}}
+                </ul>
+              </div>
+            ))}}
+          </div>
+          
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our {title.lower()} services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -65,42 +109,48 @@ const {title.replace(' ', '')}Page: React.FC = () => {{
   );
 }};
 
-export default {title.replace(' ', '')}Page;
-"""
-    
-    return content
+export default {page_name};"""
+            
+            # Write the fixed content
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            
+            print(f"Fixed: {file_path}")
+            return True
+        else:
+            print(f"Skipped (not corrupted): {file_path}")
+            return False
+            
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
 
-def fix_corrupted_files():
-    """Fix all corrupted files by replacing them with simple placeholder pages"""
-    corrupted_files = get_corrupted_files()
+def main():
+    # Find all corrupted files
+    corrupted_files = []
     
-    if not corrupted_files:
-        print("No corrupted files found.")
-        return
+    # Search for files with "export default PagePage"
+    for root, dirs, files in os.walk('app'):
+        for file in files:
+            if file == 'page.tsx':
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if "export default PagePage" in content:
+                            corrupted_files.append(file_path)
+                except:
+                    pass
     
-    print(f"Found {len(corrupted_files)} corrupted files. Fixing...")
+    print(f"Found {len(corrupted_files)} corrupted files")
     
+    # Fix each file
     fixed_count = 0
     for file_path in corrupted_files:
-        try:
-            # Create the directory if it doesn't exist
-            os.makedirs(os.path.dirname(file_path), exist_ok=True)
-            
-            # Create simple page content
-            content = create_simple_page(file_path)
-            
-            # Write the file
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            
+        if fix_corrupted_file(file_path):
             fixed_count += 1
-            if fixed_count % 50 == 0:
-                print(f"Fixed {fixed_count} files...")
-                
-        except Exception as e:
-            print(f"Error fixing {file_path}: {e}")
     
-    print(f"Fixed {fixed_count} out of {len(corrupted_files)} corrupted files.")
+    print(f"Fixed {fixed_count} files")
 
 if __name__ == "__main__":
-    fix_corrupted_files()
+    main()
