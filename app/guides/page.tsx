@@ -8,7 +8,6 @@
       <Footer />
     </>
         </section>
-  );
-};
+  )};
 
 export default GuidesPage;

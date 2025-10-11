@@ -1,26 +1,27 @@
 import React from 'react'
-const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
+const $1: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {id: 2,
-      title: 'Cloud Services',} ]
+      title: 'Cloud Services',} ],
   const categories = [
-    {value: 'all', label: 'All Services'} ,
-    {value: 'ai', label: 'AI Solutions'} ,
-    {value: 'cloud', label: 'Cloud Services'} ,
-    {value: 'data', label: 'Data Analytics'} ,
-    {value: 'security', label: 'Cybersecurity'} ,
-    {value: 'mobile', label: 'Mobile Development'} ,
-    {value: 'web', label: 'Web Development'} ]
+    {value: 'all', label: 'All Services'},
+    {value: 'ai', label: 'AI Solutions'},
+    {value: 'cloud', label: 'Cloud Services'},
+    {value: 'data', label: 'Data Analytics'},
+    {value: 'security', label: 'Cybersecurity'},
+    {value: 'mobile', label: 'Mobile Development'},
+    {value: 'web', label: 'Web Development'} ],
   const filteredServices = services.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory;} )
+    return matchesSearch && matchesCategory} )
   return (
     <>
       <Helmet>
@@ -39,14 +40,14 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="$2">
                 Services Page
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
               </div>
@@ -63,28 +64,26 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
     </>
         </section>
 
-        {/* Services Grid */}
+        {/* Services Grid */},
           </div>
       
       <Footer />
     </>
         </section>
 
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="$2">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="$2">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="$2">
                 Contact Us
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+              <button className="$2">
                 Schedule Demo
               </button>
             </div>

@@ -18,7 +18,6 @@
       <Footer />
     </>
         </section>
-  );
-};
+  )};
 
 export default SitemapPagePage;

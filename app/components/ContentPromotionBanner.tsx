@@ -7,9 +7,6 @@
       <Footer />
     </>
   )
-}
-
-
+},
   )
-
 export default ContentPromotionBanner

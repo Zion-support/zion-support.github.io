@@ -1,48 +1,47 @@
-import React;, {useState} from 'react'
-import {Helmet;} from 'react-helmet-async'
-import {Phone;, Mail, MapPin, Clock, Send} from 'lucide-react'
+import React, {useState} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Phone, Mail, MapPin, Clock, Send} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({;,
-name: '',;,
-email: '',;,
-company: '',;,
-phone: '',;,
-service: '',;,
+const $1: React.FC = () => {
+  const [formData, setFormData] = useState({,
+name: '',,
+email: '',,
+company: '',,
+phone: '',,
+service: '',,
 message: ''} })
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 setFormData({} ...formData},
       [e.target.name]: e.target.value
     })
-  }
-
-const handleSubmit = (e: React.FormEvent) => {;
+  },
+const handleSubmit = (e: React.FormEvent) => {
 e.preventDefault()
     // Handle form submission
-console.log('Form submitte, d:', formData);} }
-
+console.log('Form submitte, d:', formData)} },
 const contactInfo = [
-    {;,
-icon: Phone,;,
-title: 'Phone',;,
-value: '+1 (555) 123-4567',;,
-description: 'Mon-Fri 9AM-6PM EST'} ,
-    {;,
-icon: Mail,;,
-title: 'Email',;,
-value: 'info@ziontechgroup.com',;,
-description: 'We\'ll respond within 24 hours'} ,
-    {;,
-icon: MapPin,;,
-title: 'Address',;,
-value: '123 Tech Street, Silicon Valley, CA 94000',;,
-description: 'Visit our headquarters'} ,
-    {;,
-icon: Clock,;,
-title: 'Business Hours',;,
-value: 'Monday - Friday',;,
+    {,
+icon: Phone,,
+title: 'Phone',,
+value: '+1 (555) 123-4567',,
+description: 'Mon-Fri 9AM-6PM EST'},
+    {,
+icon: Mail,,
+title: 'Email',,
+value: 'info@ziontechgroup.com',,
+description: 'We\'ll respond within 24 hours'},
+    {,
+icon: MapPin,,
+title: 'Address',,
+value: '123 Tech Street, Silicon Valley, CA 94000',,
+description: 'Visit our headquarters'},
+    {,
+icon: Clock,,
+title: 'Business Hours',,
+value: 'Monday - Friday',,
 description: ',
-    9: 00 AM - , 6:00 PM EST'} ]
+    9: 00 AM - , 6:00 PM EST'} ],
 const services = [
     'AI Solutions',
     'Cloud Infrastructure',
@@ -52,7 +51,7 @@ const services = [
     'Mobile Development',
     'IT Consulting',
     'Other'
-  ]
+  ],
 return (
     <>
 
@@ -72,15 +71,15 @@ return (
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="
-    g: px-8"
-            <div className="text-center"
-              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
-Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+    g: px-8">
+            <div className="text-center">
+              <h1 className="$2">
+Get in <span className="$2">
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
             </div>
@@ -93,19 +92,19 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
     </>
         </section>
 
-        {/* Contact Info Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
+        {/* Contact Info Section */},
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="
     ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
+    d: grid-cols-2 l, g:grid-cols-4 gap-8">
               {contactInfo.map((info), index) => {
 const Icon = info.icon;
 return (
-}
+},
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
-                      <Icon className="w-6 h-6 text-white"
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Icon className="$2">
                     </div>
       
       <Footer />
@@ -118,7 +117,7 @@ return (
       <Footer />
     </>
                 )
-              })}
+              })},
             </div>
       
       <Footer />
@@ -129,21 +128,21 @@ return (
     </>
         </section>
 
-        {/* Contact Form Section */}
+        {/* Contact Form Section */},
         <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12"
+    g: px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6"
+                <h2 className="$2">
 Send us a Message
                 </h2>
-                <p className="text-lg text-gray-300 mb-8"
+                <p className="$2">
 Fill out the form below and we'll get back to you as soon as possible. We're here to help you succeed.
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6"
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"
 Full Name *
@@ -236,7 +235,7 @@ value={formData.service} onChange={handleChange} className="
                       <option value=""
                       {services.map((service), index) => (
                         <option key={index} value={service}>{service}</option>
-                      ))}
+                      ))},
                     </select>
                   </div>
       
@@ -274,17 +273,17 @@ Send Message
                 <h3 className="text-2xl font-bold text-white mb-6">;
 Why Choose Us?
                 </h3>
-                <div className="space-y-6"
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="$2">
                     </div>
       
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="$2">
+                      <p className="$2">
                     </div>
       
       <Footer />
@@ -301,8 +300,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="$2">
+                      <p className="$2">
                     </div>
       
       <Footer />
@@ -319,8 +318,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="$2">
+                      <p className="$2">
                     </div>
       
       <Footer />
@@ -337,8 +336,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="$2">
+                      <p className="$2">
                     </div>
       
       <Footer />
@@ -371,7 +370,6 @@ Why Choose Us?
       <Footer />
     </>
   )
-}
-
+},
 export default ContactPage
           </div>

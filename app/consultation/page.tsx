@@ -1,30 +1,29 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-    {;,
-icon: Brain,;,
-title: 'AI-Powered Solutions',;,
-description: 'Advanced artificial intelligence technology to transform your business operations.',;,
-benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']} ,
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',;,
-description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    {;,
-icon: TrendingUp,;,
-title: 'Performance Optimization',;,
-description: 'AI-powered insights to optimize your business performance.',;,
-benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {;,
-icon: Target,;,
-title: 'Precision Targeting',;,
-description: 'Target specific goals and objectives with precision.',;,
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-
+    {,
+icon: Brain,,
+title: 'AI-Powered Solutions',,
+description: 'Advanced artificial intelligence technology to transform your business operations.',,
+benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']},
+    {,
+icon: BarChart,,
+title: 'Advanced Analytics',,
+description: 'Comprehensive analytics dashboard with real-time data visualization.',,
+benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {,
+icon: TrendingUp,,
+title: 'Performance Optimization',,
+description: 'AI-powered insights to optimize your business performance.',,
+benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {,
+icon: Target,,
+title: 'Precision Targeting',,
+description: 'Target specific goals and objectives with precision.',,
+benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ],
 const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -32,8 +31,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ]
-
+  ],
 return (
     <>
 
@@ -50,20 +48,18 @@ return (
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
       </Helmet>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+        {/* Hero Section */},
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="$2">
   </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="$2">
 Get Started
-                  <ArrowRight className="ml-2 h-5 w-5"
+                  <ArrowRight className="$2">
                 </button>
-                <button className="
-    ,
-    r: bg-cyan-400 hove, r:text-white transition-all duration-300"
+                <button className="$2">
 Learn More
                 </button>
               </div>
@@ -80,7 +76,7 @@ Learn More
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -104,16 +100,16 @@ Learn More
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300"
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"
-                        {benefit}
+                        <CheckCircle className="$2">
+                        {benefit},
                       </li>
-                    ))}
+                    ))},
                   </ul>
                 </div>
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -124,7 +120,7 @@ Learn More
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -146,7 +142,7 @@ Learn More
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -173,6 +169,5 @@ Learn More
     </>
       <Footer />
     </>
-  );
-};
+  )};
 

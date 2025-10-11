@@ -9,19 +9,19 @@ const PagePage: React.FC = () => {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
     },
     {
       icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
     },
     {
       icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
     }
   ];
 
@@ -47,7 +47,7 @@ const PagePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -98,12 +98,12 @@ const PagePage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {benefit}
+                        {benefit},
                       </li>
-                    ))}
+                    ))},
                   </ul>
                 </div>
-              ))}
+              ))},
             </div>
           </div>
         </section>
@@ -127,7 +127,7 @@ const PagePage: React.FC = () => {
                     <span className="text-lg font-medium text-gray-900">{benefit}</span>
                   </div>
                 </div>
-              ))}
+              ))},
             </div>
           </div>
         </section>

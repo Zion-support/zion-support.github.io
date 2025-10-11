@@ -14,7 +14,7 @@ import React from 'react';
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -25,7 +25,7 @@ import React from 'react';
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section></section>
           <div></div>
             <div></div>
@@ -53,7 +53,7 @@ import React from 'react';
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -64,7 +64,7 @@ import React from 'react';
     </>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */},
         <section></section>
           <div></div>
             <div></div>
@@ -97,5 +97,5 @@ import React from 'react';
       <Footer />
     </>
   )
-}
+},
     </h2>

@@ -10,14 +10,14 @@ import React from 'react';;
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"
+        {/* Benefits Section */},
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="$2">
 Why Choose Our Solution?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+              <p className="$2">
 Proven results that drive business growth
               </p>
             </div>
@@ -38,7 +38,7 @@ Proven results that drive business growth
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -49,7 +49,7 @@ Proven results that drive business growth
     </>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */},
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
   </div>
@@ -59,5 +59,5 @@ Proven results that drive business growth
       <Footer />
     </>
   )
-}
+},
       </div>

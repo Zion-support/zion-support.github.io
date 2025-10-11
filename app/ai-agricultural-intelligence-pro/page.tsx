@@ -1,14 +1,12 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
     },
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',} ]
-
+    {,
+icon: BarChart,,
+title: 'Advanced Analytics',} ],
 const benefits = [
-  ]
-
+  ],
 return (
     <>
       <Helmet>
@@ -27,7 +25,7 @@ return (
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -42,7 +40,7 @@ return (
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -71,16 +69,15 @@ return (
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          {benefit},
                         </li>
-                      ))}
+                      ))},
                     </ul>
                   </div>
       
       <Footer />
     </>
-                );
-              })}
+                )})},
             </div>
       
       <Footer />
@@ -91,7 +88,7 @@ return (
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -112,7 +109,7 @@ return (
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -123,7 +120,7 @@ return (
     </>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */},
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Agriculture?</h2>
@@ -152,5 +149,5 @@ return (
       <Footer />
     </>
   )
-}
+},
     </Helmet>

@@ -16,7 +16,7 @@
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -47,7 +47,7 @@
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -72,15 +72,15 @@
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit},
                       </li>
-                    ))}
+                    ))},
                   </ul>
                 </div>
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -91,7 +91,7 @@
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -115,7 +115,7 @@
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -126,7 +126,7 @@
     </>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -175,5 +175,5 @@
       <Footer />
     </>
   )
-}
+},
   </div>

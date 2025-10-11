@@ -35,16 +35,17 @@ import {
   Wifi, 
   MessageSquare, 
   CheckCircle, 
-  ShoppingCart} from 'lucide-react'
+  ShoppingCart
+} from 'lucide-react'
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-  
+
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
@@ -62,6 +63,7 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </Link>
           </div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
@@ -77,63 +79,24 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-lg border border-white/10">
-                  <Link to="/services" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-t-lg">
-                    All Services
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                     AI Services
-                    <ChevronDown className="ml-1 h-4 w-4" />
                   </Link>
-                  {activeDropdown === 'ai-services' && (
-                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-1 z-50">
-                      <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        All AI Services
-                      </Link>
-                      <Link to="/ai-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        AI Analytics
-                      </Link>
-                      <Link to="/ai-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        AI Automation
-                      </Link>
-                      <Link to="/ai-content-generation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Content Generation
-                      </Link>
-                    </div>
-                  )}
+                  <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    IT Services
+                  </Link>
+                  <Link to="/cloud-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cloud Services
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Cybersecurity
+                  </Link>
                 </div>
               )}
             </div>
 
-            {/* IT Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('it-services')}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-              >
-                IT Services
-              </button>
-            </div>
-            <div className="relative">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white p-2 rounded-md"
-              >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-              {activeDropdown === 'solutions' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-lg border border-white/10">
-                  <Link to="/ai-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-t-lg">
-                    AI Solutions
-                  </Link>
-                  <Link to="/cloud-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Cloud Solutions
-                  </Link>
-                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Enterprise Solutions
-                  </Link>
-                </div>)}
-            </div><Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
@@ -142,7 +105,9 @@ const Navigation: React.FC = () => {
             <Link to="/demo" className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
               Demo
             </Link>
-          </div>{/* Mobile menu button */}
+          </div>
+
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -150,7 +115,10 @@ const Navigation: React.FC = () => {
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-          </div></div>{/* Mobile Navigation */}
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
@@ -172,9 +140,12 @@ const Navigation: React.FC = () => {
               <Link to="/demo" className="block px-3 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600">
                 Demo
               </Link>
-            </div></div>)}
-      </div></nav>
-  );
-};
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  )
+}
 
 export default Navigation

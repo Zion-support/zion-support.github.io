@@ -10,7 +10,7 @@ const BlogPage: React.FC = () => {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'],
     },
     {id: 2,
       title: 'Building Scalable Cloud Infrastructure: Best Practices',
@@ -56,17 +56,14 @@ const BlogPage: React.FC = () => {
       readTime: '15 min read',
       category: 'business',
       featured: false,
-      image: '/blog/digital-transformation.jpg'}
-  ]
-
+      image: '/blog/digital-transformation.jpg'},
+  ],
   const filteredPosts = blogPosts.filter(post => {const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
     return matchesSearch && matchesCategory})
-
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = filteredPosts.filter(post => !post.featured)
-
   return (
     
       <Helmet>
@@ -82,7 +79,7 @@ const BlogPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -94,7 +91,7 @@ const BlogPage: React.FC = () => {
     </>
         </section>
 
-        {/* Search and Filter */}
+        {/* Search and Filter */},
         <section className="py-8 px-4 sm:px-6 lg:px-8">
             </div>
       

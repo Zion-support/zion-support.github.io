@@ -5,5 +5,5 @@ const App: React.FC = () => {return (
       <h1>Test App</h1>
     </div>
   )
-}
+},
 export default App

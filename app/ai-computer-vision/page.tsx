@@ -4,20 +4,21 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
+const $1: React.FC = () => {
+  const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ],
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -25,7 +26,7 @@ const PagePage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ]
+  ],
   return (
     <>
       <Helmet>
@@ -37,14 +38,14 @@ const PagePage: React.FC = () => {const features = [
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+        {/* Hero Section */},
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="$2">
                 Page Page
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>
@@ -64,9 +65,9 @@ const PagePage: React.FC = () => {const features = [
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
+                  <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
-                    <h3 className="text-xl font-semibold text-gray-900"
+                    <h3 className="$2">
                   </div>
       
       <Footer />
@@ -77,7 +78,7 @@ const PagePage: React.FC = () => {const features = [
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit},
                       </li>
                     )
     </>
@@ -87,7 +88,7 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -98,7 +99,7 @@ const PagePage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
             </div>
       
       <Footer />
@@ -106,9 +107,9 @@ const PagePage: React.FC = () => {const features = [
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
+                  <div className="flex items-center">
+                    <CheckCircle className="$2">
+                    <span className="$2">
                   </div>
       
       <Footer />
@@ -118,7 +119,7 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -129,21 +130,19 @@ const PagePage: React.FC = () => {const features = [
     </>
         </section>
 
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="$2">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="$2">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="$2">
                 Contact Us
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+              <button className="$2">
                 Schedule Demo
               </button>
             </div>
@@ -158,5 +157,5 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
   )
-}
+},
         </CheckCircle>

@@ -8,22 +8,22 @@ import Footer from '../components/Footer';
 const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
     {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ],
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -51,7 +51,7 @@ const AiAnalyticsPage: React.FC = () => {
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -82,7 +82,7 @@ const AiAnalyticsPage: React.FC = () => {
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -107,15 +107,15 @@ const AiAnalyticsPage: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit},
                       </li>
-                    ))}
+                    ))},
                   </ul>
                 </div>
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -126,7 +126,7 @@ const AiAnalyticsPage: React.FC = () => {
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -139,9 +139,9 @@ const AiAnalyticsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
+                  <div className="flex items-center">
+                    <CheckCircle className="$2">
+                    <span className="$2">
                   </div>
       
       <Footer />
@@ -151,7 +151,7 @@ const AiAnalyticsPage: React.FC = () => {
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -162,21 +162,19 @@ const AiAnalyticsPage: React.FC = () => {
     </>
         </section>
 
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="$2">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="$2">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="$2">
                 Contact Us
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+              <button className="$2">
                 Schedule Demo
               </button>
             </div>
@@ -194,7 +192,6 @@ const AiAnalyticsPage: React.FC = () => {
     </>
       <Footer />
     </>
-  );
-};
+  )};
 
 export default AiAnalyticsPage;

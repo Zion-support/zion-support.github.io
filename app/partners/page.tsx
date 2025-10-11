@@ -1,6 +1,6 @@
 import React from 'react'
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
@@ -48,6 +48,5 @@ import React from 'react'
     </>
       <Footer />
     </>
-  );
-};
+  )};
 

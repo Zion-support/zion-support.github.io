@@ -64,7 +64,7 @@ import React from 'react'
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -75,11 +75,11 @@ import React from 'react'
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section></section>
           <div></div>
             <div>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -125,5 +125,5 @@ import React from 'react'
       <Footer />
     </>
   )
-}
+},
       </Helmet>

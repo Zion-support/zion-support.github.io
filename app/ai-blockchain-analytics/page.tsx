@@ -1,32 +1,32 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {const features = [
-    {;,} icon: Brain},;,
-title: 'AI-Powered Solutions',;,
-description: 'Advanced artificial intelligence technology to transform your business operations.',;,
-benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
+const $1: React.FC = () => {
+  const features = [
+    {,} icon: Brain},,
+title: 'AI-Powered Solutions',,
+description: 'Advanced artificial intelligence technology to transform your business operations.',,
+benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights'],
     },
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',;,
-description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    {;,
-icon: TrendingUp,;,
-title: 'Performance Optimization',;,
-description: 'AI-powered insights to optimize your business performance.',;,
-benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {;,
-icon: Target,;,
-title: 'Precision Targeting',;,
-description: 'Target specific goals and objectives with precision.',;,
-benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-
+    {,
+icon: BarChart,,
+title: 'Advanced Analytics',,
+description: 'Comprehensive analytics dashboard with real-time data visualization.',,
+benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {,
+icon: TrendingUp,,
+title: 'Performance Optimization',,
+description: 'AI-powered insights to optimize your business performance.',,
+benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {,
+icon: Target,,
+title: 'Precision Targeting',,
+description: 'Target specific goals and objectives with precision.',,
+benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ],
 const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -34,8 +34,7 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ]
-
+  ],
 return (
     <>
 
@@ -55,14 +54,14 @@ return (
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="$2">
+Page <span className="$2">
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
             </div>
@@ -75,7 +74,7 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -100,7 +99,7 @@ Discover our comprehensive page solutions designed to transform your business wi
                     {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit},
                       </li>
                     )
     </>
@@ -110,7 +109,7 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -121,7 +120,7 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
@@ -144,7 +143,7 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -155,21 +154,19 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-4xl mx-auto text-center"
-            <h2 className="text-4xl font-bold text-white mb-6"
-            <p className="text-xl text-gray-300 mb-8"
+        {/* CTA Section */},
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="$2">
+            <p className="$2">
 Join thousands of businesses already using our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="$2">
 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5"
+                <ArrowRight className="$2">
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+              <button className="$2">
                 Schedule Demo
               </button>
       
@@ -177,8 +174,7 @@ Start Free Trial
     </>
       <Footer />
     </>
-  );
-}
+  )},
       </div>
       
       <Footer />

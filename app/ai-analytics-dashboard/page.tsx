@@ -11,28 +11,27 @@ const AnalyticsDashboardPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Monitor your data in real-time with interactive dashboards and visualizations.',
-      benefits: ['Live data updates', 'Interactive charts', 'Custom metrics', 'Alert systems']
+      benefits: ['Live data updates', 'Interactive charts', 'Custom metrics', 'Alert systems'],
     },
     {
       icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Identify patterns and trends in your data with advanced AI algorithms.',
-      benefits: ['Pattern recognition', 'Predictive analytics', 'Trend forecasting', 'Anomaly detection']
+      benefits: ['Pattern recognition', 'Predictive analytics', 'Trend forecasting', 'Anomaly detection'],
     },
     {
       icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights with beautiful visualizations.',
-      benefits: ['Multiple chart types', 'Custom dashboards', 'Export capabilities', 'Mobile responsive']
+      benefits: ['Multiple chart types', 'Custom dashboards', 'Export capabilities', 'Mobile responsive'],
     },
     {
       icon: Target,
       title: 'Goal Tracking',
       description: 'Set and track KPIs with automated reporting and performance monitoring.',
-      benefits: ['KPI tracking', 'Goal setting', 'Progress monitoring', 'Performance reports']
-    }
-  ]
-
+      benefits: ['KPI tracking', 'Goal setting', 'Progress monitoring', 'Performance reports'],
+    },
+  ],
   const benefits = [
     'Make data-driven decisions',
     'Identify business opportunities',
@@ -42,8 +41,7 @@ const AnalyticsDashboardPage: React.FC = () => {
     'Increase revenue insights',
     'Optimize resource allocation',
     'Predict future trends'
-  ]
-
+  ],
   return (
     <>
       <Helmet>
@@ -60,8 +58,8 @@ const AnalyticsDashboardPage: React.FC = () => {
       </Helmet>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */},
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -76,7 +74,7 @@ const AnalyticsDashboardPage: React.FC = () => {
     </>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -105,16 +103,15 @@ const AnalyticsDashboardPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          {benefit},
                         </li>
-                      ))}
+                      ))},
                     </ul>
                   </div>
       
       <Footer />
     </>
-                );
-              })}
+                )})},
             </div>
       
       <Footer />
@@ -125,7 +122,7 @@ const AnalyticsDashboardPage: React.FC = () => {
     </>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */},
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -146,7 +143,7 @@ const AnalyticsDashboardPage: React.FC = () => {
       
       <Footer />
     </>
-              ))}
+              ))},
             </div>
       
       <Footer />
@@ -157,17 +154,17 @@ const AnalyticsDashboardPage: React.FC = () => {
     </>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */},
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Start analyzing your data with our AI-powered analytics dashboard today.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="$2">
 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5"
+                <ArrowRight className="$2">
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 View Demo
@@ -186,5 +183,5 @@ Start Free Trial
       <Footer />
     </>
   )
-}
+},
         </Navigation>

@@ -1,14 +1,15 @@
 import React from 'react'
-const TutorialsPage: React.FC = () => {const features = [
+const $1: React.FC = () => {
+  const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
@@ -36,14 +37,14 @@ const TutorialsPage: React.FC = () => {const features = [
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+        {/* Hero Section */},
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="$2">
                 Tutorials Page
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+              <p className="$2">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>

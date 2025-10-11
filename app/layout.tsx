@@ -3,7 +3,7 @@ import {Helmet} from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import './globals.css'
-interface RootLayoutProps {children: React.ReactNode;} const RootLayout: React.FC<RootLayoutProps> = ({children} ) => {
+interface RootLayoutProps {children: React.ReactNode} const RootLayout: React.FC<RootLayoutProps> = ({children} ) => {
   return (
     <>
 <html lang="en"
@@ -15,10 +15,10 @@ interface RootLayoutProps {children: React.ReactNode;} const RootLayout: React.F
           <meta name="viewport" content="width=device-width, initial-scale=1"
           <link rel="icon" href="/favicon.ico"
         </Helmet>
-      <body className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      <body className="$2">
         <Navigation />
-        <main className="pt-20"
-          {children}
+        <main className="pt-20">
+          {children},
         </main>
         <Footer />
       </body>

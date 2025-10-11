@@ -19,7 +19,6 @@
     </>
       <Footer />
     </>
-  );
-};
+  )};
 
 export default PagePage;

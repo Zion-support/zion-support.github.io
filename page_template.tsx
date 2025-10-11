@@ -6,8 +6,8 @@ import SEOOptimizer from '../app/components/SEOOptimizer'
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity} from 'lucide-react'
 const PageTemplate: React.FC<{title: string
   description: string
-  icon: React.ComponentType<any></any>features</any>: string[]
-  benefits: string[]
+  icon: React.ComponentType<any></any>features</any>: string[],
+  benefits: string[],
   price: string
   category: string,
   keywords: string[]}> = ({title, description, icon: Icon, features, benefits, price, category, keywords}) => {
@@ -21,24 +21,24 @@ const PageTemplate: React.FC<{title: string
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title={`${title} - Zion Tech Group`}
-        description={description}
-        keywords={keywords}
+        title={`${title} - Zion Tech Group`},
+        description={description},
+        keywords={keywords},
         canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-'
     </>
-  );`}
+  );`},
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
+        {/* Hero Section */},
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Icon className="w-10 h-10 text-white" />
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
-              {title}
+              {title},
             <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-              {description}
+              {description},
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -57,7 +57,7 @@ const PageTemplate: React.FC<{title: string
           </div>,
         </section>,
 ,
-        {/* Features Section */}
+        {/* Features Section */},
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
@@ -79,10 +79,10 @@ const PageTemplate: React.FC<{title: string
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature}
+                <h3 className="text-xl font-semibold text-white mb-2">{feature},
                 <p className="text-gray-300">Advanced {feature.toLowerCase()} capabilities powered by AI
-            ))}
-        {/* Benefits Section */}
+            ))},
+        {/* Benefits Section */},
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
@@ -99,10 +99,10 @@ const PageTemplate: React.FC<{title: string
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit},
                 <p className="text-gray-300">Measurable improvement in your business metrics
-            ))}
-        {/* Pricing Section */}
+            ))},
+        {/* Pricing Section */},
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
@@ -120,8 +120,8 @@ const PageTemplate: React.FC<{title: string
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
           <div className="max-w-md mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">{title}
-              <div className="text-4xl font-bold text-cyan-400 mb-4">{price}
+              <h3 className="text-2xl font-bold text-white mb-4">{title},
+              <div className="text-4xl font-bold text-cyan-400 mb-4">{price},
               <p className="text-gray-300 mb-6">per month
               <$2 />
                 href="/contact"
@@ -132,7 +132,7 @@ const PageTemplate: React.FC<{title: string
           </div>,
         </section>,
 ,
-        {/* Contact Section */}
+        {/* Contact Section */},
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
@@ -172,7 +172,7 @@ const PageTemplate: React.FC<{title: string
       </main>
       <Footer />,
     </div>)
-}
+},
 export default PageTemplate</h2>
   </h2>
   </h2>
