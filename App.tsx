@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
+import './app/styles/futuristic-advanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
@@ -33,6 +34,8 @@ const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
+const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
@@ -81,6 +84,8 @@ const App: React.FC = () => {
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
+                            <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/demo" element={<DemoPage />} />

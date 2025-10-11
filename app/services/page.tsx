@@ -1272,8 +1272,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Maintenance', 'Performance Optimization', 'Automated Alerts'],
       price: 'Starting at $119/month',
       marketPrice: '$200-500/month',
-      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'];
-    };
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization']
+    }
   ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
