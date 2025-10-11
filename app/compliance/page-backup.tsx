@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
-const pagebackup.tsxPage: React.FC = () => {
+const PageBackupPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -50,7 +50,7 @@ const pagebackup.tsxPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Pagebackup.tsx
+              Page Backup
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
@@ -141,4 +141,4 @@ const pagebackup.tsxPage: React.FC = () => {
   );
 };
 
-export default pagebackup.tsxPage;
+export default PageBackupPage;

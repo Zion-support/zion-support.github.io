@@ -2,41 +2,41 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { FileText, Brain, BarChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
+import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
 const AiDocumentProcessorPage: React.FC = () => {
   const features = [
     {
-      icon: FileText,
-      title: 'Intelligent Document Processing',
-      description: 'Extract, analyze, and process documents with advanced AI algorithms for maximum accuracy.',
-      benefits: ['OCR technology', 'Text extraction', 'Data validation', 'Format recognition']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations from your documents.',
-      benefits: ['Content analysis', 'Pattern recognition', 'Smart categorization', 'Insight generation']
-    },
-    {
       icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization from processed documents.',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+    },
+    {
+      icon: PieChart,
+      title: 'Data Visualization',
+      description: 'Transform complex data into clear, actionable insights.',
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
+    },
+    {
       icon: Target,
-      title: 'Precision Processing',
-      description: 'Target specific document types and requirements with precision and accuracy.',
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   ];
 
   const benefits = [
-    'Increase processing efficiency by up to 80%',
-    'Reduce manual data entry by 90%',
-    'Improve accuracy with AI validation',
-    'Scale document processing without proportional staff increases',
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
@@ -50,10 +50,10 @@ const AiDocumentProcessorPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              AI Document Processor
+              Ai Document Processor
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your document workflow with intelligent AI-powered processing and analysis.
+              Transform your business with our advanced AI-powered solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -72,7 +72,7 @@ const AiDocumentProcessorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to process documents intelligently</p>
+              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -100,8 +100,8 @@ const AiDocumentProcessorPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Document Processor?</h2>
-              <p className="text-xl text-gray-300">Transform your document workflow with intelligent automation</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -119,9 +119,9 @@ const AiDocumentProcessorPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Document Processing?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered document processing solutions.
+              Join thousands of businesses already using our AI-powered solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">

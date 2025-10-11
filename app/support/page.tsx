@@ -1,4 +1,10 @@
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Phone, Mail, MessageCircle, FileText, Clock, CheckCircle } from 'lucide-react';
 
+const SupportPage: React.FC = () => {
   const faqs = [
     {
       question: 'How do I get started with your AI services?',
@@ -17,6 +23,7 @@
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
+
   const supportChannels = [
     {
       icon: Phone,
@@ -37,67 +44,93 @@
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
+      availability: 'Business hours',
+      responseTime: 'Immediate'
+    },
+    {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
-      link: '/knowledge-base'
+      link: '/knowledge-base',
+      availability: '24/7',
+      responseTime: 'Self-service'
     }
-  ]
+  ];
 
-      </Helmet>
-      
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+              Support Center
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get help when you need it. Our expert support team is here to assist you 24/7.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* Support Channels */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
+              <p className="text-xl text-gray-300">Choose the best way to reach us</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <channel.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  {channel.contact && (
+                    <p className="text-cyan-400 font-semibold mb-2">{channel.contact}</p>
+                  )}
+                  <div className="space-y-1 text-sm text-gray-400">
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-2" />
+                      {channel.availability}
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      {channel.responseTime}
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                <div className="text-sm text-gray-400">
-                  <div>Available: {channel.availability}</div>
-                  <div>Response: {channel.responseTime}</div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">Find answers to common questions</p>
+            </div>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-          </div>
-        </div>
-      </section>
-
+      <Footer />
     </div>
   );
 };
 
-            </div>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Need Help?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Support
-            </button>
-            <button className="cyber-button-secondary">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+export default SupportPage;
