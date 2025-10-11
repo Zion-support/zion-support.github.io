@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles}}from 'lucide-react';
+const IoTPage: React.FC = () => {,
+=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react'
 const IoTPage: React.FC = () => {
+>>>>>>> origin/main
     const iotServices = [
     {
       title: 'IoT Device Management Platform',
@@ -12,10 +19,19 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
       marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']},
+    {title: 'Smart City Solutions',
+=======
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'];
+=======
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'],
+>>>>>>> origin/main
   },
     {
     title: 'Smart City Solutions',
+>>>>>>> origin/main
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
       price: 'Starting at $15,000/month',
@@ -23,10 +39,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve city efficiency', 'Enhance citizen satisfaction', 'Reduce operational costs'],
       marketPrice: '$25,000-100,000/month',
       category: 'Smart Cities',
+<<<<<<< HEAD
+      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']},
+    {title: 'Industrial IoT (IIoT)',
+=======
       technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Industrial IoT (IIoT)',
+>>>>>>> origin/main
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.',
       icon: '🏭',
       price: 'Starting at $8,000/month',
@@ -34,10 +55,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce downtime by 40%', 'Improve product quality', 'Lower energy costs'],
       marketPrice: '$15,000-60,000/month',
       category: 'Industrial IoT',
+<<<<<<< HEAD
+      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']},
+    {title: 'Smart Agriculture Platform',
+=======
       technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning'],
   },
     {
     title: 'Smart Agriculture Platform',
+>>>>>>> origin/main
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
       price: 'Starting at $3,500/month',
@@ -45,10 +71,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Increase crop yields by 25%', 'Reduce water usage', 'Improve sustainability'],
       marketPrice: '$6,000-25,000/month',
       category: 'Smart Agriculture',
+<<<<<<< HEAD
+      technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']},
+    {title: 'Smart Home Automation',
+=======
       technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision'],
   },
     {
     title: 'Smart Home Automation',
+>>>>>>> origin/main
       description: 'Complete smart home solutions with energy management, security, and comfort automation.',
       icon: '🏠',
       price: 'Starting at $1,500/month',
@@ -56,10 +87,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 30%', 'Improve home security', 'Enhance comfort'],
       marketPrice: '$2,500-10,000/month',
       category: 'Smart Homes',
+<<<<<<< HEAD
+      technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']},
+    {title: 'Healthcare IoT Solutions',
+=======
       technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter'],
   },
     {
     title: 'Healthcare IoT Solutions',
+>>>>>>> origin/main
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.',
       icon: '🏥',
       price: 'Starting at $5,000/month',
@@ -67,10 +103,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve patient care', 'Reduce hospital visits', 'Enable remote monitoring'],
       marketPrice: '$10,000-40,000/month',
       category: 'Healthcare IoT',
+<<<<<<< HEAD
+      technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']},
+    {title: 'Fleet Management IoT',
+=======
       technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Fleet Management IoT',
+>>>>>>> origin/main
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.',
       icon: '🚛',
       price: 'Starting at $2,000/month',
@@ -78,10 +119,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
       marketPrice: '$3,500-15,000/month',
       category: 'Fleet Management',
+<<<<<<< HEAD
+      technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']},
+    {title: 'Environmental Monitoring',
+=======
       technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics'],
   },
     {
     title: 'Environmental Monitoring',
+>>>>>>> origin/main
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.',
       icon: '🌍',
       price: 'Starting at $3,000/month',
@@ -89,10 +135,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve environmental awareness', 'Enable data-driven decisions', 'Support sustainability goals'],
       marketPrice: '$5,000-20,000/month',
       category: 'Environmental',
+<<<<<<< HEAD
+      technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']},
+    {title: 'Retail IoT Solutions',
+=======
       technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Retail IoT Solutions',
+>>>>>>> origin/main
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.',
       icon: '🛒',
       price: 'Starting at $4,000/month',
@@ -100,10 +151,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce inventory costs', 'Improve customer experience', 'Increase sales'],
       marketPrice: '$7,000-30,000/month',
       category: 'Retail IoT',
+<<<<<<< HEAD
+      technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']},
+    {title: 'Energy Management IoT',
+=======
       technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Energy Management IoT',
+>>>>>>> origin/main
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.',
       icon: '⚡',
       price: 'Starting at $3,500/month',
@@ -111,10 +167,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 35%', 'Improve grid stability', 'Support renewable energy'],
       marketPrice: '$6,000-25,000/month',
       category: 'Energy Management',
+<<<<<<< HEAD
+      technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']},
+    {title: 'IoT Security Solutions',
+=======
       technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization'],
   },
     {
     title: 'IoT Security Solutions',
+>>>>>>> origin/main
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.',
       icon: '🔒',
       price: 'Starting at $2,800/month',
@@ -122,10 +183,15 @@ const IoTPage: React.FC = () => {
       benefits: ['Protect IoT devices', 'Ensure data privacy', 'Meet compliance requirements'],
       marketPrice: '$5,000-20,000/month',
       category: 'IoT Security',
+<<<<<<< HEAD
+      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']},
+    {title: 'IoT Data Analytics Platform',
+=======
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence'],
   },
     {
     title: 'IoT Data Analytics Platform',
+>>>>>>> origin/main
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500/month',
@@ -133,7 +199,18 @@ const IoTPage: React.FC = () => {
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
+  ]
+const categories = [...new Set(iotServices.map(service => service.category))]
+return(<>)
+      <Helmet />
+=======
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
+=======
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'],
+>>>>>>> origin/main
   }
     }
   ]
@@ -141,7 +218,12 @@ const categories = [...new Set(iotServices.map(service => service.category))]
 return (
     <>
       <Helmet>
+<<<<<<< HEAD
+>>>>>>> origin/main
+        <title>IoT Services - Zion Tech Group</title>
+=======
         </Helmet><title>IoT Services - Zion Tech Group</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -157,44 +239,46 @@ return (
         </section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
             <div className="text-center"></div>
               <h1>
                 IoT Solutions</h1>
               </h1>
-              <p>
-                Connect, monitor, and optimize your world with intelligent Internet of Things solutions
+              <p>Connect, monitor, and optimize your world with intelligent Internet of Things solutions;</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
-                  Explore IoT Solutions
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                <button>Explore IoT Solutions;</button>
                 </button>
-                <button>
-                  Schedule IoT Consultation,
+                <button>Schedule IoT Consultation,</button>
                 </button>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Key Benefits */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Key Benefits */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
             <div className="text-center mb-12"></div>
-              <h2>
-                Why Choose Our IoT Services?,
+              <h2>Why Choose Our IoT Services?,</h2>
               </h2>
-              <p>
-                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
+              <p>End-to-end IoT solutions with proven expertise in connectivity, security, and analytics;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               <div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Wifi />
@@ -222,10 +306,20 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Services by Category */}{
+    categories.map(category => ()}
+=======
+        {/* Services by Category */},
+    {
+=======
         {/* Services by Category */}
         {
+>>>>>>> origin/main
     categories.map(category => (
   }
+>>>>>>> origin/main
           <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -234,58 +328,77 @@ return (
             </div>
           </div>
         </section>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
               <div className="text-center mb-12"></div>
-                <h2>
-                  {category} Solutions
+                <h2>{category</h2>}Solutions;
                 </h2>
-                <p>
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology
+                <p>Specialized {category.toLowerCase()</p>}}solutions powered by IoT technology;
                 </p>
               </div>
+<<<<<<< HEAD
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+                {iotServices;
+=======
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
                 {
     iotServices
+>>>>>>> origin/main
                   .filter(service => service.category === category),
-                  .map((service, index) => (</div>
-  }
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-                      <div className="text-4xl mb-4">{service.icon}</div>
+                  .map((service, index) => (</div>} <div key={index}className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"></div>,
+                      <div className="text-4xl mb-4">{service.icon</div>}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <p className="text-gray-600 mb-4">{service.description</p>}</p>
                       <div className="mb-4"></div>
                         <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold text-green-600">{service.price</span>}</span>
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice,</span>}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 40% vs market rates</div>
                         </div>
                       </div>
                       <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
                         <ul>
+<<<<<<< HEAD
+                          {service.features.map((feature, featureIndex) => (} <li>
+                              <CheckCircle />
+=======
                           {
     service.features.map((feature, featureIndex) => (
   }
                             </ul><li>
                               </li><CheckCircle>
+>>>>>>> origin/main
 
-                              {feature}
-                            </li>
+                              {feature} </li>
                           ))}
 
                         </ul>
                       </div>
+<<<<<<< HEAD
+                      <div className="mb-4"></div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
+                        <div className="flex flex-wrap gap-2"></div>
+                          {service.technologies.map((tech, techIndex) => (</div>} <span>{tech</span>} </span>
+=======
                       <div className="mb-4" / /></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2" / /></div>
                           {
     service.technologies.map((tech, techIndex) => ()
+>>>>>>> origin/main
                           ))}
 
                         </div>
                       </div>
+<<<<<<< HEAD
+                      <div className="mb-6"></div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
+                        <ul>
+                          {service.benefits.map((benefit, benefitIndex) => (} <li>
+                              <Star>
+=======
                       <div className="mb-6" / /></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul></ul>
@@ -294,15 +407,19 @@ return (
   }
                             </ul><li>
                               </li><Star>
+>>>>>>> origin/main
 
-                              {benefit}
-                            </li>
+                              {benefit} </li>
                           ))}
 
                         </ul>
                       </div>
+<<<<<<< HEAD
+                      <button>Get IoT Quote;</button>
+=======
                       <button></button>
                         Get IoT Quote
+>>>>>>> origin/main
                       </button>
                     </div>
 
@@ -310,16 +427,37 @@ return (
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        ))}
+{/* IoT Capabilities Showcase */} <section className="py-20 px-4">
+=======
+        ))},
+    {/* IoT Capabilities Showcase */}
+        <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         ))}
 {/* IoT Capabilities Showcase */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>,
+            <div className="text-center mb-12"></div>
+              <h2>Our IoT Capabilities;</h2>
+              </h2>
+              <p>Comprehensive IoT technologies and methodologies for connected solutions,</p>
+=======
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" / /></div>
             <div className="text-center mb-12" / /></div>
               <h2></h2>
@@ -327,9 +465,10 @@ return (
               </h2>
               <p></p>
                 Comprehensive IoT technologies and methodologies for connected solutions,
+>>>>>>> origin/main
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
                 <Wifi>
                 </Wifi><h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h3>
@@ -363,15 +502,32 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Contact Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Contact Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>,
+            <h2>Ready to Connect Your World?</h2>
+            </h2>
+            <p>Contact our IoT experts for a free consultation and custom IoT strategy development;</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <a>
+                📞 +1 302 464 0950;
+=======
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center" / /></div>
             <h2></h2>
               Ready to Connect Your World?
@@ -382,6 +538,7 @@ return (
             <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
               <a></a>
                 📞 +1 302 464 0950
+>>>>>>> origin/main
               </a>
               <a></a>
                 ✉️ kleber@ziontechgroup.com,

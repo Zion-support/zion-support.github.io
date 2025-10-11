@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Zap,}
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
     Zap,
+>>>>>>> origin/main
   Settings,
   CheckCircle,
   BarChart,
@@ -25,34 +32,36 @@ import {
 
   Workflow,
 
-  Bot
-  }
-} from 'lucide-react'
-const ProcessAutomationPage: React.FC = () => {
+  Bot;}} from 'lucide-react'
+const ProcessAutomationPage: React.FC = () => {,
     const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
-  },
-    {
-    icon: Bot,
+      description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.',},
+    {icon: Bot,
       title: 'AI-Powered Automation',
-      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
-  },
-    {
-    icon: Settings,
+      description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'},
+    {icon: Settings,
       title: 'Custom Integration',
-      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
-  },
-    {
-    icon: BarChart,
+      description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.',},
+    {icon: BarChart,
       title: 'Performance Monitoring',
+<<<<<<< HEAD
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.',}}
+  ]
+=======
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   }
     }
+<<<<<<< HEAD
+  ];];];
+>>>>>>> origin/main
+const benefits = [
+=======
   ]
   const benefits = [
+>>>>>>> origin/main
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',
@@ -64,38 +73,69 @@ const ProcessAutomationPage: React.FC = () => {
 
     '24/7 automated operations',
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Custom automation solutions'
+  ]
+return(<>)
+      <Helmet />
+=======
+    'Custom automation solutions';
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
+=======
     'Custom automation solutions'
   ]
 return (
     <>
       <Helmet>
         </Helmet><title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<<<<<<< HEAD
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Process Automation Services
+              <h1>Process Automation Services;</h1>
               </h1>
+<<<<<<< HEAD
+              <p>Streamline your business operations with intelligent automation solutions.;</p>
+=======
               <p>
                 Streamline your business operations with intelligent automation solutions.
+>>>>>>> origin/main
                 Reduce costs, improve efficiency, and scale your business with AI-powered process automation.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>
+<<<<<<< HEAD
+                  <Zap>
+                  Automate Now;
+=======
                   </button><Zap>
                   Automate Now
+>>>>>>> origin/main
                 </button>
                 <button>
                   </button><Phone>
@@ -105,15 +145,44 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Our Automation Solutions;</h2>
+              </h2>
+              <p>We provide comprehensive process automation services to transform your business operations.,</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                    <feature />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description</p>}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */} <section className="py-20 px-4">
+=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
@@ -134,6 +203,7 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Process Automation Services
@@ -171,6 +241,13 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Key Benefits;</h2>
+              </h2>
+              <p>Transform your business with our comprehensive process automation services.,</p>
+=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
@@ -178,15 +255,28 @@ return (
               </h2>
               <p></p>
                 Transform your business with our comprehensive process automation services.,
+>>>>>>> origin/main
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
               {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                  <CheckCircle />
+                  <p className="text-gray-300 text-lg">{benefit</p>}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */} <section className="py-20 px-4">
+=======
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -207,6 +297,13 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+              <h2>Ready to Automate Your Processes?</h2>
+              </h2>
+              <p>Contact our automation experts to discuss your process optimization needs.</p>
+=======
           <div className="max-w-4xl mx-auto text-center" / /></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
               <h2></h2>
@@ -214,15 +311,25 @@ return (
               </h2>
               <p></p>
                 Contact our automation experts to discuss your process optimization needs.
+>>>>>>> origin/main
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>
+<<<<<<< HEAD
+                  <Phone>
+                  Call (302) 464-0950;
+                </button>
+                <button>
+                  <Mail>
+                  Email Us;
+=======
                   </button><Phone>
                   Call (302) 464-0950
                 </button>
                 <button>
                   </button><Mail>
                   Email Us
+>>>>>>> origin/main
                 </button>
               </div>
             </div>

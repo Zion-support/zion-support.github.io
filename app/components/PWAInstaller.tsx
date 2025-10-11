@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 }
   ]
 const benefits = [
@@ -16,12 +23,28 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
+        <title>PWAInstaller | Zion Tech Group</title>
+=======
     'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         </Helmet><title>PWAInstaller | Zion Tech Group</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>

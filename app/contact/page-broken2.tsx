@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+'use client';
+import React, {useState, useCallback}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Phone,}
+=======
 'use client'
 import React from 'react'
 'use client'
@@ -5,6 +13,7 @@ import React, { useState, useCallback } from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
     Phone,
+>>>>>>> origin/main
   Mail,
 
   MapPin,
@@ -13,6 +22,47 @@ import {
 
   Send,
 
+<<<<<<< HEAD
+  CheckCircle;}} from 'lucide-react'
+const ContactPage: React.FC = () => {,
+    const [formData, setFormData] = useState({)
+    name: '',
+    email: '',
+    company: '',
+phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: '',}})
+const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,}const {name, value}}= e.target;
+    setFormData(prev => ({)
+    ...prev,
+      [name]: value;}}));
+  }, []);
+<<<<<<< HEAD
+const handleSubmit = async (e: React.FormEvent) => {,
+=======
+const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
+    e.preventDefault();
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+try {// Simulate form submission,}
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+      setFormData({)
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: '',}})
+    } catch (error) {setSubmitStatus('error')}} finally {setIsSubmitting(false)}}}
+=======
   CheckCircle
   }
 } from 'lucide-react'
@@ -44,6 +94,7 @@ try {
     setIsSubmitting(false)
   }
     }
+>>>>>>> origin/main
   }
 const services = [
     'AI Solutions',
@@ -58,31 +109,38 @@ const services = [
 
     'Consulting',
 
+<<<<<<< HEAD
+    'Other';
+  ];];];
+const contactInfo = [
+    {icon: Phone,
+=======
     'Other'
   ]
   const contactInfo = [
     {
     icon: Phone,
+>>>>>>> origin/main
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
-  },
-    {
-    icon: Mail,
+      description: 'Mon-Fri 9AM-6PM EST',},
+    {icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-  },
-    {
-    icon: MapPin,
+      description: 'We respond within 24 hours',},
+    {icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
-  },
-    {
-    icon: Clock,
+      description: 'Visit our office',},
+    {icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
+<<<<<<< HEAD
+      description: 'Eastern Time',}}
+  ]
+return(<>)
+      <Helmet />
+=======
       description: 'Eastern Time'
   }
     }
@@ -90,12 +148,25 @@ const services = [
 return (
     <>
       <Helmet>
+<<<<<<< HEAD
+>>>>>>> origin/main
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+=======
         </Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
+<<<<<<< HEAD
+          {/* Header */} <div className="text-center mb-16"></div>
+            <h1>Get in;</h1>
+              <span>{' '</span>}Touch;
+              </span>
+            </h1>
+            <p>Ready to transform your business? Let's discuss your project and explore;</p>
+=======
           {/* Header */}
           <div className="text-center mb-16"></div>
             <h1>
@@ -105,14 +176,30 @@ return (
             </h1>
             <p>
               Ready to transform your business? Let's discuss your project and explore
+>>>>>>> origin/main
               how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
         </section>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
+<div className="grid grid-cols-1 lg: grid-cols-2 gap-12"></div>,
+            {/* Contact Form */} <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
+              {submitStatus === 'success' && (;
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
+                  <CheckCircle />
+                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+<<<<<<< HEAD
+                </div>})}
+{submitStatus === 'error' && (;
+=======
+                </div>
+  }
+              )},
+    {
+    submitStatus === 'error' && (;
+>>>>>>> origin/main
+=======
               {
     submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
@@ -123,13 +210,16 @@ return (
               )}
 {
     submitStatus === 'error' && (
+>>>>>>> origin/main
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-  }
-              )}
+                </div>})}
 <form>
+<<<<<<< HEAD
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+=======
                 </form><div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+>>>>>>> origin/main
                   <div />
                     <label>
                       Full Name *
@@ -147,18 +237,31 @@ return (
                       </Mail><input />
                   </div>
                 </div>
+<<<<<<< HEAD
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+                  <div />
+                    <label>
+                      Company;
+=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
                   <div / /></div>
                     <label></label>
                       Company
+>>>>>>> origin/main
                     </label>
                     <div className="relative"></div>
                       <Building>
                       </Building><input />
                   </div>
+<<<<<<< HEAD
+                  <div />
+                    <label>
+                      Phone Number;
+=======
                   <div / /></div>
                     <label></label>
                       Phone Number
+>>>>>>> origin/main
                     </label>
                     <div className="relative"></div>
                       <Phone>
@@ -171,10 +274,18 @@ return (
                   </label>
                   <div className="relative"></div>
                     <Globe>
+<<<<<<< HEAD
+                    <select>
+                      <option value="">Select a service</option>
+                      {services.map((service) => (} <option>
+
+                          {service} </option>
+=======
                     </Globe><select>
                       </select><option value="">Select a service</option>
                       {
     services.map((service) => ()
+>>>>>>> origin/main
                       ))}
 
                     </select>
@@ -188,9 +299,13 @@ return (
                     <MessageCircle>
                     </MessageCircle><textarea />
                 </div>
+<<<<<<< HEAD
+                <button>{isSubmitting ? (;</button>
+=======
                 <button></button>
                   {
     isSubmitting ? (
+>>>>>>> origin/main
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
@@ -198,6 +313,36 @@ return (
                   ) : (
                     <>
                       <Send>
+<<<<<<< HEAD
+                      <span>Send Message</span>
+                    </>})}
+                </button>
+              </form>
+            </div>
+            {/* Contact Information */} <div className="space-y-8"></div>
+              <div />
+                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
+                <p>We're here to help! Reach out to us through any of these channels;</p>
+                  and we'll get back to you as soon as possible.
+                </p>
+              </div>
+              {/* Contact Information */} <div className="space-y-8"></div>
+                <div />
+                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+                  <p>We're here to help you transform your business with cutting-edge AI and technology solutions.</p>
+                  </p>
+                </div>
+                <div className="space-y-6"></div>
+                  <div className="flex items-center"></div>
+                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
+                      <Phone />
+                    <div />
+<h3>
+
+                        {info.title} </h3>
+                      <p>{info.details</p>} </p>
+                      <p>{info.description</p>} </p>
+=======
                       </Send><span>Send Message</span>
                     </>
   }
@@ -325,6 +470,7 @@ return (
                         {info.description}
 
                       </p>
+>>>>>>> origin/main
                     </div>
                   </div>
                   <div className="flex items-center" / /></div>
@@ -348,7 +494,11 @@ return (
                       <Clock / /></Clock>
                     <div / /></div>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
+<<<<<<< HEAD
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>,
+=======
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</p><br />Sat: 10:00 AM - 4:00 PM</p>
+>>>>>>> origin/main
                     </div>
                   </div>
                 </div>

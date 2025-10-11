@@ -1,8 +1,41 @@
+<<<<<<< HEAD
+'use client';
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+}
+
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    fontSize: 16,
+    reducedMotion: false
+  });
+=======
 'use client'
 import React, { useEffect } from 'react'
+>>>>>>> origin/main
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
+    // Apply accessibility settings
+    if (settings.highContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+
+    document.documentElement.style.fontSize = `${settings.fontSize}px`;
+
+    if (settings.reducedMotion) {
+      document.documentElement.classList.add('reduce-motion');
+    } else {
+      document.documentElement.classList.remove('reduce-motion');
+=======
     // Add high contrast mode support
     const addHighContrastSupport = () => {
       const style = document.createElement('style')
@@ -101,10 +134,16 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     return () => {
       observer.disconnect()
+>>>>>>> origin/main
     }
   }, [])
 
+<<<<<<< HEAD
+  return <>{children}</>;
+};
+=======
   return <>{children}</>
 }
+>>>>>>> origin/main
 
 export default EnhancedAccessibility

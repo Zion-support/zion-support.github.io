@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+'use client';
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor performance metrics
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Performance Entry:', entry);
+=======
 'use client'
 import React, { useEffect, useState } from 'react'
 
@@ -25,8 +36,21 @@ const PerformanceMonitor: React.FC = () => {
         firstContentfulPaint: 0,
         largestContentfulPaint: 0,
         cumulativeLayoutShift: 0
+>>>>>>> origin/main
       }
+    });
 
+<<<<<<< HEAD
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return null;
+};
+=======
       // Get FCP if available
       const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
       if (fcpEntry) {
@@ -89,5 +113,6 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   )
 }
+>>>>>>> origin/main
 
 export default PerformanceMonitor

@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -13,6 +29,7 @@ import { Helmet } from 'react-helmet-async'
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -20,12 +37,24 @@ import { Helmet } from 'react-helmet-async'
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
+<<<<<<< HEAD
+              <span>Page;</span>
+=======
               </h1><span>
                 Page
+>>>>>>> origin/main
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
+<<<<<<< HEAD
+            <p>Transform your business with our advanced page solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+                <ArrowRight>
+=======
             <p>
               Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -34,9 +63,9 @@ import { Helmet } from 'react-helmet-async'
               <button>
                 Get Started
                 </button><ArrowRight>
+>>>>>>> origin/main
               </button>
-              <button>
-                Learn More
+              <button>Learn More;</button>
               </button>
             </div>
           </div>

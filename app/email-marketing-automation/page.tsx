@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Mail,}
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import {
     Mail,
+>>>>>>> origin/main
   Target,
   CheckCircle,
   BarChart,
@@ -24,34 +31,36 @@ import {
 
   Send,
 
-  PieChart
-  }
-} from 'lucide-react'
-const EmailMarketingAutomationPage: React.FC = () => {
+  PieChart;}} from 'lucide-react'
+const EmailMarketingAutomationPage: React.FC = () => {,
     const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
-      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
-  },
-    {
-    icon: Target,
+      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.',},
+    {icon: Target,
       title: 'Advanced Segmentation',
-      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
-  },
-    {
-    icon: BarChart,
+      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.',},
+    {icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
-  },
-    {
-    icon: Zap,
+      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.',},
+    {icon: Zap,
       title: 'Smart Triggers',
+<<<<<<< HEAD
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
+  ]
+=======
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
+<<<<<<< HEAD
+  ];];];
+>>>>>>> origin/main
+const benefits = [
+=======
   ]
   const benefits = [
+>>>>>>> origin/main
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',
@@ -63,38 +72,69 @@ const EmailMarketingAutomationPage: React.FC = () => {
 
     'Generate more qualified leads',
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Save time and resources'
+  ]
+return(<>)
+      <Helmet />
+=======
+    'Save time and resources';
+  ];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
+=======
     'Save time and resources'
   ]
 return (
     <>
       <Helmet>
         </Helmet><title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<<<<<<< HEAD
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1>
-                Email Marketing Automation
+              <h1>Email Marketing Automation;</h1>
               </h1>
+<<<<<<< HEAD
+              <p>Transform your email marketing with our AI-powered automation platform.;</p>
+=======
               <p>
                 Transform your email marketing with our AI-powered automation platform.
+>>>>>>> origin/main
                 Create engaging campaigns, automate workflows, and drive better results.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>
+<<<<<<< HEAD
+                  <Mail>
+                  Start Free Trial;
+=======
                   </button><Mail>
                   Start Free Trial
+>>>>>>> origin/main
                 </button>
                 <button>
                   </button><Phone>
@@ -104,15 +144,44 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Platform Features;</h2>
+              </h2>
+              <p>Our email marketing automation platform provides everything you need to succeed.,</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                    <feature />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description</p>}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */} <section className="py-20 px-4">
+=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
@@ -133,6 +202,7 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Email Marketing Automation
@@ -170,6 +240,13 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Key Benefits;</h2>
+              </h2>
+              <p>Drive better results with our comprehensive email marketing automation platform.,</p>
+=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
@@ -177,15 +254,28 @@ return (
               </h2>
               <p></p>
                 Drive better results with our comprehensive email marketing automation platform.,
+>>>>>>> origin/main
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
               {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                  <CheckCircle />
+                  <p className="text-gray-300 text-lg">{benefit</p>}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */} <section className="py-20 px-4">
+=======
                 <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle>
                   </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+>>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -206,6 +296,13 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+              <h2>Ready to Automate Your Marketing?</h2>
+              </h2>
+              <p>Start your free trial today and transform your email marketing with automation.</p>
+=======
           <div className="max-w-4xl mx-auto text-center" / /></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
               <h2></h2>
@@ -213,15 +310,25 @@ return (
               </h2>
               <p></p>
                 Start your free trial today and transform your email marketing with automation.
+>>>>>>> origin/main
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>
+<<<<<<< HEAD
+                  <Phone>
+                  Call (302) 464-0950;
+                </button>
+                <button>
+                  <Mail>
+                  Email Us;
+=======
                   </button><Phone>
                   Call (302) 464-0950
                 </button>
                 <button>
                   </button><Mail>
                   Email Us
+>>>>>>> origin/main
                 </button>
               </div>
             </div>

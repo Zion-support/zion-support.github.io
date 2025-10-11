@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Mail, ArrowRight}}from 'lucide-react';
+const EmailMarketingSuitePage: React.FC = () => {,
+    return(<>,)
+      <Helmet />
+        <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
+        <meta />
+=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Mail, ArrowRight } from 'lucide-react'
@@ -7,6 +17,7 @@ const EmailMarketingSuitePage: React.FC = () => {
       <Helmet>
         </Helmet><title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta>
+>>>>>>> origin/main
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -27,17 +38,20 @@ const EmailMarketingSuitePage: React.FC = () => {
               AI Email </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
+<<<<<<< HEAD
+            <p>AI-powered email marketing automation. Create, send, and optimize email campaigns;</p>
+=======
             <p>
               AI-powered email marketing automation. Create, send, and optimize email campaigns
+>>>>>>> origin/main
               with intelligent automation and personalization.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
                 </button><span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button>View Demo;</button>
               </button>
             </div>
           </div>
@@ -53,14 +67,18 @@ const EmailMarketingSuitePage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful email marketing solutions. Stay tuned for updates!
+              <p>We're developing powerful email marketing solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>
         </section>
       </div>
     </>,
+<<<<<<< HEAD
+  )}};
+
+export default EmailMarketingSuitePage;
+=======
   )
   }
 }
@@ -96,3 +114,4 @@ export default EmailMarketingSuitePage
 export default EmailMarketingSuitePage
 </div></div></div></div></div></div></span></span></span></button></button></p></p></h1></h2></li></section></section>
 </li>
+>>>>>>> origin/main

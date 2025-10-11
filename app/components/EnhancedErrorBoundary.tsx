@@ -2,6 +2,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 
 interface Props {
+<<<<<<< HEAD
+  children: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+=======
   children: ReactNode
   fallback?: ReactNode
 }
@@ -10,19 +18,28 @@ interface State {
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
+>>>>>>> origin/main
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+<<<<<<< HEAD
+    super(props);
+    this.state = { hasError: false };
+=======
     super(props)
     this.state = { hasError: false }
+>>>>>>> origin/main
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+    console.error('Error caught by boundary:', error, errorInfo);
+=======
     this.setState({
       error,
       errorInfo
@@ -38,10 +55,24 @@ class ErrorBoundary extends Component<Props, State> {
       // You can integrate with error reporting services like Sentry here
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
+>>>>>>> origin/main
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">We apologize for the inconvenience.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Reload Page
+            </button>
+=======
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="text-center p-8 max-w-md mx-auto">
@@ -79,6 +110,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
+>>>>>>> origin/main
           </div>
         </div>
       )

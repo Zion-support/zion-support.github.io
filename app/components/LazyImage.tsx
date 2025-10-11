@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 }
   ]
 const benefits = [
@@ -15,6 +22,22 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+{/* Hero Section */} <section className="py-20 px-4">
+=======
+    'Proven track record of success';
+  ];
+{/* Hero Section */}
+      <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
     'Proven track record of success'
   ]
 {/* Hero Section */}
@@ -22,6 +45,7 @@ const benefits = [
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -29,12 +53,26 @@ const benefits = [
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
+<<<<<<< HEAD
+              <span>LazyImage;</span>
+=======
               </h1><span>
                 LazyImage
+>>>>>>> origin/main
               </span>
               <br></br>
               <span className="text-white">Solutions</span>
             </h1>
+<<<<<<< HEAD
+            <p>Transform your business with our advanced lazyimage solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+                <ArrowRight>
+              </button>
+              <button>Learn More,</button>
+=======
             <p></p>
               Transform your business with our advanced lazyimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -46,6 +84,7 @@ const benefits = [
               </button>
               <button></button>
                 Learn More,
+>>>>>>> origin/main
               </button>
             </div>
           </div>
@@ -53,15 +92,29 @@ const benefits = [
       </section>
         </div>
       </section>
+<<<<<<< HEAD
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
       {/* Benefits Section */}
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Key Benefits;</h2>
+            </h2>
+            <p>Experience the power of our lazyimage solutions for your business.,</p>
+=======
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>
@@ -69,13 +122,20 @@ const benefits = [
             </h2>
             <p></p>
               Experience the power of our lazyimage solutions for your business.,
+>>>>>>> origin/main
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
             {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                <CheckCircle />
+                <p className="text-gray-300 text-lg">{benefit</p>}</p>
+=======
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> origin/main
               </div>
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -109,15 +169,32 @@ const benefits = [
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
       {/* CTA Section */}
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your lazyimage needs and get a customized solution.</p>
+=======
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
@@ -125,15 +202,25 @@ const benefits = [
             </h2>
             <p></p>
               Contact our experts to discuss your lazyimage needs and get a customized solution.
+>>>>>>> origin/main
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
                 </button><Phone>
                 Call Now
               </button>
               <button>
                 </button><Mail>
                 Email Us
+>>>>>>> origin/main
               </button>
             </div>
           </div>

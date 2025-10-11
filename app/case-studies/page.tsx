@@ -2,6 +2,25 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
+
+const CaseStudiesPage: React.FC = () => {
+  return (
+    <div className="min-h-screen pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Case <span className="text-cyan-400">Studies</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Real-world success stories from our clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award, Building2, Shield, Zap } from 'lucide-react';
@@ -476,6 +495,7 @@ const CaseStudiesPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         </div>
       </section>
+>>>>>>> origin/main
 
       <Footer />
     </div>

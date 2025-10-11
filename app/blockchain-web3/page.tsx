@@ -1,19 +1,60 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const BlockchainWeb3Page: React.FC = () => {,
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const BlockchainWeb3Page: React.FC = () => {
+>>>>>>> origin/main
     const features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
+    {icon: Shield,
+=======
+      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
+=======
       benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'],
+>>>>>>> origin/main
   },
     {
     icon: Shield,
+>>>>>>> origin/main
       title: 'Decentralized Security',
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
+<<<<<<< HEAD
+      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
+    {icon: Brain,
+      title: 'AI Integration',
+      description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts']},
+    {icon: Globe,
+      title: 'Global Access',
+      description: 'Access blockchain services from anywhere in the world with global connectivity.',
+<<<<<<< HEAD
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
+return(<>)
+      <Helmet />
+=======
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
+  },
+  ];];
+return (
+    <>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
+        <meta />
+=======
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data'],
   },
     {
@@ -34,6 +75,7 @@ return (
       <Helmet>
         </Helmet><title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta>
+>>>>>>> origin/main
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -41,30 +83,33 @@ return (
             <h1>
               Blockchain & </h1><span className="text-cyan-400">Web3</span>
             </h1>
-            <p>
-              Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
+            <p>Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
+                <div key={index}className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="flex items-start space-x-4 mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <feature />
                   <div />
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <p className="text-gray-300 mb-4">{feature.description</p>}</p>
                   </div>
                 </div>
                 <ul>
+<<<<<<< HEAD
+                  {feature.benefits.map((benefit, benefitIndex) => (} <li>
+                      <CheckCircle />
+=======
                   {
     feature.benefits.map((benefit, benefitIndex) => (
   }
                     </ul><li>
                       </li><CheckCircle>
+>>>>>>> origin/main
 
-                      {benefit}
-                    </li>
+                      {benefit} </li>
                   ))}
                 </ul>
               </div>

@@ -1,28 +1,28 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+{icon: Brain,
+=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 {
     icon: Brain,
+>>>>>>> origin/main
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
-    {
-    icon: Zap,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-    icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
-    icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
+      description: 'Worldwide deployment and support for international businesses',}}
   ]
 const benefits = [
     'Advanced AI technology integration',
@@ -36,12 +36,28 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Page | Zion Tech Group</title>
+=======
     'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
+>>>>>>> origin/main
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -58,15 +74,32 @@ return (
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
             ))}
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
       {/* CTA Section */}
       <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+=======
         <div className="max-w-4xl mx-auto text-center" / /></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
             <h2></h2>
@@ -74,15 +107,25 @@ return (
             </h2>
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
+>>>>>>> origin/main
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
                 </button><Phone>
                 Call Now
               </button>
               <button>
                 </button><Mail>
                 Email Us
+>>>>>>> origin/main
               </button>
             </div>
           </div>
