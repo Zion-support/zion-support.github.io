@@ -1,279 +1,265 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
+  Github,
+  Award,
+  Users,
+  Brain,
+  Code,
+  Shield,
+  Cloud,
+  BarChart3,
+  CheckCircle,
+  Star
+} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Users, Award, Code, Brain, Cloud, Shield, Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 
 const TeamPage: React.FC = () => {
-<<<<<<< HEAD
   const teamMembers = [
     {
-      name: 'Dr. Kleber Santos',
-      role: 'CEO & Founder',
-      expertise: 'AI & Quantum Computing',
-      bio: 'Visionary leader with 15+ years in AI research and quantum computing. PhD in Computer Science from MIT.',
-      image: '/images/team/kleber-santos.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/kleber-santos',
-        github: 'https://github.com/kleber-santos',
-        twitter: 'https://twitter.com/kleber_santos'
-      }
+      name: 'Kleber Santos',
+      position: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation. Expert in quantum computing and autonomous systems.',
+      image: '/api/placeholder/300/300',
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      linkedin: 'https://linkedin.com/in/kleber-santos',
+      twitter: 'https://twitter.com/kleber_santos',
+      github: 'https://github.com/kleber-santos',
+      expertise: ['AI Strategy', 'Quantum Computing', 'Leadership', 'Innovation'],
+      achievements: ['Forbes 30 Under 30', 'Tech Innovator Award', 'AI Pioneer']
     },
     {
-      name: 'Sarah Chen',
-      role: 'CTO',
-      expertise: 'Cloud Infrastructure & DevOps',
-      bio: 'Expert in scalable cloud architectures and DevOps practices. Former AWS Solutions Architect.',
-      image: '/images/team/sarah-chen.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/sarah-chen',
-        github: 'https://github.com/sarah-chen'
-      }
+      name: 'Dr. Sarah Chen',
+      position: 'Chief Technology Officer',
+      bio: 'Leading AI researcher with PhD in Machine Learning. Specializes in neural networks and quantum algorithms.',
+      image: '/api/placeholder/300/300',
+      email: 'sarah@ziontechgroup.com',
+      phone: '+1 302 464 0951',
+      linkedin: 'https://linkedin.com/in/sarah-chen',
+      twitter: 'https://twitter.com/sarah_chen',
+      github: 'https://github.com/sarah-chen',
+      expertise: ['Machine Learning', 'Neural Networks', 'Quantum Algorithms', 'Research'],
+      achievements: ['IEEE Fellow', 'Nobel Prize Nominee', 'AI Research Excellence']
     },
     {
       name: 'Michael Rodriguez',
-      role: 'Head of AI Research',
-      expertise: 'Machine Learning & Neural Networks',
-      bio: 'Leading AI researcher with expertise in deep learning and computer vision. PhD in AI from Stanford.',
-      image: '/images/team/michael-rodriguez.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/michael-rodriguez',
-        github: 'https://github.com/michael-rodriguez'
-      }
+      position: 'Head of Engineering',
+      bio: 'Full-stack architect with expertise in cloud infrastructure and scalable systems design.',
+      image: '/api/placeholder/300/300',
+      email: 'michael@ziontechgroup.com',
+      phone: '+1 302 464 0952',
+      linkedin: 'https://linkedin.com/in/michael-rodriguez',
+      twitter: 'https://twitter.com/michael_rod',
+      github: 'https://github.com/michael-rodriguez',
+      expertise: ['Cloud Architecture', 'System Design', 'DevOps', 'Scalability'],
+      achievements: ['AWS Solutions Architect', 'Cloud Excellence Award', 'Tech Leadership']
     },
     {
-      name: 'Emily Johnson',
-      role: 'Head of Cybersecurity',
-      expertise: 'Cybersecurity & Threat Intelligence',
-      bio: 'Cybersecurity expert with 12+ years protecting enterprise systems. CISSP certified.',
-      image: '/images/team/emily-johnson.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/emily-johnson',
-        twitter: 'https://twitter.com/emily_cyber'
-      }
+      name: 'Dr. Emily Watson',
+      position: 'Head of AI Research',
+      bio: 'Renowned AI researcher specializing in natural language processing and computer vision.',
+      image: '/api/placeholder/300/300',
+      email: 'emily@ziontechgroup.com',
+      phone: '+1 302 464 0953',
+      linkedin: 'https://linkedin.com/in/emily-watson',
+      twitter: 'https://twitter.com/emily_watson',
+      github: 'https://github.com/emily-watson',
+      expertise: ['NLP', 'Computer Vision', 'Deep Learning', 'AI Ethics'],
+      achievements: ['Google AI Research Award', 'MIT Technology Review', 'AI Ethics Pioneer']
     },
     {
       name: 'David Kim',
-      role: 'Lead Developer',
-      expertise: 'Full-Stack Development & Microservices',
-      bio: 'Full-stack developer specializing in microservices architecture and modern web technologies.',
-      image: '/images/team/david-kim.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/david-kim',
-        github: 'https://github.com/david-kim'
-      }
+      position: 'Head of Cybersecurity',
+      bio: 'Cybersecurity expert with 20+ years protecting enterprise systems and implementing zero-trust architectures.',
+      image: '/api/placeholder/300/300',
+      email: 'david@ziontechgroup.com',
+      phone: '+1 302 464 0954',
+      linkedin: 'https://linkedin.com/in/david-kim',
+      twitter: 'https://twitter.com/david_kim',
+      github: 'https://github.com/david-kim',
+      expertise: ['Cybersecurity', 'Zero Trust', 'Threat Intelligence', 'Compliance'],
+      achievements: ['CISSP Certified', 'Security Excellence Award', 'Cyber Defense Expert']
     },
     {
-      name: 'Lisa Wang',
-      role: 'Head of Product',
-      expertise: 'Product Strategy & UX Design',
-      bio: 'Product strategist with expertise in SaaS platforms and user experience design.',
-      image: '/images/team/lisa-wang.jpg',
-      social: {
-        linkedin: 'https://linkedin.com/in/lisa-wang',
-        twitter: 'https://twitter.com/lisa_product'
-      }
+      name: 'Lisa Thompson',
+      position: 'Head of Product',
+      bio: 'Product strategist with a passion for user experience and market-driven innovation.',
+      image: '/api/placeholder/300/300',
+      email: 'lisa@ziontechgroup.com',
+      phone: '+1 302 464 0955',
+      linkedin: 'https://linkedin.com/in/lisa-thompson',
+      twitter: 'https://twitter.com/lisa_thompson',
+      github: 'https://github.com/lisa-thompson',
+      expertise: ['Product Strategy', 'UX Design', 'Market Research', 'Innovation'],
+      achievements: ['Product Excellence Award', 'UX Innovation', 'Market Leadership']
     }
   ];
 
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation First',
-      description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology.'
-    },
-    {
-      icon: Users,
-      title: 'Collaborative Spirit',
-      description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from code quality to client relationships.'
-    },
-    {
-      icon: Code,
-      title: 'Technical Mastery',
-      description: 'We maintain the highest standards of technical expertise and continuous learning.'
-    }
+  const stats = [
+    { number: '50+', label: 'Team Members' },
+    { number: '15+', label: 'Years Experience' },
+    { number: '25+', label: 'Countries Served' },
+    { number: '99%', label: 'Client Satisfaction' }
   ];
 
   return (
-=======
-    return (
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group | Meet the Experts</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, cloud computing, cybersecurity, and software development are dedicated to delivering exceptional solutions." />
-        <meta name="keywords" content="team, experts, AI researchers, cloud architects, cybersecurity specialists, software developers, leadership" />
+        <title>Our Team - Zion Tech Group | Expert Technology Professionals</title>
+        <meta name="description" content="Meet our world-class team of AI experts, engineers, and technology professionals driving innovation at Zion Tech Group." />
+        <meta name="keywords" content="team, AI experts, engineers, technology professionals, leadership, innovation" />
+        <meta property="og:title" content="Our Team - Zion Tech Group" />
+        <meta property="og:description" content="World-class technology professionals driving innovation" />
+        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/team" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="pt-20">
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="py-20 px-4">
-            <div className="max-w-7xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Meet Our <span className="text-cyan-400">Expert Team</span>
-              </h1>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Our Team
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+              World-Class Technology Professionals
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts 
+              brings together decades of experience in AI, quantum computing, cybersecurity, 
+              and cutting-edge technology innovation.
+            </p>
+          </section>
+
+          {/* Stats Section */}
+          <section className="mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Team Members Grid */}
+          <section className="mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="text-center mb-6">
+                    <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <Users className="w-16 h-16 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                    <p className="text-cyan-400 font-medium mb-4">{member.position}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">{member.bio}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Expertise</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {member.expertise.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Achievements</h4>
+                    <ul className="space-y-1">
+                      {member.achievements.map((achievement, achievementIndex) => (
+                        <li key={achievementIndex} className="flex items-center text-sm text-gray-300">
+                          <Award className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex justify-center space-x-4">
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                    >
+                      <Mail className="w-5 h-5 text-white" />
+                    </a>
+                    <a
+                      href={`tel:${member.phone}`}
+                      className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                    >
+                      <Phone className="w-5 h-5 text-white" />
+                    </a>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                    >
+                      <Linkedin className="w-5 h-5 text-white" />
+                    </a>
+                    <a
+                      href={member.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-r from-sky-500 to-sky-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                    >
+                      <Twitter className="w-5 h-5 text-white" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/20">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Join Our Team
+              </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Our diverse team of AI researchers, cloud architects, cybersecurity specialists, 
-                and software developers work together to deliver cutting-edge solutions.
+                We're always looking for talented individuals who share our passion for 
+                innovation and cutting-edge technology. Join us in shaping the future.
               </p>
-            </div>
-          </section>
-
-          {/* Team Members */}
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {teamMembers.map((member, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
-                    <div className="text-center mb-6">
-                      <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Users className="w-16 h-16 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                      <p className="text-cyan-400 font-semibold mb-2">{member.role}</p>
-                      <p className="text-gray-300 text-sm">{member.expertise}</p>
-                    </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-center">
-                      {member.bio}
-                    </p>
-                    <div className="flex justify-center space-x-4">
-                      {member.social.linkedin && (
-                        <a
-                          href={member.social.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                      )}
-                      {member.social.github && (
-                        <a
-                          href={member.social.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          <Github className="w-5 h-5" />
-                        </a>
-                      )}
-                      {member.social.twitter && (
-                        <a
-                          href={member.social.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
-                          <Twitter className="w-5 h-5" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Our Values */}
-          <section className="py-20 bg-gradient-to-br from-slate-800/50 to-slate-900/50">
-            <div className="max-w-7xl mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Our <span className="text-cyan-400">Values</span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  The principles that guide our team and shape our culture
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {values.map((value, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <value.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{value.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Join Our Team CTA */}
-          <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-3xl p-12 text-center border border-cyan-500/20">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Join Our Team
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  We're always looking for talented individuals who share our passion for innovation 
-                  and excellence. Explore our open positions and become part of our mission.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/careers"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
-                  >
-                    View Open Positions
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
-                  >
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Information */}
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-6 h-6 text-cyan-400" />
-                    <div>
-                      <div className="text-white font-semibold">Email</div>
-                      <a href="mailto:team@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                        team@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-6 h-6 text-cyan-400" />
-                    <div>
-                      <div className="text-white font-semibold">Phone</div>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                        +1 (302) 464-0950
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-6 h-6 text-cyan-400" />
-                    <div>
-                      <div className="text-white font-semibold">Address</div>
-                      <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/careers"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  View Open Positions
+                </Link>
+                <a
+                  href="mailto:careers@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Send Your Resume
+                </a>
               </div>
             </div>
           </section>
         </main>
+        
         <Footer />
       </div>
     </>

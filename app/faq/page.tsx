@@ -1,136 +1,112 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp, Search, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, ChevronUp, Search, Mail, Phone, MessageSquare } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
 
+  const faqs = [
+    {
+      question: 'What services does Zion Tech Group offer?',
+      answer: 'We offer comprehensive AI services, IT solutions, and micro SaaS tools including AI chatbots, quantum computing solutions, cloud migration, cybersecurity, business analytics, and more. Our services are designed to help businesses leverage cutting-edge technology for growth and innovation.'
+    },
+    {
+      question: 'How much do your services cost?',
+      answer: 'Our pricing varies by service and scale. AI services start at $199/month, IT services range from $499/month to $15,000/project, and micro SaaS tools start at $29/month. We offer competitive pricing that\'s typically 30-50% below market rates. Contact us for a custom quote based on your specific needs.'
+    },
+    {
+      question: 'Do you offer free consultations?',
+      answer: 'Yes! We provide free consultations to help you understand how our services can benefit your business. Our experts will analyze your needs and recommend the best solutions. You can schedule a consultation by calling (302) 464-0950 or emailing kleber@ziontechgroup.com.'
+    },
+    {
+      question: 'What is your typical project timeline?',
+      answer: 'Project timelines vary based on complexity. Simple implementations can take 2-4 weeks, while complex AI or infrastructure projects may take 3-6 months. We provide detailed timelines during the consultation phase and keep you updated throughout the project.'
+    },
+    {
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer 24/7 support for all our services. Our support includes technical assistance, system monitoring, updates, and maintenance. We also provide training for your team to ensure smooth operation of implemented solutions.'
+    },
+    {
+      question: 'Can you integrate with our existing systems?',
+      answer: 'Absolutely! We specialize in seamless integration with existing systems. Our team has experience with all major platforms and can ensure smooth integration without disrupting your current operations.'
+    },
+    {
+      question: 'What makes your AI solutions different?',
+      answer: 'Our AI solutions are built with cutting-edge technology including GPT-4, quantum computing capabilities, and advanced machine learning algorithms. We focus on practical, business-ready AI that delivers measurable results and ROI.'
+    },
+    {
+      question: 'Do you offer custom development?',
+      answer: 'Yes, we provide custom development services for unique business requirements. Our team can build custom AI models, software applications, and integrations tailored to your specific needs and industry requirements.'
+    },
+    {
+      question: 'What security measures do you have in place?',
+      answer: 'Security is our top priority. We implement enterprise-grade security including encryption, multi-factor authentication, regular security audits, and compliance with industry standards. All data is protected with advanced security protocols.'
+    },
+    {
+      question: 'Can you help with digital transformation?',
+      answer: 'Yes, digital transformation is one of our core specialties. We help businesses modernize their technology stack, implement AI solutions, migrate to cloud platforms, and optimize processes for better efficiency and growth.'
+    },
+    {
+      question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and more. Our solutions are adaptable to various sectors and we have industry-specific expertise to deliver relevant solutions.'
+    },
+    {
+      question: 'How do I get started?',
+      answer: 'Getting started is easy! Simply contact us through our website, call (302) 464-0950, or email kleber@ziontechgroup.com. We\'ll schedule a free consultation to discuss your needs and create a customized solution plan.'
+    }
+  ];
+
+  const filteredFAQs = faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-=======
-  const toggleItem = (index: number) => 
-    setOpenItems(prev => )
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
-      prev.includes(index) 
+    setOpenItems(prev =>
+      prev.includes(index)
         ? prev.filter(item => item !== index)
         : [...prev, index]
     );
   };
 
-  const faqs = [
-    {
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization.",
-      category: "AI Services"
-    },
-    {
-      question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year.",
-      category: "AI Services"
-    },
-    {
-      question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack.",
-      category: "IT Services"
-    },
-    {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote.",
-      category: "Pricing"
-    },
-    {
-      question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock.",
-      category: "Support"
-    },
-    {
-      question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation.",
-      category: "Implementation"
-    },
-    {
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology.",
-      category: "Business Size"
-    },
-    {
-      question: "What industries do you serve?",
-<<<<<<< HEAD
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.",
-      category: "Industries"
-    },
-    {
-      question: "Do you provide training for our team?",
-      answer: "Yes, we offer comprehensive training programs for your team to ensure they can effectively use and maintain our solutions. This includes documentation, video tutorials, and hands-on workshops.",
-      category: "Training"
-    },
-    {
-      question: "What security measures do you have in place?",
-      answer: "We implement enterprise-grade security including end-to-end encryption, multi-factor authentication, regular security audits, compliance with industry standards (SOC 2, GDPR, HIPAA), and 24/7 monitoring.",
-      category: "Security"
-    },
-    {
-      question: "Can you integrate with our existing systems?",
-      answer: "Yes, our solutions are designed to integrate seamlessly with existing systems through APIs, webhooks, and custom connectors. We ensure minimal disruption to your current workflows.",
-      category: "Integration"
-    },
-    {
-      question: "What happens if we need to scale up?",
-      answer: "Our solutions are built to scale with your business. We can easily accommodate growth through cloud infrastructure, load balancing, and performance optimization. We also provide ongoing monitoring and optimization.",
-      category: "Scaling"
-=======
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
-    }
-  ];
-
-  const filteredFaqs = searchQuery 
-    ? faqs.filter(faq => 
-        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        faq.category.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : faqs;
-
-  const categories = [...new Set(faqs.map(faq => faq.category))];
-
   return (
     <>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
+        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group's AI services, IT solutions, and micro SaaS tools." />
+        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT solutions, micro saas, support" />
+        <meta property="og:title" content="FAQ - Zion Tech Group" />
+        <meta property="og:description" content="Frequently asked questions about our services" />
+        <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/faq" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="pt-20">
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="py-20 px-4">
-            <div className="max-w-7xl mx-auto text-center">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                  <HelpCircle className="w-8 h-8 text-white" />
-                </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white neon-text-enhanced">
-                  Frequently Asked <span className="text-cyan-400">Questions</span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Find answers to common questions about our AI and IT services, pricing, and implementation.
-              </p>
-            </div>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+              Find Answers to Common Questions
+            </p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Get answers to the most common questions about our AI services, IT solutions, 
+              and micro SaaS tools. Can't find what you're looking for? Contact us directly.
+            </p>
           </section>
 
-          {/* Search Bar */}
-          <section className="py-8 px-4">
-            <div className="max-w-4xl mx-auto">
+          {/* Search Section */}
+          <section className="mb-12">
+            <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
@@ -138,67 +114,52 @@ const FAQPage: React.FC = () => {
                   placeholder="Search FAQ..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
             </div>
           </section>
 
-          {/* FAQ Categories */}
-          <section className="py-8 px-4">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                {categories.map((category) => (
-                  <span
-                    key={category}
-                    className="px-4 py-2 bg-slate-800 text-gray-300 rounded-lg text-sm font-medium"
-                  >
-                    {category}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ List */}
-          <section className="py-16 px-4">
+          {/* FAQ Items */}
+          <section className="mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="space-y-4">
-                {filteredFaqs.map((faq, index) => (
-                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+                {filteredFAQs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden"
+                  >
                     <button
                       onClick={() => toggleItem(index)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"
+                      className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                     >
-                      <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                      <h3 className="text-lg font-semibold text-white pr-4">
+                        {faq.question}
+                      </h3>
                       {openItems.includes(index) ? (
                         <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       ) : (
                         <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       )}
                     </button>
+                    
                     {openItems.includes(index) && (
-                      <div className="px-6 pb-4">
-                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                        <div className="mt-3">
-                          <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded">
-                            {faq.category}
-                          </span>
-                        </div>
+                      <div className="px-6 pb-6">
+                        <p className="text-gray-300 leading-relaxed">
+                          {faq.answer}
+                        </p>
                       </div>
                     )}
                   </div>
                 ))}
               </div>
 
-              {/* No Results */}
-              {filteredFaqs.length === 0 && searchQuery && (
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 text-center">
+              {filteredFAQs.length === 0 && (
+                <div className="text-center py-16">
                   <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
                   <p className="text-gray-300 mb-6">
-                    Try adjusting your search terms or browse our FAQ categories.
+                    Try adjusting your search terms or contact us directly.
                   </p>
                   <button
                     onClick={() => setSearchQuery('')}
@@ -211,35 +172,66 @@ const FAQPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Contact CTA */}
-          <section className="py-20 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-3xl p-12 text-center border border-cyan-500/20">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Still Have Questions?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Can't find what you're looking for? Our team is here to help. 
-                  Contact us for personalized assistance with your specific needs.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
-                  >
-                    Contact Support
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
-                  >
-                    Call: (302) 464-0950
-                  </a>
+          {/* Contact Section */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/20">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Still Have Questions?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Our team is here to help! Contact us directly for personalized assistance 
+                and detailed answers to your specific questions.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-semibold">Call Us</div>
+                    <div className="text-cyan-400">(302) 464-0950</div>
+                  </div>
                 </div>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-semibold">Email Us</div>
+                    <div className="text-cyan-400">kleber@ziontechgroup.com</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-white font-semibold">Live Chat</div>
+                    <div className="text-cyan-400">Available 24/7</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Contact Us
+                </Link>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Send Email
+                </a>
               </div>
             </div>
           </section>
         </main>
+        
         <Footer />
       </div>
     </>
