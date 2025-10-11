@@ -9,13 +9,18 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
 }) => {
   // Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
 
-    const optimizeImages = () => {;
+    const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       images.forEach((img) => {
         const image = img as HTMLImageElement;
@@ -23,8 +28,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
           image.src = image.dataset.src;
           image.removeAttribute('data-src');
         }
-      })
-    }
+      });
+    };
 
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
@@ -35,16 +40,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   useEffect(() => {
     if (!enableLazyLoading) return;
 
-    const observer = const observer = const observer = new IntersectionObserver()
-      (entries) => {;
-        entries.forEach((entry) => {;
-          if (entry.isIntersecting) {;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
           }
-        })
+        });
       },
-      { threshold: 0.1 } )
+      { threshold: 0.1 }
+    );
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
