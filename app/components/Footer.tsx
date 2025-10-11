@@ -17,6 +17,17 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ];
 
+  const serviceLinks = [
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Micro SAAS', url: '/micro-saas' },
+    { name: 'Cloud Solutions', url: '/it-services' },
+    { name: 'Cybersecurity', url: '/it-services' },
+    { name: 'Custom Development', url: '/it-services' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Demo', url: '/demo' }
+  ];
+
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
@@ -24,7 +35,7 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' },
+    { name: 'Blog', url: '/blog' },
     { name: 'Compliance', url: '/compliance' }
   ];
 
@@ -44,7 +55,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
@@ -93,6 +104,22 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
+            <ul className="space-y-2">
+              {serviceLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.url}
