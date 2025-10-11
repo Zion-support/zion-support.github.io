@@ -9,7 +9,7 @@ const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const products = const products = const products = [
+  const products = [
     {;
 <<<<<<< HEAD;
 ;];

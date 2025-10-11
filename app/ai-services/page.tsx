@@ -31,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
@@ -1010,10 +1010,10 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText;
-    };
+        icon: FileText
+      }
   ];
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
@@ -1040,92 +1040,137 @@ const AiServicesPage: React.FC = () => {
     { id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length },
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
-    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },;
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length };
+    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
   ];
-  const filteredServices = const filteredServices = const filteredServices = services.filter();
-  );
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesCategory;
+  });
 
-  return() {categories.map((category) => ()
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
+  return (
+    <>
+      <Helmet>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including chatbots, data analytics, computer vision, and machine learning solutions for businesses." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, data analytics, computer vision" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your business with our comprehensive AI solutions designed to drive innovation and efficiency.
+              </p>
             </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {filteredServices.map((service) => ()
-                    )}
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4" /></div>
-                    <div></div>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
-                  </div>
-
-                  <div className="mb-6" /></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2" /></ul>
-                      {service.features.slice(0, 3).map((feature, index) => ()
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between" /></div>
-                    <Link to="/contact"
-                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" /></Link>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
-                    </Link>
-                    <Link to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
               ))}
             </div>
 
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
+                        <div className="text-cyan-400 font-semibold">{service.price}</div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 4).map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {service.benefits && (
+                      <div className="mb-6">
+                        <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                        <ul className="space-y-1">
+                          {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
+                    <div className="flex items-center justify-between">
+                      <a href="/contact"
+                        className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </a>
+                      <a href="/contact"
+                        className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                        Get Started
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
             {/* CTA Section */}
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
+            <div className="mt-16 text-center">
+              <div className="bg-slate-800/50 rounded-lg p-8">
+                <h2 className="text-2xl font-bold text-white mb-4">
                   Ready to Transform Your Business with AI?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Let our AI experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how AI can transform your operations.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                  Let's discuss how our AI services can help you achieve your business goals and drive innovation.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <Link to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                     Get Free Consultation
-                  </Link>
-                  <a href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Call: (302) 464-0950
+                  </a>
+                  <a href="/contact"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Contact Us
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer / /></Footer>
+      </div>
     </>
   );
 }
